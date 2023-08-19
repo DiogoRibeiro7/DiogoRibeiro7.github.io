@@ -261,6 +261,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll
   minimal-mistakes-jekyll
   webrick
 
