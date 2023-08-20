@@ -14,6 +14,7 @@ source "https://rubygems.org"
 # To upgrade, run `bundle update`.
 
 gem "github-pages"
+gem "jekyll-remote-theme"
 gem "minimal-mistakes-jekyll"
 
 # The following plugins are automatically loaded by the theme-gem:
