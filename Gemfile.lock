@@ -264,6 +264,7 @@ DEPENDENCIES
   jekyll
   jekyll-remote-theme
   minimal-mistakes-jekyll
+  minitest
   webrick
 
 BUNDLED WITH
