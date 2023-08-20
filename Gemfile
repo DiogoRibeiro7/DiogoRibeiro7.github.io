@@ -28,7 +28,5 @@ gem "minimal-mistakes-jekyll"
 # Cf. https://jekyllrb.com/docs/plugins/installation/
 group :jekyll_plugins do
     gem "jekyll"
-    gem "minitest"
-    gem "faraday"
     gem "webrick" # Add this line
 end
