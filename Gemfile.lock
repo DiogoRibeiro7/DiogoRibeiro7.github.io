@@ -260,6 +260,7 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
+  faraday
   github-pages
   jekyll
   jekyll-remote-theme
