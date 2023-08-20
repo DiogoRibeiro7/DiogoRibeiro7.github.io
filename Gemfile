@@ -27,5 +27,6 @@ gem "minimal-mistakes-jekyll"
 # Cf. https://jekyllrb.com/docs/plugins/installation/
 group :jekyll_plugins do
     gem "jekyll"
+    gem "minimal-mistakes-jekyll"
     gem "webrick" # Add this line
 end
