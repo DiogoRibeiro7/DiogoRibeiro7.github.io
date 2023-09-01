@@ -1,0 +1,782 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The Unseen Art of Data Quality: Bridging the Gap Between Collection and Utilization - Data Science</title>
+<meta name="description" content="The neglect of data design and data quality is a pervasive issue within the data industry, hindering efforts to extract value from data. Although data science is focused on making data useful, data engineering is concerned with making data usable. However, the art of creating good data is often overlooked, and without quality data inputs, data scientists and data engineers can do little to help.">
+
+
+  <meta name="author" content="Diogo Ribeiro">
+  
+  <meta property="article:author" content="Diogo Ribeiro">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Data Science">
+<meta property="og:title" content="The Unseen Art of Data Quality: Bridging the Gap Between Collection and Utilization">
+<meta property="og:url" content="/data%20science/data_design/">
+
+
+  <meta property="og:description" content="The neglect of data design and data quality is a pervasive issue within the data industry, hindering efforts to extract value from data. Although data science is focused on making data useful, data engineering is concerned with making data usable. However, the art of creating good data is often overlooked, and without quality data inputs, data scientists and data engineers can do little to help.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-08-26T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/data%20science/data_design/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Diogo Ribeiro",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Data Science Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/data-science.png" alt="Data Science"></a>
+        
+        <a class="site-title" href="/">
+          Data Science
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/">Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#data-science" itemprop="item"><span itemprop="name">Data science</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">The Unseen Art of Data Quality: Bridging the Gap Between Collection and Utilization</li>
+      
+    
+  </ol>
+</nav>
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="/">
+        <img src="/assets/images/bio-photo.jpg" alt="Diogo Ribeiro" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="/" itemprop="url">Diogo Ribeiro</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Just another boring <strong>Data Science &amp; Research Lead</strong>, writing about Mathematics, Statistics, Data Science and Machine Learning.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Porto, Portugal</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/DiogoRibeiro7" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/diogo-ribeiro-9094604a/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://neverforget-1975.medium.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-medium" aria-hidden="true"></i><span class="label">Medium</span></a></li>
+          
+        
+          
+            <li><a href="https://www.buymeacoffee.com/diogoribeiro7" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-coffee" aria-hidden="true"></i><span class="label">Buy Me a Coffee</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hansolo.dj@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="hansolo.dj@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <meta itemprop="headline" content="The Unseen Art of Data Quality: Bridging the Gap Between Collection and Utilization">
+    <h2 class="page__subtitle">A Deep Dive into the Importance of Data Design, Quality Assurance, and the Urgent Need for Defined Roles in the Data Industry</h2>
+
+    
+    <meta itemprop="description" content="The neglect of data design and data quality is a pervasive issue within the data industry, hindering efforts to extract value from data. Although data science is focused on making data useful, data engineering is concerned with making data usable. However, the art of creating good data is often overlooked, and without quality data inputs, data scientists and data engineers can do little to help.">
+    
+    
+    <meta itemprop="datePublished" content="2023-08-26T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+      <header>
+        <h1 id="page-title" class="page__title p-name" itemprop="headline">
+          <a href="/data%20science/data_design/" class="u-url" itemprop="url"><p>The Unseen Art of Data Quality: Bridging the Gap Between Collection and Utilization
+</a>
+        </h1>
+        
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+      </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <p>The neglect of data design and data quality is a pervasive issue within the data industry, hindering efforts to extract value from data. Although data science is focused on making data useful, data engineering is concerned with making data usable. However, the art of creating good data is often overlooked, and without quality data inputs, data scientists and data engineers can do little to help.</p>
+
+<p>Furthermore, even when data is available, data quality is essential, as collecting low-quality data leads to a futile battle with the fundamental principle of “Garbage In, Garbage Out”. It is crucial to consider investing in good data before proceeding with any projects, instead of focusing on fancy algorithms, models, and hiring a parade of data scientists.</p>
+
+<p>It is essential to note that the importance of data quality is widely recognized within the industry, as it is the foundation of the entire multibillion dollar data/AI/ML/statistics/analytics industry. However, it remains unclear who is responsible for the design, collection, curation, and documentation of high-quality datasets. Data engineers, statisticians, researchers, UX designers, and product managers have all claimed responsibility, leading to confusion and inconsistency. Data quality seems to be an “everybody’s job” that ends up being nobody’s job.</p>
+
+<p>The lack of attention given to data quality and data leadership is concerning, as it diminishes the value of the data science profession. Neglecting these two critical prerequisites is disheartening, and the absence of a specific job title or community exacerbates the issue. The data quality professional, data designer, data curator, data collector, data steward, dataset engineer, or data excellence expert career lacks a defined name, making it challenging to search for candidates with the required skills.</p>
+
+<p>It is crucial to recognize that data labeling jobs, such as mindless data entry or survey collection, are not comparable to the data quality professionals required for high-quality data collection. This dismissal is unfair to the category of genius required for successful data collection.</p>
+
+<p>Therefore, it is essential to establish a specific job title for the person responsible for designing, collecting, curating, and documenting high-quality datasets to ensure data quality and avoid confusion. Without such a role, it is challenging to find excellence in candidates with the required symphony of skills, making data quality an “everybody’s job” and nobody’s responsibility.</p>
+
+<p>Policies and guidelines for data collection, usage, and access vary depending on the organization, industry, and country. However, there are some common principles and best practices that most organizations follow:</p>
+
+<p><strong>Data collection policies:</strong> Organizations should clearly define what data they collect, how they collect it, and why they collect it. Data collection policies should also specify who has the authority to collect data and under what circumstances.</p>
+
+<p><strong>Data usage policies:</strong> Organizations should establish guidelines for how data can be used within the organization. These guidelines should specify who has access to the data, how the data can be used, and what the consequences are for misuse or unauthorized access.</p>
+
+<p><strong>Data access policies:</strong> Organizations should define who has access to data and under what circumstances. Access to sensitive data should be restricted to only those who need it to perform their job functions, and all access should be logged and audited.</p>
+
+<p><strong>Data retention policies:</strong> Organizations should establish guidelines for how long data should be retained and how it should be disposed of when it is no longer needed. These policies should also specify how data should be archived for long-term storage.</p>
+
+<p><strong>Data security policies:</strong> Organizations should establish guidelines for how data should be protected from unauthorized access, use, and disclosure. These policies should include physical security measures, network security measures, and access controls.</p>
+
+<p><strong>Privacy policies:</strong> Organizations should establish guidelines for how they collect, store, use, and share personal information. These policies should comply with applicable privacy laws and regulations, such as the GDPR in the European Union or CCPA in California.</p>
+
+<p><strong>Data governance policies:</strong> Organisations should establish guidelines for how they manage data as a strategic asset. Data governance policies should specify who is responsible for data management, how data quality is maintained, how data is integrated across systems, and how data is used to support decision-making.</p>
+
+<p>Overall, policies and guidelines for data collection, usage, and access are critical for ensuring that organisations collect and use data responsibly, protect sensitive data from unauthorised access, and comply with applicable laws and regulations.</p>
+
+<p>Let’s say a retail company is collecting customer transaction data for their online store. The company is interested in analyzing this data to gain insights on customer behavior and improve their sales. However, they notice that the data is incomplete and contains errors. For instance, some transactions are missing information about the product purchased, while others have incorrect information about the price or quantity.</p>
+
+<p>To improve the data quality, the company assigns the following tasks to their team:</p>
+
+<p><strong>Data Engineer:</strong> The data engineer is responsible for ensuring that the data is accurate, complete, and consistent. They start by creating a data pipeline that automatically collects transaction data from the company’s database and performs data cleansing techniques such as data profiling and data validation. They also establish rules for data entry and ensure that the data is standardised to reduce errors and improve consistency.</p>
+
+<p><strong>Data Scientist:</strong> The data scientist is responsible for analyzing the data and extracting insights. They work closely with the data engineer to ensure that the data is clean and accurate. They use statistical methods and machine learning algorithms to identify patterns and trends in the data, and they create predictive models to forecast future customer behaviour. They also work with the responsible for the data to ensure that any data privacy or security issues are addressed.</p>
+
+<p><strong>Responsible for the data:</strong> The person responsible for the data is the gatekeeper of the data. They ensure that the data is being collected and used in a legal and ethical manner. They work with the data engineer and data scientist to ensure that the data is clean, accurate, and secure. They also set policies and guidelines for data collection, usage, and access, and they ensure that any sensitive information is protected.</p>
+
+<p>Through the contribution of these three roles, the retail company was able to improve the quality of their transaction data, enabling them to make better decisions and improve customer satisfaction.</p>
+
+          <!-- Inserting Amazon Associates Link -->
+        <div id="amazon-associates" style="margin-top:20px;">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.amazon.co.uk/gp/search?ie=UTF8&tag=diogoribeiro7-21&linkCode=ur2&linkId=6ff8fe6cd00ade16ded53c712a6667c8&camp=1634&creative=6738&index=books&keywords=data%20science%20and%20machine%20learning">Check out Data Science Books on Amazon</a>
+        </div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#data-engineering" class="page__taxonomy-item p-category" rel="tag">Data Engineering</a><span class="sep">, </span>
+    
+      <a href="/tags/#data-quality" class="page__taxonomy-item p-category" rel="tag">Data Quality</a><span class="sep">, </span>
+    
+      <a href="/tags/#data-science" class="page__taxonomy-item p-category" rel="tag">Data Science</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#data-science" class="page__taxonomy-item p-category" rel="tag">Data Science</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-08-26T00:00:00+00:00">August 26, 2023</time></p>
+
+      </footer>
+
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <!--<a href="https://twitter.com/intent/tweet?text=The+Unseen+Art+of+Data+Quality%3A+Bridging+the+Gap+Between+Collection+and+Utilization%20%2Fdata%2520science%2Fdata_design%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a> -->
+
+  <a href="https://twitter.com/intent/tweet?text=I%20just%20published%20The+Unseen+Art+of+Data+Quality%3A+Bridging+the+Gap+Between+Collection+and+Utilization%20on%20my%20blog%20%2Fdata%2520science%2Fdata_design%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fdata%2520science%2Fdata_design%2F&quote=I%20just%20published%20The+Unseen+Art+of+Data+Quality%3A+Bridging+the+Gap+Between+Collection+and+Utilization%20on%20my%20blog" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fdata%2520science%2Fdata_design%2F&summary=I%20just%20published%20The+Unseen+Art+of+Data+Quality%3A+Bridging+the+Gap+Between+Collection+and+Utilization%20on%20my%20blog" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/genius/Paul-Erdos/" class="pagination--pager" title="The Life and Legacy of Paul Erdös
+">Previous</a>
+    
+    
+      <a href="/data%20science/Data_Science/" class="pagination--pager" title="Navigating the Ethical Landscape of Data Science
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+    <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a comment</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+  <div class="page__related">
+    <h2 class="page__related-title">You may also enjoy
+    </h2>
+    <div class="grid__wrapper">
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/Data_Science/" rel="permalink">Navigating the Ethical Landscape of Data Science
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          13 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/genius/Paul-Erdos/" rel="permalink">The Life and Legacy of Paul Erdös
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          16 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+Paul Erdös
+</p>
+  </article>
+</div>
+
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/artificial%20intelligence/Large-languague-models/" rel="permalink">The Vulnerability of Large Language Models to the Closure of Open-Source Data Platforms
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          8 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+Decay of traffic in Stack Overflow
+</p>
+  </article>
+</div>
+
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/Demystifying-Data-Science/" rel="permalink">Demystifying Data Science
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+      
+    </div>
+  </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/DiogoRibeiro7" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/diogo-ribeiro-9094604a/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://neverforget-1975.medium.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-medium" aria-hidden="true"></i> Medium</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Diogo Ribeiro. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K7H5RM6S8Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K7H5RM6S8Y', { 'anonymize_ip': false});
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/data%20science/data_design/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/data%20science/data_design"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-diogoribeiro7-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+    <style>
+      .google-auto-placed {
+        margin: 2em auto;
+      }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5492460480537427"
+    crossorigin="anonymous"></script>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  </body>
+</html>
