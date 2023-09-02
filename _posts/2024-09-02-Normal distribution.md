@@ -12,6 +12,8 @@ tags:
     - Bell Curve
 ---
 
+![Example Image](/assets/images/normal_distribution/Bell-Curve.png)
+
 In the bustling tapestry of life, patterns and chaos dance together in an intricate ballet. We humans, driven by an innate curiosity, seek to understand this dance, to find meaning in the seemingly random, to discern the hidden rhythms of nature. This quest has led us to the doorstep of probability and statistics, a realm where numbers and theories intertwine to reveal the secrets of the universe.
 
 Imagine standing on a beach, watching the waves crash against the shore. Each wave is unique, yet there’s a pattern, a rhythm that connects them all. This is the essence of probability distributions. They are the mathematical waves that describe how things are spread out, how they cluster, how they behave in the wild dance of randomness.
