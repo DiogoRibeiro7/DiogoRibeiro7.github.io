@@ -197,7 +197,7 @@ Social Impact: We've examined the profound social implications of data science, 
 
 Responsible Decision-Making: We've emphasized the value of ethical decision-making frameworks, the wisdom to navigate ethical dilemmas, and the courage to make decisions that reflect our highest ethical principles.
 
->The ethical imperative in data science is not a mere theoretical concept; it's a practical and moral obligation. It's about ensuring that data science is not just about numbers, algorithms, and profits but about people, ethics, and social responsibility. It's about building a field that is not only innovative and efficient but also trustworthy, sustainable, and humane.
+The ethical imperative in data science is not a mere theoretical concept; it's a practical and moral obligation. It's about ensuring that data science is not just about numbers, algorithms, and profits but about people, ethics, and social responsibility. It's about building a field that is not only innovative and efficient but also trustworthy, sustainable, and humane.
 
 As we stand at the crossroads of technological advancement and ethical reflection, the call to action is clear:
 
