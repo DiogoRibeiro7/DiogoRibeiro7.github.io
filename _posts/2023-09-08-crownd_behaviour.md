@@ -111,6 +111,8 @@ As we conclude, it's worth reflecting on the universality and applicability of m
 
 This article stands as a testament to the power of interdisciplinary research, demonstrating that when mathematics walks hand in hand with sociology, physics, and urban planning, the result is a richer, more nuanced understanding of the world. It's a compelling example of how mathematical thinking can illuminate the complexities of human behavior, making the invisible visible and transforming the mundane into the extraordinary.
 
+
+You can find simples examples of this, in Python, in the following [Social Force Model](https://github.com/DiogoRibeiro7/Medium-Blog/blob/master/work%20force%20model/work_force_model.ipynb)
 # References
 
 1. Helbing, D., & Molnár, P. (1995). Social force model for pedestrian dynamics. Physical Review E, 51(5), 4282–4286.
