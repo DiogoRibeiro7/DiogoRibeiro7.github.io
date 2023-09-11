@@ -6,6 +6,9 @@
    Typography
    ========================================================================== */
 
+// Importing Cardo from Google Fonts or another source
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+
 $doc-font-size: 16 !default;
 
 /* paragraph indention */
@@ -29,9 +32,10 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: $sans-serif !default;
-$header-font-family: $sans-serif !default;
-$caption-font-family: $serif !default;
+// Setting the fonts
+$global-font-family: "Georgia, serif";
+$header-font-family: "Times, Times New Roman, serif";
+$caption-font-family: "Cardo, serif";
 
 /* type scale */
 $type-size-1: 2.441em !default; // ~39.056px
