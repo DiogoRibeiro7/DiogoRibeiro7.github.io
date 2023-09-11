@@ -22,9 +22,10 @@ layout: default
   {% include sidebar.html %}
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    {% if page.title %}
-    <meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{%
-    endif %}
+    {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
+      <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "
+        <p>" | remove: "</p>" }}</a>
+    </h1>{% endif %}
     {% if page.subtitle %}<h2 class="page__subtitle">{{ page.subtitle }}</h2>{% endif %}
 
     {% if page.excerpt %}
@@ -38,10 +39,6 @@ layout: default
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
       <header>
-        {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
-          <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "
-            <p>" | remove: "</p>" }}</a>
-        </h1>{% endif %}
         {% include page__meta.html %}
       </header>
       {% endunless %}
