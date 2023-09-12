@@ -8,6 +8,7 @@ tags:
     - Artificial Intelligence
     - Machine Learning
     - Ethics
+author_profile: false
 ---
 
 ![Example Image](/assets/images/artificial.jpg)

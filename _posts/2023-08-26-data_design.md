@@ -7,6 +7,8 @@ tags:
     - Data Science
     - Data Engineering
     - Data Quality
+
+author_profile: false
 ---
 
 The neglect of data design and data quality is a pervasive issue within the data industry, hindering efforts to extract value from data. Although data science is focused on making data useful, data engineering is concerned with making data usable. However, the art of creating good data is often overlooked, and without quality data inputs, data scientists and data engineers can do little to help.

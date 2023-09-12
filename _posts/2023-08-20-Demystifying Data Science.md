@@ -5,6 +5,7 @@ categories:
   - Data Science
 tags:
     - Data Science
+author_profile: false
 ---
 
 ![Example Image](/assets/images/data_has_better_idea.jpg)

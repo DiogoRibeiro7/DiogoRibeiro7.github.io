@@ -235,9 +235,11 @@ body {
 
 .page__hero-image {
   width: 100%;
+  max-height: 40vh;  /* Limit the maximum height */
   height: auto;
   -ms-interpolation-mode: bicubic;
 }
+
 
 .page__hero-caption {
   position: absolute;

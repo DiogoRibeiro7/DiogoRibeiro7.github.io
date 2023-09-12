@@ -4,6 +4,7 @@ categories:
   - Artificial Intelligence
 tags:
     - LLM
+author_profile: false
 ---
 
 ![Example Image](/assets/images/stackoverflow.jpg)

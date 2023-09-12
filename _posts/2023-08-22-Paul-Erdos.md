@@ -6,6 +6,7 @@ categories:
 tags:
     - Paul Erdös
     - Mathematics
+author_profile: false
 ---
 ![Example Image](/assets/images/Erdos_Paul.jpg)
 <p align="center"><i>Paul Erdös</i></p>

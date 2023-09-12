@@ -15,6 +15,7 @@ tags:
     - Statistical Methods
     - Fluid Dynamics
     - Probabilistic Behavior
+author_profile: false
 ---
 
 ![Example Image](/assets/images/pedestrians.jpeg)

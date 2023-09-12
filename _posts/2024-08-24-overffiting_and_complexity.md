@@ -14,6 +14,8 @@ tags:
     - Occam's Razor
     - Optimization
     - Complexity
+
+author_profile: false
 ---
 
 

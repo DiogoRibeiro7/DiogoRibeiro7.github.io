@@ -10,6 +10,8 @@ tags:
     - Machine Learning
     - Statistical Analysis
     - Bell Curve
+
+author_profile: false
 ---
 
 ![Example Image](/assets/images/normal_distribution/Bell-Curve.png)
