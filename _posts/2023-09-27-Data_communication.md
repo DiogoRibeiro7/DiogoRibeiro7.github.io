@@ -2,7 +2,7 @@
 title: "Data and Communication"
 subtitle: "Orchestrating a Harmonious Future"
 categories:
-  - Mathematics
+  - Data Science
 tags:
     - Mathematics
     - Data Science
