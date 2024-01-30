@@ -45,7 +45,7 @@ Alternatively, we might construct an ergodic, reversible Markov chain whose equi
 For our example, we'll use Python libraries like numpy and scipy. Our goal is to estimate the posterior of the mean (mu), assuming a known standard deviation, from data points drawn from a normal distribution centered at zero.
 
 Here's our Python setup:
-'''
+```
 import numpy as np
 import scipy as sp
 import pandas as pd
@@ -62,12 +62,11 @@ data = np.random.randn(20)
 ax = plt.subplot()
 sns.distplot(data, kde=False, ax=ax)
 _ = ax.set(title='Histogram of observed data', xlabel='x', ylabel='# observations')
-
-'''
+```
 
 We define our model as a normal distribution. Conveniently, we can compute the posterior analytically in this case:
 
-'''
+```
 def calc_posterior_analytical(data, x, mu_0, sigma_0):
     sigma = 1.
     n = len(data)
@@ -80,11 +79,11 @@ posterior_analytical = calc_posterior_analytical(data, x, 0., 1.)
 ax.plot(x, posterior_analytical)
 ax.set(xlabel='mu', ylabel='belief', title='Analytical posterior')
 sns.despine()
-'''
+```
 
 Next, we implement the MCMC sampler. We start with an initial mu value, propose a new mu, and decide whether to accept it based on the likelihood of the data given the proposed mu:
 
-'''
+```
 def sampler(data, samples=4, mu_init=.5, proposal_width=.5, plot=False, mu_prior_mu=0, mu_prior_sd=1.):
     mu_current = mu_init
     posterior = [mu_current]
@@ -109,7 +108,7 @@ def sampler(data, samples=4, mu_init=.5, proposal_width=.5, plot=False, mu_prior
         posterior.append(mu_current)
         
     return np.array(posterior)
-'''
+```
 
 This algorithm navigates towards more probable values of mu but sometimes accepts less likely values, ensuring exploration of the parameter space. The sampler generates samples representing the posterior distribution of the model, confirmed by comparing the histogram of these samples to the analytically computed posterior.
 
