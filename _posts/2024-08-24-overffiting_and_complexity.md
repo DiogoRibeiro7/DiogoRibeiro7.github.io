@@ -33,7 +33,7 @@ Here's a mathematical representation of the problem:
 Application in Machine Learning
 Occam's curves find applications in machine learning, particularly in model selection and regularization. The author explains how the principle can be used to prevent overfitting by penalizing models with too many parameters.
 
-Examples and Visualization
+# Examples and Visualization
 The post includes visual examples of Occam's curves applied to different datasets. The author provides code snippets (unfortunately, the specific language is not mentioned) and graphical representations to illustrate how the curves change with different values of 
 
 
