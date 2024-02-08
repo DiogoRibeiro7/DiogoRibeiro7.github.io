@@ -2,7 +2,6 @@
 title: "Mysteries of Clustering"
 subtitle: "A Dive into Data's Inner Circles"
 categories:
-  - Machine Learning
   - Data Science
 tags:
   - Data Science
