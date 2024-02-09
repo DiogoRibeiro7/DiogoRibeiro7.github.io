@@ -4,14 +4,16 @@ subtitle: "Clarifying Ergodicity"
 categories:
   - Mathematics
 tags:
-    - Mathematics
-    - Combinatorics
-    - Probability Theory
+    - Ergodicity
+    - Bernoulli Trials
+    - Python Programming
     - Statistical Analysis
-    - Mathematical Foundations
     - Data Science
-    - Educational Resources
-    - Mathematical Applications
+    - Statistical Physics
+    - Mathematical Modeling
+    - Simulation and Modeling
+    - Computational Physics
+    - Machine Learning
 
 author_profile: false
 ---
