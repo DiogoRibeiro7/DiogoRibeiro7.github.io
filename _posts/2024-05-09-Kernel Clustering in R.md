@@ -157,3 +157,20 @@ ggplot(data, aes(x = x, y = y, color = as.factor(clusters))) +
   theme_minimal()
 ```
 
+This plot uses the ggplot2 package to enhance the visual representation, with options to adjust transparency (alpha), point size, and a minimalistic theme.
+
+### 3D Visualization:
+If your data or transformed features allow, you can use the plotly or rgl packages to create interactive 3D plots to explore the clusters in three dimensions. This is particularly useful when the dataset has more than two features, and you want to explore the relationships between different feature combinations.
+
+```{r}
+library(plotly)
+fig <- plot_ly(data, x = ~x, y = ~y, z = ~z, color = ~as.factor(clusters), colors = RColorBrewer::brewer.pal(length(unique(clusters)), "Set2"))
+fig <- fig %>% add_markers()
+fig <- fig %>% layout(scene = list(xaxis = list(title = 'Feature 1'),
+                                   yaxis = list(title = 'Feature 2'),
+                                   zaxis = list(title = 'Feature 3')))
+fig
+```
+This interactive plot allows you to rotate and zoom into different views, providing a deeper understanding of how data points are grouped in three-dimensional space.
+
+Visualizing and interpreting the results of kernel clustering can offer profound insights into complex datasets. By utilizing R's robust visualization libraries, you can not only see the spatial relationships among clusters but also derive meaningful patterns that can inform strategic decisions in various applications.
