@@ -66,6 +66,9 @@ Effective data preparation is crucial for successful clustering outcomes.
 ### Data Preparation:
 
 **Scaling and Normalization:** Most kernel methods assume data is centered and scaled. Use R's scale() function to standardize your dataset to have a mean of zero and a standard deviation of one.
+
+**Feature Selection:** Choose relevant features for clustering to avoid noise and irrelevant information that may hinder the clustering process.
+
 **Handling Missing Values:** Ensure to handle missing values either by imputing them or removing rows with missing values to avoid errors during analysis.
 
 ### Example Dataset:
