@@ -57,7 +57,9 @@ The kkmeans function within kernlab is the kernel version of the K-means cluster
 ### Kernel Types:
 
 **Linear Kernel:** Suitable for data that is already linearly separable in the input space. It maintains the original form of the data.
+
 **Polynomial Kernel:** Useful for capturing interaction between features in the data. It can map the input into a polynomial feature space.
+
 **Radial Basis Function (RBF) or Gaussian Kernel:** Excellent for handling complex cluster boundaries, as it can map data into an infinite-dimensional space.
 
 ## Preparing Your Data:
