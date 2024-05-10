@@ -21,6 +21,7 @@ tags:
     - Efficiency in Data Analysis
     - Climate Modeling
     - Epidemiological Studies
+    - Machine Learning Methods
 
 
 author_profile: false
