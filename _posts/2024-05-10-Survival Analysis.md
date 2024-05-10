@@ -181,3 +181,65 @@ Additionally, ongoing research will likely focus on developing more flexible mod
 - Rizopoulos, D. (2012). Joint Models for Longitudinal and Time-to-Event Data: With Applications in R. Chapman and Hall/CRC.
 - Klein, J. P., & Moeschberger, M. L. (2003). Survival Analysis: Techniques for Censored and Truncated Data, Second Edition. Springer.
 - Andersen, P. K., Borgan, Ø., Gill, R. D., & Keiding, N. (2012). Statistical Models Based on Counting Processes. Springer Science & Business Media.
+
+# Appendices
+
+## Appendix A: Supplementary Data
+
+### Data Table A.1
+
+Here are some links to Kaggle datasets that could be helpful for your study on telecommunications customer churn:
+
+- [Telecommunications Industry Customer Churn Dataset](https://www.kaggle.com/code/tanmay111999/telco-churn-eda-cv-score-85-f1-score-80/input)
+- [Telecom Churn Prediction Dataset](https://www.kaggle.com/code/mnassrib/customer-churn-prediction-telecom-churn-dataset)
+
+These datasets on Kaggle are typically well-documented and include various attributes such as customer demographics, service details, and churn status, which can be directly used for survival analysis and other predictive modeling tasks related to customer behavior in telecommunications.
+
+## Appendix B: Mathematical Derivations
+
+### B.1: Derivation of the Kaplan-Meier Estimator
+
+Step-by-step derivation of the Kaplan-Meier formula used to estimate the survival function from lifetime data, including the handling of censored data points and calculation of survival probabilities at observed event times.
+
+**Equation:**
+
+$$\hat{S}(t) = \prod_{t_i \leq t} \left(1 - \frac{d_i}{n_i}\right).$$
+
+Where $$d_i$$ is the number of events at time $$t_i$$, and $$n_i$$ is the number of subjects at risk just prior to time $$t_i$$.
+
+### B.2: Cox Proportional Hazards Model
+Explanation and derivation of the hazard function used in the Cox model, demonstrating how it relates to the baseline hazard and the effect of covariates.
+
+**Equation:**
+
+$$h(t, X) = h_0(t) \exp(\beta_1X_1 + \beta_2X_2 + \cdots + \beta_pX_p)$$
+
+Where $$h(t, X)$$ is the hazard at time $$t$$ given covariates $$X$$, $$h_0(t)$$ is the baseline hazard, and $$\beta$$ are the coefficients of the covariates.
+
+## Appendix C: Code Snippets
+
+### C.1: R Code for Kaplan-Meier Estimator
+
+```R
+# Load survival library
+library(survival)
+# Create a survival object
+surv_obj <- Surv(time = duration, event = status)
+# Fit Kaplan-Meier model
+fit_km <- survfit(surv_obj ~ 1)
+# Plot survival curve
+plot(fit_km, main="Kaplan-Meier Survival Curve", xlab="Time", ylab="Survival Probability")
+
+### C.2: Python Code for Kaplan-Meier Estimator
+```python
+from lifelines import CoxPHFitter
+# Load data
+df = pd.read_csv('data.csv')
+# Fit Cox model
+cph = CoxPHFitter()
+cph.fit(df, duration_col='duration', event_col='event', show_progress=True)
+# Display the coefficients
+cph.print_summary()
+# Plot the survival function of specific covariates
+cph.plot_partial_effects_on_outcome(covariates='age', values=[30, 40, 50], cmap='coolwarm')
+```
