@@ -229,8 +229,10 @@ surv_obj <- Surv(time = duration, event = status)
 fit_km <- survfit(surv_obj ~ 1)
 # Plot survival curve
 plot(fit_km, main="Kaplan-Meier Survival Curve", xlab="Time", ylab="Survival Probability")
+```
 
 ### C.2: Python Code for Kaplan-Meier Estimator
+
 ```python
 from lifelines import CoxPHFitter
 # Load data
