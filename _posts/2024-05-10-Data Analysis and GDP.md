@@ -218,7 +218,6 @@ As we move forward, it is essential for policymakers, economists, and researcher
 - Thompson, R. (2020). "The Impact of GDP Metrics on Developing Economies: Case Studies from Asia and Africa." Economic Analysis and Policy, 65, 253-271.
 - International Monetary Fund. (2021). "GDP Calculation Methods: A Comparative Analysis." Working Paper.
 - United Nations Development Programme. (2019). Human Development
-- Index Report: Measuring Human Progress.
 - Stiglitz, J., Sen, A., & Fitoussi, J. (2018). Mismeasuring Our Lives: Why GDP Doesn't Add Up. New York: W.W. Norton & Company.
 - World Economic Forum. (2020). "The Future of Economic Indicators: Trends and Innovations." Report.
 - European Central Bank. (2021). "Real-Time Economic Indicators and Their Impact on Monetary Policy." Working Paper.
@@ -231,3 +230,11 @@ As we move forward, it is essential for policymakers, economists, and researcher
 - Intergovernmental Panel on Climate Change. (2021). "Climate Change and Economic Indicators: A Synthesis Report." Assessment Report.
 - Transparency International. (2020). "Corruption Perceptions Index: Assessing Governance and Economic Performance." Report.
 - World Bank. (2022). "Political Stability and Economic Growth: A Comparative Analysis." Working Paper.
+- Costanza, R., et al. (2009). "Beyond GDP: The Need for New Measures of Progress." The Pardee Papers, No. 4, Boston University.
+- Talberth, J., Cobb, C., & Slattery, N. (2007). "The Genuine Progress Indicator 2006: A Tool for Sustainable Development." Redefining Progress.
+- Jackson, T. (2017). Prosperity Without Growth: Foundations for the Economy of Tomorrow. 2nd Edition. London: Routledge.
+- Daly, H.E., & Farley, J. (2011). Ecological Economics: Principles and Applications. 2nd Edition. Washington, DC: Island Press.
+- Nordhaus, W.D., & Tobin, J. (1972). "Is Growth Obsolete?" Economic Growth, NBER.
+- Fioramonti, L. (2013). Gross Domestic Problem: The Politics Behind the World's Most Powerful Number. London: Zed Books.
+- United Nations. (2014). "Human Development Report 2014: Sustaining Human Progress." United Nations Development Programme.
+- World Economic Forum. (2019). "The Inclusive Wealth Report 2018: Measuring Progress Towards Sustainability." Report.
