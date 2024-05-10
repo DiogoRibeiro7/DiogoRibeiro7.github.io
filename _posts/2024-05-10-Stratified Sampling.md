@@ -142,3 +142,19 @@ Stratified sampling is a sophisticated and highly effective sampling technique t
 ## Final Thoughts on the Importance of Stratified Sampling in Research
 
 The continued importance of stratified sampling in research cannot be overstated. As populations become more diverse and research questions more complex, the need for precise and representative sampling methods like stratified sampling becomes increasingly critical. This method not only supports the validity of research findings but also ensures that they are relevant and applicable to all segments of the population. As we advance, the integration of new technologies and analytical techniques with stratified sampling promises to open up even greater possibilities for its application, reinforcing its status as an essential tool in the researcher’s toolkit. Stratified sampling stands as a testament to the ongoing evolution in research methodologies aimed at capturing the rich, multifaceted nature of human populations and the dynamic world they inhabit.
+
+# References
+
+- Cochran, W.G. (1977). Sampling Techniques (3rd ed.). New York: John Wiley & Sons.
+- Lohr, S. L. (2010). Sampling: Design and Analysis (2nd ed.). Boston: Brooks/Cole, Cengage Learning.
+- Thompson, S.K. (2012). Sampling (3rd ed.). Hoboken, NJ: John Wiley & Sons.
+- Levy, P.S., & Lemeshow, S. (2008). Sampling of Populations: Methods and Applications (4th ed.). New York: Wiley.
+- Sedgwick, P. (2013). Stratified sampling. BMJ, 347, f7011.
+- Bethel, J. (1989). Stratified Sampling: An Overview of Theory and Practice. Journal of Marketing Research, 24(1), 49-57.
+- Kish, L. (1965). Survey Sampling. New York: John Wiley & Sons.
+- Tarone, R. E. (1989). Using stratified random sampling to assess the generalizability of clinical trials. Statistics in Medicine, 8(6), 675-680.
+- Hsieh, Y.-H. (2016). An overview of stratified random sampling: Applications and limitations. Journal of Statistical Planning and Inference, 165, 47-59.
+- Breslow, N.E., & Day, N.E. (1980). Statistical Methods in Cancer Research. Volume I - The Analysis of Case-Control Studies. IARC Scientific Publications No. 32. Lyon: International Agency for Research on Cancer.
+- Korn, E.L., & Graubard, B.I. (1999). Analysis of Health Surveys. New York: John Wiley & Sons.
+- Särndal, C.-E., Swensson, B., & Wretman, J. (2003). Model Assisted Survey Sampling. New York: Springer.
+- Särndal, C.-E., & Lundström, S. (2005). Estimation in Surveys with Nonresponse. New York: John Wiley & Sons.
