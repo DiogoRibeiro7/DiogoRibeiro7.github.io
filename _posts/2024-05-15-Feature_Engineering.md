@@ -1,6 +1,6 @@
 ---
-title: "Kullback-Leibler and Wasserstein Distances"
-subtitle: "Measuring Differences Between Distributions"
+title: "Automating Feature Engineering"
+subtitle: "Featuretools and TPOT for Efficient and Effective Feature Engineering"
 categories:
   - Mathematics
   - Statistics
