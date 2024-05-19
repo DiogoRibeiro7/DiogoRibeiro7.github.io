@@ -161,5 +161,5 @@ def gini_normalized(actual, pred):
 
 The Gini Coefficient and Default Rate are widely used in credit scoring and risk assessment. They help financial institutions evaluate the risk associated with borrowers and make informed lending decisions.
 
-##### Conclusion
+## Conclusion
 Understanding the Gini Coefficient and Default Rate is crucial for effective credit scoring and risk management. These metrics provide valuable insights into the performance of predictive models and the overall health of loan portfolios.
