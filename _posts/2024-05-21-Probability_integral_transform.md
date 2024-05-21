@@ -118,8 +118,39 @@ The Probability Integral Transform leverages these properties of CDFs to convert
 
 ### Copula Construction
 
-- Description of copulas
-- How the transform aids in creating copulas
+Copulas are powerful tools in statistics that allow for modeling and analyzing the dependence structure between multiple random variables. They are particularly useful in multivariate analysis, finance, risk management, and many other fields where understanding the relationships between variables is crucial.
+
+#### Description of Copulas
+
+A copula is a function that links univariate marginal distribution functions to form a multivariate distribution function. Essentially, it describes the dependency structure between random variables, separate from their marginal distributions. Formally, a copula $$C$$ is a multivariate cumulative distribution function with uniform marginals on the interval $$[0, 1]$$.
+
+The Sklar's Theorem is fundamental in the theory of copulas. It states that for any multivariate cumulative distribution function $$F$$ with marginals $$F_1, F_2, \ldots, F_n$$, there exists a copula $$C$$ such that:
+
+$$F(x_1, x_2, \ldots, x_n) = C(F_1(x_1), F_2(x_2), \ldots, F_n(x_n))$$
+
+Conversely, if $$C$$ is a copula and $$F_1, F_2, \ldots, F_n$$ are cumulative distribution functions, then $$F$$ defined above is a joint cumulative distribution function with marginals $$F_1, F_2, \ldots, F_n$$.
+
+#### How the Transform Aids in Creating Copulas
+
+The Probability Integral Transform plays a crucial role in constructing copulas. Here’s how it aids in the process:
+
+1. **Uniform Marginals**: The Probability Integral Transform converts any continuous random variable into a uniform random variable on the interval $$[0, 1]$$. This is essential for copula construction, as copulas require uniform marginals.
+
+2. **Standardizing Marginal Distributions**: Given random variables $$X_1, X_2, \ldots, X_n$$ with continuous marginal distribution functions $$F_{X1}, F_{X2}, \ldots, F_{Xn}$$, we can transform these variables using their respective CDFs to obtain uniform variables:
+
+   $$U_i = F_{Xi}(X_i)$$
+
+   for $$i = 1, 2, \ldots, n$$. Each $$U_i$$ is uniformly distributed over $$[0, 1]$$.
+
+3. **Constructing the Copula**: With the transformed variables $$U_1, U_2, \ldots, U_n$$, we can now construct a copula $$C$$. The copula captures the dependence structure between the original random variables $$X_1, X_2, \ldots, X_n$$:
+
+   $$C(u_1, u_2, \ldots, u_n) = F(F_{X1}^{-1}(u_1), F_{X2}^{-1}(u_2), \ldots, F_{Xn}^{-1}(u_n))$$
+
+   Here, $$F$$ is the joint cumulative distribution function of the original random variables, and $$F_{Xi}^{-1}$$ are the inverse CDFs (quantile functions) of the marginals.
+
+4. **Flexibility in Modeling Dependence**: By separating the marginal distributions from the dependence structure, copulas provide flexibility in modeling. We can choose appropriate marginal distributions for the individual variables and a copula that best describes their dependence.
+
+In summary, the Probability Integral Transform is essential for constructing copulas because it standardizes the marginal distributions of random variables to a uniform scale. This standardization is a prerequisite for applying Sklar's Theorem and effectively modeling the dependence structure between variables using copulas.
 
 ### Goodness of Fit Tests
 
@@ -164,6 +195,28 @@ The Probability Integral Transform leverages these properties of CDFs to convert
 
 ## References
 
-- List of sources and further reading
+1. **Casella, G., & Berger, R. L. (2002).** *Statistical Inference*. Duxbury Press.
+   - A comprehensive textbook covering fundamental concepts in statistics, including the Probability Integral Transform.
+
+2. **Devroye, L. (1986).** *Non-Uniform Random Variate Generation*. Springer.
+   - This book provides detailed methods for generating random variables, including the use of the Probability Integral Transform.
+
+3. **Joe, H. (1997).** *Multivariate Models and Dependence Concepts*. Chapman & Hall.
+   - An in-depth resource on multivariate statistical models and the role of copulas, which rely on the Probability Integral Transform.
+
+4. **Nelsen, R. B. (2006).** *An Introduction to Copulas*. Springer.
+   - A detailed introduction to copulas, emphasizing the use of the Probability Integral Transform in their construction.
+
+5. **Papoulis, A., & Pillai, S. U. (2002).** *Probability, Random Variables, and Stochastic Processes*. McGraw-Hill.
+   - A classic text on probability theory that includes discussions on CDFs and transformations.
+
+6. **Robert, C. P., & Casella, G. (2004).** *Monte Carlo Statistical Methods*. Springer.
+   - This book covers Monte Carlo methods and includes applications of the Probability Integral Transform in simulations.
+
+7. **Sklar, A. (1959).** Fonctions de répartition à n dimensions et leurs marges. *Publications de l'Institut de Statistique de l'Université de Paris*, 8, 229-231.
+   - The foundational paper introducing copulas and the use of the Probability Integral Transform in their creation.
+
+8. **Wasserman, L. (2004).** *All of Statistics: A Concise Course in Statistical Inference*. Springer.
+   - A modern textbook that provides a concise overview of key statistical concepts, including the Probability Integral Transform.
 
 ---
