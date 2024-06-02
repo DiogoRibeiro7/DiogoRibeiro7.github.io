@@ -77,8 +77,3 @@ To calculate the weighted moving average, you give more weight to recent days' r
 
 Understanding and applying statistical measures like the weighted moving average and standard deviation can greatly enhance nursing practice. By using these tools, nurses can better interpret patient data, identify significant trends, and make informed decisions to improve patient outcomes.
 
----
-
-### Keywords
-
-#nursingeducation #statisticalanalysis #datainterpretationinhealthcare #weightedmovingaverage #standarddeviation #clinicaldata #nursingpractice #professionalskills
