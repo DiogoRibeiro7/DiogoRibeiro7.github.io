@@ -21,14 +21,6 @@ tags:
 author_profile: false
 ---
 
-# Explaining Weighted Moving Average and Standard Deviation to Nurses
-
-## Subtitle: Simplifying Statistical Concepts for Everyday Nursing Practice
-
-### Keywords: nursing education, statistical analysis, data interpretation in healthcare, weighted moving average, standard deviation, clinical data, nursing practice, professional skills
-
----
-
 ### Introduction
 
 In nursing, understanding basic statistical concepts can enhance decision-making and patient care. Two important statistical measures are the weighted moving average and standard deviation. These tools help in analyzing trends and variability in patient data, making it easier to identify significant changes and patterns.
