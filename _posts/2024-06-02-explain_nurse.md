@@ -1,5 +1,5 @@
 ---
-title: "Explaining Weighted Moving Average and Standard Deviation to Nurses"
+title: "Explaining Weighted Moving Average and Standard Deviation in Health Care"
 
 categories:
     - Healthcare Education
