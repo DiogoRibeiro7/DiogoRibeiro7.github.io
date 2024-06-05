@@ -182,65 +182,94 @@ In conclusion, understanding these statistical concepts is fundamental for data 
 
 ### Hypothesis Testing
 
-- Definition
-- Process
-- Example
+- **Definition**: Hypothesis testing is a statistical method used to make inferences or draw conclusions about a population based on sample data. It involves making an assumption (hypothesis) about a population parameter and using sample data to test the validity of that assumption.
+- **Process**:
+  1. **Formulate Hypotheses**: Establish the null hypothesis (H0), which represents no effect or no difference, and the alternative hypothesis (H1), which represents the effect or difference.
+  2. **Choose Significance Level**: Select a significance level (α), commonly set at 0.05, which represents the probability of rejecting the null hypothesis when it is actually true.
+  3. **Calculate Test Statistic**: Use sample data to calculate a test statistic (e.g., t-score, z-score) that measures the degree of agreement between the sample data and the null hypothesis.
+  4. **Determine P-value**: Find the p-value, which indicates the probability of obtaining the observed results, or more extreme results, if the null hypothesis is true.
+  5. **Make Decision**: Compare the p-value to the significance level. If p-value ≤ α, reject the null hypothesis (H0); otherwise, do not reject the null hypothesis.
+- **Example**: Testing if a new drug reduces blood pressure more than the existing drug. H0: There is no difference in effectiveness. H1: The new drug is more effective.
 
 ### T-tests
 
-- Definition
-- Types
-- Example
+- **Definition**: T-tests are statistical tests used to compare the means of two groups to determine if they are significantly different from each other.
+- **Types**:
+  - **Independent Samples T-test**: Compares the means of two independent groups to see if there is a significant difference.
+  - **Paired Samples T-test**: Compares the means of the same group at two different times or under two different conditions to see if there is a significant difference.
+  - **One-sample T-test**: Compares the mean of a single sample to a known value or population mean.
+- **Example**: Comparing the average test scores of students from two different classes to see if there is a significant difference.
 
 ### Chi-Square Tests
 
-- Definition
-- Types
-- Example
+- **Definition**: Chi-square tests are statistical tests used to examine the relationships between categorical variables.
+- **Types**:
+  - **Chi-square Test for Independence**: Tests whether two categorical variables are independent or related.
+  - **Chi-square Goodness of Fit Test**: Tests whether the observed distribution of data fits an expected distribution.
+- **Example**: Testing if gender is related to voting preference. H0: Gender and voting preference are independent. H1: There is a relationship between gender and voting preference.
 
 ### ANOVA (Analysis of Variance)
 
-- Definition
-- Types
-- Example
+- **Definition**: ANOVA is a statistical method used to compare the means of three or more groups to determine if there is a statistically significant difference between them.
+- **Types**:
+  - **One-way ANOVA**: Compares means across one independent variable with multiple levels (e.g., comparing test scores across different teaching methods).
+  - **Two-way ANOVA**: Compares means across two independent variables (e.g., comparing test scores across different teaching methods and different age groups).
+- **Example**: Comparing average sales across four different regions to determine if region affects sales performance.
 
 ### Regression Analysis
 
-- Definition
-- Types
-- Example
+- **Definition**: Regression analysis is a statistical technique used to examine the relationship between a dependent variable and one or more independent variables. It helps in predicting the dependent variable based on the values of the independent variables.
+- **Types**:
+  - **Simple Linear Regression**: Examines the relationship between one dependent variable and one independent variable.
+  - **Multiple Regression**: Examines the relationship between one dependent variable and multiple independent variables.
+- **Example**: Predicting house prices based on factors such as square footage, number of bedrooms, and location.
 
 ### Correlation
 
-- Definition
-- Calculation
-- Example
+- **Definition**: Correlation measures the strength and direction of the relationship between two continuous variables.
+- **Calculation**: The correlation coefficient (r) ranges from -1 to 1. A positive r indicates a direct relationship, a negative r indicates an inverse relationship, and r = 0 indicates no relationship.
+  $$
+  r = \frac{n(\sum xy) - (\sum x)(\sum y)}{\sqrt{[n\sum x^2 - (\sum x)^2][n\sum y^2 - (\sum y)^2]}}
+  $$
+- **Example**: Examining the relationship between study hours and exam scores. A high positive correlation indicates that more study hours are associated with higher exam scores.
 
 ## Sampling Techniques
 
 ### Simple Random Sampling
 
-- Definition
-- Process
-- Example
+- **Definition**: Simple random sampling is a sampling method where every member of the population has an equal chance of being selected. This method ensures that the sample is unbiased and representative of the population.
+- **Process**:
+  1. **Define the Population**: Clearly identify the population from which the sample will be drawn.
+  2. **Assign Numbers**: Assign a unique number to each member of the population.
+  3. **Random Selection**: Use a random number generator or draw lots to select the sample.
+- **Example**: Suppose a researcher wants to study the reading habits of high school students. If the school has 1,000 students, the researcher assigns a number to each student and uses a random number generator to select 100 students.
 
 ### Stratified Sampling
 
-- Definition
-- Process
-- Example
+- **Definition**: Stratified sampling is a method where the population is divided into subgroups (strata) based on a specific characteristic, and random samples are taken from each stratum. This ensures that each subgroup is adequately represented.
+- **Process**:
+  1. **Identify Strata**: Divide the population into distinct subgroups based on relevant characteristics (e.g., age, gender, income).
+  2. **Random Sampling Within Strata**: Randomly select samples from each stratum proportionally or equally, depending on the study design.
+- **Example**: A researcher wants to analyze the job satisfaction of employees in a company with departments such as HR, IT, and Sales. The researcher divides the employees into these departments and randomly selects samples from each department.
 
 ### Cluster Sampling
 
-- Definition
-- Process
-- Example
+- **Definition**: Cluster sampling involves dividing the population into clusters, usually based on geographical or natural groupings, and then randomly selecting entire clusters. All individuals within the selected clusters are included in the sample.
+- **Process**:
+  1. **Identify Clusters**: Divide the population into clusters, ensuring each cluster is representative of the population.
+  2. **Random Selection of Clusters**: Randomly select a number of clusters.
+  3. **Sample Entire Clusters**: Include all members of the selected clusters in the sample.
+- **Example**: A researcher wants to survey the educational attainment of residents in a city. The city is divided into different neighborhoods (clusters), and the researcher randomly selects a few neighborhoods. All residents in the selected neighborhoods are surveyed.
 
 ### Systematic Sampling
 
-- Definition
-- Process
-- Example
+- **Definition**: Systematic sampling is a method where every nth member of the population is selected after a random starting point. This method is easy to implement and ensures a uniform sampling interval.
+- **Process**:
+  1. **Define the Population**: Clearly identify the population from which the sample will be drawn.
+  2. **Determine Sampling Interval**: Calculate the sampling interval (k) by dividing the population size (N) by the desired sample size (n).
+  3. **Random Starting Point**: Choose a random starting point within the first interval.
+  4. **Select Every nth Member**: From the starting point, select every nth member until the desired sample size is reached.
+- **Example**: A quality control manager wants to inspect every 10th product off the assembly line. If the first product to be inspected is chosen randomly between 1 and 10, every 10th product from that starting point is inspected.
 
 ## Bayesian Statistics
 
