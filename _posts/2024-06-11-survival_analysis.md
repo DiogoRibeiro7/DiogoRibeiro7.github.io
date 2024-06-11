@@ -458,3 +458,119 @@ As data availability and computational power continue to grow, the integration o
 
 By leveraging the appropriate survival analysis methods, researchers and analysts can gain valuable insights into the timing and occurrence of critical events. This enables better decision-making, strategy development, and understanding of underlying processes across various fields. Whether using parametric, non-parametric, or machine learning approaches, the key is to carefully consider the specific needs and characteristics of the data at hand.
 
+## Appendix: Python Code Examples
+
+This appendix provides Python code examples for performing survival analysis using both parametric and non-parametric methods.
+
+### Setup
+
+First, ensure you have the necessary libraries installed:
+
+```python
+!pip install lifelines matplotlib
+```
+
+### Import Libraries
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from lifelines import KaplanMeierFitter, WeibullFitter, CoxPHFitter
+```
+
+### Sample Data
+
+Let's create a sample dataset for demonstration:
+
+```python
+data = {
+    'duration': [5, 6, 6, 2, 4, 4, 1, 2, 3, 3],
+    'event_observed': [1, 0, 1, 1, 1, 1, 1, 0, 1, 1]
+}
+df = pd.DataFrame(data)
+```
+
+### Kaplan-Meier Estimator
+
+The Kaplan-Meier estimator is a non-parametric method to estimate the survival function:
+
+```python
+kmf = KaplanMeierFitter()
+kmf.fit(durations=df['duration'], event_observed=df['event_observed'])
+
+# Plotting the survival function
+kmf.plot_survival_function()
+plt.title('Kaplan-Meier Survival Curve')
+plt.xlabel('Time')
+plt.ylabel('Survival Probability')
+plt.show()
+```
+
+### Weibull Model
+
+The Weibull model is a flexible parametric method:
+
+```python
+wf = WeibullFitter()
+wf.fit(durations=df['duration'], event_observed=df['event_observed'])
+
+# Plotting the survival function
+wf.plot_survival_function()
+plt.title('Weibull Survival Curve')
+plt.xlabel('Time')
+plt.ylabel('Survival Probability')
+plt.show()
+```
+
+### Cox Proportional Hazards Model
+
+The Cox Proportional Hazards model is a semi-parametric method often enhanced with machine learning techniques:
+
+```python
+# Adding a covariate for demonstration
+df['age'] = [50, 60, 65, 45, 55, 50, 40, 70, 60, 50]
+
+cph = CoxPHFitter()
+cph.fit(df, duration_col='duration', event_col='event_observed')
+
+# Print the summary
+cph.print_summary()
+
+# Plotting the survival function
+cph.plot()
+plt.title('Cox Proportional Hazards Model')
+plt.show()
+```
+
+### Random Survival Forest (continued)
+
+For more complex data, a Random Survival Forest can be used. This requires the `scikit-survival` library:
+
+```python
+!pip install scikit-survival
+
+from sksurv.ensemble import RandomSurvivalForest
+from sksurv.util import Surv
+
+# Prepare the data
+data_y = Surv.from_dataframe('event_observed', 'duration', df)
+data_x = df[['age']]
+
+# Fit the model
+rsf = RandomSurvivalForest(n_estimators=100, min_samples_split=10)
+rsf.fit(data_x, data_y)
+
+# Plotting the survival function for a specific individual
+individual = np.array([[50]])  # Age 50
+survival_prob = rsf.predict_survival_function(individual)
+times = np.linspace(0, 10, 100)
+
+plt.step(times, survival_prob[0](times), where="post")
+plt.title('Random Survival Forest - Survival Function')
+plt.xlabel('Time')
+plt.ylabel('Survival Probability')
+plt.show()
+```
+
+This appendix has provided code examples for performing survival analysis using both parametric and non-parametric methods. The examples demonstrate how to fit and visualize survival functions using the Kaplan-Meier estimator, Weibull model, Cox Proportional Hazards model, and Random Survival Forest. These tools offer a range of approaches to handle different types of survival data, helping researchers and analysts to choose the best method for their specific needs.
