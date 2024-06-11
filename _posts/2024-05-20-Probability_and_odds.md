@@ -80,8 +80,3 @@ $$P = \frac{\text{Odds}}{1 + \text{Odds}}$$
 ## Conclusion
 
 Understanding the concepts of probability and odds is essential for accurately describing the likelihood of events in biostatistics. By mastering these concepts, you can better interpret and communicate statistical findings.
-
----
-
-**References**: 
-- [Insert references here]
