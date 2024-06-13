@@ -82,3 +82,36 @@ fn = 5
 mcc = calculate_mcc(tp, tn, fp, fn)
 print(f"The MCC is: {mcc}")
 ```
+
+## Interpretation of MCC
+- **Range**: Explain the range of MCC values (-1 to +1).
+- **Significance of Values**: 
+  - +1: Perfect prediction
+  - 0: No better than random prediction
+  - -1: Completely wrong prediction
+- **Comparison**: Compare MCC with other metrics (e.g., Accuracy, F1 Score).
+
+## Advantages of MCC
+- **Balanced Measure**: Discuss the balanced nature of MCC.
+- **Use in Imbalanced Datasets**: Explain why MCC is preferred in cases of imbalanced datasets.
+- **Comprehensive Evaluation**: Mention its robustness compared to other metrics.
+
+## Use Cases
+- **Real-World Examples**: Provide real-world examples where MCC is particularly useful.
+- **Case Studies**: Include case studies or applications in different domains (e.g., healthcare, finance).
+
+## Limitations
+- **Potential Drawbacks**: Discuss the limitations or drawbacks of MCC.
+- **Alternative Scenarios**: Scenarios where MCC might not be the best choice.
+
+## Conclusion
+- **Summary**: Recap the key points discussed in the article.
+- **Final Thoughts**: Emphasize the importance of using MCC for evaluating binary classification models.
+
+## References
+- List of academic papers, articles, and other sources referenced in the article.
+- Example: [Wikipedia: Matthews correlation coefficient](https://en.wikipedia.org/wiki/Matthews_correlation_coefficient)
+
+## Further Reading
+- Additional resources for readers interested in learning more about MCC and other evaluation metrics.
+- Example: Links to textbooks, online courses, or tutorials.
