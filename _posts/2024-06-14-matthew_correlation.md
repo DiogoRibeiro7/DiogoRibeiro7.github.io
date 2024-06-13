@@ -192,21 +192,187 @@ MCC is particularly useful in scenarios involving imbalanced datasets. Tradition
 Compared to other metrics, MCC offers a more comprehensive evaluation of a model's predictive capabilities. While metrics like accuracy and F1 score focus on specific aspects of performance, MCC encapsulates the overall effectiveness of a model. It provides a single value that reflects the balance between precision and recall, making it a robust and reliable metric for assessing binary classifiers.
 
 ## Use Cases
-- **Real-World Examples**: Provide real-world examples where MCC is particularly useful.
-- **Case Studies**: Include case studies or applications in different domains (e.g., healthcare, finance).
+
+### Real-World Examples
+
+MCC is particularly useful in various real-world scenarios where the balance between true positives, true negatives, false positives, and false negatives is critical. For instance, in medical diagnostics, correctly identifying both diseased and healthy individuals is crucial, making MCC an ideal metric for evaluating models.
+
+### Case Studies
+
+#### Healthcare
+
+In the healthcare domain, MCC can be used to evaluate models that predict the presence of diseases. For example, in predicting the presence of cancer from medical images, a high MCC value would indicate that the model accurately distinguishes between malignant and benign cases. This is essential to ensure both high detection rates (minimizing false negatives) and low misdiagnosis rates (minimizing false positives).
+
+#### Finance
+
+In finance, MCC can be applied to models predicting credit defaults. Accurately identifying both good and bad credit risks is vital to minimize financial losses and maintain customer satisfaction. An MCC evaluation ensures that the model performs well across all risk categories, reducing the likelihood of approving risky loans or rejecting good customers.
+
+#### Fraud Detection
+
+MCC is also valuable in fraud detection systems, where it is important to correctly identify fraudulent transactions (true positives) while minimizing the false identification of legitimate transactions as fraudulent (false positives). This balance is crucial for maintaining security without disrupting customer experience.
+
+### Applications in Different Domains
+
+- **Healthcare**: Diagnosis prediction, disease outbreak detection, patient outcome prediction.
+- **Finance**: Credit scoring, loan approval processes, fraud detection.
+- **Retail**: Customer churn prediction, inventory management, personalized marketing.
+- **Cybersecurity**: Intrusion detection systems, malware classification, phishing attack detection.
+
+By using MCC, these applications can ensure a balanced and comprehensive evaluation of their predictive models, leading to more reliable and effective decision-making processes.
 
 ## Limitations
-- **Potential Drawbacks**: Discuss the limitations or drawbacks of MCC.
-- **Alternative Scenarios**: Scenarios where MCC might not be the best choice.
+
+### Potential Drawbacks
+
+While MCC is a robust metric, it does have certain limitations. One potential drawback is that MCC can be difficult to interpret intuitively compared to simpler metrics like accuracy or precision. Additionally, MCC requires the computation of all elements of the confusion matrix, which might not be straightforward in some contexts.
+
+### Alternative Scenarios
+
+There are scenarios where MCC might not be the best choice:
+
+- **Multi-Class Classification**: MCC is primarily designed for binary classification. For multi-class problems, other metrics like the macro-averaged F1 score or the Cohen's Kappa coefficient might be more appropriate.
+- **Interpretability**: In cases where stakeholders need easily interpretable metrics, simpler measures like accuracy or the F1 score could be preferred, despite their potential shortcomings in certain contexts.
+- **Class Imbalance Handling**: Although MCC handles class imbalance well, in extremely imbalanced datasets, more specialized metrics like the balanced accuracy or area under the precision-recall curve (AUC-PR) might offer more insights.
+
+By understanding these limitations, practitioners can make informed decisions on when to use MCC and when alternative metrics might be more suitable.
 
 ## Conclusion
-- **Summary**: Recap the key points discussed in the article.
-- **Final Thoughts**: Emphasize the importance of using MCC for evaluating binary classification models.
+
+### Summary
+
+In this article, we explored Matthew’s Correlation Coefficient (MCC) as a measure for evaluating binary classification models. We discussed its definition, historical background, and significance in machine learning and statistics. We also delved into the mathematical formulation of MCC, providing a step-by-step example calculation. Furthermore, we highlighted the advantages of MCC, particularly its balanced nature and suitability for imbalanced datasets, and presented real-world use cases across various domains. Lastly, we considered the limitations of MCC and scenarios where alternative metrics might be more appropriate.
+
+### Final Thoughts
+
+MCC stands out as a powerful and comprehensive metric for assessing binary classifiers. Its ability to consider all four components of the confusion matrix ensures a balanced evaluation, making it particularly useful in cases of class imbalance. By incorporating MCC into the evaluation process, data scientists and practitioners can achieve a more accurate and reliable understanding of their models' performance. As such, MCC is an essential tool for ensuring robust and effective classification outcomes.
 
 ## References
-- List of academic papers, articles, and other sources referenced in the article.
-- Example: [Wikipedia: Matthews correlation coefficient](https://en.wikipedia.org/wiki/Matthews_correlation_coefficient)
 
-## Further Reading
-- Additional resources for readers interested in learning more about MCC and other evaluation metrics.
-- Example: Links to textbooks, online courses, or tutorials.
+1. Matthews, B. W. (1975). Comparison of the predicted and observed secondary structure of T4 phage lysozyme. *Biochimica et Biophysica Acta (BBA) - Protein Structure*, 405(2), 442-451. doi:10.1016/0005-2795(75)90109-9
+
+2. Chicco, D., & Jurman, G. (2020). The advantages of the Matthews correlation coefficient (MCC) over F1 score and accuracy in binary classification evaluation. *BMC Genomics*, 21, 6. doi:10.1186/s12864-019-6413-7
+
+3. Powers, D. M. W. (2011). Evaluation: From Precision, Recall and F-Measure to ROC, Informedness, Markedness & Correlation. *Journal of Machine Learning Technologies*, 2(1), 37-63.
+
+4. Baldi, P., Brunak, S., Chauvin, Y., Andersen, C. A. F., & Nielsen, H. (2000). Assessing the accuracy of prediction algorithms for classification: An overview. *Bioinformatics*, 16(5), 412-424. doi:10.1093/bioinformatics/16.5.412
+
+5. Tharwat, A. (2018). Classification assessment methods. *Applied Computing and Informatics*, 17(1), 168-192. doi:10.1016/j.aci.2018.08.003
+
+6. Fawcett, T. (2006). An introduction to ROC analysis. *Pattern Recognition Letters*, 27(8), 861-874. doi:10.1016/j.patrec.2005.10.010
+
+7. Hand, D. J., & Till, R. J. (2001). A Simple Generalisation of the Area Under the ROC Curve for Multiple Class Classification Problems. *Machine Learning*, 45(2), 171-186. doi:10.1023/A:1010920819831
+
+## Appendix A - Fortran Code Snippet
+
+```fortran
+program mcc_calculation
+    implicit none
+
+    ! Variable declarations
+    integer :: tp, tn, fp, fn
+    real :: mcc
+
+    ! Assign hypothetical values to the confusion matrix components
+    tp = 50
+    tn = 30
+    fp = 10
+    fn = 5
+
+    ! Calculate MCC
+    mcc = calculate_mcc(tp, tn, fp, fn)
+
+    ! Print the MCC result
+    if (mcc /= -2.0) then
+        print *, 'MCC: ', mcc
+    else
+        print *, 'MCC calculation is invalid (division by zero).'
+    endif
+
+contains
+
+    ! Function to calculate MCC
+    real function calculate_mcc(tp, tn, fp, fn)
+        implicit none
+        integer, intent(in) :: tp, tn, fp, fn
+        real :: numerator, denominator
+
+        ! Calculate numerator and denominator
+        numerator = real(tp * tn - fp * fn)
+        denominator = sqrt(real((tp + fp) * (tp + fn) * (tn + fp) * (tn + fn)))
+
+        ! Check for division by zero
+        if (denominator == 0.0) then
+            calculate_mcc = -2.0
+        else
+            calculate_mcc = numerator / denominator
+        endif
+    end function calculate_mcc
+
+end program mcc_calculation
+```
+
+### Explanation
+
+**Variable Declarations**: We declare the confusion matrix components `tp`, `tn`, `fp`, and `fn` as integers, and the resulting `mcc` as a real number.
+
+**Assign Hypothetical Values**: Assign values to `tp`, `tn`, `fp`, and `fn` as per the example.
+
+**Calculate MCC**: Call the `calculate_mcc` function to compute the MCC value.
+
+**Print the MCC Result**: Print the MCC result. If the calculation is invalid (denominator is zero), print an error message.
+
+**Function to Calculate MCC**:
+
+- **Numerator Calculation**: Compute the numerator as \((tp \times tn) - (fp \times fn)\).
+- **Denominator Calculation**: Compute the denominator as the square root of the product \((tp + fp) \times (tp + fn) \times (tn + fp) \times (tn + fn)\).
+- **Division by Zero Check**: Check if the denominator is zero. If it is, return a special value (-2.0) indicating an invalid calculation. Otherwise, return the MCC value.
+
+### Compilation and Execution
+
+To compile and run this Fortran program, save it to a file (e.g., `mcc_calculation.f90`) and use a Fortran compiler like `gfortran`:
+
+```sh
+gfortran -o mcc_calculation mcc_calculation.f90
+./mcc_calculation
+```
+
+## Appendix B: C Code Snippet
+
+```c
+
+#include <stdio.h>
+#include <math.h>
+
+float calculate_mcc(int tp, int tn, int fp, int fn) {
+    float numerator, denominator;
+
+    // Calculate numerator and denominator
+    numerator = (float)(tp * tn - fp * fn);
+    denominator = sqrt((float)(tp + fp) * (tp + fn) * (tn + fp) * (tn + fn));
+
+    // Check for division by zero
+    if (denominator == 0.0) {
+        return -2.0; // Return a special value indicating invalid calculation
+    } else {
+        return numerator / denominator;
+    }
+}
+
+int main() {
+    // Variable declarations
+    int tp = 50, tn = 30, fp = 10, fn = 5;
+    float mcc;
+
+    // Calculate MCC
+    mcc = calculate_mcc(tp, tn, fp, fn);
+
+    // Print the MCC result
+    if (mcc != -2.0) {
+        printf("MCC: %f\n", mcc);
+    } else {
+        printf("MCC calculation is invalid (division by zero).\n");
+    }
+
+    return 0;
+}
+```
