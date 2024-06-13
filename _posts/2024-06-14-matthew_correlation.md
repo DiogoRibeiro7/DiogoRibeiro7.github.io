@@ -20,9 +20,8 @@ tags:
 author_profile: false
 ---
 
-# Matthew’s Correlation Coefficient (MCC): A Detailed Explanation
-
 ## Introduction
+
 - **Definition of MCC**: Introduction to Matthew’s Correlation Coefficient.
 - **Importance**: The significance of MCC in evaluating binary classification models.
 - **Objective**: Overview of what will be covered in the article.
@@ -42,11 +41,13 @@ author_profile: false
   - False Negatives (FN)
 
 ## Example Calculation
+
 - **Hypothetical Data**: Provide a step-by-step example with hypothetical data.
 - **Calculation**: Show the detailed calculation of MCC using the provided formula.
 - **Interpretation**: Interpret the result of the example calculation.
 
 ## Python Implementation
+
 - **Code Snippet**: Provide a Python function to calculate MCC.
 - **Explanation**: Explain the code in detail.
 - **Example Usage**: Demonstrate the usage of the function with sample data.
