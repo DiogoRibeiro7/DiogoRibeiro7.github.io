@@ -1,4 +1,4 @@
-s
+---
 title: "How the Human Body Affects RSSI: Detailed Analysis and Practical Approaches"
 categories:
   - Wireless Communication
