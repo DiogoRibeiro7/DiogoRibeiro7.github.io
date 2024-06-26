@@ -249,12 +249,44 @@ Given the difficulty in distinguishing MAR from MNAR, sensitivity analyses play 
 
 - **Interpretation**: Sensitivity analyses provide a range of possible outcomes, helping researchers understand the potential biases introduced by different missing data mechanisms. If the study conclusions remain consistent across various scenarios, researchers can be more confident in their findings. Conversely, if the results vary widely, it indicates that the study is sensitive to the missing data mechanism, warranting cautious interpretation.
 
-In conclusion, distinguishing MAR from MNAR is a complex but essential task in clinical research. While it is often impossible to definitively classify the missing data mechanism, sensitivity analyses offer a valuable tool for exploring the impact of different assumptions and ensuring the robustness of study conclusions. By incorporating sensitivity analyses into their research, scientists can better understand the potential biases introduced by missing data and make more informed decisions about their findings.
+Distinguishing MAR from MNAR is a complex but essential task in clinical research. While it is often impossible to definitively classify the missing data mechanism, sensitivity analyses offer a valuable tool for exploring the impact of different assumptions and ensuring the robustness of study conclusions. By incorporating sensitivity analyses into their research, scientists can better understand the potential biases introduced by missing data and make more informed decisions about their findings.
 
 ## Methods to Deal with Missing Data
+
 ### Complete Case Analysis (CCA)
-- Description and limitations.
-- Appropriate situations for CCA.
+
+#### Description and Limitations
+
+Complete Case Analysis (CCA), also known as listwise deletion, is a method for handling missing data where only the cases with complete data across all variables are included in the analysis. This approach is straightforward and easy to implement, as it involves simply excluding any records with missing values from the dataset.
+
+- **Description**: In CCA, all observations (or cases) that have missing values for any of the variables included in the analysis are removed. The analysis is then conducted using only the subset of complete cases. This method assumes that the remaining data are representative of the entire dataset.
+  
+- **Limitations**:
+  - **Reduction in Sample Size**: One of the primary drawbacks of CCA is the potential loss of a significant portion of the dataset, which can lead to a substantial reduction in sample size. This reduction decreases the statistical power of the study, making it harder to detect true effects.
+  - **Bias Introduction**: If the data are not MCAR, CCA can introduce bias into the analysis. Specifically, if the missingness is related to the outcome or predictor variables, the complete cases may not be representative of the original population, leading to biased estimates.
+  - **Inefficiency**: Even if the data are MCAR, CCA is generally less efficient than other methods, such as Multiple Imputation (MI), because it does not utilize all available information. This inefficiency can result in wider confidence intervals and less precise estimates.
+  - **Not Feasible for High Missing Data**: In datasets with a high proportion of missing data, CCA may not be feasible as it could result in an unacceptably small sample size, undermining the reliability of the analysis.
+
+#### Appropriate Situations for CCA
+
+Despite its limitations, there are specific scenarios where CCA can be a valid and appropriate method for handling missing data:
+
+- **MCAR Data**: CCA is most appropriate when the missing data mechanism is Missing Completely at Random (MCAR). In this scenario, the missingness is unrelated to any observed or unobserved variables, meaning that the complete cases are a random subset of the original dataset. Under MCAR, CCA can produce unbiased estimates.
+  
+- **Small Proportion of Missing Data**: When the proportion of missing data is very small (e.g., less than 5%), the impact of excluding incomplete cases may be minimal. In such cases, the loss of data and potential bias introduced by CCA are limited, making it a viable option.
+  
+- **Sensitivity Analyses**: CCA can be used as part of a sensitivity analysis to compare results with other missing data methods. By analyzing both complete cases and imputed datasets, researchers can assess the robustness of their findings across different handling methods.
+  
+- **Secondary Analyses**: In some situations, CCA might be used for secondary or exploratory analyses where the primary focus is not on the missing data but rather on generating preliminary insights. However, any conclusions drawn from such analyses should be interpreted with caution.
+
+#### Example
+
+Consider a clinical study examining the effects of a new medication on blood pressure. The dataset includes variables such as age, gender, baseline blood pressure, and follow-up blood pressure measurements. Suppose that 3% of the follow-up blood pressure measurements are missing at random due to technical errors in recording.
+
+- **Application of CCA**: Researchers decide to use CCA, excluding the 3% of cases with missing follow-up measurements. Given the small proportion of missing data and the assumption that the missingness is MCAR, CCA is applied without significant concerns about bias.
+- **Results Interpretation**: The analysis of the complete cases yields results that are considered unbiased and reliable. However, researchers also perform sensitivity analyses using Multiple Imputation (MI) to ensure that their findings are robust to different missing data assumptions.
+
+While Complete Case Analysis (CCA) has notable limitations, it can be an appropriate method for handling missing data under specific conditions, particularly when the missing data mechanism is MCAR or when the proportion of missing data is very small. Researchers must carefully consider the context and potential biases before deciding to use CCA, and it is often advisable to complement CCA with more sophisticated methods like MI to ensure robust and reliable results.
 
 ### Single Imputation Methods
 - Mean imputation, regression imputation, last observation carried forward.
