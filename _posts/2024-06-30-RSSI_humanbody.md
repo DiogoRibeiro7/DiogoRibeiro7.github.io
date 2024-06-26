@@ -69,6 +69,6 @@ tags:
 
 **Recommendation:** Utilize beamforming technology to direct signals towards the receiver, avoiding obstacles like the human body. This can improve signal strength and stability.
 
-# Conclusion
+## Conclusion
 
 Understanding the effects of a human body on RSSI is crucial for designing robust wireless communication systems. By considering signal attenuation, reflection, shadowing, and interference, and implementing mitigations like strategic antenna placement, diversity techniques, power control, higher frequency use, and beamforming, the negative impacts can be minimized, ensuring more reliable and efficient wireless communication.
