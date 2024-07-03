@@ -155,7 +155,7 @@ where $$MA_t$$ is the moving average at time $$t$$, $$n$$ is the window size, an
 
 ### Explain the Concept of Window Size and Its Impact on the Smoothing Process
 
-The window size, often denoted as \( n \), is a critical parameter in the moving average calculation. It determines the number of data points to consider for each average calculation. The choice of window size significantly impacts the smoothing process:
+The window size, often denoted as $$n$$, is a critical parameter in the moving average calculation. It determines the number of data points to consider for each average calculation. The choice of window size significantly impacts the smoothing process:
 
 - **Small Window Size**: A smaller window size results in a less smooth curve that closely follows the original data. While it may capture short-term fluctuations, it might not effectively filter out noise.
 - **Large Window Size**: A larger window size produces a smoother curve that emphasizes long-term trends. However, it can oversmooth the data, potentially obscuring important short-term variations and making the smoothed series lag behind actual changes in the data.
