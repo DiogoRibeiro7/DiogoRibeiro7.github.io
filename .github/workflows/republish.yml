@@ -3,7 +3,7 @@ name: Republish
 on:
     workflow_dispatch:
     schedule:
-          - cron: "3 0 * * *"
+          - cron: "0 3 * * *"
 
 permissions:
   contents: read
