@@ -7,10 +7,6 @@
 name: Deploy Jekyll site to Pages
 
 on:
-  # Runs every day at midnight UTC
-  schedule:
-    - cron: '0 1 * * *'
-
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
