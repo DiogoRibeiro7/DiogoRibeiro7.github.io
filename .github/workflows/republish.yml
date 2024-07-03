@@ -1,8 +1,9 @@
 name: Republish
 
 on:
-  schedule:
-    - cron: '25 10 * * *'  # Run at 12:01 pm every day.
+    workflow_dispatch:
+    schedule:
+          - cron: "35 11 * * *"
 
 permissions:
   contents: read
