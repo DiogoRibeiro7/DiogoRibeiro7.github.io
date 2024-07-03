@@ -356,9 +356,9 @@ Here's the implementation:
 
 ```python
 import numpy as np
-from pyflink.table import EnvironmentSettings, TableEnvironment
+from pyflink.table import EnvironmentSettings, TableEnvironment, DataTypes
 from pyflink.datastream import StreamExecutionEnvironment, TimeCharacteristic
-from pyflink.table.descriptors import Schema, Csv, FileSystem
+from pyflink.table.descriptors import Schema
 from pyflink.table.udf import udf
 
 def savitzky_golay(y: np.ndarray, window_size: int, poly_order: int) -> np.ndarray:
