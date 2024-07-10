@@ -151,4 +151,3 @@ git commit -m "Your commit message"
 By following these steps, you can ensure that your code adheres to the quality checks defined in your pre-commit hooks before every commit.
 
 Pre-commit hooks are an invaluable tool for maintaining code quality and consistency in your projects. By automating the process of code checks and fixes, they help prevent common errors and streamline your workflow. Setting up pre-commit hooks in your Python project is straightforward and can significantly enhance your development process. Give it a try and experience the benefits of automated code quality checks firsthand.
-
