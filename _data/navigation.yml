@@ -6,6 +6,8 @@ main:
     url: /categories/
   - title: "Posts by Tag"
     url: /tags/
+  - title: "Posts by Year"
+    url: /year-archive/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
