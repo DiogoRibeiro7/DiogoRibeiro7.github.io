@@ -2,11 +2,11 @@
 main:
   - title: "Posts"
     url: /
-  - title: "Posts by Category"
+  - title: "by Category"
     url: /categories/
-  - title: "Posts by Tag"
+  - title: "by Tag"
     url: /tags/
-  - title: "Posts by Year"
+  - title: "by Year"
     url: /year-archive/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
