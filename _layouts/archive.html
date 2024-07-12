@@ -21,7 +21,7 @@ layout: default
     {% unless page.header.overlay_color or page.header.overlay_image %}
       <h1 id="page-title" class="page__title">{{ page.title }}</h1>
     {% endunless %}
-    <div class="posts-by-year">
+    <!-- <div class="posts-by-year">
       {% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
       {% for year in posts_by_year %}
         <h2>{{ year.name }}</h2>
@@ -34,6 +34,6 @@ layout: default
           {% endfor %}
         </ul>
       {% endfor %}
-    </div>
+    </div> -->
   </div>
-</div>
+<!-- </div> -->
