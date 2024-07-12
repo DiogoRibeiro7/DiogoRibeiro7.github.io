@@ -21,7 +21,7 @@ jobs:
     - name: Check if branch exists
       id: check_branch
       run: |
-        if git show-ref --verify --quiet refs/heads/feaat/reserve_branche; then
+        if git show-ref --verify --quiet refs/heads/feat/reserve_branche; then
           echo "Branch exists"
           echo "branch_exists=true" >> $GITHUB_ENV
         else
