@@ -1,8 +1,9 @@
 name: Scheduled Merge
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '25 7 * * *' # This schedule is set to run at 10:00 AM UTC every day
+    - cron: '25 6 * * *' # This schedule is set to run at 10:00 AM UTC every day
 
 jobs:
   merge-branch:
