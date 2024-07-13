@@ -105,9 +105,9 @@ analytics:
 # Site Author
 author:
   name             : "Diogo Ribeiro"
-  avatar           : "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/me_myself_and_i.jpg"
   bio              : "Just another boring **Data Science & Research Lead**, writing about Mathematics, Statistics, Data Science and Machine Learning."
-  location         : "Porto, Portugal"
+  location         : "Porto, Portugal and London, UK"
   email            : "hansolo.dj@gmail.com"
   links:
     - label: "Email"
