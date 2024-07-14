@@ -1,13 +1,13 @@
 ---
 title: "Sequential Detection of Switches in Models with Changing Structures"
 categories:
-- Data Science
-- Statistics
-- Machine Learning
+    - Data Science
+    - Statistics
+    - Machine Learning
 tags:
-- Change Detection
-- Structural Changes
-- Real-time Processing
+    - Change Detection
+    - Structural Changes
+    - Real-time Processing
 author_profile: false
 ---
 
