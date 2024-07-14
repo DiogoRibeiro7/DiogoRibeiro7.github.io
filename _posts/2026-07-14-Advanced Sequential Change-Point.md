@@ -17,26 +17,26 @@ Sequential change-point detection is a dynamic field that deals with real-time m
 
 ### Change-Point Model
 
-Consider a sequence of observations $\{X_t\}_{t=1}^n$ where a change-point $\tau$ might occur such that:
+Consider a sequence of observations $$\{X_t\}_{t=1}^n$$ where a change-point $$\tau$$ might occur such that:
 
-For $t \leq \tau$, $X_t \sim F_0$
+For $$t \leq \tau$$, $$X_t \sim F_0$$
 
-For $t > \tau$, $X_t \sim F_1$
+For $$t > \tau$$, $$X_t \sim F_1$$
 
-Here, $F_0$ and $F_1$ are the distributions before and after the change, respectively. The change-point $\tau$ is unknown and needs to be detected.
+Here, $$F_0$$ and $$F_1$$ are the distributions before and after the change, respectively. The change-point $$\tau$$ is unknown and needs to be detected.
 
 ### Hypothesis Testing Framework
 
 The change-point detection problem can be framed as a hypothesis testing problem:
 
-- Null hypothesis ($H_0$): No change, i.e., $F_0 = F_1$
-- Alternative hypothesis ($H_1$): There is a change, i.e., $F_0 \neq F_1$
+- Null hypothesis ($$H_0$$): No change, i.e., $$F_0 = F_1$$
+- Alternative hypothesis ($$H_1$$): There is a change, i.e., $$F_0 \neq F_1$$
 
 ## Advanced Methods for Sequential Change-Point Detection
 
 ### Likelihood Ratio Test (LRT)
 
-The likelihood ratio test is a powerful method for detecting changes in statistical properties. The likelihood ratio for a potential change-point $k$ is given by:
+The likelihood ratio test is a powerful method for detecting changes in statistical properties. The likelihood ratio for a potential change-point $$k$$ is given by:
 
 $$
 \Lambda_k = \frac{\prod_{t=1}^k f_0(X_t) \prod_{t=k+1}^n f_1(X_t)}{\prod_{t=1}^n f_0(X_t)}
@@ -48,7 +48,7 @@ $$
 \Lambda_n = \max_{1 \leq k < n} \Lambda_k
 $$
 
-If $\Lambda_n$ exceeds a critical value, a change is detected.
+If $$\Lambda_n$$ exceeds a critical value, a change is detected.
 
 ### Cumulative Sum (CUSUM) Method
 
@@ -58,7 +58,7 @@ $$
 C_n = \max_{0 \leq k < n} \left| \sum_{t=k+1}^n (X_t - \mu) \right|
 $$
 
-where $\mu$ is the target mean. A change is detected if $C_n$ exceeds a predefined threshold $h$.
+where $$\mu$$ is the target mean. A change is detected if $$C_n$$ exceeds a predefined threshold $$h$$.
 
 ### Page's Cumulative Sum (CUSUM) Test
 
@@ -68,7 +68,7 @@ $$
 W_n = \max_{1 \leq k < n} \left( \sum_{t=k+1}^n (X_t - \mu_0) - \frac{(n-k)}{2}\delta \right)
 $$
 
-where $\delta$ is the magnitude of the shift. A change-point is signaled if $W_n$ exceeds a threshold.
+where $$\delta$$ is the magnitude of the shift. A change-point is signaled if $$W_n$$ exceeds a threshold.
 
 ### Shiryaev-Roberts Procedure
 
@@ -78,13 +78,13 @@ $$
 R_t = \left( 1 + R_{t-1} \right) \frac{f_1(X_t)}{f_0(X_t)}
 $$
 
-A change is detected if $R_t$ exceeds a threshold. This method balances the detection delay and false alarm rate effectively.
+A change is detected if $$R_t$$ exceeds a threshold. This method balances the detection delay and false alarm rate effectively.
 
 ## Practical Implementations
 
 ### Algorithm Design
 
-1. **Initialize Parameters**: Set initial values for the parameters such as means ($\mu_0, \mu_1$), variances ($\sigma_0^2, \sigma_1^2$), and thresholds ($h$).
+1. **Initialize Parameters**: Set initial values for the parameters such as means ($$\mu_0, \mu_1$$), variances ($$\sigma_0^2, \sigma_1^2$$), and thresholds ($$h$$).
 2. **Real-Time Data Collection**: Collect data in a sequential manner.
 3. **Compute Test Statistics**: Update the chosen test statistic (LRT, CUSUM, Page's, or Shiryaev-Roberts) with each new observation.
 4. **Apply Decision Rule**: Compare the test statistic to the predefined threshold. If it exceeds the threshold, signal a change-point.
@@ -94,12 +94,12 @@ A change is detected if $R_t$ exceeds a threshold. This method balances the dete
 
 To implement the CUSUM method, follow these steps:
 
-1. **Initialize**: $C_0 = 0$
-2. **Update Statistic**: For each new observation $X_n$:
+1. **Initialize**: $$C_0 = 0$$
+2. **Update Statistic**: For each new observation $$X_n$$:
    $$
    C_n = \max(0, C_{n-1} + (X_n - \mu_0 - \delta))
    $$
-3. **Decision Rule**: Signal a change-point if $C_n > h$.
+3. **Decision Rule**: Signal a change-point if $$C_n > h$$.
 
 ## Real-World Applications
 
@@ -109,9 +109,9 @@ In manufacturing, sequential change-point detection is used to monitor the produ
 
 **Example**: Monitoring the diameter of produced parts:
 
-Before change: $X_t \sim N(\mu_0, \sigma^2)$
+Before change: $$X_t \sim N(\mu_0, \sigma^2)$$
 
-After change: $X_t \sim N(\mu_1, \sigma^2)$
+After change: $$X_t \sim N(\mu_1, \sigma^2)$$
 
 Using the CUSUM method, deviations from the target diameter are accumulated, and a change is signaled when the cumulative sum exceeds a threshold.
 
@@ -121,9 +121,9 @@ In finance, change-point detection helps identify shifts in market trends or vol
 
 **Example**: Monitoring stock returns:
 
-Before change: $X_t \sim N(\mu_0, \sigma^2)$
+Before change: $$X_t \sim N(\mu_0, \sigma^2)$$
 
-After change: $X_t \sim N(\mu_1, \sigma^2)$
+After change: $$X_t \sim N(\mu_1, \sigma^2)$$
 
 The likelihood ratio test can be used to detect changes in the mean return or volatility.
 
@@ -133,9 +133,9 @@ Environmental scientists use change-point detection to identify changes in envir
 
 **Example**: Monitoring air pollution levels:
 
-Before change: $X_t \sim N(\mu_0, \sigma^2)$
+Before change: $$X_t \sim N(\mu_0, \sigma^2)$$
 
-After change: $X_t \sim N(\mu_1, \sigma^2)$
+After change: $$X_t \sim N(\mu_1, \sigma^2)$$
 
 Page's test can detect shifts in pollution levels, indicating potential changes in emissions or meteorological conditions.
 
@@ -145,9 +145,9 @@ In biostatistics, change-point detection is used to monitor changes in clinical 
 
 **Example**: Monitoring disease incidence rates:
 
-Before change: $X_t \sim Poisson(\lambda_0)$
+Before change: $$X_t \sim Poisson(\lambda_0)$$
 
-After change: $X_t \sim Poisson(\lambda_1)$
+After change: $$X_t \sim Poisson(\lambda_1)$$
 
 The Shiryaev-Roberts procedure can detect increases in incidence rates, signaling a potential outbreak.
 
@@ -155,7 +155,7 @@ The Shiryaev-Roberts procedure can detect increases in incidence rates, signalin
 
 ### Likelihood Ratio Test (LRT) Derivation
 
-The likelihood ratio for a change-point at $k$ is:
+The likelihood ratio for a change-point at $$k$$ is:
 
 $$
 \Lambda_k = \frac{\prod_{t=1}^k f_0(X_t) \prod_{t=k+1}^n f_1(X_t)}{\prod_{t=1}^n f_0(X_t)}
@@ -195,7 +195,7 @@ $$
 W_n = \max_{1 \leq k < n} \left( \sum_{t=k+1}^n (X_t - \mu_0) - \frac{(n-k)}{2} \delta \right)
 $$
 
-This incorporates the cumulative sum of deviations from the mean and adjusts for the expected shift $\delta$.
+This incorporates the cumulative sum of deviations from the mean and adjusts for the expected shift $$\delta$$.
 
 Sequential change-point detection is a vital tool in various fields for real-time monitoring and timely detection of changes in data sequences. Advanced methods such as Likelihood Ratio Tests, CUSUM, Page's Test, and the Shiryaev-Roberts procedure offer robust solutions tailored to different types of changes and data characteristics. Understanding the theoretical foundations, implementing practical algorithms, and applying these methods in real-world scenarios enable effective monitoring and response to changes in diverse applications.
 
