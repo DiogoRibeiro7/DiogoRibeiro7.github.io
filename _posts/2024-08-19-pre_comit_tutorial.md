@@ -210,6 +210,3 @@ By following the steps outlined in this tutorial, you can integrate pre-commit h
 For further reading and more advanced configurations, refer to the [official pre-commit documentation](https://pre-commit.com/) and explore the wide range of available hooks and plugins.
 
 Happy coding!
-```
-
-```yaml
