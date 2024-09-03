@@ -1,5 +1,5 @@
 ---
-title: "Real-time Data Streaming using Python and Kafka (Part 1)"
+title: "Real-time Data Streaming using Python and Kafka"
 categories:
 - Data Engineering
 - Real-time Processing
