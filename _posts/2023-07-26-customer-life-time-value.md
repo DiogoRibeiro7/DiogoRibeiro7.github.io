@@ -9,6 +9,9 @@ tags:
 - Data Integration
 - Predictive Analytics
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ![Customer Lifetime Value](https://unsplash.com/photos/BJaqPaH6AGQ)

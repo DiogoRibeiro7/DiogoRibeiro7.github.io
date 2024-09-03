@@ -11,6 +11,9 @@ tags:
 - Exponential Distribution
 - Beta Distribution
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Probability distributions form the foundation of statistical modeling and machine learning, enabling the representation and analysis of uncertainty in data. These distributions provide a mathematical framework to describe how data points are spread, which is crucial for making inferences, predictions, and decisions in various applications. This document will explore key probability distributions used in machine learning, their properties, and their applications.

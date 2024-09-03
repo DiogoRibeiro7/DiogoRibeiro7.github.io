@@ -8,6 +8,9 @@ tags:
 - Hypothesis Testing
 - Bayesian Probability
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 With statistics at the heart of data science, hypothesis testing is a logical first step for detecting data drift. The fundamental idea behind hypothesis testing is straightforward: define a null hypothesis that assumes no drift in the data, then use the p-value to determine whether this hypothesis should be rejected. However, when applied to detecting data drift in production environments, traditional hypothesis testing can be unreliable and potentially misleading. This article explores the limitations of hypothesis testing for this purpose and suggests Bayesian probability as a more effective alternative.

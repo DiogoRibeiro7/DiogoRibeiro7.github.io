@@ -8,6 +8,9 @@ tags:
 - Feature Selection
 - Dimensionality Reduction
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 At the end of this blog, you will be able to visually explain the variance in your data, select the most informative features, and create insightful plots. We will cover the following topics in detail:

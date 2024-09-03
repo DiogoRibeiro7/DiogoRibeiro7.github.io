@@ -7,6 +7,9 @@ tags:
 - Data Analysis
 - Null Hypothesis
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ## The Universal Structure of Statistical Tests

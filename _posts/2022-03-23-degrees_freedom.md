@@ -12,7 +12,11 @@ tags:
     - Data Analysis
     - Hypothesis Testing
     - Mechanical Systems
+
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ## Introduction to Degrees of Freedom
