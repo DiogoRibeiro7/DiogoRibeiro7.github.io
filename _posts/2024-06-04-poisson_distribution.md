@@ -21,6 +21,9 @@ tags:
     - Statistical Testing
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 In this article, we will explore how to model count events, such as activations of certain types of events, using the Poisson distribution in R. We will also discuss how to determine if an observed count belongs to the Poisson distribution.

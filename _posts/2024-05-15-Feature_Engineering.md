@@ -21,6 +21,9 @@ tags:
     - Model Optimization
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Feature engineering is a critical step in the machine learning pipeline, involving the creation, transformation, and selection of variables (features) that can enhance the predictive performance of models. This process requires deep domain knowledge and creativity to extract meaningful information from raw data.

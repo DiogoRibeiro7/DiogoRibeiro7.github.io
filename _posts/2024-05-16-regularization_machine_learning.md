@@ -19,7 +19,11 @@ tags:
     - High-Dimensional Data
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
+
 ## Introduction
 
 Overfitting is a common issue in machine learning where a model learns the training data too well, capturing noise and details that do not generalize to new, unseen data. This leads to a model that performs excellently on the training data but poorly on test data or in real-world applications. Overfitting can be recognized by a significant gap between training and validation/test performance, indicating that the model has become too complex and tailored to the training data.

@@ -14,6 +14,9 @@ tags:
     - Mathematical Applications
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 In the vast and intricate field of mathematical disciplines, combinatorics and probability emerge as two distinct yet deeply interconnected fields. At its core, combinatorics is the branch of mathematics primarily concerned with counting, arranging, and combining objects in specific sets, offering tools and principles vital for systematic enumeration and organization. This domain lays the groundwork for understanding the myriad ways in which objects can be selected and arranged, providing the basis for more complex mathematical explorations.

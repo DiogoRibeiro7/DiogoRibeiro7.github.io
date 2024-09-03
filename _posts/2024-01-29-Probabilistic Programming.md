@@ -14,6 +14,9 @@ tags:
     - Bayesian Statistics
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 In my talks about probabilistic programming and Bayesian statistics, I often keep the explanation of inference high-level, treating it as a sort of "black box". Probabilistic programming's advantage is that it doesn't require deep knowledge of the inference mechanism to construct models, although understanding it is beneficial.
 

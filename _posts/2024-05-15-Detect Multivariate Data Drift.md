@@ -19,6 +19,9 @@ tags:
     - Production Data
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 In machine learning, ensuring the ongoing accuracy and reliability of models in production is paramount. One significant challenge faced by data scientists and engineers is data drift, where the statistical properties of the input data change over time, leading to potential degradation in model performance. While univariate data drift detection methods analyze each feature in isolation, multivariate data drift detection offers a more holistic approach.

@@ -17,6 +17,9 @@ tags:
     - Mathematical Foundations of Data Science
     - Interdisciplinary Approaches in Data Analysis
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 The relationship between topology, a branch of mathematics concerned with the properties of space that are preserved under continuous transformations, and data science, which involves extracting insights and knowledge from data, is both profound and multifaceted. This connection is primarily embodied in the field of Topological Data Analysis (TDA), which applies concepts from topology to study the shape and structure of data. Here's how topology relates to data science and the significance of this relationship:

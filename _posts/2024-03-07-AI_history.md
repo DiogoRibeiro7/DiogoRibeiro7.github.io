@@ -10,9 +10,12 @@ tags:
 - Technology History
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
-# The History of Artificial Intelligence
+## The History of Artificial Intelligence
 
 Artificial Intelligence (AI) has become an integral part of modern technology, influencing various aspects of daily life, from personal assistants like Siri and Alexa to complex algorithms predicting stock market trends. This article delves into the rich history of AI, tracing its roots from ancient myths to the cutting-edge advancements of today.
 

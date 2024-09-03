@@ -28,6 +28,9 @@ tags:
     - Scalable Clustering Algorithms in R
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Clustering is one of the most fundamental techniques in data analysis and machine learning. It involves grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar to each other than to those in other groups. This is widely used across various fields including marketing to segment customers, in biology for genetic clustering, and in retail to arrange homogeneous product groups, making it an indispensable tool in any data scientist's arsenal.

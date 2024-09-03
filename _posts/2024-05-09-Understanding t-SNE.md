@@ -28,6 +28,9 @@ tags:
     - Interactive Data Visualization
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 In data analysis and machine learning, the challenge of making sense of large volumes of high-dimensional data is ever-present. Dimensionality reduction, a critical technique in data science, addresses this challenge by simplifying complex datasets into more manageable and interpretable forms without sacrificing essential information. Among the various techniques available, t-Distributed Stochastic Neighbor Embedding (t-SNE) has emerged as a particularly powerful tool for visualizing and exploring high-dimensional data.

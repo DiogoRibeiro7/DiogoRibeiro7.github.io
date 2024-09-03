@@ -17,6 +17,9 @@ tags:
 
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 In the mosaic of data science—a realm where numbers weave intricate patterns and insights unfold with elegance—there exists a methodology both captivating and profound. This method, recognized as clustering, stands at the heart of exploratory data analysis, acting as a beacon for both beginners and experts alike. Clustering is the sophisticated art of organizing objects into groups such that members of the same group, or cluster, exhibit greater similarity amongst themselves than with members of different groups. This process is reminiscent of discovering hidden families within a vast crowd of faces or unveiling concealed relationships within seemingly disordered data.

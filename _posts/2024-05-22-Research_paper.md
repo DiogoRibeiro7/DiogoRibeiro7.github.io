@@ -32,6 +32,9 @@ tags:
     - Academic paper structure
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Writing a research paper involves several stages, from choosing a topic to revising and finalizing your work. Here’s a structured approach to guide you through the process:

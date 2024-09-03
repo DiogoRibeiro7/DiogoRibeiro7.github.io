@@ -12,6 +12,9 @@ tags:
     - Bell Curve
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ![Example Image](/assets/images/normal_distribution/Bell-Curve.png)

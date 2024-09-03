@@ -16,6 +16,9 @@ tags:
     - Python Libraries
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Combinatorics, the branch of mathematics concerned with counting, arranging, and identifying patterns within sets of elements, is not just a theoretical discipline. It has practical applications in fields as diverse as computer science, physics, and even everyday decision-making. Fortunately, Python, with its rich ecosystem of libraries, offers powerful tools to explore this fascinating area. In this blog post, we'll dive into how you can leverage Python to tackle combinatorial problems efficiently.
