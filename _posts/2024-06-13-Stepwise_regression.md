@@ -17,7 +17,11 @@ tags:
     - Efroymson Algorithm
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
+
 ![Example Image](/assets/images/obtain-unbiased-estimates-with-stepwise-selection-by-splitting-the-dataset.png)
 <p align="center"><i>Stepwise Regression</i></p>
 

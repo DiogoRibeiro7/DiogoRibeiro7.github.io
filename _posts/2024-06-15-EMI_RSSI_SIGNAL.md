@@ -19,6 +19,9 @@ tags:
   - Network Performance
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Electromagnetic interference (EMI), also known as electrical magnetic distortion, is a phenomenon that can significantly impact the performance of wireless communication systems. One of the key metrics affected by EMI is the Received Signal Strength Indicator (RSSI), which measures the power level of the received signal.
