@@ -1,5 +1,5 @@
 ---
-title: "The Ever-Evolving Landscape of Machine Learning: Why Fundamentals Matter More Than Tools"
+title: "Machine Learning: Why Fundamentals Matter More Than Tools"
 categories:
 - Machine Learning
 - Technology
