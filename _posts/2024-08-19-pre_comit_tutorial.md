@@ -12,6 +12,9 @@ tags:
 - Git Hooks
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Ensuring code quality is a critical aspect of software development. One way to maintain high standards is by using pre-commit tools, which automatically check code before it is committed to a repository. This tutorial will guide you through the setup and usage of pre-commit tools in Python, helping you catch issues early in the development process.

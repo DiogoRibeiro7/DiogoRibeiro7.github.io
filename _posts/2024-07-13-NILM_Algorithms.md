@@ -8,6 +8,9 @@ tags:
 - Energy Monitoring
 - Smart Meters
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Non-intrusive load monitoring (NILM) is an advanced technique that disaggregates a building's total energy consumption into the usage patterns of individual appliances, all without requiring hardware installation on each device. This approach not only offers a cost-effective and scalable solution for energy management but also enhances the granularity of energy usage data, facilitating more informed decisions about energy efficiency. This article explores the intricacies of NILM algorithms, explaining how they work to distinguish and identify the energy consumption of various appliances, the benefits they provide, and the challenges they face in practical applications.

@@ -10,6 +10,9 @@ tags:
 - Random Forest
 - Distance Metric Learning
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Outliers are data points that significantly deviate from the majority of a dataset. Identifying and managing outliers is a critical aspect of data analysis because these anomalous points can skew results and lead to incorrect conclusions. This article delves into the concept of outliers, reviews common outlier detection methods, and explores an advanced technique known as Distance Metric Learning (DML) for identifying outliers.

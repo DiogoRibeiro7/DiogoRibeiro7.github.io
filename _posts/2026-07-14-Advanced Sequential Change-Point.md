@@ -9,6 +9,9 @@ tags:
 - Univariate Models
 - Sequential Analysis
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Sequential change-point detection is a dynamic field that deals with real-time monitoring of data sequences to detect points where the statistical properties change. This process is crucial in various domains such as finance, quality control, signal processing, and biostatistics. This document explores the theoretical background, advanced methodologies, practical implementations, and real-world applications of sequential change-point detection for univariate models.

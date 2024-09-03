@@ -13,6 +13,9 @@ tags:
     - Variable Selection
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 There is a clear reason why stepwise regression is usually inappropriate, along with several other significant drawbacks. This article will delve into these issues, providing an in-depth understanding of why stepwise selection is generally detrimental to statistical estimates.

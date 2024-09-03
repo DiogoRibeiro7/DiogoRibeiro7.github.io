@@ -7,7 +7,11 @@ tags:
 - Outlier Detection
 - Data Doping
 - Model Evaluation
+
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Outlier detection presents significant challenges, particularly in evaluating the effectiveness of outlier detection algorithms. Traditional methods of evaluation, such as those used in predictive modeling, are often inapplicable due to the lack of labeled data. This article introduces a method known as doping, where existing data rows are intentionally modified to create synthetic outliers. These doped records serve as a benchmark for evaluating the performance of outlier detectors.

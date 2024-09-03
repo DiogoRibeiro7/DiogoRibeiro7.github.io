@@ -11,6 +11,9 @@ tags:
 - Education
 - Society
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Mathematics is a cornerstone of modern society, yet its significance often goes unnoticed or is underappreciated. Despite its pivotal role in shaping numerous facets of our world—from technological innovation to economic stability and healthcare advancements—many societies continue to struggle with recognizing and fully valuing the contributions of mathematics and those who practice it.

@@ -19,6 +19,9 @@ tags:
     - Calibration
 
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ## Introduction

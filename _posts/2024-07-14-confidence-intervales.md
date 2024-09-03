@@ -8,7 +8,11 @@ tags:
 - Linear Regression
 - Confidence Interval
 - Prediction Interval
+
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Statistical estimates always have some uncertainty. Consider a simple example of modeling house prices based solely on their area using linear regression. A prediction from this model wouldn’t reveal the exact value of a house based on its area, because different houses of the same size can have different prices. Instead, the model predicts the mean value related to the outcome for a particular input.

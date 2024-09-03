@@ -9,9 +9,10 @@ tags:
 - Incremental Learning
 - Drift Detection Method
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
-
-# Detecting Concept Drift in Machine Learning
 
 ## Abstract
 

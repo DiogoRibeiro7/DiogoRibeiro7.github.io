@@ -11,6 +11,9 @@ tags:
 - Rhythm
 - Generative Music
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ## The Symphony of Numbers: Mathematics and Electronic Music

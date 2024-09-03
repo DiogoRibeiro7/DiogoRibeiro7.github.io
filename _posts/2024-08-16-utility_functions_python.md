@@ -9,6 +9,9 @@ tags:
 - Utility Classes
 - Object-Oriented Programming
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Python is a versatile language that excels in various programming paradigms, including object-oriented programming (OOP). Among its many features, Python's ability to create utility classes is particularly useful for organizing code. These utility classes, also known as helper or namespace classes, provide a convenient way to group related functions under a common namespace without the need for instantiation. Despite their usefulness, they are often overlooked in Python codebases.

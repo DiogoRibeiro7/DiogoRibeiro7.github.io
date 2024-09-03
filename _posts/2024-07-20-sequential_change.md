@@ -8,7 +8,11 @@ tags:
     - Change Detection
     - Structural Changes
     - Real-time Processing
+
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 Sequential detection of structural changes in models is a critical aspect in various domains, enabling timely and informed decision-making. This involves identifying moments when the parameters or structure of a model change, often signaling significant events or shifts in the underlying data-generating process.
