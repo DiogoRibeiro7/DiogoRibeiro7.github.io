@@ -9,6 +9,9 @@ tags:
 - credit risk
 - copula models
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 **Abstract**
