@@ -1,5 +1,5 @@
 ---
-title: "The Hidden Foundations of AI: Why Mathematics is Essential to Understand the Iceberg"
+title: "The Foundations of AI: Why Mathematics is Essential to Understand the Iceberg"
 categories:
 - Artificial Intelligence
 tags:
@@ -11,6 +11,8 @@ classes: wide
 # toc: true
 # toc_label: The Complexity of Real-World Data Distributions
 ---
+
+![Example Image](/assets/images/1725604108590.jpeg)
 
 Artificial Intelligence (AI) is often portrayed as a transformative technology capable of altering industries and the way society functions. Terms like Machine Learning (ML) and Deep Learning (DL) are used in discussions about self-driving cars, intelligent assistants, or creative tasks like art generation. However, beneath these high-level concepts lies an often-overlooked foundation: mathematics. Mathematics forms the essential framework that enables AI to operate, much like the submerged portion of an iceberg that supports the visible part.
 
