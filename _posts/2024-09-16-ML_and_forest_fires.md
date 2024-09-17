@@ -9,6 +9,9 @@ tags:
 - Machine Learning
 - Environmental Sustainability
 author_profile: false
+classes: wide
+# toc: true
+# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ## Advanced Machine Learning Models for Forest Fire Prediction
