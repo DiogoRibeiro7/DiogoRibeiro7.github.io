@@ -62,30 +62,30 @@ Developed by Abraham Wald during World War II, the SPRT is a cornerstone of sequ
 
 #### Likelihood Ratio (LR)
 
-The likelihood ratio at any point \( n \) is defined as:
+The likelihood ratio at any point $$ n $$ is defined as:
 
-\[
+$$
 LR_n = \frac{P(\text{Data up to } n \mid H_1)}{P(\text{Data up to } n \mid H_0)}
-\]
+$$
 
-- **\( P(\text{Data} \mid H_1) \)**: Probability of observing the data under the alternative hypothesis.
-- **\( P(\text{Data} \mid H_0) \)**: Probability of observing the data under the null hypothesis.
+- **$$ P(\text{Data} \mid H_1) $$**: Probability of observing the data under the alternative hypothesis.
+- **$$ P(\text{Data} \mid H_0) $$**: Probability of observing the data under the null hypothesis.
 
 #### Decision Boundaries
 
 Two thresholds are established to decide when to stop the test:
 
-- **Upper Boundary (A)**: If \( LR_n \geq A \), reject H₀ in favor of H₁.
-- **Lower Boundary (B)**: If \( LR_n \leq B \), accept H₀ and reject H₁.
+- **Upper Boundary (A)**: If $$ LR_n \geq A $$, reject H₀ in favor of H₁.
+- **Lower Boundary (B)**: If $$ LR_n \leq B $$, accept H₀ and reject H₁.
 
 These boundaries are calculated based on the desired error rates:
 
-\[
+$$
 A = \frac{1 - \beta}{\alpha}, \quad B = \frac{\beta}{1 - \alpha}
-\]
+$$
 
-- **\( \alpha \)**: Probability of Type I error (false positive).
-- **\( \beta \)**: Probability of Type II error (false negative).
+- **$$ \alpha $$**: Probability of Type I error (false positive).
+- **$$ \beta $$**: Probability of Type II error (false negative).
 
 #### Updating the Likelihood Ratio
 
@@ -93,20 +93,20 @@ For Bernoulli trials (e.g., conversions), the likelihood ratio after each observ
 
 - **Conversion (Success)**:
 
-  \[
+  $$
   LR_n = LR_{n-1} \times \frac{p_1}{p_0}
-  \]
+  $$
 
 - **No Conversion (Failure)**:
 
-  \[
+  $$
   LR_n = LR_{n-1} \times \frac{1 - p_1}{1 - p_0}
-  \]
+  $$
 
 where:
 
-- **\( p_0 \)**: Conversion rate under H₀.
-- **\( p_1 \)**: Conversion rate under H₁.
+- **$$ p_0 $$**: Conversion rate under H₀.
+- **$$ p_1 $$**: Conversion rate under H₁.
 
 ### Advantages of SPRT in A/B Testing
 
@@ -120,59 +120,59 @@ where:
 
 1. **Define Hypotheses**:
 
-   - **H₀**: The conversion rate is \( p_0 \).
-   - **H₁**: The conversion rate is \( p_1 \).
+   - **H₀**: The conversion rate is $$ p_0 $$.
+   - **H₁**: The conversion rate is $$ p_1 $$.
 
 2. **Set Error Rates**:
 
-   - Choose acceptable levels for \( \alpha \) and \( \beta \).
+   - Choose acceptable levels for $$ \alpha $$ and $$ \beta $$.
 
 3. **Calculate Decision Boundaries**:
 
-   - Compute \( A \) and \( B \) using the formulas provided.
+   - Compute $$ A $$ and $$ B $$ using the formulas provided.
 
 4. **Collect Data Sequentially**:
 
-   - After each observation, update the likelihood ratio \( LR_n \).
+   - After each observation, update the likelihood ratio $$ LR_n $$.
 
 5. **Apply Decision Rules**:
 
-   - If \( LR_n \geq A \), stop and reject H₀.
-   - If \( LR_n \leq B \), stop and accept H₀.
+   - If $$ LR_n \geq A $$, stop and reject H₀.
+   - If $$ LR_n \leq B $$, stop and accept H₀.
    - Otherwise, continue collecting data.
 
 ### Practical Considerations
 
-- **Initial Parameters**: Accurate estimates of \( p_0 \) and \( p_1 \) are crucial.
+- **Initial Parameters**: Accurate estimates of $$ p_0 $$ and $$ p_1 $$ are crucial.
 - **Sample Size Limit**: Although SPRT doesn't require a fixed sample size, setting a maximum limit can prevent indefinite testing.
 - **Data Quality**: Ensure data is collected and recorded accurately in real-time.
 
 ### Example Scenario
 
-Suppose we want to test if a new feature increases the conversion rate from 5% (\( p_0 \)) to 7% (\( p_1 \)).
+Suppose we want to test if a new feature increases the conversion rate from 5% ($$ p_0 $$) to 7% ($$ p_1 $$).
 
-- **Set \( \alpha = 0.05 \) and \( \beta = 0.20 \)**.
+- **Set $$ \alpha = 0.05 $$ and $$ \beta = 0.20 $$**.
 - **Calculate Boundaries**:
 
-  \[
+  $$
   A = \frac{1 - 0.20}{0.05} = 16, \quad B = \frac{0.20}{1 - 0.05} \approx 0.211
-  \]
+  $$
 
 - **Update LR After Each Observation**:
 
-  - For a conversion: Multiply \( LR_n \) by \( \frac{0.07}{0.05} = 1.4 \).
-  - For no conversion: Multiply \( LR_n \) by \( \frac{0.93}{0.95} \approx 0.9789 \).
+  - For a conversion: Multiply $$ LR_n $$ by $$ \frac{0.07}{0.05} = 1.4 $$.
+  - For no conversion: Multiply $$ LR_n $$ by $$ \frac{0.93}{0.95} \approx 0.9789 $$.
 
-Continue this process until \( LR_n \) crosses \( A \) or \( B \).
+Continue this process until $$ LR_n $$ crosses $$ A $$ or $$ B $$.
 
 ## Advanced Statistical Considerations
 
 ### Controlling Type I Error with Alpha Spending Functions
 
-In sequential testing, repeatedly analyzing data increases the risk of Type I errors. **Alpha spending functions** allocate the overall \( \alpha \) across interim analyses to control the cumulative error rate.
+In sequential testing, repeatedly analyzing data increases the risk of Type I errors. **Alpha spending functions** allocate the overall $$ \alpha $$ across interim analyses to control the cumulative error rate.
 
 - **Lan-DeMets Approach**: Allows flexibility in the timing and number of interim looks.
-- **Implementation**: Adjust decision boundaries at each analysis based on the amount of \( \alpha \) "spent" so far.
+- **Implementation**: Adjust decision boundaries at each analysis based on the amount of $$ \alpha $$ "spent" so far.
 
 ### Group Sequential Designs
 
