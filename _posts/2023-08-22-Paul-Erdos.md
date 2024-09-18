@@ -1,16 +1,21 @@
 ---
-title: "The Life and Legacy of Paul Erdös"
+title: "The Life and Legacy of Paul Erdős"
 subtitle: "A Mathematician for the Ages"
 categories:
-    - Genius
+  - Mathematics
+  - Biographies
 tags:
-    - Paul Erdös
-    - Mathematics
+  - Paul Erdős
+  - Mathematical Genius
+  - Number Theory
+  - Collaboration in Science
 author_profile: false
+seo_title: "Paul Erdős: The Mathematical Prodigy Who Changed Mathematics Forever"
+seo_description: "Explore the life and legacy of Paul Erdős, a nomadic mathematician who made groundbreaking contributions to number theory and collaborative science."
+excerpt: "Delve into the fascinating life of Paul Erdős, a wandering mathematician whose love for numbers and collaboration reshaped the world of mathematics."
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
 ---
+
 ![Example Image](/assets/images/Erdos_Paul.jpg)
 <p align="center"><i>Paul Erdös</i></p>
 

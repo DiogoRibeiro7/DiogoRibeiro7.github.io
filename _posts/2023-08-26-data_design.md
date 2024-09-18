@@ -4,12 +4,14 @@ subtitle: "A Deep Dive into the Importance of Data Design, Quality Assurance, an
 categories:
   - Data Science
 tags:
-    - Data Science
-    - Data Engineering
-    - Data Quality
-
+  - Data Science
+  - Data Engineering
+  - Data Quality
 author_profile: false
 classes: wide
+seo_title: "The Critical Role of Data Quality in the Data Industry"
+seo_description: "Explore the vital importance of data quality, the need for defined roles in data design and collection, and how data quality impacts data science and engineering."
+excerpt: "This article explores the often-overlooked importance of data quality in the data industry and emphasizes the urgent need for defined roles in data design, collection, and quality assurance."
 # toc: true
 # toc_label: The Complexity of Real-World Data Distributions
 ---
