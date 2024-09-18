@@ -115,6 +115,7 @@ DEPENDENCIES
   jekyll
   jekyll-remote-theme
   jekyll-seo-tag
+  jekyll-sitemap
   minimal-mistakes-jekyll
   rake
   webrick

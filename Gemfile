@@ -32,4 +32,5 @@ group :jekyll_plugins do
     gem "jekyll"
     # gem "webrick" # Add this line
     gem "jekyll-seo-tag"
+    gem "jekyll-sitemap"
 end
