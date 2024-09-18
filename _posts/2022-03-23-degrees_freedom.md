@@ -1,22 +1,15 @@
 ---
 title: "Degrees of Freedom: A Comprehensive Guide"
 categories:
-    - Statistics
-    - Mathematics
-    - Engineering
-    - Physics
-    - Data Analysis
+- Statistics
 tags:
-    - Degrees of Freedom
-    - Statistics
-    - Data Analysis
-    - Hypothesis Testing
-    - Mechanical Systems
-
+- Degrees of Freedom
+- Data Analysis
 author_profile: false
+seo_title: "Degrees of Freedom: A Comprehensive Guide to Statistics and Data Analysis"
+seo_description: "Explore the concept of degrees of freedom in statistics, its role in hypothesis testing, and its applications in data analysis, engineering, and physics."
+excerpt: "Learn about degrees of freedom, a crucial concept in statistics and data analysis, with applications ranging from hypothesis testing to mechanical systems."
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ## Introduction to Degrees of Freedom

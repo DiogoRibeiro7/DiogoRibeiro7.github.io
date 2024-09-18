@@ -1,0 +1,24 @@
+---
+layout: archive
+permalink: /year-archive/
+title: "Posts by Year"
+author_profile: false
+---
+
+{% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+{% assign posts_by_year = posts_by_year | sort: "name" | reverse %}
+
+<!-- Output the list of years at the beginning -->
+<ul class="year-list">
+  {% for year_group in posts_by_year %}
+    <li><a href="#{{ year_group.name | slugify }}">{{ year_group.name }}</a></li>
+  {% endfor %}
+</ul>
+
+<!-- Now output the posts grouped by year -->
+{% for year_group in posts_by_year %}
+  <h2 id="{{ year_group.name | slugify }}" class="archive__subtitle">{{ year_group.name }}</h2>
+  {% for post in year_group.items %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endfor %}

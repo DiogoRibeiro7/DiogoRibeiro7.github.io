@@ -1,15 +1,15 @@
 ---
-title: "A Comprehensive Guide to Bayesian A/B Testing for Conversion Rates"
+title: "A Guide to Bayesian A/B Testing for Conversion Rates"
 categories:
-- Data Science
-- Bayesian Statistics
+- Statistics
 tags:
 - A/B Testing
-- Conversion Rates
 - Bayesian Methods
-- Frequentist Statistics
-- Data Analysis
 author_profile: false
+seo_title: "Bayesian A/B Testing: Enhancing Conversion Rate Analysis"
+seo_description: "Learn how Bayesian A/B testing provides nuanced insights into conversion rates, offering a robust alternative to traditional frequentist methods in data analysis."
+excerpt: "Explore Bayesian A/B testing as a powerful framework for analyzing conversion rates, providing more nuanced insights than traditional frequentist approaches."
+classes: wide
 ---
 
 ## Overview

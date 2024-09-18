@@ -1,19 +1,15 @@
 ---
 title: "Optimizing Staff Scheduling with Linear Programming"
 categories:
-- Operations Research
-- Python Programming
-- Business Optimization
+- Optimization
 tags:
 - Linear Programming
-- Staff Scheduling
-- PuLP
-- Python
-
+- Scheduling
 author_profile: false
+seo_title: "Staff Scheduling Optimization with Linear Programming in Python"
+seo_description: "Learn how to use linear programming with the PuLP library in Python to optimize staff scheduling and minimize costs in a 24/7 operational environment."
+excerpt: "Discover how linear programming and Python's PuLP library can efficiently solve staff scheduling challenges, minimizing costs while meeting operational demands."
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ## Overview

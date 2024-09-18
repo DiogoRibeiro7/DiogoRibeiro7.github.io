@@ -2,16 +2,16 @@
 title: "Understanding PCA: A Step-by-Step Guide to Principal Component Analysis"
 categories:
 - Data Science
-- Machine Learning
 tags:
 - PCA
-- Feature Selection
 - Dimensionality Reduction
 author_profile: false
+seo_title: "Principal Component Analysis (PCA) Guide"
+seo_description: "A comprehensive guide to Principal Component Analysis (PCA), covering feature selection, dimension reduction, explained variance, and outlier detection."
+excerpt: "Learn about Principal Component Analysis (PCA) and how it helps in feature extraction, dimensionality reduction, and identifying key patterns in data."
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
 ---
+
 
 At the end of this blog, you will be able to visually explain the variance in your data, select the most informative features, and create insightful plots. We will cover the following topics in detail:
 
