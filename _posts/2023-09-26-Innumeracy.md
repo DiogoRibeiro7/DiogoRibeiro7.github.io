@@ -1,17 +1,18 @@
 ---
-title: "Innumeracy"
-subtitle: "The New Illiteracy That’s Crippling Our Decision-Making"
+title: "The New Illiteracy That’s Crippling Our Decision-Making"
 categories:
   - Mathematics
 tags:
-    - Mathematics
-    - Data Science
-    - Machine Learning
+  - Numeracy
+  - Data Literacy
+  - Decision Making
 author_profile: false
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+seo_title: "Innumeracy: The New Illiteracy Crippling Decision-Making"
+seo_description: "Explore the growing issue of innumeracy—our inability to understand and work with numbers. Learn how this new illiteracy impacts decision-making in society, from corporate boardrooms to public policy."
+excerpt: "Innumeracy is becoming the new illiteracy, with far-reaching implications for decision-making in various aspects of life. Discover how the inability to understand numbers affects our world and what can be done to address this growing issue."
 ---
+
 ![Example Image](/assets/images/inumeracy.jpg)
 
 In an era where data has been dubbed “the new oil,” one would expect a corresponding surge in our collective ability to understand, interpret, and wield numbers. Yet, here we are, facing a paradox that is as unsettling as it is overlooked. Welcome to the age of innumeracy — the inability to understand and work with numbers — a phenomenon that is fast becoming the new illiteracy of our time.
