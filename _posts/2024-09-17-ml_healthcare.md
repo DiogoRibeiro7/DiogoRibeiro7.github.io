@@ -1,12 +1,12 @@
 ---
 title: "How Machine Learning is Transforming Healthcare Analytics"
 seo_title: "How Machine Learning is Revolutionizing Healthcare Analytics for Improved Patient Care"
+seo_description: "Explore the impact of machine learning on healthcare analytics, including advancements in predictive patient outcomes, personalized medicine, medical imaging, and the challenges of integrating ML into healthcare systems."
 excerpt: "Discover how machine learning is revolutionizing healthcare analytics, from predictive patient outcomes to personalized medicine, and the challenges faced in integrating ML into healthcare."
 categories:
 - Healthcare
 - Machine Learning
 - Data Analytics
-
 tags:
 - Healthcare Analytics
 - Machine Learning
@@ -14,7 +14,6 @@ tags:
 - Medical Imaging
 - Personalized Medicine
 - Predictive Analytics
-
 author_profile: false
 classes: wide
 # toc: true
