@@ -13,6 +13,9 @@ excerpt: "Unlock the power of Bayesian statistics in machine learning through pr
 classes: wide
 ---
 
+![Thomas Bayes](/assets/images/thomas-bayes.jpg)
+<div align="center"><em>Bayes</em></div>
+
 The rapid advancement of machine learning has transformed industries globally, from healthcare and finance to entertainment and transportation. A cornerstone of these developments is the ability of machines to learn from data, make predictions, and assist in decision-making processes. While frequentist statistics has long been the backbone of statistical inference, Bayesian statistics has emerged as a powerful alternative, offering a fundamentally different approach to probability and inference. This article aims to demystify Bayesian statistics and explore its profound impact on machine learning.
 
 ## Bayesian Statistics: A Historical Perspective
@@ -45,28 +48,28 @@ $$
 
 Where:
 
-- $P(\theta \mid D)$ is the posterior probability of the parameter $\theta$ given data $D$.
-- $P(D \mid \theta)$ is the likelihood of observing data $D$ given parameter $\theta$.
-- $P(\theta)$ is the prior probability of $\theta$.
-- $P(D)$ is the marginal likelihood or evidence.
+- $$P(\theta \mid D)$$ is the posterior probability of the parameter $$\theta$$ given data $$D$$.
+- $$P(D \mid \theta)$$ is the likelihood of observing data $$D$$ given parameter $$\theta$$.
+- $$P(\theta)$$ is the prior probability of $$\theta$$.
+- $$P(D)$$ is the marginal likelihood or evidence.
 
 Bayes' Theorem states that the posterior probability is proportional to the product of the likelihood and the prior, providing a framework for updating beliefs in light of new data.
 
 ### Prior, Likelihood, and Posterior
 
-- **Prior ($P(\theta)$)**: Represents initial beliefs about the parameter before observing the data. Priors can be based on previous studies, expert knowledge, or chosen to be non-informative in the absence of prior information.
-- **Likelihood ($P(D \mid \theta)$)**: Describes the probability of the observed data given a specific parameter value, derived from the assumed statistical model.
-- **Posterior ($P(\theta \mid D)$)**: The updated belief about the parameter after considering the data. It combines the prior and likelihood using Bayes' Theorem.
+- **Prior ($$P(\theta)$$)**: Represents initial beliefs about the parameter before observing the data. Priors can be based on previous studies, expert knowledge, or chosen to be non-informative in the absence of prior information.
+- **Likelihood ($$P(D \mid \theta)$$)**: Describes the probability of the observed data given a specific parameter value, derived from the assumed statistical model.
+- **Posterior ($$P(\theta \mid D)$$)**: The updated belief about the parameter after considering the data. It combines the prior and likelihood using Bayes' Theorem.
 
 ### Conjugate Priors
 
 A conjugate prior is a prior distribution that, when combined with a specific likelihood function, results in a posterior distribution of the same family. Conjugate priors simplify Bayesian updating because the posterior distribution can be computed analytically.
 
-*Example*: For binomial data where we want to estimate the probability of success $\theta$, a Beta distribution prior is conjugate, as the posterior will also be a Beta distribution.
+*Example*: For binomial data where we want to estimate the probability of success $$\theta$$, a Beta distribution prior is conjugate, as the posterior will also be a Beta distribution.
 
 ### Marginalization and Predictive Distributions
 
-Marginalization involves integrating out nuisance parameters to focus on the parameters of interest. In Bayesian statistics, the predictive distribution for new data $D'$ is obtained by integrating over the posterior distribution:
+Marginalization involves integrating out nuisance parameters to focus on the parameters of interest. In Bayesian statistics, the predictive distribution for new data $$D'$$ is obtained by integrating over the posterior distribution:
 
 $$
 P(D' \mid D) = \int P(D' \mid \theta) P(\theta \mid D) \, d\theta
@@ -82,9 +85,9 @@ Bayesian parameter estimation involves computing the posterior distribution of t
 
 **Steps in Bayesian Parameter Estimation**:
 
-1. **Specify the Prior Distribution**: Choose an appropriate prior $P(\theta)$ based on existing knowledge or assumptions.
-2. **Define the Likelihood Function**: Derive $P(D \mid \theta)$ from the statistical model that describes how the data is generated.
-3. **Compute the Posterior Distribution**: Use Bayes' Theorem to obtain $P(\theta \mid D)$.
+1. **Specify the Prior Distribution**: Choose an appropriate prior $$P(\theta)$$ based on existing knowledge or assumptions.
+2. **Define the Likelihood Function**: Derive $$P(D \mid \theta)$$ from the statistical model that describes how the data is generated.
+3. **Compute the Posterior Distribution**: Use Bayes' Theorem to obtain $$P(\theta \mid D)$$.
 4. **Summarize the Posterior**: Extract meaningful statistics from the posterior, such as the mean, median, mode, or credible intervals.
 
 ### Credible Intervals vs. Confidence Intervals
@@ -102,7 +105,7 @@ $$
 \text{Bayes Factor} = \frac{P(D \mid H_1)}{P(D \mid H_0)}
 $$
 
-A Bayes factor greater than one indicates evidence in favor of hypothesis $H_1$ over $H_0$. Bayesian hypothesis testing allows for direct probability statements about hypotheses and can incorporate prior beliefs.
+A Bayes factor greater than one indicates evidence in favor of hypothesis $$H_1$$ over $$H_0$$. Bayesian hypothesis testing allows for direct probability statements about hypotheses and can incorporate prior beliefs.
 
 ## Bayesian Methods in Machine Learning
 
@@ -123,8 +126,8 @@ In Bayesian linear regression, the regression coefficients are treated as random
 
 **Inference**:
 
-- The posterior distribution of $\beta$ and $\sigma^2$ is computed using Bayes' Theorem.
-- Predictions for new inputs $X_{\text{new}}$ are made by integrating over the posterior distributions.
+- The posterior distribution of $$\beta$$ and $$\sigma^2$$ is computed using Bayes' Theorem.
+- Predictions for new inputs $$X_{\text{new}}$$ are made by integrating over the posterior distributions.
 
 **Advantages**:
 
@@ -219,8 +222,8 @@ Variational inference transforms the problem of computing the posterior distribu
 
 **Process**:
 
-1. **Choose a Family of Approximate Distributions**: Define a simpler distribution $q(\theta)$ to approximate the true posterior.
-2. **Optimize**: Find the distribution $q(\theta)$ that minimizes the Kullback-Leibler (KL) divergence from the true posterior.
+1. **Choose a Family of Approximate Distributions**: Define a simpler distribution $$q(\theta)$$ to approximate the true posterior.
+2. **Optimize**: Find the distribution $$q(\theta)$$ that minimizes the Kullback-Leibler (KL) divergence from the true posterior.
 
 **Advantages**:
 
