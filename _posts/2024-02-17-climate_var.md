@@ -43,6 +43,7 @@ For instance, if a portfolio has a 95% one-month VaR of $1 million, it indicates
 Climate VaR builds on the traditional VaR framework by incorporating climate-specific factors. It assesses the potential financial losses that could result from climate-related events and the transition to a low-carbon economy. Unlike traditional VaR, Climate VaR explicitly models the impact of physical and transition risks, providing a more holistic view of potential financial exposures.
 
 Key elements of Climate VaR include:
+
 - **Physical Risks:** Estimating potential losses due to climate-related physical events such as hurricanes, floods, and heatwaves.
 - **Transition Risks:** Evaluating the financial impact of transitioning to a low-carbon economy, including regulatory changes, technological advancements, and market shifts.
 - **Scenario Analysis:** Using scenario modeling to project potential future states of the world under different climate pathways, such as the Representative Concentration Pathways (RCPs) defined by the Intergovernmental Panel on Climate Change (IPCC).
@@ -76,6 +77,7 @@ Data science employs various statistical and machine learning models to estimate
 ### Scenario Analysis and Stress Testing
 
 Scenario analysis is a cornerstone of Climate VaR modeling. It involves creating hypothetical climate scenarios to assess the potential financial impact of different climate pathways. Common scenarios include:
+
 - **Business-as-Usual Scenario:** Projects the impact of continuing current emissions trends, leading to significant physical risks.
 - **Paris Agreement Scenario:** Models the financial implications of limiting global warming to well below 2°C, emphasizing transition risks.
 - **Severe Climate Impact Scenario:** Considers extreme climate events and the potential cascading effects on the financial system.
