@@ -10,9 +10,10 @@ tags:
 - Optimization
 - Operations
 author_profile: false
+seo_title: "Machine Learning in Supply Chain: Optimization and Efficiency"
+seo_description: "Explore how machine learning can optimize supply chain operations, enhance efficiency, and drive business value through demand forecasting, inventory management, and logistics."
+excerpt: "Learn how machine learning optimizes supply chain operations by enhancing demand forecasting, inventory management, logistics, and more, driving efficiency and business value."
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ## Overview of Supply Chain Operations
