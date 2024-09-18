@@ -9,6 +9,7 @@ tags:
 - Artificial Intelligence
 author_profile: false
 seo_title: "Demystifying Bayesian Statistics in Machine Learning"
+seo_description: "Explore Bayesian statistics in machine learning, highlighting probabilistic reasoning, uncertainty quantification, and practical applications across various domains."
 excerpt: "Unlock the power of Bayesian statistics in machine learning through probabilistic reasoning, offering insights into model uncertainty, predictive distributions, and real-world applications."
 classes: wide
 ---
