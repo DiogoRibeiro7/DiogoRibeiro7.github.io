@@ -31,19 +31,19 @@ Rolling windows are frequently used in fields such as finance, biology, and engi
 
 ### Formal Definition
 
-Let's define a discrete signal $y[t]$ for $t$ ranging from 0 to $N - 1$. A rolling window of size $n$ at a given position $t$ consists of the segment:
+Let's define a discrete signal $$y[t]$$ for $$t$$ ranging from 0 to $$N - 1$$. A rolling window of size $$n$$ at a given position $$t$$ consists of the segment:
 
 $$
 w_t = [y[t], y[t + 1], \dots, y[t + n - 1]]
 $$
 
-An operation $O$ is applied to each window to produce a result $M_t$:
+An operation $$O$$ is applied to each window to produce a result $$M_t$$:
 
 $$
 M_t = O(w_t)
 $$
 
-The stride $s$ determines the movement of the window. If $s = 1$, the windows overlap completely; if $s = n$, the windows do not overlap at all. The choice of stride and window size depends on the specific characteristics of the data and the objectives of the analysis. For example, in high-frequency financial data, smaller strides allow for more granular insights, while in long-term climate data, larger windows may be more appropriate.
+The stride $$s$$ determines the movement of the window. If $$s = 1$$, the windows overlap completely; if $$s = n$$, the windows do not overlap at all. The choice of stride and window size depends on the specific characteristics of the data and the objectives of the analysis. For example, in high-frequency financial data, smaller strides allow for more granular insights, while in long-term climate data, larger windows may be more appropriate.
 
 ### Visualization and Applications in Signal Processing
 
@@ -66,7 +66,7 @@ In machine learning, raw time-series data are often too complex and noisy to be 
 
 ### Feature Extraction Process
 
-The process involves defining the window size $n$ and stride $s$, determining the features to extract, and sliding the window across the signal. Common features include:
+The process involves defining the window size $$n$$ and stride $$s$$, determining the features to extract, and sliding the window across the signal. Common features include:
 
 - **Mean:** Provides a measure of the signal's central tendency within each window. This feature is useful for identifying general trends in the data.
 - **Standard Deviation (Std):** Measures the dispersion of the signal values, giving insights into the variability within each window.
@@ -98,7 +98,7 @@ The moving average filter is particularly effective when the goal is to reduce r
 
 The Savitzky-Golay filter offers a more sophisticated approach by fitting a low-degree polynomial to the data points within each window. This method smooths the signal while preserving its key characteristics, such as peak height and width, making it more suitable for applications where retaining signal features is essential.
 
-The mathematical foundation of the Savitzky-Golay filter involves fitting a polynomial of degree $p$ to each window:
+The mathematical foundation of the Savitzky-Golay filter involves fitting a polynomial of degree $$p$$ to each window:
 
 $$
 \min \sum_{i=-k}^{k} \left(y_{t+i} - \sum_{j=0}^{p} a_j i^j \right)^2
@@ -118,7 +118,7 @@ In the context of biomedical signals, peak detection is essential for analyzing 
 
 By using rolling windows, we compute local statistics (such as the mean and standard deviation) and identify points that significantly deviate from these statistics. This approach allows us to set thresholds that adapt to the signal's local behavior, making peak detection more robust to noise and variability.
 
-For each point $x_t$, we determine if it is a peak by comparing it to the local mean $\mu_{t-1}$ and standard deviation $\sigma_{t-1}$. If $x_t > \mu_{t-1} + \theta \sigma_{t-1}$, it is identified as a positive peak; if $x_t < \mu_{t-1} - \theta \sigma_{t-1}$, it is a negative peak.
+For each point $$x_t$$, we determine if it is a peak by comparing it to the local mean $$\mu_{t-1}$$ and standard deviation $$\sigma_{t-1}$$. If $$x_t > \mu_{t-1} + \theta \sigma_{t-1}$$, it is identified as a positive peak; if $$x_t < \mu_{t-1} - \theta \sigma_{t-1}$$, it is a negative peak.
 
 This method is particularly useful in scenarios where the signal's characteristics vary over time. By using rolling windows, we adapt to these changes, allowing for more accurate peak detection in dynamic environments. For example, in stock market analysis, this approach can help identify local maxima and minima, providing insights into market cycles and aiding in trading decisions.
 
@@ -144,13 +144,13 @@ The STFT is widely used in applications like speech processing, music analysis, 
 
 #### Rolling Window Extraction
 
-Given a signal $y[t]$ and window size $n$, the window at position $t$ is defined as:
+Given a signal $$y[t]$$ and window size $$n$$, the window at position $$t$$ is defined as:
 
 $$
 w_t = [y[t], y[t + 1], \dots, y[t + n - 1]]
 $$
 
-An operation $O$ applied to each window yields:
+An operation $$O$$ applied to each window yields:
 
 $$
 M_t = O(w_t)
@@ -158,7 +158,7 @@ $$
 
 #### Stride Movement
 
-The stride $s$ defines the movement of the window across the signal. For stride $s$, the next window starts at $t + s$. Choosing the appropriate stride is crucial; smaller strides result in more overlapping windows, providing more data points but increasing computational cost.
+The stride $$s$$ defines the movement of the window across the signal. For stride $$s$$, the next window starts at $$t + s$$. Choosing the appropriate stride is crucial; smaller strides result in more overlapping windows, providing more data points but increasing computational cost.
 
 ### B. Feature Extraction Code
 
@@ -197,9 +197,9 @@ $$
 
 Where:
 
-- $k = \frac{n - 1}{2}$ is half the window size.
-- $p$ is the polynomial order.
-- $a_j$ are the polynomial coefficients to be determined.
+- $$k = \frac{n - 1}{2}$$ is half the window size.
+- $$p$$ is the polynomial order.
+- $$a_j$$ are the polynomial coefficients to be determined.
 
 #### Convolution Coefficients
 
@@ -209,19 +209,19 @@ The filter can be efficiently implemented as a convolution operation using preco
 
 #### Detection Criteria
 
-For each point $x_t$:
+For each point $$x_t$$:
 
-- **Positive Peak:** $x_t > \mu_{t-1} + \theta \sigma_{t-1}$
-- **Negative Peak:** $x_t < \mu_{t-1} - \theta \sigma_{t-1}$
+- **Positive Peak:** $$x_t > \mu_{t-1} + \theta \sigma_{t-1}$$
+- **Negative Peak:** $$x_t < \mu_{t-1} - \theta \sigma_{t-1}$$
 
-Where $\mu_{t-1}$ and $\sigma_{t-1}$ are the mean and standard deviation of the previous window, and $\theta$ is the threshold in terms of standard deviations.
+Where $$\mu_{t-1}$$ and $$\sigma_{t-1}$$ are the mean and standard deviation of the previous window, and $$\theta$$ is the threshold in terms of standard deviations.
 
 #### Influence Update
 
 When a peak is detected:
 
 - **With Influence:** Adjust the signal value.
-- **Without Influence:** Do not include $x_t$ in future calculations.
+- **Without Influence:** Do not include $$x_t$$ in future calculations.
 
 ### E. Short-Time Fourier Transform Code
 
