@@ -4,25 +4,23 @@ subtitle: "Complex Probabilities with Markov Chain Monte Carlo"
 categories:
   - Mathematics
 tags:
-    - Bayesian Statistics
-    - Markov Chain Monte Carlo (MCMC)
-    - Statistical Computing
-    - Data Analysis Techniques
-    - Probability Theory
-    - Python Programming for Statistics
-    - Predictive Modeling
-    - Machine Learning Algorithms
-
+  - Bayesian Statistics
+  - Markov Chain Monte Carlo (MCMC)
+  - Statistical Computing
+  - Data Analysis Techniques
+  - Probability Theory
+  - Python Programming for Statistics
+  - Predictive Modeling
+  - Machine Learning Algorithms
 author_profile: false
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+seo_title: "Mastering Bayesian Statistics with MCMC: A Deep Dive into Complex Probabilities"
+seo_description: "Explore Bayesian statistics and the power of Markov Chain Monte Carlo (MCMC) in handling complex probabilistic models. Learn with practical examples and Python code."
+excerpt: "Discover how Bayesian inference and MCMC algorithms like Metropolis-Hastings can solve complex probability problems through real-world examples and Python implementation."
 ---
 
 ![Example Image](/assets/images/Markov-chain-Monte-Carlo-sampling-using-random-walk.jpeg)
-<p align="center"><i>Markov Chain Monte Carlo</i></p>
-
-# Introduction to Bayesian Statistics and MCMC
+<div align="center"><em>Markov Chain Monte Carlo</em></div>
 
 ## Brief Overview of Bayesian Statistics
 
@@ -58,6 +56,7 @@ P(\theta \mid X) = \frac{P(X \mid \theta) \cdot P(\theta)}{P(X)}
 $$
 
 Where:
+
 - $$P(\theta \mid X)$$ is the posterior probability. It represents the probability of the hypothesis $$\theta$$ given the observed data $$X$$.
 - $$P(X \mid \theta)$$ is the likelihood. It indicates the probability of observing the data $$X$$ given that the hypothesis $$\theta$$ is true.
 - $$P(\theta)$$ is the prior probability. This is our initial belief about the hypothesis before observing the data.
@@ -161,7 +160,7 @@ You can set up this environment using Python's package manager pip or a package 
 
 Here's a simple example of implementing the Metropolis-Hastings algorithm in Python:
 
-```
+```python
 import numpy as np
 import scipy.stats as stats
 import matplotlib.pyplot as plt
@@ -206,6 +205,7 @@ plt.ylabel("Frequency")
 plt.title("Posterior Distribution of Theta")
 plt.show()
 ```
+
 In this example, we define a simple Gaussian likelihood and prior. The metropolis_hastings function takes these, along with data and initial parameter values, and runs the MCMC algorithm for a specified number of iterations.
 
 ## Analysis of MCMC Output and Convergence
@@ -258,13 +258,14 @@ Python, being a versatile programming language, offers powerful libraries specif
 
 1. PyMC: PyMC3 (the latest version) is a Python library that specializes in probabilistic programming. It allows users to write down models using an intuitive syntax to describe the statistical model. PyMC3 includes a comprehensive set of pre-defined statistical distributions and model fitting algorithms, including MCMC. It leverages Theano for automatic differentiation and GPU support, which can significantly accelerate computation.
 
-  - Key Features:
+- Key Features:
+
     - Intuitive model specification syntax.
     - Powerful sampling algorithms like the No-U-Turn Sampler (NUTS), a variant of Hamiltonian Monte Carlo (HMC).
     - Extensive variety of built-in probability distributions.
     - Advanced features for model diagnostics and comparison.
 
-```
+```python
 import pymc3 as pm
 import numpy as np
 
@@ -287,15 +288,17 @@ with pm.Model() as model:
     # Inference
     trace = pm.sample(2000)
  ```
+
 2. PyStan: PyStan is the Python interface to Stan, a state-of-the-art platform for statistical modeling and high-performance statistical computation. Stan uses an expressive programming language for specifying complex statistical models and implements advanced MCMC algorithms like HMC.
 
   - Key Features:
+
     - Provides a powerful and flexible modeling language.
     - Efficient samplers that handle high-dimensional parameter spaces well.
     - Integrates well with the larger Stan ecosystem, allowing users to access advanced modeling techniques.
     - Good for high-dimensional and complex models.
 
-```
+```python
 import pystan
 import pandas as pd
 
@@ -427,6 +430,3 @@ In conclusion, MCMC methods are poised to remain at the forefront of Bayesian an
 - **"Hamiltonian Monte Carlo" by M.D. Hoffman and A. Gelman in the Journal of Machine Learning Research (2014)**: A pivotal paper on the Hamiltonian Monte Carlo method, an important variant of MCMC.
 
 - **"The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo" by M.D. Hoffman and A. Gelman in the Journal of Machine Learning Research (2011)**: Introduces the No-U-Turn Sampler, an extension of Hamiltonian Monte Carlo.
-
-
-
