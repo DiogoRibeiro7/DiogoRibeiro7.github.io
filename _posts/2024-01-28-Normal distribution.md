@@ -15,6 +15,17 @@ classes: wide
 seo_title: "Understanding the Classic Bell Curve: The Normal Distribution"
 seo_description: "An in-depth exploration of the Normal Distribution, often called the Bell Curve, and its critical role in data science, machine learning, and statistical analysis."
 excerpt: "Discover the significance of the Normal Distribution, also known as the Bell Curve, in statistics and its widespread application in real-world scenarios."
+keywords:
+  - normal distribution
+  - bell curve
+  - Gaussian distribution
+  - statistical analysis
+  - probability distribution
+  - data science
+  - machine learning
+  - statistical methods
+  - standard deviation
+  - mean and variance
 ---
 
 ![Example Image](/assets/images/normal_distribution/Bell-Curve.png)

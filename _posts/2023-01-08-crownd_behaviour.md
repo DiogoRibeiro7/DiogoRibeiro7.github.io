@@ -14,6 +14,17 @@ classes: wide
 seo_title: "Mathematical Models of Pedestrian Behavior: Insights into Urban Planning and Crowd Management"
 seo_description: "Explore the mathematical modeling of pedestrian behavior, focusing on the Social Force Model, statistical methods, and fluid dynamics to enhance urban planning, crowd management, and traffic control."
 excerpt: "Dive into the fascinating world of pedestrian behavior through mathematical models like the Social Force Model. Learn how these models inform urban planning, crowd management, and traffic control for safer and more efficient public spaces."
+keywords:
+  - pedestrian behavior
+  - mathematical modeling
+  - Social Force Model
+  - urban planning
+  - crowd management
+  - traffic control
+  - pedestrian dynamics
+  - fluid dynamics in traffic
+  - public space safety
+  - transportation systems
 ---
 
 ![Example Image](/assets/images/pedestrians.jpeg)
