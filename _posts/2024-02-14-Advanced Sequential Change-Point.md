@@ -9,10 +9,13 @@ tags:
 - Univariate Models
 - Sequential Analysis
 author_profile: false
+seo_title: "Advanced Techniques for Sequential Change-Point Detection in Univariate Models"
+seo_description: "Explore advanced methods and practical implementations for sequential change-point detection in univariate models, covering theoretical foundations, real-world applications, and key statistical techniques."
+excerpt: "Sequential change-point detection plays a crucial role in real-time monitoring across industries. Learn about advanced methods, their practical applications, and how they help detect changes in univariate models."
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
 ---
+
+## Overview
 
 Sequential change-point detection is a dynamic field that deals with real-time monitoring of data sequences to detect points where the statistical properties change. This process is crucial in various domains such as finance, quality control, signal processing, and biostatistics. This document explores the theoretical background, advanced methodologies, practical implementations, and real-world applications of sequential change-point detection for univariate models.
 
@@ -103,6 +106,14 @@ To implement the CUSUM method, follow these steps:
    C_n = \max(0, C_{n-1} + (X_n - \mu_0 - \delta))
    $$
 3. **Decision Rule**: Signal a change-point if $$C_n > h$$.
+
+### Monitoring for Multiple Change-Points
+
+In real-world applications, sequences may contain multiple change-points. To handle this scenario:
+
+1. **Reset After Detection**: After a change-point is detected, reset the detection process to look for additional changes in the subsequent data.
+2. **Segment-Based Methods**: Use segment-based methods to partition the sequence into homogeneous segments and detect multiple change-points in each segment.
+3. **Sliding Window Approach**: Apply a sliding window technique that continuously monitors overlapping subsets of the data, allowing for the detection of changes that might be missed by analyzing the full sequence.
 
 ## Real-World Applications
 
@@ -201,6 +212,94 @@ $$
 This incorporates the cumulative sum of deviations from the mean and adjusts for the expected shift $$\delta$$.
 
 Sequential change-point detection is a vital tool in various fields for real-time monitoring and timely detection of changes in data sequences. Advanced methods such as Likelihood Ratio Tests, CUSUM, Page's Test, and the Shiryaev-Roberts procedure offer robust solutions tailored to different types of changes and data characteristics. Understanding the theoretical foundations, implementing practical algorithms, and applying these methods in real-world scenarios enable effective monitoring and response to changes in diverse applications.
+
+## Appendix: Python Implementation of the CUSUM Method
+
+The following Python code demonstrates how to implement the CUSUM method for sequential change-point detection. In this example, we simulate a univariate sequence with a mean shift, apply the CUSUM method, and detect when a change-point occurs.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# CUSUM function
+def cusum(data, mu_0, delta, h):
+    """
+    CUSUM implementation for sequential change-point detection.
+
+    Parameters:
+    data (np.array): The observed data sequence.
+    mu_0 (float): The target mean before the change.
+    delta (float): The magnitude of the shift after the change.
+    h (float): The decision threshold for signaling a change-point.
+
+    Returns:
+    C (np.array): CUSUM statistic over time.
+    t_change (int): The time index where the change-point is detected, or None if not detected.
+    """
+    C = np.zeros(len(data))  # Initialize the CUSUM statistic array
+    t_change = None  # Change-point time index
+
+    for t in range(1, len(data)):
+        # Update the CUSUM statistic
+        C[t] = max(0, C[t - 1] + (data[t] - mu_0 - delta))
+
+        # Check if the CUSUM statistic exceeds the threshold
+        if C[t] > h:
+            t_change = t
+            break  # Stop when the first change-point is detected
+
+    return C, t_change
+
+# Simulated data
+np.random.seed(42)
+n = 100
+mu_0 = 0  # Mean before change
+mu_1 = 2  # Mean after change
+change_point = 60  # Actual change-point
+
+# Data before and after the change
+data = np.concatenate([np.random.normal(mu_0, 1,
+```
+
+### Explanation of the Code
+
+#### CUSUM Function:
+The `cusum` function calculates the CUSUM statistic iteratively. It checks for a change-point when the CUSUM statistic exceeds the decision threshold `h`.
+
+**Inputs**:
+- `data`: The observed sequence of data points.
+- `mu_0`: The target mean before the change.
+- `delta`: The magnitude of the shift in the mean after the change.
+- `h`: The threshold for signaling a change.
+
+**Outputs**:
+- `C`: The CUSUM statistic over time.
+- `t_change`: The index at which a change-point is detected, or `None` if no change-point is detected.
+
+#### Simulated Data:
+A sequence of 100 observations is generated. The first 60 points follow a normal distribution with mean `mu_0 = 0`, and the last 40 points follow a normal distribution with mean `mu_1 = 2`, representing a shift in the data.
+
+#### CUSUM Parameters:
+We set `delta = 1`, the expected magnitude of the mean shift, and a decision threshold of `h = 5`.
+
+#### CUSUM Detection:
+The CUSUM method is applied to the data, and the CUSUM statistic is updated sequentially. The detected change-point is marked once the statistic exceeds the threshold.
+
+#### Plotting the Results:
+The data, the actual change-point, the detected change-point, and the CUSUM statistic are plotted for visualization.
+
+### Output
+
+The output of the code is a plot that shows the following:
+
+- The observed data sequence.
+- The actual change-point (marked by a red dashed line).
+- The detected change-point using the CUSUM method (marked by a green dashed line).
+- The CUSUM statistic over time (shown in orange).
+
+In addition, the index of the detected change-point is printed to the console.
+
+This example demonstrates how the CUSUM method can be used to detect changes in the statistical properties of a univariate time series in a sequential manner.
 
 ## References
 
