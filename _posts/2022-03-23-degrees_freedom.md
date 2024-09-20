@@ -10,6 +10,20 @@ seo_title: "Degrees of Freedom: A Comprehensive Guide to Statistics and Data Ana
 seo_description: "Explore the concept of degrees of freedom in statistics, its role in hypothesis testing, and its applications in data analysis, engineering, and physics."
 excerpt: "Learn about degrees of freedom, a crucial concept in statistics and data analysis, with applications ranging from hypothesis testing to mechanical systems."
 classes: wide
+keywords:
+  - degrees of freedom
+  - statistics
+  - data analysis
+  - hypothesis testing
+  - statistical models
+  - t-distribution
+  - regression analysis
+  - parameter estimation
+  - sample size
+  - chi-square test
+  - variance estimation
+  - mechanical systems
+  - statistical significance
 ---
 
 ## Introduction to Degrees of Freedom

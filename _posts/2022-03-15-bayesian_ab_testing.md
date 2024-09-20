@@ -10,6 +10,20 @@ seo_title: "Bayesian A/B Testing: Enhancing Conversion Rate Analysis"
 seo_description: "Learn how Bayesian A/B testing provides nuanced insights into conversion rates, offering a robust alternative to traditional frequentist methods in data analysis."
 excerpt: "Explore Bayesian A/B testing as a powerful framework for analyzing conversion rates, providing more nuanced insights than traditional frequentist approaches."
 classes: wide
+keywords:
+  - Bayesian A/B testing
+  - conversion rate analysis
+  - Bayesian methods
+  - A/B testing in marketing
+  - statistical testing
+  - Bayesian statistics
+  - data-driven decision making
+  - posterior probability
+  - hypothesis testing
+  - frequentist vs Bayesian
+  - online experiments
+  - marketing optimization
+  - credible intervals
 ---
 
 ## Overview
