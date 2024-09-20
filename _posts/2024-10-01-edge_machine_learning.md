@@ -2,7 +2,6 @@
 title: "Implementing Continuous Machine Learning Deployment on Edge Devices"
 categories:
   - Machine Learning
-  - Edge Computing
 tags:
   - MLOps
   - Edge AI
@@ -12,11 +11,30 @@ tags:
 author_profile: false
 seo_title: "Continuous Machine Learning Deployment for Edge Devices: A Practical Approach"
 seo_description: "Explore how to implement continuous machine learning deployment on edge devices using MLOps platforms, focusing on a real-world example of a smart agriculture system."
-excerpt: "This article delves into the implementation of continuous machine learning deployment on edge devices, using MLOps and IoT management tools for a real-world agriculture use case."
+excerpt: "This article dives into the implementation of continuous machine learning deployment on edge devices, using MLOps and IoT management tools for a real-world agriculture use case."
 classes: wide
-# social_image: "/assets/images/social-mcmc.png"
+social_image: "/assets/images/edge-devices.png"
+header: 
+  image: "/assets/images/Edge-Computing.png"
+  overlay_image: "/assets/images/Edge-Computing.png"
+  teaser: "/assets/images/Edge-Computing.png"
+keywords:
+  - Edge Machine Learning
+  - Continuous Deployment on Edge Devices
+  - MLOps for Edge AI
+  - Smart Agriculture ML Deployment
+  - IoT Machine Learning Solutions
+  - Edge Inference
+  - Real-Time AI on Edge Devices
+  - Model Deployment in IoT
+  - AI for Agriculture
+  - Machine Learning Pipelines for Edge Devices
+summary: "This article explores how to implement continuous machine learning deployment on edge devices using MLOps and IoT management platforms. Focusing on a real-world smart agriculture use case, it highlights the benefits of edge inference for real-time processing, lower latency, and improved decision-making in environments with limited connectivity."
 math: true
 ---
+
+![Example Image](/assets/images/edge-devices.png)
+<div align="center"><em>Machine Learning in Edge Devices</em></div>
 
 Running machine learning (ML) inference on edge devices—closer to where the data is generated—provides numerous advantages compared to centralized cloud-based inference. These benefits include real-time processing, reduced latency, enhanced privacy, lower operational costs, and the ability to function in environments with intermittent or no internet connectivity. However, setting up an end-to-end ML system for continuous deployment on edge devices presents unique challenges. The process can be significantly more complex than deploying ML models in a centralized cloud environment, primarily due to the distributed nature of edge devices and the need for real-time updates.
 

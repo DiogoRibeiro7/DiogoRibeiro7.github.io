@@ -1,5 +1,5 @@
 ---
-title: "Unlocking the Power of Rolling Windows in Signal Processing"
+title: "Rolling Windows in Signal Processing"
 categories:
 - Signal Processing
 - Data Analysis
