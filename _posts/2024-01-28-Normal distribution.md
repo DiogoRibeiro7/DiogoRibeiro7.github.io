@@ -1,20 +1,20 @@
 ---
-title: "A Closer Look to the Classic Bell Curve"
+title: "A Closer Look at the Classic Bell Curve"
 subtitle: "The Normal Distribution"
 categories:
   - Mathematics
 tags:
-    - Data Science
-    - Mathematical Modeling
-    - Statistical Methods
-    - Machine Learning
-    - Statistical Analysis
-    - Bell Curve
-
+  - Data Science
+  - Mathematical Modeling
+  - Statistical Methods
+  - Machine Learning
+  - Statistical Analysis
+  - Bell Curve
 author_profile: false
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+seo_title: "Understanding the Classic Bell Curve: The Normal Distribution"
+seo_description: "An in-depth exploration of the Normal Distribution, often called the Bell Curve, and its critical role in data science, machine learning, and statistical analysis."
+excerpt: "Discover the significance of the Normal Distribution, also known as the Bell Curve, in statistics and its widespread application in real-world scenarios."
 ---
 
 ![Example Image](/assets/images/normal_distribution/Bell-Curve.png)
@@ -31,26 +31,30 @@ In this article, we will embark on an exciting journey into the world of probabi
 
 So grab your explorer’s hat and join me on this adventure. Whether you’re a seasoned mathematician or a curious novice, there’s something here for everyone. Let’s dive into the fascinating world of probability distributions and uncover the beauty and complexity of the dance between order and chaos.
 
-# The Normal Distribution — The Classic Bell Curve
+## The Normal Distribution — The Classic Bell Curve
+
 The Normal Distribution! It’s not just a curve; it’s a symphony of statistical elegance, a mathematical marvel that resonates with the rhythm of nature and human life. Let’s embark on an exploration of this fascinating distribution.
 
 ## Introduction to the Normal Distribution
+
 The Normal Distribution, often referred to as the Gaussian Distribution, is a continuous probability distribution characterized by its bell-shaped curve. It’s everywhere! From the heights of people to the marks on a test, the Normal Distribution is a universal phenomenon.
 
 The mathematical expression for the Normal Distribution is:
 
-&#36;&#36;
+$$
 f(x | \mu, \sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}
-&#36;&#36;
+$$
 
 Here, μ is the mean, and σ is the standard deviation. These two parameters define the entire curve!
 
 ## Real-world examples
+
 Imagine measuring the heights of all adults in a city. You’ll find that the heights are distributed around an average value, with fewer people being extremely tall or short. This distribution of heights would closely resemble the Normal Distribution.
 
 Similarly, in a classroom, test scores often follow the Normal Distribution. Most students score around the average, with fewer scoring significantly higher or lower.
 
 ## A simple explanation of mean and standard deviation
+
 The mean, μ, is the average value, the center of the distribution. It’s where the peak of the bell curve is located.
 
 The standard deviation, σ, tells us how spread out the values are. A small standard deviation means the values are tightly clustered around the mean, while a large standard deviation indicates a wider spread.
@@ -58,6 +62,7 @@ The standard deviation, σ, tells us how spread out the values are. A small stan
 Together, μ and σ shape the curve, encapsulating the essence of the data.
 
 ## Fun fact: Why it’s called the “bell curve”
+
 The term “bell curve” comes from the shape of the graph. It starts low, rises to a peak at the mean, and then symmetrically falls, forming a curve that resembles a bell. It’s a visual melody, a mathematical harmony that has captivated statisticians and mathematicians for centuries.
 
 The Normal Distribution is more than a mathematical concept; it’s a testament to the underlying order in a world filled with randomness. It’s a bridge between theory and reality, a tool that unlocks the secrets of nature.

@@ -1,15 +1,17 @@
 ---
-title: "The Foundations of AI: Why Mathematics is Essential to Understand the Iceberg"
+title: "Solving Data Drift Issues in Credit Risk Models: A Practical Example"
 categories:
-- Artificial Intelligence
+- Data Science
 tags:
-- AI
-- Mathematics
+- Credit Risk Modeling
+- Data Drift
 - Machine Learning
+- Multivariate Analysis
 author_profile: false
+seo_title: "Addressing Data Drift in Credit Risk Models: A Case Study"
+seo_description: "Explore a practical approach to solving data drift in credit risk models, focusing on multivariate analysis and its impact on model performance."
+excerpt: "A comprehensive exploration of data drift in credit risk models, examining practical methods to identify and address drift using multivariate techniques."
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ![Example Image](/assets/images/1725604108590.jpeg)

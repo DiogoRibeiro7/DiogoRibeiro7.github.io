@@ -13,8 +13,6 @@ classes: wide
 seo_title: "The Fears and Challenges of Artificial Intelligence and Automation"
 seo_description: "Explore the fears and challenges surrounding artificial intelligence, including job displacement, data privacy, ethical dilemmas, and the limitations of AI and machine learning."
 excerpt: "Delve into the fears and complexities of artificial intelligence and automation, addressing concerns like job displacement, data privacy, ethical decision-making, and the true capabilities and limitations of AI."
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ![Example Image](/assets/images/artificial.jpg)
