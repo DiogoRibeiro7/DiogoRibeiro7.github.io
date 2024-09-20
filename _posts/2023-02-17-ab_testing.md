@@ -1,19 +1,31 @@
 ---
-title: "Deep Dive into Sequential Testing: Advanced Statistical Methods for Efficient A/B Testing"
+title: "Advanced Statistical Methods for Efficient A/B Testing"
 categories:
-- Data Science
+  - Data Science
 tags:
-- A/B Testing
-- Sequential Testing
-- Statistical Methods
+  - A/B Testing
+  - Sequential Testing
+  - Statistical Methods
 author_profile: false
 seo_title: "In-Depth Sequential Testing in A/B Testing: Advanced Statistical Methods"
 seo_description: "Explore advanced statistical concepts behind sequential testing in A/B testing. Learn about SPRT, error control, practical implementation, and potential pitfalls."
 excerpt: "An in-depth exploration of sequential testing and its application in A/B testing. Understand the statistical underpinnings, advantages, limitations, and practical implementations in R, JavaScript, and Python."
 classes: wide
+keywords:
+  - Sequential Testing
+  - A/B Testing
+  - Statistical Methods
+  - SPRT (Sequential Probability Ratio Test)
+  - Error Control in A/B Testing
+  - Hypothesis Testing
+  - Adaptive Testing
+  - Data Science
+  - Python for A/B Testing
+  - R for Statistical Analysis
+  - JavaScript for A/B Testing
 ---
 
-A/B testing stands as a pillar in the realm of data-driven decision-making, offering a methodical approach to evaluating product variations based on user interactions and key performance indicators. However, traditional fixed-sample A/B testing can be inefficient, especially for organizations with limited user traffic or when swift decision-making is crucial. **Sequential testing**, grounded in advanced statistical theory, emerges as a powerful alternative that enables continuous data evaluation, potentially accelerating conclusions without compromising statistical integrity.
+A/B testing stands as a pillar data-driven decision-making, offering a methodical approach to evaluating product variations based on user interactions and key performance indicators. However, traditional fixed-sample A/B testing can be inefficient, especially for organizations with limited user traffic or when swift decision-making is crucial. **Sequential testing**, grounded in advanced statistical theory, emerges as a powerful alternative that enables continuous data evaluation, potentially accelerating conclusions without compromising statistical integrity.
 
 In this comprehensive article, we delve into the theoretical underpinnings of sequential testing, explore its practical application in real-world scenarios, and discuss its advantages and limitations. We will cover the statistical foundations, including the Sequential Probability Ratio Test (SPRT), and provide detailed coding examples in R, JavaScript, and Python to illustrate how to implement sequential testing effectively.
 
