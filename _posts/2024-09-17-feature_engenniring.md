@@ -1,17 +1,28 @@
 ---
 title: "5 Common Mistakes in Feature Engineering and How to Avoid Them"
 categories:
-- Machine Learning
-- Data Science
+  - Machine Learning
+  - Data Science
 tags:
-- Feature Engineering
-- Data Preprocessing
-- Machine Learning
+  - Feature Engineering
+  - Data Preprocessing
+  - Machine Learning
 author_profile: false
 seo_title: "Avoiding 5 Common Feature Engineering Mistakes in Machine Learning"
 seo_description: "Explore five common mistakes in feature engineering, including data leakage and over-engineering, and learn how to avoid them for more robust machine learning models."
 excerpt: "Feature engineering is crucial in machine learning, but it's easy to make mistakes that lead to inaccurate models. This article highlights five common pitfalls and provides strategies to avoid them."
 classes: wide
+keywords:
+  - Feature Engineering Mistakes
+  - Data Preprocessing
+  - Avoiding Data Leakage
+  - Overfitting in Machine Learning
+  - Feature Selection Techniques
+  - Data Transformation
+  - Data Quality in ML
+  - Machine Learning Best Practices
+  - Robust Feature Engineering
+  - Data Cleaning for Machine Learning
 ---
 
 ## Introduction to Feature Engineering
