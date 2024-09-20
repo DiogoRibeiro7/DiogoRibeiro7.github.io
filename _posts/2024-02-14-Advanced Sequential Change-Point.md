@@ -264,28 +264,35 @@ data = np.concatenate([np.random.normal(mu_0, 1,
 ### Explanation of the Code
 
 #### CUSUM Function:
+
 The `cusum` function calculates the CUSUM statistic iteratively. It checks for a change-point when the CUSUM statistic exceeds the decision threshold `h`.
 
 **Inputs**:
+
 - `data`: The observed sequence of data points.
 - `mu_0`: The target mean before the change.
 - `delta`: The magnitude of the shift in the mean after the change.
 - `h`: The threshold for signaling a change.
 
 **Outputs**:
+
 - `C`: The CUSUM statistic over time.
 - `t_change`: The index at which a change-point is detected, or `None` if no change-point is detected.
 
 #### Simulated Data:
+
 A sequence of 100 observations is generated. The first 60 points follow a normal distribution with mean `mu_0 = 0`, and the last 40 points follow a normal distribution with mean `mu_1 = 2`, representing a shift in the data.
 
 #### CUSUM Parameters:
+
 We set `delta = 1`, the expected magnitude of the mean shift, and a decision threshold of `h = 5`.
 
 #### CUSUM Detection:
+
 The CUSUM method is applied to the data, and the CUSUM statistic is updated sequentially. The detected change-point is marked once the statistic exceeds the threshold.
 
 #### Plotting the Results:
+
 The data, the actual change-point, the detected change-point, and the CUSUM statistic are plotted for visualization.
 
 ### Output
