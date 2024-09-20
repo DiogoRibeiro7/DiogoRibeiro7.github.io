@@ -18,6 +18,7 @@ gem "jekyll-remote-theme"
 gem "minimal-mistakes-jekyll"
 gem "webrick"
 gem "rake"
+gem 'liquid-c'
 
 # The following plugins are automatically loaded by the theme-gem:
 #   gem "jekyll-paginate"
@@ -33,4 +34,10 @@ group :jekyll_plugins do
     # gem "webrick" # Add this line
     gem "jekyll-seo-tag"
     gem "jekyll-sitemap"
+    gem 'jekyll-include-cache'			# gem to speed up Liquid parsing
+    gem 'jekyll-commonmark'			    # gem to speed up Markdown
+    gem 'liquid-md5'
+    gem 'jekyll-archives'
+    gem 'octopress'
+    gem "kramdown-parser-gfm"
 end
