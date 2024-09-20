@@ -14,6 +14,8 @@ seo_title: "Continuous Machine Learning Deployment for Edge Devices: A Practical
 seo_description: "Explore how to implement continuous machine learning deployment on edge devices using MLOps platforms, focusing on a real-world example of a smart agriculture system."
 excerpt: "This article delves into the implementation of continuous machine learning deployment on edge devices, using MLOps and IoT management tools for a real-world agriculture use case."
 classes: wide
+# social_image: "/assets/images/social-mcmc.png"
+math: true
 ---
 
 Running machine learning (ML) inference on edge devices—closer to where the data is generated—provides numerous advantages compared to centralized cloud-based inference. These benefits include real-time processing, reduced latency, enhanced privacy, lower operational costs, and the ability to function in environments with intermittent or no internet connectivity. However, setting up an end-to-end ML system for continuous deployment on edge devices presents unique challenges. The process can be significantly more complex than deploying ML models in a centralized cloud environment, primarily due to the distributed nature of edge devices and the need for real-time updates.

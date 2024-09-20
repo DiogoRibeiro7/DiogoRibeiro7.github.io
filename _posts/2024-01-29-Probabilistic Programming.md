@@ -4,20 +4,21 @@ subtitle: "Understanding the Metropolis Algorithm Through Code"
 categories:
   - Mathematics
 tags:
-    - Data Science
-    - Mathematical Modeling
-    - Statistical Methods
-    - Machine Learning
-    - Statistical Analysis
-    - Probability
-    - Probabilistic Programming
-    - Bayesian Statistics
-
+  - Data Science
+  - Mathematical Modeling
+  - Statistical Methods
+  - Machine Learning
+  - Statistical Analysis
+  - Probability
+  - Probabilistic Programming
+  - Bayesian Statistics
 author_profile: false
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+seo_title: "Demystifying MCMC: A Hands-On Guide to Bayesian Inference"
+seo_description: "A practical explanation of MCMC and the Metropolis algorithm, focusing on Bayesian inference with Python code examples to make the concepts accessible."
+excerpt: "Explore Markov Chain Monte Carlo (MCMC) methods, specifically the Metropolis algorithm, and learn how to perform Bayesian inference through Python code."
 ---
+
 In my talks about probabilistic programming and Bayesian statistics, I often keep the explanation of inference high-level, treating it as a sort of "black box". Probabilistic programming's advantage is that it doesn't require deep knowledge of the inference mechanism to construct models, although understanding it is beneficial.
 
 Once, while introducing a Bayesian model to my CEO, who is new to Bayesian statistics, he questioned the inference process, the part I usually simplify. He asked, "How does the inference work? How do we obtain samples from the posterior?"
@@ -28,12 +29,12 @@ This blog post aims to elucidate the intuition behind MCMC sampling, specificall
 
 Let's start by examining Bayes' formula:
 
-&#36;&#36;
+$$
 P(\theta \mid X) = \frac{P(X \mid \theta) \cdot P(\theta)}{P(X)}
-&#36;&#36;
-
+$$
 
 Where:
+
 - $$P(\theta \mid X)$$ is the posterior probability of the parameters ($$\theta$$) given the data ($$X$$).
 - $$P(X \mid \theta)$$ is the likelihood of the data given the parameters.
 - $$P(\theta)$$ is the prior probability of the parameters.
@@ -48,7 +49,8 @@ Alternatively, we might construct an ergodic, reversible Markov chain whose equi
 For our example, we'll use Python libraries like numpy and scipy. Our goal is to estimate the posterior of the mean (mu), assuming a known standard deviation, from data points drawn from a normal distribution centered at zero.
 
 Here's our Python setup:
-```
+
+```python
 import numpy as np
 import scipy as sp
 import pandas as pd
@@ -69,7 +71,7 @@ _ = ax.set(title='Histogram of observed data', xlabel='x', ylabel='# observation
 
 We define our model as a normal distribution. Conveniently, we can compute the posterior analytically in this case:
 
-```
+```python
 def calc_posterior_analytical(data, x, mu_0, sigma_0):
     sigma = 1.
     n = len(data)
@@ -86,7 +88,7 @@ sns.despine()
 
 Next, we implement the MCMC sampler. We start with an initial mu value, propose a new mu, and decide whether to accept it based on the likelihood of the data given the proposed mu:
 
-```
+```python
 def sampler(data, samples=4, mu_init=.5, proposal_width=.5, plot=False, mu_prior_mu=0, mu_prior_sd=1.):
     mu_current = mu_init
     posterior = [mu_current]
