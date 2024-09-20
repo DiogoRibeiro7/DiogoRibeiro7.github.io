@@ -18,6 +18,17 @@ header:
   image: "/assets/images/download.png"
   overlay_image: "/assets/images/download.png"
   teaser: "/assets/images/download.png"
+keywords:
+  - rolling windows
+  - signal processing
+  - feature extraction
+  - signal smoothing
+  - time-frequency analysis
+  - windowed analysis
+  - moving average
+  - real-time data analysis
+  - filtering techniques
+  - data smoothing
 ---
 
 ![Example Image](/assets/images/rollingwindow.png)

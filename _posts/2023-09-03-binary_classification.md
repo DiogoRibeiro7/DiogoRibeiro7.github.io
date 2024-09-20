@@ -12,8 +12,18 @@ classes: wide
 seo_title: "Binary Classification in Machine Learning: Methods, Metrics, and Applications"
 seo_description: "Explore the fundamentals of binary classification in machine learning, including key algorithms, evaluation metrics like precision and recall, and real-world applications."
 excerpt: "Learn the core concepts of binary classification, explore common algorithms like Decision Trees and SVMs, and discover how to evaluate performance using precision, recall, and F1-score."
+keywords:
+  - binary classification
+  - machine learning
+  - decision trees
+  - support vector machines
+  - precision and recall
+  - f1-score
+  - supervised learning algorithms
+  - model evaluation metrics
+  - classification problems
+  - machine learning applications
 ---
-
 
 ## Understanding Binary Classification
 

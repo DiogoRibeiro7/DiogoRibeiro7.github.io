@@ -10,6 +10,20 @@ seo_title: "Principal Component Analysis (PCA) Guide"
 seo_description: "A comprehensive guide to Principal Component Analysis (PCA), covering feature selection, dimension reduction, explained variance, and outlier detection."
 excerpt: "Learn about Principal Component Analysis (PCA) and how it helps in feature extraction, dimensionality reduction, and identifying key patterns in data."
 classes: wide
+keywords:
+  - principal component analysis
+  - PCA
+  - dimensionality reduction
+  - feature extraction
+  - explained variance
+  - PCA applications
+  - data science techniques
+  - outlier detection in PCA
+  - PCA step-by-step guide
+  - multivariate data analysis
+  - PCA for machine learning
+  - pattern recognition
+  - data compression
 ---
 
 

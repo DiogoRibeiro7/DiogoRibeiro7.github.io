@@ -11,6 +11,17 @@ classes: wide
 seo_title: "Data and Communication: Orchestrating a Harmonious Future"
 seo_description: "Explore the crucial role of communication in data-driven environments, examining how to balance data analysis with effective storytelling and context to drive actionable insights."
 excerpt: "Data and communication are intricately linked in modern business. This article explores how to balance data analysis with storytelling, ensuring clear and actionable insights."
+keywords:
+  - sample size
+  - statistical analysis
+  - data quality
+  - statistical accuracy
+  - experimental design
+  - statistical power
+  - hypothesis testing
+  - data sampling
+  - effect size
+  - research methodology
 ---
 
 ![Example Image](/assets/images/communication.jpg)
