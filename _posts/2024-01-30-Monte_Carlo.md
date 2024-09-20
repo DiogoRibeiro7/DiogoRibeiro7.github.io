@@ -17,6 +17,12 @@ classes: wide
 seo_title: "Mastering Bayesian Statistics with MCMC: A Deep Dive into Complex Probabilities"
 seo_description: "Explore Bayesian statistics and the power of Markov Chain Monte Carlo (MCMC) in handling complex probabilistic models. Learn with practical examples and Python code."
 excerpt: "Discover how Bayesian inference and MCMC algorithms like Metropolis-Hastings can solve complex probability problems through real-world examples and Python implementation."
+keywords:
+  - Bayesian Statistics
+  - MCMC algorithms
+summary: "A comprehensive guide to understanding Bayesian statistics and MCMC methods, including real-world applications and Python examples."
+math: true
+draft: false
 ---
 
 ![Example Image](/assets/images/Markov-chain-Monte-Carlo-sampling-using-random-walk.jpeg)
