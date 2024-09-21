@@ -4,6 +4,10 @@ categories:
 - Statistics
 classes: wide
 date: '2024-07-10'
+header:
+  image: /assets/images/data_science_1.jpg
+  overlay_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/data_science_1.jpg
 tags:
 - Probability
 - Gaussian Distribution

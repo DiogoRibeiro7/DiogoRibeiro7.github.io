@@ -8,6 +8,10 @@ date: '2023-08-21'
 excerpt: Discover how data science, a multidisciplinary field combining statistics,
   computer science, and domain expertise, can drive better business decisions and
   outcomes.
+header:
+  image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.jpg
 keywords:
 - data science
 - business intelligence

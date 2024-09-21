@@ -8,6 +8,10 @@ date: '2024-09-17'
 excerpt: Feature engineering is crucial in machine learning, but it's easy to make
   mistakes that lead to inaccurate models. This article highlights five common pitfalls
   and provides strategies to avoid them.
+header:
+  image: /assets/images/data_science_5.jpg
+  overlay_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/data_science_5.jpg
 keywords:
 - Feature Engineering Mistakes
 - Data Preprocessing

@@ -6,6 +6,10 @@ classes: wide
 date: '2022-03-23'
 excerpt: Learn about degrees of freedom, a crucial concept in statistics and data
   analysis, with applications ranging from hypothesis testing to mechanical systems.
+header:
+  image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.jpg
 keywords:
 - degrees of freedom
 - statistics

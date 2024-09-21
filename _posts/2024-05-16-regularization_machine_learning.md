@@ -7,6 +7,10 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-05-16'
+header:
+  image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/data_science_3.jpg
 subtitle: Techniques to Prevent Overfitting and Improve Model Performance
 tags:
 - Regularization

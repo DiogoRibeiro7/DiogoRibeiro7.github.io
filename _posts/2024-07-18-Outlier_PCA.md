@@ -5,6 +5,10 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-07-18'
+header:
+  image: /assets/images/data_science_4.jpg
+  overlay_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/data_science_4.jpg
 tags:
 - PCA
 - Outlier Detection

@@ -8,6 +8,10 @@ categories:
 - Writing Tips
 classes: wide
 date: '2024-05-22'
+header:
+  image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.jpg
 tags:
 - Research paper writing
 - Academic writing tips

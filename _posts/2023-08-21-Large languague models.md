@@ -8,6 +8,10 @@ date: '2023-08-21'
 excerpt: An in-depth exploration of how the closure of open-source data platforms
   threatens the growth of Large Language Models and the vital role humans play in
   this ecosystem.
+header:
+  image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/data_science_3.jpg
 keywords:
 - large language models
 - open-source data platforms

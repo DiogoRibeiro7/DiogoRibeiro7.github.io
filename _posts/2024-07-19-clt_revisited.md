@@ -6,6 +6,10 @@ categories:
 - Mathematical Analysis
 classes: wide
 date: '2024-07-19'
+header:
+  image: /assets/images/data_science_8.jpg
+  overlay_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.jpg
 tags:
 - Central Limit Theorem
 - m-dependence

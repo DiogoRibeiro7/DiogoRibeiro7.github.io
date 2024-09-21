@@ -7,6 +7,10 @@ date: '2023-07-26'
 excerpt: A detailed exploration of Customer Lifetime Value (CLV) for data practitioners
   and marketers, including its calculation, prediction, and integration with other
   business data.
+header:
+  image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/data_science_3.jpg
 keywords:
 - customer lifetime value
 - CLV calculation

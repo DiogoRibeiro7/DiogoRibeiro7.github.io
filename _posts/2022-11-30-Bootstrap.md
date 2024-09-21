@@ -7,6 +7,10 @@ date: '2022-11-30'
 excerpt: Delve into bootstrapping, a versatile statistical technique for estimating
   the sampling distribution of a statistic, offering insights into its applications
   and implementation.
+header:
+  image: /assets/images/data_science_4.jpg
+  overlay_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/data_science_4.jpg
 keywords:
 - bootstrapping
 - resampling methods

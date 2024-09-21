@@ -8,6 +8,10 @@ date: '2024-09-18'
 excerpt: Unlock the power of Bayesian statistics in machine learning through probabilistic
   reasoning, offering insights into model uncertainty, predictive distributions, and
   real-world applications.
+header:
+  image: /assets/images/bayes_stats_1.png
+  overlay_image: /assets/images/bayes_stats_1.png
+  teaser: /assets/images/bayes_stats_1.png
 keywords:
 - Bayesian Statistics
 - Machine Learning

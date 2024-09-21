@@ -7,6 +7,10 @@ categories:
 - Data Processing
 classes: wide
 date: '2024-07-05'
+header:
+  image: /assets/images/data_science_6.jpg
+  overlay_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/data_science_6.jpg
 tags:
 - Time Series
 - Data Smoothing

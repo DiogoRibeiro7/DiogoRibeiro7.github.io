@@ -7,6 +7,10 @@ classes: wide
 date: '2024-09-30'
 excerpt: This checklist helps Data Science professionals ensure thorough validation
   of their projects before declaring success and deploying models.
+header:
+  image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/data_science_3.jpg
 keywords:
 - Data Science
 - Model Deployment

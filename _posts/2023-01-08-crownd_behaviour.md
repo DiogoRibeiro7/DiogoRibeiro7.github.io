@@ -7,6 +7,10 @@ date: '2023-01-08'
 excerpt: Dive into the fascinating world of pedestrian behavior through mathematical
   models like the Social Force Model. Learn how these models inform urban planning,
   crowd management, and traffic control for safer and more efficient public spaces.
+header:
+  image: /assets/images/data_science_1.jpg
+  overlay_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/data_science_1.jpg
 keywords:
 - pedestrian behavior
 - mathematical modeling

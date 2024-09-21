@@ -6,6 +6,10 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-05-09'
+header:
+  image: /assets/images/data_science_5.jpg
+  overlay_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/data_science_5.jpg
 subtitle: A Practical Guide to Advanced Data Segmentation
 tags:
 - Kernel Clustering in R

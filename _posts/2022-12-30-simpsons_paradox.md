@@ -7,6 +7,10 @@ date: '2022-12-30'
 excerpt: Simpson's Paradox shows how aggregated data can lead to misleading trends.
   Learn the theory behind this paradox, its practical implications, and how to analyze
   data rigorously.
+header:
+  image: /assets/images/data_science_8.jpg
+  overlay_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.jpg
 seo_description: Explore the theoretical foundations of Simpson’s Paradox, its role
   in data analysis, and how lurking variables and data aggregation lead to contradictory
   statistical conclusions.

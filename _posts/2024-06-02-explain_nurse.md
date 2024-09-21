@@ -8,6 +8,10 @@ categories:
 - Professional Development
 classes: wide
 date: '2024-06-02'
+header:
+  image: /assets/images/data_science_8.jpg
+  overlay_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.jpg
 tags:
 - Nursing education
 - Statistical analysis

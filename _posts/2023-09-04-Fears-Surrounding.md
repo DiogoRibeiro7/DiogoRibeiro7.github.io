@@ -7,6 +7,10 @@ date: '2023-09-04'
 excerpt: Delve into the fears and complexities of artificial intelligence and automation,
   addressing concerns like job displacement, data privacy, ethical decision-making,
   and the true capabilities and limitations of AI.
+header:
+  image: /assets/images/data_science_6.jpg
+  overlay_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/data_science_6.jpg
 keywords:
 - artificial intelligence
 - machine learning

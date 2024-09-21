@@ -8,6 +8,10 @@ categories:
 - Data Analysis
 classes: wide
 date: '2024-06-04'
+header:
+  image: /assets/images/data_science_1.jpg
+  overlay_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/data_science_1.jpg
 tags:
 - Poisson Distribution
 - Count Data

@@ -5,6 +5,10 @@ categories:
 - Supply Chain Management
 classes: wide
 date: '2024-09-01'
+header:
+  image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/data_science_3.jpg
 tags:
 - Graph Theory
 - Network Optimization

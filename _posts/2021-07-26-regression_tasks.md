@@ -8,6 +8,10 @@ date: '2021-07-26'
 excerpt: Regression tasks are at the heart of machine learning. This guide explores
   methods like Linear Regression, Principal Component Regression, Gaussian Process
   Regression, and Support Vector Regression, with insights on when to use each.
+header:
+  image: /assets/images/regression-analysis-2.jpg
+  overlay_image: /assets/images/regression-analysis-2.jpg
+  teaser: /assets/images/regression-analysis-2.jpg
 keywords:
 - machine learning
 - regression tasks

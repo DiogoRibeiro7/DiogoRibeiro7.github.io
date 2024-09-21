@@ -7,6 +7,10 @@ date: '2023-09-27'
 excerpt: Data and communication are intricately linked in modern business. This article
   explores how to balance data analysis with storytelling, ensuring clear and actionable
   insights.
+header:
+  image: /assets/images/data_science_5.jpg
+  overlay_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/data_science_5.jpg
 keywords:
 - sample size
 - statistical analysis

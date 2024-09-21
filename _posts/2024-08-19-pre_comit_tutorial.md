@@ -6,6 +6,10 @@ categories:
 - Version Control
 classes: wide
 date: '2024-08-19'
+header:
+  image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.jpg
 tags:
 - Python
 - Pre-commit

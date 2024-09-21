@@ -5,6 +5,10 @@ categories:
 - Data Science
 classes: wide
 date: '2024-07-14'
+header:
+  image: /assets/images/data_science_1.jpg
+  overlay_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/data_science_1.jpg
 tags:
 - Uncertainty
 - Linear Regression

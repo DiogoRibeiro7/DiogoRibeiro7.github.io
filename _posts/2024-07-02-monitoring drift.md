@@ -8,6 +8,10 @@ categories:
 - Technology
 classes: wide
 date: '2024-07-02'
+header:
+  image: /assets/images/data_science_4.jpg
+  overlay_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/data_science_4.jpg
 tags:
 - Data Drift
 - Direct Loss Estimation

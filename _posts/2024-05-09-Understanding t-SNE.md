@@ -6,6 +6,10 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-05-09'
+header:
+  image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/data_science_3.jpg
 subtitle: A Guide to Visualizing High-Dimensional Data
 tags:
 - t-SNE

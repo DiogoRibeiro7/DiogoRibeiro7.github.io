@@ -10,6 +10,10 @@ categories:
 - Marketing
 classes: wide
 date: '2024-06-06'
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 tags:
 - Sensory Lexicon
 - Wine Tasting

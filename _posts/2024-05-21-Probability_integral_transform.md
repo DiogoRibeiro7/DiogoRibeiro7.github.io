@@ -7,6 +7,10 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-05-21'
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 tags:
 - Probability Integral Transform
 - Cumulative Distribution Function

@@ -6,6 +6,10 @@ classes: wide
 date: '2024-02-09'
 excerpt: A comprehensive guide to spectral clustering and its role in dimensionality
   reduction, enhancing data analysis, and uncovering patterns in machine learning.
+header:
+  image: /assets/images/data_science_7.jpg
+  overlay_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/data_science_7.jpg
 keywords:
 - spectral clustering
 - dimensionality reduction

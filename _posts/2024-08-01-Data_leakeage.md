@@ -4,6 +4,10 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-08-01'
+header:
+  image: /assets/images/data_science_8.jpg
+  overlay_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.jpg
 tags:
 - Data Leakage
 - Data Science

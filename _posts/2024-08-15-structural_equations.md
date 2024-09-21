@@ -5,6 +5,10 @@ categories:
 - Research Methods
 classes: wide
 date: '2024-08-15'
+header:
+  image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.jpg
 tags:
 - Structural Equation Modeling (SEM)
 - Latent Variables

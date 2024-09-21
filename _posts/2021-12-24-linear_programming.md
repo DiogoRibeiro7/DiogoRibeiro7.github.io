@@ -9,6 +9,10 @@ excerpt: Linear Programming is the foundation of optimization in operations rese
   We explore its traditional methods, challenges in scaling large instances, and introduce
   PDLP, a scalable solver using first-order methods, designed for modern computational
   infrastructures.
+header:
+  image: /assets/images/linear_program.jpeg
+  overlay_image: /assets/images/linear_program.jpeg
+  teaser: /assets/images/linear_program.jpeg
 keywords:
 - linear programming
 - simplex method
@@ -41,6 +45,8 @@ title: 'Exploring Classic Linear Programming (LP) Problems and Scalable Solution
 ---
 
 ## Introduction
+
+![Example Image](/assets/images/linear_program.jpg)
 
 **Classic linear programming (LP)** problems are some of the most foundational in computer science and operations research. Since its inception, LP has been critical in solving optimization problems across industries such as manufacturing, logistics, finance, networking, and more. As a cornerstone of **mathematical programming**, LP has significantly influenced the development of today’s sophisticated modeling frameworks and algorithmic approaches for **data-driven decision making**.
 

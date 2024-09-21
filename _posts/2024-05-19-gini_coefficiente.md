@@ -7,6 +7,10 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-05-19'
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 subtitle: Guide to the Normalized Gini Coefficient and Default Rate in Credit Scoring
   and Risk Assessment
 tags:

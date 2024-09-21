@@ -8,6 +8,10 @@ categories:
 - Educational Tutorial
 classes: wide
 date: '2024-06-05'
+header:
+  image: /assets/images/data_science_7.jpg
+  overlay_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/data_science_7.jpg
 tags:
 - Poisson Distribution
 - Count Data

@@ -6,6 +6,10 @@ classes: wide
 date: '2022-12-31'
 excerpt: Learn about Principal Component Analysis (PCA) and how it helps in feature
   extraction, dimensionality reduction, and identifying key patterns in data.
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 keywords:
 - principal component analysis
 - PCA
@@ -28,6 +32,8 @@ tags:
 - Dimensionality Reduction
 title: 'Understanding PCA: A Step-by-Step Guide to Principal Component Analysis'
 ---
+
+![Example Image](/assets/images/pca.png)
 
 At the end of this blog, you will be able to visually explain the variance in your data, select the most informative features, and create insightful plots. We will cover the following topics in detail:
 

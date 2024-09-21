@@ -6,6 +6,10 @@ categories:
 - Data Science
 classes: wide
 date: '2024-05-10'
+header:
+  image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.jpg
 subtitle: A Key to Representative Research
 tags:
 - Stratified Sampling

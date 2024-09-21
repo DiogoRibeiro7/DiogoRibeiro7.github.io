@@ -8,6 +8,10 @@ date: '2024-02-20'
 excerpt: Discover critical lessons learned from validating COPOD, a popular anomaly
   detection model, through test-driven validation techniques. Avoid common pitfalls
   in anomaly detection modeling.
+header:
+  image: /assets/images/data_science_6.jpg
+  overlay_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/data_science_6.jpg
 keywords:
 - anomaly detection
 - COPOD

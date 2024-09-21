@@ -7,6 +7,10 @@ date: '2023-01-01'
 excerpt: Delve into how multiple linear regression and binary logistic regression
   handle errors. Learn about explicit and implicit error terms and their impact on
   model performance.
+header:
+  image: /assets/images/data_science_1.jpg
+  overlay_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/data_science_1.jpg
 keywords:
 - error terms
 - multiple linear regression

@@ -6,6 +6,10 @@ categories:
 - Data Science
 classes: wide
 date: '2024-05-11'
+header:
+  image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/data_science_3.jpg
 subtitle: Impact of Importance Sampling on Simulation Accuracy and Computational Economy
 tags:
 - Importance Sampling
