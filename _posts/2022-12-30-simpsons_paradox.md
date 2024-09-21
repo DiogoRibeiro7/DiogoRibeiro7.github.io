@@ -37,27 +37,27 @@ At the heart of Simpson’s Paradox is the concept of **marginal** versus **cond
 
 The paradox arises when the marginal relationship (based on aggregated data) between two variables reverses or is significantly different from the conditional relationships within each subgroup.
 
-Consider a simple example where two variables, \( X \) and \( Y \), are positively correlated in the aggregate data. However, when the data is broken down by a third variable, \( Z \), the correlation between \( X \) and \( Y \) becomes negative or disappears entirely in each subgroup of \( Z \). This creates a situation where aggregated data misleads, hiding the true nature of the relationship.
+Consider a simple example where two variables, $$ X $$ and $$ Y $$, are positively correlated in the aggregate data. However, when the data is broken down by a third variable, $$ Z $$, the correlation between $$ X $$ and $$ Y $$ becomes negative or disappears entirely in each subgroup of $$ Z $$. This creates a situation where aggregated data misleads, hiding the true nature of the relationship.
 
 ### Formal Mathematical Representation
 
-Simpson’s Paradox can be formalized using **conditional probabilities** and the law of total probability. Suppose we have two binary variables, \( A \) and \( B \), and a third variable \( C \), which is categorical. The paradox can be described mathematically as follows:
+Simpson’s Paradox can be formalized using **conditional probabilities** and the law of total probability. Suppose we have two binary variables, $$ A $$ and $$ B $$, and a third variable $$ C $$, which is categorical. The paradox can be described mathematically as follows:
 
 Let:
 
-\[
+$$
 P(A | B) = \frac{a_1}{a_1 + b_1}, \quad P(A | \neg B) = \frac{a_2}{a_2 + b_2}
-\]
+$$
 
-Here, \( a_1 \) and \( b_1 \) represent the number of positive and negative outcomes for \( A \) when \( B \) is true, and \( a_2 \) and \( b_2 \) represent the outcomes when \( B \) is false.
+Here, $$ a_1 $$ and $$ b_1 $$ represent the number of positive and negative outcomes for $$ A $$ when $$ B $$ is true, and $$ a_2 $$ and $$ b_2 $$ represent the outcomes when $$ B $$ is false.
 
-However, if you split the data by the third variable \( C \) (such as subgroups \( C_1 \) and \( C_2 \)), you might find:
+However, if you split the data by the third variable $$ C $$ (such as subgroups $$ C_1 $$ and $$ C_2 $$), you might find:
 
-\[
+$$
 P(A | B, C_1) \neq P(A | B, C_2)
-\]
+$$
 
-The aggregated probabilities \( P(A|B) \) and \( P(A|\neg B) \) suggest one relationship, but the subgroup probabilities may tell a completely different story, leading to contradictory conclusions.
+The aggregated probabilities $$ P(A|B) $$ and $$ P(A|\neg B) $$ suggest one relationship, but the subgroup probabilities may tell a completely different story, leading to contradictory conclusions.
 
 This mathematical framework highlights the crucial role of weighting and distribution in Simpson’s Paradox. Aggregating the data without considering these subtleties can lead to misleading interpretations.
 
@@ -111,7 +111,7 @@ Visualization can be a powerful tool for understanding Simpson’s Paradox. The 
 
 A common way to visualize Simpson’s Paradox is through a scatter plot where the relationship between two variables appears to show a specific trend, such as a positive correlation. By color-coding or otherwise marking subgroups based on a third variable (the lurking variable), it becomes clear that the relationship between the two variables may differ dramatically within each subgroup.
 
-For example, in an aggregated scatter plot, the relationship between variables \( X \) and \( Y \) might appear positive. However, when the data is stratified by the lurking variable \( Z \), the individual subgroup plots may show negative correlations, revealing the paradox.
+For example, in an aggregated scatter plot, the relationship between variables $$ X $$ and $$ Y $$ might appear positive. However, when the data is stratified by the lurking variable $$ Z $$, the individual subgroup plots may show negative correlations, revealing the paradox.
 
 ### Bar Charts: Aggregated vs. Stratified Data
 
