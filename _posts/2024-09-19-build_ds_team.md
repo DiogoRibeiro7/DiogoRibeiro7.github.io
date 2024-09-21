@@ -48,6 +48,10 @@ tags:
 title: 'The Great Title Debate: Should Data Science Teams Assign Different Job Titles
   to Specialized Roles?'
 toc: false
+header:
+  image: /assets/images/data_team.png
+  overlay_image: /assets/images/data_team.png
+  teaser: /assets/images/data_team.png
 ---
 
 ![Data Scientist](/assets/images/data_scientist.jpg)

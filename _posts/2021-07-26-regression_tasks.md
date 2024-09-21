@@ -9,19 +9,19 @@ excerpt: Regression tasks are at the heart of machine learning. This guide explo
   methods like Linear Regression, Principal Component Regression, Gaussian Process
   Regression, and Support Vector Regression, with insights on when to use each.
 keywords:
-- machine learning
-- regression tasks
-- linear regression
-- polynomial regression
-- support vector regression
-- gaussian process regression
-- principal component regression
-- dimensionality reduction
-- regression algorithms
-- scikit-learn
-- machine learning techniques
-- nonlinear regression
-- probabilistic models
+  - machine learning
+  - regression tasks
+  - linear regression
+  - polynomial regression
+  - support vector regression
+  - gaussian process regression
+  - principal component regression
+  - dimensionality reduction
+  - regression algorithms
+  - scikit-learn
+  - machine learning techniques
+  - nonlinear regression
+  - probabilistic models
 seo_description: A comprehensive guide to selecting the best regression algorithm
   for your dataset, based on complexity, dimensionality, and the need for probabilistic
   output. Explore traditional machine learning methods with detailed explanations
@@ -35,6 +35,10 @@ tags:
 - Principal Component Regression
 - Polynomial Regression
 title: 'A Guide to Regression Tasks: Choosing the Right Approach'
+header:
+  image: /assets/images/regression-analysis-2.jpg
+  overlay_image: /assets/images/regression-analysis-2.jpg
+  teaser: /assets/images/regression-analysis-2.jpg
 ---
 
 When you work in a specific field long enough, certain lessons, concepts, and teachers leave a lasting impression. It's common to look back on these formative moments, especially when they spark a lifelong passion.

@@ -39,11 +39,15 @@ tags:
 title: Deciphering Cloud Customer Behavior
 toc: false
 toc_label: The Complexity of Real-World Data Distributions
+header:
+  image: /assets/images/consumer_behaviour.jpeg
+  overlay_image: /assets/images/consumer_behaviour.jpeg
+  teaser: /assets/images/consumer_behaviour.jpeg
 ---
 
 ![Example Image](/assets/images/markov_chain.png)
 
-In the dynamic landscape of cloud services, comprehending customer behavior is pivotal. This understanding not only informs service enhancements but also drives strategic decision-making and customer engagement. The variability and complexity of customer interactions with cloud-based products necessitate a robust analytical approach to accurately predict future usage patterns and preferences.
+In the dynamics of cloud services, comprehending customer behavior is pivotal. This understanding not only informs service enhancements but also drives strategic decision-making and customer engagement. The variability and complexity of customer interactions with cloud-based products necessitate a robust analytical approach to accurately predict future usage patterns and preferences.
 
 Enter Markov chains – a statistical modeling technique that offers a structured way to analyze and forecast behavioral trends in customer data. Markov chains, known for their simplicity and predictive power, are based on the principle that future states depend only on the current state, not on the sequence of events that preceded it. This characteristic makes them particularly suitable for modeling customer behavior in cloud services, where each user’s interaction can be viewed as a series of discrete, sequential events or states.
 

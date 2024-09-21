@@ -28,6 +28,10 @@ tags:
 - Probabilistic Reasoning
 - Artificial Intelligence
 title: Demystifying Bayesian Statistics for Machine Learning
+header:
+  image: /assets/images/bayes_stats_1.png
+  overlay_image: /assets/images/bayes_stats_1.png
+  teaser: /assets/images/bayes_stats_1.png
 ---
 
 ![Thomas Bayes](/assets/images/thomas-bayes.jpg)
