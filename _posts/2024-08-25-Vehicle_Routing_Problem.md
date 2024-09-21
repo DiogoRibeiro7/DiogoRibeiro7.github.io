@@ -1,19 +1,18 @@
 ---
-title: "Implementing Vehicle Routing Problem Solutions with Python"
+author_profile: false
 categories:
 - Operations Research
 - Data Science
 - Logistics
+classes: wide
+date: '2024-08-25'
 tags:
 - Vehicle Routing Problem
 - Python
 - Optimization
 - Transportation
 - Algorithms
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: Implementing Vehicle Routing Problem Solutions with Python
 ---
 
 ## Overview

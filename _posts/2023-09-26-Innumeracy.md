@@ -1,27 +1,32 @@
 ---
-title: "The New Illiteracy That’s Crippling Our Decision-Making"
-categories:
-  - Mathematics
-tags:
-  - Numeracy
-  - Data Literacy
-  - Decision Making
 author_profile: false
+categories:
+- Mathematics
 classes: wide
-seo_title: "Innumeracy: The New Illiteracy Crippling Decision-Making"
-seo_description: "Explore the growing issue of innumeracy—our inability to understand and work with numbers. Learn how this new illiteracy impacts decision-making in society, from corporate boardrooms to public policy."
-excerpt: "Innumeracy is becoming the new illiteracy, with far-reaching implications for decision-making in various aspects of life. Discover how the inability to understand numbers affects our world and what can be done to address this growing issue."
+date: '2023-09-26'
+excerpt: Innumeracy is becoming the new illiteracy, with far-reaching implications
+  for decision-making in various aspects of life. Discover how the inability to understand
+  numbers affects our world and what can be done to address this growing issue.
 keywords:
-  - innumeracy
-  - data literacy
-  - numeracy skills
-  - decision-making
-  - quantitative reasoning
-  - statistical literacy
-  - mathematical thinking
-  - cognitive bias
-  - public policy
-  - critical thinking
+- innumeracy
+- data literacy
+- numeracy skills
+- decision-making
+- quantitative reasoning
+- statistical literacy
+- mathematical thinking
+- cognitive bias
+- public policy
+- critical thinking
+seo_description: Explore the growing issue of innumeracy—our inability to understand
+  and work with numbers. Learn how this new illiteracy impacts decision-making in
+  society, from corporate boardrooms to public policy.
+seo_title: 'Innumeracy: The New Illiteracy Crippling Decision-Making'
+tags:
+- Numeracy
+- Data Literacy
+- Decision Making
+title: The New Illiteracy That’s Crippling Our Decision-Making
 ---
 
 ![Example Image](/assets/images/inumeracy.jpg)

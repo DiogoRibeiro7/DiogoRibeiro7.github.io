@@ -1,32 +1,29 @@
 ---
-title: "The Sunrise Problem: A Bayesian vs Frequentist Perspective"
-subtitle: "Understanding the Probability of the Sun Rising Tomorrow"
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Philosophy
-  - Probability
-
-tags:
-  - Bayesian Inference
-  - Frequentist Probability
-  - Rule of Succession
-  - Sunrise Problem
-  - Richard Price
-  - Thomas Bayes
-  - Probability Theory
-  - Risk Assessment
-  - Reliability Engineering
-  - Medical Diagnostics
-  - Hypothesis Testing
-  - Survival Analysis
-  - Philosophy of Science
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Philosophy
+- Probability
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-06-19'
+subtitle: Understanding the Probability of the Sun Rising Tomorrow
+tags:
+- Bayesian Inference
+- Frequentist Probability
+- Rule of Succession
+- Sunrise Problem
+- Richard Price
+- Thomas Bayes
+- Probability Theory
+- Risk Assessment
+- Reliability Engineering
+- Medical Diagnostics
+- Hypothesis Testing
+- Survival Analysis
+- Philosophy of Science
+title: 'The Sunrise Problem: A Bayesian vs Frequentist Perspective'
 ---
 
 ![Example Image](/assets/images/sunrise.jpg)

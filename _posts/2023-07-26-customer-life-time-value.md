@@ -1,31 +1,38 @@
 ---
-title: "Customer Lifetime Value: An In-Depth Exploration for Data Practitioners and Marketers"
+author_profile: false
 categories:
 - Data Science
+classes: wide
+date: '2023-07-26'
+excerpt: A detailed exploration of Customer Lifetime Value (CLV) for data practitioners
+  and marketers, including its calculation, prediction, and integration with other
+  business data.
+keywords:
+- customer lifetime value
+- CLV calculation
+- predictive analytics in marketing
+- CLV prediction models
+- data-driven marketing strategies
+- CLV in business
+- marketing strategy optimization
+- customer retention analysis
+- customer value forecasting
+- integrating CLV with business data
+- lifetime value marketing
+- improving customer lifetime value
+- customer profitability analysis
+- CLV metrics
+seo_description: Explore an in-depth guide to Customer Lifetime Value (CLV), covering
+  calculation, prediction, integration with business data, and its role in data-driven
+  marketing strategies.
+seo_title: 'Customer Lifetime Value (CLV): A Comprehensive Guide for Data Science
+  and Marketing'
 tags:
 - CLV
 - Predictive Analytics
 - Marketing Strategy
-author_profile: false
-seo_title: "Customer Lifetime Value (CLV): A Comprehensive Guide for Data Science and Marketing"
-seo_description: "Explore an in-depth guide to Customer Lifetime Value (CLV), covering calculation, prediction, integration with business data, and its role in data-driven marketing strategies."
-excerpt: "A detailed exploration of Customer Lifetime Value (CLV) for data practitioners and marketers, including its calculation, prediction, and integration with other business data."
-classes: wide
-keywords:
-  - customer lifetime value
-  - CLV calculation
-  - predictive analytics in marketing
-  - CLV prediction models
-  - data-driven marketing strategies
-  - CLV in business
-  - marketing strategy optimization
-  - customer retention analysis
-  - customer value forecasting
-  - integrating CLV with business data
-  - lifetime value marketing
-  - improving customer lifetime value
-  - customer profitability analysis
-  - CLV metrics
+title: 'Customer Lifetime Value: An In-Depth Exploration for Data Practitioners and
+  Marketers'
 ---
 
 ![Customer Lifetime Value](https://unsplash.com/photos/BJaqPaH6AGQ)

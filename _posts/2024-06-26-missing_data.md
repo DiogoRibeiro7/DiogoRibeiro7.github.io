@@ -1,29 +1,26 @@
 ---
-title: "Handling Missing Data in Clinical Research"
-subtitle: "Strategies and Guidelines for Ensuring Valid Results"
-categories:
-  - Epidemiology
-  - Data Science
-  - Medical Research
-  - Statistics
-  - Clinical Studies
-
-tags:
-  - Missing Data
-  - Multiple Imputation
-  - Complete Case Analysis
-  - Missing Data Mechanisms
-  - MCAR
-  - MAR
-  - MNAR
-  - Data Imputation
-  - Research Methodology
-  - Statistical Analysis
-
 author_profile: false
+categories:
+- Epidemiology
+- Data Science
+- Medical Research
+- Statistics
+- Clinical Studies
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-06-26'
+subtitle: Strategies and Guidelines for Ensuring Valid Results
+tags:
+- Missing Data
+- Multiple Imputation
+- Complete Case Analysis
+- Missing Data Mechanisms
+- MCAR
+- MAR
+- MNAR
+- Data Imputation
+- Research Methodology
+- Statistical Analysis
+title: Handling Missing Data in Clinical Research
 ---
 
 # Abstract

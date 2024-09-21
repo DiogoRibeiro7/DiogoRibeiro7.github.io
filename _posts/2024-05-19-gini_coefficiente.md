@@ -1,35 +1,35 @@
 ---
-title: "Understanding the Normalized Gini Coefficient and Default Rate"
-subtitle: "Guide to the Normalized Gini Coefficient and Default Rate in Credit Scoring and Risk Assessment"
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Machine Learning
-tags:
-    - Gini Coefficient
-    - Default Rate
-    - Normalized Gini Coefficient
-    - Credit Risk
-    - Economic Indicators
-    - Machine Learning Metrics
-    - Model Evaluation
-    - Loss Functions
-    - Normalized Gini Coefficient
-    - Credit Scoring
-    - Risk Assessment
-    - Loan Default
-    - Credit Scorecard
-    - Behavior Scorecard
-    - Area Under ROC Curve (AUC)
-    - TensorFlow Implementation
-    - Loan Risk Analysis
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Machine Learning
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-05-19'
+subtitle: Guide to the Normalized Gini Coefficient and Default Rate in Credit Scoring
+  and Risk Assessment
+tags:
+- Gini Coefficient
+- Default Rate
+- Normalized Gini Coefficient
+- Credit Risk
+- Economic Indicators
+- Machine Learning Metrics
+- Model Evaluation
+- Loss Functions
+- Normalized Gini Coefficient
+- Credit Scoring
+- Risk Assessment
+- Loan Default
+- Credit Scorecard
+- Behavior Scorecard
+- Area Under ROC Curve (AUC)
+- TensorFlow Implementation
+- Loan Risk Analysis
+title: Understanding the Normalized Gini Coefficient and Default Rate
 ---
+
 ## Introduction
 
 Credit scoring and risk assessment are crucial aspects of modern financial systems. Two key metrics in evaluating credit risk are the Gini Coefficient and the Default Rate. This article delves into the definitions, calculations, and practical applications of these metrics, providing a comprehensive understanding of their roles in credit scoring.

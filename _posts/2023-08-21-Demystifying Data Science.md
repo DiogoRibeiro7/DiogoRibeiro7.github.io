@@ -1,35 +1,39 @@
 ---
-title: "Demystifying Data Science"
-subtitle: "What It Is and How It Can Help Your Business"
-categories:
-  - Data Science
-  - Business Strategy
-tags:
-  - Data Science
-  - Business Intelligence
-  - Machine Learning
-  - Data Analysis
 author_profile: false
-seo_title: "Demystifying Data Science: A Guide to Its Benefits for Business"
-seo_description: "Learn what data science is and how it can transform your business through improved decision-making, cost savings, and increased revenue."
-excerpt: "Discover how data science, a multidisciplinary field combining statistics, computer science, and domain expertise, can drive better business decisions and outcomes."
+categories:
+- Data Science
+- Business Strategy
 classes: wide
+date: '2023-08-21'
+excerpt: Discover how data science, a multidisciplinary field combining statistics,
+  computer science, and domain expertise, can drive better business decisions and
+  outcomes.
 keywords:
-  - data science
-  - business intelligence
-  - machine learning applications
-  - data-driven decision-making
-  - data analysis in business
-  - customer behavior analysis
-  - predictive analytics
-  - operational efficiency with data science
-  - supply chain optimization
-  - personalized marketing strategies
-  - financial forecasting using data
-  - product innovation with data
-  - AI in business
-  - data science for revenue growth
-  - data science trends in business
+- data science
+- business intelligence
+- machine learning applications
+- data-driven decision-making
+- data analysis in business
+- customer behavior analysis
+- predictive analytics
+- operational efficiency with data science
+- supply chain optimization
+- personalized marketing strategies
+- financial forecasting using data
+- product innovation with data
+- AI in business
+- data science for revenue growth
+- data science trends in business
+seo_description: Learn what data science is and how it can transform your business
+  through improved decision-making, cost savings, and increased revenue.
+seo_title: 'Demystifying Data Science: A Guide to Its Benefits for Business'
+subtitle: What It Is and How It Can Help Your Business
+tags:
+- Data Science
+- Business Intelligence
+- Machine Learning
+- Data Analysis
+title: Demystifying Data Science
 ---
 
 ![Example Image](/assets/images/data_has_better_idea.jpg)

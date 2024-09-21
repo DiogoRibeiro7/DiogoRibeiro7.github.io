@@ -1,41 +1,37 @@
 ---
-title: "The Advantages of Using Data Science in Health Tech"
-
-categories:
-    - Data Science
-    - Mathematics
-    - Statistics
-    - Data Analysis
-    - Healthcare Technology
-
-tags: 
-    - Data Science
-    - Health Tech
-    - Predictive Analytics
-    - Early Diagnosis
-    - Personalized Medicine
-    - Operational Efficiency
-    - Patient Outcomes
-    - Machine Learning
-    - Electronic Health Records (EHRs)
-    - Genetic Data
-    - Wearable Devices
-    - Real-time Monitoring
-    - Chronic Disease Management
-    - Medical Data Analytics
-    - Predictive Healthcare
-    - Personalized Healthcare
-    - Healthcare Operations
-    - Patient Care Improvement
-    - Health Informatics
-    - Artificial Intelligence in Healthcare
-    - Healthcare Management
-    - Digital Health Solutions
-
 author_profile: false
+categories:
+- Data Science
+- Mathematics
+- Statistics
+- Data Analysis
+- Healthcare Technology
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-06-05'
+tags:
+- Data Science
+- Health Tech
+- Predictive Analytics
+- Early Diagnosis
+- Personalized Medicine
+- Operational Efficiency
+- Patient Outcomes
+- Machine Learning
+- Electronic Health Records (EHRs)
+- Genetic Data
+- Wearable Devices
+- Real-time Monitoring
+- Chronic Disease Management
+- Medical Data Analytics
+- Predictive Healthcare
+- Personalized Healthcare
+- Healthcare Operations
+- Patient Care Improvement
+- Health Informatics
+- Artificial Intelligence in Healthcare
+- Healthcare Management
+- Digital Health Solutions
+title: The Advantages of Using Data Science in Health Tech
 ---
 
 ## Introduction

@@ -1,25 +1,20 @@
 ---
-title: "Understanding Probability and Odds"
-
-subtitle: "A Clear Explanation of Two Key Concepts in Biostatistics"
-
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Machine Learning
-
-tags: 
-    - Probability 
-    - Odds 
-    - Likelihood 
-    - Biostatistics 
-    - Event Occurrence
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Machine Learning
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-05-20'
+subtitle: A Clear Explanation of Two Key Concepts in Biostatistics
+tags:
+- Probability
+- Odds
+- Likelihood
+- Biostatistics
+- Event Occurrence
+title: Understanding Probability and Odds
 ---
 
 ## Introduction

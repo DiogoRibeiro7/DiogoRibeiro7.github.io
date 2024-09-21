@@ -1,17 +1,15 @@
 ---
-title: "Detecting Outliers Using Principal Component Analysis (PCA)"
+author_profile: false
 categories:
 - Data Science
 - Machine Learning
+classes: wide
+date: '2024-07-18'
 tags:
 - PCA
 - Outlier Detection
 - Anomaly Detection
-
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: Detecting Outliers Using Principal Component Analysis (PCA)
 ---
 
 Principal Component Analysis (PCA) is a robust technique used for dimensionality reduction while retaining critical information in datasets. Its sensitivity makes it particularly useful for detecting outliers in multivariate datasets. Detecting outliers can provide early warnings of abnormal conditions, allowing experts to identify and address issues before they escalate. However, detecting outliers in multivariate datasets can be challenging due to high dimensionality and the lack of labels. PCA offers several advantages in this context, including its ability to visualize data in reduced dimensions.

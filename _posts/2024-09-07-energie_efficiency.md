@@ -1,19 +1,18 @@
 ---
-title: "Building Energy Efficiency Analysis with Python and Machine Learning"
+author_profile: false
 categories:
 - Data Science
 - Machine Learning
 - Sustainability
+classes: wide
+date: '2024-09-07'
 tags:
 - Energy Efficiency
 - Python
 - Machine Learning
 - Building Analysis
 - Sustainability
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: Building Energy Efficiency Analysis with Python and Machine Learning
 ---
 
 ## Overview

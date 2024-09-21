@@ -1,31 +1,28 @@
 ---
-title: "Latent Class Analysis: Unveiling Hidden Patterns in Data"
-categories:
-  - Data Science
-tags:
-    - Latent Class Analysis
-    - Structural Equation Modeling
-    - Multivariate Categorical Data
-    - Latent Classes
-    - Conditional Independence
-    - Maximum Likelihood Estimation
-    - Data Simplification
-    - Hidden Patterns
-    - Case Study
-    - Model Specification
-    - Estimation Process
-    - Class Membership
-    - Statistical Modeling
-    - Research Applications
-    - Data Patterns
-    - Decision Making
-    - Statistical Independence
-
-
 author_profile: false
+categories:
+- Data Science
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-06-30'
+tags:
+- Latent Class Analysis
+- Structural Equation Modeling
+- Multivariate Categorical Data
+- Latent Classes
+- Conditional Independence
+- Maximum Likelihood Estimation
+- Data Simplification
+- Hidden Patterns
+- Case Study
+- Model Specification
+- Estimation Process
+- Class Membership
+- Statistical Modeling
+- Research Applications
+- Data Patterns
+- Decision Making
+- Statistical Independence
+title: 'Latent Class Analysis: Unveiling Hidden Patterns in Data'
 ---
 
 ## Introduction

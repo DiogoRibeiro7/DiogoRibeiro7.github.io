@@ -1,31 +1,36 @@
 ---
-title: "Validating Anomaly Detection Models: Lessons from COPOD"
-categories:
-  - Data Science
-  - Machine Learning
-tags:
-  - Anomaly Detection
-  - Model Validation
-  - COPOD
-  - Python
 author_profile: false
+categories:
+- Data Science
+- Machine Learning
 classes: wide
-toc: false
-toc_label: "The Complexity of Real-World Data Distributions"
-seo_title: "Validating COPOD for Anomaly Detection: Key Insights and Lessons"
-seo_description: "Explore how to validate anomaly detection models like COPOD. Learn the importance of model validation through test-driven development and avoid pitfalls in high-dimensional data analysis."
-excerpt: "Discover critical lessons learned from validating COPOD, a popular anomaly detection model, through test-driven validation techniques. Avoid common pitfalls in anomaly detection modeling."
+date: '2024-02-20'
+excerpt: Discover critical lessons learned from validating COPOD, a popular anomaly
+  detection model, through test-driven validation techniques. Avoid common pitfalls
+  in anomaly detection modeling.
 keywords:
-  - anomaly detection
-  - COPOD
-  - model validation
-  - test-driven development
-  - Python
-  - copula-based outlier detection
-  - data science
-  - machine learning
-  - scalability in anomaly detection
-  - high-dimensional data
+- anomaly detection
+- COPOD
+- model validation
+- test-driven development
+- Python
+- copula-based outlier detection
+- data science
+- machine learning
+- scalability in anomaly detection
+- high-dimensional data
+seo_description: Explore how to validate anomaly detection models like COPOD. Learn
+  the importance of model validation through test-driven development and avoid pitfalls
+  in high-dimensional data analysis.
+seo_title: 'Validating COPOD for Anomaly Detection: Key Insights and Lessons'
+tags:
+- Anomaly Detection
+- Model Validation
+- COPOD
+- Python
+title: 'Validating Anomaly Detection Models: Lessons from COPOD'
+toc: false
+toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ## Overview

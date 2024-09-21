@@ -1,20 +1,18 @@
 ---
-title: "Central Limit Theorem for $$m$$-dependent Random Variables Under Sub-linear Expectations"
+author_profile: false
 categories:
 - Probability Theory
 - Statistics
 - Mathematical Analysis
-
+classes: wide
+date: '2024-07-19'
 tags:
 - Central Limit Theorem
 - m-dependence
 - Sub-linear Expectations
 - Rosenthal’s Inequality
-
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: Central Limit Theorem for $$m$$-dependent Random Variables Under Sub-linear
+  Expectations
 ---
 
 ## Abstract

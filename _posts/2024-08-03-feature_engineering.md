@@ -1,18 +1,15 @@
 ---
-title: "Feature Engineering Techniques for Improved Machine Learning"
+author_profile: false
 categories:
 - Machine Learning
 - Data Science
-
+classes: wide
+date: '2024-08-03'
 tags:
 - Feature Engineering
 - Data Preprocessing
 - Machine Learning Techniques
-
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: Feature Engineering Techniques for Improved Machine Learning
 ---
 
 ## Introduction to Feature Engineering

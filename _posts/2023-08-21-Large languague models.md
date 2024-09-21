@@ -1,30 +1,36 @@
 ---
-title: "The Vulnerability of Large Language Models to the Closure of Open-Source Data Platforms"
-subtitle: "Exploring the Fragility and Future of Machine Learning Without Open Data"
-categories:
-  - Artificial Intelligence
-  - Machine Learning
-tags:
-  - LLM
-  - Open-Source Data
-  - Machine Learning Models
-  - AI Ethics
 author_profile: false
-seo_title: "The Fragility of Large Language Models in a World Without Open-Source Data"
-seo_description: "Explore the vulnerability of Large Language Models like GPT when open-source data platforms such as Stack Overflow close, and the potential impact on AI's evolution."
-excerpt: "An in-depth exploration of how the closure of open-source data platforms threatens the growth of Large Language Models and the vital role humans play in this ecosystem."
+categories:
+- Artificial Intelligence
+- Machine Learning
 classes: wide
+date: '2023-08-21'
+excerpt: An in-depth exploration of how the closure of open-source data platforms
+  threatens the growth of Large Language Models and the vital role humans play in
+  this ecosystem.
 keywords:
-  - large language models
-  - open-source data platforms
-  - AI training data
-  - Stack Overflow closure
-  - machine learning fragility
-  - GPT models
-  - data availability in AI
-  - ethical AI development
-  - open data impact on AI
-  - future of machine learning
+- large language models
+- open-source data platforms
+- AI training data
+- Stack Overflow closure
+- machine learning fragility
+- GPT models
+- data availability in AI
+- ethical AI development
+- open data impact on AI
+- future of machine learning
+seo_description: Explore the vulnerability of Large Language Models like GPT when
+  open-source data platforms such as Stack Overflow close, and the potential impact
+  on AI's evolution.
+seo_title: The Fragility of Large Language Models in a World Without Open-Source Data
+subtitle: Exploring the Fragility and Future of Machine Learning Without Open Data
+tags:
+- LLM
+- Open-Source Data
+- Machine Learning Models
+- AI Ethics
+title: The Vulnerability of Large Language Models to the Closure of Open-Source Data
+  Platforms
 ---
 
 ![Example Image](/assets/images/stackoverflow.jpg)

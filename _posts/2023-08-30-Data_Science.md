@@ -1,30 +1,34 @@
 ---
-title: "Ethics in Data Science"
-subtitle: "A Comprehensive Guide to Privacy, Bias, Social Impact and Responsible Decision-Making"
-categories:
-  - Data Science
-tags:
-  - Data Science
-  - Artificial Intelligence
-  - Machine Learning
-  - Ethics
 author_profile: false
+categories:
+- Data Science
 classes: wide
-seo_title: "Ethics in Data Science: Privacy, Bias, Social Impact & Responsible AI"
-seo_description: "Explore the ethical challenges in data science, including privacy protection, bias, social impact, and responsible decision-making. A comprehensive guide for ethical AI."
-excerpt: "A deep dive into the ethical challenges of data science, covering privacy, bias, social impact, and the need for responsible AI decision-making."
+date: '2023-08-30'
+excerpt: A deep dive into the ethical challenges of data science, covering privacy,
+  bias, social impact, and the need for responsible AI decision-making.
 keywords:
-  - data science ethics
-  - artificial intelligence ethics
-  - responsible AI
-  - bias in machine learning
-  - privacy in data science
-  - ethical AI decision-making
-  - social impact of AI
-  - data protection
-  - fairness in machine learning
-  - algorithmic bias
-  - ethical challenges in AI
+- data science ethics
+- artificial intelligence ethics
+- responsible AI
+- bias in machine learning
+- privacy in data science
+- ethical AI decision-making
+- social impact of AI
+- data protection
+- fairness in machine learning
+- algorithmic bias
+- ethical challenges in AI
+seo_description: Explore the ethical challenges in data science, including privacy
+  protection, bias, social impact, and responsible decision-making. A comprehensive
+  guide for ethical AI.
+seo_title: 'Ethics in Data Science: Privacy, Bias, Social Impact & Responsible AI'
+subtitle: A Comprehensive Guide to Privacy, Bias, Social Impact and Responsible Decision-Making
+tags:
+- Data Science
+- Artificial Intelligence
+- Machine Learning
+- Ethics
+title: Ethics in Data Science
 ---
 
 ![Example Image](/assets/images/data_ethics_1.jpg)

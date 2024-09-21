@@ -1,3 +1,7 @@
+---
+date: '2026-05-27'
+---
+
 # PhD Investigation Work Plan: Applications of Mathematics and Machine Learning in Health
 
 ## 1. Introduction
@@ -651,4 +655,3 @@ By applying these cross-validation techniques and evaluation metrics, the validi
 - Sarker, I. H. (2021). *Machine learning: Algorithms, real-world applications and research directions*. SN Computer Science, 2(3), 1-21.
 - Mitchell, T. M. (1997). *Machine learning*. McGraw-Hill.
 - MacKay, D. J. C. (2003). *Information theory, inference, and learning algorithms*. Cambridge University Press.
-

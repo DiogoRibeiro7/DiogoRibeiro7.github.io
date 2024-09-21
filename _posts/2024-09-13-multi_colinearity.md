@@ -1,17 +1,21 @@
 ---
-title: "Multicollinearity: A Comprehensive Exploration"
+author_profile: false
 categories:
 - Statistics
+classes: wide
+date: '2024-09-13'
+excerpt: Multicollinearity is a common issue in regression analysis. Learn about its
+  implications, misconceptions, and techniques to manage it in statistical modeling.
+seo_description: An in-depth exploration of multicollinearity in regression analysis,
+  its consequences, common misconceptions, identification techniques, and methods
+  to address it.
+seo_title: Understanding Multicollinearity in Regression Models
 tags:
 - Multicollinearity
 - Regression Analysis
 - Collinearity
 - Statistical Modeling
-author_profile: false
-seo_title: "Understanding Multicollinearity in Regression Models"
-seo_description: "An in-depth exploration of multicollinearity in regression analysis, its consequences, common misconceptions, identification techniques, and methods to address it."
-excerpt: "Multicollinearity is a common issue in regression analysis. Learn about its implications, misconceptions, and techniques to manage it in statistical modeling."
-classes: wide
+title: 'Multicollinearity: A Comprehensive Exploration'
 ---
 
 ## Understanding Multicollinearity in Regression Models

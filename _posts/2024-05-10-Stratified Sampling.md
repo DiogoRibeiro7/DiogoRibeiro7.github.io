@@ -1,32 +1,30 @@
 ---
-title: "Stratified Sampling"
-subtitle: "A Key to Representative Research"
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-tags:
-    - Stratified Sampling
-    - Statistical Methods
-    - Sampling Bias
-    - Representative Sampling
-    - Population Strata
-    - Random Sampling
-    - Cluster Sampling
-    - Research Accuracy
-    - Data Collection Efficiency
-    - Methodological Challenges
-    - Statistical Analysis
-    - Comparative Study
-    - Sample Size Determination
-    - Data Representativeness
-    - Survey Methodology
-    - Field Applications
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-05-10'
+subtitle: A Key to Representative Research
+tags:
+- Stratified Sampling
+- Statistical Methods
+- Sampling Bias
+- Representative Sampling
+- Population Strata
+- Random Sampling
+- Cluster Sampling
+- Research Accuracy
+- Data Collection Efficiency
+- Methodological Challenges
+- Statistical Analysis
+- Comparative Study
+- Sample Size Determination
+- Data Representativeness
+- Survey Methodology
+- Field Applications
+title: Stratified Sampling
 ---
 
 # Abstract

@@ -1,27 +1,24 @@
 ---
-title: "Understanding Observational Error: Detailed Insights and Implications"
-
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Data Analysis
-tags:
-    - Measurement Error
-    - Random Errors
-    - Systematic Errors
-    - Statistical Bias
-    - Precision
-    - Accuracy
-    - Data Quality
-    - Statistical Methods
-    - Uncertainty
-    - Calibration
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Data Analysis
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2025-06-20'
+tags:
+- Measurement Error
+- Random Errors
+- Systematic Errors
+- Statistical Bias
+- Precision
+- Accuracy
+- Data Quality
+- Statistical Methods
+- Uncertainty
+- Calibration
+title: 'Understanding Observational Error: Detailed Insights and Implications'
 ---
 
 ## Introduction

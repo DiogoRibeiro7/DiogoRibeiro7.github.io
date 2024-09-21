@@ -1,27 +1,32 @@
 ---
-title: "Data and Communication"
-categories:
-  - Data Science
-tags:
-  - Communication
-  - Data Analysis
-  - Storytelling
 author_profile: false
+categories:
+- Data Science
 classes: wide
-seo_title: "Data and Communication: Orchestrating a Harmonious Future"
-seo_description: "Explore the crucial role of communication in data-driven environments, examining how to balance data analysis with effective storytelling and context to drive actionable insights."
-excerpt: "Data and communication are intricately linked in modern business. This article explores how to balance data analysis with storytelling, ensuring clear and actionable insights."
+date: '2023-09-27'
+excerpt: Data and communication are intricately linked in modern business. This article
+  explores how to balance data analysis with storytelling, ensuring clear and actionable
+  insights.
 keywords:
-  - sample size
-  - statistical analysis
-  - data quality
-  - statistical accuracy
-  - experimental design
-  - statistical power
-  - hypothesis testing
-  - data sampling
-  - effect size
-  - research methodology
+- sample size
+- statistical analysis
+- data quality
+- statistical accuracy
+- experimental design
+- statistical power
+- hypothesis testing
+- data sampling
+- effect size
+- research methodology
+seo_description: Explore the crucial role of communication in data-driven environments,
+  examining how to balance data analysis with effective storytelling and context to
+  drive actionable insights.
+seo_title: 'Data and Communication: Orchestrating a Harmonious Future'
+tags:
+- Communication
+- Data Analysis
+- Storytelling
+title: Data and Communication
 ---
 
 ![Example Image](/assets/images/communication.jpg)

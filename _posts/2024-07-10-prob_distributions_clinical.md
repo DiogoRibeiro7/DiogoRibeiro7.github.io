@@ -1,15 +1,14 @@
 ---
-title: "Common Probability Distributions in Clinical Trials"
+author_profile: false
 categories:
 - Statistics
+classes: wide
+date: '2024-07-10'
 tags:
 - Probability Distributions
 - Clinical Trials
 - Hypothesis Testing
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: Common Probability Distributions in Clinical Trials
 ---
 
 In statistics, probability distributions are essential for determining the probabilities of various outcomes in an experiment. They provide the mathematical framework to describe how data behaves under different conditions and assumptions. This is particularly important in clinical trials, where researchers need to make informed decisions based on the collected data.

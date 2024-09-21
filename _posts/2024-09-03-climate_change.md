@@ -1,19 +1,21 @@
 ---
-title: "Data Science and the Climate Crisis: Innovative Approaches to Understanding and Mitigating Global Warming"
-categories:
-  - Climate Change
-  - Data Science
-  - Environmental Science
-  - Technology
-tags:
-  - Climate Modeling
-  - Data Analysis
-  - Renewable Energy
-  - Risk Assessment
-  - Policy-Making
-  - Machine Learning
 author_profile: false
+categories:
+- Climate Change
+- Data Science
+- Environmental Science
+- Technology
 classes: wide
+date: '2024-09-03'
+tags:
+- Climate Modeling
+- Data Analysis
+- Renewable Energy
+- Risk Assessment
+- Policy-Making
+- Machine Learning
+title: 'Data Science and the Climate Crisis: Innovative Approaches to Understanding
+  and Mitigating Global Warming'
 ---
 
 ## Introduction

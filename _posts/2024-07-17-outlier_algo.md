@@ -1,18 +1,16 @@
 ---
-title: "Interpretable Outlier Detection with Counts Outlier Detector (COD)"
+author_profile: false
 categories:
 - Data Science
 - Machine Learning
 - Python
+classes: wide
+date: '2024-07-17'
 tags:
 - Outlier Detection
 - Machine Learning Algorithms
 - Data Analysis
-
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: Interpretable Outlier Detection with Counts Outlier Detector (COD)
 ---
 
 ## Overview of the Counts Outliers Detector (COD)
@@ -90,4 +88,3 @@ The scoring system then used is quite simple, which further supports interpretab
 This can loose some fidelity (rare combinations are scored the same as very rare combinations), but allows for significantly faster execution times and more interpretable results. This also avoids any complication, and any arbitrariness, weighting outliers in different spaces. For example, it may not be clear how to compare outliers in a 4d space vs in a 2d space. COD eliminates this, treating each equally. So, this does trade-off some detail in the scores for interpretability, but the emphasis of the tool is interpretability, and the effect on accuracy is small (as well as being positive as often as negative — treating anomalies equivalently provides a regularizing effect).
 
 By default, only values or combinations that are strongly anomalous will be flagged. This process can be tuned by setting a threshold parameter.
-

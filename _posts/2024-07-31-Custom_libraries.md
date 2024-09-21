@@ -1,19 +1,18 @@
 ---
-title: "Building Custom Python Libraries for Your Industry Needs"
+author_profile: false
 categories:
 - Software Development
 - Python
 - Industry Solutions
+classes: wide
+date: '2024-07-31'
 tags:
 - Python Libraries
 - Custom Software
 - Industry Solutions
 - Software Development
 - Automation
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: Building Custom Python Libraries for Your Industry Needs
 ---
 
 ## Overview

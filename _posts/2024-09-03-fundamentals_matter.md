@@ -1,16 +1,15 @@
 ---
-title: "Machine Learning: Why Fundamentals Matter More Than Tools"
+author_profile: false
 categories:
 - Machine Learning
 - Technology
+classes: wide
+date: '2024-09-03'
 tags:
 - Machine Learning
 - Fundamentals
 - Tools
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: 'Machine Learning: Why Fundamentals Matter More Than Tools'
 ---
 
 In the fast-paced world of machine learning (ML), new tools and frameworks are constantly being introduced, each promising to be faster, more efficient, and more powerful than the last. From libraries that streamline data processing to platforms that enhance model deployment, the allure of cutting-edge technology is undeniable. However, after spending enough time in the field, it becomes clear that while these tools are valuable, they are not the essence of machine learning. The true power of an ML practitioner lies in their understanding of the core principles that underlie these tools—the fundamentals that remain unchanged despite the ever-shifting landscape of technology.

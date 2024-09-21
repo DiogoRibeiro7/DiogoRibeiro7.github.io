@@ -1,17 +1,16 @@
 ---
-title: "The Kruskal-Wallis Test: A Comprehensive Guide to Non-Parametric Analysis"
+author_profile: false
 categories:
 - Statistics
 - Data Analysis
+classes: wide
+date: '2024-08-24'
 tags:
 - Kruskal-Wallis Test
 - Non-Parametric Methods
 - ANOVA
 - Statistical Tests
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: 'The Kruskal-Wallis Test: A Comprehensive Guide to Non-Parametric Analysis'
 ---
 
 ## Introduction to the Kruskal-Wallis Test

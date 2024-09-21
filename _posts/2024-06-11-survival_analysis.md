@@ -1,27 +1,25 @@
 ---
-title: "Estimating Survival Functions: Parametric and Non-Parametric Approaches"
-subtitle: "A Comprehensive Guide to Survival Function Estimation Methods"
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Medical Research
-tags:
-    - Survival Analysis
-    - Kaplan-Meier Estimator
-    - Exponential Survival Function
-    - Parametric Methods
-    - Non-Parametric Methods
-    - Censoring
-    - Customer Churn
-    - Lifetime Value
-    - Curve Fitting
-    - Medical Statistics
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Medical Research
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-06-11'
+subtitle: A Comprehensive Guide to Survival Function Estimation Methods
+tags:
+- Survival Analysis
+- Kaplan-Meier Estimator
+- Exponential Survival Function
+- Parametric Methods
+- Non-Parametric Methods
+- Censoring
+- Customer Churn
+- Lifetime Value
+- Curve Fitting
+- Medical Statistics
+title: 'Estimating Survival Functions: Parametric and Non-Parametric Approaches'
 ---
 
 ## Introduction

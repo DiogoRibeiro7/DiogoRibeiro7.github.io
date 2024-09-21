@@ -1,16 +1,15 @@
 ---
-title: "Real-time Data Streaming using Python and Kafka"
+author_profile: false
 categories:
 - Data Engineering
 - Real-time Processing
+classes: wide
+date: '2024-09-05'
 tags:
 - Apache Kafka
 - Python
 - Data Streaming
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: Real-time Data Streaming using Python and Kafka
 ---
 
 Real-time data streaming enables immediate processing and analysis of data as it is generated. This capability is crucial in industries ranging from financial services to IoT applications. In this two-part series, we’ll explore how to implement real-time data streaming using Python and Apache Kafka, a powerful distributed event streaming platform.

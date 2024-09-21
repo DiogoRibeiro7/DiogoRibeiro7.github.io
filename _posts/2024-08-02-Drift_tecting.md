@@ -1,17 +1,16 @@
 ---
-title: "Detecting Concept Drift in Machine Learning"
+author_profile: false
 categories:
 - Machine Learning
 - Data Science
 - Artificial Intelligence
+classes: wide
+date: '2024-08-02'
 tags:
 - Concept Drift
 - Incremental Learning
 - Drift Detection Method
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: Detecting Concept Drift in Machine Learning
 ---
 
 ## Abstract

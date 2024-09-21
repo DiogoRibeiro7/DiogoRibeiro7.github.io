@@ -1,25 +1,22 @@
 ---
-title: "Smoothing Time Series Data: Moving Averages vs. Savitzky-Golay Filters"
-categories: 
-    - Data Science
-    - Time Series Analysis
-    - Machine Learning
-    - Data Processing
-
-tags: 
-    - Time Series
-    - Data Smoothing
-    - Moving Averages
-    - Savitzky-Golay Filter
-    - Python
-    - Data Visualization
-    - Signal Processing
-    - Data Analysis
-
 author_profile: false
+categories:
+- Data Science
+- Time Series Analysis
+- Machine Learning
+- Data Processing
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-07-05'
+tags:
+- Time Series
+- Data Smoothing
+- Moving Averages
+- Savitzky-Golay Filter
+- Python
+- Data Visualization
+- Signal Processing
+- Data Analysis
+title: 'Smoothing Time Series Data: Moving Averages vs. Savitzky-Golay Filters'
 ---
 
 ## Introduction

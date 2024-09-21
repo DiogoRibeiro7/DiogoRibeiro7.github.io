@@ -1,30 +1,26 @@
 ---
-title: "Understanding the Use of Error Bars in Scientific Reporting"
-
-categories:
-  - Academic Writing
-  - Research Methodology
-  - Education
-  - Study Skills
-  - Writing Tips
-
-tags: 
-  - Research paper writing
-  - Academic writing tips
-  - Thesis statement development
-  - Research methodology
-  - Error bars
-  - Reporting
-  - Findings
-  - Science
-  - Standard deviation
-  - Standard error
-  - Confidence interval
-
 author_profile: false
+categories:
+- Academic Writing
+- Research Methodology
+- Education
+- Study Skills
+- Writing Tips
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-07-09'
+tags:
+- Research paper writing
+- Academic writing tips
+- Thesis statement development
+- Research methodology
+- Error bars
+- Reporting
+- Findings
+- Science
+- Standard deviation
+- Standard error
+- Confidence interval
+title: Understanding the Use of Error Bars in Scientific Reporting
 ---
 
 ## Introduction

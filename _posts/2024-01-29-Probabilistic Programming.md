@@ -1,33 +1,36 @@
 ---
-title: "Demystifying MCMC: A Practical Guide to Bayesian Inference"
-subtitle: "Understanding the Metropolis Algorithm Through Code"
-categories:
-  - Mathematics
-tags:
-  - Data Science
-  - Mathematical Modeling
-  - Statistical Methods
-  - Machine Learning
-  - Statistical Analysis
-  - Probability
-  - Probabilistic Programming
-  - Bayesian Statistics
 author_profile: false
+categories:
+- Mathematics
 classes: wide
-seo_title: "Demystifying MCMC: A Hands-On Guide to Bayesian Inference"
-seo_description: "A practical explanation of MCMC and the Metropolis algorithm, focusing on Bayesian inference with Python code examples to make the concepts accessible."
-excerpt: "Explore Markov Chain Monte Carlo (MCMC) methods, specifically the Metropolis algorithm, and learn how to perform Bayesian inference through Python code."
+date: '2024-01-29'
+excerpt: Explore Markov Chain Monte Carlo (MCMC) methods, specifically the Metropolis
+  algorithm, and learn how to perform Bayesian inference through Python code.
 keywords:
-  - MCMC
-  - Metropolis algorithm
-  - Bayesian inference
-  - Markov Chain Monte Carlo
-  - probabilistic programming
-  - Bayesian statistics
-  - statistical modeling
-  - Python code for MCMC
-  - data science
-  - machine learning
+- MCMC
+- Metropolis algorithm
+- Bayesian inference
+- Markov Chain Monte Carlo
+- probabilistic programming
+- Bayesian statistics
+- statistical modeling
+- Python code for MCMC
+- data science
+- machine learning
+seo_description: A practical explanation of MCMC and the Metropolis algorithm, focusing
+  on Bayesian inference with Python code examples to make the concepts accessible.
+seo_title: 'Demystifying MCMC: A Hands-On Guide to Bayesian Inference'
+subtitle: Understanding the Metropolis Algorithm Through Code
+tags:
+- Data Science
+- Mathematical Modeling
+- Statistical Methods
+- Machine Learning
+- Statistical Analysis
+- Probability
+- Probabilistic Programming
+- Bayesian Statistics
+title: 'Demystifying MCMC: A Practical Guide to Bayesian Inference'
 ---
 
 In my talks about probabilistic programming and Bayesian statistics, I often keep the explanation of inference high-level, treating it as a sort of "black box". Probabilistic programming's advantage is that it doesn't require deep knowledge of the inference mechanism to construct models, although understanding it is beneficial.

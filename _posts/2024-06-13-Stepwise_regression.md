@@ -1,25 +1,23 @@
 ---
-title: "Stepwise Regression: Methodology, Applications, and Concerns"
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Machine Learning
-tags:
-    - Stepwise Regression
-    - Model Selection
-    - Regression Analysis
-    - Overfitting
-    - Statistical Methods
-    - Predictive Modeling
-    - Forward Selection
-    - Backward Elimination
-    - Efroymson Algorithm
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Machine Learning
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-06-13'
+tags:
+- Stepwise Regression
+- Model Selection
+- Regression Analysis
+- Overfitting
+- Statistical Methods
+- Predictive Modeling
+- Forward Selection
+- Backward Elimination
+- Efroymson Algorithm
+title: 'Stepwise Regression: Methodology, Applications, and Concerns'
 ---
 
 ![Example Image](/assets/images/obtain-unbiased-estimates-with-stepwise-selection-by-splitting-the-dataset.png)
@@ -634,4 +632,3 @@ println("Stepwise Selection Test R²: ", stepwise_r2)
 ```
 
 These Julia code examples illustrate how to implement forward selection, backward elimination, and a combined stepwise regression approach using the GLM and DataFrames libraries. Each method helps to select the most relevant features for building a regression model, but it's essential to validate the final model to ensure its reliability and generalizability.
-

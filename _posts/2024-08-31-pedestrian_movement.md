@@ -1,20 +1,17 @@
 ---
-title: "Simulating Pedestrian Evacuation in Smoke-Affected Environments"
+author_profile: false
 categories:
 - Emergency Preparedness
 - Simulation Models
-
+classes: wide
+date: '2024-08-31'
 tags:
 - Pedestrian Evacuation
 - Smoke Propagation
 - Social Force Model
 - Advection-Diffusion Equation
 - Numerical Methods
-
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: Simulating Pedestrian Evacuation in Smoke-Affected Environments
 ---
 
 ## I. Understanding the Importance of Pedestrian Evacuation Simulations

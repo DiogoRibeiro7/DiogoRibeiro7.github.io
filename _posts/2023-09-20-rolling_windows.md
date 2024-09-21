@@ -1,34 +1,37 @@
 ---
-title: "Rolling Windows in Signal Processing"
+author_profile: false
 categories:
 - Signal Processing
 - Data Analysis
+classes: wide
+date: '2023-09-20'
+excerpt: Explore the diverse applications of rolling windows in signal processing,
+  covering both the underlying theory and practical implementations.
+header:
+  image: /assets/images/download.png
+  overlay_image: /assets/images/download.png
+  teaser: /assets/images/download.png
+keywords:
+- rolling windows
+- signal processing
+- feature extraction
+- signal smoothing
+- time-frequency analysis
+- windowed analysis
+- moving average
+- real-time data analysis
+- filtering techniques
+- data smoothing
+seo_description: Learn how rolling windows can be applied in signal processing for
+  smoothing, feature extraction, and time-frequency analysis.
+seo_title: Unlock the Power of Rolling Windows in Signal Processing
+social_image: /assets/images/rollingwindow.png
 tags:
 - Rolling Windows
 - Feature Extraction
 - Signal Smoothing
 - Time-Frequency Analysis
-author_profile: false
-seo_title: "Unlock the Power of Rolling Windows in Signal Processing"
-seo_description: "Learn how rolling windows can be applied in signal processing for smoothing, feature extraction, and time-frequency analysis."
-excerpt: "Explore the diverse applications of rolling windows in signal processing, covering both the underlying theory and practical implementations."
-classes: wide
-social_image: "/assets/images/rollingwindow.png"
-header: 
-  image: "/assets/images/download.png"
-  overlay_image: "/assets/images/download.png"
-  teaser: "/assets/images/download.png"
-keywords:
-  - rolling windows
-  - signal processing
-  - feature extraction
-  - signal smoothing
-  - time-frequency analysis
-  - windowed analysis
-  - moving average
-  - real-time data analysis
-  - filtering techniques
-  - data smoothing
+title: Rolling Windows in Signal Processing
 ---
 
 ![Example Image](/assets/images/rollingwindow.png)

@@ -1,15 +1,14 @@
 ---
-title: "The Real Power of Nonparametric Tests: Beyond Mann-Whitney"
+author_profile: false
 categories:
 - Statistics
+classes: wide
+date: '2024-09-08'
 tags:
 - Nonparametric Tests
 - Quantile Regression
 - Mann-Whitney Test
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: 'The Real Power of Nonparametric Tests: Beyond Mann-Whitney'
 ---
 
 ## Introduction to Nonparametric Tests

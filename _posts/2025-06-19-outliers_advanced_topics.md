@@ -1,27 +1,24 @@
 ---
-title: "Exploring Outliers in Data Analysis: Advanced Concepts and Techniques"
-
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Data Analysis
-tags:
-    - Outliers
-    - Robust Statistics
-    - Data Analysis
-    - Measurement Error
-    - Heavy-Tailed Distributions
-    - Mixture Models
-    - Extreme Observations
-    - Novelty Detection
-    - Box Plots
-    - Statistical Methods
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Data Analysis
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2025-06-19'
+tags:
+- Outliers
+- Robust Statistics
+- Data Analysis
+- Measurement Error
+- Heavy-Tailed Distributions
+- Mixture Models
+- Extreme Observations
+- Novelty Detection
+- Box Plots
+- Statistical Methods
+title: 'Exploring Outliers in Data Analysis: Advanced Concepts and Techniques'
 ---
 
 # Exploring Outliers in Data Analysis: Advanced Concepts and Techniques

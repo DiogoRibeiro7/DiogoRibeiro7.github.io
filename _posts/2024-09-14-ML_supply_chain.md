@@ -1,19 +1,24 @@
 ---
-title: "Using Machine Learning to Optimize Supply Chain Operations"
+author_profile: false
 categories:
 - Supply Chain Management
 - Machine Learning
 - Operations Management
+classes: wide
+date: '2024-09-14'
+excerpt: Learn how machine learning optimizes supply chain operations by enhancing
+  demand forecasting, inventory management, logistics, and more, driving efficiency
+  and business value.
+seo_description: Explore how machine learning can optimize supply chain operations,
+  enhance efficiency, and drive business value through demand forecasting, inventory
+  management, and logistics.
+seo_title: 'Machine Learning in Supply Chain: Optimization and Efficiency'
 tags:
 - Supply Chain
 - Machine Learning
 - Optimization
 - Operations
-author_profile: false
-seo_title: "Machine Learning in Supply Chain: Optimization and Efficiency"
-seo_description: "Explore how machine learning can optimize supply chain operations, enhance efficiency, and drive business value through demand forecasting, inventory management, and logistics."
-excerpt: "Learn how machine learning optimizes supply chain operations by enhancing demand forecasting, inventory management, logistics, and more, driving efficiency and business value."
-classes: wide
+title: Using Machine Learning to Optimize Supply Chain Operations
 ---
 
 ## Overview of Supply Chain Operations

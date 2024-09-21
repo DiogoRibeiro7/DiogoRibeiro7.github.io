@@ -1,19 +1,16 @@
 ---
-title: "Streamlining Your Workflow with Pre-commit Hooks in Python Projects"
-categories:
-    - Software Development
-tags:
-    - Python
-    - Git
-    - Pre-commit Hooks
-    - DevOps
-
 author_profile: false
+categories:
+- Software Development
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-07-11'
+tags:
+- Python
+- Git
+- Pre-commit Hooks
+- DevOps
+title: Streamlining Your Workflow with Pre-commit Hooks in Python Projects
 ---
-
 
 In the world of software development, maintaining code quality and consistency is crucial. Git hooks, particularly pre-commit hooks, are a powerful tool that can automate and enforce these standards before code is committed to the repository. This article will guide you through the steps to set up and run pre-commit hooks in your Python projects, ensuring a smooth and error-free development experience.
 
