@@ -6,6 +6,10 @@ categories:
 - Industry Solutions
 classes: wide
 date: '2024-07-31'
+header:
+  image: /assets/images/data_science_4.jpg
+  overlay_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/data_science_4.jpg
 tags:
 - Python Libraries
 - Custom Software

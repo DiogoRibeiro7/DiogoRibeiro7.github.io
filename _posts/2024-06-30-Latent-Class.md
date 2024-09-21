@@ -4,6 +4,10 @@ categories:
 - Data Science
 classes: wide
 date: '2024-06-30'
+header:
+  image: /assets/images/data_science_8.jpg
+  overlay_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.jpg
 tags:
 - Latent Class Analysis
 - Structural Equation Modeling

@@ -7,6 +7,10 @@ date: '2024-02-11'
 excerpt: A practical guide to mastering combinatorics with Python, featuring hands-on
   examples using the itertools library and insights into scientific computing and
   probability theory.
+header:
+  image: /assets/images/data_science_6.jpg
+  overlay_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/data_science_6.jpg
 keywords:
 - combinatorics with Python
 - itertools library

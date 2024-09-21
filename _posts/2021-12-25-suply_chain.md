@@ -7,6 +7,10 @@ date: '2021-12-25'
 excerpt: Discover how data science enhances supply chain optimization and industrial
   network analysis, leveraging techniques like predictive analytics, machine learning,
   and graph theory to optimize operations.
+header:
+  image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.jpg
 keywords:
 - supply chain optimization
 - industrial network analysis

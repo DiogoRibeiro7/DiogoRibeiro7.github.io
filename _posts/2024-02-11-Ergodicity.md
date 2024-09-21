@@ -7,6 +7,10 @@ date: '2024-02-11'
 excerpt: An in-depth look into ergodicity and its applications in statistical analysis,
   mathematical modeling, and computational physics, featuring real-world processes
   and Python simulations.
+header:
+  image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/data_science_3.jpg
 keywords:
 - ergodicity
 - statistical analysis

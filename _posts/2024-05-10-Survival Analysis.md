@@ -6,6 +6,10 @@ categories:
 - Data Science
 classes: wide
 date: '2024-05-10'
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 subtitle: Techniques and Applications
 tags:
 - Survival Analysis

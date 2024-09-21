@@ -8,6 +8,10 @@ date: '2024-02-01'
 excerpt: Discover the importance of Customer Lifetime Value (CLV) in shaping business
   strategies, improving customer retention, and enhancing marketing efforts for sustainable
   growth.
+header:
+  image: /assets/images/data_science_7.jpg
+  overlay_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/data_science_7.jpg
 keywords:
 - customer lifetime value
 - CLV

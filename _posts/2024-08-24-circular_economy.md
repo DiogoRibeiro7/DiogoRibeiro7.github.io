@@ -6,6 +6,10 @@ categories:
 - Circular Economy
 classes: wide
 date: '2024-08-24'
+header:
+  image: /assets/images/data_science_5.jpg
+  overlay_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/data_science_5.jpg
 tags:
 - Python
 - Network Analysis

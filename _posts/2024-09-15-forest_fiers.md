@@ -9,6 +9,10 @@ date: '2024-09-15'
 excerpt: This article delves into the role of machine learning in managing forest
   fires in Portugal, offering a detailed analysis of early detection, risk assessment,
   and strategic response, with a focus on the challenges posed by eucalyptus forests.
+header:
+  image: /assets/images/data_science_7.jpg
+  overlay_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/data_science_7.jpg
 seo_description: Explore how machine learning enhances forest fire management in Portugal,
   addressing early detection, risk assessment, and the impact of eucalyptus plantations.
 seo_title: 'Machine Learning and Forest Fires: Insights from Portugal''s Wildfire

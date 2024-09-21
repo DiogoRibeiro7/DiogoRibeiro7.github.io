@@ -7,6 +7,10 @@ categories:
 - Network Engineering
 classes: wide
 date: '2024-06-15'
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 tags:
 - RSSI
 - Electromagnetic Interference

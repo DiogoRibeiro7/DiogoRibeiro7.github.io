@@ -5,6 +5,10 @@ categories:
 - Real-time Processing
 classes: wide
 date: '2024-09-05'
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 tags:
 - Apache Kafka
 - Python

@@ -8,6 +8,10 @@ date: '2023-09-03'
 excerpt: Learn the core concepts of binary classification, explore common algorithms
   like Decision Trees and SVMs, and discover how to evaluate performance using precision,
   recall, and F1-score.
+header:
+  image: /assets/images/data_science_7.jpg
+  overlay_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/data_science_7.jpg
 keywords:
 - binary classification
 - machine learning

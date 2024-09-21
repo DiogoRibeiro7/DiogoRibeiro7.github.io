@@ -7,6 +7,10 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-06-13'
+header:
+  image: /assets/images/data_science_4.jpg
+  overlay_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/data_science_4.jpg
 tags:
 - Stepwise Regression
 - Model Selection

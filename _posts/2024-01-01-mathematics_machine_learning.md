@@ -7,6 +7,10 @@ date: '2024-01-01'
 excerpt: This article delves into the core mathematical principles behind machine
   learning, including classification and regression settings, loss functions, risk
   minimization, decision trees, and more.
+header:
+  image: /assets/images/data_science_1.jpg
+  overlay_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/data_science_1.jpg
 keywords:
 - Mathematics of Machine Learning
 - Machine Learning Mathematical Models

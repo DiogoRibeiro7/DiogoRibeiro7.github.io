@@ -6,6 +6,10 @@ categories:
 - Network Engineering
 classes: wide
 date: '2024-06-30'
+header:
+  image: /assets/images/data_science_7.jpg
+  overlay_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/data_science_7.jpg
 tags:
 - RSSI
 - Absorption

@@ -6,6 +6,10 @@ classes: wide
 date: '2023-08-30'
 excerpt: A deep dive into the ethical challenges of data science, covering privacy,
   bias, social impact, and the need for responsible AI decision-making.
+header:
+  image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/data_science_3.jpg
 keywords:
 - data science ethics
 - artificial intelligence ethics

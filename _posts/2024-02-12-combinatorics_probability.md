@@ -6,6 +6,10 @@ classes: wide
 date: '2024-02-12'
 excerpt: Dive into the intersection of combinatorics and probability, exploring how
   these fields work together to solve problems in mathematics, data science, and beyond.
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 keywords:
 - combinatorics
 - probability theory

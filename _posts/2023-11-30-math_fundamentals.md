@@ -6,6 +6,10 @@ classes: wide
 date: '2023-11-30'
 excerpt: A comprehensive exploration of data drift in credit risk models, examining
   practical methods to identify and address drift using multivariate techniques.
+header:
+  image: /assets/images/data_science_6.jpg
+  overlay_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/data_science_6.jpg
 keywords:
 - data drift
 - credit risk modeling

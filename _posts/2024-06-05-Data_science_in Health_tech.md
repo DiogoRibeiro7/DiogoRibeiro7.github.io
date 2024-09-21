@@ -8,6 +8,10 @@ categories:
 - Healthcare Technology
 classes: wide
 date: '2024-06-05'
+header:
+  image: /assets/images/data_science_1.jpg
+  overlay_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/data_science_1.jpg
 tags:
 - Data Science
 - Health Tech

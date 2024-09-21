@@ -3,6 +3,10 @@ author_profile: false
 categories:
 - Machine Learning
 date: '2024-09-06'
+header:
+  image: /assets/images/data_science_6.jpg
+  overlay_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/data_science_6.jpg
 tags:
 - Covariate Shift
 - Model Monitoring

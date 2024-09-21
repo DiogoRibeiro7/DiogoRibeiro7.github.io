@@ -8,6 +8,10 @@ date: '2023-12-30'
 excerpt: A comprehensive comparison of Value at Risk (VaR) and Expected Shortfall
   (ES) in financial risk management, with a focus on their performance during volatile
   and stable market conditions.
+header:
+  image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.jpg
 keywords:
 - Value at Risk
 - Expected Shortfall

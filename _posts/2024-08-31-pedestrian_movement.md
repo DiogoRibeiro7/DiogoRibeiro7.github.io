@@ -5,6 +5,10 @@ categories:
 - Simulation Models
 classes: wide
 date: '2024-08-31'
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 tags:
 - Pedestrian Evacuation
 - Smoke Propagation

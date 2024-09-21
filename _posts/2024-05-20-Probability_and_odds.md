@@ -7,6 +7,10 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-05-20'
+header:
+  image: /assets/images/data_science_1.jpg
+  overlay_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/data_science_1.jpg
 subtitle: A Clear Explanation of Two Key Concepts in Biostatistics
 tags:
 - Probability

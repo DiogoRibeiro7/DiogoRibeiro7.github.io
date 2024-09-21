@@ -7,6 +7,10 @@ categories:
 - Medical Research
 classes: wide
 date: '2024-06-11'
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 subtitle: A Comprehensive Guide to Survival Function Estimation Methods
 tags:
 - Survival Analysis

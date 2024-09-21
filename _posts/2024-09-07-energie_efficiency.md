@@ -6,6 +6,10 @@ categories:
 - Sustainability
 classes: wide
 date: '2024-09-07'
+header:
+  image: /assets/images/data_science_6.jpg
+  overlay_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/data_science_6.jpg
 tags:
 - Energy Efficiency
 - Python

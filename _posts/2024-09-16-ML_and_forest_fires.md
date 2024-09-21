@@ -9,6 +9,10 @@ date: '2024-09-16'
 excerpt: Machine learning is revolutionizing forest fire management through advanced
   models, real-time data integration, and emerging technologies like IoT and blockchain,
   offering a holistic and adaptive strategy for combating forest fires.
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 keywords:
 - Forest Fire Management
 - Machine Learning in Environmental Management

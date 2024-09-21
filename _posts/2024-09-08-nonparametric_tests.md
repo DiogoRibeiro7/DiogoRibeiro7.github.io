@@ -4,6 +4,10 @@ categories:
 - Statistics
 classes: wide
 date: '2024-09-08'
+header:
+  image: /assets/images/data_science_7.jpg
+  overlay_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/data_science_7.jpg
 tags:
 - Nonparametric Tests
 - Quantile Regression

@@ -7,6 +7,10 @@ categories:
 - Technology
 classes: wide
 date: '2024-09-03'
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 tags:
 - Climate Modeling
 - Data Analysis

@@ -8,6 +8,10 @@ date: '2024-09-11'
 excerpt: An exploration of cross-validation techniques in machine learning, focusing
   on methods to evaluate and enhance model performance while mitigating overfitting
   risks.
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 seo_description: Explore various cross-validation techniques in machine learning,
   their importance, and how they help ensure robust model performance by minimizing
   overfitting.

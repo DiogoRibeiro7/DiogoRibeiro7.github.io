@@ -7,6 +7,10 @@ categories:
 - Data Analysis
 classes: wide
 date: '2025-06-19'
+header:
+  image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/data_science_3.jpg
 tags:
 - Outliers
 - Robust Statistics

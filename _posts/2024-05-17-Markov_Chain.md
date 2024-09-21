@@ -7,6 +7,10 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-05-17'
+header:
+  image: /assets/images/data_science_6.jpg
+  overlay_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/data_science_6.jpg
 subtitle: Exploring the Foundations and Applications of Markov Models in Real-World
   Scenarios
 tags:

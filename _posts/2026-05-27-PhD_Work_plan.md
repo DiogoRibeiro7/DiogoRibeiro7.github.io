@@ -1,5 +1,9 @@
 ---
 date: '2026-05-27'
+header:
+  image: /assets/images/data_science_6.jpg
+  overlay_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/data_science_6.jpg
 ---
 
 # PhD Investigation Work Plan: Applications of Mathematics and Machine Learning in Health

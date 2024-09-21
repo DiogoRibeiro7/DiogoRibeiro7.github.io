@@ -7,6 +7,10 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-05-15'
+header:
+  image: /assets/images/data_science_7.jpg
+  overlay_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/data_science_7.jpg
 subtitle: Ensuring Model Accuracy by Monitoring Subtle Changes in Data Structure
 tags:
 - Multivariate Data Drift

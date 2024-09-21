@@ -7,6 +7,10 @@ date: '2024-02-10'
 excerpt: A journey into the Pigeonhole Principle, uncovering its profound simplicity
   and exploring its applications in fields like combinatorics, number theory, and
   geometry.
+header:
+  image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.jpg
 keywords:
 - Pigeonhole Principle
 - combinatorics

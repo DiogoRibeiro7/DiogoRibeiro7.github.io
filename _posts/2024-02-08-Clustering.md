@@ -7,6 +7,10 @@ date: '2024-02-08'
 excerpt: Discover the inner workings of clustering algorithms, from K-Means to Spectral
   Clustering, and how they unveil patterns in machine learning, bioinformatics, and
   data analysis.
+header:
+  image: /assets/images/data_science_1.jpg
+  overlay_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/data_science_1.jpg
 keywords:
 - clustering algorithms
 - K-Means clustering

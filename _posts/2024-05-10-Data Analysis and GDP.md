@@ -7,6 +7,10 @@ categories:
 - Economy
 classes: wide
 date: '2024-05-10'
+header:
+  image: /assets/images/data_science_4.jpg
+  overlay_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/data_science_4.jpg
 subtitle: Exploring the Shortcomings of GDP as a Sole Economic Indicator in Data Science
   Applications
 tags:

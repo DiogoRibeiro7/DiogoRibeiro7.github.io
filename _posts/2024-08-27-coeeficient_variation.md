@@ -5,6 +5,10 @@ categories:
 - Data Analysis
 classes: wide
 date: '2024-08-27'
+header:
+  image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.jpg
 tags:
 - Coefficient of Variation
 - Statistical Measures

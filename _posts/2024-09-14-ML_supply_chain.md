@@ -9,6 +9,10 @@ date: '2024-09-14'
 excerpt: Learn how machine learning optimizes supply chain operations by enhancing
   demand forecasting, inventory management, logistics, and more, driving efficiency
   and business value.
+header:
+  image: /assets/images/data_science_6.jpg
+  overlay_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/data_science_6.jpg
 seo_description: Explore how machine learning can optimize supply chain operations,
   enhance efficiency, and drive business value through demand forecasting, inventory
   management, and logistics.

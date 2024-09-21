@@ -6,6 +6,10 @@ categories:
 - Python
 classes: wide
 date: '2024-07-17'
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.jpg
 tags:
 - Outlier Detection
 - Machine Learning Algorithms
