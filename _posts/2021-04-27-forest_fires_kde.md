@@ -14,10 +14,17 @@ header:
   overlay_image: /assets/images/forest_fire_kde_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/forest_fire_kde_1.jpg
+keywords: forest fires, GIS, Kernel Density Estimation, Getis-Ord Gi*, Anselin Local
+  Moran's I, hotspot analysis, forest fire management, spatial analysis, Belait District
 seo_description: Explore GIS techniques like KDE, Getis-Ord Gi*, and Anselin Local
   Moran’s I for identifying forest fire hotspots in Southeast Asia, validated by contributory
   factors.
 seo_title: GIS-Based Forest Fire Hotspot Identification Using Contributory Factors
+summary: This article explores the application of GIS-based techniques, such as Kernel
+  Density Estimation (KDE), Getis-Ord Gi*, and Anselin Local Moran's I, in identifying
+  forest fire hotspots. The study focuses on Belait District, Brunei Darussalam, and
+  validates hotspot results using contributory factors like population density, precipitation,
+  elevation, and vegetation cover.
 tags:
 - Forest Fires
 - GIS
@@ -26,8 +33,6 @@ tags:
 - Anselin Local Moran’s I
 title: 'GIS-Based Forest Fire Hotspot Identification: A Comprehensive Approach Using
   Contributory Factors'
-summary: "This article explores the application of GIS-based techniques, such as Kernel Density Estimation (KDE), Getis-Ord Gi*, and Anselin Local Moran's I, in identifying forest fire hotspots. The study focuses on Belait District, Brunei Darussalam, and validates hotspot results using contributory factors like population density, precipitation, elevation, and vegetation cover."
-keywords: "forest fires, GIS, Kernel Density Estimation, Getis-Ord Gi*, Anselin Local Moran's I, hotspot analysis, forest fire management, spatial analysis, Belait District"
 ---
 
 ![Example Image](/assets/images/forest_fire_kde_3.png)
