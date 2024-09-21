@@ -1,17 +1,17 @@
 ---
-author_profile: false
+title: Demystifying Bayesian Statistics for Machine Learning
 categories:
 - Machine Learning
 - Statistics
-classes: wide
-date: '2024-09-18'
-excerpt: Unlock the power of Bayesian statistics in machine learning through probabilistic
-  reasoning, offering insights into model uncertainty, predictive distributions, and
-  real-world applications.
-header:
-  image: /assets/images/bayes_stats_1.png
-  overlay_image: /assets/images/bayes_stats_1.png
-  teaser: /assets/images/bayes_stats_1.png
+tags:
+- Bayesian Statistics
+- Probabilistic Reasoning
+- Artificial Intelligence
+author_profile: false
+seo_title: "Demystifying Bayesian Statistics in Machine Learning"
+seo_description: "Explore Bayesian statistics in machine learning, highlighting probabilistic reasoning, uncertainty quantification, and practical applications across various domains."
+excerpt: "Unlock the power of Bayesian statistics in machine learning through probabilistic reasoning, offering insights into model uncertainty, predictive distributions, and real-world applications."
+summary: Bayesian statistics provides a powerful framework for dealing with uncertainty in machine learning models, making it essential for building robust predictive systems. This article explores the principles of Bayesian inference, probabilistic reasoning, and how these concepts apply to machine learning. It delves into practical tools such as Markov Chain Monte Carlo (MCMC) methods and probabilistic programming, demonstrating how Bayesian approaches enhance model interpretability and predictive accuracy. Whether it's for uncertainty quantification or developing Bayesian networks, this guide offers valuable insights into the real-world applications of Bayesian statistics in AI.
 keywords:
 - Bayesian Statistics
 - Machine Learning
@@ -23,15 +23,12 @@ keywords:
 - Probabilistic Programming
 - Bayesian Networks
 - Uncertainty Quantification
-seo_description: Explore Bayesian statistics in machine learning, highlighting probabilistic
-  reasoning, uncertainty quantification, and practical applications across various
-  domains.
-seo_title: Demystifying Bayesian Statistics in Machine Learning
-tags:
-- Bayesian Statistics
-- Probabilistic Reasoning
-- Artificial Intelligence
-title: Demystifying Bayesian Statistics for Machine Learning
+classes: wide
+date: '2024-09-18'
+header:
+  image: /assets/images/bayes_stats_1.png
+  overlay_image: /assets/images/bayes_stats_1.png
+  teaser: /assets/images/bayes_stats_1.png
 ---
 
 ![Thomas Bayes](/assets/images/thomas-bayes.jpg)
