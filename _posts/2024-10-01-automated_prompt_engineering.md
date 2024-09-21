@@ -22,6 +22,7 @@ keywords:
 - Hyperparameter Optimization
 - OPRO
 - Random Prompt Optimization
+date: 2024-10-01
 ---
 
 With the advent of Large Language Models (LLMs) like GPT, organizations are increasingly using these tools for a wide range of tasks, including sentiment analysis, text summarization, code generation, and more. One key factor that determines an LLM's performance on these tasks is the quality of the input prompts. Crafting effective prompts, however, can be a time-consuming, trial-and-error process known as prompt engineering.
@@ -35,6 +36,7 @@ Prompt engineering involves designing prompts to extract the most accurate and u
 For example, in code generation, a prompt that clearly specifies the coding task can be evaluated almost immediately by running the code through a compiler. If the output compiles and functions correctly, the prompt is considered successful.
 
 However, manual prompt engineering is inherently limited:
+
 - **Time-consuming**: Crafting, testing, and refining prompts for various tasks is a laborious process.
 - **Suboptimal**: Even skilled engineers may fail to explore the full range of possible prompts.
 - **Bottleneck in scaling**: In a large organization with multiple models and tasks, manual prompt engineering is simply not scalable.
@@ -48,6 +50,7 @@ This is where **Automated Prompt Engineering (APE)** steps in, enabling the rapi
 ### The Core Idea Behind APE
 
 At its core, APE applies strategies similar to hyperparameter optimization (HPO) in machine learning:
+
 - **Random search**: Generate random prompts and evaluate them against a task's performance metric.
 - **Bayesian optimization**: Use a probabilistic model to intelligently select the most promising prompts based on previous results, akin to **Optimization by Prompting (OPRO)**.
 
@@ -85,6 +88,7 @@ This brute-force method generates prompts randomly without learning from previou
 OPRO, introduced by Google DeepMind, is a more advanced technique. It evaluates prompts iteratively and uses the results from previous iterations to improve future prompts. This method mimics Bayesian optimization, where a history of prompts and their performance scores are tracked, guiding the model towards increasingly effective prompts.
 
 The key to OPRO’s success is the **meta-prompt**. This includes:
+
 - Task descriptions
 - Examples of previous prompts
 - A summary of the performance of these prompts (the **optimization trajectory**)
@@ -100,6 +104,7 @@ To fully understand APE, it’s essential to dive into the code. In this section
 For this implementation, we’ll use the **geometric_shapes** dataset from the Big-Bench Hard (BBH) benchmark. This dataset presents a challenge for LLMs, as it requires interpreting SVG path elements to determine the shape they represent.
 
 To prepare the dataset:
+
 ```python
 from datasets import load_dataset
 import pandas as pd
@@ -117,3 +122,70 @@ df_test = pd.DataFrame({"question": test["input"], "answer": test["target"]})
 df_train.to_csv("train.csv", index=False)
 df_test.to_csv("test.csv", index=False)
 ```
+
+This code prepares the training and test sets by shuffling the dataset and selecting 100 examples for each set.
+
+## Baseline Evaluation
+
+Before optimizing prompts, we need to establish a baseline by testing an initial prompt. We’ll use the Gemini 1.5-flash model for this task.
+
+```python
+import asyncio
+import pandas as pd
+from prompt_evaluator import PromptEvaluator
+from vertexai.generative_models import HarmBlockThreshold, HarmCategory
+
+if __name__ == "__main__":
+    df_train = pd.read_csv('train.csv')  # Load training data
+
+    evaluator = PromptEvaluator(df_train, target_model_name="gemini-1.5-flash", ...)
+    
+    prompt = "Solve the given problem about geometric shapes."
+    asyncio.run(evaluator.main(prompt))
+```
+
+By running this evaluation, we establish a baseline for performance, which in our case was 36% accuracy. Adding the simple phrase “Think step by step” increased accuracy to 52%, serving as our starting point for APE.
+
+## Implementing the OPRO Algorithm
+
+With the baseline established, we now implement the OPRO strategy. OPRO works by refining prompts based on the optimization trajectory:
+
+```python
+for i in range(num_iterations):
+    if i == 0:
+        new_prompt = starting_prompt
+    else:
+        metaprompt = update_metaprompt(prompt_history)
+        new_prompt = get_new_prompt(metaprompt)
+
+    accuracy = evaluate_prompt(new_prompt)
+    prompt_accuracies.append((new_prompt, accuracy))
+
+    if accuracy > best_accuracy:
+        best_prompt = new_prompt
+        best_accuracy = accuracy
+```
+
+In this loop, the optimizer generates new prompts, evaluates them, and stores the best-performing prompt for future use.
+
+## Results and Analysis
+
+By running the APE workflow, we achieved significant improvements over the baseline. Starting with an accuracy of 52%, our optimized prompt reached 85% accuracy on the test set.
+
+## Final Prompt
+
+The final prompt suggested by OPRO was:
+
+```python
+"Count the number of 'L' commands in the SVG path to determine the shape."
+```
+
+This creative prompt unlocked a previously untapped aspect of the model's reasoning, resulting in better performance.
+
+## Conclusion
+
+Automated Prompt Engineering (APE) offers a powerful way to improve the performance of Large Language Models by automating the otherwise labor-intensive task of prompt crafting. Through techniques like OPRO, APE can generate, evaluate, and refine prompts efficiently, leading to optimized model behavior.
+
+In this tutorial, we explored the APE workflow, implemented the OPRO strategy from scratch, and achieved substantial improvements in task performance. As APE continues to evolve, it holds immense potential for making LLMs more adaptable and effective across a broad range of applications.
+
+For further exploration, consider incorporating techniques like few-shot prompting or using existing APE frameworks such as DSPy to streamline the process. By leveraging APE, you can unlock the full potential of Large Language Models and enhance their capabilities for a variety of tasks.
