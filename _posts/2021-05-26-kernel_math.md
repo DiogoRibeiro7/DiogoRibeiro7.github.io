@@ -33,6 +33,7 @@ header:
   image: /assets/images/kernel_math.jpg
   overlay_image: /assets/images/kernel_math.jpg
   teaser: /assets/images/kernel_math.jpg
+  excerpt: false
 classes: wide
 ---
 
