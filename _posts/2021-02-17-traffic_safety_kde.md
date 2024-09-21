@@ -159,7 +159,107 @@ Kernel Density Estimation (KDE) offers a powerful and flexible approach to traff
 
 As cities around the world continue to grow and traffic volumes increase, the need for proactive traffic safety measures will only become more urgent. KDE offers a promising solution to this challenge, enabling cities to predict and prevent accidents before they occur. With further research and development, KDE could play a key role in shaping the future of traffic safety, helping to create safer, more livable cities for all.
 
----
+### Appendix: Python Code for Solving Traffic Accident Hotspot Detection Using Kernel Density Estimation (KDE)
+
+Kernel Density Estimation (KDE) can be implemented using Python libraries such as `scikit-learn`, `geopandas`, and `matplotlib` to analyze and visualize traffic accident hotspots. In this appendix, we provide an example of how to use Python to perform KDE on traffic accident data.
+
+#### Dependencies
+
+To begin, make sure you have the following Python libraries installed:
+
+```bash
+pip install numpy pandas scikit-learn geopandas matplotlib seaborn
+```
+
+#### Example Python Code for KDE
+
+Below is a step-by-step Python code example to solve KDE for traffic accident hotspot detection:
+
+```python
+# Importing necessary libraries
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from sklearn.neighbors import KernelDensity
+from shapely.geometry import Point
+
+# Load traffic accident dataset (example CSV file with columns: longitude, latitude, accident_count)
+# You can replace this with the path to your dataset
+df = pd.read_csv('traffic_accidents.csv')
+
+# Create a GeoDataFrame
+geometry = [Point(xy) for xy in zip(df['longitude'], df['latitude'])]
+geo_df = gpd.GeoDataFrame(df, geometry=geometry)
+
+# Plot raw accident data
+fig, ax = plt.subplots(1, 1, figsize=(10, 10))
+geo_df.plot(ax=ax, markersize=1, color='blue', alpha=0.5)
+plt.title("Traffic Accident Locations")
+plt.show()
+
+# Extract coordinates
+coordinates = np.vstack([geo_df.geometry.x, geo_df.geometry.y]).T
+
+# Kernel Density Estimation
+bandwidth = 0.01  # Adjust bandwidth for more or less smoothing
+kde = KernelDensity(bandwidth=bandwidth, kernel='gaussian')
+kde.fit(coordinates)
+
+# Generate grid for density estimation
+x_min, y_min, x_max, y_max = geo_df.total_bounds
+x_grid = np.linspace(x_min, x_max, 100)
+y_grid = np.linspace(y_min, y_max, 100)
+X, Y = np.meshgrid(x_grid, y_grid)
+grid_coords = np.vstack([X.ravel(), Y.ravel()]).T
+
+# Predict KDE values
+Z = np.exp(kde.score_samples(grid_coords))
+Z = Z.reshape(X.shape)
+
+# Plot KDE heatmap
+plt.figure(figsize=(10, 10))
+plt.contourf(X, Y, Z, levels=100, cmap='hot')
+plt.colorbar(label='Density')
+plt.scatter(geo_df.geometry.x, geo_df.geometry.y, s=1, color='blue', alpha=0.5)
+plt.title("KDE Heatmap for Traffic Accident Hotspots")
+plt.xlabel("Longitude")
+plt.ylabel("Latitude")
+plt.show()
+```
+
+#### Explanation of the Code
+
+1. **Loading Data**:  
+   The dataset is assumed to be in a CSV format with columns representing longitude, latitude, and accident count (optional).
+
+2. **Geospatial Data**:  
+   We convert the dataset into a GeoDataFrame using `geopandas`, which makes it easier to work with geographic data.
+
+3. **Visualization of Raw Data**:  
+   We plot the raw accident data points on a map for reference.
+
+4. **Kernel Density Estimation (KDE)**:  
+   We use the `KernelDensity` estimator from `scikit-learn` with a Gaussian kernel to estimate the density of traffic accidents across the study area.
+
+   - **Bandwidth**:  
+     This parameter controls the smoothing level. Smaller values lead to more localized densities, while larger values produce a more general heatmap.
+
+5. **Grid for Prediction**:  
+   A grid of points is created to evaluate the KDE and generate the heatmap over the entire study area.
+
+6. **Heatmap Visualization**:  
+   Finally, a contour plot is generated to visualize the KDE results, showing areas with higher accident densities in red.
+
+### Adjusting Bandwidth and Kernel
+
+You can experiment with different bandwidth values to fine-tune the KDE output. Additionally, `scikit-learn` supports different kernels such as `'epanechnikov'`, `'tophat'`, and `'exponential'`, which can be passed to the `KernelDensity` function.
+
+```python
+kde = KernelDensity(bandwidth=0.01, kernel='epanechnikov')
+```
+
+This Python code provides a basic workflow for performing KDE on traffic accident data. By adjusting parameters like bandwidth, kernel type, and the resolution of the grid, you can obtain insights into traffic accident hotspots and visualize accident risk areas effectively. You can extend this code by integrating additional geographic information (such as road networks) and applying it to real-world traffic safety analysis.
 
 ### References
 
