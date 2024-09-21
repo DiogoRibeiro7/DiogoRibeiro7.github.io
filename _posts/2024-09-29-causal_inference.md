@@ -114,6 +114,7 @@ Gradient boosting models, like **CatBoost** and **LightGBM**, are known for thei
 ### 5.1 Real Estate
 
 Causal ML models with monotonic constraints can help answer questions like:
+
 - Will renovating this property increase its sale price?
 - What level of renovation would be most cost-effective?
 
@@ -163,4 +164,41 @@ decision_tree_with_constraints.fit(X_train, y_train)
 
 # Make predictions
 predictions = decision_tree_with_constraints.predict(X_test)
+```
+
+### A2. Implementing Monotonic Constraints in CatBoost
+
+```python
+from catboost import CatBoostRegressor
+
+# Define the CatBoost model with monotonic constraints
+catboost_with_constraints = CatBoostRegressor(
+    silent=True,
+    monotone_constraints={"square feet": 1, "overall condition": 1}
+)
+
+# Train the model
+catboost_with_constraints.fit(X_train, y_train)
+
+# Make predictions
+predictions = catboost_with_constraints.predict(X_test)
+```
+
+### A3. Implementing Monotonic Constraints in LightGBM
+
+```python
+import lightgbm as lgb
+
+# Define the dataset and model with monotonic constraints
+train_data = lgb.Dataset(X_train, label=y_train)
+params = {
+    "objective": "regression",
+    "monotone_constraints": [1, 1],  # Constraints applied to both features
+}
+
+# Train the model
+model = lgb.train(params, train_data)
+
+# Make predictions
+predictions = model.predict(X_test)
 ```
