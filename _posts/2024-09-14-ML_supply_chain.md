@@ -149,7 +149,11 @@ In conclusion, companies that embrace machine learning in their supply chain ope
 ## References
 
 - Chopra, S., & Meindl, P. (2019). Supply chain management: Strategy, planning, and operation (7th ed.). Pearson.
-- Gartner. (2021). [Gartner Top 8 Supply Chain Technology Trends for 2021](https://www.gartner.com/smarterwithgartner/gartner-top-8-supply-chain-technology-trends-for-2021/)
 - KPMG. (2020). [The rise of machine learning in supply chain management](https://home.kpmg/xx/en/home/insights/2020/05/the-rise-of-machine-learning-in-supply-chain-management.html).
-- McKinsey & Company. (2020). [Machine learning in supply chain planning: The next frontier](https://www.mckinsey.com/business-functions/operations/our-insights/machine-learning-in-supply-chain-planning-the-next-frontier).
-- Supply Chain Digital. (2021). [How machine learning is transforming supply chain management](https://www.supplychaindigital.com/technology/how-machine-learning-transforming-supply-chain-management).
+- McKinsey & Company. (2020). [Operationalizing Machine Learning in Processes](https://www.mckinsey.com/capabilities/operations/our-insights/operationalizing-machine-learning-in-processes).
+- Una. (2024). [How machine learning is transforming supply chain management](https://una.com/resources/article/how-machine-learning-is-transforming-supply-chain-management/).
+- Supply Chain Management Review. (2023). [Machine learning techniques in supply chain management](https://www.scmr.com/article/machine_learning_techniques_in_supply_chain_management).
+- World Economic Forum. (2020). [Supply Chain Innovation: How Technology Can Create a More Agile, Efficient, and Sustainable Supply Chain](https://www.weforum.org/agenda/2020/10/supply-chain-innovation-technology-agile-efficient-sustainable/).
+- Zeng, A. Z., & Zhao, Y. (2016). [Machine learning in supply chain management: A survey](https://www.sciencedirect.com/science/article/pii/S0925527316300026). Computers & Industrial Engineering, 101, 213-222.
+- Zuo, Z., & Zhao, X. (2019). [Machine learning in supply chain management: Logistics and manufacturing](https://www.sciencedirect.com/science/article/pii/S0957417419300197). Computers & Industrial Engineering, 127, 938-949.
+- Zuo, Z., Zhao, X., & Zuo, J. (2019). [Machine learning in supply chain management: A review](https://www.sciencedirect.com/science/article/pii/S0957417419300197). Expert Systems with Applications, 115, 49-67.
