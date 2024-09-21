@@ -1,16 +1,17 @@
 ---
-title: 'Causal Insights in Machine Learning: Monotonic Constraints for Better Predictions'
+author_profile: false
 categories:
 - Machine Learning
-tags:
-- Causal ML
-- Monotonic Constraints
-- Business Applications
-author_profile: false
-seo_title: "Causal Machine Learning with Monotonic Constraints"
-seo_description: "Learn how monotonic constraints improve predictions in causal machine learning and real-world applications like real estate, healthcare, and marketing."
-excerpt: "Monotonic constraints are crucial for building reliable and interpretable machine learning models. Discover how they are applied in causal ML and business decisions."
-summary: Monotonic constraints play a vital role in enhancing the reliability and interpretability of machine learning models, particularly in causal inference and decision-making applications. This article explores how monotonic constraints are implemented in techniques like decision trees and gradient boosting, ensuring that models behave predictably in response to input changes. With real-world applications in fields such as real estate, healthcare, and marketing, these constraints help businesses make more accurate and actionable predictions while maintaining transparency in their machine learning models.
+classes: wide
+date: '2024-09-29'
+excerpt: Monotonic constraints are crucial for building reliable and interpretable
+  machine learning models. Discover how they are applied in causal ML and business
+  decisions.
+header:
+  image: /assets/images/Causal-Inference-Hero.png
+  overlay_image: /assets/images/Causal-Inference-Hero.png
+  show_overlay_excerpt: false
+  teaser: /assets/images/Causal-Inference-Hero.png
 keywords:
 - machine learning
 - causal inference
@@ -18,12 +19,22 @@ keywords:
 - decision trees
 - gradient boosting
 - business analytics
-classes: wide
-date: '2024-09-29'
-header:
-  image: /assets/images/Causal-Inference-Hero.png
-  overlay_image: /assets/images/Causal-Inference-Hero.png
-  teaser: /assets/images/Causal-Inference-Hero.png
+seo_description: Learn how monotonic constraints improve predictions in causal machine
+  learning and real-world applications like real estate, healthcare, and marketing.
+seo_title: Causal Machine Learning with Monotonic Constraints
+summary: Monotonic constraints play a vital role in enhancing the reliability and
+  interpretability of machine learning models, particularly in causal inference and
+  decision-making applications. This article explores how monotonic constraints are
+  implemented in techniques like decision trees and gradient boosting, ensuring that
+  models behave predictably in response to input changes. With real-world applications
+  in fields such as real estate, healthcare, and marketing, these constraints help
+  businesses make more accurate and actionable predictions while maintaining transparency
+  in their machine learning models.
+tags:
+- Causal ML
+- Monotonic Constraints
+- Business Applications
+title: 'Causal Insights in Machine Learning: Monotonic Constraints for Better Predictions'
 ---
 
 ![Example Image](/assets/images/causal_inference.jpeg)

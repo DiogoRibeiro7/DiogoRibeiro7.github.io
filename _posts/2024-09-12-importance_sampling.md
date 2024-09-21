@@ -11,6 +11,7 @@ excerpt: Importance Sampling offers an efficient alternative to traditional Mont
 header:
   image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_3.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
 seo_description: Learn how Importance Sampling enhances Monte Carlo simulations in
   estimating portfolio credit risk, especially in the context of copula models and

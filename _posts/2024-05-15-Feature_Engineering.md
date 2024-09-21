@@ -10,6 +10,7 @@ date: '2024-05-15'
 header:
   image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_2.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
 subtitle: Featuretools and TPOT for Efficient and Effective Feature Engineering
 tags:

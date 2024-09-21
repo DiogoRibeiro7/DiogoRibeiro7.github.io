@@ -10,6 +10,7 @@ date: '2024-05-19'
 header:
   image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_9.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
 subtitle: A Comprehensive Guide to Bhattacharyya Distance and Essential Loss Functions
 tags:

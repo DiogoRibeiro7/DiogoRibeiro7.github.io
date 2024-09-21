@@ -10,6 +10,7 @@ excerpt: Innumeracy is becoming the new illiteracy, with far-reaching implicatio
 header:
   image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_1.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
 keywords:
 - innumeracy

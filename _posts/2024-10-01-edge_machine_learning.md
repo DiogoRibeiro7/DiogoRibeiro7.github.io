@@ -10,6 +10,7 @@ excerpt: This article dives into the implementation of continuous machine learni
 header:
   image: /assets/images/Edge-Computing.png
   overlay_image: /assets/images/Edge-Computing.png
+  show_overlay_excerpt: false
   teaser: /assets/images/Edge-Computing.png
 keywords:
 - Edge Machine Learning

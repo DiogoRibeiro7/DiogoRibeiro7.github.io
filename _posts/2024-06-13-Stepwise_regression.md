@@ -10,6 +10,7 @@ date: '2024-06-13'
 header:
   image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/data_science_4.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
 tags:
 - Stepwise Regression

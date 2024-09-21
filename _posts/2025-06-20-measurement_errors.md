@@ -10,6 +10,7 @@ date: '2025-06-20'
 header:
   image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_3.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
 tags:
 - Measurement Error

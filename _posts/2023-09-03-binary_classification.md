@@ -11,6 +11,7 @@ excerpt: Learn the core concepts of binary classification, explore common algori
 header:
   image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_7.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
 keywords:
 - binary classification

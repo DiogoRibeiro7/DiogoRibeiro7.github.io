@@ -10,6 +10,7 @@ excerpt: A detailed exploration of Customer Lifetime Value (CLV) for data practi
 header:
   image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_3.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
 keywords:
 - customer lifetime value

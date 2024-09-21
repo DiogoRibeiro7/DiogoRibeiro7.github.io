@@ -9,6 +9,7 @@ excerpt: Learn about degrees of freedom, a crucial concept in statistics and dat
 header:
   image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_9.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
 keywords:
 - degrees of freedom

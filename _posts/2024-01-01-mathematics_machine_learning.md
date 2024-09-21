@@ -10,6 +10,7 @@ excerpt: This article delves into the core mathematical principles behind machin
 header:
   image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_1.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
 keywords:
 - Mathematics of Machine Learning

@@ -10,6 +10,7 @@ date: '2024-06-14'
 header:
   image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_2.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
 subtitle: Understanding and Applying MCC in Binary Classification
 tags:

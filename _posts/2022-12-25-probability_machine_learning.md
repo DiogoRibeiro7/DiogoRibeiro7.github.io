@@ -9,6 +9,7 @@ excerpt: Understand key probability distributions in machine learning and their 
 header:
   image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_2.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
 keywords:
 - probability distributions

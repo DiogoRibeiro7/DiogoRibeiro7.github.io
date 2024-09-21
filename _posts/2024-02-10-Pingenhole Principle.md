@@ -10,6 +10,7 @@ excerpt: A journey into the Pigeonhole Principle, uncovering its profound simpli
 header:
   image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_9.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
 keywords:
 - Pigeonhole Principle

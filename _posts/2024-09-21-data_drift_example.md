@@ -1,17 +1,16 @@
 ---
-title: Solving Data Drift Issues in Credit Risk Models
+author_profile: false
 categories:
 - Data Science
-tags:
-- Credit Risk Modeling
-- Data Drift
-- Machine Learning
-- Multivariate Analysis
-author_profile: false
-seo_title: 'Addressing Data Drift in Credit Risk Models: A Case Study'
-seo_description: "Explore a practical approach to solving data drift in credit risk models, focusing on multivariate analysis and its impact on model performance."
-excerpt: "A comprehensive exploration of data drift in credit risk models, examining practical methods to identify and address drift using multivariate techniques."
-summary: Data drift can significantly affect the accuracy of credit risk models, making early detection and correction essential for maintaining model reliability. This article delves into practical approaches for identifying and addressing data drift, particularly through multivariate analysis. By examining the impact of data drift on model performance, the guide provides actionable strategies for maintaining the robustness of credit risk models, ensuring they remain effective over time despite changes in underlying data distributions.
+classes: wide
+date: '2024-09-21'
+excerpt: A comprehensive exploration of data drift in credit risk models, examining
+  practical methods to identify and address drift using multivariate techniques.
+header:
+  image: /assets/images/data_drift.png
+  overlay_image: /assets/images/data_drift.png
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_drift.png
 keywords:
 - data drift
 - credit risk models
@@ -23,12 +22,22 @@ keywords:
 - detecting data drift
 - credit risk assessment
 - adapting models to data changes
-classes: wide
-date: '2024-09-21'
-header:
-  image: /assets/images/data_drift.png
-  overlay_image: /assets/images/data_drift.png
-  teaser: /assets/images/data_drift.png
+seo_description: Explore a practical approach to solving data drift in credit risk
+  models, focusing on multivariate analysis and its impact on model performance.
+seo_title: 'Addressing Data Drift in Credit Risk Models: A Case Study'
+summary: Data drift can significantly affect the accuracy of credit risk models, making
+  early detection and correction essential for maintaining model reliability. This
+  article delves into practical approaches for identifying and addressing data drift,
+  particularly through multivariate analysis. By examining the impact of data drift
+  on model performance, the guide provides actionable strategies for maintaining the
+  robustness of credit risk models, ensuring they remain effective over time despite
+  changes in underlying data distributions.
+tags:
+- Credit Risk Modeling
+- Data Drift
+- Machine Learning
+- Multivariate Analysis
+title: Solving Data Drift Issues in Credit Risk Models
 ---
 
 ![Data Quality](/assets/images/model_drift.jpeg)

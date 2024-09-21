@@ -10,6 +10,7 @@ excerpt: Delve into the fascinating life of Paul Erdős, a wandering mathematici
 header:
   image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_9.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
 keywords:
 - Paul Erdős biography

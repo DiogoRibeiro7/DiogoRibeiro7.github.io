@@ -9,6 +9,7 @@ excerpt: A comprehensive guide to spectral clustering and its role in dimensiona
 header:
   image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_7.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
 keywords:
 - spectral clustering

@@ -12,6 +12,7 @@ excerpt: This article delves into the role of machine learning in managing fores
 header:
   image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_7.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
 seo_description: Explore how machine learning enhances forest fire management in Portugal,
   addressing early detection, risk assessment, and the impact of eucalyptus plantations.

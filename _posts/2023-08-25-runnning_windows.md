@@ -9,6 +9,7 @@ excerpt: Explore the `runner` package in R, which allows applying any R function
 header:
   image: /assets/images/Rolling-window.jpg
   overlay_image: /assets/images/Rolling-window.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/Rolling-window.jpg
 keywords:
 - runner R package

@@ -1,17 +1,17 @@
 ---
-title: 'The Unseen Art of Data Quality: Bridging the Gap Between Collection and Utilization'
-subtitle: The Importance of Data Design, Quality Assurance, and the Urgent Need for Defined Roles in the Data Industry
+author_profile: false
 categories:
 - Data Science
-tags:
-- Data Science
-- Data Engineering
-- Data Quality
-author_profile: false
-seo_title: "The Critical Role of Data Quality in the Data Industry"
-seo_description: "Explore the vital importance of data quality, the need for defined roles in data design and collection, and how data quality impacts data science and engineering."
-excerpt: "This article explores the often-overlooked importance of data quality in the data industry and emphasizes the urgent need for defined roles in data design, collection, and quality assurance."
-summary: Data quality is a crucial, yet often overlooked, aspect of data science and engineering. Without proper attention to data design, collection, and validation, even the most sophisticated analyses can be flawed. This article highlights the importance of establishing clear roles in data quality assurance and governance, ensuring that organizations can confidently rely on the data they use for decision-making. From defining data collection standards to ensuring ongoing data validation, this guide covers key strategies for maintaining high-quality data across the lifecycle of any data-driven project.
+classes: wide
+date: '2024-09-21'
+excerpt: This article explores the often-overlooked importance of data quality in
+  the data industry and emphasizes the urgent need for defined roles in data design,
+  collection, and quality assurance.
+header:
+  image: /assets/images/what-is-data-quality.jpg
+  overlay_image: /assets/images/what-is-data-quality.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/what-is-data-quality.jpg
 keywords:
 - data quality
 - data design
@@ -23,12 +23,25 @@ keywords:
 - importance of data roles
 - data validation
 - data governance
-classes: wide
-date: '2024-09-21'
-header:
-  image: /assets/images/what-is-data-quality.jpg
-  overlay_image: /assets/images/what-is-data-quality.jpg
-  teaser: /assets/images/what-is-data-quality.jpg
+seo_description: Explore the vital importance of data quality, the need for defined
+  roles in data design and collection, and how data quality impacts data science and
+  engineering.
+seo_title: The Critical Role of Data Quality in the Data Industry
+subtitle: The Importance of Data Design, Quality Assurance, and the Urgent Need for
+  Defined Roles in the Data Industry
+summary: Data quality is a crucial, yet often overlooked, aspect of data science and
+  engineering. Without proper attention to data design, collection, and validation,
+  even the most sophisticated analyses can be flawed. This article highlights the
+  importance of establishing clear roles in data quality assurance and governance,
+  ensuring that organizations can confidently rely on the data they use for decision-making.
+  From defining data collection standards to ensuring ongoing data validation, this
+  guide covers key strategies for maintaining high-quality data across the lifecycle
+  of any data-driven project.
+tags:
+- Data Science
+- Data Engineering
+- Data Quality
+title: 'The Unseen Art of Data Quality: Bridging the Gap Between Collection and Utilization'
 ---
 
 ![Data Quality](/assets/images/what-is-data-quality.png)

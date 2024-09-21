@@ -10,6 +10,7 @@ date: '2024-05-20'
 header:
   image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_1.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
 subtitle: A Clear Explanation of Two Key Concepts in Biostatistics
 tags:

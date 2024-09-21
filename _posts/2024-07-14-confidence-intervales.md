@@ -8,6 +8,7 @@ date: '2024-07-14'
 header:
   image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_1.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
 tags:
 - Uncertainty

@@ -8,6 +8,7 @@ date: '2024-08-27'
 header:
   image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_9.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
 tags:
 - Coefficient of Variation

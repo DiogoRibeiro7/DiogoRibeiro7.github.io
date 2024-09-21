@@ -11,6 +11,7 @@ excerpt: Discover the importance of Customer Lifetime Value (CLV) in shaping bus
 header:
   image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_7.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
 keywords:
 - customer lifetime value

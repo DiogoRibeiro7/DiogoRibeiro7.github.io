@@ -11,6 +11,7 @@ excerpt: Discover critical lessons learned from validating COPOD, a popular anom
 header:
   image: /assets/images/data_science_6.jpg
   overlay_image: /assets/images/data_science_6.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
 keywords:
 - anomaly detection

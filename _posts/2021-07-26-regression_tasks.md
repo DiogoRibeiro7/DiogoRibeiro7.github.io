@@ -11,6 +11,7 @@ excerpt: Regression tasks are at the heart of machine learning. This guide explo
 header:
   image: /assets/images/regression-analysis-2.jpg
   overlay_image: /assets/images/regression-analysis-2.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/regression-analysis-2.jpg
 keywords:
 - machine learning

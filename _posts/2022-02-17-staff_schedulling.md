@@ -9,6 +9,7 @@ excerpt: Discover how linear programming and Python's PuLP library can efficient
 header:
   image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_7.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
 keywords:
 - staff scheduling optimization

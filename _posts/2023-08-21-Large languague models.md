@@ -11,6 +11,7 @@ excerpt: An in-depth exploration of how the closure of open-source data platform
 header:
   image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_3.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
 keywords:
 - large language models

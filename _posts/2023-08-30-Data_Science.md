@@ -9,6 +9,7 @@ excerpt: A deep dive into the ethical challenges of data science, covering priva
 header:
   image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_3.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
 keywords:
 - data science ethics

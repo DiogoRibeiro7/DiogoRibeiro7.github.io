@@ -10,6 +10,7 @@ excerpt: Data and communication are intricately linked in modern business. This 
 header:
   image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_science_5.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
 keywords:
 - sample size

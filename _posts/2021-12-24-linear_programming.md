@@ -12,6 +12,7 @@ excerpt: Linear Programming is the foundation of optimization in operations rese
 header:
   image: /assets/images/linear_program.jpeg
   overlay_image: /assets/images/linear_program.jpeg
+  show_overlay_excerpt: false
   teaser: /assets/images/linear_program.jpeg
 keywords:
 - linear programming

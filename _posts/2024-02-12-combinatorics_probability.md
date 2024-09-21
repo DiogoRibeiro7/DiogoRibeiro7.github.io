@@ -9,6 +9,7 @@ excerpt: Dive into the intersection of combinatorics and probability, exploring 
 header:
   image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_2.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
 keywords:
 - combinatorics

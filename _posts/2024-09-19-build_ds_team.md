@@ -12,6 +12,7 @@ excerpt: Discover the implications of assigning different job titles in data sci
 header:
   image: /assets/images/data_team.png
   overlay_image: /assets/images/data_team.png
+  show_overlay_excerpt: false
   teaser: /assets/images/data_team.png
 keywords:
 - Data science teams

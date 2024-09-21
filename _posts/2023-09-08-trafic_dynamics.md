@@ -10,6 +10,7 @@ excerpt: This article explores the complex interplay between traffic control, pe
 header:
   image: /assets/images/data_science_6.jpg
   overlay_image: /assets/images/data_science_6.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
 keywords:
 - Traffic Control

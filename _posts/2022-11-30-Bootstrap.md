@@ -10,6 +10,7 @@ excerpt: Delve into bootstrapping, a versatile statistical technique for estimat
 header:
   image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/data_science_4.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
 keywords:
 - bootstrapping

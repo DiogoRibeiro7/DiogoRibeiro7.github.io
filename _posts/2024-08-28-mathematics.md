@@ -10,6 +10,7 @@ date: '2024-08-28'
 header:
   image: /assets/images/data_science_8.jpg
   overlay_image: /assets/images/data_science_8.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
 tags:
 - Mathematics

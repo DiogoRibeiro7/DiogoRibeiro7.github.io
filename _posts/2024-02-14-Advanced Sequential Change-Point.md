@@ -12,6 +12,7 @@ excerpt: Sequential change-point detection plays a crucial role in real-time mon
 header:
   image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_3.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
 keywords:
 - change-point detection

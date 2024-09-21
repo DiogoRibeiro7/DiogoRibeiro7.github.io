@@ -11,6 +11,7 @@ excerpt: Discover how data science, a multidisciplinary field combining statisti
 header:
   image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_9.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
 keywords:
 - data science

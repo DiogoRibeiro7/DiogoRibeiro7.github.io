@@ -11,6 +11,7 @@ excerpt: A comprehensive comparison of Value at Risk (VaR) and Expected Shortfal
 header:
   image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_9.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
 keywords:
 - Value at Risk

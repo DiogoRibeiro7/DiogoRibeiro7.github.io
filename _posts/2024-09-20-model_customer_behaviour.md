@@ -10,6 +10,7 @@ excerpt: Understand how Markov chains can be used to model customer behavior in 
 header:
   image: /assets/images/consumer_behaviour.jpeg
   overlay_image: /assets/images/consumer_behaviour.jpeg
+  show_overlay_excerpt: false
   teaser: /assets/images/consumer_behaviour.jpeg
 keywords:
 - Markov chains

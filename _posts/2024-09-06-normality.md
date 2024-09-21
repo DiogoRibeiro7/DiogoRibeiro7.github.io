@@ -9,6 +9,7 @@ date: '2024-09-06'
 header:
   image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_1.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
 tags:
 - Normal Distribution

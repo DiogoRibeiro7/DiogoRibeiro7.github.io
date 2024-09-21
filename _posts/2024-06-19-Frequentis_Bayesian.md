@@ -11,6 +11,7 @@ date: '2024-06-19'
 header:
   image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_7.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
 subtitle: Understanding the Probability of the Sun Rising Tomorrow
 tags:

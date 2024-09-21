@@ -11,6 +11,7 @@ date: '2024-06-05'
 header:
   image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_7.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
 tags:
 - Poisson Distribution

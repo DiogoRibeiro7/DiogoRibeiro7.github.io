@@ -11,6 +11,7 @@ excerpt: An exploration of cross-validation techniques in machine learning, focu
 header:
   image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_2.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
 seo_description: Explore various cross-validation techniques in machine learning,
   their importance, and how they help ensure robust model performance by minimizing

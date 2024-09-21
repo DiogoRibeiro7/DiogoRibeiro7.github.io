@@ -1,15 +1,16 @@
 ---
-title: 'Understanding PCA: A Step-by-Step Guide to Principal Component Analysis'
+author_profile: false
 categories:
 - Data Science
-tags:
-- PCA
-- Dimensionality Reduction
-author_profile: false
-seo_title: "Principal Component Analysis (PCA) Guide"
-seo_description: "A comprehensive guide to Principal Component Analysis (PCA), covering feature selection, dimension reduction, explained variance, and outlier detection."
-excerpt: "Learn about Principal Component Analysis (PCA) and how it helps in feature extraction, dimensionality reduction, and identifying key patterns in data."
-summary: Principal Component Analysis (PCA) is a powerful technique in data science, used for reducing the dimensionality of large datasets while preserving essential patterns. This article offers a step-by-step guide to understanding PCA, from its core mathematical concepts to practical applications in feature extraction, outlier detection, and multivariate data analysis. Whether you're using PCA for data compression or to improve machine learning models, this guide will help you grasp its key principles, including how to interpret explained variance and identify significant components.
+classes: wide
+date: '2022-12-31'
+excerpt: Learn about Principal Component Analysis (PCA) and how it helps in feature
+  extraction, dimensionality reduction, and identifying key patterns in data.
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_2.jpg
 keywords:
 - principal component analysis
 - PCA
@@ -24,12 +25,20 @@ keywords:
 - PCA for machine learning
 - pattern recognition
 - data compression
-classes: wide
-date: '2022-12-31'
-header:
-  image: /assets/images/data_science_2.jpg
-  overlay_image: /assets/images/data_science_2.jpg
-  teaser: /assets/images/data_science_2.jpg
+seo_description: A comprehensive guide to Principal Component Analysis (PCA), covering
+  feature selection, dimension reduction, explained variance, and outlier detection.
+seo_title: Principal Component Analysis (PCA) Guide
+summary: Principal Component Analysis (PCA) is a powerful technique in data science,
+  used for reducing the dimensionality of large datasets while preserving essential
+  patterns. This article offers a step-by-step guide to understanding PCA, from its
+  core mathematical concepts to practical applications in feature extraction, outlier
+  detection, and multivariate data analysis. Whether you're using PCA for data compression
+  or to improve machine learning models, this guide will help you grasp its key principles,
+  including how to interpret explained variance and identify significant components.
+tags:
+- PCA
+- Dimensionality Reduction
+title: 'Understanding PCA: A Step-by-Step Guide to Principal Component Analysis'
 ---
 
 ![Example Image](/assets/images/pca.png)

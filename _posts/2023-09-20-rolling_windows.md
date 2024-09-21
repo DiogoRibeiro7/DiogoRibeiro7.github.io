@@ -10,6 +10,7 @@ excerpt: Explore the diverse applications of rolling windows in signal processin
 header:
   image: /assets/images/download.png
   overlay_image: /assets/images/download.png
+  show_overlay_excerpt: false
   teaser: /assets/images/download.png
 keywords:
 - rolling windows

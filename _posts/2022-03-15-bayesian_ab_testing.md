@@ -9,6 +9,7 @@ excerpt: Explore Bayesian A/B testing as a powerful framework for analyzing conv
 header:
   image: /assets/images/data_science_8.jpg
   overlay_image: /assets/images/data_science_8.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
 keywords:
 - Bayesian A/B testing

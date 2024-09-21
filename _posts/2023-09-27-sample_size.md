@@ -9,6 +9,7 @@ excerpt: Dive into the nuances of sample size in statistical analysis, challengi
 header:
   image: /assets/images/data_science_8.jpg
   overlay_image: /assets/images/data_science_8.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
 keywords:
 - sample size

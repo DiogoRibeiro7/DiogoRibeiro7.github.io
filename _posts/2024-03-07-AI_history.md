@@ -8,6 +8,7 @@ date: '2024-03-07'
 header:
   image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_science_5.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
 tags:
 - Artificial Intelligence

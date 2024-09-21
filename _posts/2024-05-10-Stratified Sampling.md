@@ -9,6 +9,7 @@ date: '2024-05-10'
 header:
   image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_9.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
 subtitle: A Key to Representative Research
 tags:

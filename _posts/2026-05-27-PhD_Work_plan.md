@@ -3,6 +3,7 @@ date: '2026-05-27'
 header:
   image: /assets/images/data_science_6.jpg
   overlay_image: /assets/images/data_science_6.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
 ---
 

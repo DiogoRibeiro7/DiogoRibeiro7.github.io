@@ -7,6 +7,7 @@ date: '2024-07-11'
 header:
   image: /assets/images/data_science_6.jpg
   overlay_image: /assets/images/data_science_6.jpg
+  show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
 tags:
 - Python
