@@ -29,6 +29,7 @@ keywords:
   - machine learning techniques
   - nonlinear regression
   - probabilistic models
+date: 2021-07-26
 ---
 
 When you work in a specific field long enough, certain lessons, concepts, and teachers leave a lasting impression. It's common to look back on these formative moments, especially when they spark a lifelong passion.
