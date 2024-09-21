@@ -25,7 +25,7 @@ tags:
 - Large Language Models
 title: 'Automated Prompt Engineering (APE): Optimizing Large Language Models through
   Automation'
-toc: true
+toc: false
 toc_icon: robot
 toc_label: Automated Prompt Engineering Overview
 ---

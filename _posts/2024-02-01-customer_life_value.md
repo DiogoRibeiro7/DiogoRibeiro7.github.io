@@ -35,7 +35,7 @@ tags:
 - Business Growth
 - Loyalty Programs
 title: Understanding Customer Lifetime Value
-toc: true
+toc: false
 toc_label: The Complexity of Real-World Data Distributions
 ---
 

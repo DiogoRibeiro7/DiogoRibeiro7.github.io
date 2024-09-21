@@ -1,28 +1,31 @@
 ---
-title: "Causal Insights in Machine Learning: Monotonic Constraints for Better Predictions"
+author_profile: false
 categories:
 - Machine Learning
-tags:
-- Causal ML
-- Monotonic Constraints
-- Business Applications
-author_profile: false
-seo_title: "Causal Machine Learning with Monotonic Constraints"
-seo_description: "Learn how monotonic constraints improve predictions in causal machine learning and real-world applications like real estate, healthcare, and marketing."
-excerpt: "Monotonic constraints are crucial for building reliable and interpretable machine learning models. Discover how they are applied in causal ML and business decisions."
 classes: wide
-keywords: 
+date: '2024-09-29'
+excerpt: Monotonic constraints are crucial for building reliable and interpretable
+  machine learning models. Discover how they are applied in causal ML and business
+  decisions.
+header:
+  image: /assets/images/Causal-Inference-Hero.png
+  overlay_image: /assets/images/Causal-Inference-Hero.png
+  teaser: /assets/images/Causal-Inference-Hero.png
+keywords:
 - machine learning
 - causal inference
 - monotonic constraints
 - decision trees
 - gradient boosting
 - business analytics
-date: "2024-09-29"
-header:
-  image: /assets/images/Causal-Inference-Hero.png
-  overlay_image: /assets/images/Causal-Inference-Hero.png
-  teaser: /assets/images/Causal-Inference-Hero.png
+seo_description: Learn how monotonic constraints improve predictions in causal machine
+  learning and real-world applications like real estate, healthcare, and marketing.
+seo_title: Causal Machine Learning with Monotonic Constraints
+tags:
+- Causal ML
+- Monotonic Constraints
+- Business Applications
+title: 'Causal Insights in Machine Learning: Monotonic Constraints for Better Predictions'
 ---
 
 ![Example Image](/assets/images/causal_inference.jpeg)

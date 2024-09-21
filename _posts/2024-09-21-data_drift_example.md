@@ -6,6 +6,10 @@ classes: wide
 date: '2024-09-21'
 excerpt: A comprehensive exploration of data drift in credit risk models, examining
   practical methods to identify and address drift using multivariate techniques.
+header:
+  image: /assets/images/data_drift.png
+  overlay_image: /assets/images/data_drift.png
+  teaser: /assets/images/data_drift.png
 seo_description: Explore a practical approach to solving data drift in credit risk
   models, focusing on multivariate analysis and its impact on model performance.
 seo_title: 'Addressing Data Drift in Credit Risk Models: A Case Study'
@@ -15,10 +19,6 @@ tags:
 - Machine Learning
 - Multivariate Analysis
 title: Solving Data Drift Issues in Credit Risk Models
-header:
-  image: /assets/images/data_drift.png
-  overlay_image: /assets/images/data_drift.png
-  teaser: /assets/images/data_drift.png
 ---
 
 ![Data Quality](/assets/images/model_drift.jpeg)

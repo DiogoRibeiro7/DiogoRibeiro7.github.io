@@ -9,6 +9,10 @@ date: '2024-09-19'
 excerpt: Discover the implications of assigning different job titles in data science
   teams, examining how uniform or specialized titles affect team unity, role clarity,
   and individual motivation.
+header:
+  image: /assets/images/data_team.png
+  overlay_image: /assets/images/data_team.png
+  teaser: /assets/images/data_team.png
 keywords:
 - Data science teams
 - Job titles
@@ -48,10 +52,6 @@ tags:
 title: 'The Great Title Debate: Should Data Science Teams Assign Different Job Titles
   to Specialized Roles?'
 toc: false
-header:
-  image: /assets/images/data_team.png
-  overlay_image: /assets/images/data_team.png
-  teaser: /assets/images/data_team.png
 ---
 
 ![Data Scientist](/assets/images/data_scientist.jpg)

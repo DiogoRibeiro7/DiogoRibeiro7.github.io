@@ -7,6 +7,10 @@ classes: wide
 date: '2024-09-20'
 excerpt: Understand how Markov chains can be used to model customer behavior in cloud
   services, enabling predictions of usage patterns and helping optimize service offerings.
+header:
+  image: /assets/images/consumer_behaviour.jpeg
+  overlay_image: /assets/images/consumer_behaviour.jpeg
+  teaser: /assets/images/consumer_behaviour.jpeg
 keywords:
 - Markov chains
 - customer behavior
@@ -39,10 +43,6 @@ tags:
 title: Deciphering Cloud Customer Behavior
 toc: false
 toc_label: The Complexity of Real-World Data Distributions
-header:
-  image: /assets/images/consumer_behaviour.jpeg
-  overlay_image: /assets/images/consumer_behaviour.jpeg
-  teaser: /assets/images/consumer_behaviour.jpeg
 ---
 
 ![Example Image](/assets/images/markov_chain.png)
