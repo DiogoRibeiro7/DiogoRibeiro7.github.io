@@ -1,31 +1,28 @@
 ---
-title: "Wine Sensory Evaluation: From Sensory Lexicons and Emotions to Data Statistical Analysis Techniques"
-
-categories:
-    - Wine Science
-    - Sensory Evaluation
-    - Data Analysis
-    - Oenology
-    - Food Science
-    - Consumer Behavior
-    - Marketing
-
-tags: 
-    - Sensory Lexicon
-    - Wine Tasting
-    - Emotions
-    - Consumer Preferences
-    - Descriptive Statistics
-    - Multivariate Analysis
-    - PCA
-    - ANOVA
-    - Regression Analysis
-    - Wine Quality
-
 author_profile: false
+categories:
+- Wine Science
+- Sensory Evaluation
+- Data Analysis
+- Oenology
+- Food Science
+- Consumer Behavior
+- Marketing
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-06-06'
+tags:
+- Sensory Lexicon
+- Wine Tasting
+- Emotions
+- Consumer Preferences
+- Descriptive Statistics
+- Multivariate Analysis
+- PCA
+- ANOVA
+- Regression Analysis
+- Wine Quality
+title: 'Wine Sensory Evaluation: From Sensory Lexicons and Emotions to Data Statistical
+  Analysis Techniques'
 ---
 
 ## Abstract

@@ -1,34 +1,30 @@
 ---
-title: "Critical Review of 'Bursting the (Filter) Bubble: Interactions of Members of Parliament on Twitter'"
-
-categories:
-    - Academic Writing
-    - Research Methodology
-    - Political Communication
-    - Social Media Studies
-    - Digital Democracy
-    - Social Network Analysis
-    - Political Sociology
-
-
-tags: 
-    - Twitter
-    - Members of Parliament (MPs)
-    - Political Interaction
-    - Filter Bubbles
-    - Echo Chambers
-    - Social Network Analysis
-    - Political Communication
-    - Digital Engagement
-    - Homophily
-    - Status Homophily
-    - Online Political Behavior
-    - Social Media Analysis
-
 author_profile: false
+categories:
+- Academic Writing
+- Research Methodology
+- Political Communication
+- Social Media Studies
+- Digital Democracy
+- Social Network Analysis
+- Political Sociology
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-05-22'
+tags:
+- Twitter
+- Members of Parliament (MPs)
+- Political Interaction
+- Filter Bubbles
+- Echo Chambers
+- Social Network Analysis
+- Political Communication
+- Digital Engagement
+- Homophily
+- Status Homophily
+- Online Political Behavior
+- Social Media Analysis
+title: 'Critical Review of ''Bursting the (Filter) Bubble: Interactions of Members
+  of Parliament on Twitter'''
 ---
 
 ## Introduction

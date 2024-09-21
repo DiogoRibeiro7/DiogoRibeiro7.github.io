@@ -1,36 +1,34 @@
 ---
-title: "Kernel Clustering in R"
-subtitle: "A Practical Guide to Advanced Data Segmentation"
-categories:
-  - Mathematics
-  - Statistics
-  - Machine Learning
-tags:
-    - Kernel Clustering in R
-    - Advanced Data Clustering Techniques
-    - Non-linear Data Analysis
-    - Machine Learning in R
-    - kernlab package
-    - Gaussian Kernel Clustering
-    - R Data Science Tools
-    - Support Vector Clustering
-    - Multidimensional Data Analysis
-    - Kernel Methods for Clustering
-    - Clustering Non-linear Data
-    - Data Mining in R
-    - Statistical Learning in R
-    - Cluster Analysis Methods
-    - Radial Basis Function (RBF)
-    - Data Segmentation Techniques
-    - Unsupervised Learning in R
-    - Pattern Recognition with Kernels
-    - K-means Kernel Clustering
-    - Scalable Clustering Algorithms in R
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Machine Learning
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-05-09'
+subtitle: A Practical Guide to Advanced Data Segmentation
+tags:
+- Kernel Clustering in R
+- Advanced Data Clustering Techniques
+- Non-linear Data Analysis
+- Machine Learning in R
+- kernlab package
+- Gaussian Kernel Clustering
+- R Data Science Tools
+- Support Vector Clustering
+- Multidimensional Data Analysis
+- Kernel Methods for Clustering
+- Clustering Non-linear Data
+- Data Mining in R
+- Statistical Learning in R
+- Cluster Analysis Methods
+- Radial Basis Function (RBF)
+- Data Segmentation Techniques
+- Unsupervised Learning in R
+- Pattern Recognition with Kernels
+- K-means Kernel Clustering
+- Scalable Clustering Algorithms in R
+title: Kernel Clustering in R
 ---
 
 Clustering is one of the most fundamental techniques in data analysis and machine learning. It involves grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar to each other than to those in other groups. This is widely used across various fields including marketing to segment customers, in biology for genetic clustering, and in retail to arrange homogeneous product groups, making it an indispensable tool in any data scientist's arsenal.

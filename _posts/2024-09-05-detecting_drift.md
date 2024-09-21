@@ -1,16 +1,16 @@
 ---
-title: "The Limitations of Hypothesis Testing for Detecting Data Drift: A Bayesian Alternative"
+author_profile: false
 categories:
 - Data Science
 - Machine Learning
+classes: wide
+date: '2024-09-05'
 tags:
 - Data Drift
 - Hypothesis Testing
 - Bayesian Probability
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: 'The Limitations of Hypothesis Testing for Detecting Data Drift: A Bayesian
+  Alternative'
 ---
 
 With statistics at the heart of data science, hypothesis testing is a logical first step for detecting data drift. The fundamental idea behind hypothesis testing is straightforward: define a null hypothesis that assumes no drift in the data, then use the p-value to determine whether this hypothesis should be rejected. However, when applied to detecting data drift in production environments, traditional hypothesis testing can be unreliable and potentially misleading. This article explores the limitations of hypothesis testing for this purpose and suggests Bayesian probability as a more effective alternative.

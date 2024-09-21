@@ -1,29 +1,35 @@
 ---
-title: "Advanced Sequential Change-Point Detection for Univariate Models"
-categories:
-  - Statistics
-  - Machine Learning
-  - Data Analysis
-tags:
-  - Change-Point Detection
-  - Univariate Models
-  - Sequential Analysis
 author_profile: false
+categories:
+- Statistics
+- Machine Learning
+- Data Analysis
 classes: wide
-seo_title: "Advanced Techniques for Sequential Change-Point Detection in Univariate Models"
-seo_description: "Explore advanced methods and practical implementations for sequential change-point detection in univariate models, covering theoretical foundations, real-world applications, and key statistical techniques."
-excerpt: "Sequential change-point detection plays a crucial role in real-time monitoring across industries. Learn about advanced methods, their practical applications, and how they help detect changes in univariate models."
+date: '2024-02-14'
+excerpt: Sequential change-point detection plays a crucial role in real-time monitoring
+  across industries. Learn about advanced methods, their practical applications, and
+  how they help detect changes in univariate models.
 keywords:
-  - change-point detection
-  - univariate models
-  - sequential analysis
-  - real-time monitoring
-  - statistical detection methods
-  - data analysis
-  - machine learning models
-  - anomaly detection
-  - sequential change-point algorithms
-  - time series analysis
+- change-point detection
+- univariate models
+- sequential analysis
+- real-time monitoring
+- statistical detection methods
+- data analysis
+- machine learning models
+- anomaly detection
+- sequential change-point algorithms
+- time series analysis
+seo_description: Explore advanced methods and practical implementations for sequential
+  change-point detection in univariate models, covering theoretical foundations, real-world
+  applications, and key statistical techniques.
+seo_title: Advanced Techniques for Sequential Change-Point Detection in Univariate
+  Models
+tags:
+- Change-Point Detection
+- Univariate Models
+- Sequential Analysis
+title: Advanced Sequential Change-Point Detection for Univariate Models
 ---
 
 ## Overview

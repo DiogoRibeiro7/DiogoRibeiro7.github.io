@@ -1,36 +1,41 @@
 ---
-title: "Elegance of the Pigeonhole Principle: A Mathematical Odyssey"
-subtitle: "Exploring the Profound Simplicity and Universal Applications of a Foundational Mathematical Concept"
-categories:
-  - Mathematics
-tags:
-  - Pigeonhole Principle
-  - Mathematical Logic
-  - Combinatorics
-  - Data Compression
-  - Geometry
-  - Number Theory
-  - Rubik's Cube
-  - Rational Numbers
-  - Mathematical Proofs
 author_profile: false
+categories:
+- Mathematics
 classes: wide
-toc: false
-toc_label: "The Complexity of Real-World Data Distributions"
-seo_title: "The Elegance of the Pigeonhole Principle: Universal Applications in Mathematics"
-seo_description: "Explore the simplicity and power of the Pigeonhole Principle, delving into its applications across combinatorics, number theory, geometry, and more."
-excerpt: "A journey into the Pigeonhole Principle, uncovering its profound simplicity and exploring its applications in fields like combinatorics, number theory, and geometry."
+date: '2024-02-10'
+excerpt: A journey into the Pigeonhole Principle, uncovering its profound simplicity
+  and exploring its applications in fields like combinatorics, number theory, and
+  geometry.
 keywords:
-  - Pigeonhole Principle
-  - combinatorics
-  - mathematical proofs
-  - number theory
-  - geometry
-  - mathematical logic
-  - Rubik's Cube
-  - rational numbers
-  - data compression
-  - foundational math concepts
+- Pigeonhole Principle
+- combinatorics
+- mathematical proofs
+- number theory
+- geometry
+- mathematical logic
+- Rubik's Cube
+- rational numbers
+- data compression
+- foundational math concepts
+seo_description: Explore the simplicity and power of the Pigeonhole Principle, delving
+  into its applications across combinatorics, number theory, geometry, and more.
+seo_title: 'The Elegance of the Pigeonhole Principle: Universal Applications in Mathematics'
+subtitle: Exploring the Profound Simplicity and Universal Applications of a Foundational
+  Mathematical Concept
+tags:
+- Pigeonhole Principle
+- Mathematical Logic
+- Combinatorics
+- Data Compression
+- Geometry
+- Number Theory
+- Rubik's Cube
+- Rational Numbers
+- Mathematical Proofs
+title: 'Elegance of the Pigeonhole Principle: A Mathematical Odyssey'
+toc: false
+toc_label: The Complexity of Real-World Data Distributions
 ---
 
 In this discourse, we delve into the profundity of an elementary yet profoundly influential mathematical axiom, often termed the pigeonhole principle. This principle, despite its simplicity, underpins a plethora of significant and sometimes counterintuitive results within the mathematical domain. The principle articulates that if $$n>m$$, it necessitates that at least one compartment must encapsulate more than one object. This foundational concept enables the derivation of several intriguing corollaries, including but not limited to:

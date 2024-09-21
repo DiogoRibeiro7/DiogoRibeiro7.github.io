@@ -1,27 +1,23 @@
 ---
-title: "Explaining Weighted Moving Average and Standard Deviation in Health Care"
-
-categories:
-    - Healthcare Education
-    - Statistical Methods
-    - Data Interpretation
-    - Nursing Practice
-    - Professional Development
-
-tags: 
-    - Nursing education
-    - Statistical analysis
-    - Data interpretation in healthcare
-    - Weighted moving average
-    - Standard deviation
-    - Clinical data
-    - Nursing practice
-    - Professional skills
-
 author_profile: false
+categories:
+- Healthcare Education
+- Statistical Methods
+- Data Interpretation
+- Nursing Practice
+- Professional Development
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-06-02'
+tags:
+- Nursing education
+- Statistical analysis
+- Data interpretation in healthcare
+- Weighted moving average
+- Standard deviation
+- Clinical data
+- Nursing practice
+- Professional skills
+title: Explaining Weighted Moving Average and Standard Deviation in Health Care
 ---
 
 ### Introduction
@@ -79,4 +75,3 @@ To calculate the weighted moving average, you give more weight to recent days' r
 ### Conclusion
 
 Understanding and applying statistical measures like the weighted moving average and standard deviation can greatly enhance nursing practice. By using these tools, nurses can better interpret patient data, identify significant trends, and make informed decisions to improve patient outcomes.
-

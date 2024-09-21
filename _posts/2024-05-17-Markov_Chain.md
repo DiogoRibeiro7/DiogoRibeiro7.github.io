@@ -1,25 +1,24 @@
 ---
-title: "Understanding Markov Systems"
-subtitle: "Exploring the Foundations and Applications of Markov Models in Real-World Scenarios"
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Machine Learning
-tags:
-    - Markov systems
-    - Markov chains
-    - Hidden Markov Models
-    - Stochastic processes
-    - Andrey Markov
-    - Claude Shannon
-    - real-world applications
-    - parking lot occupancy
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Machine Learning
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-05-17'
+subtitle: Exploring the Foundations and Applications of Markov Models in Real-World
+  Scenarios
+tags:
+- Markov systems
+- Markov chains
+- Hidden Markov Models
+- Stochastic processes
+- Andrey Markov
+- Claude Shannon
+- real-world applications
+- parking lot occupancy
+title: Understanding Markov Systems
 ---
 
 ## Introduction
@@ -241,4 +240,3 @@ As computational power and data availability continue to grow, Markov models wil
 6. Bishop, C. M. (2006). "Pattern Recognition and Machine Learning." Springer.
 7. Jurafsky, D., & Martin, J. H. (2009). "Speech and Language Processing." Pearson.
 8. MacKay, D. J. C. (2003). "Information Theory, Inference, and Learning Algorithms." Cambridge University Press.
-

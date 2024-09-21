@@ -1,40 +1,35 @@
 ---
-title: "How to Write a Research Paper"
-
-categories:
-    - Academic Writing
-    - Research Methodology
-    - Education
-    - Study Skills
-    - Writing Tips
-
-
-tags: 
-    - Research paper writing
-    - Academic writing tips
-    - Thesis statement development
-    - Research methodology
-    - Literature review process
-    - Writing an outline
-    - Drafting a research paper
-    - Editing and revising papers
-    - Proofreading techniques
-    - Formatting academic papers
-    - Citation styles (APA, MLA, Chicago)
-    - In-depth research
-    - Organizing research notes
-    - Academic research tips
-    - Effective writing strategies
-    - Managing research projects
-    - Structuring research papers
-    - Finalizing research documents
-    - Research paper guidelines
-    - Academic paper structure
-
 author_profile: false
+categories:
+- Academic Writing
+- Research Methodology
+- Education
+- Study Skills
+- Writing Tips
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-05-22'
+tags:
+- Research paper writing
+- Academic writing tips
+- Thesis statement development
+- Research methodology
+- Literature review process
+- Writing an outline
+- Drafting a research paper
+- Editing and revising papers
+- Proofreading techniques
+- Formatting academic papers
+- Citation styles (APA, MLA, Chicago)
+- In-depth research
+- Organizing research notes
+- Academic research tips
+- Effective writing strategies
+- Managing research projects
+- Structuring research papers
+- Finalizing research documents
+- Research paper guidelines
+- Academic paper structure
+title: How to Write a Research Paper
 ---
 
 Writing a research paper involves several stages, from choosing a topic to revising and finalizing your work. Here’s a structured approach to guide you through the process:

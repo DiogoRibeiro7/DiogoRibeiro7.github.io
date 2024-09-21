@@ -1,18 +1,16 @@
 ---
-title: "Sequential Detection of Switches in Models with Changing Structures"
-categories:
-    - Data Science
-    - Statistics
-    - Machine Learning
-tags:
-    - Change Detection
-    - Structural Changes
-    - Real-time Processing
-
 author_profile: false
+categories:
+- Data Science
+- Statistics
+- Machine Learning
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-07-20'
+tags:
+- Change Detection
+- Structural Changes
+- Real-time Processing
+title: Sequential Detection of Switches in Models with Changing Structures
 ---
 
 Sequential detection of structural changes in models is a critical aspect in various domains, enabling timely and informed decision-making. This involves identifying moments when the parameters or structure of a model change, often signaling significant events or shifts in the underlying data-generating process.

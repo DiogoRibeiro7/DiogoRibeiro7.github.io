@@ -1,15 +1,14 @@
 ---
-title: "Normal Distribution: Explained"
+author_profile: false
 categories:
 - Statistics
+classes: wide
+date: '2024-07-10'
 tags:
 - Probability
 - Gaussian Distribution
 - Central Limit Theorem
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: 'Normal Distribution: Explained'
 ---
 
 ## Normal Distribution: Explained

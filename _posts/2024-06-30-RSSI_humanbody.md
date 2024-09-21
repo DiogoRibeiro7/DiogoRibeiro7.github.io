@@ -1,25 +1,23 @@
 ---
-title: "Effects of a Human Body on RSSI: Challenges and Mitigations"
-categories:
-  - Wireless Communication
-  - Signal Processing
-  - Network Engineering
-tags:
-  - RSSI
-  - Signal Attenuation
-  - Multipath Effects
-  - Shadowing
-  - Interference
-  - Antenna Placement
-  - Diversity Techniques
-  - Power Control
-  - High Frequency Bands
-  - Beamforming
-
 author_profile: false
+categories:
+- Wireless Communication
+- Signal Processing
+- Network Engineering
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-06-30'
+tags:
+- RSSI
+- Signal Attenuation
+- Multipath Effects
+- Shadowing
+- Interference
+- Antenna Placement
+- Diversity Techniques
+- Power Control
+- High Frequency Bands
+- Beamforming
+title: 'Effects of a Human Body on RSSI: Challenges and Mitigations'
 ---
 
 ## Signal Attenuation
@@ -59,4 +57,3 @@ Lastly, beamforming technology can play a crucial role in improving signal stren
 ## Summary
 
 Understanding the effects of a human body on RSSI is crucial for designing robust wireless communication systems. Signal attenuation, reflection, shadowing, and interference are common challenges posed by the presence of human bodies. However, by implementing practical mitigations such as strategic antenna placement, diversity techniques, adaptive power control, the use of higher frequency bands, and beamforming, the negative impacts can be minimized. These strategies ensure more reliable and efficient wireless communication, even in environments with significant human movement.
-

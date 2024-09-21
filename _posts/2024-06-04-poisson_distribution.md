@@ -1,29 +1,25 @@
 ---
-title: "Modeling Count Events with Poisson Distribution in R"
-
-categories:
-    - Data Science
-    - Statistics
-    - R Programming
-    - Probability and Statistics
-    - Data Analysis
-
-tags: 
-    - Poisson Distribution
-    - Count Data
-    - Statistical Modeling
-    - Time Series Analysis
-    - Event Data
-    - Data Preparation
-    - R Code
-    - Probability
-    - p-value Analysis
-    - Statistical Testing
-
 author_profile: false
+categories:
+- Data Science
+- Statistics
+- R Programming
+- Probability and Statistics
+- Data Analysis
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-06-04'
+tags:
+- Poisson Distribution
+- Count Data
+- Statistical Modeling
+- Time Series Analysis
+- Event Data
+- Data Preparation
+- R Code
+- Probability
+- p-value Analysis
+- Statistical Testing
+title: Modeling Count Events with Poisson Distribution in R
 ---
 
 In this article, we will explore how to model count events, such as activations of certain types of events, using the Poisson distribution in R. We will also discuss how to determine if an observed count belongs to the Poisson distribution.

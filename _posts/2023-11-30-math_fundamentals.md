@@ -1,28 +1,31 @@
 ---
-title: "Solving Data Drift Issues in Credit Risk Models: A Practical Example"
+author_profile: false
 categories:
 - Data Science
+classes: wide
+date: '2023-11-30'
+excerpt: A comprehensive exploration of data drift in credit risk models, examining
+  practical methods to identify and address drift using multivariate techniques.
+keywords:
+- data drift
+- credit risk modeling
+- machine learning in finance
+- model performance
+- multivariate analysis
+- risk assessment
+- financial modeling
+- drift detection
+- predictive modeling
+- credit scoring
+seo_description: Explore a practical approach to solving data drift in credit risk
+  models, focusing on multivariate analysis and its impact on model performance.
+seo_title: 'Addressing Data Drift in Credit Risk Models: A Case Study'
 tags:
 - Credit Risk Modeling
 - Data Drift
 - Machine Learning
 - Multivariate Analysis
-author_profile: false
-seo_title: "Addressing Data Drift in Credit Risk Models: A Case Study"
-seo_description: "Explore a practical approach to solving data drift in credit risk models, focusing on multivariate analysis and its impact on model performance."
-excerpt: "A comprehensive exploration of data drift in credit risk models, examining practical methods to identify and address drift using multivariate techniques."
-classes: wide
-keywords:
-  - data drift
-  - credit risk modeling
-  - machine learning in finance
-  - model performance
-  - multivariate analysis
-  - risk assessment
-  - financial modeling
-  - drift detection
-  - predictive modeling
-  - credit scoring
+title: 'Solving Data Drift Issues in Credit Risk Models: A Practical Example'
 ---
 
 ![Example Image](/assets/images/1725604108590.jpeg)

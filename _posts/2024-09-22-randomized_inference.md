@@ -1,18 +1,23 @@
 ---
-title: "Validating Anomaly Detection Models: Lessons from COPOD"
+author_profile: false
 categories:
 - Data Science
 - Machine Learning
+classes: wide
+date: '2024-09-22'
+excerpt: COPOD is a popular anomaly detection model, but how well does it perform
+  in practice? This article discusses critical validation issues in third-party models
+  and lessons learned from COPOD.
+seo_description: Learn the importance of validating anomaly detection models like
+  COPOD. Explore the pitfalls of assuming variable independence in high-dimensional
+  data.
+seo_title: 'COPOD Model Validation: Lessons for Anomaly Detection'
 tags:
 - Anomaly Detection
 - Model Validation
 - COPOD
 - Python
-author_profile: false
-seo_title: "COPOD Model Validation: Lessons for Anomaly Detection"
-seo_description: "Learn the importance of validating anomaly detection models like COPOD. Explore the pitfalls of assuming variable independence in high-dimensional data."
-excerpt: "COPOD is a popular anomaly detection model, but how well does it perform in practice? This article discusses critical validation issues in third-party models and lessons learned from COPOD."
-classes: wide
+title: 'Validating Anomaly Detection Models: Lessons from COPOD'
 ---
 
 ## Overview

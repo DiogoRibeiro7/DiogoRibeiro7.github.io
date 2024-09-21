@@ -1,28 +1,32 @@
 ---
-title: "The Myth and Reality of Sample Size in Statistical Analysis"
-subtitle: "A Nuanced Perspective"
-categories:
-  - Statistics
-tags:
-  - Data Analysis
-  - Sample Size
-  - Statistical Accuracy
 author_profile: false
+categories:
+- Statistics
 classes: wide
-seo_title: "The Myth and Reality of Sample Size in Statistical Analysis"
-seo_description: "Explore the complexities of sample size in statistical analysis. Learn why bigger isn't always better, and the importance of data quality and experimental design."
-excerpt: "Dive into the nuances of sample size in statistical analysis, challenging the common belief that larger samples always lead to better results."
+date: '2023-09-27'
+excerpt: Dive into the nuances of sample size in statistical analysis, challenging
+  the common belief that larger samples always lead to better results.
 keywords:
-  - sample size
-  - statistical analysis
-  - data quality
-  - statistical accuracy
-  - experimental design
-  - statistical power
-  - hypothesis testing
-  - data sampling
-  - effect size
-  - research methodology
+- sample size
+- statistical analysis
+- data quality
+- statistical accuracy
+- experimental design
+- statistical power
+- hypothesis testing
+- data sampling
+- effect size
+- research methodology
+seo_description: Explore the complexities of sample size in statistical analysis.
+  Learn why bigger isn't always better, and the importance of data quality and experimental
+  design.
+seo_title: The Myth and Reality of Sample Size in Statistical Analysis
+subtitle: A Nuanced Perspective
+tags:
+- Data Analysis
+- Sample Size
+- Statistical Accuracy
+title: The Myth and Reality of Sample Size in Statistical Analysis
 ---
 
 ![Example Image](/assets/images/sample_1.png)

@@ -1,28 +1,24 @@
 ---
-title: "Probability Integral Transform: Theory and Applications"
-
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Machine Learning
-
-tags: 
-    - Probability Integral Transform
-    - Cumulative Distribution Function
-    - Uniform Distribution
-    - Copula Construction
-    - Goodness of Fit
-    - Monte Carlo Simulations
-    - Hypothesis Testing
-    - Marketing Mix Modeling
-    - Credit Risk Modeling
-    - Financial Risk Management
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Machine Learning
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-05-21'
+tags:
+- Probability Integral Transform
+- Cumulative Distribution Function
+- Uniform Distribution
+- Copula Construction
+- Goodness of Fit
+- Monte Carlo Simulations
+- Hypothesis Testing
+- Marketing Mix Modeling
+- Credit Risk Modeling
+- Financial Risk Management
+title: 'Probability Integral Transform: Theory and Applications'
 ---
 
 ![Example Image](/assets/images/ProbIntegralTransform.png)

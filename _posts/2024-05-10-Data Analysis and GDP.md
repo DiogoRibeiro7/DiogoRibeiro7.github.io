@@ -1,27 +1,26 @@
 ---
-title: "The Limitations of Aggregated GDP Data in Data Science Analysis"
-subtitle: "Exploring the Shortcomings of GDP as a Sole Economic Indicator in Data Science Applications"
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Economy
-tags:
-    - GDP Limitations
-    - Economic Analysis
-    - Data Aggregation
-    - Real-Time Data
-    - Economic Indicators
-    - Data Quality
-    - Comparative Analysis
-    - Alternative Metrics
-    - Economic Analysis
-    - Data Analysis
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Economy
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-05-10'
+subtitle: Exploring the Shortcomings of GDP as a Sole Economic Indicator in Data Science
+  Applications
+tags:
+- GDP Limitations
+- Economic Analysis
+- Data Aggregation
+- Real-Time Data
+- Economic Indicators
+- Data Quality
+- Comparative Analysis
+- Alternative Metrics
+- Economic Analysis
+- Data Analysis
+title: The Limitations of Aggregated GDP Data in Data Science Analysis
 ---
 
 ![Example Image](/assets/images/gdp.jpg)

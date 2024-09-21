@@ -1,27 +1,25 @@
 ---
-title: "Regularization in Machine Learning"
-subtitle: "Techniques to Prevent Overfitting and Improve Model Performance"
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Machine Learning
-tags:
-    - Regularization
-    - Overfitting
-    - L1 Regularization
-    - L2 Regularization
-    - Elastic Net
-    - Machine Learning
-    - Model Generalization
-    - Feature Selection
-    - Model Interpretability
-    - High-Dimensional Data
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Machine Learning
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-05-16'
+subtitle: Techniques to Prevent Overfitting and Improve Model Performance
+tags:
+- Regularization
+- Overfitting
+- L1 Regularization
+- L2 Regularization
+- Elastic Net
+- Machine Learning
+- Model Generalization
+- Feature Selection
+- Model Interpretability
+- High-Dimensional Data
+title: Regularization in Machine Learning
 ---
 
 ## Introduction

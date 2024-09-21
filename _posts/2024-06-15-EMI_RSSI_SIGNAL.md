@@ -1,27 +1,25 @@
 ---
-title: "Impact of Electromagnetic Interference on RSSI Signal: Detailed Insights and Implications"
-
-categories:
-  - Wireless Communication
-  - Signal Processing
-  - Data Science
-  - Network Engineering
-tags:
-  - RSSI
-  - Electromagnetic Interference
-  - Signal Strength
-  - Noise
-  - Wireless Networks
-  - Signal Degradation
-  - EMI Mitigation
-  - Frequency Selection
-  - Data Quality
-  - Network Performance
-
 author_profile: false
+categories:
+- Wireless Communication
+- Signal Processing
+- Data Science
+- Network Engineering
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-06-15'
+tags:
+- RSSI
+- Electromagnetic Interference
+- Signal Strength
+- Noise
+- Wireless Networks
+- Signal Degradation
+- EMI Mitigation
+- Frequency Selection
+- Data Quality
+- Network Performance
+title: 'Impact of Electromagnetic Interference on RSSI Signal: Detailed Insights and
+  Implications'
 ---
 
 Electromagnetic interference (EMI), also known as electrical magnetic distortion, is a phenomenon that can significantly impact the performance of wireless communication systems. One of the key metrics affected by EMI is the Received Signal Strength Indicator (RSSI), which measures the power level of the received signal.

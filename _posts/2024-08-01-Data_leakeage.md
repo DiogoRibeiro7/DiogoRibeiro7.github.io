@@ -1,15 +1,14 @@
 ---
-title: "Understanding Data Leakage in Machine Learning: Causes, Types, and Prevention"
+author_profile: false
 categories:
 - Machine Learning
+classes: wide
+date: '2024-08-01'
 tags:
 - Data Leakage
 - Data Science
 - Model Integrity
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: 'Understanding Data Leakage in Machine Learning: Causes, Types, and Prevention'
 ---
 
 Imagine building a model to predict house prices based on features like size, location, and amenities. If you accidentally include the actual selling price during training, the model learns this private information instead of the underlying patterns in the other features. This is data leakage, compromising the model’s fairness, generalizability, and security.

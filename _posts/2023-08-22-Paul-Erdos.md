@@ -1,30 +1,33 @@
 ---
-title: "The Life and Legacy of Paul Erdős"
-subtitle: "A Mathematician for the Ages"
-categories:
-  - Mathematics
-  - Biographies
-tags:
-  - Paul Erdős
-  - Mathematical Genius
-  - Number Theory
-  - Collaboration in Science
 author_profile: false
-seo_title: "Paul Erdős: The Mathematical Prodigy Who Changed Mathematics Forever"
-seo_description: "Explore the life and legacy of Paul Erdős, a nomadic mathematician who made groundbreaking contributions to number theory and collaborative science."
-excerpt: "Delve into the fascinating life of Paul Erdős, a wandering mathematician whose love for numbers and collaboration reshaped the world of mathematics."
+categories:
+- Mathematics
+- Biographies
 classes: wide
+date: '2023-08-22'
+excerpt: Delve into the fascinating life of Paul Erdős, a wandering mathematician
+  whose love for numbers and collaboration reshaped the world of mathematics.
 keywords:
-  - Paul Erdős biography
-  - number theory contributions
-  - mathematical collaboration
-  - Erdős number
-  - combinatorics
-  - graph theory
-  - Hungarian mathematicians
-  - mathematical prodigies
-  - collaborative mathematics
-  - famous mathematicians
+- Paul Erdős biography
+- number theory contributions
+- mathematical collaboration
+- Erdős number
+- combinatorics
+- graph theory
+- Hungarian mathematicians
+- mathematical prodigies
+- collaborative mathematics
+- famous mathematicians
+seo_description: Explore the life and legacy of Paul Erdős, a nomadic mathematician
+  who made groundbreaking contributions to number theory and collaborative science.
+seo_title: 'Paul Erdős: The Mathematical Prodigy Who Changed Mathematics Forever'
+subtitle: A Mathematician for the Ages
+tags:
+- Paul Erdős
+- Mathematical Genius
+- Number Theory
+- Collaboration in Science
+title: The Life and Legacy of Paul Erdős
 ---
 
 ![Example Image](/assets/images/Erdos_Paul.jpg)

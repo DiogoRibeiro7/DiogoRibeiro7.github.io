@@ -1,26 +1,24 @@
 ---
-title: "Similarity Measures and Loss Functions in Machine Learning"
-subtitle: "A Comprehensive Guide to Bhattacharyya Distance and Essential Loss Functions"
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Machine Learning
-tags:
-    - Bhattacharyya Distance
-    - Probability Distributions
-    - KL Divergence
-    - Loss Functions
-    - Regression
-    - Classification
-    - Mean Squared Error
-    - Cross-Entropy Loss
-    - Machine Learning Optimization
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Machine Learning
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-05-19'
+subtitle: A Comprehensive Guide to Bhattacharyya Distance and Essential Loss Functions
+tags:
+- Bhattacharyya Distance
+- Probability Distributions
+- KL Divergence
+- Loss Functions
+- Regression
+- Classification
+- Mean Squared Error
+- Cross-Entropy Loss
+- Machine Learning Optimization
+title: Similarity Measures and Loss Functions in Machine Learning
 ---
 
 ## Introduction
@@ -152,4 +150,3 @@ Understanding the Bhattacharyya distance and common loss functions equips you wi
 On the other hand, loss functions play a pivotal role in the training of machine learning models. They guide the optimization process by quantifying the error between predicted and actual values, which is crucial for improving model accuracy. Each loss function has its specific use cases and advantages, from handling outliers to dealing with classification margins.
 
 By integrating these concepts into your machine learning workflow, you can make more informed decisions about model selection, evaluation, and optimization. Whether you are working on regression tasks, where minimizing errors is crucial, or on classification tasks, where precise categorization is key, these tools and techniques will help enhance your models' performance and reliability.
-

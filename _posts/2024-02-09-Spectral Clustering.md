@@ -1,31 +1,35 @@
 ---
-title: "The Power of Dimensionality Reduction"
-subtitle: "A Comprehensive Guide to Spectral Clustering"
-categories:
-  - Data Science
-tags:
-  - Data Science
-  - Machine Learning
-  - Clustering Algorithms
-  - Spectral Clustering
-  - Data Analysis
-  - Pattern Recognition
 author_profile: false
+categories:
+- Data Science
 classes: wide
-toc: false
-toc_label: "The Complexity of Real-World Data Distributions"
-seo_title: "The Power of Dimensionality Reduction: Spectral Clustering Guide"
-seo_description: "Explore the power of dimensionality reduction through spectral clustering. Learn how this algorithm enhances data analysis and pattern recognition in machine learning."
-excerpt: "A comprehensive guide to spectral clustering and its role in dimensionality reduction, enhancing data analysis, and uncovering patterns in machine learning."
+date: '2024-02-09'
+excerpt: A comprehensive guide to spectral clustering and its role in dimensionality
+  reduction, enhancing data analysis, and uncovering patterns in machine learning.
 keywords:
-  - spectral clustering
-  - dimensionality reduction
-  - clustering algorithms
-  - data science
-  - machine learning
-  - data analysis
-  - pattern recognition
-  - unsupervised learning
+- spectral clustering
+- dimensionality reduction
+- clustering algorithms
+- data science
+- machine learning
+- data analysis
+- pattern recognition
+- unsupervised learning
+seo_description: Explore the power of dimensionality reduction through spectral clustering.
+  Learn how this algorithm enhances data analysis and pattern recognition in machine
+  learning.
+seo_title: 'The Power of Dimensionality Reduction: Spectral Clustering Guide'
+subtitle: A Comprehensive Guide to Spectral Clustering
+tags:
+- Data Science
+- Machine Learning
+- Clustering Algorithms
+- Spectral Clustering
+- Data Analysis
+- Pattern Recognition
+title: The Power of Dimensionality Reduction
+toc: false
+toc_label: The Complexity of Real-World Data Distributions
 ---
 
 ![Example Image](/assets/images/spectral-clustering.jpg)

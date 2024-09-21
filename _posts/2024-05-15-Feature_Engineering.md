@@ -1,29 +1,27 @@
 ---
-title: "Automating Feature Engineering"
-subtitle: "Featuretools and TPOT for Efficient and Effective Feature Engineering"
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Machine Learning
-tags:
-    - Feature Engineering
-    - Machine Learning
-    - Data Science
-    - Automation Tools
-    - Featuretools
-    - TPOT
-    - Data Cleaning
-    - Data Transformation
-    - Feature Creation
-    - Feature Selection
-    - Genetic Algorithms
-    - Model Optimization
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Machine Learning
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-05-15'
+subtitle: Featuretools and TPOT for Efficient and Effective Feature Engineering
+tags:
+- Feature Engineering
+- Machine Learning
+- Data Science
+- Automation Tools
+- Featuretools
+- TPOT
+- Data Cleaning
+- Data Transformation
+- Feature Creation
+- Feature Selection
+- Genetic Algorithms
+- Model Optimization
+title: Automating Feature Engineering
 ---
 
 Feature engineering is a critical step in the machine learning pipeline, involving the creation, transformation, and selection of variables (features) that can enhance the predictive performance of models. This process requires deep domain knowledge and creativity to extract meaningful information from raw data.

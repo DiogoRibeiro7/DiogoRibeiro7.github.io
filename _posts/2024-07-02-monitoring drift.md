@@ -1,27 +1,24 @@
 ---
-title: "Machine Learning Monitoring: Moving Beyond Univariate Data Drift Detection"
-
-categories:
-    - Machine Learning
-    - Data Science
-    - Model Monitoring
-    - Artificial Intelligence
-    - Technology
-tags:
-    - Data Drift
-    - Direct Loss Estimation
-    - ML Monitoring
-    - Model Performance
-    - Alarm Fatigue
-    - Predictive Analytics
-    - Data Science Best Practices
-    - AI in Production
-    - Outliers Detection
-
 author_profile: false
+categories:
+- Machine Learning
+- Data Science
+- Model Monitoring
+- Artificial Intelligence
+- Technology
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-07-02'
+tags:
+- Data Drift
+- Direct Loss Estimation
+- ML Monitoring
+- Model Performance
+- Alarm Fatigue
+- Predictive Analytics
+- Data Science Best Practices
+- AI in Production
+- Outliers Detection
+title: 'Machine Learning Monitoring: Moving Beyond Univariate Data Drift Detection'
 ---
 
 ## Introduction

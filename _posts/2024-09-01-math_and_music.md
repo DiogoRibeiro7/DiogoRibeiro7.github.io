@@ -1,19 +1,18 @@
 ---
-title: "Mathematics and Electronic Music: The Symphony of Numbers"
+author_profile: false
 categories:
 - Mathematics
 - Music
 - Technology
+classes: wide
+date: '2024-09-01'
 tags:
 - Sound Synthesis
 - Algorithmic Composition
 - Digital Signal Processing
 - Rhythm
 - Generative Music
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: 'Mathematics and Electronic Music: The Symphony of Numbers'
 ---
 
 ## The Symphony of Numbers: Mathematics and Electronic Music

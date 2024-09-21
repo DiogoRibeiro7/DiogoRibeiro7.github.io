@@ -1,26 +1,24 @@
 ---
-title: "Matthew’s Correlation Coefficient (MCC): A Detailed Explanation"
-subtitle: "Understanding and Applying MCC in Binary Classification"
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Machine Learning
-tags:
-    - MCC
-    - Evaluation Metrics
-    - Binary Classification
-    - Machine Learning
-    - Statistical Methods
-    - Confusion Matrix
-    - Predictive Modeling
-    - Performance Metrics
-    - Data Analysis
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Machine Learning
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-06-14'
+subtitle: Understanding and Applying MCC in Binary Classification
+tags:
+- MCC
+- Evaluation Metrics
+- Binary Classification
+- Machine Learning
+- Statistical Methods
+- Confusion Matrix
+- Predictive Modeling
+- Performance Metrics
+- Data Analysis
+title: 'Matthew’s Correlation Coefficient (MCC): A Detailed Explanation'
 ---
 
 ## Introduction

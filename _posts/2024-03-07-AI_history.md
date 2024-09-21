@@ -1,18 +1,15 @@
 ---
-title: "The History of Artificial Intelligence"
+author_profile: false
 categories:
 - Technology
 - History
-
+classes: wide
+date: '2024-03-07'
 tags:
 - Artificial Intelligence
 - AI
 - Technology History
-
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: The History of Artificial Intelligence
 ---
 
 ## The History of Artificial Intelligence

@@ -1,28 +1,33 @@
 ---
-title: "Automated Prompt Engineering (APE): Optimizing Large Language Models through Automation"
+author_profile: false
 categories:
 - AI
 - Machine Learning
-tags:
-- Automated Prompt Engineering
-- Hyperparameter Optimization
-- Prompt Optimization
-- Large Language Models
-author_profile: false
-seo_title: "Automated Prompt Engineering (APE): Optimizing LLMs"
-seo_description: "An in-depth exploration of Automated Prompt Engineering (APE), its strategies, and how it automates the process of generating and refining prompts for improving Large Language Models."
-excerpt: "Explore Automated Prompt Engineering (APE), a powerful method to automate and optimize prompts for Large Language Models, enhancing their task performance and efficiency."
-toc: true
-toc_label: "Automated Prompt Engineering Overview"
-toc_icon: "robot"
 classes: wide
-keywords: 
+date: '2024-10-01'
+excerpt: Explore Automated Prompt Engineering (APE), a powerful method to automate
+  and optimize prompts for Large Language Models, enhancing their task performance
+  and efficiency.
+keywords:
 - Automated Prompt Engineering
 - Large Language Models
 - Hyperparameter Optimization
 - OPRO
 - Random Prompt Optimization
-date: 2024-10-01
+seo_description: An in-depth exploration of Automated Prompt Engineering (APE), its
+  strategies, and how it automates the process of generating and refining prompts
+  for improving Large Language Models.
+seo_title: 'Automated Prompt Engineering (APE): Optimizing LLMs'
+tags:
+- Automated Prompt Engineering
+- Hyperparameter Optimization
+- Prompt Optimization
+- Large Language Models
+title: 'Automated Prompt Engineering (APE): Optimizing Large Language Models through
+  Automation'
+toc: true
+toc_icon: robot
+toc_label: Automated Prompt Engineering Overview
 ---
 
 With the advent of Large Language Models (LLMs) like GPT, organizations are increasingly using these tools for a wide range of tasks, including sentiment analysis, text summarization, code generation, and more. One key factor that determines an LLM's performance on these tasks is the quality of the input prompts. Crafting effective prompts, however, can be a time-consuming, trial-and-error process known as prompt engineering.

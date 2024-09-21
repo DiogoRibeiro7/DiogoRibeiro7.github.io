@@ -1,18 +1,23 @@
 ---
-title: "Importance Sampling for Portfolio Credit Risk"
+author_profile: false
 categories:
 - Finance
 - Risk Management
+classes: wide
+date: '2024-09-12'
+excerpt: Importance Sampling offers an efficient alternative to traditional Monte
+  Carlo simulations for portfolio credit risk estimation by focusing on rare, significant
+  loss events.
+seo_description: Learn how Importance Sampling enhances Monte Carlo simulations in
+  estimating portfolio credit risk, especially in the context of copula models and
+  rare events.
+seo_title: Importance Sampling for Portfolio Credit Risk
 tags:
 - Importance Sampling
 - Monte Carlo Simulation
 - Credit Risk
 - Copula Models
-author_profile: false
-seo_title: "Importance Sampling for Portfolio Credit Risk"
-seo_description: "Learn how Importance Sampling enhances Monte Carlo simulations in estimating portfolio credit risk, especially in the context of copula models and rare events."
-excerpt: "Importance Sampling offers an efficient alternative to traditional Monte Carlo simulations for portfolio credit risk estimation by focusing on rare, significant loss events."
-classes: wide
+title: Importance Sampling for Portfolio Credit Risk
 ---
 
 **Abstract**

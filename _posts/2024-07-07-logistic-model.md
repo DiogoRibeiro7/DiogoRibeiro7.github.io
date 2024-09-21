@@ -1,27 +1,24 @@
 ---
-title: "The Logistic Model: Explained"
-
-categories:
-  - Statistics
-  - Machine Learning
-  - Data Science
-  - Predictive Modeling
-tags:
-  - Logistic Regression
-  - Logit Model
-  - Binary Classification
-  - Probability
-  - Maximum-Likelihood Estimation
-  - Odds Ratio
-  - Multinomial Logistic Regression
-  - Ordinal Logistic Regression
-  - Statistical Modeling
-  - Joseph Berkson
-
 author_profile: false
+categories:
+- Statistics
+- Machine Learning
+- Data Science
+- Predictive Modeling
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-07-07'
+tags:
+- Logistic Regression
+- Logit Model
+- Binary Classification
+- Probability
+- Maximum-Likelihood Estimation
+- Odds Ratio
+- Multinomial Logistic Regression
+- Ordinal Logistic Regression
+- Statistical Modeling
+- Joseph Berkson
+title: 'The Logistic Model: Explained'
 ---
 
 ## Introduction

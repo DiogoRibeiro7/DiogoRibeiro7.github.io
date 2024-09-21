@@ -1,13 +1,14 @@
 ---
-title: "Managing Covariate Shifts in Machine Learning Models"
+author_profile: false
 categories:
 - Machine Learning
+date: '2024-09-06'
 tags:
 - Covariate Shift
 - Model Monitoring
 - Feature Engineering
 - Model Adaptation
-author_profile: false
+title: Managing Covariate Shifts in Machine Learning Models
 ---
 
 A **covariate shift** in machine learning occurs when the distribution of input features (covariates) changes between the training and testing phases, while the underlying relationship between inputs and outputs remains the same. This phenomenon can lead to deteriorating model performance, as machine learning models often assume that the training and test data follow the same distribution.

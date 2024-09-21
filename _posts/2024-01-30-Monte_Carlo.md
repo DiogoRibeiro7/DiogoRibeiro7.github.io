@@ -1,28 +1,33 @@
 ---
-title: "Mastering Bayesian Statistics: An In-Depth Guide to MCMC"
-subtitle: "Complex Probabilities with Markov Chain Monte Carlo"
-categories:
-  - Mathematics
-tags:
-  - Bayesian Statistics
-  - Markov Chain Monte Carlo (MCMC)
-  - Statistical Computing
-  - Data Analysis Techniques
-  - Probability Theory
-  - Python Programming for Statistics
-  - Predictive Modeling
-  - Machine Learning Algorithms
 author_profile: false
+categories:
+- Mathematics
 classes: wide
-seo_title: "Mastering Bayesian Statistics with MCMC: A Deep Dive into Complex Probabilities"
-seo_description: "Explore Bayesian statistics and the power of Markov Chain Monte Carlo (MCMC) in handling complex probabilistic models. Learn with practical examples and Python code."
-excerpt: "Discover how Bayesian inference and MCMC algorithms like Metropolis-Hastings can solve complex probability problems through real-world examples and Python implementation."
-keywords:
-  - Bayesian Statistics
-  - MCMC algorithms
-summary: "A comprehensive guide to understanding Bayesian statistics and MCMC methods, including real-world applications and Python examples."
-math: true
+date: '2024-01-30'
 draft: false
+excerpt: Discover how Bayesian inference and MCMC algorithms like Metropolis-Hastings
+  can solve complex probability problems through real-world examples and Python implementation.
+keywords:
+- Bayesian Statistics
+- MCMC algorithms
+math: true
+seo_description: Explore Bayesian statistics and the power of Markov Chain Monte Carlo
+  (MCMC) in handling complex probabilistic models. Learn with practical examples and
+  Python code.
+seo_title: 'Mastering Bayesian Statistics with MCMC: A Deep Dive into Complex Probabilities'
+subtitle: Complex Probabilities with Markov Chain Monte Carlo
+summary: A comprehensive guide to understanding Bayesian statistics and MCMC methods,
+  including real-world applications and Python examples.
+tags:
+- Bayesian Statistics
+- Markov Chain Monte Carlo (MCMC)
+- Statistical Computing
+- Data Analysis Techniques
+- Probability Theory
+- Python Programming for Statistics
+- Predictive Modeling
+- Machine Learning Algorithms
+title: 'Mastering Bayesian Statistics: An In-Depth Guide to MCMC'
 ---
 
 ![Example Image](/assets/images/Markov-chain-Monte-Carlo-sampling-using-random-walk.jpeg)

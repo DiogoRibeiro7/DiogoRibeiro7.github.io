@@ -1,19 +1,24 @@
 ---
-title: "Machine Learning and Forest Fires: The Case of Portugal"
+author_profile: false
 categories:
 - Environmental Management
 - Machine Learning
 - Disaster Management
+classes: wide
+date: '2024-09-15'
+excerpt: This article delves into the role of machine learning in managing forest
+  fires in Portugal, offering a detailed analysis of early detection, risk assessment,
+  and strategic response, with a focus on the challenges posed by eucalyptus forests.
+seo_description: Explore how machine learning enhances forest fire management in Portugal,
+  addressing early detection, risk assessment, and the impact of eucalyptus plantations.
+seo_title: 'Machine Learning and Forest Fires: Insights from Portugal''s Wildfire
+  Management'
 tags:
 - Forest Fires
 - Machine Learning
 - Environmental Protection
 - Portugal
-author_profile: false
-seo_title: "Machine Learning and Forest Fires: Insights from Portugal's Wildfire Management"
-seo_description: "Explore how machine learning enhances forest fire management in Portugal, addressing early detection, risk assessment, and the impact of eucalyptus plantations."
-excerpt: "This article delves into the role of machine learning in managing forest fires in Portugal, offering a detailed analysis of early detection, risk assessment, and strategic response, with a focus on the challenges posed by eucalyptus forests."
-classes: wide
+title: 'Machine Learning and Forest Fires: The Case of Portugal'
 ---
 
 ## Overview of Forest Fires

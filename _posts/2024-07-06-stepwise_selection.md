@@ -1,21 +1,17 @@
 ---
-title: "Stepwise Selection Algorithms Almost Always Ruin Statistical Estimates"
-
-categories:
-    - Statistics
-    - Data Science
-    - Regression Analysis
-
-tags:
-    - Stepwise Selection
-    - Regression Models
-    - Statistical Bias
-    - Variable Selection
-
 author_profile: false
+categories:
+- Statistics
+- Data Science
+- Regression Analysis
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-07-06'
+tags:
+- Stepwise Selection
+- Regression Models
+- Statistical Bias
+- Variable Selection
+title: Stepwise Selection Algorithms Almost Always Ruin Statistical Estimates
 ---
 
 There is a clear reason why stepwise regression is usually inappropriate, along with several other significant drawbacks. This article will delve into these issues, providing an in-depth understanding of why stepwise selection is generally detrimental to statistical estimates.

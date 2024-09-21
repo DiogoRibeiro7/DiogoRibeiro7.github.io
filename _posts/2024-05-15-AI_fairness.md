@@ -1,40 +1,37 @@
 ---
-title: "Navigating AI Fairness"
-subtitle: "Challenges, Metrics, and Mitigation Techniques"
-categories:
-  - Mathematics
-  - Statistics
-  - Data Science
-  - Machine Learning
-  - Ethics Research
-tags:
-    - AI Fairness
-    - Bias in AI
-    - Machine Learning Fairness
-    - Demographic Parity
-    - Equal Opportunity
-    - Statistical Parity
-    - Consistency in AI
-    - Individual Fairness
-    - Counterfactual Fairness
-    - Unbiased AI
-    - Fairness through Unawareness
-    - Transparency in AI
-    - AI Ethics
-    - Bias Mitigation Techniques
-    - Adversarial Learning
-    - Data Collection Bias
-    - Fairness Metrics
-    - AI Fairness Libraries
-    - Fairness in Machine Learning
-    - AI Discrimination
-
 author_profile: false
+categories:
+- Mathematics
+- Statistics
+- Data Science
+- Machine Learning
+- Ethics Research
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-05-15'
+subtitle: Challenges, Metrics, and Mitigation Techniques
+tags:
+- AI Fairness
+- Bias in AI
+- Machine Learning Fairness
+- Demographic Parity
+- Equal Opportunity
+- Statistical Parity
+- Consistency in AI
+- Individual Fairness
+- Counterfactual Fairness
+- Unbiased AI
+- Fairness through Unawareness
+- Transparency in AI
+- AI Ethics
+- Bias Mitigation Techniques
+- Adversarial Learning
+- Data Collection Bias
+- Fairness Metrics
+- AI Fairness Libraries
+- Fairness in Machine Learning
+- AI Discrimination
+title: Navigating AI Fairness
 ---
-
 
 ## Introduction
 

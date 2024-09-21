@@ -1,19 +1,16 @@
 ---
-title: "Sequential Detection of Switches in Models with Changing Structures"
+author_profile: false
 categories:
 - Statistics
 - Machine Learning
 - Data Analysis
-
+classes: wide
+date: '2024-09-06'
 tags:
 - Change-Point Detection
 - Sequential Analysis
 - Structural Change
-
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: Sequential Detection of Switches in Models with Changing Structures
 ---
 
 Sequential detection of switches in models with changing structures is a critical aspect of real-time data analysis. It involves identifying points in a data sequence where the underlying statistical properties shift, signaling a change in the model structure. This process is essential in fields like finance, signal processing, manufacturing, environmental monitoring, and engineering, where timely detection of structural changes can significantly impact decision-making and system performance. This document delves into the theoretical framework, advanced techniques, practical implementations, and real-world applications of detecting switches in models with changing structures.

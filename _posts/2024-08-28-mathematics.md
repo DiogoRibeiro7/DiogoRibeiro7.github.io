@@ -1,19 +1,18 @@
 ---
-title: "The Undervalued Power of Mathematics in Modern Society"
+author_profile: false
 categories:
 - Mathematics
 - Education
 - Technology
 - Society
+classes: wide
+date: '2024-08-28'
 tags:
 - Mathematics
 - Technology
 - Education
 - Society
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: The Undervalued Power of Mathematics in Modern Society
 ---
 
 Mathematics is a cornerstone of modern society, yet its significance often goes unnoticed or is underappreciated. Despite its pivotal role in shaping numerous facets of our world—from technological innovation to economic stability and healthcare advancements—many societies continue to struggle with recognizing and fully valuing the contributions of mathematics and those who practice it.

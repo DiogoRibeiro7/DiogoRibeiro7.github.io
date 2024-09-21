@@ -1,19 +1,18 @@
 ---
-title: "Implementing Circular Economy Models with Python and Network Analysis"
+author_profile: false
 categories:
 - Sustainability
 - Data Science
 - Circular Economy
+classes: wide
+date: '2024-08-24'
 tags:
 - Python
 - Network Analysis
 - Circular Economy
 - Sustainability
 - Systems Thinking
-author_profile: false
-classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+title: Implementing Circular Economy Models with Python and Network Analysis
 ---
 
 ## Overview

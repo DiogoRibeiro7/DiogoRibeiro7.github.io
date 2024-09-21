@@ -1,25 +1,23 @@
 ---
-title: "How the Human Body Affects RSSI: Detailed Analysis and Practical Approaches"
-categories:
-  - Wireless Communication
-  - Signal Processing
-  - Network Engineering
-tags:
-  - RSSI
-  - Absorption
-  - Reflection
-  - Shadowing
-  - Proximity Effects
-  - Capacitive Coupling
-  - Resonant Effects
-  - Antenna Design
-  - Dynamic Adjustment
-  - Signal Quality
-
 author_profile: false
+categories:
+- Wireless Communication
+- Signal Processing
+- Network Engineering
 classes: wide
-# toc: true
-# toc_label: The Complexity of Real-World Data Distributions
+date: '2024-06-30'
+tags:
+- RSSI
+- Absorption
+- Reflection
+- Shadowing
+- Proximity Effects
+- Capacitive Coupling
+- Resonant Effects
+- Antenna Design
+- Dynamic Adjustment
+- Signal Quality
+title: 'How the Human Body Affects RSSI: Detailed Analysis and Practical Approaches'
 ---
 
 ## Absorption and Reflection
