@@ -1,4 +1,5 @@
 ---
+title: "Graph Theory Applications in Production Systems and Supply Chains"
 author_profile: false
 categories:
 - Production Systems
@@ -10,11 +11,23 @@ header:
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+excerpt: "Explore how graph theory is applied to optimize production systems and supply chains. Learn how network optimization and resource allocation techniques improve efficiency and streamline operations."
+seo_title: "Graph Theory in Production Systems and Supply Chain Optimization"
+seo_description: "Discover the role of graph theory in optimizing production systems and supply chains. This article covers network optimization, resource allocation, and key strategies for improving operational efficiency."
 tags:
 - Graph Theory
 - Network Optimization
 - Resource Allocation
-title: Graph Theory Applications in Production Systems and Supply Chains
+- Supply Chain Efficiency
+- Production Systems
+summary: "This article examines the practical applications of graph theory in optimizing production systems and supply chains. It focuses on network optimization and resource allocation techniques that enhance operational efficiency and decision-making in supply chain management."
+keywords:
+- Graph theory in supply chains
+- Network optimization
+- Resource allocation in production
+- Supply chain management
+- Optimization strategies
+- Production systems efficiency
 ---
 
 Graph theory is a powerful mathematical tool with wide-ranging applications in various fields, particularly in the optimization of production systems and supply chains. By representing complex systems as networks of nodes and edges, graph theory allows for a systematic analysis of processes, resources, and information flows. This article explores how graph theory can be applied to enhance production efficiency, streamline supply chains, manage inventory and distribution, optimize scheduling and resource allocation, and improve information flow.
