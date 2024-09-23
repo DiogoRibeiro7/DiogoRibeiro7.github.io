@@ -1,30 +1,37 @@
 ---
-title: "The Real Power of Nonparametric Tests: Beyond Mann-Whitney"
 author_profile: false
 categories:
 - Statistics
 classes: wide
 date: '2024-09-08'
+excerpt: Explore the full potential of nonparametric tests, going beyond the Mann-Whitney
+  Test. Learn how techniques like quantile regression and other nonparametric methods
+  offer robust alternatives in statistical analysis.
 header:
   image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
-excerpt: "Explore the full potential of nonparametric tests, going beyond the Mann-Whitney Test. Learn how techniques like quantile regression and other nonparametric methods offer robust alternatives in statistical analysis."
-seo_title: "Nonparametric Tests Beyond Mann-Whitney: Unlocking Statistical Power"
-seo_description: "Discover the real power of nonparametric tests, moving beyond Mann-Whitney to explore quantile regression and other robust statistical techniques for data analysis without distributional assumptions."
-tags:
-- Nonparametric Tests
-- Quantile Regression
-- Mann-Whitney Test
-- Robust Statistical Methods
-summary: "This article explores the broader landscape of nonparametric tests, focusing on methods that go beyond the Mann-Whitney Test. It covers powerful techniques like quantile regression and highlights how these approaches are used for robust statistical analysis without strict distributional assumptions."
 keywords:
 - Nonparametric statistical tests
 - Quantile regression
 - Mann-Whitney alternatives
 - Robust statistical methods
 - Distribution-free analysis
+seo_description: Discover the real power of nonparametric tests, moving beyond Mann-Whitney
+  to explore quantile regression and other robust statistical techniques for data
+  analysis without distributional assumptions.
+seo_title: 'Nonparametric Tests Beyond Mann-Whitney: Unlocking Statistical Power'
+summary: This article explores the broader landscape of nonparametric tests, focusing
+  on methods that go beyond the Mann-Whitney Test. It covers powerful techniques like
+  quantile regression and highlights how these approaches are used for robust statistical
+  analysis without strict distributional assumptions.
+tags:
+- Nonparametric Tests
+- Quantile Regression
+- Mann-Whitney Test
+- Robust Statistical Methods
+title: 'The Real Power of Nonparametric Tests: Beyond Mann-Whitney'
 ---
 
 ## Introduction to Nonparametric Tests

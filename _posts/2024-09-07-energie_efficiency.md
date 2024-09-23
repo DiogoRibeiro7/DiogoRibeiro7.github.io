@@ -1,5 +1,4 @@
 ---
-title: "Building Energy Efficiency Analysis with Python and Machine Learning"
 author_profile: false
 categories:
 - Data Science
@@ -7,21 +6,14 @@ categories:
 - Sustainability
 classes: wide
 date: '2024-09-07'
+excerpt: Explore how Python and machine learning can be applied to analyze and improve
+  building energy efficiency. Learn key techniques for assessing sustainability, optimizing
+  energy usage, and reducing carbon footprints.
 header:
   image: /assets/images/data_science_6.jpg
   overlay_image: /assets/images/data_science_6.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
-excerpt: "Explore how Python and machine learning can be applied to analyze and improve building energy efficiency. Learn key techniques for assessing sustainability, optimizing energy usage, and reducing carbon footprints."
-seo_title: "Building Energy Efficiency Analysis with Python and Machine Learning"
-seo_description: "Learn how to apply machine learning techniques and Python to building energy efficiency analysis. This article focuses on optimizing energy usage, sustainability, and reducing environmental impact."
-tags:
-- Energy Efficiency
-- Python
-- Machine Learning
-- Building Analysis
-- Sustainability
-summary: "This article covers the application of Python and machine learning to analyze building energy efficiency. It explores techniques for optimizing energy consumption, improving sustainability, and reducing carbon footprints, helping to create more energy-efficient structures."
 keywords:
 - Building energy efficiency
 - Machine learning for sustainability
@@ -29,6 +21,21 @@ keywords:
 - Python for energy analysis
 - Sustainable building practices
 - Carbon footprint reduction
+seo_description: Learn how to apply machine learning techniques and Python to building
+  energy efficiency analysis. This article focuses on optimizing energy usage, sustainability,
+  and reducing environmental impact.
+seo_title: Building Energy Efficiency Analysis with Python and Machine Learning
+summary: This article covers the application of Python and machine learning to analyze
+  building energy efficiency. It explores techniques for optimizing energy consumption,
+  improving sustainability, and reducing carbon footprints, helping to create more
+  energy-efficient structures.
+tags:
+- Energy Efficiency
+- Python
+- Machine Learning
+- Building Analysis
+- Sustainability
+title: Building Energy Efficiency Analysis with Python and Machine Learning
 ---
 
 ## Overview

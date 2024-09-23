@@ -1,5 +1,4 @@
 ---
-title: "Implementing Vehicle Routing Problem Solutions with Python"
 author_profile: false
 categories:
 - Operations Research
@@ -7,22 +6,14 @@ categories:
 - Logistics
 classes: wide
 date: '2024-08-25'
+excerpt: Learn how to solve the Vehicle Routing Problem (VRP) using Python and optimization
+  algorithms. This guide covers strategies for efficient transportation and logistics
+  solutions.
 header:
   image: /assets/images/data_science_8.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
-excerpt: "Learn how to solve the Vehicle Routing Problem (VRP) using Python and optimization algorithms. This guide covers strategies for efficient transportation and logistics solutions."
-seo_title: "Vehicle Routing Problem Solutions with Python: Optimization Guide"
-seo_description: "Explore how to implement solutions for the Vehicle Routing Problem (VRP) using Python. This article covers optimization techniques and algorithms for transportation and logistics management."
-tags:
-- Vehicle Routing Problem
-- Python
-- Optimization
-- Transportation
-- Algorithms
-- Logistics
-summary: "This comprehensive guide explains how to solve the Vehicle Routing Problem (VRP) using Python. It covers key optimization algorithms and their applications in transportation, logistics, and supply chain management to improve operational efficiency."
 keywords:
 - Vehicle Routing Problem
 - Python optimization
@@ -30,6 +21,22 @@ keywords:
 - Transportation optimization
 - VRP solutions
 - Supply chain management
+seo_description: Explore how to implement solutions for the Vehicle Routing Problem
+  (VRP) using Python. This article covers optimization techniques and algorithms for
+  transportation and logistics management.
+seo_title: 'Vehicle Routing Problem Solutions with Python: Optimization Guide'
+summary: This comprehensive guide explains how to solve the Vehicle Routing Problem
+  (VRP) using Python. It covers key optimization algorithms and their applications
+  in transportation, logistics, and supply chain management to improve operational
+  efficiency.
+tags:
+- Vehicle Routing Problem
+- Python
+- Optimization
+- Transportation
+- Algorithms
+- Logistics
+title: Implementing Vehicle Routing Problem Solutions with Python
 ---
 
 ## Overview

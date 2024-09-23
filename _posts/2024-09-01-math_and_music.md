@@ -1,5 +1,4 @@
 ---
-title: "Mathematics and Electronic Music: The Symphony of Numbers"
 author_profile: false
 categories:
 - Mathematics
@@ -7,22 +6,14 @@ categories:
 - Technology
 classes: wide
 date: '2024-09-01'
+excerpt: Discover how mathematics influences electronic music creation through sound
+  synthesis, rhythm, and algorithmic composition. Explore the role of numbers in shaping
+  digital signal processing and generative music.
 header:
   image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
-excerpt: "Discover how mathematics influences electronic music creation through sound synthesis, rhythm, and algorithmic composition. Explore the role of numbers in shaping digital signal processing and generative music."
-seo_title: "The Role of Mathematics in Electronic Music: Sound, Rhythm, and Composition"
-seo_description: "Explore how mathematics drives electronic music production, from sound synthesis to algorithmic composition. Learn how numbers shape rhythm, signal processing, and generative music."
-tags:
-- Sound Synthesis
-- Algorithmic Composition
-- Digital Signal Processing
-- Rhythm
-- Generative Music
-- Mathematics in Music
-summary: "This article explores the intersection of mathematics and electronic music, highlighting how algorithms and mathematical principles influence sound synthesis, rhythm, and generative music creation. It delves into the technical aspects of digital signal processing and algorithmic composition in music technology."
 keywords:
 - Mathematics in music
 - Sound synthesis
@@ -30,6 +21,22 @@ keywords:
 - Digital signal processing
 - Generative music
 - Rhythm and numbers
+seo_description: Explore how mathematics drives electronic music production, from
+  sound synthesis to algorithmic composition. Learn how numbers shape rhythm, signal
+  processing, and generative music.
+seo_title: 'The Role of Mathematics in Electronic Music: Sound, Rhythm, and Composition'
+summary: This article explores the intersection of mathematics and electronic music,
+  highlighting how algorithms and mathematical principles influence sound synthesis,
+  rhythm, and generative music creation. It delves into the technical aspects of digital
+  signal processing and algorithmic composition in music technology.
+tags:
+- Sound Synthesis
+- Algorithmic Composition
+- Digital Signal Processing
+- Rhythm
+- Generative Music
+- Mathematics in Music
+title: 'Mathematics and Electronic Music: The Symphony of Numbers'
 ---
 
 ## The Symphony of Numbers: Mathematics and Electronic Music
