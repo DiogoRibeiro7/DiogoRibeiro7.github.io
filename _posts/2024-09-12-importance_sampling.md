@@ -34,6 +34,7 @@ tags:
 - Monte Carlo Simulation
 - Credit Risk
 - Copula Models
+- Portfolio Risk
 title: Importance Sampling for Portfolio Credit Risk
 ---
 

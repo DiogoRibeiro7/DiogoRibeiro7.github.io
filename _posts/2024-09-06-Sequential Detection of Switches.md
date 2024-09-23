@@ -6,15 +6,35 @@ categories:
 - Data Analysis
 classes: wide
 date: '2024-09-06'
+excerpt: Learn about sequential detection techniques for identifying switches in models
+  with changing structures. Explore methods for detecting structural changes in time-series
+  data and dynamic systems.
 header:
   image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_2.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
+keywords:
+- Change-point detection
+- Sequential detection in models
+- Structural change in data
+- Time-series analysis
+- Dynamic systems modeling
+- Model structure shifts
+seo_description: Discover sequential detection methods for identifying structural
+  changes in models. Learn how to apply change-point detection and sequential analysis
+  in dynamic systems and time-series data.
+seo_title: 'Sequential Detection of Structural Changes in Models: Techniques and Methods'
+summary: This article explores sequential detection techniques used for identifying
+  switches in models with changing structures. It focuses on methods like change-point
+  detection and sequential analysis, particularly in time-series data and dynamic
+  systems.
 tags:
 - Change-Point Detection
 - Sequential Analysis
 - Structural Change
+- Time-Series Data
+- Dynamic Systems
 title: Sequential Detection of Switches in Models with Changing Structures
 ---
 

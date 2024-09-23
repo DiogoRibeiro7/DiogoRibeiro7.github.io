@@ -6,16 +6,36 @@ categories:
 - Version Control
 classes: wide
 date: '2024-08-19'
+excerpt: Learn how to use pre-commit tools in Python to enforce code quality and consistency
+  before committing changes. This guide covers the setup, configuration, and best
+  practices for using Git hooks to streamline your workflow.
 header:
   image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_9.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
+keywords:
+- Pre-commit tools
+- Git hooks
+- Python code quality
+- Automated code checks
+- Code consistency
+- Python development workflow
+seo_description: Explore pre-commit tools in Python for ensuring code quality and
+  managing Git hooks. Learn how to integrate automated checks into your development
+  process to improve code consistency.
+seo_title: 'Pre-Commit Tools in Python: Best Practices and Guide'
+summary: This guide provides an in-depth overview of pre-commit tools in Python, covering
+  how to set up and configure them to improve code quality and automate Git hooks.
+  It includes best practices for using pre-commit to ensure consistency and streamline
+  the development process.
 tags:
 - Python
 - Pre-commit
 - Code Quality
 - Git Hooks
+- Version Control
+- Automation
 title: A Comprehensive Guide to Pre-Commit Tools in Python
 ---
 
@@ -163,7 +183,6 @@ This workflow runs the pre-commit hooks on every push and pull request, ensuring
 Sometimes, you may need to create custom hooks tailored to your specific needs. Custom hooks can be written in any language and configured in the `.pre-commit-config.yaml` file. Here’s an example of a custom hook that checks for TODO comments:
 
 Create a script file, `check_todo.sh`:
-
 
 ```bash
 #!/bin/bash
