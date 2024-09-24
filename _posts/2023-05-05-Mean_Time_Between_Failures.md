@@ -119,3 +119,144 @@ MTBF is a key metric in reliability engineering, especially for **repairable sys
 15. Meeker, W. Q., & Escobar, L. A. (1998). *Statistical Methods for Reliability Data*. Wiley.
 16. Barlow, R. E., & Proschan, F. (2012). *Mathematical Theory of Reliability*. SIAM.
 
+## Appendix: Python Code for MTBF Calculation
+
+Below is a simple Python script that calculates the **Mean Time Between Failures (MTBF)** based on the operational time and the number of failures.
+
+```python
+# Python script to calculate MTBF
+
+def calculate_mtbf(total_operational_time, number_of_failures):
+    """
+    Calculate Mean Time Between Failures (MTBF).
+    
+    Parameters:
+    total_operational_time (float): Total time the system was operational (in hours, days, etc.).
+    number_of_failures (int): The total number of failures during that time.
+
+    Returns:
+    float: The MTBF value.
+    """
+    if number_of_failures == 0:
+        return float('inf')  # No failures occurred, MTBF is infinite
+    return total_operational_time / number_of_failures
+
+# Example usage:
+total_time = 600  # Total operational time in hours
+failures = 3  # Number of failures
+
+mtbf = calculate_mtbf(total_time, failures)
+print(f"Mean Time Between Failures (MTBF): {mtbf} hours")
+```
+
+### Explanation of the Code:
+
+- **Function `calculate_mtbf`**: This function takes two inputs: the total operational time and the number of failures. It calculates the MTBF by dividing the total time by the number of failures.
+
+- If no failures occur, the function returns infinity (`float('inf')`), indicating that the system is highly reliable.
+
+- The example provided calculates MTBF for 600 hours of operation with 3 failures, resulting in an MTBF of 200 hours.
+
+- You can modify the input values to suit your particular system's operational data and number of failures.
+
+## Appendix: Advanced Python Code for MTBF, MTTR, and System Availability
+
+Below is a more complex Python example that calculates **MTBF**, **MTTR** (Mean Time To Repair), and **availability** for a system based on multiple failure and repair events.
+
+### Python Code
+
+```python
+import numpy as np
+
+# Sample data: time intervals between failures and repair durations (in hours)
+failure_times = [120, 250, 310, 460, 600]  # Times at which failures occurred
+repair_durations = [5, 7, 3, 10, 8]  # Time taken to repair the system after each failure
+
+def calculate_mtbf(failure_times):
+    """
+    Calculate Mean Time Between Failures (MTBF).
+    
+    Parameters:
+    failure_times (list): List of times at which system failures occurred.
+
+    Returns:
+    float: MTBF value in hours.
+    """
+    total_uptime = failure_times[-1] - failure_times[0]  # Total system uptime
+    number_of_failures = len(failure_times) - 1  # Number of failures (n-1 events)
+
+    if number_of_failures == 0:
+        return float('inf')  # No failures occurred, MTBF is infinite
+    
+    return total_uptime / number_of_failures
+
+def calculate_mttr(repair_durations):
+    """
+    Calculate Mean Time To Repair (MTTR).
+    
+    Parameters:
+    repair_durations (list): List of repair durations following each failure.
+
+    Returns:
+    float: MTTR value in hours.
+    """
+    return np.mean(repair_durations)  # Average repair time
+
+def calculate_availability(mtbf, mttr):
+    """
+    Calculate system availability.
+    
+    Availability is the proportion of time the system is operational.
+
+    Parameters:
+    mtbf (float): Mean Time Between Failures.
+    mttr (float): Mean Time To Repair.
+
+    Returns:
+    float: Availability as a percentage.
+    """
+    return mtbf / (mtbf + mttr)
+
+# Calculate MTBF, MTTR, and Availability
+mtbf = calculate_mtbf(failure_times)
+mttr = calculate_mttr(repair_durations)
+availability = calculate_availability(mtbf, mttr)
+
+# Print results
+print(f"Mean Time Between Failures (MTBF): {mtbf:.2f} hours")
+print(f"Mean Time To Repair (MTTR): {mttr:.2f} hours")
+print(f"System Availability: {availability * 100:.2f}%")
+```
+
+### Explanation of the Code:
+
+- **Failure Times**: A list of time points (in hours) when system failures occurred.
+
+- **Repair Durations**: A list representing the time taken to repair the system after each failure.
+
+- **Function `calculate_mtbf`**: This function calculates the MTBF by determining the total uptime (the time between the first and last failure) and dividing it by the number of failure events.
+
+- **Function `calculate_mttr`**: This function computes the Mean Time To Repair (MTTR) by taking the average of the repair durations.
+
+- **Function `calculate_availability`**: Availability is calculated using the formula:
+
+$$
+\text{Availability} = \frac{\text{MTBF}}{\text{MTBF} + \text{MTTR}}
+$$
+
+This gives the proportion of time the system is available and operational.
+
+### Example Calculation:
+
+In this example:
+
+- The system experiences 5 failures at different times: 120, 250, 310, 460, and 600 hours.
+- After each failure, it takes between 3 and 10 hours to repair the system.
+- The calculated values are:
+  - **MTBF**: The mean time between failures is approximately 120 hours.
+  - **MTTR**: The average repair time is 6.6 hours.
+  - **Availability**: The system is available approximately 94.80% of the time.
+
+### Customizing the Code:
+
+You can easily modify the `failure_times` and `repair_durations` lists to reflect your specific system data. This code can be extended to include other metrics such as failure rates, reliability, or more sophisticated statistical methods.
