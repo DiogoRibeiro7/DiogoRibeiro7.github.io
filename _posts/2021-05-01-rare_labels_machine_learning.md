@@ -1,18 +1,17 @@
 ---
-title: "Handling Rare Labels in Categorical Variables in Machine Learning"
+author_profile: false
 categories:
 - Machine Learning
-tags:
-- Categorical Variables
-- Rare Labels
-- Feature Engineering
-- Overfitting
-- Mercedes-Benz Greener Manufacturing Challenge
-author_profile: false
-seo_title: "Handling Rare Labels in Categorical Variables for Machine Learning"
-seo_description: "Explore the impact of rare labels in categorical variables on machine learning models, particularly their tendency to cause overfitting, and learn how to handle rare values using feature engineering."
-excerpt: "Rare labels in categorical variables can cause significant issues in machine learning, such as overfitting. This article explains why rare labels can be problematic and provides examples on how to handle them."
-summary: "This article covers how rare labels in categorical variables can impact machine learning models, particularly tree-based methods, and why it's important to address these rare labels during preprocessing."
+classes: wide
+date: '2021-05-01'
+excerpt: Rare labels in categorical variables can cause significant issues in machine
+  learning, such as overfitting. This article explains why rare labels can be problematic
+  and provides examples on how to handle them.
+header:
+  image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_3.jpg
 keywords:
 - rare labels
 - categorical variables
@@ -20,7 +19,20 @@ keywords:
 - machine learning
 - overfitting
 - Mercedes-Benz challenge
-classes: wide
+seo_description: Explore the impact of rare labels in categorical variables on machine
+  learning models, particularly their tendency to cause overfitting, and learn how
+  to handle rare values using feature engineering.
+seo_title: Handling Rare Labels in Categorical Variables for Machine Learning
+summary: This article covers how rare labels in categorical variables can impact machine
+  learning models, particularly tree-based methods, and why it's important to address
+  these rare labels during preprocessing.
+tags:
+- Categorical Variables
+- Rare Labels
+- Feature Engineering
+- Overfitting
+- Mercedes-Benz Greener Manufacturing Challenge
+title: Handling Rare Labels in Categorical Variables in Machine Learning
 ---
 
 # Handling Rare Labels in Categorical Variables in Machine Learning
