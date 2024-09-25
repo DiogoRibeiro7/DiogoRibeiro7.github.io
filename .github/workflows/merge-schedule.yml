@@ -9,6 +9,8 @@ on:
   schedule:
     # https://crontab.guru/every-hour
     - cron: '50 13 * * *'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch: 
 
 jobs:
   merge_schedule:
