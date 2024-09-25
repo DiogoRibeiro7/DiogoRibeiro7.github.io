@@ -12,8 +12,23 @@ header:
   overlay_image: /assets/images/data_science_6.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
+keywords:
+- Markov systems
+- stochastic processes
+- Hidden Markov Models
+- real-world applications
+- parking lot occupancy
+- predictive modeling
+- Markov chains
+seo_description: A deep dive into Markov systems, including Markov chains and Hidden
+  Markov Models, and their applications in real-world scenarios like parking lot occupancy
+  prediction.
+seo_title: 'Markov Systems: Foundations and Applications'
 subtitle: Exploring the Foundations and Applications of Markov Models in Real-World
   Scenarios
+summary: This article explores the foundations and real-world applications of Markov
+  systems, including Markov chains and Hidden Markov Models, in areas such as parking
+  lot occupancy prediction.
 tags:
 - Markov systems
 - Markov chains

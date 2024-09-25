@@ -1,11 +1,7 @@
 ---
 author_profile: false
 categories:
-- Data Science
 - Statistics
-- Data Analysis
-- Python Programming
-- Educational Tutorial
 classes: wide
 date: '2024-06-05'
 header:
@@ -13,6 +9,23 @@ header:
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
+keywords:
+- Poisson distribution
+- sensor activations
+- count data modeling
+- statistical modeling in Python
+- goodness-of-fit analysis
+- cross-validation
+- time series analysis
+- residual analysis
+- Python programming for data analysis
+seo_description: Learn how to model sensor activations with the Poisson distribution
+  in Python. This tutorial covers data preparation, residual analysis, goodness-of-fit,
+  and cross-validation for accurate predictions.
+seo_title: Modeling Sensor Activations Using Poisson Distribution in Python
+summary: This tutorial explores how to model sensor activations using the Poisson
+  distribution in Python, covering data preparation, model evaluation, residual analysis,
+  and cross-validation techniques.
 tags:
 - Poisson Distribution
 - Count Data
@@ -24,6 +37,11 @@ tags:
 - Goodness-of-Fit
 - Cross-Validation
 - Time Series Analysis
+- Data Science
+- Statistics
+- Data Analysis
+- Python Programming
+- Educational Tutorial
 title: Modeling Sensor Activations with Poisson Distribution in Python
 ---
 

@@ -29,6 +29,9 @@ seo_description: Explore the underlying structure common to most statistical tes
   revealing how the comparison of observed versus expected data forms the basis of
   hypothesis testing.
 seo_title: Understanding the Universal Structure of Statistical Tests
+summary: This article explains the universal structure of statistical tests, focusing
+  on the comparison between observed and expected data that forms the foundation of
+  hypothesis testing and statistical inference.
 tags:
 - Statistical Tests
 - Data Analysis
