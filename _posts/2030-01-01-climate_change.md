@@ -1,25 +1,34 @@
 ---
-title: "Exploring Climate Change, Sustainability, and Data Science"
+author_profile: false
 categories:
 - Climate Change
 - Data Science
+classes: wide
+date: '2030-01-01'
+excerpt: Explore how data science, machine learning, and big data are critical tools
+  in addressing climate change and promoting sustainability.
+header:
+  image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_9.jpg
+keywords:
+- Climate Change
+- Data Science
+- Machine Learning
+- Sustainability
+- Big Data
+seo_description: An in-depth look at how data science, big data, and machine learning
+  can help solve climate change and sustainability challenges.
+seo_title: 'Climate Change and Data Science: Solving Global Problems'
+summary: This article provides a comprehensive list of potential topics at the intersection
+  of climate change, sustainability, and data science.
 tags:
 - Climate Change
 - Sustainability
 - Machine Learning
 - Big Data
-author_profile: false
-seo_title: "Climate Change and Data Science: Solving Global Problems"
-seo_description: "An in-depth look at how data science, big data, and machine learning can help solve climate change and sustainability challenges."
-excerpt: "Explore how data science, machine learning, and big data are critical tools in addressing climate change and promoting sustainability."
-summary: "This article provides a comprehensive list of potential topics at the intersection of climate change, sustainability, and data science."
-keywords: 
-- Climate Change
-- Data Science
-- Machine Learning
-- Sustainability
-- Big Data
-classes: wide
+title: Exploring Climate Change, Sustainability, and Data Science
 ---
 
 ### 1. Leveraging Big Data for Climate Change Mitigation

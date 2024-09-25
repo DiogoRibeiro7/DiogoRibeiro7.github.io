@@ -1,3 +1,12 @@
+---
+date: '2030-01-01'
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_2.jpg
+---
+
 ## Article Ideas on Data Drift and Model Drift
 
 ### 1. **Understanding Data Drift: What It Is and Why It Matters in Machine Learning**
