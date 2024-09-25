@@ -8,7 +8,7 @@ on:
       - synchronize
   schedule:
     # https://crontab.guru/every-hour
-    - cron: '55 20 * * *'
+    - cron: '00 21 * * *'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch: 
 
@@ -20,7 +20,7 @@ jobs:
         with:
           # Merge method to use. Possible values are merge, squash or
           # rebase. Default is merge.
-          merge_method: squash
+          merge_method: merge
           # Time zone to use. Default is UTC.
           time_zone: 'Europe/London'
           # Require all pull request statuses to be successful before
