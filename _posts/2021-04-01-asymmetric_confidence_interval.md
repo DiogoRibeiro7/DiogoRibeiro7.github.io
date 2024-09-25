@@ -129,15 +129,15 @@ print(f"Wilson Score Confidence Interval: {ci_wilson}")
 
 ### Explanation of the Code
 
-#### Symmetric Confidence Interval:
+#### Symmetric Confidence Interval
 
 We calculate the symmetric confidence interval based on the normal approximation formula. The margin of error is computed using the formula:
 
 $$ \text{Margin of Error} = z \times \sqrt{\frac{p(1 - p)}{n}} $$
 
-where $p$ is the sample proportion and $z = 1.96$ for a 95% confidence level. This interval assumes that the distribution of the proportion is approximately normal.
+where $$p$$ is the sample proportion and $$z = 1.96$% for a 95% confidence level. This interval assumes that the distribution of the proportion is approximately normal.
 
-#### Wilson Score Confidence Interval:
+#### Wilson Score Confidence Interval
 
 The Wilson score interval is computed using the `proportion_confint` function from the `statsmodels` library. This function adjusts the confidence limits based on the precision of the estimate, potentially resulting in an asymmetric confidence interval.
 
