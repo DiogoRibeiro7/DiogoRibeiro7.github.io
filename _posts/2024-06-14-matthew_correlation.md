@@ -1,18 +1,11 @@
 ---
-author_profile: false
+title: "Matthew’s Correlation Coefficient (MCC): A Detailed Explanation"
+subtitle: "Understanding and Applying MCC in Binary Classification"
 categories:
 - Mathematics
 - Statistics
 - Data Science
 - Machine Learning
-classes: wide
-date: '2024-06-14'
-header:
-  image: /assets/images/data_science_2.jpg
-  overlay_image: /assets/images/data_science_2.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-subtitle: Understanding and Applying MCC in Binary Classification
 tags:
 - MCC
 - Evaluation Metrics
@@ -23,7 +16,26 @@ tags:
 - Predictive Modeling
 - Performance Metrics
 - Data Analysis
-title: 'Matthew’s Correlation Coefficient (MCC): A Detailed Explanation'
+author_profile: false
+date: "2024-06-14"
+header:
+  image: "/assets/images/data_science_2.jpg"
+  overlay_image: "/assets/images/data_science_2.jpg"
+  show_overlay_excerpt: false
+  teaser: "/assets/images/data_science_2.jpg"
+excerpt: "Dive deep into Matthew's Correlation Coefficient (MCC), a powerful metric for evaluating binary classification models, especially in imbalanced datasets."
+summary: "This article provides a comprehensive explanation of Matthew’s Correlation Coefficient (MCC), its importance in binary classification, and how it compares to other performance metrics like accuracy, precision, and recall."
+seo_title: "Matthew’s Correlation Coefficient (MCC): A Guide to Binary Classification"
+seo_description: "Learn about Matthew’s Correlation Coefficient (MCC), an essential metric for evaluating binary classification models, particularly in imbalanced datasets, and how it improves upon traditional metrics."
+keywords:
+- MCC
+- Matthew’s Correlation Coefficient
+- Binary Classification
+- Confusion Matrix
+- Model Evaluation
+- Imbalanced Datasets
+- Machine Learning Metrics
+classes: wide
 ---
 
 ## Introduction
