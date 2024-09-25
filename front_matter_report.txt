@@ -1,18 +1,6 @@
-File '2021-12-31-FDM.md':
-  - Summary present: False
-  - Keywords present: True
-
-File '2022-07-23-statistical_tests.md':
-  - Summary present: False
-  - Keywords present: True
-
 File '2024-06-05-Data_science_in Health_tech.md':
   - Summary present: False
   - Keywords present: False
-
-File '2024-02-12-combinatorics_probability.md':
-  - Summary present: False
-  - Keywords present: True
 
 File '2024-07-07-logistic-model.md':
   - Summary present: False
@@ -241,10 +229,6 @@ File '2024-06-15-EMI_RSSI_SIGNAL.md':
 File '2024-02-08-Clustering.md':
   - Summary present: False
   - Keywords present: True
-
-File '2024-06-05-sensor_activations_models.md':
-  - Summary present: False
-  - Keywords present: False
 
 File '2024-05-09-Kernel Clustering in R.md':
   - Summary present: False
