@@ -1,9 +1,34 @@
 ---
-title: "Effects of a Human Body on RSSI: Challenges and Mitigations"
+author_profile: false
 categories:
 - Wireless Communication
 - Signal Processing
 - Network Engineering
+classes: wide
+date: '2024-06-30'
+excerpt: Explore the impact of human presence on RSSI and the challenges it introduces,
+  along with effective mitigation strategies in wireless communication systems.
+header:
+  image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_3.jpg
+keywords:
+- RSSI
+- Signal Attenuation
+- Wireless Communication
+- Multipath Effects
+- Antenna Placement
+- Shadowing
+- Interference
+- Beamforming
+seo_description: Discover how the presence of a human body impacts RSSI in wireless
+  networks and explore strategies for overcoming challenges like signal attenuation,
+  interference, and multipath effects.
+seo_title: 'Effects of a Human Body on RSSI: Challenges and Mitigations'
+summary: This article examines how human bodies affect Received Signal Strength Indicator
+  (RSSI), the resulting challenges like signal attenuation and interference, and key
+  techniques for mitigating these effects.
 tags:
 - RSSI
 - Signal Attenuation
@@ -15,27 +40,7 @@ tags:
 - Power Control
 - High Frequency Bands
 - Beamforming
-author_profile: false
-date: "2024-06-30"
-header:
-  image: "/assets/images/data_science_3.jpg"
-  overlay_image: "/assets/images/data_science_3.jpg"
-  show_overlay_excerpt: false
-  teaser: "/assets/images/data_science_3.jpg"
-excerpt: "Explore the impact of human presence on RSSI and the challenges it introduces, along with effective mitigation strategies in wireless communication systems."
-summary: "This article examines how human bodies affect Received Signal Strength Indicator (RSSI), the resulting challenges like signal attenuation and interference, and key techniques for mitigating these effects."
-seo_title: "Effects of a Human Body on RSSI: Challenges and Mitigations"
-seo_description: "Discover how the presence of a human body impacts RSSI in wireless networks and explore strategies for overcoming challenges like signal attenuation, interference, and multipath effects."
-keywords:
-- RSSI
-- Signal Attenuation
-- Wireless Communication
-- Multipath Effects
-- Antenna Placement
-- Shadowing
-- Interference
-- Beamforming
-classes: wide
+title: 'Effects of a Human Body on RSSI: Challenges and Mitigations'
 ---
 
 ## Signal Attenuation

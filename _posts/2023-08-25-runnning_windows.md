@@ -1,23 +1,16 @@
 ---
-title: "Applying R Functions on Rolling Windows Using the `runner` Package"
+author_profile: false
 categories:
 - R Programming
-tags:
-- Rolling Windows
-- Time Series Analysis
-- Data Manipulation
-- Statistical Modeling
-author_profile: false
-date: "2023-08-25"
+classes: wide
+date: '2023-08-25'
+excerpt: Explore the `runner` package in R, which allows applying any R function to
+  rolling windows of data with full control over window size, lags, and index types.
 header:
-  image: "/assets/images/Rolling-window.jpg"
-  overlay_image: "/assets/images/Rolling-window.jpg"
+  image: /assets/images/Rolling-window.jpg
+  overlay_image: /assets/images/Rolling-window.jpg
   show_overlay_excerpt: false
-  teaser: "/assets/images/Rolling-window.jpg"
-excerpt: "Explore the `runner` package in R, which allows applying any R function to rolling windows of data with full control over window size, lags, and index types."
-summary: "This article explores the `runner` package in R, detailing how to apply functions to rolling windows of data with custom window sizes, lags, and indexing, particularly useful for time series and cumulative operations."
-seo_title: "Apply Any R Function on Rolling Windows with the `runner` Package"
-seo_description: "Learn how to use the `runner` package in R to apply any function on rolling windows of data. Supports custom window sizes, lags, and flexible indexing using dates, ideal for time series analysis."
+  teaser: /assets/images/Rolling-window.jpg
 keywords:
 - runner R package
 - apply R function on windows
@@ -28,7 +21,19 @@ keywords:
 - parallel processing R
 - dplyr runner integration
 - rolling regression R
-classes: wide
+seo_description: Learn how to use the `runner` package in R to apply any function
+  on rolling windows of data. Supports custom window sizes, lags, and flexible indexing
+  using dates, ideal for time series analysis.
+seo_title: Apply Any R Function on Rolling Windows with the `runner` Package
+summary: This article explores the `runner` package in R, detailing how to apply functions
+  to rolling windows of data with custom window sizes, lags, and indexing, particularly
+  useful for time series and cumulative operations.
+tags:
+- Rolling Windows
+- Time Series Analysis
+- Data Manipulation
+- Statistical Modeling
+title: Applying R Functions on Rolling Windows Using the `runner` Package
 ---
 
 ![Example Image](/assets/images/rolling_image.png)

@@ -1,10 +1,10 @@
 ---
 author_profile: false
 categories:
-- Mathematics
-- Statistics
-- Data Science
-- Machine Learning
+  - Mathematics
+  - Statistics
+  - Data Science
+  - Machine Learning
 classes: wide
 date: '2024-05-17'
 header:
@@ -12,19 +12,30 @@ header:
   overlay_image: /assets/images/data_science_6.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
-subtitle: Exploring the Foundations and Applications of Markov Models in Real-World
-  Scenarios
+subtitle: "Exploring the Foundations and Applications of Markov Models in Real-World Scenarios"
 tags:
-- Markov systems
-- Markov chains
-- Hidden Markov Models
-- Stochastic processes
-- Andrey Markov
-- Claude Shannon
-- real-world applications
-- parking lot occupancy
-title: Understanding Markov Systems
+  - Markov systems
+  - Markov chains
+  - Hidden Markov Models
+  - Stochastic processes
+  - Andrey Markov
+  - Claude Shannon
+  - real-world applications
+  - parking lot occupancy
+title: "Understanding Markov Systems"
+summary: "This article explores the foundations and real-world applications of Markov systems, including Markov chains and Hidden Markov Models, in areas such as parking lot occupancy prediction."
+keywords:
+  - Markov systems
+  - stochastic processes
+  - Hidden Markov Models
+  - real-world applications
+  - parking lot occupancy
+  - predictive modeling
+  - Markov chains
+seo_title: "Markov Systems: Foundations and Applications"
+seo_description: "A deep dive into Markov systems, including Markov chains and Hidden Markov Models, and their applications in real-world scenarios like parking lot occupancy prediction."
 ---
+
 
 ## Introduction
 
