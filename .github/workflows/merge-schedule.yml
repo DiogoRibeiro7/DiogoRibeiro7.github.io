@@ -6,6 +6,7 @@ on:
       - opened
       - edited
       - synchronize
+  schedule:
     # https://crontab.guru/every-hour
     - cron: '50 13 * * *'
 
