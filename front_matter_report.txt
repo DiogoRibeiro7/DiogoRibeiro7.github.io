@@ -1,11 +1,3 @@
-File '2024-07-05-savitzky_golay.md':
-  - Summary present: False
-  - Keywords present: False
-
-File '2024-02-10-Pingenhole Principle.md':
-  - Summary present: False
-  - Keywords present: True
-
 File '2021-12-31-FDM.md':
   - Summary present: False
   - Keywords present: True
