@@ -10,6 +10,21 @@ header:
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+keywords:
+- outlier detection
+- data doping
+- model evaluation
+- anomaly detection
+- machine learning testing
+- evaluating ML models
+- robust data models
+seo_description: Learn how to test and evaluate outlier detection models using data
+  doping techniques. Understand the impact of doping on model performance and outlier
+  identification.
+seo_title: Evaluating Outlier Detectors with Data Doping Techniques
+summary: This article explores techniques for testing and evaluating outlier detection
+  models using data doping, highlighting key methodologies and their impact on model
+  performance.
 tags:
 - Outlier Detection
 - Data Doping
