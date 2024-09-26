@@ -101,17 +101,17 @@ Measurement errors can be statistically modeled by considering them as consistin
 1. **Systematic Error**: This component is fixed for a given setup and consistently affects all measurements.
 2. **Random Error**: This part introduces variability into the measurements and fluctuates across different trials.
 
-Mathematically, we can express the observed measurement \( M \) as:
+Mathematically, we can express the observed measurement $$ M $$ as:
 
-\[
+$$
 M = T + E_s + E_r
-\]
+$$
 
 Where:
 
-- \( T \) is the true value,
-- \( E_s \) is the systematic error,
-- \( E_r \) is the random error.
+- $$ T $$ is the true value,
+- $$ E_s $$ is the systematic error,
+- $$ E_r $$ is the random error.
 
 This model helps quantify the sources of error, allowing analysts to account for and reduce these errors where possible.
 
@@ -157,9 +157,9 @@ Measurement uncertainty quantifies the **range of potential error** associated w
 
 Uncertainty is typically represented as a **range** around the measured value. For example:
 
-\[
+$$
 32.3 \pm 0.5 \, \text{cm}
-\]
+$$
 
 This means the true value is likely within the range of 31.8 cm to 32.8 cm, giving a confidence interval based on the measured uncertainty.
 
