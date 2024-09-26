@@ -7,10 +7,6 @@ header:
   teaser: /assets/images/data_science_5.jpg
 ---
 
-### 2. Data-Driven Approaches to Managing Chronic Diseases in the Elderly
-   - **Overview**: Explore how data science helps manage chronic diseases like diabetes, arthritis, and cardiovascular conditions in elderly populations.
-   - **Focus**: Use of predictive analytics to monitor disease progression, manage medications, and tailor treatment plans based on individual health data.
-
 ### 3. Improving Elderly Mental Health with Machine Learning and Data Analytics
    - **Overview**: Discuss the role of data analytics and machine learning in understanding and treating mental health conditions like depression, anxiety, and dementia in the elderly.
    - **Focus**: Use cases of AI-powered mood tracking and early detection of cognitive decline based on behavioral and health data.
@@ -19,9 +15,6 @@ header:
    - **Overview**: Explain how big data analytics is being used to improve geriatric care by analyzing trends in elderly health, treatment outcomes, and care patterns.
    - **Focus**: How healthcare providers can leverage big data to tailor interventions and optimize elderly care across diverse populations.
 
-### 5. Remote Monitoring and Elderly Care: How IoT and Big Data are Keeping Seniors Safe
-   - **Overview**: Explore how IoT-enabled devices like wearables, smart home systems, and health monitors are generating big data to remotely monitor elderly individuals.
-   - **Focus**: Real-time data analysis for detecting health emergencies like heart attacks, strokes, or falls, and enabling quick responses.
 
 ### 6. AI for Personalized Elderly Care: Tailoring Treatment Plans for Seniors
    - **Overview**: Discuss how AI-driven algorithms are personalizing healthcare plans for the elderly based on their medical history, lifestyle, and genetic information.
