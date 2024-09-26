@@ -134,3 +134,213 @@ Predicting future outcomes using statistical or machine learning models requires
 Cross-validation, particularly K-fold cross-validation, is a popular and reliable method that balances bias and variance while remaining computationally feasible. On the other hand, the bootstrap offers flexibility in estimating the sampling distribution of a statistic and allows for more sophisticated bias corrections, such as the .632 and .632+ estimators. These techniques are critical for model evaluation, ensuring that the predictions made by a model are reliable and generalizable to new data.
 
 Understanding these concepts allows data scientists and statisticians to make informed decisions when selecting and evaluating predictive models, improving the robustness and accuracy of their predictions in practice.
+
+## References
+
+1. **Efron, B., & Tibshirani, R. J.** (1997). *Improvements on Cross-Validation: The .632+ Bootstrap Method*. Journal of the American Statistical Association, 92(438), 548-560.  
+   - This paper introduces the .632 and .632+ bootstrap estimators, providing detailed explanations and improvements over traditional cross-validation methods.
+
+2. **Hastie, T., Tibshirani, R., & Friedman, J.** (2009). *The Elements of Statistical Learning: Data Mining, Inference, and Prediction* (2nd ed.). Springer.  
+   - A comprehensive resource on statistical learning, covering various topics including prediction error, bias-variance tradeoff, cross-validation, and bootstrap methods.
+
+3. **James, G., Witten, D., Hastie, T., & Tibshirani, R.** (2013). *An Introduction to Statistical Learning: with Applications in R*. Springer.  
+   - A beginner-friendly introduction to statistical learning concepts with practical applications in R, including detailed sections on cross-validation and the bootstrap.
+
+4. **Efron, B., & Tibshirani, R. J.** (1993). *An Introduction to the Bootstrap*. Chapman & Hall/CRC Monographs on Statistics & Applied Probability.  
+   - A foundational text on the bootstrap resampling method, explaining its applications in estimating prediction errors and other statistical parameters.
+
+5. **Kohavi, R.** (1995). *A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection*. Proceedings of the 14th International Joint Conference on Artificial Intelligence (IJCAI), 1137-1143.  
+   - This paper compares cross-validation and bootstrap methods, analyzing their accuracy and efficiency in model selection and prediction error estimation.
+
+6. **Stone, M.** (1974). *Cross-Validatory Choice and Assessment of Statistical Predictions*. Journal of the Royal Statistical Society: Series B (Methodological), 36(2), 111-147.  
+   - One of the foundational papers on cross-validation, providing a theoretical framework for its application in assessing statistical models.
+
+7. **Zhang, C., & Ma, Y.** (2012). *Ensemble Machine Learning: Methods and Applications*. Springer.  
+   - A resource on ensemble learning techniques, touching on topics like cross-validation and bootstrap in the context of model evaluation and improving prediction accuracy.
+
+## Appendix: Python Code Examples for Cross-Validation and Bootstrap Methods
+
+In this appendix, we provide Python code examples to illustrate cross-validation, bootstrap methods, and prediction error estimation. These examples use common libraries like `scikit-learn` and `numpy` to demonstrate how these techniques can be applied to a dataset.
+
+### 1. Cross-Validation with `scikit-learn`
+
+#### Example: K-Fold Cross-Validation
+
+In this example, we use the K-fold cross-validation method to estimate the prediction error of a linear regression model.
+
+```python
+from sklearn.model_selection import KFold, cross_val_score
+from sklearn.linear_model import LinearRegression
+from sklearn.datasets import make_regression
+import numpy as np
+
+# Generate synthetic regression dataset
+X, y = make_regression(n_samples=100, n_features=3, noise=0.1, random_state=42)
+
+# Define a linear regression model
+model = LinearRegression()
+
+# Set up K-Fold cross-validation (K=5)
+kf = KFold(n_splits=5, shuffle=True, random_state=42)
+
+# Perform cross-validation and compute the mean squared error
+mse_scores = cross_val_score(model, X, y, scoring='neg_mean_squared_error', cv=kf)
+mean_mse = np.mean(-mse_scores)
+
+print(f'Average MSE from 5-fold cross-validation: {mean_mse:.3f}')
+```
+
+#### Explanation
+
+- We generate a synthetic regression dataset with `make_regression`.
+- The `KFold` function sets up 5-fold cross-validation.
+- `cross_val_score` is used to compute the mean squared error (MSE) across the folds. The negative MSE values are corrected by taking their negative.
+
+### 2. Bootstrap Resampling for Prediction Error Estimation
+
+Bootstrap resampling is used to estimate prediction error by repeatedly drawing samples with replacement and evaluating the model on those samples.
+
+#### Example: Bootstrap for Estimating Prediction Error
+
+```python
+from sklearn.utils import resample
+from sklearn.metrics import mean_squared_error
+import numpy as np
+
+# Generate synthetic regression dataset
+X, y = make_regression(n_samples=100, n_features=3, noise=0.1, random_state=42)
+
+# Initialize a linear regression model
+model = LinearRegression()
+
+# Number of bootstrap samples
+n_bootstraps = 1000
+bootstrap_errors = []
+
+# Perform bootstrap resampling
+for _ in range(n_bootstraps):
+    # Resample the data with replacement
+    X_resampled, y_resampled = resample(X, y, random_state=42)
+    
+    # Fit the model on the bootstrap sample
+    model.fit(X_resampled, y_resampled)
+    
+    # Predict on the original dataset (out-of-bag estimate)
+    y_pred = model.predict(X)
+    
+    # Compute the prediction error (MSE)
+    mse = mean_squared_error(y, y_pred)
+    bootstrap_errors.append(mse)
+
+# Compute the average bootstrap MSE
+mean_bootstrap_mse = np.mean(bootstrap_errors)
+print(f'Average Bootstrap MSE: {mean_bootstrap_mse:.3f}')
+```
+
+#### Explanation
+
+- We resample the data with replacement 1000 times using the `resample` function.
+- For each bootstrap sample, the model is trained and predictions are made on the original data to compute the out-of-bag error (MSE).
+- The final estimate of prediction error is the average of the errors across all bootstrap samples.
+
+### 3. Leave-One-Out Cross-Validation (LOOCV)
+
+LOOCV is a special case of K-fold cross-validation where \( K = N \), meaning each sample is used once as a validation set.
+
+#### Example: Leave-One-Out Cross-Validation
+
+```python
+from sklearn.model_selection import LeaveOneOut
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+
+# Generate synthetic regression dataset
+X, y = make_regression(n_samples=50, n_features=3, noise=0.1, random_state=42)
+
+# Initialize the model
+model = LinearRegression()
+
+# Set up leave-one-out cross-validation
+loo = LeaveOneOut()
+
+# Initialize an empty list to store the MSE values
+loo_errors = []
+
+# Perform LOOCV
+for train_index, test_index in loo.split(X):
+    X_train, X_test = X[train_index], X[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+    
+    # Fit the model
+    model.fit(X_train, y_train)
+    
+    # Predict on the test data
+    y_pred = model.predict(X_test)
+    
+    # Compute the prediction error (MSE)
+    mse = mean_squared_error(y_test, y_pred)
+    loo_errors.append(mse)
+
+# Calculate the average MSE from LOOCV
+mean_loo_mse = np.mean(loo_errors)
+print(f'Average LOOCV MSE: {mean_loo_mse:.3f}')
+```
+
+#### Explanation
+
+- The `LeaveOneOut` object performs LOOCV by splitting the dataset into \( N \) training and testing splits.
+- For each split, the model is trained on all but one sample and tested on the remaining sample.
+- The mean MSE is computed across all iterations.
+
+### 4. .632 Bootstrap Method
+
+The .632 bootstrap method is used to correct bias in prediction error estimates by combining training error and bootstrap error estimates.
+
+#### Example: .632 Bootstrap Estimator
+
+```python
+def bootstrap_632_error(X, y, model, n_bootstraps=1000):
+    n = len(y)
+    errors_train = []
+    errors_oob = []
+    
+    for _ in range(n_bootstraps):
+        # Create bootstrap sample
+        X_resampled, y_resampled = resample(X, y)
+        oob_mask = np.isin(np.arange(n), resample(np.arange(n), n_samples=n, replace=True), invert=True)
+        
+        # Train model on bootstrap sample
+        model.fit(X_resampled, y_resampled)
+        
+        # Predict on training sample (for training error)
+        y_pred_train = model.predict(X_resampled)
+        errors_train.append(mean_squared_error(y_resampled, y_pred_train))
+        
+        # Predict on out-of-bag samples (for OOB error)
+        if oob_mask.any():
+            y_pred_oob = model.predict(X[oob_mask])
+            errors_oob.append(mean_squared_error(y[oob_mask], y_pred_oob))
+    
+    # Calculate .632 error estimate
+    err_train = np.mean(errors_train)
+    err_oob = np.mean(errors_oob)
+    err_632 = 0.368 * err_train + 0.632 * err_oob
+    
+    return err_632
+
+# Generate synthetic data
+X, y = make_regression(n_samples=100, n_features=3, noise=0.1, random_state=42)
+
+# Initialize model
+model = LinearRegression()
+
+# Calculate .632 bootstrap error
+error_632 = bootstrap_632_error(X, y, model)
+print(f'.632 Bootstrap Error: {error_632:.3f}')
+```
+
+#### Explanation
+
+- This function estimates the .632 bootstrap error by combining the training error and the out-of-bag (OOB) error.
+- The `resample` function is used to create bootstrap samples, and the out-of-bag data is used to compute the OOB error.
+- The final estimate is calculated using the weighted average of the training error and the OOB error as per the .632 rule.
