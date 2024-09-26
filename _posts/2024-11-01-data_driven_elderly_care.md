@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - HealthTech
-- Data Science
 classes: wide
 date: '2024-11-01'
 excerpt: Data science is revolutionizing chronic disease management among the elderly
