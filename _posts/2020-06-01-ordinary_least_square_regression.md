@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Machine Learning
 - Statistics
-- Data Science
 classes: wide
 date: '2020-06-01'
 excerpt: Discover the foundations of Ordinary Least Squares (OLS) regression, its
@@ -20,6 +18,7 @@ keywords:
 - Consistency
 - Maximum Likelihood Estimator
 - Gauss-Markov
+- Data Science
 seo_description: A detailed exploration of Ordinary Least Squares (OLS) regression,
   its properties like consistency, efficiency, and minimum variance, and its applications
   in statistics, machine learning, and data science.

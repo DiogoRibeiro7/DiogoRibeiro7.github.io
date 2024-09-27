@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Data Science
-- Hypothesis Testing
 classes: wide
 date: '2020-07-01'
 excerpt: Understand Cochran’s Q test, a non-parametric test for comparing proportions
@@ -19,6 +17,8 @@ keywords:
 - McNemar's Test
 - Proportions
 - Logistic Regression
+- Data Science
+- Machine Learning
 seo_description: Learn about Cochran’s Q test, its use for comparing proportions across
   related groups, and its connection with McNemar’s test and logistic regression.
 seo_title: 'Cochran’s Q Test: Comparing Proportions in Related Groups'
@@ -33,8 +33,6 @@ tags:
 title: 'Cochran’s Q Test: Comparing Three or More Related Proportions'
 ---
 
-# Cochran’s Q Test: Comparing Three or More Related Proportions
-
 In the realm of statistical analysis, there are many situations where we need to compare proportions across **related groups**, particularly when the data is **binary** (e.g., success/failure, yes/no). For such cases, **Cochran’s Q test** provides an effective way to determine whether there are significant differences in proportions across three or more related samples.
 
 This article provides a comprehensive overview of Cochran’s Q test, including when it should be used, its underlying assumptions, and how it relates to other statistical tests, such as **McNemar’s test** and **logistic regression**.
@@ -46,6 +44,7 @@ This article provides a comprehensive overview of Cochran’s Q test, including 
 **Cochran’s Q test** is a **non-parametric** statistical test designed to compare proportions across **three or more related groups**. It is an extension of the **McNemar’s test**, which is used to compare proportions between two related groups. Cochran’s Q test works specifically with **binary data**—data that can take only two possible values (e.g., 0/1, yes/no).
 
 ### Key Features of Cochran’s Q Test:
+
 - **Non-parametric**: Does not require assumptions about the distribution of the data.
 - **Designed for binary data**: Works with data where each observation falls into one of two categories.
 - **Used for related samples**: The test is applied when the same subjects or units are measured across different conditions or time points.
@@ -64,16 +63,21 @@ Cochran’s Q test evaluates whether the proportions of successes (or failures) 
 Cochran’s Q test is appropriate when the following conditions are met:
 
 ### 1. **Binary Data**
+
 The data should be **binary**, meaning that each observation can only take two possible values, such as "success/failure," "yes/no," or "1/0." Examples include:
+
 - A medical study where the outcome of a treatment is either effective or not.
 - A marketing study where participants either prefer or do not prefer a product.
 
 ### 2. **Related Samples**
+
 The groups being compared must be **related**. This means that the same participants or subjects are involved in each group. For example:
+
 - A clinical trial where the same patients are tested across different treatment conditions.
 - A consumer survey where participants rate multiple products or brands.
 
 ### 3. **Three or More Groups**
+
 Cochran’s Q test is used when you need to compare **three or more groups** (i.e., proportions in different conditions). If there are only two groups, the **McNemar’s test** is more appropriate.
 
 ---
@@ -115,13 +119,13 @@ The test statistic **Q** follows a **chi-square distribution** with **k – 1 de
 
 - **McNemar’s Test**: Applied when comparing two proportions in related samples. For example, testing whether the proportion of patients responding positively to a treatment differs between two medications.
   
-  The test statistic for McNemar’s test is based on a **2x2 contingency table** and uses the following formula:
+The test statistic for McNemar’s test is based on a **2x2 contingency table** and uses the following formula:
   
-  $$
-  \chi^2 = \frac{(b - c)^2}{b + c}
-  $$
+$$
+\chi^2 = \frac{(b - c)^2}{b + c}
+$$
   
-  Where **b** and **c** are the off-diagonal counts in the contingency table.
+Where **b** and **c** are the off-diagonal counts in the contingency table.
 
 - **Cochran’s Q Test**: Used when there are more than two related groups. It extends the logic of McNemar’s test by allowing the comparison of multiple proportions across related samples, making it useful for studies with more than two conditions.
 
@@ -142,6 +146,7 @@ While Cochran’s Q test is useful for comparing proportions in related groups, 
 - **Logistic Regression**: A more general model used to predict binary outcomes (e.g., success/failure) based on one or more predictor variables. It can handle both categorical and continuous predictors and provides estimates of the effects of each predictor.
 
 **When to Use Logistic Regression:**
+
 - When you need to control for multiple predictors or confounders in the analysis.
 - When you have more than one explanatory variable influencing the binary outcome.
 - When you are interested in estimating the probability of a binary event (e.g., success or failure) based on continuous or categorical variables.

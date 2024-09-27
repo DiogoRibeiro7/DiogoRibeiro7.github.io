@@ -88,10 +88,7 @@ Here are some interesting article ideas centered around statistical tests, desig
    - Compare K-S test with other goodness-of-fit tests like Shapiro-Wilk.
    - Explore real-world use cases, such as testing if a dataset follows a specific distribution.
 
-### 11. **"Cochran’s Q Test: Comparing Three or More Related Proportions"**
-   - Overview of Cochran’s Q test for comparing proportions in related groups.
-   - Explain when Cochran’s Q test is appropriate, particularly in binary data.
-   - Discuss the test’s relationship with McNemar’s test and logistic regression.
+
 
 ### 12. **"Log-Rank Test in Survival Analysis: Comparing Survival Curves"**
    - Introduction to the log-rank test used in survival analysis.
