@@ -6,18 +6,29 @@ categories:
 - Mathematical Analysis
 classes: wide
 date: '2024-07-19'
+excerpt: An analysis of the Central Limit Theorem for m-dependent random variables
+  under sub-linear expectations, applying Rosenthal’s Inequality.
 header:
   image: /assets/images/data_science_8.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+keywords:
+- Central Limit Theorem
+- m-dependence
+- Sub-linear Expectations
+- Rosenthal’s Inequality
+seo_description: An in-depth exploration of the Central Limit Theorem for m-dependent
+  random variables under sub-linear expectations, with a focus on Rosenthal's Inequality.
+seo_title: Central Limit Theorem for m-dependent Random Variables
+summary: This article discusses the Central Limit Theorem for m-dependent random variables
+  under sub-linear expectations, highlighting key concepts like Rosenthal’s Inequality.
 tags:
 - Central Limit Theorem
 - m-dependence
 - Sub-linear Expectations
 - Rosenthal’s Inequality
-title: Central Limit Theorem for m-dependent Random Variables Under Sub-linear
-  Expectations
+title: Central Limit Theorem for m-dependent Random Variables Under Sub-linear Expectations
 ---
 
 ## Abstract
