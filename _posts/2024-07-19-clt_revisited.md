@@ -16,7 +16,7 @@ tags:
 - m-dependence
 - Sub-linear Expectations
 - Rosenthal’s Inequality
-title: Central Limit Theorem for $$m$$-dependent Random Variables Under Sub-linear
+title: Central Limit Theorem for m-dependent Random Variables Under Sub-linear
   Expectations
 ---
 
