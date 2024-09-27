@@ -70,7 +70,7 @@ Parametric models are powerful because they offer several significant advantages
    - Parametric models allow for extrapolation beyond the range of the observed data. This means they can predict survival probabilities at times not represented in the sample, which can be invaluable for long-term planning and decision-making.
 
 4. **Parameter Estimation:**
-   - The parameters estimated in parametric models often have meaningful interpretations. For instance, in an exponential model, the parameter \( \lambda \) represents the constant hazard rate, providing insights into the underlying process.
+   - The parameters estimated in parametric models often have meaningful interpretations. For instance, in an exponential model, the parameter $$ \lambda $$ represents the constant hazard rate, providing insights into the underlying process.
 
 5. **Efficiency:**
    - Parametric methods can be more statistically efficient than non-parametric methods when the model assumptions hold true. This means they can produce more precise estimates with the same amount of data.
@@ -204,50 +204,50 @@ While the exponential survival function is straightforward, other parametric mod
 
 Survival functions for these distributions are derived from their cumulative distribution functions (CDFs), where:
 
-\[ S(t) = 1 - \text{CDF}(t) \]
+$$ S(t) = 1 - \text{CDF}(t) $$
 
 #### Weibull Distribution
 
 The Weibull distribution is highly versatile and can model increasing, decreasing, or constant hazard rates. Its flexibility makes it suitable for many applications.
 
-\[ S(t) = e^{-(\lambda t)^\gamma} \]
+$$ S(t) = e^{-(\lambda t)^\gamma} $$
 
 - **Parameters:**
-  - \( \lambda \): scale parameter
-  - \( \gamma \): shape parameter
+  - $$ \lambda $$: scale parameter
+  - $$ \gamma $$: shape parameter
 - **Applications:** Reliability engineering, medical survival studies
 
 #### Gamma Distribution
 
 The Gamma distribution can accommodate various shapes of hazard functions, making it useful for modeling skewed survival times.
 
-\[ S(t) = 1 - \text{Gamma CDF}(t; \alpha, \beta) \]
+$$ S(t) = 1 - \text{Gamma CDF}(t; \alpha, \beta) $$
 
 - **Parameters:**
-  - \( \alpha \): shape parameter
-  - \( \beta \): rate parameter
+  - $$ \alpha $$: shape parameter
+  - $$ \beta $$: rate parameter
 - **Applications:** Lifespan of technical devices, biological lifetimes
 
 #### Log-Normal Distribution
 
 The Log-Normal distribution is appropriate when the logarithm of the survival time is normally distributed, often used for right-skewed data.
 
-\[ S(t) = 1 - \Phi \left( \frac{\ln t - \mu}{\sigma} \right) \]
+$$ S(t) = 1 - \Phi \left( \frac{\ln t - \mu}{\sigma} \right) $$
 
 - **Parameters:**
-  - \( \mu \): mean of the logarithm of the survival time
-  - \( \sigma \): standard deviation of the logarithm of the survival time
+  - $$ \mu $$: mean of the logarithm of the survival time
+  - $$ \sigma $$: standard deviation of the logarithm of the survival time
 - **Applications:** Time-to-event data in finance, medical research
 
 #### Log-Logistic Distribution
 
 The Log-Logistic distribution can model survival times with a hazard function that increases initially and then decreases, useful for certain biological and industrial data.
 
-\[ S(t) = \left(1 + \left(\frac{t}{\alpha}\right)^\beta\right)^{-1} \]
+$$ S(t) = \left(1 + \left(\frac{t}{\alpha}\right)^\beta\right)^{-1} $$
 
 - **Parameters:**
-  - \( \alpha \): scale parameter
-  - \( \beta \): shape parameter
+  - $$ \alpha $$: scale parameter
+  - $$ \beta $$: shape parameter
 - **Applications:** Medical research, industrial reliability studies
 
 ### Limitations

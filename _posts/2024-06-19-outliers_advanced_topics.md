@@ -64,7 +64,7 @@ Detecting outliers is the first step in managing them effectively. Several metho
 
 - **Z-Score**: The Z-score measures how many standard deviations a data point is from the mean. Data points with a Z-score greater than a certain threshold (typically 3 or -3) are considered outliers.
 
-- **IQR Method**: The Interquartile Range (IQR) method calculates the range between the first and third quartiles and identifies outliers as those points that fall below \( Q1 - 1.5 \times IQR \) or above \( Q3 + 1.5 \times IQR \).
+- **IQR Method**: The Interquartile Range (IQR) method calculates the range between the first and third quartiles and identifies outliers as those points that fall below $$ Q1 - 1.5 \times IQR $$ or above $$ Q3 + 1.5 \times IQR $$.
 
 ### Algorithmic Methods
 

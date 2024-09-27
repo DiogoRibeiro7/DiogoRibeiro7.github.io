@@ -62,15 +62,15 @@ Ordinal regression models come in various forms, but we will focus on the **cumu
 
 Mathematically, we can express the cumulative logit model as follows:
 
-\[
+$$
 \log\left(\frac{P(Y \leq j)}{P(Y > j)}\right) = \alpha_j - \beta X
-\]
+$$
 
 Where:
 
-- \( P(Y \leq j) \) represents the probability that the outcome is in category \( j \) or lower.
-- \( \alpha_j \) is the intercept (threshold) for category \( j \).
-- \( \beta \) represents the coefficients for the predictors \( X \), which explain how the covariates influence the probability of belonging to different categories.
+- $$ P(Y \leq j) $$ represents the probability that the outcome is in category $$ j $$ or lower.
+- $$ \alpha_j $$ is the intercept (threshold) for category $$ j $$.
+- $$ \beta $$ represents the coefficients for the predictors $$ X $$, which explain how the covariates influence the probability of belonging to different categories.
 
 In a cumulative logit model, we estimate a separate intercept for each threshold between the ordered categories. The **logit** link function converts the output into probabilities, making the model flexible enough to handle ordinal data. This approach assumes that the effect of each predictor is the same across all thresholds—a property known as the **proportional odds assumption**.
 

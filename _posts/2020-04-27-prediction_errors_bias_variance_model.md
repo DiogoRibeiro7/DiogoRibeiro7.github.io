@@ -245,7 +245,7 @@ print(f'Average Bootstrap MSE: {mean_bootstrap_mse:.3f}')
 
 ### 3. Leave-One-Out Cross-Validation (LOOCV)
 
-LOOCV is a special case of K-fold cross-validation where \( K = N \), meaning each sample is used once as a validation set.
+LOOCV is a special case of K-fold cross-validation where $$ K = N $$, meaning each sample is used once as a validation set.
 
 #### Example: Leave-One-Out Cross-Validation
 
@@ -288,7 +288,7 @@ print(f'Average LOOCV MSE: {mean_loo_mse:.3f}')
 
 #### Explanation
 
-- The `LeaveOneOut` object performs LOOCV by splitting the dataset into \( N \) training and testing splits.
+- The `LeaveOneOut` object performs LOOCV by splitting the dataset into $$ N $$ training and testing splits.
 - For each split, the model is trained on all but one sample and tested on the remaining sample.
 - The mean MSE is computed across all iterations.
 

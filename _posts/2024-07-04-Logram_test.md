@@ -62,27 +62,27 @@ The Logrank test is a non-parametric test used in survival analysis to compare t
 
 2. **Calculation of Expected Events**:
    - At each event time, the Logrank test calculates the expected number of events for each group under the null hypothesis, which assumes no difference in survival between the groups.
-   - The formula for the expected number of events in group \(i\) is:
-     \[
+   - The formula for the expected number of events in group $$i$$ is:
+     $$
      E_i = \frac{R_i \cdot (O_1 + O_2)}{N_1 + N_2}
-     \]
+     $$
      Where:
-     - \( E_i \): Expected events in group \(i\).
-     - \( R_i \): Number of subjects at risk in group \(i\) at the event time.
-     - \( O_1 \): Observed events in group 1.
-     - \( O_2 \): Observed events in group 2.
-     - \( N_1 \): Number of subjects at risk in group 1.
-     - \( N_2 \): Number of subjects at risk in group 2.
+     - $$ E_i $$: Expected events in group $$i$$.
+     - $$ R_i $$: Number of subjects at risk in group $$i$$ at the event time.
+     - $$ O_1 $$: Observed events in group 1.
+     - $$ O_2 $$: Observed events in group 2.
+     - $$ N_1 $$: Number of subjects at risk in group 1.
+     - $$ N_2 $$: Number of subjects at risk in group 2.
    - This calculation is performed for each group at each event time. The idea is to estimate how many events would be expected in each group if the event rates were the same across groups, based on the proportion of subjects at risk.
 
 3. **Chi-Square Statistic**:
    - For each event time, the test compares the observed number of events to the expected number of events using the Chi-Square statistic. The formula for the Chi-Square statistic at each event time is:
-     \[
+     $$
      \chi^2 = \sum \frac{(O - E)^2}{E}
-     \]
+     $$
      Where:
-     - \( O \): Observed number of events.
-     - \( E \): Expected number of events.
+     - $$ O $$: Observed number of events.
+     - $$ E $$: Expected number of events.
    - The difference between observed and expected events is squared, divided by the expected events, and then summed across all event times to produce the overall Chi-Square statistic. This cumulative Chi-Square value reflects the total deviation of the observed events from the expected events under the null hypothesis across all time points.
 
 4. **P-Value**:
@@ -124,10 +124,10 @@ Censoring impacts the Logrank test in several ways:
 
 2. **Calculation of Expected Events with Censoring**:
    - When calculating the expected number of events at each event time, the risk sets are adjusted to account for censored subjects. The formula for expected events remains the same:
-     \[
+     $$
      E_i = \frac{R_i \cdot (O_1 + O_2)}{N_1 + N_2}
-     \]
-     But \( R_i \), \( N_1 \), and \( N_2 \) only include subjects who have not been censored before the event time.
+     $$
+     But $$ R_i $$, $$ N_1 $$, and $$ N_2 $$ only include subjects who have not been censored before the event time.
 
 3. **Handling Tied Events**:
    - Sometimes multiple events occur at the same time. The Logrank test can accommodate tied events by appropriately adjusting the risk set and event counts at these time points.
@@ -171,10 +171,10 @@ The Logrank test is designed to handle censored data effectively, ensuring that 
 
 1. **Recalculation of Expected Events**:
    - The expected number of events for each group is calculated using the adjusted risk sets. The formula for expected events incorporates the number of subjects at risk, ensuring that censored subjects do not distort the results.
-     \[
+     $$
      E_i = \frac{R_i \cdot (O_1 + O_2)}{N_1 + N_2}
-     \]
-   - Where \( E_i \) is the expected number of events in group \(i\), \( R_i \) is the number of subjects at risk in group \(i\) at the event time, \( O_1 \) and \( O_2 \) are the observed events in groups 1 and 2, and \( N_1 \) and \( N_2 \) are the total subjects at risk in groups 1 and 2.
+     $$
+   - Where $$ E_i $$ is the expected number of events in group $$i$$, $$ R_i $$ is the number of subjects at risk in group $$i$$ at the event time, $$ O_1 $$ and $$ O_2 $$ are the observed events in groups 1 and 2, and $$ N_1 $$ and $$ N_2 $$ are the total subjects at risk in groups 1 and 2.
 
 2. **Handling Tied Events**:
    - When multiple events occur at the same time, the risk set and event counts are adjusted accordingly. Methods like the Efron or Breslow approaches can be used to handle ties, ensuring that the distribution of events among the risk set is accurate.
@@ -184,9 +184,9 @@ The Logrank test is designed to handle censored data effectively, ensuring that 
 1. **Dynamic Risk Sets**:
    - As the study progresses and more subjects are censored or experience the event, the risk sets decrease. This continuous adjustment impacts the calculations of both observed and expected events.
    - Each event time contributes a term to the Chi-Square statistic based on the observed and expected events, considering the adjusted risk sets:
-     \[
+     $$
      \chi^2 = \sum \frac{(O - E)^2}{E}
-     \]
+     $$
    - This term is calculated for each event time and then summed to get the overall Chi-Square statistic.
 
 2. **Ensuring Valid Comparisons**:
