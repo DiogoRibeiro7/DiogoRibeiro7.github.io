@@ -435,7 +435,7 @@ The application of the Probability Integral Transform has significantly enhanced
 In this article, we explored the concept of the Probability Integral Transform (PIT) and its various applications in statistics and probability theory. Here are the key points discussed:
 
 1. **Understanding the Probability Integral Transform**:
-   - The PIT is a method that converts any continuous random variable into a uniformly distributed random variable on the interval \([0, 1]\).
+   - The PIT is a method that converts any continuous random variable into a uniformly distributed random variable on the interval $$[0, 1]$$.
    - It leverages the properties of cumulative distribution functions (CDFs) to achieve this transformation.
 
 2. **Mathematical Basis**:

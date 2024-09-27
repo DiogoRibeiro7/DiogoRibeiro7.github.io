@@ -172,9 +172,9 @@ print(f"MCC: {mcc}")
 
 **Function Definition**: The function `calculate_mcc` is defined with parameters for true positives (tp), true negatives (tn), false positives (fp), and false negatives (fn).
 
-**Numerator Calculation**: The numerator of the MCC formula is calculated as \((tp \times tn) - (fp \times fn)\).
+**Numerator Calculation**: The numerator of the MCC formula is calculated as $$(tp \times tn) - (fp \times fn)$$.
 
-**Denominator Calculation**: The denominator is calculated as the square root of the product \((tp + fp) \times (tp + fn) \times (tn + fp) \times (tn + fn)\).
+**Denominator Calculation**: The denominator is calculated as the square root of the product $$(tp + fp) \times (tp + fn) \times (tn + fp) \times (tn + fn)$$.
 
 **Division by Zero Check**: Before performing the division, the function checks if the denominator is zero to avoid division by zero errors. If the denominator is zero, the function returns `None`.
 
@@ -346,8 +346,8 @@ end program mcc_calculation
 
 **Function to Calculate MCC**:
 
-- **Numerator Calculation**: Compute the numerator as \((tp \times tn) - (fp \times fn)\).
-- **Denominator Calculation**: Compute the denominator as the square root of the product \((tp + fp) \times (tp + fn) \times (tn + fp) \times (tn + fn)\).
+- **Numerator Calculation**: Compute the numerator as $$(tp \times tn) - (fp \times fn)$$.
+- **Denominator Calculation**: Compute the denominator as the square root of the product $$(tp + fp) \times (tp + fn) \times (tn + fp) \times (tn + fn)$$.
 - **Division by Zero Check**: Check if the denominator is zero. If it is, return a special value (-2.0) indicating an invalid calculation. Otherwise, return the MCC value.
 
 ### Compilation and Execution

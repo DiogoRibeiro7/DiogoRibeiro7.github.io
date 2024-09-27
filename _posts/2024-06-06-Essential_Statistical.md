@@ -86,18 +86,21 @@ In conclusion, understanding these statistical concepts is fundamental for data 
 ### Variance
 
 - **Definition**: Variance measures the spread of data points around the mean. It is the average of the squared differences from the mean, indicating how much the data varies.
-- **Calculation**: Calculate the mean, then subtract the mean from each data point, square the result, sum these squared differences, and divide by the number of observations. For a sample, use \( n-1 \) in the denominator.
-  $$
-  \text{Variance} (\sigma^2) = \frac{\sum_{i=1}^{n} (x_i - \mu)^2}{n}
-  $$
+- **Calculation**: Calculate the mean, then subtract the mean from each data point, square the result, sum these squared differences, and divide by the number of observations. For a sample, use $$ n-1 $$ in the denominator.
+
+$$
+\text{Variance} (\sigma^2) = \frac{\sum_{i=1}^{n} (x_i - \mu)^2}{n}
+$$
+
 - **Example**: For the dataset [70, 80, 90, 100, 85], first calculate the mean (85), then:
-  $$
-  \begin{align*}
-  \text{Variance} &= \frac{(70-85)^2 + (80-85)^2 + (90-85)^2 + (100-85)^2 + (85-85)^2}{5} \\
-  &= \frac{225 + 25 + 25 + 225 + 0}{5} \\
-  &= \frac{500}{5} = 100
-  \end{align*}
-  $$
+- 
+$$
+\begin{align*}
+\text{Variance} &= \frac{(70-85)^2 + (80-85)^2 + (90-85)^2 + (100-85)^2 + (85-85)^2}{5} \\
+&= \frac{225 + 25 + 25 + 225 + 0}{5} \\
+&= \frac{500}{5} = 100
+\end{align*}
+$$
 
 ### Standard Deviation
 
@@ -280,14 +283,18 @@ In conclusion, understanding these statistical concepts is fundamental for data 
 
 - **Definition**: Bayes' Theorem is a fundamental theorem in Bayesian statistics that describes the probability of an event, based on prior knowledge of conditions that might be related to the event. It provides a way to update the probability of a hypothesis as more evidence or information becomes available.
 - **Formula**: 
-  \[
-  P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
-  \]
-  where:
-  - \( P(A|B) \) is the posterior probability: the probability of event A occurring given event B.
-  - \( P(B|A) \) is the likelihood: the probability of event B occurring given event A.
-  - \( P(A) \) is the prior probability: the initial probability of event A occurring.
-  - \( P(B) \) is the marginal likelihood: the total probability of event B occurring.
+
+$$
+P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
+$$
+
+where:
+
+- $$ P(A|B) $$ is the posterior probability: the probability of event A occurring given event B.
+- $$ P(B|A) $$ is the likelihood: the probability of event B occurring given event A.
+- $$ P(A) $$ is the prior probability: the initial probability of event A occurring.
+- $$ P(B) $$ is the marginal likelihood: the total probability of event B occurring.
+- 
 - **Example**: Suppose a medical test for a disease is 99% accurate. If 1% of the population has the disease, Bayes' Theorem can be used to update the probability that a person has the disease given a positive test result.
 
 ### Prior Probability
@@ -323,10 +330,13 @@ In conclusion, understanding these statistical concepts is fundamental for data 
 
 - **Definition**: Autocorrelation measures the correlation of a time series with a lagged version of itself. It helps in identifying repeating patterns or trends in the data over time.
 - **Calculation**: The autocorrelation function (ACF) is used to calculate the correlation between the time series and its lagged values.
-  $$
-  \text{ACF}(k) = \frac{\sum_{t=1}^{n-k} (x_t - \bar{x})(x_{t+k} - \bar{x})}{\sum_{t=1}^{n} (x_t - \bar{x})^2}
-  $$
-  where $$k$$ is the lag, $$x_t$$ is the value at time t, and $$\bar{x}$$ is the mean of the time series.
+
+$$
+\text{ACF}(k) = \frac{\sum_{t=1}^{n-k} (x_t - \bar{x})(x_{t+k} - \bar{x})}{\sum_{t=1}^{n} (x_t - \bar{x})^2}
+$$
+
+where $$k$$ is the lag, $$x_t$$ is the value at time t, and $$\bar{x}$$ is the mean of the time series.
+
 - **Example**: Analyzing daily temperature data to identify the presence of weekly cycles or patterns in the temperature variations.
 
 ## Multivariate Analysis

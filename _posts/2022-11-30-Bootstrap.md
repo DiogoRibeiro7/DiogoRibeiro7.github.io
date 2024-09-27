@@ -71,8 +71,8 @@ Bootstrapping is one of several resampling methods, including **jackknife** and 
 
 The bootstrapping process typically involves the following steps:
 
-1. **Original Sample**: Start with the original data sample of size \( n \).
-2. **Generate Bootstrap Samples**: Create \( B \) bootstrap samples, each of size \( n \), by sampling with replacement from the original data.
+1. **Original Sample**: Start with the original data sample of size $$ n $$.
+2. **Generate Bootstrap Samples**: Create $$ B $$ bootstrap samples, each of size $$ n $$, by sampling with replacement from the original data.
 3. **Compute Statistic**: Calculate the desired statistic (e.g., mean, median, variance) for each bootstrap sample.
 4. **Analyze Bootstrap Distribution**: Use the distribution of the calculated statistics (bootstrap replicates) to make inferences about the population parameter, such as estimating confidence intervals or standard errors.
 
@@ -80,7 +80,7 @@ The bootstrapping process typically involves the following steps:
 
 Consider a simple dataset of 10 observations. We aim to estimate the mean and its confidence interval using bootstrapping.
 
-**Original Data**: \( [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] \)
+**Original Data**: $$ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] $$
 
 **Step 1: Generate Bootstrap Samples**  
 We create 1,000 bootstrap samples, each containing 10 observations drawn with replacement from the original data.

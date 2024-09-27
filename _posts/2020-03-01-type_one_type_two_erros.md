@@ -78,9 +78,9 @@ Returning to the drug trial example:
 
 The probability of making a Type I error is controlled by the **significance level** of the test, denoted by **α**. The significance level represents the threshold for rejecting the null hypothesis. It is typically set to 0.05 (5%), meaning there is a 5% chance of rejecting the null hypothesis when it is actually true.
 
-\[
+$$
 \text{P(Type I Error)} = \alpha
-\]
+$$
 
 If α = 0.05, then the risk of committing a Type I error is 5%. Lowering the significance level (e.g., to 0.01) reduces the probability of a Type I error, but as we will see, it may increase the likelihood of making a Type II error.
 
@@ -100,12 +100,12 @@ In the drug trial example:
 
 The probability of making a Type II error is denoted by **β**. The complement of β, or **1 - β**, is known as the **power** of the test. The power represents the probability of correctly rejecting the null hypothesis when the alternative hypothesis is true. Higher power means a lower chance of committing a Type II error.
 
-\[
+$$
 \text{P(Type II Error)} = \beta
-\]
-\[
+$$
+$$
 \text{Power of the Test} = 1 - \beta
-\]
+$$
 
 A test with high power is more likely to detect a true effect. The goal is to design studies with enough power to minimize the risk of Type II errors, especially in situations where missing a true effect would have serious consequences.
 
