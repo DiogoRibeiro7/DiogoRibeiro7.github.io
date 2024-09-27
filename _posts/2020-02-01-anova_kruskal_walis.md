@@ -1,27 +1,38 @@
 ---
-title: "ANOVA vs Kruskal-Wallis: Understanding the Differences and Applications"
+author_profile: false
 categories:
 - Statistics
 - Data Analysis
 - Hypothesis Testing
+classes: wide
+date: '2020-02-01'
+excerpt: Learn the key differences between ANOVA and Kruskal-Wallis tests, and understand
+  when to use each method based on your data's assumptions and characteristics.
+header:
+  image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_2.jpg
+keywords:
+- ANOVA
+- Kruskal-Wallis
+- Hypothesis Testing
+- Parametric Test
+- Non-Parametric Test
+seo_description: Explore the differences between ANOVA and Kruskal-Wallis tests. Learn
+  when to use parametric (ANOVA) and non-parametric (Kruskal-Wallis) methods for comparing
+  multiple groups.
+seo_title: 'ANOVA vs Kruskal-Wallis: Key Differences and When to Use Them'
+summary: This article explores the fundamental differences between ANOVA and Kruskal-Wallis
+  tests, with a focus on their assumptions, applications, and when to use each method
+  in data analysis.
 tags:
 - ANOVA
 - Kruskal-Wallis
 - Statistics
 - Hypothesis Testing
 - Non-Parametric Methods
-author_profile: false
-seo_title: "ANOVA vs Kruskal-Wallis: Key Differences and When to Use Them"
-seo_description: "Explore the differences between ANOVA and Kruskal-Wallis tests. Learn when to use parametric (ANOVA) and non-parametric (Kruskal-Wallis) methods for comparing multiple groups."
-excerpt: "Learn the key differences between ANOVA and Kruskal-Wallis tests, and understand when to use each method based on your data's assumptions and characteristics."
-summary: "This article explores the fundamental differences between ANOVA and Kruskal-Wallis tests, with a focus on their assumptions, applications, and when to use each method in data analysis."
-keywords: 
-- ANOVA
-- Kruskal-Wallis
-- Hypothesis Testing
-- Parametric Test
-- Non-Parametric Test
-classes: wide
+title: 'ANOVA vs Kruskal-Wallis: Understanding the Differences and Applications'
 ---
 
 In statistical analysis, comparing multiple groups to determine if they have significantly different means is a common objective. Two of the most widely used methods for this task are the **ANOVA** (Analysis of Variance) test and the **Kruskal-Wallis** test. While both tests are designed to compare more than two groups, they differ fundamentally in their assumptions, methodologies, and applications. Understanding these differences is essential for choosing the correct test for your data.
