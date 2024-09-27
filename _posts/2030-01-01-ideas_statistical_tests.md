@@ -102,10 +102,7 @@ Here are some interesting article ideas centered around statistical tests, desig
 
 
 
-### 15. **"Shapiro-Wilk Test vs. Anderson-Darling Test: Checking Normality in Data"**
-   - Comparison of two common tests for normality: Shapiro-Wilk and Anderson-Darling.
-   - Discuss when to use each test and how to interpret the results.
-   - Application of these tests in determining whether to use parametric or non-parametric methods.
+
 
 ---
 
