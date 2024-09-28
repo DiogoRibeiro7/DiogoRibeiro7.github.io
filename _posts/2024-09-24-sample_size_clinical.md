@@ -22,6 +22,7 @@ keywords:
 seo_description: Learn how to write a comprehensive sample size justification in your
   clinical protocol, ensuring adequate power and statistical rigor in your trial design.
 seo_title: Writing a Proper Sample Size Justification for Clinical Protocols
+seo_type: article
 summary: Proper sample size justification is a critical component of clinical trial
   design, ensuring that the study has enough statistical power to detect meaningful
   outcomes. This guide walks you through the process of writing a thorough sample

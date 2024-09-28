@@ -28,6 +28,7 @@ seo_description: Explore the fundamentals of binary classification in machine le
   including key algorithms, evaluation metrics like precision and recall, and real-world
   applications.
 seo_title: 'Binary Classification in Machine Learning: Methods, Metrics, and Applications'
+seo_type: article
 tags:
 - Binary Classification
 - Supervised Learning

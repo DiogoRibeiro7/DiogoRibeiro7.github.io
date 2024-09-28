@@ -28,6 +28,7 @@ seo_description: Explore five common mistakes in feature engineering, including 
   leakage and over-engineering, and learn how to avoid them for more robust machine
   learning models.
 seo_title: Avoiding 5 Common Feature Engineering Mistakes in Machine Learning
+seo_type: article
 tags:
 - Feature Engineering
 - Data Preprocessing

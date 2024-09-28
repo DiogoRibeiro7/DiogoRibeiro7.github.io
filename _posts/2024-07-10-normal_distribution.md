@@ -9,6 +9,7 @@ header:
   overlay_image: /assets/images/data_science_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
+seo_type: article
 tags:
 - Probability
 - Gaussian Distribution

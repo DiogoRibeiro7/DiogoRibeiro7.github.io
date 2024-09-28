@@ -21,6 +21,7 @@ keywords:
 seo_description: An in-depth explanation of Mean Time Between Failures (MTBF), its
   importance, strengths, weaknesses, and related metrics like MTTR and MTTF.
 seo_title: What is Mean Time Between Failures (MTBF)?
+seo_type: article
 summary: A comprehensive guide on Mean Time Between Failures (MTBF), covering its
   calculation, use cases, strengths, and weaknesses in reliability engineering.
 tags:

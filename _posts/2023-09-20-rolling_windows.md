@@ -26,6 +26,7 @@ keywords:
 seo_description: Learn how rolling windows can be applied in signal processing for
   smoothing, feature extraction, and time-frequency analysis.
 seo_title: Unlock the Power of Rolling Windows in Signal Processing
+seo_type: article
 social_image: /assets/images/rollingwindow.png
 tags:
 - Rolling Windows

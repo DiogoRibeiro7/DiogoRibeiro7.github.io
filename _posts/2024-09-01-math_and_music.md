@@ -25,6 +25,7 @@ seo_description: Explore how mathematics drives electronic music production, fro
   sound synthesis to algorithmic composition. Learn how numbers shape rhythm, signal
   processing, and generative music.
 seo_title: 'The Role of Mathematics in Electronic Music: Sound, Rhythm, and Composition'
+seo_type: article
 summary: This article explores the intersection of mathematics and electronic music,
   highlighting how algorithms and mathematical principles influence sound synthesis,
   rhythm, and generative music creation. It delves into the technical aspects of digital

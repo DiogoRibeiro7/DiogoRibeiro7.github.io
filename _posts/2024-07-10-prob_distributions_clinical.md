@@ -21,6 +21,7 @@ seo_description: Learn about common probability distributions used in clinical t
   including their roles in hypothesis testing and statistical analysis of healthcare
   data.
 seo_title: Common Probability Distributions in Clinical Trials
+seo_type: article
 summary: This article explores key probability distributions used in clinical trials,
   focusing on their applications in hypothesis testing and outcome analysis.
 tags:

@@ -17,6 +17,7 @@ seo_description: Learn the importance of validating anomaly detection models lik
   COPOD. Explore the pitfalls of assuming variable independence in high-dimensional
   data.
 seo_title: 'COPOD Model Validation: Lessons for Anomaly Detection'
+seo_type: article
 summary: Anomaly detection models like COPOD are widely used, but proper validation
   is essential to ensure their reliability, especially in high-dimensional datasets.
   This article explores the challenges of validating third-party models, focusing

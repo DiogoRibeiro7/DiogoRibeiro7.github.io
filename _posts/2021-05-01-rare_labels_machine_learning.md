@@ -23,6 +23,7 @@ seo_description: Explore the impact of rare labels in categorical variables on m
   learning models, particularly their tendency to cause overfitting, and learn how
   to handle rare values using feature engineering.
 seo_title: Handling Rare Labels in Categorical Variables for Machine Learning
+seo_type: article
 summary: This article covers how rare labels in categorical variables can impact machine
   learning models, particularly tree-based methods, and why it's important to address
   these rare labels during preprocessing.

@@ -26,6 +26,7 @@ seo_description: Discover the critical role mathematics plays in modern society,
   technological advancements to its foundational importance in education. Learn how
   math drives innovation and impacts societal development.
 seo_title: 'The Power of Mathematics in Modern Society: Technology and Education'
+seo_type: article
 summary: This article highlights the undervalued role of mathematics in modern society,
   focusing on its contributions to technology, education, and societal progress. It
   discusses how mathematical thinking underpins innovation, problem-solving, and advancements

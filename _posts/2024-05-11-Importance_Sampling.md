@@ -11,6 +11,7 @@ header:
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+seo_type: article
 subtitle: Impact of Importance Sampling on Simulation Accuracy and Computational Economy
 tags:
 - Importance Sampling

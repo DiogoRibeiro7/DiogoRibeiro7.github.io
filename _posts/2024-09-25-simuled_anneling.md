@@ -23,6 +23,7 @@ seo_description: Explore how simulated annealing, a probabilistic technique, can
   machine learning models by navigating complex loss functions and improving model
   performance.
 seo_title: Optimizing Machine Learning Models with Simulated Annealing
+seo_type: article
 summary: Simulated annealing is a probabilistic optimization technique inspired by
   metallurgy. This method is especially useful for optimizing machine learning models
   with complex, non-convex loss functions, allowing them to escape local minima and

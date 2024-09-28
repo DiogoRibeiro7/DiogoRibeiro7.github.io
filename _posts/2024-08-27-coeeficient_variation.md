@@ -24,6 +24,7 @@ seo_description: Explore the Coefficient of Variation (CV) as a statistical tool
   assessing variability. Understand its advantages and limitations in data interpretation
   and analysis.
 seo_title: 'Coefficient of Variation: A Guide to Applications and Limitations'
+seo_type: article
 summary: This article explains the Coefficient of Variation (CV), a statistical measure
   used to compare variability across datasets. It discusses its applications in fields
   like economics, biology, and finance, as well as its limitations when interpreting

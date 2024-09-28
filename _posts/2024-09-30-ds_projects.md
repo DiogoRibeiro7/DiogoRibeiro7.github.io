@@ -20,6 +20,7 @@ keywords:
 seo_description: A detailed checklist for Data Science professionals to validate research
   and model integrity before deployment.
 seo_title: 'Data Science Project Checklist: Ensure Success Before Deployment'
+seo_type: article
 tags:
 - Checklist
 - Model Validation

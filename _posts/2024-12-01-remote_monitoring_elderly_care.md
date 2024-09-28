@@ -22,6 +22,7 @@ seo_description: Explore how IoT-enabled devices, wearables, and health monitors
   using big data to remotely monitor elderly individuals and detect health emergencies
   in real time.
 seo_title: IoT and Big Data in Remote Monitoring for Elderly Care
+seo_type: article
 summary: IoT-enabled devices and big data are transforming elderly care by enabling
   real-time remote monitoring. From wearable devices to smart home systems, these
   technologies offer continuous health tracking and quick responses to emergencies

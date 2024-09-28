@@ -12,6 +12,7 @@ header:
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+seo_type: article
 subtitle: Techniques to Prevent Overfitting and Improve Model Performance
 tags:
 - Regularization

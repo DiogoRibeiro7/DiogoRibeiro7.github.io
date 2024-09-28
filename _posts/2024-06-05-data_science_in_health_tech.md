@@ -28,6 +28,7 @@ seo_description: Discover how data science is revolutionizing healthcare technol
   through predictive analytics, machine learning, personalized medicine, and real-time
   monitoring to improve patient care and operational efficiency.
 seo_title: The Advantages of Data Science in Healthcare Technology
+seo_type: article
 summary: This article explores how data science is transforming healthcare technology,
   focusing on predictive analytics, early diagnosis, personalized medicine, and improving
   patient outcomes through machine learning and real-time monitoring.

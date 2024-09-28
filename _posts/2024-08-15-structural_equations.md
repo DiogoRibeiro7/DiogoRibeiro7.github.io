@@ -26,6 +26,7 @@ seo_description: Explore a detailed guide on Structural Equation Modeling (SEM) 
   latent variables, including path analysis, measurement models, and techniques for
   handling exogenous and endogenous variables.
 seo_title: Guide to Structural Equation Modeling with Latent Variables
+seo_type: article
 summary: This comprehensive guide explains the key concepts and techniques of Structural
   Equation Modeling (SEM) with latent variables. It includes path analysis, factor
   loadings, variance-covariance matrices, and handling endogenous and exogenous variables.

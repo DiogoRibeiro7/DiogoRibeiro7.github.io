@@ -23,6 +23,7 @@ seo_description: An in-depth exploration of multicollinearity in regression anal
   its consequences, common misconceptions, identification techniques, and methods
   to address it.
 seo_title: Understanding Multicollinearity in Regression Models
+seo_type: article
 summary: Multicollinearity occurs when independent variables in a regression model
   are highly correlated, leading to unreliable coefficient estimates. This article
   explores the causes and consequences of multicollinearity, clarifies misconceptions,

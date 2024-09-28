@@ -25,6 +25,7 @@ seo_description: Explore pre-commit tools in Python for ensuring code quality an
   managing Git hooks. Learn how to integrate automated checks into your development
   process to improve code consistency.
 seo_title: 'Pre-Commit Tools in Python: Best Practices and Guide'
+seo_type: article
 summary: This guide provides an in-depth overview of pre-commit tools in Python, covering
   how to set up and configure them to improve code quality and automate Git hooks.
   It includes best practices for using pre-commit to ensure consistency and streamline

@@ -23,6 +23,7 @@ seo_description: Explore the Kruskal-Wallis Test, a non-parametric alternative t
   ANOVA for comparing independent samples. Understand its applications, assumptions,
   and how to interpret results in data analysis.
 seo_title: 'Kruskal-Wallis Test: Guide to Non-Parametric Statistical Analysis'
+seo_type: article
 summary: This comprehensive guide explains the Kruskal-Wallis Test, a non-parametric
   statistical method ideal for comparing multiple independent samples without assuming
   normal distribution. It discusses when to use the test, its assumptions, and how

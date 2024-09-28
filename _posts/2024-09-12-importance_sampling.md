@@ -25,6 +25,7 @@ seo_description: Learn how Importance Sampling enhances Monte Carlo simulations 
   estimating portfolio credit risk, especially in the context of copula models and
   rare events.
 seo_title: Importance Sampling for Portfolio Credit Risk
+seo_type: article
 summary: Importance Sampling is an advanced technique used to improve the efficiency
   of Monte Carlo simulations in estimating portfolio credit risk. By focusing computational
   resources on rare but impactful loss events, it enhances the accuracy of risk predictions,

@@ -24,6 +24,7 @@ seo_description: A deep dive into Markov systems, including Markov chains and Hi
   Markov Models, and their applications in real-world scenarios like parking lot occupancy
   prediction.
 seo_title: 'Markov Systems: Foundations and Applications'
+seo_type: article
 subtitle: Exploring the Foundations and Applications of Markov Models in Real-World
   Scenarios
 summary: This article explores the foundations and real-world applications of Markov

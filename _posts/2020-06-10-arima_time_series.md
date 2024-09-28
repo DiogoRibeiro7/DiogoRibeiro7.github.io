@@ -22,6 +22,7 @@ seo_description: Explore the fundamentals of ARIMA (AutoRegressive Integrated Mo
   Average) model, its components, parameter identification, validation, and applications.
   Comparison with ARIMAX, SARIMA, and ARMA.
 seo_title: 'Comprehensive ARIMA Model Guide: Time Series Analysis'
+seo_type: article
 summary: This guide provides an in-depth exploration of ARIMA modeling for time series
   data, discussing its core components, parameter estimation, validation, and comparison
   with models like ARIMAX, SARIMA, and ARMA.

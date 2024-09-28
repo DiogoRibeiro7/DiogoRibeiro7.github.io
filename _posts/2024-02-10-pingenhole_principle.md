@@ -26,6 +26,7 @@ keywords:
 seo_description: Explore the simplicity and power of the Pigeonhole Principle, delving
   into its applications across combinatorics, number theory, geometry, and more.
 seo_title: 'The Elegance of the Pigeonhole Principle: Universal Applications in Mathematics'
+seo_type: article
 subtitle: Exploring the Profound Simplicity and Universal Applications of a Foundational
   Mathematical Concept
 summary: This article delves into the Pigeonhole Principle, illustrating its profound

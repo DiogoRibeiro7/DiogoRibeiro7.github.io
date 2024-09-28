@@ -24,6 +24,7 @@ seo_description: A detailed exploration of Ordinary Least Squares (OLS) regressi
   in statistics, machine learning, and data science.
 seo_title: 'Ordinary Least Squares (OLS) Regression: Understanding Properties and
   Applications'
+seo_type: article
 summary: This article covers Ordinary Least Squares (OLS) regression, one of the most
   commonly used techniques in statistics, data science, and machine learning. Learn
   about its key properties, how it works, and its wide range of applications in modeling

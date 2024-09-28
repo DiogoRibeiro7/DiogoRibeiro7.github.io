@@ -28,6 +28,7 @@ seo_description: Explore the vulnerability of Large Language Models like GPT whe
   open-source data platforms such as Stack Overflow close, and the potential impact
   on AI's evolution.
 seo_title: The Fragility of Large Language Models in a World Without Open-Source Data
+seo_type: article
 subtitle: Exploring the Fragility and Future of Machine Learning Without Open Data
 tags:
 - LLM

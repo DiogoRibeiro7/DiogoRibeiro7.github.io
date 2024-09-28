@@ -28,6 +28,7 @@ seo_description: Explore how to implement continuous machine learning deployment
   edge devices using MLOps platforms, focusing on a real-world example of a smart
   agriculture system.
 seo_title: 'Continuous Machine Learning Deployment for Edge Devices: A Practical Approach'
+seo_type: article
 social_image: /assets/images/edge-devices.png
 summary: This article explores how to implement continuous machine learning deployment
   on edge devices using MLOps and IoT management platforms. Focusing on a real-world

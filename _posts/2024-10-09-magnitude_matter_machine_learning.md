@@ -24,6 +24,7 @@ seo_description: An in-depth discussion on the importance of variable magnitude 
   machine learning models, its impact on regression coefficients, and how feature
   scaling improves model performance.
 seo_title: Does the Magnitude of the Variable Matter in Machine Learning Models?
+seo_type: article
 summary: This article discusses the importance of variable magnitude in machine learning
   models, how feature scaling enhances model performance, and the distinctions between
   models that are sensitive to the scale of variables and those that are not.

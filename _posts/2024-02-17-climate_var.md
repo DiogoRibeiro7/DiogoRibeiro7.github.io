@@ -28,6 +28,7 @@ seo_description: An in-depth analysis of Climate Value at Risk (VaR) from a data
   perspective, exploring its importance in financial risk assessment amidst climate
   change.
 seo_title: 'Climate VaR: Data Science and Financial Risk Assessment'
+seo_type: article
 tags:
 - Climate Change
 - Value at Risk

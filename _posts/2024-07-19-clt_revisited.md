@@ -24,6 +24,7 @@ seo_description: A detailed study on the extension of the Central Limit Theorem 
   m-dependent random variables under sub-linear expectations, focusing on Rosenthal's
   inequality and handling truncated variables.
 seo_title: Central Limit Theorem for m-dependent Random Variables
+seo_type: article
 summary: This article extends the classical Central Limit Theorem (CLT) to m-dependent
   random variables within the sub-linear expectation framework. It incorporates Rosenthal's
   inequality for m-dependent sequences, examines truncated conditions, and discusses

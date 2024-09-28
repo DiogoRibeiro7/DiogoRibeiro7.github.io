@@ -32,6 +32,7 @@ seo_description: An extensive look at the mathematical foundations of machine le
   exploring classification, regression, empirical risk minimization, and popular algorithms
   like decision trees and random forests.
 seo_title: 'Mathematics of Machine Learning: Key Concepts and Methods'
+seo_type: article
 tags:
 - Machine Learning
 - Mathematical Models

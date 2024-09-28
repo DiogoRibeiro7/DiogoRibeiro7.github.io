@@ -24,6 +24,7 @@ seo_description: Explore the power of dimensionality reduction through spectral 
   Learn how this algorithm enhances data analysis and pattern recognition in machine
   learning.
 seo_title: 'The Power of Dimensionality Reduction: Spectral Clustering Guide'
+seo_type: article
 subtitle: A Comprehensive Guide to Spectral Clustering
 tags:
 - Data Science

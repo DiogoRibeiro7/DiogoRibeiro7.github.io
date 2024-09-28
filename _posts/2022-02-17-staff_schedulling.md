@@ -27,6 +27,7 @@ keywords:
 seo_description: Learn how to use linear programming with the PuLP library in Python
   to optimize staff scheduling and minimize costs in a 24/7 operational environment.
 seo_title: Staff Scheduling Optimization with Linear Programming in Python
+seo_type: article
 summary: This article discusses using linear programming and Python’s PuLP library
   to optimize staff scheduling, focusing on cost minimization and meeting operational
   requirements efficiently.

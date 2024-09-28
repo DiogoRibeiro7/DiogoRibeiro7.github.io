@@ -26,6 +26,7 @@ seo_description: Discover the deep connections between combinatorics and probabi
   theory, exploring their mathematical foundations, applications, and the synergies
   that drive statistical analysis and data science.
 seo_title: 'Combinatorics and Probability: Exploring Mathematical Synergies'
+seo_type: article
 subtitle: Unveiling Mathematical Synergies
 summary: This article explores the intersection of combinatorics and probability theory,
   uncovering how their mathematical synergies solve complex problems in data science,

@@ -27,6 +27,7 @@ seo_description: Explore how data science is driving innovation in climate model
   risk assessment, and policy-making to mitigate global warming. Learn about the latest
   applications of machine learning and data analysis in tackling the climate crisis.
 seo_title: 'Data Science and Climate Change: Solutions for Global Warming'
+seo_type: article
 summary: As the climate crisis intensifies, data science has emerged as a key player
   in understanding and mitigating global warming. This article delves into how cutting-edge
   techniques such as climate modeling, machine learning, and data analysis are transforming

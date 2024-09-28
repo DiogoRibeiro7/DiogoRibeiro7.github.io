@@ -22,6 +22,7 @@ keywords:
 seo_description: Learn how monotonic constraints improve predictions in causal machine
   learning and real-world applications like real estate, healthcare, and marketing.
 seo_title: Causal Machine Learning with Monotonic Constraints
+seo_type: article
 summary: Monotonic constraints play a vital role in enhancing the reliability and
   interpretability of machine learning models, particularly in causal inference and
   decision-making applications. This article explores how monotonic constraints are

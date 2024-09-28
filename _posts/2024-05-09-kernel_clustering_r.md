@@ -11,6 +11,7 @@ header:
   overlay_image: /assets/images/data_science_5.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
+seo_type: article
 subtitle: A Practical Guide to Advanced Data Segmentation
 tags:
 - Kernel Clustering in R

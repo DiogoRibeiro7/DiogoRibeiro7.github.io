@@ -28,6 +28,7 @@ seo_description: Explore the mathematical modeling of pedestrian behavior, focus
   planning, crowd management, and traffic control.
 seo_title: 'Mathematical Models of Pedestrian Behavior: Insights into Urban Planning
   and Crowd Management'
+seo_type: article
 subtitle: Understanding Pedestrian Behavior through Mathematical Models
 tags:
 - Mathematical Modeling

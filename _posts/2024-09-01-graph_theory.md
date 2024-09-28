@@ -24,6 +24,7 @@ seo_description: Discover the role of graph theory in optimizing production syst
   and supply chains. This article covers network optimization, resource allocation,
   and key strategies for improving operational efficiency.
 seo_title: Graph Theory in Production Systems and Supply Chain Optimization
+seo_type: article
 summary: This article examines the practical applications of graph theory in optimizing
   production systems and supply chains. It focuses on network optimization and resource
   allocation techniques that enhance operational efficiency and decision-making in

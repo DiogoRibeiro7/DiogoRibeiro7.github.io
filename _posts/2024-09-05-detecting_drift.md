@@ -24,6 +24,7 @@ seo_description: Understand why hypothesis testing may fall short for detecting 
   drift and explore how Bayesian probability provides a better framework for monitoring
   and adapting to data shifts in machine learning models.
 seo_title: 'Data Drift Detection: Limitations of Hypothesis Testing and Bayesian Alternatives'
+seo_type: article
 summary: This article explores the limitations of using hypothesis testing to detect
   data drift in machine learning models. It introduces Bayesian probability as an
   alternative approach, offering a more flexible and adaptive method for monitoring

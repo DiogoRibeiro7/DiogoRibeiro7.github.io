@@ -22,6 +22,7 @@ keywords:
 seo_description: Explore 15 ideas for writing articles on various statistical tests,
   including their differences, assumptions, and applications in data analysis.
 seo_title: '15 Article Ideas: Writing about Statistical Tests'
+seo_type: article
 summary: This article provides 15 ideas for articles on statistical tests, including
   their use cases, assumptions, and applications in real-world data analysis.
 tags:

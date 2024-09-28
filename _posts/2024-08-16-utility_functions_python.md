@@ -25,6 +25,7 @@ seo_description: Explore the design and implementation of Python utility classes
   This article provides examples, best practices, and insights for creating reusable
   components using object-oriented programming.
 seo_title: 'Python Utility Classes: Design and Implementation Guide'
+seo_type: article
 summary: This article provides a deep dive into Python utility classes, discussing
   their design, best practices, and implementation. It covers object-oriented programming
   principles and shows how to build reusable and efficient utility classes in Python.

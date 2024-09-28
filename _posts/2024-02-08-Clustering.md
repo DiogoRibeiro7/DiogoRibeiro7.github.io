@@ -27,6 +27,7 @@ seo_description: Explore the mysteries of clustering algorithms like K-Means, DB
   and Spectral Clustering. Learn how these techniques reveal hidden patterns in data
   science, machine learning, and bioinformatics.
 seo_title: 'Mysteries of Clustering: A Deep Dive into Data''s Inner Circles'
+seo_type: article
 subtitle: A Dive into Data's Inner Circles
 tags:
 - Data Science

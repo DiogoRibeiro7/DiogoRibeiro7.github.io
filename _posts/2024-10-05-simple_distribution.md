@@ -20,6 +20,7 @@ seo_description: Explore the effectiveness of using simple distributional proper
   as a baseline for time-series classification, compared to complex deep learning
   models.
 seo_title: Comprehensive Review of Distributional Properties in Time-Series Classification
+seo_type: article
 summary: This article reviews time-series classification techniques, highlighting
   the importance of simple distributional properties such as mean and standard deviation
   as a baseline.

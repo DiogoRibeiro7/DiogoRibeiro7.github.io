@@ -22,6 +22,7 @@ seo_description: Managing data science projects like engineering projects sets t
   up to fail. Learn the key differences in scope, timelines, and processes between
   the two fields.
 seo_title: 'Managing Data Science Projects vs Engineering: Why It Fails'
+seo_type: article
 summary: This article explores why managing data science projects with the same expectations
   as engineering leads to failure, explaining how the unknown nature of data science
   solutions differs from engineering's structured approach.

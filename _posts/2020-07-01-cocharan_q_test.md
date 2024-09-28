@@ -22,6 +22,7 @@ keywords:
 seo_description: Learn about Cochran’s Q test, its use for comparing proportions across
   related groups, and its connection with McNemar’s test and logistic regression.
 seo_title: 'Cochran’s Q Test: Comparing Proportions in Related Groups'
+seo_type: article
 summary: This article explores Cochran’s Q test, a non-parametric method for comparing
   proportions in related groups, particularly in binary data. It also covers the relationship
   between Cochran's Q, McNemar's test, and logistic regression.

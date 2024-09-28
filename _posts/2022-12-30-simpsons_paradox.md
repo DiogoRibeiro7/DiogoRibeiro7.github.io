@@ -16,6 +16,7 @@ seo_description: Explore the theoretical foundations of Simpson’s Paradox, its
   in data analysis, and how lurking variables and data aggregation lead to contradictory
   statistical conclusions.
 seo_title: 'Simpson''s Paradox: Theory, Lurking Variables, and Data Aggregation'
+seo_type: article
 tags:
 - Simpson's Paradox
 - Lurking Variables

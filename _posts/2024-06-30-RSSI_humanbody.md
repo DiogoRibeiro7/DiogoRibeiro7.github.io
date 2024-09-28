@@ -26,6 +26,7 @@ seo_description: Discover how the presence of a human body impacts RSSI in wirel
   networks and explore strategies for overcoming challenges like signal attenuation,
   interference, and multipath effects.
 seo_title: 'Effects of a Human Body on RSSI: Challenges and Mitigations'
+seo_type: article
 summary: This article examines how human bodies affect Received Signal Strength Indicator
   (RSSI), the resulting challenges like signal attenuation and interference, and key
   techniques for mitigating these effects.

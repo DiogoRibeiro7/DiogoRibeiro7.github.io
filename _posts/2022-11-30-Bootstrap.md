@@ -29,6 +29,7 @@ seo_description: Explore bootstrapping, a resampling method in statistics used t
   estimate sampling distributions. Learn about its applications, implementation, and
   limitations.
 seo_title: 'Understanding Bootstrapping: A Resampling Method in Statistics'
+seo_type: article
 summary: An overview of bootstrapping, its significance as a resampling method in
   statistics, and how it is used to estimate the sampling distribution of a statistic.
 tags:

@@ -25,6 +25,7 @@ seo_description: Discover the intricacies of real-world data distributions, incl
   heavy-tailed distributions, the Central Limit Theorem, and Extreme Value Theory.
   Learn how these concepts affect statistical analysis and machine learning.
 seo_title: 'Beyond Normal Distributions: Exploring Real-World Data Complexity'
+seo_type: article
 summary: This article delves into the complexity of real-world data distributions,
   moving beyond the assumptions of normality. It covers the importance of log-normal
   and heavy-tailed distributions, the Central Limit Theorem, and the application of

@@ -22,6 +22,7 @@ seo_description: A methodology for threshold classification in zero-inflated tim
   accuracy.
 seo_title: Threshold Classification for Zero-Inflated Time Series Using Stationary
   Distributions
+seo_type: article
 summary: A novel approach for threshold classification in zero-inflated time series
   data using stationary distributions derived from time series models. This method
   addresses the limitations of traditional techniques by leveraging parametric distribution

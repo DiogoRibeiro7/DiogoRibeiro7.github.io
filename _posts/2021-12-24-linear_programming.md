@@ -35,6 +35,7 @@ seo_description: A detailed exploration of linear programming, its traditional m
   methods such as PDLP, a revolutionary solver for large-scale LP problems.
 seo_title: 'Classic Linear Programming and PDLP: Scaling Solutions for Modern Computational
   Optimization'
+seo_type: article
 tags:
 - Linear Programming
 - Primal-Dual Hybrid Gradient Method

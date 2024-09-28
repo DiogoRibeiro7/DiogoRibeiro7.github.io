@@ -27,6 +27,7 @@ seo_description: Explore Topological Data Analysis (TDA) and its transformative 
   in data science, from persistent homology to the mapper algorithm, revealing hidden
   structures in complex datasets.
 seo_title: 'Convergence of Topology and Data Science: Uncovering Insights with TDA'
+seo_type: article
 subtitle: Exploring Topological Data Analysis and Its Impact on Uncovering Hidden
   Insights in Complex Data Sets
 tags:

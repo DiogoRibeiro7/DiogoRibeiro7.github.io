@@ -24,6 +24,7 @@ seo_description: Explore the differences between the Shapiro-Wilk and Anderson-D
   tests for checking normality in data. Learn when to use each test and how to interpret
   the results.
 seo_title: 'Shapiro-Wilk Test vs. Anderson-Darling Test: Normality Tests Explained'
+seo_type: article
 summary: This article explores two common normality tests—the Shapiro-Wilk test and
   the Anderson-Darling test—discussing their differences, when to use each, and how
   to interpret their results to determine the appropriate statistical method.

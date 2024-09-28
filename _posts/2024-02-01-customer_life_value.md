@@ -28,6 +28,7 @@ seo_description: Explore Customer Lifetime Value (CLV) and its role in driving b
   growth. Learn how CLV influences customer retention, acquisition, and marketing
   strategies.
 seo_title: 'Understanding Customer Lifetime Value: A Key to Business Growth'
+seo_type: article
 subtitle: A Key Metric for Business Growth
 tags:
 - CLV

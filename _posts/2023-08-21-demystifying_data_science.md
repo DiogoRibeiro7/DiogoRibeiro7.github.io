@@ -32,6 +32,7 @@ keywords:
 seo_description: Learn what data science is and how it can transform your business
   through improved decision-making, cost savings, and increased revenue.
 seo_title: 'Demystifying Data Science: A Guide to Its Benefits for Business'
+seo_type: article
 subtitle: What It Is and How It Can Help Your Business
 tags:
 - Data Science

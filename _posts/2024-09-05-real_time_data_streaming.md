@@ -24,6 +24,7 @@ seo_description: Explore real-time data streaming using Python and Apache Kafka.
   article explains the setup, core concepts, and best practices for creating efficient
   real-time data processing pipelines.
 seo_title: Real-time Data Streaming with Python and Apache Kafka
+seo_type: article
 summary: This article provides a comprehensive guide to implementing real-time data
   streaming using Python and Apache Kafka. It explains how to set up Kafka, stream
   data efficiently, and manage real-time data pipelines in Python, with a focus on

@@ -28,6 +28,7 @@ keywords:
 seo_description: A comprehensive guide to Principal Component Analysis (PCA), covering
   feature selection, dimension reduction, explained variance, and outlier detection.
 seo_title: Principal Component Analysis (PCA) Guide
+seo_type: article
 summary: Principal Component Analysis (PCA) is a powerful technique in data science,
   used for reducing the dimensionality of large datasets while preserving essential
   patterns. This article offers a step-by-step guide to understanding PCA, from its

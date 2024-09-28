@@ -22,6 +22,7 @@ seo_description: A review of how simple time-series classification models can be
   using feature sets like catch22 and the practical implications of balancing complexity
   and interpretability.
 seo_title: 'Extending Simple Models: Adding Catch22 for Time-Series Classification'
+seo_type: article
 summary: This article discusses when and how to extend simple time-series classification
   models by introducing additional features, such as catch22, and the practical implications
   of using these models in various domains.

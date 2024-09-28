@@ -27,6 +27,7 @@ seo_description: Explore the crucial role of communication in data-driven enviro
   examining how to balance data analysis with effective storytelling and context to
   drive actionable insights.
 seo_title: 'Data and Communication: Orchestrating a Harmonious Future'
+seo_type: article
 tags:
 - Communication
 - Data Analysis

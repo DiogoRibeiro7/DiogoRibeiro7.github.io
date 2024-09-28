@@ -25,6 +25,7 @@ seo_description: Understand why mastering the fundamentals of machine learning i
   more critical than focusing on specific tools. Explore key principles that drive
   successful machine learning projects.
 seo_title: 'Machine Learning Fundamentals vs Tools: What Matters Most'
+seo_type: article
 summary: Machine learning has become one of the most influential fields in technology
   today, with new tools and frameworks constantly emerging. However, despite the rapid
   development of sophisticated software, it's the foundational principles of machine

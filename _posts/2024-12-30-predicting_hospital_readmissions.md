@@ -22,6 +22,7 @@ seo_description: Explore how machine learning models can predict hospital readmi
   among elderly patients by analyzing post-discharge data, treatment adherence, and
   health conditions.
 seo_title: Machine Learning for Predicting Hospital Readmissions in Elderly Patients
+seo_type: article
 summary: Hospital readmissions among elderly patients are a significant healthcare
   challenge. This article examines how machine learning algorithms are being used
   to predict readmission risks by analyzing post-discharge data, health records, and

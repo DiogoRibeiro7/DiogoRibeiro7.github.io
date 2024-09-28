@@ -30,6 +30,7 @@ seo_description: A deep dive into the math, theory, and practical considerations
   Kernel Density Estimation (KDE), covering its core components, bandwidth selection,
   kernel functions, multivariate KDE, and real-world applications.
 seo_title: Exploring the Math Behind Kernel Density Estimation
+seo_type: article
 summary: Kernel Density Estimation (KDE) is a non-parametric method used to estimate
   the probability density function of data without assuming a specific distribution.
   This article explores the mathematical foundations behind KDE, including the role
