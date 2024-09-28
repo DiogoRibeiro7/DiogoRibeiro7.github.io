@@ -49,15 +49,15 @@ The classical Central Limit Theorem can be stated as follows:
 
 Let $$X_1, X_2, \dots, X_n$$ be independent and identically distributed random variables with mean $$\mu$$ and variance $$\sigma^2$$. Then, the properly normalized sum of these variables,
 
-\[
+$$
 S_n = \frac{1}{\sqrt{n}} \left( \sum_{i=1}^n X_i - n\mu \right),
-\]
+$$
 
 converges in distribution to a standard normal random variable as the sample size grows:
 
-\[
+$$
 S_n \overset{d}{\rightarrow} \mathcal{N}(0, 1) \quad \text{as} \quad n \rightarrow \infty.
-\]
+$$
 
 This powerful result underlies many aspects of statistical inference. However, it crucially relies on the assumption that the $$X_i$$ are independent. In many real-world cases, such as time series data in finance or economics, this assumption does not hold. In addition, the classical expectation operator is linear and additive, which assumes that a single probabilistic model governs the process. However, there may be uncertainty or ambiguity in the underlying model itself, requiring a more general framework.
 
@@ -70,6 +70,7 @@ This powerful result underlies many aspects of statistical inference. However, i
 ### Generalizing the CLT
 
 To address these limitations, we explore two generalizations of the CLT:
+
 1. **$$m$$-Dependence**: A more flexible dependence structure where each random variable depends only on the preceding $$m$$ variables.
 2. **Sub-linear Expectations**: A framework that extends classical expectations to non-additive measures, accommodating uncertainty about the underlying probability measure.
 
@@ -81,9 +82,9 @@ A sequence of random variables $$\{X_i\}_{i=1}^n$$ is said to be $$m$$-dependent
 
 Formally, we say that $$X_1, X_2, \dots, X_n$$ is $$m$$-dependent if for all $$i$$ and $$j$$ such that $$|i - j| > m$$, the conditional independence holds:
 
-\[
+$$
 X_i \perp X_j \quad \text{whenever} \quad |i - j| > m.
-\]
+$$
 
 ### Examples of $$m$$-dependence
 
@@ -99,9 +100,9 @@ $$m$$-dependence strikes a balance between full independence and complete depend
 
 Classical probability theory operates under the assumption of a single probability measure $$P$$, and the expectation of a random variable $$X$$ is given by the linear operator:
 
-\[
+$$
 \mathbb{E}[X] = \int X dP.
-\]
+$$
 
 In many situations, however, the true underlying probability measure may not be known, or there may be ambiguity in the model. This is where sub-linear expectations come into play. Introduced by Peng (2007), sub-linear expectations extend classical expectations to a non-additive framework, allowing for greater flexibility in the presence of uncertainty.
 
@@ -130,9 +131,9 @@ Rosenthal's inequality provides a powerful tool for controlling the moments of s
 
 For independent random variables $$X_1, X_2, \dots, X_n$$ with finite moments, Rosenthal's inequality states that for any $$p \geq 2$$, there exists a constant $$C_p$$ such that:
 
-\[
+$$
 \mathbb{E} \left( \left| \sum_{i=1}^n X_i \right|^p \right) \leq C_p \left( \sum_{i=1}^n \mathbb{E}(|X_i|^p) + \left( \sum_{i=1}^n \mathbb{E}(X_i^2) \right)^{p/2} \right).
-\]
+$$
 
 This inequality provides an upper bound on the $$p$$-th moment of the sum of independent random variables. The extension of this result to $$m$$-dependent random variables is non-trivial, as it requires taking into account the dependencies between the variables.
 
@@ -142,9 +143,9 @@ For $$m$$-dependent random variables, Rosenthal’s inequality can be extended a
 
 Let $$X_1, X_2, \dots, X_n$$ be an $$m$$-dependent sequence of random variables with finite moments. Then, for any $$p \geq 2$$, there exists a constant $$C_p$$ such that:
 
-\[
+$$
 \mathbb{E} \left( \left| \sum_{i=1}^n X_i \right|^p \right) \leq C_p \left( \sum_{i=1}^n \mathbb{E}(|X_i|^p) + \sum_{k=1}^m \left( \sum_{i=1}^n \mathbb{E}(X_i^2) \right)^{p/2} \right).
-\]
+$$
 
 This inequality plays a central role in the proof of the CLT for $$m$$-dependent sequences, as it allows us to control the higher moments of the sum of dependent random variables, ensuring that the sum converges to a $$G$$-normal distribution under sub-linear expectations.
 
