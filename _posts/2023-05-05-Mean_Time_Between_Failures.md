@@ -20,6 +20,7 @@ keywords:
 - Reliability Metrics
 - System Maintenance
 - Predictive Maintenance
+- python
 seo_description: An in-depth explanation of Mean Time Between Failures (MTBF), its
   importance, strengths, weaknesses, and related metrics like MTTR and MTTF.
 seo_title: What is Mean Time Between Failures (MTBF)?
@@ -30,6 +31,7 @@ tags:
 - MTBF
 - Reliability Metrics
 - Predictive Maintenance
+- python
 title: Understanding Mean Time Between Failures (MTBF)
 ---
 

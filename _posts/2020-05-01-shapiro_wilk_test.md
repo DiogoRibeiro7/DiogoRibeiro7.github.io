@@ -27,9 +27,9 @@ seo_description: Explore the differences between the Shapiro-Wilk and Anderson-D
   the results.
 seo_title: 'Shapiro-Wilk Test vs. Anderson-Darling Test: Normality Tests Explained'
 seo_type: article
-summary: "This article explores two common normality tests\u2014the Shapiro-Wilk test\
-  \ and the Anderson-Darling test\u2014discussing their differences, when to use each,\
-  \ and how to interpret their results to determine the appropriate statistical method."
+summary: This article explores two common normality tests—the Shapiro-Wilk test and
+  the Anderson-Darling test—discussing their differences, when to use each, and how
+  to interpret their results to determine the appropriate statistical method.
 tags:
 - Anderson-Darling Test
 - Normality Tests

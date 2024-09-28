@@ -27,6 +27,7 @@ keywords:
 - data resampling techniques
 - bootstrap in hypothesis testing
 - variance estimation
+- python
 seo_description: Explore bootstrapping, a resampling method in statistics used to
   estimate sampling distributions. Learn about its applications, implementation, and
   limitations.
@@ -37,6 +38,7 @@ summary: An overview of bootstrapping, its significance as a resampling method i
 tags:
 - Bootstrapping
 - Resampling
+- python
 title: 'Understanding Bootstrapping: A Resampling Method in Statistics'
 ---
 

@@ -14,6 +14,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
   twitter_image: /assets/images/data_science_3.jpg
+keywords:
+- python
 seo_description: Explore Gaussian Processes and their application in time-series analysis.
   Learn the theory, mathematical background, and practical implementations in Python.
 seo_title: 'Gaussian Processes for Time Series: A Deep Dive in Python'
@@ -23,6 +25,7 @@ tags:
 - Time Series
 - Bayesian Inference
 - Python
+- python
 title: Gaussian Processes for Time-Series Analysis in Python
 ---
 

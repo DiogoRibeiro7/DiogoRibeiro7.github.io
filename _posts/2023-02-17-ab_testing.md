@@ -26,6 +26,9 @@ keywords:
 - Python for A/B Testing
 - R for Statistical Analysis
 - JavaScript for A/B Testing
+- r
+- javascript
+- python
 seo_description: Explore advanced statistical concepts behind sequential testing in
   A/B testing. Learn about SPRT, error control, practical implementation, and potential
   pitfalls.
@@ -35,6 +38,9 @@ tags:
 - A/B Testing
 - Sequential Testing
 - Statistical Methods
+- r
+- javascript
+- python
 title: Advanced Statistical Methods for Efficient A/B Testing
 ---
 

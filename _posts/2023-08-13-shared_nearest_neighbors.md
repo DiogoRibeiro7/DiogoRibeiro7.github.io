@@ -22,6 +22,7 @@ keywords:
 - High Dimensionality
 - Distance Metrics
 - Machine Learning
+- python
 seo_description: An exploration of Shared Nearest Neighbors (SNN) as a distance metric,
   and its application in outlier detection, clustering, and density-based algorithms.
 seo_title: Shared Nearest Neighbors in Outlier Detection
@@ -38,6 +39,7 @@ tags:
 - Data Science
 - Distance Metrics
 - k-Nearest Neighbors
+- python
 title: Exploring Shared Nearest Neighbors (SNN) for Outlier Detection
 ---
 

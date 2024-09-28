@@ -29,6 +29,7 @@ keywords:
 - improving customer lifetime value
 - customer profitability analysis
 - CLV metrics
+- python
 seo_description: Explore an in-depth guide to Customer Lifetime Value (CLV), covering
   calculation, prediction, integration with business data, and its role in data-driven
   marketing strategies.
@@ -43,6 +44,7 @@ tags:
 - CLV
 - Predictive Analytics
 - Marketing Strategy
+- python
 title: 'Customer Lifetime Value: An In-Depth Exploration for Data Practitioners and
   Marketers'
 ---

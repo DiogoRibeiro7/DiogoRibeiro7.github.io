@@ -27,6 +27,7 @@ keywords:
 - PCA for machine learning
 - pattern recognition
 - data compression
+- python
 seo_description: A comprehensive guide to Principal Component Analysis (PCA), covering
   feature selection, dimension reduction, explained variance, and outlier detection.
 seo_title: Principal Component Analysis (PCA) Guide
@@ -41,6 +42,7 @@ summary: Principal Component Analysis (PCA) is a powerful technique in data scie
 tags:
 - PCA
 - Dimensionality Reduction
+- python
 title: 'Understanding PCA: A Step-by-Step Guide to Principal Component Analysis'
 ---
 

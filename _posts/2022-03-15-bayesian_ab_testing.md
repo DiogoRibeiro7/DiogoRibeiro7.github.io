@@ -27,6 +27,7 @@ keywords:
 - online experiments
 - marketing optimization
 - credible intervals
+- python
 seo_description: Learn how Bayesian A/B testing provides nuanced insights into conversion
   rates, offering a robust alternative to traditional frequentist methods in data
   analysis.
@@ -35,6 +36,7 @@ seo_type: article
 tags:
 - A/B Testing
 - Bayesian Methods
+- python
 title: A Guide to Bayesian A/B Testing for Conversion Rates
 ---
 
