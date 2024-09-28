@@ -9,9 +9,11 @@ excerpt: An in-depth look into ergodicity and its applications in statistical an
   and Python simulations.
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - ergodicity
 - statistical analysis

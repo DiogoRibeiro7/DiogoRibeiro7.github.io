@@ -8,9 +8,11 @@ excerpt: Learn what the False Positive Rate (FPR) is, how it impacts machine lea
   models, and when to use it for better evaluation.
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - False Positive Rate
 - FPR

@@ -10,9 +10,11 @@ excerpt: Feature engineering is crucial in machine learning, but it's easy to ma
   and provides strategies to avoid them.
 header:
   image: /assets/images/data_science_5.jpg
+  og_image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_5.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
+  twitter_image: /assets/images/data_science_2.jpg
 keywords:
 - Feature Engineering Mistakes
 - Data Preprocessing

@@ -9,9 +9,11 @@ excerpt: An in-depth review of the role of simple distributional properties, lik
   mean and standard deviation, in time-series classification as a baseline approach.
 header:
   image: /assets/images/data_science_7.jpg
+  og_image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
+  twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - Time-Series Classification
 - Simple Distributional Properties

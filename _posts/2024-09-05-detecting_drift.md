@@ -10,9 +10,11 @@ excerpt: Explore the challenges of using traditional hypothesis testing for dete
   a more robust alternative for monitoring data shifts.
 header:
   image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_9.jpg
 keywords:
 - Data drift detection
 - Hypothesis testing limitations

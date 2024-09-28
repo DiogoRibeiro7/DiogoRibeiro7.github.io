@@ -9,9 +9,11 @@ excerpt: This article dives into the implementation of continuous machine learni
   agriculture use case.
 header:
   image: /assets/images/Edge-Computing.png
+  og_image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/Edge-Computing.png
   show_overlay_excerpt: false
   teaser: /assets/images/Edge-Computing.png
+  twitter_image: /assets/images/data_science_2.jpg
 keywords:
 - Edge Machine Learning
 - Continuous Deployment on Edge Devices

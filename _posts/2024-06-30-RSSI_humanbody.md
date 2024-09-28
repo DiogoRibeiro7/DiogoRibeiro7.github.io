@@ -10,9 +10,11 @@ excerpt: Explore the impact of human presence on RSSI and the challenges it intr
   along with effective mitigation strategies in wireless communication systems.
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - RSSI
 - Signal Attenuation

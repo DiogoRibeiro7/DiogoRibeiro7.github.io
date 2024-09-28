@@ -9,9 +9,11 @@ excerpt: This article delves into the core mathematical principles behind machin
   minimization, decision trees, and more.
 header:
   image: /assets/images/data_science_1.jpg
+  og_image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_science_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
+  twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - Mathematics of Machine Learning
 - Machine Learning Mathematical Models

@@ -11,9 +11,11 @@ excerpt: A study using GIS-based techniques for forest fire hotspot identificati
   elevation, and vegetation cover.
 header:
   image: /assets/images/forest_fire_kde_1.jpg
+  og_image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/forest_fire_kde_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/forest_fire_kde_1.jpg
+  twitter_image: /assets/images/data_science_4.jpg
 keywords: forest fires, GIS, Kernel Density Estimation, Getis-Ord Gi*, Anselin Local
   Moran's I, hotspot analysis, forest fire management, spatial analysis, Belait District
 seo_description: Explore GIS techniques like KDE, Getis-Ord Gi*, and Anselin Local

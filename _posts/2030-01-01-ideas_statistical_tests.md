@@ -10,9 +10,11 @@ excerpt: A list of 15 article ideas covering statistical tests, ranging from ANO
   and Kruskal-Wallis to non-parametric tests and power analysis.
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_2.jpg
 keywords:
 - Statistical Tests
 - ANOVA

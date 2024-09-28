@@ -10,9 +10,11 @@ excerpt: Explore the intricacies of outlier detection using distance metrics and
   distance metric learning to improve outlier detection accuracy.
 header:
   image: /assets/images/data_science_5.jpg
+  og_image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/data_science_5.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
+  twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - Outlier detection
 - Distance metrics in machine learning

@@ -9,9 +9,11 @@ excerpt: Leveraging customer behavior through predictive modeling, the BG/NBD mo
   to traditional time-series models.
 header:
   image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - Demand Forecasting
 - Repurchase Model

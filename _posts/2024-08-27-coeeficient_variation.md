@@ -10,9 +10,11 @@ excerpt: Learn how to calculate and interpret the Coefficient of Variation (CV),
   and limitations in various data analysis contexts.
 header:
   image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_9.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_2.jpg
 keywords:
 - Coefficient of Variation
 - Statistical variability

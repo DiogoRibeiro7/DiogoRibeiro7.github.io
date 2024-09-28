@@ -9,9 +9,11 @@ excerpt: RFM Segmentation (Recency, Frequency, Monetary Value) is a widely used 
   into RFM, showing how to apply clustering techniques for effective customer segmentation.
 header:
   image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_9.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - RFM segmentation
 - customer segmentation

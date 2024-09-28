@@ -9,9 +9,11 @@ classes: wide
 date: '2024-05-20'
 header:
   image: /assets/images/data_science_1.jpg
+  og_image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
+  twitter_image: /assets/images/data_science_3.jpg
 seo_type: article
 subtitle: A Clear Explanation of Two Key Concepts in Biostatistics
 tags:

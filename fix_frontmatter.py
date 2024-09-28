@@ -48,14 +48,16 @@ def process_markdown_file(filepath):
         post['toc'] = False
         
     # Insert 'header' block if not already present
+    random_number = random.randint(1, 9)
     if 'header' not in post:
-        random_number = random.randint(1, 9)
         print(f"Inserting 'header' block in {filename}")
         post['header'] = {
             'image': f'/assets/images/data_science_{random_number}.jpg',
             'overlay_image': f'/assets/images/data_science_{random_number}.jpg',
             'teaser': f'/assets/images/data_science_{random_number}.jpg',
-            'show_overlay_excerpt': False  # Add excerpt key with value False when header is inserted
+            'show_overlay_excerpt': False,  # Add excerpt key with value False when header is inserted
+            'twitter_image': f'/assets/images/data_science_{random_number}.jpg',
+            'og_image': f'/assets/images/data_science_{random_number}.jpg'
         }
     else:
         # If 'header' exists, check if 'excerpt' key is present
@@ -64,6 +66,13 @@ def process_markdown_file(filepath):
             post['header']['show_overlay_excerpt'] = False
         else:
             print(f"'excerpt' key already present in 'header' in {filename}, skipping.")
+        if 'twitter_image' not in post['header']:
+            print(f"Adding 'twitter_image' key to 'header' in {filename}")
+            post['header']['twitter_image'] = f'/assets/images/data_science_{random_number}.jpg'
+        if 'og_image' not in post['header']:
+            print(f"Adding 'og_image' key to 'header' in {filename}")
+            post['header']['og_image'] = f'/assets/images/data_science_{random_number}.jpg'
+        
     if not "seo_type" in post:
         post["seo_type"] = "article"
 

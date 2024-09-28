@@ -12,9 +12,11 @@ excerpt: Explore how mathematics shapes modern society across fields like techno
   of mathematics on innovation and societal progress.
 header:
   image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_2.jpg
 keywords:
 - Mathematics in society
 - Mathematical innovation

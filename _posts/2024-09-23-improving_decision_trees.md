@@ -8,9 +8,11 @@ excerpt: A deep dive into using Genetic Algorithms to create more accurate, inte
   decision trees for classification tasks.
 header:
   image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/data_science_9.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - Decision Trees
 - Genetic Algorithms

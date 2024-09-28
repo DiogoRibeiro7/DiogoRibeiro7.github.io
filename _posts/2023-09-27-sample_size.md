@@ -8,9 +8,11 @@ excerpt: Dive into the nuances of sample size in statistical analysis, challengi
   the common belief that larger samples always lead to better results.
 header:
   image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - sample size
 - statistical analysis

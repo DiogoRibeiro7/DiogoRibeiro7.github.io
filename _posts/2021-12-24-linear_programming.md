@@ -11,9 +11,11 @@ excerpt: Linear Programming is the foundation of optimization in operations rese
   infrastructures.
 header:
   image: /assets/images/linear_program.jpeg
+  og_image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/linear_program.jpeg
   show_overlay_excerpt: false
   teaser: /assets/images/linear_program.jpeg
+  twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - linear programming
 - simplex method

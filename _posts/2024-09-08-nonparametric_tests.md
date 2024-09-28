@@ -9,9 +9,11 @@ excerpt: Explore the full potential of nonparametric tests, going beyond the Man
   offer robust alternatives in statistical analysis.
 header:
   image: /assets/images/data_science_7.jpg
+  og_image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
+  twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - Nonparametric statistical tests
 - Quantile regression

@@ -11,9 +11,11 @@ excerpt: Learn how machine learning optimizes supply chain operations by enhanci
   and business value.
 header:
   image: /assets/images/data_science_6.jpg
+  og_image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_6.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
+  twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - Machine learning in supply chain
 - Supply chain optimization

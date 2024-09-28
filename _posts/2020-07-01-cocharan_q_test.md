@@ -9,9 +9,11 @@ excerpt: Understand Cochran’s Q test, a non-parametric test for comparing prop
   McNemar's test.
 header:
   image: /assets/images/data_science_2.jpg
+  og_image: /assets/images/data_science_8.jpg
   overlay_image: /assets/images/data_science_2.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
+  twitter_image: /assets/images/data_science_8.jpg
 keywords:
 - Cochran's Q Test
 - McNemar's Test

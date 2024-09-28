@@ -10,9 +10,11 @@ excerpt: Explore Automated Prompt Engineering (APE), a powerful method to automa
   and efficiency.
 header:
   image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - Automated Prompt Engineering
 - Large Language Models

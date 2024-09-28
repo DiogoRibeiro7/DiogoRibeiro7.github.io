@@ -8,9 +8,11 @@ excerpt: Learn about Principal Component Analysis (PCA) and how it helps in feat
   extraction, dimensionality reduction, and identifying key patterns in data.
 header:
   image: /assets/images/data_science_2.jpg
+  og_image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/data_science_2.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
+  twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - principal component analysis
 - PCA

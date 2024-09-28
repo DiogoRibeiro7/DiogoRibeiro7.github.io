@@ -8,9 +8,11 @@ classes: wide
 date: '2024-05-09'
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_3.jpg
 seo_type: article
 subtitle: A Guide to Visualizing High-Dimensional Data
 tags:

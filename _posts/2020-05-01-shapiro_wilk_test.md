@@ -11,9 +11,11 @@ excerpt: Learn about the Shapiro-Wilk and Anderson-Darling tests for normality, 
   statistical methods.
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_8.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_8.jpg
 keywords:
 - Shapiro-Wilk Test
 - Anderson-Darling Test

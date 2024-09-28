@@ -9,9 +9,11 @@ excerpt: Explore how data science, machine learning, and big data are critical t
   in addressing climate change and promoting sustainability.
 header:
   image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_9.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_9.jpg
 keywords:
 - Climate Change
 - Data Science

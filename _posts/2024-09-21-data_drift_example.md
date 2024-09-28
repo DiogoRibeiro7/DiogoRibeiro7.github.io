@@ -8,9 +8,11 @@ excerpt: A comprehensive exploration of data drift in credit risk models, examin
   practical methods to identify and address drift using multivariate techniques.
 header:
   image: /assets/images/data_drift.png
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_drift.png
   show_overlay_excerpt: false
   teaser: /assets/images/data_drift.png
+  twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - data drift
 - credit risk models

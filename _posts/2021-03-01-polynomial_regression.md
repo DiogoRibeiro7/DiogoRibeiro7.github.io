@@ -11,9 +11,11 @@ excerpt: Polynomial regression is a popular extension of linear regression that 
   the response variable is still a linear combination of the regression coefficients.
 header:
   image: /assets/images/data_science_4.jpg
+  og_image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
+  twitter_image: /assets/images/data_science_2.jpg
 keywords:
 - Polynomial regression
 - Linear regression

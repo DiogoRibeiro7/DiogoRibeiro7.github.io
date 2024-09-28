@@ -12,9 +12,11 @@ excerpt: Explore the foundations, concepts, and mathematics behind Kernel Densit
 header:
   excerpt: false
   image: /assets/images/kernel_math.jpg
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/kernel_math.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/kernel_math.jpg
+  twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - Kernel Density Estimation
 - Bandwidth Selection

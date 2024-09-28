@@ -9,9 +9,11 @@ excerpt: In machine learning, linear models assume a direct relationship between
   model performance and how to work with non-linear relationships.
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_9.jpg
 keywords:
 - linear relationships
 - machine learning

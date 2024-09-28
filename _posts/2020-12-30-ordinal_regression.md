@@ -9,9 +9,11 @@ excerpt: Explore the architecture of ordinal regression models, their applicatio
   models using Python.
 header:
   image: /assets/images/data_science_1.jpg
+  og_image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
+  twitter_image: /assets/images/data_science_9.jpg
 keywords:
 - Ordinal Regression
 - Marginal Effects

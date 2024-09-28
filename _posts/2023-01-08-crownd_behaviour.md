@@ -9,9 +9,11 @@ excerpt: Dive into the fascinating world of pedestrian behavior through mathemat
   crowd management, and traffic control for safer and more efficient public spaces.
 header:
   image: /assets/images/data_science_1.jpg
+  og_image: /assets/images/data_science_6.jpg
   overlay_image: /assets/images/data_science_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
+  twitter_image: /assets/images/data_science_6.jpg
 keywords:
 - pedestrian behavior
 - mathematical modeling

@@ -11,9 +11,11 @@ excerpt: Explore how Python and network analysis can be used to implement and op
   sustainability and resource efficiency.
 header:
   image: /assets/images/data_science_5.jpg
+  og_image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_5.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
+  twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - Circular Economy
 - Python for sustainability

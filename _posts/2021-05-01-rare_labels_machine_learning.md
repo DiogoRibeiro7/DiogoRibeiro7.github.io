@@ -9,9 +9,11 @@ excerpt: Rare labels in categorical variables can cause significant issues in ma
   and provides examples on how to handle them.
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - rare labels
 - categorical variables

@@ -9,9 +9,11 @@ excerpt: This article delves into the fundamentals of Markov Chain Monte Carlo (
   distributions.
 header:
   image: /assets/images/data_science_1.jpg
+  og_image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_science_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
+  twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - Markov Chain Monte Carlo
 - MCMC
@@ -432,5 +434,3 @@ Here are some books, articles, and online resources for learning about Markov Ch
 2. **"A Visual Guide to Markov Chain Monte Carlo"** by Chi Feng  
    - **URL**: [https://chi-feng.github.io/mcmc-demo/](https://chi-feng.github.io/mcmc-demo/)  
    - **Description**: This interactive, visual tutorial explains MCMC methods with a focus on helping users intuitively understand the behavior of the algorithms.
-
-

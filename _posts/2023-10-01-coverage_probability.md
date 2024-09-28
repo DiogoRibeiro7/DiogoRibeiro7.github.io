@@ -8,9 +8,11 @@ excerpt: 'Understanding coverage probability in statistical estimation and predi
   its role in constructing confidence intervals and assessing their accuracy.'
 header:
   image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_9.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - Coverage Probability
 - Confidence Interval

@@ -11,9 +11,11 @@ excerpt: Discover how data science is transforming the fight against climate cha
   with new methods for understanding and reducing global warming impacts.
 header:
   image: /assets/images/data_science_2.jpg
+  og_image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/data_science_2.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
+  twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - climate crisis
 - data science

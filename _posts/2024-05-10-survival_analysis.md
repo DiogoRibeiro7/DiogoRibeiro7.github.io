@@ -11,9 +11,11 @@ excerpt: Explore the role of survival analysis in management, focusing on time-t
   model for business decision-making.
 header:
   image: /assets/images/data_science_2.jpg
+  og_image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_2.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
+  twitter_image: /assets/images/data_science_9.jpg
 keywords:
 - Survival Analysis
 - Time-to-Event Data

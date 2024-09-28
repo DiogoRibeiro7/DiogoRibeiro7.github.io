@@ -9,9 +9,11 @@ excerpt: Machine learning is revolutionizing fall prevention in elderly care by 
   history insights.
 header:
   image: /assets/images/data_science_7.jpg
+  og_image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
+  twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - Machine Learning
 - Fall Prevention
@@ -66,6 +68,7 @@ By integrating these data points, machine learning models can predict which indi
 The success of machine learning in predicting and preventing falls largely depends on the quality and volume of data available. Several key sources of data enable these models to function effectively:
 
 #### 1. Wearable Devices
+
 Wearables such as smartwatches, fitness trackers, and specialized health monitors are among the most valuable tools in fall prediction. These devices can collect continuous data on:
 
 - **Gait and balance**: Sensors like accelerometers and gyroscopes track movement patterns.
@@ -74,12 +77,15 @@ Wearables such as smartwatches, fitness trackers, and specialized health monitor
 - **Physical activity levels**: Daily activity levels can help assess overall physical condition and mobility, allowing algorithms to detect changes that may precede a fall.
 
 #### 2. Ambient Sensors
+
 Environmental sensors installed in living spaces can monitor conditions that may contribute to falls. For example, motion sensors, floor pressure sensors, and cameras (with privacy safeguards) can track an individual's movements within their home. These systems can alert caregivers to potential hazards, such as slippery floors or obstacles, or detect falls as they happen, triggering immediate assistance.
 
 #### 3. Electronic Health Records (EHR)
+
 EHR systems contain valuable medical information such as diagnoses, medication lists, and past fall incidents. Machine learning algorithms can analyze these records to assess long-term fall risk and inform personalized prevention strategies. For instance, a patient with a history of cardiovascular issues or medications that cause dizziness may be flagged as higher risk.
 
 #### 4. Social and Behavioral Data
+
 Beyond physical health, social factors also play a role in fall risk. For instance, elderly individuals who experience isolation or depression are more likely to experience falls due to reduced activity levels or attention. Machine learning models can incorporate data from social and behavioral assessments to create a holistic profile of an individual’s fall risk.
 
 ## How Wearables and Sensors Detect Early Warning Signs

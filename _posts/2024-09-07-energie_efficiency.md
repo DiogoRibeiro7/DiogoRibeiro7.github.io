@@ -11,9 +11,11 @@ excerpt: Explore how Python and machine learning can be applied to analyze and i
   energy usage, and reducing carbon footprints.
 header:
   image: /assets/images/data_science_6.jpg
+  og_image: /assets/images/data_science_6.jpg
   overlay_image: /assets/images/data_science_6.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
+  twitter_image: /assets/images/data_science_6.jpg
 keywords:
 - Building energy efficiency
 - Machine learning for sustainability

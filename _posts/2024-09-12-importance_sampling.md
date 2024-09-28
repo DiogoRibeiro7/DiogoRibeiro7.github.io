@@ -10,9 +10,11 @@ excerpt: Importance Sampling offers an efficient alternative to traditional Mont
   loss events.
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - Importance Sampling
 - Portfolio credit risk

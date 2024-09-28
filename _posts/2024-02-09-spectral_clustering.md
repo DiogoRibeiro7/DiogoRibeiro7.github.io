@@ -8,9 +8,11 @@ excerpt: A comprehensive guide to spectral clustering and its role in dimensiona
   reduction, enhancing data analysis, and uncovering patterns in machine learning.
 header:
   image: /assets/images/data_science_7.jpg
+  og_image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
+  twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - spectral clustering
 - dimensionality reduction

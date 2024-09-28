@@ -11,9 +11,11 @@ excerpt: Discover the implications of assigning different job titles in data sci
   and individual motivation.
 header:
   image: /assets/images/data_team.png
+  og_image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_team.png
   show_overlay_excerpt: false
   teaser: /assets/images/data_team.png
+  twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - Data science teams
 - Job titles

@@ -9,9 +9,11 @@ excerpt: Innumeracy is becoming the new illiteracy, with far-reaching implicatio
   numbers affects our world and what can be done to address this growing issue.
 header:
   image: /assets/images/data_science_1.jpg
+  og_image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_science_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
+  twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - innumeracy
 - data literacy

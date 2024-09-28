@@ -11,9 +11,11 @@ excerpt: Explore Type I and Type II errors in hypothesis testing. Learn how to b
   errors in real-world scenarios.
 header:
   image: /assets/images/data_science_7.jpg
+  og_image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
+  twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - Type I Error
 - Type II Error
