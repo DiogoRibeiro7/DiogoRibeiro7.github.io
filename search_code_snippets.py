@@ -15,8 +15,8 @@ def extract_front_matter(content: str):
 
 # Function to extract code snippets and their languages
 def extract_code_snippets(content: str):
-    # Regular expression to find code blocks with optional language declaration
-    code_snippets = re.findall(r'```(\w+)?\n(.*?)\n```', content, re.DOTALL)
+    # Updated regular expression to capture more language identifiers
+    code_snippets = re.findall(r'```([a-zA-Z0-9+_-]*)\n(.*?)\n```', content, re.DOTALL)
 
     # Dictionary to store snippets by language
     snippets_by_language = {}
@@ -36,16 +36,28 @@ def extract_code_snippets(content: str):
 def update_front_matter(front_matter: dict, snippets_by_language: dict):
     detected_languages = list(snippets_by_language.keys())
 
-    # Append to existing 'tasks' and 'keywords' in the front matter
+    # Function to safely convert a string of tags or keywords into a list
+    def ensure_list(field):
+        if isinstance(field, str):
+            # Convert comma-separated string to list
+            return [item.strip() for item in field.split(',')]
+        return field
+
+    # Ensure 'tags' is a list
     if 'tags' in front_matter:
-        # Ensure no duplicates by using a set, then convert back to a list
-        front_matter['tags'] = list(set(front_matter['tags']) | set(detected_languages))
+        front_matter['tags'] = ensure_list(front_matter['tags'])
+        for lang in detected_languages:
+            if lang not in front_matter['tags']:
+                front_matter['tags'].append(lang)
     else:
         front_matter['tags'] = detected_languages
 
+    # Ensure 'keywords' is a list
     if 'keywords' in front_matter:
-        # Ensure no duplicates by using a set, then convert back to a list
-        front_matter['keywords'] = list(set(front_matter['keywords']) | set(detected_languages))
+        front_matter['keywords'] = ensure_list(front_matter['keywords'])
+        for lang in detected_languages:
+            if lang not in front_matter['keywords']:
+                front_matter['keywords'].append(lang)
     else:
         front_matter['keywords'] = detected_languages
 
