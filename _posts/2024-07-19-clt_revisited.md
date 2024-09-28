@@ -78,9 +78,9 @@ To address these limitations, we explore two generalizations of the CLT:
 
 In practical applications, sequences of random variables often exhibit dependence. One way to model this is through $$m$$-dependence, which is defined as follows:
 
-A sequence of random variables $$\{X_i\}_{i=1}^n$$ is said to be $$m$$-dependent if for any pair of indices $$i$$ and $$j$$ such that $$|i - j| > m$$, the random variables $$X_i$$ and $$X_j$$ are independent. This structure allows for dependencies within a "window" of $$m$$ terms but ensures that distant variables are independent.
+A sequence of random variables $$\{X_i\}_{i=1}^n$$ is said to be $$m$$-dependent if for any pair of indices $$i$$ and $$j$$ such that $$\lvert i - j\rvert > m$$, the random variables $$X_i$$ and $$X_j$$ are independent. This structure allows for dependencies within a "window" of $$m$$ terms but ensures that distant variables are independent.
 
-Formally, we say that $$X_1, X_2, \dots, X_n$$ is $$m$$-dependent if for all $$i$$ and $$j$$ such that $$|i - j| > m$$, the conditional independence holds:
+Formally, we say that $$X_1, X_2, \dots, X_n$$ is $$m$$-dependent if for all $$i$$ and $$j$$ such that $$\lvert i - j\rvert > m$$,, the conditional independence holds:
 
 $$
 X_i \perp X_j \quad \text{whenever} \quad |i - j| > m.
