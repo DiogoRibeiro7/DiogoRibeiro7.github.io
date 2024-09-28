@@ -14,6 +14,9 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_5.jpg
+  overlay_image: /assets/images/data_science_1.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_1.jpg
 keywords:
 - Markov Chain Monte Carlo
 - MCMC
@@ -44,7 +47,7 @@ At its core, Markov Chain Monte Carlo is a family of algorithms that relies on M
 
 ### Markov Chains
 
-A **Markov chain** is a sequence of random variables where the distribution of each variable depends only on the value of the previous one, a property known as the **Markov property**. More formally, a Markov chain is a sequence of random variables $$X_1, X_2, \ldots$$ where the conditional probability of $$X_{n+1}$$ given the entire history up to $$X_n$$ depends only on $$X_n$$:
+A **Markov chain** is a sequence of random variables where the distribution of each variable depends only on the value of the previous one, a property known as the **Markov property**. More formally, a Markov chain is a sequence of random variables $X_1, X_2, \ldots$ where the conditional probability of $X_{n+1}$ given the entire history up to $X_n$ depends only on $X_n$:
 
 $$ P(X_{n+1} | X_1, X_2, \ldots, X_n) = P(X_{n+1} | X_n) $$
 
