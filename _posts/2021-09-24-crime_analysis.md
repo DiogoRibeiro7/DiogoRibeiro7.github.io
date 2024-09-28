@@ -15,11 +15,12 @@ header:
   teaser: /assets/images/machine_learning/machine_learning_3.jpeg
   twitter_image: /assets/images/data_science_9.jpg
 keywords:
-- K-means clustering
-- Crime analysis
-- Data mining
 - Law enforcement
+- Crime analysis
 - Crime prediction
+- K-means clustering
+- Data mining
+- python
 seo_description: Explore how K-means clustering can enhance crime analysis by identifying
   patterns, predicting trends, and improving crime prevention through data mining.
 seo_title: Crime Analysis Using K-Means Clustering
@@ -29,10 +30,11 @@ summary: This article delves into the application of K-means clustering in crime
   and predict criminal activity. The article includes a detailed exploration of data
   mining, clustering methods, and practical use cases.
 tags:
-- K-means Clustering
 - Data Mining
-- Crime Analysis
+- K-means Clustering
 - Machine Learning
+- Crime Analysis
+- python
 title: 'Crime Analysis Using K-Means Clustering: Enhancing Security through Data Mining'
 ---
 

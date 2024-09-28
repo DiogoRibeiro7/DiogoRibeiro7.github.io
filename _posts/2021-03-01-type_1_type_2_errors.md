@@ -17,10 +17,10 @@ header:
   twitter_image: /assets/images/data_science_6.jpg
 keywords:
 - Statistical Testing
-- Type I Error
 - Type II Error
-- Hypothesis Testing
+- Type I Error
 - Data Science
+- Hypothesis Testing
 seo_description: Explore the differences between Type I and Type II errors in statistical
   testing, learn how to minimize them, and understand their impact on data science,
   clinical trials, and AI model evaluation.
@@ -31,10 +31,10 @@ summary: This article explains the fundamental concepts behind Type I and Type I
   the critical role of statistical power and sample size in data science.
 tags:
 - Statistical Testing
-- Type I Error
 - Type II Error
-- Hypothesis Testing
+- Type I Error
 - Data Science
+- Hypothesis Testing
 title: 'Understanding Type I and Type II Errors in Statistical Testing: How to Minimize
   False Conclusions'
 ---

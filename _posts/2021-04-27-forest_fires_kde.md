@@ -29,11 +29,13 @@ summary: This article explores the application of GIS-based techniques, such as 
   validates hotspot results using contributory factors like population density, precipitation,
   elevation, and vegetation cover.
 tags:
-- Forest Fires
+- "Anselin Local Moran\u2019s I"
 - GIS
-- Kernel Density Estimation
+- Forest Fires
 - Getis-Ord Gi*
-- Anselin Local Moran’s I
+- python
+- Kernel Density Estimation
+- bash
 title: 'GIS-Based Forest Fire Hotspot Identification: A Comprehensive Approach Using
   Contributory Factors'
 ---

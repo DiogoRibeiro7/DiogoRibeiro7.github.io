@@ -16,8 +16,10 @@ header:
   twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - Asymmetric Confidence Interval
-- Data Distribution
 - Wilson Score Interval
+- python
+- bash
+- Data Distribution
 - Statistical Methods
 seo_description: Learn why confidence intervals can be asymmetric, the factors that
   contribute to this phenomenon, and how to interpret them in statistical analysis.
@@ -27,10 +29,12 @@ summary: Asymmetric confidence intervals can result from the nature of your data
   the statistical method used. This article explores the causes and implications of
   these intervals for interpreting research results.
 tags:
-- Confidence Intervals
 - Asymmetric CI
+- Confidence Intervals
+- bash
 - Data Distribution
 - Statistical Tests
+- python
 title: 'Understanding Asymmetric Confidence Intervals: Causes and Implications'
 ---
 

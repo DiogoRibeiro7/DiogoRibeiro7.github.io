@@ -18,16 +18,16 @@ header:
   teaser: /assets/images/kernel_math.jpg
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
+- Non-parametric Statistics
+- Multivariate KDE
+- Density Estimation
+- KDE Applications
+- Data Visualization
+- Kernel Functions
+- Anomaly Detection
+- Machine Learning
 - Kernel Density Estimation
 - Bandwidth Selection
-- Kernel Functions
-- Non-parametric Statistics
-- KDE Applications
-- Multivariate KDE
-- Data Visualization
-- Machine Learning
-- Anomaly Detection
-- Density Estimation
 seo_description: A deep dive into the math, theory, and practical considerations of
   Kernel Density Estimation (KDE), covering its core components, bandwidth selection,
   kernel functions, multivariate KDE, and real-world applications.
@@ -42,13 +42,13 @@ summary: Kernel Density Estimation (KDE) is a non-parametric method used to esti
   With a focus on practical insights and theoretical rigor, the article offers a comprehensive
   guide to understanding KDE.
 tags:
-- Kernel Density Estimation
-- Bandwidth Selection
-- Kernel Functions
 - Non-parametric Statistics
 - Multivariate KDE
-- Data Science
+- Kernel Functions
 - Machine Learning
+- Kernel Density Estimation
+- Bandwidth Selection
+- Data Science
 title: The Math Behind Kernel Density Estimation
 ---
 

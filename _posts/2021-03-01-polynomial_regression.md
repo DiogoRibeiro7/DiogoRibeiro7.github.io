@@ -17,13 +17,13 @@ header:
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_2.jpg
 keywords:
-- Polynomial regression
-- Linear regression
 - Regression coefficients
-- Nonlinear regression models
+- Statistical modeling
+- Polynomial regression
 - Least squares estimation
 - Machine learning regression
-- Statistical modeling
+- Nonlinear regression models
+- Linear regression
 seo_description: Explore why polynomial regression, despite modeling nonlinear relationships
   between the response and explanatory variables, is mathematically considered a form
   of linear regression.
@@ -36,9 +36,9 @@ summary: Polynomial regression models the relationship between the response vari
   variable and the regression coefficients.
 tags:
 - Polynomial Regression
-- Linear Regression
-- Statistical Modeling
 - Regression Analysis
+- Statistical Modeling
+- Linear Regression
 - Machine Learning Algorithms
 title: 'Understanding Polynomial Regression: Why It''s Still Linear Regression'
 ---
