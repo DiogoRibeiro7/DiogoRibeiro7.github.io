@@ -18,9 +18,9 @@ header:
   twitter_image: /assets/images/data_science_8.jpg
 keywords:
 - Repeated Measures ANOVA
-- Ordinal Data
-- Friedman Test
 - Non-Parametric Test
+- Friedman Test
+- Ordinal Data
 seo_description: Learn about the Friedman test, its application as a non-parametric
   alternative to repeated measures ANOVA, and its use with ordinal data or non-normal
   distributions.
@@ -30,10 +30,10 @@ summary: This article provides an in-depth explanation of the Friedman test, inc
   its use as a non-parametric alternative to repeated measures ANOVA, when to use
   it, and practical examples in ranking data and repeated measurements.
 tags:
-- Repeated Measures ANOVA
-- Ordinal Data
 - Non-Parametric Tests
+- Repeated Measures ANOVA
 - Friedman Test
+- Ordinal Data
 title: 'The Friedman Test: Non-Parametric Alternative to Repeated Measures ANOVA'
 ---
 

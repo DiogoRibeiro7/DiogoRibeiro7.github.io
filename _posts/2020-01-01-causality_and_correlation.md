@@ -15,10 +15,10 @@ header:
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - Simpson's Paradox
-- Data Science
 - Causality
 - Berkson's Paradox
 - Correlation
+- Data Science
 seo_description: Explore how causal reasoning, through paradoxes like Simpson's and
   Berkson's, can help us avoid the common pitfalls of interpreting data solely based
   on correlation.
@@ -29,10 +29,10 @@ summary: An in-depth exploration of the limits of correlation in data interpreta
   a tool for uncovering true causal relationships.
 tags:
 - Simpson's Paradox
-- Causal Inference
-- Data Science
 - Berkson's Paradox
 - Correlation
+- Data Science
+- Causal Inference
 title: 'Causality Beyond Correlation: Simpson''s and Berkson''s Paradoxes'
 ---
 

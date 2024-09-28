@@ -16,6 +16,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
   twitter_image: /assets/images/data_science_6.jpg
+keywords:
+- python
 seo_description: An in-depth look at prediction error, bias-variance tradeoff, and
   model evaluation techniques like cross-validation and bootstrap methods, with insights
   into the .632 estimator.
@@ -25,12 +27,12 @@ summary: This article explores methods for estimating prediction error, includin
   cross-validation, bootstrap techniques, and their variations like the .632 estimator,
   focusing on balancing bias, variance, and model evaluation accuracy.
 tags:
-- Prediction Error
-- Bootstrap Methods
-- Model Evaluation
-- Cross-Validation
 - Bias-Variance Tradeoff
+- Model Evaluation
 - .632 Estimator
+- Cross-Validation
+- Bootstrap Methods
+- Prediction Error
 - python
 title: 'Understanding Prediction Error: Bias, Variance, and Model Evaluation Techniques'
 ---

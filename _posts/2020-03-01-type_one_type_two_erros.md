@@ -17,11 +17,11 @@ header:
   teaser: /assets/images/data_science_7.jpg
   twitter_image: /assets/images/data_science_4.jpg
 keywords:
-- False Positive
 - Type II Error
+- False Positive
 - False Negative
-- Type I Error
 - Hypothesis Testing
+- Type I Error
 seo_description: A comprehensive guide to understanding Type I (false positive) and
   Type II (false negative) errors in hypothesis testing, including balancing error
   rates, significance levels, and power.
@@ -31,11 +31,11 @@ summary: This article provides an in-depth exploration of Type I and Type II err
   in hypothesis testing, explaining their importance, the trade-offs between them,
   and how they impact decisions in various domains, from clinical trials to business.
 tags:
-- False Positive
 - Type II Error
+- False Positive
 - False Negative
-- Type I Error
 - Hypothesis Testing
+- Type I Error
 title: Understanding Type I and Type II Errors in Hypothesis Testing
 ---
 

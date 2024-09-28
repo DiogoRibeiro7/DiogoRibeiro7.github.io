@@ -15,11 +15,11 @@ header:
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
-- MLE
-- Maximum Likelihood Estimation
+- Machine Learning
 - Predictive Analytics
 - Statistical Modeling
-- Machine Learning
+- Maximum Likelihood Estimation
+- MLE
 - bash
 - python
 seo_description: Explore Maximum Likelihood Estimation (MLE), its importance in data
@@ -30,11 +30,11 @@ summary: This article covers the essentials of Maximum Likelihood Estimation (ML
   breaking down its mathematical foundation, importance in data science, practical
   applications, and limitations.
 tags:
-- MLE
-- Maximum Likelihood Estimation
 - Statistical Modeling
-- Data Science
 - bash
+- Maximum Likelihood Estimation
+- Data Science
+- MLE
 - python
 title: 'Maximum Likelihood Estimation (MLE): Statistical Modeling in Data Science'
 ---
