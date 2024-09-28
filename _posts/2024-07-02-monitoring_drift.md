@@ -11,9 +11,6 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_2.jpg
-seo_title: 'Machine Learning Monitoring: Moving Beyond Univariate Data Drift Detection'
-seo_description: 'Explore advanced methods for machine learning monitoring by moving beyond univariate data drift detection. Learn about direct loss estimation, detecting outliers, and addressing alarm fatigue in production AI systems.'
-summary: 'A deep dive into advanced machine learning monitoring techniques that extend beyond traditional univariate data drift detection. This article covers methods such as direct loss estimation, outlier detection, and best practices for addressing alarm fatigue in AI systems deployed in production.'
 keywords:
 - Data Drift Detection
 - Direct Loss Estimation
@@ -29,6 +26,15 @@ keywords:
 - Model Monitoring
 - Artificial Intelligence
 - Technology
+seo_description: Explore advanced methods for machine learning monitoring by moving
+  beyond univariate data drift detection. Learn about direct loss estimation, detecting
+  outliers, and addressing alarm fatigue in production AI systems.
+seo_title: 'Machine Learning Monitoring: Moving Beyond Univariate Data Drift Detection'
+seo_type: article
+summary: A deep dive into advanced machine learning monitoring techniques that extend
+  beyond traditional univariate data drift detection. This article covers methods
+  such as direct loss estimation, outlier detection, and best practices for addressing
+  alarm fatigue in AI systems deployed in production.
 tags:
 - Data Drift
 - Direct Loss Estimation
@@ -45,8 +51,6 @@ tags:
 - Technology
 title: 'Machine Learning Monitoring: Moving Beyond Univariate Data Drift Detection'
 ---
-
-## Introduction
 
 Machine learning (ML) model monitoring is a critical aspect of maintaining the performance and reliability of models in production environments. As organizations increasingly rely on ML models to drive decision-making and automate processes, ensuring these models remain accurate and effective over time is paramount. One of the traditional approaches to monitor ML models has been univariate data drift detection. This method focuses on tracking changes in individual features or variables over time to detect any significant deviations from the original data distribution used to train the model.
 
