@@ -22,6 +22,7 @@ seo_description: Discover how data-driven approaches, powered by predictive anal
   help manage chronic diseases like diabetes, arthritis, and cardiovascular conditions
   in elderly populations.
 seo_title: Data Science for Managing Chronic Diseases in the Elderly
+seo_type: article
 summary: Data-driven approaches are improving the management of chronic diseases in
   elderly populations by harnessing the power of predictive analytics. These methods
   allow healthcare providers to monitor disease progression, optimize medication regimens,

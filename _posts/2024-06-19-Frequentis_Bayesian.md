@@ -13,6 +13,7 @@ header:
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
+seo_type: article
 subtitle: Understanding the Probability of the Sun Rising Tomorrow
 tags:
 - Bayesian Inference

@@ -1,5 +1,5 @@
 File '2024-05-15-detect_multivariate_data_drift.md':
-  - Summary present: False
+  - Summary present: True
   - Keywords present: False
 
 File '2024-07-07-logistic-model.md':

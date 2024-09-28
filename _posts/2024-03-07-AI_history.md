@@ -10,6 +10,7 @@ header:
   overlay_image: /assets/images/data_science_5.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
+seo_type: article
 tags:
 - Artificial Intelligence
 - AI

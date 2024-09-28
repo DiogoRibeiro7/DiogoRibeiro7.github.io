@@ -28,6 +28,7 @@ seo_description: Explore advanced statistical concepts behind sequential testing
   A/B testing. Learn about SPRT, error control, practical implementation, and potential
   pitfalls.
 seo_title: 'In-Depth Sequential Testing in A/B Testing: Advanced Statistical Methods'
+seo_type: article
 tags:
 - A/B Testing
 - Sequential Testing

@@ -24,6 +24,7 @@ seo_description: Explore the importance of Partial Differential Equations (PDEs)
   data science, including their role in machine learning, physics-informed models,
   and numerical methods.
 seo_title: Partial Differential Equations for Data Scientists
+seo_type: article
 summary: This article explores the role of Partial Differential Equations (PDEs) in
   data science, including their applications in machine learning, finance, image processing,
   and environmental modeling. It covers basic classifications of PDEs, solution methods,

@@ -26,6 +26,7 @@ keywords:
 seo_description: Explore the life and legacy of Paul Erdős, a nomadic mathematician
   who made groundbreaking contributions to number theory and collaborative science.
 seo_title: 'Paul Erdős: The Mathematical Prodigy Who Changed Mathematics Forever'
+seo_type: article
 subtitle: A Mathematician for the Ages
 tags:
 - Paul Erdős

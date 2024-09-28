@@ -27,6 +27,7 @@ keywords:
 seo_description: An in-depth exploration of key probability distributions in machine
   learning, including Bernoulli, Multinoulli, Gaussian, Exponential, and Beta distributions.
 seo_title: Probability Distributions in Machine Learning
+seo_type: article
 tags:
 - Probability Distributions
 - Data Analysis

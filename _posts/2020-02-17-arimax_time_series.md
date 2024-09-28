@@ -21,6 +21,7 @@ seo_description: Explore the ARIMAX model, a powerful statistical tool for time 
   forecasting that incorporates exogenous variables. Learn how ARIMAX builds on ARIMA
   to improve predictive performance.
 seo_title: 'ARIMAX Time Series Model: An In-Depth Guide'
+seo_type: article
 summary: This article explores the ARIMAX time series model, which enhances ARIMA
   by incorporating external variables. We'll dive into the model's structure, assumptions,
   applications, and how it compares to ARIMA.

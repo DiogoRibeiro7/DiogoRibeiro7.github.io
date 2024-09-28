@@ -32,6 +32,7 @@ seo_description: A comprehensive guide to selecting the best regression algorith
   output. Explore traditional machine learning methods with detailed explanations
   and code examples.
 seo_title: 'Choosing the Right Regression Task: From Linear Models to Advanced Techniques'
+seo_type: article
 tags:
 - Regression
 - Machine Learning Algorithms

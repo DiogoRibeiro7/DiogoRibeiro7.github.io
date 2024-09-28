@@ -30,6 +30,7 @@ seo_description: Explore the pros and cons of assigning uniform versus specializ
   and organizational success.
 seo_title: 'Uniform vs. Specialized Job Titles in Data Science Teams: Impact and Best
   Practices'
+seo_type: article
 subtitle: Exploring the Impact of Uniform vs. Specialized Job Titles in Data Science
   Teams
 summary: This article explores the debate on whether data science teams should assign

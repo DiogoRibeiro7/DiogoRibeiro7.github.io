@@ -30,6 +30,7 @@ seo_description: Explore the differences in error handling between multiple line
   regression and binary logistic regression. Understand the explicit and implicit
   roles of error terms in these statistical models.
 seo_title: 'Error Terms in Regression Models: Linear vs. Logistic Regression'
+seo_type: article
 summary: This article explores how error terms are handled in both multiple linear
   regression and binary logistic regression, emphasizing their roles in statistical
   model performance and accuracy.

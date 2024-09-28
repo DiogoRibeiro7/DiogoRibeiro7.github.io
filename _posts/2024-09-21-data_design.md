@@ -27,6 +27,7 @@ seo_description: Explore the vital importance of data quality, the need for defi
   roles in data design and collection, and how data quality impacts data science and
   engineering.
 seo_title: The Critical Role of Data Quality in the Data Industry
+seo_type: article
 subtitle: The Importance of Data Design, Quality Assurance, and the Urgent Need for
   Defined Roles in the Data Industry
 summary: Data quality is a crucial, yet often overlooked, aspect of data science and

@@ -21,6 +21,7 @@ keywords:
 seo_description: Explore how K-means clustering can enhance crime analysis by identifying
   patterns, predicting trends, and improving crime prevention through data mining.
 seo_title: Crime Analysis Using K-Means Clustering
+seo_type: article
 summary: This article delves into the application of K-means clustering in crime analysis,
   showing how law enforcement agencies can uncover crime patterns, allocate resources,
   and predict criminal activity. The article includes a detailed exploration of data

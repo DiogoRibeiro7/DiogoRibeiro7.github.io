@@ -28,6 +28,7 @@ seo_description: Explore Bayesian statistics in machine learning, highlighting p
   reasoning, uncertainty quantification, and practical applications across various
   domains.
 seo_title: Demystifying Bayesian Statistics in Machine Learning
+seo_type: article
 summary: Bayesian statistics provides a powerful framework for dealing with uncertainty
   in machine learning models, making it essential for building robust predictive systems.
   This article explores the principles of Bayesian inference, probabilistic reasoning,

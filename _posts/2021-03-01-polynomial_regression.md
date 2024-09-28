@@ -26,6 +26,7 @@ seo_description: Explore why polynomial regression, despite modeling nonlinear r
   between the response and explanatory variables, is mathematically considered a form
   of linear regression.
 seo_title: 'Polynomial Regression: Why It’s Still Linear Regression'
+seo_type: article
 summary: Polynomial regression models the relationship between the response variable
   and explanatory variables using a pth-order polynomial. Although this suggests a
   nonlinear relationship between the response and explanatory variables, it is still

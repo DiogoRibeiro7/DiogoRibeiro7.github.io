@@ -28,6 +28,7 @@ keywords:
 seo_description: Explore the concept of degrees of freedom in statistics, its role
   in hypothesis testing, and its applications in data analysis, engineering, and physics.
 seo_title: 'Degrees of Freedom: A Comprehensive Guide to Statistics and Data Analysis'
+seo_type: article
 tags:
 - Degrees of Freedom
 - Data Analysis

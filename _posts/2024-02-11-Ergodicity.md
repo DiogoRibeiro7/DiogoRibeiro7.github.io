@@ -28,6 +28,7 @@ seo_description: Explore ergodic regimes in mathematics, statistical physics, an
   simulations.
 seo_title: 'Distinguishing Ergodic Regimes: Clarifying Ergodicity in Statistical and
   Mathematical Models'
+seo_type: article
 subtitle: Clarifying Ergodicity
 tags:
 - Ergodicity

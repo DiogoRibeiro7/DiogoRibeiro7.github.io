@@ -31,6 +31,7 @@ seo_description: Explore how data science drives supply chain optimization and i
   network analysis, focusing on predictive analytics, IoT, and graph theory for improved
   efficiency.
 seo_title: Data-Driven Supply Chain Optimization and Industrial Network Analysis
+seo_type: article
 tags:
 - Supply Chain Optimization
 - Industrial Network Analysis

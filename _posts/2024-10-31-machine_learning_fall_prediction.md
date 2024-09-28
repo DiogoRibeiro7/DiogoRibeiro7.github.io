@@ -21,6 +21,7 @@ keywords:
 seo_description: Learn how machine learning models are used to predict and prevent
   falls among the elderly by analyzing sensor data, wearables, and health history.
 seo_title: Machine Learning for Fall Prevention in the Elderly
+seo_type: article
 summary: Falls among the elderly are a significant public health concern. Machine
   learning can help predict and prevent falls by analyzing data from wearables, sensors,
   and other health records, offering timely interventions that can improve quality

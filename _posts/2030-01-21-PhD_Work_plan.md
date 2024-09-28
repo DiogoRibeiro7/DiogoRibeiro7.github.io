@@ -5,6 +5,7 @@ header:
   overlay_image: /assets/images/data_science_6.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
+seo_type: article
 ---
 
 # PhD Investigation Work Plan: Applications of Mathematics and Machine Learning in Health

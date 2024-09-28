@@ -28,6 +28,7 @@ seo_description: An in-depth analysis of Value at Risk (VaR) and Expected Shortf
   (ES) as risk assessment models, comparing their performance during different market
   conditions.
 seo_title: 'VaR vs Expected Shortfall: A Data-Driven Analysis'
+seo_type: article
 tags:
 - Value at Risk
 - Expected Shortfall

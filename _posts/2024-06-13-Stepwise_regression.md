@@ -12,6 +12,7 @@ header:
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
+seo_type: article
 tags:
 - Stepwise Regression
 - Model Selection

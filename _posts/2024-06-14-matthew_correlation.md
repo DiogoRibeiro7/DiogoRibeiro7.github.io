@@ -26,6 +26,7 @@ seo_description: Learn about Matthew’s Correlation Coefficient (MCC), an essen
   metric for evaluating binary classification models, particularly in imbalanced datasets,
   and how it improves upon traditional metrics.
 seo_title: 'Matthew’s Correlation Coefficient (MCC): A Guide to Binary Classification'
+seo_type: article
 subtitle: Understanding and Applying MCC in Binary Classification
 summary: This article provides a comprehensive explanation of Matthew’s Correlation
   Coefficient (MCC), its importance in binary classification, and how it compares

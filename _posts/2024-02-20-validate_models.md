@@ -28,6 +28,7 @@ seo_description: Explore how to validate anomaly detection models like COPOD. Le
   the importance of model validation through test-driven development and avoid pitfalls
   in high-dimensional data analysis.
 seo_title: 'Validating COPOD for Anomaly Detection: Key Insights and Lessons'
+seo_type: article
 tags:
 - Anomaly Detection
 - Model Validation

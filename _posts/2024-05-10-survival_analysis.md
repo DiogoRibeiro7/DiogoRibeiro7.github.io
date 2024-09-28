@@ -31,6 +31,7 @@ seo_description: Learn about survival analysis and its applications in managemen
   estimator and the Cox model, useful in decision-making for employee retention and
   customer churn.
 seo_title: 'Survival Analysis in Management: Techniques and Applications'
+seo_type: article
 subtitle: Techniques and Applications
 summary: This article examines survival analysis in management, detailing its key
   concepts like hazard and survival functions, censoring, and applications such as

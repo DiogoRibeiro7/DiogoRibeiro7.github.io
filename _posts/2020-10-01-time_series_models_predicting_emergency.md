@@ -23,6 +23,7 @@ seo_description: This study examines machine learning and univariate time series
   accuracy of random forest models.
 seo_title: Comparing Machine Learning and Time Series Models for Predicting ED Visit
   Volumes
+seo_type: article
 summary: A study comparing machine learning models (random forest, GBM) with univariate
   time series models (ARIMA, ETS, Prophet) for predicting emergency department visits.
   Results show machine learning models perform better, though not substantially so.

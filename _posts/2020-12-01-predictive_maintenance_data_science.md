@@ -24,6 +24,7 @@ seo_description: Explore the impact of data science on predictive maintenance, i
   techniques like regression, anomaly detection, and clustering for failure forecasting
   and optimization of maintenance schedules.
 seo_title: 'Data Science in Predictive Maintenance: Techniques and Applications'
+seo_type: article
 summary: This article delves into the role of data science in predictive maintenance
   (PdM), explaining how methods such as regression, anomaly detection, and clustering
   help forecast equipment failures, reduce downtime, and optimize maintenance strategies.

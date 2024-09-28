@@ -25,6 +25,7 @@ keywords:
 seo_description: A practical explanation of MCMC and the Metropolis algorithm, focusing
   on Bayesian inference with Python code examples to make the concepts accessible.
 seo_title: 'Demystifying MCMC: A Hands-On Guide to Bayesian Inference'
+seo_type: article
 subtitle: Understanding the Metropolis Algorithm Through Code
 tags:
 - Data Science

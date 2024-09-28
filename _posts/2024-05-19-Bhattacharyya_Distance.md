@@ -12,6 +12,7 @@ header:
   overlay_image: /assets/images/data_science_9.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
+seo_type: article
 subtitle: A Comprehensive Guide to Bhattacharyya Distance and Essential Loss Functions
 tags:
 - Bhattacharyya Distance

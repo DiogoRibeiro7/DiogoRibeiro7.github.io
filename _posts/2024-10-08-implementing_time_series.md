@@ -22,6 +22,7 @@ seo_description: Learn how to implement time-series classification in Python usi
   simple models, catch22 features, and benchmarking with statistical tests using UEA/UCR
   datasets.
 seo_title: 'Python Code for Time-Series Classification: Simple Models to Catch22'
+seo_type: article
 summary: This article provides Python code for time-series classification, covering
   simple models, catch22 features, and benchmarking with UEA/UCR repository datasets
   and statistical significance testing.

@@ -20,6 +20,7 @@ keywords:
 seo_description: Learn why confidence intervals can be asymmetric, the factors that
   contribute to this phenomenon, and how to interpret them in statistical analysis.
 seo_title: 'Asymmetric Confidence Intervals: Causes and Understanding'
+seo_type: article
 summary: Asymmetric confidence intervals can result from the nature of your data or
   the statistical method used. This article explores the causes and implications of
   these intervals for interpreting research results.

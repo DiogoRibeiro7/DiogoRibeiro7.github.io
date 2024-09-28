@@ -21,6 +21,7 @@ keywords:
 seo_description: An in-depth look at how data science, big data, and machine learning
   can help solve climate change and sustainability challenges.
 seo_title: 'Climate Change and Data Science: Solving Global Problems'
+seo_type: article
 summary: This article provides a comprehensive list of potential topics at the intersection
   of climate change, sustainability, and data science.
 tags:

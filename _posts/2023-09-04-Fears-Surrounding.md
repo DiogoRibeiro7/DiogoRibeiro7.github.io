@@ -27,6 +27,7 @@ seo_description: Explore the fears and challenges surrounding artificial intelli
   including job displacement, data privacy, ethical dilemmas, and the limitations
   of AI and machine learning.
 seo_title: The Fears and Challenges of Artificial Intelligence and Automation
+seo_type: article
 subtitle: Automation and Machine Learning
 tags:
 - Data Science

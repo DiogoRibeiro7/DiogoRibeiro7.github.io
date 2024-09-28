@@ -29,6 +29,7 @@ seo_description: Learn how Bayesian A/B testing provides nuanced insights into c
   rates, offering a robust alternative to traditional frequentist methods in data
   analysis.
 seo_title: 'Bayesian A/B Testing: Enhancing Conversion Rate Analysis'
+seo_type: article
 tags:
 - A/B Testing
 - Bayesian Methods

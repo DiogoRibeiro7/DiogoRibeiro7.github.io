@@ -24,6 +24,7 @@ seo_description: A comprehensive guide to understanding Type I (false positive) 
   Type II (false negative) errors in hypothesis testing, including balancing error
   rates, significance levels, and power.
 seo_title: 'Understanding Type I and Type II Errors: Hypothesis Testing Explained'
+seo_type: article
 summary: This article provides an in-depth exploration of Type I and Type II errors
   in hypothesis testing, explaining their importance, the trade-offs between them,
   and how they impact decisions in various domains, from clinical trials to business.

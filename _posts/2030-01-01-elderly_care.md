@@ -5,6 +5,7 @@ header:
   overlay_image: /assets/images/data_science_5.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
+seo_type: article
 ---
 
 ### 3. Improving Elderly Mental Health with Machine Learning and Data Analytics

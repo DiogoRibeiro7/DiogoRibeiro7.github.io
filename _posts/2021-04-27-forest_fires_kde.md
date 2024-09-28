@@ -20,6 +20,7 @@ seo_description: Explore GIS techniques like KDE, Getis-Ord Gi*, and Anselin Loc
   Moran’s I for identifying forest fire hotspots in Southeast Asia, validated by contributory
   factors.
 seo_title: GIS-Based Forest Fire Hotspot Identification Using Contributory Factors
+seo_type: article
 summary: This article explores the application of GIS-based techniques, such as Kernel
   Density Estimation (KDE), Getis-Ord Gi*, and Anselin Local Moran's I, in identifying
   forest fire hotspots. The study focuses on Belait District, Brunei Darussalam, and

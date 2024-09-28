@@ -27,6 +27,7 @@ seo_description: Learn how to master combinatorial mathematics using Python. Exp
   practical applications with the itertools library, scientific computing, and probability
   theory.
 seo_title: 'Mastering Combinatorics with Python: A Practical Guide'
+seo_type: article
 subtitle: A Practical Guide
 tags:
 - Python Programming

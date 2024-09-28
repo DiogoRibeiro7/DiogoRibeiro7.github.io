@@ -24,6 +24,7 @@ seo_description: Learn how to simulate pedestrian evacuation in smoke-affected e
   using the Social Force Model and Advection-Diffusion Equation. Explore numerical
   methods to optimize emergency preparedness strategies.
 seo_title: Pedestrian Evacuation Simulation in Smoke-Affected Environments
+seo_type: article
 summary: This article examines simulation models for pedestrian evacuation in smoke-affected
   environments. It focuses on the Social Force Model, smoke propagation dynamics through
   the Advection-Diffusion Equation, and numerical methods for optimizing evacuation

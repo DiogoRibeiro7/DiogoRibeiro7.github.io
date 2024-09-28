@@ -22,6 +22,7 @@ seo_description: This article explores the ethical challenges of using AI, big d
   and machine learning in elderly care, focusing on privacy, autonomy, and informed
   consent.
 seo_title: 'Ethical Issues in AI-Powered Elderly Care: Privacy, Autonomy, and Consent'
+seo_type: article
 summary: The integration of AI and machine learning in elderly care promises significant
   advancements but raises critical ethical concerns. This article examines the challenges
   of protecting privacy, maintaining autonomy, and ensuring informed consent in AI-powered

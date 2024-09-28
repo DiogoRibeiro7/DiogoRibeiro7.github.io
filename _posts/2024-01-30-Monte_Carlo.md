@@ -20,6 +20,7 @@ seo_description: Explore Bayesian statistics and the power of Markov Chain Monte
   (MCMC) in handling complex probabilistic models. Learn with practical examples and
   Python code.
 seo_title: 'Mastering Bayesian Statistics with MCMC: A Deep Dive into Complex Probabilities'
+seo_type: article
 subtitle: Complex Probabilities with Markov Chain Monte Carlo
 summary: A comprehensive guide to understanding Bayesian statistics and MCMC methods,
   including real-world applications and Python examples.

@@ -25,6 +25,7 @@ seo_description: Learn how to apply machine learning techniques and Python to bu
   energy efficiency analysis. This article focuses on optimizing energy usage, sustainability,
   and reducing environmental impact.
 seo_title: Building Energy Efficiency Analysis with Python and Machine Learning
+seo_type: article
 summary: This article covers the application of Python and machine learning to analyze
   building energy efficiency. It explores techniques for optimizing energy consumption,
   improving sustainability, and reducing carbon footprints, helping to create more

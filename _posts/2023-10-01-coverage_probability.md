@@ -20,6 +20,7 @@ keywords:
 seo_description: A detailed explanation of coverage probability, its role in statistical
   estimation theory, and its relationship to confidence intervals and prediction intervals.
 seo_title: Coverage Probability in Statistical Estimation Theory
+seo_type: article
 summary: In statistical estimation theory, coverage probability measures the likelihood
   that a confidence interval contains the true parameter of interest. This article
   explains its importance in statistical theory, prediction intervals, and nominal

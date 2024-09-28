@@ -30,6 +30,7 @@ seo_description: Explore advanced methods and practical implementations for sequ
   applications, and key statistical techniques.
 seo_title: Advanced Techniques for Sequential Change-Point Detection in Univariate
   Models
+seo_type: article
 tags:
 - Change-Point Detection
 - Univariate Models

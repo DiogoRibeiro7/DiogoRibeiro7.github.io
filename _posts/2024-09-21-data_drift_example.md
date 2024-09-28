@@ -25,6 +25,7 @@ keywords:
 seo_description: Explore a practical approach to solving data drift in credit risk
   models, focusing on multivariate analysis and its impact on model performance.
 seo_title: 'Addressing Data Drift in Credit Risk Models: A Case Study'
+seo_type: article
 summary: Data drift can significantly affect the accuracy of credit risk models, making
   early detection and correction essential for maintaining model reliability. This
   article delves into practical approaches for identifying and addressing data drift,

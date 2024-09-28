@@ -23,6 +23,7 @@ keywords:
 seo_description: Explore powerful feature engineering techniques that boost the performance
   of machine learning models by improving data preprocessing and feature selection.
 seo_title: Feature Engineering for Better Machine Learning Models
+seo_type: article
 summary: This article delves into various feature engineering techniques essential
   for improving machine learning model performance. It covers data preprocessing,
   feature selection, transformation methods, and tips to enhance predictive accuracy.

@@ -22,6 +22,7 @@ keywords:
 seo_description: An in-depth analysis of how traffic control systems and pedestrian
   dynamics can be modeled using principles of fluid dynamics.
 seo_title: Traffic Control, Pedestrian Dynamics, and Fluid Dynamics
+seo_type: article
 tags:
 - Traffic Control
 - Pedestrian Dynamics

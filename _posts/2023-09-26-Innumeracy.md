@@ -27,6 +27,7 @@ seo_description: Explore the growing issue of innumeracy—our inability to unde
   and work with numbers. Learn how this new illiteracy impacts decision-making in
   society, from corporate boardrooms to public policy.
 seo_title: 'Innumeracy: The New Illiteracy Crippling Decision-Making'
+seo_type: article
 tags:
 - Numeracy
 - Data Literacy

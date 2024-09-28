@@ -28,6 +28,7 @@ seo_description: An in-depth exploration of how entropy plays a critical role in
   science and machine learning, including decision trees, uncertainty quantification,
   and information theory.
 seo_title: 'Entropy in Data Science and Machine Learning: Comprehensive Analysis'
+seo_type: article
 summary: This article explores how entropy, a concept from information theory, is
   used in data science and machine learning. It delves into entropy’s role in decision
   trees, classification, clustering, anomaly detection, and reinforcement learning.

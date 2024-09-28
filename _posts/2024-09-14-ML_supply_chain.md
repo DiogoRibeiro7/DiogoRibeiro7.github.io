@@ -26,6 +26,7 @@ seo_description: Explore how machine learning can optimize supply chain operatio
   enhance efficiency, and drive business value through demand forecasting, inventory
   management, and logistics.
 seo_title: 'Machine Learning in Supply Chain: Optimization and Efficiency'
+seo_type: article
 summary: Machine learning is revolutionizing supply chain management by optimizing
   key processes such as demand forecasting, inventory management, and logistics. This
   article explores how machine learning models improve operational efficiency, reduce

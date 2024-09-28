@@ -27,6 +27,7 @@ seo_description: Explore the ethical challenges in data science, including priva
   protection, bias, social impact, and responsible decision-making. A comprehensive
   guide for ethical AI.
 seo_title: 'Ethics in Data Science: Privacy, Bias, Social Impact & Responsible AI'
+seo_type: article
 subtitle: A Comprehensive Guide to Privacy, Bias, Social Impact and Responsible Decision-Making
 tags:
 - Data Science

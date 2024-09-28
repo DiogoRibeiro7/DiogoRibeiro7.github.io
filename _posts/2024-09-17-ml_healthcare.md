@@ -30,6 +30,7 @@ seo_description: Explore the impact of machine learning on healthcare analytics,
   and the challenges of integrating ML into healthcare systems.
 seo_title: How Machine Learning is Revolutionizing Healthcare Analytics for Improved
   Patient Care
+seo_type: article
 summary: Machine learning is reshaping healthcare analytics by enabling advanced predictive
   models, personalized treatment plans, and real-time analysis of medical data. This
   article highlights how ML is being applied in critical areas such as predictive

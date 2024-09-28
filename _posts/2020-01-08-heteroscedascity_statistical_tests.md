@@ -20,6 +20,7 @@ keywords:
 seo_description: Learn about heteroscedasticity, the statistical tests to detect it,
   and steps to take when it is present in regression analysis.
 seo_title: 'Heteroscedasticity: Statistical Tests and What to Do When Detected'
+seo_type: article
 summary: Explore heteroscedasticity in regression analysis, its consequences, how
   to test for it, and practical solutions for correcting it when detected.
 tags:

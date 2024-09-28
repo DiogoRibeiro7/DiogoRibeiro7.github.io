@@ -30,6 +30,7 @@ seo_description: Explore advanced machine learning applications for forest fire 
   a holistic approach.
 seo_title: 'Machine Learning in Forest Fire Management: Advanced Applications and
   Holistic Strategies'
+seo_type: article
 tags:
 - Forest Fires
 - Machine Learning

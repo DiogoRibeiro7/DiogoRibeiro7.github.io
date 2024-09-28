@@ -24,6 +24,7 @@ seo_description: Learn about outlier detection techniques in machine learning, f
   on distance metrics and metric learning. Discover how these methods enhance the
   accuracy of detecting anomalies and outliers.
 seo_title: 'Outlier Detection in Machine Learning: Exploring Distance Metric Learning'
+seo_type: article
 summary: This comprehensive guide explores outlier detection using distance metrics
   and metric learning techniques. It highlights the role of algorithms such as Random
   Forests and distance metric learning in identifying anomalies and improving detection

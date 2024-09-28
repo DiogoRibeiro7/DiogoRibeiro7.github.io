@@ -21,6 +21,7 @@ seo_description: Explore how using customer behavior and predictive models can i
   demand forecasting in the supply chain industry, leveraging the BG/NBD model for
   better accuracy.
 seo_title: Demand Forecasting in Supply Chain Using Customer Behavior
+seo_type: article
 summary: This article explores the use of customer behavior modeling to improve demand
   forecasting in the supply chain industry. We demonstrate how the BG/NBD model and
   the Lifetimes Python library are used to predict repurchases and optimize sales

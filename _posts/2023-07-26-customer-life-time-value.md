@@ -32,6 +32,7 @@ seo_description: Explore an in-depth guide to Customer Lifetime Value (CLV), cov
   marketing strategies.
 seo_title: 'Customer Lifetime Value (CLV): A Comprehensive Guide for Data Science
   and Marketing'
+seo_type: article
 tags:
 - CLV
 - Predictive Analytics

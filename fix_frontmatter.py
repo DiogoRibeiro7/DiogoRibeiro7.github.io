@@ -64,6 +64,8 @@ def process_markdown_file(filepath):
             post['header']['show_overlay_excerpt'] = False
         else:
             print(f"'excerpt' key already present in 'header' in {filename}, skipping.")
+    if not "seo_type" in post:
+        post["seo_type"] = "article"
 
     # Dump the updated content and ensure it ends with a single newline
     content = frontmatter.dumps(post)
