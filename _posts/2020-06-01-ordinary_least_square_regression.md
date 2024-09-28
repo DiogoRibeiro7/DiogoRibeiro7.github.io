@@ -15,12 +15,12 @@ header:
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
-- OLS
-- Linear Regression
 - Consistency
-- Maximum Likelihood Estimator
-- Gauss-Markov
+- Linear Regression
 - Data Science
+- Gauss-Markov
+- OLS
+- Maximum Likelihood Estimator
 seo_description: A detailed exploration of Ordinary Least Squares (OLS) regression,
   its properties like consistency, efficiency, and minimum variance, and its applications
   in statistics, machine learning, and data science.
@@ -32,11 +32,11 @@ summary: This article covers Ordinary Least Squares (OLS) regression, one of the
   about its key properties, how it works, and its wide range of applications in modeling
   linear relationships between variables.
 tags:
+- Homoscedasticity
 - OLS Regression
 - Linear Regression
 - Gauss-Markov Theorem
 - Maximum Likelihood Estimator
-- Homoscedasticity
 title: 'Ordinary Least Squares (OLS) Regression: Properties and Applications'
 ---
 

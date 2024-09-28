@@ -17,7 +17,7 @@ def extract_front_matter(content: str):
 def extract_code_snippets(content: str):
     # Regular expression to find code blocks with optional language declaration
     code_snippets = re.findall(r'```(\w+)?\n(.*?)\n```', content, re.DOTALL)
-    
+
     # Dictionary to store snippets by language
     snippets_by_language = {}
 
@@ -32,10 +32,23 @@ def extract_code_snippets(content: str):
 
     return snippets_by_language
 
-# Function to update front matter with tasks and keywords
+# Function to update front matter with tasks and keywords, appending new languages
 def update_front_matter(front_matter: dict, snippets_by_language: dict):
-    front_matter['tasks'] = list(snippets_by_language.keys())  # Add detected languages to 'tasks'
-    front_matter['keywords'] = list(snippets_by_language.keys())  # Also add detected languages to 'keywords'
+    detected_languages = list(snippets_by_language.keys())
+
+    # Append to existing 'tasks' and 'keywords' in the front matter
+    if 'tags' in front_matter:
+        # Ensure no duplicates by using a set, then convert back to a list
+        front_matter['tags'] = list(set(front_matter['tags']) | set(detected_languages))
+    else:
+        front_matter['tags'] = detected_languages
+
+    if 'keywords' in front_matter:
+        # Ensure no duplicates by using a set, then convert back to a list
+        front_matter['keywords'] = list(set(front_matter['keywords']) | set(detected_languages))
+    else:
+        front_matter['keywords'] = detected_languages
+
     return front_matter
 
 # Function to iterate over all markdown files in a folder and process them
@@ -53,23 +66,19 @@ def process_markdown_files(folder_path: str):
                 front_matter, content_without_front_matter = extract_front_matter(content)
                 snippets_by_language = extract_code_snippets(content_without_front_matter)
 
-                # Update the front matter with tasks and keywords
+                # Update the front matter by appending new languages to tasks and keywords
                 updated_front_matter = update_front_matter(front_matter, snippets_by_language)
 
-                # If front matter exists, replace it
-                if front_matter:
-                    new_front_matter = yaml.dump(updated_front_matter, default_flow_style=False).strip()
-                    new_content = f"---\n{new_front_matter}\n---\n\n{content_without_front_matter}"
-                else:
-                    # If no front matter, add it
-                    new_front_matter = yaml.dump(updated_front_matter, default_flow_style=False).strip()
-                    new_content = f"---\n{new_front_matter}\n---\n\n{content}"
+                # Create the new content with updated front matter
+                new_front_matter = yaml.dump(updated_front_matter, default_flow_style=False).strip()
+                new_content = f"---\n{new_front_matter}\n---\n\n{content_without_front_matter}"
 
                 # Write the updated content back to the file
                 with open(file_path, 'w', encoding='utf-8') as f:
                     f.write(new_content)
 
                 print(f"Updated front matter in {file}")
+
 
 # Example usage
 folder_path = './_posts'  # Update this path to your markdown folder

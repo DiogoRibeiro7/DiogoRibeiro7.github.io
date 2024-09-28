@@ -14,11 +14,12 @@ header:
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_7.jpg
 keywords:
-- False Positive Rate
-- FPR
-- Machine Learning
 - Binary Classification Metrics
 - Model Evaluation
+- FPR
+- Machine Learning
+- False Positive Rate
+- r
 seo_description: A comprehensive analysis of the False Positive Rate (FPR), including
   its role in machine learning, strengths, weaknesses, use cases, and alternative
   metrics.
@@ -28,10 +29,11 @@ summary: This article provides a detailed examination of the False Positive Rate
   in binary classification, its calculation, interpretation, and the contexts in which
   it plays a crucial role.
 tags:
-- False Positive Rate
-- Binary Classification
-- Machine Learning Metrics
 - Model Evaluation
+- Binary Classification
+- False Positive Rate
+- Machine Learning Metrics
+- r
 title: Analysis of the False Positive Rate (FPR) in Machine Learning
 ---
 

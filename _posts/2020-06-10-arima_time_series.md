@@ -16,10 +16,12 @@ header:
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - ARIMA
-- SARIMA
-- ARMA
 - ARIMAX
 - Time Series Analysis
+- python
+- SARIMA
+- r
+- ARMA
 seo_description: Explore the fundamentals of ARIMA (AutoRegressive Integrated Moving
   Average) model, its components, parameter identification, validation, and applications.
   Comparison with ARIMAX, SARIMA, and ARMA.
@@ -30,8 +32,10 @@ summary: This guide provides an in-depth exploration of ARIMA modeling for time 
   with models like ARIMAX, SARIMA, and ARMA.
 tags:
 - ARIMA
-- Forecasting
 - Time Series
+- Forecasting
+- r
+- python
 title: A Comprehensive Guide to ARIMA Time Series Modeling
 ---
 

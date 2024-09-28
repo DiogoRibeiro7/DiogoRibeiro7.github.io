@@ -17,8 +17,8 @@ keywords:
 - Heteroscedasticity
 - Breusch-Pagan Test
 - White Test
-- Regression Diagnostics
 - Econometrics
+- Regression Diagnostics
 seo_description: Learn about heteroscedasticity, the statistical tests to detect it,
   and steps to take when it is present in regression analysis.
 seo_title: 'Heteroscedasticity: Statistical Tests and What to Do When Detected'

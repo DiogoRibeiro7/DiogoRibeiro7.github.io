@@ -17,11 +17,11 @@ header:
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_8.jpg
 keywords:
-- Shapiro-Wilk Test
-- Anderson-Darling Test
-- Normality Test
-- Parametric Methods
 - Non-Parametric Methods
+- Anderson-Darling Test
+- Parametric Methods
+- Shapiro-Wilk Test
+- Normality Test
 seo_description: Explore the differences between the Shapiro-Wilk and Anderson-Darling
   tests for checking normality in data. Learn when to use each test and how to interpret
   the results.
@@ -32,10 +32,10 @@ summary: This article explores two common normality tests—the Shapiro-Wilk tes
   to interpret their results to determine the appropriate statistical method.
 tags:
 - Shapiro-Wilk Test
-- Anderson-Darling Test
-- Normality Tests
-- Parametric Methods
 - Non-Parametric Methods
+- Anderson-Darling Test
+- Parametric Methods
+- Normality Tests
 title: 'Shapiro-Wilk Test vs. Anderson-Darling Test: Checking Normality in Data'
 ---
 
