@@ -1,10 +1,10 @@
 ---
 author_profile: false
 categories:
-- Mathematics
-- Statistics
-- Data Science
-- Machine Learning
+  - Mathematics
+  - Statistics
+  - Data Science
+  - Machine Learning
 classes: wide
 date: '2024-05-15'
 header:
@@ -12,19 +12,24 @@ header:
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
-subtitle: Ensuring Model Accuracy by Monitoring Subtle Changes in Data Structure
+subtitle: "Ensuring Model Accuracy by Monitoring Subtle Changes in Data Structure"
 tags:
-- Multivariate Data Drift
-- Principal Component Analysis (PCA)
-- Reconstruction Error
-- Data Monitoring
-- Machine Learning Model Validation
-- Feature Space Analysis
-- Dimensionality Reduction
-- Model Performance
-- Data Science
-- Production Data
-title: Detect Multivariate Data Drift
+  - Multivariate Data Drift
+  - Principal Component Analysis (PCA)
+  - Reconstruction Error
+  - Data Monitoring
+  - Machine Learning Model Validation
+  - Feature Space Analysis
+  - Dimensionality Reduction
+  - Model Performance
+  - Data Science
+  - Production Data
+title: "Detect Multivariate Data Drift"
+summary: "A detailed guide on detecting multivariate data drift using Principal Component Analysis (PCA) and Reconstruction Error to monitor changes in data structure and ensure model performance in production environments."
+seo:
+  description: "Learn how to detect multivariate data drift and monitor your machine learning model's performance using PCA and Reconstruction Error."
+  title: "Detect Multivariate Data Drift with PCA and Reconstruction Error"
+  type: "article"
 ---
 
 In machine learning, ensuring the ongoing accuracy and reliability of models in production is paramount. One significant challenge faced by data scientists and engineers is data drift, where the statistical properties of the input data change over time, leading to potential degradation in model performance. While univariate data drift detection methods analyze each feature in isolation, multivariate data drift detection offers a more holistic approach.
