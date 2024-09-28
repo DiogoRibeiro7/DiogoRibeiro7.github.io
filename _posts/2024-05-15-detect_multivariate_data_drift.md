@@ -12,11 +12,10 @@ header:
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
-seo:
-  description: Learn how to detect multivariate data drift and monitor your machine
+seo_description: Learn how to detect multivariate data drift and monitor your machine
     learning model's performance using PCA and Reconstruction Error.
-  title: Detect Multivariate Data Drift with PCA and Reconstruction Error
-  type: article
+seo_title: Detect Multivariate Data Drift with PCA and Reconstruction Error
+seo_type: article
 subtitle: Ensuring Model Accuracy by Monitoring Subtle Changes in Data Structure
 summary: A detailed guide on detecting multivariate data drift using Principal Component
   Analysis (PCA) and Reconstruction Error to monitor changes in data structure and
