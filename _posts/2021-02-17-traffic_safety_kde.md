@@ -15,7 +15,7 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/traffic_kde_2.png
   twitter_image: /assets/images/data_science_1.jpg
-keywords: 
+keywords:
 - traffic safety
 - Kernel Density Estimation
 - KDE

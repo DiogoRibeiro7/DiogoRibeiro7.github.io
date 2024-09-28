@@ -29,7 +29,7 @@ summary: This article explores the application of GIS-based techniques, such as 
   validates hotspot results using contributory factors like population density, precipitation,
   elevation, and vegetation cover.
 tags:
-- "Anselin Local Moran\u2019s I"
+- Anselin Local Moran’s I
 - GIS
 - Forest Fires
 - Getis-Ord Gi*
