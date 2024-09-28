@@ -2,10 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Data Science
-- Model Monitoring
-- Artificial Intelligence
-- Technology
 classes: wide
 date: '2024-07-02'
 header:
@@ -15,7 +11,24 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_2.jpg
-seo_type: article
+seo_title: 'Machine Learning Monitoring: Moving Beyond Univariate Data Drift Detection'
+seo_description: 'Explore advanced methods for machine learning monitoring by moving beyond univariate data drift detection. Learn about direct loss estimation, detecting outliers, and addressing alarm fatigue in production AI systems.'
+summary: 'A deep dive into advanced machine learning monitoring techniques that extend beyond traditional univariate data drift detection. This article covers methods such as direct loss estimation, outlier detection, and best practices for addressing alarm fatigue in AI systems deployed in production.'
+keywords:
+- Data Drift Detection
+- Direct Loss Estimation
+- Machine Learning Monitoring
+- Alarm Fatigue in AI
+- Outlier Detection Methods
+- Model Performance Tracking
+- Predictive Analytics
+- AI in Production
+- Advanced Data Science Techniques
+- Monitoring ML Models
+- Data Science
+- Model Monitoring
+- Artificial Intelligence
+- Technology
 tags:
 - Data Drift
 - Direct Loss Estimation
@@ -26,6 +39,10 @@ tags:
 - Data Science Best Practices
 - AI in Production
 - Outliers Detection
+- Data Science
+- Model Monitoring
+- Artificial Intelligence
+- Technology
 title: 'Machine Learning Monitoring: Moving Beyond Univariate Data Drift Detection'
 ---
 

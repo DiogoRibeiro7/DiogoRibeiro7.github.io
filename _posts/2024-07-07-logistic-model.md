@@ -2,9 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Machine Learning
-- Data Science
-- Predictive Modeling
 classes: wide
 date: '2024-07-07'
 header:
@@ -14,6 +11,26 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_3.jpg
+keywords:
+- Logistic Regression
+- Logit Model
+- Binary Classification
+- Probability Theory
+- Maximum Likelihood Estimation
+- Odds Ratio
+- Multinomial Logistic Regression
+- Ordinal Logistic Regression
+- Statistical Modeling
+- Predictive Analytics
+- Joseph Berkson
+- Data Science Techniques
+- Machine Learning Algorithms
+- Classification Models
+- Predictive Modeling
+seo_description: A comprehensive guide to Logistic Regression, covering binary classification,
+  logit models, probability, maximum-likelihood estimation, odds ratios, and the contributions
+  of Joseph Berkson. Explore its use in machine learning and predictive modeling.
+seo_title: 'The Logistic Model: Explained'
 seo_type: article
 tags:
 - Logistic Regression
@@ -26,6 +43,9 @@ tags:
 - Ordinal Logistic Regression
 - Statistical Modeling
 - Joseph Berkson
+- Machine Learning
+- Data Science
+- Predictive Modeling
 title: 'The Logistic Model: Explained'
 ---
 
