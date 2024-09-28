@@ -15,8 +15,17 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/traffic_kde_2.png
   twitter_image: /assets/images/data_science_1.jpg
-keywords: traffic safety, Kernel Density Estimation, KDE, traffic accident hotspots,
-  urban planning, spatial analysis, road safety, GIS
+keywords: 
+- traffic safety
+- Kernel Density Estimation
+- KDE
+- traffic accident hotspots
+- urban planning
+- spatial analysis
+- road safety
+- GIS
+- bash
+- python
 seo_description: This article explores how Kernel Density Estimation (KDE) can be
   used for detecting traffic accident hotspots and improving urban traffic safety,
   with case studies from Japan.
@@ -29,11 +38,14 @@ summary: Traffic safety in urban areas remains a significant challenge globally.
   limitations of traditional methods, and offering practical solutions for real-world
   applications.
 tags:
+- Traffic Safety
 - Traffic Accident Hotspots
+- Data Analysis
+- python
 - Kernel Density Estimation
 - KDE
-- Traffic Safety
-- Data Analysis
+- bash
+- python
 title: 'Traffic Safety with Data: A Comprehensive Approach Using Kernel Density Estimation
   (KDE) to Detect Traffic Accident Hotspots'
 ---
