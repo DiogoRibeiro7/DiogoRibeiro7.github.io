@@ -33,99 +33,118 @@ title: Central Limit Theorem for m-dependent Random Variables Under Sub-linear E
 
 ## Abstract
 
-This article explores the extension of the Central Limit Theorem (CLT) for $$m$$-dependent random variables under sub-linear expectations. By establishing Rosenthal’s inequality for $$m$$-dependent variables and employing the framework of sub-linear expectations, this study broadens the application of CLTs in models characterized by uncertainty.
+This article investigates the extension of the Central Limit Theorem (CLT) for $$m$$-dependent random variables within the framework of sub-linear expectations. The study establishes Rosenthal’s inequality for $$m$$-dependent variables, using it to prove the convergence of sums of such random variables to a $$G$$-normal distribution under sub-linear expectations. By combining tools from dependence theory and sub-linear expectation, this work significantly broadens the application of CLTs to models characterized by uncertainty, ambiguity, and risk, making the results relevant for a wide range of practical applications in finance, insurance, and risk management.
 
 ## Background
 
-The Central Limit Theorem (CLT) is a fundamental result in probability theory and statistics, asserting that the sum of a large number of independent and identically distributed random variables tends towards a normal distribution, regardless of the original distribution. This theorem underpins many statistical methods and justifies the approximation of complex distributions by the normal distribution.
+The Central Limit Theorem (CLT) is a cornerstone of probability theory and statistics. It states that the sum of a sufficiently large number of independent and identically distributed (i.i.d.) random variables, regardless of their original distribution, converges in distribution to a normal (Gaussian) distribution. This result is pivotal because it allows for the approximation of the sum of random variables, even when the individual distributions are unknown or complex. The classical CLT plays a crucial role in various fields, including statistical inference, hypothesis testing, and the foundation of many machine learning algorithms.
+
+However, the standard CLT assumes independence among random variables, an assumption that is not always realistic in practical scenarios. Many real-world phenomena exhibit dependencies, whether in time series data, spatial statistics, or econometric models. Addressing such dependencies requires extending the classical CLT to accommodate more flexible dependence structures.
 
 ## Motivation
 
-In practical scenarios, independence among variables is often an unrealistic assumption. $$m$$-dependence provides a more flexible model for dependent sequences, where each variable is dependent only on the preceding $$m$$ variables. Sub-linear expectations, introduced by Peng, offer a robust framework for handling uncertainty and model risk, extending classical probabilistic concepts to situations where traditional expectations may fail.
+In real-world data, perfect independence is often a rare occurrence. Time series data, for instance, typically exhibit correlations, as do spatial data in geostatistics or returns in financial markets. The notion of $$m$$-dependence provides a more general framework for modeling such dependencies. In an $$m$$-dependent sequence, a random variable depends only on the preceding $$m$$ variables, capturing localized dependence while maintaining some long-range independence.
+
+Sub-linear expectations, introduced by Shige Peng, offer a framework for extending classical probabilistic concepts to settings where uncertainty and ambiguity are present. Traditional expectations are linear and additive, which assumes that all probabilistic models are well-defined and free from ambiguity. However, in many applications—such as financial markets or insurance models—there may be inherent uncertainty in model selection, parameter estimation, or even the probability measure itself. Sub-linear expectations allow for non-additivity, providing a way to quantify and manage such uncertainties. By combining $$m$$-dependence with sub-linear expectations, this research builds a more robust version of the CLT, which can better reflect real-world complexities.
 
 ## Objective
 
-The aim of this study is to extend the Central Limit Theorem to $$m$$-dependent random variables within the framework of sub-linear expectations. This involves developing new inequalities and theorems that accommodate the dependencies and non-linearities inherent in these models.
+The goal of this research is to extend the Central Limit Theorem to $$m$$-dependent random variables within the sub-linear expectation framework. This extension requires developing new mathematical tools—specifically, inequalities and theorems that account for both the local dependence and the non-linear nature of sub-linear expectations. The primary challenge lies in handling the dependencies between random variables while ensuring convergence to a generalized normal distribution (the $$G$$-normal distribution) under sub-linear expectations.
 
 ## Framework and Notations
 
 ### Sub-linear Expectations
 
-Sub-linear expectations are non-additive measures that generalize classical expectations, accommodating uncertainty and model risk. Peng’s framework introduces the notion of $$G$$-expectation and $$G$$-normal distribution, which are pivotal in this generalized setting.
+Sub-linear expectations generalize the traditional concept of expectation by allowing for non-additive measures, which are more suitable for dealing with model risk, uncertainty, and ambiguity. In classical probability theory, the expectation operator is linear, meaning that the expectation of the sum of two independent random variables equals the sum of their expectations. Sub-linear expectations relax this additivity property, enabling the incorporation of multiple probabilistic models simultaneously.
+
+The concept of $$G$$-expectation, introduced by Peng, is a specific type of sub-linear expectation that is used to define the $$G$$-normal distribution, a generalization of the classical normal distribution. The $$G$$-normal distribution is pivotal in this framework, as it accommodates the uncertainty and risk embedded in the model.
 
 ### Notations
 
-- **Sub-linear Expectation Space**: A triplet $$(\Omega, \mathcal{H}, \mathbb{E})$$, where $$\Omega$$ is the sample space, $$\mathcal{H}$$ is a linear space of real functions on $$\Omega$$, and $$\mathbb{E}$$ is a sub-linear expectation.
-- **Capacity**: A non-additive set function that measures the size of sets in terms of uncertainty.
-- **$$G$$-normal distribution**: A generalization of the normal distribution under sub-linear expectations.
-- **$$m$$-dependence**: A property where each variable in a sequence depends only on the preceding $$m$$ variables.
+To formalize the setting, we define the following notations:
 
-These concepts are crucial for extending CLTs to dependent sequences, providing the necessary mathematical tools to handle dependencies and non-linearities.
+- **Sub-linear Expectation Space**: Denoted by $$(\Omega, \mathcal{H}, \mathbb{E})$$, where:
+  - $$\Omega$$ is the sample space,
+  - $$\mathcal{H}$$ is a linear space of real functions on $$\Omega$$,
+  - $$\mathbb{E}$$ is a sub-linear expectation.
+  
+- **Capacity**: A non-additive set function $$v$$ that generalizes the classical probability measure, providing a way to quantify uncertainty. Capacity theory plays a key role in sub-linear expectation theory.
+  
+- **$$G$$-normal distribution**: A generalization of the classical normal distribution under the sub-linear expectation framework. It encapsulates both the traditional Gaussian distribution and the uncertainty or ambiguity of the model.
+
+- **$$m$$-dependence**: A sequence of random variables $$X_1, X_2, \dots$$ is said to be $$m$$-dependent if each random variable depends only on the preceding $$m$$ variables. Formally, for any $$i$$, the random variable $$X_i$$ is conditionally independent of $$X_{i-m-1}, X_{i-m-2}, \dots$$ given $$X_{i-1}, X_{i-2}, \dots, X_{i-m}$$.
+
+These notations are essential for formalizing the extension of the CLT to $$m$$-dependent sequences and for handling the complexities introduced by sub-linear expectations.
 
 ## Central Limit Theorem for $$m$$-dependent Random Variables
 
 ### Theorem Statement
 
-The main theorem states that under certain conditions, the sum of $$m$$-dependent random variables converges to a $$G$$-normal distribution under sub-linear expectations.
+The extended Central Limit Theorem asserts that, under certain regularity conditions, the sum of $$m$$-dependent random variables converges in distribution to a $$G$$-normal distribution when evaluated using sub-linear expectations. This result generalizes the classical CLT by incorporating both dependencies between the random variables and non-linear expectations.
 
 ### Rosenthal’s Inequality
 
-Rosenthal’s inequality for $$m$$-dependent variables is a key tool in the proof of the CLT. It provides bounds on the moments of sums of dependent random variables, which are essential for establishing convergence.
+A key component in the proof of this extended CLT is Rosenthal’s inequality, which provides bounds on the moments of sums of dependent random variables. Specifically, for $$m$$-dependent random variables, Rosenthal’s inequality establishes that the moments of the sum can be controlled by the moments of individual variables. This is crucial for ensuring the convergence of the distribution of the sum to the $$G$$-normal distribution under sub-linear expectations.
 
-### Conditions
+### Conditions for Convergence
 
-The CLT for $$m$$-dependent random variables holds under specific conditions, such as boundedness and certain moment constraints. These conditions ensure the applicability of Rosenthal’s inequality and the convergence of the distribution.
+The CLT for $$m$$-dependent random variables requires certain conditions to hold. These include:
+
+- **Boundedness**: The random variables must satisfy certain boundedness conditions, such as bounded variance or bounded moments.
+- **Moment Constraints**: Higher moments of the random variables need to be controlled, as these moments play a key role in ensuring the applicability of Rosenthal’s inequality.
+- **Dependence Structure**: The $$m$$-dependence must be sufficiently localized, meaning that each variable can depend only on a finite number of preceding variables.
 
 ### Proof Outline
 
-The proof involves several steps:
-1. Establishing Rosenthal’s inequality for $$m$$-dependent variables.
-2. Demonstrating the boundedness of higher moments.
-3. Showing the convergence to the $$G$$-normal distribution using sub-linear expectations.
+The proof of the extended CLT proceeds in several key steps:
+
+1. **Establishing Rosenthal’s Inequality** for $$m$$-dependent random variables, providing the necessary moment bounds.
+2. **Demonstrating boundedness** of the higher moments of the sums, ensuring that the moments do not grow too quickly as the number of random variables increases.
+3. **Proving convergence** to the $$G$$-normal distribution by employing the framework of sub-linear expectations. This involves showing that the sum of $$m$$-dependent random variables behaves asymptotically like a $$G$$-normal distribution under sub-linear expectations.
 
 ## Truncated Conditions
 
 ### Truncated Variables
 
-Truncated random variables are those that have been modified to exclude extreme values. This concept is useful in scenarios where the full distribution includes outliers that can distort the results.
+In many practical applications, it is necessary to work with truncated random variables, which exclude extreme values to avoid the influence of outliers. Truncated random variables are often used when the full distribution may contain extreme values that distort the results of statistical analysis.
 
-### Theorem Statement
+### Theorem for Truncated Variables
 
-The theorem under truncated conditions extends the CLT to $$m$$-dependent random variables with truncated distributions.
+The extension of the CLT to $$m$$-dependent random variables with truncated distributions follows a similar structure as the general case, but with additional steps to handle the truncation of extreme values. The truncated CLT asserts that, under certain regularity conditions, the sum of truncated $$m$$-dependent random variables converges to a $$G$$-normal distribution.
 
 ### Proof Outline
 
-The proof under truncated conditions follows a similar structure but involves additional steps to handle the truncation:
+The proof for truncated variables involves the following steps:
 
-1. Defining the truncated variables and their properties.
-2. Adapting Rosenthal’s inequality to the truncated setting.
-3. Proving convergence to the $$G$$-normal distribution with truncated variables.
+1. **Defining the truncated variables** and establishing their moment properties.
+2. **Adapting Rosenthal’s inequality** to the truncated setting, ensuring that the moment bounds still hold.
+3. **Proving convergence** to the $$G$$-normal distribution for the truncated variables.
 
 ## Corollaries and Specific Cases
 
 ### Stationary Sequences
 
-The main theorem can be applied to stationary sequences of $$m$$-dependent random variables, where the joint distribution of the variables is invariant under time shifts.
+A particularly important application of the extended CLT is to stationary sequences of $$m$$-dependent random variables, where the joint distribution of the sequence is invariant under time shifts. The extended CLT provides a powerful tool for analyzing such sequences in settings with sub-linear expectations.
 
 ### Independent Case
 
-A special case of the theorem is when $$m = 0$$, corresponding to independent random variables. This recovers the classical CLT results within the framework of sub-linear expectations.
+When $$m = 0$$, the $$m$$-dependence assumption reduces to the case of independent random variables. In this case, the extended CLT recovers the classical Central Limit Theorem, providing a direct connection between the classical and generalized results.
 
 ### Mean Uncertainty
 
-For sequences without mean uncertainty, the conditions for the CLT can be simplified. This corollary highlights scenarios where the average behavior of the sequence is well-defined and less influenced by uncertainty.
+A notable corollary of the extended CLT applies to sequences without mean uncertainty. In such cases, the conditions for the CLT can be simplified, as the uncertainty in the mean behavior of the sequence is reduced. This result is particularly relevant in situations where the overall mean of the sequence is well-defined and less influenced by model uncertainty.
 
 ## Summary
 
-This study extends the Central Limit Theorem to $$m$$-dependent random variables under sub-linear expectations, establishing new inequalities and conditions for convergence. The results have significant implications for modeling dependent sequences and handling uncertainty in various fields.
+This article extends the classical Central Limit Theorem to $$m$$-dependent random variables under the framework of sub-linear expectations. By introducing Rosenthal’s inequality for $$m$$-dependent sequences and proving convergence to a $$G$$-normal distribution, the study provides new mathematical tools for handling dependent random variables in uncertain environments. The results have significant implications for modeling in fields where dependencies and uncertainties are prevalent, such as finance, insurance, and risk management.
 
 ## Implications
 
-The extension of the CLT to $$m$$-dependent variables under sub-linear expectations broadens the applicability of this fundamental theorem. It offers robust tools for statistical analysis in finance, insurance, and other areas characterized by uncertainty and dependencies.
+The extension of the Central Limit Theorem to $$m$$-dependent random variables within the sub-linear expectation framework broadens the applicability of this fundamental theorem. It offers robust tools for dealing with uncertainty in complex models, which are essential in fields that require rigorous probabilistic analysis under ambiguous conditions.
 
 ## Future Work
 
-Future research could explore applications of these results in specific fields, develop numerical methods for practical implementation, and investigate further extensions to other types of dependencies and non-linearities.
+Future research can build on this work by exploring applications in specific domains, such as financial risk modeling and actuarial science. Additionally, further extensions of these results to other types of dependencies or to non-stationary sequences could be investigated. Numerical methods for practical implementation and computation of $$G$$-normal distributions in real-world data would also be valuable contributions.
 
 ## References
 
