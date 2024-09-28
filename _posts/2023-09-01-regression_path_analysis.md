@@ -9,9 +9,11 @@ excerpt: Regression and path analysis are two statistical techniques used to mod
   key features and use cases for each.
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - Regression Analysis
 - Path Analysis

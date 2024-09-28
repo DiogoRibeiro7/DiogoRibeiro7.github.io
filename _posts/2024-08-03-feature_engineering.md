@@ -10,9 +10,11 @@ excerpt: Discover the importance of feature engineering in enhancing machine lea
   that drive better predictive performance.
 header:
   image: /assets/images/data_science_1.jpg
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
+  twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - Feature Engineering
 - Data Transformation

@@ -9,9 +9,11 @@ excerpt: Delve into bootstrapping, a versatile statistical technique for estimat
   and implementation.
 header:
   image: /assets/images/data_science_4.jpg
+  og_image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
+  twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - bootstrapping
 - resampling methods

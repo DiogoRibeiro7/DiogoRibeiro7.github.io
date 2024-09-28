@@ -8,9 +8,11 @@ excerpt: Heteroscedasticity can affect regression models, leading to biased or i
   estimates. Here's how to detect it and what to do when it's present.
 header:
   image: /assets/images/data_science_4.jpg
+  og_image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
+  twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - Heteroscedasticity
 - Breusch-Pagan Test

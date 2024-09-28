@@ -8,9 +8,11 @@ excerpt: Explore Bayesian A/B testing as a powerful framework for analyzing conv
   rates, providing more nuanced insights than traditional frequentist approaches.
 header:
   image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_9.jpg
 keywords:
 - Bayesian A/B testing
 - conversion rate analysis

@@ -8,9 +8,11 @@ excerpt: Understand how causal reasoning helps us move beyond correlation, resol
   paradoxes and leading to more accurate insights from data analysis.
 header:
   image: /assets/images/data_science_4.jpg
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
+  twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - Causality
 - Correlation

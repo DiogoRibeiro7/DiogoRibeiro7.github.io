@@ -9,9 +9,11 @@ classes: wide
 date: '2024-05-17'
 header:
   image: /assets/images/data_science_6.jpg
+  og_image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_6.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
+  twitter_image: /assets/images/data_science_2.jpg
 keywords:
 - Markov systems
 - stochastic processes

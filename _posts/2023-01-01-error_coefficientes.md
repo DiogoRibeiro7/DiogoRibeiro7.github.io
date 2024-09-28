@@ -9,9 +9,11 @@ excerpt: Delve into how multiple linear regression and binary logistic regressio
   model performance.
 header:
   image: /assets/images/data_science_1.jpg
+  og_image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
+  twitter_image: /assets/images/data_science_2.jpg
 keywords:
 - error terms
 - multiple linear regression

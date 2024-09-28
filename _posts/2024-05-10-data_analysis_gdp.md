@@ -9,9 +9,11 @@ classes: wide
 date: '2024-05-10'
 header:
   image: /assets/images/data_science_4.jpg
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
+  twitter_image: /assets/images/data_science_1.jpg
 seo_type: article
 subtitle: Exploring the Shortcomings of GDP as a Sole Economic Indicator in Data Science
   Applications

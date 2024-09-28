@@ -9,9 +9,11 @@ excerpt: This article explores the use of stationary distributions in time serie
   models to define thresholds in zero-inflated data, improving classification accuracy.
 header:
   image: /assets/images/data_science_1.jpg
+  og_image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
+  twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - Zero-Inflated Data
 - Time Series Stationarity

@@ -8,9 +8,11 @@ excerpt: Multicollinearity is a common issue in regression analysis. Learn about
   implications, misconceptions, and techniques to manage it in statistical modeling.
 header:
   image: /assets/images/data_science_5.jpg
+  og_image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_5.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
+  twitter_image: /assets/images/data_science_2.jpg
 keywords:
 - Multicollinearity
 - Collinearity

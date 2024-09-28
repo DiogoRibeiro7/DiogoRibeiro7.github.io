@@ -8,9 +8,11 @@ excerpt: Discover the significance of the Normal Distribution, also known as the
   Curve, in statistics and its widespread application in real-world scenarios.
 header:
   image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_9.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_9.jpg
 keywords:
 - normal distribution
 - bell curve

@@ -11,9 +11,11 @@ excerpt: Learn how to solve the Vehicle Routing Problem (VRP) using Python and o
   solutions.
 header:
   image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_8.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_8.jpg
 keywords:
 - Vehicle Routing Problem
 - Python optimization

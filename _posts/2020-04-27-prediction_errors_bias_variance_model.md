@@ -11,9 +11,11 @@ excerpt: Learn about different methods for estimating prediction error, addressi
   & Tibshirani's .632 estimator help improve model evaluation.
 header:
   image: /assets/images/data_science_6.jpg
+  og_image: /assets/images/data_science_6.jpg
   overlay_image: /assets/images/data_science_6.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
+  twitter_image: /assets/images/data_science_6.jpg
 seo_description: An in-depth look at prediction error, bias-variance tradeoff, and
   model evaluation techniques like cross-validation and bootstrap methods, with insights
   into the .632 estimator.

@@ -10,9 +10,11 @@ excerpt: COPOD is a popular anomaly detection model, but how well does it perfor
   and lessons learned from COPOD.
 header:
   image: /assets/images/data_science_4.jpg
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
+  twitter_image: /assets/images/data_science_1.jpg
 seo_description: Learn the importance of validating anomaly detection models like
   COPOD. Explore the pitfalls of assuming variable independence in high-dimensional
   data.

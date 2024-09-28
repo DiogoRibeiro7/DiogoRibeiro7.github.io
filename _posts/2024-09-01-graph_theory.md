@@ -10,9 +10,11 @@ excerpt: Explore how graph theory is applied to optimize production systems and 
   efficiency and streamline operations.
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - Graph theory in supply chains
 - Network optimization

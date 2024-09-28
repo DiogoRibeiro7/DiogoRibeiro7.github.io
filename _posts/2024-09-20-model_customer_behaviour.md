@@ -9,9 +9,11 @@ excerpt: Understand how Markov chains can be used to model customer behavior in 
   services, enabling predictions of usage patterns and helping optimize service offerings.
 header:
   image: /assets/images/consumer_behaviour.jpeg
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/consumer_behaviour.jpeg
   show_overlay_excerpt: false
   teaser: /assets/images/consumer_behaviour.jpeg
+  twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - Markov chains
 - customer behavior

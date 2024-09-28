@@ -8,9 +8,11 @@ classes: wide
 date: '2024-08-02'
 header:
   image: /assets/images/data_science_6.jpg
+  og_image: /assets/images/data_science_8.jpg
   overlay_image: /assets/images/data_science_6.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
+  twitter_image: /assets/images/data_science_8.jpg
 seo_type: article
 tags:
 - Concept Drift

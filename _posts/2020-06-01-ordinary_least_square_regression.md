@@ -9,9 +9,11 @@ excerpt: Discover the foundations of Ordinary Least Squares (OLS) regression, it
   and its applications in linear modeling.
 header:
   image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - OLS
 - Linear Regression

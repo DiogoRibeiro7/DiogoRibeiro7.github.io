@@ -9,9 +9,11 @@ excerpt: A detailed exploration of Customer Lifetime Value (CLV) for data practi
   business data.
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - customer lifetime value
 - CLV calculation
@@ -33,6 +35,10 @@ seo_description: Explore an in-depth guide to Customer Lifetime Value (CLV), cov
 seo_title: 'Customer Lifetime Value (CLV): A Comprehensive Guide for Data Science
   and Marketing'
 seo_type: article
+summary: This article provides a comprehensive exploration of Customer Lifetime Value
+  (CLV), detailing its calculation methods, predictive models, and its importance
+  in data-driven marketing strategies. It also covers how CLV can be integrated with
+  other business data to optimize customer retention and enhance profitability.
 tags:
 - CLV
 - Predictive Analytics

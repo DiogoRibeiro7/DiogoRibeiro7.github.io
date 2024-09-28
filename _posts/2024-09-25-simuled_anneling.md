@@ -9,9 +9,11 @@ excerpt: Discover how simulated annealing, inspired by metallurgy, offers a powe
   and non-convex loss functions.
 header:
   image: /assets/images/machine_learning/machine_learning.jpg
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/machine_learning/machine_learning.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/machine_learning/machine_learning.jpg
+  twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - Simulated annealing
 - Machine learning optimization

@@ -9,9 +9,11 @@ excerpt: Simpson's Paradox shows how aggregated data can lead to misleading tren
   data rigorously.
 header:
   image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_6.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_6.jpg
 seo_description: Explore the theoretical foundations of Simpson’s Paradox, its role
   in data analysis, and how lurking variables and data aggregation lead to contradictory
   statistical conclusions.

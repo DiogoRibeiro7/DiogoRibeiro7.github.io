@@ -11,9 +11,11 @@ excerpt: This article rigorously explores the Central Limit Theorem for m-depend
   outlines, and implications in modeling dependent sequences.
 header:
   image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_8.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_8.jpg
 keywords:
 - Central Limit Theorem
 - m-dependence

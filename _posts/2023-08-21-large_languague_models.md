@@ -10,9 +10,11 @@ excerpt: An in-depth exploration of how the closure of open-source data platform
   this ecosystem.
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - large language models
 - open-source data platforms
@@ -30,6 +32,11 @@ seo_description: Explore the vulnerability of Large Language Models like GPT whe
 seo_title: The Fragility of Large Language Models in a World Without Open-Source Data
 seo_type: article
 subtitle: Exploring the Fragility and Future of Machine Learning Without Open Data
+summary: An exploration into the challenges faced by Large Language Models (LLMs)
+  like GPT in the absence of open-source data platforms. The article discusses the
+  consequences of platforms like Stack Overflow closing, the fragility of AI systems
+  dependent on these data sources, and the broader implications for ethical AI development
+  and the future of machine learning.
 tags:
 - LLM
 - Open-Source Data

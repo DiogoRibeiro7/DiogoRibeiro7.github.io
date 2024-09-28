@@ -8,9 +8,11 @@ excerpt: Explore Markov Chain Monte Carlo (MCMC) methods, specifically the Metro
   algorithm, and learn how to perform Bayesian inference through Python code.
 header:
   image: /assets/images/data_science_2.jpg
+  og_image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_2.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
+  twitter_image: /assets/images/data_science_9.jpg
 keywords:
 - MCMC
 - Metropolis algorithm

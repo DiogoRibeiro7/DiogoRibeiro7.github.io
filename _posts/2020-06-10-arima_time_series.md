@@ -9,9 +9,11 @@ excerpt: Learn the fundamentals of ARIMA modeling for time series analysis. This
   with other models.
 header:
   image: /assets/images/data_science_7.jpg
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
+  twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - ARIMA
 - SARIMA

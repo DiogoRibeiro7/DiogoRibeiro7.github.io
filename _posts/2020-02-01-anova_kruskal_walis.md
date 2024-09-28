@@ -10,9 +10,11 @@ excerpt: Learn the key differences between ANOVA and Kruskal-Wallis tests, and u
   when to use each method based on your data's assumptions and characteristics.
 header:
   image: /assets/images/data_science_2.jpg
+  og_image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_science_2.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
+  twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - ANOVA
 - Kruskal-Wallis

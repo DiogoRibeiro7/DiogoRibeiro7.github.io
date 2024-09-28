@@ -11,9 +11,11 @@ excerpt: Explore the complexity of real-world data distributions beyond the norm
   how the Central Limit Theorem and Extreme Value Theory influence data analysis.
 header:
   image: /assets/images/data_science_1.jpg
+  og_image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/data_science_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
+  twitter_image: /assets/images/data_science_9.jpg
 keywords:
 - Real-world data distributions
 - Heavy-tailed distributions

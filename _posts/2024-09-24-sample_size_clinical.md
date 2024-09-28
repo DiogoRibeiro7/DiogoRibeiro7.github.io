@@ -10,9 +10,11 @@ excerpt: A complete guide to writing the sample size justification section for y
   and outcome assumptions.
 header:
   image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - sample size justification
 - clinical trial design

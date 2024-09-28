@@ -8,9 +8,11 @@ excerpt: Explore the `runner` package in R, which allows applying any R function
   rolling windows of data with full control over window size, lags, and index types.
 header:
   image: /assets/images/Rolling-window.jpg
+  og_image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/Rolling-window.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/Rolling-window.jpg
+  twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - runner R package
 - apply R function on windows

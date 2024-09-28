@@ -8,9 +8,11 @@ excerpt: The ARIMAX model extends ARIMA by integrating exogenous variables into 
   series forecasting, offering more accurate predictions for complex systems.
 header:
   image: /assets/images/data_science_4.jpg
+  og_image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
+  twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - ARIMAX
 - Time Series

@@ -9,9 +9,11 @@ excerpt: This article explores the use of K-means clustering in crime analysis, 
   practical implementation, case studies, and future directions.
 header:
   image: /assets/images/machine_learning/machine_learning_3.jpeg
+  og_image: /assets/images/data_science_9.jpg
   overlay_image: /assets/images/machine_learning/machine_learning_3.jpeg
   show_overlay_excerpt: false
   teaser: /assets/images/machine_learning/machine_learning_3.jpeg
+  twitter_image: /assets/images/data_science_9.jpg
 keywords:
 - K-means clustering
 - Crime analysis

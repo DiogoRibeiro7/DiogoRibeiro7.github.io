@@ -10,9 +10,11 @@ excerpt: Learn how to implement real-time data streaming using Python and Apache
   in real-time processing pipelines.
 header:
   image: /assets/images/data_science_2.jpg
+  og_image: /assets/images/data_science_6.jpg
   overlay_image: /assets/images/data_science_2.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
+  twitter_image: /assets/images/data_science_6.jpg
 keywords:
 - Real-time data streaming
 - Apache Kafka with Python

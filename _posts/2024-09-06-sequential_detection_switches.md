@@ -11,9 +11,11 @@ excerpt: Learn about sequential detection techniques for identifying switches in
   data and dynamic systems.
 header:
   image: /assets/images/data_science_2.jpg
+  og_image: /assets/images/data_science_4.jpg
   overlay_image: /assets/images/data_science_2.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
+  twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - Change-point detection
 - Sequential detection in models

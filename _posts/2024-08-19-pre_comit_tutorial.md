@@ -11,9 +11,11 @@ excerpt: Learn how to use pre-commit tools in Python to enforce code quality and
   practices for using Git hooks to streamline your workflow.
 header:
   image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_1.jpg
   overlay_image: /assets/images/data_science_9.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - Pre-commit tools
 - Git hooks

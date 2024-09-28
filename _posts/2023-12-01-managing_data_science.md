@@ -9,9 +9,11 @@ excerpt: While engineering projects have defined solutions and known processes, 
   can be detrimental.
 header:
   image: /assets/images/data_science_7.jpg
+  og_image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
+  twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - Data Science
 - Engineering

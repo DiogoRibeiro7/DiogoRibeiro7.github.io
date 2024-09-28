@@ -10,9 +10,11 @@ excerpt: Explore how simple distributional models for time-series classification
   sacrificing interpretability.
 header:
   image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_3.jpg
   overlay_image: /assets/images/data_science_8.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - Time-Series Classification
 - Catch22

@@ -11,9 +11,11 @@ excerpt: Learn how to design and implement utility classes in Python. This guide
   using object-oriented programming.
 header:
   image: /assets/images/data_science_7.jpg
+  og_image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
+  twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - Python
 - Utility Classes

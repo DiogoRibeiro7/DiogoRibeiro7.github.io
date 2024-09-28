@@ -11,9 +11,11 @@ excerpt: PDEs offer a powerful framework for understanding complex systems in fi
   models.
 header:
   image: /assets/images/data_science_7.jpg
+  og_image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
+  twitter_image: /assets/images/data_science_2.jpg
 keywords:
 - Partial Differential Equations
 - PDEs

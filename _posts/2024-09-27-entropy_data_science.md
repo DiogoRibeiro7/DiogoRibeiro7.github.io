@@ -10,9 +10,11 @@ excerpt: Explore the deep connection between entropy, data science, and machine 
   and information theory in modern AI.
 header:
   image: /assets/images/data_science_4.jpg
+  og_image: /assets/images/data_science_5.jpg
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
+  twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - Entropy
 - Information Gain

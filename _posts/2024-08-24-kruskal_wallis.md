@@ -10,9 +10,11 @@ excerpt: Discover the Kruskal-Wallis Test, a powerful non-parametric statistical
   where assumptions of normality don't hold.
 header:
   image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - Kruskal-Wallis Test
 - Non-parametric statistics

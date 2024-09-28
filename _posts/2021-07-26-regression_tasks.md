@@ -10,9 +10,11 @@ excerpt: Regression tasks are at the heart of machine learning. This guide explo
   Regression, and Support Vector Regression, with insights on when to use each.
 header:
   image: /assets/images/regression-analysis-2.jpg
+  og_image: /assets/images/data_science_8.jpg
   overlay_image: /assets/images/regression-analysis-2.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/regression-analysis-2.jpg
+  twitter_image: /assets/images/data_science_8.jpg
 keywords:
 - machine learning
 - regression tasks

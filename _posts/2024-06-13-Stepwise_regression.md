@@ -9,9 +9,11 @@ classes: wide
 date: '2024-06-13'
 header:
   image: /assets/images/data_science_4.jpg
+  og_image: /assets/images/data_science_2.jpg
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
+  twitter_image: /assets/images/data_science_2.jpg
 seo_type: article
 tags:
 - Stepwise Regression

@@ -9,9 +9,11 @@ excerpt: Delve into the fears and complexities of artificial intelligence and au
   and the true capabilities and limitations of AI.
 header:
   image: /assets/images/data_science_6.jpg
+  og_image: /assets/images/data_science_7.jpg
   overlay_image: /assets/images/data_science_6.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
+  twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - artificial intelligence
 - machine learning

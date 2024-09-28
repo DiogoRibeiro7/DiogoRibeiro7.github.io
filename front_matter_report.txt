@@ -1,30 +1,4 @@
-File '2024-05-15-detect_multivariate_data_drift.md':
-  - Summary present: True
-  - Keywords present: False
 
-File '2024-07-07-logistic-model.md':
-  - Summary present: False
-  - Keywords present: False
-
-File '2023-07-26-customer-life-time-value.md':
-  - Summary present: False
-  - Keywords present: True
-
-File '2030-01-01-future_articles_time_series.md':
-  - Summary present: False
-  - Keywords present: False
-
-File '2024-07-02-monitoring_drift.md':
-  - Summary present: False
-  - Keywords present: False
-
-File '2022-03-23-degrees_freedom.md':
-  - Summary present: False
-  - Keywords present: True
-
-File '2023-08-21-large_languague_models.md':
-  - Summary present: False
-  - Keywords present: True
 
 File '2022-07-26-features.md':
   - Summary present: False

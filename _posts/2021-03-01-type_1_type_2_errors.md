@@ -10,9 +10,11 @@ excerpt: Learn how to avoid false positives and false negatives in hypothesis te
   power and sample size.
 header:
   image: /assets/images/data_science_6.jpg
+  og_image: /assets/images/data_science_6.jpg
   overlay_image: /assets/images/data_science_6.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
+  twitter_image: /assets/images/data_science_6.jpg
 keywords:
 - Statistical Testing
 - Type I Error
