@@ -32,6 +32,8 @@ tags:
 - MLE
 - Statistical Modeling
 - Data Science
+- python
+- bash
 title: 'Maximum Likelihood Estimation (MLE): Statistical Modeling in Data Science'
 ---
 
@@ -294,7 +296,9 @@ if __name__ == "__main__":
 ### Explanation:
 
 #### Base Class (`MLEBase`):  
+
 This abstract class defines the template for MLE. It includes two methods:
+
 - `log_likelihood()`: Computes the log-likelihood.
 - `fit()`: Estimates the parameters.
 

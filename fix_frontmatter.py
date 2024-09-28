@@ -94,4 +94,3 @@ def process_markdown_files_in_directory(directory):
 # Example usage:
 directory_path = './_posts'  # Change to your directory path
 process_markdown_files_in_directory(directory_path)
-
