@@ -20,8 +20,8 @@ keywords:
 - Partial Differential Equations
 - PDEs
 - Data Science
-- Physics-Informed Neural Networks
 - Numerical Solutions
+- Physics-Informed Neural Networks
 seo_description: Explore the importance of Partial Differential Equations (PDEs) in
   data science, including their role in machine learning, physics-informed models,
   and numerical methods.
@@ -32,10 +32,10 @@ summary: This article explores the role of Partial Differential Equations (PDEs)
   and environmental modeling. It covers basic classifications of PDEs, solution methods,
   and why data scientists should care about them.
 tags:
-- PDEs
-- Machine Learning
-- Numerical Methods
 - Physics-Informed Models
+- Machine Learning
+- PDEs
+- Numerical Methods
 title: Introduction to Partial Differential Equations (PDEs) from a Data Science Perspective
 ---
 

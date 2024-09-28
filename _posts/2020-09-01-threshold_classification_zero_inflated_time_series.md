@@ -15,10 +15,10 @@ header:
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_7.jpg
 keywords:
-- Zero-Inflated Data
 - Time Series Stationarity
-- Statistical Modeling
+- Zero-Inflated Data
 - Threshold Classification
+- Statistical Modeling
 seo_description: A methodology for threshold classification in zero-inflated time
   series data using stationary distributions and parametric modeling to enhance classification
   accuracy.
@@ -30,10 +30,10 @@ summary: A novel approach for threshold classification in zero-inflated time ser
   addresses the limitations of traditional techniques by leveraging parametric distribution
   quantiles for better accuracy and generalization.
 tags:
-- Zero-Inflated Data
-- Time Series
-- Stationary Distribution
 - Statistical Modeling
+- Zero-Inflated Data
+- Stationary Distribution
+- Time Series
 title: A Generalized Approach to Threshold Classification for Zero-Inflated Time Series
   Data Using Stationary Distributions
 ---

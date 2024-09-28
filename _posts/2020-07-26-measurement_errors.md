@@ -25,16 +25,16 @@ summary: A comprehensive guide to understanding observational and measurement er
   covering random and systematic errors, their statistical models, and methods to
   estimate and mitigate their effects.
 tags:
-- Measurement Error
-- Random Errors
-- Systematic Errors
 - Statistical Bias
-- Precision
-- Accuracy
-- Data Quality
 - Statistical Methods
 - Uncertainty
+- Data Quality
+- Precision
 - Calibration
+- Random Errors
+- Systematic Errors
+- Accuracy
+- Measurement Error
 title: 'Understanding Observational Error: Detailed Insights and Implications'
 ---
 

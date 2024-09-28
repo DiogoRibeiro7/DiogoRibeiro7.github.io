@@ -15,10 +15,11 @@ header:
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_7.jpg
 keywords:
-- Demand Forecasting
-- Repurchase Model
 - Supply Chain
+- Repurchase Model
 - Time Series
+- Demand Forecasting
+- python
 seo_description: Explore how using customer behavior and predictive models can improve
   demand forecasting in the supply chain industry, leveraging the BG/NBD model for
   better accuracy.
@@ -30,8 +31,9 @@ summary: This article explores the use of customer behavior modeling to improve 
   predictions over a future period.
 tags:
 - Customer Behavior
-- Repurchase Models
+- python
 - Demand Forecasting
+- Repurchase Models
 title: A Predictive Approach for Demand Forecasting in the Supply Chain Using Customer
   Behavior Modeling
 ---

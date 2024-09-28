@@ -16,12 +16,12 @@ header:
   teaser: /assets/images/data_science_7.jpg
   twitter_image: /assets/images/data_science_6.jpg
 keywords:
-- Data Science
-- Predictive Maintenance
-- Machine Learning
-- Anomaly Detection
 - Clustering
+- Predictive Maintenance
+- Anomaly Detection
 - Regression
+- Machine Learning
+- Data Science
 seo_description: Explore the impact of data science on predictive maintenance, including
   techniques like regression, anomaly detection, and clustering for failure forecasting
   and optimization of maintenance schedules.
@@ -32,8 +32,8 @@ summary: This article delves into the role of data science in predictive mainten
   help forecast equipment failures, reduce downtime, and optimize maintenance strategies.
 tags:
 - Data Science
-- Predictive Maintenance
 - Machine Learning
+- Predictive Maintenance
 - Industrial Applications
 title: The Role of Data Science in Predictive Maintenance
 ---

@@ -15,11 +15,11 @@ header:
   teaser: /assets/images/data_science_5.jpg
   twitter_image: /assets/images/data_science_8.jpg
 keywords:
-- Emergency Department Prediction
 - Time Series Models
-- Random Forest
+- Emergency Department Prediction
 - Gradient Boosted Machines
 - Resource Allocation
+- Random Forest
 seo_description: This study examines machine learning and univariate time series models
   for predicting emergency department visit volumes, highlighting the superior predictive
   accuracy of random forest models.
@@ -33,8 +33,8 @@ tags:
 - Emergency Department
 - Time Series Forecasting
 - Machine Learning
-- Random Forest
 - Gradient Boosted Machines
+- Random Forest
 title: Machine Learning vs. Univariate Time Series Models in Predicting Emergency
   Department Visit Volumes
 ---
