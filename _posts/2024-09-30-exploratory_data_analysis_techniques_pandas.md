@@ -444,6 +444,24 @@ Exploratory Data Analysis (EDA) is a fundamental step in the data science workfl
 
 By mastering these EDA techniques, you will be well-equipped to handle complex, real-world datasets and make informed, data-driven decisions in more advanced analyses and modeling processes.
 
+## Appendix: Python Code for Exploratory Data Analysis (EDA) Using Pandas
+
+This appendix provides a comprehensive collection of Python code used throughout the Exploratory Data Analysis (EDA) process. The code covers everything from loading data to performing advanced analysis techniques such as detecting outliers, dimensionality reduction, and visualizations. Each block of code is designed to help you efficiently explore, clean, transform, and visualize data using the Pandas library, along with supplementary tools like Matplotlib, Seaborn, and Scikit-learn.
+
+### Code Overview
+
+The Python code below is categorized according to the different steps of EDA, including:
+
+- **Data loading**: How to import data from CSV and Excel files using Pandas.
+- **Data cleaning**: Techniques for handling missing values, removing duplicates, and dealing with outliers.
+- **Data transformation**: Filtering, sorting, grouping, and creating new features from existing ones.
+- **Descriptive statistics**: Generating basic statistics like mean, median, mode, variance, and standard deviation to understand the data's distribution.
+- **Visualization**: Using Matplotlib and Seaborn for data visualization, including histograms, scatter plots, and correlation heatmaps.
+- **Advanced techniques**: Detecting outliers using machine learning algorithms like Isolation Forest and performing dimensionality reduction with Principal Component Analysis (PCA).
+- **Time-series analysis**: Resampling and applying rolling averages to analyze time-dependent data.
+
+By following the code snippets in this appendix, you will be able to perform end-to-end EDA on various datasets, preparing them for deeper analysis or machine learning models.
+
 ```python
 import pandas as pd
 import seaborn as sns
