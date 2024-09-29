@@ -1,3 +1,7 @@
+---
+tags: []
+---
+
 1. **Getting Started with Data Science in Python**  
    Overview of essential Python libraries for data science (e.g., NumPy, Pandas, Matplotlib, SciPy).
 
