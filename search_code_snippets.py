@@ -62,6 +62,12 @@ def update_front_matter(front_matter: dict, snippets_by_language: dict):
     # Do not add 'keywords' if they are not present in the original front matter
     return front_matter
 
+def ensure_single_newline(content):
+    # Check if content already ends with a newline
+    if not content.endswith('\n'):
+        return content + '\n'
+    return content
+
 # Function to iterate over all markdown files in a folder and process them
 def process_markdown_files(folder_path: str):
     for root, dirs, files in os.walk(folder_path):
@@ -83,6 +89,8 @@ def process_markdown_files(folder_path: str):
                 # Create the new content with updated front matter
                 new_front_matter = yaml.dump(updated_front_matter, default_flow_style=False).strip()
                 new_content = f"---\n{new_front_matter}\n---\n\n{content_without_front_matter}"
+                
+                new_content = ensure_single_newline(new_content)
 
                 # Write the updated content back to the file
                 with open(file_path, 'w', encoding='utf-8') as f:
