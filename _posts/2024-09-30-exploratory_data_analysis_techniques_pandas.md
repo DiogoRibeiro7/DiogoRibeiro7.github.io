@@ -29,21 +29,9 @@ tags:
 title: Exploratory Data Analysis (EDA) Techniques with Pandas
 ---
 
-# Exploratory Data Analysis (EDA) Techniques with Pandas
-
 Exploratory Data Analysis (EDA) is a crucial step in any data science workflow. It enables analysts and data scientists to investigate the main characteristics of their data, often using visual methods and descriptive statistics. By leveraging EDA, you can detect patterns, uncover anomalies, and test preliminary hypotheses before moving into more complex analytical models.
 
 This guide will demonstrate how to conduct effective EDA using **Pandas**, a widely-used open-source library in Python. With Pandas, you can easily handle, transform, and analyze large datasets, making it an invaluable tool in any data scientist’s toolkit.
-
-## Table of Contents
-- [Exploratory Data Analysis (EDA) Techniques with Pandas](#exploratory-data-analysis-eda-techniques-with-pandas)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction to EDA](#introduction-to-eda)
-    - [What is EDA?](#what-is-eda)
-    - [The Importance of EDA in Data Science](#the-importance-of-eda-in-data-science)
-    - [Overview of the Pandas Library](#overview-of-the-pandas-library)
-  - [Loading Data with Pandas](#loading-data-with-pandas)
-    - [Reading Data from CSV](#reading-data-from-csv)
 
 ## Introduction to EDA
 
