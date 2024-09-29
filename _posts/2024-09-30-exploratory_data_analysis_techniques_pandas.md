@@ -443,3 +443,162 @@ These visualizations help uncover critical insights, such as determining which p
 Exploratory Data Analysis (EDA) is a fundamental step in the data science workflow, enabling a comprehensive understanding of your dataset before applying machine learning models or conducting statistical analysis. With Pandas, you can efficiently carry out EDA using techniques such as descriptive statistics, data cleaning, and visualization. Whether you're identifying anomalies using machine learning techniques like Isolation Forest, reducing dimensionality through PCA, or analyzing patterns in time-series data, mastering EDA with Pandas greatly enhances your ability to extract meaningful insights from your data.
 
 By mastering these EDA techniques, you will be well-equipped to handle complex, real-world datasets and make informed, data-driven decisions in more advanced analyses and modeling processes.
+
+```python
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.ensemble import IsolationForest
+from sklearn.decomposition import PCA
+from scipy import stats
+
+# Load a CSV file
+data = pd.read_csv('data.csv')
+print(data.head())
+
+# Load data from Excel
+data = pd.read_excel('data.xlsx', sheet_name='Sheet1')
+print(data.head())
+
+# Check data types
+print(data.dtypes)
+
+# Convert a column to integer
+data['column_name'] = data['column_name'].astype(int)
+
+# Summary statistics for numerical columns
+print(data.describe())
+
+# Mean, median, and mode
+mean_value = data['column_name'].mean()
+median_value = data['column_name'].median()
+mode_value = data['column_name'].mode()
+print(mean_value, median_value, mode_value)
+
+# Frequency of unique values in a categorical column
+print(data['categorical_column'].value_counts())
+
+# Variance and standard deviation
+variance = data['column_name'].var()
+std_dev = data['column_name'].std()
+print(variance, std_dev)
+
+# Drop rows with missing values
+cleaned_data = data.dropna()
+
+# Fill missing values with the mean
+filled_data = data.fillna(data.mean())
+
+# Forward-fill missing values
+filled_data_ffill = data.fillna(method='ffill')
+
+# Remove duplicate rows
+cleaned_data = data.drop_duplicates()
+
+# Check for duplicates
+duplicate_rows = data.duplicated()
+print(duplicate_rows)
+
+# Detect outliers using Z-score
+z_scores = stats.zscore(data['column_name'])
+outliers = abs(z_scores) > 3
+print(outliers)
+
+# Detect outliers using IQR
+Q1 = data['column_name'].quantile(0.25)
+Q3 = data['column_name'].quantile(0.75)
+IQR = Q3 - Q1
+outliers = data[(data['column_name'] < (Q1 - 1.5 * IQR)) | (data['column_name'] > (Q3 + 1.5 * IQR))]
+print(outliers)
+
+# Filter rows based on a condition
+filtered_data = data[data['column_name'] > threshold]
+
+# Sort data by a specific column
+sorted_data = data.sort_values(by='column_name', ascending=True)
+
+# Group data and compute the mean for each group
+grouped_data = data.groupby('category_column').mean()
+
+# Aggregate multiple statistics
+aggregated_data = data.groupby('category_column').agg({
+    'numerical_column1': 'mean',
+    'numerical_column2': 'sum',
+    'numerical_column3': 'max'
+})
+
+# Create a new column based on a condition
+data['new_column'] = data['existing_column'] > threshold
+
+# Create interaction terms between columns
+data['interaction_term'] = data['column1'] * data['column2']
+
+# Merge two datasets on a common column
+merged_data = pd.merge(data1, data2, on='common_column', how='inner')
+
+# Concatenate datasets along rows or columns
+concatenated_data = pd.concat([data1, data2], axis=0)
+
+# Simple line plot
+data['column_name'].plot(kind='line')
+
+# Bar plot
+data['column_name'].value_counts().plot(kind='bar')
+plt.show()
+
+# Histogram of a column
+data['column_name'].plot(kind='hist', bins=30)
+
+# Box plot to show data distribution and outliers
+data['column_name'].plot(kind='box')
+
+# Scatter plot between two columns
+data.plot(kind='scatter', x='column1', y='column2')
+
+# Calculate correlation matrix and heatmap
+corr_matrix = data.corr()
+sns.heatmap(corr_matrix, annot=True)
+plt.show()
+
+# Train an Isolation Forest model
+iso_forest = IsolationForest(contamination=0.05)
+outliers = iso_forest.fit_predict(data[['numerical_column1', 'numerical_column2']])
+print(outliers)
+
+# Apply PCA to reduce the dataset to 2 dimensions
+pca = PCA(n_components=2)
+pca_result = pca.fit_transform(data[['numerical_column1', 'numerical_column2', 'numerical_column3']])
+pca_df = pd.DataFrame(pca_result, columns=['PC1', 'PC2'])
+
+# Resample time series data to monthly frequency
+monthly_data = data.resample('M').mean()
+
+# Calculate a rolling average with a window size of 12
+data['rolling_mean'] = data['column_name'].rolling(window=12).mean()
+data['rolling_mean'].plot()
+plt.show()
+
+# Load the Titanic dataset
+titanic_data = pd.read_csv('titanic.csv')
+print(titanic_data.head())
+
+# Check for missing values
+print(titanic_data.isnull().sum())
+
+# Summary statistics for numerical columns
+print(titanic_data.describe())
+
+# Fill missing 'Age' values with the median
+titanic_data['Age'].fillna(titanic_data['Age'].median(), inplace=True)
+
+# Drop rows with missing 'Embarked' values
+titanic_data.dropna(subset=['Embarked'], inplace=True)
+
+# Plot survival rates by gender
+titanic_data.groupby('Sex')['Survived'].mean().plot(kind='bar')
+plt.show()
+
+# Scatter plot of Age vs Fare, colored by survival status
+sns.scatterplot(x='Age', y='Fare', hue='Survived', data=titanic_data)
+plt.show()
+```
