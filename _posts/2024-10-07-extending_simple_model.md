@@ -5,9 +5,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-10-07'
-excerpt: Explore how simple distributional models for time-series classification can
-  be extended with additional feature sets like catch22 to improve performance without
-  sacrificing interpretability.
+excerpt: Explore how simple distributional models for time-series classification can be extended with additional feature sets like catch22 to improve performance without sacrificing interpretability.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -20,14 +18,10 @@ keywords:
 - Catch22
 - Simple Models
 - Feature Engineering
-seo_description: A review of how simple time-series classification models can be extended
-  using feature sets like catch22 and the practical implications of balancing complexity
-  and interpretability.
+seo_description: A review of how simple time-series classification models can be extended using feature sets like catch22 and the practical implications of balancing complexity and interpretability.
 seo_title: 'Extending Simple Models: Adding Catch22 for Time-Series Classification'
 seo_type: article
-summary: This article discusses when and how to extend simple time-series classification
-  models by introducing additional features, such as catch22, and the practical implications
-  of using these models in various domains.
+summary: This article discusses when and how to extend simple time-series classification models by introducing additional features, such as catch22, and the practical implications of using these models in various domains.
 tags:
 - Time-Series Classification
 - Catch22

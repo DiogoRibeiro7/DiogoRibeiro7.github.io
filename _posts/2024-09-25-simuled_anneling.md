@@ -4,9 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-09-25'
-excerpt: Discover how simulated annealing, inspired by metallurgy, offers a powerful
-  optimization method for machine learning models, especially when dealing with complex
-  and non-convex loss functions.
+excerpt: Discover how simulated annealing, inspired by metallurgy, offers a powerful optimization method for machine learning models, especially when dealing with complex and non-convex loss functions.
 header:
   image: /assets/images/machine_learning/machine_learning.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -21,15 +19,11 @@ keywords:
 - Probabilistic algorithms
 - Global optimization
 - Non-convex loss functions
-seo_description: Explore how simulated annealing, a probabilistic technique, can optimize
-  machine learning models by navigating complex loss functions and improving model
-  performance.
+- python
+seo_description: Explore how simulated annealing, a probabilistic technique, can optimize machine learning models by navigating complex loss functions and improving model performance.
 seo_title: Optimizing Machine Learning Models with Simulated Annealing
 seo_type: article
-summary: Simulated annealing is a probabilistic optimization technique inspired by
-  metallurgy. This method is especially useful for optimizing machine learning models
-  with complex, non-convex loss functions, allowing them to escape local minima and
-  find global solutions.
+summary: Simulated annealing is a probabilistic optimization technique inspired by metallurgy. This method is especially useful for optimizing machine learning models with complex, non-convex loss functions, allowing them to escape local minima and find global solutions.
 tags:
 - Optimization
 - Simulated Annealing
@@ -37,6 +31,7 @@ tags:
 - Hyperparameter Tuning
 - Machine Learning Models
 - Non-Convex Optimization
+- python
 title: Optimizing Machine Learning Models using Simulated Annealing
 ---
 

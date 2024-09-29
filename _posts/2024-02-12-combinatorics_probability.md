@@ -4,8 +4,7 @@ categories:
 - Mathematics
 classes: wide
 date: '2024-02-12'
-excerpt: Dive into the intersection of combinatorics and probability, exploring how
-  these fields work together to solve problems in mathematics, data science, and beyond.
+excerpt: Dive into the intersection of combinatorics and probability, exploring how these fields work together to solve problems in mathematics, data science, and beyond.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -24,15 +23,11 @@ keywords:
 - probability models
 - educational resources
 - applied mathematics
-seo_description: Discover the deep connections between combinatorics and probability
-  theory, exploring their mathematical foundations, applications, and the synergies
-  that drive statistical analysis and data science.
+seo_description: Discover the deep connections between combinatorics and probability theory, exploring their mathematical foundations, applications, and the synergies that drive statistical analysis and data science.
 seo_title: 'Combinatorics and Probability: Exploring Mathematical Synergies'
 seo_type: article
 subtitle: Unveiling Mathematical Synergies
-summary: This article explores the intersection of combinatorics and probability theory,
-  uncovering how their mathematical synergies solve complex problems in data science,
-  mathematics, and beyond.
+summary: This article explores the intersection of combinatorics and probability theory, uncovering how their mathematical synergies solve complex problems in data science, mathematics, and beyond.
 tags:
 - Mathematics
 - Combinatorics

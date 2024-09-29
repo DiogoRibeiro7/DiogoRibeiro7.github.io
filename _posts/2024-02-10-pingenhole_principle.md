@@ -4,9 +4,7 @@ categories:
 - Mathematics
 classes: wide
 date: '2024-02-10'
-excerpt: A journey into the Pigeonhole Principle, uncovering its profound simplicity
-  and exploring its applications in fields like combinatorics, number theory, and
-  geometry.
+excerpt: A journey into the Pigeonhole Principle, uncovering its profound simplicity and exploring its applications in fields like combinatorics, number theory, and geometry.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -25,15 +23,13 @@ keywords:
 - rational numbers
 - data compression
 - foundational math concepts
-seo_description: Explore the simplicity and power of the Pigeonhole Principle, delving
-  into its applications across combinatorics, number theory, geometry, and more.
+- r
+- python
+seo_description: Explore the simplicity and power of the Pigeonhole Principle, delving into its applications across combinatorics, number theory, geometry, and more.
 seo_title: 'The Elegance of the Pigeonhole Principle: Universal Applications in Mathematics'
 seo_type: article
-subtitle: Exploring the Profound Simplicity and Universal Applications of a Foundational
-  Mathematical Concept
-summary: This article delves into the Pigeonhole Principle, illustrating its profound
-  simplicity and exploring its applications in various mathematical fields such as
-  combinatorics, number theory, geometry, and data compression.
+subtitle: Exploring the Profound Simplicity and Universal Applications of a Foundational Mathematical Concept
+summary: This article delves into the Pigeonhole Principle, illustrating its profound simplicity and exploring its applications in various mathematical fields such as combinatorics, number theory, geometry, and data compression.
 tags:
 - Pigeonhole Principle
 - Mathematical Logic
@@ -44,6 +40,8 @@ tags:
 - Rubik's Cube
 - Rational Numbers
 - Mathematical Proofs
+- r
+- python
 title: 'Elegance of the Pigeonhole Principle: A Mathematical Odyssey'
 toc: false
 toc_label: The Complexity of Real-World Data Distributions
@@ -80,11 +78,12 @@ The pigeonhole principle, astonishingly overlooked in early mathematical educati
 - **Combinatorial Sums:** Finally, the principle is instrumental in proving that among collections of integers, there exist subsets with equal summations, showcasing its relevance in number theory and combinatorics.
 
 # Python Example
+
 Let's create a Python example that demonstrates the pigeonhole principle through a simple but illustrative scenario. We'll tackle the problem of finding at least two people with the same number of hairs on their head, based on the assumption that the number of hairs on a human head varies from 0 to, at most, 1,000,000, and considering a city with a population exceeding 1,000,000 people.
 
 Here's a Python script that simulates this scenario by randomly assigning a number of hairs (ranging from 0 to 1,000,000) to each person in a hypothetical city with a population of 1,000,001. The script then checks for at least two people with the exact same number of hairs, illustrating the pigeonhole principle.
 
-```
+```python
 import random
 
 def find_hairy_twins(population_size, max_hairs=1000000):
@@ -113,12 +112,15 @@ else:
     print("No hairy twins found (which should not happen in this simulation).")
 
 ```
+
 This script randomly generates a number of hairs for each person in a population exceeding the maximum hair count (pigeonholes). According to the pigeonhole principle, since there are more people (pigeons) than the maximum possible unique hair counts (pigeonholes), there must be at least two people with the same number of hairs (two pigeons in at least one pigeonhole). The function find_hairy_twins looks for this condition and returns True as soon as it finds a duplicate hair count, demonstrating the principle in action.
 
 # R Example
+
 For an example in R, let's consider the scenario involving handshakes at a party, which is another application of the pigeonhole principle. Specifically, we want to demonstrate that in any gathering of people, there will always be at least two guests who have shaken hands with the same number of other guests. This is based on the premise that if there are $$N$$ guests, the number of handshakes per person can range from 0 to $$N−1$$, resulting in $$N$$ possible distinct values. According to the pigeonhole principle, if there are more than $$N$$ guests, at least two of them must have the same number of handshakes.
 The following R script simulates a party where each guest randomly shakes hands with a number of other guests. It then checks for the pigeonhole principle by ensuring there are at least two guests with the same number of handshakes.
-```
+
+```r
 set.seed(123) # For reproducibility
 
 # Simulate handshakes at a party
@@ -156,6 +158,7 @@ if (result$success) {
 # Optionally, print the handshake distribution
 print(table(result$handshakes))
 ```
+
 This script first defines a function simulate_party that simulates the handshakes. It then checks if the principle holds by comparing the number of unique handshake counts to the total number of guests. The sample function is used to randomly assign the number of handshakes each guest makes, with the possibility of a guest shaking hands with any other guest at the party. Finally, it prints out whether the pigeonhole principle holds in this simulation and provides the distribution of handshakes among the guests.
 
 # Conclusion

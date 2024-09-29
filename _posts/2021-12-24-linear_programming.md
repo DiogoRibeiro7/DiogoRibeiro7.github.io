@@ -5,10 +5,7 @@ categories:
 - Operations Research
 classes: wide
 date: '2021-12-24'
-excerpt: Linear Programming is the foundation of optimization in operations research.
-  We explore its traditional methods, challenges in scaling large instances, and introduce
-  PDLP, a scalable solver using first-order methods, designed for modern computational
-  infrastructures.
+excerpt: Linear Programming is the foundation of optimization in operations research. We explore its traditional methods, challenges in scaling large instances, and introduce PDLP, a scalable solver using first-order methods, designed for modern computational infrastructures.
 header:
   image: /assets/images/linear_program.jpeg
   og_image: /assets/images/data_science_4.jpg
@@ -17,35 +14,31 @@ header:
   teaser: /assets/images/linear_program.jpeg
   twitter_image: /assets/images/data_science_4.jpg
 keywords:
+- Beale-Orchard Hays Prize
+- GPU-based optimization
+- LP solvers
 - linear programming
+- matrix-vector multiplication
+- primal-dual hybrid gradient
 - simplex method
 - interior-point methods
-- first-order methods
-- PDLP
-- primal-dual hybrid gradient
-- LP solvers
-- computational optimization
-- matrix-vector multiplication
-- scalable LP solutions
-- OR-Tools
-- Beale-Orchard Hays Prize
 - distributed systems in LP
-- GPU-based optimization
 - large-scale linear programming
-seo_description: A detailed exploration of linear programming, its traditional methods
-  like Simplex and interior-point methods, and the emergence of scalable first-order
-  methods such as PDLP, a revolutionary solver for large-scale LP problems.
-seo_title: 'Classic Linear Programming and PDLP: Scaling Solutions for Modern Computational
-  Optimization'
+- OR-Tools
+- PDLP
+- scalable LP solutions
+- first-order methods
+- computational optimization
+seo_description: A detailed exploration of linear programming, its traditional methods like Simplex and interior-point methods, and the emergence of scalable first-order methods such as PDLP, a revolutionary solver for large-scale LP problems.
+seo_title: 'Classic Linear Programming and PDLP: Scaling Solutions for Modern Computational Optimization'
 seo_type: article
 tags:
-- Linear Programming
 - Primal-Dual Hybrid Gradient Method
 - First-Order Methods
 - Computational Optimization
+- Linear Programming
 - OR-Tools
-title: 'Exploring Classic Linear Programming (LP) Problems and Scalable Solutions:
-  A Deep Dive into PDLP'
+title: 'Exploring Classic Linear Programming (LP) Problems and Scalable Solutions: A Deep Dive into PDLP'
 ---
 
 ## Introduction

@@ -36,6 +36,7 @@ tags:
 - Neural Network Visualization
 - Genomics Data Analysis
 - Interactive Data Visualization
+- python
 title: Understanding t-SNE
 ---
 

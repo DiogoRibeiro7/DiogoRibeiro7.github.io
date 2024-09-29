@@ -5,9 +5,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2023-08-21'
-excerpt: An in-depth exploration of how the closure of open-source data platforms
-  threatens the growth of Large Language Models and the vital role humans play in
-  this ecosystem.
+excerpt: An in-depth exploration of how the closure of open-source data platforms threatens the growth of Large Language Models and the vital role humans play in this ecosystem.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -26,24 +24,17 @@ keywords:
 - ethical AI development
 - open data impact on AI
 - future of machine learning
-seo_description: Explore the vulnerability of Large Language Models like GPT when
-  open-source data platforms such as Stack Overflow close, and the potential impact
-  on AI's evolution.
+seo_description: Explore the vulnerability of Large Language Models like GPT when open-source data platforms such as Stack Overflow close, and the potential impact on AI's evolution.
 seo_title: The Fragility of Large Language Models in a World Without Open-Source Data
 seo_type: article
 subtitle: Exploring the Fragility and Future of Machine Learning Without Open Data
-summary: An exploration into the challenges faced by Large Language Models (LLMs)
-  like GPT in the absence of open-source data platforms. The article discusses the
-  consequences of platforms like Stack Overflow closing, the fragility of AI systems
-  dependent on these data sources, and the broader implications for ethical AI development
-  and the future of machine learning.
+summary: An exploration into the challenges faced by Large Language Models (LLMs) like GPT in the absence of open-source data platforms. The article discusses the consequences of platforms like Stack Overflow closing, the fragility of AI systems dependent on these data sources, and the broader implications for ethical AI development and the future of machine learning.
 tags:
 - LLM
 - Open-Source Data
 - Machine Learning Models
 - AI Ethics
-title: The Vulnerability of Large Language Models to the Closure of Open-Source Data
-  Platforms
+title: The Vulnerability of Large Language Models to the Closure of Open-Source Data Platforms
 ---
 
 ![Example Image](/assets/images/stackoverflow.jpg)

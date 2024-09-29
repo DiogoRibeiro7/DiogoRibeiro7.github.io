@@ -5,9 +5,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-10-01'
-excerpt: Explore Automated Prompt Engineering (APE), a powerful method to automate
-  and optimize prompts for Large Language Models, enhancing their task performance
-  and efficiency.
+excerpt: Explore Automated Prompt Engineering (APE), a powerful method to automate and optimize prompts for Large Language Models, enhancing their task performance and efficiency.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_7.jpg
@@ -21,21 +19,18 @@ keywords:
 - Hyperparameter Optimization
 - OPRO
 - Random Prompt Optimization
-seo_description: An in-depth exploration of Automated Prompt Engineering (APE), its
-  strategies, and how it automates the process of generating and refining prompts
-  for improving Large Language Models.
+- python
+seo_description: An in-depth exploration of Automated Prompt Engineering (APE), its strategies, and how it automates the process of generating and refining prompts for improving Large Language Models.
 seo_title: 'Automated Prompt Engineering (APE): Optimizing LLMs'
 seo_type: article
-summary: This article delves into Automated Prompt Engineering (APE), explaining how
-  it automates and optimizes the prompt generation process to enhance the performance
-  of Large Language Models.
+summary: This article delves into Automated Prompt Engineering (APE), explaining how it automates and optimizes the prompt generation process to enhance the performance of Large Language Models.
 tags:
 - Automated Prompt Engineering
 - Hyperparameter Optimization
 - Prompt Optimization
 - Large Language Models
-title: 'Automated Prompt Engineering (APE): Optimizing Large Language Models through
-  Automation'
+- python
+title: 'Automated Prompt Engineering (APE): Optimizing Large Language Models through Automation'
 toc: false
 toc_icon: robot
 toc_label: Automated Prompt Engineering Overview

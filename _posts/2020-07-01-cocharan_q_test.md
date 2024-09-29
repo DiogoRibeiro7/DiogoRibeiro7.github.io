@@ -4,9 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2020-07-01'
-excerpt: Understand Cochran’s Q test, a non-parametric test for comparing proportions
-  across related groups, and its applications in binary data and its connection to
-  McNemar's test.
+excerpt: Understand Cochran’s Q test, a non-parametric test for comparing proportions across related groups, and its applications in binary data and its connection to McNemar's test.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -15,24 +13,21 @@ header:
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_8.jpg
 keywords:
-- Cochran's Q Test
-- McNemar's Test
 - Proportions
+- McNemar's Test
+- Cochran's Q Test
+- Machine Learning
 - Logistic Regression
 - Data Science
-- Machine Learning
-seo_description: Learn about Cochran’s Q test, its use for comparing proportions across
-  related groups, and its connection with McNemar’s test and logistic regression.
+seo_description: Learn about Cochran’s Q test, its use for comparing proportions across related groups, and its connection with McNemar’s test and logistic regression.
 seo_title: 'Cochran’s Q Test: Comparing Proportions in Related Groups'
 seo_type: article
-summary: This article explores Cochran’s Q test, a non-parametric method for comparing
-  proportions in related groups, particularly in binary data. It also covers the relationship
-  between Cochran's Q, McNemar's test, and logistic regression.
+summary: This article explores Cochran’s Q test, a non-parametric method for comparing proportions in related groups, particularly in binary data. It also covers the relationship between Cochran's Q, McNemar's test, and logistic regression.
 tags:
-- Cochran's Q Test
-- McNemar's Test
 - Logistic Regression
+- McNemar's Test
 - Non-Parametric Tests
+- Cochran's Q Test
 title: 'Cochran’s Q Test: Comparing Three or More Related Proportions'
 ---
 

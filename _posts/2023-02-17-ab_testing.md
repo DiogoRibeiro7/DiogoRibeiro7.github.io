@@ -4,9 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2023-02-17'
-excerpt: An in-depth exploration of sequential testing and its application in A/B
-  testing. Understand the statistical underpinnings, advantages, limitations, and
-  practical implementations in R, JavaScript, and Python.
+excerpt: An in-depth exploration of sequential testing and its application in A/B testing. Understand the statistical underpinnings, advantages, limitations, and practical implementations in R, JavaScript, and Python.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -26,15 +24,19 @@ keywords:
 - Python for A/B Testing
 - R for Statistical Analysis
 - JavaScript for A/B Testing
-seo_description: Explore advanced statistical concepts behind sequential testing in
-  A/B testing. Learn about SPRT, error control, practical implementation, and potential
-  pitfalls.
+- r
+- javascript
+- python
+seo_description: Explore advanced statistical concepts behind sequential testing in A/B testing. Learn about SPRT, error control, practical implementation, and potential pitfalls.
 seo_title: 'In-Depth Sequential Testing in A/B Testing: Advanced Statistical Methods'
 seo_type: article
 tags:
 - A/B Testing
 - Sequential Testing
 - Statistical Methods
+- r
+- javascript
+- python
 title: Advanced Statistical Methods for Efficient A/B Testing
 ---
 

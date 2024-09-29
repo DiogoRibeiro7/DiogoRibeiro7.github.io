@@ -8,6 +8,7 @@ header:
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_8.jpg
 seo_type: article
+tags: []
 ---
 
 ## Article Ideas on Data Drift and Model Drift

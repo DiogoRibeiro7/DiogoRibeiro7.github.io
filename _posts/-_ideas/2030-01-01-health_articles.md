@@ -8,6 +8,7 @@ header:
   teaser: /assets/images/data_science_5.jpg
   twitter_image: /assets/images/data_science_6.jpg
 seo_type: article
+tags: []
 ---
 
 ## Article Ideas on Health and the Role of Data Science, Big Data, and Machine Learning

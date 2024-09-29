@@ -5,9 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2021-03-01'
-excerpt: Learn how to avoid false positives and false negatives in hypothesis testing
-  by understanding Type I and Type II errors, their causes, and how to balance statistical
-  power and sample size.
+excerpt: Learn how to avoid false positives and false negatives in hypothesis testing by understanding Type I and Type II errors, their causes, and how to balance statistical power and sample size.
 header:
   image: /assets/images/data_science_6.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -17,26 +15,21 @@ header:
   twitter_image: /assets/images/data_science_6.jpg
 keywords:
 - Statistical Testing
-- Type I Error
 - Type II Error
-- Hypothesis Testing
+- Type I Error
 - Data Science
-seo_description: Explore the differences between Type I and Type II errors in statistical
-  testing, learn how to minimize them, and understand their impact on data science,
-  clinical trials, and AI model evaluation.
+- Hypothesis Testing
+seo_description: Explore the differences between Type I and Type II errors in statistical testing, learn how to minimize them, and understand their impact on data science, clinical trials, and AI model evaluation.
 seo_title: 'Type I vs. Type II Errors in Statistical Testing: How to Avoid False Conclusions'
 seo_type: article
-summary: This article explains the fundamental concepts behind Type I and Type II
-  errors in statistical testing, covering their causes, how to minimize them, and
-  the critical role of statistical power and sample size in data science.
+summary: This article explains the fundamental concepts behind Type I and Type II errors in statistical testing, covering their causes, how to minimize them, and the critical role of statistical power and sample size in data science.
 tags:
 - Statistical Testing
-- Type I Error
 - Type II Error
-- Hypothesis Testing
+- Type I Error
 - Data Science
-title: 'Understanding Type I and Type II Errors in Statistical Testing: How to Minimize
-  False Conclusions'
+- Hypothesis Testing
+title: 'Understanding Type I and Type II Errors in Statistical Testing: How to Minimize False Conclusions'
 ---
 
 ## Introduction: The Importance of Understanding Type I and Type II Errors

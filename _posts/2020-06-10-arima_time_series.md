@@ -4,9 +4,7 @@ categories:
 - Time Series Analysis
 classes: wide
 date: '2020-06-10'
-excerpt: Learn the fundamentals of ARIMA modeling for time series analysis. This guide
-  covers the AR, I, and MA components, model identification, validation, and its comparison
-  with other models.
+excerpt: Learn the fundamentals of ARIMA modeling for time series analysis. This guide covers the AR, I, and MA components, model identification, validation, and its comparison with other models.
 header:
   image: /assets/images/data_science_7.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -16,22 +14,22 @@ header:
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - ARIMA
-- SARIMA
-- ARMA
 - ARIMAX
 - Time Series Analysis
-seo_description: Explore the fundamentals of ARIMA (AutoRegressive Integrated Moving
-  Average) model, its components, parameter identification, validation, and applications.
-  Comparison with ARIMAX, SARIMA, and ARMA.
+- python
+- SARIMA
+- r
+- ARMA
+seo_description: Explore the fundamentals of ARIMA (AutoRegressive Integrated Moving Average) model, its components, parameter identification, validation, and applications. Comparison with ARIMAX, SARIMA, and ARMA.
 seo_title: 'Comprehensive ARIMA Model Guide: Time Series Analysis'
 seo_type: article
-summary: This guide provides an in-depth exploration of ARIMA modeling for time series
-  data, discussing its core components, parameter estimation, validation, and comparison
-  with models like ARIMAX, SARIMA, and ARMA.
+summary: This guide provides an in-depth exploration of ARIMA modeling for time series data, discussing its core components, parameter estimation, validation, and comparison with models like ARIMAX, SARIMA, and ARMA.
 tags:
 - ARIMA
-- Forecasting
 - Time Series
+- Forecasting
+- r
+- python
 title: A Comprehensive Guide to ARIMA Time Series Modeling
 ---
 

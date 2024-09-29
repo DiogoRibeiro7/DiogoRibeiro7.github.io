@@ -25,6 +25,9 @@ tags:
 - Forward Selection
 - Backward Elimination
 - Efroymson Algorithm
+- python
+- r
+- julia
 title: 'Stepwise Regression: Methodology, Applications, and Concerns'
 ---
 

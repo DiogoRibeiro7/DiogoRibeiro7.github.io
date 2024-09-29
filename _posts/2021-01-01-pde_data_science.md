@@ -5,10 +5,7 @@ categories:
 - Mathematics
 classes: wide
 date: '2021-01-01'
-excerpt: PDEs offer a powerful framework for understanding complex systems in fields
-  like physics, finance, and environmental science. Discover how data scientists can
-  integrate PDEs with modern machine learning techniques to create robust predictive
-  models.
+excerpt: PDEs offer a powerful framework for understanding complex systems in fields like physics, finance, and environmental science. Discover how data scientists can integrate PDEs with modern machine learning techniques to create robust predictive models.
 header:
   image: /assets/images/data_science_7.jpg
   og_image: /assets/images/data_science_2.jpg
@@ -20,22 +17,17 @@ keywords:
 - Partial Differential Equations
 - PDEs
 - Data Science
-- Physics-Informed Neural Networks
 - Numerical Solutions
-seo_description: Explore the importance of Partial Differential Equations (PDEs) in
-  data science, including their role in machine learning, physics-informed models,
-  and numerical methods.
+- Physics-Informed Neural Networks
+seo_description: Explore the importance of Partial Differential Equations (PDEs) in data science, including their role in machine learning, physics-informed models, and numerical methods.
 seo_title: Partial Differential Equations for Data Scientists
 seo_type: article
-summary: This article explores the role of Partial Differential Equations (PDEs) in
-  data science, including their applications in machine learning, finance, image processing,
-  and environmental modeling. It covers basic classifications of PDEs, solution methods,
-  and why data scientists should care about them.
+summary: This article explores the role of Partial Differential Equations (PDEs) in data science, including their applications in machine learning, finance, image processing, and environmental modeling. It covers basic classifications of PDEs, solution methods, and why data scientists should care about them.
 tags:
-- PDEs
-- Machine Learning
-- Numerical Methods
 - Physics-Informed Models
+- Machine Learning
+- PDEs
+- Numerical Methods
 title: Introduction to Partial Differential Equations (PDEs) from a Data Science Perspective
 ---
 

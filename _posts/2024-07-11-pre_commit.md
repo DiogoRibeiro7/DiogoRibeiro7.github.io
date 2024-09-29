@@ -17,6 +17,8 @@ tags:
 - Git
 - Pre-commit Hooks
 - DevOps
+- bash
+- yaml
 title: Streamlining Your Workflow with Pre-commit Hooks in Python Projects
 ---
 

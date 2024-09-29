@@ -18,6 +18,7 @@ tags:
 - Change Detection
 - Structural Changes
 - Real-time Processing
+- python
 title: Sequential Detection of Switches in Models with Changing Structures
 ---
 

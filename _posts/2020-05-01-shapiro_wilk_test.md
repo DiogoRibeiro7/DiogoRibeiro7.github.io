@@ -6,9 +6,7 @@ categories:
 - Hypothesis Testing
 classes: wide
 date: '2020-05-01'
-excerpt: Learn about the Shapiro-Wilk and Anderson-Darling tests for normality, their
-  differences, and how they guide decisions between parametric and non-parametric
-  statistical methods.
+excerpt: Learn about the Shapiro-Wilk and Anderson-Darling tests for normality, their differences, and how they guide decisions between parametric and non-parametric statistical methods.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -17,25 +15,21 @@ header:
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_8.jpg
 keywords:
-- Shapiro-Wilk Test
 - Anderson-Darling Test
+- Non-Parametric Methods
+- Shapiro-Wilk Test
 - Normality Test
 - Parametric Methods
-- Non-Parametric Methods
-seo_description: Explore the differences between the Shapiro-Wilk and Anderson-Darling
-  tests for checking normality in data. Learn when to use each test and how to interpret
-  the results.
+seo_description: Explore the differences between the Shapiro-Wilk and Anderson-Darling tests for checking normality in data. Learn when to use each test and how to interpret the results.
 seo_title: 'Shapiro-Wilk Test vs. Anderson-Darling Test: Normality Tests Explained'
 seo_type: article
-summary: This article explores two common normality tests—the Shapiro-Wilk test and
-  the Anderson-Darling test—discussing their differences, when to use each, and how
-  to interpret their results to determine the appropriate statistical method.
+summary: This article explores two common normality tests—the Shapiro-Wilk test and the Anderson-Darling test—discussing their differences, when to use each, and how to interpret their results to determine the appropriate statistical method.
 tags:
-- Shapiro-Wilk Test
 - Anderson-Darling Test
 - Normality Tests
-- Parametric Methods
 - Non-Parametric Methods
+- Shapiro-Wilk Test
+- Parametric Methods
 title: 'Shapiro-Wilk Test vs. Anderson-Darling Test: Checking Normality in Data'
 ---
 

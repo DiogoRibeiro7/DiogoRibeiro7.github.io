@@ -5,8 +5,7 @@ categories:
 - Crime Analysis
 classes: wide
 date: '2021-09-24'
-excerpt: This article explores the use of K-means clustering in crime analysis, including
-  practical implementation, case studies, and future directions.
+excerpt: This article explores the use of K-means clustering in crime analysis, including practical implementation, case studies, and future directions.
 header:
   image: /assets/images/machine_learning/machine_learning_3.jpeg
   og_image: /assets/images/data_science_9.jpg
@@ -15,24 +14,22 @@ header:
   teaser: /assets/images/machine_learning/machine_learning_3.jpeg
   twitter_image: /assets/images/data_science_9.jpg
 keywords:
-- K-means clustering
-- Crime analysis
-- Data mining
 - Law enforcement
+- Crime analysis
 - Crime prediction
-seo_description: Explore how K-means clustering can enhance crime analysis by identifying
-  patterns, predicting trends, and improving crime prevention through data mining.
+- K-means clustering
+- Data mining
+- python
+seo_description: Explore how K-means clustering can enhance crime analysis by identifying patterns, predicting trends, and improving crime prevention through data mining.
 seo_title: Crime Analysis Using K-Means Clustering
 seo_type: article
-summary: This article delves into the application of K-means clustering in crime analysis,
-  showing how law enforcement agencies can uncover crime patterns, allocate resources,
-  and predict criminal activity. The article includes a detailed exploration of data
-  mining, clustering methods, and practical use cases.
+summary: This article delves into the application of K-means clustering in crime analysis, showing how law enforcement agencies can uncover crime patterns, allocate resources, and predict criminal activity. The article includes a detailed exploration of data mining, clustering methods, and practical use cases.
 tags:
-- K-means Clustering
 - Data Mining
-- Crime Analysis
+- K-means Clustering
 - Machine Learning
+- Crime Analysis
+- python
 title: 'Crime Analysis Using K-Means Clustering: Enhancing Security through Data Mining'
 ---
 

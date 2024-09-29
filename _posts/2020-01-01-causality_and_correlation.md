@@ -4,8 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2020-01-01'
-excerpt: Understand how causal reasoning helps us move beyond correlation, resolving
-  paradoxes and leading to more accurate insights from data analysis.
+excerpt: Understand how causal reasoning helps us move beyond correlation, resolving paradoxes and leading to more accurate insights from data analysis.
 header:
   image: /assets/images/data_science_4.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -14,25 +13,21 @@ header:
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
+- Simpson's Paradox
 - Causality
+- Berkson's Paradox
 - Correlation
 - Data Science
-- Simpson's Paradox
-- Berkson's Paradox
-seo_description: Explore how causal reasoning, through paradoxes like Simpson's and
-  Berkson's, can help us avoid the common pitfalls of interpreting data solely based
-  on correlation.
+seo_description: Explore how causal reasoning, through paradoxes like Simpson's and Berkson's, can help us avoid the common pitfalls of interpreting data solely based on correlation.
 seo_title: 'Causality Beyond Correlation: Understanding Paradoxes and Causal Graphs'
 seo_type: article
-summary: An in-depth exploration of the limits of correlation in data interpretation,
-  highlighting Simpson's and Berkson's paradoxes and introducing causal graphs as
-  a tool for uncovering true causal relationships.
+summary: An in-depth exploration of the limits of correlation in data interpretation, highlighting Simpson's and Berkson's paradoxes and introducing causal graphs as a tool for uncovering true causal relationships.
 tags:
-- Causal Inference
-- Correlation
-- Data Science
 - Simpson's Paradox
 - Berkson's Paradox
+- Correlation
+- Data Science
+- Causal Inference
 title: 'Causality Beyond Correlation: Simpson''s and Berkson''s Paradoxes'
 ---
 

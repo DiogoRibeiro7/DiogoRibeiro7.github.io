@@ -12,6 +12,7 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
   twitter_image: /assets/images/data_science_6.jpg
+keywords: []
 seo_type: article
 tags:
 - Artificial Intelligence

@@ -8,6 +8,7 @@ header:
   teaser: /assets/images/data_science_6.jpg
   twitter_image: /assets/images/data_science_6.jpg
 seo_type: article
+tags: []
 ---
 
 # PhD Investigation Work Plan: Applications of Mathematics and Machine Learning in Health
