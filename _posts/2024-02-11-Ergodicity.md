@@ -25,6 +25,7 @@ keywords:
 - data science
 - machine learning
 - statistical physics
+- python
 seo_description: Explore ergodic regimes in mathematics, statistical physics, and
   data science, with practical insights into processes, Bernoulli trials, and Python-based
   simulations.
@@ -43,6 +44,7 @@ tags:
 - Simulation and Modeling
 - Computational Physics
 - Machine Learning
+- python
 title: Distinguishing Ergodic Regimes from Processes
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

@@ -24,6 +24,7 @@ keywords:
 - statistical methods
 - standard deviation
 - mean and variance
+- python
 seo_description: An in-depth exploration of the Normal Distribution, often called
   the Bell Curve, and its critical role in data science, machine learning, and statistical
   analysis.
@@ -37,6 +38,7 @@ tags:
 - Machine Learning
 - Statistical Analysis
 - Bell Curve
+- python
 title: A Closer Look at the Classic Bell Curve
 ---
 

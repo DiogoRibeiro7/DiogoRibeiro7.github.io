@@ -25,6 +25,7 @@ keywords:
 - real-time data analysis
 - filtering techniques
 - data smoothing
+- python
 seo_description: Learn how rolling windows can be applied in signal processing for
   smoothing, feature extraction, and time-frequency analysis.
 seo_title: Unlock the Power of Rolling Windows in Signal Processing
@@ -35,6 +36,7 @@ tags:
 - Feature Extraction
 - Signal Smoothing
 - Time-Frequency Analysis
+- python
 title: Rolling Windows in Signal Processing
 ---
 

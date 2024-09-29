@@ -26,6 +26,7 @@ keywords:
 - risk modeling
 - tail risk
 - risk metrics
+- python
 seo_description: An in-depth analysis of Value at Risk (VaR) and Expected Shortfall
   (ES) as risk assessment models, comparing their performance during different market
   conditions.
@@ -36,6 +37,7 @@ tags:
 - Expected Shortfall
 - Financial Crisis
 - Risk Models
+- python
 title: 'Comparing Value at Risk (VaR) and Expected Shortfall (ES): A Data-Driven Analysis'
 ---
 

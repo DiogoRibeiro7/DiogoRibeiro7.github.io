@@ -27,6 +27,7 @@ keywords:
 - anomaly detection
 - sequential change-point algorithms
 - time series analysis
+- python
 seo_description: Explore advanced methods and practical implementations for sequential
   change-point detection in univariate models, covering theoretical foundations, real-world
   applications, and key statistical techniques.
@@ -37,6 +38,7 @@ tags:
 - Change-Point Detection
 - Univariate Models
 - Sequential Analysis
+- python
 title: Advanced Sequential Change-Point Detection for Univariate Models
 ---
 

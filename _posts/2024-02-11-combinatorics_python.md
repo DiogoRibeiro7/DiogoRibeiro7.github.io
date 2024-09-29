@@ -25,6 +25,8 @@ keywords:
 - computational mathematics
 - Python libraries for math
 - data analysis techniques
+- python
+- R
 seo_description: Learn how to master combinatorial mathematics using Python. Explore
   practical applications with the itertools library, scientific computing, and probability
   theory.
@@ -42,6 +44,8 @@ tags:
 - Algorithm Development
 - Computational Mathematics
 - Python Libraries
+- python
+- R
 title: Mastering Combinatorics with Python
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

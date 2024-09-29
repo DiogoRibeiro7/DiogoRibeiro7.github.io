@@ -26,6 +26,7 @@ keywords:
 - business growth
 - loyalty programs
 - data analytics
+- python
 seo_description: Explore Customer Lifetime Value (CLV) and its role in driving business
   growth. Learn how CLV influences customer retention, acquisition, and marketing
   strategies.
@@ -42,6 +43,7 @@ tags:
 - CRM (Customer Relationship Management)
 - Business Growth
 - Loyalty Programs
+- python
 title: Understanding Customer Lifetime Value
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

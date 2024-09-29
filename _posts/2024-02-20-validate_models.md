@@ -26,6 +26,7 @@ keywords:
 - machine learning
 - scalability in anomaly detection
 - high-dimensional data
+- python
 seo_description: Explore how to validate anomaly detection models like COPOD. Learn
   the importance of model validation through test-driven development and avoid pitfalls
   in high-dimensional data analysis.
@@ -36,6 +37,7 @@ tags:
 - Model Validation
 - COPOD
 - Python
+- python
 title: 'Validating Anomaly Detection Models: Lessons from COPOD'
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

@@ -23,6 +23,7 @@ keywords:
 - parallel processing R
 - dplyr runner integration
 - rolling regression R
+- r
 seo_description: Learn how to use the `runner` package in R to apply any function
   on rolling windows of data. Supports custom window sizes, lags, and flexible indexing
   using dates, ideal for time series analysis.
@@ -36,6 +37,7 @@ tags:
 - Time Series Analysis
 - Data Manipulation
 - Statistical Modeling
+- r
 title: Applying R Functions on Rolling Windows Using the `runner` Package
 ---
 

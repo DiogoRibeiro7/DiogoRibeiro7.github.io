@@ -26,6 +26,7 @@ keywords:
 - environmental risk management
 - climate finance
 - sustainability and risk
+- python
 seo_description: An in-depth analysis of Climate Value at Risk (VaR) from a data science
   perspective, exploring its importance in financial risk assessment amidst climate
   change.
@@ -36,6 +37,7 @@ tags:
 - Value at Risk
 - Data Science
 - Financial Risk Management
+- python
 title: 'Climate Value at Risk (VaR): A Data Science Perspective'
 ---
 
