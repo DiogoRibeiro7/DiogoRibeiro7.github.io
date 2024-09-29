@@ -22,6 +22,7 @@ keywords:
 - Variability measures
 - Relative standard deviation
 - Interpreting data variability
+- rust
 seo_description: Explore the Coefficient of Variation (CV) as a statistical tool for
   assessing variability. Understand its advantages and limitations in data interpretation
   and analysis.
@@ -37,6 +38,7 @@ tags:
 - Variability
 - Data Interpretation
 - Relative Standard Deviation
+- rust
 title: 'Understanding the Coefficient of Variation: Applications and Limitations'
 ---
 

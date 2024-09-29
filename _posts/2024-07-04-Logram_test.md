@@ -25,6 +25,8 @@ tags:
 - Observed Events
 - Expected Events
 - Hypothesis Testing
+- python
+- r
 title: Understanding the Logrank Test in Survival Analysis
 ---
 

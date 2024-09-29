@@ -24,6 +24,10 @@ keywords:
 - Model Evaluation
 - Imbalanced Datasets
 - Machine Learning Metrics
+- python
+- fortran
+- sh
+- c
 seo_description: Learn about Matthew’s Correlation Coefficient (MCC), an essential
   metric for evaluating binary classification models, particularly in imbalanced datasets,
   and how it improves upon traditional metrics.
@@ -43,6 +47,10 @@ tags:
 - Predictive Modeling
 - Performance Metrics
 - Data Analysis
+- python
+- fortran
+- sh
+- c
 title: 'Matthew’s Correlation Coefficient (MCC): A Detailed Explanation'
 ---
 

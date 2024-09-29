@@ -26,6 +26,7 @@ keywords:
 - Anomaly Detection
 - Data Science
 - Machine Learning
+- python
 seo_description: An in-depth exploration of how entropy plays a critical role in data
   science and machine learning, including decision trees, uncertainty quantification,
   and information theory.
@@ -41,6 +42,7 @@ tags:
 - Data Science
 - Decision Trees
 - Probability
+- python
 title: 'Entropy in Data Science and Machine Learning: A Deep Dive'
 ---
 

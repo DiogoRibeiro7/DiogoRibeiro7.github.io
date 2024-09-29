@@ -27,6 +27,7 @@ tags:
 - Lifetime Value
 - Curve Fitting
 - Medical Statistics
+- python
 title: 'Estimating Survival Functions: Parametric and Non-Parametric Approaches'
 ---
 

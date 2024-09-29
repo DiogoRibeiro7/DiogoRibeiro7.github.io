@@ -20,6 +20,10 @@ keywords:
 - Mann-Whitney alternatives
 - Robust statistical methods
 - Distribution-free analysis
+- r
+- bash
+- ruby
+- python
 seo_description: Discover the real power of nonparametric tests, moving beyond Mann-Whitney
   to explore quantile regression and other robust statistical techniques for data
   analysis without distributional assumptions.
@@ -34,6 +38,10 @@ tags:
 - Quantile Regression
 - Mann-Whitney Test
 - Robust Statistical Methods
+- r
+- bash
+- ruby
+- python
 title: 'The Real Power of Nonparametric Tests: Beyond Mann-Whitney'
 ---
 

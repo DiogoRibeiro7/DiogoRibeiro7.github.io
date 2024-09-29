@@ -35,6 +35,7 @@ tags:
 - Area Under ROC Curve (AUC)
 - TensorFlow Implementation
 - Loan Risk Analysis
+- python
 title: Understanding the Normalized Gini Coefficient and Default Rate
 ---
 

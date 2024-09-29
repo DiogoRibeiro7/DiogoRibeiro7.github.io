@@ -22,6 +22,7 @@ keywords:
 - Random Forest for anomaly detection
 - Anomaly detection methods
 - Machine learning outlier techniques
+- python
 seo_description: Learn about outlier detection techniques in machine learning, focusing
   on distance metrics and metric learning. Discover how these methods enhance the
   accuracy of detecting anomalies and outliers.
@@ -37,6 +38,7 @@ tags:
 - Random Forest
 - Distance Metric Learning
 - Anomaly Detection
+- python
 title: 'Understanding Outlier Detection: A Deep Dive into Distance Metric Learning'
 ---
 

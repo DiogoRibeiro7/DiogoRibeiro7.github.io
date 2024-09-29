@@ -21,6 +21,7 @@ keywords:
 - decision trees
 - gradient boosting
 - business analytics
+- python
 seo_description: Learn how monotonic constraints improve predictions in causal machine
   learning and real-world applications like real estate, healthcare, and marketing.
 seo_title: Causal Machine Learning with Monotonic Constraints
@@ -37,6 +38,7 @@ tags:
 - Causal ML
 - Monotonic Constraints
 - Business Applications
+- python
 title: 'Causal Insights in Machine Learning: Monotonic Constraints for Better Predictions'
 ---
 

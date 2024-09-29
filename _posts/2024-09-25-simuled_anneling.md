@@ -21,6 +21,7 @@ keywords:
 - Probabilistic algorithms
 - Global optimization
 - Non-convex loss functions
+- python
 seo_description: Explore how simulated annealing, a probabilistic technique, can optimize
   machine learning models by navigating complex loss functions and improving model
   performance.
@@ -37,6 +38,7 @@ tags:
 - Hyperparameter Tuning
 - Machine Learning Models
 - Non-Convex Optimization
+- python
 title: Optimizing Machine Learning Models using Simulated Annealing
 ---
 

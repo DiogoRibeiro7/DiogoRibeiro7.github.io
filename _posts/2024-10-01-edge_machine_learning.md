@@ -25,6 +25,7 @@ keywords:
 - Model Deployment in IoT
 - AI for Agriculture
 - Machine Learning Pipelines for Edge Devices
+- yaml
 math: true
 seo_description: Explore how to implement continuous machine learning deployment on
   edge devices using MLOps platforms, focusing on a real-world example of a smart
@@ -43,6 +44,7 @@ tags:
 - Continuous Deployment
 - Smart Devices
 - IoT
+- yaml
 title: Implementing Continuous Machine Learning Deployment on Edge Devices
 ---
 

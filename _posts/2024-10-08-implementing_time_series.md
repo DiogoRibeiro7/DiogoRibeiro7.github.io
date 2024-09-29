@@ -20,6 +20,7 @@ keywords:
 - Catch22
 - Python
 - UEA/UCR
+- python
 seo_description: Learn how to implement time-series classification in Python using
   simple models, catch22 features, and benchmarking with statistical tests using UEA/UCR
   datasets.
@@ -33,6 +34,7 @@ tags:
 - Time-Series Classification
 - Catch22
 - UEA/UCR
+- python
 title: 'Implementing Time-Series Classification: From Simple Models to Advanced Feature
   Sets'
 ---

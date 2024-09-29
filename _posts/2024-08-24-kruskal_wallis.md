@@ -21,6 +21,8 @@ keywords:
 - ANOVA alternatives
 - Hypothesis testing
 - Statistical data analysis
+- r
+- python
 seo_description: Explore the Kruskal-Wallis Test, a non-parametric alternative to
   ANOVA for comparing independent samples. Understand its applications, assumptions,
   and how to interpret results in data analysis.
@@ -36,6 +38,8 @@ tags:
 - ANOVA
 - Statistical Tests
 - Hypothesis Testing
+- r
+- python
 title: 'The Kruskal-Wallis Test: A Comprehensive Guide to Non-Parametric Analysis'
 ---
 

@@ -23,6 +23,7 @@ keywords:
 - proximity effects
 - signal quality in wireless communication
 - antenna design adjustments
+- python
 seo_description: Explore how the human body affects RSSI in wireless communication.
   Learn about absorption, reflection, shadowing, and practical approaches to mitigate
   signal quality issues.
@@ -42,6 +43,7 @@ tags:
 - Antenna Design
 - Dynamic Adjustment
 - Signal Quality
+- python
 title: 'How the Human Body Affects RSSI: Detailed Analysis and Practical Approaches'
 ---
 

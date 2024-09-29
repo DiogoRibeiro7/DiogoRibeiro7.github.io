@@ -23,6 +23,10 @@ keywords:
 - Copula models
 - Financial risk management
 - Efficient simulation techniques
+- python
+- r
+- ruby
+- rust
 seo_description: Learn how Importance Sampling enhances Monte Carlo simulations in
   estimating portfolio credit risk, especially in the context of copula models and
   rare events.
@@ -38,6 +42,10 @@ tags:
 - Credit Risk
 - Copula Models
 - Portfolio Risk
+- python
+- r
+- ruby
+- rust
 title: Importance Sampling for Portfolio Credit Risk
 ---
 

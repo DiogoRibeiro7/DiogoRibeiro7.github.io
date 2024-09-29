@@ -26,6 +26,7 @@ tags:
 - Marketing Mix Modeling
 - Credit Risk Modeling
 - Financial Risk Management
+- r
 title: 'Probability Integral Transform: Theory and Applications'
 ---
 

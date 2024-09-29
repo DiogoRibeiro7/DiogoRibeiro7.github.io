@@ -23,6 +23,8 @@ keywords:
 - Automated code checks
 - Code consistency
 - Python development workflow
+- bash
+- yaml
 seo_description: Explore pre-commit tools in Python for ensuring code quality and
   managing Git hooks. Learn how to integrate automated checks into your development
   process to improve code consistency.
@@ -39,6 +41,8 @@ tags:
 - Git Hooks
 - Version Control
 - Automation
+- bash
+- yaml
 title: A Comprehensive Guide to Pre-Commit Tools in Python
 ---
 

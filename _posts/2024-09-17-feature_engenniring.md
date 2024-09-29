@@ -26,6 +26,7 @@ keywords:
 - Machine Learning Best Practices
 - Robust Feature Engineering
 - Data Cleaning for Machine Learning
+- python
 seo_description: Explore five common mistakes in feature engineering, including data
   leakage and over-engineering, and learn how to avoid them for more robust machine
   learning models.
@@ -35,6 +36,7 @@ tags:
 - Feature Engineering
 - Data Preprocessing
 - Machine Learning
+- python
 title: 5 Common Mistakes in Feature Engineering and How to Avoid Them
 ---
 

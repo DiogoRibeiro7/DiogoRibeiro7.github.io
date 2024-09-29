@@ -21,6 +21,7 @@ keywords:
 - time series analysis
 - residual analysis
 - Python programming for data analysis
+- python
 seo_description: Learn how to model sensor activations with the Poisson distribution
   in Python. This tutorial covers data preparation, residual analysis, goodness-of-fit,
   and cross-validation for accurate predictions.
@@ -45,6 +46,7 @@ tags:
 - Data Analysis
 - Python Programming
 - Educational Tutorial
+- python
 title: Modeling Sensor Activations with Poisson Distribution in Python
 ---
 

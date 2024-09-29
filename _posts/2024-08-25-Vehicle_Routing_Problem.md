@@ -23,6 +23,8 @@ keywords:
 - Transportation optimization
 - VRP solutions
 - Supply chain management
+- bash
+- python
 seo_description: Explore how to implement solutions for the Vehicle Routing Problem
   (VRP) using Python. This article covers optimization techniques and algorithms for
   transportation and logistics management.
@@ -39,6 +41,8 @@ tags:
 - Transportation
 - Algorithms
 - Logistics
+- bash
+- python
 title: Implementing Vehicle Routing Problem Solutions with Python
 ---
 

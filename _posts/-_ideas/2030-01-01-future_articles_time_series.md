@@ -8,6 +8,7 @@ header:
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_1.jpg
 seo_type: article
+tags: []
 ---
 
 ## Article Ideas for Time Series and Forecasting

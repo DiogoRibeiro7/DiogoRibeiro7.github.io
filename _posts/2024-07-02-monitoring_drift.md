@@ -26,6 +26,7 @@ keywords:
 - Model Monitoring
 - Artificial Intelligence
 - Technology
+- python
 seo_description: Explore advanced methods for machine learning monitoring by moving
   beyond univariate data drift detection. Learn about direct loss estimation, detecting
   outliers, and addressing alarm fatigue in production AI systems.
@@ -49,6 +50,7 @@ tags:
 - Model Monitoring
 - Artificial Intelligence
 - Technology
+- python
 title: 'Machine Learning Monitoring: Moving Beyond Univariate Data Drift Detection'
 ---
 

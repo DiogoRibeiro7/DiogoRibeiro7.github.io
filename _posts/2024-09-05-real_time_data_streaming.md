@@ -22,6 +22,8 @@ keywords:
 - Kafka real-time pipelines
 - Real-time data processing
 - Data engineering best practices
+- bash
+- python
 seo_description: Explore real-time data streaming using Python and Apache Kafka. This
   article explains the setup, core concepts, and best practices for creating efficient
   real-time data processing pipelines.
@@ -37,6 +39,8 @@ tags:
 - Data Streaming
 - Real-time Processing
 - Data Pipelines
+- bash
+- python
 title: Real-time Data Streaming using Python and Kafka
 ---
 

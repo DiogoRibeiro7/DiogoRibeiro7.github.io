@@ -22,6 +22,7 @@ keywords:
 - linear regression
 - neural networks
 - support vector machines
+- python
 seo_description: An in-depth discussion on the importance of variable magnitude in
   machine learning models, its impact on regression coefficients, and how feature
   scaling improves model performance.
@@ -38,6 +39,7 @@ tags:
 - KNN
 - PCA
 - Random Forests
+- python
 title: Does the Magnitude of the Variable Matter in Machine Learning?
 ---
 

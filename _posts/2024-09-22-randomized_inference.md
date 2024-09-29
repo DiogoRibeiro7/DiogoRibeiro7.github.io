@@ -32,6 +32,7 @@ tags:
 - Model Validation
 - COPOD
 - Python
+- python
 title: 'Validating Anomaly Detection Models: Lessons from COPOD'
 ---
 

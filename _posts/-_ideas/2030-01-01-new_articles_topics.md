@@ -8,6 +8,7 @@ header:
   teaser: /assets/images/data_science_9.jpg
   twitter_image: /assets/images/data_science_9.jpg
 seo_type: article
+tags: []
 ---
 
 ## Article Ideas on Predictive Maintenance and the Role of Data Science, Big Data, and Machine Learning

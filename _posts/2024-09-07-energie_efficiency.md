@@ -23,6 +23,7 @@ keywords:
 - Python for energy analysis
 - Sustainable building practices
 - Carbon footprint reduction
+- python
 seo_description: Learn how to apply machine learning techniques and Python to building
   energy efficiency analysis. This article focuses on optimizing energy usage, sustainability,
   and reducing environmental impact.
@@ -38,6 +39,7 @@ tags:
 - Machine Learning
 - Building Analysis
 - Sustainability
+- python
 title: Building Energy Efficiency Analysis with Python and Machine Learning
 ---
 

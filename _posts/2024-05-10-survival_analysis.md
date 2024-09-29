@@ -28,6 +28,8 @@ keywords:
 - Product Lifespan
 - Management Decision-Making
 - Business Analytics
+- R
+- python
 seo_description: Learn about survival analysis and its applications in management
   for analyzing time-to-event data. Discover key techniques like the Kaplan-Meier
   estimator and the Cox model, useful in decision-making for employee retention and
@@ -54,6 +56,8 @@ tags:
 - Data-Driven Decision-Making
 - Business Analytics
 - Data-Driven Management
+- R
+- python
 title: Survival Analysis in Management
 ---
 

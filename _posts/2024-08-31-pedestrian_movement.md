@@ -22,6 +22,9 @@ keywords:
 - Advection-Diffusion Equation
 - Numerical methods for evacuation
 - Emergency preparedness simulations
+- bash
+- python
+- fortran
 seo_description: Learn how to simulate pedestrian evacuation in smoke-affected environments
   using the Social Force Model and Advection-Diffusion Equation. Explore numerical
   methods to optimize emergency preparedness strategies.
@@ -38,6 +41,9 @@ tags:
 - Advection-Diffusion Equation
 - Numerical Methods
 - Emergency Preparedness
+- bash
+- python
+- fortran
 title: Simulating Pedestrian Evacuation in Smoke-Affected Environments
 ---
 
