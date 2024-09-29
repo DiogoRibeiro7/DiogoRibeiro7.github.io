@@ -5,8 +5,7 @@ categories:
 - Biographies
 classes: wide
 date: '2023-08-22'
-excerpt: Delve into the fascinating life of Paul Erdős, a wandering mathematician
-  whose love for numbers and collaboration reshaped the world of mathematics.
+excerpt: Delve into the fascinating life of Paul Erdős, a wandering mathematician whose love for numbers and collaboration reshaped the world of mathematics.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -25,8 +24,7 @@ keywords:
 - mathematical prodigies
 - collaborative mathematics
 - famous mathematicians
-seo_description: Explore the life and legacy of Paul Erdős, a nomadic mathematician
-  who made groundbreaking contributions to number theory and collaborative science.
+seo_description: Explore the life and legacy of Paul Erdős, a nomadic mathematician who made groundbreaking contributions to number theory and collaborative science.
 seo_title: 'Paul Erdős: The Mathematical Prodigy Who Changed Mathematics Forever'
 seo_type: article
 subtitle: A Mathematician for the Ages

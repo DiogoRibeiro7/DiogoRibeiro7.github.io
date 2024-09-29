@@ -4,9 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2022-08-15'
-excerpt: In machine learning, linear models assume a direct relationship between predictors
-  and outcome variables. Learn why understanding these assumptions is critical for
-  model performance and how to work with non-linear relationships.
+excerpt: In machine learning, linear models assume a direct relationship between predictors and outcome variables. Learn why understanding these assumptions is critical for model performance and how to work with non-linear relationships.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_9.jpg
@@ -21,14 +19,10 @@ keywords:
 - logistic regression
 - LDA
 - feature transformation
-seo_description: Exploring machine learning models that assume linear relationships,
-  including linear regression, logistic regression, and LDA, and why understanding
-  these assumptions is crucial for better model performance.
+seo_description: Exploring machine learning models that assume linear relationships, including linear regression, logistic regression, and LDA, and why understanding these assumptions is crucial for better model performance.
 seo_title: 'Linear Relationships in Machine Learning: Understanding Their Importance'
 seo_type: article
-summary: This article covers the importance of understanding linear assumptions in
-  machine learning models, which models assume linearity, and what steps can be taken
-  when the assumption is not met.
+summary: This article covers the importance of understanding linear assumptions in machine learning models, which models assume linearity, and what steps can be taken when the assumption is not met.
 tags:
 - Linear Models
 - Logistic Regression

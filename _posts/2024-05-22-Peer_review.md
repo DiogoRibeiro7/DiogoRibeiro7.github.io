@@ -31,8 +31,7 @@ tags:
 - Status Homophily
 - Online Political Behavior
 - Social Media Analysis
-title: 'Critical Review of ''Bursting the (Filter) Bubble: Interactions of Members
-  of Parliament on Twitter'''
+title: 'Critical Review of ''Bursting the (Filter) Bubble: Interactions of Members of Parliament on Twitter'''
 ---
 
 ## Introduction

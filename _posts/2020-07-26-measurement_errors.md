@@ -7,8 +7,7 @@ categories:
 - Data Analysis
 classes: wide
 date: '2020-07-26'
-excerpt: Explore the different types of observational errors, their causes, and their
-  impact on accuracy and precision in various fields, such as data science and engineering.
+excerpt: Explore the different types of observational errors, their causes, and their impact on accuracy and precision in various fields, such as data science and engineering.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -16,14 +15,10 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_8.jpg
-seo_description: Understand the types of observational errors, their causes, and how
-  to estimate and reduce their effects for better accuracy and precision in scientific
-  and data-driven fields.
+seo_description: Understand the types of observational errors, their causes, and how to estimate and reduce their effects for better accuracy and precision in scientific and data-driven fields.
 seo_title: 'Observational Error: A Deep Dive into Measurement Accuracy and Precision'
 seo_type: article
-summary: A comprehensive guide to understanding observational and measurement errors,
-  covering random and systematic errors, their statistical models, and methods to
-  estimate and mitigate their effects.
+summary: A comprehensive guide to understanding observational and measurement errors, covering random and systematic errors, their statistical models, and methods to estimate and mitigate their effects.
 tags:
 - Statistical Bias
 - Statistical Methods

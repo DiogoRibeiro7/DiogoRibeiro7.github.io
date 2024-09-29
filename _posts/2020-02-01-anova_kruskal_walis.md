@@ -6,8 +6,7 @@ categories:
 - Hypothesis Testing
 classes: wide
 date: '2020-02-01'
-excerpt: Learn the key differences between ANOVA and Kruskal-Wallis tests, and understand
-  when to use each method based on your data's assumptions and characteristics.
+excerpt: Learn the key differences between ANOVA and Kruskal-Wallis tests, and understand when to use each method based on your data's assumptions and characteristics.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -21,14 +20,10 @@ keywords:
 - ANOVA
 - Non-Parametric Test
 - Hypothesis Testing
-seo_description: Explore the differences between ANOVA and Kruskal-Wallis tests. Learn
-  when to use parametric (ANOVA) and non-parametric (Kruskal-Wallis) methods for comparing
-  multiple groups.
+seo_description: Explore the differences between ANOVA and Kruskal-Wallis tests. Learn when to use parametric (ANOVA) and non-parametric (Kruskal-Wallis) methods for comparing multiple groups.
 seo_title: 'ANOVA vs Kruskal-Wallis: Key Differences and When to Use Them'
 seo_type: article
-summary: This article explores the fundamental differences between ANOVA and Kruskal-Wallis
-  tests, with a focus on their assumptions, applications, and when to use each method
-  in data analysis.
+summary: This article explores the fundamental differences between ANOVA and Kruskal-Wallis tests, with a focus on their assumptions, applications, and when to use each method in data analysis.
 tags:
 - Kruskal-Wallis
 - Non-Parametric Methods

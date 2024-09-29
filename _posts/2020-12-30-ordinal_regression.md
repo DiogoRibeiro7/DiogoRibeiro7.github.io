@@ -4,9 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2020-12-30'
-excerpt: Explore the architecture of ordinal regression models, their applications
-  in real-world data, and how marginal effects enhance the interpretability of complex
-  models using Python.
+excerpt: Explore the architecture of ordinal regression models, their applications in real-world data, and how marginal effects enhance the interpretability of complex models using Python.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_9.jpg
@@ -21,14 +19,10 @@ keywords:
 - Ordinal Regression
 - Marginal Effects
 - python
-seo_description: This article covers the principles of ordinal regression, its applications
-  in real-world data, and how to interpret the results using marginal effects. We
-  provide detailed examples to help you implement this model effectively in Python.
+seo_description: This article covers the principles of ordinal regression, its applications in real-world data, and how to interpret the results using marginal effects. We provide detailed examples to help you implement this model effectively in Python.
 seo_title: 'Ordinal Regression Explained: Models, Marginal Effects, and Applications'
 seo_type: article
-summary: This article explains ordinal regression models, from their mathematical
-  structure to real-world applications, including how marginal effects make model
-  outputs more interpretable in Python.
+summary: This article explains ordinal regression models, from their mathematical structure to real-world applications, including how marginal effects make model outputs more interpretable in Python.
 tags:
 - Statistical Models
 - Data Analysis

@@ -4,9 +4,7 @@ categories:
 - Mathematics
 classes: wide
 date: '2024-02-11'
-excerpt: An in-depth look into ergodicity and its applications in statistical analysis,
-  mathematical modeling, and computational physics, featuring real-world processes
-  and Python simulations.
+excerpt: An in-depth look into ergodicity and its applications in statistical analysis, mathematical modeling, and computational physics, featuring real-world processes and Python simulations.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_4.jpg
@@ -26,11 +24,8 @@ keywords:
 - machine learning
 - statistical physics
 - python
-seo_description: Explore ergodic regimes in mathematics, statistical physics, and
-  data science, with practical insights into processes, Bernoulli trials, and Python-based
-  simulations.
-seo_title: 'Distinguishing Ergodic Regimes: Clarifying Ergodicity in Statistical and
-  Mathematical Models'
+seo_description: Explore ergodic regimes in mathematics, statistical physics, and data science, with practical insights into processes, Bernoulli trials, and Python-based simulations.
+seo_title: 'Distinguishing Ergodic Regimes: Clarifying Ergodicity in Statistical and Mathematical Models'
 seo_type: article
 subtitle: Clarifying Ergodicity
 tags:

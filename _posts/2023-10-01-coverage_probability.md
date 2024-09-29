@@ -4,8 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2023-10-01'
-excerpt: 'Understanding coverage probability in statistical estimation and prediction:
-  its role in constructing confidence intervals and assessing their accuracy.'
+excerpt: 'Understanding coverage probability in statistical estimation and prediction: its role in constructing confidence intervals and assessing their accuracy.'
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -19,14 +18,10 @@ keywords:
 - Nominal Confidence Level
 - Prediction Intervals
 - Statistical Estimation
-seo_description: A detailed explanation of coverage probability, its role in statistical
-  estimation theory, and its relationship to confidence intervals and prediction intervals.
+seo_description: A detailed explanation of coverage probability, its role in statistical estimation theory, and its relationship to confidence intervals and prediction intervals.
 seo_title: Coverage Probability in Statistical Estimation Theory
 seo_type: article
-summary: In statistical estimation theory, coverage probability measures the likelihood
-  that a confidence interval contains the true parameter of interest. This article
-  explains its importance in statistical theory, prediction intervals, and nominal
-  coverage probability.
+summary: In statistical estimation theory, coverage probability measures the likelihood that a confidence interval contains the true parameter of interest. This article explains its importance in statistical theory, prediction intervals, and nominal coverage probability.
 tags:
 - Confidence Intervals
 - Statistical Theory

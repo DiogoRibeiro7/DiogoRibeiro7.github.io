@@ -15,8 +15,7 @@ header:
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_1.jpg
 seo_type: article
-subtitle: Exploring the Shortcomings of GDP as a Sole Economic Indicator in Data Science
-  Applications
+subtitle: Exploring the Shortcomings of GDP as a Sole Economic Indicator in Data Science Applications
 tags:
 - GDP Limitations
 - Economic Analysis

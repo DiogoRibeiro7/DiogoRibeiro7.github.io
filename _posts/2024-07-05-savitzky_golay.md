@@ -25,14 +25,10 @@ keywords:
 - data visualization
 - python
 - unknown
-seo_description: Learn about smoothing time series data using Moving Averages and
-  Savitzky-Golay filters. Explore their differences, benefits, and Python implementations
-  for signal and data processing.
+seo_description: Learn about smoothing time series data using Moving Averages and Savitzky-Golay filters. Explore their differences, benefits, and Python implementations for signal and data processing.
 seo_title: 'Time Series Smoothing: Moving Averages vs. Savitzky-Golay Filters'
 seo_type: article
-summary: 'This article compares two popular techniques for smoothing time series data:
-  Moving Averages and Savitzky-Golay filters, focusing on their applications, benefits,
-  and implementation in Python.'
+summary: 'This article compares two popular techniques for smoothing time series data: Moving Averages and Savitzky-Golay filters, focusing on their applications, benefits, and implementation in Python.'
 tags:
 - Time Series
 - Data Smoothing

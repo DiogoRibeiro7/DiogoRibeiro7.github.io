@@ -5,8 +5,7 @@ categories:
 - Time Series
 classes: wide
 date: '2023-08-12'
-excerpt: Dive into Gaussian Processes for time-series analysis using Python, combining
-  flexible modeling with Bayesian inference for trends, seasonality, and noise.
+excerpt: Dive into Gaussian Processes for time-series analysis using Python, combining flexible modeling with Bayesian inference for trends, seasonality, and noise.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -16,8 +15,7 @@ header:
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - python
-seo_description: Explore Gaussian Processes and their application in time-series analysis.
-  Learn the theory, mathematical background, and practical implementations in Python.
+seo_description: Explore Gaussian Processes and their application in time-series analysis. Learn the theory, mathematical background, and practical implementations in Python.
 seo_title: 'Gaussian Processes for Time Series: A Deep Dive in Python'
 seo_type: article
 tags:

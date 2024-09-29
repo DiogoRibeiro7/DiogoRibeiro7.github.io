@@ -4,10 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-10-09'
-excerpt: The magnitude of variables in machine learning models can have significant
-  impacts, particularly on linear regression, neural networks, and models using distance
-  metrics. This article explores why feature scaling is crucial and which models are
-  sensitive to variable magnitude.
+excerpt: The magnitude of variables in machine learning models can have significant impacts, particularly on linear regression, neural networks, and models using distance metrics. This article explores why feature scaling is crucial and which models are sensitive to variable magnitude.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -23,14 +20,10 @@ keywords:
 - neural networks
 - support vector machines
 - python
-seo_description: An in-depth discussion on the importance of variable magnitude in
-  machine learning models, its impact on regression coefficients, and how feature
-  scaling improves model performance.
+seo_description: An in-depth discussion on the importance of variable magnitude in machine learning models, its impact on regression coefficients, and how feature scaling improves model performance.
 seo_title: Does the Magnitude of the Variable Matter in Machine Learning Models?
 seo_type: article
-summary: This article discusses the importance of variable magnitude in machine learning
-  models, how feature scaling enhances model performance, and the distinctions between
-  models that are sensitive to the scale of variables and those that are not.
+summary: This article discusses the importance of variable magnitude in machine learning models, how feature scaling enhances model performance, and the distinctions between models that are sensitive to the scale of variables and those that are not.
 tags:
 - Feature Scaling
 - Linear Regression

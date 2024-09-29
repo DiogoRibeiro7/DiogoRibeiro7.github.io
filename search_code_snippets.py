@@ -87,9 +87,9 @@ def process_markdown_files(folder_path: str):
                 updated_front_matter = update_front_matter(front_matter, snippets_by_language)
 
                 # Create the new content with updated front matter
-                new_front_matter = yaml.dump(updated_front_matter, default_flow_style=False).strip()
+                new_front_matter = yaml.dump(updated_front_matter, default_flow_style=False, allow_unicode=True, width=float('inf')).strip()
                 new_content = f"---\n{new_front_matter}\n---\n\n{content_without_front_matter}"
-                
+
                 new_content = ensure_single_newline(new_content)
 
                 # Write the updated content back to the file

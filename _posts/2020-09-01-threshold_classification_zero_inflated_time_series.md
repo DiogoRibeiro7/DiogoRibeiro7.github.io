@@ -5,8 +5,7 @@ categories:
 - Time Series Analysis
 classes: wide
 date: '2020-09-01'
-excerpt: This article explores the use of stationary distributions in time series
-  models to define thresholds in zero-inflated data, improving classification accuracy.
+excerpt: This article explores the use of stationary distributions in time series models to define thresholds in zero-inflated data, improving classification accuracy.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_7.jpg
@@ -19,23 +18,16 @@ keywords:
 - Zero-Inflated Data
 - Threshold Classification
 - Statistical Modeling
-seo_description: A methodology for threshold classification in zero-inflated time
-  series data using stationary distributions and parametric modeling to enhance classification
-  accuracy.
-seo_title: Threshold Classification for Zero-Inflated Time Series Using Stationary
-  Distributions
+seo_description: A methodology for threshold classification in zero-inflated time series data using stationary distributions and parametric modeling to enhance classification accuracy.
+seo_title: Threshold Classification for Zero-Inflated Time Series Using Stationary Distributions
 seo_type: article
-summary: A novel approach for threshold classification in zero-inflated time series
-  data using stationary distributions derived from time series models. This method
-  addresses the limitations of traditional techniques by leveraging parametric distribution
-  quantiles for better accuracy and generalization.
+summary: A novel approach for threshold classification in zero-inflated time series data using stationary distributions derived from time series models. This method addresses the limitations of traditional techniques by leveraging parametric distribution quantiles for better accuracy and generalization.
 tags:
 - Statistical Modeling
 - Zero-Inflated Data
 - Stationary Distribution
 - Time Series
-title: A Generalized Approach to Threshold Classification for Zero-Inflated Time Series
-  Data Using Stationary Distributions
+title: A Generalized Approach to Threshold Classification for Zero-Inflated Time Series Data Using Stationary Distributions
 ---
 
 ## Abstract

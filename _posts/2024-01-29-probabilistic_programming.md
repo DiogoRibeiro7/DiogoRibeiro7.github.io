@@ -4,8 +4,7 @@ categories:
 - Mathematics
 classes: wide
 date: '2024-01-29'
-excerpt: Explore Markov Chain Monte Carlo (MCMC) methods, specifically the Metropolis
-  algorithm, and learn how to perform Bayesian inference through Python code.
+excerpt: Explore Markov Chain Monte Carlo (MCMC) methods, specifically the Metropolis algorithm, and learn how to perform Bayesian inference through Python code.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_9.jpg
@@ -25,8 +24,7 @@ keywords:
 - data science
 - machine learning
 - python
-seo_description: A practical explanation of MCMC and the Metropolis algorithm, focusing
-  on Bayesian inference with Python code examples to make the concepts accessible.
+seo_description: A practical explanation of MCMC and the Metropolis algorithm, focusing on Bayesian inference with Python code examples to make the concepts accessible.
 seo_title: 'Demystifying MCMC: A Hands-On Guide to Bayesian Inference'
 seo_type: article
 subtitle: Understanding the Metropolis Algorithm Through Code

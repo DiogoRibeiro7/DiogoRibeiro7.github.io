@@ -4,9 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-09-29'
-excerpt: Monotonic constraints are crucial for building reliable and interpretable
-  machine learning models. Discover how they are applied in causal ML and business
-  decisions.
+excerpt: Monotonic constraints are crucial for building reliable and interpretable machine learning models. Discover how they are applied in causal ML and business decisions.
 header:
   image: /assets/images/Causal-Inference-Hero.png
   og_image: /assets/images/data_science_2.jpg
@@ -22,18 +20,10 @@ keywords:
 - gradient boosting
 - business analytics
 - python
-seo_description: Learn how monotonic constraints improve predictions in causal machine
-  learning and real-world applications like real estate, healthcare, and marketing.
+seo_description: Learn how monotonic constraints improve predictions in causal machine learning and real-world applications like real estate, healthcare, and marketing.
 seo_title: Causal Machine Learning with Monotonic Constraints
 seo_type: article
-summary: Monotonic constraints play a vital role in enhancing the reliability and
-  interpretability of machine learning models, particularly in causal inference and
-  decision-making applications. This article explores how monotonic constraints are
-  implemented in techniques like decision trees and gradient boosting, ensuring that
-  models behave predictably in response to input changes. With real-world applications
-  in fields such as real estate, healthcare, and marketing, these constraints help
-  businesses make more accurate and actionable predictions while maintaining transparency
-  in their machine learning models.
+summary: Monotonic constraints play a vital role in enhancing the reliability and interpretability of machine learning models, particularly in causal inference and decision-making applications. This article explores how monotonic constraints are implemented in techniques like decision trees and gradient boosting, ensuring that models behave predictably in response to input changes. With real-world applications in fields such as real estate, healthcare, and marketing, these constraints help businesses make more accurate and actionable predictions while maintaining transparency in their machine learning models.
 tags:
 - Causal ML
 - Monotonic Constraints

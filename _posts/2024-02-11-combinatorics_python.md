@@ -4,9 +4,7 @@ categories:
 - Mathematics
 classes: wide
 date: '2024-02-11'
-excerpt: A practical guide to mastering combinatorics with Python, featuring hands-on
-  examples using the itertools library and insights into scientific computing and
-  probability theory.
+excerpt: A practical guide to mastering combinatorics with Python, featuring hands-on examples using the itertools library and insights into scientific computing and probability theory.
 header:
   image: /assets/images/data_science_6.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -27,9 +25,7 @@ keywords:
 - data analysis techniques
 - python
 - R
-seo_description: Learn how to master combinatorial mathematics using Python. Explore
-  practical applications with the itertools library, scientific computing, and probability
-  theory.
+seo_description: Learn how to master combinatorial mathematics using Python. Explore practical applications with the itertools library, scientific computing, and probability theory.
 seo_title: 'Mastering Combinatorics with Python: A Practical Guide'
 seo_type: article
 subtitle: A Practical Guide
