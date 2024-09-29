@@ -43,7 +43,7 @@ def update_front_matter(front_matter: dict, snippets_by_language: dict):
             return [item.strip() for item in field.split(',')]
         return field
 
-    # Ensure 'tags' is a list
+    # Ensure 'tags' is a list and append new languages if not already present
     if 'tags' in front_matter:
         front_matter['tags'] = ensure_list(front_matter['tags'])
         for lang in detected_languages:
@@ -52,15 +52,14 @@ def update_front_matter(front_matter: dict, snippets_by_language: dict):
     else:
         front_matter['tags'] = detected_languages
 
-    # Ensure 'keywords' is a list
+    # Only update 'keywords' if it already exists in the front matter
     if 'keywords' in front_matter:
         front_matter['keywords'] = ensure_list(front_matter['keywords'])
         for lang in detected_languages:
             if lang not in front_matter['keywords']:
                 front_matter['keywords'].append(lang)
-    else:
-        front_matter['keywords'] = detected_languages
 
+    # Do not add 'keywords' if they are not present in the original front matter
     return front_matter
 
 # Function to iterate over all markdown files in a folder and process them
@@ -78,7 +77,7 @@ def process_markdown_files(folder_path: str):
                 front_matter, content_without_front_matter = extract_front_matter(content)
                 snippets_by_language = extract_code_snippets(content_without_front_matter)
 
-                # Update the front matter by appending new languages to tasks and keywords
+                # Update the front matter by appending new languages to tags and existing keywords
                 updated_front_matter = update_front_matter(front_matter, snippets_by_language)
 
                 # Create the new content with updated front matter

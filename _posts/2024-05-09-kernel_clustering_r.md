@@ -37,6 +37,7 @@ tags:
 - K-means Kernel Clustering
 - Scalable Clustering Algorithms in R
 - unknown
+- r
 title: Kernel Clustering in R
 ---
 

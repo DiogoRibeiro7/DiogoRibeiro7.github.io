@@ -16,7 +16,6 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_8.jpg
-
 seo_description: Understand the types of observational errors, their causes, and how
   to estimate and reduce their effects for better accuracy and precision in scientific
   and data-driven fields.
