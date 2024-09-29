@@ -6,12 +6,12 @@ classes: wide
 date: '2020-02-02'
 excerpt: A detailed look at hypothesis testing, the misconceptions around the null hypothesis, and the diverse methods for detecting data deviations.
 header:
-  image: /assets/images/data_science_9.jpg
-  og_image: /assets/images/data_science_9.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - hypothesis testing
 - null hypothesis
@@ -98,4 +98,12 @@ Before diving into any kind of statistical analysis, it is essential to think cr
 
 1. **Understand the nature of your data**: What kind of deviations might you expect from the theoretical distribution? Are you dealing with skewed data, outliers, or multimodal distributions? The answers to these questions should guide your choice of statistical tests.
    
-2. **Choose your tools wisely**: Just as no single test can cover all potential deviations from the null hypothesis, no single perspective can capture the full complexity of your
+2. **Choose your tools wisely**: Just as no single test can cover all potential deviations from the null hypothesis, no single perspective can capture the full complexity of your data. Consider running multiple tests to gain a comprehensive view of how your data compare to the theoretical model.
+   
+3. **Interpret results in context**: A significant result from a single test does not mean your data are fundamentally flawed, just as a non-significant result does not guarantee that your data are perfectly aligned with the null hypothesis. Context matters.
+
+4. **Frequentist vs. Bayesian**: Consider whether your analysis would benefit from the flexibility of Bayesian methods, particularly in cases where prior knowledge or expert opinion can inform the analysis. 
+
+## Conclusion
+
+Statistical hypothesis testing is a powerful but nuanced tool. Understanding the limitations of the null hypothesis and the diversity of statistical tests available is essential for making accurate inferences from data. While it is impossible to prove the null hypothesis, careful consideration of the different ways in which data can deviate from theoretical patterns—along with thoughtful selection of appropriate statistical tests—can provide deeper insights into the underlying processes generating the data. By recognizing that no single test or framework can capture the full complexity of real-world data, analysts can approach hypothesis testing with greater precision and understanding.
