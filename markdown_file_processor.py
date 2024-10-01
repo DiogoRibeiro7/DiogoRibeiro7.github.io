@@ -4,6 +4,7 @@ import re
 # List of stop words to remove from file names
 STOP_WORDS = {"and", "or", "the", "a", "an", "that", "this", "is", "in", "on", "with", "of", "for", "to"}
 
+
 def rename_markdown_file(file_path: str):
     """
     Renames the markdown file so that the name part after the date is in lowercase,
