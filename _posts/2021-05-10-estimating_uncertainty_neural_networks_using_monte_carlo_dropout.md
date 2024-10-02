@@ -76,15 +76,15 @@ Monte Carlo dropout works by approximating the posterior distribution of a model
 Let $f(y|x)$ be the softmax output of the neural network for class $y$ given input $x$. Monte Carlo dropout involves generating $T$ samples $\{ f_t(y|x) \}_{t=1}^{T}$ by running the network $T$ times with different dropout masks. From these samples, we can compute:
 
 - **Predictive mean**: 
-  \[
+  $$
   \mathbb{E}[f(y|x)] = \frac{1}{T} \sum_{t=1}^{T} f_t(y|x)
-  \]
+  $$
   This gives the average probability assigned to class $y$ across the $T$ stochastic forward passes.
 
 - **Predictive variance**: 
-  \[
+  $$
   \text{Var}[f(y|x)] = \frac{1}{T} \sum_{t=1}^{T} (f_t(y|x) - \mathbb{E}[f(y|x)])^2
-  \]
+  $$
   This measures the dispersion of the model’s predictions, giving us an indication of how much the predictions vary due to dropout.
 
 The predictive variance is particularly useful for identifying inputs where the model is uncertain about its prediction. Large variance indicates that the model's predictions are inconsistent across different dropout configurations, signaling uncertainty.
@@ -97,9 +97,9 @@ Once we have the predictive mean and variance, the next challenge is to distill 
 
 One intuitive approach is to use the probability of the predicted class as the uncertainty score. Specifically, we can compute the maximum predicted probability across all classes:
 
-\[
+$$
 \text{Uncertainty Score} = 1 - \max_y \mathbb{E}[f(y|x)]
-\]
+$$
 
 This score measures the model's confidence in its most likely prediction. A high value for $\max_y \mathbb{E}[f(y|x)]$ indicates high confidence in the predicted class, while a lower value suggests greater uncertainty.
 
@@ -109,9 +109,9 @@ This method is simple and easy to implement, but it has some limitations. For ex
 
 A more nuanced approach is to compute the entropy of the predictive distribution:
 
-\[
+$$
 H(\mathbb{E}[f(\cdot|x)]) = - \sum_{y} \mathbb{E}[f(y|x)] \log \mathbb{E}[f(y|x)]
-\]
+$$
 
 Entropy measures the overall uncertainty in the distribution of predicted probabilities. If the model assigns most of the probability mass to a single class, the entropy will be low, indicating high confidence. Conversely, if the probabilities are more evenly spread across classes, the entropy will be higher, indicating greater uncertainty.
 
@@ -121,15 +121,15 @@ This method captures uncertainty more comprehensively than the maximum class pro
 
 Another method is to use the variance of the predicted probabilities as a measure of uncertainty. The variance for each class $y$ is computed as:
 
-\[
+$$
 \text{Var}[f(y|x)] = \frac{1}{T} \sum_{t=1}^{T} (f_t(y|x) - \mathbb{E}[f(y|x)])^2
-\]
+$$
 
 To obtain a single uncertainty score, we can aggregate the variances across all classes. One common approach is to compute the total variance:
 
-\[
+$$
 \text{Total Variance} = \sum_{y} \text{Var}[f(y|x)]
-\]
+$$
 
 This score reflects the overall uncertainty in the model's predictions. High variance indicates that the model's predictions are inconsistent across different dropout configurations, suggesting that the model is unsure about its prediction.
 
@@ -139,23 +139,23 @@ Variance-based methods are particularly useful when the goal is to detect out-of
 
 In some cases, particularly when dealing with binary or reduced two-class problems, it may be useful to approximate the predictive distribution using a normal distribution. Specifically, we can model the output probabilities for class $y$ as a Gaussian distribution:
 
-\[
+$$
 p(y|x) \sim \mathcal{N}(\mu_y, \sigma_y^2)
-\]
+$$
 where $\mu_y = \mathbb{E}[f(y|x)]$ is the predictive mean and $\sigma_y^2 = \text{Var}[f(y|x)]$ is the predictive variance.
 
 For a two-class classifier, let $y$ be the predicted class (i.e., $y = \arg\max_y \mathbb{E}[f(y|x)]$) and $\neg y$ be the other class. The probability that a future evaluation of the classifier will also output $y$ is given by:
 
-\[
+$$
 u = \Pr[X \geq 0]
-\]
+$$
 where $X \sim \mathcal{N}(\mu_y - \mu_{\neg y}, \sigma_y^2 + \sigma_{\neg y}^2)$.
 
 This probability can be estimated using the error function:
 
-\[
+$$
 u = \frac{1}{2} \left[1 + \text{erf}\left(\frac{\mu_y - \mu_{\neg y}}{\sqrt{2 (\sigma_y^2 + \sigma_{\neg y}^2)}}\right)\right]
-\]
+$$
 
 This approach is particularly useful for binary classification problems or situations where multi-class problems can be reduced to a binary decision (e.g., when comparing the predicted class to all other classes). It provides a probabilistic estimate of the model’s confidence that a future evaluation will yield the same prediction.
 
