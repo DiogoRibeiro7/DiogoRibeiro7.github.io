@@ -1,6 +1,4 @@
-
-
-File '2022-07-26-features.md':
+File '2024-07-07-logistic-model.md':
   - Summary present: False
   - Keywords present: True
 
@@ -32,15 +30,11 @@ File '2024-06-04-poisson_distribution.md':
   - Summary present: False
   - Keywords present: False
 
-File '2030-01-01-new_articles_topics.md':
-  - Summary present: False
-  - Keywords present: False
-
 File '2023-09-03-binary_classification.md':
   - Summary present: False
   - Keywords present: True
 
-File '2024-05-21-Probability_integral_transform.md':
+File '2024-05-21-probability_integral_transform.md':
   - Summary present: False
   - Keywords present: False
 
@@ -57,10 +51,6 @@ File '2024-02-11-ergodicity.md':
   - Keywords present: True
 
 File '2024-07-10-normal_distribution.md':
-  - Summary present: False
-  - Keywords present: False
-
-File '2030-01-01-data_model_drift.md':
   - Summary present: False
   - Keywords present: False
 
@@ -118,10 +108,6 @@ File '2024-07-06-stepwise_selection.md':
 
 File '2024-06-12-dbscan.md':
   - Summary present: False
-  - Keywords present: False
-
-File '2020-04-27-prediction_errors_bias_variance_model.md':
-  - Summary present: True
   - Keywords present: False
 
 File '2024-02-20-validate_models.md':
@@ -208,7 +194,7 @@ File '2024-02-08-clustering.md':
   - Summary present: False
   - Keywords present: True
 
-File '2024-05-14-Kullback.md':
+File '2024-05-14-kullback.md':
   - Summary present: False
   - Keywords present: False
 
@@ -218,7 +204,7 @@ File '2024-02-11-combinatorics_python.md':
 
 File '2024-03-07-ai_history.md':
   - Summary present: False
-  - Keywords present: False
+  - Keywords present: True
 
 File '2023-09-27-data_communication.md':
   - Summary present: False
@@ -268,10 +254,6 @@ File '2024-01-01-mathematics_machine_learning.md':
   - Summary present: False
   - Keywords present: True
 
-File '2030-01-01-health_articles.md':
-  - Summary present: False
-  - Keywords present: False
-
 File '2024-05-09-understanding_t-sne.md':
   - Summary present: False
   - Keywords present: False
@@ -280,7 +262,7 @@ File '2024-07-11-pre_commit.md':
   - Summary present: False
   - Keywords present: False
 
-File '2024-07-04-Logram_test.md':
+File '2024-07-04-logram_test.md':
   - Summary present: False
   - Keywords present: False
 
@@ -288,7 +270,7 @@ File '2024-07-13-clt.md':
   - Summary present: False
   - Keywords present: False
 
-File '2024-07-01-Lasso.md':
+File '2024-07-01-lasso.md':
   - Summary present: False
   - Keywords present: False
 
@@ -309,14 +291,6 @@ File '2024-01-28-normal_distribution.md':
   - Keywords present: True
 
 File '2024-02-09-spectral_clustering.md':
-  - Summary present: False
-  - Keywords present: True
-
-File '2030-01-21-phd_work_plan.md':
-  - Summary present: False
-  - Keywords present: False
-
-File '2023-08-21-demystifying_data_science.md':
   - Summary present: False
   - Keywords present: True
 
@@ -350,9 +324,9 @@ File '2022-12-25-probability_machine_learning.md':
 
 File '2023-08-12-guassian_processes.md':
   - Summary present: False
-  - Keywords present: False
+  - Keywords present: True
 
-File '2024-06-06-Essential_Statistical.md':
+File '2024-06-06-essential_statistical.md':
   - Summary present: False
   - Keywords present: False
 
@@ -403,10 +377,6 @@ File '2024-05-19-gini_coefficiente.md':
 File '2022-01-02-ols.md':
   - Summary present: False
   - Keywords present: True
-
-File '2030-01-01-elderly_care.md':
-  - Summary present: False
-  - Keywords present: False
 
 File '2024-07-14-copulas.md':
   - Summary present: False
