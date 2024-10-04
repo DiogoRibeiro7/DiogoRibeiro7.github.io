@@ -16,10 +16,10 @@ tags: []
 Here are several article ideas that would complement the ARIMAX time series model article, expanding on related topics within time series analysis, forecasting, and statistical modeling:
 
 
-### 2. **"Time Series Forecasting with SARIMA: Seasonal ARIMA Explained"**
+<!-- TODO: 2. **"Time Series Forecasting with SARIMA: Seasonal ARIMA Explained"**
    - Introduce SARIMA (Seasonal ARIMA) and its relevance to time series with strong seasonal patterns.
    - Explain how SARIMA extends ARIMA by modeling seasonality, including parameter selection and interpretation.
-   - Provide real-world examples and R or Python code for implementation.
+   - Provide real-world examples and R or Python code for implementation. -->
 
 
 
