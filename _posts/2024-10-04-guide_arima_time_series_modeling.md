@@ -19,6 +19,7 @@ keywords:
 - ARIMAX
 - ARMA
 - python
+- r
 seo_description: Learn the fundamentals of ARIMA (AutoRegressive Integrated Moving Average) modeling, including components, parameter identification, validation, and practical applications.
 seo_title: ARIMA Time Series Modeling Explained
 seo_type: article
@@ -29,6 +30,7 @@ tags:
 - Forecasting
 - Data Science
 - python
+- r
 title: A Comprehensive Guide to ARIMA Time Series Modeling
 ---
 

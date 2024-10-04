@@ -15,11 +15,7 @@ tags: []
 
 Here are several article ideas that would complement the ARIMAX time series model article, expanding on related topics within time series analysis, forecasting, and statistical modeling:
 
-### 1. **"A Comprehensive Guide to ARIMA Time Series Modeling"**
-   - Discuss the fundamentals of the ARIMA model (AutoRegressive Integrated Moving Average).
-   - Cover components (AR, I, MA), how to identify model parameters, model validation, and practical applications.
-   - Comparison with other models like ARIMAX, SARIMA, and ARMA.
-   
+
 ### 2. **"Time Series Forecasting with SARIMA: Seasonal ARIMA Explained"**
    - Introduce SARIMA (Seasonal ARIMA) and its relevance to time series with strong seasonal patterns.
    - Explain how SARIMA extends ARIMA by modeling seasonality, including parameter selection and interpretation.
