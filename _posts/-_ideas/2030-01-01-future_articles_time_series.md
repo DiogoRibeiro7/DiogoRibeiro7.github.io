@@ -21,10 +21,7 @@ Here are several article ideas that would complement the ARIMAX time series mode
    - Explain how SARIMA extends ARIMA by modeling seasonality, including parameter selection and interpretation.
    - Provide real-world examples and R or Python code for implementation.
 
-### 3. **"Introduction to Exponential Smoothing Methods for Time Series Forecasting"**
-   - Explore simple, double, and triple exponential smoothing techniques (ETS).
-   - Discuss how these methods compare to ARIMA-based models in terms of complexity and applicability.
-   - Provide examples of using exponential smoothing in retail, inventory management, and finance.
+
 
 ### 4. **"Machine Learning Approaches to Time Series Forecasting: A Comparative Analysis"**
    - Compare traditional statistical methods (ARIMA, ARIMAX) with machine learning models like LSTM (Long Short-Term Memory), Random Forest, and Prophet for time series forecasting.

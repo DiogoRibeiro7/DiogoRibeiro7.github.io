@@ -36,38 +36,9 @@ tags:
 title: 'Introduction to Seasonal Decomposition of Time Series: STL and X-13 Methods'
 ---
 
-## Introduction to Seasonal Decomposition of Time Series: STL and X-13 Methods
-
 Seasonality is a crucial component of time series analysis. In many real-world applications, time series data shows regular, recurring patterns over specific periods. For instance, sales may peak during holidays, or temperatures might rise and fall according to seasons. Identifying and modeling this seasonality is essential for accurate forecasting and analysis. To achieve this, **seasonal decomposition** methods are used to break down the time series into its components: trend, seasonal, and residual components.
 
 Two of the most widely used methods for decomposing time series are **STL (Seasonal-Trend decomposition using LOESS)** and **X-13-SEATS**. These methods allow us to isolate the seasonal effect and better understand the underlying trends and random noise in the data. In this article, we will explore these two methods in detail, discuss their practical applications, and demonstrate how they can be implemented using R and Python.
-
-### Table of Contents
-
-1. **Understanding Seasonal Decomposition**
-   - Components of a Time Series
-   - Importance of Seasonality in Forecasting
-2. **STL: Seasonal-Trend Decomposition using LOESS**
-   - What is STL?
-   - How STL Works
-   - Advantages and Limitations of STL
-3. **X-13-SEATS: An Overview**
-   - What is X-13-SEATS?
-   - SEATS vs X-12-ARIMA: Historical Context
-   - Key Features of X-13-SEATS
-4. **STL vs X-13: A Comparison**
-   - Handling Seasonality
-   - Flexibility and Customization
-   - Computational Complexity
-5. **Practical Examples and Code Implementations**
-   - Decomposing Time Series with STL in Python and R
-   - X-13-SEATS Implementation in R
-6. **Applications of STL and X-13 in Real-World Scenarios**
-   - Economic Forecasting
-   - Climate Data Analysis
-   - Retail and E-commerce Sales
-7. **Challenges and Best Practices in Seasonal Decomposition**
-8. **Conclusion**
 
 ---
 
