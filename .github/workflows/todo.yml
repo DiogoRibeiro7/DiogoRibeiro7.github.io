@@ -9,8 +9,8 @@ on:
         type: boolean
         description: Enable, if you want to import all TODOs. Runs on checked out branch! Only use if you're sure what you are doing.
   push:
-    branches: # do not set multiple branches, todos might be added and then get referenced by themselves in case of a merge
-      - master
+    branches:
+      - main
 
 permissions:
   issues: write
@@ -29,4 +29,4 @@ jobs:
         with:
           excludePattern: '^(node_modules/)'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}  # Replace with your PAT secret
