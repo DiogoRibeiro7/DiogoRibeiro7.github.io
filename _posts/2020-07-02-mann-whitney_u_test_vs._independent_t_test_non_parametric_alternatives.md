@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Data Science
-- Hypothesis Testing
 classes: wide
 date: '2020-07-02'
 excerpt: The Mann-Whitney U test and independent t-test are used for comparing two independent groups, but the choice between them depends on data distribution. Learn when to use each and explore real-world applications.
