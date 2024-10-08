@@ -50,8 +50,8 @@ Levene’s test essentially works by transforming the data into deviations from 
 The steps involved in Levene's Test are as follows:
 
 1. **Define the hypothesis**:
-   - **Null hypothesis ($H_0$):** All group variances are equal.
-   - **Alternative hypothesis ($H_A$):** At least one group has a variance different from the others.
+   - **Null hypothesis ($$H_0$$):** All group variances are equal.
+   - **Alternative hypothesis ($$H_A$$):** At least one group has a variance different from the others.
 
 2. **Transform the data**: Compute the absolute deviations of each data point from the group median (or mean, depending on the variant used).
 
@@ -84,8 +84,8 @@ Bartlett’s test works by comparing the variances of the groups directly and ca
 The steps for Bartlett’s test are as follows:
 
 1. **Define the hypothesis**:
-   - **Null hypothesis ($H_0$):** The variances of all groups are equal.
-   - **Alternative hypothesis ($H_A$):** At least one group has a variance different from the others.
+   - **Null hypothesis ($$H_0$$):** The variances of all groups are equal.
+   - **Alternative hypothesis ($$H_A$$):** At least one group has a variance different from the others.
 
 2. **Compute the test statistic**: Bartlett’s test computes a chi-squared test statistic based on the sample variances of the groups.
 
