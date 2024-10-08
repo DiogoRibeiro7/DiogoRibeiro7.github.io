@@ -59,7 +59,7 @@ The likelihood function is at the heart of MLE. It measures how likely the obser
 
 $$ x_1, x_2, \dots, x_n $$
 
-These observations are assumed to be drawn from some probability distribution, say $p(x | \theta)$, where $\theta$ represents the unknown parameters of the model. The likelihood function is the product of the probability density (or mass) functions for all observations:
+These observations are assumed to be drawn from some probability distribution, say $$p(x | \theta)$$, where $$\theta$$ represents the unknown parameters of the model. The likelihood function is the product of the probability density (or mass) functions for all observations:
 
 $$ L(\theta) = p(x_1 \mid \theta) \times p(x_2 \mid \theta) \times \dots \times p(x_n \mid \theta) $$
 
@@ -75,11 +75,11 @@ $$ \log L(\theta) = \sum_{i=1}^{n} \log p(x_i \mid \theta) $$
 
 ### 2.3 Maximization
 
-The objective of MLE is to find the parameter values that maximize the log-likelihood function. This is typically done by taking the derivative of the log-likelihood with respect to the parameter $\theta$, setting it equal to zero, and solving for $\theta$:
+The objective of MLE is to find the parameter values that maximize the log-likelihood function. This is typically done by taking the derivative of the log-likelihood with respect to the parameter $$\theta$$, setting it equal to zero, and solving for $$\theta$$:
 
 $$ \frac{\partial}{\partial \theta} \log L(\theta) = 0 $$
 
-This solution gives the maximum likelihood estimate of $\theta$, which is denoted as $\hat{\theta}$.
+This solution gives the maximum likelihood estimate of $$\theta$$, which is denoted as $$\hat{\theta}$$.
 
 ## 3. Why MLE is Essential in Data Science
 
@@ -303,7 +303,7 @@ Subclasses are expected to implement these methods.
 
 #### Normal Distribution MLE (`MLENormal`):
 
-- The `log_likelihood()` method computes the log-likelihood for the normal distribution given mean ($\mu$) and variance ($\sigma^2$).
+- The `log_likelihood()` method computes the log-likelihood for the normal distribution given mean ($$\mu$$) and variance ($$\sigma^2$$).
 - The `fit()` method estimates the parameters (mean and variance) using the following formulas:
 
 $$ \hat{\mu} = \text{mean}(data) $$  
@@ -311,8 +311,8 @@ $$ \hat{\sigma^2} = \text{variance}(data) $$
 
 #### Bernoulli Distribution MLE (`MLEBernoulli`):
 
-- The `log_likelihood()` method computes the log-likelihood for the Bernoulli distribution based on the probability $p$ of success.
-- The `fit()` method estimates the probability $p$ using the formula:
+- The `log_likelihood()` method computes the log-likelihood for the Bernoulli distribution based on the probability $$p$$ of success.
+- The `fit()` method estimates the probability $$p$$ using the formula:
 
 $$ \hat{p} = \text{mean}(data) $$
 
