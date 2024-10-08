@@ -73,27 +73,9 @@ Here are some interesting article ideas centered around statistical tests, desig
    - Explain how the sign test works as a non-parametric test.
    - Compare the sign test with the Wilcoxon signed-rank test and other small-sample tests.
 
-### 8. **"Levene's Test vs. Bartlett’s Test: Checking for Homogeneity of Variances"**
-   - Comparison of Levene's and Bartlett’s tests for checking homogeneity of variances in data.
-   - Discuss when to use each test (parametric vs. non-parametric, normal vs. non-normal data).
-   - Application in conjunction with ANOVA and other tests that assume equal variances.
-
-### 9. **"Multiple Comparisons Problem: Bonferroni Correction and Other Solutions"**
-   - Explain the multiple comparisons problem that arises in hypothesis testing.
-   - Discuss the Bonferroni correction and other methods (e.g., Holm-Bonferroni, FDR).
-   - Show practical applications in experiments with multiple testing (e.g., medical studies, genetics).
-
-### 10. **"Kolmogorov-Smirnov Test: Assessing Goodness-of-Fit in Non-Parametric Data"**
-   - Introduction to the Kolmogorov-Smirnov (K-S) test for checking distribution fit.
-   - Compare K-S test with other goodness-of-fit tests like Shapiro-Wilk.
-   - Explore real-world use cases, such as testing if a dataset follows a specific distribution.
 
 
 
-### 12. **"Log-Rank Test in Survival Analysis: Comparing Survival Curves"**
-   - Introduction to the log-rank test used in survival analysis.
-   - Discuss its applications in medical studies to compare survival times between two groups.
-   - Explain how to interpret survival curves and the p-values from a log-rank test.
 
 
 

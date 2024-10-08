@@ -31,14 +31,12 @@ tags:
 title: Exploring Climate Change, Sustainability, and Data Science
 ---
 
-### 1. Leveraging Big Data for Climate Change Mitigation
-Explore how large-scale data collection and analysis are helping scientists better understand climate patterns and predict changes. Discuss the role of satellite data, sensors, and environmental monitoring.
+## TODO:
 
 ### 2. The Role of Machine Learning in Predicting Climate Change Impacts
 Examine how machine learning algorithms are being used to model and predict the future impacts of climate change. Focus on predictive analytics for extreme weather, sea-level rise, and biodiversity loss.
 
-### 3. Sustainability Analytics: How Data Science Drives Green Innovation
-Look at how companies and organizations are using data science to improve sustainability practices. Cover areas like resource optimization, waste reduction, and improving the energy efficiency of supply chains.
+
 
 ### 4. AI and Machine Learning in Renewable Energy Optimization
 Discuss how AI is used to optimize renewable energy sources, such as wind and solar power, by improving energy forecasting, managing grid systems, and balancing energy storage.
