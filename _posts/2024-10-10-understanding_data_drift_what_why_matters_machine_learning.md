@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Data Science
-- AI Monitoring
 classes: wide
 date: '2024-10-10'
 excerpt: Data drift can significantly affect the performance of machine learning models over time. Learn about different types of drift and how they impact model predictions in dynamic environments.

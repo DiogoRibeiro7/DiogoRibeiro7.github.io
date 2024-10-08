@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Data Science
-- AI Monitoring
 classes: wide
 date: '2024-10-11'
 excerpt: Even the best machine learning models experience performance degradation over time due to model drift. Learn about the causes of model drift and how it affects production systems.
