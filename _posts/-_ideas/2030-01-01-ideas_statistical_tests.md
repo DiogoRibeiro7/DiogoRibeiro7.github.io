@@ -58,10 +58,7 @@ Here are some interesting article ideas centered around statistical tests, desig
    - Discuss the relationship between sample size, effect size, and significance level.
    - Provide an overview of how to perform power analysis in different tests (e.g., t-test, ANOVA).
 
-### 5. **"Mann-Whitney U Test vs. Independent T-Test: Non-Parametric Alternatives"**
-   - Comparison between the parametric t-test and the non-parametric Mann-Whitney U test.
-   - Explain when and why to use the Mann-Whitney U test (e.g., non-normal distributions).
-   - Provide practical examples and real-world applications of each test.
+
 
 ### 6. **"One-Way ANOVA vs. Two-Way ANOVA: When to Use Which"**
    - Overview of the one-way and two-way ANOVA tests.
