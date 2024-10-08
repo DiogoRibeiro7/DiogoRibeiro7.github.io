@@ -83,17 +83,8 @@ Here are some interesting article ideas centered around statistical tests, desig
    - Discuss the Bonferroni correction and other methods (e.g., Holm-Bonferroni, FDR).
    - Show practical applications in experiments with multiple testing (e.g., medical studies, genetics).
 
-### 10. **"Kolmogorov-Smirnov Test: Assessing Goodness-of-Fit in Non-Parametric Data"**
-   - Introduction to the Kolmogorov-Smirnov (K-S) test for checking distribution fit.
-   - Compare K-S test with other goodness-of-fit tests like Shapiro-Wilk.
-   - Explore real-world use cases, such as testing if a dataset follows a specific distribution.
 
 
-
-### 12. **"Log-Rank Test in Survival Analysis: Comparing Survival Curves"**
-   - Introduction to the log-rank test used in survival analysis.
-   - Discuss its applications in medical studies to compare survival times between two groups.
-   - Explain how to interpret survival curves and the p-values from a log-rank test.
 
 
 
