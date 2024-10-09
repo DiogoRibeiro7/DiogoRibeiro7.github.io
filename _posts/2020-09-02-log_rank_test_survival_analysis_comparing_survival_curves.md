@@ -1,8 +1,6 @@
 ---
 author_profile: false
 categories:
-- Biostatistics
-- Medical Research
 - Data Science
 classes: wide
 date: '2020-09-02'

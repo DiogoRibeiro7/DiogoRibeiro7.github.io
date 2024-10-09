@@ -1,8 +1,7 @@
 ---
 author_profile: false
 categories:
-- Traffic Safety
-- Urban Planning
+- Data Science
 classes: wide
 date: '2021-02-17'
 excerpt: A deep dive into using Kernel Density Estimation (KDE) for identifying traffic accident hotspots and improving road safety, including practical applications and case studies from Japan.

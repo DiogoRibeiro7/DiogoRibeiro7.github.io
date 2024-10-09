@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Sustainability
 - Data Science
-- Green Technology
 classes: wide
 date: '2020-03-30'
 excerpt: Data science is a key driver of sustainability, offering insights that help optimize resources, reduce waste, and improve the energy efficiency of supply chains.

@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- Data Science
 - Statistics
 classes: wide
 date: '2021-03-01'

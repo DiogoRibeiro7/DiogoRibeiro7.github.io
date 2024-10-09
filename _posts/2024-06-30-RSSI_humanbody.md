@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Wireless Communication
 - Signal Processing
-- Network Engineering
 classes: wide
 date: '2024-06-30'
 excerpt: Explore the impact of human presence on RSSI and the challenges it introduces, along with effective mitigation strategies in wireless communication systems.

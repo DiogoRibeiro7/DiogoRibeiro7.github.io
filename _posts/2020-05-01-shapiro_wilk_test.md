@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Data Analysis
-- Hypothesis Testing
 classes: wide
 date: '2020-05-01'
 excerpt: Learn about the Shapiro-Wilk and Anderson-Darling tests for normality, their differences, and how they guide decisions between parametric and non-parametric statistical methods.

@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Mathematics
 - Statistics
-- Data Science
 classes: wide
 date: '2024-05-10'
 excerpt: Explore the role of survival analysis in management, focusing on time-to-event data and techniques like the Kaplan-Meier estimator and Cox proportional hazards model for business decision-making.

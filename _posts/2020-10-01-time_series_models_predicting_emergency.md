@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- Healthcare Analytics
 - Machine Learning
 classes: wide
 date: '2020-10-01'

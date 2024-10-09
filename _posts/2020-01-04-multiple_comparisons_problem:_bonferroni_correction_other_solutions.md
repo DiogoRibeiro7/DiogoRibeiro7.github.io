@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Data Science
-- Hypothesis Testing
 classes: wide
 date: '2020-01-04'
 excerpt: The multiple comparisons problem arises in hypothesis testing when performing multiple tests increases the likelihood of false positives. Learn about the Bonferroni correction and other solutions to control error rates.

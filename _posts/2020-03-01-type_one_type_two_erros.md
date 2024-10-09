@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Data Science
-- Hypothesis Testing
 classes: wide
 date: '2020-03-01'
 excerpt: Explore Type I and Type II errors in hypothesis testing. Learn how to balance error rates, interpret significance levels, and understand the implications of statistical errors in real-world scenarios.

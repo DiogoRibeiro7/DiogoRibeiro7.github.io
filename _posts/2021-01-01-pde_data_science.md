@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- Data Science
 - Mathematics
 classes: wide
 date: '2021-01-01'
