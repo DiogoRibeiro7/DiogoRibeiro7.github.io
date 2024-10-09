@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Forest Fire Management
-- GIS
-- Environmental Science
+- Data Science
 classes: wide
 date: '2021-04-27'
 excerpt: A study using GIS-based techniques for forest fire hotspot identification and analysis, validated with contributory factors like population density, precipitation, elevation, and vegetation cover.

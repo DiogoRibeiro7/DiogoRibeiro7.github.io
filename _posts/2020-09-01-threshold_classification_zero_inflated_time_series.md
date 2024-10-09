@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- Data Science
 - Time Series Analysis
 classes: wide
 date: '2020-09-01'

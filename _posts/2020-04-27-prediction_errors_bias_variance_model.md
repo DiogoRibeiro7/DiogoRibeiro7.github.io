@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Mathematics
 - Machine Learning
-- Data Science
 classes: wide
 date: '2020-04-27'
 excerpt: Learn about different methods for estimating prediction error, addressing the bias-variance tradeoff, and how cross-validation, bootstrap methods, and Efron & Tibshirani's .632 estimator help improve model evaluation.

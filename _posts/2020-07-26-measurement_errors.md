@@ -1,10 +1,7 @@
 ---
 author_profile: false
 categories:
-- Mathematics
 - Statistics
-- Data Science
-- Data Analysis
 classes: wide
 date: '2020-07-26'
 excerpt: Explore the different types of observational errors, their causes, and their impact on accuracy and precision in various fields, such as data science and engineering.

@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Statistics
 - Data Analysis
-- Non-Parametric Tests
 classes: wide
 date: '2020-04-01'
 excerpt: The Friedman test is a non-parametric alternative to repeated measures ANOVA, designed for use with ordinal data or non-normal distributions. Learn how and when to use it in your analyses.

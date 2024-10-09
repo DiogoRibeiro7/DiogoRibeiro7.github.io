@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Predictive Maintenance
 classes: wide
 date: '2020-12-01'
 excerpt: Learn how data science revolutionizes predictive maintenance through key techniques like regression, anomaly detection, and clustering to forecast machine failures and optimize maintenance schedules.

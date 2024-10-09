@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Data Analysis
 classes: wide
 date: '2021-04-01'
 excerpt: Discover the reasons behind asymmetric confidence intervals in statistics and how they impact research interpretation.
