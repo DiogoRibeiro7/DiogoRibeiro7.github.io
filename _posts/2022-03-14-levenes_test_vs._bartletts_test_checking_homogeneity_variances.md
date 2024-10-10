@@ -1,8 +1,6 @@
 ---
 author_profile: false
 categories:
-- Statistics
-- Data Science
 - Hypothesis Testing
 classes: wide
 date: '2022-03-14'

@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- Physics
 - Information Theory
 classes: wide
 date: '2022-09-27'

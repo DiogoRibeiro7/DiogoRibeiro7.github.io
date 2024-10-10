@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- Computer Science
 - Operations Research
 classes: wide
 date: '2021-12-24'

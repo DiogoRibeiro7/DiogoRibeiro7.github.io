@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Time Series
 classes: wide
 date: '2023-08-12'
 excerpt: Dive into Gaussian Processes for time-series analysis using Python, combining flexible modeling with Bayesian inference for trends, seasonality, and noise.

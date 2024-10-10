@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- Reliability Engineering
 - Predictive Maintenance
 classes: wide
 date: '2023-05-05'

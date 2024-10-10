@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Health Monitoring
-- Cardiovascular Health
 classes: wide
 date: '2021-05-12'
 excerpt: Discover the significance of heart rate variability (HRV) and how the coefficient of variation (CV) provides a more nuanced view of cardiovascular health.
