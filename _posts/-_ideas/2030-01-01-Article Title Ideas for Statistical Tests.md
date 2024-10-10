@@ -73,6 +73,3 @@ tags: []
    - Explanation of biserial and point-biserial correlation methods.
    - Practical applications in educational testing, psychology, and medical diagnostics.
 
-### 17. **"Multiple Regression vs. Stepwise Regression: Building the Best Predictive Models"**
-   - Comparing multiple regression and stepwise regression methods.
-   - When to use each for predictive modeling in business analytics and scientific research.
