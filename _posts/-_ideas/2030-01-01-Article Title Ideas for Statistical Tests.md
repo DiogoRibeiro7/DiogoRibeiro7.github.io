@@ -76,7 +76,3 @@ tags: []
 ### 17. **"Multiple Regression vs. Stepwise Regression: Building the Best Predictive Models"**
    - Comparing multiple regression and stepwise regression methods.
    - When to use each for predictive modeling in business analytics and scientific research.
-
-### 18. **"G-Test vs. Chi-Square Test: Modern Alternatives for Testing Categorical Data"**
-   - A comparison between the G-test and Chi-square test for categorical data.
-   - Use cases in genetic studies, market research, and large datasets.
