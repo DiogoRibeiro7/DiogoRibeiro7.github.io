@@ -69,7 +69,4 @@ tags: []
    - Overview of the Cox proportional hazards model for time-to-event data.
    - Applications in survival analysis and clinical trial data.
 
-### 16. **"Biserial and Point-Biserial Correlation: Analyzing the Relationship Between Continuous and Binary Variables"**
-   - Explanation of biserial and point-biserial correlation methods.
-   - Practical applications in educational testing, psychology, and medical diagnostics.
-
+### 16. **"Mann-Whitney U Test: Non-Parametric Comparison of Two Independent Samples"**
