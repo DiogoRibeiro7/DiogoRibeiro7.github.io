@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Climate Change
 - Data Science
-- Environmental Science
 classes: wide
 date: '2021-04-30'
 excerpt: Big data is revolutionizing climate science, enabling more accurate predictions and helping formulate effective mitigation strategies.

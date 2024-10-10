@@ -2,9 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Data Science
-- Artificial Intelligence
-- Model Monitoring
 classes: wide
 date: '2022-03-23'
 header:

@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- Artificial Intelligence
 - Machine Learning
 classes: wide
 date: '2023-08-21'

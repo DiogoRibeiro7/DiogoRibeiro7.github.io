@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Data Science
 classes: wide
 date: '2021-07-26'
 excerpt: Regression tasks are at the heart of machine learning. This guide explores methods like Linear Regression, Principal Component Regression, Gaussian Process Regression, and Support Vector Regression, with insights on when to use each.

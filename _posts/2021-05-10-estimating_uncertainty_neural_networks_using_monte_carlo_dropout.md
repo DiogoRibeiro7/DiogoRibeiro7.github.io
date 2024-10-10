@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Neural Networks
-- Uncertainty Estimation
 classes: wide
 date: '2021-05-10'
 excerpt: This article discusses Monte Carlo dropout and how it is used to estimate uncertainty in multi-class neural network classification, covering methods such as entropy, variance, and predictive probabilities.

@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Crime Analysis
 classes: wide
 date: '2021-09-24'
 excerpt: This article explores the use of K-means clustering in crime analysis, including practical implementation, case studies, and future directions.
