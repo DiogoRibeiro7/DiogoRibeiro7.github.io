@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Predictive Modeling
-- Data Analysis
 classes: wide
 date: '2023-09-30'
 excerpt: Learn the differences between multiple regression and stepwise regression, and discover when to use each method to build the best predictive models in business analytics and scientific research.

@@ -69,10 +69,4 @@ tags: []
    - Overview of the Cox proportional hazards model for time-to-event data.
    - Applications in survival analysis and clinical trial data.
 
-### 16. **"Biserial and Point-Biserial Correlation: Analyzing the Relationship Between Continuous and Binary Variables"**
-   - Explanation of biserial and point-biserial correlation methods.
-   - Practical applications in educational testing, psychology, and medical diagnostics.
-
-### 17. **"Multiple Regression vs. Stepwise Regression: Building the Best Predictive Models"**
-   - Comparing multiple regression and stepwise regression methods.
-   - When to use each for predictive modeling in business analytics and scientific research.
+### 16. **"Mann-Whitney U Test: Non-Parametric Comparison of Two Independent Samples"**
