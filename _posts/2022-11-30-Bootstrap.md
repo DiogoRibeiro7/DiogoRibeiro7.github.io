@@ -4,9 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2022-11-30'
-excerpt: Delve into bootstrapping, a versatile statistical technique for estimating
-  the sampling distribution of a statistic, offering insights into its applications
-  and implementation.
+excerpt: Delve into bootstrapping, a versatile statistical technique for estimating the sampling distribution of a statistic, offering insights into its applications and implementation.
 header:
   image: /assets/images/data_science_4.jpg
   og_image: /assets/images/data_science_7.jpg
@@ -29,18 +27,17 @@ keywords:
 - Variance estimation
 - Python
 - Python
-seo_description: Explore bootstrapping, a resampling method in statistics used to
-  estimate sampling distributions. Learn about its applications, implementation, and
-  limitations.
+- python
+seo_description: Explore bootstrapping, a resampling method in statistics used to estimate sampling distributions. Learn about its applications, implementation, and limitations.
 seo_title: 'Understanding Bootstrapping: A Resampling Method in Statistics'
 seo_type: article
-summary: An overview of bootstrapping, its significance as a resampling method in
-  statistics, and how it is used to estimate the sampling distribution of a statistic.
+summary: An overview of bootstrapping, its significance as a resampling method in statistics, and how it is used to estimate the sampling distribution of a statistic.
 tags:
 - Bootstrapping
 - Resampling
 - Python
 - Python
+- python
 title: 'Understanding Bootstrapping: A Resampling Method in Statistics'
 ---
 

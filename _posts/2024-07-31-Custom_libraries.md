@@ -21,6 +21,7 @@ tags:
 - Software development
 - Automation
 - Python
+- python
 title: Building Custom Python Libraries for Your Industry Needs
 ---
 

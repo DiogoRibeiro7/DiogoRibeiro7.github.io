@@ -19,6 +19,8 @@ tags:
 - Devops
 - Bash
 - Yaml
+- bash
+- yaml
 title: Streamlining Your Workflow with Pre-commit Hooks in Python Projects
 ---
 

@@ -4,9 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2021-07-26'
-excerpt: Regression tasks are at the heart of machine learning. This guide explores
-  methods like Linear Regression, Principal Component Regression, Gaussian Process
-  Regression, and Support Vector Regression, with insights on when to use each.
+excerpt: Regression tasks are at the heart of machine learning. This guide explores methods like Linear Regression, Principal Component Regression, Gaussian Process Regression, and Support Vector Regression, with insights on when to use each.
 header:
   image: /assets/images/regression-analysis-2.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -29,10 +27,8 @@ keywords:
 - Dimensionality reduction
 - Machine learning
 - Gaussian process regression
-seo_description: A comprehensive guide to selecting the best regression algorithm
-  for your dataset, based on complexity, dimensionality, and the need for probabilistic
-  output. Explore traditional machine learning methods with detailed explanations
-  and code examples.
+- python
+seo_description: A comprehensive guide to selecting the best regression algorithm for your dataset, based on complexity, dimensionality, and the need for probabilistic output. Explore traditional machine learning methods with detailed explanations and code examples.
 seo_title: 'Choosing the Right Regression Task: From Linear Models to Advanced Techniques'
 seo_type: article
 tags:
@@ -43,6 +39,7 @@ tags:
 - Machine learning algorithms
 - Principal component regression
 - Python
+- python
 title: 'A Guide to Regression Tasks: Choosing the Right Approach'
 ---
 

@@ -4,9 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2023-09-01'
-excerpt: Regression and path analysis are two statistical techniques used to model
-  relationships between variables. This article explains their differences, highlighting
-  key features and use cases for each.
+excerpt: Regression and path analysis are two statistical techniques used to model relationships between variables. This article explains their differences, highlighting key features and use cases for each.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -20,17 +18,10 @@ keywords:
 - Statistical modeling
 - Structural equation models
 - Multivariate analysis
-seo_description: Explore the key differences between regression analysis and path
-  analysis, two important techniques in statistical modeling. Understand their applications,
-  advantages, and limitations.
+seo_description: Explore the key differences between regression analysis and path analysis, two important techniques in statistical modeling. Understand their applications, advantages, and limitations.
 seo_title: 'Regression vs. Path Analysis: A Comprehensive Comparison'
 seo_type: article
-summary: Regression and path analysis are both important statistical methods, but
-  they differ in terms of their complexity, scope, and purpose. While regression focuses
-  on predicting dependent variables from independent variables, path analysis allows
-  for the modeling of more complex, multivariate relationships between variables.
-  This comprehensive article delves into the theoretical and practical distinctions
-  between these two methods.
+summary: Regression and path analysis are both important statistical methods, but they differ in terms of their complexity, scope, and purpose. While regression focuses on predicting dependent variables from independent variables, path analysis allows for the modeling of more complex, multivariate relationships between variables. This comprehensive article delves into the theoretical and practical distinctions between these two methods.
 tags:
 - Regression analysis
 - Path analysis

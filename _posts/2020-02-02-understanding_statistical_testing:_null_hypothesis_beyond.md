@@ -4,8 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2020-02-02'
-excerpt: A detailed look at hypothesis testing, the misconceptions around the null
-  hypothesis, and the diverse methods for detecting data deviations.
+excerpt: A detailed look at hypothesis testing, the misconceptions around the null hypothesis, and the diverse methods for detecting data deviations.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -19,14 +18,10 @@ keywords:
 - Data non-normality
 - Statistical methods
 - Hypothesis rejection
-seo_description: An in-depth exploration of the complexities behind hypothesis testing,
-  the null hypothesis, and multiple testing methods that detect data deviations from
-  theoretical patterns.
+seo_description: An in-depth exploration of the complexities behind hypothesis testing, the null hypothesis, and multiple testing methods that detect data deviations from theoretical patterns.
 seo_title: 'Statistical Testing: Exploring the Complexities of the Null Hypothesis'
 seo_type: article
-summary: This article delves into the core principles of hypothesis testing, the nuances
-  of the null hypothesis, and the various statistical tools used to test data compatibility
-  with theoretical distributions.
+summary: This article delves into the core principles of hypothesis testing, the nuances of the null hypothesis, and the various statistical tools used to test data compatibility with theoretical distributions.
 tags:
 - Hypothesis testing
 - Null hypothesis

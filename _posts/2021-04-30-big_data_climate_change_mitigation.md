@@ -4,8 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2021-04-30'
-excerpt: Big data is revolutionizing climate science, enabling more accurate predictions
-  and helping formulate effective mitigation strategies.
+excerpt: Big data is revolutionizing climate science, enabling more accurate predictions and helping formulate effective mitigation strategies.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_2.jpg
@@ -19,14 +18,10 @@ keywords:
 - Environmental monitoring
 - Satellite data
 - Predictive analytics
-seo_description: This article explores how big data is being used to monitor and predict
-  climate change, utilizing tools like satellite data, sensors, and environmental
-  monitoring systems.
+seo_description: This article explores how big data is being used to monitor and predict climate change, utilizing tools like satellite data, sensors, and environmental monitoring systems.
 seo_title: How Big Data Can Help Mitigate Climate Change
 seo_type: article
-summary: In this article, we examine the intersection of big data and climate science,
-  focusing on how large-scale data collection and analysis are transforming our ability
-  to monitor, predict, and mitigate climate change.
+summary: In this article, we examine the intersection of big data and climate science, focusing on how large-scale data collection and analysis are transforming our ability to monitor, predict, and mitigate climate change.
 tags:
 - Big data
 - Climate change

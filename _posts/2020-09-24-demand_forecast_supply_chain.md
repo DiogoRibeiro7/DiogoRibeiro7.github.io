@@ -4,9 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2020-09-24'
-excerpt: Leveraging customer behavior through predictive modeling, the BG/NBD model
-  offers a more accurate approach to demand forecasting in the supply chain compared
-  to traditional time-series models.
+excerpt: Leveraging customer behavior through predictive modeling, the BG/NBD model offers a more accurate approach to demand forecasting in the supply chain compared to traditional time-series models.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_7.jpg
@@ -21,23 +19,19 @@ keywords:
 - Demand forecasting
 - Python
 - Python
-seo_description: Explore how using customer behavior and predictive models can improve
-  demand forecasting in the supply chain industry, leveraging the BG/NBD model for
-  better accuracy.
+- python
+seo_description: Explore how using customer behavior and predictive models can improve demand forecasting in the supply chain industry, leveraging the BG/NBD model for better accuracy.
 seo_title: Demand Forecasting in Supply Chain Using Customer Behavior
 seo_type: article
-summary: This article explores the use of customer behavior modeling to improve demand
-  forecasting in the supply chain industry. We demonstrate how the BG/NBD model and
-  the Lifetimes Python library are used to predict repurchases and optimize sales
-  predictions over a future period.
+summary: This article explores the use of customer behavior modeling to improve demand forecasting in the supply chain industry. We demonstrate how the BG/NBD model and the Lifetimes Python library are used to predict repurchases and optimize sales predictions over a future period.
 tags:
 - Customer behavior
 - Python
 - Demand forecasting
 - Repurchase models
 - Python
-title: A Predictive Approach for Demand Forecasting in the Supply Chain Using Customer
-  Behavior Modeling
+- python
+title: A Predictive Approach for Demand Forecasting in the Supply Chain Using Customer Behavior Modeling
 ---
 
 ## Introduction

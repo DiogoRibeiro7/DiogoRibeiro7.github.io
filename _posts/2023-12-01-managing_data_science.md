@@ -4,9 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2023-12-01'
-excerpt: While engineering projects have defined solutions and known processes, data
-  science is all about experimentation and discovery. Managing them in the same way
-  can be detrimental.
+excerpt: While engineering projects have defined solutions and known processes, data science is all about experimentation and discovery. Managing them in the same way can be detrimental.
 header:
   image: /assets/images/data_science_7.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -20,14 +18,10 @@ keywords:
 - Project management
 - Ai
 - Experimentation
-seo_description: Managing data science projects like engineering projects sets them
-  up to fail. Learn the key differences in scope, timelines, and processes between
-  the two fields.
+seo_description: Managing data science projects like engineering projects sets them up to fail. Learn the key differences in scope, timelines, and processes between the two fields.
 seo_title: 'Managing Data Science Projects vs Engineering: Why It Fails'
 seo_type: article
-summary: This article explores why managing data science projects with the same expectations
-  as engineering leads to failure, explaining how the unknown nature of data science
-  solutions differs from engineering's structured approach.
+summary: This article explores why managing data science projects with the same expectations as engineering leads to failure, explaining how the unknown nature of data science solutions differs from engineering's structured approach.
 tags:
 - Data science
 - Engineering

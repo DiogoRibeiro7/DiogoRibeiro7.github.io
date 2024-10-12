@@ -4,8 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2020-01-30'
-excerpt: The Cox Proportional Hazards Model is a vital tool for analyzing time-to-event
-  data in medical studies. Learn how it works and its applications in survival analysis.
+excerpt: The Cox Proportional Hazards Model is a vital tool for analyzing time-to-event data in medical studies. Learn how it works and its applications in survival analysis.
 header:
   image: /assets/images/data_science_4.jpg
   og_image: /assets/images/data_science_4.jpg
@@ -24,12 +23,12 @@ keywords:
 - Proportional hazards assumption
 - R
 - Python
-seo_description: Explore the Cox Proportional Hazards Model and its application in
-  survival analysis, with examples from clinical trials and medical research.
+- r
+- python
+seo_description: Explore the Cox Proportional Hazards Model and its application in survival analysis, with examples from clinical trials and medical research.
 seo_title: Understanding Cox Proportional Hazards Model for Medical Survival Analysis
 seo_type: article
-summary: A comprehensive guide to the Cox Proportional Hazards Model, its assumptions,
-  and applications in survival analysis and clinical trials.
+summary: A comprehensive guide to the Cox Proportional Hazards Model, its assumptions, and applications in survival analysis and clinical trials.
 tags:
 - Cox proportional hazards model
 - Survival analysis
@@ -39,6 +38,8 @@ tags:
 - Censored data
 - R
 - Python
+- r
+- python
 title: 'Cox Proportional Hazards Model: A Guide to Survival Analysis in Medical Studies'
 ---
 

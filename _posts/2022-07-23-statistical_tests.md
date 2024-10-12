@@ -4,9 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2022-07-23'
-excerpt: Discover the universal structure behind statistical tests, highlighting the
-  core comparison between observed and expected data that drives hypothesis testing
-  and data analysis.
+excerpt: Discover the universal structure behind statistical tests, highlighting the core comparison between observed and expected data that drives hypothesis testing and data analysis.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -27,14 +25,10 @@ keywords:
 - Common statistical test structure
 - Hypothesis comparison
 - Statistical methodologies
-seo_description: Explore the underlying structure common to most statistical tests,
-  revealing how the comparison of observed versus expected data forms the basis of
-  hypothesis testing.
+seo_description: Explore the underlying structure common to most statistical tests, revealing how the comparison of observed versus expected data forms the basis of hypothesis testing.
 seo_title: Understanding the Universal Structure of Statistical Tests
 seo_type: article
-summary: This article explains the universal structure of statistical tests, focusing
-  on the comparison between observed and expected data that forms the foundation of
-  hypothesis testing and statistical inference.
+summary: This article explains the universal structure of statistical tests, focusing on the comparison between observed and expected data that forms the foundation of hypothesis testing and statistical inference.
 tags:
 - Statistical tests
 - Data analysis

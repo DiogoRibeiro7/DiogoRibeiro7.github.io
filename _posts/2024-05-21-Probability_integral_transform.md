@@ -28,6 +28,7 @@ tags:
 - Financial risk management
 - R
 - R
+- r
 title: 'Probability Integral Transform: Theory and Applications'
 ---
 

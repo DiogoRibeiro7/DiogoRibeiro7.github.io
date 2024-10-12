@@ -4,8 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2024-09-21'
-excerpt: A comprehensive exploration of data drift in credit risk models, examining
-  practical methods to identify and address drift using multivariate techniques.
+excerpt: A comprehensive exploration of data drift in credit risk models, examining practical methods to identify and address drift using multivariate techniques.
 header:
   image: /assets/images/data_drift.png
   og_image: /assets/images/data_science_1.jpg
@@ -24,17 +23,10 @@ keywords:
 - Detecting data drift
 - Credit risk assessment
 - Adapting models to data changes
-seo_description: Explore a practical approach to solving data drift in credit risk
-  models, focusing on multivariate analysis and its impact on model performance.
+seo_description: Explore a practical approach to solving data drift in credit risk models, focusing on multivariate analysis and its impact on model performance.
 seo_title: 'Addressing Data Drift in Credit Risk Models: A Case Study'
 seo_type: article
-summary: Data drift can significantly affect the accuracy of credit risk models, making
-  early detection and correction essential for maintaining model reliability. This
-  article delves into practical approaches for identifying and addressing data drift,
-  particularly through multivariate analysis. By examining the impact of data drift
-  on model performance, the guide provides actionable strategies for maintaining the
-  robustness of credit risk models, ensuring they remain effective over time despite
-  changes in underlying data distributions.
+summary: Data drift can significantly affect the accuracy of credit risk models, making early detection and correction essential for maintaining model reliability. This article delves into practical approaches for identifying and addressing data drift, particularly through multivariate analysis. By examining the impact of data drift on model performance, the guide provides actionable strategies for maintaining the robustness of credit risk models, ensuring they remain effective over time despite changes in underlying data distributions.
 tags:
 - Credit risk modeling
 - Data drift

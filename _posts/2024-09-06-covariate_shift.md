@@ -3,9 +3,7 @@ author_profile: false
 categories:
 - Machine Learning
 date: '2024-09-06'
-excerpt: Learn how to manage covariate shifts in machine learning models through effective
-  model monitoring, feature engineering, and adaptation strategies to maintain model
-  accuracy and performance.
+excerpt: Learn how to manage covariate shifts in machine learning models through effective model monitoring, feature engineering, and adaptation strategies to maintain model accuracy and performance.
 header:
   image: /assets/images/data_science_6.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -20,15 +18,10 @@ keywords:
 - Model adaptation strategies
 - Managing data drift in machine learning
 - Maintaining model accuracy
-seo_description: Explore techniques for managing covariate shifts in machine learning,
-  including model monitoring, feature engineering, and model adaptation. Learn how
-  to mitigate data drift and maintain model performance.
+seo_description: Explore techniques for managing covariate shifts in machine learning, including model monitoring, feature engineering, and model adaptation. Learn how to mitigate data drift and maintain model performance.
 seo_title: 'Managing Covariate Shifts in Machine Learning: Strategies for Model Adaptation'
 seo_type: article
-summary: This article covers strategies for managing covariate shifts in machine learning
-  models. It explains how to monitor models, adapt to changing data distributions,
-  and implement feature engineering to address data drift and ensure continued model
-  performance.
+summary: This article covers strategies for managing covariate shifts in machine learning models. It explains how to monitor models, adapt to changing data distributions, and implement feature engineering to address data drift and ensure continued model performance.
 tags:
 - Covariate shift
 - Model monitoring

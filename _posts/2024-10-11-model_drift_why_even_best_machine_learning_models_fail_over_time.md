@@ -4,9 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-10-11'
-excerpt: Even the best machine learning models experience performance degradation
-  over time due to model drift. Learn about the causes of model drift and how it affects
-  production systems.
+excerpt: Even the best machine learning models experience performance degradation over time due to model drift. Learn about the causes of model drift and how it affects production systems.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -20,15 +18,10 @@ keywords:
 - Data drift
 - Model degradation
 - Ai in production
-seo_description: This article explores the concept of model drift and how changes
-  in data or target variables degrade the accuracy of machine learning models over
-  time, with case studies from real-world applications.
+seo_description: This article explores the concept of model drift and how changes in data or target variables degrade the accuracy of machine learning models over time, with case studies from real-world applications.
 seo_title: 'Why Machine Learning Models Fail Over Time: Understanding Model Drift'
 seo_type: article
-summary: This article examines model drift, focusing on how data drift, changes in
-  underlying patterns, and new unseen data can degrade machine learning model accuracy
-  over time. We explore the causes of model drift and provide case studies from industries
-  like finance and healthcare.
+summary: This article examines model drift, focusing on how data drift, changes in underlying patterns, and new unseen data can degrade machine learning model accuracy over time. We explore the causes of model drift and provide case studies from industries like finance and healthcare.
 tags:
 - Model drift
 - Data drift
