@@ -13,16 +13,16 @@ header:
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_5.jpg
 keywords:
-- combinatorics
-- probability theory
-- mathematical foundations
-- statistical analysis
-- mathematics education
-- data science applications
-- mathematical synergies
-- probability models
-- educational resources
-- applied mathematics
+- Combinatorics
+- Probability theory
+- Mathematical foundations
+- Statistical analysis
+- Mathematics education
+- Data science applications
+- Mathematical synergies
+- Probability models
+- Educational resources
+- Applied mathematics
 seo_description: Discover the deep connections between combinatorics and probability theory, exploring their mathematical foundations, applications, and the synergies that drive statistical analysis and data science.
 seo_title: 'Combinatorics and Probability: Exploring Mathematical Synergies'
 seo_type: article
@@ -31,12 +31,12 @@ summary: This article explores the intersection of combinatorics and probability
 tags:
 - Mathematics
 - Combinatorics
-- Probability Theory
-- Statistical Analysis
-- Mathematical Foundations
-- Data Science
-- Educational Resources
-- Mathematical Applications
+- Probability theory
+- Statistical analysis
+- Mathematical foundations
+- Data science
+- Educational resources
+- Mathematical applications
 title: Paths of Combinatorics and Probability
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

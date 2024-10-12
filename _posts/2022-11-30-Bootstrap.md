@@ -13,18 +13,19 @@ header:
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_7.jpg
 keywords:
-- bootstrapping
-- resampling methods
-- statistical bootstrapping
-- sampling distribution
-- non-parametric statistics
-- bootstrap method applications
-- bootstrap confidence intervals
-- statistical inference
-- bootstrapping limitations
-- data resampling techniques
-- bootstrap in hypothesis testing
-- variance estimation
+- Bootstrapping
+- Resampling methods
+- Statistical bootstrapping
+- Sampling distribution
+- Non-parametric statistics
+- Bootstrap method applications
+- Bootstrap confidence intervals
+- Statistical inference
+- Bootstrapping limitations
+- Data resampling techniques
+- Bootstrap in hypothesis testing
+- Variance estimation
+- Python
 - python
 seo_description: Explore bootstrapping, a resampling method in statistics used to estimate sampling distributions. Learn about its applications, implementation, and limitations.
 seo_title: 'Understanding Bootstrapping: A Resampling Method in Statistics'
@@ -33,6 +34,7 @@ summary: An overview of bootstrapping, its significance as a resampling method i
 tags:
 - Bootstrapping
 - Resampling
+- Python
 - python
 title: 'Understanding Bootstrapping: A Resampling Method in Statistics'
 ---

@@ -17,16 +17,17 @@ header:
   twitter_image: /assets/images/data_science_7.jpg
 seo_type: article
 tags:
-- Poisson Distribution
-- Count Data
-- Statistical Modeling
-- Time Series Analysis
-- Event Data
-- Data Preparation
-- R Code
+- Poisson distribution
+- Count data
+- Statistical modeling
+- Time series analysis
+- Event data
+- Data preparation
+- R code
 - Probability
-- p-value Analysis
-- Statistical Testing
+- P-value analysis
+- Statistical testing
+- R
 - r
 title: Modeling Count Events with Poisson Distribution in R
 ---

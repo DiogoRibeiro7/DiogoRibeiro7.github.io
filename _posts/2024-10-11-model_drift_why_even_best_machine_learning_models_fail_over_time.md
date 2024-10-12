@@ -13,21 +13,21 @@ header:
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
-- model drift
-- machine learning models
-- data drift
-- model degradation
-- AI in production
+- Model drift
+- Machine learning models
+- Data drift
+- Model degradation
+- Ai in production
 seo_description: This article explores the concept of model drift and how changes in data or target variables degrade the accuracy of machine learning models over time, with case studies from real-world applications.
 seo_title: 'Why Machine Learning Models Fail Over Time: Understanding Model Drift'
 seo_type: article
 summary: This article examines model drift, focusing on how data drift, changes in underlying patterns, and new unseen data can degrade machine learning model accuracy over time. We explore the causes of model drift and provide case studies from industries like finance and healthcare.
 tags:
-- Model Drift
-- Data Drift
-- Machine Learning Models
-- Model Degradation
-- AI in Production
+- Model drift
+- Data drift
+- Machine learning models
+- Model degradation
+- Ai in production
 title: 'Model Drift: Why Even the Best Machine Learning Models Fail Over Time'
 ---
 

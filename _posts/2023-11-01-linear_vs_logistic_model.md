@@ -13,19 +13,19 @@ header:
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
-- Linear Probability Model
-- Logistic Regression
-- Statistical Modeling
+- Linear probability model
+- Logistic regression
+- Statistical modeling
 - Interpretability
-- Statistical Estimation
+- Statistical estimation
 seo_description: A comprehensive guide to understanding the advantages and limitations of linear and logistic probability models in statistical analysis.
 seo_title: 'Linear vs. Logistic Probability Models: Which is Better?'
 seo_type: article
 summary: This article explores the pros and cons of linear and logistic probability models, highlighting interpretability, computation, and when to use each.
 tags:
-- Linear Probability Model
-- Logistic Regression
-- Statistical Modeling
+- Linear probability model
+- Logistic regression
+- Statistical modeling
 - Interpretability
 title: 'Linear vs. Logistic Probability Models: A Comparative Analysis'
 ---

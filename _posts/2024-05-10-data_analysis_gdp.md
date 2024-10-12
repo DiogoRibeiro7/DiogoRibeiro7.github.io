@@ -17,16 +17,16 @@ header:
 seo_type: article
 subtitle: Exploring the Shortcomings of GDP as a Sole Economic Indicator in Data Science Applications
 tags:
-- GDP Limitations
-- Economic Analysis
-- Data Aggregation
-- Real-Time Data
-- Economic Indicators
-- Data Quality
-- Comparative Analysis
-- Alternative Metrics
-- Economic Analysis
-- Data Analysis
+- Gdp limitations
+- Economic analysis
+- Data aggregation
+- Real-time data
+- Economic indicators
+- Data quality
+- Comparative analysis
+- Alternative metrics
+- Economic analysis
+- Data analysis
 title: The Limitations of Aggregated GDP Data in Data Science Analysis
 ---
 

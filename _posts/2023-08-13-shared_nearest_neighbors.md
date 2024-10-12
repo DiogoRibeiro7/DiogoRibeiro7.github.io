@@ -13,26 +13,28 @@ header:
   teaser: /assets/images/data_science_5.jpg
   twitter_image: /assets/images/data_science_9.jpg
 keywords:
-- Shared Nearest Neighbors
-- SNN
-- Outlier Detection
-- Clustering Algorithms
-- k-Nearest Neighbors
-- High Dimensionality
-- Distance Metrics
-- Machine Learning
+- Shared nearest neighbors
+- Snn
+- Outlier detection
+- Clustering algorithms
+- K-nearest neighbors
+- High dimensionality
+- Distance metrics
+- Machine learning
+- Python
 - python
 seo_description: An exploration of Shared Nearest Neighbors (SNN) as a distance metric, and its application in outlier detection, clustering, and density-based algorithms.
 seo_title: Shared Nearest Neighbors in Outlier Detection
 seo_type: article
 summary: Shared Nearest Neighbors (SNN) is a distance metric designed to enhance outlier detection, clustering, and predictive modeling in datasets with high dimensionality and varying density. This article explores how SNN mitigates the weaknesses of traditional metrics like Euclidean and Manhattan, providing robust performance in complex data scenarios.
 tags:
-- Machine Learning
-- Outlier Detection
+- Machine learning
+- Outlier detection
 - Clustering
-- Data Science
-- Distance Metrics
-- k-Nearest Neighbors
+- Data science
+- Distance metrics
+- K-nearest neighbors
+- Python
 - python
 title: Exploring Shared Nearest Neighbors (SNN) for Outlier Detection
 ---

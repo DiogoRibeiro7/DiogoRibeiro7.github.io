@@ -16,11 +16,11 @@ header:
   twitter_image: /assets/images/data_science_2.jpg
 keywords:
 - Markov systems
-- stochastic processes
-- Hidden Markov Models
-- real-world applications
-- parking lot occupancy
-- predictive modeling
+- Stochastic processes
+- Hidden markov models
+- Real-world applications
+- Parking lot occupancy
+- Predictive modeling
 - Markov chains
 seo_description: A deep dive into Markov systems, including Markov chains and Hidden Markov Models, and their applications in real-world scenarios like parking lot occupancy prediction.
 seo_title: 'Markov Systems: Foundations and Applications'
@@ -30,12 +30,12 @@ summary: This article explores the foundations and real-world applications of Ma
 tags:
 - Markov systems
 - Markov chains
-- Hidden Markov Models
+- Hidden markov models
 - Stochastic processes
-- Andrey Markov
-- Claude Shannon
-- real-world applications
-- parking lot occupancy
+- Andrey markov
+- Claude shannon
+- Real-world applications
+- Parking lot occupancy
 title: Understanding Markov Systems
 ---
 

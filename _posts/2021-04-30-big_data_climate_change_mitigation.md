@@ -13,21 +13,21 @@ header:
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_2.jpg
 keywords:
-- big data
-- climate change
-- environmental monitoring
-- satellite data
-- predictive analytics
+- Big data
+- Climate change
+- Environmental monitoring
+- Satellite data
+- Predictive analytics
 seo_description: This article explores how big data is being used to monitor and predict climate change, utilizing tools like satellite data, sensors, and environmental monitoring systems.
 seo_title: How Big Data Can Help Mitigate Climate Change
 seo_type: article
 summary: In this article, we examine the intersection of big data and climate science, focusing on how large-scale data collection and analysis are transforming our ability to monitor, predict, and mitigate climate change.
 tags:
-- Big Data
-- Climate Change
-- Environmental Monitoring
-- Predictive Analytics
-- Satellite Data
+- Big data
+- Climate change
+- Environmental monitoring
+- Predictive analytics
+- Satellite data
 title: Big Data for Climate Change Mitigation
 ---
 

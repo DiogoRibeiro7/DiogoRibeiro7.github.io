@@ -13,17 +13,20 @@ header:
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
-- Sequential Testing
-- A/B Testing
-- Statistical Methods
-- SPRT (Sequential Probability Ratio Test)
-- Error Control in A/B Testing
-- Hypothesis Testing
-- Adaptive Testing
-- Data Science
-- Python for A/B Testing
-- R for Statistical Analysis
-- JavaScript for A/B Testing
+- Sequential testing
+- A/b testing
+- Statistical methods
+- Sprt (sequential probability ratio test)
+- Error control in a/b testing
+- Hypothesis testing
+- Adaptive testing
+- Data science
+- Python for a/b testing
+- R for statistical analysis
+- Javascript for a/b testing
+- R
+- Javascript
+- Python
 - r
 - javascript
 - python
@@ -31,9 +34,12 @@ seo_description: Explore advanced statistical concepts behind sequential testing
 seo_title: 'In-Depth Sequential Testing in A/B Testing: Advanced Statistical Methods'
 seo_type: article
 tags:
-- A/B Testing
-- Sequential Testing
-- Statistical Methods
+- A/b testing
+- Sequential testing
+- Statistical methods
+- R
+- Javascript
+- Python
 - r
 - javascript
 - python

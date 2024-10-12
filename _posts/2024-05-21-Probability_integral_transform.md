@@ -16,16 +16,17 @@ header:
   twitter_image: /assets/images/data_science_3.jpg
 seo_type: article
 tags:
-- Probability Integral Transform
-- Cumulative Distribution Function
-- Uniform Distribution
-- Copula Construction
-- Goodness of Fit
-- Monte Carlo Simulations
-- Hypothesis Testing
-- Marketing Mix Modeling
-- Credit Risk Modeling
-- Financial Risk Management
+- Probability integral transform
+- Cumulative distribution function
+- Uniform distribution
+- Copula construction
+- Goodness of fit
+- Monte carlo simulations
+- Hypothesis testing
+- Marketing mix modeling
+- Credit risk modeling
+- Financial risk management
+- R
 - r
 title: 'Probability Integral Transform: Theory and Applications'
 ---

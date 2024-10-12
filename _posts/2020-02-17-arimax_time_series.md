@@ -13,23 +13,25 @@ header:
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_4.jpg
 keywords:
-- r
-- Statistical Modeling
-- Exogenous Variables
+- R
+- Statistical modeling
+- Exogenous variables
 - Forecasting
-- Time Series
-- ARIMAX
+- Time series
+- Arimax
+- r
 seo_description: Explore the ARIMAX model, a powerful statistical tool for time series forecasting that incorporates exogenous variables. Learn how ARIMAX builds on ARIMA to improve predictive performance.
 seo_title: 'ARIMAX Time Series Model: An In-Depth Guide'
 seo_type: article
 summary: This article explores the ARIMAX time series model, which enhances ARIMA by incorporating external variables. We'll dive into the model's structure, assumptions, applications, and how it compares to ARIMA.
 tags:
+- R
+- Statistical modeling
+- Machine learning
+- Arima
+- Time series forecasting
+- Arimax
 - r
-- Statistical Modeling
-- Machine Learning
-- ARIMA
-- Time Series Forecasting
-- ARIMAX
 title: 'ARIMAX Time Series: Comprehensive Guide'
 ---
 

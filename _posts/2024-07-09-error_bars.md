@@ -16,15 +16,15 @@ header:
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_4.jpg
 keywords:
-- error bars
-- research reporting
-- standard deviation
-- confidence intervals
-- standard error
-- data variability
-- statistical reporting
-- scientific analysis
-- error representation in research
+- Error bars
+- Research reporting
+- Standard deviation
+- Confidence intervals
+- Standard error
+- Data variability
+- Statistical reporting
+- Scientific analysis
+- Error representation in research
 seo_description: Learn how error bars represent variability, standard deviation, standard error, and confidence intervals in scientific research, improving the accuracy and clarity of reporting findings.
 seo_title: 'Understanding Error Bars: A Guide to Scientific Reporting'
 seo_type: article

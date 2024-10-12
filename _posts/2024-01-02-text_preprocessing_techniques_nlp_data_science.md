@@ -13,23 +13,23 @@ header:
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_4.jpg
 keywords:
-- text preprocessing
-- NLP
-- tokenization
-- stemming
-- lemmatization
-- text normalization
+- Text preprocessing
+- Nlp
+- Tokenization
+- Stemming
+- Lemmatization
+- Text normalization
 seo_description: Explore essential text preprocessing techniques for NLP, including tokenization, stemming, lemmatization, handling stopwords, and advanced text cleaning using regex.
 seo_title: 'Text Preprocessing Techniques for NLP: Tokenization, Stemming, and More'
 seo_type: article
 summary: This article provides an in-depth look at text preprocessing techniques for Natural Language Processing (NLP) in data science. It covers core concepts like tokenization, stemming, lemmatization, handling stopwords, text normalization, and advanced cleaning techniques such as regex for handling misspellings, slang, and abbreviations.
 tags:
-- Text Preprocessing
+- Text preprocessing
 - Tokenization
 - Stemming
 - Lemmatization
-- NLP Techniques
-- Text Normalization
+- Nlp techniques
+- Text normalization
 title: Text Preprocessing Techniques for NLP in Data Science
 ---
 

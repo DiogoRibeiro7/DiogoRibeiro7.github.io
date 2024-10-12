@@ -12,21 +12,21 @@ header:
   teaser: /assets/images/data_science_5.jpg
   twitter_image: /assets/images/data_science_6.jpg
 keywords:
-- probability distributions
-- clinical trials
-- hypothesis testing
-- normal distribution
-- binomial distribution
-- statistical analysis in healthcare
-- trial outcome analysis
+- Probability distributions
+- Clinical trials
+- Hypothesis testing
+- Normal distribution
+- Binomial distribution
+- Statistical analysis in healthcare
+- Trial outcome analysis
 seo_description: Learn about common probability distributions used in clinical trials, including their roles in hypothesis testing and statistical analysis of healthcare data.
 seo_title: Common Probability Distributions in Clinical Trials
 seo_type: article
 summary: This article explores key probability distributions used in clinical trials, focusing on their applications in hypothesis testing and outcome analysis.
 tags:
-- Probability Distributions
-- Clinical Trials
-- Hypothesis Testing
+- Probability distributions
+- Clinical trials
+- Hypothesis testing
 title: Common Probability Distributions in Clinical Trials
 ---
 

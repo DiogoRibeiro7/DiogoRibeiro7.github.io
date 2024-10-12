@@ -14,8 +14,9 @@ header:
   teaser: /assets/images/data_science_5.jpg
   twitter_image: /assets/images/data_science_4.jpg
 keywords:
-- Bayesian Statistics
-- MCMC algorithms
+- Bayesian statistics
+- Mcmc algorithms
+- Python
 - python
 math: true
 seo_description: Explore Bayesian statistics and the power of Markov Chain Monte Carlo (MCMC) in handling complex probabilistic models. Learn with practical examples and Python code.
@@ -24,14 +25,15 @@ seo_type: article
 subtitle: Complex Probabilities with Markov Chain Monte Carlo
 summary: A comprehensive guide to understanding Bayesian statistics and MCMC methods, including real-world applications and Python examples.
 tags:
-- Bayesian Statistics
-- Markov Chain Monte Carlo (MCMC)
-- Statistical Computing
-- Data Analysis Techniques
-- Probability Theory
-- Python Programming for Statistics
-- Predictive Modeling
-- Machine Learning Algorithms
+- Bayesian statistics
+- Markov chain monte carlo (mcmc)
+- Statistical computing
+- Data analysis techniques
+- Probability theory
+- Python programming for statistics
+- Predictive modeling
+- Machine learning algorithms
+- Python
 - python
 title: 'Mastering Bayesian Statistics: An In-Depth Guide to MCMC'
 ---

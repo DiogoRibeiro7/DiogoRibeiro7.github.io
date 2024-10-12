@@ -15,9 +15,9 @@ header:
   twitter_image: /assets/images/data_science_3.jpg
 seo_type: article
 tags:
-- Outlier Detection
-- Machine Learning Algorithms
-- Data Analysis
+- Outlier detection
+- Machine learning algorithms
+- Data analysis
 title: Interpretable Outlier Detection with Counts Outlier Detector (COD)
 ---
 

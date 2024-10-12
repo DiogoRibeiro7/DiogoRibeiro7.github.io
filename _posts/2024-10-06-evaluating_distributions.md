@@ -14,19 +14,19 @@ header:
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
-- Time-Series Classification
-- UEA/UCR Repository
-- Distributional Properties
-- Machine Learning
+- Time-series classification
+- Uea/ucr repository
+- Distributional properties
+- Machine learning
 - Benchmarking
 seo_description: Explore the performance of simple distributional properties in time-series classification benchmarks using the UEA/UCR repository, and the relevance of these models in complex tasks.
 seo_title: Simple Distributional Properties for Time-Series Classification Benchmarks
 seo_type: article
 summary: This article discusses the use of simple distributional properties as a baseline for time-series classification, focusing on benchmarks from the UEA/UCR repository and comparing simple and complex models.
 tags:
-- Time-Series Classification
-- UEA/UCR Repository
-- Simple Models
+- Time-series classification
+- Uea/ucr repository
+- Simple models
 title: Evaluating Simple Distributional Properties for Time-Series Classification Benchmarks
 ---
 

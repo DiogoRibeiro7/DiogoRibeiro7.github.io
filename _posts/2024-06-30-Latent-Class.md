@@ -13,23 +13,23 @@ header:
   twitter_image: /assets/images/data_science_7.jpg
 seo_type: article
 tags:
-- Latent Class Analysis
-- Structural Equation Modeling
-- Multivariate Categorical Data
-- Latent Classes
-- Conditional Independence
-- Maximum Likelihood Estimation
-- Data Simplification
-- Hidden Patterns
-- Case Study
-- Model Specification
-- Estimation Process
-- Class Membership
-- Statistical Modeling
-- Research Applications
-- Data Patterns
-- Decision Making
-- Statistical Independence
+- Latent class analysis
+- Structural equation modeling
+- Multivariate categorical data
+- Latent classes
+- Conditional independence
+- Maximum likelihood estimation
+- Data simplification
+- Hidden patterns
+- Case study
+- Model specification
+- Estimation process
+- Class membership
+- Statistical modeling
+- Research applications
+- Data patterns
+- Decision making
+- Statistical independence
 title: 'Latent Class Analysis: Unveiling Hidden Patterns in Data'
 ---
 

@@ -13,21 +13,23 @@ header:
   teaser: /assets/images/data_science_9.jpg
   twitter_image: /assets/images/data_science_4.jpg
 keywords:
-- Decision Trees
-- Genetic Algorithms
-- Machine Learning
-- Interpretable Models
+- Decision trees
+- Genetic algorithms
+- Machine learning
+- Interpretable models
 - Classification
+- Python
 - python
 seo_description: Explore how Genetic Algorithms can significantly improve the performance of decision trees in machine learning, yielding interpretable models with higher accuracy and the same size as standard trees.
 seo_title: Enhancing Decision Trees Using Genetic Algorithms for Better Performance
 seo_type: article
 summary: This article explains how to enhance decision tree performance using Genetic Algorithms. The approach allows for small, interpretable trees that outperform those created with standard greedy methods.
 tags:
-- Decision Trees
-- Genetic Algorithms
-- Interpretable AI
-- Classification Models
+- Decision trees
+- Genetic algorithms
+- Interpretable ai
+- Classification models
+- Python
 - python
 title: Improving Decision Tree Performance with Genetic Algorithms
 ---

@@ -14,25 +14,27 @@ header:
   teaser: /assets/images/data_science_9.jpg
   twitter_image: /assets/images/data_science_9.jpg
 keywords:
-- Value at Risk
-- Expected Shortfall
-- financial risk management
-- risk assessment models
-- market volatility
-- financial crisis
-- VaR vs ES
-- risk modeling
-- tail risk
-- risk metrics
+- Value at risk
+- Expected shortfall
+- Financial risk management
+- Risk assessment models
+- Market volatility
+- Financial crisis
+- Var vs es
+- Risk modeling
+- Tail risk
+- Risk metrics
+- Python
 - python
 seo_description: An in-depth analysis of Value at Risk (VaR) and Expected Shortfall (ES) as risk assessment models, comparing their performance during different market conditions.
 seo_title: 'VaR vs Expected Shortfall: A Data-Driven Analysis'
 seo_type: article
 tags:
-- Value at Risk
-- Expected Shortfall
-- Financial Crisis
-- Risk Models
+- Value at risk
+- Expected shortfall
+- Financial crisis
+- Risk models
+- Python
 - python
 title: 'Comparing Value at Risk (VaR) and Expected Shortfall (ES): A Data-Driven Analysis'
 ---

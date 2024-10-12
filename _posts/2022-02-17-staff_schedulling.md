@@ -13,18 +13,20 @@ header:
   teaser: /assets/images/data_science_7.jpg
   twitter_image: /assets/images/data_science_8.jpg
 keywords:
-- staff scheduling optimization
-- linear programming
-- scheduling algorithms
-- PuLP library
+- Staff scheduling optimization
+- Linear programming
+- Scheduling algorithms
+- Pulp library
 - Python for optimization
-- workforce scheduling
-- cost minimization
+- Workforce scheduling
+- Cost minimization
 - 24/7 operations scheduling
-- LP models in staffing
-- shift scheduling optimization
-- operational efficiency
-- constraint programming
+- Lp models in staffing
+- Shift scheduling optimization
+- Operational efficiency
+- Constraint programming
+- Bash
+- Python
 - bash
 - python
 seo_description: Learn how to use linear programming with the PuLP library in Python to optimize staff scheduling and minimize costs in a 24/7 operational environment.
@@ -32,8 +34,10 @@ seo_title: Staff Scheduling Optimization with Linear Programming in Python
 seo_type: article
 summary: This article discusses using linear programming and Python’s PuLP library to optimize staff scheduling, focusing on cost minimization and meeting operational requirements efficiently.
 tags:
-- Linear Programming
+- Linear programming
 - Scheduling
+- Bash
+- Python
 - bash
 - python
 title: Optimizing Staff Scheduling with Linear Programming

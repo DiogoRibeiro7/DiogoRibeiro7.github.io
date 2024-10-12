@@ -14,8 +14,8 @@ header:
 seo_type: article
 tags:
 - Probability
-- Gaussian Distribution
-- Central Limit Theorem
+- Gaussian distribution
+- Central limit theorem
 title: 'Normal Distribution: Explained'
 ---
 

@@ -14,9 +14,9 @@ header:
   twitter_image: /assets/images/data_science_1.jpg
 seo_type: article
 tags:
-- PCA
-- Outlier Detection
-- Anomaly Detection
+- Pca
+- Outlier detection
+- Anomaly detection
 title: Detecting Outliers Using Principal Component Analysis (PCA)
 ---
 

@@ -13,20 +13,20 @@ header:
   teaser: /assets/images/data_science_7.jpg
   twitter_image: /assets/images/data_science_5.jpg
 keywords:
-- Machine Learning
-- Fall Prevention
-- Wearable Technology
-- Elderly Care
-- Health Monitoring
+- Machine learning
+- Fall prevention
+- Wearable technology
+- Elderly care
+- Health monitoring
 seo_description: Learn how machine learning models are used to predict and prevent falls among the elderly by analyzing sensor data, wearables, and health history.
 seo_title: Machine Learning for Fall Prevention in the Elderly
 seo_type: article
 summary: Falls among the elderly are a significant public health concern. Machine learning can help predict and prevent falls by analyzing data from wearables, sensors, and other health records, offering timely interventions that can improve quality of life.
 tags:
-- Machine Learning
+- Machine learning
 - Healthcare
-- Elderly Care
-- Wearable Technology
+- Elderly care
+- Wearable technology
 title: Using Machine Learning to Predict and Prevent Falls in the Elderly
 ---
 
