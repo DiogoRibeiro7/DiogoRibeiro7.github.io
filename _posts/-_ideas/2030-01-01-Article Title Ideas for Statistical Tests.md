@@ -28,11 +28,13 @@ TODO:
    - Introduction to Cochran’s Q test for comparing multiple related samples of categorical data.
    - Practical examples in medical diagnostics and clinical trials with repeated measures.
 
+TODO:
 ### 5. **"Friedman Test vs. Repeated Measures ANOVA: Comparing Multiple Dependent Groups"**
    - Differences between Friedman Test (non-parametric) and Repeated Measures ANOVA (parametric).
    - When to use each based on assumptions and data characteristics.
    - Real-world examples in longitudinal studies and repeated measurements.
 
+TODO:
 ### 6. **"Z-Test vs. T-Test: When to Use Large-Sample and Small-Sample Hypothesis Testing"**
    - A comparison between z-tests and t-tests.
    - How sample size influences the choice of test and assumptions about population variance.
