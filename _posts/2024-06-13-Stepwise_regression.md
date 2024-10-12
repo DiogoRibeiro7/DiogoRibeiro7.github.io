@@ -1,9 +1,6 @@
 ---
 author_profile: false
 categories:
-- Mathematics
-- Statistics
-- Data Science
 - Machine Learning
 classes: wide
 date: '2024-06-13'
@@ -28,6 +25,9 @@ tags:
 - python
 - r
 - julia
+- - Mathematics
+- Statistics
+- Data Science
 title: 'Stepwise Regression: Methodology, Applications, and Concerns'
 ---
 
