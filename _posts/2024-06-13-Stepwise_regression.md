@@ -25,7 +25,6 @@ tags:
 - Python
 - R
 - Julia
-- '[''mathematics'']'
 - Statistics
 - Data science
 title: 'Stepwise Regression: Methodology, Applications, and Concerns'
