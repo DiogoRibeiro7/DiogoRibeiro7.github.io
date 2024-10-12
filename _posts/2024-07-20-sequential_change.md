@@ -15,10 +15,10 @@ header:
   twitter_image: /assets/images/data_science_1.jpg
 seo_type: article
 tags:
-- Change Detection
-- Structural Changes
-- Real-time Processing
-- python
+- Change detection
+- Structural changes
+- Real-time processing
+- Python
 title: Sequential Detection of Switches in Models with Changing Structures
 ---
 

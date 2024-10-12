@@ -4,7 +4,9 @@ categories:
 - Data Science
 classes: wide
 date: '2023-09-27'
-excerpt: Data and communication are intricately linked in modern business. This article explores how to balance data analysis with storytelling, ensuring clear and actionable insights.
+excerpt: Data and communication are intricately linked in modern business. This article
+  explores how to balance data analysis with storytelling, ensuring clear and actionable
+  insights.
 header:
   image: /assets/images/data_science_5.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -13,22 +15,24 @@ header:
   teaser: /assets/images/data_science_5.jpg
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
-- sample size
-- statistical analysis
-- data quality
-- statistical accuracy
-- experimental design
-- statistical power
-- hypothesis testing
-- data sampling
-- effect size
-- research methodology
-seo_description: Explore the crucial role of communication in data-driven environments, examining how to balance data analysis with effective storytelling and context to drive actionable insights.
+- Sample size
+- Statistical analysis
+- Data quality
+- Statistical accuracy
+- Experimental design
+- Statistical power
+- Hypothesis testing
+- Data sampling
+- Effect size
+- Research methodology
+seo_description: Explore the crucial role of communication in data-driven environments,
+  examining how to balance data analysis with effective storytelling and context to
+  drive actionable insights.
 seo_title: 'Data and Communication: Orchestrating a Harmonious Future'
 seo_type: article
 tags:
 - Communication
-- Data Analysis
+- Data analysis
 - Storytelling
 title: Data and Communication
 ---

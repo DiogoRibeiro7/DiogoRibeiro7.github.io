@@ -14,9 +14,9 @@ header:
   twitter_image: /assets/images/data_science_3.jpg
 seo_type: article
 tags:
-- NILM
-- Energy Monitoring
-- Smart Meters
+- Nilm
+- Energy monitoring
+- Smart meters
 title: 'Disaggregating Energy Consumption: The NILM Algorithms'
 ---
 

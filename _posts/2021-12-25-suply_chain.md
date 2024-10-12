@@ -4,7 +4,9 @@ categories:
 - Optimization
 classes: wide
 date: '2021-12-25'
-excerpt: Discover how data science enhances supply chain optimization and industrial network analysis, leveraging techniques like predictive analytics, machine learning, and graph theory to optimize operations.
+excerpt: Discover how data science enhances supply chain optimization and industrial
+  network analysis, leveraging techniques like predictive analytics, machine learning,
+  and graph theory to optimize operations.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_2.jpg
@@ -13,27 +15,29 @@ header:
   teaser: /assets/images/data_science_9.jpg
   twitter_image: /assets/images/data_science_2.jpg
 keywords:
-- real-time data analytics
-- supply chain visibility
-- industrial network analysis
-- IoT in supply chain
-- digital twins in logistics
-- machine learning in logistics
-- network optimization
-- big data in supply chain management
-- blockchain in supply chain
-- predictive analytics
-- graph theory in supply chain
-- resource allocation
-- supply chain optimization
-- data science in supply chain
-seo_description: Explore how data science drives supply chain optimization and industrial network analysis, focusing on predictive analytics, IoT, and graph theory for improved efficiency.
+- Real-time data analytics
+- Supply chain visibility
+- Industrial network analysis
+- Iot in supply chain
+- Digital twins in logistics
+- Machine learning in logistics
+- Network optimization
+- Big data in supply chain management
+- Blockchain in supply chain
+- Predictive analytics
+- Graph theory in supply chain
+- Resource allocation
+- Supply chain optimization
+- Data science in supply chain
+seo_description: Explore how data science drives supply chain optimization and industrial
+  network analysis, focusing on predictive analytics, IoT, and graph theory for improved
+  efficiency.
 seo_title: Data-Driven Supply Chain Optimization and Industrial Network Analysis
 seo_type: article
 tags:
-- Industrial Network Analysis
-- Data Science
-- Supply Chain Optimization
+- Industrial network analysis
+- Data science
+- Supply chain optimization
 title: Supply Chain Optimization and Industrial Network Analysis Using Data Science
 ---
 

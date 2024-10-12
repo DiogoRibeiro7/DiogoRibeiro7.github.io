@@ -12,38 +12,40 @@ header:
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
-- Logistic Regression
-- Logit Model
-- Binary Classification
-- Probability Theory
-- Maximum Likelihood Estimation
-- Odds Ratio
-- Multinomial Logistic Regression
-- Ordinal Logistic Regression
-- Statistical Modeling
-- Predictive Analytics
-- Joseph Berkson
-- Data Science Techniques
-- Machine Learning Algorithms
-- Classification Models
-- Predictive Modeling
-seo_description: A comprehensive guide to Logistic Regression, covering binary classification, logit models, probability, maximum-likelihood estimation, odds ratios, and the contributions of Joseph Berkson. Explore its use in machine learning and predictive modeling.
+- Logistic regression
+- Logit model
+- Binary classification
+- Probability theory
+- Maximum likelihood estimation
+- Odds ratio
+- Multinomial logistic regression
+- Ordinal logistic regression
+- Statistical modeling
+- Predictive analytics
+- Joseph berkson
+- Data science techniques
+- Machine learning algorithms
+- Classification models
+- Predictive modeling
+seo_description: A comprehensive guide to Logistic Regression, covering binary classification,
+  logit models, probability, maximum-likelihood estimation, odds ratios, and the contributions
+  of Joseph Berkson. Explore its use in machine learning and predictive modeling.
 seo_title: 'The Logistic Model: Explained'
 seo_type: article
 tags:
-- Logistic Regression
-- Logit Model
-- Binary Classification
+- Logistic regression
+- Logit model
+- Binary classification
 - Probability
-- Maximum-Likelihood Estimation
-- Odds Ratio
-- Multinomial Logistic Regression
-- Ordinal Logistic Regression
-- Statistical Modeling
-- Joseph Berkson
-- Machine Learning
-- Data Science
-- Predictive Modeling
+- Maximum-likelihood estimation
+- Odds ratio
+- Multinomial logistic regression
+- Ordinal logistic regression
+- Statistical modeling
+- Joseph berkson
+- Machine learning
+- Data science
+- Predictive modeling
 title: 'The Logistic Model: Explained'
 ---
 

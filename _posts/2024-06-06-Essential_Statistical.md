@@ -16,13 +16,13 @@ header:
   twitter_image: /assets/images/data_science_7.jpg
 seo_type: article
 tags:
-- Descriptive Statistics
-- Inferential Statistics
-- Probability Distributions
-- Sampling Techniques
-- Bayesian Statistics
-- Time Series Analysis
-- Multivariate Analysis
+- Descriptive statistics
+- Inferential statistics
+- Probability distributions
+- Sampling techniques
+- Bayesian statistics
+- Time series analysis
+- Multivariate analysis
 title: Essential Statistical Concepts for Data Analysts
 ---
 

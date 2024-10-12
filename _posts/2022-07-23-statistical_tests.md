@@ -4,7 +4,9 @@ categories:
 - Statistics
 classes: wide
 date: '2022-07-23'
-excerpt: Discover the universal structure behind statistical tests, highlighting the core comparison between observed and expected data that drives hypothesis testing and data analysis.
+excerpt: Discover the universal structure behind statistical tests, highlighting the
+  core comparison between observed and expected data that drives hypothesis testing
+  and data analysis.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -13,25 +15,29 @@ header:
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
-- statistical tests
-- hypothesis testing
-- structure of statistical tests
-- data analysis
-- observed vs expected data
-- statistical inference
-- test statistics
-- p-value interpretation
-- statistical significance
-- common statistical test structure
-- hypothesis comparison
-- statistical methodologies
-seo_description: Explore the underlying structure common to most statistical tests, revealing how the comparison of observed versus expected data forms the basis of hypothesis testing.
+- Statistical tests
+- Hypothesis testing
+- Structure of statistical tests
+- Data analysis
+- Observed vs expected data
+- Statistical inference
+- Test statistics
+- P-value interpretation
+- Statistical significance
+- Common statistical test structure
+- Hypothesis comparison
+- Statistical methodologies
+seo_description: Explore the underlying structure common to most statistical tests,
+  revealing how the comparison of observed versus expected data forms the basis of
+  hypothesis testing.
 seo_title: Understanding the Universal Structure of Statistical Tests
 seo_type: article
-summary: This article explains the universal structure of statistical tests, focusing on the comparison between observed and expected data that forms the foundation of hypothesis testing and statistical inference.
+summary: This article explains the universal structure of statistical tests, focusing
+  on the comparison between observed and expected data that forms the foundation of
+  hypothesis testing and statistical inference.
 tags:
-- Statistical Tests
-- Data Analysis
+- Statistical tests
+- Data analysis
 title: The Structure Behind Most Statistical Tests
 ---
 

@@ -4,7 +4,8 @@ categories:
 - Predictive Maintenance
 classes: wide
 date: '2023-05-05'
-excerpt: Explore the key concepts of Mean Time Between Failures (MTBF), how it is calculated, its applications, and its alternatives in system reliability.
+excerpt: Explore the key concepts of Mean Time Between Failures (MTBF), how it is
+  calculated, its applications, and its alternatives in system reliability.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_7.jpg
@@ -13,21 +14,23 @@ header:
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_7.jpg
 keywords:
-- MTBF
-- Mean Time Between Failures
-- Reliability Metrics
-- System Maintenance
-- Predictive Maintenance
-- python
-seo_description: An in-depth explanation of Mean Time Between Failures (MTBF), its importance, strengths, weaknesses, and related metrics like MTTR and MTTF.
+- Mtbf
+- Mean time between failures
+- Reliability metrics
+- System maintenance
+- Predictive maintenance
+- Python
+seo_description: An in-depth explanation of Mean Time Between Failures (MTBF), its
+  importance, strengths, weaknesses, and related metrics like MTTR and MTTF.
 seo_title: What is Mean Time Between Failures (MTBF)?
 seo_type: article
-summary: A comprehensive guide on Mean Time Between Failures (MTBF), covering its calculation, use cases, strengths, and weaknesses in reliability engineering.
+summary: A comprehensive guide on Mean Time Between Failures (MTBF), covering its
+  calculation, use cases, strengths, and weaknesses in reliability engineering.
 tags:
-- MTBF
-- Reliability Metrics
-- Predictive Maintenance
-- python
+- Mtbf
+- Reliability metrics
+- Predictive maintenance
+- Python
 title: Understanding Mean Time Between Failures (MTBF)
 ---
 

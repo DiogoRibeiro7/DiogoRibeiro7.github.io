@@ -4,7 +4,9 @@ categories:
 - Statistics
 classes: wide
 date: '2020-01-04'
-excerpt: The multiple comparisons problem arises in hypothesis testing when performing multiple tests increases the likelihood of false positives. Learn about the Bonferroni correction and other solutions to control error rates.
+excerpt: The multiple comparisons problem arises in hypothesis testing when performing
+  multiple tests increases the likelihood of false positives. Learn about the Bonferroni
+  correction and other solutions to control error rates.
 header:
   image: /assets/images/data_science_6.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -13,23 +15,28 @@ header:
   teaser: /assets/images/data_science_6.jpg
   twitter_image: /assets/images/data_science_6.jpg
 keywords:
-- multiple comparisons problem
+- Multiple comparisons problem
 - Bonferroni correction
-- Holm-Bonferroni
-- false discovery rate
-- hypothesis testing
-- python
-seo_description: This article explains the multiple comparisons problem in hypothesis testing and discusses solutions such as Bonferroni correction, Holm-Bonferroni, and FDR, with practical applications in fields like medical studies and genetics.
+- Holm-bonferroni
+- False discovery rate
+- Hypothesis testing
+- Python
+seo_description: This article explains the multiple comparisons problem in hypothesis
+  testing and discusses solutions such as Bonferroni correction, Holm-Bonferroni,
+  and FDR, with practical applications in fields like medical studies and genetics.
 seo_title: 'Understanding the Multiple Comparisons Problem: Bonferroni and Other Solutions'
 seo_type: article
-summary: This article explores the multiple comparisons problem in hypothesis testing, discussing solutions like the Bonferroni correction, Holm-Bonferroni method, and False Discovery Rate (FDR). It includes practical examples from experiments involving multiple testing, such as medical studies and genetics.
+summary: This article explores the multiple comparisons problem in hypothesis testing,
+  discussing solutions like the Bonferroni correction, Holm-Bonferroni method, and
+  False Discovery Rate (FDR). It includes practical examples from experiments involving
+  multiple testing, such as medical studies and genetics.
 tags:
-- Multiple Comparisons Problem
-- Bonferroni Correction
-- Holm-Bonferroni
-- False Discovery Rate (FDR)
-- Multiple Testing
-- python
+- Multiple comparisons problem
+- Bonferroni correction
+- Holm-bonferroni
+- False discovery rate (fdr)
+- Multiple testing
+- Python
 title: 'Multiple Comparisons Problem: Bonferroni Correction and Other Solutions'
 ---
 

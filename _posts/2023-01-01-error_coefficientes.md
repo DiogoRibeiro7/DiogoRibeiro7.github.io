@@ -4,7 +4,9 @@ categories:
 - Statistics
 classes: wide
 date: '2023-01-01'
-excerpt: Delve into how multiple linear regression and binary logistic regression handle errors. Learn about explicit and implicit error terms and their impact on model performance.
+excerpt: Delve into how multiple linear regression and binary logistic regression
+  handle errors. Learn about explicit and implicit error terms and their impact on
+  model performance.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_2.jpg
@@ -13,29 +15,33 @@ header:
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_2.jpg
 keywords:
-- error terms
-- multiple linear regression
-- binary logistic regression
-- regression model errors
-- statistical model accuracy
-- error handling in regression
-- regression model performance
-- implicit error terms
-- explicit error terms
-- residuals in regression
-- error analysis in statistics
-- predictive model accuracy
-- linear vs logistic regression errors
-seo_description: Explore the differences in error handling between multiple linear regression and binary logistic regression. Understand the explicit and implicit roles of error terms in these statistical models.
+- Error terms
+- Multiple linear regression
+- Binary logistic regression
+- Regression model errors
+- Statistical model accuracy
+- Error handling in regression
+- Regression model performance
+- Implicit error terms
+- Explicit error terms
+- Residuals in regression
+- Error analysis in statistics
+- Predictive model accuracy
+- Linear vs logistic regression errors
+seo_description: Explore the differences in error handling between multiple linear
+  regression and binary logistic regression. Understand the explicit and implicit
+  roles of error terms in these statistical models.
 seo_title: 'Error Terms in Regression Models: Linear vs. Logistic Regression'
 seo_type: article
-summary: This article explores how error terms are handled in both multiple linear regression and binary logistic regression, emphasizing their roles in statistical model performance and accuracy.
+summary: This article explores how error terms are handled in both multiple linear
+  regression and binary logistic regression, emphasizing their roles in statistical
+  model performance and accuracy.
 tags:
-- Regression Models
-- Error Terms
-- Multiple Linear Regression
-- Binary Logistic Regression
-- Statistical Models
+- Regression models
+- Error terms
+- Multiple linear regression
+- Binary logistic regression
+- Statistical models
 title: The Role of Error Terms in Multiple Linear Regression and Binary Logistic Regression
 ---
 

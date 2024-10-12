@@ -17,17 +17,17 @@ header:
 seo_type: article
 subtitle: A Comprehensive Guide to Survival Function Estimation Methods
 tags:
-- Survival Analysis
-- Kaplan-Meier Estimator
-- Exponential Survival Function
-- Parametric Methods
-- Non-Parametric Methods
+- Survival analysis
+- Kaplan-meier estimator
+- Exponential survival function
+- Parametric methods
+- Non-parametric methods
 - Censoring
-- Customer Churn
-- Lifetime Value
-- Curve Fitting
-- Medical Statistics
-- python
+- Customer churn
+- Lifetime value
+- Curve fitting
+- Medical statistics
+- Python
 title: 'Estimating Survival Functions: Parametric and Non-Parametric Approaches'
 ---
 

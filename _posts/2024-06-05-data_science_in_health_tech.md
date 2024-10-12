@@ -16,43 +16,47 @@ header:
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
-- data science in healthcare
-- health tech innovations
-- predictive analytics
-- personalized medicine
-- healthcare data analytics
-- electronic health records (EHR)
-- wearable devices in healthcare
-- machine learning for health
-- healthcare operations improvement
-- patient outcomes and AI
-seo_description: Discover how data science is revolutionizing healthcare technology through predictive analytics, machine learning, personalized medicine, and real-time monitoring to improve patient care and operational efficiency.
+- Data science in healthcare
+- Health tech innovations
+- Predictive analytics
+- Personalized medicine
+- Healthcare data analytics
+- Electronic health records (ehr)
+- Wearable devices in healthcare
+- Machine learning for health
+- Healthcare operations improvement
+- Patient outcomes and ai
+seo_description: Discover how data science is revolutionizing healthcare technology
+  through predictive analytics, machine learning, personalized medicine, and real-time
+  monitoring to improve patient care and operational efficiency.
 seo_title: The Advantages of Data Science in Healthcare Technology
 seo_type: article
-summary: This article explores how data science is transforming healthcare technology, focusing on predictive analytics, early diagnosis, personalized medicine, and improving patient outcomes through machine learning and real-time monitoring.
+summary: This article explores how data science is transforming healthcare technology,
+  focusing on predictive analytics, early diagnosis, personalized medicine, and improving
+  patient outcomes through machine learning and real-time monitoring.
 tags:
-- Data Science
-- Health Tech
-- Predictive Analytics
-- Early Diagnosis
-- Personalized Medicine
-- Operational Efficiency
-- Patient Outcomes
-- Machine Learning
-- Electronic Health Records (EHRs)
-- Genetic Data
-- Wearable Devices
-- Real-time Monitoring
-- Chronic Disease Management
-- Medical Data Analytics
-- Predictive Healthcare
-- Personalized Healthcare
-- Healthcare Operations
-- Patient Care Improvement
-- Health Informatics
-- Artificial Intelligence in Healthcare
-- Healthcare Management
-- Digital Health Solutions
+- Data science
+- Health tech
+- Predictive analytics
+- Early diagnosis
+- Personalized medicine
+- Operational efficiency
+- Patient outcomes
+- Machine learning
+- Electronic health records (ehrs)
+- Genetic data
+- Wearable devices
+- Real-time monitoring
+- Chronic disease management
+- Medical data analytics
+- Predictive healthcare
+- Personalized healthcare
+- Healthcare operations
+- Patient care improvement
+- Health informatics
+- Artificial intelligence in healthcare
+- Healthcare management
+- Digital health solutions
 title: The Advantages of Using Data Science in Health Tech
 ---
 

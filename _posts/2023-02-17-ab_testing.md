@@ -4,7 +4,9 @@ categories:
 - Data Science
 classes: wide
 date: '2023-02-17'
-excerpt: An in-depth exploration of sequential testing and its application in A/B testing. Understand the statistical underpinnings, advantages, limitations, and practical implementations in R, JavaScript, and Python.
+excerpt: An in-depth exploration of sequential testing and its application in A/B
+  testing. Understand the statistical underpinnings, advantages, limitations, and
+  practical implementations in R, JavaScript, and Python.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -13,30 +15,38 @@ header:
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
-- Sequential Testing
-- A/B Testing
-- Statistical Methods
-- SPRT (Sequential Probability Ratio Test)
-- Error Control in A/B Testing
-- Hypothesis Testing
-- Adaptive Testing
-- Data Science
-- Python for A/B Testing
-- R for Statistical Analysis
-- JavaScript for A/B Testing
-- r
-- javascript
-- python
-seo_description: Explore advanced statistical concepts behind sequential testing in A/B testing. Learn about SPRT, error control, practical implementation, and potential pitfalls.
+- Sequential testing
+- A/b testing
+- Statistical methods
+- Sprt (sequential probability ratio test)
+- Error control in a/b testing
+- Hypothesis testing
+- Adaptive testing
+- Data science
+- Python for a/b testing
+- R for statistical analysis
+- Javascript for a/b testing
+- R
+- Javascript
+- Python
+- R
+- Javascript
+- Python
+seo_description: Explore advanced statistical concepts behind sequential testing in
+  A/B testing. Learn about SPRT, error control, practical implementation, and potential
+  pitfalls.
 seo_title: 'In-Depth Sequential Testing in A/B Testing: Advanced Statistical Methods'
 seo_type: article
 tags:
-- A/B Testing
-- Sequential Testing
-- Statistical Methods
-- r
-- javascript
-- python
+- A/b testing
+- Sequential testing
+- Statistical methods
+- R
+- Javascript
+- Python
+- R
+- Javascript
+- Python
 title: Advanced Statistical Methods for Efficient A/B Testing
 ---
 

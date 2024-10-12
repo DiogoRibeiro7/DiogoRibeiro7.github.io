@@ -12,40 +12,47 @@ header:
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_2.jpg
 keywords:
-- Data Drift Detection
-- Direct Loss Estimation
-- Machine Learning Monitoring
-- Alarm Fatigue in AI
-- Outlier Detection Methods
-- Model Performance Tracking
-- Predictive Analytics
-- AI in Production
-- Advanced Data Science Techniques
-- Monitoring ML Models
-- Data Science
-- Model Monitoring
-- Artificial Intelligence
+- Data drift detection
+- Direct loss estimation
+- Machine learning monitoring
+- Alarm fatigue in ai
+- Outlier detection methods
+- Model performance tracking
+- Predictive analytics
+- Ai in production
+- Advanced data science techniques
+- Monitoring ml models
+- Data science
+- Model monitoring
+- Artificial intelligence
 - Technology
-- python
-seo_description: Explore advanced methods for machine learning monitoring by moving beyond univariate data drift detection. Learn about direct loss estimation, detecting outliers, and addressing alarm fatigue in production AI systems.
+- Python
+- Python
+seo_description: Explore advanced methods for machine learning monitoring by moving
+  beyond univariate data drift detection. Learn about direct loss estimation, detecting
+  outliers, and addressing alarm fatigue in production AI systems.
 seo_title: 'Machine Learning Monitoring: Moving Beyond Univariate Data Drift Detection'
 seo_type: article
-summary: A deep dive into advanced machine learning monitoring techniques that extend beyond traditional univariate data drift detection. This article covers methods such as direct loss estimation, outlier detection, and best practices for addressing alarm fatigue in AI systems deployed in production.
+summary: A deep dive into advanced machine learning monitoring techniques that extend
+  beyond traditional univariate data drift detection. This article covers methods
+  such as direct loss estimation, outlier detection, and best practices for addressing
+  alarm fatigue in AI systems deployed in production.
 tags:
-- Data Drift
-- Direct Loss Estimation
-- ML Monitoring
-- Model Performance
-- Alarm Fatigue
-- Predictive Analytics
-- Data Science Best Practices
-- AI in Production
-- Outliers Detection
-- Data Science
-- Model Monitoring
-- Artificial Intelligence
+- Data drift
+- Direct loss estimation
+- Ml monitoring
+- Model performance
+- Alarm fatigue
+- Predictive analytics
+- Data science best practices
+- Ai in production
+- Outliers detection
+- Data science
+- Model monitoring
+- Artificial intelligence
 - Technology
-- python
+- Python
+- Python
 title: 'Machine Learning Monitoring: Moving Beyond Univariate Data Drift Detection'
 ---
 

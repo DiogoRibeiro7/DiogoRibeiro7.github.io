@@ -4,7 +4,8 @@ categories:
 - Statistics
 classes: wide
 date: '2020-01-08'
-excerpt: Heteroscedasticity can affect regression models, leading to biased or inefficient estimates. Here's how to detect it and what to do when it's present.
+excerpt: Heteroscedasticity can affect regression models, leading to biased or inefficient
+  estimates. Here's how to detect it and what to do when it's present.
 header:
   image: /assets/images/data_science_4.jpg
   og_image: /assets/images/data_science_4.jpg
@@ -14,16 +15,18 @@ header:
   twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - Econometrics
-- Regression Diagnostics
-- White Test
+- Regression diagnostics
+- White test
 - Heteroscedasticity
-- Breusch-Pagan Test
-seo_description: Learn about heteroscedasticity, the statistical tests to detect it, and steps to take when it is present in regression analysis.
+- Breusch-pagan test
+seo_description: Learn about heteroscedasticity, the statistical tests to detect it,
+  and steps to take when it is present in regression analysis.
 seo_title: 'Heteroscedasticity: Statistical Tests and What to Do When Detected'
 seo_type: article
-summary: Explore heteroscedasticity in regression analysis, its consequences, how to test for it, and practical solutions for correcting it when detected.
+summary: Explore heteroscedasticity in regression analysis, its consequences, how
+  to test for it, and practical solutions for correcting it when detected.
 tags:
-- Regression Analysis
+- Regression analysis
 - Econometrics
 - Heteroscedasticity
 title: 'Heteroscedasticity: Statistical Tests and Solutions'

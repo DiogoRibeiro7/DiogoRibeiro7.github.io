@@ -6,7 +6,8 @@ categories:
 - Hypothesis Testing
 classes: wide
 date: '2030-01-01'
-excerpt: A list of 15 article ideas covering statistical tests, ranging from ANOVA and Kruskal-Wallis to non-parametric tests and power analysis.
+excerpt: A list of 15 article ideas covering statistical tests, ranging from ANOVA
+  and Kruskal-Wallis to non-parametric tests and power analysis.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_2.jpg
@@ -15,20 +16,22 @@ header:
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_2.jpg
 keywords:
-- Statistical Tests
-- ANOVA
-- Kruskal-Wallis
-- Data Analysis
-- Hypothesis Testing
-seo_description: Explore 15 ideas for writing articles on various statistical tests, including their differences, assumptions, and applications in data analysis.
+- Statistical tests
+- Anova
+- Kruskal-wallis
+- Data analysis
+- Hypothesis testing
+seo_description: Explore 15 ideas for writing articles on various statistical tests,
+  including their differences, assumptions, and applications in data analysis.
 seo_title: '15 Article Ideas: Writing about Statistical Tests'
 seo_type: article
-summary: This article provides 15 ideas for articles on statistical tests, including their use cases, assumptions, and applications in real-world data analysis.
+summary: This article provides 15 ideas for articles on statistical tests, including
+  their use cases, assumptions, and applications in real-world data analysis.
 tags:
-- ANOVA
-- Hypothesis Testing
-- Statistical Tests
-- Data Science
+- Anova
+- Hypothesis testing
+- Statistical tests
+- Data science
 title: 15 Article Ideas on Statistical Tests
 ---
 

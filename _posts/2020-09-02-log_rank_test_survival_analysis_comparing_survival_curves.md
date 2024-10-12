@@ -4,7 +4,9 @@ categories:
 - Data Science
 classes: wide
 date: '2020-09-02'
-excerpt: The log-rank test is a key tool in survival analysis, commonly used to compare survival curves between groups in medical research. Learn how it works and how to interpret its results.
+excerpt: The log-rank test is a key tool in survival analysis, commonly used to compare
+  survival curves between groups in medical research. Learn how it works and how to
+  interpret its results.
 header:
   image: /assets/images/data_science_7.jpg
   og_image: /assets/images/data_science_7.jpg
@@ -13,21 +15,27 @@ header:
   teaser: /assets/images/data_science_7.jpg
   twitter_image: /assets/images/data_science_7.jpg
 keywords:
-- log-rank test
-- survival analysis
-- survival curves
-- Kaplan-Meier curves
-- p-values
-seo_description: This article explores the log-rank test used in survival analysis, its applications in medical studies to compare survival times, and how to interpret survival curves and p-values.
-seo_title: 'Understanding the Log-Rank Test in Survival Analysis: Comparing Survival Curves'
+- Log-rank test
+- Survival analysis
+- Survival curves
+- Kaplan-meier curves
+- P-values
+seo_description: This article explores the log-rank test used in survival analysis,
+  its applications in medical studies to compare survival times, and how to interpret
+  survival curves and p-values.
+seo_title: 'Understanding the Log-Rank Test in Survival Analysis: Comparing Survival
+  Curves'
 seo_type: article
-summary: This article provides a comprehensive guide to the log-rank test in survival analysis, focusing on its use in medical studies to compare survival curves between two or more groups. We explain how to interpret Kaplan-Meier curves, p-values from the log-rank test, and real-world applications in clinical trials.
+summary: This article provides a comprehensive guide to the log-rank test in survival
+  analysis, focusing on its use in medical studies to compare survival curves between
+  two or more groups. We explain how to interpret Kaplan-Meier curves, p-values from
+  the log-rank test, and real-world applications in clinical trials.
 tags:
-- Log-Rank Test
-- Survival Analysis
-- Medical Statistics
-- Kaplan-Meier Curves
-- P-Values
+- Log-rank test
+- Survival analysis
+- Medical statistics
+- Kaplan-meier curves
+- P-values
 title: 'Log-Rank Test in Survival Analysis: Comparing Survival Curves'
 ---
 

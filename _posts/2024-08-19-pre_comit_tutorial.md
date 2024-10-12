@@ -6,7 +6,9 @@ categories:
 - Version Control
 classes: wide
 date: '2024-08-19'
-excerpt: Learn how to use pre-commit tools in Python to enforce code quality and consistency before committing changes. This guide covers the setup, configuration, and best practices for using Git hooks to streamline your workflow.
+excerpt: Learn how to use pre-commit tools in Python to enforce code quality and consistency
+  before committing changes. This guide covers the setup, configuration, and best
+  practices for using Git hooks to streamline your workflow.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -21,21 +23,26 @@ keywords:
 - Automated code checks
 - Code consistency
 - Python development workflow
-- bash
-- yaml
-seo_description: Explore pre-commit tools in Python for ensuring code quality and managing Git hooks. Learn how to integrate automated checks into your development process to improve code consistency.
+- Bash
+- Yaml
+seo_description: Explore pre-commit tools in Python for ensuring code quality and
+  managing Git hooks. Learn how to integrate automated checks into your development
+  process to improve code consistency.
 seo_title: 'Pre-Commit Tools in Python: Best Practices and Guide'
 seo_type: article
-summary: This guide provides an in-depth overview of pre-commit tools in Python, covering how to set up and configure them to improve code quality and automate Git hooks. It includes best practices for using pre-commit to ensure consistency and streamline the development process.
+summary: This guide provides an in-depth overview of pre-commit tools in Python, covering
+  how to set up and configure them to improve code quality and automate Git hooks.
+  It includes best practices for using pre-commit to ensure consistency and streamline
+  the development process.
 tags:
 - Python
 - Pre-commit
-- Code Quality
-- Git Hooks
-- Version Control
+- Code quality
+- Git hooks
+- Version control
 - Automation
-- bash
-- yaml
+- Bash
+- Yaml
 title: A Comprehensive Guide to Pre-Commit Tools in Python
 ---
 

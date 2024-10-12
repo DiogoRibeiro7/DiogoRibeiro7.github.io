@@ -16,28 +16,28 @@ header:
 seo_type: article
 subtitle: A Practical Guide to Advanced Data Segmentation
 tags:
-- Kernel Clustering in R
-- Advanced Data Clustering Techniques
-- Non-linear Data Analysis
-- Machine Learning in R
-- kernlab package
-- Gaussian Kernel Clustering
-- R Data Science Tools
-- Support Vector Clustering
-- Multidimensional Data Analysis
-- Kernel Methods for Clustering
-- Clustering Non-linear Data
-- Data Mining in R
-- Statistical Learning in R
-- Cluster Analysis Methods
-- Radial Basis Function (RBF)
-- Data Segmentation Techniques
-- Unsupervised Learning in R
-- Pattern Recognition with Kernels
-- K-means Kernel Clustering
-- Scalable Clustering Algorithms in R
-- unknown
-- r
+- Kernel clustering in r
+- Advanced data clustering techniques
+- Non-linear data analysis
+- Machine learning in r
+- Kernlab package
+- Gaussian kernel clustering
+- R data science tools
+- Support vector clustering
+- Multidimensional data analysis
+- Kernel methods for clustering
+- Clustering non-linear data
+- Data mining in r
+- Statistical learning in r
+- Cluster analysis methods
+- Radial basis function (rbf)
+- Data segmentation techniques
+- Unsupervised learning in r
+- Pattern recognition with kernels
+- K-means kernel clustering
+- Scalable clustering algorithms in r
+- Unknown
+- R
 title: Kernel Clustering in R
 ---
 

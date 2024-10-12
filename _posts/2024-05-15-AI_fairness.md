@@ -18,26 +18,26 @@ header:
 seo_type: article
 subtitle: Challenges, Metrics, and Mitigation Techniques
 tags:
-- AI Fairness
-- Bias in AI
-- Machine Learning Fairness
-- Demographic Parity
-- Equal Opportunity
-- Statistical Parity
-- Consistency in AI
-- Individual Fairness
-- Counterfactual Fairness
-- Unbiased AI
-- Fairness through Unawareness
-- Transparency in AI
-- AI Ethics
-- Bias Mitigation Techniques
-- Adversarial Learning
-- Data Collection Bias
-- Fairness Metrics
-- AI Fairness Libraries
-- Fairness in Machine Learning
-- AI Discrimination
+- Ai fairness
+- Bias in ai
+- Machine learning fairness
+- Demographic parity
+- Equal opportunity
+- Statistical parity
+- Consistency in ai
+- Individual fairness
+- Counterfactual fairness
+- Unbiased ai
+- Fairness through unawareness
+- Transparency in ai
+- Ai ethics
+- Bias mitigation techniques
+- Adversarial learning
+- Data collection bias
+- Fairness metrics
+- Ai fairness libraries
+- Fairness in machine learning
+- Ai discrimination
 title: Navigating AI Fairness
 ---
 

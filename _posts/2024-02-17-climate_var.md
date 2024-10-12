@@ -6,7 +6,8 @@ categories:
 - Financial Risk
 classes: wide
 date: '2024-02-17'
-excerpt: Exploring Climate Value at Risk (VaR) from a data science perspective, detailing its role in assessing financial risks associated with climate change.
+excerpt: Exploring Climate Value at Risk (VaR) from a data science perspective, detailing
+  its role in assessing financial risks associated with climate change.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_4.jpg
@@ -15,26 +16,28 @@ header:
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_4.jpg
 keywords:
-- Climate VaR
-- value at risk
-- climate change risk
-- financial risk management
-- data science in climate risk
-- financial assessment tools
-- climate data modeling
-- environmental risk management
-- climate finance
-- sustainability and risk
-- python
-seo_description: An in-depth analysis of Climate Value at Risk (VaR) from a data science perspective, exploring its importance in financial risk assessment amidst climate change.
+- Climate var
+- Value at risk
+- Climate change risk
+- Financial risk management
+- Data science in climate risk
+- Financial assessment tools
+- Climate data modeling
+- Environmental risk management
+- Climate finance
+- Sustainability and risk
+- Python
+seo_description: An in-depth analysis of Climate Value at Risk (VaR) from a data science
+  perspective, exploring its importance in financial risk assessment amidst climate
+  change.
 seo_title: 'Climate VaR: Data Science and Financial Risk Assessment'
 seo_type: article
 tags:
-- Climate Change
-- Value at Risk
-- Data Science
-- Financial Risk Management
-- python
+- Climate change
+- Value at risk
+- Data science
+- Financial risk management
+- Python
 title: 'Climate Value at Risk (VaR): A Data Science Perspective'
 ---
 

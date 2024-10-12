@@ -4,7 +4,9 @@ categories:
 - Data Science
 classes: wide
 date: '2023-09-04'
-excerpt: Delve into the fears and complexities of artificial intelligence and automation, addressing concerns like job displacement, data privacy, ethical decision-making, and the true capabilities and limitations of AI.
+excerpt: Delve into the fears and complexities of artificial intelligence and automation,
+  addressing concerns like job displacement, data privacy, ethical decision-making,
+  and the true capabilities and limitations of AI.
 header:
   image: /assets/images/data_science_6.jpg
   og_image: /assets/images/data_science_7.jpg
@@ -13,24 +15,26 @@ header:
   teaser: /assets/images/data_science_6.jpg
   twitter_image: /assets/images/data_science_7.jpg
 keywords:
-- artificial intelligence
-- machine learning
-- automation
-- AI ethics
-- job displacement
-- data privacy
-- AI limitations
-- ethical dilemmas in AI
-- AI in automation
-- future of AI
-seo_description: Explore the fears and challenges surrounding artificial intelligence, including job displacement, data privacy, ethical dilemmas, and the limitations of AI and machine learning.
+- Artificial intelligence
+- Machine learning
+- Automation
+- Ai ethics
+- Job displacement
+- Data privacy
+- Ai limitations
+- Ethical dilemmas in ai
+- Ai in automation
+- Future of ai
+seo_description: Explore the fears and challenges surrounding artificial intelligence,
+  including job displacement, data privacy, ethical dilemmas, and the limitations
+  of AI and machine learning.
 seo_title: The Fears and Challenges of Artificial Intelligence and Automation
 seo_type: article
 subtitle: Automation and Machine Learning
 tags:
-- Data Science
-- Artificial Intelligence
-- Machine Learning
+- Data science
+- Artificial intelligence
+- Machine learning
 - Ethics
 title: The Fears Surrounding Artificial Intelligence
 ---

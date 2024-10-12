@@ -6,7 +6,9 @@ categories:
 - Data Analysis
 classes: wide
 date: '2023-11-16'
-excerpt: Learn how the Mann-Whitney U Test is used to compare two independent samples in non-parametric statistics, with applications in fields such as psychology, medicine, and ecology.
+excerpt: Learn how the Mann-Whitney U Test is used to compare two independent samples
+  in non-parametric statistics, with applications in fields such as psychology, medicine,
+  and ecology.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -15,26 +17,30 @@ header:
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_8.jpg
 keywords:
-- Mann-Whitney U Test
-- Non-Parametric Test
-- Independent Samples
-- Hypothesis Testing
+- Mann-whitney u test
+- Non-parametric test
+- Independent samples
+- Hypothesis testing
 - Psychology
 - Medicine
-- bash
-- python
-seo_description: Explore the Mann-Whitney U Test, a non-parametric method for comparing two independent samples, with applications in fields like psychology, medicine, and ecology.
+- Bash
+- Python
+seo_description: Explore the Mann-Whitney U Test, a non-parametric method for comparing
+  two independent samples, with applications in fields like psychology, medicine,
+  and ecology.
 seo_title: 'Mann-Whitney U Test: Comparing Two Independent Samples'
 seo_type: article
-summary: The Mann-Whitney U Test is a non-parametric method used to compare two independent samples. This article explains the test's assumptions, mathematical foundations, and its applications in fields like psychology, medicine, and ecology.
+summary: The Mann-Whitney U Test is a non-parametric method used to compare two independent
+  samples. This article explains the test's assumptions, mathematical foundations,
+  and its applications in fields like psychology, medicine, and ecology.
 tags:
-- Mann-Whitney U Test
-- Non-Parametric Statistics
-- Two Independent Samples
-- Hypothesis Testing
-- Data Analysis
-- bash
-- python
+- Mann-whitney u test
+- Non-parametric statistics
+- Two independent samples
+- Hypothesis testing
+- Data analysis
+- Bash
+- Python
 title: 'Mann-Whitney U Test: Non-Parametric Comparison of Two Independent Samples'
 ---
 

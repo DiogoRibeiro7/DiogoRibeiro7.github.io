@@ -64,9 +64,3 @@ tags: []
 ### 14. **"Shapiro-Wilk Test vs. Anderson-Darling: Checking for Normality in Small vs. Large Samples"**
    - Comparing two common tests for normality: Shapiro-Wilk and Anderson-Darling.
    - How sample size and distribution affect the choice of normality test.
-
-### 15. **"Cox Proportional Hazards Model: A Guide to Survival Analysis in Medical Studies"**
-   - Overview of the Cox proportional hazards model for time-to-event data.
-   - Applications in survival analysis and clinical trial data.
-
-### 16. **"Mann-Whitney U Test: Non-Parametric Comparison of Two Independent Samples"**

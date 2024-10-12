@@ -4,7 +4,8 @@ categories:
 - Machine Learning
 classes: wide
 date: '2022-12-25'
-excerpt: Understand key probability distributions in machine learning and their applications, including Bernoulli, Gaussian, and Beta distributions.
+excerpt: Understand key probability distributions in machine learning and their applications,
+  including Bernoulli, Gaussian, and Beta distributions.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -13,24 +14,25 @@ header:
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_6.jpg
 keywords:
-- probability distributions
-- machine learning distributions
+- Probability distributions
+- Machine learning distributions
 - Bernoulli distribution
 - Gaussian distribution
 - Multinoulli distribution
 - Beta distribution
 - Exponential distribution
-- statistical models in machine learning
-- probability theory in AI
-- data analysis with probability distributions
-- distribution types in machine learning
-- modeling uncertainty in AI
-seo_description: An in-depth exploration of key probability distributions in machine learning, including Bernoulli, Multinoulli, Gaussian, Exponential, and Beta distributions.
+- Statistical models in machine learning
+- Probability theory in ai
+- Data analysis with probability distributions
+- Distribution types in machine learning
+- Modeling uncertainty in ai
+seo_description: An in-depth exploration of key probability distributions in machine
+  learning, including Bernoulli, Multinoulli, Gaussian, Exponential, and Beta distributions.
 seo_title: Probability Distributions in Machine Learning
 seo_type: article
 tags:
-- Probability Distributions
-- Data Analysis
+- Probability distributions
+- Data analysis
 title: Probability Distributions in Machine Learning
 ---
 

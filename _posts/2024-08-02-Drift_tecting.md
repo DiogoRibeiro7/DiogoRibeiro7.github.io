@@ -15,9 +15,9 @@ header:
   twitter_image: /assets/images/data_science_8.jpg
 seo_type: article
 tags:
-- Concept Drift
-- Incremental Learning
-- Drift Detection Method
+- Concept drift
+- Incremental learning
+- Drift detection method
 title: Detecting Concept Drift in Machine Learning
 ---
 

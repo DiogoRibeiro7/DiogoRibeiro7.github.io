@@ -27,7 +27,7 @@ tags:
 - Editing and revising papers
 - Proofreading techniques
 - Formatting academic papers
-- Citation styles (APA, MLA, Chicago)
+- Citation styles (apa, mla, chicago)
 - In-depth research
 - Organizing research notes
 - Academic research tips

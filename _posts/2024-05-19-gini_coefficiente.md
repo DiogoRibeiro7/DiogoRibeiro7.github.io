@@ -15,26 +15,27 @@ header:
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_7.jpg
 seo_type: article
-subtitle: Guide to the Normalized Gini Coefficient and Default Rate in Credit Scoring and Risk Assessment
+subtitle: Guide to the Normalized Gini Coefficient and Default Rate in Credit Scoring
+  and Risk Assessment
 tags:
-- Gini Coefficient
-- Default Rate
-- Normalized Gini Coefficient
-- Credit Risk
-- Economic Indicators
-- Machine Learning Metrics
-- Model Evaluation
-- Loss Functions
-- Normalized Gini Coefficient
-- Credit Scoring
-- Risk Assessment
-- Loan Default
-- Credit Scorecard
-- Behavior Scorecard
-- Area Under ROC Curve (AUC)
-- TensorFlow Implementation
-- Loan Risk Analysis
-- python
+- Gini coefficient
+- Default rate
+- Normalized gini coefficient
+- Credit risk
+- Economic indicators
+- Machine learning metrics
+- Model evaluation
+- Loss functions
+- Normalized gini coefficient
+- Credit scoring
+- Risk assessment
+- Loan default
+- Credit scorecard
+- Behavior scorecard
+- Area under roc curve (auc)
+- Tensorflow implementation
+- Loan risk analysis
+- Python
 title: Understanding the Normalized Gini Coefficient and Default Rate
 ---
 

@@ -14,32 +14,38 @@ header:
   teaser: /assets/images/data_science_7.jpg
   twitter_image: /assets/images/data_science_8.jpg
 keywords:
-- RSSI
-- human body effects on signals
-- absorption
-- reflection
-- shadowing
-- signal interference
-- proximity effects
-- signal quality in wireless communication
-- antenna design adjustments
-- python
-seo_description: Explore how the human body affects RSSI in wireless communication. Learn about absorption, reflection, shadowing, and practical approaches to mitigate signal quality issues.
-seo_title: 'How the Human Body Affects RSSI: Analysis and Practical Solutions'
-seo_type: article
-summary: This article provides a comprehensive analysis of how the human body impacts RSSI, covering absorption, reflection, shadowing, and proximity effects, and offering practical approaches to mitigate signal interference.
-tags:
-- RSSI
+- Rssi
+- Human body effects on signals
 - Absorption
 - Reflection
 - Shadowing
-- Proximity Effects
-- Capacitive Coupling
-- Resonant Effects
-- Antenna Design
-- Dynamic Adjustment
-- Signal Quality
-- python
+- Signal interference
+- Proximity effects
+- Signal quality in wireless communication
+- Antenna design adjustments
+- Python
+- Python
+seo_description: Explore how the human body affects RSSI in wireless communication.
+  Learn about absorption, reflection, shadowing, and practical approaches to mitigate
+  signal quality issues.
+seo_title: 'How the Human Body Affects RSSI: Analysis and Practical Solutions'
+seo_type: article
+summary: This article provides a comprehensive analysis of how the human body impacts
+  RSSI, covering absorption, reflection, shadowing, and proximity effects, and offering
+  practical approaches to mitigate signal interference.
+tags:
+- Rssi
+- Absorption
+- Reflection
+- Shadowing
+- Proximity effects
+- Capacitive coupling
+- Resonant effects
+- Antenna design
+- Dynamic adjustment
+- Signal quality
+- Python
+- Python
 title: 'How the Human Body Affects RSSI: Detailed Analysis and Practical Approaches'
 ---
 

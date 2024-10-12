@@ -13,10 +13,10 @@ header:
   twitter_image: /assets/images/data_science_2.jpg
 seo_type: article
 tags:
-- Data Leakage
-- Data Science
-- Model Integrity
-- python
+- Data leakage
+- Data science
+- Model integrity
+- Python
 title: 'Understanding Data Leakage in Machine Learning: Causes, Types, and Prevention'
 ---
 

@@ -19,17 +19,18 @@ header:
   twitter_image: /assets/images/data_science_8.jpg
 seo_type: article
 tags:
-- Sensory Lexicon
-- Wine Tasting
+- Sensory lexicon
+- Wine tasting
 - Emotions
-- Consumer Preferences
-- Descriptive Statistics
-- Multivariate Analysis
-- PCA
-- ANOVA
-- Regression Analysis
-- Wine Quality
-title: 'Wine Sensory Evaluation: From Sensory Lexicons and Emotions to Data Statistical Analysis Techniques'
+- Consumer preferences
+- Descriptive statistics
+- Multivariate analysis
+- Pca
+- Anova
+- Regression analysis
+- Wine quality
+title: 'Wine Sensory Evaluation: From Sensory Lexicons and Emotions to Data Statistical
+  Analysis Techniques'
 ---
 
 ## Abstract

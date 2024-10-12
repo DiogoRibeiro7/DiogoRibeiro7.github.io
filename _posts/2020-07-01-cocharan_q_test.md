@@ -4,7 +4,9 @@ categories:
 - Statistics
 classes: wide
 date: '2020-07-01'
-excerpt: Understand Cochran’s Q test, a non-parametric test for comparing proportions across related groups, and its applications in binary data and its connection to McNemar's test.
+excerpt: "Understand Cochran\u2019s Q test, a non-parametric test for comparing proportions\
+  \ across related groups, and its applications in binary data and its connection\
+  \ to McNemar's test."
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -14,21 +16,25 @@ header:
   twitter_image: /assets/images/data_science_8.jpg
 keywords:
 - Proportions
-- McNemar's Test
-- Cochran's Q Test
-- Machine Learning
-- Logistic Regression
-- Data Science
-seo_description: Learn about Cochran’s Q test, its use for comparing proportions across related groups, and its connection with McNemar’s test and logistic regression.
-seo_title: 'Cochran’s Q Test: Comparing Proportions in Related Groups'
+- Mcnemar's test
+- Cochran's q test
+- Machine learning
+- Logistic regression
+- Data science
+seo_description: "Learn about Cochran\u2019s Q test, its use for comparing proportions\
+  \ across related groups, and its connection with McNemar\u2019s test and logistic\
+  \ regression."
+seo_title: "Cochran\u2019s Q Test: Comparing Proportions in Related Groups"
 seo_type: article
-summary: This article explores Cochran’s Q test, a non-parametric method for comparing proportions in related groups, particularly in binary data. It also covers the relationship between Cochran's Q, McNemar's test, and logistic regression.
+summary: "This article explores Cochran\u2019s Q test, a non-parametric method for\
+  \ comparing proportions in related groups, particularly in binary data. It also\
+  \ covers the relationship between Cochran's Q, McNemar's test, and logistic regression."
 tags:
-- Logistic Regression
-- McNemar's Test
-- Non-Parametric Tests
-- Cochran's Q Test
-title: 'Cochran’s Q Test: Comparing Three or More Related Proportions'
+- Logistic regression
+- Mcnemar's test
+- Non-parametric tests
+- Cochran's q test
+title: "Cochran\u2019s Q Test: Comparing Three or More Related Proportions"
 ---
 
 In the realm of statistical analysis, there are many situations where we need to compare proportions across **related groups**, particularly when the data is **binary** (e.g., success/failure, yes/no). For such cases, **Cochran’s Q test** provides an effective way to determine whether there are significant differences in proportions across three or more related samples.

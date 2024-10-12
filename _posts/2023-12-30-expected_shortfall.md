@@ -5,7 +5,9 @@ categories:
 - Financial Risk Management
 classes: wide
 date: '2023-12-30'
-excerpt: A comprehensive comparison of Value at Risk (VaR) and Expected Shortfall (ES) in financial risk management, with a focus on their performance during volatile and stable market conditions.
+excerpt: A comprehensive comparison of Value at Risk (VaR) and Expected Shortfall
+  (ES) in financial risk management, with a focus on their performance during volatile
+  and stable market conditions.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_9.jpg
@@ -14,26 +16,30 @@ header:
   teaser: /assets/images/data_science_9.jpg
   twitter_image: /assets/images/data_science_9.jpg
 keywords:
-- Value at Risk
-- Expected Shortfall
-- financial risk management
-- risk assessment models
-- market volatility
-- financial crisis
-- VaR vs ES
-- risk modeling
-- tail risk
-- risk metrics
-- python
-seo_description: An in-depth analysis of Value at Risk (VaR) and Expected Shortfall (ES) as risk assessment models, comparing their performance during different market conditions.
+- Value at risk
+- Expected shortfall
+- Financial risk management
+- Risk assessment models
+- Market volatility
+- Financial crisis
+- Var vs es
+- Risk modeling
+- Tail risk
+- Risk metrics
+- Python
+- Python
+seo_description: An in-depth analysis of Value at Risk (VaR) and Expected Shortfall
+  (ES) as risk assessment models, comparing their performance during different market
+  conditions.
 seo_title: 'VaR vs Expected Shortfall: A Data-Driven Analysis'
 seo_type: article
 tags:
-- Value at Risk
-- Expected Shortfall
-- Financial Crisis
-- Risk Models
-- python
+- Value at risk
+- Expected shortfall
+- Financial crisis
+- Risk models
+- Python
+- Python
 title: 'Comparing Value at Risk (VaR) and Expected Shortfall (ES): A Data-Driven Analysis'
 ---
 

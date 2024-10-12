@@ -19,14 +19,14 @@ subtitle: Techniques to Prevent Overfitting and Improve Model Performance
 tags:
 - Regularization
 - Overfitting
-- L1 Regularization
-- L2 Regularization
-- Elastic Net
-- Machine Learning
-- Model Generalization
-- Feature Selection
-- Model Interpretability
-- High-Dimensional Data
+- L1 regularization
+- L2 regularization
+- Elastic net
+- Machine learning
+- Model generalization
+- Feature selection
+- Model interpretability
+- High-dimensional data
 title: Regularization in Machine Learning
 ---
 

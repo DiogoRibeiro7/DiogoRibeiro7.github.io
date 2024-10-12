@@ -13,36 +13,40 @@ header:
   twitter_image: /assets/images/data_science_8.jpg
 keywords:
 - Poisson distribution
-- sensor activations
-- count data modeling
-- statistical modeling in Python
-- goodness-of-fit analysis
-- cross-validation
-- time series analysis
-- residual analysis
+- Sensor activations
+- Count data modeling
+- Statistical modeling in python
+- Goodness-of-fit analysis
+- Cross-validation
+- Time series analysis
+- Residual analysis
 - Python programming for data analysis
-- python
-seo_description: Learn how to model sensor activations with the Poisson distribution in Python. This tutorial covers data preparation, residual analysis, goodness-of-fit, and cross-validation for accurate predictions.
+- Python
+seo_description: Learn how to model sensor activations with the Poisson distribution
+  in Python. This tutorial covers data preparation, residual analysis, goodness-of-fit,
+  and cross-validation for accurate predictions.
 seo_title: Modeling Sensor Activations Using Poisson Distribution in Python
 seo_type: article
-summary: This tutorial explores how to model sensor activations using the Poisson distribution in Python, covering data preparation, model evaluation, residual analysis, and cross-validation techniques.
+summary: This tutorial explores how to model sensor activations using the Poisson
+  distribution in Python, covering data preparation, model evaluation, residual analysis,
+  and cross-validation techniques.
 tags:
-- Poisson Distribution
-- Count Data
-- Statistical Modeling
-- Sensor Activations
-- Data Preparation
-- Model Evaluation
-- Residual Analysis
-- Goodness-of-Fit
-- Cross-Validation
-- Time Series Analysis
-- Data Science
+- Poisson distribution
+- Count data
+- Statistical modeling
+- Sensor activations
+- Data preparation
+- Model evaluation
+- Residual analysis
+- Goodness-of-fit
+- Cross-validation
+- Time series analysis
+- Data science
 - Statistics
-- Data Analysis
-- Python Programming
-- Educational Tutorial
-- python
+- Data analysis
+- Python programming
+- Educational tutorial
+- Python
 title: Modeling Sensor Activations with Poisson Distribution in Python
 ---
 

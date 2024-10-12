@@ -4,7 +4,8 @@ categories:
 - Optimization
 classes: wide
 date: '2022-02-17'
-excerpt: Discover how linear programming and Python's PuLP library can efficiently solve staff scheduling challenges, minimizing costs while meeting operational demands.
+excerpt: Discover how linear programming and Python's PuLP library can efficiently
+  solve staff scheduling challenges, minimizing costs while meeting operational demands.
 header:
   image: /assets/images/data_science_7.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -13,29 +14,36 @@ header:
   teaser: /assets/images/data_science_7.jpg
   twitter_image: /assets/images/data_science_8.jpg
 keywords:
-- staff scheduling optimization
-- linear programming
-- scheduling algorithms
-- PuLP library
+- Staff scheduling optimization
+- Linear programming
+- Scheduling algorithms
+- Pulp library
 - Python for optimization
-- workforce scheduling
-- cost minimization
+- Workforce scheduling
+- Cost minimization
 - 24/7 operations scheduling
-- LP models in staffing
-- shift scheduling optimization
-- operational efficiency
-- constraint programming
-- bash
-- python
-seo_description: Learn how to use linear programming with the PuLP library in Python to optimize staff scheduling and minimize costs in a 24/7 operational environment.
+- Lp models in staffing
+- Shift scheduling optimization
+- Operational efficiency
+- Constraint programming
+- Bash
+- Python
+- Bash
+- Python
+seo_description: Learn how to use linear programming with the PuLP library in Python
+  to optimize staff scheduling and minimize costs in a 24/7 operational environment.
 seo_title: Staff Scheduling Optimization with Linear Programming in Python
 seo_type: article
-summary: This article discusses using linear programming and Python’s PuLP library to optimize staff scheduling, focusing on cost minimization and meeting operational requirements efficiently.
+summary: "This article discusses using linear programming and Python\u2019s PuLP library\
+  \ to optimize staff scheduling, focusing on cost minimization and meeting operational\
+  \ requirements efficiently."
 tags:
-- Linear Programming
+- Linear programming
 - Scheduling
-- bash
-- python
+- Bash
+- Python
+- Bash
+- Python
 title: Optimizing Staff Scheduling with Linear Programming
 ---
 

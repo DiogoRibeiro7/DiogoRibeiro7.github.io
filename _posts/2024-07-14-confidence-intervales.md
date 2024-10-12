@@ -15,10 +15,11 @@ header:
 seo_type: article
 tags:
 - Uncertainty
-- Linear Regression
-- Confidence Interval
-- Prediction Interval
-title: 'Understanding Uncertainty in Statistical Estimates: Confidence and Prediction Intervals'
+- Linear regression
+- Confidence interval
+- Prediction interval
+title: 'Understanding Uncertainty in Statistical Estimates: Confidence and Prediction
+  Intervals'
 ---
 
 Statistical estimates always have some uncertainty. Consider a simple example of modeling house prices based solely on their area using linear regression. A prediction from this model wouldn’t reveal the exact value of a house based on its area, because different houses of the same size can have different prices. Instead, the model predicts the mean value related to the outcome for a particular input.

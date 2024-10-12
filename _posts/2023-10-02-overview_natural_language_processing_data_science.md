@@ -6,7 +6,9 @@ categories:
 - Machine Learning
 classes: wide
 date: '2023-10-02'
-excerpt: Natural Language Processing (NLP) is integral to data science, enabling tasks like text classification and sentiment analysis. Learn how NLP works, its common tasks, tools, and applications in real-world projects.
+excerpt: Natural Language Processing (NLP) is integral to data science, enabling tasks
+  like text classification and sentiment analysis. Learn how NLP works, its common
+  tasks, tools, and applications in real-world projects.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -15,25 +17,28 @@ header:
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
-- Natural Language Processing
-- NLP in Data Science
-- Text Classification
-- Sentiment Analysis
-- NLTK
-- SpaCy
-- Hugging Face
-seo_description: Explore how Natural Language Processing (NLP) fits into data science, common NLP tasks, popular libraries like NLTK and SpaCy, and real-world applications.
+- Natural language processing
+- Nlp in data science
+- Text classification
+- Sentiment analysis
+- Nltk
+- Spacy
+- Hugging face
+seo_description: Explore how Natural Language Processing (NLP) fits into data science,
+  common NLP tasks, popular libraries like NLTK and SpaCy, and real-world applications.
 seo_title: 'Natural Language Processing in Data Science: Tasks, Tools, and Applications'
 seo_type: article
-summary: This article provides an overview of Natural Language Processing (NLP) in data science, covering its role in the field, common NLP tasks, tools like NLTK and SpaCy, and real-world applications in various industries.
+summary: This article provides an overview of Natural Language Processing (NLP) in
+  data science, covering its role in the field, common NLP tasks, tools like NLTK
+  and SpaCy, and real-world applications in various industries.
 tags:
-- Natural Language Processing (NLP)
-- Text Classification
-- Sentiment Analysis
-- Data Science
-- NLTK
-- SpaCy
-- Hugging Face
+- Natural language processing (nlp)
+- Text classification
+- Sentiment analysis
+- Data science
+- Nltk
+- Spacy
+- Hugging face
 title: An Overview of Natural Language Processing in Data Science
 ---
 

@@ -15,10 +15,10 @@ header:
   twitter_image: /assets/images/data_science_5.jpg
 seo_type: article
 tags:
-- Stepwise Selection
-- Regression Models
-- Statistical Bias
-- Variable Selection
+- Stepwise selection
+- Regression models
+- Statistical bias
+- Variable selection
 title: Stepwise Selection Algorithms Almost Always Ruin Statistical Estimates
 ---
 

@@ -4,7 +4,9 @@ categories:
 - Mathematics
 classes: wide
 date: '2023-09-26'
-excerpt: Innumeracy is becoming the new illiteracy, with far-reaching implications for decision-making in various aspects of life. Discover how the inability to understand numbers affects our world and what can be done to address this growing issue.
+excerpt: Innumeracy is becoming the new illiteracy, with far-reaching implications
+  for decision-making in various aspects of life. Discover how the inability to understand
+  numbers affects our world and what can be done to address this growing issue.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -13,24 +15,26 @@ header:
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_5.jpg
 keywords:
-- innumeracy
-- data literacy
-- numeracy skills
-- decision-making
-- quantitative reasoning
-- statistical literacy
-- mathematical thinking
-- cognitive bias
-- public policy
-- critical thinking
-seo_description: Explore the growing issue of innumeracy—our inability to understand and work with numbers. Learn how this new illiteracy impacts decision-making in society, from corporate boardrooms to public policy.
+- Innumeracy
+- Data literacy
+- Numeracy skills
+- Decision-making
+- Quantitative reasoning
+- Statistical literacy
+- Mathematical thinking
+- Cognitive bias
+- Public policy
+- Critical thinking
+seo_description: "Explore the growing issue of innumeracy\u2014our inability to understand\
+  \ and work with numbers. Learn how this new illiteracy impacts decision-making in\
+  \ society, from corporate boardrooms to public policy."
 seo_title: 'Innumeracy: The New Illiteracy Crippling Decision-Making'
 seo_type: article
 tags:
 - Numeracy
-- Data Literacy
-- Decision Making
-title: The New Illiteracy That’s Crippling Our Decision-Making
+- Data literacy
+- Decision making
+title: "The New Illiteracy That\u2019s Crippling Our Decision-Making"
 ---
 
 ![Example Image](/assets/images/inumeracy.jpg)

@@ -6,7 +6,10 @@ categories:
 - Business Strategy
 classes: wide
 date: '2024-10-12'
-excerpt: Data-driven decision-making, powered by data science and machine learning, is becoming central to business strategy. Learn how companies are integrating data science into strategic planning to improve outcomes in customer segmentation, churn prediction, and recommendation systems.
+excerpt: Data-driven decision-making, powered by data science and machine learning,
+  is becoming central to business strategy. Learn how companies are integrating data
+  science into strategic planning to improve outcomes in customer segmentation, churn
+  prediction, and recommendation systems.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_9.jpg
@@ -15,23 +18,29 @@ header:
   teaser: /assets/images/data_science_9.jpg
   twitter_image: /assets/images/data_science_9.jpg
 keywords:
-- data science
-- machine learning
-- business strategy
-- customer segmentation
-- churn prediction
-- recommendation systems
-seo_description: This article explores how data science and machine learning are reshaping business strategy, focusing on key use cases like customer segmentation, churn prediction, and recommendation systems.
+- Data science
+- Machine learning
+- Business strategy
+- Customer segmentation
+- Churn prediction
+- Recommendation systems
+seo_description: This article explores how data science and machine learning are reshaping
+  business strategy, focusing on key use cases like customer segmentation, churn prediction,
+  and recommendation systems.
 seo_title: How Data Science is Transforming Business Strategy with Machine Learning
 seo_type: article
-summary: This article examines how data science and machine learning are transforming business strategy, highlighting key use cases such as customer segmentation, churn prediction, and recommendation systems. It compares traditional decision-making approaches with data-driven methods and discusses the benefits of integrating data science into strategic planning.
+summary: This article examines how data science and machine learning are transforming
+  business strategy, highlighting key use cases such as customer segmentation, churn
+  prediction, and recommendation systems. It compares traditional decision-making
+  approaches with data-driven methods and discusses the benefits of integrating data
+  science into strategic planning.
 tags:
-- Data Science
-- Machine Learning
-- Business Strategy
-- Customer Segmentation
-- Churn Prediction
-- Recommendation Systems
+- Data science
+- Machine learning
+- Business strategy
+- Customer segmentation
+- Churn prediction
+- Recommendation systems
 title: How Data Science is Reshaping Business Strategy in the Age of Machine Learning
 ---
 

@@ -4,7 +4,9 @@ categories:
 - Statistics
 classes: wide
 date: '2020-07-02'
-excerpt: The Mann-Whitney U test and independent t-test are used for comparing two independent groups, but the choice between them depends on data distribution. Learn when to use each and explore real-world applications.
+excerpt: The Mann-Whitney U test and independent t-test are used for comparing two
+  independent groups, but the choice between them depends on data distribution. Learn
+  when to use each and explore real-world applications.
 header:
   image: /assets/images/data_science_6.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -13,21 +15,27 @@ header:
   teaser: /assets/images/data_science_6.jpg
   twitter_image: /assets/images/data_science_6.jpg
 keywords:
-- Mann-Whitney U test
-- independent t-test
-- non-parametric tests
-- parametric tests
-- hypothesis testing
-seo_description: This article compares the parametric independent t-test and the non-parametric Mann-Whitney U test, explaining when to use each based on data distribution, with practical examples.
-seo_title: 'Mann-Whitney U Test vs. Independent T-Test: When to Use Non-Parametric Tests'
+- Mann-whitney u test
+- Independent t-test
+- Non-parametric tests
+- Parametric tests
+- Hypothesis testing
+seo_description: This article compares the parametric independent t-test and the non-parametric
+  Mann-Whitney U test, explaining when to use each based on data distribution, with
+  practical examples.
+seo_title: 'Mann-Whitney U Test vs. Independent T-Test: When to Use Non-Parametric
+  Tests'
 seo_type: article
-summary: This article provides a comprehensive comparison between the Mann-Whitney U test and the independent t-test. It explains when and why the non-parametric Mann-Whitney U test is preferred over the parametric t-test, especially in the case of non-normal distributions, and provides practical examples of both tests.
+summary: This article provides a comprehensive comparison between the Mann-Whitney
+  U test and the independent t-test. It explains when and why the non-parametric Mann-Whitney
+  U test is preferred over the parametric t-test, especially in the case of non-normal
+  distributions, and provides practical examples of both tests.
 tags:
-- Mann-Whitney U Test
-- Independent T-Test
-- Non-Parametric Tests
-- Parametric Tests
-- Hypothesis Testing
+- Mann-whitney u test
+- Independent t-test
+- Non-parametric tests
+- Parametric tests
+- Hypothesis testing
 title: 'Mann-Whitney U Test vs. Independent T-Test: Non-Parametric Alternatives'
 ---
 

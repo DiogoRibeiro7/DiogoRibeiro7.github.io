@@ -4,7 +4,9 @@ categories:
 - Data Science
 classes: wide
 date: '2024-02-02'
-excerpt: Dive into Topological Data Analysis (TDA) and discover how its methods, such as persistent homology and the mapper algorithm, help uncover hidden insights in high-dimensional and complex datasets.
+excerpt: Dive into Topological Data Analysis (TDA) and discover how its methods, such
+  as persistent homology and the mapper algorithm, help uncover hidden insights in
+  high-dimensional and complex datasets.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -13,33 +15,36 @@ header:
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
-- topological data analysis
-- persistent homology
-- mapper algorithm
-- data science
-- computational topology
-- high-dimensional data
-- anomaly detection
-- network analysis
-- interdisciplinary data science
-- mathematical foundations
-seo_description: Explore Topological Data Analysis (TDA) and its transformative role in data science, from persistent homology to the mapper algorithm, revealing hidden structures in complex datasets.
+- Topological data analysis
+- Persistent homology
+- Mapper algorithm
+- Data science
+- Computational topology
+- High-dimensional data
+- Anomaly detection
+- Network analysis
+- Interdisciplinary data science
+- Mathematical foundations
+seo_description: Explore Topological Data Analysis (TDA) and its transformative role
+  in data science, from persistent homology to the mapper algorithm, revealing hidden
+  structures in complex datasets.
 seo_title: 'Convergence of Topology and Data Science: Uncovering Insights with TDA'
 seo_type: article
-subtitle: Exploring Topological Data Analysis and Its Impact on Uncovering Hidden Insights in Complex Data Sets
+subtitle: Exploring Topological Data Analysis and Its Impact on Uncovering Hidden
+  Insights in Complex Data Sets
 tags:
-- Topological Data Analysis (TDA)
-- Data Science
-- Machine Learning
-- Persistent Homology
-- Mapper Algorithm
-- High-Dimensional Data
-- Big Data Analytics
-- Network Analysis
-- Anomaly Detection
-- Computational Topology
-- Mathematical Foundations of Data Science
-- Interdisciplinary Approaches in Data Analysis
+- Topological data analysis (tda)
+- Data science
+- Machine learning
+- Persistent homology
+- Mapper algorithm
+- High-dimensional data
+- Big data analytics
+- Network analysis
+- Anomaly detection
+- Computational topology
+- Mathematical foundations of data science
+- Interdisciplinary approaches in data analysis
 title: Convergence of Topology and Data Science
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

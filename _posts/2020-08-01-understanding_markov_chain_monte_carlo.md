@@ -4,7 +4,9 @@ categories:
 - Algorithms
 classes: wide
 date: '2020-08-01'
-excerpt: This article delves into the fundamentals of Markov Chain Monte Carlo (MCMC), its applications, and its significance in solving complex, high-dimensional probability distributions.
+excerpt: This article delves into the fundamentals of Markov Chain Monte Carlo (MCMC),
+  its applications, and its significance in solving complex, high-dimensional probability
+  distributions.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -13,24 +15,28 @@ header:
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_5.jpg
 keywords:
-- Markov Chain Monte Carlo
-- MCMC
+- Markov chain monte carlo
+- Mcmc
 - Probability distributions
-- Metropolis-Hastings algorithm
-- python
+- Metropolis-hastings algorithm
+- Python
 - Bayesian inference
-- bash
-seo_description: An in-depth exploration of Markov Chain Monte Carlo (MCMC), its algorithms, and its applications in statistics, probability theory, and numerical approximations.
+- Bash
+seo_description: An in-depth exploration of Markov Chain Monte Carlo (MCMC), its algorithms,
+  and its applications in statistics, probability theory, and numerical approximations.
 seo_title: Comprehensive Guide to Markov Chain Monte Carlo (MCMC)
 seo_type: article
-summary: Markov Chain Monte Carlo (MCMC) is an essential tool in probabilistic computation, used for sampling from complex distributions. This article explores its foundations, algorithms like Metropolis-Hastings, and various applications in statistics and numerical integration.
+summary: Markov Chain Monte Carlo (MCMC) is an essential tool in probabilistic computation,
+  used for sampling from complex distributions. This article explores its foundations,
+  algorithms like Metropolis-Hastings, and various applications in statistics and
+  numerical integration.
 tags:
-- Markov Chain Monte Carlo
-- Probability Distributions
-- python
-- bash
-- Bayesian Statistics
-- Numerical Methods
+- Markov chain monte carlo
+- Probability distributions
+- Python
+- Bash
+- Bayesian statistics
+- Numerical methods
 title: Understanding Markov Chain Monte Carlo (MCMC)
 ---
 

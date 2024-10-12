@@ -5,7 +5,9 @@ categories:
 - Data Science
 classes: wide
 date: '2024-08-03'
-excerpt: Discover the importance of feature engineering in enhancing machine learning models. Learn essential techniques for transforming raw data into valuable inputs that drive better predictive performance.
+excerpt: Discover the importance of feature engineering in enhancing machine learning
+  models. Learn essential techniques for transforming raw data into valuable inputs
+  that drive better predictive performance.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -14,24 +16,29 @@ header:
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
-- Feature Engineering
-- Data Transformation
-- Feature Selection
-- Data Science
-- Machine Learning Models
-- Predictive Analytics
-- python
-seo_description: Explore powerful feature engineering techniques that boost the performance of machine learning models by improving data preprocessing and feature selection.
+- Feature engineering
+- Data transformation
+- Feature selection
+- Data science
+- Machine learning models
+- Predictive analytics
+- Python
+- Python
+seo_description: Explore powerful feature engineering techniques that boost the performance
+  of machine learning models by improving data preprocessing and feature selection.
 seo_title: Feature Engineering for Better Machine Learning Models
 seo_type: article
-summary: This article delves into various feature engineering techniques essential for improving machine learning model performance. It covers data preprocessing, feature selection, transformation methods, and tips to enhance predictive accuracy.
+summary: This article delves into various feature engineering techniques essential
+  for improving machine learning model performance. It covers data preprocessing,
+  feature selection, transformation methods, and tips to enhance predictive accuracy.
 tags:
-- Feature Engineering
-- Data Preprocessing
-- Machine Learning Techniques
-- Feature Selection
-- Model Performance
-- python
+- Feature engineering
+- Data preprocessing
+- Machine learning techniques
+- Feature selection
+- Model performance
+- Python
+- Python
 title: Feature Engineering Techniques for Improved Machine Learning
 ---
 

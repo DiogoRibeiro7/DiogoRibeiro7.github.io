@@ -4,7 +4,9 @@ categories:
 - Mathematics
 classes: wide
 date: '2024-02-11'
-excerpt: An in-depth look into ergodicity and its applications in statistical analysis, mathematical modeling, and computational physics, featuring real-world processes and Python simulations.
+excerpt: An in-depth look into ergodicity and its applications in statistical analysis,
+  mathematical modeling, and computational physics, featuring real-world processes
+  and Python simulations.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_4.jpg
@@ -13,33 +15,38 @@ header:
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_4.jpg
 keywords:
-- ergodicity
-- statistical analysis
+- Ergodicity
+- Statistical analysis
 - Bernoulli trials
 - Python programming
-- computational physics
-- mathematical modeling
-- simulation techniques
-- data science
-- machine learning
-- statistical physics
-- python
-seo_description: Explore ergodic regimes in mathematics, statistical physics, and data science, with practical insights into processes, Bernoulli trials, and Python-based simulations.
-seo_title: 'Distinguishing Ergodic Regimes: Clarifying Ergodicity in Statistical and Mathematical Models'
+- Computational physics
+- Mathematical modeling
+- Simulation techniques
+- Data science
+- Machine learning
+- Statistical physics
+- Python
+- Python
+seo_description: Explore ergodic regimes in mathematics, statistical physics, and
+  data science, with practical insights into processes, Bernoulli trials, and Python-based
+  simulations.
+seo_title: 'Distinguishing Ergodic Regimes: Clarifying Ergodicity in Statistical and
+  Mathematical Models'
 seo_type: article
 subtitle: Clarifying Ergodicity
 tags:
 - Ergodicity
-- Bernoulli Trials
-- Python Programming
-- Statistical Analysis
-- Data Science
-- Statistical Physics
-- Mathematical Modeling
-- Simulation and Modeling
-- Computational Physics
-- Machine Learning
-- python
+- Bernoulli trials
+- Python programming
+- Statistical analysis
+- Data science
+- Statistical physics
+- Mathematical modeling
+- Simulation and modeling
+- Computational physics
+- Machine learning
+- Python
+- Python
 title: Distinguishing Ergodic Regimes from Processes
 toc: false
 toc_label: The Complexity of Real-World Data Distributions
