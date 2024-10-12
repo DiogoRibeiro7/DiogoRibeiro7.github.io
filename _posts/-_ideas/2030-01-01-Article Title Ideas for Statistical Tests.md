@@ -4,21 +4,26 @@ tags: []
 
 ## Article Title Ideas for Statistical Tests
 
+TODO:
 ### 1. **"Chi-Square Test: Exploring Categorical Data and Goodness-of-Fit"**
    - Overview of the Chi-Square test for categorical data.
    - Discuss goodness-of-fit and independence tests.
    - Applications in survey data, contingency tables, and genetics.
 
+
+TODO:
 ### 2. **"ANOVA vs. Kruskal-Wallis: Comparing Multiple Groups with Parametric and Non-Parametric Tests"**
    - A comparison between ANOVA (parametric) and Kruskal-Wallis (non-parametric).
    - When to use each based on assumptions about normality and homogeneity.
    - Practical examples in clinical trials and market research.
 
+TODO:
 ### 3. **"Paired T-Test vs. Wilcoxon Signed-Rank Test: Dependent Samples Analysis"**
    - Explanation of the paired t-test and the Wilcoxon signed-rank test for dependent samples.
    - How to decide between parametric and non-parametric methods.
    - Use cases in before-and-after studies (e.g., medical treatments).
 
+TODO:
 ### 4. **"Cochran's Q Test: Analyzing Related Categorical Variables"**
    - Introduction to Cochran’s Q test for comparing multiple related samples of categorical data.
    - Practical examples in medical diagnostics and clinical trials with repeated measures.
