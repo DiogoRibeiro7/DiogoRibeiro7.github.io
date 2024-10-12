@@ -4,7 +4,9 @@ categories:
 - HealthTech
 classes: wide
 date: '2024-12-01'
-excerpt: The integration of IoT and big data is revolutionizing elderly care by enabling remote monitoring systems that track vital signs, detect emergencies, and ensure quick responses to health risks.
+excerpt: The integration of IoT and big data is revolutionizing elderly care by enabling
+  remote monitoring systems that track vital signs, detect emergencies, and ensure
+  quick responses to health risks.
 header:
   image: /assets/images/data_science_5.jpg
   og_image: /assets/images/data_science_4.jpg
@@ -18,17 +20,23 @@ keywords:
 - Elderly care
 - Health emergencies
 - Smart homes
-seo_description: Explore how IoT-enabled devices, wearables, and health monitors are using big data to remotely monitor elderly individuals and detect health emergencies in real time.
+seo_description: Explore how IoT-enabled devices, wearables, and health monitors are
+  using big data to remotely monitor elderly individuals and detect health emergencies
+  in real time.
 seo_title: IoT and Big Data in Remote Monitoring for Elderly Care
 seo_type: article
-summary: IoT-enabled devices and big data are transforming elderly care by enabling real-time remote monitoring. From wearable devices to smart home systems, these technologies offer continuous health tracking and quick responses to emergencies like heart attacks, strokes, or falls, ensuring that seniors remain safe and healthy.
+summary: IoT-enabled devices and big data are transforming elderly care by enabling
+  real-time remote monitoring. From wearable devices to smart home systems, these
+  technologies offer continuous health tracking and quick responses to emergencies
+  like heart attacks, strokes, or falls, ensuring that seniors remain safe and healthy.
 tags:
 - Elderly care
 - Iot
 - Big data
 - Remote monitoring
 - Health monitoring
-title: 'Remote Monitoring and Elderly Care: How IoT and Big Data are Keeping Seniors Safe'
+title: 'Remote Monitoring and Elderly Care: How IoT and Big Data are Keeping Seniors
+  Safe'
 ---
 
 ## Introduction

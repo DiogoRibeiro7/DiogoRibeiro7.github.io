@@ -25,10 +25,14 @@ keywords:
 - Statistical reporting
 - Scientific analysis
 - Error representation in research
-seo_description: Learn how error bars represent variability, standard deviation, standard error, and confidence intervals in scientific research, improving the accuracy and clarity of reporting findings.
+seo_description: Learn how error bars represent variability, standard deviation, standard
+  error, and confidence intervals in scientific research, improving the accuracy and
+  clarity of reporting findings.
 seo_title: 'Understanding Error Bars: A Guide to Scientific Reporting'
 seo_type: article
-summary: This article explores the significance of error bars in scientific reporting, focusing on their use in representing variability, standard deviation, standard error, and confidence intervals in research findings.
+summary: This article explores the significance of error bars in scientific reporting,
+  focusing on their use in representing variability, standard deviation, standard
+  error, and confidence intervals in research findings.
 tags:
 - Research paper writing
 - Academic writing tips

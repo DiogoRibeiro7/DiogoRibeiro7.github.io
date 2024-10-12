@@ -15,10 +15,10 @@ seo_type: article
 tags:
 - Python
 - Git
-- Pre-commit Hooks
-- DevOps
-- bash
-- yaml
+- Pre-commit hooks
+- Devops
+- Bash
+- Yaml
 title: Streamlining Your Workflow with Pre-commit Hooks in Python Projects
 ---
 

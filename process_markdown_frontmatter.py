@@ -4,19 +4,23 @@ import yaml  # You might need to install PyYAML (pip install pyyaml)
 
 def process_frontmatter(frontmatter: dict):
     """
-    Modify the first letter of each tag or keyword in the frontmatter.
+    Modify the first letter of each tag or keyword in the frontmatter if they exist.
 
     :param frontmatter: The frontmatter dictionary loaded from YAML.
     :return: Modified frontmatter.
     """
     for key in ['tags', 'keywords']:  # Adjust based on the actual fields you want to modify
         if key in frontmatter and isinstance(frontmatter[key], list):
-            frontmatter[key] = [tag.capitalize() for tag in frontmatter[key]]
+            # Capitalize the first letter of each word in the list
+            frontmatter[key] = [str(tag).capitalize() for tag in frontmatter[key]]
+        else:
+            # If 'tags' or 'keywords' don't exist, just skip
+            print(f"'{key}' not found in frontmatter, skipping modification for this field.")
     return frontmatter
 
 def process_markdown_file(filepath: str):
     """
-    Process a markdown file by reading the frontmatter, modifying the tags/keywords, and saving the file.
+    Process a markdown file by reading the frontmatter, modifying the tags/keywords if they exist, and saving the file.
 
     :param filepath: Path to the markdown file.
     """
@@ -31,7 +35,7 @@ def process_markdown_file(filepath: str):
         try:
             frontmatter = yaml.safe_load(frontmatter_str)
             if isinstance(frontmatter, dict):
-                # Process the frontmatter to update tags and keywords
+                # Process the frontmatter to update tags and keywords if they exist
                 updated_frontmatter = process_frontmatter(frontmatter)
 
                 # Replace the original frontmatter in the content

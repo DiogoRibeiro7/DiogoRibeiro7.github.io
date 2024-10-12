@@ -21,7 +21,7 @@ tags:
 - Odds
 - Likelihood
 - Biostatistics
-- Event Occurrence
+- Event occurrence
 title: Understanding Probability and Odds
 ---
 

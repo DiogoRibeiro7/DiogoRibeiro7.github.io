@@ -13,9 +13,9 @@ header:
   twitter_image: /assets/images/data_science_4.jpg
 seo_type: article
 tags:
-- Moving Averages
-- Behavioral Patterns
-- Data Analysis
+- Moving averages
+- Behavioral patterns
+- Data analysis
 title: Using Moving Averages to Analyze Behavior Beyond Financial Markets
 ---
 

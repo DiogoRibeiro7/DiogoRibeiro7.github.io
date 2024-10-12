@@ -20,18 +20,19 @@ header:
 seo_type: article
 tags:
 - Twitter
-- Members of Parliament (MPs)
-- Political Interaction
-- Filter Bubbles
-- Echo Chambers
-- Social Network Analysis
-- Political Communication
-- Digital Engagement
+- Members of parliament (mps)
+- Political interaction
+- Filter bubbles
+- Echo chambers
+- Social network analysis
+- Political communication
+- Digital engagement
 - Homophily
-- Status Homophily
-- Online Political Behavior
-- Social Media Analysis
-title: 'Critical Review of ''Bursting the (Filter) Bubble: Interactions of Members of Parliament on Twitter'''
+- Status homophily
+- Online political behavior
+- Social media analysis
+title: 'Critical Review of ''Bursting the (Filter) Bubble: Interactions of Members
+  of Parliament on Twitter'''
 ---
 
 ## Introduction

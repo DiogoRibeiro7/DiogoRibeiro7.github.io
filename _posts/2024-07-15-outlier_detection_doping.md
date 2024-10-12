@@ -21,17 +21,21 @@ keywords:
 - Evaluating ml models
 - Robust data models
 - Python
-- python
-seo_description: Learn how to test and evaluate outlier detection models using data doping techniques. Understand the impact of doping on model performance and outlier identification.
+- Python
+seo_description: Learn how to test and evaluate outlier detection models using data
+  doping techniques. Understand the impact of doping on model performance and outlier
+  identification.
 seo_title: Evaluating Outlier Detectors with Data Doping Techniques
 seo_type: article
-summary: This article explores techniques for testing and evaluating outlier detection models using data doping, highlighting key methodologies and their impact on model performance.
+summary: This article explores techniques for testing and evaluating outlier detection
+  models using data doping, highlighting key methodologies and their impact on model
+  performance.
 tags:
 - Outlier detection
 - Data doping
 - Model evaluation
 - Python
-- python
+- Python
 title: Testing and Evaluating Outlier Detectors Using Doping
 ---
 

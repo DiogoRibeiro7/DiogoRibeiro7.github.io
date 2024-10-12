@@ -18,16 +18,16 @@ header:
 seo_type: article
 subtitle: Strategies and Guidelines for Ensuring Valid Results
 tags:
-- Missing Data
-- Multiple Imputation
-- Complete Case Analysis
-- Missing Data Mechanisms
-- MCAR
-- MAR
-- MNAR
-- Data Imputation
-- Research Methodology
-- Statistical Analysis
+- Missing data
+- Multiple imputation
+- Complete case analysis
+- Missing data mechanisms
+- Mcar
+- Mar
+- Mnar
+- Data imputation
+- Research methodology
+- Statistical analysis
 title: Handling Missing Data in Clinical Research
 ---
 

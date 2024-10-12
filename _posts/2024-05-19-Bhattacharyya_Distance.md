@@ -17,15 +17,15 @@ header:
 seo_type: article
 subtitle: A Comprehensive Guide to Bhattacharyya Distance and Essential Loss Functions
 tags:
-- Bhattacharyya Distance
-- Probability Distributions
-- KL Divergence
-- Loss Functions
+- Bhattacharyya distance
+- Probability distributions
+- Kl divergence
+- Loss functions
 - Regression
 - Classification
-- Mean Squared Error
-- Cross-Entropy Loss
-- Machine Learning Optimization
+- Mean squared error
+- Cross-entropy loss
+- Machine learning optimization
 title: Similarity Measures and Loss Functions in Machine Learning
 ---
 

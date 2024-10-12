@@ -15,12 +15,12 @@ header:
   twitter_image: /assets/images/data_science_5.jpg
 seo_type: article
 tags:
-- Python Libraries
-- Custom Software
-- Industry Solutions
-- Software Development
+- Python libraries
+- Custom software
+- Industry solutions
+- Software development
 - Automation
-- python
+- Python
 title: Building Custom Python Libraries for Your Industry Needs
 ---
 

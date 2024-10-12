@@ -4,7 +4,9 @@ categories:
 - Statistics
 classes: wide
 date: '2024-05-10'
-excerpt: Explore the role of survival analysis in management, focusing on time-to-event data and techniques like the Kaplan-Meier estimator and Cox proportional hazards model for business decision-making.
+excerpt: Explore the role of survival analysis in management, focusing on time-to-event
+  data and techniques like the Kaplan-Meier estimator and Cox proportional hazards
+  model for business decision-making.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_9.jpg
@@ -13,42 +15,47 @@ header:
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_9.jpg
 keywords:
-- Survival Analysis
-- Time-to-Event Data
+- Survival analysis
+- Time-to-event data
 - Censoring
-- Hazard Function
-- Kaplan-Meier Estimator
-- Cox Proportional Hazards Model
-- Employee Retention
-- Customer Churn
-- Product Lifespan
-- Management Decision-Making
-- Business Analytics
+- Hazard function
+- Kaplan-meier estimator
+- Cox proportional hazards model
+- Employee retention
+- Customer churn
+- Product lifespan
+- Management decision-making
+- Business analytics
 - R
-- python
-seo_description: Learn about survival analysis and its applications in management for analyzing time-to-event data. Discover key techniques like the Kaplan-Meier estimator and the Cox model, useful in decision-making for employee retention and customer churn.
+- Python
+seo_description: Learn about survival analysis and its applications in management
+  for analyzing time-to-event data. Discover key techniques like the Kaplan-Meier
+  estimator and the Cox model, useful in decision-making for employee retention and
+  customer churn.
 seo_title: 'Survival Analysis in Management: Techniques and Applications'
 seo_type: article
 subtitle: Techniques and Applications
-summary: This article examines survival analysis in management, detailing its key concepts like hazard and survival functions, censoring, and applications such as employee retention, customer churn, and product lifespan modeling.
+summary: This article examines survival analysis in management, detailing its key
+  concepts like hazard and survival functions, censoring, and applications such as
+  employee retention, customer churn, and product lifespan modeling.
 tags:
-- Survival Analysis
-- Time-to-Event Data
-- Censoring and Truncation
-- Hazard Function
-- Survival Function
-- Kaplan-Meier Estimator
-- Cox Proportional Hazards Model
-- Employee Retention
-- Customer Churn
-- Product Lifespan
-- Management Decision-Making
-- Statistical Modeling in Management
-- Data-Driven Decision-Making
-- Business Analytics
-- Data-Driven Management
+- Survival analysis
+- Time-to-event data
+- Censoring and truncation
+- Hazard function
+- Survival function
+- Kaplan-meier estimator
+- Cox proportional hazards model
+- Employee retention
+- Customer churn
+- Product lifespan
+- Management decision-making
+- Statistical modeling in management
+- Data-driven decision-making
+- Business analytics
+- Data-driven management
 - R
-- python
+- Python
 title: Survival Analysis in Management
 ---
 

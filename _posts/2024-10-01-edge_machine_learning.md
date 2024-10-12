@@ -4,7 +4,9 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-10-01'
-excerpt: This article dives into the implementation of continuous machine learning deployment on edge devices, using MLOps and IoT management tools for a real-world agriculture use case.
+excerpt: This article dives into the implementation of continuous machine learning
+  deployment on edge devices, using MLOps and IoT management tools for a real-world
+  agriculture use case.
 header:
   image: /assets/images/Edge-Computing.png
   og_image: /assets/images/data_science_2.jpg
@@ -13,30 +15,36 @@ header:
   teaser: /assets/images/Edge-Computing.png
   twitter_image: /assets/images/data_science_2.jpg
 keywords:
-- Edge Machine Learning
-- Continuous Deployment on Edge Devices
-- MLOps for Edge AI
-- Smart Agriculture ML Deployment
-- IoT Machine Learning Solutions
-- Edge Inference
-- Real-Time AI on Edge Devices
-- Model Deployment in IoT
-- AI for Agriculture
-- Machine Learning Pipelines for Edge Devices
-- yaml
+- Edge machine learning
+- Continuous deployment on edge devices
+- Mlops for edge ai
+- Smart agriculture ml deployment
+- Iot machine learning solutions
+- Edge inference
+- Real-time ai on edge devices
+- Model deployment in iot
+- Ai for agriculture
+- Machine learning pipelines for edge devices
+- Yaml
 math: true
-seo_description: Explore how to implement continuous machine learning deployment on edge devices using MLOps platforms, focusing on a real-world example of a smart agriculture system.
+seo_description: Explore how to implement continuous machine learning deployment on
+  edge devices using MLOps platforms, focusing on a real-world example of a smart
+  agriculture system.
 seo_title: 'Continuous Machine Learning Deployment for Edge Devices: A Practical Approach'
 seo_type: article
 social_image: /assets/images/edge-devices.png
-summary: This article explores how to implement continuous machine learning deployment on edge devices using MLOps and IoT management platforms. Focusing on a real-world smart agriculture use case, it highlights the benefits of edge inference for real-time processing, lower latency, and improved decision-making in environments with limited connectivity.
+summary: This article explores how to implement continuous machine learning deployment
+  on edge devices using MLOps and IoT management platforms. Focusing on a real-world
+  smart agriculture use case, it highlights the benefits of edge inference for real-time
+  processing, lower latency, and improved decision-making in environments with limited
+  connectivity.
 tags:
-- MLOps
-- Edge AI
-- Continuous Deployment
-- Smart Devices
-- IoT
-- yaml
+- Mlops
+- Edge ai
+- Continuous deployment
+- Smart devices
+- Iot
+- Yaml
 title: Implementing Continuous Machine Learning Deployment on Edge Devices
 ---
 

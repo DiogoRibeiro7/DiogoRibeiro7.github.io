@@ -1,7 +1,7 @@
 ---
 tags:
-- plaintext
-- fortran
+- Plaintext
+- Fortran
 ---
 
 # Numerical Methods Using Fortran Repository

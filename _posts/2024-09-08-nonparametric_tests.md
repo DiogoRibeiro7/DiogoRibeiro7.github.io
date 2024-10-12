@@ -4,7 +4,9 @@ categories:
 - Statistics
 classes: wide
 date: '2024-09-08'
-excerpt: Explore the full potential of nonparametric tests, going beyond the Mann-Whitney Test. Learn how techniques like quantile regression and other nonparametric methods offer robust alternatives in statistical analysis.
+excerpt: Explore the full potential of nonparametric tests, going beyond the Mann-Whitney
+  Test. Learn how techniques like quantile regression and other nonparametric methods
+  offer robust alternatives in statistical analysis.
 header:
   image: /assets/images/data_science_7.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -15,26 +17,31 @@ header:
 keywords:
 - Nonparametric statistical tests
 - Quantile regression
-- Mann-Whitney alternatives
+- Mann-whitney alternatives
 - Robust statistical methods
 - Distribution-free analysis
-- r
-- bash
-- ruby
-- python
-seo_description: Discover the real power of nonparametric tests, moving beyond Mann-Whitney to explore quantile regression and other robust statistical techniques for data analysis without distributional assumptions.
+- R
+- Bash
+- Ruby
+- Python
+seo_description: Discover the real power of nonparametric tests, moving beyond Mann-Whitney
+  to explore quantile regression and other robust statistical techniques for data
+  analysis without distributional assumptions.
 seo_title: 'Nonparametric Tests Beyond Mann-Whitney: Unlocking Statistical Power'
 seo_type: article
-summary: This article explores the broader landscape of nonparametric tests, focusing on methods that go beyond the Mann-Whitney Test. It covers powerful techniques like quantile regression and highlights how these approaches are used for robust statistical analysis without strict distributional assumptions.
+summary: This article explores the broader landscape of nonparametric tests, focusing
+  on methods that go beyond the Mann-Whitney Test. It covers powerful techniques like
+  quantile regression and highlights how these approaches are used for robust statistical
+  analysis without strict distributional assumptions.
 tags:
-- Nonparametric Tests
-- Quantile Regression
-- Mann-Whitney Test
-- Robust Statistical Methods
-- r
-- bash
-- ruby
-- python
+- Nonparametric tests
+- Quantile regression
+- Mann-whitney test
+- Robust statistical methods
+- R
+- Bash
+- Ruby
+- Python
 title: 'The Real Power of Nonparametric Tests: Beyond Mann-Whitney'
 ---
 

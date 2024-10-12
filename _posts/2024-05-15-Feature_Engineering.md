@@ -17,19 +17,19 @@ header:
 seo_type: article
 subtitle: Featuretools and TPOT for Efficient and Effective Feature Engineering
 tags:
-- Feature Engineering
-- Machine Learning
-- Data Science
-- Automation Tools
+- Feature engineering
+- Machine learning
+- Data science
+- Automation tools
 - Featuretools
-- TPOT
-- Data Cleaning
-- Data Transformation
-- Feature Creation
-- Feature Selection
-- Genetic Algorithms
-- Model Optimization
-- python
+- Tpot
+- Data cleaning
+- Data transformation
+- Feature creation
+- Feature selection
+- Genetic algorithms
+- Model optimization
+- Python
 title: Automating Feature Engineering
 ---
 

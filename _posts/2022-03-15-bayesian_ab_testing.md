@@ -4,7 +4,8 @@ categories:
 - Statistics
 classes: wide
 date: '2022-03-15'
-excerpt: Explore Bayesian A/B testing as a powerful framework for analyzing conversion rates, providing more nuanced insights than traditional frequentist approaches.
+excerpt: Explore Bayesian A/B testing as a powerful framework for analyzing conversion
+  rates, providing more nuanced insights than traditional frequentist approaches.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_9.jpg
@@ -13,27 +14,29 @@ header:
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_9.jpg
 keywords:
-- Bayesian A/B testing
-- conversion rate analysis
+- Bayesian a/b testing
+- Conversion rate analysis
 - Bayesian methods
-- A/B testing in marketing
-- statistical testing
+- A/b testing in marketing
+- Statistical testing
 - Bayesian statistics
-- data-driven decision making
-- posterior probability
-- hypothesis testing
-- frequentist vs Bayesian
-- online experiments
-- marketing optimization
-- credible intervals
-- python
-seo_description: Learn how Bayesian A/B testing provides nuanced insights into conversion rates, offering a robust alternative to traditional frequentist methods in data analysis.
+- Data-driven decision making
+- Posterior probability
+- Hypothesis testing
+- Frequentist vs bayesian
+- Online experiments
+- Marketing optimization
+- Credible intervals
+- Python
+seo_description: Learn how Bayesian A/B testing provides nuanced insights into conversion
+  rates, offering a robust alternative to traditional frequentist methods in data
+  analysis.
 seo_title: 'Bayesian A/B Testing: Enhancing Conversion Rate Analysis'
 seo_type: article
 tags:
-- A/B Testing
-- Bayesian Methods
-- python
+- A/b testing
+- Bayesian methods
+- Python
 title: A Guide to Bayesian A/B Testing for Conversion Rates
 ---
 

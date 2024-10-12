@@ -13,21 +13,21 @@ header:
   twitter_image: /assets/images/data_science_2.jpg
 seo_type: article
 tags:
-- Stepwise Regression
-- Model Selection
-- Regression Analysis
+- Stepwise regression
+- Model selection
+- Regression analysis
 - Overfitting
-- Statistical Methods
-- Predictive Modeling
-- Forward Selection
-- Backward Elimination
-- Efroymson Algorithm
-- python
-- r
-- julia
-- - Mathematics
+- Statistical methods
+- Predictive modeling
+- Forward selection
+- Backward elimination
+- Efroymson algorithm
+- Python
+- R
+- Julia
+- '[''mathematics'']'
 - Statistics
-- Data Science
+- Data science
 title: 'Stepwise Regression: Methodology, Applications, and Concerns'
 ---
 

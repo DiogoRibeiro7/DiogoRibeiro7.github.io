@@ -5,7 +5,9 @@ categories:
 - Real-time Processing
 classes: wide
 date: '2024-09-05'
-excerpt: Learn how to implement real-time data streaming using Python and Apache Kafka. This guide covers key concepts, setup, and best practices for managing data streams in real-time processing pipelines.
+excerpt: Learn how to implement real-time data streaming using Python and Apache Kafka.
+  This guide covers key concepts, setup, and best practices for managing data streams
+  in real-time processing pipelines.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -22,12 +24,17 @@ keywords:
 - Data engineering best practices
 - Bash
 - Python
-- bash
-- python
-seo_description: Explore real-time data streaming using Python and Apache Kafka. This article explains the setup, core concepts, and best practices for creating efficient real-time data processing pipelines.
+- Bash
+- Python
+seo_description: Explore real-time data streaming using Python and Apache Kafka. This
+  article explains the setup, core concepts, and best practices for creating efficient
+  real-time data processing pipelines.
 seo_title: Real-time Data Streaming with Python and Apache Kafka
 seo_type: article
-summary: This article provides a comprehensive guide to implementing real-time data streaming using Python and Apache Kafka. It explains how to set up Kafka, stream data efficiently, and manage real-time data pipelines in Python, with a focus on best practices for data engineering.
+summary: This article provides a comprehensive guide to implementing real-time data
+  streaming using Python and Apache Kafka. It explains how to set up Kafka, stream
+  data efficiently, and manage real-time data pipelines in Python, with a focus on
+  best practices for data engineering.
 tags:
 - Apache kafka
 - Python
@@ -36,8 +43,8 @@ tags:
 - Data pipelines
 - Bash
 - Python
-- bash
-- python
+- Bash
+- Python
 title: Real-time Data Streaming using Python and Kafka
 ---
 

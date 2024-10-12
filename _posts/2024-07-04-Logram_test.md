@@ -16,17 +16,17 @@ header:
   twitter_image: /assets/images/data_science_7.jpg
 seo_type: article
 tags:
-- Logrank Test
-- Survival Probability
-- Chi-Square Test
+- Logrank test
+- Survival probability
+- Chi-square test
 - Censoring
-- Cox Proportional Hazards Model
-- Statistical Significance
-- Observed Events
-- Expected Events
-- Hypothesis Testing
-- python
-- r
+- Cox proportional hazards model
+- Statistical significance
+- Observed events
+- Expected events
+- Hypothesis testing
+- Python
+- R
 title: Understanding the Logrank Test in Survival Analysis
 ---
 

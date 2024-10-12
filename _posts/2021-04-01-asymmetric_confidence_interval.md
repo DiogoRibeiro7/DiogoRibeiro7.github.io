@@ -4,7 +4,8 @@ categories:
 - Statistics
 classes: wide
 date: '2021-04-01'
-excerpt: Discover the reasons behind asymmetric confidence intervals in statistics and how they impact research interpretation.
+excerpt: Discover the reasons behind asymmetric confidence intervals in statistics
+  and how they impact research interpretation.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -13,23 +14,26 @@ header:
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_5.jpg
 keywords:
-- Asymmetric Confidence Interval
-- Wilson Score Interval
-- python
-- bash
-- Data Distribution
-- Statistical Methods
-seo_description: Learn why confidence intervals can be asymmetric, the factors that contribute to this phenomenon, and how to interpret them in statistical analysis.
+- Asymmetric confidence interval
+- Wilson score interval
+- Python
+- Bash
+- Data distribution
+- Statistical methods
+seo_description: Learn why confidence intervals can be asymmetric, the factors that
+  contribute to this phenomenon, and how to interpret them in statistical analysis.
 seo_title: 'Asymmetric Confidence Intervals: Causes and Understanding'
 seo_type: article
-summary: Asymmetric confidence intervals can result from the nature of your data or the statistical method used. This article explores the causes and implications of these intervals for interpreting research results.
+summary: Asymmetric confidence intervals can result from the nature of your data or
+  the statistical method used. This article explores the causes and implications of
+  these intervals for interpreting research results.
 tags:
-- Asymmetric CI
-- Confidence Intervals
-- bash
-- Data Distribution
-- Statistical Tests
-- python
+- Asymmetric ci
+- Confidence intervals
+- Bash
+- Data distribution
+- Statistical tests
+- Python
 title: 'Understanding Asymmetric Confidence Intervals: Causes and Implications'
 ---
 

@@ -17,15 +17,15 @@ header:
 seo_type: article
 tags:
 - Outliers
-- Robust Statistics
-- Data Analysis
-- Measurement Error
-- Heavy-Tailed Distributions
-- Mixture Models
-- Extreme Observations
-- Novelty Detection
-- Box Plots
-- Statistical Methods
+- Robust statistics
+- Data analysis
+- Measurement error
+- Heavy-tailed distributions
+- Mixture models
+- Extreme observations
+- Novelty detection
+- Box plots
+- Statistical methods
 title: 'Exploring Outliers in Data Analysis: Advanced Concepts and Techniques'
 ---
 

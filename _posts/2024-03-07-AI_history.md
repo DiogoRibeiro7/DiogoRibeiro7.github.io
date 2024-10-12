@@ -15,9 +15,9 @@ header:
 keywords: []
 seo_type: article
 tags:
-- Artificial Intelligence
-- AI
-- Technology History
+- Artificial intelligence
+- Ai
+- Technology history
 title: The History of Artificial Intelligence
 ---
 

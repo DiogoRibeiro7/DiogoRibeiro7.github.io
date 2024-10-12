@@ -4,7 +4,8 @@ categories:
 - Signal Processing
 classes: wide
 date: '2024-06-30'
-excerpt: Explore the impact of human presence on RSSI and the challenges it introduces, along with effective mitigation strategies in wireless communication systems.
+excerpt: Explore the impact of human presence on RSSI and the challenges it introduces,
+  along with effective mitigation strategies in wireless communication systems.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -13,28 +14,32 @@ header:
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
-- RSSI
-- Signal Attenuation
-- Wireless Communication
-- Multipath Effects
-- Antenna Placement
+- Rssi
+- Signal attenuation
+- Wireless communication
+- Multipath effects
+- Antenna placement
 - Shadowing
 - Interference
 - Beamforming
-seo_description: Discover how the presence of a human body impacts RSSI in wireless networks and explore strategies for overcoming challenges like signal attenuation, interference, and multipath effects.
+seo_description: Discover how the presence of a human body impacts RSSI in wireless
+  networks and explore strategies for overcoming challenges like signal attenuation,
+  interference, and multipath effects.
 seo_title: 'Effects of a Human Body on RSSI: Challenges and Mitigations'
 seo_type: article
-summary: This article examines how human bodies affect Received Signal Strength Indicator (RSSI), the resulting challenges like signal attenuation and interference, and key techniques for mitigating these effects.
+summary: This article examines how human bodies affect Received Signal Strength Indicator
+  (RSSI), the resulting challenges like signal attenuation and interference, and key
+  techniques for mitigating these effects.
 tags:
-- RSSI
-- Signal Attenuation
-- Multipath Effects
+- Rssi
+- Signal attenuation
+- Multipath effects
 - Shadowing
 - Interference
-- Antenna Placement
-- Diversity Techniques
-- Power Control
-- High Frequency Bands
+- Antenna placement
+- Diversity techniques
+- Power control
+- High frequency bands
 - Beamforming
 title: 'Effects of a Human Body on RSSI: Challenges and Mitigations'
 ---

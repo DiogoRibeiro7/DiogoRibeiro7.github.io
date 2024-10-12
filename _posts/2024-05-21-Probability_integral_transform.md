@@ -27,7 +27,7 @@ tags:
 - Credit risk modeling
 - Financial risk management
 - R
-- r
+- R
 title: 'Probability Integral Transform: Theory and Applications'
 ---
 

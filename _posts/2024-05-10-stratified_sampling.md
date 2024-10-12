@@ -16,22 +16,22 @@ header:
 seo_type: article
 subtitle: A Key to Representative Research
 tags:
-- Stratified Sampling
-- Statistical Methods
-- Sampling Bias
-- Representative Sampling
-- Population Strata
-- Random Sampling
-- Cluster Sampling
-- Research Accuracy
-- Data Collection Efficiency
-- Methodological Challenges
-- Statistical Analysis
-- Comparative Study
-- Sample Size Determination
-- Data Representativeness
-- Survey Methodology
-- Field Applications
+- Stratified sampling
+- Statistical methods
+- Sampling bias
+- Representative sampling
+- Population strata
+- Random sampling
+- Cluster sampling
+- Research accuracy
+- Data collection efficiency
+- Methodological challenges
+- Statistical analysis
+- Comparative study
+- Sample size determination
+- Data representativeness
+- Survey methodology
+- Field applications
 title: Stratified Sampling
 ---
 

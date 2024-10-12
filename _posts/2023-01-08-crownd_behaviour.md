@@ -4,7 +4,9 @@ categories:
 - Mathematics
 classes: wide
 date: '2023-01-08'
-excerpt: Dive into the fascinating world of pedestrian behavior through mathematical models like the Social Force Model. Learn how these models inform urban planning, crowd management, and traffic control for safer and more efficient public spaces.
+excerpt: Dive into the fascinating world of pedestrian behavior through mathematical
+  models like the Social Force Model. Learn how these models inform urban planning,
+  crowd management, and traffic control for safer and more efficient public spaces.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -13,26 +15,29 @@ header:
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_6.jpg
 keywords:
-- pedestrian behavior
-- mathematical modeling
-- Social Force Model
-- urban planning
-- crowd management
-- traffic control
-- pedestrian dynamics
-- fluid dynamics in traffic
-- public space safety
-- transportation systems
-seo_description: Explore the mathematical modeling of pedestrian behavior, focusing on the Social Force Model, statistical methods, and fluid dynamics to enhance urban planning, crowd management, and traffic control.
-seo_title: 'Mathematical Models of Pedestrian Behavior: Insights into Urban Planning and Crowd Management'
+- Pedestrian behavior
+- Mathematical modeling
+- Social force model
+- Urban planning
+- Crowd management
+- Traffic control
+- Pedestrian dynamics
+- Fluid dynamics in traffic
+- Public space safety
+- Transportation systems
+seo_description: Explore the mathematical modeling of pedestrian behavior, focusing
+  on the Social Force Model, statistical methods, and fluid dynamics to enhance urban
+  planning, crowd management, and traffic control.
+seo_title: 'Mathematical Models of Pedestrian Behavior: Insights into Urban Planning
+  and Crowd Management'
 seo_type: article
 subtitle: Understanding Pedestrian Behavior through Mathematical Models
 tags:
-- Mathematical Modeling
-- Pedestrian Behavior
-- Urban Planning
-- Crowd Management
-- Traffic Control
+- Mathematical modeling
+- Pedestrian behavior
+- Urban planning
+- Crowd management
+- Traffic control
 title: Walking the Mathematical Path
 ---
 

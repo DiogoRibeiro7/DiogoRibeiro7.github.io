@@ -18,19 +18,19 @@ header:
 seo_type: article
 subtitle: Understanding the Probability of the Sun Rising Tomorrow
 tags:
-- Bayesian Inference
-- Frequentist Probability
-- Rule of Succession
-- Sunrise Problem
-- Richard Price
-- Thomas Bayes
-- Probability Theory
-- Risk Assessment
-- Reliability Engineering
-- Medical Diagnostics
-- Hypothesis Testing
-- Survival Analysis
-- Philosophy of Science
+- Bayesian inference
+- Frequentist probability
+- Rule of succession
+- Sunrise problem
+- Richard price
+- Thomas bayes
+- Probability theory
+- Risk assessment
+- Reliability engineering
+- Medical diagnostics
+- Hypothesis testing
+- Survival analysis
+- Philosophy of science
 title: 'The Sunrise Problem: A Bayesian vs Frequentist Perspective'
 ---
 

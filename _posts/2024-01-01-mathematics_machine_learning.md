@@ -4,7 +4,9 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-01-01'
-excerpt: This article delves into the core mathematical principles behind machine learning, including classification and regression settings, loss functions, risk minimization, decision trees, and more.
+excerpt: This article delves into the core mathematical principles behind machine
+  learning, including classification and regression settings, loss functions, risk
+  minimization, decision trees, and more.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -13,27 +15,29 @@ header:
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_5.jpg
 keywords:
-- Mathematics of Machine Learning
-- Machine Learning Mathematical Models
-- Supervised Learning
-- Classification and Regression
-- Empirical Risk Minimization
-- Loss Functions in Machine Learning
-- Bias-Variance Tradeoff
-- Cross-Validation Techniques
-- Decision Trees and Random Forests
-- Statistical Learning Theory
-- VC Dimension
-- Rademacher Complexity
-- Machine Learning Algorithms
-- Generalization in Machine Learning
-- Concentration Inequalities in Machine Learning
-seo_description: An extensive look at the mathematical foundations of machine learning, exploring classification, regression, empirical risk minimization, and popular algorithms like decision trees and random forests.
+- Mathematics of machine learning
+- Machine learning mathematical models
+- Supervised learning
+- Classification and regression
+- Empirical risk minimization
+- Loss functions in machine learning
+- Bias-variance tradeoff
+- Cross-validation techniques
+- Decision trees and random forests
+- Statistical learning theory
+- Vc dimension
+- Rademacher complexity
+- Machine learning algorithms
+- Generalization in machine learning
+- Concentration inequalities in machine learning
+seo_description: An extensive look at the mathematical foundations of machine learning,
+  exploring classification, regression, empirical risk minimization, and popular algorithms
+  like decision trees and random forests.
 seo_title: 'Mathematics of Machine Learning: Key Concepts and Methods'
 seo_type: article
 tags:
-- Machine Learning
-- Mathematical Models
+- Machine learning
+- Mathematical models
 - Statistics
 - Algorithms
 title: 'Mathematics of Machine Learning: A Comprehensive Exploration'
