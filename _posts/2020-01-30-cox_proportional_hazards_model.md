@@ -21,6 +21,8 @@ keywords:
 - Censored Data
 - Hazard Ratios
 - Proportional Hazards Assumption
+- r
+- python
 seo_description: Explore the Cox Proportional Hazards Model and its application in survival analysis, with examples from clinical trials and medical research.
 seo_title: Understanding Cox Proportional Hazards Model for Medical Survival Analysis
 seo_type: article
@@ -32,6 +34,8 @@ tags:
 - Clinical Trials
 - Time-to-Event Data
 - Censored Data
+- r
+- python
 title: 'Cox Proportional Hazards Model: A Guide to Survival Analysis in Medical Studies'
 ---
 
@@ -90,6 +94,7 @@ h(t \mid X_i) = h_0(t) \cdot \exp(\beta_1 X_{i1} + \beta_2 X_{i2} + \dots + \bet
 $$
 
 Where:
+
 - $$h_0(t)$$ is the **baseline hazard**, representing the hazard function for an individual with baseline (or zero) values for all covariates.
 - $$X_i$$ is a vector of covariates for individual $$i$$.
 - $$\beta_1, \dots, \beta_p$$ are the regression coefficients corresponding to the covariates.
@@ -132,6 +137,7 @@ h(t \mid X) = h_0(t) \cdot \exp(\beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p)
 $$
 
 Where:
+
 - $$h(t \mid X)$$ is the hazard function at time $$t$$ given the covariate values.
 - $$h_0(t)$$ is the **baseline hazard function**, representing the hazard for an individual with all covariates set to zero.
 - $$\beta_1, \dots, \beta_p$$ are the **regression coefficients** that quantify the relationship between the covariates and the hazard.
