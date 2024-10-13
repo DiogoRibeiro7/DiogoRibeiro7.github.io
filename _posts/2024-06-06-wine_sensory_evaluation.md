@@ -29,8 +29,7 @@ tags:
 - Anova
 - Regression analysis
 - Wine quality
-title: 'Wine Sensory Evaluation: From Sensory Lexicons and Emotions to Data Statistical
-  Analysis Techniques'
+title: 'Wine Sensory Evaluation: From Sensory Lexicons and Emotions to Data Statistical Analysis Techniques'
 ---
 
 ## Abstract

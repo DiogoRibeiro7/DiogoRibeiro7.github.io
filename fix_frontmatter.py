@@ -3,6 +3,8 @@ import re
 import frontmatter
 import random
 
+TOTAL_FILES = 14
+
 def extract_date_from_filename(filename):
     # Assuming the filename format is 'YYYY-MM-DD-some-title.md'
     match = re.match(r'(\d{4}-\d{2}-\d{2})-', filename)
@@ -48,7 +50,7 @@ def process_markdown_file(filepath):
         post['toc'] = False
         
     # Insert 'header' block if not already present
-    random_number = random.randint(1, 9)
+    random_number = random.randint(1, TOTAL_FILES)
     if 'header' not in post:
         print(f"Inserting 'header' block in {filename}")
         post['header'] = {

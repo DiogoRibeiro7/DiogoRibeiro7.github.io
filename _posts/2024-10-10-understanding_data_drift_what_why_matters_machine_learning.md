@@ -4,9 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-10-10'
-excerpt: Data drift can significantly affect the performance of machine learning models
-  over time. Learn about different types of drift and how they impact model predictions
-  in dynamic environments.
+excerpt: Data drift can significantly affect the performance of machine learning models over time. Learn about different types of drift and how they impact model predictions in dynamic environments.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_2.jpg
@@ -20,15 +18,10 @@ keywords:
 - Covariate drift
 - Concept drift
 - Label drift
-seo_description: This article explores data drift in machine learning, its types,
-  and how changes in input data can affect model performance. It covers covariate,
-  label, and concept drift, with real-world examples from finance and healthcare.
+seo_description: This article explores data drift in machine learning, its types, and how changes in input data can affect model performance. It covers covariate, label, and concept drift, with real-world examples from finance and healthcare.
 seo_title: 'Understanding Data Drift in Machine Learning: Types and Impact'
 seo_type: article
-summary: This article explains the concept of data drift, focusing on how changes
-  in data distribution affect machine learning model performance. We discuss the different
-  types of data drift, such as covariate, label, and concept drift, providing examples
-  from industries like finance and healthcare.
+summary: This article explains the concept of data drift, focusing on how changes in data distribution affect machine learning model performance. We discuss the different types of data drift, such as covariate, label, and concept drift, providing examples from industries like finance and healthcare.
 tags:
 - Data drift
 - Machine learning models

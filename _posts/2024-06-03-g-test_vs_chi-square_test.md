@@ -5,9 +5,7 @@ categories:
 - Categorical Data Analysis
 classes: wide
 date: '2024-06-03'
-excerpt: Learn the key differences between the G-Test and Chi-Square Test for analyzing
-  categorical data, and discover their applications in fields like genetics, market
-  research, and large datasets.
+excerpt: Learn the key differences between the G-Test and Chi-Square Test for analyzing categorical data, and discover their applications in fields like genetics, market research, and large datasets.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -22,14 +20,10 @@ keywords:
 - Genetic studies
 - Market research
 - Large datasets
-seo_description: Explore the differences between the G-Test and Chi-Square Test, two
-  methods for analyzing categorical data, with use cases in genetic studies, market
-  research, and large datasets.
+seo_description: Explore the differences between the G-Test and Chi-Square Test, two methods for analyzing categorical data, with use cases in genetic studies, market research, and large datasets.
 seo_title: 'G-Test vs. Chi-Square Test: A Comparison for Categorical Data Analysis'
 seo_type: article
-summary: The G-Test and Chi-Square Test are two widely used statistical methods for
-  analyzing categorical data. This article compares their formulas, assumptions, advantages,
-  and applications in fields like genetic studies, market research, and large datasets.
+summary: The G-Test and Chi-Square Test are two widely used statistical methods for analyzing categorical data. This article compares their formulas, assumptions, advantages, and applications in fields like genetic studies, market research, and large datasets.
 tags:
 - G-test
 - Chi-square test

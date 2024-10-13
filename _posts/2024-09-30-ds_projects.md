@@ -5,8 +5,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-09-30'
-excerpt: This checklist helps Data Science professionals ensure thorough validation
-  of their projects before declaring success and deploying models.
+excerpt: This checklist helps Data Science professionals ensure thorough validation of their projects before declaring success and deploying models.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_2.jpg
@@ -19,8 +18,7 @@ keywords:
 - Model deployment
 - Research validation
 - Best practices
-seo_description: A detailed checklist for Data Science professionals to validate research
-  and model integrity before deployment.
+seo_description: A detailed checklist for Data Science professionals to validate research and model integrity before deployment.
 seo_title: 'Data Science Project Checklist: Ensure Success Before Deployment'
 seo_type: article
 tags:

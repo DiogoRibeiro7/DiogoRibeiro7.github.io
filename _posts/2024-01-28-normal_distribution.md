@@ -4,8 +4,7 @@ categories:
 - Mathematics
 classes: wide
 date: '2024-01-28'
-excerpt: Discover the significance of the Normal Distribution, also known as the Bell
-  Curve, in statistics and its widespread application in real-world scenarios.
+excerpt: Discover the significance of the Normal Distribution, also known as the Bell Curve, in statistics and its widespread application in real-world scenarios.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_9.jpg
@@ -25,9 +24,8 @@ keywords:
 - Standard deviation
 - Mean and variance
 - Python
-seo_description: An in-depth exploration of the Normal Distribution, often called
-  the Bell Curve, and its critical role in data science, machine learning, and statistical
-  analysis.
+- python
+seo_description: An in-depth exploration of the Normal Distribution, often called the Bell Curve, and its critical role in data science, machine learning, and statistical analysis.
 seo_title: 'Understanding the Classic Bell Curve: The Normal Distribution'
 seo_type: article
 subtitle: The Normal Distribution
@@ -39,6 +37,7 @@ tags:
 - Statistical analysis
 - Bell curve
 - Python
+- python
 title: A Closer Look at the Classic Bell Curve
 ---
 

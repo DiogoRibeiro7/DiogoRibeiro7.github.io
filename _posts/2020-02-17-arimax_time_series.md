@@ -4,8 +4,7 @@ categories:
 - Time Series Analysis
 classes: wide
 date: '2020-02-17'
-excerpt: The ARIMAX model extends ARIMA by integrating exogenous variables into time
-  series forecasting, offering more accurate predictions for complex systems.
+excerpt: The ARIMAX model extends ARIMA by integrating exogenous variables into time series forecasting, offering more accurate predictions for complex systems.
 header:
   image: /assets/images/data_science_4.jpg
   og_image: /assets/images/data_science_4.jpg
@@ -20,14 +19,11 @@ keywords:
 - Forecasting
 - Time series
 - Arimax
-seo_description: Explore the ARIMAX model, a powerful statistical tool for time series
-  forecasting that incorporates exogenous variables. Learn how ARIMAX builds on ARIMA
-  to improve predictive performance.
+- r
+seo_description: Explore the ARIMAX model, a powerful statistical tool for time series forecasting that incorporates exogenous variables. Learn how ARIMAX builds on ARIMA to improve predictive performance.
 seo_title: 'ARIMAX Time Series Model: An In-Depth Guide'
 seo_type: article
-summary: This article explores the ARIMAX time series model, which enhances ARIMA
-  by incorporating external variables. We'll dive into the model's structure, assumptions,
-  applications, and how it compares to ARIMA.
+summary: This article explores the ARIMAX time series model, which enhances ARIMA by incorporating external variables. We'll dive into the model's structure, assumptions, applications, and how it compares to ARIMA.
 tags:
 - R
 - Statistical modeling
@@ -35,6 +31,7 @@ tags:
 - Arima
 - Time series forecasting
 - Arimax
+- r
 title: 'ARIMAX Time Series: Comprehensive Guide'
 ---
 

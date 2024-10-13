@@ -4,9 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-01-01'
-excerpt: This article delves into the core mathematical principles behind machine
-  learning, including classification and regression settings, loss functions, risk
-  minimization, decision trees, and more.
+excerpt: This article delves into the core mathematical principles behind machine learning, including classification and regression settings, loss functions, risk minimization, decision trees, and more.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -30,9 +28,7 @@ keywords:
 - Machine learning algorithms
 - Generalization in machine learning
 - Concentration inequalities in machine learning
-seo_description: An extensive look at the mathematical foundations of machine learning,
-  exploring classification, regression, empirical risk minimization, and popular algorithms
-  like decision trees and random forests.
+seo_description: An extensive look at the mathematical foundations of machine learning, exploring classification, regression, empirical risk minimization, and popular algorithms like decision trees and random forests.
 seo_title: 'Mathematics of Machine Learning: Key Concepts and Methods'
 seo_type: article
 tags:

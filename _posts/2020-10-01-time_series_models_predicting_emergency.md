@@ -4,8 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2020-10-01'
-excerpt: A comparison between machine learning models and univariate time series models
-  for predicting emergency department visit volumes, focusing on predictive accuracy.
+excerpt: A comparison between machine learning models and univariate time series models for predicting emergency department visit volumes, focusing on predictive accuracy.
 header:
   image: /assets/images/data_science_5.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -19,23 +18,17 @@ keywords:
 - Gradient boosted machines
 - Resource allocation
 - Random forest
-seo_description: This study examines machine learning and univariate time series models
-  for predicting emergency department visit volumes, highlighting the superior predictive
-  accuracy of random forest models.
-seo_title: Comparing Machine Learning and Time Series Models for Predicting ED Visit
-  Volumes
+seo_description: This study examines machine learning and univariate time series models for predicting emergency department visit volumes, highlighting the superior predictive accuracy of random forest models.
+seo_title: Comparing Machine Learning and Time Series Models for Predicting ED Visit Volumes
 seo_type: article
-summary: A study comparing machine learning models (random forest, GBM) with univariate
-  time series models (ARIMA, ETS, Prophet) for predicting emergency department visits.
-  Results show machine learning models perform better, though not substantially so.
+summary: A study comparing machine learning models (random forest, GBM) with univariate time series models (ARIMA, ETS, Prophet) for predicting emergency department visits. Results show machine learning models perform better, though not substantially so.
 tags:
 - Emergency department
 - Time series forecasting
 - Machine learning
 - Gradient boosted machines
 - Random forest
-title: Machine Learning vs. Univariate Time Series Models in Predicting Emergency
-  Department Visit Volumes
+title: Machine Learning vs. Univariate Time Series Models in Predicting Emergency Department Visit Volumes
 ---
 
 ## 1. Introduction

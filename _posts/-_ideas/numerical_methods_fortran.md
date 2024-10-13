@@ -2,6 +2,8 @@
 tags:
 - Plaintext
 - Fortran
+- plaintext
+- fortran
 ---
 
 # Numerical Methods Using Fortran Repository

@@ -4,8 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2022-08-14'
-excerpt: Explore the Wald test, a key tool in hypothesis testing for regression models,
-  its applications, and its role in logistic regression, Poisson regression, and beyond.
+excerpt: Explore the Wald test, a key tool in hypothesis testing for regression models, its applications, and its role in logistic regression, Poisson regression, and beyond.
 header:
   image: /assets/images/data_science_6.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -19,15 +18,10 @@ keywords:
 - Regression analysis
 - Logistic regression
 - Poisson regression
-seo_description: A comprehensive guide to the Wald test for hypothesis testing in
-  regression models, its applications in logistic regression, Poisson regression,
-  and more.
+seo_description: A comprehensive guide to the Wald test for hypothesis testing in regression models, its applications in logistic regression, Poisson regression, and more.
 seo_title: 'Wald Test in Regression Analysis: An In-Depth Guide'
 seo_type: article
-summary: The Wald test is a fundamental statistical method used to evaluate hypotheses
-  in regression analysis. This article provides an in-depth discussion on the theory,
-  practical applications, and interpretation of the Wald test in various regression
-  models.
+summary: The Wald test is a fundamental statistical method used to evaluate hypotheses in regression analysis. This article provides an in-depth discussion on the theory, practical applications, and interpretation of the Wald test in various regression models.
 tags:
 - Wald test
 - Logistic regression

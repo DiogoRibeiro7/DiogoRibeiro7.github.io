@@ -4,8 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2020-03-30'
-excerpt: Data science is a key driver of sustainability, offering insights that help
-  optimize resources, reduce waste, and improve the energy efficiency of supply chains.
+excerpt: Data science is a key driver of sustainability, offering insights that help optimize resources, reduce waste, and improve the energy efficiency of supply chains.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -19,14 +18,10 @@ keywords:
 - Green innovation
 - Resource optimization
 - Supply chain efficiency
-seo_description: This article explores how companies and organizations are using data
-  science to enhance sustainability practices in areas like resource optimization,
-  waste reduction, and energy efficiency.
+seo_description: This article explores how companies and organizations are using data science to enhance sustainability practices in areas like resource optimization, waste reduction, and energy efficiency.
 seo_title: How Data Science is Driving Green Innovation through Sustainability Analytics
 seo_type: article
-summary: In this article, we explore the role of data science in driving green innovation
-  through sustainability analytics, examining how companies use data to optimize resources,
-  cut waste, and enhance supply chain efficiency.
+summary: In this article, we explore the role of data science in driving green innovation through sustainability analytics, examining how companies use data to optimize resources, cut waste, and enhance supply chain efficiency.
 tags:
 - Sustainability analytics
 - Data science

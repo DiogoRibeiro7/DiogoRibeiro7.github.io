@@ -5,9 +5,7 @@ categories:
 - Data Science
 classes: wide
 date: '2024-02-01'
-excerpt: Discover the importance of Customer Lifetime Value (CLV) in shaping business
-  strategies, improving customer retention, and enhancing marketing efforts for sustainable
-  growth.
+excerpt: Discover the importance of Customer Lifetime Value (CLV) in shaping business strategies, improving customer retention, and enhancing marketing efforts for sustainable growth.
 header:
   image: /assets/images/data_science_7.jpg
   og_image: /assets/images/data_science_2.jpg
@@ -27,9 +25,8 @@ keywords:
 - Loyalty programs
 - Data analytics
 - Python
-seo_description: Explore Customer Lifetime Value (CLV) and its role in driving business
-  growth. Learn how CLV influences customer retention, acquisition, and marketing
-  strategies.
+- python
+seo_description: Explore Customer Lifetime Value (CLV) and its role in driving business growth. Learn how CLV influences customer retention, acquisition, and marketing strategies.
 seo_title: 'Understanding Customer Lifetime Value: A Key to Business Growth'
 seo_type: article
 subtitle: A Key Metric for Business Growth
@@ -44,6 +41,7 @@ tags:
 - Business growth
 - Loyalty programs
 - Python
+- python
 title: Understanding Customer Lifetime Value
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

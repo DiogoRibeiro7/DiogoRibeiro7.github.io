@@ -38,6 +38,8 @@ tags:
 - Scalable clustering algorithms in r
 - Unknown
 - R
+- r
+- unknown
 title: Kernel Clustering in R
 ---
 

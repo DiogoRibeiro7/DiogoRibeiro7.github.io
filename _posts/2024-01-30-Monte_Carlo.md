@@ -5,8 +5,7 @@ categories:
 classes: wide
 date: '2024-01-30'
 draft: false
-excerpt: Discover how Bayesian inference and MCMC algorithms like Metropolis-Hastings
-  can solve complex probability problems through real-world examples and Python implementation.
+excerpt: Discover how Bayesian inference and MCMC algorithms like Metropolis-Hastings can solve complex probability problems through real-world examples and Python implementation.
 header:
   image: /assets/images/data_science_5.jpg
   og_image: /assets/images/data_science_4.jpg
@@ -19,15 +18,13 @@ keywords:
 - Mcmc algorithms
 - Python
 - Python
+- python
 math: true
-seo_description: Explore Bayesian statistics and the power of Markov Chain Monte Carlo
-  (MCMC) in handling complex probabilistic models. Learn with practical examples and
-  Python code.
+seo_description: Explore Bayesian statistics and the power of Markov Chain Monte Carlo (MCMC) in handling complex probabilistic models. Learn with practical examples and Python code.
 seo_title: 'Mastering Bayesian Statistics with MCMC: A Deep Dive into Complex Probabilities'
 seo_type: article
 subtitle: Complex Probabilities with Markov Chain Monte Carlo
-summary: A comprehensive guide to understanding Bayesian statistics and MCMC methods,
-  including real-world applications and Python examples.
+summary: A comprehensive guide to understanding Bayesian statistics and MCMC methods, including real-world applications and Python examples.
 tags:
 - Bayesian statistics
 - Markov chain monte carlo (mcmc)
@@ -39,6 +36,7 @@ tags:
 - Machine learning algorithms
 - Python
 - Python
+- python
 title: 'Mastering Bayesian Statistics: An In-Depth Guide to MCMC'
 ---
 

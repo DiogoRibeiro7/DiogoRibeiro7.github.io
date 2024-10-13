@@ -4,9 +4,7 @@ categories:
 - Time Series Analysis
 classes: wide
 date: '2024-10-30'
-excerpt: This article provides an in-depth look at STL and X-13-SEATS, two powerful
-  methods for decomposing time series into trend, seasonal, and residual components.
-  Learn how these methods help model seasonality in time series forecasting.
+excerpt: This article provides an in-depth look at STL and X-13-SEATS, two powerful methods for decomposing time series into trend, seasonal, and residual components. Learn how these methods help model seasonality in time series forecasting.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -23,15 +21,12 @@ keywords:
 - Python
 - Python
 - R
-seo_description: Learn how Seasonal-Trend decomposition using LOESS (STL) and X-13-SEATS
-  methods help model seasonality in time series data, with practical examples in R
-  and Python.
+- python
+- r
+seo_description: Learn how Seasonal-Trend decomposition using LOESS (STL) and X-13-SEATS methods help model seasonality in time series data, with practical examples in R and Python.
 seo_title: STL and X-13 Methods for Time Series Decomposition
 seo_type: article
-summary: Explore STL (Seasonal-Trend decomposition using LOESS) and X-13-SEATS, two
-  prominent methods for time series decomposition, and their importance in modeling
-  seasonality. The article includes practical examples and code implementation in
-  both R and Python.
+summary: Explore STL (Seasonal-Trend decomposition using LOESS) and X-13-SEATS, two prominent methods for time series decomposition, and their importance in modeling seasonality. The article includes practical examples and code implementation in both R and Python.
 tags:
 - Seasonal decomposition
 - Time series
@@ -40,6 +35,8 @@ tags:
 - Forecasting
 - Python
 - R
+- python
+- r
 title: 'Introduction to Seasonal Decomposition of Time Series: STL and X-13 Methods'
 ---
 
