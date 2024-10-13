@@ -3,7 +3,7 @@ import re
 import frontmatter
 import random
 
-TOTAL_FILES = 14
+TOTAL_FILES = 20
 
 def extract_date_from_filename(filename):
     # Assuming the filename format is 'YYYY-MM-DD-some-title.md'
