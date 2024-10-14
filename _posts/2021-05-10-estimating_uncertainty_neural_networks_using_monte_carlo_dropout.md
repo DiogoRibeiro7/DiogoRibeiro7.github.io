@@ -54,7 +54,7 @@ Dropout is a regularization technique commonly used to prevent overfitting in ne
 
 Monte Carlo dropout, introduced by Yarin Gal and his colleagues, builds on this technique by keeping dropout enabled during inference. This seemingly simple modification allows the model to behave like a Bayesian approximation, enabling it to produce a distribution of outputs for a given input. By running the neural network multiple times on the same input (with different dropout masks applied each time), we can approximate the posterior predictive distribution of the model’s outputs.
 
-Mathematically, if $f(y|x)$ denotes the output of the neural network for class $y$ on input $x$, then the Monte Carlo dropout approach involves drawing multiple samples from $f(y|x)$ by running the model several times with dropout enabled. These samples can be used to compute the mean and variance of the model's predictions, which serve as estimates of the predictive mean $\mathbb{E}[f(y|x)]$ and predictive variance $\text{Var}[f(y|x)]$.
+Mathematically, if $$f(y|x)$$ denotes the output of the neural network for class $$y$$ on input $$x$$, then the Monte Carlo dropout approach involves drawing multiple samples from $$f(y|x)$$ by running the model several times with dropout enabled. These samples can be used to compute the mean and variance of the model's predictions, which serve as estimates of the predictive mean $$\mathbb{E}[f(y|x)]$$ and predictive variance $$\text{Var}[f(y|x)]$$.
 
 This technique provides a straightforward way to quantify the uncertainty of a model's predictions. In practice, Monte Carlo dropout is used to estimate uncertainty in both classification and regression tasks, although our focus here will be on multi-class classification.
 
@@ -72,13 +72,13 @@ Monte Carlo dropout works by approximating the posterior distribution of a model
 
 ### Formalizing the Process
 
-Let $f(y|x)$ be the softmax output of the neural network for class $y$ given input $x$. Monte Carlo dropout involves generating $T$ samples $\{ f_t(y|x) \}_{t=1}^{T}$ by running the network $T$ times with different dropout masks. From these samples, we can compute:
+Let $$f(y|x)$$ be the softmax output of the neural network for class $$y$$ given input $$x$$. Monte Carlo dropout involves generating $$T$$ samples $$\{ f_t(y|x) \}_{t=1}^{T}$$ by running the network $$T$$ times with different dropout masks. From these samples, we can compute:
 
 - **Predictive mean**: 
   $$
   \mathbb{E}[f(y|x)] = \frac{1}{T} \sum_{t=1}^{T} f_t(y|x)
   $$
-  This gives the average probability assigned to class $y$ across the $T$ stochastic forward passes.
+  This gives the average probability assigned to class $$y$$ across the $$T$$ stochastic forward passes.
 
 - **Predictive variance**: 
   $$
@@ -100,7 +100,7 @@ $$
 \text{Uncertainty Score} = 1 - \max_y \mathbb{E}[f(y|x)]
 $$
 
-This score measures the model's confidence in its most likely prediction. A high value for $\max_y \mathbb{E}[f(y|x)]$ indicates high confidence in the predicted class, while a lower value suggests greater uncertainty.
+This score measures the model's confidence in its most likely prediction. A high value for $$\max_y \mathbb{E}[f(y|x)]$$ indicates high confidence in the predicted class, while a lower value suggests greater uncertainty.
 
 This method is simple and easy to implement, but it has some limitations. For example, it only takes into account the predicted class's probability and ignores the spread of probabilities across other classes. In cases where the model assigns similar probabilities to multiple classes, this method might underestimate uncertainty.
 
@@ -118,7 +118,7 @@ This method captures uncertainty more comprehensively than the maximum class pro
 
 ### 3. Variance-Based Uncertainty Estimation
 
-Another method is to use the variance of the predicted probabilities as a measure of uncertainty. The variance for each class $y$ is computed as:
+Another method is to use the variance of the predicted probabilities as a measure of uncertainty. The variance for each class $$y$$ is computed as:
 
 $$
 \text{Var}[f(y|x)] = \frac{1}{T} \sum_{t=1}^{T} (f_t(y|x) - \mathbb{E}[f(y|x)])^2
@@ -136,19 +136,19 @@ Variance-based methods are particularly useful when the goal is to detect out-of
 
 ### 4. Error Function and Normal Approximation
 
-In some cases, particularly when dealing with binary or reduced two-class problems, it may be useful to approximate the predictive distribution using a normal distribution. Specifically, we can model the output probabilities for class $y$ as a Gaussian distribution:
+In some cases, particularly when dealing with binary or reduced two-class problems, it may be useful to approximate the predictive distribution using a normal distribution. Specifically, we can model the output probabilities for class $$y$$ as a Gaussian distribution:
 
 $$
 p(y|x) \sim \mathcal{N}(\mu_y, \sigma_y^2)
 $$
-where $\mu_y = \mathbb{E}[f(y|x)]$ is the predictive mean and $\sigma_y^2 = \text{Var}[f(y|x)]$ is the predictive variance.
+where $$\mu_y = \mathbb{E}[f(y|x)]$$ is the predictive mean and $$\sigma_y^2 = \text{Var}[f(y|x)]$$ is the predictive variance.
 
-For a two-class classifier, let $y$ be the predicted class (i.e., $y = \arg\max_y \mathbb{E}[f(y|x)]$) and $\neg y$ be the other class. The probability that a future evaluation of the classifier will also output $y$ is given by:
+For a two-class classifier, let $$y$$ be the predicted class (i.e., $$y = \arg\max_y \mathbb{E}[f(y|x)]$$) and $$\neg y$$ be the other class. The probability that a future evaluation of the classifier will also output $$y$$ is given by:
 
 $$
 u = \Pr[X \geq 0]
 $$
-where $X \sim \mathcal{N}(\mu_y - \mu_{\neg y}, \sigma_y^2 + \sigma_{\neg y}^2)$.
+where $$X \sim \mathcal{N}(\mu_y - \mu_{\neg y}, \sigma_y^2 + \sigma_{\neg y}^2)$$.
 
 This probability can be estimated using the error function:
 

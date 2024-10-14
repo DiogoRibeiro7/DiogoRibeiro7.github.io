@@ -25,13 +25,8 @@ There are several interesting article topics you can explore under the umbrella 
    - **Overview**: An in-depth guide on how machine learning models are applied in PdM, covering supervised, unsupervised, and reinforcement learning techniques.
    - **Focus**: How models like decision trees, random forests, support vector machines (SVM), and neural networks are used to predict equipment failures.
 
-### 5. A Comparison of Predictive Maintenance Algorithms: Classical vs. Machine Learning Approaches
-   - **Overview**: Compare traditional predictive maintenance models (e.g., statistical models like ARIMA) with machine learning algorithms.
-   - **Focus**: Performance, accuracy, and scalability differences between classical approaches and machine learning models in real-world applications.
 
-### 6. IoT and Sensor Data: The Backbone of Predictive Maintenance
-   - **Overview**: Explain how IoT-enabled devices and sensors gather data that drives predictive maintenance strategies.
-   - **Focus**: Types of sensors (vibration, temperature, pressure, etc.), the importance of real-time monitoring, and how this data is utilized for predictive maintenance.
+
 
 ### 7. Deep Learning for Predictive Maintenance: Unlocking Hidden Patterns in Data
    - **Overview**: Explore how deep learning models such as convolutional neural networks (CNN) and recurrent neural networks (RNN) are used for complex PdM scenarios.

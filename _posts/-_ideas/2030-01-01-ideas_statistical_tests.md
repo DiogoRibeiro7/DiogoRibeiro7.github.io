@@ -36,11 +36,6 @@ title: 15 Article Ideas on Statistical Tests
 
 Here are some interesting article ideas centered around statistical tests, designed to help you explore the differences, applications, and nuances of various statistical methods:
 
-### 1. **"T-Test vs. Z-Test: When and Why to Use Each"**
-   - Explain the differences between the t-test and z-test.
-   - Discuss when each test is appropriate based on sample size, variance, and distribution.
-   - Provide real-world applications for each test.
-   - Explore one-sample, two-sample, and paired t-tests.
 
 ### 2. **"Chi-Square Test: Applications in Categorical Data Analysis"**
    - Overview of the chi-square test for independence and goodness of fit.

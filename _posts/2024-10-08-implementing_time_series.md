@@ -7,12 +7,12 @@ classes: wide
 date: '2024-10-08'
 excerpt: Explore time-series classification in Python with step-by-step examples using simple models, the catch22 feature set, and UEA/UCR repository benchmarking with statistical tests.
 header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_2.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - Time-series classification
 - Catch22
