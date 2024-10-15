@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Machine Learning
 - Healthcare
-- Technology
 classes: wide
 date: '2024-10-13'
 excerpt: Machine learning is revolutionizing medical diagnosis by providing faster, more accurate tools for detecting diseases such as cancer, heart disease, and neurological disorders.
