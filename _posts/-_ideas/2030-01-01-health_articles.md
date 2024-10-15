@@ -17,9 +17,7 @@ tags: []
    - **Overview**: Discuss the vast amounts of data generated in healthcare (e.g., patient records, diagnostic results, sensor data) and how it’s transforming decision-making.
    - **Focus**: How big data analytics is driving personalized medicine, improving patient outcomes, and reducing healthcare costs.
 
-### 2. Machine Learning in Medical Diagnosis: Enhancing Accuracy and Speed
-   - **Overview**: Explore how machine learning algorithms are being used to diagnose diseases more accurately and faster than traditional methods.
-   - **Focus**: Highlight specific use cases such as detecting cancer, heart disease, or neurological disorders using ML models like CNNs (Convolutional Neural Networks) or deep learning.
+
 
 ### 3. Predictive Analytics in Healthcare: Anticipating Health Issues Before They Happen
    - **Overview**: Discuss how predictive analytics can help foresee health problems before they arise, using patient data and machine learning models.
