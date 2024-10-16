@@ -31,80 +31,129 @@ title: 'Understanding Normality Tests: A Deep Dive into Their Power and Limitati
 **Abstract:**  
 In statistical analysis, assessing whether data follow a normal distribution is a critical step that influences subsequent tests and interpretations. However, the concept of "normality tests" is often misunderstood. This article explores the intricacies of normality testing, highlighting the limitations of these tests, the variety of methods available, and the importance of understanding what each test measures. We will delve into a unique distribution that challenges several normality tests, demonstrating why visual inspection and a comprehensive understanding of the data are indispensable.
 
-## The Role of Normality in Statistical Analysis
+## Introduction
 
-The normal distribution holds a place of central importance in statistics. Many statistical models and tests assume that data follow a normal (Gaussian) distribution, characterized by a bell-shaped curve and symmetry around the mean. This assumption underpins inferential statistics, making normality testing a key first step in any analysis.
+In the realm of statistics, the normal distribution holds a place of central importance. Many statistical tests and models assume that data follow a normal (Gaussian) distribution, which is characterized by its bell-shaped curve, symmetry around the mean, and specific properties of skewness and kurtosis. Assessing normality is thus a fundamental step in data analysis, ensuring the validity of inferential statistics that rely on this assumption.
 
-Despite their common usage, normality tests are often misunderstood. These tests do not confirm that data are normal; rather, they test whether the data provide enough evidence to reject the null hypothesis ($$H_0$$) that the data come from a normal distribution. A failure to reject $$H_0$$ merely suggests that the data are not significantly different from a normal distribution, within the power and constraints of the test used.
+However, the term "normality test" is somewhat of a misnomer. No statistical test can prove that data are normally distributed. Instead, these tests can only assess whether there is enough evidence to reject the null hypothesis ($H_0$) that the data come from a normal distribution. Failure to reject $H_0$ does not confirm normality; it merely suggests that the data are not significantly different from what would be expected under normality, within the test's power and limitations.
 
-## The Special Distribution: A Case Study for Normality Testing
+This article aims to shed light on the complexities of normality testing. We will examine a specially constructed distribution with properties that challenge several normality tests, revealing how different tests can yield contradictory results. By exploring the underlying mechanics of these tests and the nature of our example distribution, we will understand why visual tools like Quantile-Quantile (QQ) plots and empirical Cumulative Distribution Function (CDF) plots are essential complements to formal statistical tests.
 
-Consider a specially constructed distribution with features that challenge normality tests. This distribution is symmetric with near-zero skewness and kurtosis approximating that of a normal distribution. Despite these properties, it is bimodal, featuring two distinct peaks—clearly deviating from the single-peaked nature of a normal distribution.
+## The Special Distribution: A Challenge to Normality Tests
 
-### Key Characteristics of the Distribution:
+Before diving into the tests themselves, let's consider the distribution that serves as our focal point. This distribution is crafted to exhibit certain characteristics that make it a suitable candidate for exploring the nuances of normality testing.
 
-- **Perfect Symmetry (Skewness ≈ 0):** The left and right tails mirror each other.
-- **Normal Kurtosis (Kurtosis ≈ 3):** The distribution's tails are similar in weight to those of a normal distribution.
-- **Bimodality:** Unlike a normal distribution, the distribution has two peaks with a noticeable dip in the middle.
+### Characteristics of the Distribution
 
-Despite this bimodality, tests that focus only on skewness and kurtosis may fail to detect the deviation from normality, as these metrics align closely with those of a true normal distribution.
+- **Perfect Symmetry (Skewness ≈ 0):** The distribution is symmetric around its mean. Skewness, a measure of asymmetry, is approximately zero, indicating that the left and right tails of the distribution are mirror images of each other.
+  
+- **Normal Kurtosis (Kurtosis ≈ 3):** The kurtosis of the distribution is close to 3, which is the kurtosis of a normal distribution. Excess kurtosis (kurtosis minus 3) is approximately zero, suggesting that the tails of the distribution have a similar heaviness to those of a normal distribution.
+  
+- **Bimodality:** Despite its symmetry and normal kurtosis, the distribution is bimodal, meaning it has two distinct peaks or modes. There is a noticeable "hole" or dip in the middle of the distribution, deviating from the single-peaked nature of a normal distribution.
+
+- **Non-normal Nature:** Given its bimodality and the separation between the modes, the distribution is not normal. The mean does not correspond to the mode, which is a key characteristic of a normal distribution.
+
+### Implications
+
+This distribution presents an interesting case for normality testing. Tests that rely solely on skewness and kurtosis may fail to detect the non-normality because these measures align closely with those of a normal distribution. However, tests that consider the overall shape or specific aspects of the distribution may reveal the deviation from normality.
 
 ## Understanding Normality Tests
 
-Normality tests formulate a null hypothesis ($$H_0$$) that the data come from a normal distribution and calculate a test statistic to determine whether to reject $$H_0$$. These tests have limitations that affect their reliability, depending on sample size, test type, and the specific features of the data.
+Normality tests are statistical procedures used to determine whether a data set is well-modeled by a normal distribution. They involve formulating a null hypothesis ($H_0$) that the data come from a normal distribution and an alternative hypothesis ($H_1$) that they do not. The tests calculate a test statistic based on the data and compare it to a critical value or use it to compute a p-value, which informs the decision to reject or fail to reject $H_0$.
 
 ### The Null Hypothesis and Type II Errors
 
-It is crucial to understand that failing to reject $$H_0$$ does not confirm normality. It indicates that there is insufficient evidence to conclude the data are not normal, which may reflect a Type II error—failing to detect a deviation when one exists.
+It's crucial to understand that failing to reject $H_0$ does not confirm that the data are normal. It merely indicates that there is insufficient evidence to conclude that the data are not normal, given the sample size and the test's sensitivity. This situation is known as a Type II error, where the test fails to detect a difference when one actually exists.
 
-### Limitations of Normality Tests:
+### Limitations of Normality Tests
 
-1. **Sample Size Sensitivity:** Smaller samples may not provide enough power to detect deviations.
-2. **Test Specificity:** Different tests respond to different features (e.g., skewness, kurtosis, overall shape).
-3. **Multiple Testing Issues:** Running multiple normality tests can lead to conflicting results.
+Normality tests have inherent limitations:
 
-## Moment-Based Tests: Skewness, Kurtosis, and Jarque-Bera
+1. **Sample Size Sensitivity:** Small sample sizes may not provide enough power to detect deviations from normality, leading to a failure to reject $H_0$ even when the data are not normal.
+
+2. **Test Specificity:** Different tests are sensitive to different aspects of the distribution (e.g., skewness, kurtosis, overall shape). A test may not detect certain types of deviations.
+
+3. **Multiple Testing Issues:** Using multiple normality tests can lead to contradictory results, as each test may respond differently to the data's characteristics.
+
+## Tests Based on Moments: Skewness, Kurtosis, and Jarque-Bera
 
 ### Skewness and Kurtosis
 
-- **Skewness** measures the asymmetry of a distribution. A skewness of zero indicates symmetry.
-- **Kurtosis** measures the heaviness of the tails. A kurtosis of 3 indicates a normal distribution.
+- **Skewness** measures the asymmetry of a distribution. A skewness of zero indicates perfect symmetry.
+
+- **Kurtosis** measures the "tailedness" of a distribution. A kurtosis of 3 corresponds to a normal distribution, with higher values indicating heavier tails and lower values indicating lighter tails.
 
 ### The Jarque-Bera Test
 
-The **Jarque-Bera test** combines skewness and kurtosis into a test statistic:
+The **Jarque-Bera test** combines skewness and kurtosis to assess normality. It calculates a test statistic based on the sample skewness ($S$) and kurtosis ($K$):
 
 $$
 JB = \frac{n}{6} \left( S^2 + \frac{(K - 3)^2}{4} \right)
 $$
 
-Where $$S$$ is skewness, $$K$$ is kurtosis, and $$n$$ is the sample size. In our special distribution, since skewness and kurtosis are close to zero, the test may fail to reject $$H_0$$—even though the distribution is bimodal.
+Where $n$ is the sample size.
 
-### Geary's Kurtosis: A Robust Alternative
+### Limitations with the Special Distribution
 
-**Geary's kurtosis** (or Geary's ratio) compares the **Median Absolute Deviation (MAD)** to the **Standard Deviation (SD)**:
+In our special distribution, skewness and kurtosis are approximately equal to those of a normal distribution ($S \approx 0$, $K \approx 3$). Consequently, the Jarque-Bera test may yield a high p-value, leading us to fail to reject $H_0$. The test cannot detect the bimodality because it relies solely on skewness and kurtosis, which do not capture the distribution's multimodal nature.
+
+### Interpretation
+
+While the Jarque-Bera test is useful for detecting deviations in skewness and kurtosis, it is blind to other types of non-normality. In our example, the test's inability to detect bimodality highlights the importance of selecting appropriate tests based on the data's characteristics.
+
+## Geary's Kurtosis and Its Power
+
+### Geary's Kurtosis
+
+**Geary's kurtosis**, also known as **Geary's ratio**, is defined as:
 
 $$
-\text{Geary's Ratio} = \frac{\text{MAD}}{\text{SD}}
+\text{Geary's Ratio} = \frac{\text{Median Absolute Deviation (MAD)}}{\text{Standard Deviation (SD)}}
 $$
 
-This ratio is more robust to outliers and better captures the shape of the distribution. In our bimodal distribution, Geary's test would be more likely to detect the deviation from normality.
+This ratio compares the median absolute deviation to the standard deviation, providing a measure of kurtosis that is less sensitive to outliers than traditional kurtosis.
+
+### Advantages
+
+- **Robustness:** Geary's kurtosis is less affected by extreme values, making it a robust measure.
+  
+- **Sensitivity to Shape:** It captures aspects of the distribution's shape that traditional kurtosis may miss.
+
+### Performance on the Special Distribution
+
+Tests based on Geary's kurtosis are powerful in detecting non-normality in distributions like our special case. Despite the traditional kurtosis being normal ($K \approx 3$), Geary's ratio may differ from that expected under normality due to the distribution's bimodality and the "hole" in the middle.
+
+### Implications
+
+The success of Geary's kurtosis-based tests in detecting non-normality underscores the importance of using robust statistical measures. These tests can provide additional insights when traditional moment-based tests fail.
 
 ## Tests Based on CDF Comparison
 
-These tests compare the empirical cumulative distribution function (ECDF) of the sample to the theoretical CDF of a normal distribution.
+### Overview
 
-### Kolmogorov-Smirnov (K-S) Test
+Tests that compare the empirical cumulative distribution function (ECDF) of the sample data to the theoretical CDF of a normal distribution can detect differences in the overall shape of the distributions. They consider the cumulative probabilities and assess deviations at all points, rather than focusing on specific moments.
 
-The **K-S test** calculates the maximum difference between the ECDF and the theoretical CDF:
+### Kolmogorov-Smirnov Test
+
+The **Kolmogorov-Smirnov (K-S) test** evaluates the maximum absolute difference between the ECDF and the theoretical CDF:
 
 $$
 D = \sup_x |F_n(x) - F(x)|
 $$
 
+Where $F_n(x)$ is the ECDF and $F(x)$ is the theoretical CDF.
+
+### Limitations
+
+- **Parameter Estimation Bias:** When parameters of the normal distribution (mean and standard deviation) are estimated from the data, the K-S test becomes biased towards failing to reject $H_0$.
+
+### Lilliefors Test
+
+The **Lilliefors test** adjusts the K-S test for cases where parameters are estimated from the data. It provides a corrected critical value or p-value, accounting for the bias.
+
 ### Cramér-von Mises Test
 
-The **Cramér-von Mises test** evaluates the squared difference between the ECDF and the theoretical CDF:
+The **Cramér-von Mises test** considers the squared differences between the ECDF and the theoretical CDF, integrated over all values:
 
 $$
 W^2 = n \int_{-\infty}^{\infty} [F_n(x) - F(x)]^2 dF(x)
@@ -112,48 +161,131 @@ $$
 
 ### Anderson-Darling Test
 
-The **Anderson-Darling test** improves upon the Cramér-von Mises test by giving more weight to deviations in the tails.
+The **Anderson-Darling test** improves upon the Cramér-von Mises test by giving more weight to the tails of the distribution:
 
-These CDF-based tests are sensitive to differences across the entire distribution. In our special case, the Anderson-Darling test would likely detect the non-normality due to the distribution’s bimodal structure.
+$$
+A^2 = -n - \frac{1}{n} \sum_{i=1}^n \left( (2i - 1) \left[ \ln F(X_i) + \ln(1 - F(X_{n + 1 - i})) \right] \right)
+$$
+
+### Performance on the Special Distribution
+
+Tests based on CDF comparisons, particularly the **Anderson-Darling test**, are sensitive to deviations in the entire distribution, including the middle and tails. In our special distribution, the bimodality and the "hole" in the middle result in significant differences between the ECDF and the theoretical CDF of a normal distribution. Consequently, these tests are more likely to detect the non-normality.
+
+### Recommendations
+
+- **Prefer Anderson-Darling Over K-S:** The Anderson-Darling test is generally more powerful than the K-S test, especially for detecting deviations in the tails.
+  
+- **Use Lilliefors When Parameters Are Estimated:** The Lilliefors test corrects for bias when parameters are estimated from the data.
 
 ## Shapiro-Wilk and Shapiro-Francia Tests
 
 ### Shapiro-Wilk Test
 
-The **Shapiro-Wilk test** measures the correlation between the data and the expected normal scores:
+The **Shapiro-Wilk test** assesses normality by examining the correlation between the data and the corresponding normal scores (expected values under normality). The test statistic $W$ is calculated as:
 
 $$
 W = \frac{\left( \sum_{i=1}^n a_i X_{(i)} \right)^2}{\sum_{i=1}^n (X_i - \bar{X})^2}
 $$
 
-Where $$X_{(i)}$$ are the ordered data and $$a_i$$ are constants based on expected normal values.
+Where $X_{(i)}$ are the ordered data and $a_i$ are constants derived from the expected values and variances of the order statistics of a normal distribution.
+
+### Limitations
+
+- **Sample Size Constraints:** The Shapiro-Wilk test is most effective for small to moderate sample sizes ($n \leq 2000$). For larger samples, its power may decrease.
+  
+- **Sensitivity to Symmetry and Tails:** The test is sensitive to deviations in symmetry and tail weight but may not detect bimodality effectively.
 
 ### Shapiro-Francia Test
 
-The **Shapiro-Francia test** is a variant of the Shapiro-Wilk test, adjusted for larger sample sizes.
+The **Shapiro-Francia test** is a modification of the Shapiro-Wilk test, designed for larger sample sizes. It replaces the variance of the sample with the expected variance under normality.
+
+### Shapiro-Chen Test
+
+The **Shapiro-Chen test** is another variant that adjusts the weighting of the data to improve power against certain alternatives.
 
 ### Performance on the Special Distribution
 
-For our bimodal distribution, these tests may not effectively detect the non-normality. Although useful for detecting skewness or tail deviations, they might overlook the bimodality.
+In the case of our special distribution, the **Shapiro-Wilk test** may not be the most effective. Its test statistic relies on the correlation with normal order statistics, which may not sufficiently capture the bimodal nature of the distribution. The **Shapiro-Chen test**, however, might have improved power due to its adjustments.
 
-## Contradictory Test Results: Understanding the Discrepancies
+### Implications
 
-Different tests often yield conflicting results. For instance, while moment-based tests like **Jarque-Bera** may suggest normality, CDF-based tests like **Anderson-Darling** could strongly reject it. These contradictions arise because each test measures different aspects of the distribution.
+This example illustrates that even widely used tests like Shapiro-Wilk may not always be the best choice. Understanding the specific strengths of each test helps in selecting the most appropriate one for the data at hand.
 
-## The Importance of Data Visualization
+## Contradictions Between Tests: Understanding the Discrepancies
+
+### Observations
+
+In testing our special distribution, we may encounter significant contradictions:
+
+- Some tests yield high p-values (e.g., Jarque-Bera, failing to reject $H_0$).
+- Other tests yield very low p-values (e.g., Anderson-Darling, rejecting $H_0$).
+
+These discrepancies are not marginal; they can be substantial (e.g., $p \approx 1$ vs. $p < 0.001$).
+
+### Reasons for Contradictions
+
+- **Different Sensitivities:** Each test is sensitive to different aspects of the distribution (e.g., skewness, kurtosis, overall shape, tails).
+  
+- **Test Statistics Based on Different Principles:** Moment-based tests focus on skewness and kurtosis, while CDF-based tests consider the entire distribution.
+  
+- **Sample Size Effects:** Some tests perform differently depending on the sample size.
+
+### Not an Error
+
+Contradictory results do not indicate errors in the testing process. Instead, they reflect the multifaceted nature of statistical distributions and the varying focus of different tests.
+
+### Choosing the Right Test
+
+- **Define Concerns:** Determine what type of deviation from normality is most relevant for your analysis (e.g., tails, skewness, modality).
+  
+- **Select Appropriate Tests:** Choose tests that are sensitive to those specific deviations.
+  
+- **Use Multiple Tests Judiciously:** While using multiple tests can provide a comprehensive assessment, interpret results carefully to avoid confusion.
+
+## Importance of Data Visualization
 
 ### Quantile-Quantile (QQ) Plots
 
-A **QQ plot** compares the sample quantiles to the theoretical normal quantiles. Deviations from a straight line indicate non-normality, which may be due to skewness, kurtosis, or modality.
+A **QQ plot** compares the quantiles of the sample data to the quantiles of a theoretical normal distribution. If the data are normally distributed, the points should fall approximately along a straight line.
+
+### Advantages
+
+- **Visual Detection of Deviations:** QQ plots can reveal deviations from normality, such as skewness, kurtosis, and bimodality.
+  
+- **Easy Interpretation:** Patterns in the plot can indicate specific types of non-normality.
 
 ### Empirical CDF (ECDF) Plots
 
-An **ECDF plot** shows the cumulative probabilities of the sample data. Overlaying the theoretical CDF provides a visual comparison, highlighting differences across the entire distribution.
+An **ECDF plot** displays the cumulative probabilities of the sample data. Overlaying the theoretical CDF allows for visual comparison.
+
+### Advantages
+
+- **Highlighting Differences in Distribution Shape:** ECDF plots can show where the sample data deviate from the theoretical distribution, including in the tails and middle.
 
 ### Application to the Special Distribution
 
-Visualizing our bimodal distribution with QQ or ECDF plots would immediately reveal the deviations from normality—particularly the dip in the middle of the distribution.
+Visualizing our special distribution using **QQ** and **ECDF** plots would likely reveal the bimodality and the "hole" in the middle. These deviations may not be apparent from statistical tests alone, especially those focusing on moments.
+
+### Recommendations
+
+- **Always Start with Visualization:** Before conducting formal tests, examine the data visually to identify potential issues.
+  
+- **Complement Tests with Plots:** Use visual tools to support and interpret the results of statistical tests.
 
 ## Conclusion
 
-Normality tests are essential tools, but they must be used with a deep understanding of their limitations. While formal tests can provide statistical evidence, they should be complemented by visual inspection tools like QQ plots and ECDF plots. Moreover, different tests have different sensitivities, so choosing the right test for the data’s characteristics is crucial. In practice, a comprehensive approach, combining statistical tests with visualization, will yield more robust and accurate conclusions.
+Assessing normality is a nuanced process that requires more than a one-size-fits-all approach. Our exploration of a specially crafted distribution has highlighted several key points:
+
+1. **Normality Tests Cannot Prove Normality:** Failing to reject the null hypothesis does not confirm that data are normally distributed.
+
+2. **Different Tests Have Different Sensitivities:** Understanding what each test measures is crucial. Tests based on moments may miss certain deviations, while CDF-based tests might detect them.
+
+3. **Contradictory Results Are Informative:** Discrepancies between tests are not errors but reflections of the data's complexity. They inform us about different aspects of non-normality.
+
+4. **Visualization Is Essential:** Visual tools like QQ plots and ECDF plots provide invaluable insights that complement formal tests.
+
+5. **Select Tests Based on Specific Concerns:** Choose tests that align with the types of deviations most relevant to your analysis.
+
+6. **Understand the Limitations:** Be aware of sample size effects, test assumptions, and the potential for Type II errors.
+
+In practice, a comprehensive approach that combines statistical tests with visual inspection and a thorough understanding of the data will lead to more robust and reliable conclusions. By appreciating the strengths and limitations of various normality tests, statisticians and data analysts can make informed decisions that enhance the quality of their analyses.
