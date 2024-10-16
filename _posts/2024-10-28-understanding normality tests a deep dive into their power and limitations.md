@@ -17,6 +17,9 @@ keywords:
 - Statistics
 - Data Analysis
 - QQ Plots
+- python
+- r
+- ruby
 seo_description: An in-depth exploration of normality tests, their limitations, and the importance of visual inspection for assessing whether data follow a normal distribution.
 seo_title: 'Understanding Normality Tests: A Deep Dive'
 seo_type: article
@@ -25,6 +28,9 @@ tags:
 - Normality Tests
 - Statistical Methods
 - Data Visualization
+- python
+- r
+- ruby
 title: 'Understanding Normality Tests: A Deep Dive into Their Power and Limitations'
 ---
 
@@ -289,3 +295,189 @@ Assessing normality is a nuanced process that requires more than a one-size-fits
 6. **Understand the Limitations:** Be aware of sample size effects, test assumptions, and the potential for Type II errors.
 
 In practice, a comprehensive approach that combines statistical tests with visual inspection and a thorough understanding of the data will lead to more robust and reliable conclusions. By appreciating the strengths and limitations of various normality tests, statisticians and data analysts can make informed decisions that enhance the quality of their analyses.
+
+## Appendix: Python Code for Normality Tests
+
+```python
+# Import necessary libraries
+import numpy as np
+import scipy.stats as stats
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Generate the special bimodal distribution
+def generate_bimodal_distribution(size=1000):
+    mean1, mean2 = 0, 3
+    std1, std2 = 1, 0.5
+    data1 = np.random.normal(mean1, std1, size // 2)
+    data2 = np.random.normal(mean2, std2, size // 2)
+    return np.concatenate([data1, data2])
+
+# Generate data
+data = generate_bimodal_distribution()
+
+# Plot QQ plot
+plt.figure(figsize=(8, 6))
+stats.probplot(data, dist="norm", plot=plt)
+plt.title('QQ Plot')
+plt.show()
+
+# Plot empirical CDF
+plt.figure(figsize=(8, 6))
+sns.ecdfplot(data, label='Empirical CDF')
+x = np.linspace(min(data), max(data), 1000)
+plt.plot(x, stats.norm.cdf(x, np.mean(data), np.std(data)), label='Theoretical CDF', linestyle='--')
+plt.title('Empirical CDF vs Theoretical CDF')
+plt.legend()
+plt.show()
+
+# Shapiro-Wilk test
+shapiro_stat, shapiro_p = stats.shapiro(data)
+print(f"Shapiro-Wilk Test: W = {shapiro_stat}, p-value = {shapiro_p}")
+
+# Kolmogorov-Smirnov test
+ks_stat, ks_p = stats.kstest(data, 'norm', args=(np.mean(data), np.std(data)))
+print(f"Kolmogorov-Smirnov Test: D = {ks_stat}, p-value = {ks_p}")
+
+# Anderson-Darling test
+ad_result = stats.anderson(data, dist='norm')
+print(f"Anderson-Darling Test: A² = {ad_result.statistic}, critical values = {ad_result.critical_values}")
+
+# Jarque-Bera test
+jb_stat, jb_p = stats.jarque_bera(data)
+print(f"Jarque-Bera Test: JB = {jb_stat}, p-value = {jb_p}")
+
+# Geary's Kurtosis (using MAD and Standard Deviation)
+mad = np.median(np.abs(data - np.median(data)))
+sd = np.std(data)
+geary_ratio = mad / sd
+print(f"Geary's Kurtosis: {geary_ratio}")
+```
+
+# Appendix: R Code for Normality Tests
+
+```r
+# Load necessary libraries
+library(MASS)
+library(nortest)
+library(moments)
+library(ggplot2)
+
+# Generate the special bimodal distribution
+generate_bimodal_distribution <- function(size = 1000) {
+  mean1 <- 0
+  mean2 <- 3
+  std1 <- 1
+  std2 <- 0.5
+  data1 <- rnorm(size / 2, mean = mean1, sd = std1)
+  data2 <- rnorm(size / 2, mean = mean2, sd = std2)
+  c(data1, data2)
+}
+
+# Generate data
+data <- generate_bimodal_distribution()
+
+# QQ Plot
+qqnorm(data, main = "QQ Plot")
+qqline(data, col = "blue")
+
+# Empirical CDF vs Theoretical CDF
+ggplot(data.frame(x = data), aes(x)) +
+  stat_ecdf(geom = "step", color = "blue") +
+  stat_function(fun = pnorm, args = list(mean = mean(data), sd = sd(data)),
+                color = "red", linetype = "dashed") +
+  labs(title = "Empirical CDF vs Theoretical CDF")
+
+# Shapiro-Wilk Test
+shapiro_test <- shapiro.test(data)
+print(paste("Shapiro-Wilk Test: W =", shapiro_test$statistic, ", p-value =", shapiro_test$p.value))
+
+# Kolmogorov-Smirnov Test
+ks_test <- ks.test(data, "pnorm", mean(data), sd(data))
+print(paste("Kolmogorov-Smirnov Test: D =", ks_test$statistic, ", p-value =", ks_test$p.value))
+
+# Anderson-Darling Test
+ad_test <- ad.test(data)
+print(paste("Anderson-Darling Test: A² =", ad_test$statistic, ", p-value =", ad_test$p.value))
+
+# Jarque-Bera Test
+jb_test <- jarque.test(data)
+print(paste("Jarque-Bera Test: JB =", jb_test$statistic, ", p-value =", jb_test$p.value))
+
+# Geary's Kurtosis (using MAD and Standard Deviation)
+mad <- mad(data)
+sd <- sd(data)
+geary_ratio <- mad / sd
+print(paste("Geary's Kurtosis: ", geary_ratio))
+```
+
+# Appendix: Ruby Code for Normality Tests
+
+```ruby
+# Load necessary libraries
+require 'distribution'
+require 'gnuplotrb'
+include GnuplotRB
+
+# Generate the special bimodal distribution
+def generate_bimodal_distribution(size = 1000)
+  mean1, mean2 = 0, 3
+  std1, std2 = 1, 0.5
+  data1 = Array.new(size / 2) { Distribution::Normal.rng(mean1, std1).call }
+  data2 = Array.new(size / 2) { Distribution::Normal.rng(mean2, std2).call }
+  data1 + data2
+end
+
+# Generate data
+data = generate_bimodal_distribution
+
+# QQ plot (using Gnuplot)
+x = Distribution::Normal.rng(0, 1).call
+qq_plot = Plot.new([x.sort, data.sort], with: 'points', title: 'QQ Plot', style: 'points')
+qq_plot.to_png('qq_plot.png')
+
+# Empirical CDF vs Theoretical CDF (using Gnuplot)
+sorted_data = data.sort
+ecdf = sorted_data.each_with_index.map { |val, i| [val, (i + 1).to_f / sorted_data.size] }
+cdf_plot = Plot.new(
+  [ecdf, with: 'lines', title: 'Empirical CDF'],
+  [sorted_data, sorted_data.map { |x| Distribution::Normal.cdf(x, data.mean, data.standard_deviation) },
+  with: 'lines', title: 'Theoretical CDF', style: 'dashed']
+)
+cdf_plot.to_png('cdf_plot.png')
+
+# Shapiro-Wilk Test (using R integration through RinRuby)
+require 'rinruby'
+
+R.eval <<-EOF
+  shapiro_test <- shapiro.test(c(#{data.join(',')}))
+  shapiro_stat <- shapiro_test$statistic
+  shapiro_p_value <- shapiro_test$p.value
+EOF
+
+puts "Shapiro-Wilk Test: W = #{R.shapiro_stat}, p-value = #{R.shapiro_p_value}"
+
+# Kolmogorov-Smirnov Test
+ks_test = Distribution::Normal.kstest(data)
+puts "Kolmogorov-Smirnov Test: D = #{ks_test[:statistic]}, p-value = #{ks_test[:p_value]}"
+
+# Anderson-Darling Test (using R integration)
+R.eval <<-EOF
+  library(nortest)
+  ad_test <- ad.test(c(#{data.join(',')}))
+  ad_stat <- ad_test$statistic
+  ad_p_value <- ad_test$p.value
+EOF
+
+puts "Anderson-Darling Test: A² = #{R.ad_stat}, p-value = #{R.ad_p_value}"
+
+# Jarque-Bera Test
+jb_test = Distribution::Normal.jarque_bera(data)
+puts "Jarque-Bera Test: JB = #{jb_test[:statistic]}, p-value = #{jb_test[:p_value]}"
+
+# Geary's Kurtosis (using MAD and Standard Deviation)
+mad = data.map { |x| (x - data.median).abs }.median
+sd = Math.sqrt(data.map { |x| (x - data.mean) ** 2 }.sum / data.size)
+geary_ratio = mad / sd
+puts "Geary's Kurtosis: #{geary_ratio}"
+```
