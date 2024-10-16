@@ -300,7 +300,9 @@ Assessing normality is a nuanced process that requires more than a one-size-fits
 
 In practice, a comprehensive approach that combines statistical tests with visual inspection and a thorough understanding of the data will lead to more robust and reliable conclusions. By appreciating the strengths and limitations of various normality tests, statisticians and data analysts can make informed decisions that enhance the quality of their analyses.
 
-## Appendix: Python Code for Normality Tests
+## Appendix
+
+### Python Code for Normality Tests
 
 ```python
 # Import necessary libraries
@@ -358,7 +360,7 @@ geary_ratio = mad / sd
 print(f"Geary's Kurtosis: {geary_ratio}")
 ```
 
-# Appendix: R Code for Normality Tests
+### R Code for Normality Tests
 
 ```r
 # Load necessary libraries
@@ -415,7 +417,7 @@ geary_ratio <- mad / sd
 print(paste("Geary's Kurtosis: ", geary_ratio))
 ```
 
-# Appendix: Ruby Code for Normality Tests
+### Ruby Code for Normality Tests
 
 ```ruby
 # Load necessary libraries
@@ -486,7 +488,7 @@ geary_ratio = mad / sd
 puts "Geary's Kurtosis: #{geary_ratio}"
 ```
 
-# Appendix: Scala Code for Normality Tests
+### Scala Code for Normality Tests
 
 ```scala
 // Import necessary libraries
@@ -555,7 +557,7 @@ val gearyRatio = mad / stdDev
 println(s"Geary's Kurtosis: $gearyRatio")
 ```
 
-# Appendix: Go Code for Normality Tests
+### Go Code for Normality Tests
 
 ```go
 package main
