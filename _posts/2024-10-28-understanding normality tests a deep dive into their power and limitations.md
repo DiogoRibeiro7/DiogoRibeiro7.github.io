@@ -20,6 +20,8 @@ keywords:
 - python
 - r
 - ruby
+- scala
+- go
 seo_description: An in-depth exploration of normality tests, their limitations, and the importance of visual inspection for assessing whether data follow a normal distribution.
 seo_title: 'Understanding Normality Tests: A Deep Dive'
 seo_type: article
@@ -31,6 +33,8 @@ tags:
 - python
 - r
 - ruby
+- scala
+- go
 title: 'Understanding Normality Tests: A Deep Dive into Their Power and Limitations'
 ---
 
@@ -480,4 +484,230 @@ mad = data.map { |x| (x - data.median).abs }.median
 sd = Math.sqrt(data.map { |x| (x - data.mean) ** 2 }.sum / data.size)
 geary_ratio = mad / sd
 puts "Geary's Kurtosis: #{geary_ratio}"
+```
+
+# Appendix: Scala Code for Normality Tests
+
+```scala
+// Import necessary libraries
+import breeze.stats.distributions._
+import breeze.plot._
+import org.apache.commons.math3.stat.descriptive._
+import org.apache.commons.math3.stat.inference._
+import org.apache.commons.math3.stat.StatUtils
+
+// Generate the special bimodal distribution
+def generateBimodalDistribution(size: Int = 1000): Array[Double] = {
+  val dist1 = Gaussian(0, 1).sample(size / 2)
+  val dist2 = Gaussian(3, 0.5).sample(size / 2)
+  dist1 ++ dist2
+}
+
+// Generate data
+val data = generateBimodalDistribution()
+
+// QQ plot (using Breeze)
+val f = Figure()
+val p = f.subplot(0)
+p += plot(Gaussian(0, 1).sample(data.length).sorted, data.sorted)
+p.title = "QQ Plot"
+f.saveas("qq_plot.png")
+
+// Empirical CDF vs Theoretical CDF
+val empiricalCDF = data.sorted.zipWithIndex.map { case (value, index) =>
+  (value, (index + 1).toDouble / data.length)
+}
+val theoreticalCDF = data.sorted.map(x => (x, Gaussian(data.mean, data.stdDev).cdf(x)))
+
+val f2 = Figure()
+val p2 = f2.subplot(0)
+p2 += plot(empiricalCDF.map(_._1), empiricalCDF.map(_._2), name = "Empirical CDF")
+p2 += plot(theoreticalCDF.map(_._1), theoreticalCDF.map(_._2), name = "Theoretical CDF", style = '-')
+p2.title = "Empirical CDF vs Theoretical CDF"
+f2.saveas("cdf_plot.png")
+
+// Shapiro-Wilk test (via Apache Commons Math3)
+val shapiroTest = new org.apache.commons.math3.stat.inference.ShapiroWilkTest()
+val shapiroP = shapiroTest.test(data)
+println(s"Shapiro-Wilk Test: p-value = $shapiroP")
+
+// Kolmogorov-Smirnov test
+val ksTest = new KolmogorovSmirnovTest()
+val ksP = ksTest.kolmogorovSmirnovTest(Gaussian(data.mean, data.stdDev).sample(data.length).toArray, data, true)
+println(s"Kolmogorov-Smirnov Test: p-value = $ksP")
+
+// Anderson-Darling test (using Apache Commons Math3)
+val adTest = new AndersonDarlingNormalDistributionTest()
+val adP = adTest.test(data, true)
+println(s"Anderson-Darling Test: p-value = $adP")
+
+// Jarque-Bera test (using Apache Commons Math3)
+val skewness = new Skewness().evaluate(data)
+val kurtosis = new Kurtosis().evaluate(data)
+val jbTest = new JarqueBeraTest()
+val jbP = jbTest.test(data)
+println(s"Jarque-Bera Test: p-value = $jbP")
+
+// Geary's Kurtosis (using MAD and Standard Deviation)
+val mad = StatUtils.percentile(data.map(x => Math.abs(x - StatUtils.percentile(data, 50))), 50)
+val stdDev = Math.sqrt(StatUtils.variance(data))
+val gearyRatio = mad / stdDev
+println(s"Geary's Kurtosis: $gearyRatio")
+```
+
+# Appendix: Go Code for Normality Tests
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+	"math/rand"
+	"sort"
+
+	"gonum.org/v1/gonum/floats"
+	"gonum.org/v1/gonum/stat"
+	"gonum.org/v1/plot"
+	"gonum.org/v1/plot/plotter"
+	"gonum.org/v1/plot/plotutil"
+	"gonum.org/v1/plot/vg"
+	"gonum.org/v1/gonum/stat/distuv"
+	"github.com/montanaflynn/stats"
+)
+
+// Generate a bimodal distribution
+func generateBimodalDistribution(size int) []float64 {
+	data := make([]float64, size)
+	for i := 0; i < size/2; i++ {
+		data[i] = rand.NormFloat64()
+	}
+	for i := size / 2; i < size; i++ {
+		data[i] = rand.NormFloat64()*0.5 + 3
+	}
+	return data
+}
+
+// QQ plot function
+func plotQQ(data []float64, fileName string) {
+	p, err := plot.New()
+	if err != nil {
+		panic(err)
+	}
+
+	p.Title.Text = "QQ Plot"
+	p.X.Label.Text = "Theoretical Quantiles"
+	p.Y.Label.Text = "Sample Quantiles"
+
+	norm := distuv.Normal{Mu: 0, Sigma: 1}
+	quantiles := make(plotter.XYs, len(data))
+
+	sort.Float64s(data)
+	for i, v := range data {
+		quantiles[i].X = norm.Quantile(float64(i+1) / float64(len(data)+1))
+		quantiles[i].Y = v
+	}
+
+	plotutil.AddScatters(p, "QQ", quantiles)
+	if err := p.Save(4*vg.Inch, 4*vg.Inch, fileName); err != nil {
+		panic(err)
+	}
+}
+
+// Empirical CDF vs Theoretical CDF
+func plotCDF(data []float64, fileName string) {
+	p, err := plot.New()
+	if err != nil {
+		panic(err)
+	}
+
+	p.Title.Text = "Empirical CDF vs Theoretical CDF"
+	p.X.Label.Text = "x"
+	p.Y.Label.Text = "Cumulative Probability"
+
+	sort.Float64s(data)
+	empirical := make(plotter.XYs, len(data))
+	theoretical := make(plotter.XYs, len(data))
+	norm := distuv.Normal{Mu: stat.Mean(data, nil), Sigma: stat.StdDev(data, nil)}
+
+	for i, v := range data {
+		empirical[i].X = v
+		empirical[i].Y = float64(i+1) / float64(len(data))
+		theoretical[i].X = v
+		theoretical[i].Y = norm.CDF(v)
+	}
+
+	plotutil.AddLines(p, "Empirical CDF", empirical, "Theoretical CDF", theoretical)
+	if err := p.Save(4*vg.Inch, 4*vg.Inch, fileName); err != nil {
+		panic(err)
+	}
+}
+
+// Shapiro-Wilk test (external package "github.com/montanaflynn/stats")
+func shapiroWilkTest(data []float64) float64 {
+	w, p := stats.ShapiroWilk(data)
+	fmt.Printf("Shapiro-Wilk Test: W = %v, p-value = %v\n", w, p)
+	return p
+}
+
+// Kolmogorov-Smirnov test
+func kolmogorovSmirnovTest(data []float64) float64 {
+	norm := distuv.Normal{Mu: stat.Mean(data, nil), Sigma: stat.StdDev(data, nil)}
+	d := stat.KolmogorovSmirnov(data, norm.CDF)
+	fmt.Printf("Kolmogorov-Smirnov Test: D = %v\n", d)
+	return d
+}
+
+// Anderson-Darling test (external package "github.com/montanaflynn/stats")
+func andersonDarlingTest(data []float64) float64 {
+	a, _ := stats.AndersonDarling(data)
+	fmt.Printf("Anderson-Darling Test: A² = %v\n", a)
+	return a
+}
+
+// Jarque-Bera test
+func jarqueBeraTest(data []float64) float64 {
+	skewness := stat.Skew(data, nil)
+	kurtosis := stat.ExKurtosis(data, nil)
+	n := float64(len(data))
+	jb := n / 6.0 * (math.Pow(skewness, 2) + math.Pow(kurtosis, 2)/4.0)
+	fmt.Printf("Jarque-Bera Test: JB = %v\n", jb)
+	return jb
+}
+
+// Geary's Kurtosis (using MAD and Standard Deviation)
+func gearyKurtosis(data []float64) float64 {
+	median, _ := stats.Median(data)
+	mad := floats.Sum(floats.Map(func(x float64) float64 { return math.Abs(x - median) }, data)) / float64(len(data))
+	stdDev := stat.StdDev(data, nil)
+	geary := mad / stdDev
+	fmt.Printf("Geary's Kurtosis: %v\n", geary)
+	return geary
+}
+
+func main() {
+	// Generate data
+	data := generateBimodalDistribution(1000)
+
+	// Plot QQ plot
+	plotQQ(data, "qq_plot.png")
+
+	// Plot CDF plot
+	plotCDF(data, "cdf_plot.png")
+
+	// Perform Shapiro-Wilk test
+	shapiroWilkTest(data)
+
+	// Perform Kolmogorov-Smirnov test
+	kolmogorovSmirnovTest(data)
+
+	// Perform Anderson-Darling test
+	andersonDarlingTest(data)
+
+	// Perform Jarque-Bera test
+	jarqueBeraTest(data)
+
+	// Calculate Geary's Kurtosis
+	gearyKurtosis(data)
+}
 ```
