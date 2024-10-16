@@ -57,6 +57,7 @@ where $$k$$ is a constant of proportionality that may be ignored when comparing 
 The likelihood function is not a probability distribution over $$\theta$$; rather, it serves as a tool for estimation and hypothesis testing. It allows us to identify parameter values that make the observed data most plausible.
 
 ### Bayesian Posterior Distributions
+
 In Bayesian statistics, the posterior distribution represents the updated belief about the parameter $$\theta$$ after observing data $$x$$. It is derived using Bayes' theorem:
 
 $$
@@ -249,3 +250,378 @@ By maintaining clarity, precision, and a thorough understanding of the tools at 
 - **Be Mindful of Prior Information:** When using Bayesian methods, carefully select priors and assess their influence on the posterior distribution.
 - **Consider the Practical Implications:** Choose statistical methods that are tractable and provide clear, actionable insights.
 - **Stay Informed of Methodological Debates:** Engage with the ongoing discourse between Bayesian and frequentist methodologies to enhance understanding and application.
+
+## Appendix
+
+### Python Code for Bayesian Posterior and Test Statistics
+
+```python
+# Import necessary libraries
+import numpy as np
+from scipy import stats
+import matplotlib.pyplot as plt
+
+# Define a prior distribution (uniform prior)
+def prior(theta):
+    return 1 if 0 <= theta <= 1 else 0
+
+# Define the likelihood function
+def likelihood(theta, data):
+    return np.prod(stats.binom.pmf(data, n=1, p=theta))
+
+# Define the posterior using Bayes' theorem
+def posterior(theta, data):
+    return likelihood(theta, data) * prior(theta)
+
+# Normalize the posterior to ensure it integrates to 1
+def normalized_posterior(data):
+    theta_range = np.linspace(0, 1, 100)
+    posterior_values = np.array([posterior(theta, data) for theta in theta_range])
+    normalization_constant = np.trapz(posterior_values, theta_range)
+    return theta_range, posterior_values / normalization_constant
+
+# Plot the posterior distribution
+def plot_posterior(data):
+    theta_range, norm_posterior = normalized_posterior(data)
+    plt.plot(theta_range, norm_posterior, label='Posterior')
+    plt.title('Posterior Distribution')
+    plt.xlabel('Theta')
+    plt.ylabel('Density')
+    plt.legend()
+    plt.show()
+
+# Simulate data (e.g., Bernoulli trials with true parameter 0.7)
+data = np.random.binomial(1, 0.7, size=20)
+
+# Plot the posterior for the given data
+plot_posterior(data)
+
+# Compute the test statistics (mean, variance, etc.)
+mean_posterior = np.trapz(theta_range * norm_posterior, theta_range)
+variance_posterior = np.trapz((theta_range - mean_posterior) ** 2 * norm_posterior, theta_range)
+credible_interval = np.percentile(theta_range, [2.5, 97.5])
+
+# Print posterior mean, variance, and credible interval
+print(f"Posterior Mean: {mean_posterior}")
+print(f"Posterior Variance: {variance_posterior}")
+print(f"95% Credible Interval: {credible_interval}")
+
+# Frequentist Test Statistics Example: Likelihood Ratio Test
+def likelihood_ratio_test(data, theta_null, theta_alt):
+    ll_null = np.sum(np.log(stats.binom.pmf(data, n=1, p=theta_null)))
+    ll_alt = np.sum(np.log(stats.binom.pmf(data, n=1, p=theta_alt)))
+    return 2 * (ll_alt - ll_null)
+
+# Perform a likelihood ratio test for two values of theta
+lr_stat = likelihood_ratio_test(data, theta_null=0.5, theta_alt=0.7)
+p_value = stats.chi2.sf(lr_stat, df=1)
+print(f"Likelihood Ratio Test Statistic: {lr_stat}")
+print(f"p-value: {p_value}")
+```
+
+### R Code for Bayesian Posterior and Test Statistics
+
+```r
+# Load necessary libraries
+library(ggplot2)
+
+# Define a uniform prior
+prior <- function(theta) {
+  ifelse(theta >= 0 & theta <= 1, 1, 0)
+}
+
+# Define the likelihood function (Bernoulli trials)
+likelihood <- function(theta, data) {
+  prod(dbinom(data, size = 1, prob = theta))
+}
+
+# Define the posterior function using Bayes' theorem
+posterior <- function(theta, data) {
+  likelihood(theta, data) * prior(theta)
+}
+
+# Normalize the posterior distribution
+normalized_posterior <- function(data) {
+  theta_range <- seq(0, 1, length.out = 100)
+  posterior_values <- sapply(theta_range, posterior, data = data)
+  normalization_constant <- sum(posterior_values) * diff(range(theta_range)) / length(theta_range)
+  list(theta_range = theta_range, posterior_values = posterior_values / normalization_constant)
+}
+
+# Plot the posterior distribution
+plot_posterior <- function(data) {
+  result <- normalized_posterior(data)
+  df <- data.frame(theta = result$theta_range, posterior = result$posterior_values)
+  
+  ggplot(df, aes(x = theta, y = posterior)) +
+    geom_line() +
+    labs(title = "Posterior Distribution", x = "Theta", y = "Density") +
+    theme_minimal()
+}
+
+# Simulate data (e.g., Bernoulli trials with true parameter 0.7)
+set.seed(123)
+data <- rbinom(20, size = 1, prob = 0.7)
+
+# Plot the posterior for the given data
+plot_posterior(data)
+
+# Compute posterior mean, variance, and credible interval
+posterior_summary <- function(data) {
+  result <- normalized_posterior(data)
+  theta_range <- result$theta_range
+  posterior_values <- result$posterior_values
+  
+  mean_posterior <- sum(theta_range * posterior_values) * diff(range(theta_range)) / length(theta_range)
+  variance_posterior <- sum((theta_range - mean_posterior)^2 * posterior_values) * diff(range(theta_range)) / length(theta_range)
+  credible_interval <- quantile(theta_range, c(0.025, 0.975))
+  
+  list(mean = mean_posterior, variance = variance_posterior, credible_interval = credible_interval)
+}
+
+# Compute and print posterior summary statistics
+summary_stats <- posterior_summary(data)
+print(paste("Posterior Mean:", summary_stats$mean))
+print(paste("Posterior Variance:", summary_stats$variance))
+print(paste("95% Credible Interval:", paste(summary_stats$credible_interval, collapse = " - ")))
+
+# Frequentist Test Statistics Example: Likelihood Ratio Test
+likelihood_ratio_test <- function(data, theta_null, theta_alt) {
+  ll_null <- sum(dbinom(data, size = 1, prob = theta_null, log = TRUE))
+  ll_alt <- sum(dbinom(data, size = 1, prob = theta_alt, log = TRUE))
+  test_stat <- 2 * (ll_alt - ll_null)
+  p_value <- 1 - pchisq(test_stat, df = 1)
+  list(test_stat = test_stat, p_value = p_value)
+}
+
+# Perform a likelihood ratio test for two values of theta
+lr_test_result <- likelihood_ratio_test(data, theta_null = 0.5, theta_alt = 0.7)
+print(paste("Likelihood Ratio Test Statistic:", lr_test_result$test_stat))
+print(paste("p-value:", lr_test_result$p_value))
+```
+
+### Scala Code for Bayesian Posterior and Test Statistics
+
+```scala
+// Import necessary libraries
+import breeze.stats.distributions._
+import breeze.linalg._
+import breeze.plot._
+import scala.math._
+
+// Define a uniform prior
+def prior(theta: Double): Double = {
+  if (theta >= 0 && theta <= 1) 1.0 else 0.0
+}
+
+// Define the likelihood function (Bernoulli trials)
+def likelihood(theta: Double, data: Seq[Int]): Double = {
+  data.map(x => pow(theta, x) * pow(1 - theta, 1 - x)).product
+}
+
+// Define the posterior function using Bayes' theorem
+def posterior(theta: Double, data: Seq[Int]): Double = {
+  likelihood(theta, data) * prior(theta)
+}
+
+// Normalize the posterior distribution
+def normalizedPosterior(data: Seq[Int]): (DenseVector[Double], DenseVector[Double]) = {
+  val thetaRange = linspace(0.0, 1.0, 100)
+  val posteriorValues = DenseVector(thetaRange.map(posterior(_, data)).toArray)
+  val normalizationConstant = sum(posteriorValues) * (thetaRange(1) - thetaRange(0))
+  (thetaRange, posteriorValues / normalizationConstant)
+}
+
+// Plot the posterior distribution
+def plotPosterior(data: Seq[Int]): Unit = {
+  val (thetaRange, normPosterior) = normalizedPosterior(data)
+  val f = Figure()
+  val p = f.subplot(0)
+  p += plot(thetaRange, normPosterior)
+  p.title = "Posterior Distribution"
+  p.xlabel = "Theta"
+  p.ylabel = "Density"
+  f.saveas("posterior_plot.png")
+}
+
+// Simulate data (e.g., Bernoulli trials with true parameter 0.7)
+val data = Seq.fill(20)(if (Gaussian(0.7, 0.15).draw() > 0.5) 1 else 0)
+
+// Plot the posterior for the given data
+plotPosterior(data)
+
+// Compute posterior mean, variance, and credible interval
+def posteriorSummary(data: Seq[Int]): (Double, Double, (Double, Double)) = {
+  val (thetaRange, normPosterior) = normalizedPosterior(data)
+  val meanPosterior = sum(thetaRange *:* normPosterior) * (thetaRange(1) - thetaRange(0))
+  val variancePosterior = sum(pow(thetaRange - meanPosterior, 2) *:* normPosterior) * (thetaRange(1) - thetaRange(0))
+  val credibleInterval = (thetaRange(2), thetaRange(97))
+  (meanPosterior, variancePosterior, credibleInterval)
+}
+
+// Compute and print posterior summary statistics
+val (mean, variance, credibleInterval) = posteriorSummary(data)
+println(s"Posterior Mean: $mean")
+println(s"Posterior Variance: $variance")
+println(s"95% Credible Interval: ${credibleInterval._1} - ${credibleInterval._2}")
+
+// Frequentist Test Statistics Example: Likelihood Ratio Test
+def likelihoodRatioTest(data: Seq[Int], thetaNull: Double, thetaAlt: Double): (Double, Double) = {
+  val logLikelihoodNull = data.map(x => x * log(thetaNull) + (1 - x) * log(1 - thetaNull)).sum
+  val logLikelihoodAlt = data.map(x => x * log(thetaAlt) + (1 - x) * log(1 - thetaAlt)).sum
+  val testStat = 2 * (logLikelihoodAlt - logLikelihoodNull)
+  val pValue = 1 - breeze.stats.distributions.ChiSquared(1).cdf(testStat)
+  (testStat, pValue)
+}
+
+// Perform a likelihood ratio test for two values of theta
+val (lrStat, pValue) = likelihoodRatioTest(data, thetaNull = 0.5, thetaAlt = 0.7)
+println(s"Likelihood Ratio Test Statistic: $lrStat")
+println(s"p-value: $pValue")
+```
+
+### Go Code for Bayesian Posterior and Test Statistics
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+	"math/rand"
+	"sort"
+
+	"gonum.org/v1/gonum/stat/distuv"
+	"gonum.org/v1/plot"
+	"gonum.org/v1/plot/plotter"
+	"gonum.org/v1/plot/vg"
+)
+
+// Define the prior function (uniform prior)
+func prior(theta float64) float64 {
+	if theta >= 0 && theta <= 1 {
+		return 1
+	}
+	return 0
+}
+
+// Define the likelihood function (Bernoulli trials)
+func likelihood(theta float64, data []int) float64 {
+	likelihood := 1.0
+	for _, x := range data {
+		likelihood *= math.Pow(theta, float64(x)) * math.Pow(1-theta, float64(1-x))
+	}
+	return likelihood
+}
+
+// Define the posterior function using Bayes' theorem
+func posterior(theta float64, data []int) float64 {
+	return likelihood(theta, data) * prior(theta)
+}
+
+// Normalize the posterior distribution
+func normalizedPosterior(data []int) ([]float64, []float64) {
+	thetas := make([]float64, 100)
+	posteriors := make([]float64, 100)
+	sumPosterior := 0.0
+
+	for i := 0; i < 100; i++ {
+		theta := float64(i) / 100
+		thetas[i] = theta
+		post := posterior(theta, data)
+		posteriors[i] = post
+		sumPosterior += post
+	}
+
+	for i := range posteriors {
+		posteriors[i] /= sumPosterior
+	}
+
+	return thetas, posteriors
+}
+
+// Plot the posterior distribution
+func plotPosterior(data []int) {
+	thetas, posteriors := normalizedPosterior(data)
+
+	p, _ := plot.New()
+	p.Title.Text = "Posterior Distribution"
+	p.X.Label.Text = "Theta"
+	p.Y.Label.Text = "Density"
+
+	pts := make(plotter.XYs, len(thetas))
+	for i := range thetas {
+		pts[i].X = thetas[i]
+		pts[i].Y = posteriors[i]
+	}
+
+	line, _ := plotter.NewLine(pts)
+	p.Add(line)
+	p.Save(4*vg.Inch, 4*vg.Inch, "posterior.png")
+}
+
+// Simulate data (e.g., Bernoulli trials with true parameter 0.7)
+func simulateData(size int, prob float64) []int {
+	data := make([]int, size)
+	for i := range data {
+		if rand.Float64() < prob {
+			data[i] = 1
+		} else {
+			data[i] = 0
+		}
+	}
+	return data
+}
+
+// Compute posterior mean, variance, and credible interval
+func posteriorSummary(data []int) (float64, float64, [2]float64) {
+	thetas, posteriors := normalizedPosterior(data)
+
+	meanPosterior := 0.0
+	for i := range thetas {
+		meanPosterior += thetas[i] * posteriors[i]
+	}
+
+	variancePosterior := 0.0
+	for i := range thetas {
+		variancePosterior += math.Pow(thetas[i]-meanPosterior, 2) * posteriors[i]
+	}
+
+	credibleInterval := [2]float64{thetas[2], thetas[97]}
+	return meanPosterior, variancePosterior, credibleInterval
+}
+
+// Likelihood ratio test
+func likelihoodRatioTest(data []int, thetaNull, thetaAlt float64) (float64, float64) {
+	llNull := 0.0
+	llAlt := 0.0
+
+	for _, x := range data {
+		llNull += float64(x)*math.Log(thetaNull) + float64(1-x)*math.Log(1-thetaNull)
+		llAlt += float64(x)*math.Log(thetaAlt) + float64(1-x)*math.Log(1-thetaAlt)
+	}
+
+	testStat := 2 * (llAlt - llNull)
+	pValue := 1 - distuv.ChiSquared{K: 1}.CDF(testStat)
+	return testStat, pValue
+}
+
+func main() {
+	// Simulate data
+	data := simulateData(20, 0.7)
+
+	// Plot posterior distribution
+	plotPosterior(data)
+
+	// Compute and print posterior summary statistics
+	mean, variance, credibleInterval := posteriorSummary(data)
+	fmt.Printf("Posterior Mean: %.4f\n", mean)
+	fmt.Printf("Posterior Variance: %.4f\n", variance)
+	fmt.Printf("95%% Credible Interval: [%.4f, %.4f]\n", credibleInterval[0], credibleInterval[1])
+
+	// Perform likelihood ratio test
+	lrStat, pValue := likelihoodRatioTest(data, 0.5, 0.7)
+	fmt.Printf("Likelihood Ratio Test Statistic: %.4f\n", lrStat)
+	fmt.Printf("p-value: %.4f\n", pValue)
+}
+```
