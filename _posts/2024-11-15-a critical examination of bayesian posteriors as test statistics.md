@@ -18,6 +18,10 @@ keywords:
 - Test Statistics
 - Likelihoods
 - Bayesian vs Frequentist
+- python
+- r
+- scala
+- go
 seo_description: A critical examination of Bayesian posteriors as test statistics, exploring their utility and limitations in statistical inference.
 seo_title: Bayesian Posteriors as Test Statistics
 seo_type: article
@@ -26,6 +30,10 @@ tags:
 - Bayesian Posteriors
 - Test Statistics
 - Likelihoods
+- python
+- r
+- scala
+- go
 title: A Critical Examination of Bayesian Posteriors as Test Statistics
 ---
 
