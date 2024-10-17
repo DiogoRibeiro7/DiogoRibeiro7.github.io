@@ -71,3 +71,7 @@ TODO:
 ### 14. **"Shapiro-Wilk Test vs. Anderson-Darling: Checking for Normality in Small vs. Large Samples"**
    - Comparing two common tests for normality: Shapiro-Wilk and Anderson-Darling.
    - How sample size and distribution affect the choice of normality test.
+
+### 15. **"Log-Rank Test: Comparing Survival Curves in Clinical Studies"**
+   - Overview of the Log-Rank test for comparing survival distributions.
+   - Applications in clinical trials, epidemiology, and medical research.
