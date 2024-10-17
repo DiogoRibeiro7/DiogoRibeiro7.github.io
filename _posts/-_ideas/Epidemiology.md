@@ -1,3 +1,7 @@
+---
+tags: []
+---
+
 ## Epidimiology
 
 - TODO: "Leveraging Machine Learning in Epidemiology for Disease Prediction"
