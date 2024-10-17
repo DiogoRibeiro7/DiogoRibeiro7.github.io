@@ -3,9 +3,6 @@
 - TODO: "Leveraging Machine Learning in Epidemiology for Disease Prediction"
   - Discuss how ML models can predict the spread of diseases, diagnose outbreaks, or provide personalized medicine recommendations.
 
-- TODO: "Applications of Time Series Analysis in Epidemiological Research"
-  - Explore how time series methods can model the spread of diseases, detect outbreaks early, and predict future cases.
-
 - TODO: "Data Science in the Fight Against Pandemics: Lessons from COVID-19"
   - Analyze the role of data science in managing the COVID-19 pandemic, including predictive modeling, contact tracing, and vaccine distribution strategies.
 
@@ -44,3 +41,6 @@
 
 - TODO: "Epidemiology in the Age of IoT: Using Wearable Devices for Public Health Research"
   - Explore how wearable technology can be integrated with data science frameworks to enhance epidemiological studies.
+
+- TODO: "Machine Learning for Drug Discovery and Epidemiology"
+  - Discuss the intersection of machine learning, bioinformatics, and epidemiology in accelerating drug discovery and personalized medicine.
