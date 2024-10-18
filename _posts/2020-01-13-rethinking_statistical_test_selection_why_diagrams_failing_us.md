@@ -144,4 +144,4 @@ Here’s why: **Permutation testing** naturally performs under the true null hyp
 
 If you’ve been relying on the same diagrams and pseudorules for choosing statistical tests, it’s time to rethink your approach. These flowcharts may be a decent introduction, but they often ignore the complexities of real-world data. By focusing on meaningful interpretations, using robust methods like **Welch’s t-test**, and avoiding unnecessary data transformations, you can make better decisions and gain deeper insights from your data.
 
-Remember, statistical tests are tools—not laws to be followed blindly. The real power lies in understanding what your data is telling you and choosing methods that respect its structure without distorting the interpretation. 
+Remember, statistical tests are tools—not laws to be followed blindly. The real power lies in understanding what your data is telling you and choosing methods that respect its structure without distorting the interpretation.
