@@ -37,7 +37,6 @@ tags:
 - Genomics data analysis
 - Interactive data visualization
 - Python
-- python
 title: Understanding t-SNE
 ---
 

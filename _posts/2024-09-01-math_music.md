@@ -6,7 +6,9 @@ categories:
 - Technology
 classes: wide
 date: '2024-09-01'
-excerpt: Discover how mathematics influences electronic music creation through sound synthesis, rhythm, and algorithmic composition. Explore the role of numbers in shaping digital signal processing and generative music.
+excerpt: Discover how mathematics influences electronic music creation through sound
+  synthesis, rhythm, and algorithmic composition. Explore the role of numbers in shaping
+  digital signal processing and generative music.
 header:
   image: /assets/images/data_science_4.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -21,10 +23,15 @@ keywords:
 - Digital signal processing
 - Generative music
 - Rhythm and numbers
-seo_description: Explore how mathematics drives electronic music production, from sound synthesis to algorithmic composition. Learn how numbers shape rhythm, signal processing, and generative music.
+seo_description: Explore how mathematics drives electronic music production, from
+  sound synthesis to algorithmic composition. Learn how numbers shape rhythm, signal
+  processing, and generative music.
 seo_title: 'The Role of Mathematics in Electronic Music: Sound, Rhythm, and Composition'
 seo_type: article
-summary: This article explores the intersection of mathematics and electronic music, highlighting how algorithms and mathematical principles influence sound synthesis, rhythm, and generative music creation. It delves into the technical aspects of digital signal processing and algorithmic composition in music technology.
+summary: This article explores the intersection of mathematics and electronic music,
+  highlighting how algorithms and mathematical principles influence sound synthesis,
+  rhythm, and generative music creation. It delves into the technical aspects of digital
+  signal processing and algorithmic composition in music technology.
 tags:
 - Sound synthesis
 - Algorithmic composition

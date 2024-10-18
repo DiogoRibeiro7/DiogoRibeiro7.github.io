@@ -27,12 +27,15 @@ keywords:
 - Artificial intelligence
 - Technology
 - Python
-- Python
-- python
-seo_description: Explore advanced methods for machine learning monitoring by moving beyond univariate data drift detection. Learn about direct loss estimation, detecting outliers, and addressing alarm fatigue in production AI systems.
+seo_description: Explore advanced methods for machine learning monitoring by moving
+  beyond univariate data drift detection. Learn about direct loss estimation, detecting
+  outliers, and addressing alarm fatigue in production AI systems.
 seo_title: 'Machine Learning Monitoring: Moving Beyond Univariate Data Drift Detection'
 seo_type: article
-summary: A deep dive into advanced machine learning monitoring techniques that extend beyond traditional univariate data drift detection. This article covers methods such as direct loss estimation, outlier detection, and best practices for addressing alarm fatigue in AI systems deployed in production.
+summary: A deep dive into advanced machine learning monitoring techniques that extend
+  beyond traditional univariate data drift detection. This article covers methods
+  such as direct loss estimation, outlier detection, and best practices for addressing
+  alarm fatigue in AI systems deployed in production.
 tags:
 - Data drift
 - Direct loss estimation
@@ -48,8 +51,6 @@ tags:
 - Artificial intelligence
 - Technology
 - Python
-- Python
-- python
 title: 'Machine Learning Monitoring: Moving Beyond Univariate Data Drift Detection'
 ---
 

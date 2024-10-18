@@ -27,7 +27,9 @@ keywords:
 - Machine learning algorithms
 - Classification models
 - Predictive modeling
-seo_description: A comprehensive guide to Logistic Regression, covering binary classification, logit models, probability, maximum-likelihood estimation, odds ratios, and the contributions of Joseph Berkson. Explore its use in machine learning and predictive modeling.
+seo_description: A comprehensive guide to Logistic Regression, covering binary classification,
+  logit models, probability, maximum-likelihood estimation, odds ratios, and the contributions
+  of Joseph Berkson. Explore its use in machine learning and predictive modeling.
 seo_title: 'The Logistic Model: Explained'
 seo_type: article
 tags:

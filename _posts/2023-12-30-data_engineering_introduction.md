@@ -4,7 +4,8 @@ categories:
 - Data Engineering
 classes: wide
 date: '2023-12-30'
-excerpt: This article explores the fundamentals of data engineering, including the ETL/ELT processes, required skills, and the relationship with data science.
+excerpt: This article explores the fundamentals of data engineering, including the
+  ETL/ELT processes, required skills, and the relationship with data science.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -18,10 +19,13 @@ keywords:
 - Elt
 - Data science
 - Data pipelines
-seo_description: An in-depth overview of Data Engineering, discussing the ETL and ELT processes, data pipelines, and the necessary skills for data engineers.
+seo_description: An in-depth overview of Data Engineering, discussing the ETL and
+  ELT processes, data pipelines, and the necessary skills for data engineers.
 seo_title: 'Understanding Data Engineering: Skills, ETL, and ELT Processes'
 seo_type: article
-summary: Data Engineering is critical for managing and processing large datasets. Learn about the skills, processes like ETL and ELT, and how they fit into modern data workflows.
+summary: Data Engineering is critical for managing and processing large datasets.
+  Learn about the skills, processes like ETL and ELT, and how they fit into modern
+  data workflows.
 tags:
 - Etl
 - Data pipelines

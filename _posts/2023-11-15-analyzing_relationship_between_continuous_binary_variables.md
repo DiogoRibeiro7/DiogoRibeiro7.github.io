@@ -4,7 +4,9 @@ categories:
 - Data Analysis
 classes: wide
 date: '2023-11-15'
-excerpt: Learn the differences between biserial and point-biserial correlation methods, and discover how they can be applied to analyze relationships between continuous and binary variables in educational testing, psychology, and medical diagnostics.
+excerpt: Learn the differences between biserial and point-biserial correlation methods,
+  and discover how they can be applied to analyze relationships between continuous
+  and binary variables in educational testing, psychology, and medical diagnostics.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_9.jpg
@@ -18,10 +20,16 @@ keywords:
 - Educational testing
 - Psychology
 - Medical diagnostics
-seo_description: Explore biserial and point-biserial correlation methods for analyzing relationships between continuous and binary variables, with applications in educational testing, psychology, and medical diagnostics.
-seo_title: 'Biserial vs. Point-Biserial Correlation: Analyzing Continuous and Binary Variable Relationships'
+seo_description: Explore biserial and point-biserial correlation methods for analyzing
+  relationships between continuous and binary variables, with applications in educational
+  testing, psychology, and medical diagnostics.
+seo_title: 'Biserial vs. Point-Biserial Correlation: Analyzing Continuous and Binary
+  Variable Relationships'
 seo_type: article
-summary: Biserial and point-biserial correlation methods are used to analyze relationships between binary and continuous variables. This article explains the differences between these two correlation techniques and their practical applications in fields like educational testing, psychology, and medical diagnostics.
+summary: Biserial and point-biserial correlation methods are used to analyze relationships
+  between binary and continuous variables. This article explains the differences between
+  these two correlation techniques and their practical applications in fields like
+  educational testing, psychology, and medical diagnostics.
 tags:
 - Biserial correlation
 - Point-biserial correlation
@@ -30,7 +38,8 @@ tags:
 - Educational testing
 - Psychology
 - Medical diagnostics
-title: 'Biserial and Point-Biserial Correlation: Analyzing the Relationship Between Continuous and Binary Variables'
+title: 'Biserial and Point-Biserial Correlation: Analyzing the Relationship Between
+  Continuous and Binary Variables'
 ---
 
 In statistical analysis, understanding the relationship between variables is essential for gaining insights and making informed decisions. When analyzing the relationship between **continuous** and **binary** variables, two specialized correlation methods are often employed: **biserial correlation** and **point-biserial correlation**. Both techniques are used to measure the strength and direction of association between these two types of variables, but they are applied in different contexts and are based on distinct assumptions.

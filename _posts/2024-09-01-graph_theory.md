@@ -5,7 +5,9 @@ categories:
 - Supply Chain Management
 classes: wide
 date: '2024-09-01'
-excerpt: Explore how graph theory is applied to optimize production systems and supply chains. Learn how network optimization and resource allocation techniques improve efficiency and streamline operations.
+excerpt: Explore how graph theory is applied to optimize production systems and supply
+  chains. Learn how network optimization and resource allocation techniques improve
+  efficiency and streamline operations.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_4.jpg
@@ -20,10 +22,15 @@ keywords:
 - Supply chain management
 - Optimization strategies
 - Production systems efficiency
-seo_description: Discover the role of graph theory in optimizing production systems and supply chains. This article covers network optimization, resource allocation, and key strategies for improving operational efficiency.
+seo_description: Discover the role of graph theory in optimizing production systems
+  and supply chains. This article covers network optimization, resource allocation,
+  and key strategies for improving operational efficiency.
 seo_title: Graph Theory in Production Systems and Supply Chain Optimization
 seo_type: article
-summary: This article examines the practical applications of graph theory in optimizing production systems and supply chains. It focuses on network optimization and resource allocation techniques that enhance operational efficiency and decision-making in supply chain management.
+summary: This article examines the practical applications of graph theory in optimizing
+  production systems and supply chains. It focuses on network optimization and resource
+  allocation techniques that enhance operational efficiency and decision-making in
+  supply chain management.
 tags:
 - Graph theory
 - Network optimization

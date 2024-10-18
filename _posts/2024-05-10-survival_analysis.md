@@ -4,7 +4,9 @@ categories:
 - Statistics
 classes: wide
 date: '2024-05-10'
-excerpt: Explore the role of survival analysis in management, focusing on time-to-event data and techniques like the Kaplan-Meier estimator and Cox proportional hazards model for business decision-making.
+excerpt: Explore the role of survival analysis in management, focusing on time-to-event
+  data and techniques like the Kaplan-Meier estimator and Cox proportional hazards
+  model for business decision-making.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_9.jpg
@@ -26,12 +28,16 @@ keywords:
 - Business analytics
 - R
 - Python
-- python
-seo_description: Learn about survival analysis and its applications in management for analyzing time-to-event data. Discover key techniques like the Kaplan-Meier estimator and the Cox model, useful in decision-making for employee retention and customer churn.
+seo_description: Learn about survival analysis and its applications in management
+  for analyzing time-to-event data. Discover key techniques like the Kaplan-Meier
+  estimator and the Cox model, useful in decision-making for employee retention and
+  customer churn.
 seo_title: 'Survival Analysis in Management: Techniques and Applications'
 seo_type: article
 subtitle: Techniques and Applications
-summary: This article examines survival analysis in management, detailing its key concepts like hazard and survival functions, censoring, and applications such as employee retention, customer churn, and product lifespan modeling.
+summary: This article examines survival analysis in management, detailing its key
+  concepts like hazard and survival functions, censoring, and applications such as
+  employee retention, customer churn, and product lifespan modeling.
 tags:
 - Survival analysis
 - Time-to-event data
@@ -50,7 +56,6 @@ tags:
 - Data-driven management
 - R
 - Python
-- python
 title: Survival Analysis in Management
 ---
 

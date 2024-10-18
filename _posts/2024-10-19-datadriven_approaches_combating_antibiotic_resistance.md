@@ -4,7 +4,9 @@ categories:
 - Healthcare
 classes: wide
 date: '2024-10-19'
-excerpt: Data science is transforming our approach to antibiotic resistance by identifying patterns in antibiotic use, proposing interventions, and aiding in the fight against superbugs.
+excerpt: Data science is transforming our approach to antibiotic resistance by identifying
+  patterns in antibiotic use, proposing interventions, and aiding in the fight against
+  superbugs.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -13,19 +15,22 @@ header:
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_8.jpg
 keywords:
-- Antibiotic Resistance
-- Predictive Modeling
-- Data Science
+- Antibiotic resistance
+- Predictive modeling
+- Data science
 - Superbugs
-- Healthcare Data Analytics
-seo_description: An in-depth exploration of how data-driven approaches, particularly predictive modeling and pattern analysis, are helping combat antibiotic resistance.
+- Healthcare data analytics
+seo_description: An in-depth exploration of how data-driven approaches, particularly
+  predictive modeling and pattern analysis, are helping combat antibiotic resistance.
 seo_title: Data Science in Combating Antibiotic Resistance
 seo_type: article
-summary: This article discusses how data science, through predictive modeling and pattern analysis, plays a crucial role in identifying misuse of antibiotics and proposing effective strategies to combat antibiotic resistance.
+summary: This article discusses how data science, through predictive modeling and
+  pattern analysis, plays a crucial role in identifying misuse of antibiotics and
+  proposing effective strategies to combat antibiotic resistance.
 tags:
-- Antibiotic Resistance
-- Data Science
-- Predictive Modeling
+- Antibiotic resistance
+- Data science
+- Predictive modeling
 - Superbugs
 title: Data-Driven Approaches to Combating Antibiotic Resistance
 ---

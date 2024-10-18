@@ -28,13 +28,14 @@ keywords:
 - Machine learning models
 - Statistical methods
 - Python
-- Python
-- python
-seo_description: Learn how to detect multivariate data drift and monitor your machine learning model's performance using PCA and Reconstruction Error.
+seo_description: Learn how to detect multivariate data drift and monitor your machine
+  learning model's performance using PCA and Reconstruction Error.
 seo_title: Detect Multivariate Data Drift with PCA and Reconstruction Error
 seo_type: article
 subtitle: Ensuring Model Accuracy by Monitoring Subtle Changes in Data Structure
-summary: A detailed guide on detecting multivariate data drift using Principal Component Analysis (PCA) and Reconstruction Error to monitor changes in data structure and ensure model performance in production environments.
+summary: A detailed guide on detecting multivariate data drift using Principal Component
+  Analysis (PCA) and Reconstruction Error to monitor changes in data structure and
+  ensure model performance in production environments.
 tags:
 - Multivariate data drift
 - Principal component analysis (pca)
@@ -49,8 +50,6 @@ tags:
 - Data science
 - Production data
 - Python
-- Python
-- python
 title: Detect Multivariate Data Drift
 ---
 

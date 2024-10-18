@@ -28,7 +28,6 @@ tags:
 - Curve fitting
 - Medical statistics
 - Python
-- python
 title: 'Estimating Survival Functions: Parametric and Non-Parametric Approaches'
 ---
 

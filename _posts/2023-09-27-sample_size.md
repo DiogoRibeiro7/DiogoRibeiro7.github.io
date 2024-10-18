@@ -4,7 +4,8 @@ categories:
 - Statistics
 classes: wide
 date: '2023-09-27'
-excerpt: Dive into the nuances of sample size in statistical analysis, challenging the common belief that larger samples always lead to better results.
+excerpt: Dive into the nuances of sample size in statistical analysis, challenging
+  the common belief that larger samples always lead to better results.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -23,7 +24,9 @@ keywords:
 - Data sampling
 - Effect size
 - Research methodology
-seo_description: Explore the complexities of sample size in statistical analysis. Learn why bigger isn't always better, and the importance of data quality and experimental design.
+seo_description: Explore the complexities of sample size in statistical analysis.
+  Learn why bigger isn't always better, and the importance of data quality and experimental
+  design.
 seo_title: The Myth and Reality of Sample Size in Statistical Analysis
 seo_type: article
 subtitle: A Nuanced Perspective

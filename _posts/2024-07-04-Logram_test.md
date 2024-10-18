@@ -27,8 +27,6 @@ tags:
 - Hypothesis testing
 - Python
 - R
-- python
-- r
 title: Understanding the Logrank Test in Survival Analysis
 ---
 

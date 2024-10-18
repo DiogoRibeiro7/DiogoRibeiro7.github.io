@@ -4,7 +4,9 @@ categories:
 - Data Science
 classes: wide
 date: '2020-12-01'
-excerpt: Learn how data science revolutionizes predictive maintenance through key techniques like regression, anomaly detection, and clustering to forecast machine failures and optimize maintenance schedules.
+excerpt: Learn how data science revolutionizes predictive maintenance through key
+  techniques like regression, anomaly detection, and clustering to forecast machine
+  failures and optimize maintenance schedules.
 header:
   image: /assets/images/data_science_7.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -19,10 +21,14 @@ keywords:
 - Regression
 - Machine learning
 - Data science
-seo_description: Explore the impact of data science on predictive maintenance, including techniques like regression, anomaly detection, and clustering for failure forecasting and optimization of maintenance schedules.
+seo_description: Explore the impact of data science on predictive maintenance, including
+  techniques like regression, anomaly detection, and clustering for failure forecasting
+  and optimization of maintenance schedules.
 seo_title: 'Data Science in Predictive Maintenance: Techniques and Applications'
 seo_type: article
-summary: This article delves into the role of data science in predictive maintenance (PdM), explaining how methods such as regression, anomaly detection, and clustering help forecast equipment failures, reduce downtime, and optimize maintenance strategies.
+summary: This article delves into the role of data science in predictive maintenance
+  (PdM), explaining how methods such as regression, anomaly detection, and clustering
+  help forecast equipment failures, reduce downtime, and optimize maintenance strategies.
 tags:
 - Data science
 - Machine learning

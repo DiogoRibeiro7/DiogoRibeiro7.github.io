@@ -4,7 +4,9 @@ categories:
 - Statistics
 classes: wide
 date: '2020-06-01'
-excerpt: Discover the foundations of Ordinary Least Squares (OLS) regression, its key properties such as consistency, efficiency, and maximum likelihood estimation, and its applications in linear modeling.
+excerpt: Discover the foundations of Ordinary Least Squares (OLS) regression, its
+  key properties such as consistency, efficiency, and maximum likelihood estimation,
+  and its applications in linear modeling.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -19,10 +21,16 @@ keywords:
 - Gauss-markov
 - Ols
 - Maximum likelihood estimator
-seo_description: A detailed exploration of Ordinary Least Squares (OLS) regression, its properties like consistency, efficiency, and minimum variance, and its applications in statistics, machine learning, and data science.
-seo_title: 'Ordinary Least Squares (OLS) Regression: Understanding Properties and Applications'
+seo_description: A detailed exploration of Ordinary Least Squares (OLS) regression,
+  its properties like consistency, efficiency, and minimum variance, and its applications
+  in statistics, machine learning, and data science.
+seo_title: 'Ordinary Least Squares (OLS) Regression: Understanding Properties and
+  Applications'
 seo_type: article
-summary: This article covers Ordinary Least Squares (OLS) regression, one of the most commonly used techniques in statistics, data science, and machine learning. Learn about its key properties, how it works, and its wide range of applications in modeling linear relationships between variables.
+summary: This article covers Ordinary Least Squares (OLS) regression, one of the most
+  commonly used techniques in statistics, data science, and machine learning. Learn
+  about its key properties, how it works, and its wide range of applications in modeling
+  linear relationships between variables.
 tags:
 - Homoscedasticity
 - Ols regression
@@ -37,39 +45,45 @@ title: 'Ordinary Least Squares (OLS) Regression: Properties and Applications'
 This method is critical in many disciplines—including **economics**, **social sciences**, and **engineering**—for **predicting outcomes**, **understanding relationships** between variables, and **making data-driven decisions**. This article delves into how OLS works, its properties, and the conditions under which OLS estimators are optimal.
 
 ---
-
-## What is OLS Regression?
-
-At its core, OLS seeks to minimize the sum of squared differences between the observed values $$ y_i $$ and the predicted values $$ \hat{y_i} $$ in a linear model. This means it finds the best-fitting line (or hyperplane in the case of multiple variables) by minimizing the total squared errors.
-
-For a simple linear regression model:
-
-$$
-y = \beta_0 + \beta_1 x + \epsilon
-$$
-
-Where:
-
-- $$ y $$ is the dependent variable.
-- $$ x $$ is the independent variable.
-- $$ \beta_0 $$ is the intercept.
-- $$ \beta_1 $$ is the slope (regression coefficient).
-- $$ \epsilon $$ is the error term (the difference between observed and predicted values).
-
-The goal of OLS is to estimate the coefficients $$ \beta_0 $$ and $$ \beta_1 $$ such that the sum of squared residuals (errors) is minimized:
-
-$$
-\min_{\beta_0, \beta_1} \sum_{i=1}^{n} \left( y_i - (\beta_0 + \beta_1 x_i) \right)^2
-$$
-
-In **multiple linear regression**, where there are multiple independent variables, the model is extended as follows:
-
-$$
-y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_k x_k + \epsilon
-$$
-
-OLS estimates the coefficients $$ \beta_0, \beta_1, \dots, \beta_k $$ by minimizing the sum of squared residuals in this multi-dimensional space.
-
+author_profile: false
+categories:
+- Statistics
+classes: wide
+date: '2020-06-01'
+excerpt: Discover the foundations of Ordinary Least Squares (OLS) regression, its
+  key properties such as consistency, efficiency, and maximum likelihood estimation,
+  and its applications in linear modeling.
+header:
+  image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_8.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_3.jpg
+keywords:
+- Consistency
+- Linear regression
+- Data science
+- Gauss-markov
+- Ols
+- Maximum likelihood estimator
+seo_description: A detailed exploration of Ordinary Least Squares (OLS) regression,
+  its properties like consistency, efficiency, and minimum variance, and its applications
+  in statistics, machine learning, and data science.
+seo_title: 'Ordinary Least Squares (OLS) Regression: Understanding Properties and
+  Applications'
+seo_type: article
+summary: This article covers Ordinary Least Squares (OLS) regression, one of the most
+  commonly used techniques in statistics, data science, and machine learning. Learn
+  about its key properties, how it works, and its wide range of applications in modeling
+  linear relationships between variables.
+tags:
+- Homoscedasticity
+- Ols regression
+- Linear regression
+- Gauss-markov theorem
+- Maximum likelihood estimator
+title: 'Ordinary Least Squares (OLS) Regression: Properties and Applications'
 ---
 
 ## Key Properties of the OLS Estimator
@@ -113,19 +127,45 @@ When the additional assumption is made that the error terms follow a **normal di
 - OLS being the maximum likelihood estimator under normality is particularly useful in cases where the errors are assumed to follow a normal distribution, allowing us to fully leverage statistical inference tools.
 
 ---
-
-## Assumptions for OLS Regression
-
-To ensure that OLS estimators have the desirable properties mentioned above, certain assumptions about the data and the model must be satisfied. These assumptions are often referred to as the **Gauss-Markov assumptions**. When these assumptions hold, OLS provides reliable estimates:
-
-1. **Linearity**: The relationship between the independent and dependent variables must be linear.
-2. **Exogeneity**: The independent variables must not be correlated with the error term.
-3. **Homoscedasticity**: The variance of the error terms should remain constant across all values of the independent variables.
-4. **No autocorrelation**: There should be no correlation between the residuals of different observations.
-5. **Normality of errors** (for inference): The errors are normally distributed (particularly important for constructing confidence intervals and hypothesis tests).
-
-If any of these assumptions are violated, alternative methods, such as **generalized least squares (GLS)** or **robust regression techniques**, may be used to address the issue.
-
+author_profile: false
+categories:
+- Statistics
+classes: wide
+date: '2020-06-01'
+excerpt: Discover the foundations of Ordinary Least Squares (OLS) regression, its
+  key properties such as consistency, efficiency, and maximum likelihood estimation,
+  and its applications in linear modeling.
+header:
+  image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_8.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_3.jpg
+keywords:
+- Consistency
+- Linear regression
+- Data science
+- Gauss-markov
+- Ols
+- Maximum likelihood estimator
+seo_description: A detailed exploration of Ordinary Least Squares (OLS) regression,
+  its properties like consistency, efficiency, and minimum variance, and its applications
+  in statistics, machine learning, and data science.
+seo_title: 'Ordinary Least Squares (OLS) Regression: Understanding Properties and
+  Applications'
+seo_type: article
+summary: This article covers Ordinary Least Squares (OLS) regression, one of the most
+  commonly used techniques in statistics, data science, and machine learning. Learn
+  about its key properties, how it works, and its wide range of applications in modeling
+  linear relationships between variables.
+tags:
+- Homoscedasticity
+- Ols regression
+- Linear regression
+- Gauss-markov theorem
+- Maximum likelihood estimator
+title: 'Ordinary Least Squares (OLS) Regression: Properties and Applications'
 ---
 
 ## Applications of OLS Regression
@@ -149,19 +189,45 @@ Engineers use OLS to model linear relationships between variables such as materi
 In machine learning, OLS forms the basis for **linear regression**, which is often the first method learned for regression problems. It serves as a benchmark model and is used to develop more advanced techniques like **regularized regression** (Ridge, Lasso) and **generalized linear models**.
 
 ---
-
-## Limitations of OLS Regression
-
-While OLS is a powerful tool, it has some limitations that analysts must be aware of:
-
-1. **Sensitivity to outliers**: OLS is highly sensitive to extreme values, which can disproportionately affect the fitted model. In such cases, robust regression methods like **Huber regression** or **RANSAC** may be more appropriate.
-   
-2. **Multicollinearity**: When independent variables are highly correlated with one another, it can inflate the standard errors of the OLS estimates, leading to unreliable coefficient estimates.
-
-3. **Violations of assumptions**: If the assumptions of OLS (such as homoscedasticity, no autocorrelation, and exogeneity) are violated, OLS may produce biased or inefficient estimates.
-
-4. **Non-linearity**: OLS assumes a linear relationship between the independent and dependent variables. If the true relationship is non-linear, OLS will not perform well, and methods such as **polynomial regression** or **non-linear regression** might be required.
-
+author_profile: false
+categories:
+- Statistics
+classes: wide
+date: '2020-06-01'
+excerpt: Discover the foundations of Ordinary Least Squares (OLS) regression, its
+  key properties such as consistency, efficiency, and maximum likelihood estimation,
+  and its applications in linear modeling.
+header:
+  image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_8.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_3.jpg
+keywords:
+- Consistency
+- Linear regression
+- Data science
+- Gauss-markov
+- Ols
+- Maximum likelihood estimator
+seo_description: A detailed exploration of Ordinary Least Squares (OLS) regression,
+  its properties like consistency, efficiency, and minimum variance, and its applications
+  in statistics, machine learning, and data science.
+seo_title: 'Ordinary Least Squares (OLS) Regression: Understanding Properties and
+  Applications'
+seo_type: article
+summary: This article covers Ordinary Least Squares (OLS) regression, one of the most
+  commonly used techniques in statistics, data science, and machine learning. Learn
+  about its key properties, how it works, and its wide range of applications in modeling
+  linear relationships between variables.
+tags:
+- Homoscedasticity
+- Ols regression
+- Linear regression
+- Gauss-markov theorem
+- Maximum likelihood estimator
+title: 'Ordinary Least Squares (OLS) Regression: Properties and Applications'
 ---
 
 ## Conclusion

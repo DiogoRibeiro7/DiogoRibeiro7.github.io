@@ -4,7 +4,9 @@ categories:
 - Data Science
 classes: wide
 date: '2024-10-15'
-excerpt: This article provides an in-depth comparison between the t-test and z-test, highlighting their differences, appropriate usage, and real-world applications, with examples of one-sample, two-sample, and paired t-tests.
+excerpt: This article provides an in-depth comparison between the t-test and z-test,
+  highlighting their differences, appropriate usage, and real-world applications,
+  with examples of one-sample, two-sample, and paired t-tests.
 header:
   image: /assets/images/data_science_5.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -13,20 +15,24 @@ header:
   teaser: /assets/images/data_science_5.jpg
   twitter_image: /assets/images/data_science_5.jpg
 keywords:
-- T-Test
-- Z-Test
-- Hypothesis Testing
-- Statistical Analysis
-- Sample Size
-seo_description: Learn about the key differences between the t-test and z-test, when to use each test based on sample size, variance, and distribution, and explore real-world applications for both tests.
+- T-test
+- Z-test
+- Hypothesis testing
+- Statistical analysis
+- Sample size
+seo_description: Learn about the key differences between the t-test and z-test, when
+  to use each test based on sample size, variance, and distribution, and explore real-world
+  applications for both tests.
 seo_title: 'Understanding T-Test vs. Z-Test: Differences and Applications'
 seo_type: article
-summary: A comprehensive guide to understanding the differences between t-tests and z-tests, covering when to use each test, their assumptions, and examples of one-sample, two-sample, and paired t-tests.
+summary: A comprehensive guide to understanding the differences between t-tests and
+  z-tests, covering when to use each test, their assumptions, and examples of one-sample,
+  two-sample, and paired t-tests.
 tags:
-- T-Test
-- Z-Test
-- Hypothesis Testing
-- Statistical Analysis
+- T-test
+- Z-test
+- Hypothesis testing
+- Statistical analysis
 title: 'T-Test vs. Z-Test: When and Why to Use Each'
 ---
 

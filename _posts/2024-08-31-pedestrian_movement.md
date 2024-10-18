@@ -5,7 +5,9 @@ categories:
 - Simulation Models
 classes: wide
 date: '2024-08-31'
-excerpt: Explore the simulation of pedestrian evacuation in environments impacted by smoke. This guide covers key models such as the Social Force Model and Advection-Diffusion Equation to assess evacuation efficiency under smoke propagation conditions.
+excerpt: Explore the simulation of pedestrian evacuation in environments impacted
+  by smoke. This guide covers key models such as the Social Force Model and Advection-Diffusion
+  Equation to assess evacuation efficiency under smoke propagation conditions.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -23,13 +25,15 @@ keywords:
 - Bash
 - Python
 - Fortran
-- bash
-- python
-- fortran
-seo_description: Learn how to simulate pedestrian evacuation in smoke-affected environments using the Social Force Model and Advection-Diffusion Equation. Explore numerical methods to optimize emergency preparedness strategies.
+seo_description: Learn how to simulate pedestrian evacuation in smoke-affected environments
+  using the Social Force Model and Advection-Diffusion Equation. Explore numerical
+  methods to optimize emergency preparedness strategies.
 seo_title: Pedestrian Evacuation Simulation in Smoke-Affected Environments
 seo_type: article
-summary: This article examines simulation models for pedestrian evacuation in smoke-affected environments. It focuses on the Social Force Model, smoke propagation dynamics through the Advection-Diffusion Equation, and numerical methods for optimizing evacuation strategies during emergencies.
+summary: This article examines simulation models for pedestrian evacuation in smoke-affected
+  environments. It focuses on the Social Force Model, smoke propagation dynamics through
+  the Advection-Diffusion Equation, and numerical methods for optimizing evacuation
+  strategies during emergencies.
 tags:
 - Pedestrian evacuation
 - Smoke propagation
@@ -40,9 +44,6 @@ tags:
 - Bash
 - Python
 - Fortran
-- bash
-- python
-- fortran
 title: Simulating Pedestrian Evacuation in Smoke-Affected Environments
 ---
 

@@ -5,7 +5,9 @@ categories:
 - Data Science
 classes: wide
 date: '2023-09-03'
-excerpt: Learn the core concepts of binary classification, explore common algorithms like Decision Trees and SVMs, and discover how to evaluate performance using precision, recall, and F1-score.
+excerpt: Learn the core concepts of binary classification, explore common algorithms
+  like Decision Trees and SVMs, and discover how to evaluate performance using precision,
+  recall, and F1-score.
 header:
   image: /assets/images/data_science_7.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -24,7 +26,9 @@ keywords:
 - Model evaluation metrics
 - Classification problems
 - Machine learning applications
-seo_description: Explore the fundamentals of binary classification in machine learning, including key algorithms, evaluation metrics like precision and recall, and real-world applications.
+seo_description: Explore the fundamentals of binary classification in machine learning,
+  including key algorithms, evaluation metrics like precision and recall, and real-world
+  applications.
 seo_title: 'Binary Classification in Machine Learning: Methods, Metrics, and Applications'
 seo_type: article
 tags:

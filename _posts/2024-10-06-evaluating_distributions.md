@@ -5,7 +5,9 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-10-06'
-excerpt: A comprehensive review of simple distributional properties such as mean and standard deviation as a strong baseline for time-series classification in standardized benchmarks.
+excerpt: A comprehensive review of simple distributional properties such as mean and
+  standard deviation as a strong baseline for time-series classification in standardized
+  benchmarks.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -19,15 +21,20 @@ keywords:
 - Distributional properties
 - Machine learning
 - Benchmarking
-seo_description: Explore the performance of simple distributional properties in time-series classification benchmarks using the UEA/UCR repository, and the relevance of these models in complex tasks.
+seo_description: Explore the performance of simple distributional properties in time-series
+  classification benchmarks using the UEA/UCR repository, and the relevance of these
+  models in complex tasks.
 seo_title: Simple Distributional Properties for Time-Series Classification Benchmarks
 seo_type: article
-summary: This article discusses the use of simple distributional properties as a baseline for time-series classification, focusing on benchmarks from the UEA/UCR repository and comparing simple and complex models.
+summary: This article discusses the use of simple distributional properties as a baseline
+  for time-series classification, focusing on benchmarks from the UEA/UCR repository
+  and comparing simple and complex models.
 tags:
 - Time-series classification
 - Uea/ucr repository
 - Simple models
-title: Evaluating Simple Distributional Properties for Time-Series Classification Benchmarks
+title: Evaluating Simple Distributional Properties for Time-Series Classification
+  Benchmarks
 ---
 
 ## The UEA/UCR Time-Series Classification Repository
