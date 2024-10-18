@@ -5,7 +5,9 @@ categories:
 - Statistics
 classes: wide
 date: '2024-09-18'
-excerpt: Unlock the power of Bayesian statistics in machine learning through probabilistic reasoning, offering insights into model uncertainty, predictive distributions, and real-world applications.
+excerpt: Unlock the power of Bayesian statistics in machine learning through probabilistic
+  reasoning, offering insights into model uncertainty, predictive distributions, and
+  real-world applications.
 header:
   image: /assets/images/bayes_stats_1.png
   og_image: /assets/images/data_science_7.jpg
@@ -24,10 +26,20 @@ keywords:
 - Probabilistic programming
 - Bayesian networks
 - Uncertainty quantification
-seo_description: Explore Bayesian statistics in machine learning, highlighting probabilistic reasoning, uncertainty quantification, and practical applications across various domains.
+seo_description: Explore Bayesian statistics in machine learning, highlighting probabilistic
+  reasoning, uncertainty quantification, and practical applications across various
+  domains.
 seo_title: Demystifying Bayesian Statistics in Machine Learning
 seo_type: article
-summary: Bayesian statistics provides a powerful framework for dealing with uncertainty in machine learning models, making it essential for building robust predictive systems. This article explores the principles of Bayesian inference, probabilistic reasoning, and how these concepts apply to machine learning. It delves into practical tools such as Markov Chain Monte Carlo (MCMC) methods and probabilistic programming, demonstrating how Bayesian approaches enhance model interpretability and predictive accuracy. Whether it's for uncertainty quantification or developing Bayesian networks, this guide offers valuable insights into the real-world applications of Bayesian statistics in AI.
+summary: Bayesian statistics provides a powerful framework for dealing with uncertainty
+  in machine learning models, making it essential for building robust predictive systems.
+  This article explores the principles of Bayesian inference, probabilistic reasoning,
+  and how these concepts apply to machine learning. It delves into practical tools
+  such as Markov Chain Monte Carlo (MCMC) methods and probabilistic programming, demonstrating
+  how Bayesian approaches enhance model interpretability and predictive accuracy.
+  Whether it's for uncertainty quantification or developing Bayesian networks, this
+  guide offers valuable insights into the real-world applications of Bayesian statistics
+  in AI.
 tags:
 - Bayesian statistics
 - Probabilistic reasoning

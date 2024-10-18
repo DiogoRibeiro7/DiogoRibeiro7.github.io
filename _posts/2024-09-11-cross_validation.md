@@ -5,7 +5,9 @@ categories:
 - Data Science
 classes: wide
 date: '2024-09-11'
-excerpt: An exploration of cross-validation techniques in machine learning, focusing on methods to evaluate and enhance model performance while mitigating overfitting risks.
+excerpt: An exploration of cross-validation techniques in machine learning, focusing
+  on methods to evaluate and enhance model performance while mitigating overfitting
+  risks.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -20,10 +22,15 @@ keywords:
 - Preventing overfitting
 - Machine learning model validation
 - Data science methodologies
-seo_description: Explore various cross-validation techniques in machine learning, their importance, and how they help ensure robust model performance by minimizing overfitting.
+seo_description: Explore various cross-validation techniques in machine learning,
+  their importance, and how they help ensure robust model performance by minimizing
+  overfitting.
 seo_title: Cross-Validation Techniques for Robust Machine Learning Models
 seo_type: article
-summary: Cross-validation is a critical technique in machine learning for assessing model performance and preventing overfitting. This article covers key cross-validation methods, including k-fold, stratified, and leave-one-out cross-validation, and discusses their role in building reliable and generalizable machine learning models.
+summary: Cross-validation is a critical technique in machine learning for assessing
+  model performance and preventing overfitting. This article covers key cross-validation
+  methods, including k-fold, stratified, and leave-one-out cross-validation, and discusses
+  their role in building reliable and generalizable machine learning models.
 tags:
 - Cross-validation
 - Model evaluation

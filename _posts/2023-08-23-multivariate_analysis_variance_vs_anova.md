@@ -4,7 +4,8 @@ categories:
 - Multivariate Analysis
 classes: wide
 date: '2023-08-23'
-excerpt: Learn the key differences between MANOVA and ANOVA, and when to apply them in experimental designs with multiple dependent variables, such as clinical trials.
+excerpt: Learn the key differences between MANOVA and ANOVA, and when to apply them
+  in experimental designs with multiple dependent variables, such as clinical trials.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -18,17 +19,24 @@ keywords:
 - Experimental design
 - Clinical trials
 - Multivariate analysis
-seo_description: A detailed exploration of the differences between MANOVA and ANOVA, and when to use them in experimental designs, such as in clinical trials with multiple outcome variables.
+seo_description: A detailed exploration of the differences between MANOVA and ANOVA,
+  and when to use them in experimental designs, such as in clinical trials with multiple
+  outcome variables.
 seo_title: 'MANOVA vs. ANOVA: Differences and Use Cases in Experimental Design'
 seo_type: article
-summary: Multivariate Analysis of Variance (MANOVA) and Analysis of Variance (ANOVA) are statistical methods used to analyze group differences. While ANOVA focuses on a single dependent variable, MANOVA extends this to multiple dependent variables. This article explores their differences and application in experimental designs like clinical trials.
+summary: Multivariate Analysis of Variance (MANOVA) and Analysis of Variance (ANOVA)
+  are statistical methods used to analyze group differences. While ANOVA focuses on
+  a single dependent variable, MANOVA extends this to multiple dependent variables.
+  This article explores their differences and application in experimental designs
+  like clinical trials.
 tags:
 - Manova
 - Anova
 - Multivariate statistics
 - Experimental design
 - Clinical trials
-title: 'Multivariate Analysis of Variance (MANOVA) vs. ANOVA: When to Analyze Multiple Dependent Variables'
+title: 'Multivariate Analysis of Variance (MANOVA) vs. ANOVA: When to Analyze Multiple
+  Dependent Variables'
 ---
 
 In the world of experimental design and statistical analysis, **Analysis of Variance (ANOVA)** and **Multivariate Analysis of Variance (MANOVA)** are essential tools for comparing groups and determining whether differences exist between them. While ANOVA is designed to analyze a single dependent variable across groups, MANOVA extends this capability to multiple dependent variables, making it particularly useful in complex experimental designs. Understanding when to use ANOVA versus MANOVA can significantly impact the robustness and interpretability of statistical results, especially in fields like psychology, clinical trials, and educational research, where multiple outcomes are common.

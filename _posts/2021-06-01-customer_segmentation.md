@@ -4,7 +4,9 @@ categories:
 - Customer Analytics
 classes: wide
 date: '2021-06-01'
-excerpt: RFM Segmentation (Recency, Frequency, Monetary Value) is a widely used method to segment customers based on their behavior. This article provides a deep dive into RFM, showing how to apply clustering techniques for effective customer segmentation.
+excerpt: RFM Segmentation (Recency, Frequency, Monetary Value) is a widely used method
+  to segment customers based on their behavior. This article provides a deep dive
+  into RFM, showing how to apply clustering techniques for effective customer segmentation.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -20,11 +22,14 @@ keywords:
 - Rfm segmentation
 - Machine learning
 - Python
-- python
-seo_description: Learn about RFM Segmentation, a customer segmentation technique used to increase retention, improve marketing strategies, and enhance customer experiences. Discover how to implement RFM clustering using unsupervised learning.
+seo_description: Learn about RFM Segmentation, a customer segmentation technique used
+  to increase retention, improve marketing strategies, and enhance customer experiences.
+  Discover how to implement RFM clustering using unsupervised learning.
 seo_title: 'RFM Segmentation: Understanding Customer Value with Machine Learning'
 seo_type: article
-summary: This article provides an in-depth exploration of RFM segmentation, explaining how businesses can use Recency, Frequency, and Monetary Value to identify customer groups, improve marketing, and enhance retention strategies using clustering techniques.
+summary: This article provides an in-depth exploration of RFM segmentation, explaining
+  how businesses can use Recency, Frequency, and Monetary Value to identify customer
+  groups, improve marketing, and enhance retention strategies using clustering techniques.
 tags:
 - Clustering
 - Unsupervised learning
@@ -33,7 +38,6 @@ tags:
 - Data science
 - Rfm segmentation
 - Python
-- python
 title: 'RFM Segmentation: A Powerful Customer Segmentation Technique'
 ---
 

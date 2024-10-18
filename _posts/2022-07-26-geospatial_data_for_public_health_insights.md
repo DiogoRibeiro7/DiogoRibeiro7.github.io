@@ -1,27 +1,34 @@
 ---
-title: "Spatial Epidemiology: Geospatial Data for Public Health Insights"
+author_profile: false
 categories:
 - Data Science
 - Public Health
-tags:
-- Spatial Epidemiology
-- Geospatial Data
-- Disease Surveillance
-- Data Science
-- Public Health
-author_profile: false
-seo_title: "Spatial Epidemiology: Leveraging Geospatial Data in Public Health"
-seo_description: "Explore how geospatial data is revolutionizing public health. Learn how spatial epidemiology and data science techniques track disease outbreaks and offer critical insights for health interventions."
-excerpt: "Spatial epidemiology combines geospatial data with data science techniques to track and analyze disease outbreaks, offering public health agencies critical tools for intervention and planning."
-summary: "This article explores the importance of geospatial data in spatial epidemiology, focusing on how it is used to track and analyze disease outbreaks. It delves into the integration of spatial data with data science methods and how these insights are applied to public health decision-making and intervention strategies."
-keywords:
-- Spatial Epidemiology
-- Geospatial Data
-- Disease Outbreaks
-- Public Health
-- GIS
-- Data Science
 classes: wide
+excerpt: Spatial epidemiology combines geospatial data with data science techniques
+  to track and analyze disease outbreaks, offering public health agencies critical
+  tools for intervention and planning.
+keywords:
+- Spatial epidemiology
+- Geospatial data
+- Disease outbreaks
+- Public health
+- Gis
+- Data science
+seo_description: Explore how geospatial data is revolutionizing public health. Learn
+  how spatial epidemiology and data science techniques track disease outbreaks and
+  offer critical insights for health interventions.
+seo_title: 'Spatial Epidemiology: Leveraging Geospatial Data in Public Health'
+summary: This article explores the importance of geospatial data in spatial epidemiology,
+  focusing on how it is used to track and analyze disease outbreaks. It delves into
+  the integration of spatial data with data science methods and how these insights
+  are applied to public health decision-making and intervention strategies.
+tags:
+- Spatial epidemiology
+- Geospatial data
+- Disease surveillance
+- Data science
+- Public health
+title: 'Spatial Epidemiology: Geospatial Data for Public Health Insights'
 ---
 
 In today’s interconnected world, where populations are increasingly mobile and diseases can spread rapidly, understanding the spatial patterns of disease outbreaks is more important than ever. **Spatial epidemiology** is a field that combines **geospatial data** with **epidemiological analysis** to study the geographic distribution of diseases, their patterns, and how they spread across different populations.

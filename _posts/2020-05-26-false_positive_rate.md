@@ -4,7 +4,8 @@ categories:
 - Machine Learning
 classes: wide
 date: '2020-05-26'
-excerpt: Learn what the False Positive Rate (FPR) is, how it impacts machine learning models, and when to use it for better evaluation.
+excerpt: Learn what the False Positive Rate (FPR) is, how it impacts machine learning
+  models, and when to use it for better evaluation.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_7.jpg
@@ -19,18 +20,20 @@ keywords:
 - Machine learning
 - Fpr
 - Binary classification metrics
-- r
-seo_description: A comprehensive analysis of the False Positive Rate (FPR), including its role in machine learning, strengths, weaknesses, use cases, and alternative metrics.
+seo_description: A comprehensive analysis of the False Positive Rate (FPR), including
+  its role in machine learning, strengths, weaknesses, use cases, and alternative
+  metrics.
 seo_title: Understanding the False Positive Rate in Machine Learning
 seo_type: article
-summary: This article provides a detailed examination of the False Positive Rate (FPR) in binary classification, its calculation, interpretation, and the contexts in which it plays a crucial role.
+summary: This article provides a detailed examination of the False Positive Rate (FPR)
+  in binary classification, its calculation, interpretation, and the contexts in which
+  it plays a crucial role.
 tags:
 - R
 - False positive rate
 - Model evaluation
 - Machine learning metrics
 - Binary classification
-- r
 title: Analysis of the False Positive Rate (FPR) in Machine Learning
 ---
 

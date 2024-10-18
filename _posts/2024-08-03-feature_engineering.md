@@ -5,7 +5,9 @@ categories:
 - Data Science
 classes: wide
 date: '2024-08-03'
-excerpt: Discover the importance of feature engineering in enhancing machine learning models. Learn essential techniques for transforming raw data into valuable inputs that drive better predictive performance.
+excerpt: Discover the importance of feature engineering in enhancing machine learning
+  models. Learn essential techniques for transforming raw data into valuable inputs
+  that drive better predictive performance.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -21,12 +23,13 @@ keywords:
 - Machine learning models
 - Predictive analytics
 - Python
-- Python
-- python
-seo_description: Explore powerful feature engineering techniques that boost the performance of machine learning models by improving data preprocessing and feature selection.
+seo_description: Explore powerful feature engineering techniques that boost the performance
+  of machine learning models by improving data preprocessing and feature selection.
 seo_title: Feature Engineering for Better Machine Learning Models
 seo_type: article
-summary: This article delves into various feature engineering techniques essential for improving machine learning model performance. It covers data preprocessing, feature selection, transformation methods, and tips to enhance predictive accuracy.
+summary: This article delves into various feature engineering techniques essential
+  for improving machine learning model performance. It covers data preprocessing,
+  feature selection, transformation methods, and tips to enhance predictive accuracy.
 tags:
 - Feature engineering
 - Data preprocessing
@@ -34,8 +37,6 @@ tags:
 - Feature selection
 - Model performance
 - Python
-- Python
-- python
 title: Feature Engineering Techniques for Improved Machine Learning
 ---
 

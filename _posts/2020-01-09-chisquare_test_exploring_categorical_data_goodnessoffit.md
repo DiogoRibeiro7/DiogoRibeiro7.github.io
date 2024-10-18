@@ -4,7 +4,9 @@ categories:
 - Statistics
 classes: wide
 date: '2020-01-09'
-excerpt: This article delves into the Chi-Square test, a fundamental tool for analyzing categorical data, with a focus on its applications in goodness-of-fit and tests of independence.
+excerpt: This article delves into the Chi-Square test, a fundamental tool for analyzing
+  categorical data, with a focus on its applications in goodness-of-fit and tests
+  of independence.
 header:
   image: /assets/images/data_science_11.jpg
   og_image: /assets/images/data_science_11.jpg
@@ -13,23 +15,26 @@ header:
   teaser: /assets/images/data_science_11.jpg
   twitter_image: /assets/images/data_science_11.jpg
 keywords:
-- Chi-Square Test
-- Goodness-of-Fit
-- Statistical Testing
-- Categorical Data Analysis
-- Contingency Tables
-- Independence Testing
-- python
-seo_description: A detailed exploration of the Chi-Square test, focusing on its application in categorical data analysis, including goodness-of-fit and independence tests.
+- Chi-square test
+- Goodness-of-fit
+- Statistical testing
+- Categorical data analysis
+- Contingency tables
+- Independence testing
+- Python
+seo_description: A detailed exploration of the Chi-Square test, focusing on its application
+  in categorical data analysis, including goodness-of-fit and independence tests.
 seo_title: 'Chi-Square Test: Categorical Data & Goodness-of-Fit'
 seo_type: article
-summary: Learn about the Chi-Square test for categorical data analysis, including its use in goodness-of-fit and independence tests, and how it's applied in fields such as survey data analysis and genetics.
+summary: Learn about the Chi-Square test for categorical data analysis, including
+  its use in goodness-of-fit and independence tests, and how it's applied in fields
+  such as survey data analysis and genetics.
 tags:
-- Chi-Square Test
-- Categorical Data
-- Goodness-of-Fit
-- Statistical Testing
-- python
+- Chi-square test
+- Categorical data
+- Goodness-of-fit
+- Statistical testing
+- Python
 title: 'Chi-Square Test: Exploring Categorical Data and Goodness-of-Fit'
 ---
 

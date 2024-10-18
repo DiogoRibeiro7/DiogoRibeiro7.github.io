@@ -5,7 +5,9 @@ categories:
 - Machine Learning
 classes: wide
 date: '2024-02-20'
-excerpt: Discover critical lessons learned from validating COPOD, a popular anomaly detection model, through test-driven validation techniques. Avoid common pitfalls in anomaly detection modeling.
+excerpt: Discover critical lessons learned from validating COPOD, a popular anomaly
+  detection model, through test-driven validation techniques. Avoid common pitfalls
+  in anomaly detection modeling.
 header:
   image: /assets/images/data_science_6.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -24,9 +26,9 @@ keywords:
 - Machine learning
 - Scalability in anomaly detection
 - High-dimensional data
-- Python
-- python
-seo_description: Explore how to validate anomaly detection models like COPOD. Learn the importance of model validation through test-driven development and avoid pitfalls in high-dimensional data analysis.
+seo_description: Explore how to validate anomaly detection models like COPOD. Learn
+  the importance of model validation through test-driven development and avoid pitfalls
+  in high-dimensional data analysis.
 seo_title: 'Validating COPOD for Anomaly Detection: Key Insights and Lessons'
 seo_type: article
 tags:
@@ -34,8 +36,6 @@ tags:
 - Model validation
 - Copod
 - Python
-- Python
-- python
 title: 'Validating Anomaly Detection Models: Lessons from COPOD'
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

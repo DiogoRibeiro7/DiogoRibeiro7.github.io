@@ -4,7 +4,9 @@ categories:
 - Data Science
 classes: wide
 date: '2020-01-06'
-excerpt: Explore the role of data science in predictive maintenance, from forecasting equipment failure to optimizing maintenance schedules using techniques like regression and anomaly detection.
+excerpt: Explore the role of data science in predictive maintenance, from forecasting
+  equipment failure to optimizing maintenance schedules using techniques like regression
+  and anomaly detection.
 header:
   image: /assets/images/data_science_7.jpg
   og_image: /assets/images/data_science_7.jpg
@@ -13,22 +15,26 @@ header:
   teaser: /assets/images/data_science_7.jpg
   twitter_image: /assets/images/data_science_7.jpg
 keywords:
-- Predictive Maintenance
-- Data Science
-- Industrial IoT
-- Machine Learning
-- Predictive Analytics
-- Industrial Analytics
-seo_description: Discover how data science techniques such as regression, clustering, and anomaly detection optimize predictive maintenance, helping organizations forecast failures and enhance operational efficiency.
+- Predictive maintenance
+- Data science
+- Industrial iot
+- Machine learning
+- Predictive analytics
+- Industrial analytics
+seo_description: Discover how data science techniques such as regression, clustering,
+  and anomaly detection optimize predictive maintenance, helping organizations forecast
+  failures and enhance operational efficiency.
 seo_title: How Data Science Powers Predictive Maintenance
 seo_type: article
-summary: An in-depth look at how data science techniques such as regression, clustering, anomaly detection, and machine learning are transforming predictive maintenance across various industries.
+summary: An in-depth look at how data science techniques such as regression, clustering,
+  anomaly detection, and machine learning are transforming predictive maintenance
+  across various industries.
 tags:
-- Predictive Maintenance
-- Machine Learning
-- Industrial IoT
-- Industrial Analytics
-- Predictive Analytics
+- Predictive maintenance
+- Machine learning
+- Industrial iot
+- Industrial analytics
+- Predictive analytics
 title: Leveraging Data Science Techniques for Predictive Maintenance
 ---
 

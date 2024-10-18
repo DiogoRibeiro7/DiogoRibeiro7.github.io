@@ -6,7 +6,9 @@ categories:
 - Machine Learning
 classes: wide
 date: '2019-12-29'
-excerpt: Splines are powerful tools for modeling complex, nonlinear relationships in data. In this article, we'll explore what splines are, how they work, and how they are used in data analysis, statistics, and machine learning.
+excerpt: Splines are powerful tools for modeling complex, nonlinear relationships
+  in data. In this article, we'll explore what splines are, how they work, and how
+  they are used in data analysis, statistics, and machine learning.
 header:
   image: /assets/images/data_science_19.jpg
   og_image: /assets/images/data_science_19.jpg
@@ -16,25 +18,30 @@ header:
   twitter_image: /assets/images/data_science_19.jpg
 keywords:
 - Splines
-- Spline Regression
-- Nonlinear Models
-- Data Smoothing
-- Statistical Modeling
-- python
-- bash
-- go
-seo_description: Splines are flexible mathematical tools used for smoothing and modeling complex data patterns. Learn what they are, how they work, and their practical applications in regression, data smoothing, and machine learning.
+- Spline regression
+- Nonlinear models
+- Data smoothing
+- Statistical modeling
+- Python
+- Bash
+- Go
+seo_description: Splines are flexible mathematical tools used for smoothing and modeling
+  complex data patterns. Learn what they are, how they work, and their practical applications
+  in regression, data smoothing, and machine learning.
 seo_title: What Are Splines? A Deep Dive into Their Uses in Data Analysis
 seo_type: article
-summary: Splines are flexible mathematical functions used to approximate complex patterns in data. They help smooth data, model non-linear relationships, and fit curves in regression analysis. This article covers the basics of splines, their various types, and their practical applications in statistics, data science, and machine learning.
+summary: Splines are flexible mathematical functions used to approximate complex patterns
+  in data. They help smooth data, model non-linear relationships, and fit curves in
+  regression analysis. This article covers the basics of splines, their various types,
+  and their practical applications in statistics, data science, and machine learning.
 tags:
 - Splines
 - Regression
-- Data Smoothing
-- Nonlinear Models
-- python
-- bash
-- go
+- Data smoothing
+- Nonlinear models
+- Python
+- Bash
+- Go
 title: 'Understanding Splines: What They Are and How They Are Used in Data Analysis'
 ---
 

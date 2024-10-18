@@ -4,7 +4,8 @@ categories:
 - Data Science
 classes: wide
 date: '2023-08-30'
-excerpt: A deep dive into the ethical challenges of data science, covering privacy, bias, social impact, and the need for responsible AI decision-making.
+excerpt: A deep dive into the ethical challenges of data science, covering privacy,
+  bias, social impact, and the need for responsible AI decision-making.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_7.jpg
@@ -24,7 +25,9 @@ keywords:
 - Fairness in machine learning
 - Algorithmic bias
 - Ethical challenges in ai
-seo_description: Explore the ethical challenges in data science, including privacy protection, bias, social impact, and responsible decision-making. A comprehensive guide for ethical AI.
+seo_description: Explore the ethical challenges in data science, including privacy
+  protection, bias, social impact, and responsible decision-making. A comprehensive
+  guide for ethical AI.
 seo_title: 'Ethics in Data Science: Privacy, Bias, Social Impact & Responsible AI'
 seo_type: article
 subtitle: A Comprehensive Guide to Privacy, Bias, Social Impact and Responsible Decision-Making

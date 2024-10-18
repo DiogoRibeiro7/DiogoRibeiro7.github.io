@@ -4,7 +4,8 @@ categories:
 - R Programming
 classes: wide
 date: '2023-08-25'
-excerpt: Explore the `runner` package in R, which allows applying any R function to rolling windows of data with full control over window size, lags, and index types.
+excerpt: Explore the `runner` package in R, which allows applying any R function to
+  rolling windows of data with full control over window size, lags, and index types.
 header:
   image: /assets/images/Rolling-window.jpg
   og_image: /assets/images/data_science_4.jpg
@@ -23,18 +24,20 @@ keywords:
 - Dplyr runner integration
 - Rolling regression r
 - R
-- r
-seo_description: Learn how to use the `runner` package in R to apply any function on rolling windows of data. Supports custom window sizes, lags, and flexible indexing using dates, ideal for time series analysis.
+seo_description: Learn how to use the `runner` package in R to apply any function
+  on rolling windows of data. Supports custom window sizes, lags, and flexible indexing
+  using dates, ideal for time series analysis.
 seo_title: Apply Any R Function on Rolling Windows with the `runner` Package
 seo_type: article
-summary: This article explores the `runner` package in R, detailing how to apply functions to rolling windows of data with custom window sizes, lags, and indexing, particularly useful for time series and cumulative operations.
+summary: This article explores the `runner` package in R, detailing how to apply functions
+  to rolling windows of data with custom window sizes, lags, and indexing, particularly
+  useful for time series and cumulative operations.
 tags:
 - Rolling windows
 - Time series analysis
 - Data manipulation
 - Statistical modeling
 - R
-- r
 title: Applying R Functions on Rolling Windows Using the `runner` Package
 ---
 

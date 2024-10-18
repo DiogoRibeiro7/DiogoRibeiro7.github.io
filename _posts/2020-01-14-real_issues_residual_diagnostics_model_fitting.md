@@ -5,7 +5,10 @@ categories:
 - Statistics
 classes: wide
 date: '2020-01-14'
-excerpt: Residual diagnostics often trigger debates, especially when tests like Shapiro-Wilk suggest non-normality. But should it be the final verdict on your model? Let's dive deeper into residual analysis, focusing on its impact in GLS, mixed models, and robust alternatives.
+excerpt: Residual diagnostics often trigger debates, especially when tests like Shapiro-Wilk
+  suggest non-normality. But should it be the final verdict on your model? Let's dive
+  deeper into residual analysis, focusing on its impact in GLS, mixed models, and
+  robust alternatives.
 header:
   image: /assets/images/data_science_13.jpg
   og_image: /assets/images/data_science_13.jpg
@@ -14,21 +17,29 @@ header:
   teaser: /assets/images/data_science_13.jpg
   twitter_image: /assets/images/data_science_13.jpg
 keywords:
-- Residual Diagnostics
-- Shapiro-Wilk Test
-- Generalized Least Squares
-- Mixed Models
-- Statistical Modeling
-seo_description: An in-depth exploration of the limitations of Shapiro-Wilk and the real issues to consider in residual diagnostics when fitting models. Focusing on Generalized Least Squares and robust alternatives, this article provides insight into the complexities of longitudinal data analysis.
+- Residual diagnostics
+- Shapiro-wilk test
+- Generalized least squares
+- Mixed models
+- Statistical modeling
+seo_description: An in-depth exploration of the limitations of Shapiro-Wilk and the
+  real issues to consider in residual diagnostics when fitting models. Focusing on
+  Generalized Least Squares and robust alternatives, this article provides insight
+  into the complexities of longitudinal data analysis.
 seo_title: 'Residual Diagnostics: Beyond the Shapiro-Wilk Test in Model Fitting'
 seo_type: article
-summary: In this article, we examine why the Shapiro-Wilk test should not be the final say in assessing model fit, particularly in complex models like Generalized Least Squares for longitudinal data. Instead, we explore alternative diagnostics, the role of kurtosis, skewness, and the practical impact of non-normality on parameter estimates.
+summary: In this article, we examine why the Shapiro-Wilk test should not be the final
+  say in assessing model fit, particularly in complex models like Generalized Least
+  Squares for longitudinal data. Instead, we explore alternative diagnostics, the
+  role of kurtosis, skewness, and the practical impact of non-normality on parameter
+  estimates.
 tags:
-- Residual Analysis
-- Longitudinal Data
-- Generalized Least Squares
-- Parametric Models
-title: 'Don''t Get MAD About Shapiro-Wilk: Real Issues in Residual Diagnostics and Model Fitting'
+- Residual analysis
+- Longitudinal data
+- Generalized least squares
+- Parametric models
+title: 'Don''t Get MAD About Shapiro-Wilk: Real Issues in Residual Diagnostics and
+  Model Fitting'
 ---
 
 When fitting models, especially in longitudinal studies, residual diagnostics often become a contentious part of the statistical review process. It's not uncommon for a reviewer to wave the **Shapiro-Wilk test** in your face, claiming that the residuals' departure from normality invalidates your entire parametric model. But is this rigid adherence to normality testing warranted? 

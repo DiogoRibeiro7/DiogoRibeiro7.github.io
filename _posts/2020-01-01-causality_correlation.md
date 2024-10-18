@@ -4,7 +4,8 @@ categories:
 - Statistics
 classes: wide
 date: '2020-01-01'
-excerpt: Understand how causal reasoning helps us move beyond correlation, resolving paradoxes and leading to more accurate insights from data analysis.
+excerpt: Understand how causal reasoning helps us move beyond correlation, resolving
+  paradoxes and leading to more accurate insights from data analysis.
 header:
   image: /assets/images/data_science_4.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -18,10 +19,14 @@ keywords:
 - Berkson's paradox
 - Correlation
 - Data science
-seo_description: Explore how causal reasoning, through paradoxes like Simpson's and Berkson's, can help us avoid the common pitfalls of interpreting data solely based on correlation.
+seo_description: Explore how causal reasoning, through paradoxes like Simpson's and
+  Berkson's, can help us avoid the common pitfalls of interpreting data solely based
+  on correlation.
 seo_title: 'Causality Beyond Correlation: Understanding Paradoxes and Causal Graphs'
 seo_type: article
-summary: An in-depth exploration of the limits of correlation in data interpretation, highlighting Simpson's and Berkson's paradoxes and introducing causal graphs as a tool for uncovering true causal relationships.
+summary: An in-depth exploration of the limits of correlation in data interpretation,
+  highlighting Simpson's and Berkson's paradoxes and introducing causal graphs as
+  a tool for uncovering true causal relationships.
 tags:
 - Simpson's paradox
 - Berkson's paradox
@@ -36,20 +41,41 @@ In today's data-driven world, we often rely on statistical correlations to make 
 This article is aimed at anyone who works with data and is interested in gaining a more accurate understanding of how to interpret statistical relationships. Here, we will explore how to uncover **causal relationships** in data, how to resolve confusing situations like **Simpson's Paradox** and **Berkson's Paradox**, and how to use **causal graphs** as a tool for making better decisions. The goal is to demonstrate that by understanding causality, we can avoid the pitfalls of over-relying on correlation and make more informed decisions.
 
 ---
-
-## Correlation and Causation: Why the Distinction Matters
-
-In statistics, **correlation** measures the strength of a relationship between two variables. For example, if you observe that ice cream sales increase as temperatures rise, you might conclude that warmer weather causes more ice cream to be sold. This conclusion feels intuitive, but what about cases where the data is less obvious? Imagine a study finds a correlation between shark attacks and ice cream sales. Does one cause the other? Clearly not—but the correlation exists because both are influenced by a common factor: hot weather.
-
-This example underscores the central problem: **correlation does not imply causation**. Just because two variables move together doesn’t mean one causes the other. Correlation can arise for several reasons:
-
-- **Direct causality**: One variable causes the other.
-- **Reverse causality**: The relationship runs in the opposite direction.
-- **Confounding variables**: A third variable influences both.
-- **Coincidence**: The relationship is due to chance.
-
-To understand the true nature of relationships in data, we need to go beyond correlation and ask **why** the variables are related. This is where **causal inference** comes in.
-
+author_profile: false
+categories:
+- Statistics
+classes: wide
+date: '2020-01-01'
+excerpt: Understand how causal reasoning helps us move beyond correlation, resolving
+  paradoxes and leading to more accurate insights from data analysis.
+header:
+  image: /assets/images/data_science_4.jpg
+  og_image: /assets/images/data_science_1.jpg
+  overlay_image: /assets/images/data_science_4.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_4.jpg
+  twitter_image: /assets/images/data_science_1.jpg
+keywords:
+- Simpson's paradox
+- Causality
+- Berkson's paradox
+- Correlation
+- Data science
+seo_description: Explore how causal reasoning, through paradoxes like Simpson's and
+  Berkson's, can help us avoid the common pitfalls of interpreting data solely based
+  on correlation.
+seo_title: 'Causality Beyond Correlation: Understanding Paradoxes and Causal Graphs'
+seo_type: article
+summary: An in-depth exploration of the limits of correlation in data interpretation,
+  highlighting Simpson's and Berkson's paradoxes and introducing causal graphs as
+  a tool for uncovering true causal relationships.
+tags:
+- Simpson's paradox
+- Berkson's paradox
+- Correlation
+- Data science
+- Causal inference
+title: 'Causality Beyond Correlation: Simpson''s and Berkson''s Paradoxes'
 ---
 
 ## The Importance of Causal Inference
@@ -61,23 +87,41 @@ In most real-world scenarios, we rely on **observational data**, which is data c
 Fortunately, researchers have developed methods to uncover causal relationships from observational data by combining **statistical reasoning** with a deep understanding of the data's context. This is where **causal graphs** and tools like **Simpson's Paradox** and **Berkson's Paradox** come into play.
 
 ---
-
-## Simpson's Paradox: The Danger of Aggregating Data
-
-Simpson's Paradox is a statistical phenomenon in which a trend that appears in different groups of data disappears or reverses when the groups are combined. This paradox occurs because of a **lurking confounder**, a variable that influences both the independent and dependent variables, skewing the relationship between them.
-
-### The Classic Example
-
-Imagine you're analyzing the effectiveness of a new drug across two groups: younger patients and older patients. Within each group, the drug seems to improve health outcomes. However, when you combine the two groups, the overall analysis shows that the drug is **less** effective.
-
-This reversal happens because age, a **confounding variable**, is driving the overall result. If more older patients received the drug and older patients have worse outcomes in general, it can skew the overall data. Thus, the combined analysis gives a misleading result, suggesting the drug is less effective when it actually benefits each group.
-
-### Why Does This Happen?
-
-Simpson’s Paradox occurs because the relationship between variables changes when data is aggregated. In the example above, **age** confounds the relationship between the drug and health outcomes. It’s important to note that combining data from different groups without accounting for confounders can hide the true relationships within each group.
-
-This paradox demonstrates why it’s crucial to understand the **story behind the data**. If we simply relied on the overall correlation, we would draw the wrong conclusion about the drug’s effectiveness.
-
+author_profile: false
+categories:
+- Statistics
+classes: wide
+date: '2020-01-01'
+excerpt: Understand how causal reasoning helps us move beyond correlation, resolving
+  paradoxes and leading to more accurate insights from data analysis.
+header:
+  image: /assets/images/data_science_4.jpg
+  og_image: /assets/images/data_science_1.jpg
+  overlay_image: /assets/images/data_science_4.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_4.jpg
+  twitter_image: /assets/images/data_science_1.jpg
+keywords:
+- Simpson's paradox
+- Causality
+- Berkson's paradox
+- Correlation
+- Data science
+seo_description: Explore how causal reasoning, through paradoxes like Simpson's and
+  Berkson's, can help us avoid the common pitfalls of interpreting data solely based
+  on correlation.
+seo_title: 'Causality Beyond Correlation: Understanding Paradoxes and Causal Graphs'
+seo_type: article
+summary: An in-depth exploration of the limits of correlation in data interpretation,
+  highlighting Simpson's and Berkson's paradoxes and introducing causal graphs as
+  a tool for uncovering true causal relationships.
+tags:
+- Simpson's paradox
+- Berkson's paradox
+- Correlation
+- Data science
+- Causal inference
+title: 'Causality Beyond Correlation: Simpson''s and Berkson''s Paradoxes'
 ---
 
 ## Berkson's Paradox: The Pitfall of Selection Bias
@@ -99,39 +143,41 @@ Berkson's Paradox illustrates the problem of **selection bias**—when we restri
 The key takeaway from Berkson’s Paradox is that we need to be careful about **how we select data for analysis**. If we focus only on a specific group without understanding how that group was selected, we can introduce misleading correlations.
 
 ---
-
-## Causal Graphs: A Tool for Visualizing Relationships
-
-To avoid falling into the traps of Simpson’s and Berkson’s Paradoxes, it’s helpful to use **causal graphs** to visualize the relationships between variables. These graphs, also known as **Directed Acyclic Graphs (DAGs)**, allow us to represent the causal structure of a system and identify which variables are influencing others.
-
-### What Are Causal Graphs?
-
-A **causal graph** is a diagram that represents variables as **nodes** and the causal relationships between them as **directed edges** (arrows). A directed edge from variable **A** to variable **B** indicates that **A** has a causal influence on **B**.
-
-Causal graphs are powerful because they help us:
-
-1. **Identify confounders**: Variables that influence both the independent and dependent variables.
-2. **Clarify causal relationships**: Show which variables are direct causes and which are effects.
-3. **Avoid incorrect controls**: Help us decide which variables to control for in statistical analysis.
-
-### Using Causal Graphs to Resolve Simpson's Paradox
-
-Let’s return to the example of the drug trial. A causal graph for this scenario might look like this:
-
-- **Age** influences both **Drug Use** and **Health Outcome**.
-- **Drug Use** directly affects **Health Outcome**.
-
-In this case, **Age** is a **confounder** because it influences both the independent variable (**Drug Use**) and the dependent variable (**Health Outcome**). When we control for **Age**, we remove its confounding effect and can properly assess the impact of the drug on health outcomes.
-
-### Using Causal Graphs to Resolve Berkson's Paradox
-
-In the case of celebrities, a causal graph might look like this:
-
-- **Talent** and **Attractiveness** are independent in the general population.
-- **Celebrity Status** depends on both **Talent** and **Attractiveness**.
-
-Here, **Celebrity Status** is a **collider**, a variable that is influenced by both **Talent** and **Attractiveness**. When we condition on a collider (i.e., focus only on celebrities), we create a spurious correlation between **Talent** and **Attractiveness**. The key is to recognize that the negative correlation between these variables only exists because we have selected a specific subset of the population (celebrities), not because there is a true relationship between talent and attractiveness.
-
+author_profile: false
+categories:
+- Statistics
+classes: wide
+date: '2020-01-01'
+excerpt: Understand how causal reasoning helps us move beyond correlation, resolving
+  paradoxes and leading to more accurate insights from data analysis.
+header:
+  image: /assets/images/data_science_4.jpg
+  og_image: /assets/images/data_science_1.jpg
+  overlay_image: /assets/images/data_science_4.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_4.jpg
+  twitter_image: /assets/images/data_science_1.jpg
+keywords:
+- Simpson's paradox
+- Causality
+- Berkson's paradox
+- Correlation
+- Data science
+seo_description: Explore how causal reasoning, through paradoxes like Simpson's and
+  Berkson's, can help us avoid the common pitfalls of interpreting data solely based
+  on correlation.
+seo_title: 'Causality Beyond Correlation: Understanding Paradoxes and Causal Graphs'
+seo_type: article
+summary: An in-depth exploration of the limits of correlation in data interpretation,
+  highlighting Simpson's and Berkson's paradoxes and introducing causal graphs as
+  a tool for uncovering true causal relationships.
+tags:
+- Simpson's paradox
+- Berkson's paradox
+- Correlation
+- Data science
+- Causal inference
+title: 'Causality Beyond Correlation: Simpson''s and Berkson''s Paradoxes'
 ---
 
 ## The Broader Implications of Causality in Data Analysis

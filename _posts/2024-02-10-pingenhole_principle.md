@@ -4,7 +4,9 @@ categories:
 - Mathematics
 classes: wide
 date: '2024-02-10'
-excerpt: A journey into the Pigeonhole Principle, uncovering its profound simplicity and exploring its applications in fields like combinatorics, number theory, and geometry.
+excerpt: A journey into the Pigeonhole Principle, uncovering its profound simplicity
+  and exploring its applications in fields like combinatorics, number theory, and
+  geometry.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -25,15 +27,15 @@ keywords:
 - Foundational math concepts
 - R
 - Python
-- Python
-- R
-- python
-- r
-seo_description: Explore the simplicity and power of the Pigeonhole Principle, delving into its applications across combinatorics, number theory, geometry, and more.
+seo_description: Explore the simplicity and power of the Pigeonhole Principle, delving
+  into its applications across combinatorics, number theory, geometry, and more.
 seo_title: 'The Elegance of the Pigeonhole Principle: Universal Applications in Mathematics'
 seo_type: article
-subtitle: Exploring the Profound Simplicity and Universal Applications of a Foundational Mathematical Concept
-summary: This article delves into the Pigeonhole Principle, illustrating its profound simplicity and exploring its applications in various mathematical fields such as combinatorics, number theory, geometry, and data compression.
+subtitle: Exploring the Profound Simplicity and Universal Applications of a Foundational
+  Mathematical Concept
+summary: This article delves into the Pigeonhole Principle, illustrating its profound
+  simplicity and exploring its applications in various mathematical fields such as
+  combinatorics, number theory, geometry, and data compression.
 tags:
 - Pigeonhole principle
 - Mathematical logic
@@ -46,10 +48,6 @@ tags:
 - Mathematical proofs
 - R
 - Python
-- Python
-- R
-- python
-- r
 title: 'Elegance of the Pigeonhole Principle: A Mathematical Odyssey'
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

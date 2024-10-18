@@ -28,8 +28,6 @@ tags:
 - P-value analysis
 - Statistical testing
 - R
-- R
-- r
 title: Modeling Count Events with Poisson Distribution in R
 ---
 

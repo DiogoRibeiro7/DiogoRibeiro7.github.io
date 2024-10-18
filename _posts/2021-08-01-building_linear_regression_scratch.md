@@ -4,7 +4,8 @@ categories:
 - Machine Learning
 classes: wide
 date: '2021-08-01'
-excerpt: A step-by-step guide to implementing Linear Regression from scratch using the Normal Equation method, complete with Python code and evaluation techniques.
+excerpt: A step-by-step guide to implementing Linear Regression from scratch using
+  the Normal Equation method, complete with Python code and evaluation techniques.
 header:
   image: /assets/images/data_science_2.jpg
   og_image: /assets/images/data_science_2.jpg
@@ -17,18 +18,18 @@ keywords:
 - Normal equation
 - Python
 - Data science interviews
-- Python
-- python
-seo_description: Learn how to build a Linear Regression model from scratch using the Normal Equation approach. This article covers the theoretical foundations, algorithm design, and Python implementation.
+seo_description: Learn how to build a Linear Regression model from scratch using the
+  Normal Equation approach. This article covers the theoretical foundations, algorithm
+  design, and Python implementation.
 seo_title: Building Linear Regression from Scratch Using the Normal Equation
 seo_type: article
-summary: This article provides a detailed algorithmic approach to building a Linear Regression model from scratch, covering theory, Python code implementation, and performance evaluation.
+summary: This article provides a detailed algorithmic approach to building a Linear
+  Regression model from scratch, covering theory, Python code implementation, and
+  performance evaluation.
 tags:
 - Linear regression
 - Python
 - Normal equation
-- Python
-- python
 title: 'Building Linear Regression from Scratch: A Detailed Algorithmic Approach'
 ---
 

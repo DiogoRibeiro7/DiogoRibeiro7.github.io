@@ -4,7 +4,9 @@ categories:
 - Data Science
 classes: wide
 date: '2024-10-18'
-excerpt: Wearable devices generate real-time health data that, combined with big data analytics, offer transformative insights for chronic disease monitoring, early diagnosis, and preventive healthcare.
+excerpt: Wearable devices generate real-time health data that, combined with big data
+  analytics, offer transformative insights for chronic disease monitoring, early diagnosis,
+  and preventive healthcare.
 header:
   image: /assets/images/data_science_17.jpg
   og_image: /assets/images/data_science_17.jpg
@@ -13,28 +15,32 @@ header:
   teaser: /assets/images/data_science_17.jpg
   twitter_image: /assets/images/data_science_17.jpg
 keywords:
-- Wearable Technology
-- Big Data
-- Health Monitoring
-- Chronic Disease Management
-- Preventive Healthcare
+- Wearable technology
+- Big data
+- Health monitoring
+- Chronic disease management
+- Preventive healthcare
 - Healthcare
-- Health Analytics
-- Data Science
-- Machine Learning
-seo_description: Explore how wearable technology and big data analytics are transforming health monitoring, focusing on applications in chronic disease management, early diagnosis, and preventive healthcare.
+- Health analytics
+- Data science
+- Machine learning
+seo_description: Explore how wearable technology and big data analytics are transforming
+  health monitoring, focusing on applications in chronic disease management, early
+  diagnosis, and preventive healthcare.
 seo_title: Using Wearable Technology and Big Data for Health Monitoring
 seo_type: article
-summary: This article explores the role of wearable technology and big data in health monitoring, examining how these tools support chronic disease management, early diagnosis, and preventive healthcare.
+summary: This article explores the role of wearable technology and big data in health
+  monitoring, examining how these tools support chronic disease management, early
+  diagnosis, and preventive healthcare.
 tags:
-- Wearable Technology
-- Big Data
-- Health Monitoring
-- Chronic Disease
-- Preventive Healthcare
-- Health Analytics
-- Data Science
-- Machine Learning
+- Wearable technology
+- Big data
+- Health monitoring
+- Chronic disease
+- Preventive healthcare
+- Health analytics
+- Data science
+- Machine learning
 title: Using Wearable Technology and Big Data for Health Monitoring
 ---
 

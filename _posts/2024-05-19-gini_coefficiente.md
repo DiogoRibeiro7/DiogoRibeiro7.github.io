@@ -15,7 +15,8 @@ header:
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_7.jpg
 seo_type: article
-subtitle: Guide to the Normalized Gini Coefficient and Default Rate in Credit Scoring and Risk Assessment
+subtitle: Guide to the Normalized Gini Coefficient and Default Rate in Credit Scoring
+  and Risk Assessment
 tags:
 - Gini coefficient
 - Default rate
@@ -25,7 +26,6 @@ tags:
 - Machine learning metrics
 - Model evaluation
 - Loss functions
-- Normalized gini coefficient
 - Credit scoring
 - Risk assessment
 - Loan default
@@ -35,7 +35,6 @@ tags:
 - Tensorflow implementation
 - Loan risk analysis
 - Python
-- python
 title: Understanding the Normalized Gini Coefficient and Default Rate
 ---
 
