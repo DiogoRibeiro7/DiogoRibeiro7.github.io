@@ -19,10 +19,10 @@ tags: []
 - TODO: "Bayesian Statistics in Epidemiological Modeling"
   - Introduce how Bayesian methods can improve disease risk assessment and uncertainty quantification in epidemiological studies.
 
-- TODO: "Real-Time Data Processing and Epidemiological Surveillance"
+- "Real-Time Data Processing and Epidemiological Surveillance"
   - Write about how real-time analytics platforms like Apache Flink can be used for tracking diseases and improving epidemiological surveillance systems.
 
-- TODO: "Spatial Epidemiology: Using Geospatial Data in Public Health"
+- "Spatial Epidemiology: Using Geospatial Data in Public Health"
   - Discuss the importance of geospatial data in tracking disease outbreaks and how data science techniques can integrate spatial data for public health insights.
 
 - TODO: "Epidemiological Data Challenges and How Data Science Can Solve Them"
