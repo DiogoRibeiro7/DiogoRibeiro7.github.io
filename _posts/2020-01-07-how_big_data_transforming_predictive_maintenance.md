@@ -56,7 +56,7 @@ title: How Big Data is Transforming Predictive Maintenance
 ---
 author_profile: false
 categories:
-- Big Data
+- Data Science
 classes: wide
 date: '2020-01-07'
 excerpt: Big Data is revolutionizing predictive maintenance by offering unprecedented

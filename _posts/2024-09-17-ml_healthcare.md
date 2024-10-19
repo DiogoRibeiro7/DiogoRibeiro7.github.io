@@ -22,7 +22,6 @@ keywords:
 - Personalized medicine
 - Predictive analytics
 - Healthcare
-- Machine Learning
 - Healthcare data privacy
 - Clinical implementation challenges
 - Predictive patient outcomes

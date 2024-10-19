@@ -15,7 +15,7 @@ header:
   teaser: /assets/images/data_science_9.jpg
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
-- Customer Analytics
+- Customer analytics
 - Customer segmentation
 - Unsupervised learning
 - Data science
