@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Customer Analytics
+- Data Science
 classes: wide
 date: '2021-06-01'
 excerpt: RFM Segmentation (Recency, Frequency, Monetary Value) is a widely used method
@@ -15,6 +15,7 @@ header:
   teaser: /assets/images/data_science_9.jpg
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
+- Customer analytics
 - Customer segmentation
 - Unsupervised learning
 - Data science

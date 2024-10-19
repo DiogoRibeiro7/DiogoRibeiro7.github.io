@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use "sass:color";
 /* ==========================================================================
    MIXINS
    ========================================================================== */
@@ -62,11 +63,11 @@
   $color,
   $threshold: $yiq-contrasted-threshold
 ) {
-  $red: red($color);
-  $green: green($color);
-  $blue: blue($color);
+  $red: color.channel($color, "red", $space: rgb);
+  $green: color.channel($color, "green", $space: rgb);
+  $blue: color.channel($color, "blue", $space: rgb);
 
-  $yiq: (($red*299)+($green*587)+($blue*114))/1000;
+  $yiq: calc((($red * 299) + ($green * 587) + ($blue * 114)) / 1000);
 
   @if $yiq-debug { @debug $yiq, $threshold; }
 

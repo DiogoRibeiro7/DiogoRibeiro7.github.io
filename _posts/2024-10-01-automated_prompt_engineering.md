@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- AI
 - Machine Learning
 classes: wide
 date: '2024-10-01'

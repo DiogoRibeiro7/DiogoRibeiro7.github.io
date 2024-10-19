@@ -90,9 +90,15 @@
   $span-width: _su-sum($span, $gutters, $spread, $validate: false);
 
   @if unitless($span-width) {
+    // Ensure $container-spread is a valid spread, likely sanitizing or adjusting its value.
     $container-spread: su-valid-spread($container-spread);
+  
+    // Calculate the container's width based on columns, gutters, and container spread.
+    // This is a custom function that you need to have defined elsewhere.
     $container: _su-sum($columns, $gutters, $container-spread, $validate: false);
-    @return percentage($span-width / $container);
+  
+    // Finally, calculate the percentage value of the span-width relative to the container.
+    @return calc($span-width / $container);
   }
 
   @return $span-width;
@@ -143,7 +149,7 @@
   }
 
   $container: _su-sum($columns, $gutters, $container-spread);
-  @return percentage($gutters / $container);
+  @return calc($gutters / $container);
 }
 
 

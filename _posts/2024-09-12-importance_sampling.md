@@ -1,8 +1,7 @@
 ---
 author_profile: false
 categories:
-- Finance
-- Risk Management
+- Statistics
 classes: wide
 date: '2024-09-12'
 excerpt: Importance Sampling offers an efficient alternative to traditional Monte
@@ -56,8 +55,7 @@ Estimating credit risk in portfolios containing loans or bonds is crucial for fi
 ---
 author_profile: false
 categories:
-- Finance
-- Risk Management
+- Statistics
 classes: wide
 date: '2024-09-12'
 excerpt: Importance Sampling offers an efficient alternative to traditional Monte
@@ -123,8 +121,7 @@ In this model, each obligor’s default is influenced by a set of **systematic f
 ---
 author_profile: false
 categories:
-- Finance
-- Risk Management
+- Statistics
 classes: wide
 date: '2024-09-12'
 excerpt: Importance Sampling offers an efficient alternative to traditional Monte
@@ -202,8 +199,7 @@ When obligors are dependent (i.e., influenced by common risk factors), IS become
 ---
 author_profile: false
 categories:
-- Finance
-- Risk Management
+- Statistics
 classes: wide
 date: '2024-09-12'
 excerpt: Importance Sampling offers an efficient alternative to traditional Monte
