@@ -1,10 +1,15 @@
 ---
-author_profile: false
+title: 'Building Custom Python Libraries for Your Industry Needs'
 categories:
-- Software Development
 - Python
-- Industry Solutions
-classes: wide
+tags:
+- Python libraries
+- Custom software
+- Industry solutions
+- Software development
+- Automation
+- Python
+author_profile: false
 date: '2024-07-31'
 header:
   image: /assets/images/data_science_4.jpg
@@ -13,15 +18,16 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_5.jpg
-seo_type: article
-tags:
+seo_title: 'Building Custom Python Libraries for Industry-Specific Solutions'
+seo_description: 'Learn how to create custom Python libraries tailored to your industry needs. This article covers strategies for software development and automation using Python.'
+excerpt: 'A guide on developing custom Python libraries to meet specific industry needs, focusing on software development and automation.'
+summary: 'This article explores the process of building custom Python libraries, offering insights into Python’s versatility for developing industry-specific software solutions and automation tools.'
+keywords: 
 - Python libraries
-- Custom software
-- Industry solutions
-- Software development
+- Custom software development
 - Automation
-- Python
-title: Building Custom Python Libraries for Your Industry Needs
+- Industry solutions
+classes: wide
 ---
 
 ## Overview

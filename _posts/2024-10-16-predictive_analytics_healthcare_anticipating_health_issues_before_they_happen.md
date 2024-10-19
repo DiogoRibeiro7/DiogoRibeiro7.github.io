@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Predictive Analytics
+- Machine Learning
 classes: wide
 date: '2024-10-16'
 excerpt: Predictive analytics in healthcare is transforming how providers foresee

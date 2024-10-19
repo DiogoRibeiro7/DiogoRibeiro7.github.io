@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Financial Risk Management
 classes: wide
 date: '2023-12-30'
 excerpt: A comprehensive comparison of Value at Risk (VaR) and Expected Shortfall

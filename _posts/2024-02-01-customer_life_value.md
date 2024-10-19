@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Data Science
 classes: wide
 date: '2024-02-01'
 excerpt: Discover the importance of Customer Lifetime Value (CLV) in shaping business

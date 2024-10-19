@@ -1,8 +1,7 @@
 ---
 author_profile: false
 categories:
-- Finance
-- Risk Management
+- Statistics
 classes: wide
 date: '2024-09-12'
 excerpt: Importance Sampling offers an efficient alternative to traditional Monte

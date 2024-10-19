@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Data Science
 - Machine Learning
-- Business Strategy
 classes: wide
 date: '2024-10-12'
 excerpt: Data-driven decision-making, powered by data science and machine learning,

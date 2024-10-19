@@ -1,8 +1,6 @@
 ---
 author_profile: false
 categories:
-- Healthcare
-- Machine Learning
 - Data Analytics
 classes: wide
 date: '2024-09-17'
@@ -23,6 +21,8 @@ keywords:
 - Medical imaging
 - Personalized medicine
 - Predictive analytics
+- Healthcare
+- Machine Learning
 - Healthcare data privacy
 - Clinical implementation challenges
 - Predictive patient outcomes

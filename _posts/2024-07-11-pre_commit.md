@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Software Development
+- Python
 classes: wide
 date: '2024-07-11'
 header:
