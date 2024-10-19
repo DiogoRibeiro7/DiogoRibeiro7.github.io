@@ -75,6 +75,7 @@ Using an F-test, we evaluate whether the inclusion of lagged values of $X$ signi
 In economics, the Granger causality test is widely used to examine the interdependencies between various macroeconomic indicators. For instance, researchers often investigate whether changes in money supply Granger-cause inflation or if GDP growth Granger-causes employment rates. One classic example is the analysis of the causal relationship between oil prices and economic growth. Understanding these relationships can help policymakers make informed decisions about monetary policy, fiscal interventions, and resource allocation.
 
 #### Example: Money Supply and Inflation
+
 An economist might explore whether increases in the money supply Granger-cause inflation by analyzing historical data. If money supply changes are found to improve predictions of inflation rates, this could suggest that managing the money supply is crucial for controlling inflationary pressures.
 
 ### Climate Science
@@ -82,6 +83,7 @@ An economist might explore whether increases in the money supply Granger-cause i
 Climate science often involves complex, interdependent systems where Granger causality can help unravel the directional influences between different climatic variables. For example, researchers might use the Granger causality test to examine whether changes in sea surface temperature (SST) in one part of the ocean Granger-cause changes in atmospheric pressure patterns elsewhere, potentially improving predictions of weather phenomena like El Niño or monsoons.
 
 #### Example: El Niño-Southern Oscillation (ENSO) and Monsoon Patterns
+
 The relationship between the El Niño-Southern Oscillation and monsoon rainfall is critical for agricultural planning and disaster preparedness. By applying the Granger causality test, researchers can assess whether variations in ENSO indices (such as SST anomalies) have predictive power over monsoon activity, guiding forecasts and risk assessments.
 
 ### Finance
@@ -89,6 +91,7 @@ The relationship between the El Niño-Southern Oscillation and monsoon rainfall 
 In the financial world, the Granger causality test helps identify the relationships between different asset prices, such as stocks, bonds, or commodities. Investors may be interested in knowing if changes in one market Granger-cause price movements in another. This knowledge can be leveraged for asset pricing models, portfolio diversification strategies, and risk management.
 
 #### Example: Stock Prices and Exchange Rates
+
 In a globalized economy, the interaction between stock prices and exchange rates is of considerable interest. For instance, researchers might test whether movements in stock indices Granger-cause fluctuations in currency values. If significant, this insight could inform traders and multinational corporations in making hedging decisions or adjusting their investment portfolios based on currency risks.
 
 ## Interpreting Results and Limitations
