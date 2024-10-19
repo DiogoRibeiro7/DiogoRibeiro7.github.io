@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Data Science
 classes: wide
 date: '2023-09-03'
 excerpt: Learn the core concepts of binary classification, explore common algorithms

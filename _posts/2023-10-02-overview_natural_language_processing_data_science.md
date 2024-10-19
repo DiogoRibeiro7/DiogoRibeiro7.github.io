@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Data Science
 - Natural Language Processing
-- Machine Learning
 classes: wide
 date: '2023-10-02'
 excerpt: Natural Language Processing (NLP) is integral to data science, enabling tasks
@@ -24,6 +22,7 @@ keywords:
 - Nltk
 - Spacy
 - Hugging face
+- Data science
 seo_description: Explore how Natural Language Processing (NLP) fits into data science,
   common NLP tasks, popular libraries like NLTK and SpaCy, and real-world applications.
 seo_title: 'Natural Language Processing in Data Science: Tasks, Tools, and Applications'

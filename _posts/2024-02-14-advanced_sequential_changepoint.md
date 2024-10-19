@@ -1,8 +1,6 @@
 ---
 author_profile: false
 categories:
-- Statistics
-- Machine Learning
 - Data Analysis
 classes: wide
 date: '2024-02-14'
