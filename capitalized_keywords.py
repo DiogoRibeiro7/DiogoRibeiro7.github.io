@@ -52,7 +52,15 @@ def process_markdown_file(file_path):
 
         # Replace the front matter in the content
         updated_front_matter = yaml.dump(front_matter_dict, default_flow_style=False)
-        updated_content = re.sub(r'---(.*?)---', f'---\n{updated_front_matter}---', content, flags=re.DOTALL)
+        
+        # Escape backslashes in YAML to avoid issues with re.sub
+        updated_front_matter = re.escape(updated_front_matter)
+        
+        # Rebuild the full content with updated front matter, use re.sub for replacement
+        updated_content = re.sub(r'---(.*?)---', f'---\n{updated_front_matter}\n---', content, flags=re.DOTALL)
+        
+        # Unescape YAML content for the final write back
+        updated_content = updated_content.replace(r'\n', '\n').replace(r'\\', '\\')
 
         # Save the updated content back to the file
         with open(file_path, 'w', encoding='utf-8') as file:
