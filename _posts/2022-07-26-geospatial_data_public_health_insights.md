@@ -4,9 +4,17 @@ categories:
 - Data Science
 - Public Health
 classes: wide
+date: '2022-07-26'
 excerpt: Spatial epidemiology combines geospatial data with data science techniques
   to track and analyze disease outbreaks, offering public health agencies critical
   tools for intervention and planning.
+header:
+  image: /assets/images/data_science_19.jpg
+  og_image: /assets/images/data_science_19.jpg
+  overlay_image: /assets/images/data_science_19.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_19.jpg
+  twitter_image: /assets/images/data_science_19.jpg
 keywords:
 - Spatial epidemiology
 - Geospatial data
@@ -18,6 +26,7 @@ seo_description: Explore how geospatial data is revolutionizing public health. L
   how spatial epidemiology and data science techniques track disease outbreaks and
   offer critical insights for health interventions.
 seo_title: 'Spatial Epidemiology: Leveraging Geospatial Data in Public Health'
+seo_type: article
 summary: This article explores the importance of geospatial data in spatial epidemiology,
   focusing on how it is used to track and analyze disease outbreaks. It delves into
   the integration of spatial data with data science methods and how these insights
