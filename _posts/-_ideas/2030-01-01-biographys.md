@@ -1,21 +1,21 @@
 ---
-title: "Mathematicians Biographies: Exploring the Lives Behind Mathematical Discoveries"
+author_profile: false
 categories:
 - Mathematics
 - Biographies
-tags:
-- Mathematicians
-- History of Mathematics
-author_profile: false
-seo_title: "Mathematicians Biographies: Lives Behind Mathematical Discoveries"
-seo_description: "A list of articles detailing the biographies of some of the most influential mathematicians in history, including their contributions and lasting impact on the field of mathematics."
-excerpt: "Learn about the mathematicians whose ideas shaped the world of mathematics. From Pythagoras to John Nash, this collection of biographies covers their discoveries and legacies."
-summary: "Explore the lives and works of mathematicians who revolutionized the world with their groundbreaking discoveries. This list offers biographies of notable figures across different mathematical fields and eras."
-keywords: 
+classes: wide
+excerpt: Learn about the mathematicians whose ideas shaped the world of mathematics. From Pythagoras to John Nash, this collection of biographies covers their discoveries and legacies.
+keywords:
 - mathematicians biographies
 - history of mathematics
 - contributions of mathematicians
-classes: wide
+seo_description: A list of articles detailing the biographies of some of the most influential mathematicians in history, including their contributions and lasting impact on the field of mathematics.
+seo_title: 'Mathematicians Biographies: Lives Behind Mathematical Discoveries'
+summary: Explore the lives and works of mathematicians who revolutionized the world with their groundbreaking discoveries. This list offers biographies of notable figures across different mathematical fields and eras.
+tags:
+- Mathematicians
+- History of Mathematics
+title: 'Mathematicians Biographies: Exploring the Lives Behind Mathematical Discoveries'
 ---
 
 ## List of Articles on Mathematicians' Biographies
