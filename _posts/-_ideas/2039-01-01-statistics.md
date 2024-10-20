@@ -60,5 +60,3 @@ title: Exploring Key Topics in Statistics
 
 - **TODO: Correlation vs. Causation: Understanding Relationships Between Variables**
    - This article explains the difference between correlation and causation, a common point of confusion in statistical analysis. It discusses how to use correlation coefficients to measure the strength of relationships and how to determine causality using controlled experiments.
-
-

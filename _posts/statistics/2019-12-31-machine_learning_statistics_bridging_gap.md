@@ -4,9 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2019-12-31'
-excerpt: Machine learning is often seen as a new frontier, but its roots lie firmly
-  in traditional statistical methods. This article explores how statistical techniques
-  underpin key machine learning algorithms, highlighting their interconnectedness.
+excerpt: Machine learning is often seen as a new frontier, but its roots lie firmly in traditional statistical methods. This article explores how statistical techniques underpin key machine learning algorithms, highlighting their interconnectedness.
 header:
   image: /assets/images/data_science_19.jpg
   og_image: /assets/images/data_science_19.jpg
@@ -20,16 +18,10 @@ keywords:
 - Algorithms in machine learning
 - Linear regression
 - Support vector machines
-seo_description: This article explores the relationship between machine learning and
-  statistics, showing how statistical techniques form the foundation for many machine
-  learning algorithms, from linear regression to decision trees and support vector
-  machines.
-seo_title: 'Machine Learning and Statistics: How Statistical Methods Power Machine
-  Learning'
+seo_description: This article explores the relationship between machine learning and statistics, showing how statistical techniques form the foundation for many machine learning algorithms, from linear regression to decision trees and support vector machines.
+seo_title: 'Machine Learning and Statistics: How Statistical Methods Power Machine Learning'
 seo_type: article
-summary: Machine learning and statistics share deep connections. This article examines
-  the ways statistical methods form the backbone of machine learning algorithms, exploring
-  key techniques like regression, decision trees, and support vector machines.
+summary: Machine learning and statistics share deep connections. This article examines the ways statistical methods form the backbone of machine learning algorithms, exploring key techniques like regression, decision trees, and support vector machines.
 tags:
 - Machine learning
 - Statistics

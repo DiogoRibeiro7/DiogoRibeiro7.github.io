@@ -1,24 +1,24 @@
 ---
-title: "Exploring Key Topics in Mathematics"
+author_profile: false
 categories:
 - Mathematics
-tags:
-- Algebra
-- Calculus
-- Number Theory
-- Geometry
-author_profile: false
-seo_title: "Comprehensive Articles on Mathematics"
-seo_description: "A curated list of articles that cover a wide range of topics in mathematics, from algebra and calculus to number theory and geometry, offering insights into key concepts and advanced topics."
-excerpt: "Explore a collection of articles that cover essential and advanced topics in mathematics, providing insights into various fields like algebra, calculus, number theory, and geometry."
-summary: "This collection of articles explores key topics in mathematics, offering insights into fundamental concepts and advanced theories. Covering areas like algebra, calculus, number theory, and geometry, these articles provide a comprehensive guide for students, researchers, and enthusiasts."
-keywords: 
+classes: wide
+excerpt: Explore a collection of articles that cover essential and advanced topics in mathematics, providing insights into various fields like algebra, calculus, number theory, and geometry.
+keywords:
 - articles on mathematics
 - algebra
 - calculus
 - geometry
 - number theory
-classes: wide
+seo_description: A curated list of articles that cover a wide range of topics in mathematics, from algebra and calculus to number theory and geometry, offering insights into key concepts and advanced topics.
+seo_title: Comprehensive Articles on Mathematics
+summary: This collection of articles explores key topics in mathematics, offering insights into fundamental concepts and advanced theories. Covering areas like algebra, calculus, number theory, and geometry, these articles provide a comprehensive guide for students, researchers, and enthusiasts.
+tags:
+- Algebra
+- Calculus
+- Number Theory
+- Geometry
+title: Exploring Key Topics in Mathematics
 ---
 
 ## List of Articles About Mathematics
