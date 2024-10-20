@@ -1,3 +1,7 @@
+---
+tags: []
+---
+
 ## Appendix: TODO List of Models for Wealth Distribution and Inequality
 
 - TODO: **Explore Agent-Based Models (ABM)**  

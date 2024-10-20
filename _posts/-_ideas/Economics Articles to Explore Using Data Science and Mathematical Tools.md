@@ -1,3 +1,7 @@
+---
+tags: []
+---
+
 ## List of Economics Articles to Explore Using Data Science and Mathematical Tools
 
 - TODO: **Predictive Analytics for Economic Growth**  

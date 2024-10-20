@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Machine Learning
 classes: wide
 date: '2019-12-30'
 excerpt: AUC-ROC and Gini are popular metrics for evaluating binary classifiers, but

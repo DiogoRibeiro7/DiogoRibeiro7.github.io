@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Statistics
-- Machine Learning
 classes: wide
 date: '2019-12-29'
 excerpt: Splines are powerful tools for modeling complex, nonlinear relationships
@@ -25,6 +23,8 @@ keywords:
 - Python
 - Bash
 - Go
+- Statistics
+- Machine Learning
 seo_description: Splines are flexible mathematical tools used for smoothing and modeling
   complex data patterns. Learn what they are, how they work, and their practical applications
   in regression, data smoothing, and machine learning.
@@ -42,6 +42,8 @@ tags:
 - Python
 - Bash
 - Go
+- Statistics
+- Machine Learning
 title: 'Understanding Splines: What They Are and How They Are Used in Data Analysis'
 ---
 
