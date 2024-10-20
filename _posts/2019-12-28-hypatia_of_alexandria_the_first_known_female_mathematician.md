@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- Mathematics
 - Biographies
 classes: wide
 date: '2019-12-28'
@@ -37,6 +36,9 @@ tags:
 - Women in science
 title: 'Hypatia of Alexandria: The First Known Female Mathematician'
 ---
+
+![Example Image](/assets/images/biographies/hypatia.jpg)
+<p align="center"><i>Hypatia of Alexandria</i></p>
 
 ## Hypatia of Alexandria: The First Known Female Mathematician
 
