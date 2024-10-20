@@ -4,9 +4,7 @@ categories:
 - Biographies
 classes: wide
 date: '2020-01-12'
-excerpt: Grace Hopper revolutionized computer science by developing the first compiler
-  and contributing to COBOL. Discover her groundbreaking work and her legacy in the
-  field of programming.
+excerpt: Grace Hopper revolutionized computer science by developing the first compiler and contributing to COBOL. Discover her groundbreaking work and her legacy in the field of programming.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -20,15 +18,10 @@ keywords:
 - Cobol history
 - Debugging term origin
 - Women pioneers in computer science
-seo_description: Grace Hopper was a trailblazer in computer science, credited with
-  developing the first compiler and playing a key role in the creation of COBOL. Learn
-  about her contributions to programming and the origin of 'debugging.'
+seo_description: Grace Hopper was a trailblazer in computer science, credited with developing the first compiler and playing a key role in the creation of COBOL. Learn about her contributions to programming and the origin of 'debugging.'
 seo_title: 'Grace Hopper: Pioneer of Computer Science and the Inventor of COBOL'
 seo_type: article
-summary: Grace Hopper, a pioneer in computer science, is best known for developing
-  the first compiler for programming languages and playing a critical role in the
-  creation of COBOL. Her work transformed how computers are programmed and coined
-  the term 'debugging' for fixing computer issues.
+summary: Grace Hopper, a pioneer in computer science, is best known for developing the first compiler for programming languages and playing a critical role in the creation of COBOL. Her work transformed how computers are programmed and coined the term 'debugging' for fixing computer issues.
 tags:
 - Grace hopper
 - Computer science
