@@ -4,9 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2020-01-02'
-excerpt: Discover the fundamentals of Maximum Likelihood Estimation (MLE), its role
-  in data science, and how it impacts businesses through predictive analytics and
-  risk modeling.
+excerpt: Discover the fundamentals of Maximum Likelihood Estimation (MLE), its role in data science, and how it impacts businesses through predictive analytics and risk modeling.
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -22,13 +20,10 @@ keywords:
 - Mle
 - Bash
 - Python
-seo_description: Explore Maximum Likelihood Estimation (MLE), its importance in data
-  science, machine learning, and real-world applications.
+seo_description: Explore Maximum Likelihood Estimation (MLE), its importance in data science, machine learning, and real-world applications.
 seo_title: 'MLE: A Key Tool in Data Science'
 seo_type: article
-summary: This article covers the essentials of Maximum Likelihood Estimation (MLE),
-  breaking down its mathematical foundation, importance in data science, practical
-  applications, and limitations.
+summary: This article covers the essentials of Maximum Likelihood Estimation (MLE), breaking down its mathematical foundation, importance in data science, practical applications, and limitations.
 tags:
 - Statistical modeling
 - Bash
@@ -36,6 +31,8 @@ tags:
 - Data science
 - Mle
 - Python
+- python
+- bash
 title: 'Maximum Likelihood Estimation (MLE): Statistical Modeling in Data Science'
 ---
 

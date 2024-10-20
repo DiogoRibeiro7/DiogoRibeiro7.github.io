@@ -4,9 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2020-01-05'
-excerpt: One-way and two-way ANOVA are essential tools for comparing means across
-  groups, but each test serves different purposes. Learn when to use one-way versus
-  two-way ANOVA and how to interpret their results.
+excerpt: One-way and two-way ANOVA are essential tools for comparing means across groups, but each test serves different purposes. Learn when to use one-way versus two-way ANOVA and how to interpret their results.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -20,14 +18,10 @@ keywords:
 - Interaction effects
 - Main effects
 - Hypothesis testing
-seo_description: This article explores the differences between one-way and two-way
-  ANOVA, when to use each test, and how to interpret main effects and interaction
-  effects in two-way ANOVA.
+seo_description: This article explores the differences between one-way and two-way ANOVA, when to use each test, and how to interpret main effects and interaction effects in two-way ANOVA.
 seo_title: 'One-Way ANOVA vs. Two-Way ANOVA: When to Use Which'
 seo_type: article
-summary: This article discusses one-way and two-way ANOVA, focusing on when to use
-  each method. It explains how two-way ANOVA is useful for analyzing interactions
-  between factors and details the interpretation of main effects and interactions.
+summary: This article discusses one-way and two-way ANOVA, focusing on when to use each method. It explains how two-way ANOVA is useful for analyzing interactions between factors and details the interpretation of main effects and interactions.
 tags:
 - One-way anova
 - Two-way anova
