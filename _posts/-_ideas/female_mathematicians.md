@@ -16,17 +16,16 @@ tags: []
 
 
 
-- **TODO: Julia Robinson (1919–1985)**  
-  - Known for her work in **decision problems** and **number theory**, Julia Robinson contributed to solving **Hilbert's Tenth Problem**. She was the first woman to be elected to the National Academy of Sciences in the U.S.
 
-- **TODO: Katherine Johnson (1918–2020)**  
-  - A mathematician who worked at NASA, Katherine Johnson was instrumental in calculating trajectories for the **Mercury** and **Apollo space missions**. Her work in **applied mathematics** was crucial to the success of U.S. space exploration.
+
+
 
 - **TODO: Mary Cartwright (1900–1998)**  
   - A pioneer in **nonlinear differential equations** and **chaos theory**, Mary Cartwright made significant contributions to applied mathematics and her work paved the way for modern developments in chaos theory.
 
-- **TODO: Dorothy Vaughan (1910–2008)**  
-  - A mathematician and computer scientist, Dorothy Vaughan was an expert in **FORTRAN programming** and worked at NASA as a leader in the computing division during a time when women and African Americans faced significant barriers.
+
+
+
 
 - **TODO: Shafi Goldwasser (1958–Present)**  
   - A contemporary mathematician and computer scientist, Shafi Goldwasser is known for her work in **cryptography** and **complexity theory**. She has received the **Turing Award**, the highest honor in computer science.
