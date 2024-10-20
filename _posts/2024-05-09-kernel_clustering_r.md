@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Mathematics
 - Statistics
-- Machine Learning
 classes: wide
 date: '2024-05-09'
 header:

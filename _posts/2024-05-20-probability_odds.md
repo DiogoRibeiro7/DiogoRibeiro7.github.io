@@ -1,12 +1,12 @@
 ---
 author_profile: false
 categories:
-- Mathematics
 - Statistics
-- Data Science
-- Machine Learning
 classes: wide
 date: '2024-05-20'
+excerpt: Discover the difference between probability and odds in biostatistics, and
+  how these concepts apply to data science and machine learning. A clear explanation
+  of event occurrence and likelihood.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_3.jpg
@@ -14,14 +14,31 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_3.jpg
+keywords:
+- Probability vs odds
+- Biostatistics probability
+- Understanding odds in statistics
+- Event occurrence likelihood
+- Statistical analysis in data science
+seo_description: Learn the key differences between probability and odds, two fundamental
+  concepts in biostatistics, with clear examples and applications in data science
+  and statistics.
+seo_title: Understanding Probability and Odds in Biostatistics
 seo_type: article
 subtitle: A Clear Explanation of Two Key Concepts in Biostatistics
+summary: This article provides a detailed explanation of probability and odds, exploring
+  their definitions, differences, and applications in biostatistics, data science,
+  and machine learning.
 tags:
 - Probability
 - Odds
 - Likelihood
 - Biostatistics
 - Event occurrence
+- Mathematics
+- Statistics
+- Data science
+- Machine learning
 title: Understanding Probability and Odds
 ---
 

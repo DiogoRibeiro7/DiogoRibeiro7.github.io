@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Statistics
 - Non-Parametric Tests
-- Data Analysis
 classes: wide
 date: '2023-11-16'
 excerpt: Learn how the Mann-Whitney U Test is used to compare two independent samples

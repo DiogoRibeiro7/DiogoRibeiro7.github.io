@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Climate Change
-- Financial Risk
 classes: wide
 date: '2024-02-17'
 excerpt: Exploring Climate Value at Risk (VaR) from a data science perspective, detailing

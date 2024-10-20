@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Machine Learning
 classes: wide
 date: '2024-02-20'
 excerpt: Discover critical lessons learned from validating COPOD, a popular anomaly

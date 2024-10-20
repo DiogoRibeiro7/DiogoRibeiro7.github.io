@@ -1,10 +1,7 @@
 ---
 author_profile: false
 categories:
-- Mathematics
 - Statistics
-- Data Science
-- Machine Learning
 classes: wide
 date: '2024-05-21'
 excerpt: An in-depth guide to understanding and applying the Probability Integral
@@ -26,6 +23,10 @@ keywords:
 - Hypothesis testing
 - Credit risk modeling
 - R
+- Mathematics
+- Statistics
+- Data science
+- Machine learning
 seo_description: A comprehensive exploration of the probability integral transform,
   its theoretical foundations, and practical applications in fields such as risk management
   and marketing mix modeling.
@@ -46,6 +47,10 @@ tags:
 - Credit risk modeling
 - Financial risk management
 - R
+- Mathematics
+- Statistics
+- Data science
+- Machine learning
 title: 'Probability Integral Transform: Theory and Applications'
 ---
 
@@ -144,10 +149,7 @@ The Probability Integral Transform leverages these properties of CDFs to convert
 ---
 author_profile: false
 categories:
-- Mathematics
 - Statistics
-- Data Science
-- Machine Learning
 classes: wide
 date: '2024-05-21'
 excerpt: An in-depth guide to understanding and applying the Probability Integral
@@ -169,6 +171,10 @@ keywords:
 - Hypothesis testing
 - Credit risk modeling
 - R
+- Mathematics
+- Statistics
+- Data science
+- Machine learning
 seo_description: A comprehensive exploration of the probability integral transform,
   its theoretical foundations, and practical applications in fields such as risk management
   and marketing mix modeling.
@@ -189,6 +195,10 @@ tags:
 - Credit risk modeling
 - Financial risk management
 - R
+- Mathematics
+- Statistics
+- Data science
+- Machine learning
 title: 'Probability Integral Transform: Theory and Applications'
 ---
 
@@ -291,10 +301,7 @@ The application of the Probability Integral Transform has significantly enhanced
 ---
 author_profile: false
 categories:
-- Mathematics
 - Statistics
-- Data Science
-- Machine Learning
 classes: wide
 date: '2024-05-21'
 excerpt: An in-depth guide to understanding and applying the Probability Integral
@@ -316,6 +323,10 @@ keywords:
 - Hypothesis testing
 - Credit risk modeling
 - R
+- Mathematics
+- Statistics
+- Data science
+- Machine learning
 seo_description: A comprehensive exploration of the probability integral transform,
   its theoretical foundations, and practical applications in fields such as risk management
   and marketing mix modeling.
@@ -336,6 +347,10 @@ tags:
 - Credit risk modeling
 - Financial risk management
 - R
+- Mathematics
+- Statistics
+- Data science
+- Machine learning
 title: 'Probability Integral Transform: Theory and Applications'
 ---
 

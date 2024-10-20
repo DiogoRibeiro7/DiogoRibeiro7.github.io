@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Signal Processing
-- Data Analysis
 classes: wide
 date: '2023-09-20'
 excerpt: Explore the diverse applications of rolling windows in signal processing,

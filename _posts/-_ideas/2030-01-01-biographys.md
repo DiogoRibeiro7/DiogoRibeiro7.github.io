@@ -1,21 +1,21 @@
 ---
-title: "Mathematicians Biographies: Exploring the Lives Behind Mathematical Discoveries"
+author_profile: false
 categories:
 - Mathematics
 - Biographies
-tags:
-- Mathematicians
-- History of Mathematics
-author_profile: false
-seo_title: "Mathematicians Biographies: Lives Behind Mathematical Discoveries"
-seo_description: "A list of articles detailing the biographies of some of the most influential mathematicians in history, including their contributions and lasting impact on the field of mathematics."
-excerpt: "Learn about the mathematicians whose ideas shaped the world of mathematics. From Pythagoras to John Nash, this collection of biographies covers their discoveries and legacies."
-summary: "Explore the lives and works of mathematicians who revolutionized the world with their groundbreaking discoveries. This list offers biographies of notable figures across different mathematical fields and eras."
-keywords: 
+classes: wide
+excerpt: Learn about the mathematicians whose ideas shaped the world of mathematics. From Pythagoras to John Nash, this collection of biographies covers their discoveries and legacies.
+keywords:
 - mathematicians biographies
 - history of mathematics
 - contributions of mathematicians
-classes: wide
+seo_description: A list of articles detailing the biographies of some of the most influential mathematicians in history, including their contributions and lasting impact on the field of mathematics.
+seo_title: 'Mathematicians Biographies: Lives Behind Mathematical Discoveries'
+summary: Explore the lives and works of mathematicians who revolutionized the world with their groundbreaking discoveries. This list offers biographies of notable figures across different mathematical fields and eras.
+tags:
+- Mathematicians
+- History of Mathematics
+title: 'Mathematicians Biographies: Exploring the Lives Behind Mathematical Discoveries'
 ---
 
 ## List of Articles on Mathematicians' Biographies
@@ -29,41 +29,44 @@ classes: wide
 - **TODO: Archimedes: The Master of Mechanical Mathematics**
    - This article highlights the life of Archimedes, one of the greatest mathematicians of antiquity. His contributions to geometry, calculus, and mechanics are explored, along with his famous inventions.
 
+
+- **TODO: Emmy Noether: The Mother of Modern Algebra**
+   - Explore the life and contributions of Emmy Noether, a pioneering mathematician known for her foundational work in **abstract algebra** and **Noether's Theorem**, which links symmetries and conservation laws in physics.
+
+- **TODO: Mary Cartwright: Chaos Theory and Nonlinear Dynamics**
+   - Discover Mary Cartwright’s groundbreaking contributions to **chaos theory** and **nonlinear differential equations**. The article discusses her influence on the development of modern chaos theory and her collaboration with J.E. Littlewood.
+
+
 - **TODO: Carl Friedrich Gauss: The Prince of Mathematicians**
-   - A biography of Carl Gauss, who made significant contributions to number theory, algebra, statistics, and more. The article covers his early genius, major works, and long-term influence on mathematics.
+   - A biography of Carl Gauss, who made significant contributions to **number theory**, **algebra**, **statistics**, and more. The article covers his early genius, major works, and long-term influence on mathematics.
 
-- **TODO: Leonhard Euler: Prolific Contributor to Every Mathematical Field**
-   - Learn about Euler’s extraordinary career, where he made foundational contributions to graph theory, calculus, and topology. The article focuses on his vast output and mathematical notation still used today.
-
-- **TODO: Srinivasa Ramanujan: The Self-Taught Genius**
-   - A captivating biography of Ramanujan, an Indian mathematician whose intuitive approach to mathematics led to groundbreaking work in number theory, despite his lack of formal training. The article explores his partnership with G.H. Hardy and his profound contributions.
-
-- **TODO: Ada Lovelace: The First Computer Programmer**
-   - Ada Lovelace is often celebrated as the first computer programmer for her work with Charles Babbage's Analytical Engine. This article covers her early life, education, and her remarkable foresight into computational theory.
-
-- **TODO: John Nash: Game Theory and the Beautiful Mind**
-   - This biography covers the life of John Nash, the mathematician behind game theory, and his struggle with schizophrenia. The article examines his groundbreaking contributions to mathematics and economics, along with his personal challenges.
-
-- **TODO: Sophie Germain: Pioneer in Number Theory and Elasticity**
-   - Discover the life of Sophie Germain, a trailblazing female mathematician who made significant advances in number theory and elasticity theory, despite facing significant barriers due to her gender.
+- **TODO: Hypatia of Alexandria: The First Known Female Mathematician**
+   - Learn about Hypatia, one of the first recorded female mathematicians, who made important contributions to **geometry** and **astronomy** in ancient Alexandria. Her tragic death and her enduring legacy in mathematics and philosophy are discussed.
 
 - **TODO: Évariste Galois: Revolutionary Mathematician**
-   - The brief and tragic life of Évariste Galois, whose work laid the foundations of group theory and abstract algebra. This article covers his radical political views and the mathematical genius cut short at a young age.
+   - The brief and tragic life of Évariste Galois, whose work laid the foundations of **group theory** and **abstract algebra**. This article covers his radical political views and the mathematical genius cut short at a young age.
 
-- **TODO: David Hilbert: The Formulator of Mathematical Problems**
-   - Hilbert’s biography delves into his creation of the famous "Hilbert Problems" and his foundational work in algebra, geometry, and logic. The article also explores his impact on 20th-century mathematics.
+- **TODO: Katherine Johnson: The Human Computer Behind NASA’s Space Missions**
+   - Explore the remarkable life of Katherine Johnson, a **NASA mathematician** who calculated trajectories for the Mercury and Apollo missions. This article delves into her key role in space exploration and her contributions to **applied mathematics**.
+
+- **TODO: Leonhard Euler: Prolific Contributor to Every Mathematical Field**
+   - Learn about Euler’s extraordinary career, where he made foundational contributions to **graph theory**, **calculus**, and **topology**. The article focuses on his vast output and mathematical notation still used today.
+
+- **TODO: Srinivasa Ramanujan: The Self-Taught Genius**
+   - A captivating biography of Ramanujan, an Indian mathematician whose intuitive approach to mathematics led to groundbreaking work in **number theory**, despite his lack of formal training. The article explores his partnership with G.H. Hardy and his profound contributions.
+
+- **TODO: Mary Somerville: Bridging Astronomy and Mathematics**
+   - Learn about Mary Somerville, a mathematician and polymath who made significant contributions to **astronomy** and **mathematical physics**. She was one of the first women to be published in scientific journals and helped lay the groundwork for modern science communication.
 
 - **TODO: Henri Poincaré: The Father of Topology**
-   - A deep dive into Poincaré’s work in topology, dynamical systems, and celestial mechanics. This article explores his influential ideas, including the "Poincaré Conjecture" and his role in the development of chaos theory.
+   - A deep dive into Poincaré’s work in **topology**, **dynamical systems**, and **celestial mechanics**. This article explores his influential ideas, including the "Poincaré Conjecture" and his role in the development of chaos theory.
 
 - **TODO: Niels Henrik Abel: The Pioneer of Group Theory**
-   - The story of Niels Abel, whose early death cut short a promising mathematical career. His work on group theory and the solution of quintic equations remains foundational in modern algebra.
+   - The story of Niels Abel, whose early death cut short a promising mathematical career. His work on **group theory** and the solution of quintic equations remains foundational in modern algebra.
 
 - **TODO: Georg Cantor: Creator of Set Theory**
-   - A biography of Georg Cantor, who revolutionized mathematics with the development of set theory and the concept of infinity. This article covers his breakthroughs and the controversies surrounding his work.
+   - A biography of Georg Cantor, who revolutionized mathematics with the development of **set theory** and the concept of infinity. This article covers his breakthroughs and the controversies surrounding his work.
 
-- **TODO: Kurt Gödel: Incompleteness Theorem and the Limits of Mathematics**
-   - Explore the life and work of Kurt Gödel, known for his incompleteness theorems, which shook the foundations of mathematical logic. The article also touches on Gödel's close relationship with Einstein and his philosophical views.
 
 ## Final Thoughts
 

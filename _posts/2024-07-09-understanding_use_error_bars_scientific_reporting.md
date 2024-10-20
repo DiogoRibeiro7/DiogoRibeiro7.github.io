@@ -1,11 +1,7 @@
 ---
 author_profile: false
 categories:
-- Academic Writing
 - Research Methodology
-- Education
-- Study Skills
-- Writing Tips
 classes: wide
 date: '2024-07-09'
 header:
@@ -144,11 +140,7 @@ Provide an explanation of the statistical methods used to calculate the error ba
 ---
 author_profile: false
 categories:
-- Academic Writing
 - Research Methodology
-- Education
-- Study Skills
-- Writing Tips
 classes: wide
 date: '2024-07-09'
 header:

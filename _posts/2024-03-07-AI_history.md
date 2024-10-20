@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Technology
-- History
 classes: wide
 date: '2024-03-07'
 header:
