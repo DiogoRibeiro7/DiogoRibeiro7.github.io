@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- Technology
 - Biographies
 classes: wide
 date: '2019-12-25'

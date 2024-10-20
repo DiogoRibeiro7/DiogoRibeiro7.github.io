@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- Mathematics
 - Biographies
 classes: wide
 date: '2019-12-26'
