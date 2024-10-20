@@ -41,11 +41,6 @@ title: 'Mathematicians Biographies: Exploring the Lives Behind Mathematical Disc
 
 
 
-- **TODO: John Nash: Game Theory and the Beautiful Mind**
-   - This biography covers the life of John Nash, the mathematician behind game theory, and his struggle with schizophrenia. The article examines his groundbreaking contributions to mathematics and economics, along with his personal challenges.
-
-
-
 - **TODO: Évariste Galois: Revolutionary Mathematician**
    - The brief and tragic life of Évariste Galois, whose work laid the foundations of group theory and abstract algebra. This article covers his radical political views and the mathematical genius cut short at a young age.
 

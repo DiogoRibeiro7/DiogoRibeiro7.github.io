@@ -4,9 +4,7 @@ categories:
 - Biographies
 classes: wide
 date: '2019-12-24'
-excerpt: Sophie Germain was a trailblazing mathematician who made groundbreaking contributions
-  to number theory and elasticity. This article explores her life, her challenges,
-  and her lasting impact on mathematics and science.
+excerpt: Sophie Germain was a trailblazing mathematician who made groundbreaking contributions to number theory and elasticity. This article explores her life, her challenges, and her lasting impact on mathematics and science.
 header:
   image: /assets/images/data_science_5.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -20,15 +18,10 @@ keywords:
 - Women mathematicians
 - Elasticity theory
 - Fermat's last theorem
-seo_description: Explore the remarkable life of Sophie Germain, a pioneering female
-  mathematician who made significant contributions to number theory and elasticity
-  despite the gender barriers she faced.
+seo_description: Explore the remarkable life of Sophie Germain, a pioneering female mathematician who made significant contributions to number theory and elasticity despite the gender barriers she faced.
 seo_title: 'Sophie Germain: Trailblazer in Number Theory and Elasticity'
 seo_type: article
-summary: Sophie Germain overcame significant social barriers in the early 19th century
-  to become a leading mathematician in number theory and elasticity. This article
-  delves into her personal struggles, her notable achievements in mathematics, and
-  her legacy in scientific history.
+summary: Sophie Germain overcame significant social barriers in the early 19th century to become a leading mathematician in number theory and elasticity. This article delves into her personal struggles, her notable achievements in mathematics, and her legacy in scientific history.
 tags:
 - Sophie germain
 - Number theory
