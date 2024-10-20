@@ -30,6 +30,9 @@ tags:
 title: 'John Nash: Game Theory and the Beautiful Mind'
 ---
 
+![Example Image](/assets/images/biographies/John-Nash.jpg)
+<p align="center"><i>John Nash</i></p>
+
 ## John Nash: Game Theory and the Beautiful Mind
 
 John Forbes Nash Jr. (1928–2015) was an American mathematician whose profound contributions to **game theory** transformed the fields of economics, political science, evolutionary biology, and artificial intelligence. His work on the **Nash equilibrium**—a fundamental concept in game theory—revolutionized the way strategic decision-making is understood and applied in competitive scenarios, from business to diplomacy. Beyond his mathematical brilliance, Nash’s life was marked by his intense struggle with **schizophrenia**, a battle that, while deeply challenging, showcased his incredible resilience. This combination of intellectual genius and personal adversity was famously portrayed in the Oscar-winning film *A Beautiful Mind*.
