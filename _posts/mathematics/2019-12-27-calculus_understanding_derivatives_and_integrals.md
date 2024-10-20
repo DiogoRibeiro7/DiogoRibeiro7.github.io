@@ -44,7 +44,7 @@ A **derivative** represents the rate at which a quantity changes with respect to
 For a function $$f(x)$$, the **derivative** at a point $$x = a$$ is defined as the limit:
 
 $$
-f'(a) = \lim_{{h \to 0}} \frac{f(a+h) - f(a)}{h}
+f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
 $$
 
 This formula expresses how the function changes around the point $$a$$. If the slope is positive, the function is increasing at $$x = a$$, and if it is negative, the function is decreasing. When the slope is zero, the function has a **critical point**, which could be a local maximum, minimum, or a point of inflection.
