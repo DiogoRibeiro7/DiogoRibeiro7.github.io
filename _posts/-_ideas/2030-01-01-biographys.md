@@ -50,8 +50,7 @@ title: 'Mathematicians Biographies: Exploring the Lives Behind Mathematical Disc
 - **TODO: Évariste Galois: Revolutionary Mathematician**
    - The brief and tragic life of Évariste Galois, whose work laid the foundations of group theory and abstract algebra. This article covers his radical political views and the mathematical genius cut short at a young age.
 
-- David Hilbert: The Formulator of Mathematical Problems**
-   - Hilbert’s biography delves into his creation of the famous "Hilbert Problems" and his foundational work in algebra, geometry, and logic. The article also explores his impact on 20th-century mathematics.
+
 
 - **TODO: Henri Poincaré: The Father of Topology**
    - A deep dive into Poincaré’s work in topology, dynamical systems, and celestial mechanics. This article explores his influential ideas, including the "Poincaré Conjecture" and his role in the development of chaos theory.
@@ -61,9 +60,6 @@ title: 'Mathematicians Biographies: Exploring the Lives Behind Mathematical Disc
 
 - **TODO: Georg Cantor: Creator of Set Theory**
    - A biography of Georg Cantor, who revolutionized mathematics with the development of set theory and the concept of infinity. This article covers his breakthroughs and the controversies surrounding his work.
-
-- Kurt Gödel: Incompleteness Theorem and the Limits of Mathematics**
-   - Explore the life and work of Kurt Gödel, known for his incompleteness theorems, which shook the foundations of mathematical logic. The article also touches on Gödel's close relationship with Einstein and his philosophical views.
 
 ## Final Thoughts
 
