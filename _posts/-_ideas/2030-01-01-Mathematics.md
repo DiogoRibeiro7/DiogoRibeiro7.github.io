@@ -26,8 +26,9 @@ title: Exploring Key Topics in Mathematics
 - **TODO: Introduction to Algebra: The Language of Mathematics**
    - This article provides an introduction to algebra, covering the basic concepts of variables, equations, and functions. It explores the fundamental rules of algebra and how they are applied to solve mathematical problems.
 
-- **TODO: Calculus: Understanding Derivatives and Integrals**
-   - Dive into the world of calculus, where you’ll learn about the concepts of **derivatives** and **integrals**. This article explains how calculus is used to analyze change and area under curves, with applications ranging from physics to economics.
+
+
+
 
 - **TODO: Number Theory: The Study of Primes and Integers**
    - Explore the fascinating world of number theory, focusing on prime numbers, divisibility, and the properties of integers. The article highlights important topics like **Fermat's Last Theorem**, **the Goldbach Conjecture**, and **modular arithmetic**.
