@@ -5,9 +5,7 @@ categories:
 - Biographies
 classes: wide
 date: '2019-12-26'
-excerpt: David Hilbert, one of the most influential mathematicians of the 20th century,
-  is best known for his 'Hilbert Problems' and his pioneering contributions to algebra,
-  geometry, and logic. This article examines his lasting impact on mathematics.
+excerpt: David Hilbert, one of the most influential mathematicians of the 20th century, is best known for his 'Hilbert Problems' and his pioneering contributions to algebra, geometry, and logic. This article examines his lasting impact on mathematics.
 header:
   image: /assets/images/data_science_12.jpg
   og_image: /assets/images/data_science_12.jpg
@@ -21,14 +19,10 @@ keywords:
 - Contributions to algebra
 - Geometry and logic
 - 20th-century mathematics
-seo_description: Explore the life and work of David Hilbert, his famous list of 23
-  mathematical problems, and his foundational contributions to algebra, geometry,
-  and logic. Learn how Hilbert shaped 20th-century mathematics.
+seo_description: Explore the life and work of David Hilbert, his famous list of 23 mathematical problems, and his foundational contributions to algebra, geometry, and logic. Learn how Hilbert shaped 20th-century mathematics.
 seo_title: 'David Hilbert: Creator of the Hilbert Problems and Pioneer in Mathematics'
 seo_type: article
-summary: David Hilbert revolutionized mathematics with his famous 'Hilbert Problems,'
-  foundational contributions in algebra and geometry, and efforts to formalize mathematics
-  through logic. His ideas shaped the course of mathematical thought in the 20th century.
+summary: David Hilbert revolutionized mathematics with his famous 'Hilbert Problems,' foundational contributions in algebra and geometry, and efforts to formalize mathematics through logic. His ideas shaped the course of mathematical thought in the 20th century.
 tags:
 - David hilbert
 - Hilbert problems

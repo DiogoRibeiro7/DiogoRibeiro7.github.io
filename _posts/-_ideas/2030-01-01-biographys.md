@@ -38,14 +38,13 @@ title: 'Mathematicians Biographies: Exploring the Lives Behind Mathematical Disc
 - **TODO: Srinivasa Ramanujan: The Self-Taught Genius**
    - A captivating biography of Ramanujan, an Indian mathematician whose intuitive approach to mathematics led to groundbreaking work in number theory, despite his lack of formal training. The article explores his partnership with G.H. Hardy and his profound contributions.
 
-- **TODO: Ada Lovelace: The First Computer Programmer**
-   - Ada Lovelace is often celebrated as the first computer programmer for her work with Charles Babbage's Analytical Engine. This article covers her early life, education, and her remarkable foresight into computational theory.
+
+
 
 - **TODO: John Nash: Game Theory and the Beautiful Mind**
    - This biography covers the life of John Nash, the mathematician behind game theory, and his struggle with schizophrenia. The article examines his groundbreaking contributions to mathematics and economics, along with his personal challenges.
 
-- **TODO: Sophie Germain: Pioneer in Number Theory and Elasticity**
-   - Discover the life of Sophie Germain, a trailblazing female mathematician who made significant advances in number theory and elasticity theory, despite facing significant barriers due to her gender.
+
 
 - **TODO: Évariste Galois: Revolutionary Mathematician**
    - The brief and tragic life of Évariste Galois, whose work laid the foundations of group theory and abstract algebra. This article covers his radical political views and the mathematical genius cut short at a young age.
