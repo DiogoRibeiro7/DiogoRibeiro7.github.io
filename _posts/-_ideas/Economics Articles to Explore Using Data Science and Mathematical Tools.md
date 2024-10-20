@@ -115,15 +115,8 @@ tags: []
 
 
 
-- TODO: **Forecasting Commodity Prices Using Machine Learning**  
-  - Developing predictive models for commodity prices (e.g., oil, gold) using machine learning techniques and economic indicators.
 
 
-
-
-
-- TODO: **Blockchain's Economic Impact: Data Science Perspectives**  
-  - Studying the economic implications of blockchain technology using big data analysis and predictive models.
 
 ---
 
