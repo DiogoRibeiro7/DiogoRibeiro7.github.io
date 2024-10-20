@@ -30,6 +30,9 @@ tags:
 title: 'Ada Lovelace: The First Computer Programmer'
 ---
 
+![Example Image](/assets/images/biographies/Ada-Lovelace.png)
+<p align="center"><i>Ada Lovelace</i></p>
+
 ## Ada Lovelace: The First Computer Programmer
 
 Ada Lovelace, born **Augusta Ada Byron** on December 10, 1815, in London, is a name synonymous with the early history of computing. Widely celebrated as the **first computer programmer**, Lovelace was a mathematician and visionary who foresaw the potential of computers long before the advent of modern technology. Her work with **Charles Babbage** on the **Analytical Engine**, the world's first conceptual computer, laid the foundation for the field of **computer science**. Lovelace's visionary insights into computational theory, her understanding of algorithms, and her recognition of the broader potential of computing machines make her an enduring figure in both history and technology.
