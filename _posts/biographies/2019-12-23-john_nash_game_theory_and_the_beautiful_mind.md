@@ -4,9 +4,7 @@ categories:
 - Biographies
 classes: wide
 date: '2019-12-23'
-excerpt: John Nash revolutionized game theory with his Nash equilibrium concept and
-  won the Nobel Prize in Economics. He also faced a lifelong struggle with schizophrenia,
-  making his life a story of genius, triumph, and resilience.
+excerpt: John Nash revolutionized game theory with his Nash equilibrium concept and won the Nobel Prize in Economics. He also faced a lifelong struggle with schizophrenia, making his life a story of genius, triumph, and resilience.
 header:
   image: /assets/images/data_science_16.jpg
   og_image: /assets/images/data_science_16.jpg
@@ -20,15 +18,10 @@ keywords:
 - Nash equilibrium
 - Schizophrenia and genius
 - A beautiful mind
-seo_description: Explore the life of John Nash, the brilliant mathematician who revolutionized
-  game theory and faced a lifelong struggle with schizophrenia. This biography details
-  his contributions to mathematics and economics, as well as his personal battles.
+seo_description: Explore the life of John Nash, the brilliant mathematician who revolutionized game theory and faced a lifelong struggle with schizophrenia. This biography details his contributions to mathematics and economics, as well as his personal battles.
 seo_title: 'John Nash: Game Theory and the Mind Behind the Mathematics'
 seo_type: article
-summary: John Nash, the mathematical genius who revolutionized game theory and economics,
-  is also remembered for his personal battle with schizophrenia. This biography delves
-  into his contributions to mathematics and economics, as well as his complex personal
-  journey, which became the basis of the film *A Beautiful Mind*.
+summary: John Nash, the mathematical genius who revolutionized game theory and economics, is also remembered for his personal battle with schizophrenia. This biography delves into his contributions to mathematics and economics, as well as his complex personal journey, which became the basis of the film *A Beautiful Mind*.
 tags:
 - John nash
 - Game theory
