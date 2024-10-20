@@ -1,13 +1,12 @@
+---
+tags: []
+---
+
 ## List of Notable Female Mathematicians
 
-- **TODO: Hypatia of Alexandria (c. 360–415 CE)**  
-  - One of the earliest recorded female mathematicians, Hypatia made significant contributions to **geometry** and **astronomy**. She was also a prominent philosopher and teacher in ancient Alexandria.
 
-- **TODO: Sophie Germain (1776–1831)**  
-  - A trailblazer in **number theory** and **elasticity theory**, Sophie Germain made critical contributions to Fermat's Last Theorem and was the first woman to win a prize from the Paris Academy of Sciences for her work on elasticity.
 
-- **TODO: Ada Lovelace (1815–1852)**  
-  - Often considered the world’s first computer programmer, Ada Lovelace worked on **Charles Babbage's Analytical Engine** and wrote the first algorithm intended to be processed by a machine. Her visionary ideas foreshadowed modern computing.
+
 
 - **TODO: Mary Somerville (1780–1872)**  
   - Known for her work in **astronomy** and **mathematical physics**, Mary Somerville was one of the first women to be recognized as a scientist in her era. Her writings made science accessible to a broader audience.
@@ -15,8 +14,7 @@
 - **TODO: Emmy Noether (1882–1935)**  
   - A groundbreaking mathematician, Emmy Noether made monumental contributions to **abstract algebra** and **Noether's Theorem**, which is fundamental in linking symmetries and conservation laws in physics.
 
-- **TODO: Grace Hopper (1906–1992)**  
-  - A pioneer in **computer science** and **mathematics**, Grace Hopper developed the first compiler for computer languages and played a significant role in the creation of COBOL. She also coined the term "debugging" for fixing computer issues.
+
 
 - **TODO: Julia Robinson (1919–1985)**  
   - Known for her work in **decision problems** and **number theory**, Julia Robinson contributed to solving **Hilbert's Tenth Problem**. She was the first woman to be elected to the National Academy of Sciences in the U.S.
