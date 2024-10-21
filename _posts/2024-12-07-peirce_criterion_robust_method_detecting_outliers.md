@@ -21,6 +21,7 @@ keywords:
 - Benjamin peirce
 - Experimental data
 - Data quality
+- R
 seo_description: A detailed exploration of Peirce's Criterion, a robust statistical
   method for eliminating outliers from datasets. Learn the principles, assumptions,
   and how to apply this method.
@@ -37,6 +38,7 @@ tags:
 - Robust statistics
 - Hypothesis testing
 - Data analysis
+- R
 title: 'Peirce''s Criterion: A Robust Method for Detecting Outliers'
 ---
 
