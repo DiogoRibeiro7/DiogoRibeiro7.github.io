@@ -23,6 +23,7 @@ keywords:
 - Simplex method
 - Resource allocation
 - R
+- Python
 seo_description: Explore linear optimization, its key components, methods like simplex
   and graphical, and applications in finance, logistics, and production. Learn how
   to solve linear programming problems efficiently.
@@ -40,6 +41,7 @@ tags:
 - Decision making
 - Linear programming
 - R
+- Python
 title: 'Linear Optimization: Efficient Resource Allocation for Business Success'
 ---
 
@@ -59,7 +61,7 @@ Linear optimization problems generally consist of three core components:
 
 ### Example: Coffee Shop Optimization
 
-Consider a coffee shop that sells espresso and lattes. Each espresso brings in $5, and each latte brings in $7. However, the store faces several constraints:
+Consider a coffee shop that sells espresso and lattes. Each espresso brings in $$5, and each latte brings in $$7. However, the store faces several constraints:
 
 - It can sell no more than 500 cups in total.
 - The milk supply can only support up to 300 lattes.
@@ -69,12 +71,12 @@ The goal of this linear optimization problem is to maximize the shop’s revenue
 
 ### Defining the Problem
 
-- **Decision Variables:** Let $x_1$ represent the number of espressos sold, and $x_2$ represent the number of lattes sold.
-- **Objective Function:** Maximize revenue, which can be expressed as $Z = 5x_1 + 7x_2$.
+- **Decision Variables:** Let $$x_1$$ represent the number of espressos sold, and $$x_2$$ represent the number of lattes sold.
+- **Objective Function:** Maximize revenue, which can be expressed as $$Z = 5x_1 + 7x_2$$.
 - **Constraints:**
-    - Total drinks sold: $x_1 + x_2 \leq 500$
-    - Milk limit for lattes: $x_2 \leq 300$
-    - Labor hours: $x_1 + x_2 \leq 400$
+    - Total drinks sold: $$x_1 + x_2 \leq 500$$
+    - Milk limit for lattes: $$x_2 \leq 300$$
+    - Labor hours: $$x_1 + x_2 \leq 400$$
 
 This model can then be solved to find the optimal number of espressos and lattes to sell in order to maximize revenue.
 
@@ -108,13 +110,13 @@ The graphical method is a simple technique for solving linear optimization probl
 
 Consider a linear optimization problem with the following constraints:
 
-- $y \leq x + 4$
-- $y \geq 2x - 8$
-- $y \leq -0.25x + 6$
-- $y \geq -0.5x + 7$
-- $y \geq -0.5x + 3$
+- $$y \leq x + 4$$
+- $$y \geq 2x - 8$$
+- $$y \leq -0.25x + 6$$
+- $$y \geq -0.5x + 7$$
+- $$y \geq -0.5x + 3$$
 
-By plotting these inequalities, the feasible region can be identified as a polygon on the graph. The objective function—represented as a linear equation such as $Z = ax + by$—can then be plotted as a series of parallel lines. The optimal solution is found at the vertex of the feasible region that maximizes or minimizes the value of $Z$.
+By plotting these inequalities, the feasible region can be identified as a polygon on the graph. The objective function—represented as a linear equation such as $$Z = ax + by$$—can then be plotted as a series of parallel lines. The optimal solution is found at the vertex of the feasible region that maximizes or minimizes the value of $$Z$$.
 
 While the graphical method provides a clear visual representation, it is limited to problems with only two variables, making it more suited to educational purposes than practical business applications.
 
@@ -139,7 +141,7 @@ direction <- c("<=", "<=")
 rhs <- c(10, 15)
 
 solution <- lp("max", objective, constraints, direction, rhs)
-solution$solution
+solution$$solution
 # Output: 0 10
 ```
 
