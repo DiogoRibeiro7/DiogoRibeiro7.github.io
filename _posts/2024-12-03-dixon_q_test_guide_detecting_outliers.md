@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Data Science
 classes: wide
 date: '2024-12-03'
 excerpt: Dixon's Q test is a statistical method used to detect and reject outliers
@@ -10,11 +9,11 @@ excerpt: Dixon's Q test is a statistical method used to detect and reject outlie
   assumptions, and application.
 header:
   image: /assets/images/statistics_outlier.jpg
-  og_image: /assets/images/statistics_outlier_og.jpg
-  overlay_image: /assets/images/statistics_outlier.jpg
+  og_image: /assets/images/statistics_outlier.jpg
+  overlay_image: /assets/images/statistics.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/statistics_outlier_teaser.jpg
-  twitter_image: /assets/images/statistics_outlier_twitter.jpg
+  teaser: /assets/images/statistics_outlier.jpg
+  twitter_image: /assets/images/statistics_outlier.jpg
 keywords:
 - Dixon's q test
 - Outlier detection
@@ -22,6 +21,7 @@ keywords:
 - Statistical hypothesis testing
 - Data quality
 - Python
+- Data science
 seo_description: A detailed exploration of Dixon's Q test, a statistical method for
   identifying and rejecting outliers in small datasets. Learn how the test works,
   its assumptions, and application process.
