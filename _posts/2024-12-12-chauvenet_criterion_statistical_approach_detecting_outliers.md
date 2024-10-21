@@ -4,7 +4,9 @@ categories:
 - Statistics
 classes: wide
 date: '2024-12-12'
-excerpt: Chauvenet's Criterion is a statistical method used to determine whether a data point is an outlier. This article explains how the criterion works, its assumptions, and its application in real-world data analysis.
+excerpt: Chauvenet's Criterion is a statistical method used to determine whether a
+  data point is an outlier. This article explains how the criterion works, its assumptions,
+  and its application in real-world data analysis.
 header:
   image: /assets/images/statistics_outlier.jpg
   og_image: /assets/images/statistics_outliers.jpg
@@ -13,22 +15,33 @@ header:
   teaser: /assets/images/statistics_outlier.jpg
   twitter_image: /assets/images/statistics_outlier.jpg
 keywords:
-- Chauvenet's Criterion
-- Outlier Detection
-- Statistical Methods
-- Normal Distribution
-- Experimental Data
-- Hypothesis Testing
-seo_description: An in-depth exploration of Chauvenet's Criterion, a statistical method for identifying spurious data points. Learn the mechanics, assumptions, and applications of this outlier detection method.
-seo_title: 'Chauvenet''s Criterion for Outlier Detection: Comprehensive Overview and Application'
+- Chauvenet's criterion
+- Outlier detection
+- Statistical methods
+- Normal distribution
+- Experimental data
+- Hypothesis testing
+- Python
+- R
+seo_description: An in-depth exploration of Chauvenet's Criterion, a statistical method
+  for identifying spurious data points. Learn the mechanics, assumptions, and applications
+  of this outlier detection method.
+seo_title: 'Chauvenet''s Criterion for Outlier Detection: Comprehensive Overview and
+  Application'
 seo_type: article
-summary: Chauvenet's Criterion is a robust statistical method for identifying outliers in normally distributed datasets. This guide covers the principles behind the criterion, the step-by-step process for applying it, and its limitations. Learn how to calculate deviations, assess probability thresholds, and use the criterion to improve the quality of your data analysis.
+summary: Chauvenet's Criterion is a robust statistical method for identifying outliers
+  in normally distributed datasets. This guide covers the principles behind the criterion,
+  the step-by-step process for applying it, and its limitations. Learn how to calculate
+  deviations, assess probability thresholds, and use the criterion to improve the
+  quality of your data analysis.
 tags:
-- Chauvenet's Criterion
-- Outlier Detection
-- Statistical Methods
-- Hypothesis Testing
-- Data Analysis
+- Chauvenet's criterion
+- Outlier detection
+- Statistical methods
+- Hypothesis testing
+- Data analysis
+- Python
+- R
 title: 'Chauvenet''s Criterion: A Statistical Approach to Detecting Outliers'
 ---
 
@@ -73,6 +86,7 @@ Chauvenet's criterion uses the following steps to determine whether a data point
 5. **Apply the criterion**: If $$N_{\text{outliers}} < 0.5$$, then the data point is considered an outlier and should be excluded from the dataset.
 
 ### Example:
+
 Let’s say you have a dataset of 100 observations with a mean of 50 and a standard deviation of 5. You want to determine if a value of 65 is an outlier.
 
 1. Calculate the deviation:
