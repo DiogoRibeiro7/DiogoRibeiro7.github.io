@@ -4,9 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2019-12-28'
-excerpt: Explore the differences between the Shapiro-Wilk and Anderson-Darling tests,
-  two common methods for testing normality, and how sample size and distribution affect
-  their performance.
+excerpt: Explore the differences between the Shapiro-Wilk and Anderson-Darling tests, two common methods for testing normality, and how sample size and distribution affect their performance.
 header:
   image: /assets/images/data_science_20.jpg
   og_image: /assets/images/data_science_20.jpg
@@ -22,22 +20,19 @@ keywords:
 - Large sample size
 - Statistical distribution
 - Python
-seo_description: A comparison of the Shapiro-Wilk and Anderson-Darling tests for normality,
-  analyzing their strengths and weaknesses based on sample size and distribution.
-seo_title: 'Shapiro-Wilk vs Anderson-Darling: Normality Tests for Small and Large
-  Samples'
+- python
+seo_description: A comparison of the Shapiro-Wilk and Anderson-Darling tests for normality, analyzing their strengths and weaknesses based on sample size and distribution.
+seo_title: 'Shapiro-Wilk vs Anderson-Darling: Normality Tests for Small and Large Samples'
 seo_type: article
-summary: This article compares the Shapiro-Wilk and Anderson-Darling tests, emphasizing
-  how sample size and distribution characteristics influence the choice of method
-  when assessing normality.
+summary: This article compares the Shapiro-Wilk and Anderson-Darling tests, emphasizing how sample size and distribution characteristics influence the choice of method when assessing normality.
 tags:
 - Normality testing
 - Shapiro-wilk test
 - Anderson-darling test
 - Sample size
 - Python
-title: 'Shapiro-Wilk Test vs. Anderson-Darling: Checking for Normality in Small vs.
-  Large Samples'
+- python
+title: 'Shapiro-Wilk Test vs. Anderson-Darling: Checking for Normality in Small vs. Large Samples'
 ---
 
 ## Shapiro-Wilk Test vs. Anderson-Darling: Checking for Normality in Small vs. Large Samples

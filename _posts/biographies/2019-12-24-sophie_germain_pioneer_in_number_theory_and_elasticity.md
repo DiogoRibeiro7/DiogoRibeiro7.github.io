@@ -30,6 +30,9 @@ tags:
 title: 'Sophie Germain: Pioneer in Number Theory and Elasticity'
 ---
 
+![Example Image](/assets/images/biographies/sophiegermain.jpg)
+<p align="center"><i>Ada Lovelace</i></p>
+
 ## Sophie Germain: Pioneer in Number Theory and Elasticity
 
 Sophie Germain (1776–1831) was a self-taught French mathematician who made pioneering contributions to **number theory** and **elasticity theory**, two distinct areas of mathematics that have had a lasting impact on both theoretical and applied sciences. Despite living in an era when women were largely excluded from formal scientific education and professional recognition, Germain persevered in her intellectual pursuits, defying societal expectations and leaving behind a remarkable legacy. Her work on **Fermat’s Last Theorem** and her groundbreaking research in **elasticity** continue to inspire mathematicians and scientists today.

@@ -33,21 +33,19 @@ title: 'Mathematicians Biographies: Exploring the Lives Behind Mathematical Disc
 - **TODO: Emmy Noether: The Mother of Modern Algebra**
    - Explore the life and contributions of Emmy Noether, a pioneering mathematician known for her foundational work in **abstract algebra** and **Noether's Theorem**, which links symmetries and conservation laws in physics.
 
-- **TODO: Mary Cartwright: Chaos Theory and Nonlinear Dynamics**
-   - Discover Mary Cartwright’s groundbreaking contributions to **chaos theory** and **nonlinear differential equations**. The article discusses her influence on the development of modern chaos theory and her collaboration with J.E. Littlewood.
+
 
 
 - **TODO: Carl Friedrich Gauss: The Prince of Mathematicians**
    - A biography of Carl Gauss, who made significant contributions to **number theory**, **algebra**, **statistics**, and more. The article covers his early genius, major works, and long-term influence on mathematics.
 
-- **TODO: Hypatia of Alexandria: The First Known Female Mathematician**
-   - Learn about Hypatia, one of the first recorded female mathematicians, who made important contributions to **geometry** and **astronomy** in ancient Alexandria. Her tragic death and her enduring legacy in mathematics and philosophy are discussed.
+
 
 - **TODO: Évariste Galois: Revolutionary Mathematician**
    - The brief and tragic life of Évariste Galois, whose work laid the foundations of **group theory** and **abstract algebra**. This article covers his radical political views and the mathematical genius cut short at a young age.
 
-- **TODO: Katherine Johnson: The Human Computer Behind NASA’s Space Missions**
-   - Explore the remarkable life of Katherine Johnson, a **NASA mathematician** who calculated trajectories for the Mercury and Apollo missions. This article delves into her key role in space exploration and her contributions to **applied mathematics**.
+
+
 
 - **TODO: Leonhard Euler: Prolific Contributor to Every Mathematical Field**
    - Learn about Euler’s extraordinary career, where he made foundational contributions to **graph theory**, **calculus**, and **topology**. The article focuses on his vast output and mathematical notation still used today.
@@ -55,8 +53,7 @@ title: 'Mathematicians Biographies: Exploring the Lives Behind Mathematical Disc
 - **TODO: Srinivasa Ramanujan: The Self-Taught Genius**
    - A captivating biography of Ramanujan, an Indian mathematician whose intuitive approach to mathematics led to groundbreaking work in **number theory**, despite his lack of formal training. The article explores his partnership with G.H. Hardy and his profound contributions.
 
-- **TODO: Mary Somerville: Bridging Astronomy and Mathematics**
-   - Learn about Mary Somerville, a mathematician and polymath who made significant contributions to **astronomy** and **mathematical physics**. She was one of the first women to be published in scientific journals and helped lay the groundwork for modern science communication.
+
 
 - **TODO: Henri Poincaré: The Father of Topology**
    - A deep dive into Poincaré’s work in **topology**, **dynamical systems**, and **celestial mechanics**. This article explores his influential ideas, including the "Poincaré Conjecture" and his role in the development of chaos theory.

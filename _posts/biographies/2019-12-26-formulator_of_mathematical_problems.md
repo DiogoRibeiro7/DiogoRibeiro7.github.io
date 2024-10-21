@@ -31,6 +31,11 @@ tags:
 title: 'David Hilbert: The Formulator of Mathematical Problems'
 ---
 
+<p align="center">
+  <img src="/assets/images/biographies/david_hilbert.jpg" alt="Example Image">
+</p>
+<p align="center"><i>David Hilbert</i></p>
+
 ## David Hilbert: Pioneer of Modern Mathematics
 
 David Hilbert, born on January 23, 1862, in Königsberg, Prussia (now Kaliningrad, Russia), is regarded as one of the most influential mathematicians of the late 19th and early 20th centuries. His work not only advanced specific fields like **geometry**, **algebra**, and **logic** but also shaped the broader direction of modern mathematics. Hilbert’s famous list of **23 unsolved problems**, presented in 1900, became a guiding force in mathematical research for the next century, challenging mathematicians to explore the frontiers of knowledge. His contributions to the development of formalism and his efforts to establish mathematics on a consistent foundation remain central to the discipline today.

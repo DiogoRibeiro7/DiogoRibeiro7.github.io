@@ -2,12 +2,9 @@
 author_profile: false
 categories:
 - Data Science
-- Machine Learning
 classes: wide
 date: '2019-12-30'
-excerpt: AUC-ROC and Gini are popular metrics for evaluating binary classifiers, but
-  they can be misleading on imbalanced datasets. Discover why AUC-PR, with its focus
-  on Precision and Recall, offers a better evaluation for handling rare events.
+excerpt: AUC-ROC and Gini are popular metrics for evaluating binary classifiers, but they can be misleading on imbalanced datasets. Discover why AUC-PR, with its focus on Precision and Recall, offers a better evaluation for handling rare events.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -21,23 +18,16 @@ keywords:
 - Binary classifiers
 - Imbalanced data
 - Machine learning metrics
-seo_description: When evaluating binary classifiers on imbalanced datasets, AUC-PR
-  is a more informative metric than AUC-ROC or Gini. Learn why Precision-Recall curves
-  provide a clearer picture of model performance on rare events.
+seo_description: When evaluating binary classifiers on imbalanced datasets, AUC-PR is a more informative metric than AUC-ROC or Gini. Learn why Precision-Recall curves provide a clearer picture of model performance on rare events.
 seo_title: 'AUC-PR vs. AUC-ROC: Evaluating Classifiers on Imbalanced Data'
 seo_type: article
-summary: In this article, we explore why AUC-PR (Area Under Precision-Recall Curve)
-  is a superior metric for evaluating binary classifiers on imbalanced datasets compared
-  to AUC-ROC and Gini. We discuss how class imbalance distorts performance metrics
-  and provide real-world examples of why Precision-Recall curves give a clearer understanding
-  of model performance on rare events.
+summary: In this article, we explore why AUC-PR (Area Under Precision-Recall Curve) is a superior metric for evaluating binary classifiers on imbalanced datasets compared to AUC-ROC and Gini. We discuss how class imbalance distorts performance metrics and provide real-world examples of why Precision-Recall curves give a clearer understanding of model performance on rare events.
 tags:
 - Binary classifiers
 - Imbalanced data
 - Auc-pr
 - Precision-recall
-title: 'Evaluating Binary Classifiers on Imbalanced Datasets: Why AUC-PR Beats AUC-ROC
-  and Gini'
+title: 'Evaluating Binary Classifiers on Imbalanced Datasets: Why AUC-PR Beats AUC-ROC and Gini'
 ---
 
 When working with binary classifiers, metrics like **AUC-ROC** and **Gini** have long been the default for evaluating model performance. These metrics offer a quick way to assess how well a model discriminates between two classes, typically a **positive class** (e.g., detecting fraud or predicting defaults) and a **negative class** (e.g., non-fraudulent or non-default cases). 
