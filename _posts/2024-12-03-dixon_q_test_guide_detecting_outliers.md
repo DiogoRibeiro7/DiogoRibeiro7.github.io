@@ -5,7 +5,9 @@ categories:
 - Data Science
 classes: wide
 date: '2024-12-03'
-excerpt: Dixon's Q test is a statistical method used to detect and reject outliers in small datasets, assuming normal distribution. This article explains its mechanics, assumptions, and application.
+excerpt: Dixon's Q test is a statistical method used to detect and reject outliers
+  in small datasets, assuming normal distribution. This article explains its mechanics,
+  assumptions, and application.
 header:
   image: /assets/images/statistics_outlier.jpg
   og_image: /assets/images/statistics_outlier_og.jpg
@@ -14,21 +16,29 @@ header:
   teaser: /assets/images/statistics_outlier_teaser.jpg
   twitter_image: /assets/images/statistics_outlier_twitter.jpg
 keywords:
-- Dixon's Q Test
-- Outlier Detection
-- Normal Distribution
-- Statistical Hypothesis Testing
-- Data Quality
-seo_description: A detailed exploration of Dixon's Q test, a statistical method for identifying and rejecting outliers in small datasets. Learn how the test works, its assumptions, and application process.
+- Dixon's q test
+- Outlier detection
+- Normal distribution
+- Statistical hypothesis testing
+- Data quality
+- Python
+seo_description: A detailed exploration of Dixon's Q test, a statistical method for
+  identifying and rejecting outliers in small datasets. Learn how the test works,
+  its assumptions, and application process.
 seo_title: 'Dixon''s Q Test for Outlier Detection: Comprehensive Overview and Application'
 seo_type: article
-summary: Dixon's Q test is a statistical tool designed for detecting outliers in small, normally distributed datasets. This guide covers its fundamental principles, the step-by-step process for applying the test, and its limitations. Learn how to calculate the Q statistic, compare it to reference Q values, and effectively detect outliers using the test.
+summary: Dixon's Q test is a statistical tool designed for detecting outliers in small,
+  normally distributed datasets. This guide covers its fundamental principles, the
+  step-by-step process for applying the test, and its limitations. Learn how to calculate
+  the Q statistic, compare it to reference Q values, and effectively detect outliers
+  using the test.
 tags:
-- Dixon's Q Test
-- Outlier Detection
-- Statistical Methods
-- Hypothesis Testing
-- Data Analysis
+- Dixon's q test
+- Outlier detection
+- Statistical methods
+- Hypothesis testing
+- Data analysis
+- Python
 title: 'Dixon''s Q Test: A Guide for Detecting Outliers'
 ---
 
@@ -193,3 +203,81 @@ In cases where Dixon's Q test is not appropriate, consider using the following a
 Dixon's Q test is a simple yet powerful tool for detecting outliers in small, normally distributed datasets. By comparing the ratio of the gap between the suspected outlier and the nearest data point to the range of the dataset, the test provides a structured approach for deciding whether a data point should be rejected as an outlier. However, its assumptions and limitations mean that it should be used sparingly and only in datasets with certain characteristics.
 
 Understanding the mechanics of Dixon’s Q test, including how to compute the Q statistic and interpret Q table values, enables analysts to make more informed decisions about their data, ensuring that outliers are appropriately handled and the integrity of the dataset is maintained.
+
+## Appendix: Python Implementation of Dixon's Q Test
+
+```python
+import numpy as np
+
+def dixon_q_test(data, significance_level=0.05):
+    """
+    Perform Dixon's Q test to detect a single outlier in a small dataset.
+    
+    Parameters:
+    data (list or numpy array): The dataset, assumed to follow a normal distribution.
+    significance_level (float): The significance level for the test (default is 0.05).
+    
+    Returns:
+    outlier (float or None): The detected outlier value, or None if no outlier is found.
+    Q_statistic (float): The calculated Q statistic.
+    Q_critical (float): The critical value from Dixon's Q table for comparison.
+    """
+    
+    # Dixon's Q critical values for significance levels (0.90, 0.95, 0.99) and sample sizes
+    Q_critical_table = {
+        3: {0.90: 0.941, 0.95: 0.970, 0.99: 0.994},
+        4: {0.90: 0.765, 0.95: 0.829, 0.99: 0.926},
+        5: {0.90: 0.642, 0.95: 0.710, 0.99: 0.821},
+        6: {0.90: 0.560, 0.95: 0.625, 0.99: 0.740},
+        7: {0.90: 0.507, 0.95: 0.568, 0.99: 0.680},
+        8: {0.90: 0.468, 0.95: 0.526, 0.99: 0.634},
+        9: {0.90: 0.437, 0.95: 0.493, 0.99: 0.598},
+        10: {0.90: 0.412, 0.95: 0.466, 0.99: 0.568}
+    }
+    
+    n = len(data)
+    
+    if n < 3 or n > 10:
+        raise ValueError("Dixon's Q test is only applicable for sample sizes between 3 and 10.")
+    
+    # Select the appropriate critical value from the table
+    if significance_level == 0.05:
+        Q_critical = Q_critical_table[n][0.95]
+    elif significance_level == 0.10:
+        Q_critical = Q_critical_table[n][0.90]
+    elif significance_level == 0.01:
+        Q_critical = Q_critical_table[n][0.99]
+    else:
+        raise ValueError("Supported significance levels are 0.01, 0.05, and 0.10.")
+    
+    # Sort data in ascending order
+    data_sorted = np.sort(data)
+    
+    # Calculate the gap and range
+    gap_low = abs(data_sorted[1] - data_sorted[0])  # gap for the lowest value
+    gap_high = abs(data_sorted[-1] - data_sorted[-2])  # gap for the highest value
+    data_range = data_sorted[-1] - data_sorted[0]
+    
+    # Compute the Q statistic for both the lowest and highest values
+    Q_low = gap_low / data_range
+    Q_high = gap_high / data_range
+    
+    # Compare Q statistics with the critical value
+    if Q_high > Q_critical:
+        return data_sorted[-1], Q_high, Q_critical  # Highest value is an outlier
+    elif Q_low > Q_critical:
+        return data_sorted[0], Q_low, Q_critical  # Lowest value is an outlier
+    else:
+        return None, max(Q_low, Q_high), Q_critical  # No outliers detected
+
+# Example usage:
+data = [1.2, 1.4, 1.5, 1.7, 5.0]
+outlier, Q_statistic, Q_critical = dixon_q_test(data)
+
+if outlier:
+    print(f"Outlier detected: {outlier}")
+else:
+    print("No outlier detected.")
+print(f"Dixon's Q Statistic: {Q_statistic}")
+print(f"Critical Q Value: {Q_critical}")
+```
