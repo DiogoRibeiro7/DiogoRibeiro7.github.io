@@ -2,17 +2,16 @@
 author_profile: false
 categories:
 - Statistics
-- Data Science
 classes: wide
 date: '2024-12-12'
 excerpt: Chauvenet's Criterion is a statistical method used to determine whether a data point is an outlier. This article explains how the criterion works, its assumptions, and its application in real-world data analysis.
 header:
-  image: /assets/images/statistics_outliers.jpg
-  og_image: /assets/images/statistics_outliers_og.jpg
-  overlay_image: /assets/images/statistics_outliers.jpg
+  image: /assets/images/statistics_outlier.jpg
+  og_image: /assets/images/statistics_outliers.jpg
+  overlay_image: /assets/images/statistics_outlier.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/statistics_outliers_teaser.jpg
-  twitter_image: /assets/images/statistics_outliers_twitter.jpg
+  teaser: /assets/images/statistics_outlier.jpg
+  twitter_image: /assets/images/statistics_outlier.jpg
 keywords:
 - Chauvenet's Criterion
 - Outlier Detection
