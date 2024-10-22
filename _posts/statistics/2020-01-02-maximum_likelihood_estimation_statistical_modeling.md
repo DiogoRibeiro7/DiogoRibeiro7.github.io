@@ -20,6 +20,8 @@ keywords:
 - Mle
 - Bash
 - Python
+- python
+- bash
 seo_description: Explore Maximum Likelihood Estimation (MLE), its importance in data science, machine learning, and real-world applications.
 seo_title: 'MLE: A Key Tool in Data Science'
 seo_type: article

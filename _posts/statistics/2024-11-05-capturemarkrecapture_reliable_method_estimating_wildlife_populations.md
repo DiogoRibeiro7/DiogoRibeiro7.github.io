@@ -4,8 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2024-11-05'
-excerpt: Capture-Mark-Recapture (CMR) is a powerful statistical method for estimating
-  wildlife populations, relying on six key assumptions for reliability.
+excerpt: Capture-Mark-Recapture (CMR) is a powerful statistical method for estimating wildlife populations, relying on six key assumptions for reliability.
 header:
   image: /assets/images/data_science_19.jpg
   og_image: /assets/images/data_science_19.jpg
@@ -24,14 +23,10 @@ keywords:
 - Cmr assumptions
 - Closed population models
 - Equal catchability in statistics
-seo_description: A detailed exploration of the capture-mark-recapture (CMR) method
-  and its statistical assumptions, vital for accurate wildlife population estimation.
+seo_description: A detailed exploration of the capture-mark-recapture (CMR) method and its statistical assumptions, vital for accurate wildlife population estimation.
 seo_title: Capture-Mark-Recapture and its Statistical Reliability
 seo_type: article
-summary: This article delves into the statistical reliability of Capture-Mark-Recapture
-  (CMR) methods in wildlife population estimation. It explains the six critical assumptions
-  that must be fulfilled to achieve accurate results, and discusses the consequences
-  of violating these assumptions, highlighting the importance of careful study design.
+summary: This article delves into the statistical reliability of Capture-Mark-Recapture (CMR) methods in wildlife population estimation. It explains the six critical assumptions that must be fulfilled to achieve accurate results, and discusses the consequences of violating these assumptions, highlighting the importance of careful study design.
 tags:
 - Capture-mark-recapture
 - Wildlife statistics
