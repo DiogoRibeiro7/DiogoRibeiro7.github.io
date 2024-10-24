@@ -1,7 +1,11 @@
+---
+tags: []
+---
+
 ## TODO: Mathematical Topics in Macroeconomics
 
-### 1. **TODO: Mathematical Foundations of Macroeconomic Models**
-   - **TODO: Differential Equations in Growth Models**: Examine how differential equations are used to model economic growth, especially in models like the **Solow Growth Model** or **Romer’s Endogenous Growth Model**.
+### 1. Mathematical Foundations of Macroeconomic Models**
+   -  Differential Equations in Growth Models**: Examine how differential equations are used to model economic growth, especially in models like the **Solow Growth Model** or **Romer’s Endogenous Growth Model**.
    - **TODO: Dynamic Systems in Economics**: Discuss how dynamic systems theory is applied to macroeconomics to understand changes over time.
    - **TODO: Optimal Control Theory in Economics**: Explore the use of Hamiltonian and Lagrangian techniques in models of fiscal and monetary policy.
 
