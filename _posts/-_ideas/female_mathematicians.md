@@ -8,8 +8,7 @@ tags: []
 
 
 
-- **TODO: Mary Somerville (1780–1872)**  
-  - Known for her work in **astronomy** and **mathematical physics**, Mary Somerville was one of the first women to be recognized as a scientist in her era. Her writings made science accessible to a broader audience.
+
 
 - **TODO: Emmy Noether (1882–1935)**  
   - A groundbreaking mathematician, Emmy Noether made monumental contributions to **abstract algebra** and **Noether's Theorem**, which is fundamental in linking symmetries and conservation laws in physics.
