@@ -10,8 +10,7 @@ tags: []
 
 
 
-- **TODO: Emmy Noether (1882–1935)**  
-  - A groundbreaking mathematician, Emmy Noether made monumental contributions to **abstract algebra** and **Noether's Theorem**, which is fundamental in linking symmetries and conservation laws in physics.
+
 
 
 
