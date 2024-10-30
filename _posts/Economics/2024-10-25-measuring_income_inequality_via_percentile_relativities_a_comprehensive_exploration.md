@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Economics
+- Mathematical Economics
 classes: wide
 date: '2024-10-25'
 excerpt: This article delves deeply into percentile relativity indices, a novel approach to measuring income inequality, offering fresh insights into income distribution and its societal implications.

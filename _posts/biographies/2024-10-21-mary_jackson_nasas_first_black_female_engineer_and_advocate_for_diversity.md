@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- Mathematics
 - Biographies
 classes: wide
 date: '2024-10-21'
@@ -19,6 +18,7 @@ keywords:
 - women in aerospace engineering
 - African American women in STEM
 - diversity and inclusion in STEM
+- Mathematics
 seo_description: Mary Jackson, NASA's first Black female engineer, broke barriers in aerospace engineering and became a champion for diversity and inclusion in STEM. Discover her inspiring journey and contributions.
 seo_title: 'Mary Jackson: NASA''s First Black Female Engineer and Advocate for Diversity'
 seo_type: article
@@ -30,6 +30,7 @@ tags:
 - Aerospace Engineering
 - Diversity and Inclusion
 - African American Mathematicians
+- Mathematics
 title: 'Mary Jackson: NASA''s First Black Female Engineer and Advocate for Diversity'
 ---
 

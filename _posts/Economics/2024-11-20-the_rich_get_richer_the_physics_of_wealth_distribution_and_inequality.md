@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Economics
+- Mathematical Economics
 classes: wide
 date: '2024-11-20'
 excerpt: The rich are getting richer while the poor remain poor. This article dives into the physics-based models that explain the inherent inequality in wealth distribution.
