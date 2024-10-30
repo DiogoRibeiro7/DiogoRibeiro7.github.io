@@ -7,7 +7,7 @@ tags: []
 ### 1. Mathematical Foundations of Macroeconomic Models**
    -  Differential Equations in Growth Models**: Examine how differential equations are used to model economic growth, especially in models like the **Solow Growth Model** or **Romer’s Endogenous Growth Model**.
    - Dynamic Systems in Economics**: Discuss how dynamic systems theory is applied to macroeconomics to understand changes over time.
-   - **TODO: Optimal Control Theory in Economics**: Explore the use of Hamiltonian and Lagrangian techniques in models of fiscal and monetary policy.
+   - Optimal Control Theory in Economics**: Explore the use of Hamiltonian and Lagrangian techniques in models of fiscal and monetary policy.
 
 ### 2. **TODO: Stochastic Processes and Uncertainty in Macroeconomics**
    - **TODO: Stochastic Differential Equations (SDEs)**: Explain how SDEs model uncertainty in macroeconomic variables like inflation, interest rates, and exchange rates.
