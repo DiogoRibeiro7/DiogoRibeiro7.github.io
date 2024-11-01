@@ -1,7 +1,6 @@
 ---
 author_profile: false
 categories:
-- Emergency Preparedness
 - Simulation Models
 classes: wide
 date: '2024-08-31'
