@@ -57,6 +57,3 @@ title: Exploring Key Topics in Statistics
 
 - **TODO: Nonparametric Methods: Statistics Without Distribution Assumptions**
    - Learn about nonparametric statistical methods, which are used when the data does not meet the assumptions of parametric tests. The article covers common nonparametric tests like the Mann-Whitney U test, Kruskal-Wallis test, and the Wilcoxon signed-rank test.
-
-- **TODO: Correlation vs. Causation: Understanding Relationships Between Variables**
-   - This article explains the difference between correlation and causation, a common point of confusion in statistical analysis. It discusses how to use correlation coefficients to measure the strength of relationships and how to determine causality using controlled experiments.

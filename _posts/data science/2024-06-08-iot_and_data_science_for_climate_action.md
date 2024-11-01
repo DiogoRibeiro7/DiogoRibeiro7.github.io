@@ -4,8 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2024-06-08'
-excerpt: IoT and data science together offer powerful tools for monitoring environmental
-  conditions, analyzing climate data, and supporting global climate action initiatives.
+excerpt: IoT and data science together offer powerful tools for monitoring environmental conditions, analyzing climate data, and supporting global climate action initiatives.
 header:
   image: /assets/images/data_science_14.jpg
   og_image: /assets/images/data_science_14.jpg
@@ -21,12 +20,10 @@ keywords:
 - Climate Action
 - Data Science
 - Internet of Things
-seo_description: An in-depth exploration of IoT's role in monitoring climate conditions
-  and how data science transforms this data into actionable insights for climate action.
+seo_description: An in-depth exploration of IoT's role in monitoring climate conditions and how data science transforms this data into actionable insights for climate action.
 seo_title: Using IoT and Data Science for Climate Action
 seo_type: article
-summary: Explore how IoT devices and data science combine to monitor and analyze environmental
-  data, providing essential insights to support climate action and sustainability.
+summary: Explore how IoT devices and data science combine to monitor and analyze environmental data, providing essential insights to support climate action and sustainability.
 tags:
 - Iot
 - Climate change
