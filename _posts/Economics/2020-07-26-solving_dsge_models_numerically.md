@@ -70,11 +70,11 @@ The general approach for perturbation techniques is:
 
 Consider a simple DSGE model with a representative agent optimizing utility, where the Euler equation in the steady state is:
 
-\[
+$$
 E_t \left[ u'(c_t) = \beta u'(c_{t+1}) \right]
-\]
+$$
 
-A first-order perturbation would linearize this equation around the steady state values of \( c_t \) and \( c_{t+1} \), resulting in a system of linear equations that approximate the dynamics of the economy in response to small shocks.
+A first-order perturbation would linearize this equation around the steady state values of $$ c_t $$ and $$ c_{t+1} $$, resulting in a system of linear equations that approximate the dynamics of the economy in response to small shocks.
 
 ### Advantages and Limitations of Perturbation Methods
 
