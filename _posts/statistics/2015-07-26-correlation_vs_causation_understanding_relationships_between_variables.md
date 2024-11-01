@@ -19,7 +19,8 @@ keywords:
 - Data analysis
 - Rust
 - R
-
+- rust
+- r
 seo_description: Explore the difference between correlation and causation in statistical analysis, including methods for measuring relationships and determining causality.
 seo_title: 'Understanding Correlation vs. Causation: Statistical Analysis Guide'
 seo_type: article
@@ -31,6 +32,8 @@ tags:
 - Statistics
 - Rust
 - R
+- rust
+- r
 title: 'Correlation vs. Causation: Understanding Relationships Between Variables'
 ---
 

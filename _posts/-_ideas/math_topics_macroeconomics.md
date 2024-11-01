@@ -56,5 +56,3 @@ tags: []
 ### 13. **TODO: Behavioral Macroeconomics and Agent-Based Modeling**
    - **TODO: Mathematics of Behavioral Biases**: Introduce mathematical models of behavioral biases such as loss aversion.
    - **TODO: Agent-Based Models (ABM)**: Explore agent-based modeling and its mathematical foundations in macroeconomics.
-
-
