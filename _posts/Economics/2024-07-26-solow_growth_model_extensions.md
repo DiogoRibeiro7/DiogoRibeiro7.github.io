@@ -88,43 +88,6 @@ $$
 
 where $$ H $$ represents **human capital per worker**. This modification allows the model to account for the cumulative effect of education, health, and skills development on economic output.
 
----
-author_profile: false
-categories:
-- Economics
-- Growth Theory
-- Quantitative Analysis
-classes: wide
-date: '2020-01-01'
-excerpt: An exploration of the Solow Growth Model's extensions, including the effects
-  of technological advancement and human capital on economic growth.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Solow growth model
-- Economic growth
-- Technological change
-- Human capital
-- Growth theory
-seo_description: Explore extensions to the Solow Growth Model, incorporating technological
-  progress and human capital to understand long-term economic growth.
-seo_title: 'Solow Growth Model Extended: Including Technology and Human Capital'
-seo_type: article
-summary: This article delves into the Solow Growth Model and its extensions, examining
-  how technological change and human capital influence economic growth.
-tags:
-- Solow growth model
-- Economic growth
-- Technological change
-- Human capital
-title: 'Solow Growth Model and Extensions: Technological Change and Human Capital'
----
-
 ## Real-World Implications of the Extended Model
 
 ### Economic Growth Policies
@@ -143,43 +106,6 @@ The extended Solow model helps explain the growth dynamics of both developed and
 - **Developing Economies**: These countries often focus on capital accumulation but benefit significantly from education, healthcare, and gradual adoption of new technologies.
 
 Differences in growth rates across countries are frequently attributed to variations in technological adoption and human capital investment, as captured by the extended Solow framework.
-
----
-author_profile: false
-categories:
-- Economics
-- Growth Theory
-- Quantitative Analysis
-classes: wide
-date: '2020-01-01'
-excerpt: An exploration of the Solow Growth Model's extensions, including the effects
-  of technological advancement and human capital on economic growth.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Solow growth model
-- Economic growth
-- Technological change
-- Human capital
-- Growth theory
-seo_description: Explore extensions to the Solow Growth Model, incorporating technological
-  progress and human capital to understand long-term economic growth.
-seo_title: 'Solow Growth Model Extended: Including Technology and Human Capital'
-seo_type: article
-summary: This article delves into the Solow Growth Model and its extensions, examining
-  how technological change and human capital influence economic growth.
-tags:
-- Solow growth model
-- Economic growth
-- Technological change
-- Human capital
-title: 'Solow Growth Model and Extensions: Technological Change and Human Capital'
----
 
 ## Conclusion
 
