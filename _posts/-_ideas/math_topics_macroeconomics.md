@@ -45,9 +45,7 @@ tags: []
    - **TODO: Solving DSGE Models Numerically**: Discuss methods like **perturbation techniques** and **finite difference methods** for solving DSGE models.
    - **TODO: Monte Carlo Simulations**: Explore the use of Monte Carlo methods in macroeconomic simulations.
 
-### 11. **TODO: Inequality and Growth: Mathematical Models**
-   - **TODO: Solow Growth Model and Extensions**: Extend the Solow model to include technological change and human capital.
-   - **TODO: Mathematical Models of Inequality**: Use **Lorenz curves** and **Gini coefficients** to measure economic inequality.
+
 
 
 
