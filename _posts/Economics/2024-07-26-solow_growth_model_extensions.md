@@ -4,8 +4,7 @@ categories:
 - Mathematical Economics
 classes: wide
 date: '2024-07-26'
-excerpt: An exploration of the Solow Growth Model's extensions, including the effects
-  of technological advancement and human capital on economic growth.
+excerpt: An exploration of the Solow Growth Model's extensions, including the effects of technological advancement and human capital on economic growth.
 header:
   image: /assets/images/data_science_6.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -22,12 +21,10 @@ keywords:
 - Economics
 - Growth Theory
 - Quantitative Analysis
-seo_description: Explore extensions to the Solow Growth Model, incorporating technological
-  progress and human capital to understand long-term economic growth.
+seo_description: Explore extensions to the Solow Growth Model, incorporating technological progress and human capital to understand long-term economic growth.
 seo_title: 'Solow Growth Model Extended: Including Technology and Human Capital'
 seo_type: article
-summary: This article delves into the Solow Growth Model and its extensions, examining
-  how technological change and human capital influence economic growth.
+summary: This article delves into the Solow Growth Model and its extensions, examining how technological change and human capital influence economic growth.
 tags:
 - Solow growth model
 - Economic growth
@@ -69,43 +66,6 @@ Key concepts in the Solow model include **diminishing returns** to capital and l
 ### Steady State and Convergence
 
 The steady state represents a level of output per worker where capital per worker is constant, as new investment balances depreciation and population growth. Without technological progress, the economy eventually reaches a point where **additional capital** provides **diminishing returns** to growth. This convergence theory implies that countries with similar savings rates, depreciation rates, and population growth should reach similar levels of output per capita over time.
-
----
-author_profile: false
-categories:
-- Economics
-- Growth Theory
-- Quantitative Analysis
-classes: wide
-date: '2020-01-01'
-excerpt: An exploration of the Solow Growth Model's extensions, including the effects
-  of technological advancement and human capital on economic growth.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Solow growth model
-- Economic growth
-- Technological change
-- Human capital
-- Growth theory
-seo_description: Explore extensions to the Solow Growth Model, incorporating technological
-  progress and human capital to understand long-term economic growth.
-seo_title: 'Solow Growth Model Extended: Including Technology and Human Capital'
-seo_type: article
-summary: This article delves into the Solow Growth Model and its extensions, examining
-  how technological change and human capital influence economic growth.
-tags:
-- Solow growth model
-- Economic growth
-- Technological change
-- Human capital
-title: 'Solow Growth Model and Extensions: Technological Change and Human Capital'
----
 
 ## Integrating Human Capital into the Solow Model
 
