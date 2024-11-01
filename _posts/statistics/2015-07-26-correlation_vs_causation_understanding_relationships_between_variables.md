@@ -4,9 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2015-07-26'
-excerpt: Learn the critical difference between correlation and causation in data analysis,
-  how to interpret correlation coefficients, and why controlled experiments are essential
-  for establishing causality.
+excerpt: Learn the critical difference between correlation and causation in data analysis, how to interpret correlation coefficients, and why controlled experiments are essential for establishing causality.
 header:
   image: /assets/images/data_science_13.jpg
   og_image: /assets/images/data_science_13.jpg
@@ -21,13 +19,11 @@ keywords:
 - Data analysis
 - Rust
 - R
-seo_description: Explore the difference between correlation and causation in statistical
-  analysis, including methods for measuring relationships and determining causality.
+
+seo_description: Explore the difference between correlation and causation in statistical analysis, including methods for measuring relationships and determining causality.
 seo_title: 'Understanding Correlation vs. Causation: Statistical Analysis Guide'
 seo_type: article
-summary: This article breaks down the essential difference between correlation and
-  causation, covering how correlation coefficients measure relationship strength and
-  how controlled experiments establish causality.
+summary: This article breaks down the essential difference between correlation and causation, covering how correlation coefficients measure relationship strength and how controlled experiments establish causality.
 tags:
 - Correlation
 - Causation
@@ -39,9 +35,9 @@ title: 'Correlation vs. Causation: Understanding Relationships Between Variables
 ---
 
 <p align="center">
-  <img src="/assets/images/biographies/correlation_causation.jpeg" alt="Example Image">
+  <img src="/assets/images/statistics/correlation_causation.jpeg" alt="Example Image">
 </p>
-<p align="center"><i>Emmy Noether</i></p>
+<p align="center"><i>Correlation vs. Causation</i></p>
 
 Understanding the difference between correlation and causation is key in data analysis, especially in fields where decisions really matter, like medicine, economics, social science, and engineering. Mistaking correlation for causation can lead to costly errors, while correctly identifying causation supports solid, evidence-based decisions.
 
