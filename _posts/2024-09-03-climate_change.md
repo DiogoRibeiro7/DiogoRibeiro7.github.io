@@ -1,10 +1,7 @@
 ---
 author_profile: false
 categories:
-- Climate Change
 - Data Science
-- Environmental Science
-- Technology
 classes: wide
 date: '2024-09-03'
 excerpt: Discover how data science is transforming the fight against climate change

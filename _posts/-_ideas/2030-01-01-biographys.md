@@ -30,8 +30,7 @@ title: 'Mathematicians Biographies: Exploring the Lives Behind Mathematical Disc
    - This article highlights the life of Archimedes, one of the greatest mathematicians of antiquity. His contributions to geometry, calculus, and mechanics are explored, along with his famous inventions.
 
 
-- **TODO: Emmy Noether: The Mother of Modern Algebra**
-   - Explore the life and contributions of Emmy Noether, a pioneering mathematician known for her foundational work in **abstract algebra** and **Noether's Theorem**, which links symmetries and conservation laws in physics.
+
 
 
 
@@ -63,8 +62,3 @@ title: 'Mathematicians Biographies: Exploring the Lives Behind Mathematical Disc
 
 - **TODO: Georg Cantor: Creator of Set Theory**
    - A biography of Georg Cantor, who revolutionized mathematics with the development of **set theory** and the concept of infinity. This article covers his breakthroughs and the controversies surrounding his work.
-
-
-## Final Thoughts
-
-The contributions of these mathematicians have left an indelible mark on the world of mathematics and beyond. Their innovative ideas continue to shape the way we understand complex systems, logic, and the physical world. Whether through the development of fundamental theorems or new branches of mathematics, their legacies are firmly rooted in history, inspiring future generations of mathematicians.

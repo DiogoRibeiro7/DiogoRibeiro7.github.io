@@ -92,8 +92,7 @@ Look into how AI and data science are transforming disaster management by predic
 ### 21. Blockchain and Big Data for Environmental Sustainability
 Investigate how blockchain technology, when combined with big data, is being used to ensure transparency in sustainable practices, carbon trading, and supply chain management for sustainability efforts.
 
-### 22. Harnessing IoT (Internet of Things) and Data Science for Climate Action
-Explore the role of IoT devices in monitoring environmental conditions and how data from these devices is processed and analyzed using data science to inform climate action.
+
 
 ### 23. Digital Twins and Their Role in Simulating Sustainable Development
 Discuss the concept of digital twins—virtual models of real-world systems—and how they are used to simulate the impacts of different climate change mitigation strategies and improve sustainability efforts.
