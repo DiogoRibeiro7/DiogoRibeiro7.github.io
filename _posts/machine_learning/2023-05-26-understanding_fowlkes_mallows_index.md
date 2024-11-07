@@ -157,3 +157,137 @@ In this example, `fowlkes_mallows_score` provides a quick and easy way to comput
 The Fowlkes-Mallows Index stands as a powerful tool for evaluating clustering and classification solutions in machine learning. By quantifying the similarity between groupings, FMI allows practitioners to validate clustering stability, assess model accuracy, and make informed decisions about model performance. However, it is essential to understand FMI’s limitations, especially in relation to dataset size and complexity, and to consider it alongside other metrics for a well-rounded assessment.
 
 By incorporating FMI into their analytical toolbox, data scientists and machine learning professionals can better gauge the quality of clustering and classification models, fostering a more accurate and reliable data-driven decision-making process.
+
+## Appendix: Implementing the Fowlkes-Mallows Index in Python (Using Base Python and NumPy)
+
+This appendix provides implementations for calculating the Fowlkes-Mallows Index (FMI) in Python using only base Python and NumPy. We avoid using specialized libraries like `sklearn`, making this a lightweight, dependency-free approach suitable for environments with limited access to external packages.
+
+### Step-by-Step Implementation of FMI
+
+To calculate the Fowlkes-Mallows Index, we need to:
+1. Count pairs of elements that are **True Positives (TP)**, **False Positives (FP)**, and **False Negatives (FN)** between the two clusterings.
+2. Use these values to calculate the FMI score with the formula:
+
+   $$
+   \text{FMI} = \frac{\text{TP}}{\sqrt{(\text{TP} + \text{FP})(\text{TP} + \text{FN})}}
+   $$
+
+### Helper Function: Pairwise Matches in Clusters
+
+First, we’ll create a helper function that generates all possible pairs of elements in clusters. This will allow us to check if pairs are clustered similarly in two different clustering solutions.
+
+```python
+import numpy as np
+from itertools import combinations
+
+def generate_pairs(labels):
+    """
+    Generate all unique pairs from a list of cluster labels and indicate whether
+    each pair belongs to the same cluster or not.
+
+    Args:
+        labels (list or array): List or array of cluster labels for elements.
+
+    Returns:
+        set: A set of pairs (tuples) where each tuple contains indices of elements
+             that are in the same cluster.
+    """
+    pairs = set()
+    for label in np.unique(labels):
+        # Find indices of all items with the same label
+        indices = np.where(labels == label)[0]
+        # Generate all unique combinations of pairs within the same cluster
+        pairs.update(combinations(indices, 2))
+    return pairs
+```
+
+### Counting True Positives, False Positives, and False Negatives
+
+With the generate_pairs function, we can now count the number of True Positives, False Positives, and False Negatives by comparing pairs from two different clusterings.
+
+```python
+def count_pairs(true_labels, pred_labels):
+    """
+    Count True Positive (TP), False Positive (FP), and False Negative (FN) pairs
+    between two sets of cluster labels.
+
+    Args:
+        true_labels (list or array): Ground truth labels for each element.
+        pred_labels (list or array): Predicted cluster labels for each element.
+
+    Returns:
+        tuple: Counts of TP, FP, and FN pairs.
+    """
+    # Generate pairs from true and predicted clusterings
+    true_pairs = generate_pairs(true_labels)
+    pred_pairs = generate_pairs(pred_labels)
+    
+    # True Positives: Pairs that are in both true and predicted clusters
+    TP = len(true_pairs.intersection(pred_pairs))
+    
+    # False Positives: Pairs in predicted clusters but not in true clusters
+    FP = len(pred_pairs - true_pairs)
+    
+    # False Negatives: Pairs in true clusters but not in predicted clusters
+    FN = len(true_pairs - pred_pairs)
+    
+    return TP, FP, FN
+```
+
+### Calculating the Fowlkes-Mallows Index
+
+Finally, we can calculate the Fowlkes-Mallows Index using the counts of True Positives, False Positives, and False Negatives.
+
+```python
+def fowlkes_mallows_index(true_labels, pred_labels):
+    """
+    Calculate the Fowlkes-Mallows Index (FMI) between two clustering solutions.
+
+    Args:
+        true_labels (list or array): Ground truth labels for each element.
+        pred_labels (list or array): Predicted cluster labels for each element.
+
+    Returns:
+        float: FMI score between 0 and 1.
+    """
+    TP, FP, FN = count_pairs(true_labels, pred_labels)
+    
+    # Avoid division by zero in cases with no pairs (e.g., single-element clusters)
+    denominator = np.sqrt((TP + FP) * (TP + FN))
+    if denominator == 0:
+        return 0.0
+    
+    return TP / denominator
+```
+
+### Example Usage of the Fowlkes-Mallows Index Function
+
+Let’s demonstrate the usage of the Fowlkes-Mallows Index function with sample data.
+
+```python
+# Example true and predicted labels
+true_labels = np.array([0, 0, 1, 1, 2, 2])
+pred_labels = np.array([0, 0, 2, 1, 2, 1])
+
+# Calculate FMI
+fmi_score = fowlkes_mallows_index(true_labels, pred_labels)
+print(f"The Fowlkes-Mallows Index is: {fmi_score}")
+```
+
+### Explanation of Each Step
+
+- generate_pairs: Creates pairs of indices for items within the same cluster. This lets us identify which items are clustered together in both true and predicted labels.
+- count_pairs: Uses `generate_pairs` to determine the number of TP, FP, and FN pairs by comparing clustering solutions.
+- fowlkes_mallows_index: Calculates the final FMI score using the TP, FP, and FN counts, with a safeguard to handle cases where clusters have only one element or other edge cases.
+
+### Example Output
+
+Given the example above, the output will look something like:
+
+```plaintext
+The Fowlkes-Mallows Index is: 0.5773502691896257
+```
+
+This FMI score reflects the similarity between `true_labels` and `pred_labels`, with a value closer to 1 indicating higher similarity.
+
+By following these steps, you can calculate the Fowlkes-Mallows Index using only base Python and NumPy, enabling flexible, efficient clustering evaluation without relying on external machine learning libraries.
