@@ -19,6 +19,7 @@ keywords:
 - Online Learning
 - Time Series Forecasting
 - Sherman-Morrison Formula
+- python
 seo_description: Explore how incremental learning enables continuous model updates in time series forecasting, reducing the need for retraining and improving predictive accuracy.
 seo_title: 'Incremental Learning: A Dynamic Approach to Time Series Forecasting'
 seo_type: article
@@ -28,6 +29,7 @@ tags:
 - Online Learning
 - Time Series Forecasting
 - Dynamic Model Updating
+- python
 title: Understanding Incremental Learning in Time Series Forecasting
 ---
 
