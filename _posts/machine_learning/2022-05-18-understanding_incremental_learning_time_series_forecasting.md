@@ -2,8 +2,10 @@
 author_profile: false
 categories:
 - Machine Learning
+- Data Science
+- Time Series
 classes: wide
-date: '2020-01-01'
+date: '2022-05-18'
 excerpt: Discover incremental learning in time series forecasting, a technique that dynamically updates models with new data for better accuracy and efficiency.
 header:
   image: /assets/images/data_science_10.jpg
@@ -17,9 +19,6 @@ keywords:
 - Online Learning
 - Time Series Forecasting
 - Sherman-Morrison Formula
-- Machine Learning
-- Data Science
-- Time Series Analysis
 seo_description: Explore how incremental learning enables continuous model updates in time series forecasting, reducing the need for retraining and improving predictive accuracy.
 seo_title: 'Incremental Learning: A Dynamic Approach to Time Series Forecasting'
 seo_type: article
@@ -29,15 +28,12 @@ tags:
 - Online Learning
 - Time Series Forecasting
 - Dynamic Model Updating
-- Machine Learning
-- Data Science
-- Time Series Analysis
 title: Understanding Incremental Learning in Time Series Forecasting
 ---
 
 ## Introduction to Incremental Learning
 
-Incremental learning, also known as online learning, is a method in machine learning that allows models to adaptively update themselves as new data becomes available, rather than undergoing complete retraining. This adaptive approach enables systems to adjust to changes in data patterns, allowing them to maintain accuracy and relevance over time. Unlike traditional “batch learning,” which relies on re-training the model with a static dataset, incremental learning continuously integrates new data points, updating the model in a more efficient and timely manner.
+Incremental learning, also known as online learning, is a method in machine learning that allows models to adaptively update themselves as new data becomes available, rather than undergoing complete retraining. This adaptive approach enables systems to adjust to changes in data patterns, allowing them to maintain accuracy and relevance over time. Unlike traditional “batch learning,” which relies on re-training the model with a static dataset, incremental learning continuously integrates new data points, updating the model in a more efficient and timely manner. 
 
 ### Understanding Batch Learning vs. Incremental Learning
 
@@ -230,3 +226,211 @@ Combining incremental learning with reinforcement learning creates a framework w
 Incremental learning is a powerful approach for time series forecasting and other machine learning tasks that require real-time adaptability and efficient data integration. Techniques like the Sherman-Morrison formula enable linear models to incorporate new data points seamlessly, while neural networks benefit from gradient-based methods to update model parameters incrementally.
 
 With its wide-ranging applications across industries, incremental learning provides a scalable, resource-efficient alternative to traditional batch learning, enabling models to adapt continuously in a world where data is constantly evolving. Practitioners looking to implement incremental learning should consider the advantages and challenges unique to their domain and leverage techniques that align best with their data and model requirements. As data science evolves, incremental learning will play an increasingly crucial role in developing models that remain accurate, responsive, and relevant over time.
+
+## Appendix: Implementing Incremental Learning for Time Series Forecasting in Python
+
+This appendix provides Python code examples for applying incremental learning to time series forecasting, using both linear models with the **Sherman-Morrison formula** for efficient updates and non-linear models with **Stochastic Gradient Descent (SGD)**. This code demonstrates how to update a model with new data in real-time, without retraining from scratch, making it ideal for dynamic forecasting applications.
+
+### 1. Incremental Updates with the Sherman-Morrison Formula for Linear Regression
+
+We start by implementing incremental updates for a linear regression model using the Sherman-Morrison formula, which allows us to efficiently update the coefficient estimates as new data points arrive.
+
+### Import Required Libraries
+
+```python
+import numpy as np
+import pandas as pd
+from numpy.linalg import inv
+```
+
+#### Helper Functions for Sherman-Morrison Update
+
+The following helper functions help manage the incremental updates:
+
+```python
+def sherman_morrison_update(A_inv, u, v):
+    """
+    Applies the Sherman-Morrison formula to update the inverse of a matrix A
+    when a new row (or vector) of data is added.
+
+    Args:
+        A_inv (ndarray): The current inverse of matrix A.
+        u (ndarray): The new data vector to add (column vector).
+        v (ndarray): The new data vector to add (row vector).
+
+    Returns:
+        ndarray: The updated inverse matrix.
+    """
+    numerator = np.outer(A_inv @ u, v.T @ A_inv)
+    denominator = 1.0 + v.T @ A_inv @ u
+    return A_inv - numerator / denominator
+```
+
+#### Initial Linear Regression Model Setup
+
+1. First, load and preprocess the data.
+2. Split the data into features (X) and target (y).
+3. Initialize the regression model by fitting it to an initial subset of the data.
+
+```python
+# Sample dataset
+np.random.seed(0)
+n_initial = 50  # Initial data points
+n_total = 100  # Total data points
+
+# Generate synthetic data for demonstration
+X = np.random.randn(n_total, 1)
+y = 3 * X.squeeze() + np.random.randn(n_total) * 0.5
+
+# Initialize with the first 'n_initial' points
+X_initial = X[:n_initial]
+y_initial = y[:n_initial]
+
+# Compute initial values
+XTX = X_initial.T @ X_initial
+XTX_inv = inv(XTX)
+XTy = X_initial.T @ y_initial
+beta = XTX_inv @ XTy  # Initial coefficient estimate
+```
+
+#### Incrementally Update Model with Sherman-Morrison Formula
+
+As new data arrives, we use the Sherman-Morrison formula to update `XTX_inv` and adjust `beta`.
+
+```python
+for i in range(n_initial, n_total):
+    # New data point
+    x_new = X[i:i+1].T  # Column vector
+    y_new = y[i]
+
+    # Update XTX_inv using Sherman-Morrison formula
+    XTX_inv = sherman_morrison_update(XTX_inv, x_new, x_new)
+
+    # Update beta
+    beta = XTX_inv @ (XTy + x_new * y_new)
+
+    # Print updated beta values
+    print(f"Update {i - n_initial + 1}, beta: {beta.flatten()}")
+```
+
+Each iteration updates the coefficient vector beta efficiently, making it adaptable to new data without retraining from scratch.
+
+### 2. Incremental Learning with Stochastic Gradient Descent for Neural Networks
+
+For non-linear models such as neural networks, incremental learning can be implemented using Stochastic Gradient Descent (SGD) to update the model’s weights in response to new data.
+
+#### Neural Network Initialization and Helper Functions
+
+```python
+# Initialize Neural Network Parameters
+input_size = 1
+hidden_size = 10
+output_size = 1
+learning_rate = 0.01
+
+# Randomly initialize weights and biases
+W1 = np.random.randn(hidden_size, input_size) * 0.01
+b1 = np.zeros((hidden_size, 1))
+W2 = np.random.randn(output_size, hidden_size) * 0.01
+b2 = np.zeros((output_size, 1))
+
+# Activation functions
+def relu(z):
+    return np.maximum(0, z)
+
+def relu_derivative(z):
+    return (z > 0).astype(float)
+
+# Loss function
+def mean_squared_error(y_true, y_pred):
+    return np.mean((y_true - y_pred) ** 2)
+```
+
+### Forward and Backward Pass Functions
+
+The forward and backward pass functions help compute predictions and adjust weights using backpropagation.
+
+```python
+def forward_pass(x, W1, b1, W2, b2):
+    z1 = np.dot(W1, x) + b1
+    a1 = relu(z1)
+    z2 = np.dot(W2, a1) + b2
+    y_pred = z2  # Linear output for regression
+    return y_pred, z1, a1
+
+def backward_pass(x, y, y_pred, z1, a1, W2):
+    m = x.shape[1]  # Number of examples
+    
+    # Output layer gradient
+    dz2 = y_pred - y
+    dW2 = (1 / m) * np.dot(dz2, a1.T)
+    db2 = (1 / m) * np.sum(dz2, axis=1, keepdims=True)
+
+    # Hidden layer gradient
+    dz1 = np.dot(W2.T, dz2) * relu_derivative(z1)
+    dW1 = (1 / m) * np.dot(dz1, x.T)
+    db1 = (1 / m) * np.sum(dz1, axis=1, keepdims=True)
+
+    return dW1, db1, dW2, db2
+```
+
+#### Incremental Update with SGD
+
+Each new data point triggers a forward pass, loss calculation, backward pass, and weight update.
+
+```python
+for i in range(n_initial, n_total):
+    # Prepare single data point for incremental learning
+    x_new = X[i:i+1].T  # Column vector for new input
+    y_new = y[i:i+1].reshape(1, -1)  # Reshape for single output
+
+    # Forward pass with the new data
+    y_pred, z1, a1 = forward_pass(x_new, W1, b1, W2, b2)
+
+    # Calculate loss
+    loss = mean_squared_error(y_new, y_pred)
+    print(f"Update {i - n_initial + 1}, Loss: {loss}")
+
+    # Backward pass to calculate gradients
+    dW1, db1, dW2, db2 = backward_pass(x_new, y_new, y_pred, z1, a1, W2)
+
+    # Update weights and biases
+    W1 -= learning_rate * dW1
+    b1 -= learning_rate * db1
+    W2 -= learning_rate * dW2
+    b2 -= learning_rate * db2
+```
+
+After each iteration, the neural network adjusts its weights based on the new data point, incrementally refining its parameters to maintain predictive accuracy.
+
+### 3. Putting It All Together: Validating Incremental Updates
+
+To validate the effectiveness of incremental updates, we can monitor the model’s accuracy on a validation set as new data is incorporated.
+
+```python
+# Validation set
+X_valid = X[n_initial:]
+y_valid = y[n_initial:]
+
+# Predict on validation set after all updates
+y_pred_valid = []
+for x in X_valid:
+    x = x.reshape(-1, 1)
+    y_pred, _, _ = forward_pass(x, W1, b1, W2, b2)
+    y_pred_valid.append(y_pred.squeeze())
+
+# Calculate final validation loss
+validation_loss = mean_squared_error(y_valid, np.array(y_pred_valid))
+print(f"Final Validation Loss: {validation_loss}")
+```
+
+This code outputs the final validation loss, allowing us to assess the effectiveness of incremental learning in maintaining model accuracy.
+
+### Summary
+
+This appendix demonstrates how incremental learning can be implemented in Python for both linear and non-linear models:
+
+1. Linear Regression with Sherman-Morrison Formula: Allows efficient updates to the model coefficients without retraining.
+2. Neural Networks with Stochastic Gradient Descent: Incrementally updates weights and biases using gradient descent in response to each new data point.
+
+These approaches provide a foundation for adapting time series forecasting models in real-time, optimizing them for applications where data is continuously generated and immediate adaptability is required.
