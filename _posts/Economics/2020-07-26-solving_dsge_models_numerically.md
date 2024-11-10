@@ -4,8 +4,7 @@ categories:
 - Mathematical Economics
 classes: wide
 date: '2020-07-26'
-excerpt: A guide to solving DSGE models numerically, focusing on perturbation techniques
-  and finite difference methods used in economic modeling.
+excerpt: A guide to solving DSGE models numerically, focusing on perturbation techniques and finite difference methods used in economic modeling.
 header:
   image: /assets/images/data_science_18.jpg
   og_image: /assets/images/data_science_18.jpg
@@ -25,12 +24,13 @@ keywords:
 - Python
 - Fortran
 - C
-seo_description: Explore numerical methods for solving DSGE models, including perturbation
-  techniques and finite difference methods, essential tools in quantitative economics.
+- python
+- fortran
+- c
+seo_description: Explore numerical methods for solving DSGE models, including perturbation techniques and finite difference methods, essential tools in quantitative economics.
 seo_title: 'Solving DSGE Models: Perturbation and Finite Difference Methods'
 seo_type: article
-summary: This article covers numerical techniques for solving DSGE models, particularly
-  perturbation and finite difference methods, essential in analyzing economic dynamics.
+summary: This article covers numerical techniques for solving DSGE models, particularly perturbation and finite difference methods, essential in analyzing economic dynamics.
 tags:
 - Dsge models
 - Numerical methods
@@ -42,8 +42,10 @@ tags:
 - Python
 - Fortran
 - C
-title: 'Solving DSGE Models Numerically: Perturbation Techniques and Finite Difference
-  Methods'
+- python
+- fortran
+- c
+title: 'Solving DSGE Models Numerically: Perturbation Techniques and Finite Difference Methods'
 ---
 
 Dynamic Stochastic General Equilibrium (DSGE) models are powerful tools for analyzing the effects of economic shocks and policy changes over time. Because DSGE models are inherently nonlinear and involve complex dynamic relationships, analytical solutions are often not feasible. Instead, numerical methods are used to approximate solutions to these models. Among the most popular techniques are **perturbation methods** and **finite difference methods**, each offering unique approaches to handling DSGE models' nonlinearity and time dependency.
