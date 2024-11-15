@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Economics
+- Mathematical Economics
 classes: wide
 date: '2022-01-01'
 excerpt: Explore exchange rate models like Purchasing Power Parity (PPP) and Uncovered
