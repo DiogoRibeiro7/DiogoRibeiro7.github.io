@@ -4,8 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2023-03-01'
-excerpt: The Chi-Square Test is a powerful tool for analyzing relationships in categorical
-  data. Learn its principles and practical applications.
+excerpt: The Chi-Square Test is a powerful tool for analyzing relationships in categorical data. Learn its principles and practical applications.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_9.jpg
@@ -18,13 +17,10 @@ keywords:
 - Categorical data
 - Goodness-of-fit
 - Independence test
-seo_description: Discover how to use the Chi-Square Test to analyze categorical data,
-  including tests for independence and goodness-of-fit.
+seo_description: Discover how to use the Chi-Square Test to analyze categorical data, including tests for independence and goodness-of-fit.
 seo_title: Chi-Square Test for Categorical Data
 seo_type: article
-summary: An exploration of the Chi-Square Test, focusing on its use in testing the
-  association between categorical variables and examining goodness-of-fit in statistical
-  analysis.
+summary: An exploration of the Chi-Square Test, focusing on its use in testing the association between categorical variables and examining goodness-of-fit in statistical analysis.
 tags:
 - Categorical data
 - Chi-square test
