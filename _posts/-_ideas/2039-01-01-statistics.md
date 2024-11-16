@@ -46,8 +46,9 @@ title: Exploring Key Topics in Statistics
 - **TODO: Bayesian Statistics: An Introduction**
    - An introductory article on Bayesian statistics, which differs from traditional (frequentist) approaches by incorporating prior beliefs and evidence into the analysis. This piece covers Bayes’ Theorem, prior and posterior distributions, and applications in decision-making.
 
-- **TODO: Chi-Square Test: Testing Categorical Data**
-   - This article explores the chi-square test, a statistical method used to examine the association between categorical variables. It covers both the chi-square test for independence and the chi-square goodness-of-fit test, with examples of how to apply these tests in practical situations.
+
+
+
 
 - **TODO: Statistical Power and Sample Size: Designing Effective Studies**
    - Learn about the concepts of statistical power and sample size, which are critical in designing experiments and studies. The article explains how to calculate the necessary sample size for a study and the importance of achieving sufficient power to detect a true effect.
