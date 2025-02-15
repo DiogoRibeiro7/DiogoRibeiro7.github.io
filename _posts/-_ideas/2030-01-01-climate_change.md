@@ -33,8 +33,7 @@ title: Exploring Climate Change, Sustainability, and Data Science
 
 ## TODO:
 
-### 2. The Role of Machine Learning in Predicting Climate Change Impacts
-Examine how machine learning algorithms are being used to model and predict the future impacts of climate change. Focus on predictive analytics for extreme weather, sea-level rise, and biodiversity loss.
+
 
 
 
