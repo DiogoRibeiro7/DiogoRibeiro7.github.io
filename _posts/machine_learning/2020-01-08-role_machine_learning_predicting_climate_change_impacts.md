@@ -4,8 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2020-01-08'
-excerpt: Machine learning is transforming climate science, offering powerful predictive
-  tools for forecasting extreme weather, rising sea levels, and biodiversity shifts.
+excerpt: Machine learning is transforming climate science, offering powerful predictive tools for forecasting extreme weather, rising sea levels, and biodiversity shifts.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -20,13 +19,10 @@ keywords:
 - Extreme weather
 - Sea level rise
 - Biodiversity
-seo_description: Exploring how machine learning is used to predict extreme weather,
-  sea-level rise, and biodiversity loss due to climate change.
+seo_description: Exploring how machine learning is used to predict extreme weather, sea-level rise, and biodiversity loss due to climate change.
 seo_title: 'Machine Learning and Climate Change: Predicting Future Impacts'
 seo_type: article
-summary: This article examines the role of machine learning in predicting climate
-  change impacts, focusing on extreme weather events, sea-level rise, and biodiversity
-  loss.
+summary: This article examines the role of machine learning in predicting climate change impacts, focusing on extreme weather events, sea-level rise, and biodiversity loss.
 tags:
 - Machine learning
 - Climate change
