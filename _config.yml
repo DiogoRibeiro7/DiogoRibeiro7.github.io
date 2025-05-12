@@ -316,3 +316,9 @@ defaults:
       comments: true
       share: true
       related: true
+
+# Footer JavaScript files, in load order
+footer_scripts:
+  - /assets/js/navigation.js
+  - /assets/js/main.min.js
+  

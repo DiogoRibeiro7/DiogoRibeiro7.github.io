@@ -17,9 +17,13 @@ GEM
       logger
     faraday-net_http (3.3.0)
       net-http
+    ffi (1.17.0)
     ffi (1.17.0-arm64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
     forwardable-extended (2.6.0)
+    google-protobuf (4.28.2)
+      bigdecimal
+      rake (>= 13)
     google-protobuf (4.28.2-arm64-darwin)
       bigdecimal
       rake (>= 13)
@@ -122,6 +126,9 @@ GEM
     rouge (4.4.0)
     rubyzip (2.3.2)
     safe_yaml (1.0.5)
+    sass-embedded (1.79.3)
+      google-protobuf (~> 4.27)
+      rake (>= 13)
     sass-embedded (1.79.3-arm64-darwin)
       google-protobuf (~> 4.27)
     sass-embedded (1.79.3-x86_64-linux-gnu)
@@ -139,9 +146,15 @@ GEM
 PLATFORMS
   arm64-darwin-22
   arm64-darwin-23
+  ruby
   x86_64-linux
 
 DEPENDENCIES
+  bigdecimal (>= 3.1.8)
+  commonmarker (>= 0.23.10)
+  eventmachine (>= 1.2.7)
+  ffi (>= 1.17.0)
+  http_parser.rb (>= 0.8.0)
   jekyll
   jekyll-archives
   jekyll-commonmark
@@ -149,12 +162,14 @@ DEPENDENCIES
   jekyll-remote-theme
   jekyll-seo-tag
   jekyll-sitemap
+  json (>= 2.7.2)
   kramdown-parser-gfm
   liquid-c
   liquid-md5
   minimal-mistakes-jekyll
   octopress
   rake
+  rexml (>= 3.3.9)
   webrick
 
 BUNDLED WITH
