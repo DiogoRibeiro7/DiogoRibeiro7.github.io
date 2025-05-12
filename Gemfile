@@ -18,7 +18,7 @@ gem "jekyll-remote-theme"
 gem "minimal-mistakes-jekyll"
 gem "webrick"
 gem "rake"
-gem 'liquid-c'
+# gem 'liquid-c'
 
 # The following plugins are automatically loaded by the theme-gem:
 #   gem "jekyll-paginate"
