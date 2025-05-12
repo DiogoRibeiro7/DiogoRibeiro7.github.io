@@ -226,8 +226,17 @@ In the future, probabilistic programming may play a key role in **automating the
 
 ### Emphasis on Trust, Robustness, and Fairness
 
-As AI systems increasingly influence critical aspects of society, statistical models must be designed with trust, accountability, and ethical considerations in mind. This includes developing methods to quantify and communicate uncertainty, detect bias, and ensure robustness under distributional shifts.
+As AI systems increasingly influence critical aspects of society, statistical models must be designed with trust, accountability, and ethical considerations in mind. This includes developing methods to quantify and communicate uncertainty, detect bias, and ensure robustness under distributional shifts [1][2].
 
-Future statistical AI systems will not only aim for higher accuracy but also for **alignment with human values**, explainability, and fairness across diverse populations. Achieving this will require interdisciplinary collaboration across statistics, computer science, ethics, and the social sciences.
+Future statistical AI systems will not only aim for higher accuracy but also for **alignment with human values**, explainability, and fairness across diverse populations. Achieving this will require interdisciplinary collaboration across statistics, computer science, ethics, and the social sciences [3][4].
+
+---
+
+#### References
+
+[1] Amodei, D., Olah, C., Steinhardt, J., et al. (2016). "Concrete Problems in AI Safety." arXiv preprint arXiv:1606.06565.
+[2] Varshney, K. R. (2016). "Engineering Safety in Machine Learning." Proceedings of the 2016 IEEE International Symposium on Ethics in Engineering, Science, and Technology.
+[3] Mittelstadt, B. D., Allo, P., Taddeo, M., Wachter, S., & Floridi, L. (2016). "The ethics of algorithms: Mapping the debate." Big Data & Society, 3(2).
+[4] Doshi-Velez, F., & Kim, B. (2017). "Towards a rigorous science of interpretable machine learning." arXiv preprint arXiv:1702.08608.
 
 ---
