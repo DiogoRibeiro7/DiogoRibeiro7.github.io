@@ -1,7 +1,12 @@
 import os
+import sys
 import tempfile
 import frontmatter
 import pytest
+
+
+# Add the project root to sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import fix_date
 
@@ -12,7 +17,8 @@ def test_extract_date_from_filename():
 
 
 def create_markdown_file(path, front_matter):
-    content = frontmatter.dumps(front_matter) + "\nBody"
+    post = frontmatter.Post(content="Body", **front_matter)
+    content = frontmatter.dumps(post)
     with open(path, 'w', encoding='utf-8') as f:
         f.write(content)
 
