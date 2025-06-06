@@ -119,3 +119,47 @@ Least Angle Regression occupies an elegant middle ground between computational e
 Going forward, LARS continues to inspire variations and improvements, including hybrid methods that incorporate Bayesian priors or non-linear transformations. Additionally, integrating LARS into deep learning architectures or extending it to generalized linear models are active areas of research.
 
 As machine learning and statistics continue to evolve in tandem, algorithms like LARS remind us that simplicity and insight often go hand-in-hand.
+
+# Appendix: Python Example of Least Angle Regression (LARS)
+
+```python
+import numpy as np
+from sklearn import datasets
+from sklearn.linear_model import Lars
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, r2_score
+import matplotlib.pyplot as plt
+
+# Load a high-dimensional dataset (e.g., diabetes or synthetic)
+X, y = datasets.make_regression(n_samples=100, n_features=50, n_informative=10, noise=0.1, random_state=42)
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Initialize and fit the LARS model
+lars = Lars(n_nonzero_coefs=10)  # Limit to 10 predictors for sparsity
+lars.fit(X_train, y_train)
+
+# Predict on test data
+y_pred = lars.predict(X_test)
+
+# Evaluate model performance
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+print("Mean Squared Error:", mse)
+print("R^2 Score:", r2)
+print("Selected Coefficients:", lars.coef_)
+
+# Plot coefficient progression (coefficient paths)
+_, _, coefs = lars.path(X_train, y_train)
+
+plt.figure(figsize=(10, 6))
+for coef_path in coefs.T:
+    plt.plot(coef_path)
+plt.title("LARS Coefficient Paths")
+plt.xlabel("Step")
+plt.ylabel("Coefficient Value")
+plt.grid(True)
+plt.show()
+```
