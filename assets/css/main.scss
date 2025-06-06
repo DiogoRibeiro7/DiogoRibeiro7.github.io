@@ -29,6 +29,20 @@ a:hover {
   color: $link-color-hover;
 }
 
+/* Lighten breadcrumb text */
+.breadcrumbs {
+  color: #999;
+}
+
+/* Center pagination links */
+.pagination {
+  text-align: center;
+}
+.pagination li {
+  float: none;
+  display: inline-block;
+}
+
 
 /* Custom styles for the 404 page */
 .page__hero {
@@ -48,10 +62,11 @@ a:hover {
   //   background-color: rgba(0, 0, 0, 0.5);
   // }
 
-  .page__hero-image img {
-    max-width: 100%;
-    height: auto;
-  }
+.page__hero-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 50vh; /* smaller hero image */
+}
 
   .page__hero-title {
     position: absolute;
