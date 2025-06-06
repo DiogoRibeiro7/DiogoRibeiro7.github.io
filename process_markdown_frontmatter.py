@@ -1,6 +1,7 @@
 import os
 import re
 import yaml  # You might need to install PyYAML (pip install pyyaml)
+import argparse
 
 def process_frontmatter(frontmatter: dict):
     """
@@ -64,6 +65,8 @@ def process_folder(folder_path: str):
                 process_markdown_file(filepath)
 
 
-# Specify the folder path containing markdown files
-folder_path = './_posts'  # Replace with the actual folder path
-process_folder(folder_path)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Process markdown front matter")
+    parser.add_argument("--path", default="./_posts", help="Target folder")
+    args = parser.parse_args()
+    process_folder(args.path)

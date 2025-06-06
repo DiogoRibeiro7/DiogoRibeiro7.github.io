@@ -1,6 +1,7 @@
 import os
 import re
 import string
+import argparse
 
 # List of stop words to remove from file names
 STOP_WORDS = {
@@ -122,6 +123,8 @@ def process_markdown_files_in_folder(folder_path: str):
             print(f"Finished processing file: {new_file_path}")
 
 
-# Path to the folder containing markdown files
-folder_path = "./_posts"
-process_markdown_files_in_folder(folder_path)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Process markdown files in a folder")
+    parser.add_argument("--path", default="./_posts", help="Target folder")
+    args = parser.parse_args()
+    process_markdown_files_in_folder(args.path)

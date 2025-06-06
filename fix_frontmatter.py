@@ -2,6 +2,7 @@ import os
 import re
 import frontmatter
 import random
+import argparse
 
 TOTAL_FILES = 20
 
@@ -93,6 +94,8 @@ def process_markdown_files_in_directory(directory):
             filepath = os.path.join(directory, filename)
             process_markdown_file(filepath)
 
-# Example usage:
-directory_path = './_posts'  # Change to your directory path
-process_markdown_files_in_directory(directory_path)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Fix front matter in markdown files")
+    parser.add_argument("--path", default="./_posts", help="Target folder")
+    args = parser.parse_args()
+    process_markdown_files_in_directory(args.path)

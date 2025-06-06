@@ -1,4 +1,5 @@
 import yaml
+import argparse
 
 def extract_and_print_front_matter(folder: str, file_name: str):
     """
@@ -31,6 +32,9 @@ def extract_and_print_front_matter(folder: str, file_name: str):
         print(f"An error occurred: {e}")
 
 # Example usage:
-folder = './_posts/'
-file_name = '2023-01-01-error_coefficientes.md'  # Replace with your file name
-extract_and_print_front_matter(folder, file_name)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Extract and print front matter from a markdown file")
+    parser.add_argument("--path", default="./_posts/", help="Folder containing the markdown file")
+    parser.add_argument("--file", default="2023-01-01-error_coefficientes.md", help="Markdown file name")
+    args = parser.parse_args()
+    extract_and_print_front_matter(args.path, args.file)

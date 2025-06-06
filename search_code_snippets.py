@@ -1,6 +1,7 @@
 import os
 import re
 import yaml
+import argparse
 
 # Function to extract front matter from markdown file
 def extract_front_matter(content: str):
@@ -99,6 +100,8 @@ def process_markdown_files(folder_path: str):
                 print(f"Updated front matter in {file}")
 
 
-# Example usage
-folder_path = './_posts'  # Update this path to your markdown folder
-process_markdown_files(folder_path)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Search code snippets in markdown files")
+    parser.add_argument("--path", default="./_posts", help="Target folder")
+    args = parser.parse_args()
+    process_markdown_files(args.path)

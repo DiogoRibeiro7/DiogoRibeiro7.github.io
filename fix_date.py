@@ -1,6 +1,7 @@
 import os
 import re
 import frontmatter
+import argparse
 
 def extract_date_from_filename(filename):
     # Assuming the filename format is 'YYYY-MM-DD-some-title.md'
@@ -46,6 +47,8 @@ def process_markdown_files_in_directory(directory):
             filepath = os.path.join(directory, filename)
             process_markdown_file(filepath)
 
-# Example usage:
-directory_path = './_posts'  # Change to your directory path
-process_markdown_files_in_directory(directory_path)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Fix dates in markdown front matter")
+    parser.add_argument("--path", default="./_posts", help="Target folder")
+    args = parser.parse_args()
+    process_markdown_files_in_directory(args.path)
