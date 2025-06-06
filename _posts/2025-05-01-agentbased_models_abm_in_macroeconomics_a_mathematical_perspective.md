@@ -153,6 +153,7 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 ```
+
 This simple agent-based model simulates a population of agents who consume a fraction of their wealth and receive random income shocks. The average consumption over time illustrates how individual behaviors aggregate to macroeconomic trends.
 
 This example captures the essence of ABMs: agents interact with their environment and each other, leading to complex dynamics that can be analyzed over time.
