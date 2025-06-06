@@ -20,6 +20,15 @@ a:hover {
   color: #333333; // Dark gray
 }
 
+/* Override article title style */
+.page__title a {
+  color: $link-color;
+  font-weight: bold;
+}
+.page__title a:hover {
+  color: $link-color-hover;
+}
+
 
 /* Custom styles for the 404 page */
 .page__hero {
