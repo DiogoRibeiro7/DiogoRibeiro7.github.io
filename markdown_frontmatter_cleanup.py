@@ -38,8 +38,8 @@ def clean_tags(frontmatter: dict) -> dict:
     return frontmatter
 
 def clean_keywords(frontmatter: dict) -> dict:
-    # Ensure the 'tags' key has unique elements, capitalizing the first letter
-    if 'keywords' in frontmatter and isinstance(frontmatter['tags'], list):
+    # Ensure the 'keywords' key has unique elements, capitalizing the first letter
+    if 'keywords' in frontmatter and isinstance(frontmatter['keywords'], list):
         # Normalize by capitalizing the first letter of each tag and removing duplicates (case-insensitive)
         unique_tags = set()  # To ensure uniqueness
         cleaned_tags = []
