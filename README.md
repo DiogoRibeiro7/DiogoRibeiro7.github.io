@@ -36,6 +36,22 @@ npm run build:js   # minify and add banner
 npm run watch:js   # optional: automatically rebuild on changes
 ```
 
+## Local development
+
+Install Ruby gems specified in the `Gemfile` with:
+
+```bash
+bundle install
+```
+
+Serve the site locally with:
+
+```bash
+bundle exec jekyll serve
+```
+
+GitHub Actions already runs these commands automatically during deployments.
+
 # ToDo
 
 Have a consistency in the font and font sizes (ideally you want to use 2 fonts. One for the header/subtitle and one for the text. You can use this kind of website https://fontjoy.com/ which allow you to pair fonts).
