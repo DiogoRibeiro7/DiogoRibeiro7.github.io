@@ -1,5 +1,6 @@
 import os
 import yaml  # to parse YAML front matter
+import argparse
 
 def extract_front_matter(md_file_path: str) -> dict:
     """
@@ -52,7 +53,9 @@ def check_front_matter(folder_path: str, output_file: str):
                         out_file.write(f"  - Keywords present: {has_keywords}\n")
                         out_file.write("\n")
 
-# Example usage
-folder_path = './_posts'  # Replace with the actual folder path
-output_file = "front_matter_report.txt"  # Replace with the desired output file path
-check_front_matter(folder_path, output_file)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Check markdown files for summary and keywords")
+    parser.add_argument("--path", default="./_posts", help="Target folder")
+    args = parser.parse_args()
+    output_file = "front_matter_report.txt"
+    check_front_matter(args.path, output_file)

@@ -1,9 +1,10 @@
 import os
 import yaml
 import re
+import argparse
 
-# Define the folder where the markdown files are stored
-folder_path = './_posts'  # Change this to your folder path
+# Default folder containing the markdown files
+DEFAULT_FOLDER = "./_posts"
 
 # List of stop words to exclude from capitalization
 stop_words = {'at', 'vs', 'and', 'or', 'the', 'of', 'in', 'on', 'for', 'to', 'a'}
@@ -71,11 +72,14 @@ def process_markdown_file(file_path):
         print(f"No 'keywords' found in {file_path}")
 
 # Function to process all markdown files in the folder
-def process_all_markdown_files(folder_path):
+def process_all_markdown_files(folder_path: str) -> None:
     for filename in os.listdir(folder_path):
         if filename.endswith(".md"):  # Check if it's a markdown file
             file_path = os.path.join(folder_path, filename)
             process_markdown_file(file_path)
 
-# Run the function for the specified folder
-process_all_markdown_files(folder_path)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Capitalize keywords in markdown files")
+    parser.add_argument("--path", default=DEFAULT_FOLDER, help="Target folder")
+    args = parser.parse_args()
+    process_all_markdown_files(args.path)
