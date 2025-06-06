@@ -144,19 +144,6 @@ $base0d: #82aaff !default;
 $base0e: #c792ea !default;
 $base0f: #ff5370 !default;
 
-/* Remove underline and set color to black */
-a {
-   text-decoration: none;
-   color: black;
- }
- 
- /* Add style on hover */
- a:hover {
-   text-decoration: underline;
-   color: #333333; // Dark gray
- }
- 
-
 /*
    Breakpoints
    ========================================================================== */
