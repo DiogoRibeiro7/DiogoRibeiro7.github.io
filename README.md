@@ -53,6 +53,14 @@ Serve the site locally with:
 bundle exec jekyll serve
 ```
 
+
+## Running tests
+
+Install the Python dependencies and execute:
+
+```bash
+pytest
+```
 GitHub Actions already runs these commands automatically during deployments.
 
 # ToDo
