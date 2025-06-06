@@ -1,5 +1,6 @@
 import os
 import re
+import argparse
 
 def replace_latex_syntax_in_file(file_path: str):
     """
@@ -47,5 +48,8 @@ def process_markdown_files_in_folder(folder_path: str):
             print(f'Finished processing file: {file_path}')
 
 
-folder_path = './_posts'
-process_markdown_files_in_folder(folder_path)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Replace LaTeX delimiters in markdown files")
+    parser.add_argument("--path", default="./_posts", help="Target folder")
+    args = parser.parse_args()
+    process_markdown_files_in_folder(args.path)

@@ -1,4 +1,5 @@
 import os
+import argparse
 
 
 def rename_files_in_folder(directory: str) -> None:
@@ -30,6 +31,7 @@ def rename_files_in_folder(directory: str) -> None:
 
 
 if __name__ == "__main__":
-    # You can change the path below to point to your folder
-    folder_path: str = './_posts'
-    rename_files_in_folder(folder_path)
+    parser = argparse.ArgumentParser(description="Rename files replacing spaces with underscores")
+    parser.add_argument("--path", default="./_posts", help="Target folder")
+    args = parser.parse_args()
+    rename_files_in_folder(args.path)

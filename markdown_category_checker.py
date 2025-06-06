@@ -1,6 +1,7 @@
 import os
 import re
 import yaml
+import argparse
 from typing import List
 
 def read_markdown_files_from_folder(folder_path: str) -> List[str]:
@@ -41,7 +42,10 @@ def process_markdown_files(folder_path: str, output_txt_file: str):
             output_file.write(f'{filename}\n')
 
 
-folder_path = './_posts'  # Change this to your folder path
-output_txt_file = 'files_with_multiple_categories.txt'
-process_markdown_files(folder_path, output_txt_file)
-print(f'Processing complete. Files with multiple categories saved to {output_txt_file}')
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Check categories in markdown files")
+    parser.add_argument("--path", default="./_posts", help="Target folder")
+    args = parser.parse_args()
+    output_txt_file = 'files_with_multiple_categories.txt'
+    process_markdown_files(args.path, output_txt_file)
+    print(f'Processing complete. Files with multiple categories saved to {output_txt_file}')

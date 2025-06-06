@@ -1,6 +1,7 @@
 import os
 import re
 import yaml
+import argparse
 from typing import List
 
 def read_markdown_files_from_folder(folder_path: str) -> List[str]:
@@ -81,6 +82,9 @@ def process_markdown_files(folder_path: str):
         except Exception as e:
             print(f"Error processing file {md_file}: {e}")
 
-folder_path = './_posts'  # Change this to your folder path
-process_markdown_files(folder_path)
-print(f"Processing complete.")
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Clean up markdown front matter")
+    parser.add_argument("--path", default="./_posts", help="Target folder")
+    args = parser.parse_args()
+    process_markdown_files(args.path)
+    print("Processing complete.")
