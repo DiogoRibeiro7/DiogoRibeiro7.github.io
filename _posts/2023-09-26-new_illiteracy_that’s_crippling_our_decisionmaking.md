@@ -4,7 +4,9 @@ categories:
 - Mathematics
 classes: wide
 date: '2023-09-26'
-excerpt: Innumeracy is becoming the new illiteracy, with far-reaching implications for decision-making in various aspects of life. Discover how the inability to understand numbers affects our world and what can be done to address this growing issue.
+excerpt: Innumeracy is becoming the new illiteracy, with far-reaching implications
+  for decision-making in various aspects of life. Discover how the inability to understand
+  numbers affects our world and what can be done to address this growing issue.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -23,7 +25,9 @@ keywords:
 - Cognitive bias
 - Public policy
 - Critical thinking
-seo_description: Explore the growing issue of innumeracy—our inability to understand and work with numbers. Learn how this new illiteracy impacts decision-making in society, from corporate boardrooms to public policy.
+seo_description: Explore the growing issue of innumeracy—our inability to understand
+  and work with numbers. Learn how this new illiteracy impacts decision-making in
+  society, from corporate boardrooms to public policy.
 seo_title: 'Innumeracy: The New Illiteracy Crippling Decision-Making'
 seo_type: article
 tags:

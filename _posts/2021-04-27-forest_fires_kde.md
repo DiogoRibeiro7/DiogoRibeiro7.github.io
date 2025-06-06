@@ -4,7 +4,9 @@ categories:
 - Data Science
 classes: wide
 date: '2021-04-27'
-excerpt: A study using GIS-based techniques for forest fire hotspot identification and analysis, validated with contributory factors like population density, precipitation, elevation, and vegetation cover.
+excerpt: A study using GIS-based techniques for forest fire hotspot identification
+  and analysis, validated with contributory factors like population density, precipitation,
+  elevation, and vegetation cover.
 header:
   image: /assets/images/forest_fire_kde_1.jpg
   og_image: /assets/images/data_science_4.jpg
@@ -26,10 +28,16 @@ keywords:
 - Python
 - bash
 - python
-seo_description: Explore GIS techniques like KDE, Getis-Ord Gi*, and Anselin Local Moran’s I for identifying forest fire hotspots in Southeast Asia, validated by contributory factors.
+seo_description: Explore GIS techniques like KDE, Getis-Ord Gi*, and Anselin Local
+  Moran’s I for identifying forest fire hotspots in Southeast Asia, validated by contributory
+  factors.
 seo_title: GIS-Based Forest Fire Hotspot Identification Using Contributory Factors
 seo_type: article
-summary: This article explores the application of GIS-based techniques, such as Kernel Density Estimation (KDE), Getis-Ord Gi*, and Anselin Local Moran's I, in identifying forest fire hotspots. The study focuses on Belait District, Brunei Darussalam, and validates hotspot results using contributory factors like population density, precipitation, elevation, and vegetation cover.
+summary: This article explores the application of GIS-based techniques, such as Kernel
+  Density Estimation (KDE), Getis-Ord Gi*, and Anselin Local Moran's I, in identifying
+  forest fire hotspots. The study focuses on Belait District, Brunei Darussalam, and
+  validates hotspot results using contributory factors like population density, precipitation,
+  elevation, and vegetation cover.
 tags:
 - Anselin local moran’s i
 - Gis
@@ -40,7 +48,8 @@ tags:
 - Bash
 - bash
 - python
-title: 'GIS-Based Forest Fire Hotspot Identification: A Comprehensive Approach Using Contributory Factors'
+title: 'GIS-Based Forest Fire Hotspot Identification: A Comprehensive Approach Using
+  Contributory Factors'
 ---
 
 ![Example Image](/assets/images/forest_fire_kde_3.png)

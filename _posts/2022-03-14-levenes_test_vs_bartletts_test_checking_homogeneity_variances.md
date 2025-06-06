@@ -4,7 +4,9 @@ categories:
 - Hypothesis Testing
 classes: wide
 date: '2022-03-14'
-excerpt: Levene's Test and Bartlett's Test are key tools for checking homogeneity of variances in data. Learn when to use each test, based on normality assumptions, and how they relate to tests like ANOVA.
+excerpt: Levene's Test and Bartlett's Test are key tools for checking homogeneity
+  of variances in data. Learn when to use each test, based on normality assumptions,
+  and how they relate to tests like ANOVA.
 header:
   image: /assets/images/data_science_4.jpg
   og_image: /assets/images/data_science_4.jpg
@@ -18,10 +20,16 @@ keywords:
 - Homogeneity of variances
 - Anova
 - Hypothesis testing
-seo_description: This article compares Levene's Test and Bartlett's Test for checking homogeneity of variances, discussing when to use each test based on data normality, and their application in conjunction with ANOVA.
-seo_title: 'Levene''s Test vs. Bartlett’s Test: A Comparison for Testing Homogeneity of Variances'
+seo_description: This article compares Levene's Test and Bartlett's Test for checking
+  homogeneity of variances, discussing when to use each test based on data normality,
+  and their application in conjunction with ANOVA.
+seo_title: 'Levene''s Test vs. Bartlett’s Test: A Comparison for Testing Homogeneity
+  of Variances'
 seo_type: article
-summary: This article provides a detailed comparison between Levene's Test and Bartlett’s Test for assessing the homogeneity of variances in data. It explains the differences in when to use these tests—parametric vs. non-parametric data, normal vs. non-normal data—and their applications alongside statistical tests like ANOVA.
+summary: This article provides a detailed comparison between Levene's Test and Bartlett’s
+  Test for assessing the homogeneity of variances in data. It explains the differences
+  in when to use these tests—parametric vs. non-parametric data, normal vs. non-normal
+  data—and their applications alongside statistical tests like ANOVA.
 tags:
 - Levene's test
 - Bartlett’s test
