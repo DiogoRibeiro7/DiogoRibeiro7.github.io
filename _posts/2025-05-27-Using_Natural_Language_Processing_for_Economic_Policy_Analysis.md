@@ -40,7 +40,7 @@ tags:
 title: Using Natural Language Processing for Economic Policy Analysis
 ---
 
-# Using Natural Language Processing for Economic Policy Analysis
+## Using Natural Language Processing for Economic Policy Analysis
 
 Natural Language Processing (NLP) is redefining how economists, policymakers, and data scientists interpret and analyze unstructured text data. In an era where vast quantities of political speeches, legislative texts, central bank statements, and government reports are published daily, NLP provides scalable, automated means to extract insights that once required intensive manual review.
 
@@ -109,3 +109,76 @@ Overcoming these issues requires careful model selection, human-in-the-loop vali
 NLP is a powerful ally in the realm of economic policy analysis. By transforming qualitative political and governmental text into structured, analyzable data, it enhances our ability to detect policy trends, forecast outcomes, and hold decision-makers accountable.
 
 As models continue to evolve and become more interpretable, we can expect even deeper integration of NLP into the economic policymaking and analysis process—bridging the gap between language and action in the world of public economics.
+
+## Appendix: NLP Example for Economic Policy Analysis Using Political Speeches
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.decomposition import LatentDirichletAllocation
+from sklearn.pipeline import make_pipeline
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+import seaborn as sns
+
+# Example corpus: Simulated economic policy speeches
+documents = [
+    "We must focus on reducing inflation and stabilizing interest rates.",
+    "Investing in healthcare and education is vital to long-term growth.",
+    "Tax cuts will boost consumer spending and revive the economy.",
+    "Our plan includes raising the minimum wage and improving labor rights.",
+    "We propose deregulating markets to increase economic efficiency.",
+    "Stronger regulations on banks will prevent financial crises.",
+    "We aim to decrease the fiscal deficit while maintaining social programs.",
+    "Public infrastructure investment will stimulate employment.",
+    "Monetary tightening is necessary to prevent overheating of the economy.",
+    "Support for small businesses and innovation is key to competitiveness."
+]
+
+# Step 1: TF-IDF Vectorization
+vectorizer = TfidfVectorizer(stop_words='english', max_features=100)
+X_tfidf = vectorizer.fit_transform(documents)
+
+# Step 2: Topic Modeling with LDA
+lda = LatentDirichletAllocation(n_components=3, random_state=42)
+lda_topics = lda.fit_transform(X_tfidf)
+
+# Display top keywords for each topic
+def display_topics(model, feature_names, n_top_words):
+    for topic_idx, topic in enumerate(model.components_):
+        print(f"\nTopic {topic_idx + 1}:")
+        print(" | ".join([feature_names[i] for i in topic.argsort()[:-n_top_words - 1:-1]]))
+
+feature_names = vectorizer.get_feature_names_out()
+display_topics(lda, feature_names, 5)
+
+# Step 3: Visualizing Document-Topic Distributions
+topic_df = pd.DataFrame(lda_topics, columns=[f"Topic {i+1}" for i in range(lda.n_components)])
+topic_df['Document'] = [f"Speech {i+1}" for i in range(len(documents))]
+
+plt.figure(figsize=(10, 6))
+topic_df.set_index('Document').plot(kind='bar', stacked=True, colormap='tab20c')
+plt.title("Topic Distribution Across Speeches")
+plt.ylabel("Proportion")
+plt.tight_layout()
+plt.show()
+
+# Optional: Sentiment Analysis Example with TextBlob (if available)
+try:
+    from textblob import TextBlob
+    sentiments = [TextBlob(doc).sentiment.polarity for doc in documents]
+    sentiment_df = pd.DataFrame({'Speech': [f"Speech {i+1}" for i in range(len(documents))],
+                                 'Sentiment': sentiments})
+
+    plt.figure(figsize=(8, 5))
+    sns.barplot(data=sentiment_df, x='Speech', y='Sentiment', palette='coolwarm')
+    plt.title("Sentiment Scores of Political Speeches")
+    plt.axhline(0, color='gray', linestyle='--')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+except ImportError:
+    print("Optional: Install TextBlob for sentiment analysis (pip install textblob)")
+```
