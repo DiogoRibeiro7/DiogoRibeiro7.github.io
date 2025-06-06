@@ -38,7 +38,7 @@ a:hover {
     padding: 100px 0;
     // background-color: #333;
   }
-  
+
   // .overlay {
   //   position: absolute;
   //   top: 0;
@@ -47,29 +47,29 @@ a:hover {
   //   height: 100%;
   //   background-color: rgba(0, 0, 0, 0.5);
   // }
-  
+
   .page__hero-image img {
     max-width: 100%;
     height: auto;
   }
-  
+
   .page__hero-title {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
+
   .page__title {
     font-size: 36px;
     margin-bottom: 10px;
   }
-  
+
   .page__subtitle {
     font-size: 18px;
     margin-bottom: 20px;
   }
-  
+
   .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -80,7 +80,7 @@ a:hover {
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
-  
+
   .btn:hover {
     background-color: #FFCA00;
   }

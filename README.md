@@ -39,6 +39,14 @@ npm run build:js   # minify and add banner
 npm run watch:js   # optional: automatically rebuild on changes
 ```
 
+## CSS linting
+
+Lint all SCSS files with [Stylelint](https://stylelint.io/):
+
+```bash
+npm run lint:css
+```
+
 ## Local development
 
 Install Ruby gems specified in the `Gemfile` with:
