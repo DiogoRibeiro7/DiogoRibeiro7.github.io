@@ -6,7 +6,7 @@
    Typography
    ========================================================================== */
 
-// Cardo font is loaded via a <link> tag in the site head
+// Cardo and custom web fonts are loaded via <link> tags in the site head
 
 $doc-font-size: 16 !default;
 
@@ -32,8 +32,8 @@ $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
 // Setting the fonts
-$global-font-family: "Georgia, serif";
-$header-font-family: "Times, Times New Roman, serif";
+$global-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+$header-font-family: "Merriweather", "Times New Roman", serif;
 $caption-font-family: "Cardo, serif";
 
 /* type scale */
