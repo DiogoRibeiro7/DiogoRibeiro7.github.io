@@ -1,0 +1,36 @@
+import os
+import tempfile
+import frontmatter
+import pytest
+
+import fix_date
+
+
+def test_extract_date_from_filename():
+    assert fix_date.extract_date_from_filename('2023-12-01-post.md') == '2023-12-01'
+    assert fix_date.extract_date_from_filename('no-date.md') is None
+
+
+def create_markdown_file(path, front_matter):
+    content = frontmatter.dumps(front_matter) + "\nBody"
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(content)
+
+
+def load_front_matter(path):
+    with open(path, 'r', encoding='utf-8') as f:
+        return frontmatter.load(f)
+
+
+@pytest.mark.parametrize("initial_frontmatter, expected_date", [
+    ({'title': 'Test'}, '2024-02-03'),
+    ({'title': 'Test', 'date': '2020-01-01'}, '2024-02-03'),
+])
+def test_process_markdown_file_updates_date(tmp_path, initial_frontmatter, expected_date):
+    file_path = tmp_path / '2024-02-03-test.md'
+    create_markdown_file(file_path, initial_frontmatter)
+
+    fix_date.process_markdown_file(str(file_path))
+
+    updated = load_front_matter(file_path)
+    assert updated['date'] == expected_date
