@@ -1,27 +1,44 @@
 ---
-title: "Agent-Based Models (ABM) in Macroeconomics: A Mathematical Perspective"
+author_profile: false
 categories:
 - Macroeconomics
 - Computational Economics
 - Agent-Based Modeling
+classes: wide
+date: '2025-05-01'
+excerpt: Agent-Based Models (ABM) offer a powerful framework for simulating macroeconomic
+  systems by modeling interactions between heterogeneous agents. This article delves
+  into the theory, structure, and use of ABMs in economic research.
+header:
+  image: /assets/images/data_science_3.jpg
+  og_image: /assets/images/data_science_3.jpg
+  overlay_image: /assets/images/data_science_3.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_3.jpg
+  twitter_image: /assets/images/data_science_3.jpg
+keywords:
+- Agent-based modeling
+- Abm in economics
+- Macro simulation
+- Heterogeneous agents
+- Economic networks
+- Python
+seo_description: Explore how agent-based modeling (ABM) provides a bottom-up approach
+  to macroeconomic simulation using heterogeneous agents and dynamic interactions,
+  grounded in computational and mathematical frameworks.
+seo_title: Understanding Agent-Based Models (ABM) in Macroeconomics
+seo_type: article
+summary: This article introduces agent-based models in macroeconomics, explaining
+  how they are built, the math behind their dynamics, and their value in simulating
+  emergent economic phenomena like unemployment, inflation, and market shocks.
 tags:
-- ABM
+- Abm
 - Macroeconomic modeling
 - Computational simulation
 - Heterogeneous agents
 - Economic systems
-author_profile: false
-seo_title: "Understanding Agent-Based Models (ABM) in Macroeconomics"
-seo_description: "Explore how agent-based modeling (ABM) provides a bottom-up approach to macroeconomic simulation using heterogeneous agents and dynamic interactions, grounded in computational and mathematical frameworks."
-excerpt: Agent-Based Models (ABM) offer a powerful framework for simulating macroeconomic systems by modeling interactions between heterogeneous agents. This article delves into the theory, structure, and use of ABMs in economic research.
-summary: This article introduces agent-based models in macroeconomics, explaining how they are built, the math behind their dynamics, and their value in simulating emergent economic phenomena like unemployment, inflation, and market shocks.
-keywords: 
-- "agent-based modeling"
-- "ABM in economics"
-- "macro simulation"
-- "heterogeneous agents"
-- "economic networks"
-classes: wide
+- Python
+title: 'Agent-Based Models (ABM) in Macroeconomics: A Mathematical Perspective'
 ---
 
 # Agent-Based Models (ABM) in Macroeconomics: A Mathematical Perspective
