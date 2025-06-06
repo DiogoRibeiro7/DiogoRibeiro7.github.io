@@ -1,7 +1,7 @@
 const fs = require("fs");
 const pkg = require("./package.json");
 const filename = "assets/js/main.min.js";
-const script = fs.readFileSync(filename);
+const script = fs.readFileSync(filename, 'utf8');
 const padStart = str => ("0" + str).slice(-2);
 const dateObj = new Date();
 const date = `${dateObj.getFullYear()}-${padStart(
@@ -14,6 +14,6 @@ const banner = `/*!
  */
 `;
 
-if (script.slice(0, 3) != "/**") {
+if (!script.startsWith('/*!')) {
   fs.writeFileSync(filename, banner + script);
 }

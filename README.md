@@ -21,6 +21,21 @@ Install the Python dependencies listed in `requirements.txt` with:
 pip install -r requirements.txt
 ```
 
+To work with the JavaScript that powers the theme you'll also need Node
+dependencies. Install them with:
+
+```bash
+npm install
+```
+
+Bundled JavaScript is compiled from the source files in `assets/js/`. Run the
+following to create `main.min.js` (minified with a banner) or watch for changes:
+
+```bash
+npm run build:js   # minify and add banner
+npm run watch:js   # optional: automatically rebuild on changes
+```
+
 # ToDo
 
 Have a consistency in the font and font sizes (ideally you want to use 2 fonts. One for the header/subtitle and one for the text. You can use this kind of website https://fontjoy.com/ which allow you to pair fonts).
