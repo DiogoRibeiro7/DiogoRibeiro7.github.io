@@ -14,9 +14,6 @@ tags: []
 ## Article Ideas on Data Drift and Model Drift
 
 
-### 3. **How to Detect Data Drift in Machine Learning Models**
-   - **Overview**: Provide a guide to detecting data drift using statistical techniques and machine learning-based approaches.
-   - **Focus**: Methods like **Kullback-Leibler Divergence**, **Population Stability Index (PSI)**, **Chi-square tests**, and model monitoring tools such as **NannyML** and **Evidently AI**.
 
 ### 4. **Techniques for Monitoring and Managing Model Drift in Production**
    - **Overview**: Discuss best practices for monitoring model performance over time to detect and mitigate model drift.

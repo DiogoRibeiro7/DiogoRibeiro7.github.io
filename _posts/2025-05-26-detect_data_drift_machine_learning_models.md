@@ -16,12 +16,12 @@ header:
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_2.jpg
 keywords:
-- data drift detection
-- Kullback-Leibler divergence
-- Population Stability Index
+- Data drift detection
+- Kullback-leibler divergence
+- Population stability index
 - Chi-square test
-- Evidently AI
-- NannyML
+- Evidently ai
+- Nannyml
 seo_description: Learn how to detect data drift in machine learning using statistical
   techniques like KL Divergence and PSI, and tools like NannyML and Evidently AI to
   maintain model accuracy in production.
@@ -31,11 +31,11 @@ summary: Explore how to detect data drift in machine learning systems, including
   techniques like KL Divergence, PSI, and Chi-square tests, as well as practical tools
   like NannyML and Evidently AI.
 tags:
-- Data Drift
-- Drift Detection
-- Model Monitoring
-- Statistical Tests
-- ML Ops
+- Data drift
+- Drift detection
+- Model monitoring
+- Statistical tests
+- Ml ops
 title: How to Detect Data Drift in Machine Learning Models
 ---
 

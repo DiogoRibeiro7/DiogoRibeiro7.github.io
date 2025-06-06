@@ -16,12 +16,12 @@ header:
   teaser: /assets/images/data_science_16.jpg
   twitter_image: /assets/images/data_science_16.jpg
 keywords:
-- statistical model
-- data modeling
-- probability
-- prediction
-- inference
-- simulation
+- Statistical model
+- Data modeling
+- Probability
+- Prediction
+- Inference
+- Simulation
 seo_description: 'A comprehensive exploration of statistical models: what they are,
   how they work, and why they''re fundamental to data analysis, prediction, and decision-making
   across disciplines.'
@@ -31,10 +31,10 @@ summary: This article explores the essence of statistical models, including thei
   structure, function, and real-world applications, with a focus on their role in
   inference, uncertainty quantification, and decision support.
 tags:
-- Statistical Models
+- Statistical models
 - Inference
 - Simulation
-- Predictive Analytics
+- Predictive analytics
 - Probability
 title: 'Understanding Statistical Models: Foundations, Functions, and Applications'
 ---

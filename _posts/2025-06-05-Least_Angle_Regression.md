@@ -16,10 +16,10 @@ header:
   teaser: /assets/images/data_science_18.jpg
   twitter_image: /assets/images/data_science_18.jpg
 keywords:
-- Least Angle Regression
-- LARS
-- Feature Selection
-- Linear Regression
+- Least angle regression
+- Lars
+- Feature selection
+- Linear regression
 - Lasso
 seo_description: Explore Least Angle Regression (LARS), a regression algorithm that
   combines efficiency with feature selection. Learn how it works, its advantages,
@@ -31,9 +31,9 @@ summary: This article explores Least Angle Regression (LARS), explaining its cor
   most effectively applied.
 tags:
 - Regression
-- LARS
-- Linear Models
-- Feature Selection
+- Lars
+- Linear models
+- Feature selection
 title: 'Least Angle Regression: A Gentle Dive into LARS'
 ---
 
