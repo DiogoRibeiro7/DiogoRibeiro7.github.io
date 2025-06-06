@@ -22,6 +22,7 @@ keywords:
 - Text mining political speeches
 - Machine learning for policy
 - Government document analysis
+- Python
 seo_description: Explore how Natural Language Processing (NLP) techniques are revolutionizing
   the analysis of political texts and government documents to assess and predict economic
   policy impacts.
@@ -37,6 +38,7 @@ tags:
 - Text mining
 - Political analysis
 - Machine learning
+- Python
 title: Using Natural Language Processing for Economic Policy Analysis
 ---
 

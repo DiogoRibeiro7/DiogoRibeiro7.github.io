@@ -4,9 +4,7 @@ categories:
 - Economics
 classes: wide
 date: '2025-01-18'
-excerpt: Differential equations are essential in modeling economic growth, providing
-  insight into long-term trends and the impact of policy changes on macroeconomic
-  variables.
+excerpt: Differential equations are essential in modeling economic growth, providing insight into long-term trends and the impact of policy changes on macroeconomic variables.
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_1.jpg
@@ -21,14 +19,10 @@ keywords:
 - Romer Growth Model
 - Dynamic Systems Theory
 - Optimal Control Theory
-seo_description: An in-depth exploration of how differential equations are used to
-  model economic growth, focusing on the Solow Growth Model, Romer’s Endogenous Growth
-  Model, and related dynamic systems.
+seo_description: An in-depth exploration of how differential equations are used to model economic growth, focusing on the Solow Growth Model, Romer’s Endogenous Growth Model, and related dynamic systems.
 seo_title: Differential Equations in Economic Growth Models
 seo_type: article
-summary: A comprehensive discussion of how differential equations are applied in macroeconomic
-  growth models, with a special focus on the Solow and Romer growth models, dynamic
-  systems, and optimal control theory.
+summary: A comprehensive discussion of how differential equations are applied in macroeconomic growth models, with a special focus on the Solow and Romer growth models, dynamic systems, and optimal control theory.
 tags:
 - Economic Growth
 - Differential Equations

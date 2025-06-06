@@ -5,10 +5,7 @@ categories:
 - Model Monitoring
 classes: wide
 date: '2025-02-17'
-excerpt: Model drift is a silent model killer in production machine learning systems.
-  Over time, shifts in data distributions or target concepts can cause even the most
-  sophisticated models to fail. This article explores what model drift is, why it
-  happens, and how to deal with it effectively.
+excerpt: Model drift is a silent model killer in production machine learning systems. Over time, shifts in data distributions or target concepts can cause even the most sophisticated models to fail. This article explores what model drift is, why it happens, and how to deal with it effectively.
 header:
   image: /assets/images/data_science_13.jpg
   og_image: /assets/images/data_science_13.jpg
@@ -22,15 +19,10 @@ keywords:
 - data drift
 - machine learning monitoring
 - model degradation
-seo_description: Even the most accurate machine learning models degrade over time
-  due to model drift. Learn what causes this phenomenon, how it impacts predictions,
-  and how to detect and manage it in production systems.
-seo_title: 'Understanding Model Drift in Machine Learning: Causes, Effects, and Real-World
-  Examples'
+seo_description: Even the most accurate machine learning models degrade over time due to model drift. Learn what causes this phenomenon, how it impacts predictions, and how to detect and manage it in production systems.
+seo_title: 'Understanding Model Drift in Machine Learning: Causes, Effects, and Real-World Examples'
 seo_type: article
-summary: This article dives into model drift in machine learning—what it is, why it
-  matters, and how changes in data or patterns can lead to serious performance degradation.
-  Case studies and practical insights are included.
+summary: This article dives into model drift in machine learning—what it is, why it matters, and how changes in data or patterns can lead to serious performance degradation. Case studies and practical insights are included.
 tags:
 - Model Drift
 - Concept Drift

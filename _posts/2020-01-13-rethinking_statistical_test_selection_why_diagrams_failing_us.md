@@ -5,9 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2020-01-13'
-excerpt: Most diagrams for choosing statistical tests miss the bigger picture. Here's
-  a bold, practical approach that emphasizes interpretation over mechanistic rules,
-  and cuts through statistical misconceptions like the N>30 rule.
+excerpt: Most diagrams for choosing statistical tests miss the bigger picture. Here's a bold, practical approach that emphasizes interpretation over mechanistic rules, and cuts through statistical misconceptions like the N>30 rule.
 header:
   image: /assets/images/data_science_8.jpg
   og_image: /assets/images/data_science_8.jpg
@@ -21,15 +19,10 @@ keywords:
 - Data Science
 - Hypothesis Testing
 - Nonparametric Tests
-seo_description: A bold take on statistical test selection that challenges common
-  frameworks. Move beyond basic diagrams and N>30 pseudorules, and learn how to focus
-  on meaningful interpretation and robust testing strategies.
+seo_description: A bold take on statistical test selection that challenges common frameworks. Move beyond basic diagrams and N>30 pseudorules, and learn how to focus on meaningful interpretation and robust testing strategies.
 seo_title: 'Rethinking Statistical Test Selection: A Bold Approach to Choosing Tests'
 seo_type: article
-summary: This article critiques popular frameworks for selecting statistical tests,
-  offering a robust, more flexible alternative that emphasizes interpretation and
-  realistic outcomes over pseudorules and data transformations. Learn why techniques
-  like Welch’s t-test and permutation tests are better than many 'classics'.
+summary: This article critiques popular frameworks for selecting statistical tests, offering a robust, more flexible alternative that emphasizes interpretation and realistic outcomes over pseudorules and data transformations. Learn why techniques like Welch’s t-test and permutation tests are better than many 'classics'.
 tags:
 - Statistical Analysis
 - Data Science

@@ -21,6 +21,7 @@ keywords:
 - Feature selection
 - Linear regression
 - Lasso
+- Python
 seo_description: Explore Least Angle Regression (LARS), a regression algorithm that
   combines efficiency with feature selection. Learn how it works, its advantages,
   and its role in modern statistical modeling.
@@ -34,6 +35,7 @@ tags:
 - Lars
 - Linear models
 - Feature selection
+- Python
 title: 'Least Angle Regression: A Gentle Dive into LARS'
 ---
 
