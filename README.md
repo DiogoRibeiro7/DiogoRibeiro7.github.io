@@ -12,6 +12,15 @@
 
 Minimal Mistakes is a flexible two-column Jekyll theme, perfect for building personal sites, blogs, and portfolios. As the name implies, styling is purposely minimalistic to be enhanced and customized by you :smile:.
 
+## Setup
+
+This repository contains a few helper scripts for processing Markdown posts.
+Install the Python dependencies listed in `requirements.txt` with:
+
+```bash
+pip install -r requirements.txt
+```
+
 # ToDo
 
 Have a consistency in the font and font sizes (ideally you want to use 2 fonts. One for the header/subtitle and one for the text. You can use this kind of website https://fontjoy.com/ which allow you to pair fonts).
