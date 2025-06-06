@@ -14,10 +14,6 @@ tags: []
 ## Article Ideas on Data Drift and Model Drift
 
 
-### 2. **Model Drift: Why Even the Best Machine Learning Models Fail Over Time**
-   - **Overview**: Explore the concept of model drift and how changes in the environment or target variable can degrade model accuracy.
-   - **Focus**: Discuss the causes of model drift, including **data drift**, changes in underlying patterns, and new unseen data, with case studies on the impact of model drift in production.
-
 ### 3. **How to Detect Data Drift in Machine Learning Models**
    - **Overview**: Provide a guide to detecting data drift using statistical techniques and machine learning-based approaches.
    - **Focus**: Methods like **Kullback-Leibler Divergence**, **Population Stability Index (PSI)**, **Chi-square tests**, and model monitoring tools such as **NannyML** and **Evidently AI**.
