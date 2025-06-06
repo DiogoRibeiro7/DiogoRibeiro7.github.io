@@ -28,6 +28,9 @@ dependencies. Install them with:
 npm install
 ```
 
+This project uses **npm** for managing JavaScript dependencies and tracks
+exact versions in `package-lock.json`.
+
 Bundled JavaScript is compiled from the source files in `assets/js/`. Run the
 following to create `main.min.js` (minified with a banner) or watch for changes:
 
