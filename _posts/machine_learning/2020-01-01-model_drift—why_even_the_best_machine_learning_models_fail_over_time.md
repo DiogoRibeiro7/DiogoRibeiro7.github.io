@@ -4,9 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2020-01-01'
-excerpt: Machine learning models degrade over time due to model drift, which includes
-  data drift, concept drift, and feature drift. Learn how to detect, measure, and
-  mitigate these challenges.
+excerpt: Machine learning models degrade over time due to model drift, which includes data drift, concept drift, and feature drift. Learn how to detect, measure, and mitigate these challenges.
 header:
   image: /assets/images/data_science_9.jpg
   og_image: /assets/images/data_science_9.jpg
@@ -21,12 +19,10 @@ keywords:
 - Concept drift
 - Ai model monitoring
 - Ml lifecycle management
-seo_description: A deep dive into model drift, why machine learning models degrade
-  over time, and how organizations can detect and mitigate drift in production.
+seo_description: A deep dive into model drift, why machine learning models degrade over time, and how organizations can detect and mitigate drift in production.
 seo_title: 'Model Drift in Machine Learning: Causes, Detection, and Mitigation'
 seo_type: article
-summary: This article explores model drift, its causes, real-world impact, and strategies
-  to detect and mitigate its effects in production machine learning systems.
+summary: This article explores model drift, its causes, real-world impact, and strategies to detect and mitigate its effects in production machine learning systems.
 tags:
 - Model drift
 - Data drift

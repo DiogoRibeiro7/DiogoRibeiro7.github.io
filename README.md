@@ -39,6 +39,14 @@ npm run build:js   # minify and add banner
 npm run watch:js   # optional: automatically rebuild on changes
 ```
 
+## CSS linting
+
+Lint all SCSS files with [Stylelint](https://stylelint.io/):
+
+```bash
+npm run lint:css
+```
+
 ## Local development
 
 Install Ruby gems specified in the `Gemfile` with:
@@ -78,9 +86,6 @@ Choose a few main colours for your site (I would suggest black/white/grey but no
 ~~Restyle your article detail page breadcrumbs. You want them to be less visible (I would suggest a light grey colour here)~~
 
 Right now at the top of the detail page, you have your site breadcrumbs, a title then another title and the font sizes are a bit off and it is hard to understand the role of the second title. I would reorganise this to provide a better understanding to the reader
-
 On the detail page, I would suggest you put the `You may also enjoy` straight at the end of the article. Right now it is after comments and you can lose engagement on your site.
-
 I would suggest you remove your description from the detail page. I think having it on the home page is enough. You can have a smaller introduction if needed with a read more button or link that will take the reader to a full page description of yourself and your skillset. That will allow you to tell more about yourself and why you do what you do
-
 I will create card article with a hover animation (add some shape and background colour and ideally a header image for the card. The graphs you show me last week for example.)
