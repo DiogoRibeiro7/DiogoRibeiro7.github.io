@@ -73,7 +73,17 @@ GitHub Actions already runs these commands automatically during deployments.
 
 # ToDo
 
+~~Have a consistency in the font and font sizes (ideally you want to use 2 fonts. One for the header/subtitle and one for the text. You can use this kind of website https://fontjoy.com/ which allow you to pair fonts).~~
+
 Choose a few main colours for your site (I would suggest black/white/grey but not in solid. You can also use this kind of site: https://coolors.co/palettes/popular/2a4849).
+
+~~Reduce then size of the homepage top image (ideally you want your first articles to be visible on load and not hidden below the fold).~~
+
+~~Restyle your links (ideally the link should be back with no underline and you add a css style on hover)~~
+
+~~Center pagination~~
+
+~~Restyle your article detail page breadcrumbs. You want them to be less visible (I would suggest a light grey colour here)~~
 
 Right now at the top of the detail page, you have your site breadcrumbs, a title then another title and the font sizes are a bit off and it is hard to understand the role of the second title. I would reorganise this to provide a better understanding to the reader
 On the detail page, I would suggest you put the `You may also enjoy` straight at the end of the article. Right now it is after comments and you can lose engagement on your site.

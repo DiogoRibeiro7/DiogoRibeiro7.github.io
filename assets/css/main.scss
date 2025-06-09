@@ -103,3 +103,34 @@ a:hover {
   .page__hero-button {
     margin-top: 1px; /* Add some space between the content and the button */
   }
+
+/* Breadcrumbs in light grey */
+.breadcrumbs,
+.breadcrumbs a {
+  color: $light-gray;
+}
+
+/* Center pagination controls */
+.pagination {
+  text-align: center;
+}
+
+.pagination ul {
+  display: inline-block;
+  padding-left: 0;
+}
+
+.pagination li {
+  float: none;
+  display: inline-block;
+}
+
+/* Smaller hero section on homepage */
+.layout--home .page__hero--overlay {
+  padding: 2em 0;
+}
+
+.layout--home .page__hero-image img {
+  max-height: 40vh;
+  object-fit: cover;
+}
