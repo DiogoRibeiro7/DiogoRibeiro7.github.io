@@ -4,7 +4,8 @@ categories:
 - Data Science
 classes: wide
 date: '2025-06-07'
-excerpt: Mastering mathematics and statistics is essential for understanding data science algorithms and avoiding common pitfalls when building models.
+excerpt: Mastering mathematics and statistics is essential for understanding data
+  science algorithms and avoiding common pitfalls when building models.
 header:
   image: /assets/images/data_science_10.jpg
   og_image: /assets/images/data_science_10.jpg
@@ -17,17 +18,20 @@ keywords:
 - Statistics fundamentals
 - Machine learning theory
 - Algorithms
-seo_description: Explore why a solid grasp of math and statistics is crucial for data scientists and how ignoring the underlying theory can lead to faulty models.
+seo_description: Explore why a solid grasp of math and statistics is crucial for data
+  scientists and how ignoring the underlying theory can lead to faulty models.
 seo_title: 'Math and Statistics: The Bedrock of Data Science'
 seo_type: article
-summary: To excel in data science, you need more than coding skills. This article explains how mathematics and statistics underpin popular algorithms and why understanding them prevents costly mistakes.
+summary: To excel in data science, you need more than coding skills. This article
+  explains how mathematics and statistics underpin popular algorithms and why understanding
+  them prevents costly mistakes.
 tags:
 - Mathematics
 - Statistics
 - Machine learning
 - Data science
 - Algorithms
-title: 'Why Data Scientists Need Math and Statistics'
+title: Why Data Scientists Need Math and Statistics
 ---
 
 A common misconception is that data science is mostly about applying libraries and frameworks. While tools are helpful, they cannot replace a solid understanding of **mathematics** and **statistics**. These disciplines provide the language and theory that power every algorithm behind the scenes.

@@ -4,7 +4,8 @@ categories:
 - Data Science
 classes: wide
 date: '2025-06-14'
-excerpt: Ethical considerations are critical when deploying machine learning systems that affect real people.
+excerpt: Ethical considerations are critical when deploying machine learning systems
+  that affect real people.
 header:
   image: /assets/images/data_science_17.jpg
   og_image: /assets/images/data_science_17.jpg
@@ -15,18 +16,20 @@ header:
 keywords:
 - Data ethics
 - Bias mitigation
-- Responsible AI
+- Responsible ai
 - Transparency
-seo_description: Examine the ethical challenges of machine learning, from biased data to algorithmic transparency, and learn best practices for responsible AI.
-seo_title: 'Data Ethics in Machine Learning'
+seo_description: Examine the ethical challenges of machine learning, from biased data
+  to algorithmic transparency, and learn best practices for responsible AI.
+seo_title: Data Ethics in Machine Learning
 seo_type: article
-summary: This article discusses how to address fairness, accountability, and transparency when building machine learning solutions.
+summary: This article discusses how to address fairness, accountability, and transparency
+  when building machine learning solutions.
 tags:
 - Ethics
-- Responsible AI
+- Responsible ai
 - Bias
 - Machine learning
-title: 'Why Data Ethics Matters in Machine Learning'
+title: Why Data Ethics Matters in Machine Learning
 ---
 
 ## Context and Ethical Imperatives

@@ -4,7 +4,8 @@ categories:
 - Data Science
 classes: wide
 date: '2021-10-05'
-excerpt: Learn how to design robust data preprocessing pipelines that prepare raw data for modeling.
+excerpt: Learn how to design robust data preprocessing pipelines that prepare raw
+  data for modeling.
 header:
   image: /assets/images/data_science_6.jpg
   og_image: /assets/images/data_science_6.jpg
@@ -17,10 +18,12 @@ keywords:
 - Pipelines
 - Data cleaning
 - Feature engineering
-seo_description: Discover best practices for building reusable data preprocessing pipelines that handle missing values, encoding, and feature scaling.
+seo_description: Discover best practices for building reusable data preprocessing
+  pipelines that handle missing values, encoding, and feature scaling.
 seo_title: Building Data Preprocessing Pipelines for Reliable Models
 seo_type: article
-summary: This post outlines the key steps in constructing data preprocessing pipelines using tools like scikit-learn to ensure consistent model inputs.
+summary: This post outlines the key steps in constructing data preprocessing pipelines
+  using tools like scikit-learn to ensure consistent model inputs.
 tags:
 - Data preprocessing
 - Machine learning

@@ -4,7 +4,8 @@ categories:
 - Machine Learning
 classes: wide
 date: '2025-06-15'
-excerpt: SMOTE generates synthetic samples to rebalance datasets, but using it blindly can create unrealistic data and biased models.
+excerpt: SMOTE generates synthetic samples to rebalance datasets, but using it blindly
+  can create unrealistic data and biased models.
 header:
   image: /assets/images/data_science_18.jpg
   og_image: /assets/images/data_science_18.jpg
@@ -13,19 +14,22 @@ header:
   teaser: /assets/images/data_science_18.jpg
   twitter_image: /assets/images/data_science_18.jpg
 keywords:
-- SMOTE
+- Smote
 - Oversampling
 - Imbalanced data
 - Machine learning pitfalls
-seo_description: Understand the drawbacks of applying SMOTE for imbalanced datasets and why improper use may reduce model reliability.
+seo_description: Understand the drawbacks of applying SMOTE for imbalanced datasets
+  and why improper use may reduce model reliability.
 seo_title: 'When SMOTE Backfires: Avoiding the Risks of Synthetic Oversampling'
 seo_type: article
-summary: Synthetic Minority Over-sampling Technique (SMOTE) creates artificial examples to balance classes, but ignoring its assumptions can distort your dataset and harm model performance.
+summary: Synthetic Minority Over-sampling Technique (SMOTE) creates artificial examples
+  to balance classes, but ignoring its assumptions can distort your dataset and harm
+  model performance.
 tags:
-- SMOTE
+- Smote
 - Class imbalance
 - Machine learning
-title: "Why SMOTE Isn't Always the Answer"
+title: Why SMOTE Isn't Always the Answer
 ---
 
 ## The Imbalanced Classification Problem
