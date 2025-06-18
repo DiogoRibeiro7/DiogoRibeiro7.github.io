@@ -1,40 +1,40 @@
-/*!
+/*!\
  * Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
  * Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
  * Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE)
-*/
+ */
 
 /* Variables */
-@import "minimal-mistakes/variables";
+@forward "minimal-mistakes/variables";
 
 /* Mixins and functions */
-@import "minimal-mistakes/vendor/breakpoint/breakpoint";
+@forward "minimal-mistakes/vendor/breakpoint/breakpoint";
 @include breakpoint-set("to ems", true);
-@import "minimal-mistakes/vendor/magnific-popup/magnific-popup"; // Magnific Popup
-@import "minimal-mistakes/vendor/susy/susy";
-@import "minimal-mistakes/mixins";
+@forward "minimal-mistakes/vendor/magnific-popup/magnific-popup";
+@forward "minimal-mistakes/vendor/susy/susy";
+@forward "minimal-mistakes/mixins";
 
 /* Core CSS */
-@import "minimal-mistakes/reset";
-@import "minimal-mistakes/base";
-@import "minimal-mistakes/forms";
-@import "minimal-mistakes/tables";
-@import "minimal-mistakes/animations";
+@forward "minimal-mistakes/reset";
+@forward "minimal-mistakes/base";
+@forward "minimal-mistakes/forms";
+@forward "minimal-mistakes/tables";
+@forward "minimal-mistakes/animations";
 
 /* Components */
-@import "minimal-mistakes/buttons";
-@import "minimal-mistakes/notices";
-@import "minimal-mistakes/masthead";
-@import "minimal-mistakes/navigation";
-@import "minimal-mistakes/footer";
-@import "minimal-mistakes/search";
-@import "minimal-mistakes/syntax";
+@forward "minimal-mistakes/buttons";
+@forward "minimal-mistakes/notices";
+@forward "minimal-mistakes/masthead";
+@forward "minimal-mistakes/navigation";
+@forward "minimal-mistakes/footer";
+@forward "minimal-mistakes/search";
+@forward "minimal-mistakes/syntax";
 
 /* Utility classes */
-@import "minimal-mistakes/utilities";
+@forward "minimal-mistakes/utilities";
 
 /* Layout specific */
-@import "minimal-mistakes/page";
-@import "minimal-mistakes/archive";
-@import "minimal-mistakes/sidebar";
-@import "minimal-mistakes/print";
+@forward "minimal-mistakes/page";
+@forward "minimal-mistakes/archive";
+@forward "minimal-mistakes/sidebar";
+@forward "minimal-mistakes/print";
