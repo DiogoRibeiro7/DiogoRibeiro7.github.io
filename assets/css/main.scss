@@ -134,3 +134,16 @@ a:hover {
   max-height: 40vh;
   object-fit: cover;
 }
+
+/* Card styles for archive items */
+.archive__item.card {
+  background: $background-color;
+  border-radius: $border-radius;
+  padding: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.archive__item.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

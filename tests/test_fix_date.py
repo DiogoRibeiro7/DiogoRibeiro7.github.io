@@ -1,13 +1,14 @@
 import os
 import sys
 import tempfile
+
+# Add the project root to sys.path so local modules can be imported when
+# running the tests via the `pytest` entry point (which doesn't prepend the
+# working directory to `sys.path`).
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import frontmatter
 import pytest
-
-
-# Add the project root to sys.path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 import fix_date
 
 

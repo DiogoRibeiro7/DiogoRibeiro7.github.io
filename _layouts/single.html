@@ -22,10 +22,12 @@ layout: default
   {% include sidebar.html %}
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    {% unless page.header.overlay_color or page.header.overlay_image %}
     {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
       <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "
         <p>" | remove: "</p>" }}</a>
     </h1>{% endif %}
+    {% endunless %}
     {% if page.subtitle %}<h2 class="page__subtitle">{{ page.subtitle }}</h2>{% endif %}
 
     {% if page.excerpt %}
