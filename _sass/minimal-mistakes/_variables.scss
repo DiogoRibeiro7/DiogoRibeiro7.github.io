@@ -73,7 +73,13 @@ $border-color: $lighter-gray !default;
 $form-background-color: $lighter-gray !default;
 $footer-background-color: $lighter-gray !default;
 
-$primary-color: #6f777d !default;
+$color-primary: #2a4849 !default;
+$color-secondary: #6c757d !default;
+$color-background: #f7f9fa !default;
+$color-surface: #ffffff !default;
+$color-accent: #ffca00 !default;
+
+$primary-color: $color-primary !default;
 $success-color: #3fa63f !default;
 $warning-color: #d67f05 !default;
 $danger-color: #ee5f5b !default;

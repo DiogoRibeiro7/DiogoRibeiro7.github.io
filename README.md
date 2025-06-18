@@ -75,7 +75,7 @@ GitHub Actions already runs these commands automatically during deployments.
 
 ~~Have a consistency in the font and font sizes (ideally you want to use 2 fonts. One for the header/subtitle and one for the text. You can use this kind of website https://fontjoy.com/ which allow you to pair fonts).~~
 
-Choose a few main colours for your site (I would suggest black/white/grey but not in solid. You can also use this kind of site: https://coolors.co/palettes/popular/2a4849).
+~~Choose a few main colours for your site (I would suggest black/white/grey but not in solid. You can also use this kind of site: https://coolors.co/palettes/popular/2a4849).~~
 
 ~~Reduce then size of the homepage top image (ideally you want your first articles to be visible on load and not hidden below the fold).~~
 
