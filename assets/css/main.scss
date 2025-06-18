@@ -5,11 +5,10 @@ search: false
 
 @charset "utf-8";
 
-// Import variables before skin so color variables are available
-@import "minimal-mistakes/variables";
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+@use "sass:color";
+@use "minimal-mistakes/variables" as *;
+@use "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}" as *; // skin
+@use "minimal-mistakes" as *; // main partials
 
 /* Remove underline and set color to black */
 a {
