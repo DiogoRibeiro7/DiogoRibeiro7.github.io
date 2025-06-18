@@ -38,25 +38,25 @@ Time series forecasting underpins decision-making in domains from finance to sup
 
 ## The ARIMA(p, d, q) Model Formulation
 
-An ARIMA(p, d, q) model can be expressed in operator notation. Let \(L\) denote the lag operator, so that \(L\,x_t = x_{t-1}\). Then the model satisfies
+An ARIMA(p, d, q) model can be expressed in operator notation. Let $$L$$ denote the lag operator, so that $$L\,x_t = x_{t-1}$$. Then the model satisfies
 
-\[
+$$
 \phi(L)\,(1 - L)^d\,x_t \;=\; \theta(L)\,\varepsilon_t,
-\]
+$$
 
 where
 
-\[
+$$
 \phi(L) \;=\; 1 - \phi_1 L - \phi_2 L^2 - \cdots - \phi_p L^p,
 \quad
 \theta(L) \;=\; 1 + \theta_1 L + \theta_2 L^2 + \cdots + \theta_q L^q,
-\]
+$$
 
-and \(\varepsilon_t\) is white noise. The integer \(d\) denotes the number of nonseasonal differences required to achieve stationarity. When \(d=0\) and \(p,q>0\), the model reduces to ARMA(p, q). Seasonal extensions augment this with seasonal autoregressive and moving-average polynomials at lag \(s\).
+and $$\varepsilon_t$$ is white noise. The integer $$d$$ denotes the number of nonseasonal differences required to achieve stationarity. When $$d=0$$ and $$p,q>0$$, the model reduces to ARMA(p, q). Seasonal extensions augment this with seasonal autoregressive and moving-average polynomials at lag $$s$$.
 
 ## Identifying Model Order via ACF and PACF
 
-Choosing suitable values for \(p\), \(d\), and \(q\) begins with visualization. The autocorrelation function (ACF) plots \(\mathrm{Corr}(x_t, x_{t-k})\) against lag \(k\), while the partial autocorrelation function (PACF) isolates the correlation at lag \(k\) after removing intermediate effects. A slowly decaying ACF suggests need for differencing; a sharp cutoff in the PACF after lag \(p\) hints at an AR(\(p\)) component, whereas a cutoff in the ACF after lag \(q\) indicates an MA(\(q\)) term.  
+Choosing suitable values for $$p$$, $$d$$, and $$q$$ begins with visualization. The autocorrelation function (ACF) plots $$\mathrm{Corr}(x_t, x_{t-k})$$ against lag $$k$$, while the partial autocorrelation function (PACF) isolates the correlation at lag $$k$$ after removing intermediate effects. A slowly decaying ACF suggests need for differencing; a sharp cutoff in the PACF after lag $$p$$ hints at an AR($$p$$) component, whereas a cutoff in the ACF after lag $$q$$ indicates an MA($$q$$) term.  
 
 In practice, one may:
 
@@ -65,11 +65,11 @@ In practice, one may:
 - Examine the ACF for significant spikes at lags up to 20 or 30.
 - Inspect the PACF for single-lag cutoffs or exponential decay patterns.
 
-These heuristics guide the initial grid of candidate \((p,d,q)\) combinations to evaluate.
+These heuristics guide the initial grid of candidate $$(p,d,q)$$ combinations to evaluate.
 
 ## Stationarity, Differencing, and Seasonal Extensions
 
-Non-stationary behavior—trends or unit roots—violates ARIMA assumptions. The Augmented Dickey-Fuller (ADF) test offers a statistical check for a unit root and informs the choice of \(d\). When seasonal patterns recur every \(s\) observations (for example, \(s=12\) for monthly data), applying a seasonal difference \((1 - L^s)\) yields the SARIMA(p, d, q)(P, D, Q)\(_s\) model. Seasonal terms capture long-period dependencies that nonseasonal differencing cannot.  
+Non-stationary behavior—trends or unit roots—violates ARIMA assumptions. The Augmented Dickey-Fuller (ADF) test offers a statistical check for a unit root and informs the choice of $$d$$. When seasonal patterns recur every $$s$$ observations (for example, $$s=12$$ for monthly data), applying a seasonal difference $$(1 - L^s)$$ yields the SARIMA(p, d, q)(P, D, Q)$$_s$$ model. Seasonal terms capture long-period dependencies that nonseasonal differencing cannot.  
 
 Proper differencing preserves the underlying information while stabilizing variance and autocorrelation structure. Over-differencing should be avoided, as it can inflate model variance and distort forecasts.
 

@@ -62,20 +62,20 @@ In macroeconomics, ABMs can simulate the evolution of the economy through the in
 
 Although agent-based models are primarily computational, they rest on well-defined mathematical components. A typical ABM can be formalized as a discrete-time dynamical system:
 
-Let the system state at time \( t \) be denoted as:
+Let the system state at time $$ t $$ be denoted as:
 
 $$
 S_t = \{a_{1,t}, a_{2,t}, ..., a_{N,t}\}
 $$
 
-where \( a_{i,t} \) represents the state of agent \( i \) at time \( t \), and \( N \) is the total number of agents.
+where $$ a_{i,t} $$ represents the state of agent $$ i $$ at time $$ t $$, and $$ N $$ is the total number of agents.
 
 ### 1. **Agent State and Behavior Functions**
 
 Each agent has:
 
-- A **state vector** \( a_{i,t} \in \mathbb{R}^k \) representing variables such as wealth, consumption, productivity, etc.  
-- A **decision function** \( f_i: S_t \rightarrow \mathbb{R}^k \) that determines how the agent updates its state:
+- A **state vector** $$ a_{i,t} \in \mathbb{R}^k $$ representing variables such as wealth, consumption, productivity, etc.  
+- A **decision function** $$ f_i: S_t \rightarrow \mathbb{R}^k $$ that determines how the agent updates its state:
 
 $$
 a_{i,t+1} = f_i(a_{i,t}, \mathcal{E}_t, \mathcal{I}_{i,t})
@@ -83,8 +83,8 @@ $$
 
 Where:
 
-- \( \mathcal{E}_t \) is the macro environment (e.g., interest rates, inflation)
-- \( \mathcal{I}_{i,t} \) is local information accessible to the agent
+- $$ \mathcal{E}_t $$ is the macro environment (e.g., interest rates, inflation)
+- $$ \mathcal{I}_{i,t} $$ is local information accessible to the agent
 
 ### 2. **Interaction Structure**
 
@@ -94,7 +94,7 @@ Agents may interact through a **network topology**, such as:
 - Small-world or scale-free networks  
 - Spatial lattices  
 
-These interactions define information flow and market exchanges. Let \( G = (V, E) \) be a graph with nodes \( V \) representing agents and edges \( E \) representing communication or trade links.
+These interactions define information flow and market exchanges. Let $$ G = (V, E) $$ be a graph with nodes $$ V $$ representing agents and edges $$ E $$ representing communication or trade links.
 
 ### 3. **Environment and Aggregation**
 
@@ -104,7 +104,7 @@ $$
 \mathcal{E}_{t+1} = g(S_t)
 $$
 
-Where \( g \) is a function that computes macro variables (e.g., GDP, inflation, aggregate demand) from the microstate \( S_t \). This allows for **micro-to-macro feedback loops**.
+Where $$ g $$ is a function that computes macro variables (e.g., GDP, inflation, aggregate demand) from the microstate $$ S_t $$. This allows for **micro-to-macro feedback loops**.
 
 ## Key Features of ABMs in Macroeconomics
 

@@ -38,11 +38,11 @@ In many real-world applications—from fraud detection to rare disease diagnosis
 
 ## How SMOTE Generates Synthetic Samples
 
-The Synthetic Minority Over-sampling Technique (SMOTE) tackles class imbalance by creating new, synthetic minority-class instances rather than merely duplicating existing ones. For each minority sample \(x_i\), SMOTE selects one of its \(k\) nearest neighbors \(x_{\text{nn}}\), computes the difference vector, scales it by a random factor \(\lambda \in [0,1]\), and adds it back to \(x_i\). Formally:
+The Synthetic Minority Over-sampling Technique (SMOTE) tackles class imbalance by creating new, synthetic minority-class instances rather than merely duplicating existing ones. For each minority sample $$x_i$$, SMOTE selects one of its $$k$$ nearest neighbors $$x_{\text{nn}}$$, computes the difference vector, scales it by a random factor $$\lambda \in [0,1]$$, and adds it back to $$x_i$$. Formally:
 
-\[
+$$
 x_{\text{new}} \;=\; x_i \;+\; \lambda \,\bigl(x_{\text{nn}} - x_i\bigr).
-\]
+$$
 
 This interpolation process effectively spreads new points along the line segments joining minority samples, ostensibly enriching the decision regions for the underrepresented class.
 

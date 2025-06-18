@@ -38,7 +38,7 @@ Hyperparameters—settings that govern the training process and structure of a m
 
 ## Grid Search: Exhaustive Exploration
 
-Grid search enumerates every possible combination of specified hyperparameter values. If you define a grid over two parameters—for instance, learning rate \(\eta \in \{10^{-3},10^{-2},10^{-1}\}\) and regularization strength \(\lambda \in \{10^{-4},10^{-3},10^{-2},10^{-1}\}\)—grid search will train and evaluate models at all 12 combinations. This exhaustive approach guarantees that the global optimum within the grid will be discovered, but its computational cost grows exponentially with the number of parameters and resolution of the grid. In low-dimensional spaces or when compute resources abound, grid search delivers reliable baselines and insights into parameter interactions. However, for high-dimensional or continuous domains, its inefficiency mandates alternative strategies.
+Grid search enumerates every possible combination of specified hyperparameter values. If you define a grid over two parameters—for instance, learning rate $$\eta \in \{10^{-3},10^{-2},10^{-1}\}$$ and regularization strength $$\lambda \in \{10^{-4},10^{-3},10^{-2},10^{-1}\}$$—grid search will train and evaluate models at all 12 combinations. This exhaustive approach guarantees that the global optimum within the grid will be discovered, but its computational cost grows exponentially with the number of parameters and resolution of the grid. In low-dimensional spaces or when compute resources abound, grid search delivers reliable baselines and insights into parameter interactions. However, for high-dimensional or continuous domains, its inefficiency mandates alternative strategies.
 
 ## Random Search: Efficient Sampling
 
@@ -48,11 +48,11 @@ Random search addresses the curse of dimensionality by drawing hyperparameter co
 
 Bayesian optimization constructs a surrogate probabilistic model—commonly a Gaussian process or Tree-structured Parzen Estimator (TPE)—to approximate the relationship between hyperparameters and objective metrics such as validation loss. At each iteration, it uses an acquisition function (e.g., Expected Improvement, Upper Confidence Bound) to balance exploration of untested regions and exploitation of known good areas. The Expected Improvement acquisition can be expressed as
 
-\[
+$$
 \alpha_{\mathrm{EI}}(x) = \mathbb{E}\bigl[\max\bigl(0,\,f(x) - f(x^+)\bigr)\bigr],
-\]
+$$
 
-where \(f(x^+)\) is the best observed objective so far. This criterion quantifies the expected gain from sampling \(x\), guiding resource allocation towards configurations with the greatest promise. Popular libraries such as Optuna, Hyperopt, and Scikit-Optimize abstract these concepts into user-friendly interfaces, enabling asynchronous parallel evaluations, pruning of unpromising trials, and automatic logging.
+where $$f(x^+)$$ is the best observed objective so far. This criterion quantifies the expected gain from sampling $$x$$, guiding resource allocation towards configurations with the greatest promise. Popular libraries such as Optuna, Hyperopt, and Scikit-Optimize abstract these concepts into user-friendly interfaces, enabling asynchronous parallel evaluations, pruning of unpromising trials, and automatic logging.
 
 ## Multi-Fidelity Methods: Hyperband and Successive Halving
 
@@ -86,7 +86,7 @@ To maximize the effectiveness of hyperparameter optimization, consider the follo
    Prioritize parameters known to impact performance (e.g., learning rate, regularization) and constrain ranges based on prior experiments or domain knowledge.
 
 2. **Scale and Transform Appropriately**  
-   Sample continuous parameters on logarithmic scales (e.g., \(\log_{10}\) for learning rates) and encode categorical choices with one-hot or ordinal representations.
+   Sample continuous parameters on logarithmic scales (e.g., $$\log_{10}$$ for learning rates) and encode categorical choices with one-hot or ordinal representations.
 
 3. **Allocate Budget Wisely**  
    Balance the number of trials with the compute time per trial. Favor a larger number of quick, low-fidelity runs early on, then refine with more thorough evaluations.
