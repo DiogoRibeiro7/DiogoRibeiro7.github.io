@@ -9,6 +9,7 @@
 
 /* Mixins and functions */
 @forward "minimal-mistakes/vendor/breakpoint/breakpoint";
+@use "minimal-mistakes/vendor/breakpoint/breakpoint" as breakpoint;
 @forward "minimal-mistakes/vendor/magnific-popup/magnific-popup";
 @forward "minimal-mistakes/vendor/susy/susy";
 @forward "minimal-mistakes/mixins";
@@ -39,4 +40,4 @@
 @forward "minimal-mistakes/print";
 
 // Configure Breakpoint after loading all modules
-@include breakpoint-set("to ems", true);
+@include breakpoint.breakpoint-set("to ems", true);
