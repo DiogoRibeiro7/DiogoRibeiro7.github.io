@@ -1,5 +1,8 @@
 @use 'sass:math';
-@use "minimal-mistakes/variables" as *;
+
+// Import theme variables so popup styles use the same fonts and colours.
+@use "../../variables" as *;
+
 ////////////////////////
 //      Settings      //
 ////////////////////////

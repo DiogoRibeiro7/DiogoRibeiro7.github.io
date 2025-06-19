@@ -1,5 +1,7 @@
 /* Magnific Popup CSS */
 @use 'sass:math';
+// Import theme variables so popup fonts match the site
+@use "../../variables" as *;
 @use "settings" as *;
 
 ////////////////////////
