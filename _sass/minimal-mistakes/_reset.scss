@@ -2,6 +2,8 @@
    STYLE RESETS
    ========================================================================== */
 
+@use "variables" as *;
+
 * { box-sizing: border-box; }
 
 html {
