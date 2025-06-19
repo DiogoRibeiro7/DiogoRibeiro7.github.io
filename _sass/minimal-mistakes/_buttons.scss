@@ -1,5 +1,6 @@
 @use "sass:color";
 @use "variables" as *;
+@use "mixins" as *; // Import mixins for color contrast helpers
 /* ==========================================================================
    BUTTONS
    ========================================================================== */
