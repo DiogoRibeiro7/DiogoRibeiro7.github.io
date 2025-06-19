@@ -2,6 +2,10 @@
    MASTHEAD
    ========================================================================== */
 
+@use "variables" as *;
+@use "mixins" as *;
+@use "vendor/breakpoint/breakpoint" as *;
+
 .masthead {
   position: relative;
   border-bottom: 1px solid $border-color;
