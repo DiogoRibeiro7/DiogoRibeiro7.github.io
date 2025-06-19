@@ -186,7 +186,9 @@ body:hover .visually-hidden button {
 
 .full {
   @include breakpoint($large) {
-    margin-right: -1 * span(2.5 of 12) !important;
+    // `span()` returns a `calc()` expression which cannot be multiplied.
+    // Passing a negative value directly avoids the undefined operation error.
+    margin-right: span(-2.5 of 12) !important;
   }
 }
 
