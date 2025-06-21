@@ -4,7 +4,8 @@ categories:
 - Statistics
 classes: wide
 date: '2020-11-25'
-excerpt: See how hypothesis testing helps draw meaningful conclusions from data in practical scenarios.
+excerpt: See how hypothesis testing helps draw meaningful conclusions from data in
+  practical scenarios.
 header:
   image: /assets/images/data_science_13.jpg
   og_image: /assets/images/data_science_13.jpg
@@ -17,15 +18,18 @@ keywords:
 - P-values
 - Significance
 - Data science
-seo_description: Learn how to apply hypothesis tests in real-world analyses and avoid common pitfalls when interpreting p-values and confidence levels.
-seo_title: 'Applying Hypothesis Testing in the Real World'
+seo_description: Learn how to apply hypothesis tests in real-world analyses and avoid
+  common pitfalls when interpreting p-values and confidence levels.
+seo_title: Applying Hypothesis Testing in the Real World
 seo_type: article
-summary: This post walks through frequentist hypothesis testing, showing how to formulate null and alternative hypotheses and interpret the results in practical data science tasks.
+summary: This post walks through frequentist hypothesis testing, showing how to formulate
+  null and alternative hypotheses and interpret the results in practical data science
+  tasks.
 tags:
 - Hypothesis testing
 - Statistics
 - Experiments
-title: 'Applying Hypothesis Testing in the Real World'
+title: Applying Hypothesis Testing in the Real World
 ---
 
 Hypothesis testing allows data scientists to objectively assess whether an observed pattern is likely due to chance or reflects a genuine effect.

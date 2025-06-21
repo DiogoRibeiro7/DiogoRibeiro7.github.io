@@ -4,7 +4,8 @@ categories:
 - Machine Learning
 classes: wide
 date: '2021-10-15'
-excerpt: Understand how decision tree algorithms split data and how pruning improves generalization.
+excerpt: Understand how decision tree algorithms split data and how pruning improves
+  generalization.
 header:
   image: /assets/images/data_science_7.jpg
   og_image: /assets/images/data_science_7.jpg
@@ -17,10 +18,12 @@ keywords:
 - Classification
 - Tree pruning
 - Machine learning
-seo_description: Learn the mechanics of decision tree algorithms, including entropy-based splits and pruning techniques that prevent overfitting.
+seo_description: Learn the mechanics of decision tree algorithms, including entropy-based
+  splits and pruning techniques that prevent overfitting.
 seo_title: How Decision Trees Work and Why Pruning Matters
 seo_type: article
-summary: This article walks through the basics of decision tree construction and explains common pruning methods to create better models.
+summary: This article walks through the basics of decision tree construction and explains
+  common pruning methods to create better models.
 tags:
 - Decision trees
 - Classification

@@ -4,7 +4,8 @@ categories:
 - Data Science
 classes: wide
 date: '2025-06-06'
-excerpt: Discover the essential steps of Exploratory Data Analysis (EDA) and how to gain insights from your data before building models.
+excerpt: Discover the essential steps of Exploratory Data Analysis (EDA) and how to
+  gain insights from your data before building models.
 header:
   image: /assets/images/data_science_5.jpg
   og_image: /assets/images/data_science_5.jpg
@@ -18,16 +19,19 @@ keywords:
 - Python
 - Pandas
 - Data cleaning
-seo_description: Learn the fundamentals of Exploratory Data Analysis using Python, including data cleaning, visualization, and summary statistics.
-seo_title: "Beginner's Guide to Exploratory Data Analysis (EDA)"
+seo_description: Learn the fundamentals of Exploratory Data Analysis using Python,
+  including data cleaning, visualization, and summary statistics.
+seo_title: Beginner's Guide to Exploratory Data Analysis (EDA)
 seo_type: article
-summary: This guide covers the core principles of Exploratory Data Analysis, demonstrating how to inspect, clean, and visualize datasets to uncover patterns and inform subsequent modeling steps.
+summary: This guide covers the core principles of Exploratory Data Analysis, demonstrating
+  how to inspect, clean, and visualize datasets to uncover patterns and inform subsequent
+  modeling steps.
 tags:
-- EDA
+- Eda
 - Data science
 - Python
 - Visualization
-title: "Exploratory Data Analysis: A Beginner's Guide"
+title: 'Exploratory Data Analysis: A Beginner''s Guide'
 ---
 
 Exploratory Data Analysis (EDA) is the process of examining a dataset to understand its main characteristics before applying more formal statistical modeling or machine learning. By exploring your data upfront, you can identify patterns, spot anomalies, and test assumptions that might otherwise go unnoticed.

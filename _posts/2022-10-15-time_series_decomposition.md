@@ -5,7 +5,8 @@ categories:
 - Time Series
 classes: wide
 date: '2022-10-15'
-excerpt: Learn how time series decomposition reveals trend, seasonality, and residual components for clearer forecasting insights.
+excerpt: Learn how time series decomposition reveals trend, seasonality, and residual
+  components for clearer forecasting insights.
 header:
   image: /assets/images/data_science_12.jpg
   og_image: /assets/images/data_science_12.jpg
@@ -19,10 +20,12 @@ keywords:
 - Seasonality
 - Forecasting
 - Decomposition
-seo_description: Discover how to separate trend and seasonal patterns from a time series using additive or multiplicative decomposition.
-seo_title: 'Time Series Decomposition Made Simple'
+seo_description: Discover how to separate trend and seasonal patterns from a time
+  series using additive or multiplicative decomposition.
+seo_title: Time Series Decomposition Made Simple
 seo_type: article
-summary: This article explains how decomposing a time series helps isolate long-term trends and recurring seasonal effects so you can model data more effectively.
+summary: This article explains how decomposing a time series helps isolate long-term
+  trends and recurring seasonal effects so you can model data more effectively.
 tags:
 - Time series
 - Forecasting

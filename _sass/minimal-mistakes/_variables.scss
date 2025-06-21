@@ -1,3 +1,4 @@
+@use "sass:color";
 /* ==========================================================================
    Variables
    ========================================================================== */
@@ -32,8 +33,8 @@ $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
 // Setting the fonts
-$global-font-family: "Roboto", Helvetica, Arial, sans-serif;
-$header-font-family: "Lora", "Times New Roman", serif;
+$global-font-family: 'Inter', system-ui, sans-serif;
+$header-font-family: 'Nunito Sans', system-ui, sans-serif;
 $caption-font-family: "Cardo, serif";
 
 /* type scale */
@@ -59,27 +60,33 @@ $h-size-6: 1em !default; // ~16px
    ========================================================================== */
 
 $gray: #7a8288 !default;
-$dark-gray: mix(#000, $gray, 50%) !default;
-$darker-gray: mix(#000, $gray, 60%) !default;
-$light-gray: mix(#fff, $gray, 50%) !default;
-$lighter-gray: mix(#fff, $gray, 90%) !default;
+$dark-gray: color.mix(#000, $gray, 50%) !default;
+$darker-gray: color.mix(#000, $gray, 60%) !default;
+$light-gray: color.mix(#fff, $gray, 50%) !default;
+$lighter-gray: color.mix(#fff, $gray, 90%) !default;
 
 $background-color: #fff !default;
 $code-background-color: #fafafa !default;
 $code-background-color-dark: $light-gray !default;
 $text-color: $dark-gray !default;
-$muted-text-color: mix(#fff, $text-color, 20%) !default;
+$muted-text-color: color.mix(#fff, $text-color, 20%) !default;
 $border-color: $lighter-gray !default;
 $form-background-color: $lighter-gray !default;
 $footer-background-color: $lighter-gray !default;
 
-$primary-color: #6f777d !default;
+$color-primary: #2a4849 !default;
+$color-secondary: #6c757d !default;
+$color-background: #f7f9fa !default;
+$color-surface: #ffffff !default;
+$color-accent: #ffca00 !default;
+
+$primary-color: $color-primary !default;
 $success-color: #3fa63f !default;
 $warning-color: #d67f05 !default;
 $danger-color: #ee5f5b !default;
 $info-color: #3b9cba !default;
 $focus-color: $primary-color !default;
-$active-color: mix(#fff, $primary-color, 80%) !default;
+$active-color: color.mix(#fff, $primary-color, 80%) !default;
 
 /* YIQ color contrast */
 $yiq-contrasted-dark-default: $dark-gray !default;
@@ -114,12 +121,12 @@ $youtube-color: #bb0000 !default;
 $xing-color: #006567 !default;
 
 /* links */
-$link-color: mix(#000, $info-color, 20%) !default;
-$link-color-hover: mix(#000, $link-color, 25%) !default;
-$link-color-visited: mix(#fff, $link-color, 15%) !default;
+$link-color: color.mix(#000, $info-color, 20%) !default;
+$link-color-hover: color.mix(#000, $link-color, 25%) !default;
+$link-color-visited: color.mix(#fff, $link-color, 15%) !default;
 $masthead-link-color: $primary-color !default;
-$masthead-link-color-hover: mix(#000, $primary-color, 25%) !default;
-$navicon-link-color-hover: mix(#fff, $primary-color, 75%) !default;
+$masthead-link-color-hover: color.mix(#000, $primary-color, 25%) !default;
+$navicon-link-color-hover: color.mix(#fff, $primary-color, 75%) !default;
 
 /* notices */
 $notice-background-mix: 80% !default;

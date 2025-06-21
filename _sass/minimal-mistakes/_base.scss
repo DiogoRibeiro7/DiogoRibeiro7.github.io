@@ -2,6 +2,10 @@
    BASE ELEMENTS
    ========================================================================== */
 
+@use "variables" as *;
+@use "vendor/breakpoint/breakpoint" as *;
+@use "mixins";
+
 html {
   /* sticky footer fix */
   position: relative;

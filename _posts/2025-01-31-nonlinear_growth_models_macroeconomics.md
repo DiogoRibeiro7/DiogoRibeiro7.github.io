@@ -96,7 +96,7 @@ $$
 \dot{A} = \phi A^\beta L_A
 $$
 
-Where \( \beta > 1 \) leads to accelerating technological growth, while \( \beta < 1 \) introduces convergence or stagnation risks.
+Where $$ \beta > 1 $$ leads to accelerating technological growth, while $$ \beta < 1 $$ introduces convergence or stagnation risks.
 
 ---
 author_profile: false

@@ -4,7 +4,8 @@ categories:
 - Statistics
 classes: wide
 date: '2020-11-20'
-excerpt: Explore the fundamentals of Bayesian inference and how prior beliefs combine with data to form posterior conclusions.
+excerpt: Explore the fundamentals of Bayesian inference and how prior beliefs combine
+  with data to form posterior conclusions.
 header:
   image: /assets/images/data_science_12.jpg
   og_image: /assets/images/data_science_12.jpg
@@ -17,15 +18,17 @@ keywords:
 - Priors
 - Posterior distributions
 - Data science
-seo_description: An overview of Bayesian inference, demonstrating how to update prior beliefs with new evidence to make data-driven decisions.
-seo_title: 'Bayesian Inference Explained'
+seo_description: An overview of Bayesian inference, demonstrating how to update prior
+  beliefs with new evidence to make data-driven decisions.
+seo_title: Bayesian Inference Explained
 seo_type: article
-summary: Learn how Bayesian inference updates prior beliefs into posterior distributions, providing a flexible framework for reasoning under uncertainty.
+summary: Learn how Bayesian inference updates prior beliefs into posterior distributions,
+  providing a flexible framework for reasoning under uncertainty.
 tags:
 - Bayesian
 - Inference
 - Statistics
-title: 'Bayesian Inference Explained'
+title: Bayesian Inference Explained
 ---
 
 Bayesian inference offers a powerful perspective on probability, treating unknown quantities as distributions that update when new evidence appears.

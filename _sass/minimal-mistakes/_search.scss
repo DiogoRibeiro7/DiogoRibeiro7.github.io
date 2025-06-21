@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "variables" as *;
+@use "mixins" as *;
+@use "vendor/breakpoint/breakpoint" as *;
 /* ==========================================================================
    SEARCH
    ========================================================================== */
@@ -21,7 +25,7 @@
   transition: 0.2s;
 
   &:hover {
-    color: mix(#000, $primary-color, 25%);
+    color: color.mix(#000, $primary-color, 25%);
   }
 }
 

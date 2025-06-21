@@ -20,3 +20,5 @@ main:
   #   url: /sitemap/
   - title: "Code Download"
     url: /code/
+  - title: "Package Docs"
+    url: /docs/

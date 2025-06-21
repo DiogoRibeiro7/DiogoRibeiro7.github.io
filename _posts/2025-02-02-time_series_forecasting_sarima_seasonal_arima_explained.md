@@ -80,9 +80,9 @@ $$
 
 Where:
 
-- \( p \): Number of autoregressive terms  
-- \( d \): Number of differencing operations  
-- \( q \): Number of moving average terms  
+- $$ p $$: Number of autoregressive terms  
+- $$ d $$: Number of differencing operations  
+- $$ q $$: Number of moving average terms  
 
 While ARIMA works well for many datasets, it does not explicitly model **seasonal structure**. For example, monthly sales data may show a 12-month cycle, which ARIMA cannot capture directly.
 
@@ -96,9 +96,9 @@ $$
 
 Where:
 
-- \( p, d, q \): Non-seasonal ARIMA parameters  
-- \( P, D, Q \): Seasonal AR, differencing, and MA orders  
-- \( s \): Seasonality period (e.g., 12 for monthly data with yearly seasonality)  
+- $$ p, d, q $$: Non-seasonal ARIMA parameters  
+- $$ P, D, Q $$: Seasonal AR, differencing, and MA orders  
+- $$ s $$: Seasonality period (e.g., 12 for monthly data with yearly seasonality)  
 
 For example:
 
@@ -128,15 +128,15 @@ $$
 \Phi(B^s) \phi(B) (1 - B)^d (1 - B^s)^D y_t = \Theta(B^s) \theta(B) \varepsilon_t
 $$
 
-Where \( \varepsilon_t \) is white noise.
+Where $$ \varepsilon_t $$ is white noise.
 
 ## 5. Parameter Selection: Seasonal and Non-Seasonal
 
-### Step 1: Seasonal Period \( s \)
+### Step 1: Seasonal Period $$ s $$
 
 Choose based on frequency (e.g., 12 for monthly).
 
-### Step 2: Differencing \( d \), \( D \)
+### Step 2: Differencing $$ d $$, $$ D $$
 
 Use plots and ADF tests to determine.
 
@@ -144,8 +144,8 @@ Use plots and ADF tests to determine.
 
 Use ACF and PACF plots to estimate:
 
-- \( p, q \) for non-seasonal  
-- \( P, Q \) for seasonal  
+- $$ p, q $$ for non-seasonal  
+- $$ P, Q $$ for seasonal  
 
 ### Step 4: Use Auto ARIMA (Python)
 

@@ -5,8 +5,10 @@ search: false
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+@use "sass:color";
+@use "minimal-mistakes/variables" as *;
+@use "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}" as *; // skin
+@use "minimal-mistakes" as *; // main partials
 
 /* Remove underline and set color to black */
 a {
@@ -133,4 +135,17 @@ a:hover {
 .layout--home .page__hero-image img {
   max-height: 40vh;
   object-fit: cover;
+}
+
+/* Card styles for archive items */
+.archive__item.card {
+  background: $background-color;
+  border-radius: $border-radius;
+  padding: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.archive__item.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

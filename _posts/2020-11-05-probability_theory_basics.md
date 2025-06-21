@@ -4,7 +4,8 @@ categories:
 - Statistics
 classes: wide
 date: '2020-11-05'
-excerpt: An introduction to probability theory concepts every data scientist should know.
+excerpt: An introduction to probability theory concepts every data scientist should
+  know.
 header:
   image: /assets/images/data_science_10.jpg
   og_image: /assets/images/data_science_10.jpg
@@ -17,15 +18,17 @@ keywords:
 - Random variables
 - Distributions
 - Data science
-seo_description: Learn the core principles of probability theory, from random variables to common distributions, with practical examples for data science.
-seo_title: 'Probability Theory Basics for Data Science'
+seo_description: Learn the core principles of probability theory, from random variables
+  to common distributions, with practical examples for data science.
+seo_title: Probability Theory Basics for Data Science
 seo_type: article
-summary: This post reviews essential probability concepts like random variables, expectation, and common distributions, illustrating how they underpin data science workflows.
+summary: This post reviews essential probability concepts like random variables, expectation,
+  and common distributions, illustrating how they underpin data science workflows.
 tags:
 - Probability
 - Statistics
 - Data science
-title: 'Probability Theory Basics for Data Science'
+title: Probability Theory Basics for Data Science
 ---
 
 Probability theory provides the mathematical foundation for modeling uncertainty. By understanding random variables and probability distributions, data scientists can quantify risks and make informed decisions.

@@ -4,7 +4,8 @@ categories:
 - Data Science
 classes: wide
 date: '2020-11-10'
-excerpt: Understand how simple linear regression models the relationship between two variables using a single predictor.
+excerpt: Understand how simple linear regression models the relationship between two
+  variables using a single predictor.
 header:
   image: /assets/images/data_science_11.jpg
   og_image: /assets/images/data_science_11.jpg
@@ -16,15 +17,17 @@ keywords:
 - Linear regression
 - Least squares
 - Data analysis
-seo_description: Discover the mechanics of simple linear regression and how to interpret slope and intercept when fitting a straight line to data.
-seo_title: 'A Primer on Simple Linear Regression'
+seo_description: Discover the mechanics of simple linear regression and how to interpret
+  slope and intercept when fitting a straight line to data.
+seo_title: A Primer on Simple Linear Regression
 seo_type: article
-summary: This article introduces simple linear regression and the least squares method, showing how a single predictor explains variation in a response variable.
+summary: This article introduces simple linear regression and the least squares method,
+  showing how a single predictor explains variation in a response variable.
 tags:
 - Regression
 - Statistics
 - Data science
-title: 'A Primer on Simple Linear Regression'
+title: A Primer on Simple Linear Regression
 ---
 
 Simple linear regression is a foundational technique for modeling the relationship between a predictor variable and a response variable. By fitting a straight line, we can quantify how changes in one variable are associated with changes in another.
