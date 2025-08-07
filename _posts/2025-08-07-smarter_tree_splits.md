@@ -46,8 +46,8 @@ $$
 
 Where:
 
-- $\text{Var}(y)$ is the variance of the target variable in a node.
-- $n$ denotes the number of samples in each respective node.
+- $$\text{Var}(y)$$ is the variance of the target variable in a node.
+- $$n$$ denotes the number of samples in each respective node.
 
 This formulation effectively measures how much more "pure" (less variance) the child nodes become after a split. It works well in many cases but has some computational and numerical limitations, especially at scale.
 
