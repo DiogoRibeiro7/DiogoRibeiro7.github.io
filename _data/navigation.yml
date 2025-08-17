@@ -18,7 +18,5 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
-  - title: "Code Download"
-    url: /code/
-  - title: "Package Docs"
-    url: /docs/
+  - title: "Packages"
+    url: /packages/
