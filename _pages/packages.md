@@ -35,4 +35,20 @@ A multilingual greeting and farewell package that serves as an example of proper
 
 --------------------------------------------------------------------------------
 
+### [unconfoundedr](/packages/unconfoundedr/)
+
+Test (un)confoundedness by comparing an effect from an RCT-like dataset to the same estimand from an observational dataset. Includes robust estimators, inference, and transportability tools.
+
+**Features:**
+
+- IPW and AIPW (doubly robust) estimators for the marginal ATE
+- Bootstrap confidence intervals and Wald test
+- Transport modes: `none`, `rct_to_obs`, and `auto` (KS/energy shift detection)
+- Diagnostics for propensity overlap, stabilized weights, trimming, and transport ESS
+
+[View Documentation →](/packages/unconfoundedr/)
+
+--------------------------------------------------------------------------------
+
 For more R packages and data science content, check out my [GitHub profile](https://github.com/DiogoRibeiro7).
+
