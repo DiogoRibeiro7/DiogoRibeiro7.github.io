@@ -32,6 +32,14 @@ keywords:
   - research reproducibility
   - confirmatory analysis
 classes: wide
+date: '2025-08-13'
+header:
+  image: /assets/images/data_science_10.jpg
+  og_image: /assets/images/data_science_10.jpg
+  overlay_image: /assets/images/data_science_10.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_10.jpg
+  twitter_image: /assets/images/data_science_10.jpg
 ---
 
 Structural Equation Modeling (SEM) is a powerful analytical tool, capable of modeling complex latent structures and causal relationships between variables. From psychology to marketing, SEM is used in diverse fields to test theoretical models with observed data. Yet, the same flexibility that makes SEM attractive also opens the door to excessive researcher degrees of freedom. Without constraints, analysts can tweak specifications post hoc--knowingly or unknowingly--to produce more favorable results.
