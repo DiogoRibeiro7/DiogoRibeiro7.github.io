@@ -24,15 +24,6 @@ Here are several article ideas that would complement the ARIMAX time series mode
    - Discuss the advantages and limitations of each approach.
    - Provide examples and code implementation in Python. -->
 
-### 5. **"Multivariate Time Series Forecasting: VAR and VECM Models Explained"**
-   - Dive into the Vector AutoRegressive (VAR) model and Vector Error Correction Model (VECM) for multivariate time series data.
-   - Discuss how these models handle interdependencies between multiple time series.
-   - Provide examples of applications in economics, finance, and weather forecasting.
-
-### 6. **"Handling Non-Stationarity in Time Series Data: Techniques and Best Practices"**
-   - Discuss why stationarity is crucial for time series forecasting models like ARIMA and ARIMAX.
-   - Explain techniques to make a time series stationary (differencing, transformations, detrending).
-   - Introduce tests like ADF and KPSS, with practical examples in R or Python.
 
 ### 7. **"Prophet: A Modern Approach to Time Series Forecasting Developed by Facebook"**
    - Introduce the Prophet model developed by Facebook, which is designed to handle seasonality and holidays with ease.
