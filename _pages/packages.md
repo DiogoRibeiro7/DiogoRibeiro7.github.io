@@ -1,6 +1,6 @@
 ---
 layout: single
-title: R Packages
+title: Packages
 permalink: /packages/
 author_profile: true
 header:
@@ -50,5 +50,28 @@ Test (un)confoundedness by comparing an effect from an RCT-like dataset to the s
 
 --------------------------------------------------------------------------------
 
-For more R packages and data science content, check out my [GitHub profile](https://github.com/DiogoRibeiro7).
+# Python Packages
+
+This section includes Python libraries I've developed or contributed to, with a focus on statistical modeling, survival analysis, and reproducibility.
+
+## Available Packages
+
+### [genSurvPy](/packages/gensurvpy/)
+
+A Python package for generalized survival analysis. It includes tools for simulation, estimation, and diagnostics in complex time-to-event models, including proportional hazards and accelerated failure time frameworks.
+
+**Features:**
+
+- Flexible simulation of survival datasets under user-defined models
+- Support for right-censored and interval-censored data
+- Estimation under both PH and AFT models using parametric or semi-parametric methods
+- Modular API for custom hazard and survival functions
+- Publication-ready plots using matplotlib and seaborn
+- Documentation built with Sphinx, deployed to both Read the Docs and this site
+
+[View Documentation →](/packages/gensurvpy/)
+
+--------------------------------------------------------------------------------
+
+For more R and Python packages, as well as general data science content, visit my [GitHub profile](https://github.com/DiogoRibeiro7).
 
