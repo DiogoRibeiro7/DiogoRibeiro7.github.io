@@ -27,6 +27,14 @@ keywords:
 - "XGBoost"
 - "scikit-learn"
 classes: wide
+date: '2025-08-07'
+header:
+  image: /assets/images/data_science_6.jpg
+  og_image: /assets/images/data_science_6.jpg
+  overlay_image: /assets/images/data_science_6.jpg
+  show_overlay_excerpt: false
+  teaser: /assets/images/data_science_6.jpg
+  twitter_image: /assets/images/data_science_6.jpg
 ---
 
 When building regression trees, whether in standalone models or ensembles like Random Forests and Gradient Boosted Trees, the key objective is to decide the best way to split nodes for optimal predictive performance. Traditionally, this has been done using **Mean Squared Error (MSE)** as a split criterion. However, many modern implementations — such as those in **LightGBM**, **XGBoost**, and **scikit-learn’s HistGradientBoostingRegressor** — use a mathematically equivalent but computationally superior alternative: **Friedman MSE**.

@@ -25,16 +25,6 @@ Here are several article ideas that would complement the ARIMAX time series mode
    - Provide examples and code implementation in Python. -->
 
 
-### 7. **"Prophet: A Modern Approach to Time Series Forecasting Developed by Facebook"**
-   - Introduce the Prophet model developed by Facebook, which is designed to handle seasonality and holidays with ease.
-   - Discuss how it differs from ARIMA, its ease of use for non-experts, and how it handles missing data and seasonality.
-   - Provide code examples and case studies of its use in industry.
-
-### 8. **"Evaluating Time Series Forecasting Models: Metrics and Best Practices"**
-   - Discuss how to evaluate the performance of time series models using metrics like RMSE, MAE, AIC, BIC, and MAPE.
-   - Explain model validation techniques such as cross-validation and out-of-sample testing.
-   - Provide a guide to interpreting results and improving model performance.
-
 ### 9. **"Causality and Granger Causality in Time Series Data"**
    - Explore the concept of Granger Causality and how it is used to determine if one time series can predict another.
    - Provide mathematical explanations, real-world examples (e.g., economic indicators), and implementation in R or Python.
