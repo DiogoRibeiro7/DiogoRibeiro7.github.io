@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gen_surv: Survival Data Simulation in Python &mdash; gen_surv 1.0.9 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="canonical" href="https://gensurvpy.readthedocs.io/index.html"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=0abd802e"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=30646c52"></script>
+        <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Started" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            gen_surv
+          </a>
+              <div class="version">
+                1.0.9
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">📘 Mathematical Foundations of <code class="docutils literal notranslate"><span class="pre">gen_surv</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="algorithms.html">Algorithm Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rtd.html">Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html#contributing-to-gen-surv">Contributing to gen_surv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id1">CHANGELOG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">gen_surv</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">gen_surv: Survival Data Simulation in Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gen-surv-survival-data-simulation-in-python">
+<h1>gen_surv: Survival Data Simulation in Python<a class="headerlink" href="#gen-surv-survival-data-simulation-in-python" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="https://gensurvpy.readthedocs.io/en/latest/?badge=latest"><img alt="Documentation Status" src="https://readthedocs.org/projects/gensurvpy/badge/?version=latest" /></a>
+<a class="reference external" href="https://badge.fury.io/py/gen-surv"><img alt="PyPI version" src="https://badge.fury.io/py/gen-surv.svg" /></a>
+<a class="reference external" href="https://pypi.org/project/gen-surv/"><img alt="Python versions" src="https://img.shields.io/pypi/pyversions/gen-surv.svg" /></a></p>
+<p><strong>gen_surv</strong> is a comprehensive Python package for simulating survival data under various statistical models, inspired by the R package <code class="docutils literal notranslate"><span class="pre">genSurv</span></code>. It provides a unified interface for generating synthetic survival datasets that are essential for:</p>
+<ul class="simple">
+<li><p><strong>Research</strong>: Testing new survival analysis methods</p></li>
+<li><p><strong>Education</strong>: Teaching survival analysis concepts</p></li>
+<li><p><strong>Benchmarking</strong>: Comparing different survival models</p></li>
+<li><p><strong>Validation</strong>: Testing statistical software implementations</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Quick Start</p>
+<p>Install with pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>gen-surv
+</pre></div>
+</div>
+</div>
+<p>Generate your first dataset:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">gen_surv</span><span class="w"> </span><span class="kn">import</span> <span class="n">generate</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">generate</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;cphm&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">covariate_range</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+```{note}
+The `to_sksurv` helper and related tests require the optional
+dependency `scikit-survival`. Install it with `poetry install --with dev`
+or `pip install scikit-survival` if you need this functionality.
+</pre></div>
+</div>
+<section id="supported-models">
+<h2>Supported Models<a class="headerlink" href="#supported-models" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Model</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Use Case</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>CPHM</strong></p></td>
+<td><p>Cox Proportional Hazards</p></td>
+<td><p>Standard survival regression</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>AFT</strong></p></td>
+<td><p>Accelerated Failure Time</p></td>
+<td><p>Non-proportional hazards</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>CMM</strong></p></td>
+<td><p>Continuous-Time Markov</p></td>
+<td><p>Multi-state processes</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>TDCM</strong></p></td>
+<td><p>Time-Dependent Covariates</p></td>
+<td><p>Dynamic risk factors</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>THMM</strong></p></td>
+<td><p>Time-Homogeneous Markov</p></td>
+<td><p>Hidden state processes</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Competing Risks</strong></p></td>
+<td><p>Multiple event types</p></td>
+<td><p>Cause-specific hazards</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Mixture Cure</strong></p></td>
+<td><p>Long-term survivors</p></td>
+<td><p>Logistic cure fraction</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Piecewise Exponential</strong></p></td>
+<td><p>Piecewise constant hazard</p></td>
+<td><p>Flexible baseline</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="algorithm-descriptions">
+<h2>Algorithm Descriptions<a class="headerlink" href="#algorithm-descriptions" title="Link to this heading"></a></h2>
+<p>For a brief summary of each statistical model see <a class="reference internal" href="algorithms.html"><span class="doc">Algorithm Overview</span></a>. Mathematical
+details and notation are provided on the <a class="reference internal" href="theory.html"><span class="doc">📘 Mathematical Foundations of gen_surv</span></a> page.</p>
+</section>
+<section id="documentation-contents">
+<h2>Documentation Contents<a class="headerlink" href="#documentation-contents" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#basic-usage">Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#understanding-the-output">Understanding the Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#command-line-usage">Command Line Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#building-the-documentation">Building the Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/basic_usage.html">Basic Usage Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#core-interface">Core Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">📘 Mathematical Foundations of <code class="docutils literal notranslate"><span class="pre">gen_surv</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#cox-proportional-hazards-model-cphm">1. Cox Proportional Hazards Model (CPHM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#time-dependent-covariate-model-tdcm">2. Time-Dependent Covariate Model (TDCM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#continuous-time-multi-state-markov-model-cmm">3. Continuous-Time Multi-State Markov Model (CMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#time-homogeneous-hidden-markov-model-thmm">4. Time-Homogeneous Hidden Markov Model (THMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#accelerated-failure-time-aft-models">5. Accelerated Failure Time (AFT) Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#competing-risks-models">6. Competing Risks Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#mixture-cure-models">7. Mixture Cure Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#piecewise-exponential-model">8. Piecewise Exponential Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="algorithms.html">Algorithm Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="algorithms.html#cox-proportional-hazards-model-cphm">Cox Proportional Hazards Model (CPHM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms.html#accelerated-failure-time-models-aft">Accelerated Failure Time Models (AFT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms.html#continuous-time-multi-state-markov-model-cmm">Continuous-Time Multi-State Markov Model (CMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms.html#time-dependent-covariate-model-tdcm">Time-Dependent Covariate Model (TDCM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms.html#time-homogeneous-hidden-markov-model-thmm">Time-Homogeneous Hidden Markov Model (THMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms.html#competing-risks">Competing Risks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms.html#mixture-cure-model">Mixture Cure Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms.html#piecewise-exponential-model">Piecewise Exponential Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/tdcm.html">Time-Dependent Covariate Model (TDCM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/cmm.html">Continuous-Time Multi-State Markov Model (CMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/thmm.html">Time-Homogeneous Hidden Markov Model (THMM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#modulenotfounderror-no-module-named-gen-surv">ModuleNotFoundError: No module named ‘gen_surv’</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#validation-errors-when-generating-data">Validation errors when generating data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#inconsistent-results-between-runs">Inconsistent results between runs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rtd.html">Read the Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rtd.html#building-locally">Building Locally</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html#contributing-to-gen-surv">Contributing to gen_surv</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#submitting-changes">Submitting Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id1">CHANGELOG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v1-0-9-2025-08-02">v1.0.9 (2025-08-02)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v1-0-8-2025-07-30">v1.0.8 (2025-07-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v1-0-0-2025-06-06">v1.0.0 (2025-06-06)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-7-1-2025-04-13">v0.7.1 (2025-04-13)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-7-0-2025-04-12">v0.7.0 (2025-04-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-6-1-2025-04-12">v0.6.1 (2025-04-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-6-0-2025-04-12">v0.6.0 (2025-04-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-5-0-2025-04-12">v0.5.0 (2025-04-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-4-0-2025-04-12">v0.4.0 (2025-04-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-3-1-2025-04-12">v0.3.1 (2025-04-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-3-0-2025-04-12">v0.3.0 (2025-04-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-2-1-2025-04-12">v0.2.1 (2025-04-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-2-0-2025-04-12">v0.2.0 (2025-04-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-1-0-2025-04-12">v0.1.0 (2025-04-12)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bibliography.html#cox-1972">Cox (1972)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography.html#farewell-1982">Farewell (1982)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography.html#fine-and-gray-1999">Fine and Gray (1999)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography.html#andersen-et-al-1993">Andersen et al. (1993)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography.html#zucchini-et-al-2017">Zucchini et al. (2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography.html#klein-and-moeschberger-2003">Klein and Moeschberger (2003)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography.html#kalbfleisch-and-prentice-2002">Kalbfleisch and Prentice (2002)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography.html#cook-and-lawless-2007">Cook and Lawless (2007)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography.html#kaplan-and-meier-1958">Kaplan and Meier (1958)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography.html#therneau-and-grambsch-2000">Therneau and Grambsch (2000)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography.html#fleming-and-harrington-1991">Fleming and Harrington (1991)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography.html#collett-2015">Collett (2015)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography.html#kleinbaum-and-klein-2012">Kleinbaum and Klein (2012)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="quick-examples">
+<h2>Quick Examples<a class="headerlink" href="#quick-examples" title="Link to this heading"></a></h2>
+<section id="cox-proportional-hazards-model">
+<h3>Cox Proportional Hazards Model<a class="headerlink" href="#cox-proportional-hazards-model" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">gen_surv</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gs</span>
+
+<span class="c1"># Basic CPHM with uniform censoring</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;cphm&quot;</span><span class="p">,</span> 
+    <span class="n">n</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> 
+    <span class="n">beta</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> 
+    <span class="n">covariate_range</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
+    <span class="n">model_cens</span><span class="o">=</span><span class="s2">&quot;uniform&quot;</span><span class="p">,</span> 
+    <span class="n">cens_par</span><span class="o">=</span><span class="mf">3.0</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="accelerated-failure-time-model">
+<h3>Accelerated Failure Time Model<a class="headerlink" href="#accelerated-failure-time-model" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># AFT with log-normal distribution</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;aft_ln&quot;</span><span class="p">,</span>
+    <span class="n">n</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+    <span class="n">beta</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
+    <span class="n">sigma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">model_cens</span><span class="o">=</span><span class="s2">&quot;exponential&quot;</span><span class="p">,</span>
+    <span class="n">cens_par</span><span class="o">=</span><span class="mf">2.0</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="multi-state-markov-model">
+<h3>Multi-State Markov Model<a class="headerlink" href="#multi-state-markov-model" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Three-state illness-death model</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;cmm&quot;</span><span class="p">,</span>
+    <span class="n">n</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">qmat</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
+    <span class="n">p0</span><span class="o">=</span><span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+    <span class="n">model_cens</span><span class="o">=</span><span class="s2">&quot;uniform&quot;</span><span class="p">,</span>
+    <span class="n">cens_par</span><span class="o">=</span><span class="mf">5.0</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="key-features">
+<h2>Key Features<a class="headerlink" href="#key-features" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Unified Interface</strong>: Single <code class="docutils literal notranslate"><span class="pre">generate()</span></code> function for all models</p></li>
+<li><p><strong>Flexible Censoring</strong>: Support for uniform and exponential censoring</p></li>
+<li><p><strong>Rich Parameterization</strong>: Extensive customization options</p></li>
+<li><p><strong>Command-Line Interface</strong>: Generate datasets from terminal</p></li>
+<li><p><strong>Comprehensive Validation</strong>: Input parameter checking</p></li>
+<li><p><strong>Educational Focus</strong>: Clear mathematical documentation</p></li>
+</ul>
+</section>
+<section id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Link to this heading"></a></h2>
+<p>If you use gen_surv in your research, please cite:</p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@software</span><span class="p">{</span><span class="nl">ribeiro2025gensurvpy</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{gen_surv: Survival Data Simulation in Python}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Diogo Ribeiro}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2025}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://github.com/DiogoRibeiro7/genSurvPy}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">version</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{1.0.9}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Link to this heading"></a></h2>
+<p>MIT License - see <a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/blob/main/LICENSE">LICENSE</a> for details.</p>
+<p>For foundational papers related to these models see the <a class="reference internal" href="bibliography.html"><span class="doc">References</span></a>.
+Information on building the docs is provided in the <a class="reference internal" href="rtd.html"><span class="doc">Read the Docs</span></a> page.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Diogo Ribeiro.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📘 Mathematical Foundations of gen_surv &mdash; gen_surv 1.0.9 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="canonical" href="https://gensurvpy.readthedocs.io/theory.html"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=0abd802e"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=30646c52"></script>
+        <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Algorithm Overview" href="algorithms.html" />
+    <link rel="prev" title="API Reference" href="api/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            gen_surv
+          </a>
+              <div class="version">
+                1.0.9
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">📘 Mathematical Foundations of <code class="docutils literal notranslate"><span class="pre">gen_surv</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cox-proportional-hazards-model-cphm">1. Cox Proportional Hazards Model (CPHM)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#weibull-baseline-hazard">Weibull baseline hazard:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#time-dependent-covariate-model-tdcm">2. Time-Dependent Covariate Model (TDCM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#continuous-time-multi-state-markov-model-cmm">3. Continuous-Time Multi-State Markov Model (CMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#time-homogeneous-hidden-markov-model-thmm">4. Time-Homogeneous Hidden Markov Model (THMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#accelerated-failure-time-aft-models">5. Accelerated Failure Time (AFT) Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#log-normal-aft">Log-Normal AFT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#competing-risks-models">6. Competing Risks Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mixture-cure-models">7. Mixture Cure Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#piecewise-exponential-model">8. Piecewise Exponential Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="algorithms.html">Algorithm Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rtd.html">Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html#contributing-to-gen-surv">Contributing to gen_surv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id1">CHANGELOG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">gen_surv</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">📘 Mathematical Foundations of <code class="docutils literal notranslate"><span class="pre">gen_surv</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/theory.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mathematical-foundations-of-gen-surv">
+<h1>📘 Mathematical Foundations of <code class="docutils literal notranslate"><span class="pre">gen_surv</span></code><a class="headerlink" href="#mathematical-foundations-of-gen-surv" title="Link to this heading"></a></h1>
+<p>This page presents the mathematical formulation behind the survival models implemented in the <code class="docutils literal notranslate"><span class="pre">gen_surv</span></code> package.</p>
+<hr class="docutils" />
+<section id="cox-proportional-hazards-model-cphm">
+<h2>1. Cox Proportional Hazards Model (CPHM)<a class="headerlink" href="#cox-proportional-hazards-model-cphm" title="Link to this heading"></a></h2>
+<p>This semi-parametric approach models the hazard as a baseline component
+multiplied by an exponential term involving the covariates. The hazard
+function conditioned on covariates is:</p>
+<p>$$
+h(t \mid X) = h_0(t) \exp(X \beta)
+$$</p>
+<p>Where:</p>
+<ul class="simple">
+<li><p>( h_0(t) ) is the baseline hazard</p></li>
+<li><p>( X \beta ) is the linear predictor</p></li>
+</ul>
+<section id="weibull-baseline-hazard">
+<h3>Weibull baseline hazard:<a class="headerlink" href="#weibull-baseline-hazard" title="Link to this heading"></a></h3>
+<p>$$
+h_0(t) = \lambda \rho t^{\rho - 1}
+$$</p>
+<p>The cumulative hazard is:</p>
+<p>$$
+\Lambda_0(t) = \lambda t^{\rho}
+$$</p>
+<p>And the survival function becomes:</p>
+<p>$$
+S(t \mid X) = \exp\left(-\Lambda_0(t) \exp(X \beta)\right)
+$$</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="time-dependent-covariate-model-tdcm">
+<h2>2. Time-Dependent Covariate Model (TDCM)<a class="headerlink" href="#time-dependent-covariate-model-tdcm" title="Link to this heading"></a></h2>
+<p>This extension of the Cox model allows covariate values to vary during
+follow-up, accommodating exposures or treatments that change over time:</p>
+<p>$$
+h(t \mid Z(t)) = h_0(t) \exp(Z(t) \beta)
+$$</p>
+<p>In this package, piecewise covariate values are simulated with dependence across segments using correlated normal draws.</p>
+</section>
+<hr class="docutils" />
+<section id="continuous-time-multi-state-markov-model-cmm">
+<h2>3. Continuous-Time Multi-State Markov Model (CMM)<a class="headerlink" href="#continuous-time-multi-state-markov-model-cmm" title="Link to this heading"></a></h2>
+<p>This framework captures transitions between a finite set of states where
+waiting times are exponentially distributed. With generator matrix ( Q ), the transition probability matrix is given by:</p>
+<p>$$
+P(t) = \exp(Qt)
+$$</p>
+<p>Where:</p>
+<ul class="simple">
+<li><p>( Q ) is the rate matrix</p></li>
+<li><p>( P(t)_{ij} ) gives the probability of being in state j at time t given starting in state i</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="time-homogeneous-hidden-markov-model-thmm">
+<h2>4. Time-Homogeneous Hidden Markov Model (THMM)<a class="headerlink" href="#time-homogeneous-hidden-markov-model-thmm" title="Link to this heading"></a></h2>
+<p>This model handles situations where the process evolves through unobserved
+states that generate the observed responses. It simulates observed states with
+latent transitions.</p>
+<p>Let:</p>
+<ul class="simple">
+<li><p>( S_t ) be the latent state at time t</p></li>
+<li><p>( Y_t ) be the observed variable conditional on ( S_t )</p></li>
+</ul>
+<p>The transition structure is governed by a homogeneous Markov chain with transition matrix ( P ), and emissions are Gaussian:</p>
+<p>$$
+Y_t \mid S_t = k \sim \mathcal{N}(\mu_k, \sigma_k^2)
+$$</p>
+</section>
+<hr class="docutils" />
+<section id="accelerated-failure-time-aft-models">
+<h2>5. Accelerated Failure Time (AFT) Models<a class="headerlink" href="#accelerated-failure-time-aft-models" title="Link to this heading"></a></h2>
+<p>These fully parametric models relate covariates to the logarithm of the
+survival time. They assume the effect of a covariate speeds up or slows down the
+event time directly, rather than acting on the hazard.</p>
+<section id="log-normal-aft">
+<h3>Log-Normal AFT<a class="headerlink" href="#log-normal-aft" title="Link to this heading"></a></h3>
+<p>The model assumes:</p>
+<p>$$
+\log(T_i) = X_i \beta + \varepsilon_i, \quad \varepsilon_i \sim \mathcal{N}(0, \sigma^2)
+$$</p>
+<p>Thus:</p>
+<p>$$
+T_i \sim \text{Log-Normal}(X_i \beta, \sigma^2)
+$$</p>
+<p>The survival function is:</p>
+<p>$$
+S(t \mid X) = 1 - \Phi\left(\frac{\log(t) - X \beta}{\sigma}\right)
+$$</p>
+<p>Where:</p>
+<ul class="simple">
+<li><p>( \Phi ) is the standard normal cumulative distribution function (CDF)</p></li>
+</ul>
+<p>This model is especially useful when the proportional hazards assumption is not valid and provides interpretable effects in the time domain.</p>
+</section>
+</section>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Link to this heading"></a></h2>
+<p>All models support censoring:</p>
+<ul class="simple">
+<li><p><strong>Uniform:</strong> ( C_i \sim U(0, \text{cens_par}) )</p></li>
+<li><p><strong>Exponential:</strong> ( C_i \sim \text{Exp}(\text{cens_par}) )</p></li>
+</ul>
+</section>
+<section id="competing-risks-models">
+<h2>6. Competing Risks Models<a class="headerlink" href="#competing-risks-models" title="Link to this heading"></a></h2>
+<p>These models handle scenarios where several distinct failure types can occur.
+Each cause has its own hazard function, and the observed status indicates which
+event occurred (1, 2, …). The package includes constant-hazard and
+Weibull-hazard versions.</p>
+</section>
+<section id="mixture-cure-models">
+<h2>7. Mixture Cure Models<a class="headerlink" href="#mixture-cure-models" title="Link to this heading"></a></h2>
+<p>These models posit that a subset of the population is cured and will never
+experience the event of interest. The generator mixes a logistic cure component
+with an exponential hazard for the uncured, returning a <code class="docutils literal notranslate"><span class="pre">cured</span></code> indicator
+column alongside the usual time and status.</p>
+</section>
+<section id="piecewise-exponential-model">
+<h2>8. Piecewise Exponential Model<a class="headerlink" href="#piecewise-exponential-model" title="Link to this heading"></a></h2>
+<p>Here the baseline hazard is assumed constant within each of several
+user-specified intervals. This allows flexible hazard shapes over time while
+remaining easy to simulate.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="api/index.html" class="btn btn-neutral float-left" title="API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="algorithms.html" class="btn btn-neutral float-right" title="Algorithm Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Diogo Ribeiro.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

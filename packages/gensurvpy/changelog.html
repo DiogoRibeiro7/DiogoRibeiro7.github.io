@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changelog &mdash; gen_surv 1.0.9 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="canonical" href="https://gensurvpy.readthedocs.io/changelog.html"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=0abd802e"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=30646c52"></script>
+        <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="bibliography.html" />
+    <link rel="prev" title="Contributing" href="contributing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            gen_surv
+          </a>
+              <div class="version">
+                1.0.9
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">📘 Mathematical Foundations of <code class="docutils literal notranslate"><span class="pre">gen_surv</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="algorithms.html">Algorithm Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rtd.html">Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html#contributing-to-gen-surv">Contributing to gen_surv</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id1">CHANGELOG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#v1-0-9-2025-08-02">v1.0.9 (2025-08-02)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#continuous-integration">Continuous Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#misc">Misc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-0-8-2025-07-30">v1.0.8 (2025-07-30)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing">Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Misc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-0-0-2025-06-06">v1.0.0 (2025-06-06)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Misc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-7-1-2025-04-13">v0.7.1 (2025-04-13)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bug-fixes">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chores">Chores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-7-0-2025-04-12">v0.7.0 (2025-04-12)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Chores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-6-1-2025-04-12">v0.6.1 (2025-04-12)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Chores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-6-0-2025-04-12">v0.6.0 (2025-04-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-5-0-2025-04-12">v0.5.0 (2025-04-12)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-4-0-2025-04-12">v0.4.0 (2025-04-12)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Chores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-3-1-2025-04-12">v0.3.1 (2025-04-12)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Chores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-3-0-2025-04-12">v0.3.0 (2025-04-12)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id18">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">Chores</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-2-1-2025-04-12">v0.2.1 (2025-04-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-2-0-2025-04-12">v0.2.0 (2025-04-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-1-0-2025-04-12">v0.1.0 (2025-04-12)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id20">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">Chores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">Continuous Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">gen_surv</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Changelog</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/changelog.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h1>
+</section>
+<section id="id1">
+<h1>CHANGELOG<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<section id="v1-0-9-2025-08-02">
+<h2>v1.0.9 (2025-08-02)<a class="headerlink" href="#v1-0-9-2025-08-02" title="Link to this heading"></a></h2>
+<section id="features">
+<h3>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>export datasets to RDS files</p></li>
+<li><p>test workflow runs on a Python version matrix</p></li>
+<li><p>scikit-learn compatible data generator</p></li>
+<li><p>compatibility helpers for lifelines and scikit-survival</p></li>
+</ul>
+</section>
+<section id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>updated usage examples and tutorials</p></li>
+<li><p>document optional scikit-survival dependency throughout the docs</p></li>
+</ul>
+</section>
+<section id="continuous-integration">
+<h3>Continuous Integration<a class="headerlink" href="#continuous-integration" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>auto-tag releases using the version check script</p></li>
+</ul>
+</section>
+<section id="misc">
+<h3>Misc<a class="headerlink" href="#misc" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>README quick example uses <code class="docutils literal notranslate"><span class="pre">covariate_range</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="v1-0-8-2025-07-30">
+<h2>v1.0.8 (2025-07-30)<a class="headerlink" href="#v1-0-8-2025-07-30" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3>Documentation<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>ensure absolute path resolution in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></p></li>
+<li><p>drop unsupported theme option</p></li>
+<li><p>define bibliography anchors and headings</p></li>
+<li><p>fix tutorial links to non-existing docs</p></li>
+<li><p>add additional references to the bibliography</p></li>
+</ul>
+</section>
+<section id="testing">
+<h3>Testing<a class="headerlink" href="#testing" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>add CLI integration test</p></li>
+<li><p>expand piecewise generator test coverage</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>Misc<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>remove fix_recommendations.md</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-0-0-2025-06-06">
+<h2>v1.0.0 (2025-06-06)<a class="headerlink" href="#v1-0-0-2025-06-06" title="Link to this heading"></a></h2>
+<section id="id4">
+<h3>Misc<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Align pyproject version with GitHub tag</p></li>
+<li><p>Add project Code of Conduct</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-7-1-2025-04-13">
+<h2>v0.7.1 (2025-04-13)<a class="headerlink" href="#v0-7-1-2025-04-13" title="Link to this heading"></a></h2>
+<section id="bug-fixes">
+<h3>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Fix import
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/3cdb59acda5e60328d1d9abd57ee49252f3044fe"><code class="docutils literal notranslate"><span class="pre">3cdb59a</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="chores">
+<h3>Chores<a class="headerlink" href="#chores" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Add <a class="reference external" href="http://tasks.py">tasks.py</a> with Invoke CLI for project automation
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/87868b86aec04a0e9254cee78036ac20056731e7"><code class="docutils literal notranslate"><span class="pre">87868b8</span></code></a>)</p></li>
+<li><p>Badges
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/79c1d0de79bfc20cfa92da6dda5eaed192bf7dc4"><code class="docutils literal notranslate"><span class="pre">79c1d0d</span></code></a>)</p></li>
+<li><p>Docs
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/4b2704e7179396a1d41c60f914a327e81bd45f6b"><code class="docutils literal notranslate"><span class="pre">4b2704e</span></code></a>)</p></li>
+<li><p>Update pyproject
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/127d1f6dff84056e859d9b92e87403e34816853e"><code class="docutils literal notranslate"><span class="pre">127d1f6</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>Documentation<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Add mathematical foundations page for all survival models
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/8472ff181ee3b882a44bc2c48c094de4db4a70fb"><code class="docutils literal notranslate"><span class="pre">8472ff1</span></code></a>)</p></li>
+<li><p>Add roadmap for advanced survival models and extend TODO
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/1990109f3ea0f7a4351cfdcf8880dd87108c8181"><code class="docutils literal notranslate"><span class="pre">1990109</span></code></a>)</p></li>
+<li><p>Add usage examples for all models in <a class="reference external" href="http://index.md">index.md</a>
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/57c5fb025b2cfe2eaae613e064bcd17c900ee4fc"><code class="docutils literal notranslate"><span class="pre">57c5fb0</span></code></a>)</p></li>
+<li><p>Fix version number in pyproject
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/6cff868bb504256918eecfad9d5d0bad3bcc97bb"><code class="docutils literal notranslate"><span class="pre">6cff868</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-7-0-2025-04-12">
+<h2>v0.7.0 (2025-04-12)<a class="headerlink" href="#v0-7-0-2025-04-12" title="Link to this heading"></a></h2>
+<section id="id6">
+<h3>Chores<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Update documentation
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/d34e32f9e2181f3ed5bf23fbee60a6a0a977c738"><code class="docutils literal notranslate"><span class="pre">d34e32f</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Features<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>docs</strong>: Document generic interface <code class="docutils literal notranslate"><span class="pre">generate()</span></code> and update examples
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/55e22a4a9ad4ac1af48f0fbb176c9c474a590182"><code class="docutils literal notranslate"><span class="pre">55e22a4</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-6-1-2025-04-12">
+<h2>v0.6.1 (2025-04-12)<a class="headerlink" href="#v0-6-1-2025-04-12" title="Link to this heading"></a></h2>
+<section id="id8">
+<h3>Bug Fixes<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Fix pyproject toml
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/a06f58aded7336b3a14d2f48db2efd160ab31323"><code class="docutils literal notranslate"><span class="pre">a06f58a</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id9">
+<h3>Chores<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Fix readme
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/f4897cdc19cf0a43f0fb6490ff068b55c436a2e2"><code class="docutils literal notranslate"><span class="pre">f4897cd</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id10">
+<h3>Documentation<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Docs
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/75417f184dd067f0bd8bd0b7351eb3b0d1f0d336"><code class="docutils literal notranslate"><span class="pre">75417f1</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-6-0-2025-04-12">
+<h2>v0.6.0 (2025-04-12)<a class="headerlink" href="#v0-6-0-2025-04-12" title="Link to this heading"></a></h2>
+</section>
+<section id="v0-5-0-2025-04-12">
+<h2>v0.5.0 (2025-04-12)<a class="headerlink" href="#v0-5-0-2025-04-12" title="Link to this heading"></a></h2>
+<section id="id11">
+<h3>Features<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Add documentation to readthedocs
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/1b00d740a1613e42138510dfa01331074bd97a22"><code class="docutils literal notranslate"><span class="pre">1b00d74</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-4-0-2025-04-12">
+<h2>v0.4.0 (2025-04-12)<a class="headerlink" href="#v0-4-0-2025-04-12" title="Link to this heading"></a></h2>
+<section id="id12">
+<h3>Bug Fixes<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Fix codecoverage
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/16bc525138e6a2b4370f951cab896ae8476b1775"><code class="docutils literal notranslate"><span class="pre">16bc525</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id13">
+<h3>Chores<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Delete file
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/ba2043eb3b891c6fe8d062e655002573cfb2e6fa"><code class="docutils literal notranslate"><span class="pre">ba2043e</span></code></a>)</p></li>
+<li><p>Fix documentation
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/4231eca916b50eabaa0e79472ce4481910d02a96"><code class="docutils literal notranslate"><span class="pre">4231eca</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id14">
+<h3>Features<a class="headerlink" href="#id14" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Add documentation to readthedocs
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/d1a0d29e38f61a4366b8e845415fc60bee3b7ca2"><code class="docutils literal notranslate"><span class="pre">d1a0d29</span></code></a>)</p></li>
+<li><p>Add documentation to readthedocs
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/78eb4485ff801ba9e951ba5f2a1e51e6c3d1d468"><code class="docutils literal notranslate"><span class="pre">78eb448</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-3-1-2025-04-12">
+<h2>v0.3.1 (2025-04-12)<a class="headerlink" href="#v0-3-1-2025-04-12" title="Link to this heading"></a></h2>
+<section id="id15">
+<h3>Bug Fixes<a class="headerlink" href="#id15" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Bump version
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/5cc649da03bbc57fbaf80494e63543012e1e849d"><code class="docutils literal notranslate"><span class="pre">5cc649d</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id16">
+<h3>Chores<a class="headerlink" href="#id16" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Bump version
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/2e269f50737a5b497718f55e1e42a1501e0d398f"><code class="docutils literal notranslate"><span class="pre">2e269f5</span></code></a>)</p></li>
+<li><p>Bump version
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/081ce3db093410ea96f8d594201d26f81f6b35ec"><code class="docutils literal notranslate"><span class="pre">081ce3d</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id17">
+<h3>Features<a class="headerlink" href="#id17" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Add documentation to readthedocs
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/c33f666295dd7a779065249bd61bf28631519e79"><code class="docutils literal notranslate"><span class="pre">c33f666</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-3-0-2025-04-12">
+<h2>v0.3.0 (2025-04-12)<a class="headerlink" href="#v0-3-0-2025-04-12" title="Link to this heading"></a></h2>
+<section id="id18">
+<h3>Bug Fixes<a class="headerlink" href="#id18" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Fix git hub actions
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/c9559ba319684e5b9de59bfa7ad23e42ee6f8bf9"><code class="docutils literal notranslate"><span class="pre">c9559ba</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id19">
+<h3>Chores<a class="headerlink" href="#id19" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Bump version
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/e11182609d99094d8b02fa2e142ac983f42dc5b3"><code class="docutils literal notranslate"><span class="pre">e111826</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-2-1-2025-04-12">
+<h2>v0.2.1 (2025-04-12)<a class="headerlink" href="#v0-2-1-2025-04-12" title="Link to this heading"></a></h2>
+</section>
+<section id="v0-2-0-2025-04-12">
+<h2>v0.2.0 (2025-04-12)<a class="headerlink" href="#v0-2-0-2025-04-12" title="Link to this heading"></a></h2>
+</section>
+<section id="v0-1-0-2025-04-12">
+<h2>v0.1.0 (2025-04-12)<a class="headerlink" href="#v0-1-0-2025-04-12" title="Link to this heading"></a></h2>
+<section id="id20">
+<h3>Bug Fixes<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Add name to pyproject
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/6a3a8f3a82b6017f1903f23b27d02233a05e0763"><code class="docutils literal notranslate"><span class="pre">6a3a8f3</span></code></a>)</p></li>
+<li><p>Fix mixing tags creation
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/93ac8a05ac8b825b2c5066a0f7eb4e8b7463fb06"><code class="docutils literal notranslate"><span class="pre">93ac8a0</span></code></a>)</p></li>
+<li><p>Fix pyproject toml
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/8537f63d01249e8db29e9e7353831d0b894bbc3d"><code class="docutils literal notranslate"><span class="pre">8537f63</span></code></a>)</p></li>
+<li><p>Fix recommended by copilot
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/f188f76fa858f1753ad1b153f61df94a241f0831"><code class="docutils literal notranslate"><span class="pre">f188f76</span></code></a>)</p></li>
+<li><p>Fix semantic release
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/3d18b02fb617dddade3fb6862d5647143e52a3a9"><code class="docutils literal notranslate"><span class="pre">3d18b02</span></code></a>)</p></li>
+<li><p>Fix version bump
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/e5114deb150e6a594d6b649049abd9ebd6242faa"><code class="docutils literal notranslate"><span class="pre">e5114de</span></code></a>)</p></li>
+<li><p>Github address
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/43f9d93e21a285df6d5ea27d296ac489782b6b13"><code class="docutils literal notranslate"><span class="pre">43f9d93</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id21">
+<h3>Chores<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Bump version
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/e0c739ff2c4aa8a4d46416aff5924969872d0337"><code class="docutils literal notranslate"><span class="pre">e0c739f</span></code></a>)</p></li>
+<li><p>Code coverage
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/56a345302c50be21cc05a5afa0ac406224dd77a0"><code class="docutils literal notranslate"><span class="pre">56a3453</span></code></a>)</p></li>
+<li><p>Update pyproject
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/a4b25e470954091254b1384a44a991a47341bf80"><code class="docutils literal notranslate"><span class="pre">a4b25e4</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id22">
+<h3>Continuous Integration<a class="headerlink" href="#id22" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Add GitHub Actions workflow for test automation
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/0d57884f84e3d8e09a130e1eb87895cd168ab1e0"><code class="docutils literal notranslate"><span class="pre">0d57884</span></code></a>)</p></li>
+<li><p>Add GitHub Actions workflow for test automation
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/33e1e400ace7b491d88138331df496f7b7ab02c9"><code class="docutils literal notranslate"><span class="pre">33e1e40</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id23">
+<h3>Documentation<a class="headerlink" href="#id23" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Add Sphinx configuration with Markdown support and <a class="reference external" href="http://index.md">index.md</a> setup
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/75d46530cf894263b3e98cf8667ff52c7863f646"><code class="docutils literal notranslate"><span class="pre">75d4653</span></code></a>)</p></li>
+<li><p>Add Sphinx documentation with MyST and autodoc integration
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/f58feeae82cb2b9073d936412a494a4a74ff9df1"><code class="docutils literal notranslate"><span class="pre">f58feea</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id24">
+<h3>Features<a class="headerlink" href="#id24" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Add changelog automation
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/055c20934b76c71fa1a91bf7948cd3699398a242"><code class="docutils literal notranslate"><span class="pre">055c209</span></code></a>)</p></li>
+<li><p>Add changelog automation
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/f22aba754b7fc118477f9070ae0d7a5377a9659d"><code class="docutils literal notranslate"><span class="pre">f22aba7</span></code></a>)</p></li>
+<li><p>Implement core CPHM data simulation with validation and censoring models
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/f5ef2829c2896c5ca575382b9b2d9e389784496d"><code class="docutils literal notranslate"><span class="pre">f5ef282</span></code></a>)</p></li>
+<li><p>Implement THMM data generator and finalize full model suite
+(<a class="reference external" href="https://github.com/DiogoRibeiro7/genSurvPy/commit/1e667babf28892c3a85c43477562f2de85f07f3c"><code class="docutils literal notranslate"><span class="pre">1e667ba</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="contributing.html" class="btn btn-neutral float-left" title="Contributing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bibliography.html" class="btn btn-neutral float-right" title="References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Diogo Ribeiro.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
