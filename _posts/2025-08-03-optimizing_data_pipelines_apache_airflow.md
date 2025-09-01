@@ -27,7 +27,7 @@ keywords:
 - "Monitoring with Prometheus"
 
 classes: wide
-date: '2025-08-29'
+date: '2025-08-03'
 header:
   image: /assets/images/data_science/data_science_10.jpg
   og_image: /assets/images/data_science/data_science_10.jpg
