@@ -24,7 +24,7 @@ keywords:
 - "innovation"
 - "long-term progress"
 classes: wide
-date: '2025-09-01'
+date: '2025-09-14'
 header:
   image: /assets/images/data_science_16.jpg
   og_image: /assets/images/data_science_16.jpg
