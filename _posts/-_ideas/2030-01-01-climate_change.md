@@ -33,8 +33,6 @@ title: Exploring Climate Change, Sustainability, and Data Science
 
 ## TODO:
 
-### 5. Data Science in Carbon Footprint Reduction
-Focus on the use of big data to track and reduce carbon emissions. Explain how machine learning models are being applied to identify carbon-intensive processes and optimize operations in industries like transportation and manufacturing.
 
 ### 6. Smart Cities and the Role of Data Science in Urban Sustainability
 Investigate the development of smart cities that rely on big data and AI to optimize energy usage, reduce waste, and make transportation more efficient, all of which contribute to lowering the carbon footprint of urban environments.
