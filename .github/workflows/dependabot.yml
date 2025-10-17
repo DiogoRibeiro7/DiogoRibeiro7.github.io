@@ -1,0 +1,62 @@
+version: 2
+updates:
+  # JavaScript deps (Yarn or npm) — Dependabot uses the "npm" ecosystem for both.
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    versioning-strategy: increase-if-necessary
+    assignees:
+      - "diogoribeiro7"
+    reviewers:
+      - "diogoribeiro7"
+    labels:
+      - "dependencies"
+      - "javascript"
+    # Optional: avoid noisy breaking bumps
+    # ignore:
+    #   - dependency-name: "*"
+    #     update-types: ["version-update:semver-major"]
+    # Optional: nice commit prefixes
+    # commit-message:
+    #   prefix: "deps(npm)"
+    #   prefix-development: "deps(dev-npm)"
+
+  # Jekyll (Ruby/Bundler) deps — typical for GitHub Pages sites.
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    assignees:
+      - "diogoribeiro7"
+    reviewers:
+      - "diogoribeiro7"
+    labels:
+      - "dependencies"
+      - "jekyll"
+      - "ruby"
+    # If you use the 'github-pages' meta-gem (recommended), you can limit updates to it:
+    # allow:
+    #   - dependency-name: "github-pages"
+    # Optional: avoid major bumps on gems
+    # ignore:
+    #   - dependency-name: "*"
+    #     update-types: ["version-update:semver-major"]
+    # commit-message:
+    #   prefix: "deps(bundler)"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    assignees:
+      - "diogoribeiro7"
+    reviewers:
+      - "diogoribeiro7"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    # commit-message:
+    #   prefix: "deps(actions)"
+    
