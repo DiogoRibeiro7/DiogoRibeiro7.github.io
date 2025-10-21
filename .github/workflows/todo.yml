@@ -4,29 +4,80 @@ on:
   workflow_dispatch:
     inputs:
       importAll:
-        default: false
-        required: false
+        description: Import ALL TODOs from the checked-out ref (use with care)
         type: boolean
-        description: Enable, if you want to import all TODOs. Runs on checked out branch! Only use if you're sure what you are doing.
+        required: false
+        default: false
   push:
-    branches:
-      - master
+    # Use your default branch. Avoid multiple branches to prevent self-referencing on merges (per action docs).
+    branches: [ main ]
+    # Optional: run only when source files change, not docs/CI files.
+    paths:
+      - '**/*.ts'
+      - '**/*.tsx'
+      - '**/*.js'
+      - '**/*.jsx'
+      - '**/*.py'
+      - '**/*.rs'
+      - '**/*.go'
+      - '**/*.java'
+      - '**/*.cs'
+      - '**/*.rb'
+      - '**/*.php'
+      - '**/*.sh'
+      - '!**/*.md'
+      - '!.github/**'
 
 permissions:
+  contents: read
   issues: write
   repository-projects: read
-  contents: read
+
+concurrency:
+  group: todo-issue-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   todos:
+    name: Convert TODOs to issues
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: ${{ !github.event.repository.fork }}  # don't run on forks
 
     steps:
-      - uses: actions/checkout@v5
+      # Pin to a release or a commit SHA for supply-chain safety.
+      # v5 example (or replace with a specific commit SHA):
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          # If you plan to run "import all" against history, set fetch-depth: 0
+          fetch-depth: 1
 
       - name: Run Issue Bot
-        uses: juulsn/todo-issue@main
-        with:
-          excludePattern: '^(node_modules/)'
+        # Pin to the latest release tag instead of @main
+        uses: juulsn/todo-issue@v1.1.4
         env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}  # Replace with your PAT secret
+          # Use the built-in token; no PAT required.
+          # Either works; I prefer github.token so you don't need a secret entry.
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          # Keep the regex tight; add common big folders/build artifacts to skip.
+          excludePattern: >-
+            ^(
+              node_modules/|
+              dist/|
+              build/|
+              .next/|
+              out/|
+              coverage/|
+              .venv/|
+              venv/|
+              target/|
+              vendor/
+            )
+          # Optional tweaks (uncomment if you want them)
+          keywords: '["TODO","FIXME"]'
+          label: '["todo"]'
+          autoAssign: false
+          caseSensitive: false
+
