@@ -76,8 +76,8 @@ jobs:
               vendor/
             )
           # Optional tweaks (uncomment if you want them)
-          keywords: '["TODO","FIXME"]'
-          label: '["todo"]'
+          keywords: "TODO"
+          label: "todo"
           autoAssign: false
           caseSensitive: false
 
