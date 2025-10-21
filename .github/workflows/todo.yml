@@ -10,7 +10,7 @@ on:
         default: false
   push:
     # Use your default branch. Avoid multiple branches to prevent self-referencing on merges (per action docs).
-    branches: [ main ]
+    branches: [ master ]
     # Optional: run only when source files change, not docs/CI files.
     paths:
       - '**/*.ts'
