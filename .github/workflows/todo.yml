@@ -53,6 +53,14 @@ jobs:
           # If you plan to run "import all" against history, set fetch-depth: 0
           fetch-depth: 1
 
+      - name: Who am I with this token?
+        run: |
+          set -euo pipefail
+          who=$(curl -s -H "authorization: Bearer ${{ env.GITHUB_TOKEN }}" https://api.github.com/user | jq -r '.login,.type')
+          echo "Actor via token: $who"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
       - name: Run Issue Bot
         # Pin to the latest release tag instead of @main
         uses: juulsn/todo-issue@v1.1.4
