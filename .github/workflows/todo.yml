@@ -63,7 +63,7 @@ jobs:
 
       - name: Run Issue Bot
         # Pin to the latest release tag instead of @main
-        uses: juulsn/todo-issue@v1.1.4
+        uses: juulsn/todo-issue@v1.1.5
         env:
           # Use the built-in token; no PAT required.
           # Either works; I prefer github.token so you don't need a secret entry.
