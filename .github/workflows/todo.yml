@@ -48,7 +48,7 @@ jobs:
       # Pin to a release or a commit SHA for supply-chain safety.
       # v5 example (or replace with a specific commit SHA):
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           # If you plan to run "import all" against history, set fetch-depth: 0
           fetch-depth: 1
