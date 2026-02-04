@@ -3,6 +3,7 @@ import re
 import string
 import argparse
 
+# TODO: Add a dry-run flag to preview changes without writing.
 # List of stop words to remove from file names
 STOP_WORDS = {
     "and",

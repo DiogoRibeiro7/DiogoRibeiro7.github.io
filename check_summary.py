@@ -2,6 +2,8 @@ import os
 import yaml  # to parse YAML front matter
 import argparse
 
+# TODO: Add optional JSON output for CI consumption.
+
 def extract_front_matter(md_file_path: str) -> dict:
     """
     Extracts YAML front matter from a Markdown file.
