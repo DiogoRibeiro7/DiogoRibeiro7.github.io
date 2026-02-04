@@ -4,6 +4,7 @@ import yaml
 import argparse
 from typing import List
 
+# TODO: Add a dry-run flag to preview changes and report diffs.
 def read_markdown_files_from_folder(folder_path: str) -> List[str]:
     # List all markdown files in the given folder
     return [f for f in os.listdir(folder_path) if f.endswith('.md')]

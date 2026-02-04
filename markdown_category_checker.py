@@ -4,6 +4,7 @@ import yaml
 import argparse
 from typing import List
 
+# TODO: Add a flag to output results as JSON for tooling.
 def read_markdown_files_from_folder(folder_path: str) -> List[str]:
     # List all markdown files in the given folder
     return [f for f in os.listdir(folder_path) if f.endswith('.md')]

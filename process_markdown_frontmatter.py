@@ -3,6 +3,7 @@ import re
 import yaml  # You might need to install PyYAML (pip install pyyaml)
 import argparse
 
+# TODO: Add an option to skip files without tags/keywords.
 def process_frontmatter(frontmatter: dict):
     """
     Modify the first letter of each tag or keyword in the frontmatter if they exist.
