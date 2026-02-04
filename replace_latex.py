@@ -2,6 +2,7 @@ import os
 import re
 import argparse
 
+# TODO: Add an option to skip files that contain code blocks.
 def replace_latex_syntax_in_file(file_path: str):
     """
     This function reads a markdown file, finds LaTeX delimiters and replaces them 

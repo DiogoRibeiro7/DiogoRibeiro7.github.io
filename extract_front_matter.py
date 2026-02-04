@@ -1,6 +1,7 @@
 import yaml
 import argparse
 
+# TODO: Allow selecting output format (yaml/json/plain) from CLI.
 def extract_and_print_front_matter(folder: str, file_name: str):
     """
     Extracts and prints the YAML front matter from a Markdown file.

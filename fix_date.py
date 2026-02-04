@@ -3,6 +3,7 @@ import re
 import frontmatter
 import argparse
 
+# TODO: Add a dry-run option to report changes without writing files.
 def extract_date_from_filename(filename):
     # Assuming the filename format is 'YYYY-MM-DD-some-title.md'
     match = re.match(r'(\d{4}-\d{2}-\d{2})-', filename)

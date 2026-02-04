@@ -3,6 +3,7 @@ import re
 import yaml
 import argparse
 
+# TODO: Add a flag to only analyze a single file.
 # Function to extract front matter from markdown file
 def extract_front_matter(content: str):
     front_matter_match = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
