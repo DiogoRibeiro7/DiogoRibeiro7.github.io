@@ -37,44 +37,6 @@ title: 'Implementing Time-Series Classification: From Simple Models to Advanced 
   Sets'
 ---
 
----
-author_profile: false
-categories:
-- Time-Series
-- Machine Learning
-classes: wide
-date: '2024-10-08'
-excerpt: Explore time-series classification in Python with step-by-step examples using
-  simple models, the catch22 feature set, and UEA/UCR repository benchmarking with
-  statistical tests.
-header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
-keywords:
-- Time-series classification
-- Catch22
-- Python
-- Uea/ucr
-seo_description: Learn how to implement time-series classification in Python using
-  simple models, catch22 features, and benchmarking with statistical tests using UEA/UCR
-  datasets.
-seo_title: 'Python Code for Time-Series Classification: Simple Models to Catch22'
-seo_type: article
-summary: This article provides Python code for time-series classification, covering
-  simple models, catch22 features, and benchmarking with UEA/UCR repository datasets
-  and statistical significance testing.
-tags:
-- Python
-- Time-series classification
-- Catch22
-- Uea/ucr
-title: 'Implementing Time-Series Classification: From Simple Models to Advanced Feature
-  Sets'
----
 
 # Implementing Time-Series Classification: From Simple Models to Advanced Feature Sets
 

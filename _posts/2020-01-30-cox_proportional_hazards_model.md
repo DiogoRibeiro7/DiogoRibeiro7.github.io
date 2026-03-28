@@ -62,49 +62,6 @@ The main reasons for the widespread use of the Cox model in medical studies incl
 
 Given its wide applicability, the Cox model is used extensively in medical research, from clinical trials evaluating new therapies to epidemiological studies investigating risk factors for chronic diseases.
 
----
-author_profile: false
-categories:
-- Data Science
-classes: wide
-date: '2020-01-30'
-excerpt: The Cox Proportional Hazards Model is a vital tool for analyzing time-to-event
-  data in medical studies. Learn how it works and its applications in survival analysis.
-header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
-keywords:
-- Cox proportional hazards model
-- Survival analysis
-- Medical statistics
-- Clinical trials
-- Time-to-event data
-- Censored data
-- Hazard ratios
-- Proportional hazards assumption
-- R
-- Python
-seo_description: Explore the Cox Proportional Hazards Model and its application in
-  survival analysis, with examples from clinical trials and medical research.
-seo_title: Understanding Cox Proportional Hazards Model for Medical Survival Analysis
-seo_type: article
-summary: A comprehensive guide to the Cox Proportional Hazards Model, its assumptions,
-  and applications in survival analysis and clinical trials.
-tags:
-- Cox proportional hazards model
-- Survival analysis
-- Medical studies
-- Clinical trials
-- Time-to-event data
-- Censored data
-- R
-- Python
-title: 'Cox Proportional Hazards Model: A Guide to Survival Analysis in Medical Studies'
----
 
 ## Mathematical Foundations of the Cox Model
 
@@ -154,49 +111,6 @@ Where $$\hat{\beta}_j$$ is the estimated coefficient, and $$\text{SE}(\hat{\beta
 
 Hypothesis testing in the Cox model often involves comparing nested models using the **likelihood ratio test** or examining individual covariates using the **Wald test**. These tests provide insights into the statistical significance of the covariates and help guide model selection.
 
----
-author_profile: false
-categories:
-- Data Science
-classes: wide
-date: '2020-01-30'
-excerpt: The Cox Proportional Hazards Model is a vital tool for analyzing time-to-event
-  data in medical studies. Learn how it works and its applications in survival analysis.
-header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
-keywords:
-- Cox proportional hazards model
-- Survival analysis
-- Medical statistics
-- Clinical trials
-- Time-to-event data
-- Censored data
-- Hazard ratios
-- Proportional hazards assumption
-- R
-- Python
-seo_description: Explore the Cox Proportional Hazards Model and its application in
-  survival analysis, with examples from clinical trials and medical research.
-seo_title: Understanding Cox Proportional Hazards Model for Medical Survival Analysis
-seo_type: article
-summary: A comprehensive guide to the Cox Proportional Hazards Model, its assumptions,
-  and applications in survival analysis and clinical trials.
-tags:
-- Cox proportional hazards model
-- Survival analysis
-- Medical studies
-- Clinical trials
-- Time-to-event data
-- Censored data
-- R
-- Python
-title: 'Cox Proportional Hazards Model: A Guide to Survival Analysis in Medical Studies'
----
 
 ## Handling Censored Data in Survival Analysis
 
@@ -228,49 +142,6 @@ Censoring is particularly important in long-term studies, such as epidemiologica
 
 While the **Kaplan-Meier estimator** is a widely used non-parametric method for estimating survival probabilities in the presence of censored data, it does not allow for the inclusion of multiple covariates. The **Cox model**, in contrast, is a **multivariate model** that can handle multiple covariates while adjusting for censored observations. Researchers often use Kaplan-Meier survival curves for initial exploration of the data and then apply the Cox model for a more detailed analysis that includes covariates.
 
----
-author_profile: false
-categories:
-- Data Science
-classes: wide
-date: '2020-01-30'
-excerpt: The Cox Proportional Hazards Model is a vital tool for analyzing time-to-event
-  data in medical studies. Learn how it works and its applications in survival analysis.
-header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
-keywords:
-- Cox proportional hazards model
-- Survival analysis
-- Medical statistics
-- Clinical trials
-- Time-to-event data
-- Censored data
-- Hazard ratios
-- Proportional hazards assumption
-- R
-- Python
-seo_description: Explore the Cox Proportional Hazards Model and its application in
-  survival analysis, with examples from clinical trials and medical research.
-seo_title: Understanding Cox Proportional Hazards Model for Medical Survival Analysis
-seo_type: article
-summary: A comprehensive guide to the Cox Proportional Hazards Model, its assumptions,
-  and applications in survival analysis and clinical trials.
-tags:
-- Cox proportional hazards model
-- Survival analysis
-- Medical studies
-- Clinical trials
-- Time-to-event data
-- Censored data
-- R
-- Python
-title: 'Cox Proportional Hazards Model: A Guide to Survival Analysis in Medical Studies'
----
 
 ## Extensions to the Cox Model
 
@@ -323,49 +194,6 @@ The **Accelerated Failure Time (AFT)** model is an alternative to the Cox model 
 
 The AFT model is preferred in situations where the proportional hazards assumption is not appropriate, or where researchers are more interested in modeling the effect of covariates on the **time to the event** rather than the hazard. For example, in a study of time to disease progression in cancer patients, the AFT model might be more appropriate if the effect of treatment on survival time is not proportional over time.
 
----
-author_profile: false
-categories:
-- Data Science
-classes: wide
-date: '2020-01-30'
-excerpt: The Cox Proportional Hazards Model is a vital tool for analyzing time-to-event
-  data in medical studies. Learn how it works and its applications in survival analysis.
-header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
-keywords:
-- Cox proportional hazards model
-- Survival analysis
-- Medical statistics
-- Clinical trials
-- Time-to-event data
-- Censored data
-- Hazard ratios
-- Proportional hazards assumption
-- R
-- Python
-seo_description: Explore the Cox Proportional Hazards Model and its application in
-  survival analysis, with examples from clinical trials and medical research.
-seo_title: Understanding Cox Proportional Hazards Model for Medical Survival Analysis
-seo_type: article
-summary: A comprehensive guide to the Cox Proportional Hazards Model, its assumptions,
-  and applications in survival analysis and clinical trials.
-tags:
-- Cox proportional hazards model
-- Survival analysis
-- Medical studies
-- Clinical trials
-- Time-to-event data
-- Censored data
-- R
-- Python
-title: 'Cox Proportional Hazards Model: A Guide to Survival Analysis in Medical Studies'
----
 
 ## Practical Implementation in Statistical Software
 
@@ -455,49 +283,6 @@ The results of a Cox model are specific to the study population from which the d
 
 **Unmeasured confounders**—variables that are not included in the model but influence both the covariates and the outcome—can bias the estimates from a Cox model. Techniques such as **frailty models** or **instrumental variable approaches** can help address unmeasured confounding in certain situations.
 
----
-author_profile: false
-categories:
-- Data Science
-classes: wide
-date: '2020-01-30'
-excerpt: The Cox Proportional Hazards Model is a vital tool for analyzing time-to-event
-  data in medical studies. Learn how it works and its applications in survival analysis.
-header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
-keywords:
-- Cox proportional hazards model
-- Survival analysis
-- Medical statistics
-- Clinical trials
-- Time-to-event data
-- Censored data
-- Hazard ratios
-- Proportional hazards assumption
-- R
-- Python
-seo_description: Explore the Cox Proportional Hazards Model and its application in
-  survival analysis, with examples from clinical trials and medical research.
-seo_title: Understanding Cox Proportional Hazards Model for Medical Survival Analysis
-seo_type: article
-summary: A comprehensive guide to the Cox Proportional Hazards Model, its assumptions,
-  and applications in survival analysis and clinical trials.
-tags:
-- Cox proportional hazards model
-- Survival analysis
-- Medical studies
-- Clinical trials
-- Time-to-event data
-- Censored data
-- R
-- Python
-title: 'Cox Proportional Hazards Model: A Guide to Survival Analysis in Medical Studies'
----
 
 The Cox Proportional Hazards Model is a cornerstone of survival analysis in medical research, offering a flexible and robust framework for analyzing time-to-event data. Its ability to handle censored data, accommodate multiple covariates, and produce interpretable hazard ratios has made it an invaluable tool for clinicians and researchers alike.
 

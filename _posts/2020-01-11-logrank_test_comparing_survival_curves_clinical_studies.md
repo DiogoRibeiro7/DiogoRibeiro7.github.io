@@ -46,45 +46,6 @@ The Log-Rank test is a non-parametric test used to compare the survival distribu
 
 This article will provide an overview of the Log-Rank test, its methodology, assumptions, and applications in clinical and medical research, as well as its use in fields like epidemiology and cancer studies.
 
----
-author_profile: false
-categories:
-- Statistics
-- Medical Research
-classes: wide
-date: '2020-01-11'
-excerpt: The Log-Rank test is a vital statistical method used to compare survival
-  curves in clinical studies. This article explores its significance in medical research,
-  including applications in clinical trials and epidemiology.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Log-rank test
-- Survival curves
-- Clinical trials
-- Survival analysis
-- Medical statistics
-- Epidemiology
-seo_description: A comprehensive guide to the Log-Rank test, a statistical tool for
-  comparing survival distributions in clinical trials and medical research.
-seo_title: 'Log-Rank Test: Comparing Survival Curves in Clinical Research'
-seo_type: article
-summary: Discover how the Log-Rank test is used to compare survival curves in clinical
-  studies, with detailed insights into its applications in clinical trials, epidemiology,
-  and medical research.
-tags:
-- Log-rank test
-- Survival analysis
-- Clinical trials
-- Medical research
-- Epidemiology
-title: 'Log-Rank Test: Comparing Survival Curves in Clinical Studies'
----
 
 ## 2. The Basics of Survival Analysis
 
@@ -99,45 +60,6 @@ To understand the Log-Rank test, it is essential to have a basic grasp of **surv
 
 Survival analysis typically involves the estimation of **survival curves**, which graphically depict the probability of survival over time for different groups. The Log-Rank test is a method to statistically compare these survival curves.
 
----
-author_profile: false
-categories:
-- Statistics
-- Medical Research
-classes: wide
-date: '2020-01-11'
-excerpt: The Log-Rank test is a vital statistical method used to compare survival
-  curves in clinical studies. This article explores its significance in medical research,
-  including applications in clinical trials and epidemiology.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Log-rank test
-- Survival curves
-- Clinical trials
-- Survival analysis
-- Medical statistics
-- Epidemiology
-seo_description: A comprehensive guide to the Log-Rank test, a statistical tool for
-  comparing survival distributions in clinical trials and medical research.
-seo_title: 'Log-Rank Test: Comparing Survival Curves in Clinical Research'
-seo_type: article
-summary: Discover how the Log-Rank test is used to compare survival curves in clinical
-  studies, with detailed insights into its applications in clinical trials, epidemiology,
-  and medical research.
-tags:
-- Log-rank test
-- Survival analysis
-- Clinical trials
-- Medical research
-- Epidemiology
-title: 'Log-Rank Test: Comparing Survival Curves in Clinical Studies'
----
 
 ## 4. Assumptions of the Log-Rank Test
 
@@ -158,45 +80,6 @@ The Log-Rank test is a widely used method in survival analysis, but it is based 
 - **Non-proportional Hazards:** If the hazards are not proportional (e.g., if one group experiences higher event rates initially but lower rates later), the Log-Rank test may not be appropriate. In such cases, alternative tests like the **Wilcoxon (Breslow) test** or **Cox proportional hazards regression** might be more suitable.
 - **Dependent Censoring:** If censoring is related to the likelihood of experiencing the event, the test results may be biased.
 
----
-author_profile: false
-categories:
-- Statistics
-- Medical Research
-classes: wide
-date: '2020-01-11'
-excerpt: The Log-Rank test is a vital statistical method used to compare survival
-  curves in clinical studies. This article explores its significance in medical research,
-  including applications in clinical trials and epidemiology.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Log-rank test
-- Survival curves
-- Clinical trials
-- Survival analysis
-- Medical statistics
-- Epidemiology
-seo_description: A comprehensive guide to the Log-Rank test, a statistical tool for
-  comparing survival distributions in clinical trials and medical research.
-seo_title: 'Log-Rank Test: Comparing Survival Curves in Clinical Research'
-seo_type: article
-summary: Discover how the Log-Rank test is used to compare survival curves in clinical
-  studies, with detailed insights into its applications in clinical trials, epidemiology,
-  and medical research.
-tags:
-- Log-rank test
-- Survival analysis
-- Clinical trials
-- Medical research
-- Epidemiology
-title: 'Log-Rank Test: Comparing Survival Curves in Clinical Studies'
----
 
 ## 6. Interpreting Log-Rank Test Results
 
@@ -214,45 +97,6 @@ It is also important to consider **Kaplan-Meier survival curves** alongside the 
 - A significant result indicates a difference in survival distributions, but it does not provide information about the magnitude or clinical relevance of that difference.
 - Always report confidence intervals for survival estimates to provide context for the statistical significance.
 
----
-author_profile: false
-categories:
-- Statistics
-- Medical Research
-classes: wide
-date: '2020-01-11'
-excerpt: The Log-Rank test is a vital statistical method used to compare survival
-  curves in clinical studies. This article explores its significance in medical research,
-  including applications in clinical trials and epidemiology.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Log-rank test
-- Survival curves
-- Clinical trials
-- Survival analysis
-- Medical statistics
-- Epidemiology
-seo_description: A comprehensive guide to the Log-Rank test, a statistical tool for
-  comparing survival distributions in clinical trials and medical research.
-seo_title: 'Log-Rank Test: Comparing Survival Curves in Clinical Research'
-seo_type: article
-summary: Discover how the Log-Rank test is used to compare survival curves in clinical
-  studies, with detailed insights into its applications in clinical trials, epidemiology,
-  and medical research.
-tags:
-- Log-rank test
-- Survival analysis
-- Clinical trials
-- Medical research
-- Epidemiology
-title: 'Log-Rank Test: Comparing Survival Curves in Clinical Studies'
----
 
 ## 8. Alternatives to the Log-Rank Test
 

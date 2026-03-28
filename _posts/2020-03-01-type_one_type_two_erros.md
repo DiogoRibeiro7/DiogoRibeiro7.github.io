@@ -41,44 +41,6 @@ Statistical hypothesis testing is one of the most widely used methods in researc
 
 In this article, we will explore the concepts of Type I and Type II errors, how they arise, how to balance them, and their implications in real-world contexts like clinical trials and business decisions.
 
----
-author_profile: false
-categories:
-- Statistics
-classes: wide
-date: '2020-03-01'
-excerpt: Explore Type I and Type II errors in hypothesis testing. Learn how to balance
-  error rates, interpret significance levels, and understand the implications of statistical
-  errors in real-world scenarios.
-header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_7.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_4.jpg
-keywords:
-- Type ii error
-- False positive
-- False negative
-- Hypothesis testing
-- Type i error
-seo_description: A comprehensive guide to understanding Type I (false positive) and
-  Type II (false negative) errors in hypothesis testing, including balancing error
-  rates, significance levels, and power.
-seo_title: 'Understanding Type I and Type II Errors: Hypothesis Testing Explained'
-seo_type: article
-summary: This article provides an in-depth exploration of Type I and Type II errors
-  in hypothesis testing, explaining their importance, the trade-offs between them,
-  and how they impact decisions in various domains, from clinical trials to business.
-tags:
-- Type ii error
-- False positive
-- False negative
-- Hypothesis testing
-- Type i error
-title: Understanding Type I and Type II Errors in Hypothesis Testing
----
 
 ## Type I Error: False Positives
 
@@ -100,44 +62,6 @@ $$
 
 If α = 0.05, then the risk of committing a Type I error is 5%. Lowering the significance level (e.g., to 0.01) reduces the probability of a Type I error, but as we will see, it may increase the likelihood of making a Type II error.
 
----
-author_profile: false
-categories:
-- Statistics
-classes: wide
-date: '2020-03-01'
-excerpt: Explore Type I and Type II errors in hypothesis testing. Learn how to balance
-  error rates, interpret significance levels, and understand the implications of statistical
-  errors in real-world scenarios.
-header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_7.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_4.jpg
-keywords:
-- Type ii error
-- False positive
-- False negative
-- Hypothesis testing
-- Type i error
-seo_description: A comprehensive guide to understanding Type I (false positive) and
-  Type II (false negative) errors in hypothesis testing, including balancing error
-  rates, significance levels, and power.
-seo_title: 'Understanding Type I and Type II Errors: Hypothesis Testing Explained'
-seo_type: article
-summary: This article provides an in-depth exploration of Type I and Type II errors
-  in hypothesis testing, explaining their importance, the trade-offs between them,
-  and how they impact decisions in various domains, from clinical trials to business.
-tags:
-- Type ii error
-- False positive
-- False negative
-- Hypothesis testing
-- Type i error
-title: Understanding Type I and Type II Errors in Hypothesis Testing
----
 
 ## Balancing Type I and Type II Errors
 
@@ -161,44 +85,6 @@ To reduce the likelihood of Type II errors, it’s important to increase the pow
 
 Designing a test requires careful consideration of these trade-offs. In critical applications, such as clinical trials, researchers often aim for a high power (e.g., 0.80 or 80%) while controlling α at a reasonable level (e.g., 0.05).
 
----
-author_profile: false
-categories:
-- Statistics
-classes: wide
-date: '2020-03-01'
-excerpt: Explore Type I and Type II errors in hypothesis testing. Learn how to balance
-  error rates, interpret significance levels, and understand the implications of statistical
-  errors in real-world scenarios.
-header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_7.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_4.jpg
-keywords:
-- Type ii error
-- False positive
-- False negative
-- Hypothesis testing
-- Type i error
-seo_description: A comprehensive guide to understanding Type I (false positive) and
-  Type II (false negative) errors in hypothesis testing, including balancing error
-  rates, significance levels, and power.
-seo_title: 'Understanding Type I and Type II Errors: Hypothesis Testing Explained'
-seo_type: article
-summary: This article provides an in-depth exploration of Type I and Type II errors
-  in hypothesis testing, explaining their importance, the trade-offs between them,
-  and how they impact decisions in various domains, from clinical trials to business.
-tags:
-- Type ii error
-- False positive
-- False negative
-- Hypothesis testing
-- Type i error
-title: Understanding Type I and Type II Errors in Hypothesis Testing
----
 
 ## Visualizing Type I and Type II Errors with the Decision Matrix
 

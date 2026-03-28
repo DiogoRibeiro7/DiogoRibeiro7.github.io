@@ -47,48 +47,6 @@ Epidemiological surveillance systems are essential for tracking the spread of di
 
 This article explores how real-time data processing platforms like Apache Flink can be used in epidemiological surveillance to track diseases, detect outbreaks early, and improve the overall responsiveness of public health systems.
 
----
-author_profile: false
-categories:
-- Data Science
-- Epidemiology
-classes: wide
-date: '2020-03-29'
-excerpt: Real-time data processing platforms like Apache Flink are revolutionizing
-  epidemiological surveillance by providing timely, accurate insights that enable
-  rapid response to disease outbreaks and public health threats.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Real-time data processing
-- Apache flink
-- Epidemiological surveillance
-- Disease tracking
-- Real-time analytics
-- Public health data
-seo_description: An exploration of how real-time analytics platforms like Apache Flink
-  can enhance epidemiological surveillance, enabling disease tracking and outbreak
-  detection with high accuracy and timeliness.
-seo_title: Real-Time Data Processing in Epidemiological Surveillance Using Apache
-  Flink
-seo_type: article
-summary: Explore how real-time data processing platforms like Apache Flink are used
-  to enhance epidemiological surveillance, enabling timely disease tracking, outbreak
-  detection, and informed public health decisions. Learn about the benefits and challenges
-  of implementing real-time analytics in disease monitoring systems.
-tags:
-- Real-time data processing
-- Apache flink
-- Epidemiological surveillance
-- Disease tracking
-- Public health analytics
-title: Real-Time Data Processing and Epidemiological Surveillance
----
 
 ## 1. What is Real-Time Data Processing?
 
@@ -96,48 +54,6 @@ title: Real-Time Data Processing and Epidemiological Surveillance
 
 Real-time data processing platforms, such as **Apache Flink**, are designed to handle large-scale data streams efficiently. These platforms can process millions of events per second, making them ideal for applications that require fast, low-latency analytics—such as financial trading, fraud detection, and more recently, **epidemiological surveillance**.
 
----
-author_profile: false
-categories:
-- Data Science
-- Epidemiology
-classes: wide
-date: '2020-03-29'
-excerpt: Real-time data processing platforms like Apache Flink are revolutionizing
-  epidemiological surveillance by providing timely, accurate insights that enable
-  rapid response to disease outbreaks and public health threats.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Real-time data processing
-- Apache flink
-- Epidemiological surveillance
-- Disease tracking
-- Real-time analytics
-- Public health data
-seo_description: An exploration of how real-time analytics platforms like Apache Flink
-  can enhance epidemiological surveillance, enabling disease tracking and outbreak
-  detection with high accuracy and timeliness.
-seo_title: Real-Time Data Processing in Epidemiological Surveillance Using Apache
-  Flink
-seo_type: article
-summary: Explore how real-time data processing platforms like Apache Flink are used
-  to enhance epidemiological surveillance, enabling timely disease tracking, outbreak
-  detection, and informed public health decisions. Learn about the benefits and challenges
-  of implementing real-time analytics in disease monitoring systems.
-tags:
-- Real-time data processing
-- Apache flink
-- Epidemiological surveillance
-- Disease tracking
-- Public health analytics
-title: Real-Time Data Processing and Epidemiological Surveillance
----
 
 ## 3. Apache Flink: An Overview of the Platform
 
@@ -152,48 +68,6 @@ title: Real-Time Data Processing and Epidemiological Surveillance
 
 Flink is increasingly being adopted in public health because of its ability to process large-scale epidemiological data streams in real time, enabling faster outbreak detection and disease tracking.
 
----
-author_profile: false
-categories:
-- Data Science
-- Epidemiology
-classes: wide
-date: '2020-03-29'
-excerpt: Real-time data processing platforms like Apache Flink are revolutionizing
-  epidemiological surveillance by providing timely, accurate insights that enable
-  rapid response to disease outbreaks and public health threats.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Real-time data processing
-- Apache flink
-- Epidemiological surveillance
-- Disease tracking
-- Real-time analytics
-- Public health data
-seo_description: An exploration of how real-time analytics platforms like Apache Flink
-  can enhance epidemiological surveillance, enabling disease tracking and outbreak
-  detection with high accuracy and timeliness.
-seo_title: Real-Time Data Processing in Epidemiological Surveillance Using Apache
-  Flink
-seo_type: article
-summary: Explore how real-time data processing platforms like Apache Flink are used
-  to enhance epidemiological surveillance, enabling timely disease tracking, outbreak
-  detection, and informed public health decisions. Learn about the benefits and challenges
-  of implementing real-time analytics in disease monitoring systems.
-tags:
-- Real-time data processing
-- Apache flink
-- Epidemiological surveillance
-- Disease tracking
-- Public health analytics
-title: Real-Time Data Processing and Epidemiological Surveillance
----
 
 ## 5. Challenges and Considerations in Implementing Real-Time Analytics
 
@@ -211,48 +85,6 @@ Real-time data processing systems need robust infrastructure to handle **high-th
 
 Real-time surveillance systems often involve the collection of sensitive health data. Ensuring the **privacy and security** of this data is critical, particularly when dealing with personally identifiable information (PII) such as patient records, contact tracing data, or test results. Public health agencies must implement strict data security protocols and comply with regulations like HIPAA or GDPR when processing real-time health data.
 
----
-author_profile: false
-categories:
-- Data Science
-- Epidemiology
-classes: wide
-date: '2020-03-29'
-excerpt: Real-time data processing platforms like Apache Flink are revolutionizing
-  epidemiological surveillance by providing timely, accurate insights that enable
-  rapid response to disease outbreaks and public health threats.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Real-time data processing
-- Apache flink
-- Epidemiological surveillance
-- Disease tracking
-- Real-time analytics
-- Public health data
-seo_description: An exploration of how real-time analytics platforms like Apache Flink
-  can enhance epidemiological surveillance, enabling disease tracking and outbreak
-  detection with high accuracy and timeliness.
-seo_title: Real-Time Data Processing in Epidemiological Surveillance Using Apache
-  Flink
-seo_type: article
-summary: Explore how real-time data processing platforms like Apache Flink are used
-  to enhance epidemiological surveillance, enabling timely disease tracking, outbreak
-  detection, and informed public health decisions. Learn about the benefits and challenges
-  of implementing real-time analytics in disease monitoring systems.
-tags:
-- Real-time data processing
-- Apache flink
-- Epidemiological surveillance
-- Disease tracking
-- Public health analytics
-title: Real-Time Data Processing and Epidemiological Surveillance
----
 
 ## 7. The Future of Real-Time Data Processing in Epidemiology
 

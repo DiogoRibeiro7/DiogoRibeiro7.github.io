@@ -47,48 +47,6 @@ Monte Carlo simulations have become a cornerstone of modern quantitative economi
 
 This article explores the core mechanics of Monte Carlo methods and illustrates how they're used to simulate stochastic dynamics in macroeconomic models.
 
----
-author_profile: false
-categories:
-- Macroeconomics
-- Simulation Methods
-- Quantitative Finance
-classes: wide
-date: '2025-04-18'
-excerpt: Monte Carlo simulations offer a powerful way to model uncertainty in macroeconomic
-  systems. This article explores how they're applied to stress testing, forecasting,
-  and policy analysis in complex economic models.
-header:
-  image: /assets/images/data_science_16.jpg
-  og_image: /assets/images/data_science_16.jpg
-  overlay_image: /assets/images/data_science_16.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_16.jpg
-  twitter_image: /assets/images/data_science_16.jpg
-keywords:
-- Monte carlo simulation
-- Macroeconomics
-- Economic uncertainty
-- Policy modeling
-- Forecasting methods
-- Python
-seo_description: Explore how Monte Carlo methods are applied to simulate uncertainty,
-  test policy scenarios, and enhance macroeconomic forecasting models using stochastic
-  techniques.
-seo_title: 'Monte Carlo Simulations in Macroeconomics: Modeling Uncertainty at Scale'
-seo_type: article
-summary: This article explores the role of Monte Carlo simulation methods in macroeconomic
-  modeling, covering their mathematical basis, implementation, and real-world applications
-  in policy, forecasting, and risk management.
-tags:
-- Monte carlo
-- Economic forecasting
-- Uncertainty modeling
-- Probabilistic simulations
-- Computational economics
-- Python
-title: Monte Carlo Simulations in Macroeconomic Modeling
----
 
 ## 🧠 Why Use Monte Carlo in Macroeconomics?
 
@@ -101,48 +59,6 @@ Macroeconomic models are inherently uncertain. Assumptions about technology, pol
 
 Traditional deterministic simulations offer single trajectories. Monte Carlo offers distributions—essential in policy environments where confidence levels matter.
 
----
-author_profile: false
-categories:
-- Macroeconomics
-- Simulation Methods
-- Quantitative Finance
-classes: wide
-date: '2025-04-18'
-excerpt: Monte Carlo simulations offer a powerful way to model uncertainty in macroeconomic
-  systems. This article explores how they're applied to stress testing, forecasting,
-  and policy analysis in complex economic models.
-header:
-  image: /assets/images/data_science_16.jpg
-  og_image: /assets/images/data_science_16.jpg
-  overlay_image: /assets/images/data_science_16.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_16.jpg
-  twitter_image: /assets/images/data_science_16.jpg
-keywords:
-- Monte carlo simulation
-- Macroeconomics
-- Economic uncertainty
-- Policy modeling
-- Forecasting methods
-- Python
-seo_description: Explore how Monte Carlo methods are applied to simulate uncertainty,
-  test policy scenarios, and enhance macroeconomic forecasting models using stochastic
-  techniques.
-seo_title: 'Monte Carlo Simulations in Macroeconomics: Modeling Uncertainty at Scale'
-seo_type: article
-summary: This article explores the role of Monte Carlo simulation methods in macroeconomic
-  modeling, covering their mathematical basis, implementation, and real-world applications
-  in policy, forecasting, and risk management.
-tags:
-- Monte carlo
-- Economic forecasting
-- Uncertainty modeling
-- Probabilistic simulations
-- Computational economics
-- Python
-title: Monte Carlo Simulations in Macroeconomic Modeling
----
 
 ## 🛠️ Example: Simulating GDP under Random Shocks
 
@@ -173,48 +89,6 @@ plt.show()
 
 This simple example reveals how even small, random shocks compound significantly over time, yielding a wide range of economic futures.
 
----
-author_profile: false
-categories:
-- Macroeconomics
-- Simulation Methods
-- Quantitative Finance
-classes: wide
-date: '2025-04-18'
-excerpt: Monte Carlo simulations offer a powerful way to model uncertainty in macroeconomic
-  systems. This article explores how they're applied to stress testing, forecasting,
-  and policy analysis in complex economic models.
-header:
-  image: /assets/images/data_science_16.jpg
-  og_image: /assets/images/data_science_16.jpg
-  overlay_image: /assets/images/data_science_16.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_16.jpg
-  twitter_image: /assets/images/data_science_16.jpg
-keywords:
-- Monte carlo simulation
-- Macroeconomics
-- Economic uncertainty
-- Policy modeling
-- Forecasting methods
-- Python
-seo_description: Explore how Monte Carlo methods are applied to simulate uncertainty,
-  test policy scenarios, and enhance macroeconomic forecasting models using stochastic
-  techniques.
-seo_title: 'Monte Carlo Simulations in Macroeconomics: Modeling Uncertainty at Scale'
-seo_type: article
-summary: This article explores the role of Monte Carlo simulation methods in macroeconomic
-  modeling, covering their mathematical basis, implementation, and real-world applications
-  in policy, forecasting, and risk management.
-tags:
-- Monte carlo
-- Economic forecasting
-- Uncertainty modeling
-- Probabilistic simulations
-- Computational economics
-- Python
-title: Monte Carlo Simulations in Macroeconomic Modeling
----
 
 ## 🚀 The Road Ahead
 

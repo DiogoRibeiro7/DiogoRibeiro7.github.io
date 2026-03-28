@@ -43,48 +43,6 @@ title: A Comprehensive Guide to ARIMA Time Series Modeling
 
 Time series analysis is a crucial tool in various industries such as finance, economics, and engineering, where forecasting future trends based on historical data is essential. One of the most widely used models in this domain is the **ARIMA (AutoRegressive Integrated Moving Average)** model. It is a powerful statistical technique that can model and predict future points in a series based on its own past values. In this article, we will delve into the fundamentals of ARIMA, explain its components, how to identify the appropriate model parameters, and compare it with other similar models like ARIMAX, SARIMA, and ARMA.
 
----
-author_profile: false
-categories:
-- Time Series Analysis
-classes: wide
-date: '2024-10-04'
-excerpt: A detailed exploration of the ARIMA model for time series forecasting. Understand
-  its components, parameter identification techniques, and comparison with ARIMAX,
-  SARIMA, and ARMA.
-header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
-keywords:
-- Arima
-- Time series forecasting
-- Sarima
-- Arimax
-- Arma
-- Python
-- R
-seo_description: Learn the fundamentals of ARIMA (AutoRegressive Integrated Moving
-  Average) modeling, including components, parameter identification, validation, and
-  practical applications.
-seo_title: ARIMA Time Series Modeling Explained
-seo_type: article
-summary: This guide delves into the AutoRegressive Integrated Moving Average (ARIMA)
-  model, a powerful tool for time series forecasting. It covers the essential components,
-  how to identify model parameters, validation techniques, and how ARIMA compares
-  with other time series models like ARIMAX, SARIMA, and ARMA.
-tags:
-- Arima
-- Time series modeling
-- Forecasting
-- Data science
-- Python
-- R
-title: A Comprehensive Guide to ARIMA Time Series Modeling
----
 
 ## 2. Introduction to ARIMA Models
 
@@ -129,48 +87,6 @@ The primary goal of ARIMA is to capture autocorrelations in the time series and 
 
    Where $$\epsilon_t$$ is the error term and $$\theta_1, \theta_2, \dots, \theta_q$$ are the MA coefficients.
 
----
-author_profile: false
-categories:
-- Time Series Analysis
-classes: wide
-date: '2024-10-04'
-excerpt: A detailed exploration of the ARIMA model for time series forecasting. Understand
-  its components, parameter identification techniques, and comparison with ARIMAX,
-  SARIMA, and ARMA.
-header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
-keywords:
-- Arima
-- Time series forecasting
-- Sarima
-- Arimax
-- Arma
-- Python
-- R
-seo_description: Learn the fundamentals of ARIMA (AutoRegressive Integrated Moving
-  Average) modeling, including components, parameter identification, validation, and
-  practical applications.
-seo_title: ARIMA Time Series Modeling Explained
-seo_type: article
-summary: This guide delves into the AutoRegressive Integrated Moving Average (ARIMA)
-  model, a powerful tool for time series forecasting. It covers the essential components,
-  how to identify model parameters, validation techniques, and how ARIMA compares
-  with other time series models like ARIMAX, SARIMA, and ARMA.
-tags:
-- Arima
-- Time series modeling
-- Forecasting
-- Data science
-- Python
-- R
-title: A Comprehensive Guide to ARIMA Time Series Modeling
----
 
 ## 4. Model Identification: Choosing ARIMA Parameters (p, d, q)
 
@@ -192,48 +108,6 @@ The **MA term (q)** refers to the number of lagged forecast errors that are incl
 
 To identify the MA term, one looks at the **ACF plot**. If the ACF cuts off after lag $$q$$, that suggests an MA(q) process. For example, if the ACF shows significant spikes up to lag 1 but cuts off after that, it implies an MA(1) process.
 
----
-author_profile: false
-categories:
-- Time Series Analysis
-classes: wide
-date: '2024-10-04'
-excerpt: A detailed exploration of the ARIMA model for time series forecasting. Understand
-  its components, parameter identification techniques, and comparison with ARIMAX,
-  SARIMA, and ARMA.
-header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
-keywords:
-- Arima
-- Time series forecasting
-- Sarima
-- Arimax
-- Arma
-- Python
-- R
-seo_description: Learn the fundamentals of ARIMA (AutoRegressive Integrated Moving
-  Average) modeling, including components, parameter identification, validation, and
-  practical applications.
-seo_title: ARIMA Time Series Modeling Explained
-seo_type: article
-summary: This guide delves into the AutoRegressive Integrated Moving Average (ARIMA)
-  model, a powerful tool for time series forecasting. It covers the essential components,
-  how to identify model parameters, validation techniques, and how ARIMA compares
-  with other time series models like ARIMAX, SARIMA, and ARMA.
-tags:
-- Arima
-- Time series modeling
-- Forecasting
-- Data science
-- Python
-- R
-title: A Comprehensive Guide to ARIMA Time Series Modeling
----
 
 ## 6. Practical Applications of ARIMA
 
@@ -249,48 +123,6 @@ In economics, ARIMA models are used to forecast macroeconomic variables like GDP
 
 For example, an e-commerce company may use ARIMA to forecast monthly sales based on historical sales data. This forecast can then be used to optimize inventory levels and reduce storage costs.
 
----
-author_profile: false
-categories:
-- Time Series Analysis
-classes: wide
-date: '2024-10-04'
-excerpt: A detailed exploration of the ARIMA model for time series forecasting. Understand
-  its components, parameter identification techniques, and comparison with ARIMAX,
-  SARIMA, and ARMA.
-header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
-keywords:
-- Arima
-- Time series forecasting
-- Sarima
-- Arimax
-- Arma
-- Python
-- R
-seo_description: Learn the fundamentals of ARIMA (AutoRegressive Integrated Moving
-  Average) modeling, including components, parameter identification, validation, and
-  practical applications.
-seo_title: ARIMA Time Series Modeling Explained
-seo_type: article
-summary: This guide delves into the AutoRegressive Integrated Moving Average (ARIMA)
-  model, a powerful tool for time series forecasting. It covers the essential components,
-  how to identify model parameters, validation techniques, and how ARIMA compares
-  with other time series models like ARIMAX, SARIMA, and ARMA.
-tags:
-- Arima
-- Time series modeling
-- Forecasting
-- Data science
-- Python
-- R
-title: A Comprehensive Guide to ARIMA Time Series Modeling
----
 
 ## 8. Challenges and Limitations of ARIMA
 

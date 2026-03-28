@@ -45,46 +45,6 @@ The ability to track and predict disease spread is a cornerstone of epidemiologi
 
 This article explores the applications of time series analysis in epidemiology, illustrating how these methods help model disease dynamics, enhance outbreak detection, and provide valuable insights for predicting and preventing future public health crises.
 
----
-author_profile: false
-categories:
-- Data Science
-classes: wide
-date: '2020-01-12'
-excerpt: Time series analysis is a vital tool in epidemiology, allowing researchers
-  to model the spread of diseases, detect outbreaks, and predict future trends in
-  infection rates.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Time series analysis
-- Epidemiology
-- Disease spread
-- Outbreak detection
-- Predictive analytics
-- Public health modeling
-seo_description: A comprehensive look at the applications of time series analysis
-  in epidemiology. Learn how time series methods model disease spread, detect outbreaks
-  early, and predict future cases.
-seo_title: 'Time Series Analysis in Epidemiological Research: Disease Modeling and
-  Prediction'
-seo_type: article
-summary: Explore how time series analysis is used in epidemiological research to model
-  disease transmission, detect outbreaks, and predict future cases. This article covers
-  techniques like ARIMA, moving averages, and their applications in public health.
-tags:
-- Time series analysis
-- Epidemiology
-- Disease modeling
-- Outbreak detection
-- Predictive analytics
-title: Applications of Time Series Analysis in Epidemiological Research
----
 
 ## 2. Basic Concepts of Time Series in Epidemiology
 
@@ -99,46 +59,6 @@ In epidemiology, time series data typically consists of counts or rates of disea
 
 By analyzing these types of data, epidemiologists can uncover insights into disease patterns and inform strategies for prevention and control. Time series methods help by distinguishing between normal fluctuations and significant changes that might indicate the beginning of an outbreak or the effect of public health interventions.
 
----
-author_profile: false
-categories:
-- Data Science
-classes: wide
-date: '2020-01-12'
-excerpt: Time series analysis is a vital tool in epidemiology, allowing researchers
-  to model the spread of diseases, detect outbreaks, and predict future trends in
-  infection rates.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Time series analysis
-- Epidemiology
-- Disease spread
-- Outbreak detection
-- Predictive analytics
-- Public health modeling
-seo_description: A comprehensive look at the applications of time series analysis
-  in epidemiology. Learn how time series methods model disease spread, detect outbreaks
-  early, and predict future cases.
-seo_title: 'Time Series Analysis in Epidemiological Research: Disease Modeling and
-  Prediction'
-seo_type: article
-summary: Explore how time series analysis is used in epidemiological research to model
-  disease transmission, detect outbreaks, and predict future cases. This article covers
-  techniques like ARIMA, moving averages, and their applications in public health.
-tags:
-- Time series analysis
-- Epidemiology
-- Disease modeling
-- Outbreak detection
-- Predictive analytics
-title: Applications of Time Series Analysis in Epidemiological Research
----
 
 ## 4. Applications of Time Series in Epidemiology
 
@@ -172,46 +92,6 @@ Techniques like ARIMA, **seasonal exponential smoothing**, and **long short-term
 
 During the COVID-19 pandemic, many public health agencies used time series models to forecast the number of cases, hospitalizations, and deaths. These predictions helped guide public health responses and allocate resources, such as ventilators, ICU beds, and vaccines.
 
----
-author_profile: false
-categories:
-- Data Science
-classes: wide
-date: '2020-01-12'
-excerpt: Time series analysis is a vital tool in epidemiology, allowing researchers
-  to model the spread of diseases, detect outbreaks, and predict future trends in
-  infection rates.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Time series analysis
-- Epidemiology
-- Disease spread
-- Outbreak detection
-- Predictive analytics
-- Public health modeling
-seo_description: A comprehensive look at the applications of time series analysis
-  in epidemiology. Learn how time series methods model disease spread, detect outbreaks
-  early, and predict future cases.
-seo_title: 'Time Series Analysis in Epidemiological Research: Disease Modeling and
-  Prediction'
-seo_type: article
-summary: Explore how time series analysis is used in epidemiological research to model
-  disease transmission, detect outbreaks, and predict future cases. This article covers
-  techniques like ARIMA, moving averages, and their applications in public health.
-tags:
-- Time series analysis
-- Epidemiology
-- Disease modeling
-- Outbreak detection
-- Predictive analytics
-title: Applications of Time Series Analysis in Epidemiological Research
----
 
 ## 6. Challenges and Limitations of Time Series in Epidemiology
 
@@ -229,46 +109,6 @@ Infectious diseases are influenced by a multitude of factors, including human be
 
 Many epidemiological time series exhibit non-stationarity, meaning their statistical properties change over time. This could be due to seasonal effects, changing transmission rates, or the introduction of new interventions like vaccines. Dealing with non-stationary data requires sophisticated methods like **differencing** or **seasonal decomposition** to make the data stationary and suitable for analysis.
 
----
-author_profile: false
-categories:
-- Data Science
-classes: wide
-date: '2020-01-12'
-excerpt: Time series analysis is a vital tool in epidemiology, allowing researchers
-  to model the spread of diseases, detect outbreaks, and predict future trends in
-  infection rates.
-header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
-keywords:
-- Time series analysis
-- Epidemiology
-- Disease spread
-- Outbreak detection
-- Predictive analytics
-- Public health modeling
-seo_description: A comprehensive look at the applications of time series analysis
-  in epidemiology. Learn how time series methods model disease spread, detect outbreaks
-  early, and predict future cases.
-seo_title: 'Time Series Analysis in Epidemiological Research: Disease Modeling and
-  Prediction'
-seo_type: article
-summary: Explore how time series analysis is used in epidemiological research to model
-  disease transmission, detect outbreaks, and predict future cases. This article covers
-  techniques like ARIMA, moving averages, and their applications in public health.
-tags:
-- Time series analysis
-- Epidemiology
-- Disease modeling
-- Outbreak detection
-- Predictive analytics
-title: Applications of Time Series Analysis in Epidemiological Research
----
 
 ## Conclusion
 

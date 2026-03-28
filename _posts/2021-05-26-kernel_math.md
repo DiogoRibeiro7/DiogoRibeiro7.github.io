@@ -65,57 +65,6 @@ In this comprehensive guide, we will explore:
 
 By the end of this article, you will have a solid understanding of KDE’s theoretical framework and be able to apply it confidently in various analytical contexts.
 
----
-author_profile: false
-categories:
-- Statistics
-classes: wide
-date: '2021-05-26'
-excerpt: Explore the foundations, concepts, and mathematics behind Kernel Density
-  Estimation (KDE), a powerful tool in non-parametric statistics for estimating probability
-  density functions.
-header:
-  excerpt: false
-  image: /assets/images/kernel_math.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/kernel_math.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/kernel_math.jpg
-  twitter_image: /assets/images/data_science_1.jpg
-keywords:
-- Non-parametric statistics
-- Multivariate kde
-- Density estimation
-- Kde applications
-- Data visualization
-- Kernel functions
-- Anomaly detection
-- Machine learning
-- Kernel density estimation
-- Bandwidth selection
-seo_description: A deep dive into the math, theory, and practical considerations of
-  Kernel Density Estimation (KDE), covering its core components, bandwidth selection,
-  kernel functions, multivariate KDE, and real-world applications.
-seo_title: Exploring the Math Behind Kernel Density Estimation
-seo_type: article
-summary: Kernel Density Estimation (KDE) is a non-parametric method used to estimate
-  the probability density function of data without assuming a specific distribution.
-  This article explores the mathematical foundations behind KDE, including the role
-  of kernel functions, bandwidth selection, and their impact on bias and variance.
-  The article also covers multivariate KDE, efficient computational techniques, and
-  applications of KDE in fields such as data science, machine learning, and statistics.
-  With a focus on practical insights and theoretical rigor, the article offers a comprehensive
-  guide to understanding KDE.
-tags:
-- Non-parametric statistics
-- Multivariate kde
-- Kernel functions
-- Machine learning
-- Kernel density estimation
-- Bandwidth selection
-- Data science
-title: The Math Behind Kernel Density Estimation
----
 
 ## 2. The Basics of Kernel Density Estimation (KDE)
 
@@ -161,57 +110,6 @@ Common kernel functions include:
 
 Each kernel function has its advantages and trade-offs, but the Gaussian kernel is the most widely used due to its smoothness and mathematical properties.
 
----
-author_profile: false
-categories:
-- Statistics
-classes: wide
-date: '2021-05-26'
-excerpt: Explore the foundations, concepts, and mathematics behind Kernel Density
-  Estimation (KDE), a powerful tool in non-parametric statistics for estimating probability
-  density functions.
-header:
-  excerpt: false
-  image: /assets/images/kernel_math.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/kernel_math.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/kernel_math.jpg
-  twitter_image: /assets/images/data_science_1.jpg
-keywords:
-- Non-parametric statistics
-- Multivariate kde
-- Density estimation
-- Kde applications
-- Data visualization
-- Kernel functions
-- Anomaly detection
-- Machine learning
-- Kernel density estimation
-- Bandwidth selection
-seo_description: A deep dive into the math, theory, and practical considerations of
-  Kernel Density Estimation (KDE), covering its core components, bandwidth selection,
-  kernel functions, multivariate KDE, and real-world applications.
-seo_title: Exploring the Math Behind Kernel Density Estimation
-seo_type: article
-summary: Kernel Density Estimation (KDE) is a non-parametric method used to estimate
-  the probability density function of data without assuming a specific distribution.
-  This article explores the mathematical foundations behind KDE, including the role
-  of kernel functions, bandwidth selection, and their impact on bias and variance.
-  The article also covers multivariate KDE, efficient computational techniques, and
-  applications of KDE in fields such as data science, machine learning, and statistics.
-  With a focus on practical insights and theoretical rigor, the article offers a comprehensive
-  guide to understanding KDE.
-tags:
-- Non-parametric statistics
-- Multivariate kde
-- Kernel functions
-- Machine learning
-- Kernel density estimation
-- Bandwidth selection
-- Data science
-title: The Math Behind Kernel Density Estimation
----
 
 ## 7. Efficient Computation of KDE
 

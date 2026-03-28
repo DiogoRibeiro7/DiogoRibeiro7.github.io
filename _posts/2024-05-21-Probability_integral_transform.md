@@ -146,61 +146,6 @@ Key properties of CDFs that make the Probability Integral Transform work include
 
 The Probability Integral Transform leverages these properties of CDFs to convert any continuous random variable into a uniformly distributed variable, facilitating various statistical methods and analyses.
 
----
-author_profile: false
-categories:
-- Statistics
-classes: wide
-date: '2024-05-21'
-excerpt: An in-depth guide to understanding and applying the Probability Integral
-  Transform in various fields, from finance to statistics.
-header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_2.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_3.jpg
-keywords:
-- Probability integral transform
-- Cumulative distribution function
-- Goodness of fit
-- Copula construction
-- Financial risk management
-- Monte carlo simulations
-- Hypothesis testing
-- Credit risk modeling
-- R
-- Mathematics
-- Statistics
-- Data science
-- Machine learning
-seo_description: A comprehensive exploration of the probability integral transform,
-  its theoretical foundations, and practical applications in fields such as risk management
-  and marketing mix modeling.
-seo_title: 'Probability Integral Transform: Theory and Applications'
-seo_type: article
-summary: This article explains the Probability Integral Transform, its role in statistical
-  modeling, and how it is applied in diverse fields like risk management, hypothesis
-  testing, and Monte Carlo simulations.
-tags:
-- Probability integral transform
-- Cumulative distribution function
-- Uniform distribution
-- Copula construction
-- Goodness of fit
-- Monte carlo simulations
-- Hypothesis testing
-- Marketing mix modeling
-- Credit risk modeling
-- Financial risk management
-- R
-- Mathematics
-- Statistics
-- Data science
-- Machine learning
-title: 'Probability Integral Transform: Theory and Applications'
----
 
 ## Case Study: Application to Marketing Mix Modeling (MMM)
 
@@ -298,61 +243,6 @@ The application of the Probability Integral Transform in our MMM analysis has le
 
 The application of the Probability Integral Transform has significantly enhanced the effectiveness of Marketing Mix Modeling. By enabling precise residual analysis and robust model validation, PIT has led to the development of highly accurate and actionable MMM models, driving better decision-making and improved marketing outcomes for our clients.
 
----
-author_profile: false
-categories:
-- Statistics
-classes: wide
-date: '2024-05-21'
-excerpt: An in-depth guide to understanding and applying the Probability Integral
-  Transform in various fields, from finance to statistics.
-header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_2.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_3.jpg
-keywords:
-- Probability integral transform
-- Cumulative distribution function
-- Goodness of fit
-- Copula construction
-- Financial risk management
-- Monte carlo simulations
-- Hypothesis testing
-- Credit risk modeling
-- R
-- Mathematics
-- Statistics
-- Data science
-- Machine learning
-seo_description: A comprehensive exploration of the probability integral transform,
-  its theoretical foundations, and practical applications in fields such as risk management
-  and marketing mix modeling.
-seo_title: 'Probability Integral Transform: Theory and Applications'
-seo_type: article
-summary: This article explains the Probability Integral Transform, its role in statistical
-  modeling, and how it is applied in diverse fields like risk management, hypothesis
-  testing, and Monte Carlo simulations.
-tags:
-- Probability integral transform
-- Cumulative distribution function
-- Uniform distribution
-- Copula construction
-- Goodness of fit
-- Monte carlo simulations
-- Hypothesis testing
-- Marketing mix modeling
-- Credit risk modeling
-- Financial risk management
-- R
-- Mathematics
-- Statistics
-- Data science
-- Machine learning
-title: 'Probability Integral Transform: Theory and Applications'
----
 
 ## Appendix: Code Snippets in R
 
