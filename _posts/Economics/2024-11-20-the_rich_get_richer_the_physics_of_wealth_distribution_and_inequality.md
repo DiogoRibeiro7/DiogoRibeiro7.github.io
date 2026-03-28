@@ -32,7 +32,6 @@ keywords:
 - Boltzmann-Gibbs Distribution
 - Game Theory
 - Endogenous Growth
-- python
 seo_description: An in-depth exploration of the economic and physical models explaining wealth distribution, focusing on Pareto's Law and the emerging field of econophysics.
 seo_title: 'The Rich Get Richer: Understanding Wealth Distribution through Physics'
 seo_type: article
@@ -49,7 +48,6 @@ tags:
 - Data Science
 - Wealth Inequality
 - Pareto Distribution
-- Econophysics
 - Stochastic Models
 - Agent-Based Models
 - Markov Chains
@@ -59,7 +57,6 @@ tags:
 - Differential Equations
 - Game Theory
 - Endogenous Growth Models
-- python
 title: 'The Rich Get Richer: The Physics of Wealth Distribution and Inequality'
 ---
 

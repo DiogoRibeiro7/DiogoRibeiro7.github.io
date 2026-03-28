@@ -1448,7 +1448,7 @@ class RealTimeAnomalyDetectionSystem:
         
         return status
 
-# WebSocket server for real-time alerts
+## WebSocket server for real-time alerts
 async def alert_websocket_handler(websocket, path, detection_system):
     """
     WebSocket handler for real-time alert distribution
@@ -1459,7 +1459,7 @@ async def alert_websocket_handler(websocket, path, detection_system):
     finally:
         detection_system.alert_subscribers.discard(websocket)
 
-# Example usage
+## Example usage
 async def simulate_real_time_detection():
     """
     Simulate real-time traffic anomaly detection
@@ -1527,8 +1527,8 @@ async def simulate_real_time_detection():
     print(f"Detection Rate: {status['detection_rate']:.2%}")
     print(f"Avg Processing Time: {status['avg_processing_time']:.4f}s")
 
-# Run simulation
-# asyncio.run(simulate_real_time_detection())
+## Run simulation
+## asyncio.run(simulate_real_time_detection())
 
 ## Emergency Response Integration and Alert Management
 

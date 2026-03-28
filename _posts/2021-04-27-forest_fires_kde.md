@@ -24,8 +24,6 @@ keywords:
 - Belait district
 - Bash
 - Python
-- bash
-- python
 seo_description: Explore GIS techniques like KDE, Getis-Ord Gi*, and Anselin Local Moran’s I for identifying forest fire hotspots in Southeast Asia, validated by contributory factors.
 seo_title: GIS-Based Forest Fire Hotspot Identification Using Contributory Factors
 seo_type: article
@@ -43,7 +41,7 @@ tags:
 title: 'GIS-Based Forest Fire Hotspot Identification: A Comprehensive Approach Using Contributory Factors'
 ---
 
-![Example Image](/assets/images/forest_fire_kde_3.png)
+![Example Image](/assets/images/forest_fire_kde_2.png)
 
 ### Introduction
 

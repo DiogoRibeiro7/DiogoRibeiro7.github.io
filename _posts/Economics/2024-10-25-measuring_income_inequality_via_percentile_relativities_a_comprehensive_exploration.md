@@ -21,7 +21,6 @@ keywords:
 - Statistics
 - Social sciences
 - Python
-- python
 seo_description: An in-depth analysis of percentile-based measures of income inequality, comparing traditional metrics like the Gini Index with novel approaches developed by Brazauskas, Greselin, and Zitikis.
 seo_title: Measuring Income Inequality via Percentile Relativities
 seo_type: article
@@ -35,7 +34,6 @@ tags:
 - Statistics
 - Social sciences
 - Python
-- python
 title: 'Measuring Income Inequality via Percentile Relativities: A Comprehensive Exploration'
 ---
 

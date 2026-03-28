@@ -22,7 +22,6 @@ keywords:
 - Finance
 - Statistics
 - Quantitative Analysis
-- python
 seo_description: Explore key financial models, including Copula and GARCH, for quantitative analysis in finance, with applications in risk assessment and Python code examples.
 seo_title: Copula, GARCH, and Financial Models in Quantitative Analysis
 seo_type: article
@@ -35,7 +34,6 @@ tags:
 - Finance
 - Statistics
 - Quantitative Analysis
-- python
 title: Copula, GARCH, and Other Financial Models
 ---
 

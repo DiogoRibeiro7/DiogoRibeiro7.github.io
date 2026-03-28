@@ -61,7 +61,7 @@ Consider a model that predicts house prices based on features such as square foo
 
 The ability to detect such subtle changes is crucial for maintaining the integrity and performance of machine learning models over time. By leveraging multivariate data drift detection, data scientists can ensure their models remain accurate and reliable, adapting to changes in the underlying data distribution and preserving the quality of predictions. This approach not only enhances model performance but also builds trust in the deployment of machine learning solutions in dynamic environments.
 
-# How Does It Work? 🔬
+## How Does It Work? 🔬
 
 ## Compressing the Reference Feature Space
 
@@ -89,7 +89,7 @@ Detecting such drift is vital for maintaining the reliability of machine learnin
 
 The process of detecting multivariate data drift involves compressing the reference feature space using PCA, measuring the reconstruction error, transforming production data, and monitoring for significant changes in reconstruction error. This approach provides a robust mechanism for capturing and responding to complex changes in data structure, maintaining the integrity and performance of machine learning models over time.
 
-# Detailed Explanation
+## Detailed Explanation
 
 ## Principal Component Analysis (PCA)
 
@@ -122,7 +122,7 @@ where $$x_i$$ is the original data point, $$\hat{x}_i$$ is the reconstructed dat
 
 In the context of multivariate data drift detection, monitoring the reconstruction error allows us to detect when the production data no longer aligns with the reference data. A significant increase in reconstruction error signals that the underlying data structure has changed, potentially impacting the performance of machine learning models. By identifying these changes early, we can take appropriate actions to update or retrain models, ensuring their continued accuracy and reliability.
 
-# Application in Production
+## Application in Production
 
 ## Setting the Threshold
 
@@ -161,7 +161,7 @@ To ensure timely detection and response to data drift, setting up alerts is cruc
 
 By setting an appropriate threshold, continuously monitoring reconstruction errors, and implementing an effective alerting system, organizations can proactively manage multivariate data drift, maintaining the accuracy and reliability of their machine learning models in production.
 
-# Benefits and Limitations
+## Benefits and Limitations
 
 ## Benefits
 
@@ -179,11 +179,11 @@ By setting an appropriate threshold, continuously monitoring reconstruction erro
 - **May Need Frequent Recalibration as Data Evolves:**
   As the underlying data distribution changes over time, the PCA model and the predefined threshold for reconstruction error may need recalibration. This ongoing maintenance can be resource-intensive and may require regular updates to ensure the system remains effective in detecting data drift.
 
-# Conclusion
+## Conclusion
 
 Multivariate data drift detection using PCA and reconstruction error provides a robust method for monitoring changes in data structure. By evaluating all features simultaneously, it captures subtle shifts that might be overlooked by univariate methods, ensuring the reliability and accuracy of machine learning models in production. This comprehensive approach helps maintain model performance, allowing organizations to proactively address data drift and uphold the integrity of their machine learning applications.
 
-# References
+## References
 
 - Jolliffe, I. T. (2002). Principal Component Analysis. Springer Series in Statistics.
 - Kullback, S., & Leibler, R. A. (1951). On Information and Sufficiency. The Annals of Mathematical Statistics, 22(1), 79-86.
@@ -192,7 +192,7 @@ Multivariate data drift detection using PCA and reconstruction error provides a 
 - Basseville, M., & Nikiforov, I. V. (1993). Detection of Abrupt Changes: Theory and Application. Prentice Hall.
 - Agyemang, M., Barker, K., & Alhajj, R. (2006). A Comprehensive Survey of Data Mining-based Fraud Detection Research. IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews), 38(6), 944-964.
 
-# Appendices
+## Appendices
 
 ## Appendix A: PCA Implementation
 

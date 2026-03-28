@@ -50,11 +50,11 @@ toc: false
 toc_label: The Complexity of Real-World Data Distributions
 ---
 
-# Abstract
+## Abstract
 
 Ergodicity, a foundational concept across disciplines such as physics, chemistry, natural sciences, economics, and machine learning, often suffers from a widespread misconception. Traditionally, ergodicity has been attributed to processes themselves, suggesting that a process can be inherently ergodic. This perspective, however, overlooks the nuanced understanding that ergodicity is not a fixed property but a regime or condition that emerges within the temporal evolution of a process. The distinction is critical for accurate analysis and interpretation in theoretical and applied research. This paper aims to elucidate the misconception by advocating for a shift in perspective: from identifying "ergodic processes" to recognizing "ergodic regimes" based on observables and their evolution over time. Through a detailed examination of ergodicity measures, mathematical formulations, and a case study on Bernoulli Trials, we underscore the importance of this paradigm shift for a deeper understanding of ergodic behavior in complex systems.
 
-# Introduction
+## Introduction
 
 Ergodicity is a cornerstone concept that intersects multiple fields of science, including physics, chemistry, the natural sciences, and more recently, economics and machine learning. Its significance lies in understanding how systems evolve over time and the implications of this evolution for predicting future states. Despite its widespread application, the definition and interpretation of ergodicity vary, leading to confusion and misconceptions, particularly regarding its application to processes and regimes.
 
@@ -66,7 +66,7 @@ Understanding ergodicity as a regime rather than an inherent process characteris
 
 In this introduction, we explore the roots of the ergodicity concept, clarify the statistical underpinnings as posited by Birkhoff, and address the critical misconception surrounding ergodic processes. We argue for the importance of identifying ergodic regimes within the temporal evolution of processes, a perspective that not only aligns with theoretical foundations but also enhances the practical understanding and application of ergodic principles across diverse scientific disciplines.
 
-# Ergodicity in Theory and Practice
+## Ergodicity in Theory and Practice
 
 ## Definitions and Background
 
@@ -112,7 +112,7 @@ Understanding ergodicity as a regime rather than an inherent property of process
 
 In conclusion, the transition from viewing processes as inherently ergodic to recognizing the existence of ergodic regimes enriches our understanding of dynamic systems. It underscores the importance of context, observables, and scales in the analysis of ergodicity, paving the way for more nuanced and accurate scientific inquiries into the nature of complex systems.
 
-# Identifying Ergodic Regimes
+## Identifying Ergodic Regimes
 
 ## Key Components
 
@@ -163,7 +163,7 @@ For deterministic systems, this analysis often involves exploring the system's p
 
 In summary, the mathematical formulation of processes as dynamical systems, encompassing both deterministic and stochastic models, provides a rigorous foundation for understanding ergodic regimes. By defining regimes in terms of parameter spaces or temporal intervals and employing mathematical tools to analyze the convergence of time and ensemble averages, researchers can precisely identify and characterize ergodic behavior in complex systems.
 
-# Methodology for Identifying Ergodic Regimes
+## Methodology for Identifying Ergodic Regimes
 
 ## Ensemble and Time-Averaged Observables
 
@@ -243,7 +243,7 @@ For stochastic systems, the Fokker-Planck and Master equations describe the time
 
 These advanced measures extend the toolkit available to physicists and researchers in related fields for probing the intricate behavior of dynamical systems. By employing these measures, scientists can uncover deeper insights into the nature of ergodicity, facilitating a more nuanced understanding of the conditions under which systems transition between ergodic and non-ergodic regimes.
 
-# Case Study: Bernoulli Trials
+## Case Study: Bernoulli Trials
 
 ## Experimental Setup
 
@@ -291,7 +291,7 @@ The onset of ergodic regimes in Bernoulli trials can be observed when the time-a
 
 The case study of Bernoulli trials provides a clear and tangible example of how ergodic regimes manifest in stochastic processes. Through the detailed analysis of time-averaged observables and their convergence to ensemble averages, we gain a deeper understanding of the conditions under which a system can be considered ergodic. These observations underscore the importance of considering both the choice of observables and the scale of analysis when investigating ergodicity in dynamical systems. Ultimately, the exploration of Bernoulli trials reinforces the concept that ergodicity is a nuanced and emergent property, pivotal for bridging the gap between dynamic processes and their statistical descriptions.
 
-# Conclusion
+## Conclusion
 
 This investigation into the nature of ergodicity, spanning theoretical foundations, mathematical formulations, and a practical case study, underscores a crucial insight: ergodic regimes are highly contingent on the observable under consideration and the temporal evolution of the process. The journey from the basic definitions and misconceptions surrounding ergodic processes to the nuanced exploration of ergodic regimes in Bernoulli trials illuminates the intricate dance between dynamics and statistics that defines ergodicity.
 
@@ -321,7 +321,7 @@ The exploration of ergodicity outlined in this article opens several avenues for
 
 In conclusion, the study of ergodicity, with its intricate balance between time and ensemble averages, provides a rich framework for understanding the behavior of dynamic systems. By embracing the complexity and conditional nature of ergodic regimes, researchers can deepen their insights into the fundamental principles that govern the evolution of both physical and non-physical processes, paving the way for new discoveries and applications in the science of dynamics and beyond.
 
-# Appendices: 
+## Appendices: 
 
 ## Python Notebook for Simulating Bernoulli Trials and Identifying Ergodic Regimes
 

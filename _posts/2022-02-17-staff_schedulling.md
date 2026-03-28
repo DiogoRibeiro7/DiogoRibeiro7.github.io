@@ -27,10 +27,6 @@ keywords:
 - Constraint programming
 - Bash
 - Python
-- Bash
-- Python
-- bash
-- python
 seo_description: Learn how to use linear programming with the PuLP library in Python to optimize staff scheduling and minimize costs in a 24/7 operational environment.
 seo_title: Staff Scheduling Optimization with Linear Programming in Python
 seo_type: article
@@ -40,10 +36,6 @@ tags:
 - Scheduling
 - Bash
 - Python
-- Bash
-- Python
-- bash
-- python
 title: Optimizing Staff Scheduling with Linear Programming
 ---
 

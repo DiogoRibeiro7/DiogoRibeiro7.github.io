@@ -10,7 +10,7 @@ excerpt: Dixon's Q test is a statistical method used to detect and reject outlie
 header:
   image: /assets/images/statistics_outlier.jpg
   og_image: /assets/images/statistics_outlier.jpg
-  overlay_image: /assets/images/statistics.jpg
+  overlay_image: /assets/images/statistics/statistics.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/statistics_outlier.jpg
   twitter_image: /assets/images/statistics_outlier.jpg

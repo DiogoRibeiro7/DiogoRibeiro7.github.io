@@ -8,12 +8,12 @@ excerpt: Grubbs' test is a statistical method used to detect outliers in a univa
   dataset, assuming the data follows a normal distribution. This article explores
   its mechanics, usage, and applications.
 header:
-  image: /assets/images/statistics_header.jpg
-  og_image: /assets/images/statistics_og.jpg
-  overlay_image: /assets/images/statistics_header.jpg
+  image: /assets/images/statistics_outlier.jpg
+  og_image: /assets/images/statistics_outlier.jpg
+  overlay_image: /assets/images/statistics_outlier.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/statistics_teaser.jpg
-  twitter_image: /assets/images/statistics_twitter.jpg
+  twitter_image: /assets/images/statistics_outlier.jpg
 keywords:
 - Grubbs' test
 - Outlier detection

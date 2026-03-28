@@ -33,9 +33,6 @@ tags:
 - Fmi
 - Machine Learning
 - Data Science
-- Clustering
-- python
-- plaintext
 title: 'Understanding the Fowlkes-Mallows Index: A Tool for Clustering and Classification Evaluation'
 ---
 

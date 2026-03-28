@@ -22,10 +22,7 @@ keywords:
 - Inequality
 - Python
 - Java
-- Javascript
-- python
-- java
-- javascript
+- JavaScript
 seo_description: Explore mathematical models of inequality, including the Lorenz curve and Gini coefficient, and learn how they quantify economic inequality.
 seo_title: 'Mathematical Models of Economic Inequality: Lorenz Curves and Gini Coefficients'
 seo_type: article

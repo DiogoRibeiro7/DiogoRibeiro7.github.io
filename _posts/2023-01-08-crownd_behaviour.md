@@ -51,7 +51,7 @@ Our journey today takes us down a fascinating path—one that employs the rigor 
 
 So, let's embark on this intellectual adventure, where numbers meet human behavior, and where equations can predict the future—or at least, make it a bit more understandable. Welcome to the world where mathematics walks hand in hand with everyday life, illuminating the way forward.
 
-# The Science of Walking
+## The Science of Walking
 At first glance, walking might appear as nothing more than a mechanical act, a straightforward sequence of steps that propel us from one point to another. Yet, when we delve deeper into this ostensibly simple activity, we uncover a labyrinth of complexities that defy casual observation. Each step is a marvel of biomechanical engineering, involving intricate coordination between muscles, bones, and neural pathways. But the complexity doesn't end with individual physiology; it extends into the realm of social dynamics and environmental interactions.
 
 Imagine walking through a crowded marketplace. Your steps are not just guided by your destination, but also by the people around you, the layout of the space, and even the ambient noise level. You navigate through the crowd, avoiding collisions, perhaps even altering your speed or trajectory based on social cues and unspoken agreements. This dance, so to speak, is a complex system of interactions that begs for scientific scrutiny. Understanding it requires a multidisciplinary approach that combines insights from psychology, sociology, urban planning, and yes, mathematics. It's a subject that calls for the kind of rigorous analysis that only scientific study can provide, transforming the simple act of walking into a rich field of inquiry.
@@ -66,7 +66,7 @@ By quantifying these forces, the Social Force Model allows us to simulate and pr
 
 In essence, the Social Force Model serves as a bridge between the abstract world of mathematics and the tangible realities of human interaction. It's a testament to the power of scientific inquiry, capable of transforming our understanding of something as simple, yet as complex, as the act of walking.
 
-# Mathematical Foundations
+## Mathematical Foundations
 In the realm of mathematics, vectors serve as a powerful tool for representing both magnitude and direction, making them ideal for describing forces. When we talk about pedestrian movement in the context of the Social Force Model, vectors come into play to quantify the attraction and repulsion forces that influence individual trajectories.
 
 Mathematically, the attraction force is denoted as $$\vec{F}_{\text{attraction}}$$ can be represented as:
@@ -102,7 +102,7 @@ These self-organizing behaviors underscore the intricate balance between individ
 
 In summary, the mathematical foundations of pedestrian dynamics weave together vectors, probabilities, and fluid dynamics into a cohesive tapestry. This interdisciplinary approach not only deepens our understanding of what may seem like mundane activity but also equips us with the tools to improve the design and management of public spaces. It's a vivid illustration of how mathematics can illuminate the complexities of the world around us, making the invisible visible and the incomprehensible understandable.
 
-# Cultural and Societal Factors
+## Cultural and Societal Factors
 While mathematical models offer a robust framework for understanding the mechanics of pedestrian movement, they often overlook the nuanced influences of culture and society. Cultural norms, deeply ingrained in the collective psyche of a population, can significantly impact pedestrian behavior. For instance, in Japan, it's common to see people standing on one side of the escalator to allow for a walking lane on the other side—a practice less consistently observed in other countries. In the United Kingdom, the unspoken rule of walking on the left side of the sidewalk mirrors the driving direction, a tendency not shared by countries where driving is on the right.
 
 Even the concept of personal space varies from culture to culture. In some Middle Eastern and South Asian countries, it's not uncommon for people to stand closer to each other in queues or while conversing, a behavior that might be considered invasive in Western societies. These cultural biases extend to how people navigate crowded spaces, how they react to congestion, and even how they interpret social cues while walking.
@@ -113,7 +113,7 @@ Similarly, the design of public spaces, from airports to shopping malls, can ben
 
 In essence, integrating cultural factors into mathematical models of pedestrian behavior can result in more accurate, effective, and empathetic urban planning and crowd management strategies. It's a multidimensional approach that respects the diversity of human experience, acknowledging that numbers and equations, while powerful, are just one part of the intricate tapestry that makes up our social fabric.
 
-# Applications and Innovations
+## Applications and Innovations
 The applications of mathematical models in understanding pedestrian behavior extend far beyond theoretical musings; they have a tangible impact on the quality of life in urban settings. City planners, architects, and policymakers are increasingly relying on these models to design public spaces that are not only aesthetically pleasing but also functionally efficient and safe. From the layout of parks and plazas to the architecture of subway stations, mathematical insights into pedestrian dynamics are shaping the cities of tomorrow.
 
 One area where these models prove invaluable is in ensuring crowd safety during large events, such as concerts, sports games, and public demonstrations. By simulating different scenarios—ranging from the flow of people entering and exiting a venue to emergency evacuations—planners can identify potential bottlenecks and hazards before they become real-life problems. This proactive approach has been instrumental in preventing tragedies and ensuring that large gatherings remain safe and enjoyable experiences for all.
@@ -126,7 +126,7 @@ These are just a few examples, but they illustrate a broader trend: the marriage
 
 In conclusion, the study of pedestrian behavior, underpinned by rigorous mathematical models, is not just an academic endeavor. It's a multidisciplinary field with far-reaching applications that touch upon various aspects of our daily lives. From the design of public spaces to the management of large events and traffic systems, this blend of mathematics, sociology, and urban planning offers a holistic approach to understanding and improving the world we navigate on foot. It's a testament to the power of interdisciplinary research and its potential to drive meaningful change in our increasingly complex and interconnected world.
 
-# Summary and Reflection
+## Summary and Reflection
 In this exploration, we've journeyed through the multifaceted world of pedestrian behavior, uncovering the layers of complexity that lie beneath the seemingly simple act of walking. At the heart of our discussion is the interdisciplinary nature of this field, which marries the precision of mathematics and physics with the insights of sociology and the practical concerns of urban planning. Through frameworks like the Social Force Model, we've seen how vectors and equations can capture the nuances of human movement, while statistical methods add a layer of probabilistic realism.
 
 Yet, the story doesn't end with numbers and formulas. Cultural norms and societal factors play a crucial role in shaping pedestrian dynamics, adding a layer of complexity that enriches our mathematical models. This interdisciplinary approach has practical implications, too, from enhancing crowd safety at large events to innovating traffic management systems in cities around the world.
@@ -137,7 +137,7 @@ This article stands as a testament to the power of interdisciplinary research, d
 
 
 You can find simples examples of this, in Python, in the following [Social Force Model](https://github.com/DiogoRibeiro7/Medium-Blog/blob/master/work%20force%20model/work_force_model.ipynb)
-# References
+## References
 
 1. Helbing, D., & Molnár, P. (1995). Social force model for pedestrian dynamics. Physical Review E, 51(5), 4282–4286.
 2. Fruin, J. J. (1971). Pedestrian Planning and Design. Metropolitan Association of Urban Designers and Environmental Planners.

@@ -27,14 +27,6 @@ keywords:
 - Mathematics
 - Statistics
 - Data science
-- Python
-- Fortran
-- Sh
-- C
-- python
-- fortran
-- sh
-- c
 seo_description: Learn about Matthew’s Correlation Coefficient (MCC), an essential metric for evaluating binary classification models, particularly in imbalanced datasets, and how it improves upon traditional metrics.
 seo_title: 'Matthew’s Correlation Coefficient (MCC): A Guide to Binary Classification'
 seo_type: article

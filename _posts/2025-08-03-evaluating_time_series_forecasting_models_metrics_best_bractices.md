@@ -43,7 +43,7 @@ header:
   twitter_image: /assets/images/data_science_9.jpg
 ---
 
-# Introduction
+## Introduction
 
 Time series forecasting is one of the most challenging yet essential tasks in data science, econometrics, engineering, and applied research. Accurate forecasts can drive business decisions, inform policy, optimize resources, and improve operational efficiency. However, building a forecasting model is only half the battle. The real challenge lies in **evaluating** the model's performance to ensure it is both reliable and actionable.
 
@@ -51,7 +51,7 @@ Evaluation of time series models requires a careful selection of performance met
 
 This article provides a comprehensive overview of how to evaluate time series forecasting models. We discuss the most commonly used performance metrics such as RMSE, MAE, MAPE, AIC, and BIC, highlight best practices for model validation (including rolling-origin evaluation and time series cross-validation), and provide guidance on interpreting results for model improvement. Practical examples in Python and R are included for hands-on understanding.
 
-# 1\. Importance of Evaluation in Time Series Forecasting
+## 1\. Importance of Evaluation in Time Series Forecasting
 
 Evaluation ensures that forecasts are accurate, reliable, and robust under real-world conditions. Without proper evaluation:
 
@@ -61,7 +61,7 @@ Evaluation ensures that forecasts are accurate, reliable, and robust under real-
 
 Therefore, evaluation is not just a technical step but a critical component of the forecasting process.
 
-# 2\. Forecast Accuracy Metrics
+## 2\. Forecast Accuracy Metrics
 
 Performance metrics quantify how well a model's predictions match the observed values. Below are the most widely used metrics for time series forecasting.
 
@@ -177,7 +177,7 @@ model <- arima(y, order=c(1,1,1))
 AIC(model); BIC(model)
 ```
 
-# 3\. Model Validation Techniques
+## 3\. Model Validation Techniques
 
 Metrics alone are insufficient; how we validate the model matters equally. Standard random cross-validation is inappropriate for time series due to temporal dependencies.
 
@@ -226,7 +226,7 @@ Generalizes rolling-origin by systematically evaluating across multiple folds wh
 Keep the last part of the data entirely untouched until final evaluation. Prevents overfitting during model selection.
 
 
-# 4\. Interpreting Results and Improving Performance
+## 4\. Interpreting Results and Improving Performance
 
 ## 4.1 Comparing Metrics
 
@@ -261,7 +261,7 @@ Inspect residuals:
 - Monitor performance drift as new data arrives.
 
 
-# 5\. Case Study: Forecasting and Evaluation in Practice
+## 5\. Case Study: Forecasting and Evaluation in Practice
 
 ## 5.1 Data Simulation
 
@@ -297,7 +297,7 @@ rmse = np.sqrt(mean_squared_error(test, forecast))
 
 Resulting metrics provide insights into forecast performance and guide adjustments.
 
-# 6\. Advanced Considerations
+## 6\. Advanced Considerations
 
 ## 6.1 Forecast Horizons
 
@@ -319,7 +319,7 @@ Instead of point forecasts, models can generate prediction intervals or full pre
 
 In applied settings, evaluation must balance accuracy with computational efficiency and interpretability.
 
-# 7\. Summary and Best Practices
+## 7\. Summary and Best Practices
 
 - **Use multiple metrics.** RMSE, MAE, MAPE, MASE, AIC/BIC each provide unique insights.
 - **Validate properly.** Employ rolling-origin or cross-validation; avoid random shuffling.
@@ -327,7 +327,7 @@ In applied settings, evaluation must balance accuracy with computational efficie
 - **Prevent overfitting.** Simplicity often outperforms over-complex models.
 - **Match evaluation to context.** Select metrics aligned with application needs (e.g., absolute errors vs percentage errors).
 
-# Conclusion
+## Conclusion
 
 Evaluating time series forecasting models is a nuanced process that requires both statistical rigor and practical judgment. By carefully choosing appropriate accuracy metrics, implementing robust validation strategies, and thoroughly analyzing residuals, practitioners can ensure that their forecasts are not only accurate in historical data but also reliable in predicting the future.
 

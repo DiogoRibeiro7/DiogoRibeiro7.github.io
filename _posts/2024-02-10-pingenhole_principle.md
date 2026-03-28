@@ -61,7 +61,7 @@ The inevitability of locating at least four out of any five points distributed a
 The certainty of encountering at least two attendees at any social gathering who have engaged in an identical number of handshakes.
 These propositions, at first glance, may appear elusive and challenging to substantiate. However, they can be convincingly demonstrated utilizing straightforward logical deductions devoid of complex mathematical formulations.
 
-# The Pigeonhole Principle: A Closer Examination
+## The Pigeonhole Principle: A Closer Examination
 
 The pigeonhole principle, astonishingly overlooked in early mathematical education despite its accessibility, posits that if n items are distributed into m containers with $$n>m$$, then at least one container must contain a minimum of $$⌈n/m⌉$$ items, where $$⌈⋅⌉$$ denotes the ceiling function, rounding up to the nearest whole number. This quantified version of the principle extends its applicability, allowing for nuanced applications across various contexts.
 
@@ -83,7 +83,7 @@ The pigeonhole principle, astonishingly overlooked in early mathematical educati
 
 - **Combinatorial Sums:** Finally, the principle is instrumental in proving that among collections of integers, there exist subsets with equal summations, showcasing its relevance in number theory and combinatorics.
 
-# Python Example
+## Python Example
 
 Let's create a Python example that demonstrates the pigeonhole principle through a simple but illustrative scenario. We'll tackle the problem of finding at least two people with the same number of hairs on their head, based on the assumption that the number of hairs on a human head varies from 0 to, at most, 1,000,000, and considering a city with a population exceeding 1,000,000 people.
 
@@ -121,7 +121,7 @@ else:
 
 This script randomly generates a number of hairs for each person in a population exceeding the maximum hair count (pigeonholes). According to the pigeonhole principle, since there are more people (pigeons) than the maximum possible unique hair counts (pigeonholes), there must be at least two people with the same number of hairs (two pigeons in at least one pigeonhole). The function find_hairy_twins looks for this condition and returns True as soon as it finds a duplicate hair count, demonstrating the principle in action.
 
-# R Example
+## R Example
 
 For an example in R, let's consider the scenario involving handshakes at a party, which is another application of the pigeonhole principle. Specifically, we want to demonstrate that in any gathering of people, there will always be at least two guests who have shaken hands with the same number of other guests. This is based on the premise that if there are $$N$$ guests, the number of handshakes per person can range from 0 to $$N−1$$, resulting in $$N$$ possible distinct values. According to the pigeonhole principle, if there are more than $$N$$ guests, at least two of them must have the same number of handshakes.
 The following R script simulates a party where each guest randomly shakes hands with a number of other guests. It then checks for the pigeonhole principle by ensuring there are at least two guests with the same number of handshakes.
@@ -167,6 +167,6 @@ print(table(result$handshakes))
 
 This script first defines a function simulate_party that simulates the handshakes. It then checks if the principle holds by comparing the number of unique handshake counts to the total number of guests. The sample function is used to randomly assign the number of handshakes each guest makes, with the possibility of a guest shaking hands with any other guest at the party. Finally, it prints out whether the pigeonhole principle holds in this simulation and provides the distribution of handshakes among the guests.
 
-# Conclusion
+## Conclusion
 
 Through these examples, the pigeonhole principle's role as a cornerstone of mathematical reasoning is underscored, demonstrating its capacity to provide elegant solutions to seemingly complex problems. This discourse aims not only to illuminate the principle's theoretical underpinnings but also to inspire further exploration into its diverse applications across mathematics and beyond.

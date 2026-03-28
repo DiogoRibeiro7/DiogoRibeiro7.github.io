@@ -23,9 +23,6 @@ keywords:
 - Go
 - Statistics
 - Machine Learning
-- python
-- bash
-- go
 seo_description: Splines are flexible mathematical tools used for smoothing and modeling complex data patterns. Learn what they are, how they work, and their practical applications in regression, data smoothing, and machine learning.
 seo_title: What Are Splines? A Deep Dive into Their Uses in Data Analysis
 seo_type: article
@@ -40,9 +37,6 @@ tags:
 - Go
 - Statistics
 - Machine Learning
-- python
-- bash
-- go
 title: 'Understanding Splines: What They Are and How They Are Used in Data Analysis'
 ---
 

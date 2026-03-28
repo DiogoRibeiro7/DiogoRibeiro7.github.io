@@ -25,11 +25,6 @@ keywords:
 - R
 - Go
 - Scala
-- python
-- rust
-- r
-- go
-- scala
 seo_description: Explore the concept of coverage probability, its importance in confidence intervals and statistical prediction, and its application in estimation theory with detailed explanations.
 seo_title: Coverage Probability in Statistics | Confidence Intervals Explained
 seo_type: article
@@ -47,11 +42,6 @@ tags:
 - R
 - Go
 - Scala
-- python
-- rust
-- r
-- go
-- scala
 title: Understanding Coverage Probability in Statistical Estimation
 ---
 

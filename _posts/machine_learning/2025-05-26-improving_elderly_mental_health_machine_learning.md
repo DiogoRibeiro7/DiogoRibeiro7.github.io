@@ -22,7 +22,7 @@ keywords:
 - "cognitive monitoring AI"
 - "AI depression detection older adults"
 classes: wide
-date: '2025-06-26'
+date: '2025-05-26'
 header:
   image: /assets/images/data_science_5.jpg
   og_image: /assets/images/data_science_5.jpg

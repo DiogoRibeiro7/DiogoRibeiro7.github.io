@@ -42,7 +42,7 @@ tags:
 title: 'Causal Insights in Machine Learning: Monotonic Constraints for Better Predictions'
 ---
 
-![Example Image](/assets/images/causal_inference.jpeg)
+![Example Image](/assets/images/Causal-Inference-Hero.png)
 
 ## 1. Introduction to Causal Machine Learning
 

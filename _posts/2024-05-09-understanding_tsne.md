@@ -46,7 +46,7 @@ t-SNE is a non-linear dimensionality reduction technique that is especially well
 
 The aim of this article is to delve into the theory underlying t-SNE, highlighting how it differs from and improves upon other dimensionality reduction techniques. We will explore its practical applications through detailed examples to demonstrate how t-SNE can be effectively utilized to reveal hidden patterns in data. Additionally, the discussion will cover the strengths of t-SNE in extracting meaningful insights from data, as well as its limitations, providing a balanced view that will enable readers to use this technique to its full potential in their own analytical work.
 
-# Theoretical Background
+## Theoretical Background
 
 The allure of high-dimensional data in uncovering rich, insightful patterns is often dimmed by the inherent challenges it poses. One of the most notorious issues is known as the "curse of dimensionality," which refers to various phenomena that arise when analyzing data in high-dimensional spaces that do not occur in lower-dimensional settings. These include the exponential increase in volume associated with adding extra dimensions, which can lead to data becoming sparse and distances between points becoming misleadingly uniform. This sparsity makes it difficult for traditional data analysis techniques to find true patterns without significant adjustments or enhancements.
 
@@ -58,7 +58,7 @@ t-SNE operates on the principle of converting high-dimensional Euclidean distanc
 
 This technique's power lies in its ability to model similar points by nearby points and dissimilar points by distant points in the embedded space, ensuring that the local data structure is honored more faithfully than in other dimensionality reduction methods. While t-SNE is not without its challenges, such as sensitivity to parameter settings and a tendency to form fairly distinct clusters even in uniformly distributed data, its ability to create compelling and intuitive visualizations makes it an invaluable tool in the data scientist’s toolkit.
 
-# Implementing t-SNE
+## Implementing t-SNE
 
 Implementing t-Distributed Stochastic Neighbor Embedding (t-SNE) effectively requires a thoughtful approach, especially when dealing with real-world data. This section will guide you through the process of applying t-SNE to a sample dataset, using Python and the scikit-learn library, one of the most popular machine learning libraries. We will also cover key parameters that significantly influence the outcome of t-SNE and provide recommendations on how to tune them for optimal results.
 
@@ -120,7 +120,7 @@ The outcome of t-SNE is significantly influenced by its hyperparameters. Here ar
 
 These parameters can significantly affect the clarity and interpretability of the t-SNE output. Experiment with different values to find the best settings for your specific data characteristics. Adjusting these settings appropriately ensures that t-SNE can be a remarkably powerful tool for visualizing multidimensional data in a way that is both insightful and accessible. For example, in the Iris dataset, you can experiment with different perplexity values to see how they affect the separation of the three species in the t-SNE plot.
 
-# Analyzing and Interpreting Results
+## Analyzing and Interpreting Results
 
 Once you've applied t-SNE to your dataset and visualized the outputs, the next crucial step is to correctly analyze and interpret these results. Understanding what t-SNE plots tell you—and just as importantly, what they do not tell you—is vital for making informed decisions based on this type of visualization.
 
@@ -149,7 +149,7 @@ While t-SNE is a powerful tool for visual data exploration, it comes with its sh
 
 By being aware of these issues and knowing how to address them, you can more effectively use t-SNE for exploring high-dimensional data. Combining t-SNE with other analysis techniques and validating findings through additional statistical or machine learning methods can also provide a more comprehensive understanding of your data's underlying structures.
 
-# Advanced Applications and Case Studies
+## Advanced Applications and Case Studies
 
 t-Distributed Stochastic Neighbor Embedding (t-SNE) has proven to be an invaluable tool in many advanced application areas, where its ability to reduce dimensionality and visualize complex datasets finds practical and impactful uses. From genomics to image processing and social network analysis, t-SNE helps to unravel complex patterns and relationships that are often hidden in high-dimensional data.
 
@@ -170,7 +170,7 @@ In supervised learning, t-SNE can be used to explore how well different classes 
 
 Through its applications and ability to be integrated into various stages of machine learning projects, t-SNE has established itself as a critical tool in the data scientist’s toolkit. Whether used for exploratory data analysis, enhancing machine learning pipelines, or simply visualizing high-dimensional data, t-SNE provides a window into the complex structures of data, enabling clearer insights and more informed decision-making across numerous fields and disciplines.
 
-# Summary
+## Summary
 
 Throughout this article, we have explored the intricacies and applications of t-Distributed Stochastic Neighbor Embedding (t-SNE), a powerful technique for dimensionality reduction and visualization of high-dimensional data. We began by understanding the challenges posed by high-dimensional data and discussed how traditional techniques like PCA compare with t-SNE, particularly highlighting t-SNE's ability to capture complex nonlinear relationships within data. We then delved into a practical tutorial on implementing t-SNE using popular programming tools like Python's scikit-learn, and discussed how to fine-tune the process through critical parameters such as perplexity, learning rate, and number of iterations.
 

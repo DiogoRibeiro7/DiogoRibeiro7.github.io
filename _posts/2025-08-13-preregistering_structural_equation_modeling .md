@@ -50,7 +50,7 @@ This article outlines the major decision domains to address in a preregistered S
 
 --------------------------------------------------------------------------------
 
-# 1\. Locking the Software Environment
+## 1\. Locking the Software Environment
 
 A reproducible analysis begins with a stable computational environment. SEM models are sensitive not only to the software used but also to subtle changes across versions of packages, operating systems, and numerical libraries.
 
@@ -60,7 +60,7 @@ Use tools like `renv::snapshot()` in R, `requirements.txt` in Python, or `conda`
 
 Also include the exact script or notebook you intend to run during analysis. This provides a literal representation of your analysis plan--helpful not only for others but also for future-you.
 
-# 2\. Defining the Scientific and Structural Model
+## 2\. Defining the Scientific and Structural Model
 
 Before data ever enters the picture, you need a clear theoretical model. This involves both conceptual and graphical representations of expected relationships.
 
@@ -70,7 +70,7 @@ Declare whether your model is directional (i.e., causal paths), and specify whic
 
 To preserve confirmatory integrity, clearly state that no additional paths will be added unless in a predefined exploratory phase. If modifications are planned, make them conditional on specified thresholds or theoretical rationales.
 
-# 3\. Operationalizing the Statistical Model
+## 3\. Operationalizing the Statistical Model
 
 The theoretical structure must be translated into a formal statistical model. This includes selecting the appropriate SEM framework, specifying assumptions, and handling practical modeling choices.
 
@@ -82,7 +82,7 @@ Declare how residuals are treated--are any error covariances theory-justified? D
 
 Also fix your identification strategy: marker-variable (loading fixed to 1) or unit-variance scaling (latent variance fixed to 1). Changes to these decisions post hoc can affect parameter estimates, so preregistration helps avoid retrofitting models to the data.
 
-# 4\. Estimation Methods and Robustness Considerations
+## 4\. Estimation Methods and Robustness Considerations
 
 Choosing an estimator isn't just a technical detail--it affects parameter accuracy, standard errors, and fit indices. Preregister your primary estimation method, such as Maximum Likelihood (ML), Robust ML (MLR), Diagonally Weighted Least Squares (DWLS/WLSMV), Unweighted Least Squares (ULS), or Bayesian estimation.
 
@@ -92,7 +92,7 @@ For studies involving bootstrapping, state how many samples will be used (e.g., 
 
 Robustness checks should be planned--not reactive. They belong in a separate sensitivity analysis tier rather than as an opportunistic fix after primary analyses fail.
 
-# 5\. Measurement Model Decisions and Fit Criteria
+## 5\. Measurement Model Decisions and Fit Criteria
 
 A major temptation in SEM is to "tune" the model post hoc to improve fit. Preregistration prevents this by locking in the criteria by which model fit will be judged.
 
@@ -106,7 +106,7 @@ A best practice is to employ a two-tiered strategy: analyze the confirmatory mod
 
 --------------------------------------------------------------------------------
 
-# 6\. Predefined Backup Plans and Contingency Responses
+## 6\. Predefined Backup Plans and Contingency Responses
 
 Even well-specified models can fail. Convergence issues, inadmissible solutions, or severe model misfit are not uncommon in SEM. Rather than improvising fixes, define contingency plans in advance to preserve the integrity of your confirmatory claims.
 
@@ -120,7 +120,7 @@ Contingencies can also include assumption violations, such as non-normality or o
 
 Use a decision table mapping common problems to specific, predefined responses. This reduces the need for subjective choices once the data are visible.
 
-# 7\. Multiverse and Sensitivity Analyses
+## 7\. Multiverse and Sensitivity Analyses
 
 To demonstrate that your results are not fragile, preregister a **multiverse analysis**--a systematic variation of defensible analytical decisions. This goes beyond robustness checks by explicitly modeling the uncertainty introduced by researcher degrees of freedom.
 
@@ -138,7 +138,7 @@ Include robustness checks such as **leave-one-indicator-out** analysis, where th
 
 The goal here is not to eliminate all variation, but to demonstrate that your conclusions hold across reasonable decision spaces. Automate this process before analyzing real data using scripts or workflows that can be rerun unchanged.
 
-# 8\. Additional Preregistration Components
+## 8\. Additional Preregistration Components
 
 A high-quality preregistration does more than lock analytic decisions--it anticipates all aspects of confirmatory research.
 
@@ -152,7 +152,7 @@ Define your **reporting plan**, including how confirmatory results will be separ
 
 Finally, consider uploading the preregistration to a public registry, such as [AsPredicted](https://aspredicted.org), [OSF Registries](https://osf.io/registries), or a journal-specific format if submitting under a Registered Reports model.
 
-# 9\. Final Thoughts on Transparency and Rigor
+## 9\. Final Thoughts on Transparency and Rigor
 
 Preregistration does not limit scientific creativity--it clarifies it. By defining your confirmatory analysis plan in advance, you create a clean boundary between hypothesis testing and hypothesis generation. Readers can trust that the results you present as confirmatory were not achieved through post hoc modifications.
 
@@ -162,7 +162,7 @@ Think of your preregistration as a recipe. If another researcher followed it pre
 
 --------------------------------------------------------------------------------
 
-# Resources and Templates
+## Resources and Templates
 
 - [Preregistration Template for SEM Studies (OSF)](https://osf.io/registries)
 - [lavaan Model Syntax Documentation](https://lavaan.ugent.be/tutorial/index.html)

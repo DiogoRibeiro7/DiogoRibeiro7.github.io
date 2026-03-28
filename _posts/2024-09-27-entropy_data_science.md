@@ -25,7 +25,6 @@ keywords:
 - Data science
 - Machine learning
 - Python
-- python
 seo_description: An in-depth exploration of how entropy plays a critical role in data science and machine learning, including decision trees, uncertainty quantification, and information theory.
 seo_title: 'Entropy in Data Science and Machine Learning: Comprehensive Analysis'
 seo_type: article
@@ -38,7 +37,6 @@ tags:
 - Decision trees
 - Probability
 - Python
-- python
 title: 'Entropy in Data Science and Machine Learning: A Deep Dive'
 ---
 

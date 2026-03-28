@@ -24,9 +24,6 @@ keywords:
 - Python
 - Fortran
 - C
-- python
-- fortran
-- c
 seo_description: Explore numerical methods for solving DSGE models, including perturbation techniques and finite difference methods, essential tools in quantitative economics.
 seo_title: 'Solving DSGE Models: Perturbation and Finite Difference Methods'
 seo_type: article

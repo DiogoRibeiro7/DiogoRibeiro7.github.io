@@ -9,7 +9,7 @@ excerpt: Chauvenet's Criterion is a statistical method used to determine whether
   and its application in real-world data analysis.
 header:
   image: /assets/images/statistics_outlier.jpg
-  og_image: /assets/images/statistics_outliers.jpg
+  og_image: /assets/images/statistics_outlier.jpg
   overlay_image: /assets/images/statistics_outlier.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/statistics_outlier.jpg
