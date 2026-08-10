@@ -217,6 +217,13 @@ now accepted; three still work but emit a <code class="docutils literal notransl
 mean any stored 1.2.0 output should be regenerated.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scipy</span></code> is now a declared runtime dependency. It was already installed as a
 transitive dependency of <code class="docutils literal notranslate"><span class="pre">lifelines</span></code>, so this should not change resolution.</p></li>
+<li><p>The PyPI maturity classifier moves from <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">-</span> <span class="pre">Production/Stable</span></code> to
+<code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">-</span> <span class="pre">Beta</span></code>. A package that has just corrected the marginal distribution and
+the dependence sign of one of its core samplers is not accurately described as
+production-stable, and known correctness gaps remain: CMM and THMM report only
+the first transition rather than a full trajectory, and the CLI cannot drive
+every registered generator. The classifier is intended to return to
+<code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">-</span> <span class="pre">Production/Stable</span></code> once the multistate output schema lands.</p></li>
 </ul>
 </section>
 <section id="features">
