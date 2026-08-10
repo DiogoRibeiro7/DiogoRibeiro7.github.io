@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>📘 Mathematical Foundations of gen_surv &mdash; gen_surv 1.3.0 documentation</title>
+  <title>📘 Mathematical Foundations of gen_surv &mdash; gen_surv 2.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -17,7 +17,7 @@
     <link rel="canonical" href="https://diogoribeiro7.github.io/packages/gensurvpy/theory.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=1f29e9d3"></script>
+      <script src="_static/documentation_options.js?v=51b770b3"></script>
       <script src="_static/doctools.js?v=9a2dae69"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -185,11 +185,15 @@ $$</p>
 <p>A subject leaves state 1 at ( \min(T_{12}, T_{13}) ), and the destination is
 whichever of the two came first. If censoring occurs before that, the subject is
 recorded in state 1.</p>
+<p>The generator returns the full trajectory as a panel of state observations: an
+entry observation in state 1 at time 0, then one observation per transition, or
+an observation in the currently occupied state at the censoring time.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The generator currently reports only the first transition, so it emits one row
-per subject and the <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">-&gt;</span> <span class="pre">3</span></code> intensity does not appear in the returned data.
-Emitting the full trajectory is planned; see the roadmap.</p>
+<p>This panel layout differs from the counting-process intervals returned by the
+CMM generator. The distinction is deliberate and follows the R package, where
+<code class="docutils literal notranslate"><span class="pre">genTHMM</span></code> returns states observed at times and <code class="docutils literal notranslate"><span class="pre">genCMM</span></code> returns transition
+intervals.</p>
 </div>
 </section>
 <hr class="docutils" />

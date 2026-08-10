@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Algorithm Overview &mdash; gen_surv 1.3.0 documentation</title>
+  <title>Algorithm Overview &mdash; gen_surv 2.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -17,7 +17,7 @@
     <link rel="canonical" href="https://diogoribeiro7.github.io/packages/gensurvpy/algorithms.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=1f29e9d3"></script>
+      <script src="_static/documentation_options.js?v=51b770b3"></script>
       <script src="_static/doctools.js?v=9a2dae69"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -116,8 +116,15 @@ They are convenient when the effect of covariates accelerates or decelerates eve
 </section>
 <section id="continuous-time-multi-state-markov-model-cmm">
 <h2>Continuous-Time Multi-State Markov Model (CMM)<a class="headerlink" href="#continuous-time-multi-state-markov-model-cmm" title="Link to this heading"></a></h2>
-<p>Transitions between states are governed by a generator matrix.
-This model is suited for illness-death and other multi-state processes where state occupancy changes continuously over time.
+<p>Simulates the illness-death process over states 1 (healthy), 2 (illness) and
+3 (death), with Weibull transition intensities scaled by a covariate.
+The three rate pairs and three coefficients map one-to-one onto the
+<code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-&gt;</span> <span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-&gt;</span> <span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">-&gt;</span> <span class="pre">3</span></code> transitions.
+Output is in counting-process form: while a subject occupies state 1 it is at
+risk of both <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-&gt;</span> <span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-&gt;</span> <span class="pre">3</span></code>, so it contributes a row for each over the
+same interval, and a subject that reaches state 2 contributes a further
+<code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">-&gt;</span> <span class="pre">3</span></code> row. Sojourn times are drawn on a reset clock, making the model
+semi-Markov.
 The mathematical formulation follows the counting-process approach of Andersen et al. <a class="reference internal" href="bibliography.html#andersen1993"><span class="std std-ref">Andersen et al. (1993)</span></a>.</p>
 </section>
 <section id="time-dependent-covariate-model-tdcm">
@@ -132,8 +139,11 @@ intensities are constant in time, which is what makes it time-homogeneous.
 Each intensity is scaled by a covariate through <code class="docutils literal notranslate"><span class="pre">rate</span> <span class="pre">*</span> <span class="pre">exp(beta</span> <span class="pre">*</span> <span class="pre">X0)</span></code>, so the
 three rates and three coefficients are matched one-to-one with the
 <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-&gt;</span> <span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-&gt;</span> <span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">-&gt;</span> <span class="pre">3</span></code> transitions.
-Every subject is followed to the first transition or to censoring, so the
-current output holds one row per subject rather than a full trajectory.
+Output is a panel of state observations: each subject starts in state 1 at
+time 0 and contributes a further observation at each transition, or at
+censoring in whichever state it then occupies.
+This layout differs from the counting-process form used by CMM, matching the
+distinction drawn by the R package between <code class="docutils literal notranslate"><span class="pre">genTHMM</span></code> and <code class="docutils literal notranslate"><span class="pre">genCMM</span></code>.
 For background on multistate survival models see Andersen et al. <a class="reference internal" href="bibliography.html#andersen1993"><span class="std std-ref">Andersen et al. (1993)</span></a>.</p>
 </section>
 <section id="competing-risks">
