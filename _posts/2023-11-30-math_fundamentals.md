@@ -4,8 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2023-11-30'
-excerpt: A comprehensive exploration of data drift in credit risk models, examining
-  practical methods to identify and address drift using multivariate techniques.
+excerpt: Beneath the headlines about AI sits a layer most discussions skip - the linear algebra, calculus, probability, and optimization that make it work.
 header:
   image: /assets/images/data_science_6.jpg
   og_image: /assets/images/data_science_9.jpg
@@ -14,26 +13,22 @@ header:
   teaser: /assets/images/data_science_6.jpg
   twitter_image: /assets/images/data_science_9.jpg
 keywords:
-- Data drift
-- Credit risk modeling
-- Machine learning in finance
-- Model performance
-- Multivariate analysis
-- Risk assessment
-- Financial modeling
-- Drift detection
-- Predictive modeling
-- Credit scoring
-seo_description: Explore a practical approach to solving data drift in credit risk
-  models, focusing on multivariate analysis and its impact on model performance.
-seo_title: 'Addressing Data Drift in Credit Risk Models: A Case Study'
+- Mathematics for AI
+- Linear algebra
+- Calculus
+- Probability and statistics
+- Optimization theory
+- Machine learning foundations
+- Deep learning
+seo_description: The linear algebra, calculus, probability, and optimization that sit beneath machine learning, and why skipping them holds practitioners back.
+seo_title: Why Mathematics Is the Foundation of AI
 seo_type: article
 tags:
-- Credit risk modeling
-- Data drift
+- Mathematics
 - Machine learning
-- Multivariate analysis
-title: 'Solving Data Drift Issues in Credit Risk Models: A Practical Example'
+- Linear algebra
+- Optimization
+title: Why Mathematics Is the Foundation of AI
 ---
 
 ![Example Image](/assets/images/1725604108590.jpeg)

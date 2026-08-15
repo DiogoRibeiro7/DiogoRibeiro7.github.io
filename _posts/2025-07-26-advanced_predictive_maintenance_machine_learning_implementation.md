@@ -11,9 +11,9 @@ tags:
 - asset management
 - machine learning
 author_profile: false
-seo_title: "Predictive Maintenance: Transforming Industrial Operations"
+seo_title: Advanced Predictive Maintenance with Machine Learning
 seo_description: How predictive maintenance is reshaping industrial asset management through AI, IoT, and data analytics.
-excerpt: "Predictive maintenance is redefining how industries manage assets, reducing downtime and costs through intelligent monitoring and data-driven decisions."
+excerpt: A hands-on look at building predictive maintenance models - feature engineering, algorithm selection, and deploying them against real sensor data.
 summary: "This comprehensive article examines the evolution of predictive maintenance, comparing traditional approaches and modern strategies powered by AI and analytics. It explores condition-based monitoring, implementation challenges, economic benefits, and future directions for predictive maintenance in industrial operations."
 keywords: 
 - "predictive maintenance"

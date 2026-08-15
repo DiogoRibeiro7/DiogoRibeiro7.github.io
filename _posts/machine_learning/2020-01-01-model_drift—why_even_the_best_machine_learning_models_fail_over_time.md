@@ -19,8 +19,8 @@ keywords:
 - Concept drift
 - Ai model monitoring
 - Ml lifecycle management
-seo_description: A deep dive into model drift, why machine learning models degrade over time, and how organizations can detect and mitigate drift in production.
-seo_title: 'Model Drift: Causes, Detection, and Mitigation'
+seo_description: How model drift played out in algorithmic trading, medical diagnosis, and threat detection, and where AI monitoring is heading.
+seo_title: 'Model Drift in Production: Case Studies'
 seo_type: article
 summary: This article explores model drift, its causes, real-world impact, and strategies to detect and mitigate its effects in production machine learning systems.
 tags:
@@ -29,7 +29,7 @@ tags:
 - Concept drift
 - Ml model monitoring
 - Ai lifecycle
-title: 'Model Drift: Why Even the Best Machine Learning Models Fail Over Time'
+title: 'Model Drift in Production: Case Studies'
 ---
 
 ## Introduction to Model Drift

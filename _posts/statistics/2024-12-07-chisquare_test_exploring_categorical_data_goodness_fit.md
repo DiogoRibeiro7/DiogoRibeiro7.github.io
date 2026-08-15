@@ -17,15 +17,15 @@ keywords:
 - Goodness-of-fit test
 - Categorical data analysis
 - Independence test
-seo_description: Learn about the Chi-Square Test, its role in analyzing categorical data, and its applications in testing goodness-of-fit and independence.
-seo_title: Chi-Square Test for Categorical Data Analysis
+seo_description: Where the chi-square test is used in survey analysis, contingency tables, and genetics, and the assumptions that limit it.
+seo_title: 'Chi-Square Test: Applications and Limits'
 seo_type: article
 summary: An in-depth exploration of the Chi-Square Test, focusing on its uses for goodness-of-fit and independence testing in categorical data analysis.
 tags:
 - Chi-square test
 - Goodness-of-fit
 - Categorical data
-title: 'Chi-Square Test: Exploring Categorical Data and Goodness-of-Fit'
+title: 'The Chi-Square Test in Practice: Applications and Limits'
 ---
 
 The Chi-Square test is a cornerstone of statistical analysis for categorical data. It enables researchers to examine how well observed data align with expected distributions, assess the independence of categorical variables, and test hypotheses in a wide range of fields. This article examines the mechanics of the Chi-Square test, its two primary applications—goodness-of-fit and independence testing—and its use in practical scenarios such as survey data, contingency tables, and genetics.
