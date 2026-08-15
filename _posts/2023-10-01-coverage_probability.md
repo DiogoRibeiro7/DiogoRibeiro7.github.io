@@ -19,8 +19,7 @@ keywords:
 - Nominal confidence level
 - Prediction intervals
 - Statistical estimation
-seo_description: A detailed explanation of coverage probability, its role in statistical
-  estimation theory, and its relationship to confidence intervals and prediction intervals.
+seo_description: 'Coverage probability explained: its role in estimation theory and its relationship to confidence and prediction intervals.'
 seo_title: Coverage Probability in Statistical Estimation Theory
 seo_type: article
 summary: In statistical estimation theory, coverage probability measures the likelihood
@@ -87,4 +86,4 @@ This concept reinforces the understanding that coverage probability is not a one
 
 ## Conclusion
 
-Coverage probability plays a crucial role in statistical inference by providing a probabilistic framework for evaluating the accuracy of confidence and prediction intervals. While the **nominal coverage probability** is often set by the analyst, the **true coverage probability** depends on the validity of the underlying assumptions. Understanding the distinction between nominal and true coverage probabilities is essential for ensuring that statistical conclusions are reliable and accurately reflect the uncertainty inherent in parameter estimation.
+Coverage probability is central to statistical inference by providing a probabilistic framework for evaluating the accuracy of confidence and prediction intervals. While the **nominal coverage probability** is often set by the analyst, the **true coverage probability** depends on the validity of the underlying assumptions. Understanding the distinction between nominal and true coverage probabilities is essential for ensuring that statistical conclusions are reliable and accurately reflect the uncertainty inherent in parameter estimation.

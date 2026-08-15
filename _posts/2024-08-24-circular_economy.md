@@ -24,9 +24,7 @@ keywords:
 - Sustainability models
 - Resource efficiency
 - Python
-seo_description: Learn to implement circular economy models using Python and network
-  analysis techniques. This guide covers how data science and systems thinking can
-  promote sustainability and resource management.
+seo_description: How to implement circular economy models with Python and network analysis, using data science and systems thinking for sustainability.
 seo_title: Circular Economy Models with Python and Network Analysis
 seo_type: article
 summary: This article explores the implementation of circular economy models using

@@ -23,10 +23,8 @@ keywords:
 - Statistical data analysis
 - R
 - Python
-seo_description: Explore the Kruskal-Wallis Test, a non-parametric alternative to
-  ANOVA for comparing independent samples. Understand its applications, assumptions,
-  and how to interpret results in data analysis.
-seo_title: 'Kruskal-Wallis Test: Guide to Non-Parametric Statistical Analysis'
+seo_description: 'The Kruskal-Wallis test, a non-parametric alternative to ANOVA for independent samples: its assumptions and how to interpret results.'
+seo_title: 'Kruskal-Wallis Test: A Non-Parametric Guide'
 seo_type: article
 summary: This comprehensive guide explains the Kruskal-Wallis Test, a non-parametric
   statistical method ideal for comparing multiple independent samples without assuming
@@ -47,7 +45,7 @@ title: 'The Kruskal-Wallis Test: A Comprehensive Guide to Non-Parametric Analysi
 
 In statistical analysis, comparing multiple groups to determine if their central tendencies differ is a common task. Traditionally, the Analysis of Variance (ANOVA) is used for this purpose, particularly when comparing means across groups. However, ANOVA relies on assumptions of normality and homogeneity of variance, which may not hold in many real-world data sets. The Kruskal-Wallis test provides a non-parametric alternative that does not require these assumptions, making it a powerful tool for analyzing ordinal data or data that deviate from normality.
 
-The Kruskal-Wallis test, named after William Kruskal and W. Allen Wallis, extends the concepts of the Mann-Whitney U test to more than two groups. It is particularly useful when data are skewed or when outliers might unduly influence the results of parametric tests. This article delves into the mechanics, advantages, challenges, and practical applications of the Kruskal-Wallis test, highlighting its importance in modern data analysis.
+The Kruskal-Wallis test, named after William Kruskal and W. Allen Wallis, extends the concepts of the Mann-Whitney U test to more than two groups. It is particularly useful when data are skewed or when outliers might unduly influence the results of parametric tests. This article examines the mechanics, advantages, challenges, and practical applications of the Kruskal-Wallis test, highlighting its importance in modern data analysis.
 
 ## Mechanics of the Kruskal-Wallis Test
 

@@ -23,9 +23,7 @@ keywords:
 - Medicine
 - Bash
 - Python
-seo_description: Explore the Mann-Whitney U Test, a non-parametric method for comparing
-  two independent samples, with applications in fields like psychology, medicine,
-  and ecology.
+seo_description: The Mann-Whitney U test, a non-parametric method for comparing two independent samples, with applications in psychology, medicine, and ecology.
 seo_title: 'Mann-Whitney U Test: Comparing Two Independent Samples'
 seo_type: article
 summary: The Mann-Whitney U Test is a non-parametric method used to compare two independent

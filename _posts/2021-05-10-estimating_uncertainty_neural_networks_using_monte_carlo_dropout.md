@@ -20,10 +20,8 @@ keywords:
 - Multi-class classification
 - Neural networks
 - Entropy
-seo_description: Explore how Monte Carlo dropout can estimate uncertainty in neural
-  networks for multi-class classification, examining various methods to derive uncertainty
-  scores.
-seo_title: Estimating Uncertainty with Monte Carlo Dropout in Neural Networks
+seo_description: How Monte Carlo dropout estimates uncertainty in neural networks for multi-class classification, and the methods used to derive uncertainty scores.
+seo_title: Monte Carlo Dropout for Uncertainty Estimation
 seo_type: article
 summary: In this article, we explore how to estimate uncertainty in neural network
   predictions using Monte Carlo dropout. We explain the mechanism of Monte Carlo dropout

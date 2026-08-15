@@ -24,7 +24,7 @@ keywords:
 - Epidemiology
 seo_description: A comprehensive guide to the Log-Rank test, a statistical tool for
   comparing survival distributions in clinical trials and medical research.
-seo_title: 'Log-Rank Test: Comparing Survival Curves in Clinical Research'
+seo_title: 'Log-Rank Test: Comparing Survival Curves'
 seo_type: article
 summary: Discover how the Log-Rank test is used to compare survival curves in clinical
   studies, with detailed insights into its applications in clinical trials, epidemiology,

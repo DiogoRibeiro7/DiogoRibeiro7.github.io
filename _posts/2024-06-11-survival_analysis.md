@@ -14,6 +14,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_7.jpg
+seo_description: Parametric and non-parametric approaches to estimating survival functions, their assumptions, and where each applies.
+seo_title: 'Estimating Survival Functions: Two Approaches'
 seo_type: article
 subtitle: A Comprehensive Guide to Survival Function Estimation Methods
 tags:
@@ -262,7 +264,7 @@ Parametric methods rely on the assumption that the chosen model fits the data we
 - **Model Selection:** Choosing the correct parametric model requires domain knowledge and often involves trial and error, which can be time-consuming.
 - **Flexibility:** Although more flexible than the exponential model, parametric models may still be less adaptable to complex data patterns compared to non-parametric methods.
 
-In summary, while parametric models offer structured and interpretable ways to estimate survival functions, they require careful selection and validation to ensure they accurately reflect the underlying data patterns. Researchers should consider these limitations and validate their models rigorously.
+While parametric models offer structured and interpretable ways to estimate survival functions, they require careful selection and validation to ensure they accurately reflect the underlying data patterns. Researchers should consider these limitations and validate their models rigorously.
 
 ## Non-Parametric Survival Functions
 

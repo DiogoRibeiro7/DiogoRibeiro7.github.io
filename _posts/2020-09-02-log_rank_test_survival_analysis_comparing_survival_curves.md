@@ -20,11 +20,8 @@ keywords:
 - Survival curves
 - Kaplan-meier curves
 - P-values
-seo_description: This article explores the log-rank test used in survival analysis,
-  its applications in medical studies to compare survival times, and how to interpret
-  survival curves and p-values.
-seo_title: 'Understanding the Log-Rank Test in Survival Analysis: Comparing Survival
-  Curves'
+seo_description: 'The log-rank test in survival analysis: how it compares survival times in medical studies, and how to interpret survival curves and p-values.'
+seo_title: The Log-Rank Test in Survival Analysis
 seo_type: article
 summary: This article provides a comprehensive guide to the log-rank test in survival
   analysis, focusing on its use in medical studies to compare survival curves between

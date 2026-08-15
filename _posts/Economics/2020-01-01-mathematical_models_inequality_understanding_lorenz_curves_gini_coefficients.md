@@ -24,7 +24,7 @@ keywords:
 - Java
 - JavaScript
 seo_description: Explore mathematical models of inequality, including the Lorenz curve and Gini coefficient, and learn how they quantify economic inequality.
-seo_title: 'Mathematical Models of Economic Inequality: Lorenz Curves and Gini Coefficients'
+seo_title: Lorenz Curves and Gini Coefficients Explained
 seo_type: article
 summary: A comprehensive guide to understanding and applying Lorenz curves and Gini coefficients to measure economic inequality.
 tags:
@@ -80,12 +80,12 @@ Constructing a Lorenz Curve involves the following steps:
 
 #### Example Calculation
 
-Consider a simplified economy with five individuals, each with a different level of income. We’ll assume the following incomes: $10, $20, $30, $40, and $100.
+Consider a simplified economy with five individuals, each with a different level of income. We’ll assume the following incomes: <span class="tex2jax_ignore">$10</span>, <span class="tex2jax_ignore">$20</span>, <span class="tex2jax_ignore">$30</span>, <span class="tex2jax_ignore">$40</span>, and <span class="tex2jax_ignore">$100</span>.
 
 1. **Sort the Income Data**: The data is already in ascending order.
 2. **Calculate Cumulative Percentages**:
    - Population percentages: 20%, 40%, 60%, 80%, 100%
-   - Cumulative income: $10, $30, $60, $100, $200
+   - Cumulative income: <span class="tex2jax_ignore">$10</span>, <span class="tex2jax_ignore">$30</span>, <span class="tex2jax_ignore">$60</span>, <span class="tex2jax_ignore">$100</span>, <span class="tex2jax_ignore">$200</span>
    - Income percentages: 5%, 15%, 30%, 50%, 100%
 3. **Plotting the Points**:
    - Point 1: (20%, 5%)

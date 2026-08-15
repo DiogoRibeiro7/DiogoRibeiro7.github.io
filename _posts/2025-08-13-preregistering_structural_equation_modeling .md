@@ -10,11 +10,8 @@ tags:
   - Open Science
   - Reproducibility
 author_profile: false
-seo_title: How to Preregister Structural Equation Modeling (SEM) Studies
-seo_description: >-
-  A comprehensive guide to preregistering SEM studies, including software
-  environments, modeling decisions, fit criteria, and contingency plans for
-  robust and reproducible analysis.
+seo_title: Preregistering SEM Studies
+seo_description: 'How to preregister SEM studies: software environments, modeling decisions, fit criteria, and contingency plans for reproducibility.'
 excerpt: >-
   Learn how to preregister your SEM study by systematically locking down
   modeling and analytic decisions to improve scientific transparency and reduce

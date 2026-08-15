@@ -12,6 +12,8 @@ header:
   teaser: /assets/images/data_science_5.jpg
   twitter_image: /assets/images/data_science_6.jpg
 keywords: []
+seo_description: 'How artificial intelligence developed, from ancient myths and mechanical automata to the algorithms behind today''s assistants and systems.'
+seo_title: The History of Artificial Intelligence
 seo_type: article
 tags:
 - Artificial intelligence
@@ -22,7 +24,7 @@ title: The History of Artificial Intelligence
 
 ## The History of Artificial Intelligence
 
-Artificial Intelligence (AI) has become an integral part of modern technology, influencing various aspects of daily life, from personal assistants like Siri and Alexa to complex algorithms predicting stock market trends. This article delves into the rich history of AI, tracing its roots from ancient myths to the cutting-edge advancements of today.
+Artificial Intelligence (AI) has become an integral part of modern technology, influencing various aspects of daily life, from personal assistants like Siri and Alexa to complex algorithms predicting stock market trends. This article examines the rich history of AI, tracing its roots from ancient myths to the cutting-edge advancements of today.
 
 ## Ancient Myths and Early Concepts
 

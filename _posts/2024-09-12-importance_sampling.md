@@ -50,7 +50,7 @@ title: Importance Sampling for Portfolio Credit Risk
 
 **Abstract**
 
-Estimating credit risk in portfolios containing loans or bonds is crucial for financial institutions. Monte Carlo simulation, the traditional method for calculating credit risk, is often computationally expensive due to the low probability of defaults, especially for highly rated entities. Importance Sampling (IS) offers a more efficient alternative by focusing simulations on scenarios that lead to rare but significant losses. This article explains the implementation of IS in a portfolio credit risk context, particularly within the normal copula model. We delve into IS theory, its practical application, and the numerical examples that support its effectiveness in improving simulation performance.
+Estimating credit risk in portfolios containing loans or bonds is crucial for financial institutions. Monte Carlo simulation, the traditional method for calculating credit risk, is often computationally expensive due to the low probability of defaults, especially for highly rated entities. Importance Sampling (IS) offers a more efficient alternative by focusing simulations on scenarios that lead to rare but significant losses. This article explains the implementation of IS in a portfolio credit risk context, particularly within the normal copula model. We examine IS theory, its practical application, and the numerical examples that support its effectiveness in improving simulation performance.
 
 
 ## Importance Sampling (IS) for Credit Risk

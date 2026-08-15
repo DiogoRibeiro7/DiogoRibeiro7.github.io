@@ -14,8 +14,8 @@ tags:
 - Statistical Process Control
 
 author_profile: false
-seo_title: "Advanced Traffic Anomaly Detection for Smart Transportation Systems"
-seo_description: "Explore real-time anomaly detection systems in traffic management using statistical process control and machine learning techniques. Enhance incident response and reduce traffic disruptions."
+seo_title: Traffic Anomaly Detection for Smart Transport
+seo_description: Real-time traffic anomaly detection using statistical process control and machine learning to improve incident response.
 excerpt: "A deep dive into real-time traffic anomaly detection for intelligent transportation systems, covering statistical and machine learning methods for early incident response."
 summary: "This article explores the architecture, detection methodologies, and practical implementation of real-time traffic anomaly detection systems using both statistical process control and modern machine learning algorithms."
 keywords:

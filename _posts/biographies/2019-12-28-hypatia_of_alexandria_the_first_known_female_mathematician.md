@@ -18,7 +18,7 @@ keywords:
 - Ancient alexandria mathematics
 - Geometry and astronomy
 - Hypatia legacy
-seo_description: Explore the life of Hypatia, one of the earliest recorded female mathematicians, known for her contributions to geometry and astronomy in ancient Alexandria. Her legacy in mathematics and philosophy endures to this day.
+seo_description: The life of Hypatia, one of the earliest recorded female mathematicians, and her work in geometry and astronomy in Alexandria.
 seo_title: 'Hypatia of Alexandria: The First Known Female Mathematician'
 seo_type: article
 summary: Learn about Hypatia of Alexandria, the first known female mathematician. Discover her contributions to mathematics and astronomy, her philosophical influence, and the enduring legacy of her work in science and philosophy.
@@ -74,7 +74,7 @@ Despite her violent death, Hypatia’s legacy endured. Her work and ideas contin
 
 ### Enduring Legacy
 
-Hypatia’s contributions to mathematics and astronomy, though overshadowed by her tragic death, played a crucial role in preserving the knowledge of the ancient world. Her work, particularly her commentaries on key mathematical texts, ensured that essential Greek mathematical and astronomical knowledge survived and was passed down through the ages.
+Hypatia’s contributions to mathematics and astronomy, though overshadowed by her tragic death, proved central to preserving the knowledge of the ancient world. Her work, particularly her commentaries on key mathematical texts, ensured that essential Greek mathematical and astronomical knowledge survived and was passed down through the ages.
 
 In modern times, Hypatia’s life and work have been celebrated as a symbol of women's contributions to science and philosophy. She is remembered not only for her intellectual brilliance but also for her courage in pursuing knowledge in the face of social and political adversity.
 

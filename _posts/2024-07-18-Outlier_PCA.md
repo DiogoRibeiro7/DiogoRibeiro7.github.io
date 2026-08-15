@@ -12,6 +12,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_1.jpg
+seo_description: How Principal Component Analysis detects outliers, the difference between anomalies and novelties, and the methods available.
+seo_title: Detecting Outliers with PCA
 seo_type: article
 tags:
 - Pca
@@ -44,7 +46,7 @@ To demonstrate how PCA can be used for outlier detection in continuous random va
 
 ### Visualizing Outliers
 
-Visualization plays a crucial role in interpreting PCA results. By plotting the principal components, outliers can be marked and analyzed further. For instance, plotting the first two principal components (PC1 and PC2) with marked outliers helps in understanding their distribution and identifying any patterns.
+Visualization is central to interpreting PCA results. By plotting the principal components, outliers can be marked and analyzed further. For instance, plotting the first two principal components (PC1 and PC2) with marked outliers helps in understanding their distribution and identifying any patterns.
 
 ## Outlier Detection for Categorical Variables
 

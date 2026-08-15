@@ -23,10 +23,8 @@ keywords:
 - Digital signal processing
 - Generative music
 - Rhythm and numbers
-seo_description: Explore how mathematics drives electronic music production, from
-  sound synthesis to algorithmic composition. Learn how numbers shape rhythm, signal
-  processing, and generative music.
-seo_title: 'The Role of Mathematics in Electronic Music: Sound, Rhythm, and Composition'
+seo_description: How mathematics drives electronic music, from sound synthesis to algorithmic composition, rhythm, and signal processing.
+seo_title: The Mathematics of Electronic Music
 seo_type: article
 summary: This article explores the intersection of mathematics and electronic music,
   highlighting how algorithms and mathematical principles influence sound synthesis,
@@ -44,7 +42,7 @@ title: 'Mathematics and Electronic Music: The Symphony of Numbers'
 
 ## The Symphony of Numbers: Mathematics and Electronic Music
 
-Mathematics and music share a profound relationship, tracing back to the ancient Greeks who viewed harmony and rhythm as manifestations of mathematical ratios. In contemporary times, electronic music has elevated this relationship to new heights, where mathematical precision becomes a cornerstone in both creating and understanding sound. This article delves into the intricate connections between mathematics and electronic music, exploring how mathematical principles are deeply embedded in everything from sound synthesis to algorithmic composition.
+Mathematics and music share a profound relationship, tracing back to the ancient Greeks who viewed harmony and rhythm as manifestations of mathematical ratios. In contemporary times, electronic music has elevated this relationship to new heights, where mathematical precision becomes a cornerstone in both creating and understanding sound. This article examines the intricate connections between mathematics and electronic music, exploring how mathematical principles are deeply embedded in everything from sound synthesis to algorithmic composition.
 
 ## The Mathematics of Sound
 
@@ -84,7 +82,7 @@ Rhythm in music is another area where mathematics is essential. Time signatures,
 Beyond the technical aspects, the relationship between mathematics and electronic music also has an aesthetic dimension. Many artists are drawn to the beauty of mathematical forms and structures, finding inspiration in the precision and order that mathematics imparts to the chaotic world of sound.
 
 - **Minimalism**: A genre of electronic music characterized by repetitive structures and gradual processes, minimalism reflects mathematical concepts such as iteration and recursion.
-- **Mathematical Music Theory**: Some composers delve into the connections between music theory and mathematics, using concepts like set theory or group theory to structure their compositions.
+- **Mathematical Music Theory**: Some composers examine the connections between music theory and mathematics, using concepts like set theory or group theory to structure their compositions.
 
 ## The Digital Symphony: Mathematics as Composer and Conductor
 

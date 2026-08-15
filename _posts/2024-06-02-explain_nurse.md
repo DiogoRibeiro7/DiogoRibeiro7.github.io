@@ -15,6 +15,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_8.jpg
+seo_description: How weighted moving averages and standard deviation work in health care, explained for nurses and clinical decision-making.
+seo_title: Weighted Moving Average in Health Care
 seo_type: article
 tags:
 - Nursing education

@@ -18,8 +18,8 @@ keywords:
 - Binary classifiers
 - Imbalanced data
 - Machine learning metrics
-seo_description: When evaluating binary classifiers on imbalanced datasets, AUC-PR is a more informative metric than AUC-ROC or Gini. Learn why Precision-Recall curves provide a clearer picture of model performance on rare events.
-seo_title: 'AUC-PR vs. AUC-ROC: Evaluating Classifiers on Imbalanced Data'
+seo_description: Why AUC-PR is more informative than AUC-ROC or Gini when evaluating binary classifiers on imbalanced data.
+seo_title: AUC-PR vs. AUC-ROC on Imbalanced Data
 seo_type: article
 summary: In this article, we explore why AUC-PR (Area Under Precision-Recall Curve) is a superior metric for evaluating binary classifiers on imbalanced datasets compared to AUC-ROC and Gini. We discuss how class imbalance distorts performance metrics and provide real-world examples of why Precision-Recall curves give a clearer understanding of model performance on rare events.
 tags:
@@ -34,7 +34,7 @@ When working with binary classifiers, metrics like **AUC-ROC** and **Gini** have
 
 However, when dealing with **imbalanced datasets**, where one class is much more prevalent than the other, these metrics can **mislead** us into believing a model is better than it truly is. In such cases, **AUC-PR**—which focuses on **Precision** and **Recall**—offers a more meaningful evaluation of a model’s ability to handle rare events, providing a clearer picture of how the model performs on the **minority class**.
 
-In this article, we'll explore why **AUC-PR** (Area Under the Precision-Recall Curve) is more informative than **AUC-ROC** and **Gini** when evaluating models on imbalanced datasets. We’ll delve into why AUC-ROC often **overstates model performance**, and how AUC-PR shifts the focus to the model’s performance on the **positive class**, giving a more reliable assessment of how well it handles **imbalanced classes**.
+In this article, we'll explore why **AUC-PR** (Area Under the Precision-Recall Curve) is more informative than **AUC-ROC** and **Gini** when evaluating models on imbalanced datasets. We’ll examine why AUC-ROC often **overstates model performance**, and how AUC-PR shifts the focus to the model’s performance on the **positive class**, giving a more reliable assessment of how well it handles **imbalanced classes**.
 
 ## The Challenges of Imbalanced Data
 

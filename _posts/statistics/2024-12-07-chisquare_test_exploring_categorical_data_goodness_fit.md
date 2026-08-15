@@ -28,7 +28,7 @@ tags:
 title: 'Chi-Square Test: Exploring Categorical Data and Goodness-of-Fit'
 ---
 
-The Chi-Square test is a cornerstone of statistical analysis for categorical data. It enables researchers to examine how well observed data align with expected distributions, assess the independence of categorical variables, and test hypotheses in a wide range of fields. This article delves into the mechanics of the Chi-Square test, its two primary applications—goodness-of-fit and independence testing—and its use in practical scenarios such as survey data, contingency tables, and genetics.
+The Chi-Square test is a cornerstone of statistical analysis for categorical data. It enables researchers to examine how well observed data align with expected distributions, assess the independence of categorical variables, and test hypotheses in a wide range of fields. This article examines the mechanics of the Chi-Square test, its two primary applications—goodness-of-fit and independence testing—and its use in practical scenarios such as survey data, contingency tables, and genetics.
 
 ---
 

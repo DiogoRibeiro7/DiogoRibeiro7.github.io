@@ -20,9 +20,7 @@ keywords:
 - Understanding odds in statistics
 - Event occurrence likelihood
 - Statistical analysis in data science
-seo_description: Learn the key differences between probability and odds, two fundamental
-  concepts in biostatistics, with clear examples and applications in data science
-  and statistics.
+seo_description: The key differences between probability and odds in biostatistics, with clear examples and applications in data science.
 seo_title: Understanding Probability and Odds in Biostatistics
 seo_type: article
 subtitle: A Clear Explanation of Two Key Concepts in Biostatistics

@@ -13,7 +13,7 @@ tags:
 - conformal-prediction
 
 author_profile: false
-seo_title: "The Impossible Dream: Why Regression Confidence Bands Can't Exist Without Assumptions"
+seo_title: Why Regression Confidence Bands Need Assumptions
 seo_description: "A deep dive into the statistical impossibility of constructing uniform, distribution-free confidence bands in regression without making assumptions."
 excerpt: "Why the intuitive idea of regression confidence bands breaks down under mathematical scrutiny."
 summary: "Explore the fundamental reasons why simultaneous confidence bands in regression require assumptions, and how this impossibility shapes modern statistical inference."

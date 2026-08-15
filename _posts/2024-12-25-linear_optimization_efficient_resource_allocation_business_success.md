@@ -24,9 +24,7 @@ keywords:
 - Resource allocation
 - R
 - Python
-seo_description: Explore linear optimization, its key components, methods like simplex
-  and graphical, and applications in finance, logistics, and production. Learn how
-  to solve linear programming problems efficiently.
+seo_description: 'Linear optimization explained: key components, simplex and graphical methods, and applications in finance, logistics, and production.'
 seo_title: Comprehensive Guide to Linear Optimization for Business
 seo_type: article
 summary: This article provides an in-depth look at linear optimization, including

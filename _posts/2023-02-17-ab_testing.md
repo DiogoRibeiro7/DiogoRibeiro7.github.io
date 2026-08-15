@@ -29,10 +29,8 @@ keywords:
 - R
 - Javascript
 - Python
-seo_description: Explore advanced statistical concepts behind sequential testing in
-  A/B testing. Learn about SPRT, error control, practical implementation, and potential
-  pitfalls.
-seo_title: 'In-Depth Sequential Testing in A/B Testing: Advanced Statistical Methods'
+seo_description: 'The statistics behind sequential testing in A/B tests: SPRT, error control, practical implementation, and common pitfalls.'
+seo_title: Sequential Testing Methods for A/B Tests
 seo_type: article
 tags:
 - A/b testing
@@ -46,7 +44,7 @@ title: Advanced Statistical Methods for Efficient A/B Testing
 
 A/B testing stands as a pillar data-driven decision-making, offering a methodical approach to evaluating product variations based on user interactions and key performance indicators. However, traditional fixed-sample A/B testing can be inefficient, especially for organizations with limited user traffic or when swift decision-making is crucial. **Sequential testing**, grounded in advanced statistical theory, emerges as a powerful alternative that enables continuous data evaluation, potentially accelerating conclusions without compromising statistical integrity.
 
-In this comprehensive article, we delve into the theoretical underpinnings of sequential testing, explore its practical application in real-world scenarios, and discuss its advantages and limitations. We will cover the statistical foundations, including the Sequential Probability Ratio Test (SPRT), and provide detailed coding examples in R, JavaScript, and Python to illustrate how to implement sequential testing effectively.
+In this comprehensive article, we examine the theoretical underpinnings of sequential testing, explore its practical application in real-world scenarios, and discuss its advantages and limitations. We will cover the statistical foundations, including the Sequential Probability Ratio Test (SPRT), and provide detailed coding examples in R, JavaScript, and Python to illustrate how to implement sequential testing effectively.
 
 ## The Foundations of A/B Testing: Benefits and Limitations
 
@@ -63,8 +61,8 @@ A/B testing, or split testing, involves comparing two versions of a variable—s
 
 Consider testing two pricing strategies:
 
-- **Version A**: The product is priced at **$19.99**.
-- **Version B**: The product is priced at **$24.99** with a **20% discount**, effectively reducing it to $19.99.
+- **Version A**: The product is priced at **<span class="tex2jax_ignore">$19.99</span>**.
+- **Version B**: The product is priced at **<span class="tex2jax_ignore">$24.99</span>** with a **20% discount**, effectively reducing it to <span class="tex2jax_ignore">$19.99</span>.
 
 Despite the same final price, psychological pricing suggests that consumers might perceive greater value in receiving a discount, potentially influencing conversion rates.
 

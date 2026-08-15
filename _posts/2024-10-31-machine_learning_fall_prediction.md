@@ -57,7 +57,7 @@ By integrating these data points, machine learning models can predict which indi
 
 1. **Gait and Mobility**: One of the most important indicators of fall risk is how individuals move. Changes in gait, such as reduced walking speed, instability, or irregular stride patterns, are strongly correlated with fall risk. Machine learning algorithms can be trained on mobility data from wearables to monitor an individual's movement and detect any deviations that could signal an increased risk of falling.
 
-2. **Health Conditions**: Medical history plays a vital role in predicting falls. Factors like a history of strokes, diabetes, heart conditions, or medications that cause dizziness can elevate the likelihood of falls. Machine learning models can analyze these health records to better estimate fall risks, combining these with real-time data from sensors and wearables.
+2. **Health Conditions**: Medical history is central to predicting falls. Factors like a history of strokes, diabetes, heart conditions, or medications that cause dizziness can elevate the likelihood of falls. Machine learning models can analyze these health records to better estimate fall risks, combining these with real-time data from sensors and wearables.
 
 3. **Environmental Factors**: Many falls are caused by environmental hazards such as slippery surfaces, poor lighting, or cluttered spaces. ML algorithms can factor in environmental risks by integrating data from sensors embedded in living spaces. These sensors detect potential hazards, and the algorithms can adjust fall predictions based on the individual's interaction with their environment.
 

@@ -28,9 +28,9 @@ tags:
 title: A Deep Dive into Why Multiple Imputation is Indefensible
 ---
 
-# Why Multiple Imputation is Indefensible: A Deep Dive
+## Why Multiple Imputation is Indefensible: A Deep Dive
 
-In the realm of statistical analysis, missing data is an issue that nearly every data analyst encounters at some point. The need to deal with incomplete data sets has spurred the development of various methods to impute or estimate the missing values. Among the most popular of these methods is **multiple imputation**. This technique, endorsed by many as the "gold standard" for handling missing data, is widely applied across various fields of research, including medical studies, social sciences, and economics. 
+In statistical analysis, missing data is an issue that nearly every data analyst encounters at some point. The need to deal with incomplete data sets has spurred the development of various methods to impute or estimate the missing values. Among the most popular of these methods is **multiple imputation**. This technique, endorsed by many as the "gold standard" for handling missing data, is widely applied across various fields of research, including medical studies, social sciences, and economics. 
 
 On the surface, multiple imputation appears to be a robust, theoretically sound approach that takes into account the uncertainty associated with missing data by generating multiple plausible versions of the data set and averaging the results across these imputed versions. Yet, beneath this seemingly reasonable approach lies a series of troubling theoretical issues, particularly in the interpretation of the results. The purpose of this article is to critically examine the fundamental problems with multiple imputation, particularly its lack of correspondence to empirical reality, and to propose an alternative approach that better preserves the falsifiability and interpretability of statistical inference.
 
@@ -82,7 +82,7 @@ As discussed earlier, multiple imputation generates estimates based on different
 
 ### 5. Computational Complexity and Practical Challenges
 
-In addition to the theoretical problems discussed above, multiple imputation also presents practical challenges. The method requires the creation and analysis of multiple imputed data sets, which can be computationally intensive, particularly for large data sets or complex models. Moreover, the process of specifying multiple missing data models and combining the results adds layers of complexity to the analysis, which can make it difficult for researchers to fully understand or interpret the results.
+In addition to the theoretical problems discussed above, multiple imputation also presents practical challenges. The method requires the creation and analysis of multiple imputed data sets, which can be computationally intensive, particularly for large data sets or complex models. The process of specifying multiple missing data models and combining the results adds layers of complexity to the analysis, which can make it difficult for researchers to fully understand or interpret the results.
 
 While these practical challenges are not as fundamental as the theoretical issues, they do contribute to the overall difficulty of using multiple imputation effectively. The method's complexity can lead to errors or misinterpretations, particularly for researchers who are not well-versed in the nuances of imputation techniques.
 
@@ -110,7 +110,7 @@ For example, researchers might specify both a "conservative" missing data model,
 
 One of the key advantages of single stochastic imputation combined with deterministic sensitivity analysis is that it maintains a clear connection to empirical reality. The imputation models are based on assumptions that can be explicitly stated and discussed, and the results of the analysis correspond to these assumptions. This makes it possible to engage in a meaningful scientific dialogue about the validity of the imputation process and the reasonableness of the assumptions.
 
-Moreover, because the imputation models are based on specific, well-defined assumptions, the results of the analysis are falsifiable. If new data becomes available, or if the assumptions of the imputation model are found to be incorrect, the results can be revised or rejected. This stands in contrast to multiple imputation, which generates results based on hypothetical models that cannot be directly tested or falsified.
+Because the imputation models are based on specific, well-defined assumptions, the results of the analysis are falsifiable. If new data becomes available, or if the assumptions of the imputation model are found to be incorrect, the results can be revised or rejected. This stands in contrast to multiple imputation, which generates results based on hypothetical models that cannot be directly tested or falsified.
 
 ### 4. Simplicity and Transparency
 

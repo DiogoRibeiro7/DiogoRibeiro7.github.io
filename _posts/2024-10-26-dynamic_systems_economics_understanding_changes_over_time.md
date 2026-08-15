@@ -19,10 +19,8 @@ keywords:
 - Economic stability
 - Phase diagrams
 - Economic equilibrium
-seo_description: A deep dive into how dynamic systems theory is used in macroeconomics
-  to model the evolution of economic variables over time, focusing on stability, equilibrium,
-  and phase diagrams.
-seo_title: 'Dynamic Systems in Economics: A Tool for Understanding Macroeconomic Changes'
+seo_description: How dynamic systems theory models the evolution of economic variables over time, covering stability, equilibrium, and phase diagrams.
+seo_title: Dynamic Systems in Economics
 seo_type: article
 summary: Dynamic systems theory provides a framework for understanding how economies
   evolve over time, enabling economists to model complex interactions between variables

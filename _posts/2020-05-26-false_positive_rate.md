@@ -221,7 +221,7 @@ In both machine learning and statistics, there is often a trade-off between cont
 
 Understanding this balance is crucial when setting thresholds for decision-making, whether it’s the significance level in a hypothesis test or the classification threshold in a machine learning model.
 
-The False Positive Rate (FPR) in machine learning directly parallels the concept of a Type I error in statistics. Both represent the probability of incorrectly identifying a negative instance as positive, and both play a vital role in decision-making processes. Controlling FPR or Type I errors is particularly important in fields where false positives carry significant consequences, such as medicine, finance, and security.
+The False Positive Rate (FPR) in machine learning directly parallels the concept of a Type I error in statistics. Both represent the probability of incorrectly identifying a negative instance as positive, and both are central to decision-making processes. Controlling FPR or Type I errors is particularly important in fields where false positives carry significant consequences, such as medicine, finance, and security.
 
 ## Appendix: R Code for Calculating and Visualizing False Positive Rate (FPR)
 
@@ -347,7 +347,7 @@ This R code provides a practical approach for calculating and visualizing the Fa
    - *ISBN-13: 978-0387402727*
 
 4. **"The Theory of Statistics" by D.R. Cox and D.V. Hinkley**  
-   A classic text that delves into statistical inference, including hypothesis testing, error rates, and decision theory. It covers Type I and Type II errors, making it relevant to the relationship between FPR and hypothesis testing in statistics.
+   A classic text that examines statistical inference, including hypothesis testing, error rates, and decision theory. It covers Type I and Type II errors, making it relevant to the relationship between FPR and hypothesis testing in statistics.
    - *ISBN-13: 978-0412162309*
 
 5. **"Statistical Learning Theory" by Vladimir N. Vapnik**  

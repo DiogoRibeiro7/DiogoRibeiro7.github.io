@@ -25,10 +25,8 @@ keywords:
 - Model evaluation metrics
 - Classification problems
 - Machine learning applications
-seo_description: Explore the fundamentals of binary classification in machine learning,
-  including key algorithms, evaluation metrics like precision and recall, and real-world
-  applications.
-seo_title: 'Binary Classification in Machine Learning: Methods, Metrics, and Applications'
+seo_description: 'The fundamentals of binary classification: key algorithms, evaluation metrics such as precision and recall, and real-world applications.'
+seo_title: 'Binary Classification: Methods and Metrics'
 seo_type: article
 tags:
 - Binary classification

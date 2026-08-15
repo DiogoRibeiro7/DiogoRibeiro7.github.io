@@ -26,9 +26,7 @@ keywords:
 - Tail risk
 - Risk metrics
 - Python
-seo_description: An in-depth analysis of Value at Risk (VaR) and Expected Shortfall
-  (ES) as risk assessment models, comparing their performance during different market
-  conditions.
+seo_description: Value at Risk (VaR) and Expected Shortfall (ES) compared as risk models, and how each performs under different market conditions.
 seo_title: 'VaR vs Expected Shortfall: A Data-Driven Analysis'
 seo_type: article
 tags:
@@ -90,7 +88,7 @@ To illustrate the differences between VaR and ES, we compare their performance d
 
 ### Computational Analysis
 
-We will calculate the VaR and ES for a portfolio with an initial value of $10,000 over a 10-day holding period at a 95% confidence level. The steps involve:
+We will calculate the VaR and ES for a portfolio with an initial value of <span class="tex2jax_ignore">$10,000</span> over a 10-day holding period at a 95% confidence level. The steps involve:
 
 1. Calculating the daily return and daily loss.
 2. Estimating the 95th percentile of the loss distribution for VaR.
@@ -100,15 +98,15 @@ We will calculate the VaR and ES for a portfolio with an initial value of $10,00
 ### Results and Insights
 
 - **2008 Financial Crisis:** 
-  - **Expected Return:** -$196.59
-  - **VaR (95%):** $1,366.41
-  - **ES:** $1,841.86
+  - **Expected Return:** -<span class="tex2jax_ignore">$196.59</span>
+  - **VaR (95%):** <span class="tex2jax_ignore">$1,366.41</span>
+  - **ES:** <span class="tex2jax_ignore">$1,841.86</span>
   - **Interpretation:** High volatility led to substantial potential losses. ES provided a more comprehensive estimate, indicating the average loss beyond the VaR threshold.
 
 - **2017 Stable Market:**
-  - **Expected Return:** $43.01
-  - **VaR (95%):** $354.74
-  - **ES:** $423.22
+  - **Expected Return:** <span class="tex2jax_ignore">$43.01</span>
+  - **VaR (95%):** <span class="tex2jax_ignore">$354.74</span>
+  - **ES:** <span class="tex2jax_ignore">$423.22</span>
   - **Interpretation:** Lower volatility resulted in smaller potential losses. Both VaR and ES values were closer, reflecting a more stable environment.
 
 ### Conclusion

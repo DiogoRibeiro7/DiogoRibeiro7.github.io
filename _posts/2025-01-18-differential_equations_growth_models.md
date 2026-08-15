@@ -19,7 +19,7 @@ keywords:
 - Romer Growth Model
 - Dynamic Systems Theory
 - Optimal Control Theory
-seo_description: An in-depth exploration of how differential equations are used to model economic growth, focusing on the Solow Growth Model, Romer’s Endogenous Growth Model, and related dynamic systems.
+seo_description: 'How differential equations model economic growth, focusing on the Solow Growth Model, Romer''s Endogenous Growth Model, and related systems.'
 seo_title: Differential Equations in Economic Growth Models
 seo_type: article
 summary: A comprehensive discussion of how differential equations are applied in macroeconomic growth models, with a special focus on the Solow and Romer growth models, dynamic systems, and optimal control theory.
@@ -109,7 +109,7 @@ Dynamic systems are not limited to growth models. They are also used to study ot
 
 ## Optimal Control Theory in Economics
 
-**Optimal control theory** is another mathematical tool that plays a crucial role in economics, particularly in the formulation of fiscal and monetary policy. By using techniques from Hamiltonian and Lagrangian mechanics, economists can determine the optimal paths of control variables (such as government spending or interest rates) that maximize an objective function, such as social welfare or economic growth.
+**Optimal control theory** is another mathematical tool that is central to economics, particularly in the formulation of fiscal and monetary policy. By using techniques from Hamiltonian and Lagrangian mechanics, economists can determine the optimal paths of control variables (such as government spending or interest rates) that maximize an objective function, such as social welfare or economic growth.
 
 ### Hamiltonian in Economic Models
 

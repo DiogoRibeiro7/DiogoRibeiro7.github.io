@@ -21,10 +21,8 @@ keywords:
 - Distributional properties
 - Machine learning
 - Benchmarking
-seo_description: Explore the performance of simple distributional properties in time-series
-  classification benchmarks using the UEA/UCR repository, and the relevance of these
-  models in complex tasks.
-seo_title: Simple Distributional Properties for Time-Series Classification Benchmarks
+seo_description: How simple distributional properties perform in time-series classification benchmarks on the UEA/UCR repository.
+seo_title: Simple Baselines for Time-Series Classification
 seo_type: article
 summary: This article discusses the use of simple distributional properties as a baseline
   for time-series classification, focusing on benchmarks from the UEA/UCR repository
@@ -67,7 +65,7 @@ These findings challenge the conventional wisdom that complex time-series proble
 
 ### Neuroimaging and Time-Series Data: Unique Challenges
 
-**Neuroimaging data**, such as functional magnetic resonance imaging (fMRI), is another domain where time-series classification plays a significant role. For psychiatric disorders like schizophrenia, analyzing time-series data from neuroimaging is crucial for identifying biomarkers. However, this data presents unique challenges, including extreme noise and complexity, as well as high dimensionality.
+**Neuroimaging data**, such as functional magnetic resonance imaging (fMRI), is another domain where time-series classification is essential. For psychiatric disorders like schizophrenia, analyzing time-series data from neuroimaging is crucial for identifying biomarkers. However, this data presents unique challenges, including extreme noise and complexity, as well as high dimensionality.
 
 The time-series generated from fMRI reflect brain activity over time, with scans capturing changes in blood oxygen levels. The high dimensionality (with potentially hundreds of thousands of brain voxels) complicates classification tasks, as it becomes difficult to extract meaningful patterns from noisy data.
 

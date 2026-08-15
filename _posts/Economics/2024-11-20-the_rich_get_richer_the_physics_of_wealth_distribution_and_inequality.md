@@ -33,7 +33,7 @@ keywords:
 - Game Theory
 - Endogenous Growth
 seo_description: An in-depth exploration of the economic and physical models explaining wealth distribution, focusing on Pareto's Law and the emerging field of econophysics.
-seo_title: 'The Rich Get Richer: Understanding Wealth Distribution through Physics'
+seo_title: The Physics of Wealth Distribution
 seo_type: article
 summary: This article examines the growing inequality between the rich and poor, utilizing models from physics and econophysics to explain how wealth distribution follows specific statistical patterns. It discusses key findings from physicists and economists and their implications for future policy and societal structure.
 tags:
@@ -84,7 +84,7 @@ Physicist **Victor Yakovenko** from the University of Maryland, alongside his co
 
 In the **gas model**, people exchange money in random interactions, much like atoms exchanging energy when they collide. This idea challenges traditional economic models that view individuals as rational actors who make optimal decisions. Instead, econophysicists argue that in large systems, the behavior of each individual is influenced by so many factors that the overall outcome is effectively random. As a result, it makes sense to treat people like atoms in a gas.
 
-Furthermore, the gas analogy works because, like energy, **money is conserved**. It flows through the economy in interactions—redistributed but never created or destroyed. Yakovenko's findings showed that while incomes for those in the lower and middle portions of the distribution remained relatively stable after adjusting for inflation, the incomes of those in the Pareto distribution (the richest) increased nearly fivefold between 1983 and 2000. This wealth boom, however, came to a halt with the 2001 stock market crash.
+The gas analogy works because, like energy, **money is conserved**. It flows through the economy in interactions—redistributed but never created or destroyed. Yakovenko's findings showed that while incomes for those in the lower and middle portions of the distribution remained relatively stable after adjusting for inflation, the incomes of those in the Pareto distribution (the richest) increased nearly fivefold between 1983 and 2000. This wealth boom, however, came to a halt with the 2001 stock market crash.
 
 ## Class Jumping and the Persistence of Wealth Inequality
 

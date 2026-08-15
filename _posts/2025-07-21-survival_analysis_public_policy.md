@@ -11,8 +11,8 @@ tags:
 - government data
 - evidence-based policymaking
 author_profile: false
-seo_title: "Survival Analysis for Public Policy: Methods, Applications & Python Implementation"
-seo_description: "Explore how survival analysis transforms public policy by modeling time-to-event data across domains like health, housing, and education. Includes Python code examples."
+seo_title: Survival Analysis for Public Policy in Python
+seo_description: How survival analysis models time-to-event data for public policy across health, housing, and education, with Python examples.
 excerpt: "Survival analysis offers a powerful framework for analyzing time-to-event data in public policy, enabling data-driven decision making across health, welfare, housing, and more."
 summary: "A comprehensive guide to using survival analysis in public policy, this article covers theoretical foundations, real-world applications, ethical considerations, and detailed Python implementations across domains like healthcare, social services, and housing."
 keywords: 

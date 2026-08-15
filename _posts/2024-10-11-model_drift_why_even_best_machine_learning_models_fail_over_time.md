@@ -20,10 +20,8 @@ keywords:
 - Data drift
 - Model degradation
 - Ai in production
-seo_description: This article explores the concept of model drift and how changes
-  in data or target variables degrade the accuracy of machine learning models over
-  time, with case studies from real-world applications.
-seo_title: 'Why Machine Learning Models Fail Over Time: Understanding Model Drift'
+seo_description: How model drift degrades machine learning accuracy over time as data or target variables change, with real-world case studies.
+seo_title: 'Why ML Models Fail Over Time: Model Drift'
 seo_type: article
 summary: This article examines model drift, focusing on how data drift, changes in
   underlying patterns, and new unseen data can degrade machine learning model accuracy

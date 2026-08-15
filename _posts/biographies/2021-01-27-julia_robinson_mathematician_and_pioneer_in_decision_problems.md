@@ -18,8 +18,8 @@ keywords:
 - Decision problems in mathematics
 - Number theory contributions
 - Women pioneers in mathematics
-seo_description: Explore the life and achievements of Julia Robinson, the first woman elected to the U.S. National Academy of Sciences, known for her contributions to decision problems and solving Hilbert's Tenth Problem.
-seo_title: 'Julia Robinson: Mathematician Who Contributed to Solving Hilbert''s Tenth Problem'
+seo_description: 'Julia Robinson, the first woman elected to the U.S. National Academy of Sciences, and her work on Hilbert''s Tenth Problem.'
+seo_title: 'Julia Robinson and Hilbert''s Tenth Problem'
 seo_type: article
 summary: This article delves into the life and legacy of Julia Robinson, a pioneering mathematician who contributed significantly to solving Hilbert's Tenth Problem. Learn about her groundbreaking work in decision problems and her impact on mathematics.
 tags:

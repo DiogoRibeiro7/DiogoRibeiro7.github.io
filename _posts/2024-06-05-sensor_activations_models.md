@@ -22,10 +22,8 @@ keywords:
 - Residual analysis
 - Python programming for data analysis
 - Python
-seo_description: Learn how to model sensor activations with the Poisson distribution
-  in Python. This tutorial covers data preparation, residual analysis, goodness-of-fit,
-  and cross-validation for accurate predictions.
-seo_title: Modeling Sensor Activations Using Poisson Distribution in Python
+seo_description: How to model sensor activations with the Poisson distribution in Python, covering data preparation, residual analysis, and cross-validation.
+seo_title: Modeling Sensor Activations with Poisson in Python
 seo_type: article
 summary: This tutorial explores how to model sensor activations using the Poisson
   distribution in Python, covering data preparation, model evaluation, residual analysis,
@@ -500,7 +498,7 @@ print(f'Cross-Validated RMSE: {-np.mean(rmse_scores):.2f}')
 
 #### Discuss the Importance of Cross-Validation in Model Evaluation
 
-Cross-validation plays a crucial role in model evaluation for several reasons:
+Cross-validation is central to model evaluation for several reasons:
 
 - Prevents Overfitting: By training and testing the model on different subsets of data, cross-validation ensures that the model does not simply memorize the training data but learns to generalize to new, unseen data.
 - Model Robustness: It provides a more reliable estimate of model performance by averaging the results from multiple folds, reducing the impact of any particular data split.
@@ -557,7 +555,7 @@ print(f'ARIMA Model - Root Mean Squared Error (RMSE): {rmse_arima:.2f}')
 
 - Model Fit: The ARIMA model summary provides insights into the coefficients and significance of the AR, I, and MA terms. Significant coefficients indicate that these components contribute meaningfully to the model.
 - Comparison: Comparing the MAE and RMSE of the ARIMA model with those of the Poisson and ZIP models helps determine which model best captures the patterns in the data. Lower error metrics indicate better model performance.
-- Temporal Dependencies: If the ARIMA model shows significantly lower MAE and RMSE compared to the Poisson and ZIP models, it suggests that temporal dependencies play a crucial role in the sensor activation data, and the ARIMA model is more effective in capturing these patterns.
+- Temporal Dependencies: If the ARIMA model shows significantly lower MAE and RMSE compared to the Poisson and ZIP models, it suggests that temporal dependencies are central to the sensor activation data, and the ARIMA model is more effective in capturing these patterns.
 - Further Analysis: For complex scenarios with strong temporal dependencies, further reading on time series analysis and advanced modeling techniques may be beneficial to improve model performance.
 
 By fitting and evaluating an ARIMA model, we can explore whether time series-specific techniques provide better performance for modeling sensor activations, particularly when the data exhibits strong temporal dependencies.

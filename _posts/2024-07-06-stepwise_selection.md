@@ -13,6 +13,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
   twitter_image: /assets/images/data_science_5.jpg
+seo_description: Why stepwise selection biases coefficients upward, the consequences for your estimates, and the broader implications.
+seo_title: Why Stepwise Selection Ruins Your Estimates
 seo_type: article
 tags:
 - Stepwise selection
@@ -22,11 +24,11 @@ tags:
 title: Stepwise Selection Algorithms Almost Always Ruin Statistical Estimates
 ---
 
-There is a clear reason why stepwise regression is usually inappropriate, along with several other significant drawbacks. This article will delve into these issues, providing an in-depth understanding of why stepwise selection is generally detrimental to statistical estimates.
+There is a clear reason why stepwise regression is usually inappropriate, along with several other significant drawbacks. This article will examine these issues, providing an in-depth understanding of why stepwise selection is generally detrimental to statistical estimates.
 
 Stepwise regression, a popular method for model selection in regression analysis, involves adding or removing predictors based on certain criteria, typically p-values. Although this method is often used for its simplicity and convenience, it introduces several biases and inaccuracies that compromise the integrity of the resulting models. By examining the primary issue of bias towards larger coefficients and exploring other significant problems such as biased R² values, misleading test statistics, underestimated standard errors, invalid p-values, and the influence of collinearity, we can see why stepwise selection is fundamentally flawed.
 
-Moreover, stepwise selection can discourage thoughtful modeling, leading to models that are not well-suited to the underlying data or the research questions at hand. It is crucial for practitioners to understand these pitfalls and consider more robust alternative methods when building regression models. Through this comprehensive exploration, we aim to highlight the importance of careful model selection and the potential dangers of relying on stepwise regression.
+Stepwise selection can discourage thoughtful modeling, leading to models that are not well-suited to the underlying data or the research questions at hand. It is crucial for practitioners to understand these pitfalls and consider more robust alternative methods when building regression models. Through this comprehensive exploration, we aim to highlight the importance of careful model selection and the potential dangers of relying on stepwise regression.
 
 ## Primary Issue: Bias Towards Larger Coefficients
 
@@ -118,7 +120,7 @@ P-values for model coefficients become nonsensical because they are based on imp
 
 ### Influence of Collinearity
 
-Collinearity among model predictors heavily influences the variables selected, making the selection process arbitrary. In the presence of multicollinearity, stepwise selection might favor one variable over another based on small differences in their p-values, even if both variables essentially convey the same information. This arbitrariness can lead to models that are unstable and difficult to interpret. Moreover, stepwise selection does not properly address collinearity, which can further compromise the model's validity.
+Collinearity among model predictors heavily influences the variables selected, making the selection process arbitrary. In the presence of multicollinearity, stepwise selection might favor one variable over another based on small differences in their p-values, even if both variables essentially convey the same information. This arbitrariness can lead to models that are unstable and difficult to interpret. Stepwise selection does not properly address collinearity, which can further compromise the model's validity.
 
 ### Discourages Thoughtful Modeling
 

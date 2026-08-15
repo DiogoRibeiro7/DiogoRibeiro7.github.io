@@ -20,9 +20,7 @@ keywords:
 - Predictive maintenance
 - Real-time monitoring
 - Industrial iot
-seo_description: Explore how IoT-enabled devices and sensors provide the real-time
-  data that drives predictive maintenance strategies, and how various types of sensors
-  contribute to equipment health monitoring.
+seo_description: How IoT devices and sensors supply the real-time data behind predictive maintenance, and how sensor types contribute to equipment health monitoring.
 seo_title: How IoT and Sensor Data Power Predictive Maintenance
 seo_type: article
 summary: This article delves into the critical role IoT and sensor data play in predictive

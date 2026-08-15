@@ -11,11 +11,8 @@ tags:
   - inventory management
   - shipment prediction
 author_profile: false
-seo_title: 'Survival Analysis for Supply Chain and Logistics: A Complete Guide'
-seo_description: >-
-  Explore how survival analysis transforms supply chain operations. Learn to
-  model delivery times, predict stockouts, manage perishables, assess supplier
-  risk, and more.
+seo_title: Survival Analysis for Supply Chain and Logistics
+seo_description: How survival analysis models delivery times, predicts stockouts, manages perishables, and assesses supplier risk.
 excerpt: >-
   Survival analysis offers a powerful framework to model time-to-event phenomena
   across the supply chain. This guide explores how to apply it to inventory,
@@ -340,7 +337,7 @@ Slow-moving inventory presents unique challenges that survival analysis is well-
 
 - **Inventory Parameter Adjustment**: Automatically adjusting reorder points and quantities for items showing early signs of obsolescence risk.
 
-**Implementation Case**: An industrial parts distributor with over 50,000 SKUs implemented a cure-mixture accelerated failure time model to identify slow-moving inventory at risk of never depleting. The model incorporated product attributes, historical demand patterns, and market indicators. This approach identified $3.2M in at-risk inventory for proactive disposition, resulting in $1.8M in recovered value that would otherwise have been eventually written off.
+**Implementation Case**: An industrial parts distributor with over 50,000 SKUs implemented a cure-mixture accelerated failure time model to identify slow-moving inventory at risk of never depleting. The model incorporated product attributes, historical demand patterns, and market indicators. This approach identified <span class="tex2jax_ignore">$3.2M</span> in at-risk inventory for proactive disposition, resulting in <span class="tex2jax_ignore">$1.8M</span> in recovered value that would otherwise have been eventually written off.
 
 ## Seasonal Demand Patterns
 
@@ -742,7 +739,7 @@ Supplier relationships have finite lifespans influenced by numerous factors. Sur
 
 - **Succession Planning**: Ensuring backup suppliers are developed for relationships showing warning signs.
 
-**Implementation Case**: A manufacturing company with over 600 active suppliers implemented Cox proportional hazards models to analyze relationship duration. The model incorporated quarterly supplier performance metrics, market factors, and relationship characteristics. By identifying high-risk supplier relationships 6-12 months before critical issues emerged, they reduced unplanned supplier transitions by 65% and associated disruption costs by $4.2M annually.
+**Implementation Case**: A manufacturing company with over 600 active suppliers implemented Cox proportional hazards models to analyze relationship duration. The model incorporated quarterly supplier performance metrics, market factors, and relationship characteristics. By identifying high-risk supplier relationships 6-12 months before critical issues emerged, they reduced unplanned supplier transitions by 65% and associated disruption costs by <span class="tex2jax_ignore">$4.2M</span> annually.
 
 ## Supplier Performance Degradation
 
@@ -2053,7 +2050,7 @@ Bayesian approaches to survival analysis offer distinct advantages for supply ch
 
 **Context and Challenge**:
 
-A global pharmaceutical company faced significant challenges managing temperature-sensitive products through their complex distribution network. With products valued at over $50 million moving through the supply chain monthly and temperature excursions potentially rendering products unusable, they needed sophisticated analytics to:
+A global pharmaceutical company faced significant challenges managing temperature-sensitive products through their complex distribution network. With products valued at over <span class="tex2jax_ignore">$50 million</span> moving through the supply chain monthly and temperature excursions potentially rendering products unusable, they needed sophisticated analytics to:
 
 1. Predict remaining product quality life based on temperature history
 2. Optimize routing decisions for products with different temperature sensitivity
@@ -2252,8 +2249,8 @@ The implementation yielded substantial improvements:
 
 4. **Financial Impact**:
 
-  - $14.2M annual savings through reduced production disruptions
-  - $7.6M inventory carrying cost reduction
+  - <span class="tex2jax_ignore">$14.2M</span> annual savings through reduced production disruptions
+  - <span class="tex2jax_ignore">$7.6M</span> inventory carrying cost reduction
   - 22% decrease in premium freight expenses
 
 The automotive manufacturer has subsequently extended this approach across their global production network, creating a risk-aware JIT system that dynamically adjusts buffers and interventions based on continuously updated disruption risk predictions.

@@ -17,8 +17,8 @@ keywords:
 - Women scientists
 - Astronomy history
 - Mathematical physics
-seo_description: Explore the life and contributions of Mary Somerville, a pioneering female scientist in astronomy and mathematical physics who opened the doors of scientific knowledge to the public.
-seo_title: 'Mary Somerville: Trailblazer in Astronomy and Mathematical Physics'
+seo_description: Mary Somerville, a pioneering scientist in astronomy and mathematical physics who brought science to a wider public.
+seo_title: 'Mary Somerville: Astronomy and Mathematical Physics'
 seo_type: article
 summary: Discover Mary Somerville's life and legacy as a trailblazer in science, whose accessible writings in astronomy and physics inspired generations.
 tags:
@@ -36,7 +36,7 @@ title: 'Mary Somerville: Pioneer in Astronomy and Mathematical Physics'
 
 ## Mary Somerville: Pioneer in Astronomy and Mathematical Physics
 
-Mary Somerville (1780–1872) remains a pivotal figure in science history, celebrated for her contributions to astronomy and mathematical physics. Known as the "Queen of Nineteenth-Century Science," Somerville was among the first women to be recognized professionally for her scientific endeavors. Her work played a crucial role in advancing scientific understanding and fostering public interest in complex scientific fields. Here, we explore her life, achievements, and enduring influence on science.
+Mary Somerville (1780–1872) remains a pivotal figure in science history, celebrated for her contributions to astronomy and mathematical physics. Known as the "Queen of Nineteenth-Century Science," Somerville was among the first women to be recognized professionally for her scientific endeavors. Her work proved central to advancing scientific understanding and fostering public interest in complex scientific fields. Here, we explore her life, achievements, and enduring influence on science.
 
 ### Early Life and Education
 

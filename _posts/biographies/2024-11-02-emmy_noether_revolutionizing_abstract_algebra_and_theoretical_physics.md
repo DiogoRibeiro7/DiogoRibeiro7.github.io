@@ -21,7 +21,7 @@ keywords:
 - Mathematics
 - Physics
 seo_description: Explore the profound contributions of Emmy Noether, whose work in abstract algebra and Noether's Theorem has transformed mathematics and theoretical physics.
-seo_title: 'Emmy Noether: Pioneer in Abstract Algebra and Theoretical Physics'
+seo_title: 'Emmy Noether: Abstract Algebra and Physics'
 seo_type: article
 summary: Discover the life and legacy of Emmy Noether, a visionary mathematician whose contributions to algebra and theoretical physics continue to shape modern science.
 tags:

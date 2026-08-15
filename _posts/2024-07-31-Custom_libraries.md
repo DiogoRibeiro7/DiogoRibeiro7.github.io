@@ -17,8 +17,8 @@ keywords:
 - Custom software development
 - Automation
 - Industry solutions
-seo_description: Learn how to create custom Python libraries tailored to your industry needs. This article covers strategies for software development and automation using Python.
-seo_title: Building Custom Python Libraries for Industry-Specific Solutions
+seo_description: How to create custom Python libraries for industry-specific needs, covering software development and automation strategies.
+seo_title: Building Custom Python Libraries for Industry
 seo_type: article
 summary: This article explores the process of building custom Python libraries, offering insights into Python’s versatility for developing industry-specific software solutions and automation tools.
 tags:

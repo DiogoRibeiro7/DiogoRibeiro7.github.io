@@ -35,7 +35,7 @@ title: 'Linear vs. Logistic Probability Models: A Comparative Analysis'
 
 Statistical modeling is at the core of many decisions in fields ranging from economics to medicine. Among the commonly used techniques, linear and logistic probability models stand out, each with distinct benefits and limitations. The question of which model is better—linear or logistic—is not easily answered, as both have contexts where they excel.
 
-This article explores the nuances of both linear and logistic probability models, including their interpretability, computation methods, and specific scenarios where each model is preferable. We'll also delve into potential pitfalls and provide guidance on how to choose the right model for your analysis.
+This article explores the nuances of both linear and logistic probability models, including their interpretability, computation methods, and specific scenarios where each model is preferable. We'll also examine potential pitfalls and provide guidance on how to choose the right model for your analysis.
 
 ## Overview of Linear and Logistic Probability Models
 
@@ -115,7 +115,7 @@ If ease of interpretation is critical, particularly for communicating results to
 
 ## Nonlinearity and Model Fit
 
-While interpretability is important, it's not the only factor to consider. The model’s fit—how well it captures the underlying relationships in the data—plays a crucial role in determining its suitability.
+While interpretability is important, it's not the only factor to consider. The model’s fit—how well it captures the underlying relationships in the data—is central to determining its suitability.
 
 ### Linearity in the Linear Probability Model
 

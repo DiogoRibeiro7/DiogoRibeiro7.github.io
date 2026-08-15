@@ -20,10 +20,8 @@ keywords:
 - Data science
 - Ordinal regression
 - Marginal effects
-seo_description: This article covers the principles of ordinal regression, its applications
-  in real-world data, and how to interpret the results using marginal effects. We
-  provide detailed examples to help you implement this model effectively in Python.
-seo_title: 'Ordinal Regression Explained: Models, Marginal Effects, and Applications'
+seo_description: The principles of ordinal regression, its real-world applications, and how to interpret results using marginal effects, with Python examples.
+seo_title: 'Ordinal Regression: Models and Marginal Effects'
 seo_type: article
 summary: This article explains ordinal regression models, from their mathematical
   structure to real-world applications, including how marginal effects make model

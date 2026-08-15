@@ -21,7 +21,7 @@ keywords:
 - Best practices
 seo_description: A detailed checklist for Data Science professionals to validate research
   and model integrity before deployment.
-seo_title: 'Data Science Project Checklist: Ensure Success Before Deployment'
+seo_title: Data Science Project Checklist Before Deployment
 seo_type: article
 tags:
 - Checklist

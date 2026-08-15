@@ -14,11 +14,8 @@ tags:
   - Kubernetes
   - Celery Executor
 author_profile: false
-seo_title: 'Optimizing Apache Airflow for Scalable, Fault-Tolerant Data Pipelines'
-seo_description: >-
-  A deep technical guide to designing high-performance, scalable, and
-  fault-tolerant data pipelines using Apache Airflow, featuring executor
-  benchmarking, DAG patterns, error recovery, and observability strategies.
+seo_title: Optimizing Apache Airflow for Data Pipelines
+seo_description: 'Designing scalable, fault-tolerant data pipelines with Apache Airflow: executor benchmarking, DAG patterns, and observability.'
 excerpt: >-
   Learn how to optimize Apache Airflow for production-scale data pipelines,
   featuring DAG design patterns, executor architecture, error handling
@@ -59,7 +56,7 @@ Airflow's Directed Acyclic Graph (DAG) model provides an intuitive framework for
 
 - Enterprise data volumes growing at 23% CAGR (Compound Annual Growth Rate)
 - Pipeline complexity increasing with average DAGs containing 47 tasks
-- Downtime costs averaging $5.6M per hour for data-dependent business processes
+- Downtime costs averaging <span class="tex2jax_ignore">$5.6M</span> per hour for data-dependent business processes
 - Regulatory requirements demanding complete data lineage and auditability
 
 **Research Scope and Methodology**: This analysis synthesizes insights from:

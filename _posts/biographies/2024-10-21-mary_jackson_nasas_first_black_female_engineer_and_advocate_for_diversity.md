@@ -19,8 +19,8 @@ keywords:
 - African American women in STEM
 - diversity and inclusion in STEM
 - Mathematics
-seo_description: Mary Jackson, NASA's first Black female engineer, broke barriers in aerospace engineering and became a champion for diversity and inclusion in STEM. Discover her inspiring journey and contributions.
-seo_title: 'Mary Jackson: NASA''s First Black Female Engineer and Advocate for Diversity'
+seo_description: 'Mary Jackson, NASA''s first Black female engineer, and her work advancing diversity and inclusion in STEM.'
+seo_title: 'Mary Jackson: NASA''s First Black Female Engineer'
 seo_type: article
 summary: Mary Jackson, NASA’s first Black female engineer, was a trailblazer in aerospace engineering and a lifelong advocate for equality and inclusion in STEM. Her work helped shape NASA’s early space missions, and her commitment to diversity created opportunities for future generations.
 tags:
@@ -51,7 +51,7 @@ After college, Jackson worked as a schoolteacher and later held jobs as a recept
 
 ### A Trailblazer at NASA
 
-Jackson started her career at NACA as a **mathematician** in the **West Area Computing** unit at Langley Research Center, where she worked under **Dorothy Vaughan** alongside other talented women known as **human computers**. These women were responsible for performing the complex calculations necessary for NASA's aerodynamics research. Their work, often done by hand, played a vital role in the development of aircraft and spacecraft technology.
+Jackson started her career at NACA as a **mathematician** in the **West Area Computing** unit at Langley Research Center, where she worked under **Dorothy Vaughan** alongside other talented women known as **human computers**. These women were responsible for performing the complex calculations necessary for NASA's aerodynamics research. Their work, often done by hand, proved central to the development of aircraft and spacecraft technology.
 
 Jackson’s talents quickly became apparent, and she was soon assigned to work with engineer **Kazimierz Czarnecki** in Langley’s Supersonic Pressure Tunnel. There, she conducted experiments and analyzed data on **airflow dynamics** and **aerodynamics**. Czarnecki recognized Jackson’s potential and encouraged her to pursue an engineering degree to advance her career.
 

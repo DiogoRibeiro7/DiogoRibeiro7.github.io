@@ -22,10 +22,8 @@ keywords:
 - Machine learning depression detection
 - Cognitive decline prediction
 - Health analytics for seniors
-seo_description: Explore how machine learning and data analytics are transforming
-  elderly mental health care through early detection of depression, anxiety, and dementia
-  using behavioral and health data.
-seo_title: 'AI and Data Analytics in Elderly Mental Health: Use Cases and Innovations'
+seo_description: How machine learning and analytics support elderly mental health care through early detection of depression, anxiety, and dementia.
+seo_title: AI and Analytics in Elderly Mental Health
 seo_type: article
 summary: This article discusses how AI and data analytics are improving mental health
   outcomes in the elderly population. It covers use cases like AI-powered mood monitoring,

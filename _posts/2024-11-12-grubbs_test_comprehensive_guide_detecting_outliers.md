@@ -22,10 +22,8 @@ keywords:
 - Statistical hypothesis testing
 - Data quality
 - Python
-seo_description: An in-depth exploration of Grubbs' test, a statistical method for
-  detecting outliers in univariate data. Learn how the test works, its assumptions,
-  and how to apply it.
-seo_title: 'Grubbs'' Test for Outlier Detection: Detailed Overview and Application'
+seo_description: 'Grubbs'' test for detecting outliers in univariate data: how it works, the assumptions it makes, and how to apply it.'
+seo_title: 'Grubbs'' Test for Outlier Detection'
 seo_type: article
 summary: Grubbs' test, also known as the extreme studentized deviate test, is a powerful
   tool for detecting outliers in normally distributed univariate data. This article
