@@ -26,9 +26,7 @@ keywords:
 - Probabilistic programming
 - Bayesian networks
 - Uncertainty quantification
-seo_description: Explore Bayesian statistics in machine learning, highlighting probabilistic
-  reasoning, uncertainty quantification, and practical applications across various
-  domains.
+seo_description: 'Bayesian statistics in machine learning: probabilistic reasoning, uncertainty quantification, and practical applications.'
 seo_title: Demystifying Bayesian Statistics in Machine Learning
 seo_type: article
 summary: Bayesian statistics provides a powerful framework for dealing with uncertainty

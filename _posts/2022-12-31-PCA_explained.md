@@ -89,7 +89,7 @@ Reducing dimensionality is important for several reasons:
 
 Choosing between feature selection and feature extraction depends on the specific needs of your analysis. Feature selection is preferable when maintaining the original features' interpretability is important. In contrast, feature extraction, such as PCA, is useful when the goal is to capture the maximum variance with fewer dimensions, even if it means losing some interpretability.
 
-In the next section, we will delve deeper into how to choose between feature selection and feature extraction techniques, providing insights into their respective advantages and applications.
+In the next section, we will look more closely at how to choose between feature selection and feature extraction techniques, providing insights into their respective advantages and applications.
 
 ## Feature Selection
 
@@ -377,7 +377,7 @@ The `pca` library facilitates these analyses by offering robust tools for:
 
 By integrating these functionalities, the `pca` library offers a comprehensive toolkit for performing PCA, making it accessible and intuitive even for those new to the technique. Whether you aim to reduce dimensionality, identify key features, or detect outliers, the `pca` library provides the necessary tools to enhance your data analysis.
 
-In summary, PCA transforms high-dimensional data into a lower-dimensional space while preserving the most significant variance. The loadings and biplots facilitate the interpretation of the principal components, providing clear insights into the data's structure. The `pca` library streamlines these processes, offering a powerful and user-friendly solution for PCA analysis.
+PCA transforms high-dimensional data into a lower-dimensional space while preserving the most significant variance. The loadings and biplots facilitate the interpretation of the principal components, providing clear insights into the data's structure. The `pca` library streamlines these processes, offering a powerful and user-friendly solution for PCA analysis.
 
 By mastering PCA and utilizing the `pca` library, you can effectively reduce dimensionality, improve model performance, and gain deeper insights into your data, ultimately leading to more informed and accurate analyses.
 

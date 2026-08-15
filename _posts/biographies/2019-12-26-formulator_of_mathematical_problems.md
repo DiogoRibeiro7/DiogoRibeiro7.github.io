@@ -18,8 +18,8 @@ keywords:
 - Contributions to algebra
 - Geometry and logic
 - 20th-century mathematics
-seo_description: Explore the life and work of David Hilbert, his famous list of 23 mathematical problems, and his foundational contributions to algebra, geometry, and logic. Learn how Hilbert shaped 20th-century mathematics.
-seo_title: 'David Hilbert: Creator of the Hilbert Problems and Pioneer in Mathematics'
+seo_description: The life and work of David Hilbert, his 23 mathematical problems, and his contributions to algebra, geometry, and logic.
+seo_title: David Hilbert and the Hilbert Problems
 seo_type: article
 summary: David Hilbert revolutionized mathematics with his famous 'Hilbert Problems,' foundational contributions in algebra and geometry, and efforts to formalize mathematics through logic. His ideas shaped the course of mathematical thought in the 20th century.
 tags:
@@ -84,7 +84,7 @@ Despite this setback, Hilbert's contributions to **mathematical logic** and his 
 
 ### Hilbert’s Influence on Modern Physics
 
-Hilbert's influence extended beyond mathematics and into **theoretical physics**. In 1915, Hilbert worked closely with **Albert Einstein** during the development of the theory of **general relativity**. Hilbert's own work on the **Einstein-Hilbert action**, a functional that describes the dynamics of spacetime, played a crucial role in the formulation of Einstein’s field equations for gravity. The collaboration between Hilbert and Einstein remains a landmark in the history of mathematics and physics, demonstrating Hilbert’s ability to contribute to multiple scientific disciplines.
+Hilbert's influence extended beyond mathematics and into **theoretical physics**. In 1915, Hilbert worked closely with **Albert Einstein** during the development of the theory of **general relativity**. Hilbert's own work on the **Einstein-Hilbert action**, a functional that describes the dynamics of spacetime, proved central to the formulation of Einstein’s field equations for gravity. The collaboration between Hilbert and Einstein remains a landmark in the history of mathematics and physics, demonstrating Hilbert’s ability to contribute to multiple scientific disciplines.
 
 Hilbert’s interest in physics also led to his sixth problem, which called for the **axiomatization of physics**—an effort to bring the same level of rigor to the laws of physics as had been achieved in mathematics. Though this goal remains largely unfulfilled, Hilbert’s work in this area influenced later developments in **quantum mechanics** and **statistical mechanics**.
 

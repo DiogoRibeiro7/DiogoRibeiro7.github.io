@@ -22,10 +22,8 @@ keywords:
 - Public health
 - Gis
 - Data science
-seo_description: Explore how geospatial data is revolutionizing public health. Learn
-  how spatial epidemiology and data science techniques track disease outbreaks and
-  offer critical insights for health interventions.
-seo_title: 'Spatial Epidemiology: Leveraging Geospatial Data in Public Health'
+seo_description: How geospatial data is transforming public health, and how spatial epidemiology tracks disease outbreaks to guide health interventions.
+seo_title: Spatial Epidemiology and Geospatial Data
 seo_type: article
 summary: This article explores the importance of geospatial data in spatial epidemiology,
   focusing on how it is used to track and analyze disease outbreaks. It delves into
@@ -127,7 +125,7 @@ Spatial epidemiology is used in a variety of public health contexts to **track, 
 
 ### 1. **COVID-19 Pandemic Response**
 
-During the COVID-19 pandemic, spatial epidemiology played a crucial role in mapping the spread of the virus, predicting future outbreaks, and informing policy decisions. By integrating geospatial data with mobility patterns (e.g., travel restrictions, lockdowns), public health officials could identify emerging hotspots, allocate resources like hospital beds and vaccines, and predict where the virus might spread next.
+During the COVID-19 pandemic, spatial epidemiology proved central to mapping the spread of the virus, predicting future outbreaks, and informing policy decisions. By integrating geospatial data with mobility patterns (e.g., travel restrictions, lockdowns), public health officials could identify emerging hotspots, allocate resources like hospital beds and vaccines, and predict where the virus might spread next.
 
 ### 2. **Malaria Control and Elimination**
 

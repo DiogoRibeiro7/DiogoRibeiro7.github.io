@@ -13,10 +13,7 @@ tags:
   - Feature Engineering
 author_profile: false
 seo_title: Advanced Traffic Prediction with Smart Analytics and AI
-seo_description: >-
-  Explore the data-driven world of traffic prediction using AI and advanced
-  analytics. Learn about traffic data sources, preprocessing, modeling, and
-  evaluation techniques.
+seo_description: 'Traffic prediction with AI and advanced analytics: data sources, preprocessing, modeling, and evaluation techniques.'
 excerpt: >-
   A comprehensive guide to traffic prediction in smart transportation systems,
   covering data sources, preprocessing, modeling approaches, and real-world
@@ -42,8 +39,6 @@ header:
   teaser: /assets/images/data_science_15.jpg
   twitter_image: /assets/images/data_science_15.jpg
 ---
-
-# Traffic Prediction: Advanced Analytics for Smart Transportation Systems
 
 ## Introduction
 

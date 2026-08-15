@@ -2,9 +2,9 @@ import os
 import re
 import yaml
 import argparse
+import json
 from typing import List
 
-# TODO: Add a flag to output results as JSON for tooling.
 def read_markdown_files_from_folder(folder_path: str) -> List[str]:
     # List all markdown files in the given folder
     return [f for f in os.listdir(folder_path) if f.endswith('.md')]
@@ -26,7 +26,7 @@ def check_categories(frontmatter: dict) -> bool:
         return len(frontmatter['categories']) > 1
     return False
 
-def process_markdown_files(folder_path: str, output_txt_file: str):
+def process_markdown_files(folder_path: str, output_file: str, output_format: str = "text"):
     markdown_files = read_markdown_files_from_folder(folder_path)
     files_with_multiple_categories = []
 
@@ -35,18 +35,27 @@ def process_markdown_files(folder_path: str, output_txt_file: str):
             content = file.read()
             frontmatter = extract_frontmatter(content)
             if check_categories(frontmatter):
-                files_with_multiple_categories.append(md_file)
+                files_with_multiple_categories.append({
+                    "file": md_file,
+                    "categories": frontmatter.get("categories", []),
+                })
 
-    # Write filenames to output text file
-    with open(output_txt_file, 'w', encoding='utf-8') as output_file:
-        for filename in files_with_multiple_categories:
-            output_file.write(f'{filename}\n')
+    with open(output_file, 'w', encoding='utf-8') as output:
+        if output_format == "json":
+            json.dump(files_with_multiple_categories, output, indent=2)
+            output.write("\n")
+        else:
+            for result in files_with_multiple_categories:
+                output.write(f'{result["file"]}\n')
+
+    return files_with_multiple_categories
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Check categories in markdown files")
     parser.add_argument("--path", default="./_posts", help="Target folder")
+    parser.add_argument("--output", default="files_with_multiple_categories.txt", help="Output file")
+    parser.add_argument("--format", choices=["text", "json"], default="text", help="Output format")
     args = parser.parse_args()
-    output_txt_file = 'files_with_multiple_categories.txt'
-    process_markdown_files(args.path, output_txt_file)
-    print(f'Processing complete. Files with multiple categories saved to {output_txt_file}')
+    process_markdown_files(args.path, args.output, args.format)
+    print(f'Processing complete. Files with multiple categories saved to {args.output}')

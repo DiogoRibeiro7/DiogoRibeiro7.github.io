@@ -11,8 +11,8 @@ tags:
 - Technology
 - Education
 author_profile: false
-seo_title: "The Hidden Crisis: Why Defunding Basic Science Threatens Our Future"
-seo_description: "Defunding fundamental research may seem fiscally responsible, but it poses a long-term threat to innovation, national security, and scientific progress. Here's why society can't afford the cut."
+seo_title: Why Defunding Basic Science Threatens Our Future
+seo_description: Why defunding fundamental research threatens innovation, national security, and scientific progress over the long term.
 excerpt: "Fundamental research is often targeted for cuts due to its lack of immediate outcomes. But eliminating it risks innovation, education, crisis response, and global competitiveness."
 summary: "This article explores the long-term consequences of eliminating funding for fundamental research, illustrating how such decisions erode innovation pipelines, talent retention, and national security while undermining our capacity to respond to future crises."
 keywords: 

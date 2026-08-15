@@ -31,11 +31,8 @@ keywords:
 - Scalable lp solutions
 - First-order methods
 - Computational optimization
-seo_description: A detailed exploration of linear programming, its traditional methods
-  like Simplex and interior-point methods, and the emergence of scalable first-order
-  methods such as PDLP, a revolutionary solver for large-scale LP problems.
-seo_title: 'Classic Linear Programming and PDLP: Scaling Solutions for Modern Computational
-  Optimization'
+seo_description: Linear programming from Simplex and interior-point methods to PDLP, a scalable first-order solver for very large LP problems.
+seo_title: Linear Programming and PDLP at Scale
 seo_type: article
 tags:
 - Primal-dual hybrid gradient method
@@ -55,7 +52,7 @@ title: 'Exploring Classic Linear Programming (LP) Problems and Scalable Solution
 
 Since the 1940s, LP techniques have been refined and adapted to fit the ever-increasing complexity and size of the optimization problems faced by modern industries. The most prominent and traditional LP solvers are built around **Dantzig's Simplex Method** and **interior-point methods**. Despite their efficacy, these solvers face substantial challenges when scaling to large, complex instances due to memory and computational constraints. In response, **first-order methods (FOMs)** have emerged as an alternative approach, providing a scalable solution to large-scale LP problems by reducing the reliance on resource-heavy matrix factorization techniques.
 
-This article delves into the traditional methods of solving LP, the challenges they face in scaling, and introduces **PDLP (Primal-Dual Hybrid Gradient Enhanced for LP)**, a modern solver that offers a scalable alternative to traditional methods by leveraging advancements in FOMs. PDLP was co-awarded the **Beale-Orchard Hays Prize** in 2024 for its innovative approach to computational optimization, marking a significant step forward in the field.
+This article examines the traditional methods of solving LP, the challenges they face in scaling, and introduces **PDLP (Primal-Dual Hybrid Gradient Enhanced for LP)**, a modern solver that offers a scalable alternative to traditional methods by leveraging advancements in FOMs. PDLP was co-awarded the **Beale-Orchard Hays Prize** in 2024 for its innovative approach to computational optimization, marking a significant step forward in the field.
 
 ## A Brief Overview of Linear Programming (LP)
 

@@ -13,8 +13,8 @@ tags:
 - uncertainty-estimation
 
 author_profile: false
-seo_title: "Probability Calibration in Machine Learning: Classical to Venn–ABERS Methods"
-seo_description: "A comprehensive guide to probability calibration in machine learning, covering classical methods like Platt scaling, modern approaches, and Venn–ABERS predictors with theoretical guarantees."
+seo_title: 'Probability Calibration: Classical to Venn-ABERS'
+seo_description: 'A guide to probability calibration in machine learning: Platt scaling, modern approaches, and Venn-ABERS predictors.'
 excerpt: "Explore the evolution of probability calibration methods in machine learning, from histogram binning to Venn–ABERS predictors, with a deep dive into theory, implementation, and applications."
 summary: "This article explores the development of probability calibration methods in machine learning, discussing theoretical foundations, classical and modern techniques, Venn–ABERS predictors, and practical guidelines for real-world use."
 keywords: 
@@ -112,7 +112,7 @@ Isotonic regression (Zadrozny & Elkan, 2002) offers a non-parametric alternative
 
 **Advantages**: Isotonic regression is flexible and capable of capturing arbitrary monotonic calibration functions. Being non-parametric, it makes no distributional assumptions about the underlying data. The method is guaranteed to produce monotonic outputs and can handle complex calibration curves that deviate significantly from simple parametric forms.
 
-**Pitfalls**: The method is prone to overfitting, particularly with small calibration sets, and may produce sharp discontinuities that degrade generalization performance. A phenomenon known as "step overfitting" occurs where small fluctuations in calibration data cause large changes in the learned mapping function. Furthermore, isotonic regression provides no theoretical guarantees about the quality of the resulting calibration.
+**Pitfalls**: The method is prone to overfitting, particularly with small calibration sets, and may produce sharp discontinuities that degrade generalization performance. A phenomenon known as "step overfitting" occurs where small fluctuations in calibration data cause large changes in the learned mapping function. Isotonic regression provides no theoretical guarantees about the quality of the resulting calibration.
 
 ### 3.4 Temperature Scaling
 
@@ -160,7 +160,7 @@ For ensemble models, specialized calibration methods account for the correlation
 
 ### 5.1 Why Neural Networks Are Miscalibrated
 
-Several factors contribute to poor calibration in neural networks. Overfitting in high-capacity models leads to memorization of training data, resulting in overconfident predictions. Model size plays a role, as larger networks tend to be more miscalibrated. Training procedures including modern practices like data augmentation and batch normalization can affect calibration properties. Furthermore, different architecture choices exhibit varying calibration characteristics, with some designs being inherently better calibrated than others.
+Several factors contribute to poor calibration in neural networks. Overfitting in high-capacity models leads to memorization of training data, resulting in overconfident predictions. Model size plays a role, as larger networks tend to be more miscalibrated. Training procedures including modern practices like data augmentation and batch normalization can affect calibration properties. Different architecture choices exhibit varying calibration characteristics, with some designs being inherently better calibrated than others.
 
 ### 5.2 Regularization-Based Approaches
 
@@ -346,14 +346,14 @@ Visual representations plotting predicted probability vs. observed frequency, ty
 
 **Step 1: Ranking and Partitioning**
 
-```
+```text
 Sort calibration examples by score s_i
 Create partitions based on score ranks
 ```
 
 **Step 2: Probability Calculation**
 
-```
+```text
 For each test example with score s:
   Find adjacent partitions in calibration set
   Compute p0 = proportion of negatives in lower partition
@@ -363,7 +363,7 @@ For each test example with score s:
 
 **Step 3: Point Estimate (if needed)**
 
-```
+```text
 Return (p0 + p1) / 2 as single probability estimate
 ```
 

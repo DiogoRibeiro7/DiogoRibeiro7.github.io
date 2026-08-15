@@ -25,9 +25,7 @@ keywords:
 - Python development workflow
 - Bash
 - Yaml
-seo_description: Explore pre-commit tools in Python for ensuring code quality and
-  managing Git hooks. Learn how to integrate automated checks into your development
-  process to improve code consistency.
+seo_description: Pre-commit tools in Python for code quality and Git hooks, and how to integrate automated checks into your development process.
 seo_title: 'Pre-Commit Tools in Python: Best Practices and Guide'
 seo_type: article
 summary: This guide provides an in-depth overview of pre-commit tools in Python, covering

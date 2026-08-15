@@ -17,6 +17,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
   twitter_image: /assets/images/data_science_1.jpg
+seo_description: A critical review of a study on filter bubbles and MP interactions on Twitter, covering its limitations and research directions.
+seo_title: 'Review: Filter Bubbles Among MPs on Twitter'
 seo_type: article
 tags:
 - Twitter
@@ -105,7 +107,7 @@ From a data science perspective, the study "Bursting the (Filter) Bubble: Intera
 
 2. **Limited Sample Size and Timeframe**: Analyzing only 750 tweets from 69 MPs over four one-week periods significantly limits the study's statistical power and generalizability. A larger dataset over a more extended period would provide a more comprehensive understanding of MPs' Twitter behavior and improve the reliability of the results.
 
-3. **Lack of Content Analysis**: The study focuses on interaction types without delving into the content of the tweets. Natural Language Processing (NLP) techniques could be employed to analyze tweet content, sentiment, and topic modeling. This approach would provide deeper insights into the nature and quality of interactions, beyond mere frequency and type.
+3. **Lack of Content Analysis**: The study focuses on interaction types without examining the content of the tweets. Natural Language Processing (NLP) techniques could be employed to analyze tweet content, sentiment, and topic modeling. This approach would provide deeper insights into the nature and quality of interactions, beyond mere frequency and type.
 
 4. **Potential Bias in Account Coding**: The manual coding of accounts based on public information and recent tweets introduces subjectivity and potential bias. Automated classification techniques, such as machine learning classifiers, could enhance accuracy and consistency in categorizing accounts and their affiliations.
 

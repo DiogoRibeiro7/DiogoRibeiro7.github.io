@@ -18,10 +18,8 @@ keywords:
 - Normal equation
 - Python
 - Data science interviews
-seo_description: Learn how to build a Linear Regression model from scratch using the
-  Normal Equation approach. This article covers the theoretical foundations, algorithm
-  design, and Python implementation.
-seo_title: Building Linear Regression from Scratch Using the Normal Equation
+seo_description: 'Build a linear regression model from scratch with the Normal Equation: theoretical foundations, algorithm design, and Python implementation.'
+seo_title: 'Linear Regression from Scratch: Normal Equation'
 seo_type: article
 summary: This article provides a detailed algorithmic approach to building a Linear
   Regression model from scratch, covering theory, Python code implementation, and

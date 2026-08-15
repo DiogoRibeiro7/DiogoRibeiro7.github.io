@@ -18,8 +18,8 @@ keywords:
 - Cobol history
 - Debugging term origin
 - Women pioneers in computer science
-seo_description: Grace Hopper was a trailblazer in computer science, credited with developing the first compiler and playing a key role in the creation of COBOL. Learn about her contributions to programming and the origin of 'debugging.'
-seo_title: 'Grace Hopper: Pioneer of Computer Science and the Inventor of COBOL'
+seo_description: Grace Hopper, who built the first compiler and helped create COBOL, and the origin of the term debugging.
+seo_title: 'Grace Hopper: Pioneer of COBOL and Computing'
 seo_type: article
 summary: Grace Hopper, a pioneer in computer science, is best known for developing the first compiler for programming languages and playing a critical role in the creation of COBOL. Her work transformed how computers are programmed and coined the term 'debugging' for fixing computer issues.
 tags:
@@ -61,7 +61,7 @@ This led to the creation of the **A-0 compiler** in 1952, the first ever to tran
 
 ### Creation of COBOL
 
-Grace Hopper’s work on compilers was just the beginning. She continued to champion the idea that programming languages should be more intuitive and accessible, even to non-experts. In the late 1950s, Hopper played a key role in the development of **COBOL** (**COmmon Business-Oriented Language**), a programming language designed specifically for business applications.
+Grace Hopper’s work on compilers was just the beginning. She continued to champion the idea that programming languages should be more intuitive and accessible, even to non-experts. In the late 1950s, Hopper proved central to the development of **COBOL** (**COmmon Business-Oriented Language**), a programming language designed specifically for business applications.
 
 COBOL was revolutionary because it allowed businesses to write programs using simple, English-like syntax. Unlike machine code, COBOL could be understood by non-specialists, enabling businesses to automate processes like payroll, accounting, and data management. Hopper’s vision of creating a language that "speaks to the computer" was realized in COBOL, which became one of the most widely used programming languages in the world.
 

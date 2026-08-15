@@ -43,11 +43,11 @@ title: 'Understanding Normality Tests: A Deep Dive into Their Power and Limitati
 ---
 
 **Abstract:**  
-In statistical analysis, assessing whether data follow a normal distribution is a critical step that influences subsequent tests and interpretations. However, the concept of "normality tests" is often misunderstood. This article explores the intricacies of normality testing, highlighting the limitations of these tests, the variety of methods available, and the importance of understanding what each test measures. We will delve into a unique distribution that challenges several normality tests, demonstrating why visual inspection and a comprehensive understanding of the data are indispensable.
+In statistical analysis, assessing whether data follow a normal distribution is a critical step that influences subsequent tests and interpretations. However, the concept of "normality tests" is often misunderstood. This article explores the intricacies of normality testing, highlighting the limitations of these tests, the variety of methods available, and the importance of understanding what each test measures. We will examine a unique distribution that challenges several normality tests, demonstrating why visual inspection and a comprehensive understanding of the data are indispensable.
 
 ## Introduction
 
-In the realm of statistics, the normal distribution holds a place of central importance. Many statistical tests and models assume that data follow a normal (Gaussian) distribution, which is characterized by its bell-shaped curve, symmetry around the mean, and specific properties of skewness and kurtosis. Assessing normality is thus a fundamental step in data analysis, ensuring the validity of inferential statistics that rely on this assumption.
+In statistics, the normal distribution holds a place of central importance. Many statistical tests and models assume that data follow a normal (Gaussian) distribution, which is characterized by its bell-shaped curve, symmetry around the mean, and specific properties of skewness and kurtosis. Assessing normality is thus a fundamental step in data analysis, ensuring the validity of inferential statistics that rely on this assumption.
 
 However, the term "normality test" is somewhat of a misnomer. No statistical test can prove that data are normally distributed. Instead, these tests can only assess whether there is enough evidence to reject the null hypothesis ($H_0$) that the data come from a normal distribution. Failure to reject $H_0$ does not confirm normality; it merely suggests that the data are not significantly different from what would be expected under normality, within the test's power and limitations.
 

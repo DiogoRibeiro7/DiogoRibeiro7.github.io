@@ -23,7 +23,7 @@ keywords:
 - Temporal causality
 seo_description: A detailed exploration of the Granger causality test, its theoretical
   foundations, and applications in economics, climate science, and finance.
-seo_title: 'Granger Causality Test: Temporal Causality in Time-Series Data'
+seo_title: Granger Causality in Time-Series Data
 seo_type: article
 summary: The Granger causality test is a key method for identifying causal relationships
   in time-series data. This article covers its principles, methodology, and practical
@@ -96,7 +96,7 @@ In a globalized economy, the interaction between stock prices and exchange rates
 
 ## Interpreting Results and Limitations
 
-While the Granger causality test provides valuable insights, it is essential to interpret the results carefully. **Granger causality does not imply true causality**, only predictive causality. There may be underlying third variables or common factors influencing both $X$ and $Y$. Moreover, the test assumes a linear relationship between variables, which may not always hold in real-world situations where complex, non-linear dynamics are at play.
+While the Granger causality test provides valuable insights, it is essential to interpret the results carefully. **Granger causality does not imply true causality**, only predictive causality. There may be underlying third variables or common factors influencing both $X$ and $Y$. The test assumes a linear relationship between variables, which may not always hold in real-world situations where complex, non-linear dynamics are at play.
 
 Another limitation is that the test requires both series to be stationary. If the time-series are not stationary, differencing or transformation methods may be needed, which can sometimes lead to the loss of important information about the original series.
 

@@ -29,7 +29,7 @@ title: Gaussian Processes for Time-Series Analysis in Python
 
 Gaussian Processes (GPs) are a highly flexible Bayesian tool that can be employed in a variety of modeling tasks, including time-series analysis. While traditional methods like ARIMA focus on generative processes, Gaussian Processes approach the problem from a curve-fitting perspective, allowing the user to define how different temporal components—such as trend, seasonality, and noise—should behave.
 
-This post delves deep into the mechanics of GPs, how they work in the context of time-series data, and practical ways to implement them using Python.
+This post examines the mechanics of GPs, how they work in the context of time-series data, and practical ways to implement them using Python.
 
 ## Simulating Time Series Data
 

@@ -49,9 +49,9 @@ Statistical inference is a cornerstone of scientific research, providing tools a
 
 At the heart of Bayesian statistics is the posterior distribution, which represents the updated belief about a parameter after observing data. The posterior combines the prior distribution (representing initial beliefs) and the likelihood function (representing the data's influence) through Bayes' theorem. This approach contrasts with the frequentist perspective, which relies solely on the likelihood and views parameters as fixed but unknown quantities.
 
-Despite its theoretical appeal, the practical application of Bayesian posteriors raises several questions. One critical viewpoint suggests that a Bayesian posterior is merely a test statistic, similar to a likelihood function, and that interpreting areas under its tail or ratios as evidence can be misleading. Furthermore, the scaling and normalization of likelihoods, often required in Bayesian analysis, may not provide meaningful probabilities and could complicate the inference process without offering substantial benefits.
+Despite its theoretical appeal, the practical application of Bayesian posteriors raises several questions. One critical viewpoint suggests that a Bayesian posterior is merely a test statistic, similar to a likelihood function, and that interpreting areas under its tail or ratios as evidence can be misleading. The scaling and normalization of likelihoods, often required in Bayesian analysis, may not provide meaningful probabilities and could complicate the inference process without offering substantial benefits.
 
-This article delves into these concerns, exploring the nature of likelihoods and Bayesian posteriors, the role of test statistics in statistical inference, and the implications of scaling and normalizing likelihoods. We also discuss the importance of sufficient statistics and the challenges associated with interpreting integrated likelihoods. By critically examining these aspects, we aim to shed light on the limitations and potential pitfalls of treating Bayesian posteriors as test statistics and to provide guidance for practitioners in statistical analysis.
+This article examines these concerns, exploring the nature of likelihoods and Bayesian posteriors, the role of test statistics in statistical inference, and the implications of scaling and normalizing likelihoods. We also discuss the importance of sufficient statistics and the challenges associated with interpreting integrated likelihoods. By critically examining these aspects, we aim to shed light on the limitations and potential pitfalls of treating Bayesian posteriors as test statistics and to provide guidance for practitioners in statistical analysis.
 
 ## The Nature of Likelihoods and Bayesian Posteriors
 
@@ -122,7 +122,7 @@ $$
 p(x \mid T(x), \theta) = p(x \mid T(x)).
 $$
 
-Sufficient statistics are valuable because they reduce data complexity without losing information about the parameter. They play a crucial role in both estimation and hypothesis testing.
+Sufficient statistics are valuable because they reduce data complexity without losing information about the parameter. They are central to both estimation and hypothesis testing.
 
 ### Role in Decision-Making
 

@@ -2,8 +2,10 @@ import os
 import re
 import argparse
 
-# TODO: Add an option to skip files that contain code blocks.
-def replace_latex_syntax_in_file(file_path: str):
+def contains_code_block(content: str) -> bool:
+    return bool(re.search(r"```.*?```", content, re.DOTALL))
+
+def replace_latex_syntax_in_file(file_path: str, skip_code_blocks: bool = False):
     """
     This function reads a markdown file, finds LaTeX delimiters and replaces them 
     with double dollar signs for compatibility with a different LaTeX rendering system.
@@ -18,17 +20,25 @@ def replace_latex_syntax_in_file(file_path: str):
     with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read()
 
+    if skip_code_blocks and contains_code_block(content):
+        print(f"Skipping file with code block: {file_path}")
+        return False
+
     # Define the patterns to be replaced
-    content = re.sub(r'\\\[', '$$', content)  # Replaces \[ with $$
-    content = re.sub(r'\\\]', '$$', content)  # Replaces \] with $$
-    content = re.sub(r'\\\(', '$$', content)  # Replaces \( with $$
-    content = re.sub(r'\\\)', '$$', content)  # Replaces \) with $$
+    updated_content = re.sub(r'\\\[', '$$', content)  # Replaces \[ with $$
+    updated_content = re.sub(r'\\\]', '$$', updated_content)  # Replaces \] with $$
+    updated_content = re.sub(r'\\\(', '$$', updated_content)  # Replaces \( with $$
+    updated_content = re.sub(r'\\\)', '$$', updated_content)  # Replaces \) with $$
+
+    if updated_content == content:
+        return False
 
     # Write the updated content back to the file
     with open(file_path, 'w', encoding='utf-8') as file:
-        file.write(content)
+        file.write(updated_content)
+    return True
 
-def process_markdown_files_in_folder(folder_path: str):
+def process_markdown_files_in_folder(folder_path: str, skip_code_blocks: bool = False):
     """
     Processes all markdown files in a given folder, replacing LaTeX delimiters
     according to the replacement rules.
@@ -45,12 +55,13 @@ def process_markdown_files_in_folder(folder_path: str):
         if filename.endswith('.md'):
             file_path = os.path.join(folder_path, filename)
             print(f'Processing file: {file_path}')
-            replace_latex_syntax_in_file(file_path)
+            replace_latex_syntax_in_file(file_path, skip_code_blocks=skip_code_blocks)
             print(f'Finished processing file: {file_path}')
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Replace LaTeX delimiters in markdown files")
     parser.add_argument("--path", default="./_posts", help="Target folder")
+    parser.add_argument("--skip-code-blocks", action="store_true", help="Skip files containing fenced code blocks")
     args = parser.parse_args()
-    process_markdown_files_in_folder(args.path)
+    process_markdown_files_in_folder(args.path, skip_code_blocks=args.skip_code_blocks)

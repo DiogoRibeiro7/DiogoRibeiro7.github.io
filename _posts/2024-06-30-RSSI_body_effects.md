@@ -24,10 +24,8 @@ keywords:
 - Signal quality in wireless communication
 - Antenna design adjustments
 - Python
-seo_description: Explore how the human body affects RSSI in wireless communication.
-  Learn about absorption, reflection, shadowing, and practical approaches to mitigate
-  signal quality issues.
-seo_title: 'How the Human Body Affects RSSI: Analysis and Practical Solutions'
+seo_description: How the human body affects RSSI in wireless communication through absorption, reflection, and shadowing, and how to mitigate it.
+seo_title: How the Human Body Affects RSSI Signals
 seo_type: article
 summary: This article provides a comprehensive analysis of how the human body impacts
   RSSI, covering absorption, reflection, shadowing, and proximity effects, and offering

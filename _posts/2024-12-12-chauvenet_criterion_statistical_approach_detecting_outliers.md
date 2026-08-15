@@ -23,11 +23,8 @@ keywords:
 - Hypothesis testing
 - Python
 - R
-seo_description: An in-depth exploration of Chauvenet's Criterion, a statistical method
-  for identifying spurious data points. Learn the mechanics, assumptions, and applications
-  of this outlier detection method.
-seo_title: 'Chauvenet''s Criterion for Outlier Detection: Comprehensive Overview and
-  Application'
+seo_description: 'Chauvenet''s Criterion for identifying spurious data points: the mechanics, assumptions, and applications of this outlier test.'
+seo_title: 'Chauvenet''s Criterion for Outlier Detection'
 seo_type: article
 summary: Chauvenet's Criterion is a robust statistical method for identifying outliers
   in normally distributed datasets. This guide covers the principles behind the criterion,
@@ -45,7 +42,7 @@ tags:
 title: 'Chauvenet''s Criterion: A Statistical Approach to Detecting Outliers'
 ---
 
-In the realm of statistical analysis, **Chauvenet's criterion** is a widely recognized method used to determine whether a specific data point within a set of observations is an **outlier**. Named after **William Chauvenet**, this criterion provides a systematic approach for assessing whether a data point deviates so much from the rest of the dataset that it is likely to be **spurious** or the result of experimental error.
+In statistical analysis, **Chauvenet's criterion** is a widely recognized method used to determine whether a specific data point within a set of observations is an **outlier**. Named after **William Chauvenet**, this criterion provides a systematic approach for assessing whether a data point deviates so much from the rest of the dataset that it is likely to be **spurious** or the result of experimental error.
 
 The criterion is particularly useful in the field of **experimental physics** and **engineering**, where datasets must be carefully examined to ensure that outliers—often caused by measurement inaccuracies or random fluctuations—are identified and appropriately handled. By comparing the probability of observing a given data point with a calculated threshold, Chauvenet’s criterion helps scientists and engineers maintain the accuracy and integrity of their results.
 

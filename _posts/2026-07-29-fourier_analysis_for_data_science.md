@@ -13,7 +13,7 @@ tags:
 - Spectral Analysis
 author_profile: false
 seo_title: "Fourier Analysis for Data Science"
-seo_description: "An accessible but rigorous introduction to Fourier analysis for data science, including periodicity, frequency-domain features, aliasing, leakage, and practical interpretation."
+seo_description: 'An accessible introduction to Fourier analysis for data science: periodicity, frequency-domain features, aliasing, and leakage.'
 excerpt: "Fourier analysis is more than a signal-processing trick. It is a way to ask which cycles, rhythms, and scales explain variation in data."
 summary: "This article introduces Fourier analysis from a data science perspective. It explains the intuition behind decomposing signals into frequencies, the difference between time and frequency domains, practical uses in feature engineering and anomaly detection, and the common traps of aliasing, leakage, and overinterpreting spectra."
 keywords:

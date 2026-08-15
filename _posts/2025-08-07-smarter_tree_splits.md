@@ -15,7 +15,7 @@ tags:
 
 author_profile: false
 seo_title: "Friedman MSE vs Classic MSE in Regression Trees"
-seo_description: "Explore the differences between Classic MSE and Friedman MSE in regression trees. Learn why Friedman MSE offers smarter, faster, and more stable tree splits in gradient boosting algorithms."
+seo_description: Classic MSE versus Friedman MSE in regression trees, and why Friedman MSE gives faster, more stable splits in gradient boosting.
 excerpt: "Explore the smarter way of splitting nodes in regression trees using Friedman MSE, a computationally efficient and numerically stable alternative to classic variance-based MSE."
 summary: "Understand how Friedman MSE improves split decisions in regression trees. Learn about its mathematical foundation, practical advantages, and role in modern libraries like LightGBM and XGBoost."
 keywords: 

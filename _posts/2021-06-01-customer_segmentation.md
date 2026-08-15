@@ -23,10 +23,8 @@ keywords:
 - Rfm segmentation
 - Machine learning
 - Python
-seo_description: Learn about RFM Segmentation, a customer segmentation technique used
-  to increase retention, improve marketing strategies, and enhance customer experiences.
-  Discover how to implement RFM clustering using unsupervised learning.
-seo_title: 'RFM Segmentation: Understanding Customer Value with Machine Learning'
+seo_description: 'RFM segmentation for customer retention and marketing: what it measures and how to implement RFM clustering with unsupervised learning.'
+seo_title: 'RFM Segmentation: Measuring Customer Value'
 seo_type: article
 summary: This article provides an in-depth exploration of RFM segmentation, explaining
   how businesses can use Recency, Frequency, and Monetary Value to identify customer

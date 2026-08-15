@@ -20,10 +20,8 @@ keywords:
 - Catch22
 - Simple models
 - Feature engineering
-seo_description: A review of how simple time-series classification models can be extended
-  using feature sets like catch22 and the practical implications of balancing complexity
-  and interpretability.
-seo_title: 'Extending Simple Models: Adding Catch22 for Time-Series Classification'
+seo_description: How simple time-series classification models can be extended with catch22 features, and the complexity-interpretability tradeoff.
+seo_title: Adding Catch22 to Time-Series Classification
 seo_type: article
 summary: This article discusses when and how to extend simple time-series classification
   models by introducing additional features, such as catch22, and the practical implications
@@ -95,7 +93,7 @@ The results from benchmarks like the UEA/UCR repository and case studies in heal
 
 The key takeaway for practitioners is to start with the **simplest model** that could solve the problem at hand. Although complex algorithms are tempting, establishing a strong baseline with simple features like the mean and standard deviation is critical.
 
-Moreover, in areas where transparency is paramount—such as healthcare and public policy—**simpler models** are often preferred. Complex models may offer slight improvements in accuracy, but they come at the cost of interpretability and computational efficiency.
+In areas where transparency is paramount—such as healthcare and public policy—**simpler models** are often preferred. Complex models may offer slight improvements in accuracy, but they come at the cost of interpretability and computational efficiency.
 
 ### Addressing the Limitations of Simple Models
 
@@ -115,4 +113,4 @@ Time-series classification is essential in fields ranging from healthcare to fin
 
 Starting with simple models provides interpretability, efficiency, and resistance to overfitting. This is especially valuable in domains where transparency is critical. By carefully balancing simplicity with the occasional need for additional features, practitioners can build models that are both effective and interpretable.
 
-As machine learning advances, simple models will continue to play a vital role in time-series classification. By recognizing the importance of strong, interpretable baselines, we can ensure that the field develops models that are not only powerful but also practical.
+As machine learning advances, simple models will continue to be central to time-series classification. By recognizing the importance of strong, interpretable baselines, we can ensure that the field develops models that are not only powerful but also practical.

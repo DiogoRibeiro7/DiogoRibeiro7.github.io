@@ -26,11 +26,8 @@ keywords:
 - Sequential change-point algorithms
 - Time series analysis
 - Python
-seo_description: Explore advanced methods and practical implementations for sequential
-  change-point detection in univariate models, covering theoretical foundations, real-world
-  applications, and key statistical techniques.
-seo_title: Advanced Techniques for Sequential Change-Point Detection in Univariate
-  Models
+seo_description: Advanced methods for sequential change-point detection in univariate models, covering theory, applications, and key statistical techniques.
+seo_title: Sequential Change-Point Detection Techniques
 seo_type: article
 tags:
 - Change-point detection

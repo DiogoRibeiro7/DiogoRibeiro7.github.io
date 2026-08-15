@@ -22,10 +22,8 @@ keywords:
 - Data drift detection
 - Covariate shift management
 - Model performance tracking
-seo_description: Learn about adaptive performance estimation in machine learning with
-  a focus on methods like CBPE and PAPE. Understand how to manage performance monitoring,
-  data drift, and covariate shift for better model outcomes.
-seo_title: 'Adaptive Machine Learning Performance Estimation: CBPE and PAPE'
+seo_description: Adaptive performance estimation in machine learning with CBPE and PAPE, and how to monitor data drift and covariate shift.
+seo_title: 'Adaptive ML Performance Estimation: CBPE and PAPE'
 seo_type: article
 summary: This article dives into adaptive performance estimation techniques in machine
   learning, comparing methods such as Confidence-Based Performance Estimation (CBPE)

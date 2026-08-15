@@ -22,10 +22,8 @@ keywords:
 - Loan default prediction
 - Gini coefficient vs auc
 - Python
-seo_description: A detailed guide on the Normalized Gini Coefficient and Default Rate,
-  focusing on their applications in credit scoring, risk assessment, and machine learning
-  model evaluation.
-seo_title: Normalized Gini Coefficient and Default Rate in Credit Risk Analysis
+seo_description: The Normalized Gini Coefficient and Default Rate in credit scoring, risk assessment, and machine learning model evaluation.
+seo_title: Gini Coefficient and Default Rate in Credit Risk
 seo_type: article
 subtitle: Guide to the Normalized Gini Coefficient and Default Rate in Credit Scoring
   and Risk Assessment
@@ -59,7 +57,7 @@ title: Understanding the Normalized Gini Coefficient and Default Rate
 
 ## Introduction
 
-Credit scoring and risk assessment are crucial aspects of modern financial systems. Two key metrics in evaluating credit risk are the Gini Coefficient and the Default Rate. This article delves into the definitions, calculations, and practical applications of these metrics, providing a comprehensive understanding of their roles in credit scoring.
+Credit scoring and risk assessment are crucial aspects of modern financial systems. Two key metrics in evaluating credit risk are the Gini Coefficient and the Default Rate. This article examines the definitions, calculations, and practical applications of these metrics, providing a comprehensive understanding of their roles in credit scoring.
 
 ## Section 1: Understanding the Gini Coefficient
 

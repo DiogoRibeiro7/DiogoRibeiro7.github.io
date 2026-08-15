@@ -25,7 +25,7 @@ keywords:
 - Fortran
 - C
 seo_description: Explore numerical methods for solving DSGE models, including perturbation techniques and finite difference methods, essential tools in quantitative economics.
-seo_title: 'Solving DSGE Models: Perturbation and Finite Difference Methods'
+seo_title: Solving DSGE Models Numerically
 seo_type: article
 summary: This article covers numerical techniques for solving DSGE models, particularly perturbation and finite difference methods, essential in analyzing economic dynamics.
 tags:

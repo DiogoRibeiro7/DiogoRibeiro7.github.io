@@ -26,7 +26,7 @@ keywords:
 - Python
 seo_description: Explore the Cox Proportional Hazards Model and its application in
   survival analysis, with examples from clinical trials and medical research.
-seo_title: Understanding Cox Proportional Hazards Model for Medical Survival Analysis
+seo_title: Cox Proportional Hazards in Survival Analysis
 seo_type: article
 summary: A comprehensive guide to the Cox Proportional Hazards Model, its assumptions,
   and applications in survival analysis and clinical trials.

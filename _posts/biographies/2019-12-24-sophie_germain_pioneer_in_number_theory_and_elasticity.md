@@ -18,7 +18,7 @@ keywords:
 - Women mathematicians
 - Elasticity theory
 - Fermat's last theorem
-seo_description: Explore the remarkable life of Sophie Germain, a pioneering female mathematician who made significant contributions to number theory and elasticity despite the gender barriers she faced.
+seo_description: The life of Sophie Germain, a pioneering mathematician who advanced number theory and elasticity despite the barriers she faced.
 seo_title: 'Sophie Germain: Trailblazer in Number Theory and Elasticity'
 seo_type: article
 summary: Sophie Germain overcame significant social barriers in the early 19th century to become a leading mathematician in number theory and elasticity. This article delves into her personal struggles, her notable achievements in mathematics, and her legacy in scientific history.
@@ -75,7 +75,7 @@ Germain’s **theory of elasticity** became a foundational contribution to the f
 
 Throughout her life, Sophie Germain faced significant obstacles due to her gender. Despite her intellectual achievements, she was largely excluded from academic circles and denied many of the opportunities and accolades that her male counterparts received. Germain was never allowed to formally enroll in the École Polytechnique or participate in professional mathematics societies.
 
-Moreover, Germain’s contributions were often overshadowed by those of her male colleagues. For example, when **Carl Friedrich Gauss**, one of the greatest mathematicians of the time, learned of Germain’s work in number theory, he was astonished that a woman could possess such deep mathematical knowledge. Gauss became an admirer of Germain’s work, but even his praise could not secure her a place within the mainstream mathematical community.
+Germain’s contributions were often overshadowed by those of her male colleagues. For example, when **Carl Friedrich Gauss**, one of the greatest mathematicians of the time, learned of Germain’s work in number theory, he was astonished that a woman could possess such deep mathematical knowledge. Gauss became an admirer of Germain’s work, but even his praise could not secure her a place within the mainstream mathematical community.
 
 Germain’s health also presented challenges. She suffered from poor health throughout much of her life, which limited her ability to travel and engage more fully with the academic world. Nevertheless, she remained committed to her research, often working in isolation and without the recognition she deserved during her lifetime.
 
@@ -85,7 +85,7 @@ Despite the barriers she faced, Sophie Germain’s contributions to mathematics 
 
 In recognition of her contributions, the **Sophie Germain Prize** was established in her honor, awarded annually by the **Institut de France** to a mathematician who has made significant advances in mathematical research. This prestigious award ensures that Germain’s name remains associated with the highest levels of mathematical achievement.
 
-Moreover, Germain has become a symbol of perseverance and determination in the face of adversity. Her ability to overcome the restrictions placed on her by society, coupled with her passion for intellectual inquiry, has made her an inspiring figure in the history of science. Today, she is celebrated not only for her mathematical contributions but also as a trailblazer who helped pave the way for women in mathematics and science.
+Germain has become a symbol of perseverance and determination in the face of adversity. Her ability to overcome the restrictions placed on her by society, coupled with her passion for intellectual inquiry, has made her an inspiring figure in the history of science. Today, she is celebrated not only for her mathematical contributions but also as a trailblazer who helped pave the way for women in mathematics and science.
 
 ### Conclusion
 

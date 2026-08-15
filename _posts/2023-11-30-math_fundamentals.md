@@ -48,11 +48,11 @@ In this metaphor, ignoring the mathematical underpinnings is similar to only app
 
 ## Mathematics: The Bedrock of Machine Learning and Deep Learning
 
-AI models are built on mathematical principles. Whether through data manipulation, decision-making, or optimization, mathematics plays a key role in each process. Different areas of mathematics form the backbone of the AI ecosystem.
+AI models are built on mathematical principles. Whether through data manipulation, decision-making, or optimization, mathematics is central to each process. Different areas of mathematics form the backbone of the AI ecosystem.
 
 ### Linear Algebra
 
-Linear algebra plays a key role in representing and manipulating data. When an image is fed into a neural network, it is converted into a matrix, a representation made up of rows and columns of numbers. Operations such as rotation, scaling, and feature extraction in the image use linear algebra principles. In deep learning, neural networks perform transformations on data using matrices, vectors, and tensors, where each operation relies on matrix multiplication, vector addition, and other linear algebraic computations. 
+Linear algebra is central to representing and manipulating data. When an image is fed into a neural network, it is converted into a matrix, a representation made up of rows and columns of numbers. Operations such as rotation, scaling, and feature extraction in the image use linear algebra principles. In deep learning, neural networks perform transformations on data using matrices, vectors, and tensors, where each operation relies on matrix multiplication, vector addition, and other linear algebraic computations. 
 
 For example, each layer of a neural network applies a series of transformations to input data using weights and biases, represented as matrices. These operations manipulate input data through matrix multiplication, which enables the model to extract patterns and perform tasks such as classification or regression.
 
@@ -102,6 +102,6 @@ Mathematics does more than facilitate understanding; it equips practitioners to 
 
 ## Embracing the Foundations
 
-The rapid growth of AI and machine learning has captured public attention, but understanding their full potential requires delving into the mathematical foundations. While tools and libraries make it possible to work with AI systems without a strong background in mathematics, this comes at the cost of long-term mastery. Embracing mathematics as the foundation of AI enables practitioners to not only understand existing models but also to innovate and create new ones.
+The rapid growth of AI and machine learning has captured public attention, but understanding their full potential requires examining the mathematical foundations. While tools and libraries make it possible to work with AI systems without a strong background in mathematics, this comes at the cost of long-term mastery. Embracing mathematics as the foundation of AI enables practitioners to not only understand existing models but also to innovate and create new ones.
 
 Skipping the mathematical groundwork may lead to short-term success, but it limits the ability to solve complex problems and develop more advanced systems. For those serious about mastering AI, a deep dive into mathematics is not just beneficial—it is essential.

@@ -36,7 +36,7 @@ title: Exploring the Dynamics of Traffic Control and Pedestrian Behavior Through
 
 ## Overview
 
-As cities grow and urban populations expand, managing traffic and pedestrian movement becomes increasingly complex. Traffic control systems play a crucial role in optimizing the flow of vehicles, while understanding pedestrian dynamics is essential for ensuring safety and efficient movement in public spaces. Interestingly, the principles of **fluid dynamics**—which traditionally model the flow of liquids and gases—can also be applied to study and optimize traffic and pedestrian flows. By drawing parallels between traffic, pedestrian behavior, and fluid mechanics, urban planners and engineers can design more efficient systems that prevent congestion and improve mobility.
+As cities grow and urban populations expand, managing traffic and pedestrian movement becomes increasingly complex. Traffic control systems are central to optimizing the flow of vehicles, while understanding pedestrian dynamics is essential for ensuring safety and efficient movement in public spaces. Interestingly, the principles of **fluid dynamics**—which traditionally model the flow of liquids and gases—can also be applied to study and optimize traffic and pedestrian flows. By drawing parallels between traffic, pedestrian behavior, and fluid mechanics, urban planners and engineers can design more efficient systems that prevent congestion and improve mobility.
 
 This article provides a detailed examination of traffic control mechanisms, the dynamics of pedestrian behavior, and how fluid dynamics offers a powerful framework for analyzing both.
 
@@ -169,7 +169,7 @@ One of the most complex urban traffic environments is London, which has long str
 - **Real-time traffic monitoring**: Sensors throughout the city feed into a centralized traffic control system, allowing authorities to monitor and adjust traffic signals, reroute traffic, and address congestion hotspots.
 - **Pedestrian-focused initiatives**: London has also implemented extensive **pedestrian-only zones** in areas like Oxford Street, which not only improve safety but also encourage walking as a primary mode of transport.
 
-This blend of pedestrian-friendly infrastructure and advanced traffic control systems has allowed London to balance vehicle flow and pedestrian dynamics more effectively. The **fluid dynamic models** used to simulate vehicle density and flow play a crucial role in predicting how changes in infrastructure or pricing can affect traffic patterns.
+This blend of pedestrian-friendly infrastructure and advanced traffic control systems has allowed London to balance vehicle flow and pedestrian dynamics more effectively. The **fluid dynamic models** used to simulate vehicle density and flow are central to predicting how changes in infrastructure or pricing can affect traffic patterns.
 
 ### 6.2 Pedestrian Flow Management in Large-Scale Events: The Hajj Pilgrimage
 
@@ -205,7 +205,7 @@ The rise of **autonomous vehicles (AVs)** promises to revolutionize traffic mana
 - **Dynamic routing**: AVs could dynamically adjust their routes to avoid congestion, much like fluid particles moving to lower-pressure areas in a system.
 - **Higher density traffic**: Because AVs can operate with minimal spacing, roads can accommodate more vehicles without the risk of collisions, potentially increasing the overall capacity of urban roads.
 
-Fluid dynamic models will play a crucial role in simulating these autonomous systems, allowing urban planners to predict how AVs will affect overall traffic patterns and where infrastructure changes will be needed.
+Fluid dynamic models will be central to simulating these autonomous systems, allowing urban planners to predict how AVs will affect overall traffic patterns and where infrastructure changes will be needed.
 
 ### 7.2 Pedestrian Dynamics in Smart Cities
 

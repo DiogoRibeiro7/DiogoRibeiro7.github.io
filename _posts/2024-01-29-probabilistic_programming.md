@@ -141,4 +141,4 @@ def sampler(data, samples=4, mu_init=.5, proposal_width=.5, plot=False, mu_prior
 
 This algorithm navigates towards more probable values of mu but sometimes accepts less likely values, ensuring exploration of the parameter space. The sampler generates samples representing the posterior distribution of the model, confirmed by comparing the histogram of these samples to the analytically computed posterior.
 
-In conclusion, while this post simplifies some aspects, it aims to clarify the concept of MCMC and the Metropolis sampler. This foundation should help in understanding more technical discussions of MCMC algorithms like Hamiltonian Monte Carlo, which function similarly but with more sophisticated proposal mechanisms.
+While this post simplifies some aspects, it aims to clarify the concept of MCMC and the Metropolis sampler. This foundation should help in understanding more technical discussions of MCMC algorithms like Hamiltonian Monte Carlo, which function similarly but with more sophisticated proposal mechanisms.

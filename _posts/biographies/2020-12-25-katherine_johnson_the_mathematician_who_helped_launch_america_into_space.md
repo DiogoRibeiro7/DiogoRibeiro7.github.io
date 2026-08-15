@@ -19,8 +19,8 @@ keywords:
 - Apollo missions calculations
 - Mercury space missions
 - Women pioneers in stem
-seo_description: Katherine Johnson, a NASA mathematician, played a critical role in calculating trajectories for the Mercury and Apollo missions. Her work in applied mathematics was key to U.S. space exploration success.
-seo_title: 'Katherine Johnson: NASA Mathematician Who Calculated the Path to Space'
+seo_description: Katherine Johnson, the NASA mathematician whose trajectory calculations were critical to the Mercury and Apollo missions.
+seo_title: 'Katherine Johnson: The NASA Mathematician'
 seo_type: article
 summary: Katherine Johnson was a brilliant mathematician whose work at NASA included calculating trajectories for the Mercury and Apollo space missions. Her contributions to applied mathematics were essential to the success of U.S. space exploration, making her a key figure in American scientific history.
 tags:
@@ -58,7 +58,7 @@ Her breakthrough came in 1958, when NACA transitioned into NASA, and Johnson’s
 
 Katherine Johnson’s most celebrated work came during the **Mercury-Atlas 6 mission**, which saw astronaut **John Glenn** become the first American to orbit the Earth in 1962. Glenn, aware of the complexity and potential risks involved in the mission, famously insisted that Johnson double-check the computer-generated calculations before he would proceed. Her careful verification of the numbers ensured the mission’s success, cementing her reputation as one of NASA’s top mathematicians.
 
-In addition to her contributions to the Mercury program, Johnson played a key role in the calculations for **Project Apollo**, including the pivotal **Apollo 11 mission** that landed the first humans on the moon in 1969. Johnson’s work in **orbital mechanics** and **rendezvous calculations** helped determine the precise trajectories that allowed the lunar module to land safely on the moon and return to Earth.
+In addition to her contributions to the Mercury program, Johnson proved central to the calculations for **Project Apollo**, including the pivotal **Apollo 11 mission** that landed the first humans on the moon in 1969. Johnson’s work in **orbital mechanics** and **rendezvous calculations** helped determine the precise trajectories that allowed the lunar module to land safely on the moon and return to Earth.
 
 Johnson also contributed to the planning of the **Apollo 13 mission** in 1970, which famously encountered a life-threatening malfunction in space. Her work helped ensure that the astronauts could return safely despite the mission's failure to reach the moon.
 

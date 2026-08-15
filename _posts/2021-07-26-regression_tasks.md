@@ -29,11 +29,8 @@ keywords:
 - Dimensionality reduction
 - Machine learning
 - Gaussian process regression
-seo_description: A comprehensive guide to selecting the best regression algorithm
-  for your dataset, based on complexity, dimensionality, and the need for probabilistic
-  output. Explore traditional machine learning methods with detailed explanations
-  and code examples.
-seo_title: 'Choosing the Right Regression Task: From Linear Models to Advanced Techniques'
+seo_description: How to select a regression algorithm based on complexity, dimensionality, and the need for probabilistic output, with code examples.
+seo_title: Choosing the Right Regression Model
 seo_type: article
 tags:
 - Polynomial regression

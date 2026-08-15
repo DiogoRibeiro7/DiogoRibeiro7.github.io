@@ -27,9 +27,7 @@ keywords:
 - Data analysis techniques
 - Python
 - R
-seo_description: Learn how to master combinatorial mathematics using Python. Explore
-  practical applications with the itertools library, scientific computing, and probability
-  theory.
+seo_description: How to master combinatorial mathematics with Python, using the itertools library, scientific computing, and probability theory.
 seo_title: 'Mastering Combinatorics with Python: A Practical Guide'
 seo_type: article
 subtitle: A Practical Guide

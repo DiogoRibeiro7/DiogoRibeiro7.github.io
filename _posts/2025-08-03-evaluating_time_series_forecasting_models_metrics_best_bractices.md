@@ -13,10 +13,7 @@ tags:
   - forecasting metrics
 author_profile: false
 seo_title: Evaluating Time Series Forecasting Models
-seo_description: >-
-  A comprehensive guide to evaluating time series forecasts using metrics like
-  RMSE, MAE, AIC, and BIC. Learn validation strategies, practical coding
-  examples, and best practices.
+seo_description: How to evaluate time series forecasts with RMSE, MAE, AIC, and BIC, plus validation strategies and coding examples.
 excerpt: >-
   Effective model evaluation is essential for reliable time series forecasting.
   Learn the most important metrics, validation methods, and strategies for

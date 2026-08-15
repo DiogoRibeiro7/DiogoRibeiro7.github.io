@@ -30,11 +30,8 @@ keywords:
 - Customer profitability analysis
 - Clv metrics
 - Python
-seo_description: Explore an in-depth guide to Customer Lifetime Value (CLV), covering
-  calculation, prediction, integration with business data, and its role in data-driven
-  marketing strategies.
-seo_title: 'Customer Lifetime Value (CLV): A Comprehensive Guide for Data Science
-  and Marketing'
+seo_description: 'A guide to Customer Lifetime Value (CLV): how to calculate and predict it, integrate it with business data, and use it in marketing strategy.'
+seo_title: 'Customer Lifetime Value (CLV): A Practical Guide'
 seo_type: article
 summary: This article provides a comprehensive exploration of Customer Lifetime Value
   (CLV), detailing its calculation methods, predictive models, and its importance
@@ -109,7 +106,7 @@ Survival analysis can be used to predict the future behavior of customers. This 
 
 Both survival analysis and CLV can be used to inform resource allocation. For example, if survival analysis indicates a customer is likely to churn soon, more resources could be devoted to retaining that customer, especially if their CLV is high. This ensures that businesses are maintaining their potentially most profitable customers.
 
-In summary, survival analysis is a valuable tool in understanding and calculating Customer Lifetime Value. It provides crucial insights into customer behaviors and lifetimes that feed into CLV models, thus helping businesses make informed decisions about customer acquisition, retention, and resource allocation strategies.
+Survival analysis is a valuable tool in understanding and calculating Customer Lifetime Value. It provides crucial insights into customer behaviors and lifetimes that feed into CLV models, thus helping businesses make informed decisions about customer acquisition, retention, and resource allocation strategies.
 
 ## Conclusion
 

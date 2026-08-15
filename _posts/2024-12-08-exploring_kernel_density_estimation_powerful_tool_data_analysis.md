@@ -24,10 +24,8 @@ keywords:
 - High-dimensional data analysis
 - Python
 - R
-seo_description: This article delves into Kernel Density Estimation (KDE), explaining
-  its concepts, applications, and advantages in machine learning, statistics, and
-  data science.
-seo_title: In-Depth Guide to Kernel Density Estimation for Data Analysis
+seo_description: 'Kernel Density Estimation (KDE) explained: core concepts, applications, and advantages in machine learning and statistics.'
+seo_title: A Guide to Kernel Density Estimation
 seo_type: article
 summary: Kernel Density Estimation (KDE) is a non-parametric technique for estimating
   the probability density function of data, offering flexibility and accuracy without

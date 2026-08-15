@@ -21,10 +21,8 @@ keywords:
 - Data transformation
 - Statistical modeling
 - Model assumptions
-seo_description: An in-depth guide to evaluating the use of the Box-Cox transformation
-  in hypothesis testing. Explore questions about its purpose, interpretation, and
-  alternatives.
-seo_title: 'Box-Cox Transformation: Questions to Ask Before Hypothesis Testing'
+seo_description: 'A guide to evaluating the Box-Cox transformation in hypothesis testing: what it is for, how to interpret it, and when to use alternatives.'
+seo_title: 'Box-Cox Transformation: What to Check First'
 seo_type: article
 summary: This article outlines key considerations when using the Box-Cox transformation,
   including its purpose, effects on hypothesis testing, interpretation challenges,

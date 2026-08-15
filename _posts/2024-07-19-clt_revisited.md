@@ -20,7 +20,7 @@ keywords:
 - Sub-linear expectations
 - Rosenthal’s inequality
 - Truncated variables
-seo_description: A detailed study on the extension of the Central Limit Theorem for m-dependent random variables under sub-linear expectations, focusing on Rosenthal's inequality and handling truncated variables.
+seo_description: 'Extending the Central Limit Theorem to m-dependent variables under sub-linear expectations, using Rosenthal''s inequality.'
 seo_title: Central Limit Theorem for m-dependent Random Variables
 seo_type: article
 summary: This article extends the classical Central Limit Theorem (CLT) to m-dependent random variables within the sub-linear expectation framework. It incorporates Rosenthal's inequality for m-dependent sequences, examines truncated conditions, and discusses the broader implications for real-world systems characterized by uncertainty and dependencies.
@@ -34,7 +34,7 @@ title: Central Limit Theorem for m-dependent Random Variables Under Sub-linear E
 
 ## Abstract
 
-This article provides a comprehensive investigation of the Central Limit Theorem (CLT) for $$m$$-dependent random variables within the framework of sub-linear expectations. By extending Rosenthal’s inequality to $$m$$-dependent variables and using the theoretical foundation of sub-linear expectations, we generalize the classical CLT to sequences that exhibit both dependence and uncertainty. These results have profound implications for fields such as finance, risk management, and other areas where model uncertainty plays a significant role. We explore truncated variables, proof structures, corollaries, and special cases, offering a full mathematical treatment of the subject.
+This article provides a comprehensive investigation of the Central Limit Theorem (CLT) for $$m$$-dependent random variables within the framework of sub-linear expectations. By extending Rosenthal’s inequality to $$m$$-dependent variables and using the theoretical foundation of sub-linear expectations, we generalize the classical CLT to sequences that exhibit both dependence and uncertainty. These results have profound implications for fields such as finance, risk management, and other areas where model uncertainty is essential. We explore truncated variables, proof structures, corollaries, and special cases, offering a full mathematical treatment of the subject.
 
 ## Introduction
 
@@ -44,7 +44,7 @@ Another limitation of the classical CLT is its reliance on traditional expectati
 
 To address these limitations, this article explores the extension of the CLT to $$m$$-dependent random variables under the framework of sub-linear expectations. $$m$$-dependence relaxes the assumption of independence by allowing each random variable to depend on the preceding $$m$$ variables in the sequence, providing a more realistic model of dependence. Sub-linear expectations, as introduced by Shige Peng, provide a robust method for dealing with model uncertainty, allowing for non-additive measures that can account for ambiguity and risk.
 
-Our objective is to extend the CLT to $$m$$-dependent sequences within the framework of sub-linear expectations and to explore the implications of this generalization in various practical applications. We begin by revisiting the classical CLT and discussing its limitations, followed by an introduction to $$m$$-dependence and sub-linear expectations. We then present Rosenthal’s inequality for $$m$$-dependent variables, which plays a key role in the proof of the extended CLT. Finally, we examine truncated variables and the implications of this result in specific applications, such as stationary sequences and risk modeling.
+Our objective is to extend the CLT to $$m$$-dependent sequences within the framework of sub-linear expectations and to explore the implications of this generalization in various practical applications. We begin by revisiting the classical CLT and discussing its limitations, followed by an introduction to $$m$$-dependence and sub-linear expectations. We then present Rosenthal’s inequality for $$m$$-dependent variables, which is central to the proof of the extended CLT. Finally, we examine truncated variables and the implications of this result in specific applications, such as stationary sequences and risk modeling.
 
 ## Classical Central Limit Theorem: Revisited
 
@@ -128,7 +128,7 @@ In a $$G$$-expectation framework, a random variable $$X$$ is said to follow a $$
 
 ## Rosenthal’s Inequality for $$m$$-dependent Sequences
 
-Rosenthal's inequality provides a powerful tool for controlling the moments of sums of random variables. For independent random variables, Rosenthal's inequality bounds the $$p$$-th moment of the sum of these variables in terms of the individual moments. In the case of $$m$$-dependent random variables, Rosenthal's inequality can be extended to account for the dependence structure, playing a crucial role in the proof of the extended CLT.
+Rosenthal's inequality provides a powerful tool for controlling the moments of sums of random variables. For independent random variables, Rosenthal's inequality bounds the $$p$$-th moment of the sum of these variables in terms of the individual moments. In the case of $$m$$-dependent random variables, Rosenthal's inequality can be extended to account for the dependence structure, central to the proof of the extended CLT.
 
 ### Classical Rosenthal’s Inequality
 

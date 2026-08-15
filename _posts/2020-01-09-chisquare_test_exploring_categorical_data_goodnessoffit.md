@@ -40,9 +40,9 @@ title: 'Chi-Square Test: Exploring Categorical Data and Goodness-of-Fit'
 
 ## Chi-Square Test: Exploring Categorical Data and Goodness-of-Fit
 
-Statistical analysis plays a crucial role in modern research across disciplines. A fundamental aspect of statistics is hypothesis testing, and one of the most widely used tools in this area is the **Chi-Square test**. The test is particularly useful when dealing with **categorical data**, allowing researchers to assess how well observed data fits a particular distribution or to evaluate relationships between categorical variables. 
+Statistical analysis is central to modern research across disciplines. A fundamental aspect of statistics is hypothesis testing, and one of the most widely used tools in this area is the **Chi-Square test**. The test is particularly useful when dealing with **categorical data**, allowing researchers to assess how well observed data fits a particular distribution or to evaluate relationships between categorical variables. 
 
-This article delves into the workings of the Chi-Square test, covering its basic principles, various forms like the **goodness-of-fit test** and the **test of independence**, and its applications in fields such as survey data analysis, contingency tables, and genetics. The goal is to provide a thorough understanding of how this test operates and why it is so valuable for statisticians and researchers alike.
+This article examines the workings of the Chi-Square test, covering its basic principles, various forms like the **goodness-of-fit test** and the **test of independence**, and its applications in fields such as survey data analysis, contingency tables, and genetics. The goal is to provide a thorough understanding of how this test operates and why it is so valuable for statisticians and researchers alike.
 
 ## 1. What is the Chi-Square Test?
 

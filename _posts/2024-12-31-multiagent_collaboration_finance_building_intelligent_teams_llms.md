@@ -20,7 +20,7 @@ keywords:
 - AutoGen
 - M&A analysis
 - CrewAI
-seo_description: Explore how multi-agent LLM systems like AutoGen, CrewAI, and OpenDevin can simulate collaborative roles—analyst, compliance, auditor—in complex financial workflows like M&A analysis.
+seo_description: 'How multi-agent LLM systems like AutoGen, CrewAI, and OpenDevin simulate analyst, compliance, and auditor roles in M&A analysis.'
 seo_title: Multi-Agent Collaboration in Finance with LLMs
 seo_type: article
 summary: This article explores the rise of multi-agent architectures in finance, using tools like AutoGen and CrewAI to simulate collaborative roles in tasks like M&A, compliance review, and financial reporting.

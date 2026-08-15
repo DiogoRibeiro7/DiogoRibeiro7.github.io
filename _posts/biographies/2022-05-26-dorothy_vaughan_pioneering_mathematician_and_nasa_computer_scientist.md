@@ -19,7 +19,7 @@ keywords:
 - African american women in stem
 - Fortran programming expert
 - Hidden figures
-seo_description: Dorothy Vaughan, a trailblazing mathematician and computer scientist, led NASA's computing division and became an expert in FORTRAN programming during a time when women and African Americans faced significant barriers.
+seo_description: 'Dorothy Vaughan, who led NASA''s computing division and became a FORTRAN expert while facing significant barriers.'
 seo_title: 'Dorothy Vaughan: Pioneering Mathematician and Leader at NASA'
 seo_type: article
 summary: Dorothy Vaughan was a groundbreaking mathematician and computer scientist who led the computing division at NASA during a pivotal time in the space race. She became an expert in FORTRAN programming and broke barriers as an African American woman in STEM.
@@ -40,7 +40,7 @@ title: 'Dorothy Vaughan: Pioneering Mathematician and NASA Computer Scientist'
 
 ## Dorothy Vaughan: Pioneering Mathematician and NASA Computer Scientist
 
-**Dorothy Vaughan** (1910–2008) was a trailblazing African American mathematician and computer scientist who played a crucial role in NASA's early space programs. As a leader in the **West Area Computing** unit at NASA, she specialized in **FORTRAN programming** and helped lay the foundation for modern computing in the aerospace industry. Vaughan's achievements were remarkable not only for her contributions to mathematics and computer science but also for her leadership as an African American woman during a time when racial segregation and gender discrimination were widespread in the United States.
+**Dorothy Vaughan** (1910–2008) was a trailblazing African American mathematician and computer scientist who proved central to NASA's early space programs. As a leader in the **West Area Computing** unit at NASA, she specialized in **FORTRAN programming** and helped lay the foundation for modern computing in the aerospace industry. Vaughan's achievements were remarkable not only for her contributions to mathematics and computer science but also for her leadership as an African American woman during a time when racial segregation and gender discrimination were widespread in the United States.
 
 ### Early Life and Education
 
@@ -68,7 +68,7 @@ Vaughan’s role in transforming human computation to machine computation was cr
 
 ### Legacy and Impact
 
-Dorothy Vaughan retired from NASA in 1971 after nearly three decades of service. Her impact, however, continues to resonate. She helped bridge the gap between human computing and the digital age, laying the groundwork for future generations of computer scientists and mathematicians. Vaughan’s work helped shape the success of NASA’s space missions and ensured that women and African Americans played a vital role in the United States’ achievements in space exploration.
+Dorothy Vaughan retired from NASA in 1971 after nearly three decades of service. Her impact, however, continues to resonate. She helped bridge the gap between human computing and the digital age, laying the groundwork for future generations of computer scientists and mathematicians. Vaughan’s work helped shape the success of NASA’s space missions and ensured that women and African Americans proved central to the United States’ achievements in space exploration.
 
 Her legacy as a trailblazer in **STEM (Science, Technology, Engineering, and Mathematics)** serves as an inspiration to women and minorities pursuing careers in science and technology. Today, Vaughan is remembered not only for her technical contributions but also for her leadership, perseverance, and dedication to breaking down barriers in the workforce.
 

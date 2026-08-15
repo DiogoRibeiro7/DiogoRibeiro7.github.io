@@ -23,7 +23,7 @@ keywords:
 - Cognitive bias
 - Public policy
 - Critical thinking
-seo_description: Explore the growing issue of innumeracy—our inability to understand and work with numbers. Learn how this new illiteracy impacts decision-making in society, from corporate boardrooms to public policy.
+seo_description: How innumeracy, the inability to work with numbers, undermines decision-making from corporate boardrooms to public policy.
 seo_title: 'Innumeracy: The New Illiteracy Crippling Decision-Making'
 seo_type: article
 tags:
@@ -39,7 +39,7 @@ In an era where data has been dubbed “the new oil,” one would expect a corre
 
 While we’ve made admirable strides in battling traditional illiteracy, with over 86% of the global population now able to read and write, the same cannot be said for our proficiency with numbers. According to a recent global literacy study, a mere 12% of adults worldwide can claim to be numerically literate. That leaves an overwhelming 88% who may find themselves bewildered by even the simplest numerical data, charts, or computations.
 
-The aim of this article is not just to spotlight the prevalence of innumeracy but to delve into its far-reaching implications — ranging from impaired decision-making in corporate boardrooms to the societal risks of misunderstanding critical public policies. This is not a subject we can afford to ignore; the stakes are too high, and the consequences too severe.
+The aim of this article is not just to spotlight the prevalence of innumeracy but to examine its far-reaching implications — ranging from impaired decision-making in corporate boardrooms to the societal risks of misunderstanding critical public policies. This is not a subject we can afford to ignore; the stakes are too high, and the consequences too severe.
 
 ## The Disparity in Global Literacy Rates
 In a world that prizes the written word, we often measure a society’s progress by its literacy rates. Educational campaigns, governmental programs, and international initiatives have long focused on boosting the ability to read and write. The result? A global literacy rate that hovers above 86%, according to UNESCO. This is, undoubtedly, a monumental achievement that reflects decades of concerted efforts. The written word, once the domain of the privileged few, is now accessible to the many. Books, newspapers, and digital media have become integral parts of our daily lives, shaping our understanding of the world around us.
@@ -70,7 +70,7 @@ In a corporate environment awash with data, one might assume that decision-makin
 
 Imagine a boardroom where sales forecasts, market trends, and risk assessments are being discussed. Numbers, charts, and graphs are projected onto screens, but they might as well be hieroglyphs to those who cannot decode them. The result is decision-making that is less informed, more reliant on gut feelings, and consequently, more prone to error. In a competitive landscape where margins are thin and the stakes are high, such errors aren’t just setbacks; they’re potential catastrophes.
 
-Furthermore, the cost of innumeracy isn’t only in poor decisions made but also in opportunities missed. In a data-rich environment, the ability to spot trends, make accurate forecasts, and optimize operations can be a game-changer. Companies that fail to cultivate numerical literacy among their decision-makers are not just falling behind; they’re effectively sidelining themselves in a race that others are running at full speed.
+The cost of innumeracy isn’t only in poor decisions made but also in opportunities missed. In a data-rich environment, the ability to spot trends, make accurate forecasts, and optimize operations can be a game-changer. Companies that fail to cultivate numerical literacy among their decision-makers are not just falling behind; they’re effectively sidelining themselves in a race that others are running at full speed.
 
 When it comes to matters of public interest, the ability to understand numbers is not a luxury; it’s a necessity. Whether we’re contemplating the future of healthcare, grappling with the implications of climate change, or dissecting economic policies, numbers are often at the heart of the debate. Yet, how can there be a debate when a significant portion of the population is unable to engage with the basic data that underpin these issues?
 
@@ -79,7 +79,7 @@ The problem compounds when you consider the role of media and political discours
 In a democratic society, the implications are chilling. Whether it’s misunderstanding the risks associated with a medical treatment, misinterpreting the consequences of a proposed tax policy, or underestimating the urgency of environmental issues, the stakes are not just high — they’re existential.
 
 ## Solutions and the Path Forward
-The unsettling landscape of innumeracy we’ve traversed thus far is not an inescapable destiny. It’s a pressing challenge, yes, but it’s also an opportunity — a call for action that resonates across educational corridors, corporate boardrooms, and the social structures that underpin our daily lives. Let’s delve into the avenues through which we can begin to reverse this troubling trend.
+The unsettling landscape of innumeracy we’ve traversed thus far is not an inescapable destiny. It’s a pressing challenge, yes, but it’s also an opportunity — a call for action that resonates across educational corridors, corporate boardrooms, and the social structures that underpin our daily lives. Let’s examine the avenues through which we can begin to reverse this troubling trend.
 
 If the roots of innumeracy dig deep into our society, then it stands to reason that we must start addressing it at its source: the educational system. It’s not enough to treat mathematics and numerical reasoning as optional subjects, confined to those who show an early aptitude. They must be integrated into the core curricula, woven into the fabric of early education, and treated with the same gravitas as reading and writing.
 

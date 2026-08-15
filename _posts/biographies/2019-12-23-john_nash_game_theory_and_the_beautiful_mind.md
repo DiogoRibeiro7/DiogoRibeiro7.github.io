@@ -18,7 +18,7 @@ keywords:
 - Nash equilibrium
 - Schizophrenia and genius
 - A beautiful mind
-seo_description: Explore the life of John Nash, the brilliant mathematician who revolutionized game theory and faced a lifelong struggle with schizophrenia. This biography details his contributions to mathematics and economics, as well as his personal battles.
+seo_description: The life of John Nash, whose work reshaped game theory and economics, and his lifelong struggle with schizophrenia.
 seo_title: 'John Nash: Game Theory and the Mind Behind the Mathematics'
 seo_type: article
 summary: John Nash, the mathematical genius who revolutionized game theory and economics, is also remembered for his personal battle with schizophrenia. This biography delves into his contributions to mathematics and economics, as well as his complex personal journey, which became the basis of the film *A Beautiful Mind*.

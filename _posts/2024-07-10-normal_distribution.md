@@ -11,6 +11,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_3.jpg
+seo_description: 'The normal distribution explained: its key characteristics, probability density function, and the standard normal form.'
+seo_title: The Normal Distribution Explained
 seo_type: article
 tags:
 - Probability

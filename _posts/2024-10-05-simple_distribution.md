@@ -21,7 +21,7 @@ keywords:
 seo_description: Explore the effectiveness of using simple distributional properties
   as a baseline for time-series classification, compared to complex deep learning
   models.
-seo_title: Comprehensive Review of Distributional Properties in Time-Series Classification
+seo_title: Distributional Properties in Time-Series Classification
 seo_type: article
 summary: This article reviews time-series classification techniques, highlighting
   the importance of simple distributional properties such as mean and standard deviation
@@ -72,7 +72,7 @@ In time-series classification, distributional properties can serve as powerful i
 
 ### Linear Classifiers in Simple Feature Spaces
 
-A linear classifier in a simple two-dimensional feature space—defined by the mean and standard deviation—can often perform surprisingly well in time-series classification tasks. The key advantage of using distributional properties as features lies in their simplicity and speed of computation. Furthermore, these features are easy to interpret. Any changes in the mean or standard deviation of a time-series can often be traced back to meaningful changes in the underlying data-generating process.
+A linear classifier in a simple two-dimensional feature space—defined by the mean and standard deviation—can often perform surprisingly well in time-series classification tasks. The key advantage of using distributional properties as features lies in their simplicity and speed of computation. These features are easy to interpret. Any changes in the mean or standard deviation of a time-series can often be traced back to meaningful changes in the underlying data-generating process.
 
 In contrast to deep learning methods, which involve thousands of parameters, a linear classifier using only the mean and standard deviation involves minimal complexity. This makes it a natural benchmark for comparing more complex models.
 

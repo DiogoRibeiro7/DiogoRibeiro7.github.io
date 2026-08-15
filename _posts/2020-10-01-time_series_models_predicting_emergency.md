@@ -19,11 +19,8 @@ keywords:
 - Gradient boosted machines
 - Resource allocation
 - Random forest
-seo_description: This study examines machine learning and univariate time series models
-  for predicting emergency department visit volumes, highlighting the superior predictive
-  accuracy of random forest models.
-seo_title: Comparing Machine Learning and Time Series Models for Predicting ED Visit
-  Volumes
+seo_description: Comparing machine learning and univariate time series models for predicting emergency department visit volumes, with random forest performing best.
+seo_title: 'Forecasting ED Visit Volumes: ML vs Time Series'
 seo_type: article
 summary: A study comparing machine learning models (random forest, GBM) with univariate
   time series models (ARIMA, ETS, Prophet) for predicting emergency department visits.

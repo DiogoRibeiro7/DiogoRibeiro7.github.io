@@ -22,11 +22,8 @@ keywords:
 - Generalized least squares
 - Mixed models
 - Statistical modeling
-seo_description: An in-depth exploration of the limitations of Shapiro-Wilk and the
-  real issues to consider in residual diagnostics when fitting models. Focusing on
-  Generalized Least Squares and robust alternatives, this article provides insight
-  into the complexities of longitudinal data analysis.
-seo_title: 'Residual Diagnostics: Beyond the Shapiro-Wilk Test in Model Fitting'
+seo_description: Why Shapiro-Wilk falls short in residual diagnostics, and what to check instead when fitting models to longitudinal data with GLS and robust alternatives.
+seo_title: Residual Diagnostics Beyond Shapiro-Wilk
 seo_type: article
 summary: In this article, we examine why the Shapiro-Wilk test should not be the final
   say in assessing model fit, particularly in complex models like Generalized Least

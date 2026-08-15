@@ -23,7 +23,7 @@ keywords:
 - Threshold tuning
 seo_description: Understand the confusion matrix, key classification metrics like
   precision and recall, and when to use each based on real-world cost trade-offs.
-seo_title: 'Confusion Matrix Explained: Metrics, Use Cases, and Trade-Offs'
+seo_title: 'Confusion Matrix: Metrics and Trade-Offs'
 seo_type: article
 summary: This guide explores the confusion matrix, explains how to calculate accuracy,
   precision, recall, specificity, and F1-score, and discusses when to optimize each

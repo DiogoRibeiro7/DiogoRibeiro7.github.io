@@ -43,7 +43,7 @@ tags:
 title: Exploring Shared Nearest Neighbors (SNN) for Outlier Detection
 ---
 
-In this article, we will delve into the concept of Shared Nearest Neighbors (SNN), a distance metric that has shown significant utility in various machine learning tasks, particularly in outlier detection and clustering. Traditional distance metrics like Euclidean and Manhattan distances often fail to capture meaningful similarities when working with high-dimensional datasets or data with variable densities. SNN provides a robust alternative in such situations.
+In this article, we will examine the concept of Shared Nearest Neighbors (SNN), a distance metric that has shown significant utility in various machine learning tasks, particularly in outlier detection and clustering. Traditional distance metrics like Euclidean and Manhattan distances often fail to capture meaningful similarities when working with high-dimensional datasets or data with variable densities. SNN provides a robust alternative in such situations.
 
 We'll cover the origins of SNN in clustering algorithms like DBSCAN, explore its effectiveness in k Nearest Neighbors (kNN) outlier detection, and analyze how it compares to more common metrics. The implementation of SNN in Python will be presented in an appendix, making it easier to reproduce and experiment with the techniques discussed here.
 
@@ -106,7 +106,7 @@ Here’s a general process of how SNN works for clustering:
 
 The concept of shared nearest neighbors is not entirely new. In fact, the earliest iteration of this idea can be traced back to the **Jarvis-Patrick Clustering Algorithm** (1973). This algorithm grouped points based on the number of shared neighbors, but it did not gain widespread popularity due to its computational cost. SNN builds on this foundational idea but introduces a more robust approach for modern applications, such as outlier detection and high-dimensional clustering.
 
-In summary, while DBSCAN works well for uniform-density data, SNN shines in more complex datasets, making it a better option for clustering high-dimensional data or data with varying densities.
+While DBSCAN works well for uniform-density data, SNN shines in more complex datasets, making it a better option for clustering high-dimensional data or data with varying densities.
 
 ## Shared Nearest Neighbors in Outlier Detection
 

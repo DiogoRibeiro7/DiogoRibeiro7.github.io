@@ -67,11 +67,11 @@ By integrating data from multiple sources—such as electronic health records (E
 
 The ability to analyze large datasets also enables the identification of emerging resistant strains before they become widespread. For example, genomic data can reveal mutations in bacterial DNA that confer resistance to certain antibiotics. By tracking these mutations across different populations and geographic regions, researchers can predict where resistance is likely to emerge next.
 
-Moreover, data science can help identify patterns of antibiotic use that contribute to resistance. Machine learning algorithms can analyze prescription data to detect instances of overprescription or inappropriate use, such as the prescribing of antibiotics for viral infections. This information can then be used to design interventions that promote more judicious use of antibiotics.
+Data science can help identify patterns of antibiotic use that contribute to resistance. Machine learning algorithms can analyze prescription data to detect instances of overprescription or inappropriate use, such as the prescribing of antibiotics for viral infections. This information can then be used to design interventions that promote more judicious use of antibiotics.
 
 ## Predictive Modeling Techniques for Forecasting Resistance Patterns
 
-Predictive modeling plays a crucial role in the fight against antibiotic resistance by allowing researchers to forecast the emergence and spread of resistant bacterial strains. Predictive models use historical data to generate forecasts, helping public health officials and healthcare providers make informed decisions about antibiotic use and infection control measures.
+Predictive modeling is central to the fight against antibiotic resistance by allowing researchers to forecast the emergence and spread of resistant bacterial strains. Predictive models use historical data to generate forecasts, helping public health officials and healthcare providers make informed decisions about antibiotic use and infection control measures.
 
 ### Machine Learning and Its Applications in Antibiotic Resistance
 

@@ -19,10 +19,8 @@ keywords:
 - Experimental design
 - Clinical trials
 - Multivariate analysis
-seo_description: A detailed exploration of the differences between MANOVA and ANOVA,
-  and when to use them in experimental designs, such as in clinical trials with multiple
-  outcome variables.
-seo_title: 'MANOVA vs. ANOVA: Differences and Use Cases in Experimental Design'
+seo_description: The differences between MANOVA and ANOVA, and when to use each in experimental designs such as clinical trials with multiple outcome variables.
+seo_title: 'MANOVA vs. ANOVA: Differences and Use Cases'
 seo_type: article
 summary: Multivariate Analysis of Variance (MANOVA) and Analysis of Variance (ANOVA)
   are statistical methods used to analyze group differences. While ANOVA focuses on

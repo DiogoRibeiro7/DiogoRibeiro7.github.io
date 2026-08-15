@@ -21,9 +21,7 @@ keywords:
 - Ridge regression
 - Statistical modeling
 - Regression diagnostics
-seo_description: An in-depth exploration of multicollinearity in regression analysis,
-  its consequences, common misconceptions, identification techniques, and methods
-  to address it.
+seo_description: 'Multicollinearity in regression analysis: its consequences, common misconceptions, how to identify it, and how to address it.'
 seo_title: Understanding Multicollinearity in Regression Models
 seo_type: article
 summary: Multicollinearity occurs when independent variables in a regression model

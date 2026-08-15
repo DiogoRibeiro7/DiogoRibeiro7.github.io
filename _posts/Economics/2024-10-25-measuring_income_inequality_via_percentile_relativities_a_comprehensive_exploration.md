@@ -21,7 +21,7 @@ keywords:
 - Statistics
 - Social sciences
 - Python
-seo_description: An in-depth analysis of percentile-based measures of income inequality, comparing traditional metrics like the Gini Index with novel approaches developed by Brazauskas, Greselin, and Zitikis.
+seo_description: Percentile-based measures of income inequality compared with the Gini Index, including approaches from Brazauskas, Greselin, and Zitikis.
 seo_title: Measuring Income Inequality via Percentile Relativities
 seo_type: article
 summary: This article explores the measurement of income inequality through percentile relativities, comparing it with traditional metrics like the Gini Index. It discusses new inequality indices, their application in real-world data, and their policy implications.
@@ -39,7 +39,7 @@ title: 'Measuring Income Inequality via Percentile Relativities: A Comprehensive
 
 Income inequality has long been a topic of interest for economists, policymakers, and statisticians. As societies continue to evolve and grow, understanding how wealth and income are distributed among their populations becomes increasingly crucial for maintaining social equity and fairness. One of the prominent ways of quantifying inequality is through statistical measures, which have been refined over the years to capture both simple and complex aspects of distributional imbalances.
 
-This article delves deeply into a particular approach to measuring income inequality—*percentile relativities*. This method, recently discussed by Brazauskas, Greselin, and Zitikis (2024), provides a new perspective on quantifying inequality by focusing on income comparisons between different percentiles of the population. By using percentile-based indices, we can offer fresh insights into how income distribution behaves across varying segments of society.
+This article examines a particular approach to measuring income inequality—*percentile relativities*. This method, recently discussed by Brazauskas, Greselin, and Zitikis (2024), provides a new perspective on quantifying inequality by focusing on income comparisons between different percentiles of the population. By using percentile-based indices, we can offer fresh insights into how income distribution behaves across varying segments of society.
 
 ## Historical Context: Traditional Measures of Inequality
 
@@ -151,7 +151,7 @@ To illustrate the practical application of the percentile relativity indices, Br
 
 The study examines income inequality in Europe using data from 2001 and 2018. The indices $$\Psi_1$$, $$\Psi_2$$, and $$\Psi_3$$ are calculated for each country, and the results reveal notable differences in income inequality across European nations. Some countries, such as Sweden and Denmark, exhibit relatively low levels of inequality, while others, like Italy and Greece, show higher levels of inequality.
 
-Moreover, the study highlights how income inequality has evolved over time. In many European countries, income inequality increased between 2001 and 2018, particularly in Southern Europe. This trend is captured by the rising values of the percentile relativity indices, particularly $$\Psi_3$$, which measures the gap between the poorest and the richest.
+The study highlights how income inequality has evolved over time. In many European countries, income inequality increased between 2001 and 2018, particularly in Southern Europe. This trend is captured by the rising values of the percentile relativity indices, particularly $$\Psi_3$$, which measures the gap between the poorest and the richest.
 
 ### Policy Implications
 

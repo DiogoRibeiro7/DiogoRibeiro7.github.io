@@ -22,7 +22,7 @@ keywords:
 - Financial text analysis
 - python
 seo_description: Explore how large language model agents can automate and streamline the analysis of quarterly earnings calls for financial analysts using OpenAI and LangChain.
-seo_title: 'Case Study: Using LLM Agents to Automate Earnings Call Analysis'
+seo_title: LLM Agents for Automated Earnings Call Analysis
 seo_type: article
 summary: Learn how an LLM agent built with LangChain and OpenAI API can extract financial guidance, sentiment, and KPIs from quarterly earnings call transcripts, automating a time-consuming task for financial analysts.
 tags:
@@ -34,8 +34,6 @@ tags:
 - python
 title: 'Case Study: How an LLM Agent Streamlines Quarterly Earnings Calls for Analysts'
 ---
-
-# Case Study: How an LLM Agent Streamlines Quarterly Earnings Calls for Analysts
 
 Quarterly earnings calls are a critical source of information for investors and analysts. These events provide updates on a company’s performance, forward-looking guidance, and strategic priorities. However, manually reviewing earnings transcripts is labor-intensive, time-sensitive, and repetitive.
 
@@ -96,7 +94,7 @@ Transcript: Apple Inc. Q1 2024 Earnings Call
 - Gross margin expected to contract slightly in Q2.
 - CEO emphasizes confidence in AI integration.
 - CFO warns of FX headwinds and weaker Mac sales.
-- Capital return program expanded by $90 billion.
+- Capital return program expanded by <span class="tex2jax_ignore">$90 billion</span>.
 
 #### 📈 Extracted KPIs
 
@@ -104,7 +102,7 @@ Transcript: Apple Inc. Q1 2024 Earnings Call
 |---------------------|------------------|
 | Revenue Growth      | 6% YoY           |
 | Gross Margin Outlook| Slightly Lower   |
-| Buyback Increase    | +$90B            |
+| Buyback Increase    | +<span class="tex2jax_ignore">$90B</span>            |
 
 #### 🎭 Sentiment Analysis
 

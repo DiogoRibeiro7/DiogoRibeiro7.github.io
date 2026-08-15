@@ -11,6 +11,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_2.jpg
+seo_description: What data leakage is, the forms it takes including feature, label, and target leakage, and how to prevent it.
+seo_title: 'Data Leakage in ML: Causes and Prevention'
 seo_type: article
 tags:
 - Data leakage

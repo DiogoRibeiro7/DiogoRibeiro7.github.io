@@ -14,14 +14,8 @@ tags:
   - Deep Q-Networks
   - Actor-Critic
 author_profile: false
-seo_title: >-
-  Reinforcement Learning for Predictive Maintenance: Adaptive, Reward-Driven
-  Optimization
-seo_description: >-
-  Explore how reinforcement learning enables dynamic, data-driven maintenance
-  strategies that adapt to operational realities. Learn how RL agents reduce
-  maintenance costs and improve equipment uptime through intelligent,
-  reward-based decision-making.
+seo_title: Reinforcement Learning for Predictive Maintenance
+seo_description: How reinforcement learning enables adaptive maintenance strategies, cutting costs and improving uptime through reward-based decisions.
 excerpt: >-
   Reinforcement Learning (RL) brings intelligent autonomy to industrial
   maintenance, enabling dynamic optimization through trial-and-error interaction
@@ -62,8 +56,8 @@ Reinforcement Learning offers a fundamentally different approach: autonomous age
 
 **The Industrial Maintenance Optimization Challenge**:
 
-- Global industrial maintenance spending: $647 billion annually
-- Unplanned downtime costs: Average $50,000 per hour across manufacturing sectors
+- Global industrial maintenance spending: <span class="tex2jax_ignore">$647 billion</span> annually
+- Unplanned downtime costs: Average <span class="tex2jax_ignore">$50,000</span> per hour across manufacturing sectors
 - Maintenance decision complexity: 15+ variables affecting optimal timing
 - Dynamic operational conditions: Equipment degradation varies with usage patterns, environmental factors, and operational loads
 
@@ -79,7 +73,7 @@ Reinforcement Learning offers a fundamentally different approach: autonomous age
 - 89 RL-based maintenance implementations across manufacturing, energy, and transportation sectors
 - Performance analysis across 12,000+ pieces of equipment over 3-year observation period
 - Algorithmic comparison across Deep Q-Networks, Policy Gradient methods, and Actor-Critic approaches
-- Economic impact assessment demonstrating $847M in cumulative cost savings
+- Economic impact assessment demonstrating <span class="tex2jax_ignore">$847M</span> in cumulative cost savings
 
 ## 2\. Fundamentals of Reinforcement Learning for Maintenance
 
@@ -128,7 +122,7 @@ The maintenance MDP can be formally defined as:
 
 The optimal policy π*(s) maximizes expected cumulative reward:
 
-```
+```text
 V*(s) = max_π E[∑(γ^t * R_t) | s_0 = s, π]
 ```
 
@@ -1914,11 +1908,11 @@ annual_impact = economic_analyzer.calculate_annual_savings(performance_improveme
 
 **Results**:
 
-- Annual maintenance savings: $928,200
-- Downtime reduction value: $204,750,000
-- Quality improvement savings: $110,360
-- Energy efficiency savings: $104,400
-- **Total annual savings: $205,892,960**
+- Annual maintenance savings: <span class="tex2jax_ignore">$928,200</span>
+- Downtime reduction value: <span class="tex2jax_ignore">$204,750,000</span>
+- Quality improvement savings: <span class="tex2jax_ignore">$110,360</span>
+- Energy efficiency savings: <span class="tex2jax_ignore">$104,400</span>
+- **Total annual savings: <span class="tex2jax_ignore">$205,892,960</span>**
 - **ROI: 9,804%** (exceptional due to high-value production environment)
 
 ## 4.2 Power Generation: Wind Farm Operations
@@ -2221,10 +2215,10 @@ class WeatherAwareRewardFunction:
 Performance Metric          | Baseline          | RL-Optimized      | Improvement | Effect Size (Cohen's d)
 --------------------------- | ----------------- | ----------------- | ----------- | -----------------------
 Capacity Factor             | 34.7% ± 4.2%      | 39.1% ± 3.8%      | +4.4pp      | 1.12 (large)
-Maintenance Cost/MW         | $47,300/year      | $36,800/year      | -22.2%      | 0.89 (large)
+Maintenance Cost/MW         | <span class="tex2jax_ignore">$47,300</span>/year      | <span class="tex2jax_ignore">$36,800</span>/year      | -22.2%      | 0.89 (large)
 Unplanned Outages           | 3.2/year          | 1.8/year          | -43.8%      | 1.34 (large)
 Technician Safety Incidents | 0.09/turbine/year | 0.03/turbine/year | -66.7%      | 0.67 (medium)
-Weather-Related Damage      | $234K/year        | $89K/year         | -62.0%      | 1.45 (large)
+Weather-Related Damage      | <span class="tex2jax_ignore">$234K</span>/year        | <span class="tex2jax_ignore">$89K</span>/year         | -62.0%      | 1.45 (large)
 
 **Algorithm Adaptation to Weather Patterns**:
 
@@ -2665,7 +2659,7 @@ Safety Metric              | Baseline | RL-Optimized | Improvement             |
 -------------------------- | -------- | ------------ | ----------------------- | -----------------------------
 Process Safety Events      | 3.2/year | 1.4/year     | -56.3%                  | 78% risk reduction
 Safety System Availability | 97.8%    | 99.3%        | +1.5pp                  | 68% failure rate reduction
-Emergency Shutdowns        | 12/year  | 5/year       | -58.3%                  | $2.1M annual savings
+Emergency Shutdowns        | 12/year  | 5/year       | -58.3%                  | <span class="tex2jax_ignore">$2.1M</span> annual savings
 Environmental Incidents    | 0.8/year | 0.2/year     | -75.0%                  | Regulatory compliance
 Near-Miss Reporting        | +47%     | -            | Improved safety culture | Proactive risk identification
 
@@ -3274,10 +3268,10 @@ sustainability_results = {
 
 Investment Category          | Mean Investment | Mean Annual Savings | Mean ROI | Payback Period
 ---------------------------- | --------------- | ------------------- | -------- | --------------
-Algorithm Development        | $340K           | $1.2M               | 353%     | 3.4 months
-Infrastructure Setup         | $180K           | $0.7M               | 389%     | 3.1 months
-Training & Change Management | $120K           | $0.4M               | 333%     | 3.6 months
-**Total Implementation**     | **$640K**       | **$2.3M**           | **359%** | **3.3 months**
+Algorithm Development        | <span class="tex2jax_ignore">$340K</span>           | <span class="tex2jax_ignore">$1.2M</span>               | 353%     | 3.4 months
+Infrastructure Setup         | <span class="tex2jax_ignore">$180K</span>           | <span class="tex2jax_ignore">$0.7M</span>               | 389%     | 3.1 months
+Training & Change Management | <span class="tex2jax_ignore">$120K</span>           | <span class="tex2jax_ignore">$0.4M</span>               | 333%     | 3.6 months
+**Total Implementation**     | **<span class="tex2jax_ignore">$640K</span>**       | **<span class="tex2jax_ignore">$2.3M</span>**           | **359%** | **3.3 months**
 
 **Risk-Adjusted ROI Analysis**: Using Monte Carlo simulation with 10,000 iterations accounting for:
 
