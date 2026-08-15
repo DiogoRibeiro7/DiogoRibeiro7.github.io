@@ -48,7 +48,7 @@ jobs:
       # Pin to a release or a commit SHA for supply-chain safety.
       # v5 example (or replace with a specific commit SHA):
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           # If you plan to run "import all" against history, set fetch-depth: 0
           fetch-depth: 1
@@ -63,7 +63,7 @@ jobs:
 
       - name: Run Issue Bot
         # Pin to the latest release tag instead of @main
-        uses: juulsn/todo-issue@v1.1.5
+        uses: juulsn/todo-issue@v2.0.0
         env:
           # Use the built-in token; no PAT required.
           # Either works; I prefer github.token so you don't need a secret entry.
