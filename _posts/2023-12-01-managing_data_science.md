@@ -20,9 +20,7 @@ keywords:
 - Project management
 - Ai
 - Experimentation
-seo_description: Managing data science projects like engineering projects sets them
-  up to fail. Learn the key differences in scope, timelines, and processes between
-  the two fields.
+seo_description: Why managing data science projects like engineering projects sets them up to fail, and how scope, timelines, and process differ.
 seo_title: 'Managing Data Science Projects vs Engineering: Why It Fails'
 seo_type: article
 summary: This article explores why managing data science projects with the same expectations

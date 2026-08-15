@@ -19,11 +19,8 @@ keywords:
 - Exploratory data analysis python
 - Data science pandas
 - Python
-seo_description: A detailed guide on performing Exploratory Data Analysis (EDA) using
-  the Pandas library in Python, covering data loading, cleaning, visualization, and
-  advanced techniques.
-seo_title: 'Exploratory Data Analysis (EDA) Techniques with Pandas: A Comprehensive
-  Guide'
+seo_description: 'A guide to Exploratory Data Analysis (EDA) with Pandas in Python: data loading, cleaning, visualization, and advanced techniques.'
+seo_title: Exploratory Data Analysis (EDA) with Pandas
 seo_type: article
 summary: A comprehensive guide on Exploratory Data Analysis (EDA) using Pandas, covering
   essential techniques for understanding, cleaning, and analyzing datasets in Python.

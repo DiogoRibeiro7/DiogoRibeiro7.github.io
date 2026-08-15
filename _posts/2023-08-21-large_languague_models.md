@@ -25,10 +25,8 @@ keywords:
 - Ethical ai development
 - Open data impact on ai
 - Future of machine learning
-seo_description: Explore the vulnerability of Large Language Models like GPT when
-  open-source data platforms such as Stack Overflow close, and the potential impact
-  on AI's evolution.
-seo_title: The Fragility of Large Language Models in a World Without Open-Source Data
+seo_description: 'How vulnerable large language models are when open-source data platforms like Stack Overflow decline, and what that means for AI''s evolution.'
+seo_title: LLM Fragility Without Open-Source Data
 seo_type: article
 subtitle: Exploring the Fragility and Future of Machine Learning Without Open Data
 summary: An exploration into the challenges faced by Large Language Models (LLMs)

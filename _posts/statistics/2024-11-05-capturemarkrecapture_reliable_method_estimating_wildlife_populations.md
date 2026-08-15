@@ -45,7 +45,7 @@ However, the reliability of CMR estimates depends on six key assumptions, which,
 
 ## Overview of Capture-Mark-Recapture in Statistical Context
 
-Before delving into the assumptions, it is important to understand why CMR is so commonly used in wildlife statistics. The method offers a non-invasive way to infer population sizes without needing to capture every individual. By marking a portion of the population and observing the proportion of those individuals recaptured later, researchers can apply statistical formulas to estimate the total population.
+Before examining the assumptions, it is important to understand why CMR is so commonly used in wildlife statistics. The method offers a non-invasive way to infer population sizes without needing to capture every individual. By marking a portion of the population and observing the proportion of those individuals recaptured later, researchers can apply statistical formulas to estimate the total population.
 
 The simplest CMR model is the **Lincoln-Petersen estimator**, which assumes a closed population and equal catchability between marked and unmarked individuals. However, more sophisticated models have been developed to account for the complexities of real-world populations, including open populations, variation in catchability, and the possibility of mark loss.
 

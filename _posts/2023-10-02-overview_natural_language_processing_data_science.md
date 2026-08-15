@@ -25,7 +25,7 @@ keywords:
 - Data science
 seo_description: Explore how Natural Language Processing (NLP) fits into data science,
   common NLP tasks, popular libraries like NLTK and SpaCy, and real-world applications.
-seo_title: 'Natural Language Processing in Data Science: Tasks, Tools, and Applications'
+seo_title: 'NLP in Data Science: Tasks, Tools, and Uses'
 seo_type: article
 summary: This article provides an overview of Natural Language Processing (NLP) in
   data science, covering its role in the field, common NLP tasks, tools like NLTK

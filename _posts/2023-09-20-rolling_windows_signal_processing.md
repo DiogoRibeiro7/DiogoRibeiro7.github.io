@@ -50,7 +50,7 @@ In this article, we'll explore the diverse applications of rolling windows in si
 
 ### Understanding Rolling Windows
 
-Rolling windows, also known as sliding or moving windows, are subsets of data that move sequentially across a dataset. This technique is invaluable in signal processing and time-series analysis, where temporal dependency plays a crucial role. By breaking down the dataset into smaller overlapping or non-overlapping sections, we can perform localized operations that are essential for understanding and manipulating the underlying signal characteristics.
+Rolling windows, also known as sliding or moving windows, are subsets of data that move sequentially across a dataset. This technique is invaluable in signal processing and time-series analysis, where temporal dependency is essential. By breaking down the dataset into smaller overlapping or non-overlapping sections, we can perform localized operations that are essential for understanding and manipulating the underlying signal characteristics.
 
 Rolling windows are frequently used in fields such as finance, biology, and engineering to analyze sequential data. In finance, they are used to compute moving averages of stock prices, providing insights into market trends. In biological signals, rolling windows help analyze physiological data like ECG and EEG signals, enabling real-time monitoring of heart and brain activities. Engineering applications include analyzing vibration data from machinery to detect potential faults.
 

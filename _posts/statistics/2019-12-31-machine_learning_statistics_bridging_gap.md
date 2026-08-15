@@ -18,8 +18,8 @@ keywords:
 - Algorithms in machine learning
 - Linear regression
 - Support vector machines
-seo_description: This article explores the relationship between machine learning and statistics, showing how statistical techniques form the foundation for many machine learning algorithms, from linear regression to decision trees and support vector machines.
-seo_title: 'Machine Learning and Statistics: How Statistical Methods Power Machine Learning'
+seo_description: How statistical techniques underpin machine learning algorithms, from linear regression to decision trees and support vector machines.
+seo_title: How Statistical Methods Power Machine Learning
 seo_type: article
 summary: Machine learning and statistics share deep connections. This article examines the ways statistical methods form the backbone of machine learning algorithms, exploring key techniques like regression, decision trees, and support vector machines.
 tags:

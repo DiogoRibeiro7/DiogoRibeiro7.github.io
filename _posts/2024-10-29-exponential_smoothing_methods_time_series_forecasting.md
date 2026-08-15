@@ -24,11 +24,8 @@ keywords:
 - Inventory management
 - Python
 - R
-seo_description: Explore simple, double, and triple exponential smoothing methods
-  (ETS) for time series forecasting. Learn how these methods compare to ARIMA models
-  and their applications in retail, finance, and inventory management.
-seo_title: A Comprehensive Guide to Exponential Smoothing Methods for Time Series
-  Forecasting
+seo_description: Simple, double, and triple exponential smoothing (ETS) for time series forecasting, how they compare to ARIMA, and where they apply.
+seo_title: Exponential Smoothing for Time Series Forecasting
 seo_type: article
 summary: Explore the different types of exponential smoothing methods, how they work,
   and their practical applications in time series forecasting. This article compares

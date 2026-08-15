@@ -104,7 +104,7 @@ Recognizing the limitations of univariate drift analysis, the focus shifted towa
 This multivariate analysis led to the discovery of an unexpected feature:
 
 - **Key Feature Identification**: A particular feature was found to be a major contributor to multivariate drift. Interestingly, this feature had shown no significant univariate drift and was considered of low importance in the original model.
-- **Unanticipated Culprit**: Despite its apparent stability in univariate analysis, this feature played a key role in interacting with other features, contributing to model instability over time.
+- **Unanticipated Culprit**: Despite its apparent stability in univariate analysis, this feature proved central to interacting with other features, contributing to model instability over time.
 
 ## Implementing the Solution
 

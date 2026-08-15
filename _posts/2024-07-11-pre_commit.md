@@ -11,6 +11,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
   twitter_image: /assets/images/data_science_3.jpg
+seo_description: How pre-commit hooks enforce code quality in Python projects, and how to set them up in your Git workflow.
+seo_title: Pre-commit Hooks for Python Projects
 seo_type: article
 tags:
 - Python

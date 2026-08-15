@@ -20,10 +20,8 @@ keywords:
 - Interpretable models
 - Classification
 - Python
-seo_description: Explore how Genetic Algorithms can significantly improve the performance
-  of decision trees in machine learning, yielding interpretable models with higher
-  accuracy and the same size as standard trees.
-seo_title: Enhancing Decision Trees Using Genetic Algorithms for Better Performance
+seo_description: How Genetic Algorithms improve decision tree performance, yielding interpretable models with higher accuracy at the same size.
+seo_title: Enhancing Decision Trees with Genetic Algorithms
 seo_type: article
 summary: This article explains how to enhance decision tree performance using Genetic
   Algorithms. The approach allows for small, interpretable trees that outperform those

@@ -23,9 +23,7 @@ keywords:
 - Proofreading techniques
 - Thesis development
 - Structuring research papers
-seo_description: Learn how to write a research paper with effective strategies for
-  thesis development, organizing notes, formatting citations, and proofreading techniques
-  for success.
+seo_description: 'How to write a research paper: thesis development, organizing notes, formatting citations, and proofreading techniques.'
 seo_title: 'How to Write a Research Paper: Tips for Academic Writing'
 seo_type: article
 summary: This guide provides essential tips for writing a research paper, from outlining

@@ -19,8 +19,8 @@ keywords:
 - Data Science
 - Hypothesis Testing
 - Nonparametric Tests
-seo_description: A bold take on statistical test selection that challenges common frameworks. Move beyond basic diagrams and N>30 pseudorules, and learn how to focus on meaningful interpretation and robust testing strategies.
-seo_title: 'Rethinking Statistical Test Selection: A Bold Approach to Choosing Tests'
+seo_description: 'A critical take on statistical test selection: move past decision diagrams and N>30 pseudorules toward meaningful interpretation and robust testing.'
+seo_title: Rethinking How We Choose Statistical Tests
 seo_type: article
 summary: This article critiques popular frameworks for selecting statistical tests, offering a robust, more flexible alternative that emphasizes interpretation and realistic outcomes over pseudorules and data transformations. Learn why techniques like Welch’s t-test and permutation tests are better than many 'classics'.
 tags:

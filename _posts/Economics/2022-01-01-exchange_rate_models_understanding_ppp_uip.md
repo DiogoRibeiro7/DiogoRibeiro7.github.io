@@ -53,7 +53,7 @@ Where:
 #### **Types of PPP**
 
 1. **Absolute PPP:** Assumes price levels are directly proportional to exchange rates.  
-   Example: If a basket of goods costs $100 in the U.S. and €80 in the Eurozone, the exchange rate should be $$ S = 100/80 = 1.25 $$ USD/EUR.
+   Example: If a basket of goods costs <span class="tex2jax_ignore">$100</span> in the U.S. and €80 in the Eurozone, the exchange rate should be $$ S = 100/80 = 1.25 $$ USD/EUR.
 
 2. **Relative PPP:** Focuses on the rate of change in price levels (inflation) to predict exchange rate movements over time. The formula is:
 

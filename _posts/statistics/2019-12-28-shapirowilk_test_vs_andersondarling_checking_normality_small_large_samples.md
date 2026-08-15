@@ -21,7 +21,7 @@ keywords:
 - Statistical distribution
 - Python
 seo_description: A comparison of the Shapiro-Wilk and Anderson-Darling tests for normality, analyzing their strengths and weaknesses based on sample size and distribution.
-seo_title: 'Shapiro-Wilk vs Anderson-Darling: Normality Tests for Small and Large Samples'
+seo_title: Shapiro-Wilk vs Anderson-Darling Normality Tests
 seo_type: article
 summary: This article compares the Shapiro-Wilk and Anderson-Darling tests, emphasizing how sample size and distribution characteristics influence the choice of method when assessing normality.
 tags:

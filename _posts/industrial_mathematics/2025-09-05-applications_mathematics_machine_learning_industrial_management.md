@@ -12,10 +12,7 @@ tags:
   - Predictive Maintenance
 author_profile: false
 seo_title: Mathematics and Machine Learning in Industrial Management
-seo_description: >-
-  A detailed review of how mathematical optimization and machine learning are
-  transforming industrial management across supply chain, production, and
-  quality control.
+seo_description: How mathematical optimization and machine learning are transforming supply chain, production, and quality control.
 excerpt: >-
   This review explores the transformative applications of mathematical
   optimization and machine learning in industrial management, with a focus on
@@ -53,7 +50,7 @@ Mathematics has long provided the theoretical foundation for industrial optimiza
 
 This convergence is particularly relevant in the context of Industry 4.0, where cyber-physical systems, Internet of Things (IoT) devices, and cloud computing enable real-time data collection and analysis. Manufacturing execution systems (MES), enterprise resource planning (ERP) platforms, and sensor networks generate continuous streams of operational data that can be leveraged for optimization and prediction. The challenge lies in transforming this data deluge into actionable insights that drive measurable business value.
 
-The economic impact of these technologies is substantial. McKinsey estimates that artificial intelligence could contribute up to $13 trillion to global economic output by 2030, with manufacturing representing one of the largest application areas. Companies implementing advanced analytics and optimization report 10-20% improvements in operational efficiency, 15-25% reductions in inventory costs, and 20-50% decreases in equipment downtime.
+The economic impact of these technologies is substantial. McKinsey estimates that artificial intelligence could contribute up to <span class="tex2jax_ignore">$13 trillion</span> to global economic output by 2030, with manufacturing representing one of the largest application areas. Companies implementing advanced analytics and optimization report 10-20% improvements in operational efficiency, 15-25% reductions in inventory costs, and 20-50% decreases in equipment downtime.
 
 ## 2. Mathematical Foundations in Industrial Management
 

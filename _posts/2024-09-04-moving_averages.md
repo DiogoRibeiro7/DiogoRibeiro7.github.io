@@ -11,6 +11,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_4.jpg
+seo_description: How moving averages reveal trends in human behavior far beyond stock trading, and how to tune them for behavioral data.
+seo_title: Moving Averages Beyond Financial Markets
 seo_type: article
 tags:
 - Moving averages

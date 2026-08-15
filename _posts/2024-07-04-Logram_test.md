@@ -14,6 +14,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_7.jpg
+seo_description: How the logrank test compares survival distributions between two groups, and why it matters in survival analysis.
+seo_title: The Logrank Test in Survival Analysis
 seo_type: article
 tags:
 - Logrank test
@@ -32,7 +34,7 @@ title: Understanding the Logrank Test in Survival Analysis
 
 ## Basics of the Logrank Test
 
-The Logrank test is a widely used statistical method in survival analysis, particularly for comparing the survival distributions of two groups. It is essential for determining whether there is a significant difference in the probability of an event occurring, such as death or failure, between these groups over time. Understanding the Logrank test is crucial for researchers and data scientists working with time-to-event data, as it lays the foundation for more advanced techniques in survival analysis. In this section, we will delve into the fundamental concepts, calculations, and assumptions underlying the Logrank test to provide a comprehensive overview of how it works and why it is so important in the field of survival analysis.
+The Logrank test is a widely used statistical method in survival analysis, particularly for comparing the survival distributions of two groups. It is essential for determining whether there is a significant difference in the probability of an event occurring, such as death or failure, between these groups over time. Understanding the Logrank test is crucial for researchers and data scientists working with time-to-event data, as it lays the foundation for more advanced techniques in survival analysis. In this section, we will examine the fundamental concepts, calculations, and assumptions underlying the Logrank test to provide a comprehensive overview of how it works and why it is so important in the field of survival analysis.
 
 ### Purpose
 

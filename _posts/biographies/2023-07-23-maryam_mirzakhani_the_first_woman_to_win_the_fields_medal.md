@@ -18,7 +18,7 @@ keywords:
 - Riemann surfaces and geometry
 - Hyperbolic geometry contributions
 - Women in mathematics
-seo_description: Explore the life and achievements of Maryam Mirzakhani, the first woman to win the Fields Medal, and her pioneering contributions to the geometry of Riemann surfaces and hyperbolic spaces.
+seo_description: Maryam Mirzakhani, the first woman to win the Fields Medal, and her work on Riemann surfaces and hyperbolic geometry.
 seo_title: 'Maryam Mirzakhani: First Woman to Win the Fields Medal'
 seo_type: article
 summary: Maryam Mirzakhani was the first woman to win the Fields Medal, recognized for her pioneering work on the dynamics and geometry of Riemann surfaces and their moduli spaces. Her legacy continues to inspire the world of mathematics.

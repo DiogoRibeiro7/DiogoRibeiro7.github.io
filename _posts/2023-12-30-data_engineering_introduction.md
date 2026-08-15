@@ -21,7 +21,7 @@ keywords:
 - Data pipelines
 seo_description: An in-depth overview of Data Engineering, discussing the ETL and
   ELT processes, data pipelines, and the necessary skills for data engineers.
-seo_title: 'Understanding Data Engineering: Skills, ETL, and ELT Processes'
+seo_title: 'Data Engineering: Skills, ETL, and ELT'
 seo_type: article
 summary: Data Engineering is critical for managing and processing large datasets.
   Learn about the skills, processes like ETL and ELT, and how they fit into modern

@@ -11,8 +11,8 @@ tags:
 - Academic Policy
 - Mathematical History
 author_profile: false
-seo_title: "Why Pure Mathematics Must Be Protected from Practical Pressures"
-seo_description: "A defense of pure mathematics against increasing pressure for immediate application, exploring its crucial role in long-term innovation and technological progress."
+seo_title: Why Pure Mathematics Must Be Protected
+seo_description: A defense of pure mathematics against pressure for immediate application, and its role in long-term innovation.
 excerpt: "As institutions prioritize immediate applications, pure mathematics faces an existential threat. This article defends abstract research as essential to innovation and long-term progress."
 summary: "This article critiques the growing emphasis on applied mathematics in academic and funding environments, arguing for the preservation of pure mathematical research as the foundation of future breakthroughs."
 keywords: 

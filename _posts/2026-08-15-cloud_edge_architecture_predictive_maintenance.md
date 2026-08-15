@@ -13,7 +13,7 @@ tags:
 - Streaming Analytics
 author_profile: false
 seo_title: "Cloud and Edge Architecture for Predictive Maintenance"
-seo_description: "An architecture-focused article on how cloud computing and edge analytics support predictive maintenance, including latency, reliability, data pipelines, and deployment trade-offs."
+seo_description: How cloud computing and edge analytics support predictive maintenance, covering latency, reliability, pipelines, and trade-offs.
 excerpt: "Predictive maintenance systems rarely live entirely in the cloud or entirely at the edge. Effective architectures split work across sensors, gateways, plant systems, and cloud platforms."
 summary: "This article examines the role of cloud computing and edge analytics in predictive maintenance. It explains where different workloads belong, how to design industrial data pipelines, why latency and reliability matter, and how hybrid architectures support scalable asset monitoring."
 keywords:

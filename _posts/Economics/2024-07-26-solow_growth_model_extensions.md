@@ -22,7 +22,7 @@ keywords:
 - Growth Theory
 - Quantitative Analysis
 seo_description: Explore extensions to the Solow Growth Model, incorporating technological progress and human capital to understand long-term economic growth.
-seo_title: 'Solow Growth Model Extended: Including Technology and Human Capital'
+seo_title: 'Solow Growth Model: Technology and Human Capital'
 seo_type: article
 summary: This article delves into the Solow Growth Model and its extensions, examining how technological change and human capital influence economic growth.
 tags:

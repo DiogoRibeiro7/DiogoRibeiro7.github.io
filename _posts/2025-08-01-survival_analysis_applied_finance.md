@@ -11,8 +11,8 @@ tags:
 - investment analysis
 - customer retention
 author_profile: false
-seo_title: "Survival Analysis in Finance: Techniques, Applications, and Case Studies"
-seo_description: "Explore a complete guide to survival analysis in finance. Learn how time-to-event modeling transforms credit risk, investment analysis, churn prediction, and more."
+seo_title: 'Survival Analysis in Finance: Techniques and Cases'
+seo_description: 'A complete guide to survival analysis in finance: time-to-event modeling for credit risk, investment analysis, and churn.'
 excerpt: "Survival analysis offers financial institutions a powerful framework for modeling time-to-event data such as default, prepayment, and churn. This guide explores the methodology, financial applications, advanced techniques, and real-world case studies."
 summary: "This in-depth article explores how survival analysis is used in finance to model default risk, customer attrition, mortgage prepayment, and investment duration. It covers statistical techniques, machine learning integration, case studies, and regulatory frameworks like Basel and IFRS 9."
 keywords:
@@ -1051,7 +1051,7 @@ The implementation yielded several valuable insights:
 
 #### Problem Context
 
-A fixed income asset management firm managing over $50 billion in corporate bonds sought to enhance its credit risk management and investment selection process using survival analysis. Key objectives included:
+A fixed income asset management firm managing over <span class="tex2jax_ignore">$50 billion</span> in corporate bonds sought to enhance its credit risk management and investment selection process using survival analysis. Key objectives included:
 
 - Developing a framework for estimating time-dependent default probabilities
 - Identifying early warning indicators of deteriorating credit quality
@@ -1112,7 +1112,7 @@ The implementation provided several valuable insights:
 
 #### Problem Context
 
-A large retirement plan provider managing over $100 billion in assets sought to better understand participant investment behavior, particularly around fund switching, contribution changes, and withdrawal patterns. The objectives included:
+A large retirement plan provider managing over <span class="tex2jax_ignore">$100 billion</span> in assets sought to better understand participant investment behavior, particularly around fund switching, contribution changes, and withdrawal patterns. The objectives included:
 
 - Modeling the timing and drivers of participant fund switching
 - Understanding the lifecycle of different investment choices

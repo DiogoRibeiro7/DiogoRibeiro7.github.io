@@ -25,10 +25,8 @@ keywords:
 - Seasonal time series
 - Python
 - Bash
-seo_description: Learn how SARIMA extends ARIMA to handle seasonality in time series
-  forecasting. Understand model selection, parameters, and implementation with Python
-  examples.
-seo_title: 'Time Series Forecasting with SARIMA: Seasonal ARIMA Explained'
+seo_description: How SARIMA extends ARIMA to handle seasonality in forecasting, covering model selection, parameters, and Python implementation.
+seo_title: 'SARIMA: Seasonal ARIMA Forecasting Explained'
 seo_type: article
 summary: SARIMA is an extension of ARIMA that models seasonality, a crucial feature
   in many real-world time series. This article explains the theory, model structure,

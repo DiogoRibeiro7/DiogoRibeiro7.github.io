@@ -12,7 +12,7 @@ tags:
   - Python
   - stationarity
 author_profile: false
-seo_title: 'Multivariate Time Series Forecasting: VAR vs VECM with Python'
+seo_title: 'Multivariate Forecasting: VAR vs VECM in Python'
 seo_description: >-
   Learn how VAR and VECM model multivariate time series. Understand assumptions,
   cointegration, model selection, and see complete Python implementations.

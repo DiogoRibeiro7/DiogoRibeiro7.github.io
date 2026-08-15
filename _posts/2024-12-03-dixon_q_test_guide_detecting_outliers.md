@@ -22,10 +22,8 @@ keywords:
 - Data quality
 - Python
 - Data science
-seo_description: A detailed exploration of Dixon's Q test, a statistical method for
-  identifying and rejecting outliers in small datasets. Learn how the test works,
-  its assumptions, and application process.
-seo_title: 'Dixon''s Q Test for Outlier Detection: Comprehensive Overview and Application'
+seo_description: 'Dixon''s Q test for identifying and rejecting outliers in small datasets: how it works, its assumptions, and how to apply it.'
+seo_title: 'Dixon''s Q Test for Outlier Detection'
 seo_type: article
 summary: Dixon's Q test is a statistical tool designed for detecting outliers in small,
   normally distributed datasets. This guide covers its fundamental principles, the

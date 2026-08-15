@@ -12,6 +12,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_3.jpg
+seo_description: The difference between confidence and prediction intervals, and what each tells you about uncertainty in an estimate.
+seo_title: Confidence vs. Prediction Intervals
 seo_type: article
 tags:
 - Uncertainty
@@ -129,7 +131,7 @@ For example, if our linear regression model predicts that the mean price of a ho
 
 By presenting prediction intervals, we provide a more comprehensive understanding of the uncertainty involved in individual predictions. This is particularly useful for practical applications, such as when a buyer or seller wants to know the likely range of prices for a specific house, rather than just the average price for similar houses.
 
-In summary, prediction intervals are a valuable tool in statistical modeling, allowing us to quantify and communicate the uncertainty in predicting individual outcomes. By using prediction intervals alongside confidence intervals, we can offer a clearer and more informative picture of the reliability and variability of our model's predictions.
+Prediction intervals are a valuable tool in statistical modeling, allowing us to quantify and communicate the uncertainty in predicting individual outcomes. By using prediction intervals alongside confidence intervals, we can offer a clearer and more informative picture of the reliability and variability of our model's predictions.
 
 ## Conclusion
 

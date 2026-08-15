@@ -20,11 +20,8 @@ keywords:
 - Non-parametric tests
 - Parametric tests
 - Hypothesis testing
-seo_description: This article compares the parametric independent t-test and the non-parametric
-  Mann-Whitney U test, explaining when to use each based on data distribution, with
-  practical examples.
-seo_title: 'Mann-Whitney U Test vs. Independent T-Test: When to Use Non-Parametric
-  Tests'
+seo_description: Comparing the parametric independent t-test with the non-parametric Mann-Whitney U test, and choosing between them based on your data distribution.
+seo_title: Mann-Whitney U Test vs. Independent T-Test
 seo_type: article
 summary: This article provides a comprehensive comparison between the Mann-Whitney
   U test and the independent t-test. It explains when and why the non-parametric Mann-Whitney

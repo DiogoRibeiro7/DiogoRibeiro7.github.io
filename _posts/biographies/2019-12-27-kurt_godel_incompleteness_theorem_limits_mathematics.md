@@ -18,7 +18,7 @@ keywords:
 - Mathematical logic
 - Gödel and Einstein
 - Philosophy of mathematics
-seo_description: An exploration of Kurt Gödel's life, his incompleteness theorems, and their profound impact on the foundations of mathematics and logic. The article also examines his close friendship with Einstein and his philosophical views on mathematics.
+seo_description: 'Kurt Gödel''s incompleteness theorems and their impact on the foundations of mathematics, plus his friendship with Einstein.'
 seo_title: 'Kurt Gödel: Incompleteness Theorems and Mathematical Logic'
 seo_type: article
 summary: Kurt Gödel, one of the greatest logicians of the 20th century, is best known for his incompleteness theorems, which demonstrated the limitations of formal systems in mathematics. This article delves into his life, his revolutionary ideas, and his close relationship with Albert Einstein.

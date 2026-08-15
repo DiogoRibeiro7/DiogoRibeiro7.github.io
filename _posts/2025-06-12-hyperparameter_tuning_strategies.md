@@ -34,7 +34,7 @@ title: Hyperparameter Tuning Strategies
 
 ## The Importance of Hyperparameter Optimization
 
-Hyperparameters—settings that govern the training process and structure of a model—play a pivotal role in determining predictive performance, generalization ability, and computational cost. Examples include learning rates, regularization coefficients, network depths, and kernel parameters. Manually tuning these values by trial and error is laborious and rarely finds the true optimum, especially as models grow in complexity. A systematic approach to hyperparameter search transforms tuning from an art into a reproducible, quantifiable process. By intelligently exploring the search space, practitioners can achieve better model accuracy, faster convergence, and clearer insights into the sensitivity of their algorithms to key parameters.
+Hyperparameters—settings that govern the training process and structure of a model—are central to determining predictive performance, generalization ability, and computational cost. Examples include learning rates, regularization coefficients, network depths, and kernel parameters. Manually tuning these values by trial and error is laborious and rarely finds the true optimum, especially as models grow in complexity. A systematic approach to hyperparameter search transforms tuning from an art into a reproducible, quantifiable process. By intelligently exploring the search space, practitioners can achieve better model accuracy, faster convergence, and clearer insights into the sensitivity of their algorithms to key parameters.
 
 ## Grid Search: Exhaustive Exploration
 

@@ -72,7 +72,7 @@ However, traditional ML models have one major limitation: they treat all input f
 
 ### 2.2 The Importance of Causal Questions in Business
 
-In a business context, predictive models are often used to guide decision-making. For instance, a company might ask, "If we invest $30,000 in renovating a house, will we be able to sell it for a higher price?" Answering this question requires understanding the causal effect of the renovation (the treatment) on the sale price (the outcome).
+In a business context, predictive models are often used to guide decision-making. For instance, a company might ask, "If we invest <span class="tex2jax_ignore">$30,000</span> in renovating a house, will we be able to sell it for a higher price?" Answering this question requires understanding the causal effect of the renovation (the treatment) on the sale price (the outcome).
 
 Causal questions are particularly important in fields like marketing, healthcare, and finance. Traditional ML models, however, are not equipped to answer these questions because they focus solely on prediction rather than the effect of interventions.
 

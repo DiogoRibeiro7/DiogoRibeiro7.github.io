@@ -21,11 +21,8 @@ keywords:
 - Outbreak detection
 - Predictive analytics
 - Public health modeling
-seo_description: A comprehensive look at the applications of time series analysis
-  in epidemiology. Learn how time series methods model disease spread, detect outbreaks
-  early, and predict future cases.
-seo_title: 'Time Series Analysis in Epidemiological Research: Disease Modeling and
-  Prediction'
+seo_description: How time series analysis is applied in epidemiology to model disease spread, detect outbreaks early, and predict future case counts.
+seo_title: Time Series Analysis in Epidemiology
 seo_type: article
 summary: Explore how time series analysis is used in epidemiological research to model
   disease transmission, detect outbreaks, and predict future cases. This article covers

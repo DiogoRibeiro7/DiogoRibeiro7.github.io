@@ -13,6 +13,8 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_3.jpg
+seo_description: How the Counts Outlier Detector (COD) uses multi-dimensional histograms to find interpretable outliers in data.
+seo_title: Interpretable Outlier Detection with COD
 seo_type: article
 tags:
 - Outlier detection

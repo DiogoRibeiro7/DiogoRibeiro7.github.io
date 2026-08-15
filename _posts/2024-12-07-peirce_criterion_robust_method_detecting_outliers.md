@@ -22,11 +22,8 @@ keywords:
 - Experimental data
 - Data quality
 - R
-seo_description: A detailed exploration of Peirce's Criterion, a robust statistical
-  method for eliminating outliers from datasets. Learn the principles, assumptions,
-  and how to apply this method.
-seo_title: 'Peirce''s Criterion for Outlier Detection: Comprehensive Overview and
-  Application'
+seo_description: 'Peirce''s Criterion, a robust method for eliminating outliers from datasets: its principles, assumptions, and how to apply it.'
+seo_title: 'Peirce''s Criterion for Outlier Detection'
 seo_type: article
 summary: Peirce's Criterion is a robust statistical tool for detecting and removing
   outliers from datasets. This article covers its principles, step-by-step application,

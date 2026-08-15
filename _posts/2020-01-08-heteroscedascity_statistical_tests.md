@@ -21,7 +21,7 @@ keywords:
 - Breusch-pagan test
 seo_description: Learn about heteroscedasticity, the statistical tests to detect it,
   and steps to take when it is present in regression analysis.
-seo_title: 'Heteroscedasticity: Statistical Tests and What to Do When Detected'
+seo_title: 'Heteroscedasticity: Tests and How to Fix It'
 seo_type: article
 summary: Explore heteroscedasticity in regression analysis, its consequences, how
   to test for it, and practical solutions for correcting it when detected.

@@ -30,9 +30,7 @@ keywords:
 - Machine learning algorithms
 - Generalization in machine learning
 - Concentration inequalities in machine learning
-seo_description: An extensive look at the mathematical foundations of machine learning,
-  exploring classification, regression, empirical risk minimization, and popular algorithms
-  like decision trees and random forests.
+seo_description: 'The mathematical foundations of machine learning: classification, regression, empirical risk minimization, decision trees, and random forests.'
 seo_title: 'Mathematics of Machine Learning: Key Concepts and Methods'
 seo_type: article
 tags:

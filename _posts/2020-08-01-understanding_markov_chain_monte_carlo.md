@@ -22,8 +22,7 @@ keywords:
 - Python
 - Bayesian inference
 - Bash
-seo_description: An in-depth exploration of Markov Chain Monte Carlo (MCMC), its algorithms,
-  and its applications in statistics, probability theory, and numerical approximations.
+seo_description: 'Markov Chain Monte Carlo (MCMC) explained: its algorithms and applications in statistics, probability theory, and numerical approximation.'
 seo_title: Comprehensive Guide to Markov Chain Monte Carlo (MCMC)
 seo_type: article
 summary: Markov Chain Monte Carlo (MCMC) is an essential tool in probabilistic computation,

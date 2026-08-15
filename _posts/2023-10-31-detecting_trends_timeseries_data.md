@@ -25,7 +25,7 @@ keywords:
 - Python
 seo_description: Explore the Mann-Kendall Test for detecting trends in time-series
   data, with applications in environmental studies, hydrology, and climate research.
-seo_title: 'Mann-Kendall Test: A Guide to Detecting Trends in Time-Series Data'
+seo_title: Mann-Kendall Test for Trend Detection
 seo_type: article
 summary: The Mann-Kendall Test is a non-parametric method for detecting trends in
   time-series data. This article provides an overview of the test, its mathematical

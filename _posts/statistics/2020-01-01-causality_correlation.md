@@ -18,8 +18,8 @@ keywords:
 - Berkson's paradox
 - Correlation
 - Data science
-seo_description: Explore how causal reasoning, through paradoxes like Simpson's and Berkson's, can help us avoid the common pitfalls of interpreting data solely based on correlation.
-seo_title: 'Causality Beyond Correlation: Understanding Paradoxes and Causal Graphs'
+seo_description: 'How causal reasoning and paradoxes like Simpson''s and Berkson''s help avoid the pitfalls of reading data as correlation alone.'
+seo_title: 'Causality Beyond Correlation: Paradoxes and Graphs'
 seo_type: article
 summary: An in-depth exploration of the limits of correlation in data interpretation, highlighting Simpson's and Berkson's paradoxes and introducing causal graphs as a tool for uncovering true causal relationships.
 tags:

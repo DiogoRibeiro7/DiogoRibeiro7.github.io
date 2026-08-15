@@ -24,10 +24,8 @@ keywords:
 - Bash
 - Python
 - Fortran
-seo_description: Learn how to simulate pedestrian evacuation in smoke-affected environments
-  using the Social Force Model and Advection-Diffusion Equation. Explore numerical
-  methods to optimize emergency preparedness strategies.
-seo_title: Pedestrian Evacuation Simulation in Smoke-Affected Environments
+seo_description: Simulating pedestrian evacuation in smoke-affected spaces with the Social Force Model and Advection-Diffusion Equation.
+seo_title: Pedestrian Evacuation in Smoke-Filled Spaces
 seo_type: article
 summary: This article examines simulation models for pedestrian evacuation in smoke-affected
   environments. It focuses on the Social Force Model, smoke propagation dynamics through

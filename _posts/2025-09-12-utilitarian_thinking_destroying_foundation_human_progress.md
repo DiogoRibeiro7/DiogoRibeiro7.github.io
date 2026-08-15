@@ -11,8 +11,8 @@ tags:
 - Intellectual Culture
 - Innovation Policy
 author_profile: false
-seo_title: "The Intellectual Crisis: Why Pure Inquiry Matters More Than Ever"
-seo_description: "Utilitarian pressures are transforming academia into a tool for short-term gains, eroding the foundation of innovation and knowledge. Here's why we must protect pure research."
+seo_title: Why Pure Inquiry Matters More Than Ever
+seo_description: How utilitarian pressures are turning academia toward short-term gains, and why pure research must be protected.
 excerpt: "Short-term thinking and utilitarian pressures are undermining the very institutions that sustain human progress. This is a crisis not just in science policy, but in civilization itself."
 summary: "This article explores how utilitarian approaches to research and education are dismantling the foundations of human progress by undermining pure inquiry, academic freedom, and intellectual culture. It examines historical parallels, economic consequences, and institutional trends to make the case for reclaiming the intrinsic value of knowledge."
 keywords: 

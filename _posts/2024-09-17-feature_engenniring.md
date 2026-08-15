@@ -27,10 +27,8 @@ keywords:
 - Robust feature engineering
 - Data cleaning for machine learning
 - Python
-seo_description: Explore five common mistakes in feature engineering, including data
-  leakage and over-engineering, and learn how to avoid them for more robust machine
-  learning models.
-seo_title: Avoiding 5 Common Feature Engineering Mistakes in Machine Learning
+seo_description: Five common feature engineering mistakes, including data leakage and over-engineering, and how to avoid them.
+seo_title: 5 Common Feature Engineering Mistakes to Avoid
 seo_type: article
 tags:
 - Feature engineering

@@ -21,9 +21,7 @@ keywords:
 - Evaluating ml models
 - Robust data models
 - Python
-seo_description: Learn how to test and evaluate outlier detection models using data
-  doping techniques. Understand the impact of doping on model performance and outlier
-  identification.
+seo_description: How to test and evaluate outlier detection models with data doping, and how doping affects model performance.
 seo_title: Evaluating Outlier Detectors with Data Doping Techniques
 seo_type: article
 summary: This article explores techniques for testing and evaluating outlier detection
@@ -72,7 +70,7 @@ Doping involves modifying existing data records by altering one or a few cells p
 - Number of sales last year
 - Total dollar value of sales last year
 
-A doped version of this record could set the age to 100 years, making it an obvious outlier. More subtle doping might change the total sales from $500,000 to $100,000, creating an unusual combination of sales numbers and total sales value. By manipulating the data in this way, we can create a controlled environment to test and compare the performance of different outlier detectors.
+A doped version of this record could set the age to 100 years, making it an obvious outlier. More subtle doping might change the total sales from <span class="tex2jax_ignore">$500,000</span> to <span class="tex2jax_ignore">$100,000</span>, creating an unusual combination of sales numbers and total sales value. By manipulating the data in this way, we can create a controlled environment to test and compare the performance of different outlier detectors.
 
 ### Approaches to Doping
 

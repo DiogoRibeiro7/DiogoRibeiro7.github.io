@@ -18,11 +18,8 @@ keywords:
 - Zero-inflated data
 - Threshold classification
 - Statistical modeling
-seo_description: A methodology for threshold classification in zero-inflated time
-  series data using stationary distributions and parametric modeling to enhance classification
-  accuracy.
-seo_title: Threshold Classification for Zero-Inflated Time Series Using Stationary
-  Distributions
+seo_description: A method for threshold classification in zero-inflated time series using stationary distributions and parametric modeling.
+seo_title: Threshold Classification for Zero-Inflated Series
 seo_type: article
 summary: A novel approach for threshold classification in zero-inflated time series
   data using stationary distributions derived from time series models. This method
@@ -59,7 +56,7 @@ This paper aims to integrate the concept of stationarity into the threshold clas
 
 In zero-inflated time series data, zeros dominate the distribution, making it difficult to apply traditional thresholding techniques like percentiles or standard deviation-based intervals. This is especially problematic for classification tasks, where a meaningful distinction between event intensities (such as low, moderate, or severe precipitation) is needed.
 
-Traditional methods like percentile-based thresholds or standard deviation intervals fail in zero-inflated contexts because they do not account for the high frequency of zero values. Furthermore, these methods typically assume the data follows a normal distribution, which is rarely the case in zero-inflated datasets.
+Traditional methods like percentile-based thresholds or standard deviation intervals fail in zero-inflated contexts because they do not account for the high frequency of zero values. These methods typically assume the data follows a normal distribution, which is rarely the case in zero-inflated datasets.
 
 ### Limitations of Existing Methods
 

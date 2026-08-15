@@ -156,7 +156,7 @@ Despite the benefits, several challenges exist in deploying IoT and data science
 
 The combination of IoT and data science holds immense potential for advancing climate action. As technology continues to evolve, we can expect even more precise environmental monitoring, predictive analytics, and actionable insights. Integrating IoT with artificial intelligence (AI) and big data analytics will enable a deeper understanding of climate patterns, guiding policies that can mitigate climate change effects.
 
-Furthermore, innovations in energy-efficient IoT devices, advanced machine learning algorithms, and collaborative global data platforms are expected to enhance the scalability and accessibility of climate monitoring technologies. By continuing to develop these tools and address existing challenges, we can leverage IoT and data science to drive meaningful progress in the fight against climate change.
+Innovations in energy-efficient IoT devices, advanced machine learning algorithms, and collaborative global data platforms are expected to enhance the scalability and accessibility of climate monitoring technologies. By continuing to develop these tools and address existing challenges, we can leverage IoT and data science to drive meaningful progress in the fight against climate change.
 
 ### Conclusion
 

@@ -20,10 +20,8 @@ keywords:
 - Catch22
 - Python
 - Uea/ucr
-seo_description: Learn how to implement time-series classification in Python using
-  simple models, catch22 features, and benchmarking with statistical tests using UEA/UCR
-  datasets.
-seo_title: 'Python Code for Time-Series Classification: Simple Models to Catch22'
+seo_description: How to implement time-series classification in Python with simple models, catch22 features, and UEA/UCR benchmarking.
+seo_title: Time-Series Classification in Python with Catch22
 seo_type: article
 summary: This article provides Python code for time-series classification, covering
   simple models, catch22 features, and benchmarking with UEA/UCR repository datasets
@@ -37,8 +35,6 @@ title: 'Implementing Time-Series Classification: From Simple Models to Advanced 
   Sets'
 ---
 
-
-# Implementing Time-Series Classification: From Simple Models to Advanced Feature Sets
 
 Time-series classification is an essential task in machine learning, with applications ranging from finance to healthcare and industrial monitoring. While deep learning models offer high accuracy in many cases, simpler models based on basic statistical features, like the mean and standard deviation, often provide a solid foundation. For more complex tasks, feature sets like **catch22** can be introduced to capture subtle dynamics in the data.
 

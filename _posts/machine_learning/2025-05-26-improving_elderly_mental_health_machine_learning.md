@@ -12,7 +12,7 @@ tags:
 - AI applications
 author_profile: false
 seo_title: "Improving Elderly Mental Health with AI & Data Analytics"
-seo_description: "Explore how machine learning and data analytics are revolutionizing elderly mental health care—from early detection to personalized support and clinical integration."
+seo_description: How machine learning and analytics are transforming elderly mental health care, from early detection to clinical integration.
 excerpt: "Discover how AI-powered tools are reshaping mental health care for older adults, offering early detection, personalized mood tracking, cognitive monitoring, and integrated clinical support."
 summary: "This article explores the transformative role of AI and data analytics in improving mental health care for elderly populations. It covers mood tracking, cognitive decline detection, clinical integration, ethical concerns, and future directions for global and accessible care."
 keywords: 
