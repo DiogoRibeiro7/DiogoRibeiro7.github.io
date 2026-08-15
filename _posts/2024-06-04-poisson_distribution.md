@@ -39,6 +39,26 @@ In this article, we will explore how to model count events, such as activations 
 
 The Poisson distribution is often used to model the number of events occurring within a fixed interval of time or space when these events occur with a known constant mean rate and independently of the time since the last event. It is defined by a single parameter, λ (lambda), which represents the average rate of occurrence.
 
+Formally, the probability of observing exactly $k$ events is
+
+$$
+P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}, \qquad k = 0, 1, 2, \dots
+$$
+
+The distribution has a property that turns out to be its most useful diagnostic: its mean and variance are both equal to $\lambda$.
+
+$$
+E[X] = \operatorname{Var}(X) = \lambda .
+$$
+
+Three assumptions underpin the model, and each can fail in practice:
+
+- **Constant rate.** Events occur at the same average rate throughout the interval. Hourly web traffic violates this badly, since the rate depends on time of day.
+- **Independence.** One event does not change the probability of another. Clustered events, such as retries after a failure, violate this.
+- **No simultaneity.** Two events cannot occur at exactly the same instant.
+
+When the rate genuinely varies over time in a known way, an inhomogeneous Poisson process with rate $\lambda(t)$ is the appropriate generalisation.
+
 ## Step-by-Step Implementation
 
 ### Step 1: Data Collection and Preparation
@@ -48,6 +68,7 @@ First, we need to gather and prepare our event data. For this example, let's ass
 ```r
 # Load necessary libraries
 library(dplyr)
+library(tidyr)      # complete() lives here, not in dplyr
 library(lubridate)
 
 # Example data: event timestamps
@@ -70,6 +91,8 @@ event_counts <- data %>%
 print(event_counts)
 ```
 
+Note the `complete()` step. Without it, hours with no events are simply absent from the counted data, and every subsequent statistic would be computed only over hours where something happened. That would bias λ upward substantially, because the zeros carry real information about the rate.
+
 ### Step 2: Fitting the Poisson Model
 
 Next, we will calculate the rate parameter (λ) for the Poisson distribution based on our data.
@@ -79,6 +102,8 @@ Next, we will calculate the rate parameter (λ) for the Poisson distribution bas
 lambda_estimate <- mean(event_counts$n)
 cat("Estimated rate (lambda):", lambda_estimate, "events per hour\n")
 ```
+
+The sample mean is not an arbitrary choice here: it is the maximum likelihood estimator for λ. Differentiating the Poisson log-likelihood and solving gives $\hat{\lambda} = \bar{x}$ exactly. Its standard error is $\sqrt{\hat{\lambda}/n}$, which is worth reporting alongside the estimate.
 
 ### Step 3: Using the Model for Predictions
 
@@ -116,10 +141,89 @@ p_value <- 2 * min(cumulative_prob_lower, cumulative_prob_upper)
 cat("Two-sided p-value for observing", observed_count, "events:", p_value, "\n")
 ```
 
+This answers a narrow question: is *this single count* surprising, assuming the Poisson model is correct? It does not test the model itself, which is a different and usually more important question.
+
+## Testing Whether the Data Is Poisson At All
+
+Two checks address the model rather than an individual observation.
+
+The **dispersion test** exploits the mean-equals-variance property directly. Define the dispersion index
+
+$$
+D = \frac{s^2}{\bar{x}} .
+$$
+
+Under a true Poisson process $D \approx 1$. Values well above 1 indicate overdispersion, and values below 1 indicate underdispersion, which arises when events are more regularly spaced than randomness would produce.
+
+```r
+mu  <- mean(event_counts$n)
+s2  <- var(event_counts$n)
+n   <- length(event_counts$n)
+
+dispersion <- s2 / mu
+cat("Dispersion index:", round(dispersion, 3), "\n")
+
+# Formal test: (n-1) * D is approximately chi-square with n-1 df
+stat <- (n - 1) * dispersion
+p_disp <- 2 * min(pchisq(stat, n - 1), 1 - pchisq(stat, n - 1))
+cat("Dispersion test p-value:", round(p_disp, 4), "\n")
+```
+
+The **chi-square goodness-of-fit test** compares the full observed frequency distribution against the expected Poisson frequencies:
+
+```r
+obs_table <- table(factor(event_counts$n, levels = 0:max(event_counts$n)))
+k_vals    <- as.integer(names(obs_table))
+
+expected <- dpois(k_vals, lambda_estimate) * n
+expected[length(expected)] <- expected[length(expected)] +
+  n * (1 - ppois(max(k_vals), lambda_estimate))   # absorb the upper tail
+
+# Pool categories so every expected count is at least 5
+keep <- expected >= 5
+chi_stat <- sum((as.numeric(obs_table)[keep] - expected[keep])^2 / expected[keep])
+df <- sum(keep) - 1 - 1        # minus one for the estimated lambda
+cat("Chi-square:", round(chi_stat, 3), "on", df, "df,",
+    "p =", round(1 - pchisq(chi_stat, df), 4), "\n")
+```
+
+Two details matter. Degrees of freedom lose an extra one because λ was estimated from the same data. And the test is unreliable when expected counts fall below about 5, hence the pooling. With only nine events, as in this toy dataset, neither test has meaningful power; these procedures need a few hundred intervals to be informative.
+
+## When Poisson Fails: Overdispersion
+
+In real count data, overdispersion is the rule rather than the exception. Website visits, insurance claims, and machine faults almost always show variance exceeding the mean, usually because the rate itself varies between periods rather than staying constant.
+
+The standard remedy is the **negative binomial** distribution, which adds a dispersion parameter $\theta$ and allows
+
+$$
+\operatorname{Var}(X) = \mu + \frac{\mu^2}{\theta} .
+$$
+
+As $\theta \to \infty$ this collapses back to the Poisson. Fitting is a one-line change:
+
+```r
+library(MASS)
+fit_pois <- glm(n ~ 1, family = poisson, data = event_counts)
+fit_nb   <- glm.nb(n ~ 1, data = event_counts)
+
+AIC(fit_pois, fit_nb)      # lower AIC indicates the better fit
+```
+
+An excess of zeros beyond even what a negative binomial predicts points to a zero-inflated or hurdle model, where a separate process decides whether any event can occur at all.
+
+Ignoring overdispersion does not usually bias the estimate of the mean rate, but it makes standard errors far too small, producing confidence intervals that are much narrower than the data supports and significance where none exists.
+
 ## Conclusion
 
 In this article, we demonstrated how to use the Poisson distribution to model count events in R. We covered the steps of data preparation, fitting the Poisson model, using the model for predictions, and measuring if an observed count belongs to the distribution. The Poisson distribution provides a useful framework for analyzing count data and making probabilistic predictions about future event occurrences.
 
 By using the p-value, we can assess whether an observed count is consistent with the Poisson distribution. A low p-value suggests that the observed count is unlikely under the assumed Poisson model, indicating it may be an outlier or that the model's assumptions need to be reconsidered.
 
-Feel free to explore further by applying the Poisson distribution to your own count data and experimenting with different λ values to see how they affect the distribution of events. This statistical tool can be particularly valuable in various fields, such as healthcare, finance, and operations research, where count data analysis is essential for decision-making and forecasting.
+The habit worth building is to check dispersion before trusting any Poisson result. It is a single line of code, it catches the most common way this model fails, and it points directly at the alternative that fixes it.
+
+## References
+
+- Cameron, A. C., & Trivedi, P. K. (2013). *Regression Analysis of Count Data* (2nd ed.). Cambridge University Press.
+- Hilbe, J. M. (2011). *Negative Binomial Regression* (2nd ed.). Cambridge University Press.
+- Agresti, A. (2018). *An Introduction to Categorical Data Analysis* (3rd ed.). Wiley.
+- Venables, W. N., & Ripley, B. D. (2002). *Modern Applied Statistics with S* (4th ed.). Springer.
