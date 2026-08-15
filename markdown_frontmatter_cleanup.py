@@ -2,9 +2,9 @@ import os
 import re
 import yaml
 import argparse
+import difflib
 from typing import List
 
-# TODO: Add a dry-run flag to preview changes and report diffs.
 def read_markdown_files_from_folder(folder_path: str) -> List[str]:
     # List all markdown files in the given folder
     return [f for f in os.listdir(folder_path) if f.endswith('.md')]
@@ -60,7 +60,7 @@ def update_file_content(original_content: str, cleaned_frontmatter: dict) -> str
     new_content = re.sub(r'---\n(.*?)\n---', f'---\n{cleaned_frontmatter_str}---', original_content, flags=re.DOTALL)
     return new_content
 
-def process_markdown_files(folder_path: str):
+def process_markdown_files(folder_path: str, dry_run: bool = False):
     markdown_files = read_markdown_files_from_folder(folder_path)
 
     for md_file in markdown_files:
@@ -75,9 +75,21 @@ def process_markdown_files(folder_path: str):
                 cleaned_frontmatter = clean_keywords(frontmatter)
                 new_content = update_file_content(content, cleaned_frontmatter)
 
-                # Write the modified content back to the file if changes were made
-                with open(file_path, 'w', encoding='utf-8') as file:
-                    file.write(new_content)
+                if new_content == content:
+                    continue
+
+                if dry_run:
+                    diff = difflib.unified_diff(
+                        content.splitlines(keepends=True),
+                        new_content.splitlines(keepends=True),
+                        fromfile=file_path,
+                        tofile=f"{file_path} (cleaned)",
+                    )
+                    print("".join(diff), end="")
+                else:
+                    # Write the modified content back to the file if changes were made
+                    with open(file_path, 'w', encoding='utf-8') as file:
+                        file.write(new_content)
 
                 print(f"Processed file: {md_file}")
         except Exception as e:
@@ -86,6 +98,7 @@ def process_markdown_files(folder_path: str):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Clean up markdown front matter")
     parser.add_argument("--path", default="./_posts", help="Target folder")
+    parser.add_argument("--dry-run", action="store_true", help="Preview changes and print diffs without writing")
     args = parser.parse_args()
-    process_markdown_files(args.path)
+    process_markdown_files(args.path, dry_run=args.dry_run)
     print("Processing complete.")

@@ -3,7 +3,6 @@ import re
 import yaml
 import argparse
 
-# TODO: Add a flag to only analyze a single file.
 # Function to extract front matter from markdown file
 def extract_front_matter(content: str):
     front_matter_match = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
@@ -71,38 +70,47 @@ def ensure_single_newline(content):
     return content
 
 # Function to iterate over all markdown files in a folder and process them
-def process_markdown_files(folder_path: str):
+def process_markdown_file(file_path: str):
+    # Read the content of the file
+    with open(file_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # Extract front matter and code snippets
+    front_matter, content_without_front_matter = extract_front_matter(content)
+    snippets_by_language = extract_code_snippets(content_without_front_matter)
+
+    # Update the front matter by appending new languages to tags and existing keywords
+    updated_front_matter = update_front_matter(front_matter, snippets_by_language)
+
+    # Create the new content with updated front matter
+    new_front_matter = yaml.dump(updated_front_matter, default_flow_style=False, allow_unicode=True, width=float('inf')).strip()
+    new_content = f"---\n{new_front_matter}\n---\n\n{content_without_front_matter}"
+
+    new_content = ensure_single_newline(new_content)
+
+    # Write the updated content back to the file
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.write(new_content)
+
+    print(f"Updated front matter in {os.path.basename(file_path)}")
+
+# Function to iterate over all markdown files in a folder and process them
+def process_markdown_files(folder_path: str, file_name: str = None):
+    if file_name:
+        file_path = file_name if os.path.isabs(file_name) else os.path.join(folder_path, file_name)
+        process_markdown_file(file_path)
+        return
+
     for root, dirs, files in os.walk(folder_path):
         for file in files:
             if file.endswith('.md'):
                 file_path = os.path.join(root, file)
-
-                # Read the content of the file
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-
-                # Extract front matter and code snippets
-                front_matter, content_without_front_matter = extract_front_matter(content)
-                snippets_by_language = extract_code_snippets(content_without_front_matter)
-
-                # Update the front matter by appending new languages to tags and existing keywords
-                updated_front_matter = update_front_matter(front_matter, snippets_by_language)
-
-                # Create the new content with updated front matter
-                new_front_matter = yaml.dump(updated_front_matter, default_flow_style=False, allow_unicode=True, width=float('inf')).strip()
-                new_content = f"---\n{new_front_matter}\n---\n\n{content_without_front_matter}"
-
-                new_content = ensure_single_newline(new_content)
-
-                # Write the updated content back to the file
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(new_content)
-
-                print(f"Updated front matter in {file}")
+                process_markdown_file(file_path)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Search code snippets in markdown files")
     parser.add_argument("--path", default="./_posts", help="Target folder")
+    parser.add_argument("--file", help="Only analyze one markdown file, relative to --path unless absolute")
     args = parser.parse_args()
-    process_markdown_files(args.path)
+    process_markdown_files(args.path, file_name=args.file)

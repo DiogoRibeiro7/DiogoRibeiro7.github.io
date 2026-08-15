@@ -7,13 +7,14 @@ const dateObj = new Date();
 const date = `${dateObj.getFullYear()}-${padStart(
   dateObj.getMonth() + 1
 )}-${padStart(dateObj.getDate())}`;
-// TODO: Consider sourcing the banner template from config or frontmatter.
-const banner = `/*!
+
+const defaultBannerTemplate = `/*!
  * Minimal Mistakes Jekyll Theme ${pkg.version} by ${pkg.author}
  * Copyright 2013-${dateObj.getFullYear()} Michael Rose - mademistakes.com | @mmistakes
  * Licensed under ${pkg.license}
  */
 `;
+const banner = pkg.bannerTemplate || defaultBannerTemplate;
 
 if (!script.startsWith('/*!')) {
   fs.writeFileSync(filename, banner + script);

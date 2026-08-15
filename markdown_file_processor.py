@@ -3,7 +3,6 @@ import re
 import string
 import argparse
 
-# TODO: Add a dry-run flag to preview changes without writing.
 # List of stop words to remove from file names
 STOP_WORDS = {
     "and",
@@ -34,7 +33,7 @@ STOP_WORDS = {
     "have",
 }
 
-def rename_markdown_file(file_path: str) -> str:
+def rename_markdown_file(file_path: str, dry_run: bool = False) -> str:
     """
     Renames the markdown file so that the name part after the date is in lowercase,
     spaces are replaced with underscores, stop words are removed, and special symbols
@@ -67,12 +66,14 @@ def rename_markdown_file(file_path: str) -> str:
     new_filename = f"{'-'.join(date_part)}-{formatted_name}.md"
     new_file_path = os.path.join(os.path.dirname(file_path), new_filename)
 
-    # Rename the file
-    os.rename(file_path, new_file_path)
-    print(f"Renamed '{filename}' to '{new_filename}'")
+    if dry_run:
+        print(f"Dry run: would rename '{filename}' to '{new_filename}'")
+    else:
+        os.rename(file_path, new_file_path)
+        print(f"Renamed '{filename}' to '{new_filename}'")
     return new_file_path
 
-def replace_latex_syntax_in_file(file_path: str):
+def replace_latex_syntax_in_file(file_path: str, dry_run: bool = False):
     """
     Reads a markdown file, finds LaTeX delimiters, and replaces them
     with double dollar signs for compatibility with a different LaTeX rendering system.
@@ -88,16 +89,24 @@ def replace_latex_syntax_in_file(file_path: str):
         content = file.read()
 
     # Define the patterns to be replaced
-    content = re.sub(r"\\\\\[", "$$", content)  # Replaces \[ with $$
-    content = re.sub(r"\\\\\]", "$$", content)  # Replaces \] with $$
-    content = re.sub(r"\\\\\(", "$$", content)  # Replaces \( with $$
-    content = re.sub(r"\\\\\)", "$$", content)  # Replaces \) with $$
+    updated_content = re.sub(r"\\\\\[", "$$", content)  # Replaces \[ with $$
+    updated_content = re.sub(r"\\\\\]", "$$", updated_content)  # Replaces \] with $$
+    updated_content = re.sub(r"\\\\\(", "$$", updated_content)  # Replaces \( with $$
+    updated_content = re.sub(r"\\\\\)", "$$", updated_content)  # Replaces \) with $$
+
+    if updated_content == content:
+        return False
+
+    if dry_run:
+        print(f"Dry run: would replace LaTeX syntax in '{file_path}'")
+        return True
 
     # Write the updated content back to the file
     with open(file_path, "w", encoding="utf-8") as file:
-        file.write(content)
+        file.write(updated_content)
+    return True
 
-def process_markdown_files_in_folder(folder_path: str):
+def process_markdown_files_in_folder(folder_path: str, dry_run: bool = False):
     """
     Processes all markdown files in a given folder, renaming them and
     replacing LaTeX delimiters according to the replacement rules.
@@ -116,10 +125,11 @@ def process_markdown_files_in_folder(folder_path: str):
             print(f"Processing file: {file_path}")
 
             # Rename the file
-            new_file_path = rename_markdown_file(file_path)
+            new_file_path = rename_markdown_file(file_path, dry_run=dry_run)
 
             # Replace LaTeX syntax in the renamed file
-            replace_latex_syntax_in_file(new_file_path)
+            target_path = file_path if dry_run else new_file_path
+            replace_latex_syntax_in_file(target_path, dry_run=dry_run)
 
             print(f"Finished processing file: {new_file_path}")
 
@@ -127,5 +137,6 @@ def process_markdown_files_in_folder(folder_path: str):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process markdown files in a folder")
     parser.add_argument("--path", default="./_posts", help="Target folder")
+    parser.add_argument("--dry-run", action="store_true", help="Preview changes without writing files")
     args = parser.parse_args()
-    process_markdown_files_in_folder(args.path)
+    process_markdown_files_in_folder(args.path, dry_run=args.dry_run)
