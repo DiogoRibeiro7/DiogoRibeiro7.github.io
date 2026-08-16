@@ -1,15 +1,15 @@
 # main links
 main:
-  - title: "Posts"
+  - title: "Home"
     url: /
-  - title: "by Category"
-    url: /categories/
-  - title: "by Tag"
-    url: /tags/
-  - title: "by Year"
-    url: /year-archive/
   - title: "About"
     url: /about/
+  - title: "Statistics"
+    url: /statistics/
+  - title: "Machine Learning"
+    url: /machine-learning/
+  - title: "Time Series"
+    url: /time-series/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
@@ -20,5 +20,5 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
-  - title: "Packages"
+  - title: "Open Source"
     url: /packages/

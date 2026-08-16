@@ -11,6 +11,11 @@ tags:
 - MLOps
 - Model Monitoring
 author_profile: false
+related_posts:
+- /machine-learning/detect_data_drift_machine_learning_models/
+- /machine-learning/detect_multivariate_data_drift/
+- /machine-learning/techniques_moniitoring_managing_model_drift_production/
+- /machine-learning/prevalence_shift_base_rate_drift/
 seo_title: Data Drift vs. Concept Drift in Machine Learning
 seo_description: The differences between data drift and concept drift, how each affects models in production, and how to detect them.
 excerpt: >-

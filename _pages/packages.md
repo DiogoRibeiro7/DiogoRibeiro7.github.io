@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Packages
+title: Projects & Packages
 permalink: /packages/
 author_profile: true
 header:
@@ -11,13 +11,17 @@ header:
   twitter_image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_1.jpg
 seo_type: article
+seo_title: "Open Source Projects and Packages"
+seo_description: "R and Python packages, documentation and project notes by Diogo Ribeiro, including survival analysis and causal inference tools."
 ---
 
-# R Packages
+## Open Source Projects & Packages
 
-This section contains documentation for R packages I've developed, demonstrating best practices in R package development, documentation, and testing.
+This page collects R and Python projects that are more useful as technical assets than as generic blog posts: problem framing, methods, code and documentation.
 
-## Available Packages
+## R Packages
+
+### Available Packages
 
 ### [myrpackage](/packages/myrpackage/)
 
@@ -50,11 +54,11 @@ Test (un)confoundedness by comparing an effect from an RCT-like dataset to the s
 
 --------------------------------------------------------------------------------
 
-# Python Packages
+## Python Packages
 
 This section includes Python libraries I've developed or contributed to, with a focus on statistical modeling, survival analysis, and reproducibility.
 
-## Available Packages
+### Available Packages
 
 ### [genSurvPy](/packages/gensurvpy/)
 

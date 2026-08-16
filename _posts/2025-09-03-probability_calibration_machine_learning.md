@@ -13,6 +13,11 @@ tags:
 - Confidence Intervals
 
 author_profile: false
+related_posts:
+- /statistics/conformal_prediction_operational_risk/
+- /machine-learning/selective_prediction_abstention_machine_learning/
+- /machine-learning/temporal_validation_machine_learning/
+- /machine-learning/slice_based_model_evaluation_machine_learning/
 seo_title: 'Probability Calibration: Classical to Venn-ABERS'
 seo_description: 'A guide to probability calibration in machine learning: Platt scaling, modern approaches, and Venn-ABERS predictors.'
 excerpt: "Explore the evolution of probability calibration methods in machine learning, from histogram binning to Venn–ABERS predictors, with a deep dive into theory, implementation, and applications."

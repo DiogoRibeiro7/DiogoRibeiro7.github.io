@@ -37,6 +37,11 @@ tags:
 - Hypothesis Testing
 - MLOps
 title: How to Detect Data Drift in Machine Learning Models
+related_posts:
+- /machine-learning/data_drift_concept_drift_understanding_differences_implications/
+- /machine-learning/detect_multivariate_data_drift/
+- /machine-learning/monitoring_drift/
+- /machine-learning/prevalence_shift_base_rate_drift/
 ---
 
 Data drift—the change in the distribution of input data over time—is one of the most common and insidious causes of model performance degradation in production environments. A model trained on a historical dataset might face real-world data that no longer reflects past patterns, leading to inaccurate predictions and diminished business value.

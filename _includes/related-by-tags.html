@@ -10,34 +10,48 @@
   so this stays linear per page rather than scanning every post per post.
 {%- endcomment -%}
 
-{%- assign candidates = "" | split: "" -%}
-{%- for t in page.tags limit: 4 -%}
-  {%- assign bucket = site.tags[t] -%}
-  {%- if bucket -%}
-    {%- assign candidates = candidates | concat: bucket -%}
-  {%- endif -%}
-{%- endfor -%}
-{%- assign cat = page.categories.first -%}
-{%- if cat -%}
-  {%- assign bucket = site.categories[cat] -%}
-  {%- if bucket -%}
-    {%- assign candidates = candidates | concat: bucket -%}
-  {%- endif -%}
+{%- assign related = "" | split: "" -%}
+
+{%- if page.related_posts -%}
+  {%- for related_url in page.related_posts -%}
+    {%- for post in site.posts -%}
+      {%- if post.url == related_url and related.size < 4 -%}
+        {%- assign related = related | push: post -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
 {%- endif -%}
 
-{%- comment -%}
-  A post appearing under several of this page's tags shows up more than once;
-  keeping the first occurrences before uniq means the most-overlapping posts
-  survive, which is the ranking we want.
-{%- endcomment -%}
-{%- assign candidates = candidates | uniq -%}
-
-{%- assign related = "" | split: "" -%}
-{%- for post in candidates -%}
-  {%- if post.url != page.url and related.size < 4 -%}
-    {%- assign related = related | push: post -%}
+{%- if related.size == 0 -%}
+  {%- assign candidates = "" | split: "" -%}
+  {%- for t in page.tags limit: 4 -%}
+    {%- assign bucket = site.tags[t] -%}
+    {%- if bucket -%}
+      {%- assign candidates = candidates | concat: bucket -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign cat = page.categories.first -%}
+  {%- if cat -%}
+    {%- assign bucket = site.categories[cat] -%}
+    {%- if bucket -%}
+      {%- assign candidates = candidates | concat: bucket -%}
+    {%- endif -%}
   {%- endif -%}
-{%- endfor -%}
+
+  {%- comment -%}
+    A post appearing under several of this page's tags shows up more than once;
+    keeping the first occurrences before uniq means the most-overlapping posts
+    survive, which is the ranking we want.
+  {%- endcomment -%}
+  {%- assign candidates = candidates | uniq -%}
+
+  {%- for post in candidates -%}
+    {%- if post.url != page.url and related.size < 4 -%}
+      {%- assign related = related | push: post -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
 
 {%- if related.size > 0 -%}
 <div class="page__related">

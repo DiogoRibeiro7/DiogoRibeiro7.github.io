@@ -1,0 +1,24 @@
+{%- assign limit = include.limit | default: 8 -%}
+{%- assign shown = 0 -%}
+{%- assign category = include.category -%}
+{%- assign tag = include.tag -%}
+
+<div class="entries-list">
+{%- for post in site.posts -%}
+  {%- assign matches = false -%}
+  {%- if category and post.categories contains category -%}
+    {%- assign matches = true -%}
+  {%- endif -%}
+  {%- if tag and post.tags contains tag -%}
+    {%- assign matches = true -%}
+  {%- endif -%}
+  {%- if matches and shown < limit -%}
+    {%- include archive-single.html -%}
+    {%- assign shown = shown | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+</div>
+
+{%- if shown == 0 -%}
+<p>No posts found for this section yet.</p>
+{%- endif -%}
