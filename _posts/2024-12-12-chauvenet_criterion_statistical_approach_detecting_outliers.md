@@ -32,11 +32,10 @@ summary: Chauvenet's Criterion is a robust statistical method for identifying ou
   deviations, assess probability thresholds, and use the criterion to improve the
   quality of your data analysis.
 tags:
-- Chauvenet's criterion
-- Outlier detection
-- Statistical methods
-- Hypothesis testing
-- Data analysis
+- Anomaly Detection
+- Statistical Modeling
+- Hypothesis Testing
+- Data Analysis
 - Python
 - R
 title: 'Chauvenet''s Criterion: A Statistical Approach to Detecting Outliers'

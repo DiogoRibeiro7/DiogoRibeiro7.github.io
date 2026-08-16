@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Research Methodology
+- Data Science
 classes: wide
 date: '2024-07-09'
 header:
@@ -21,6 +21,8 @@ keywords:
 - Statistical reporting
 - Scientific analysis
 - Error representation in research
+redirect_from:
+- '/research methodology/understanding_use_error_bars_scientific_reporting/'
 seo_description: How error bars represent variability, standard deviation, standard error, and confidence intervals in scientific reporting.
 seo_title: 'Understanding Error Bars: A Guide to Scientific Reporting'
 seo_type: article
@@ -28,17 +30,9 @@ summary: This article explores the significance of error bars in scientific repo
   focusing on their use in representing variability, standard deviation, standard
   error, and confidence intervals in research findings.
 tags:
-- Research paper writing
-- Academic writing tips
-- Thesis statement development
-- Research methodology
-- Error bars
-- Reporting
-- Findings
-- Science
-- Standard deviation
-- Standard error
-- Confidence interval
+- Research Methodology
+- Descriptive Statistics
+- Confidence Intervals
 title: Understanding the Use of Error Bars in Scientific Reporting
 ---
 

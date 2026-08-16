@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Mathematical Economics
+- Economics
 classes: wide
 date: '2024-11-20'
 excerpt: The rich are getting richer while the poor remain poor. This article dives into the physics-based models that explain the inherent inequality in wealth distribution.
@@ -32,31 +32,19 @@ keywords:
 - Boltzmann-Gibbs Distribution
 - Game Theory
 - Endogenous Growth
+redirect_from:
+- '/mathematical economics/the_rich_get_richer_the_physics_of_wealth_distribution_and_inequality/'
 seo_description: An in-depth exploration of the economic and physical models explaining wealth distribution, focusing on Pareto's Law and the emerging field of econophysics.
 seo_title: The Physics of Wealth Distribution
 seo_type: article
 summary: This article examines the growing inequality between the rich and poor, utilizing models from physics and econophysics to explain how wealth distribution follows specific statistical patterns. It discusses key findings from physicists and economists and their implications for future policy and societal structure.
 tags:
-- Wealth distribution
-- Inequality
-- Econophysics
-- Pareto law
-- Income disparity
-- Physics
-- Social Sciences
+- Probability
+- Economics
+- Mathematical Modeling
 - Python
 - Data Science
-- Wealth Inequality
-- Pareto Distribution
-- Stochastic Models
-- Agent-Based Models
-- Markov Chains
-- Lorenz Curve
-- Gini Coefficient
-- Wealth Distribution Models
-- Differential Equations
-- Game Theory
-- Endogenous Growth Models
+- Artificial Intelligence
 title: 'The Rich Get Richer: The Physics of Wealth Distribution and Inequality'
 ---
 

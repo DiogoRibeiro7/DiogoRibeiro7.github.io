@@ -23,10 +23,8 @@ seo_title: 'Sophie Germain: Trailblazer in Number Theory and Elasticity'
 seo_type: article
 summary: Sophie Germain overcame significant social barriers in the early 19th century to become a leading mathematician in number theory and elasticity. This article delves into her personal struggles, her notable achievements in mathematics, and her legacy in scientific history.
 tags:
-- Sophie germain
-- Number theory
-- Elasticity
-- Women in science
+- Number Theory
+- Biographies
 title: 'Sophie Germain: Pioneer in Number Theory and Elasticity'
 ---
 

@@ -2,9 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Statistics
-- Data Science
-- Medical Research
 classes: wide
 date: '2024-06-11'
 header:
@@ -14,21 +11,17 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_7.jpg
+redirect_from:
+- '/mathematics/statistics/data science/medical research/survival_analysis/'
 seo_description: Parametric and non-parametric approaches to estimating survival functions, their assumptions, and where each applies.
 seo_title: 'Estimating Survival Functions: Two Approaches'
 seo_type: article
 subtitle: A Comprehensive Guide to Survival Function Estimation Methods
 tags:
-- Survival analysis
-- Kaplan-meier estimator
-- Exponential survival function
-- Parametric methods
-- Non-parametric methods
-- Censoring
-- Customer churn
-- Lifetime value
-- Curve fitting
-- Medical statistics
+- Survival Analysis
+- Statistical Modeling
+- Nonparametric Methods
+- Customer Analytics
 - Python
 title: 'Estimating Survival Functions: Parametric and Non-Parametric Approaches'
 ---

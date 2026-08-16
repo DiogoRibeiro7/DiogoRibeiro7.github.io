@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- HealthTech
+- Data Science
 classes: wide
 date: '2024-11-01'
 excerpt: Data science is revolutionizing chronic disease management among the elderly
@@ -20,6 +20,8 @@ keywords:
 - Elderly care
 - Data-driven healthcare
 - Personalized medicine
+redirect_from:
+- '/healthtech/data_driven_elderly_care/'
 seo_description: How predictive analytics helps manage chronic diseases such as diabetes, arthritis, and cardiovascular conditions in older adults.
 seo_title: Data Science for Managing Chronic Diseases in the Elderly
 seo_type: article
@@ -28,10 +30,8 @@ summary: Data-driven approaches are improving the management of chronic diseases
   allow healthcare providers to monitor disease progression, optimize medication regimens,
   and tailor treatment plans based on real-time individual health data.
 tags:
-- Chronic disease management
-- Predictive analytics
-- Elderly care
-- Healthcare technology
+- Healthcare
+- Machine Learning
 title: Data-Driven Approaches to Managing Chronic Diseases in the Elderly
 ---
 

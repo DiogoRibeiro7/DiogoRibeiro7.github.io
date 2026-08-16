@@ -23,11 +23,8 @@ seo_title: David Hilbert and the Hilbert Problems
 seo_type: article
 summary: David Hilbert revolutionized mathematics with his famous 'Hilbert Problems,' foundational contributions in algebra and geometry, and efforts to formalize mathematics through logic. His ideas shaped the course of mathematical thought in the 20th century.
 tags:
-- David hilbert
-- Hilbert problems
-- Algebra
 - Geometry
-- Mathematical logic
+- Mathematical Modeling
 title: 'David Hilbert: The Formulator of Mathematical Problems'
 ---
 

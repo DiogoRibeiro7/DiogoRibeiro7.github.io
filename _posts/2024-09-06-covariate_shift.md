@@ -28,11 +28,9 @@ summary: This article covers strategies for managing covariate shifts in machine
   and implement feature engineering to address data drift and ensure continued model
   performance.
 tags:
-- Covariate shift
-- Model monitoring
-- Feature engineering
-- Model adaptation
-- Data drift
+- Data Drift
+- Model Monitoring
+- Feature Engineering
 title: Managing Covariate Shifts in Machine Learning Models
 ---
 

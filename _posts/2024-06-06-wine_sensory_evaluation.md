@@ -1,13 +1,7 @@
 ---
 author_profile: false
 categories:
-- Wine Science
-- Sensory Evaluation
-- Data Analysis
-- Oenology
-- Food Science
-- Consumer Behavior
-- Marketing
+- Data Science
 classes: wide
 date: '2024-06-06'
 header:
@@ -17,20 +11,17 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_8.jpg
+redirect_from:
+- '/wine science/sensory evaluation/data analysis/oenology/food science/consumer behavior/marketing/wine_sensory_evaluation/'
 seo_description: How wine sensory evaluation works, from sensory lexicons and emotional response to the statistical techniques used to analyze results.
 seo_title: Wine Sensory Evaluation and Statistical Analysis
 seo_type: article
 tags:
-- Sensory lexicon
-- Wine tasting
-- Emotions
-- Consumer preferences
-- Descriptive statistics
-- Multivariate analysis
-- Pca
-- Anova
-- Regression analysis
-- Wine quality
+- Descriptive Statistics
+- Multivariate Analysis
+- Dimensionality Reduction
+- Hypothesis Testing
+- Regression
 title: 'Wine Sensory Evaluation: From Sensory Lexicons and Emotions to Data Statistical
   Analysis Techniques'
 ---

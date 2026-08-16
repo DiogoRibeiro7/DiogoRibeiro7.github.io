@@ -26,9 +26,7 @@ summary: This article discusses how to address fairness, accountability, and tra
   when building machine learning solutions.
 tags:
 - Ethics
-- Responsible ai
-- Bias
-- Machine learning
+- Machine Learning
 title: Why Data Ethics Matters in Machine Learning
 ---
 

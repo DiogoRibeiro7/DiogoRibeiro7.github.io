@@ -25,12 +25,8 @@ seo_title: 'Emmy Noether: Abstract Algebra and Physics'
 seo_type: article
 summary: Discover the life and legacy of Emmy Noether, a visionary mathematician whose contributions to algebra and theoretical physics continue to shape modern science.
 tags:
-- Emmy Noether
-- Abstract Algebra
-- Noether's Theorem
-- Women in Science
-- Mathematics
-- Physics
+- Biographies
+- Mathematical Modeling
 title: 'Emmy Noether: Revolutionizing Abstract Algebra and Theoretical Physics'
 ---
 

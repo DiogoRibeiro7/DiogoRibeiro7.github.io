@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Mathematical Economics
+- Economics
 classes: wide
 date: '2020-07-26'
 excerpt: A guide to solving DSGE models numerically, focusing on perturbation techniques and finite difference methods used in economic modeling.
@@ -24,24 +24,18 @@ keywords:
 - Python
 - Fortran
 - C
+redirect_from:
+- '/mathematical economics/solving_dsge_models_numerically/'
 seo_description: Explore numerical methods for solving DSGE models, including perturbation techniques and finite difference methods, essential tools in quantitative economics.
 seo_title: Solving DSGE Models Numerically
 seo_type: article
 summary: This article covers numerical techniques for solving DSGE models, particularly perturbation and finite difference methods, essential in analyzing economic dynamics.
 tags:
-- Dsge models
-- Numerical methods
-- Perturbation techniques
-- Finite difference methods
 - Economics
-- Quantitative analysis
-- Computational methods
+- Numerical Methods
+- Mathematical Modeling
 - Python
-- Fortran
-- C
-- python
-- fortran
-- c
+- Programming
 title: 'Solving DSGE Models Numerically: Perturbation Techniques and Finite Difference Methods'
 ---
 

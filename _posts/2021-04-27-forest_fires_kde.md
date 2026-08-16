@@ -29,15 +29,10 @@ seo_title: GIS-Based Forest Fire Hotspot Identification
 seo_type: article
 summary: This article explores the application of GIS-based techniques, such as Kernel Density Estimation (KDE), Getis-Ord Gi*, and Anselin Local Moran's I, in identifying forest fire hotspots. The study focuses on Belait District, Brunei Darussalam, and validates hotspot results using contributory factors like population density, precipitation, elevation, and vegetation cover.
 tags:
-- Anselin local moran’s i
-- Gis
-- Forest fires
-- Getis-ord gi*
+- Climate and Environment
 - Python
-- Kernel density estimation
-- Bash
-- bash
-- python
+- Statistical Modeling
+- Programming
 title: 'GIS-Based Forest Fire Hotspot Identification: A Comprehensive Approach Using Contributory Factors'
 ---
 

@@ -25,9 +25,8 @@ summary: This article provides a detailed algorithmic approach to building a Lin
   Regression model from scratch, covering theory, Python code implementation, and
   performance evaluation.
 tags:
-- Linear regression
+- Regression
 - Python
-- Normal equation
 title: 'Building Linear Regression from Scratch: A Detailed Algorithmic Approach'
 ---
 

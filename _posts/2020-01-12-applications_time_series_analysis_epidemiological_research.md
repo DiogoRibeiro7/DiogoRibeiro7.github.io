@@ -28,11 +28,9 @@ summary: Explore how time series analysis is used in epidemiological research to
   disease transmission, detect outbreaks, and predict future cases. This article covers
   techniques like ARIMA, moving averages, and their applications in public health.
 tags:
-- Time series analysis
+- Time Series
 - Epidemiology
-- Disease modeling
-- Outbreak detection
-- Predictive analytics
+- Machine Learning
 title: Applications of Time Series Analysis in Epidemiological Research
 ---
 

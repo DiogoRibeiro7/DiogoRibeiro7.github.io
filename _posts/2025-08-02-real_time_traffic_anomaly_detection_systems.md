@@ -1,17 +1,14 @@
 ---
+redirect_from:
+- '/transportation/artificial intelligence/data science/real_time_traffic_anomaly_detection_systems/'
 title: "Real-Time Traffic Anomaly Detection Systems: Advanced Incident Detection and Response"
 categories:
-- Transportation
-- Artificial Intelligence
-- Data Science
+- Environment
 
 tags:
-- Traffic Anomaly Detection
-- Incident Detection
-- Smart Transportation
-- Real-Time Analytics
+- Anomaly Detection
+- Transportation
 - Machine Learning
-- Statistical Process Control
 
 author_profile: false
 seo_title: Traffic Anomaly Detection for Smart Transport

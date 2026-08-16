@@ -34,10 +34,9 @@ seo_description: 'The mathematical foundations of machine learning: classificati
 seo_title: 'Mathematics of Machine Learning: Key Concepts and Methods'
 seo_type: article
 tags:
-- Machine learning
-- Mathematical models
+- Machine Learning
+- Mathematical Modeling
 - Statistics
-- Algorithms
 title: 'Mathematics of Machine Learning: A Comprehensive Exploration'
 ---
 

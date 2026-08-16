@@ -25,10 +25,9 @@ seo_type: article
 summary: This article breaks down the essential difference between correlation and causation, covering how correlation coefficients measure relationship strength and how controlled experiments establish causality.
 tags:
 - Correlation
-- Causation
-- Data analysis
+- Data Analysis
 - Statistics
-- Rust
+- Programming
 - R
 title: 'Correlation vs. Causation: Understanding Relationships Between Variables'
 ---

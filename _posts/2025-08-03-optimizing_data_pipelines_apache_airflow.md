@@ -1,18 +1,15 @@
 ---
+redirect_from:
+- '/data engineering/workflow orchestration/devops/optimizing_data_pipelines_apache_airflow/'
 title: >-
   Optimizing Data Pipelines with Apache Airflow: Building Scalable,
   Fault-Tolerant Data Infrastructure
 categories:
-  - Data Engineering
-  - Workflow Orchestration
-  - DevOps
+- Programming
 tags:
-  - Apache Airflow
-  - Data Pipelines
-  - Workflow Automation
-  - DAG Optimization
-  - Kubernetes
-  - Celery Executor
+- Data Engineering
+- MLOps
+- Optimization
 author_profile: false
 seo_title: Optimizing Apache Airflow for Data Pipelines
 seo_description: 'Designing scalable, fault-tolerant data pipelines with Apache Airflow: executor benchmarking, DAG patterns, and observability.'

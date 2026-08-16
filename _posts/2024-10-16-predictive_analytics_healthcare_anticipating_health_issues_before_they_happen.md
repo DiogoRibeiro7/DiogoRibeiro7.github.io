@@ -28,11 +28,9 @@ summary: This article provides an in-depth exploration of predictive analytics i
   to anticipate health problems before they arise, with a focus on hospital readmissions,
   disease outbreaks, and chronic disease management.
 tags:
-- Healthcare analytics
-- Predictive analytics
-- Data science
-- Machine learning
-- Chronic disease management
+- Healthcare
+- Machine Learning
+- Data Science
 title: 'Predictive Analytics in Healthcare: Anticipating Health Issues Before They
   Happen'
 ---

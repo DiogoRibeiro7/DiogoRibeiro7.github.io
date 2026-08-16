@@ -30,12 +30,9 @@ summary: This article dives into adaptive performance estimation techniques in m
   and Predictive Adaptive Performance Estimation (PAPE). It covers their roles in
   detecting data drift, covariate shift, and maintaining optimal model performance.
 tags:
-- Machine learning
-- Performance monitoring
-- Data drift
-- Covariate shift
-- Cbpe
-- Pape
+- Machine Learning
+- Model Monitoring
+- Data Drift
 title: 'Adaptive Performance Estimation in Machine Learning: From CBPE to PAPE'
 ---
 

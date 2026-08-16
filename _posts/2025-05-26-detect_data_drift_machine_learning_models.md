@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Model Monitoring
 classes: wide
 date: '2025-05-26'
 excerpt: Data drift is one of the primary threats to model reliability in production.
@@ -22,6 +21,8 @@ keywords:
 - Chi-square test
 - Evidently ai
 - Nannyml
+redirect_from:
+- '/machine learning/model monitoring/detect_data_drift_machine_learning_models/'
 seo_description: How to detect data drift with KL Divergence and PSI, and tools like NannyML and Evidently AI for maintaining accuracy in production.
 seo_title: 'Detecting Data Drift in Machine Learning: Methods and Tools'
 seo_type: article
@@ -29,11 +30,10 @@ summary: Explore how to detect data drift in machine learning systems, including
   techniques like KL Divergence, PSI, and Chi-square tests, as well as practical tools
   like NannyML and Evidently AI.
 tags:
-- Data drift
-- Drift detection
-- Model monitoring
-- Statistical tests
-- Ml ops
+- Data Drift
+- Model Monitoring
+- Hypothesis Testing
+- MLOps
 title: How to Detect Data Drift in Machine Learning Models
 ---
 

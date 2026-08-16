@@ -33,27 +33,12 @@ seo_type: article
 subtitle: Understanding and Applying MCC in Binary Classification
 summary: This article provides a comprehensive explanation of Matthew’s Correlation Coefficient (MCC), its importance in binary classification, and how it compares to other performance metrics like accuracy, precision, and recall.
 tags:
-- Mcc
-- Evaluation metrics
-- Binary classification
-- Machine learning
-- Statistical methods
-- Confusion matrix
-- Predictive modeling
-- Performance metrics
-- Data analysis
+- Model Evaluation
+- Classification
+- Machine Learning
+- Statistical Modeling
+- Data Analysis
 - Python
-- Fortran
-- Sh
-- C
-- Python
-- Fortran
-- Sh
-- C
-- python
-- fortran
-- sh
-- c
 title: 'Matthew’s Correlation Coefficient (MCC): A Detailed Explanation'
 ---
 

@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Data Science
-- Artificial Intelligence
 classes: wide
 date: '2024-08-02'
 header:
@@ -13,13 +11,14 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
   twitter_image: /assets/images/data_science_8.jpg
+redirect_from:
+- '/machine learning/data science/artificial intelligence/Drift_tecting/'
 seo_description: How to detect concept drift when real-world data stops matching the stationary distribution your model assumed.
 seo_title: Detecting Concept Drift in Machine Learning
 seo_type: article
 tags:
-- Concept drift
-- Incremental learning
-- Drift detection method
+- Data Drift
+- Supervised Learning
 title: Detecting Concept Drift in Machine Learning
 ---
 

@@ -1,8 +1,7 @@
 ---
 author_profile: false
 categories:
-- Clinical Research
-- Biostatistics
+- Healthcare
 classes: wide
 date: '2024-09-24'
 excerpt: A complete guide to writing the sample size justification section for your
@@ -21,6 +20,8 @@ keywords:
 - Statistical power
 - Type 1 and type 2 errors
 - Biostatistics in clinical research
+redirect_from:
+- '/clinical research/biostatistics/sample_size_clinical/'
 seo_description: Learn how to write a comprehensive sample size justification in your
   clinical protocol, ensuring adequate power and statistical rigor in your trial design.
 seo_title: Sample Size Justification for Clinical Protocols
@@ -34,11 +35,10 @@ summary: Proper sample size justification is a critical component of clinical tr
   standards while minimizing the risk of invalid results due to inadequate sample
   sizes.
 tags:
-- Sample size justification
-- Clinical protocol
-- Biostatistics
-- Clinical trial design
-- Statistical power
+- Sample Size
+- Healthcare
+- Statistical Modeling
+- Experimental Design
 title: How to Write the Sample Size Justification Section in Your Clinical Protocol
 ---
 

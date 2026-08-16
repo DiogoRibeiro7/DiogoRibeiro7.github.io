@@ -1,14 +1,13 @@
 ---
+redirect_from:
+- '/research methods/preregistering_structural_equation_modeling/'
 title: >-
   Preregistering Structural Equation Modeling (SEM) Studies: A Comprehensive
   Guide
 categories:
-  - Research Methods
+- Statistics
 tags:
-  - SEM
-  - Preregistration
-  - Open Science
-  - Reproducibility
+- Research Methodology
 author_profile: false
 seo_title: Preregistering SEM Studies
 seo_description: 'How to preregister SEM studies: software environments, modeling decisions, fit criteria, and contingency plans for reproducibility.'

@@ -28,12 +28,8 @@ summary: This article covers the importance of understanding linear assumptions 
   machine learning models, which models assume linearity, and what steps can be taken
   when the assumption is not met.
 tags:
-- Linear models
-- Logistic regression
-- Lda
-- Principal component regression
-- Feature engineering
-- House price prediction
+- Regression
+- Feature Engineering
 title: 'Linear Relationships in Machine Learning Models: Why They Matter'
 ---
 

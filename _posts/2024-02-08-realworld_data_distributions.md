@@ -30,16 +30,10 @@ seo_title: 'Clustering Explained: How Algorithms Group Data'
 seo_type: article
 subtitle: A Dive into Data's Inner Circles
 tags:
-- Data science
-- Machine learning
-- Clustering algorithms
-- K-means clustering
-- Hierarchical clustering
-- Dbscan
-- Spectral clustering
-- Data analysis
-- Pattern recognition
-- Bioinformatics
+- Data Science
+- Machine Learning
+- Clustering
+- Data Analysis
 title: Mysteries of Clustering
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

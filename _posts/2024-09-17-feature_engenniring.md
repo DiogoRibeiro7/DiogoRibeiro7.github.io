@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Data Science
 classes: wide
 date: '2024-09-17'
 excerpt: Feature engineering is crucial in machine learning, but it's easy to make
@@ -27,13 +26,15 @@ keywords:
 - Robust feature engineering
 - Data cleaning for machine learning
 - Python
+redirect_from:
+- '/machine learning/data science/feature_engenniring/'
 seo_description: Five common feature engineering mistakes, including data leakage and over-engineering, and how to avoid them.
 seo_title: 5 Common Feature Engineering Mistakes to Avoid
 seo_type: article
 tags:
-- Feature engineering
-- Data preprocessing
-- Machine learning
+- Feature Engineering
+- Data Quality
+- Machine Learning
 - Python
 title: 5 Common Mistakes in Feature Engineering and How to Avoid Them
 ---

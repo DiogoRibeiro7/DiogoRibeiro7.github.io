@@ -28,11 +28,8 @@ summary: This article provides a comprehensive comparison between the Mann-Whitn
   U test is preferred over the parametric t-test, especially in the case of non-normal
   distributions, and provides practical examples of both tests.
 tags:
-- Mann-whitney u test
-- Independent t-test
-- Non-parametric tests
-- Parametric tests
-- Hypothesis testing
+- Hypothesis Testing
+- Nonparametric Methods
 title: 'Mann-Whitney U Test vs. Independent T-Test: Non-Parametric Alternatives'
 ---
 

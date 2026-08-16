@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Optimization
+- Mathematics
 classes: wide
 date: '2021-12-25'
 excerpt: Discover how data science enhances supply chain optimization and industrial
@@ -29,13 +29,15 @@ keywords:
 - Resource allocation
 - Supply chain optimization
 - Data science in supply chain
+redirect_from:
+- '/optimization/suply_chain/'
 seo_description: How data science drives supply chain optimization and industrial network analysis through predictive analytics, IoT, and graph theory.
 seo_title: Data-Driven Supply Chain Optimization
 seo_type: article
 tags:
-- Industrial network analysis
-- Data science
-- Supply chain optimization
+- Graph Theory
+- Data Science
+- Supply Chain
 title: Supply Chain Optimization and Industrial Network Analysis Using Data Science
 ---
 

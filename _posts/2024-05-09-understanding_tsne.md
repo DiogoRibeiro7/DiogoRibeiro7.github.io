@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Statistics
-- Machine Learning
 classes: wide
 date: '2024-05-09'
 header:
@@ -13,32 +11,19 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_3.jpg
+redirect_from:
+- '/mathematics/statistics/machine learning/understanding_tsne/'
 seo_description: How t-SNE reduces high-dimensional data for visualization, covering parameter tuning and how to interpret the results.
 seo_title: Understanding t-SNE for Dimensionality Reduction
 seo_type: article
 subtitle: A Guide to Visualizing High-Dimensional Data
 tags:
-- T-sne
-- Dimensionality reduction
-- High-dimensional data visualization
-- Machine learning techniques
-- Data science
-- Stochastic neighbor embedding
-- Visualizing complex data
-- T-sne algorithms
-- Bioinformatics visualization
-- Multidimensional scaling
-- Feature extraction
-- Big data analytics
-- T-sne in python
-- T-sne in r
-- Unsupervised learning
-- Artificial intelligence
-- Clustering high-dimensional data
-- Neural network visualization
-- Genomics data analysis
-- Interactive data visualization
-- Python
+- Dimensionality Reduction
+- Data Visualization
+- Machine Learning
+- Data Science
+- Probability
+- Feature Engineering
 title: Understanding t-SNE
 ---
 

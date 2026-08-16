@@ -24,11 +24,8 @@ seo_title: Machine Learning and Climate Change
 seo_type: article
 summary: This article examines the role of machine learning in predicting climate change impacts, focusing on extreme weather events, sea-level rise, and biodiversity loss.
 tags:
-- Machine learning
-- Climate change
-- Predictive analytics
-- Extreme weather
-- Biodiversity
+- Machine Learning
+- Climate and Environment
 title: The Role of Machine Learning in Predicting Climate Change Impacts
 ---
 

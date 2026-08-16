@@ -29,10 +29,8 @@ summary: Machine Learning Engineering (MLE) and MLOps are two interconnected yet
   of both roles, highlighting where they overlap and where they diverge, especially
   in real-world machine learning projects.
 tags:
-- Machine learning engineering
-- Mlops
-- Ml infrastructure
-- Model deployment
+- Machine Learning
+- MLOps
 title: 'Differentiating Machine Learning Engineering and MLOps: A Fine Line Between
   Two Critical Roles'
 ---

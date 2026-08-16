@@ -2,9 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Data Science
-- Survival Analysis
-- Hypothesis Testing
 classes: wide
 date: '2024-07-04'
 header:
@@ -14,19 +11,14 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_7.jpg
+redirect_from:
+- '/statistics/data science/survival analysis/hypothesis testing/Logram_test/'
 seo_description: How the logrank test compares survival distributions between two groups, and why it matters in survival analysis.
 seo_title: The Logrank Test in Survival Analysis
 seo_type: article
 tags:
-- Logrank test
-- Survival probability
-- Chi-square test
-- Censoring
-- Cox proportional hazards model
-- Statistical significance
-- Observed events
-- Expected events
-- Hypothesis testing
+- Survival Analysis
+- Hypothesis Testing
 - Python
 - R
 title: Understanding the Logrank Test in Survival Analysis

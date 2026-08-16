@@ -1,16 +1,15 @@
 ---
+redirect_from:
+- '/statistics/regression/uncertainty-quantification/the_impossible_dream_regression_confidence_bands/'
 title: "The Impossible Dream: Why Regression Confidence Bands Can't Exist Without Assumptions"
 categories:
-- statistics
-- regression
-- uncertainty-quantification
+- Statistics
 
 tags:
-- confidence-intervals
-- nonparametric-regression
-- statistical-inference
-- assumptions
-- conformal-prediction
+- Confidence Intervals
+- Nonparametric Methods
+- Statistical Modeling
+- Model Evaluation
 
 author_profile: false
 seo_title: Why Regression Confidence Bands Need Assumptions

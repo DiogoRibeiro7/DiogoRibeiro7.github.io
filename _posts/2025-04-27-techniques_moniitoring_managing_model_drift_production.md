@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Model Monitoring
 classes: wide
 date: '2025-04-27'
 excerpt: Model drift is inevitable in production ML systems. This guide explores monitoring
@@ -22,6 +21,8 @@ keywords:
 - Seldon
 - Tfx
 - Retraining models
+redirect_from:
+- '/machine learning/model monitoring/techniques_moniitoring_managing_model_drift_production/'
 seo_description: Best practices and tools for monitoring model performance, detecting drift, and retraining models with MLflow, Seldon, and TFX.
 seo_title: Monitoring and Managing Model Drift in Production ML Systems
 seo_type: article
@@ -29,12 +30,9 @@ summary: This article outlines practical techniques for managing model drift in 
   learning production environments, including real-time monitoring, automated alerts,
   and retraining using popular tools like MLflow, Seldon, and TFX.
 tags:
-- Model drift
-- Model monitoring
-- Ml ops
-- Mlflow
-- Tfx
-- Seldon
+- Data Drift
+- Model Monitoring
+- MLOps
 title: Techniques for Monitoring and Managing Model Drift in Production
 ---
 

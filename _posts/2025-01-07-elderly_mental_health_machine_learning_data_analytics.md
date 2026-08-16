@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Healthcare
-- Machine Learning
-- Mental Health
 classes: wide
 date: '2025-01-07'
 excerpt: Machine learning is reshaping elderly mental health care. This article explores
@@ -22,6 +20,8 @@ keywords:
 - Machine learning depression detection
 - Cognitive decline prediction
 - Health analytics for seniors
+redirect_from:
+- '/healthcare/machine learning/mental health/elderly_mental_health_machine_learning_data_analytics/'
 seo_description: How machine learning and analytics support elderly mental health care through early detection of depression, anxiety, and dementia.
 seo_title: AI and Analytics in Elderly Mental Health
 seo_type: article
@@ -29,12 +29,8 @@ summary: This article discusses how AI and data analytics are improving mental h
   outcomes in the elderly population. It covers use cases like AI-powered mood monitoring,
   behavioral tracking, and early intervention tools for dementia and depression.
 tags:
-- Elderly care
-- Mental health
-- Ai in healthcare
-- Cognitive decline
-- Depression
-- Data analytics
+- Healthcare
+- Data Analysis
 title: Improving Elderly Mental Health with Machine Learning and Data Analytics
 ---
 

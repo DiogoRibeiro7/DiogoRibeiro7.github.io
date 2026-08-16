@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Science History
+- Data Science
 classes: wide
 date: '2024-11-01'
 excerpt: Mary Somerville's work in astronomy and mathematical physics earned her recognition as one of the first female scientists, making complex scientific concepts accessible.
@@ -17,15 +17,15 @@ keywords:
 - Women scientists
 - Astronomy history
 - Mathematical physics
+redirect_from:
+- '/science history/mary_somerville_pioneer_astronomy_mathematical_physics/'
 seo_description: Mary Somerville, a pioneering scientist in astronomy and mathematical physics who brought science to a wider public.
 seo_title: 'Mary Somerville: Astronomy and Mathematical Physics'
 seo_type: article
 summary: Discover Mary Somerville's life and legacy as a trailblazer in science, whose accessible writings in astronomy and physics inspired generations.
 tags:
-- Mary somerville
-- Astronomy
-- Mathematical physics
-- Women in science
+- Mathematical Modeling
+- Biographies
 title: 'Mary Somerville: Pioneer in Astronomy and Mathematical Physics'
 ---
 

@@ -27,10 +27,10 @@ summary: This guide covers the core principles of Exploratory Data Analysis, dem
   how to inspect, clean, and visualize datasets to uncover patterns and inform subsequent
   modeling steps.
 tags:
-- Eda
-- Data science
+- Exploratory Data Analysis
+- Data Science
 - Python
-- Visualization
+- Data Visualization
 title: 'Exploratory Data Analysis: A Beginner''s Guide'
 ---
 

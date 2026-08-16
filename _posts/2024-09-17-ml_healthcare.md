@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Data Analytics
+- Data Science
 classes: wide
 date: '2024-09-17'
 excerpt: Discover how machine learning is revolutionizing healthcare analytics, from
@@ -26,6 +26,8 @@ keywords:
 - Clinical implementation challenges
 - Predictive patient outcomes
 - Real-time medical data analysis
+redirect_from:
+- '/data analytics/ml_healthcare/'
 seo_description: 'How machine learning is changing healthcare analytics: predictive patient outcomes, personalized medicine, and medical imaging.'
 seo_title: Machine Learning in Healthcare Analytics
 seo_type: article
@@ -38,12 +40,9 @@ summary: Machine learning is reshaping healthcare analytics by enabling advanced
   With its potential to enhance patient care and optimize resource allocation, machine
   learning is poised to revolutionize the healthcare industry.
 tags:
-- Healthcare analytics
-- Machine learning
-- Artificial intelligence
-- Medical imaging
-- Personalized medicine
-- Predictive analytics
+- Healthcare
+- Machine Learning
+- Artificial Intelligence
 title: How Machine Learning is Transforming Healthcare Analytics
 ---
 

@@ -28,10 +28,9 @@ summary: This article delves into the role of data science in predictive mainten
   (PdM), explaining how methods such as regression, anomaly detection, and clustering
   help forecast equipment failures, reduce downtime, and optimize maintenance strategies.
 tags:
-- Data science
-- Machine learning
-- Predictive maintenance
-- Industrial applications
+- Data Science
+- Machine Learning
+- Predictive Maintenance
 title: The Role of Data Science in Predictive Maintenance
 ---
 

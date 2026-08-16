@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Technology
+- Research
 classes: wide
 date: '2024-03-07'
 header:
@@ -12,13 +12,13 @@ header:
   teaser: /assets/images/data_science_5.jpg
   twitter_image: /assets/images/data_science_6.jpg
 keywords: []
+redirect_from:
+- '/technology/AI_history/'
 seo_description: 'How artificial intelligence developed, from ancient myths and mechanical automata to the algorithms behind today''s assistants and systems.'
 seo_title: The History of Artificial Intelligence
 seo_type: article
 tags:
-- Artificial intelligence
-- Ai
-- Technology history
+- Artificial Intelligence
 title: The History of Artificial Intelligence
 ---
 

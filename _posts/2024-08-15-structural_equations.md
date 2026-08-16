@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Research Methods
 classes: wide
 date: '2024-08-15'
 excerpt: Learn the fundamentals of Structural Equation Modeling (SEM) with latent
@@ -24,6 +23,8 @@ keywords:
 - Variance-covariance matrix
 - Measurement models
 - Exogenous and endogenous variables
+redirect_from:
+- '/statistics/research methods/structural_equations/'
 seo_description: 'A guide to Structural Equation Modeling (SEM) with latent variables: path analysis, measurement models, and exogenous vs endogenous variables.'
 seo_title: Guide to Structural Equation Modeling with Latent Variables
 seo_type: article
@@ -31,16 +32,9 @@ summary: This comprehensive guide explains the key concepts and techniques of St
   Equation Modeling (SEM) with latent variables. It includes path analysis, factor
   loadings, variance-covariance matrices, and handling endogenous and exogenous variables.
 tags:
-- Structural equation modeling (sem)
-- Latent variables
-- Measurement model
-- Factor loadings
-- Variance-covariance matrix
-- Path analysis
-- Causal relationships
-- Error variance
-- Endogenous variables
-- Exogenous variables
+- Statistical Modeling
+- Correlation
+- Descriptive Statistics
 title: A Comprehensive Guide to Structural Equation Modeling with Latent Variables
 ---
 

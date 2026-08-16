@@ -30,9 +30,9 @@ seo_title: The Fears and Challenges of AI and Automation
 seo_type: article
 subtitle: Automation and Machine Learning
 tags:
-- Data science
-- Artificial intelligence
-- Machine learning
+- Data Science
+- Artificial Intelligence
+- Machine Learning
 - Ethics
 title: The Fears Surrounding Artificial Intelligence
 ---

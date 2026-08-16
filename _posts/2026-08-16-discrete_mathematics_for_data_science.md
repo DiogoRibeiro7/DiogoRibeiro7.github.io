@@ -1,16 +1,14 @@
 ---
+redirect_from:
+- '/mathematics/data science/computer science/discrete_mathematics_for_data_science/'
 title: "Discrete Mathematics for Data Science: States, Constraints, and Algorithms"
 categories:
 - Mathematics
-- Data Science
-- Computer Science
 tags:
-- Discrete Mathematics
-- Algorithms
+- Mathematical Modeling
+- Machine Learning
 - Graph Theory
 - Combinatorics
-- Boolean Algebra
-- Data Structures
 author_profile: false
 seo_title: "Discrete Mathematics for Data Science"
 seo_description: "A practical introduction to discrete mathematics for data science, focused on states, constraints, graphs, logic, counting, and algorithmic thinking."

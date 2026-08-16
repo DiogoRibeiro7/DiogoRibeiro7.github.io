@@ -28,11 +28,9 @@ summary: This article examines model drift, focusing on how data drift, changes 
   over time. We explore the causes of model drift and provide case studies from industries
   like finance and healthcare.
 tags:
-- Model drift
-- Data drift
-- Machine learning models
-- Model degradation
-- Ai in production
+- Data Drift
+- Machine Learning
+- Model Monitoring
 title: 'Model Drift: Why Even the Best Machine Learning Models Fail Over Time'
 ---
 

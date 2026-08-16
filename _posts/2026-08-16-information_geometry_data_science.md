@@ -1,6 +1,4 @@
 ---
-redirect_from:
-- '/Mathematics/Statistics/Data Science/information_geometry_data_science/'
 title: "Information Geometry for Data Science: Curvature, Models, and Learning"
 categories:
 - Mathematics
@@ -11,7 +9,7 @@ tags:
 - Optimization
 author_profile: false
 seo_title: "Information Geometry for Data Science"
-seo_description: "A practical introduction to information geometry for data science, covering statistical manifolds, Fisher information, curvature, natural gradients, and model behavior."
+seo_description: 'Information geometry for data science: statistical manifolds, Fisher information, curvature, and natural gradients.'
 excerpt: "Information geometry treats probability models as geometric objects, making it easier to reason about distance, curvature, uncertainty, and learning."
 summary: "This article introduces information geometry as a useful framework for data science. It explains statistical manifolds, Fisher information, KL divergence, curvature, natural gradients, model sensitivity, uncertainty, and why geometry matters when fitting, comparing, and deploying probabilistic models."
 keywords:

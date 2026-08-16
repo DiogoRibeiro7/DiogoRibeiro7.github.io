@@ -31,12 +31,10 @@ summary: This article examines how data science and machine learning are transfo
   approaches with data-driven methods and discusses the benefits of integrating data
   science into strategic planning.
 tags:
-- Data science
-- Machine learning
-- Business strategy
-- Customer segmentation
-- Churn prediction
-- Recommendation systems
+- Data Science
+- Machine Learning
+- Business Intelligence
+- Customer Analytics
 title: How Data Science is Reshaping Business Strategy in the Age of Machine Learning
 ---
 

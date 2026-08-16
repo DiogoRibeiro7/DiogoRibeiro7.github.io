@@ -29,9 +29,9 @@ seo_description: 'The fundamentals of binary classification: key algorithms, eva
 seo_title: 'Binary Classification: Methods and Metrics'
 seo_type: article
 tags:
-- Binary classification
-- Supervised learning
-- Machine learning algorithms
+- Classification
+- Supervised Learning
+- Machine Learning
 title: 'Binary Classification: Explained'
 ---
 

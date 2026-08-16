@@ -27,9 +27,7 @@ seo_type: article
 summary: A comprehensive guide on Mean Time Between Failures (MTBF), covering its
   calculation, use cases, strengths, and weaknesses in reliability engineering.
 tags:
-- Mtbf
-- Reliability metrics
-- Predictive maintenance
+- Predictive Maintenance
 - Python
 title: Understanding Mean Time Between Failures (MTBF)
 ---

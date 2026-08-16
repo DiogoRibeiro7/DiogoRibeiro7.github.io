@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Statistics
-- Data Science
 classes: wide
 date: '2024-05-10'
 header:
@@ -13,27 +11,16 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
   twitter_image: /assets/images/data_science_9.jpg
+redirect_from:
+- '/mathematics/statistics/data science/stratified_sampling/'
 seo_description: How stratified sampling improves representativeness and accuracy by dividing a population into subgroups before sampling.
 seo_title: 'Stratified Sampling: Methods and Applications'
 seo_type: article
 subtitle: A Key to Representative Research
 tags:
-- Stratified sampling
-- Statistical methods
-- Sampling bias
-- Representative sampling
-- Population strata
-- Random sampling
-- Cluster sampling
-- Research accuracy
-- Data collection efficiency
-- Methodological challenges
-- Statistical analysis
-- Comparative study
-- Sample size determination
-- Data representativeness
-- Survey methodology
-- Field applications
+- Statistical Modeling
+- Model Evaluation
+- Sample Size
 title: Stratified Sampling
 ---
 

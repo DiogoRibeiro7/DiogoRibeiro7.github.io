@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Python
+- Programming
 classes: wide
 date: '2024-07-31'
 excerpt: A guide on developing custom Python libraries to meet specific industry needs, focusing on software development and automation.
@@ -17,17 +17,16 @@ keywords:
 - Custom software development
 - Automation
 - Industry solutions
+redirect_from:
+- '/python/Custom_libraries/'
 seo_description: How to create custom Python libraries for industry-specific needs, covering software development and automation strategies.
 seo_title: Building Custom Python Libraries for Industry
 seo_type: article
 summary: This article explores the process of building custom Python libraries, offering insights into Python’s versatility for developing industry-specific software solutions and automation tools.
 tags:
-- Python libraries
-- Custom software
-- Industry solutions
-- Software development
-- Automation
 - Python
+- Programming
+- MLOps
 title: Building Custom Python Libraries for Your Industry Needs
 ---
 

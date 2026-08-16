@@ -1,8 +1,7 @@
 ---
 author_profile: false
 categories:
-- machine-learning
-- model-combination
+- Machine Learning
 classes: wide
 date: '2024-11-16'
 excerpt: Ensemble methods combine multiple models to improve accuracy, robustness,
@@ -22,6 +21,8 @@ keywords:
 - Stacking
 - Random forest
 - Xgboost
+redirect_from:
+- '/machine-learning/model-combination/ensemble_learning_theory_techniques_applications/'
 seo_description: 'Ensemble learning explained: how bagging, boosting, and stacking work, when to use them, and their real-world applications.'
 seo_title: 'Ensemble Methods: Bagging, Boosting, and Stacking'
 seo_type: article
@@ -29,13 +30,8 @@ summary: Ensemble learning leverages multiple models to enhance predictive perfo
   This article explores the motivations, techniques, theoretical insights, and applications
   of ensemble methods including bagging, boosting, and stacking.
 tags:
-- Ensemble-learning
-- Bagging
-- Boosting
-- Stacking
-- Random-forest
-- Xgboost
-- Model-interpretability
+- Decision Trees
+- Machine Learning
 title: 'Ensemble Learning: Theory, Techniques, and Applications'
 ---
 

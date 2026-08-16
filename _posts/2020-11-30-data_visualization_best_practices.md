@@ -25,9 +25,9 @@ seo_type: article
 summary: Learn how to design effective visualizations by focusing on clarity, appropriate
   chart selection, and thoughtful use of color and labels.
 tags:
-- Visualization
-- Data science
-- Communication
+- Data Visualization
+- Data Science
+- Research Methodology
 title: Data Visualization Best Practices
 ---
 

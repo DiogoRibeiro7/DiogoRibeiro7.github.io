@@ -1,15 +1,12 @@
 ---
+redirect_from:
+- '/healthcare ai/mental health/aging population/improving_elderly_mental_health_machine_learning/'
 title: "Improving Elderly Mental Health with Machine Learning and Data Analytics: Transforming Care for an Aging Population"
 categories:
-- Healthcare AI
-- Mental Health
-- Aging Population
+- Healthcare
 tags:
-- elderly mental health
-- machine learning
-- healthcare innovation
-- cognitive decline
-- AI applications
+- Healthcare
+- Machine Learning
 author_profile: false
 seo_title: "Improving Elderly Mental Health with AI & Data Analytics"
 seo_description: How machine learning and analytics are transforming elderly mental health care, from early detection to clinical integration.

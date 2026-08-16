@@ -2,9 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Statistics
-- Data Science
-- Machine Learning
 classes: wide
 date: '2024-07-08'
 header:
@@ -14,21 +11,18 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
   twitter_image: /assets/images/data_science_1.jpg
+redirect_from:
+- '/mathematics/statistics/data science/machine learning/pseudosupervised_outlier_detection/'
 seo_description: How pseudo-supervised outlier detection combines supervised and unsupervised approaches for finance, healthcare, and security.
 seo_title: Pseudo-Supervised Outlier Detection
 seo_type: article
 subtitle: Bridging the Gap Between Supervised and Unsupervised Anomaly Detection
 tags:
-- Pseudo-supervised learning
-- Outlier detection
-- Anomaly detection
-- Unsupervised learning
-- Supervised learning
-- Machine learning
-- Data science
-- Hybrid methods
-- Pseudo-labeling
-- Iterative refinement
+- Supervised Learning
+- Anomaly Detection
+- Unsupervised Learning
+- Machine Learning
+- Data Science
 - Python
 title: Pseudo-Supervised Outlier Detection
 ---

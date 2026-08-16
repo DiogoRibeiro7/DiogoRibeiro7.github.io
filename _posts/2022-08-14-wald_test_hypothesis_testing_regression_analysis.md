@@ -29,11 +29,9 @@ summary: The Wald test is a fundamental statistical method used to evaluate hypo
   practical applications, and interpretation of the Wald test in various regression
   models.
 tags:
-- Wald test
-- Logistic regression
-- Poisson regression
-- Hypothesis testing
-- Regression models
+- Regression
+- Probability
+- Hypothesis Testing
 title: 'Wald Test: Hypothesis Testing in Regression Analysis'
 ---
 

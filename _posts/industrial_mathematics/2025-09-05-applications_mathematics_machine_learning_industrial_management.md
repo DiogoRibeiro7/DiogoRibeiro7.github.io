@@ -1,15 +1,14 @@
 ---
+redirect_from:
+- '/industrial management/data science/artificial intelligence/applications_mathematics_machine_learning_industrial_management/'
 title: "Applications of Mathematics and Machine Learning in Industrial Management: A Comprehensive Review"
 categories:
-  - Industrial Management
-  - Data Science
-  - Artificial Intelligence
+- Data Science
 tags:
-  - Machine Learning
-  - Mathematical Optimization
-  - Industry 4.0
-  - Supply Chain
-  - Predictive Maintenance
+- Machine Learning
+- Optimization
+- Supply Chain
+- Predictive Maintenance
 author_profile: false
 seo_title: Mathematics and Machine Learning in Industrial Management
 seo_description: How mathematical optimization and machine learning are transforming supply chain, production, and quality control.

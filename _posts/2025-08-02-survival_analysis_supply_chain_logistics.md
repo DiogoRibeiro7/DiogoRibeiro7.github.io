@@ -1,15 +1,12 @@
 ---
+redirect_from:
+- '/supply-chain/analytics/data-science/survival_analysis_supply_chain_logistics/'
 title: 'Survival Analysis in Supply Chain and Logistics: A Comprehensive Guide'
 categories:
-  - supply-chain
-  - analytics
-  - data-science
+- Economics
 tags:
-  - survival analysis
-  - supply chain analytics
-  - logistics modeling
-  - inventory management
-  - shipment prediction
+- Survival Analysis
+- Supply Chain
 author_profile: false
 seo_title: Survival Analysis for Supply Chain and Logistics
 seo_description: How survival analysis models delivery times, predicts stockouts, manages perishables, and assesses supplier risk.

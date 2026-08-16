@@ -29,11 +29,9 @@ summary: This article covers Ordinary Least Squares (OLS) regression, one of the
   about its key properties, how it works, and its wide range of applications in modeling
   linear relationships between variables.
 tags:
-- Homoscedasticity
-- Ols regression
-- Linear regression
-- Gauss-markov theorem
-- Maximum likelihood estimator
+- Regression
+- Stochastic Processes
+- Probability
 title: 'Ordinary Least Squares (OLS) Regression: Properties and Applications'
 ---
 

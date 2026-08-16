@@ -1,16 +1,14 @@
 ---
+redirect_from:
+- '/data science/industrial analytics/predictive maintenance/cloud_edge_architecture_predictive_maintenance/'
 title: "Cloud Computing and Edge Analytics in Predictive Maintenance"
 categories:
 - Data Science
-- Industrial Analytics
-- Predictive Maintenance
 tags:
 - Predictive Maintenance
-- Edge Analytics
-- Cloud Computing
+- MLOps
 - Industrial IoT
 - Data Engineering
-- Streaming Analytics
 author_profile: false
 seo_title: "Cloud and Edge Architecture for Predictive Maintenance"
 seo_description: How cloud computing and edge analytics support predictive maintenance, covering latency, reliability, pipelines, and trade-offs.

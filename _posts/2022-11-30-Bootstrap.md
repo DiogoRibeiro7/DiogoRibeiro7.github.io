@@ -36,8 +36,7 @@ seo_type: article
 summary: An overview of bootstrapping, its significance as a resampling method in
   statistics, and how it is used to estimate the sampling distribution of a statistic.
 tags:
-- Bootstrapping
-- Resampling
+- Monte Carlo
 - Python
 title: 'Understanding Bootstrapping: A Resampling Method in Statistics'
 ---

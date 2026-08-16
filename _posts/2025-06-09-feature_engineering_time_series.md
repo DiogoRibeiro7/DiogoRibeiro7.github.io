@@ -26,9 +26,9 @@ seo_type: article
 summary: This post explains how to engineer features such as lagged values, rolling
   statistics, and seasonal indicators to improve model performance on sequential data.
 tags:
-- Feature engineering
-- Time series
-- Machine learning
+- Feature Engineering
+- Time Series
+- Machine Learning
 - Forecasting
 - Python
 title: Crafting Time Series Features for Better Models

@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Time Series Analysis
+- Time Series
 classes: wide
 date: '2020-09-01'
 excerpt: This article explores the use of stationary distributions in time series
@@ -18,6 +18,8 @@ keywords:
 - Zero-inflated data
 - Threshold classification
 - Statistical modeling
+redirect_from:
+- '/time series analysis/threshold_classification_zero_inflated_time_series/'
 seo_description: A method for threshold classification in zero-inflated time series using stationary distributions and parametric modeling.
 seo_title: Threshold Classification for Zero-Inflated Series
 seo_type: article
@@ -26,10 +28,9 @@ summary: A novel approach for threshold classification in zero-inflated time ser
   addresses the limitations of traditional techniques by leveraging parametric distribution
   quantiles for better accuracy and generalization.
 tags:
-- Statistical modeling
-- Zero-inflated data
-- Stationary distribution
-- Time series
+- Statistical Modeling
+- Probability
+- Time Series
 title: A Generalized Approach to Threshold Classification for Zero-Inflated Time Series
   Data Using Stationary Distributions
 ---

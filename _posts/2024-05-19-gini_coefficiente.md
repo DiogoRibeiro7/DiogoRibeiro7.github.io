@@ -31,27 +31,12 @@ summary: This article explores the Normalized Gini Coefficient and Default Rate,
   metrics used in credit scoring and risk assessment. Learn how these metrics are
   applied in machine learning and financial modeling.
 tags:
-- Gini coefficient
-- Default rate
-- Normalized gini coefficient
-- Credit risk
-- Economic indicators
-- Machine learning metrics
-- Model evaluation
-- Loss functions
-- Credit scoring
-- Risk assessment
-- Loan default
-- Credit scorecard
-- Behavior scorecard
-- Area under roc curve (auc)
-- Tensorflow implementation
-- Loan risk analysis
+- Economics
+- Finance
+- Model Evaluation
+- Risk Management
 - Python
-- Mathematics
-- Statistics
-- Data science
-- Machine learning
+- Mathematical Modeling
 title: Understanding the Normalized Gini Coefficient and Default Rate
 ---
 

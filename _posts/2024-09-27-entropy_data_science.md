@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Machine Learning
 classes: wide
 date: '2024-09-27'
 excerpt: Explore the deep connection between entropy, data science, and machine learning. Understand how entropy drives decision trees, uncertainty measures, feature selection, and information theory in modern AI.
@@ -25,17 +24,18 @@ keywords:
 - Data science
 - Machine learning
 - Python
+redirect_from:
+- '/data science/machine learning/entropy_data_science/'
 seo_description: The role entropy plays in data science and machine learning, from decision trees to uncertainty quantification and information theory.
 seo_title: Entropy in Data Science and Machine Learning
 seo_type: article
 summary: This article explores how entropy, a concept from information theory, is used in data science and machine learning. It delves into entropy’s role in decision trees, classification, clustering, anomaly detection, and reinforcement learning.
 tags:
-- Entropy
-- Information theory
-- Machine learning
-- Data science
-- Decision trees
 - Probability
+- Information Theory
+- Machine Learning
+- Data Science
+- Decision Trees
 - Python
 title: 'Entropy in Data Science and Machine Learning: A Deep Dive'
 ---

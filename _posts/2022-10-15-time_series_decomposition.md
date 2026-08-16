@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Time Series
 classes: wide
 date: '2022-10-15'
 excerpt: Learn how time series decomposition reveals trend, seasonality, and residual
@@ -20,6 +19,8 @@ keywords:
 - Seasonality
 - Forecasting
 - Decomposition
+redirect_from:
+- '/data science/time series/time_series_decomposition/'
 seo_description: Discover how to separate trend and seasonal patterns from a time
   series using additive or multiplicative decomposition.
 seo_title: Time Series Decomposition Made Simple
@@ -27,9 +28,9 @@ seo_type: article
 summary: This article explains how decomposing a time series helps isolate long-term
   trends and recurring seasonal effects so you can model data more effectively.
 tags:
-- Time series
+- Time Series
 - Forecasting
-- Data analysis
+- Data Analysis
 - Python
 title: 'Time Series Decomposition: Separating Trend and Seasonality'
 ---

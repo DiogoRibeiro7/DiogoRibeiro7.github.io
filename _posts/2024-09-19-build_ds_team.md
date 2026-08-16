@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Team Management
-- Organizational Behavior
 classes: wide
 date: '2024-09-19'
 excerpt: Discover the implications of assigning different job titles in data science
@@ -27,6 +25,8 @@ keywords:
 - Career development
 - Employee motivation
 - Team management
+redirect_from:
+- '/data science/team management/organizational behavior/build_ds_team/'
 seo_description: The pros and cons of uniform versus specialized job titles in data science teams, and how they affect collaboration.
 seo_title: 'Job Titles in Data Science Teams: Uniform or Not'
 seo_type: article
@@ -40,16 +40,8 @@ summary: This article explores the debate on whether data science teams should a
   the article provides recommendations to help organizations make informed decisions
   that align with their strategic goals and foster a productive work environment.
 tags:
-- Data science teams
-- Job titles
-- Team dynamics
-- Software engineering
-- Machine learning research
-- Organizational culture
-- Team collaboration
-- Human resources
-- Career development
-- Employee motivation
+- Data Science
+- Machine Learning
 title: 'The Great Title Debate: Should Data Science Teams Assign Different Job Titles
   to Specialized Roles?'
 toc: false

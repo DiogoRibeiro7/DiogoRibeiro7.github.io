@@ -27,10 +27,9 @@ summary: This article explains how to enhance decision tree performance using Ge
   Algorithms. The approach allows for small, interpretable trees that outperform those
   created with standard greedy methods.
 tags:
-- Decision trees
-- Genetic algorithms
-- Interpretable ai
-- Classification models
+- Decision Trees
+- Machine Learning
+- Classification
 - Python
 title: Improving Decision Tree Performance with Genetic Algorithms
 ---

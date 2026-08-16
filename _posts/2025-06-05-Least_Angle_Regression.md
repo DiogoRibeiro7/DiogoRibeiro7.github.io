@@ -30,9 +30,7 @@ summary: This article explores Least Angle Regression (LARS), explaining its cor
   most effectively applied.
 tags:
 - Regression
-- Lars
-- Linear models
-- Feature selection
+- Feature Engineering
 - Python
 title: 'Least Angle Regression: A Gentle Dive into LARS'
 ---

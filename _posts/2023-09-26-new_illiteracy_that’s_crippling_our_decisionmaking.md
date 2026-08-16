@@ -27,9 +27,7 @@ seo_description: How innumeracy, the inability to work with numbers, undermines 
 seo_title: 'Innumeracy: The New Illiteracy Crippling Decision-Making'
 seo_type: article
 tags:
-- Numeracy
-- Data literacy
-- Decision making
+- Business Intelligence
 title: The New Illiteracy That’s Crippling Our Decision-Making
 ---
 

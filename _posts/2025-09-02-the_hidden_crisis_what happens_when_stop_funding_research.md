@@ -1,15 +1,11 @@
 ---
+redirect_from:
+- '/science policy/research funding/innovation/the_hidden_crisis_what-happens_when_stop_funding_research/'
 title: "The Hidden Crisis: What Happens When We Stop Funding Fundamental Research"
 categories:
-- Science Policy
-- Research Funding
-- Innovation
+- Research
 tags:
-- Fundamental Research
-- Basic Science
-- Science Policy
-- Technology
-- Education
+- Research Methodology
 author_profile: false
 seo_title: Why Defunding Basic Science Threatens Our Future
 seo_description: Why defunding fundamental research threatens innovation, national security, and scientific progress over the long term.

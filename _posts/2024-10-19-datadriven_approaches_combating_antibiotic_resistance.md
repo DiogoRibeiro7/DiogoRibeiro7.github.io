@@ -28,10 +28,8 @@ summary: This article discusses how data science, through predictive modeling an
   pattern analysis, plays a crucial role in identifying misuse of antibiotics and
   proposing effective strategies to combat antibiotic resistance.
 tags:
-- Antibiotic resistance
-- Data science
-- Predictive modeling
-- Superbugs
+- Data Science
+- Machine Learning
 title: Data-Driven Approaches to Combating Antibiotic Resistance
 ---
 

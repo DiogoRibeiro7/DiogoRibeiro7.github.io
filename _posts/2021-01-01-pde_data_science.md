@@ -29,10 +29,8 @@ summary: This article explores the role of Partial Differential Equations (PDEs)
   and environmental modeling. It covers basic classifications of PDEs, solution methods,
   and why data scientists should care about them.
 tags:
-- Physics-informed models
-- Machine learning
-- Pdes
-- Numerical methods
+- Machine Learning
+- Numerical Methods
 title: Introduction to Partial Differential Equations (PDEs) from a Data Science Perspective
 ---
 

@@ -2,9 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Statistics
-- Data Science
-- Machine Learning
 classes: wide
 date: '2024-05-16'
 header:
@@ -14,21 +11,18 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_3.jpg
+redirect_from:
+- '/mathematics/statistics/data science/machine learning/regularization_machine_learning/'
 seo_description: How regularization prevents overfitting in machine learning, why it works, and how the main techniques compare.
 seo_title: Regularization in Machine Learning
 seo_type: article
 subtitle: Techniques to Prevent Overfitting and Improve Model Performance
 tags:
 - Regularization
-- Overfitting
-- L1 regularization
-- L2 regularization
-- Elastic net
-- Machine learning
-- Model generalization
-- Feature selection
-- Model interpretability
-- High-dimensional data
+- Regression
+- Machine Learning
+- Feature Engineering
+- Data Analysis
 title: Regularization in Machine Learning
 ---
 

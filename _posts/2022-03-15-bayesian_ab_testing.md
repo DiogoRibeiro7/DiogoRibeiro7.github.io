@@ -32,8 +32,8 @@ seo_description: How Bayesian A/B testing gives more nuanced insight into conver
 seo_title: 'Bayesian A/B Testing: Enhancing Conversion Rate Analysis'
 seo_type: article
 tags:
-- A/b testing
-- Bayesian methods
+- Experimental Design
+- Bayesian Statistics
 - Python
 title: A Guide to Bayesian A/B Testing for Conversion Rates
 ---

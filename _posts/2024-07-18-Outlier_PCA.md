@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Machine Learning
 classes: wide
 date: '2024-07-18'
 header:
@@ -12,13 +11,14 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_1.jpg
+redirect_from:
+- '/data science/machine learning/Outlier_PCA/'
 seo_description: How Principal Component Analysis detects outliers, the difference between anomalies and novelties, and the methods available.
 seo_title: Detecting Outliers with PCA
 seo_type: article
 tags:
-- Pca
-- Outlier detection
-- Anomaly detection
+- Dimensionality Reduction
+- Anomaly Detection
 title: Detecting Outliers Using Principal Component Analysis (PCA)
 ---
 

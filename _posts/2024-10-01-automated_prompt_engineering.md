@@ -28,10 +28,8 @@ summary: This article delves into Automated Prompt Engineering (APE), explaining
   it automates and optimizes the prompt generation process to enhance the performance
   of Large Language Models.
 tags:
-- Automated prompt engineering
-- Hyperparameter optimization
-- Prompt optimization
-- Large language models
+- Optimization
+- Natural Language Processing
 - Python
 title: 'Automated Prompt Engineering (APE): Optimizing Large Language Models through
   Automation'

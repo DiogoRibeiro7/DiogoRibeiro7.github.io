@@ -35,13 +35,12 @@ summary: Traffic safety in urban areas remains a significant challenge globally.
   limitations of traditional methods, and offering practical solutions for real-world
   applications.
 tags:
-- Traffic safety
-- Traffic accident hotspots
-- Data analysis
+- Transportation
+- Data Analysis
 - Python
-- Kernel density estimation
-- Kde
-- Bash
+- Statistical Modeling
+- Mathematical Modeling
+- Programming
 title: 'Traffic Safety with Data: A Comprehensive Approach Using Kernel Density Estimation
   (KDE) to Detect Traffic Accident Hotspots'
 ---

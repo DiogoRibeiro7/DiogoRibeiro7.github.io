@@ -25,9 +25,9 @@ seo_type: article
 summary: This article walks through the basics of decision tree construction and explains
   common pruning methods to create better models.
 tags:
-- Decision trees
+- Decision Trees
 - Classification
-- Overfitting
+- Regularization
 title: Demystifying Decision Tree Algorithms
 ---
 

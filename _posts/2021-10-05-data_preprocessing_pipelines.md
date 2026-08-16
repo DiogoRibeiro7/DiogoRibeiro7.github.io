@@ -25,9 +25,9 @@ seo_type: article
 summary: This post outlines the key steps in constructing data preprocessing pipelines
   using tools like scikit-learn to ensure consistent model inputs.
 tags:
-- Data preprocessing
-- Machine learning
-- Feature engineering
+- Data Quality
+- Machine Learning
+- Feature Engineering
 title: Designing Effective Data Preprocessing Pipelines
 ---
 

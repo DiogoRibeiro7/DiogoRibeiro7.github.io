@@ -27,10 +27,9 @@ summary: This article explains ordinal regression models, from their mathematica
   structure to real-world applications, including how marginal effects make model
   outputs more interpretable in Python.
 tags:
-- Statistical models
-- Data analysis
-- Ordinal regression
-- Marginal effects
+- Statistical Modeling
+- Data Analysis
+- Regression
 - Python
 title: 'Understanding Ordinal Regression: A Comprehensive Guide'
 ---

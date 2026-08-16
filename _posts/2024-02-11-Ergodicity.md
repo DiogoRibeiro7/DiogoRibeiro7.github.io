@@ -31,17 +31,12 @@ seo_title: Ergodicity in Statistical and Mathematical Models
 seo_type: article
 subtitle: Clarifying Ergodicity
 tags:
-- Ergodicity
-- Bernoulli trials
-- Python programming
-- Statistical analysis
-- Data science
-- Statistical physics
-- Mathematical modeling
-- Simulation and modeling
-- Computational physics
-- Machine learning
 - Python
+- Statistical Modeling
+- Data Science
+- Mathematical Modeling
+- Monte Carlo
+- Machine Learning
 title: Distinguishing Ergodic Regimes from Processes
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

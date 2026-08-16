@@ -1,19 +1,15 @@
 ---
+redirect_from:
+- '/data science/industrial ai/natural language processing/predictive maintenance/role_natural_language_processing_predictive_maintenance/'
 title: >-
   The Role of Natural Language Processing in Predictive Maintenance: Leveraging
   Unstructured Data for Enhanced Industrial Intelligence
 categories:
-  - Data Science
-  - Industrial AI
-  - Natural Language Processing
-  - Predictive Maintenance
+- Data Science
 tags:
-  - Predictive Maintenance
-  - NLP
-  - Industrial Analytics
-  - Maintenance Logs
-  - Text Mining
-  - Machine Learning
+- Predictive Maintenance
+- Natural Language Processing
+- Machine Learning
 author_profile: false
 seo_title: NLP for Predictive Maintenance
 seo_description: How NLP enhances predictive maintenance by extracting insights from maintenance logs, work orders, and technical documentation.

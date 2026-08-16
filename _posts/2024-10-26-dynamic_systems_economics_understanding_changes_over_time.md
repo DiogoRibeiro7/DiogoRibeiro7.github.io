@@ -26,11 +26,8 @@ summary: Dynamic systems theory provides a framework for understanding how econo
   evolve over time, enabling economists to model complex interactions between variables
   and assess stability and change in macroeconomic conditions.
 tags:
-- Dynamic systems theory
-- Macroeconomics
-- Differential equations
-- Economic growth
-- Stability analysis
+- Economics
+- Numerical Methods
 title: 'Dynamic Systems in Economics: Understanding Changes Over Time'
 ---
 

@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Machine Learning
-- Sustainability
 classes: wide
 date: '2024-09-07'
 excerpt: Explore how Python and machine learning can be applied to analyze and improve
@@ -24,6 +22,8 @@ keywords:
 - Sustainable building practices
 - Carbon footprint reduction
 - Python
+redirect_from:
+- '/data science/machine learning/sustainability/energie_efficiency/'
 seo_description: How to apply machine learning and Python to building energy efficiency analysis, optimizing usage and reducing environmental impact.
 seo_title: Building Energy Efficiency with Python and ML
 seo_type: article
@@ -32,11 +32,9 @@ summary: This article covers the application of Python and machine learning to a
   improving sustainability, and reducing carbon footprints, helping to create more
   energy-efficient structures.
 tags:
-- Energy efficiency
+- Climate and Environment
 - Python
-- Machine learning
-- Building analysis
-- Sustainability
+- Machine Learning
 title: Building Energy Efficiency Analysis with Python and Machine Learning
 ---
 

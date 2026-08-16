@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Signal Processing
+- Predictive Maintenance
 classes: wide
 date: '2024-06-30'
 excerpt: Explore the impact of human presence on RSSI and the challenges it introduces,
@@ -22,6 +22,8 @@ keywords:
 - Shadowing
 - Interference
 - Beamforming
+redirect_from:
+- '/signal processing/RSSI_humanbody/'
 seo_description: How the human body affects RSSI in wireless networks, and strategies for handling signal attenuation, interference, and multipath effects.
 seo_title: 'Effects of a Human Body on RSSI: Challenges and Mitigations'
 seo_type: article
@@ -29,16 +31,7 @@ summary: This article examines how human bodies affect Received Signal Strength 
   (RSSI), the resulting challenges like signal attenuation and interference, and key
   techniques for mitigating these effects.
 tags:
-- Rssi
-- Signal attenuation
-- Multipath effects
-- Shadowing
-- Interference
-- Antenna placement
-- Diversity techniques
-- Power control
-- High frequency bands
-- Beamforming
+- Industrial IoT
 title: 'Effects of a Human Body on RSSI: Challenges and Mitigations'
 ---
 

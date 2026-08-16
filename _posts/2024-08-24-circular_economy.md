@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Sustainability
 - Data Science
-- Circular Economy
 classes: wide
 date: '2024-08-24'
 excerpt: Explore how Python and network analysis can be used to implement and optimize
@@ -24,6 +22,8 @@ keywords:
 - Sustainability models
 - Resource efficiency
 - Python
+redirect_from:
+- '/sustainability/data science/circular economy/circular_economy/'
 seo_description: How to implement circular economy models with Python and network analysis, using data science and systems thinking for sustainability.
 seo_title: Circular Economy Models with Python and Network Analysis
 seo_type: article
@@ -32,11 +32,7 @@ summary: This article explores the implementation of circular economy models usi
   can be applied to improve resource efficiency, sustainability, and waste reduction.
 tags:
 - Python
-- Network analysis
-- Circular economy
-- Sustainability
-- Systems thinking
-- Resource efficiency
+- Graph Theory
 title: Implementing Circular Economy Models with Python and Network Analysis
 ---
 

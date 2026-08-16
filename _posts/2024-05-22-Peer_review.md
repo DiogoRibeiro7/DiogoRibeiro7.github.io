@@ -1,13 +1,7 @@
 ---
 author_profile: false
 categories:
-- Academic Writing
-- Research Methodology
-- Political Communication
-- Social Media Studies
-- Digital Democracy
-- Social Network Analysis
-- Political Sociology
+- Data Science
 classes: wide
 date: '2024-05-22'
 header:
@@ -17,22 +11,15 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.jpg
   twitter_image: /assets/images/data_science_1.jpg
+redirect_from:
+- '/academic writing/research methodology/political communication/social media studies/digital democracy/social network analysis/political sociology/Peer_review/'
 seo_description: A critical review of a study on filter bubbles and MP interactions on Twitter, covering its limitations and research directions.
 seo_title: 'Review: Filter Bubbles Among MPs on Twitter'
 seo_type: article
 tags:
-- Twitter
-- Members of parliament (mps)
-- Political interaction
-- Filter bubbles
-- Echo chambers
-- Social network analysis
-- Political communication
-- Digital engagement
-- Homophily
-- Status homophily
-- Online political behavior
-- Social media analysis
+- Signal Processing
+- Graph Theory
+- Research Methodology
 title: 'Critical Review of ''Bursting the (Filter) Bubble: Interactions of Members
   of Parliament on Twitter'''
 ---

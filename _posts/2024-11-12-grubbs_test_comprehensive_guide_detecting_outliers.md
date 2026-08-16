@@ -29,12 +29,10 @@ summary: Grubbs' test, also known as the extreme studentized deviate test, is a 
   tool for detecting outliers in normally distributed univariate data. This article
   covers its principles, assumptions, test procedure, and real-world applications.
 tags:
-- Grubbs' test
-- Outlier detection
-- Statistical methods
-- Extreme studentized deviate test
-- Hypothesis testing
-- Data analysis
+- Anomaly Detection
+- Statistical Modeling
+- Hypothesis Testing
+- Data Analysis
 - Python
 title: 'Grubbs'' Test: A Comprehensive Guide to Detecting Outliers'
 ---

@@ -28,11 +28,10 @@ summary: Asymmetric confidence intervals can result from the nature of your data
   the statistical method used. This article explores the causes and implications of
   these intervals for interpreting research results.
 tags:
-- Asymmetric ci
-- Confidence intervals
-- Bash
-- Data distribution
-- Statistical tests
+- Confidence Intervals
+- Programming
+- Probability
+- Hypothesis Testing
 - Python
 title: 'Understanding Asymmetric Confidence Intervals: Causes and Implications'
 ---

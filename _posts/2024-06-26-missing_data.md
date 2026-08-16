@@ -1,11 +1,7 @@
 ---
 author_profile: false
 categories:
-- Epidemiology
 - Data Science
-- Medical Research
-- Statistics
-- Clinical Studies
 classes: wide
 date: '2024-06-26'
 header:
@@ -15,21 +11,16 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_6.jpg
+redirect_from:
+- '/epidemiology/data science/medical research/statistics/clinical studies/missing_data/'
 seo_description: How to handle missing data in clinical research, the biases that arise when it is ignored, and the methods that address it.
 seo_title: Handling Missing Data in Clinical Research
 seo_type: article
 subtitle: Strategies and Guidelines for Ensuring Valid Results
 tags:
-- Missing data
-- Multiple imputation
-- Complete case analysis
-- Missing data mechanisms
-- Mcar
-- Mar
-- Mnar
-- Data imputation
-- Research methodology
-- Statistical analysis
+- Missing Data
+- Research Methodology
+- Statistical Modeling
 title: Handling Missing Data in Clinical Research
 ---
 

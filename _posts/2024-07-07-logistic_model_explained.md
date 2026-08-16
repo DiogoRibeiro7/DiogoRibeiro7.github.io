@@ -31,19 +31,12 @@ seo_description: 'A guide to logistic regression: binary classification, logit m
 seo_title: 'The Logistic Model: Explained'
 seo_type: article
 tags:
-- Logistic regression
-- Logit model
-- Binary classification
+- Regression
+- Classification
 - Probability
-- Maximum-likelihood estimation
-- Odds ratio
-- Multinomial logistic regression
-- Ordinal logistic regression
-- Statistical modeling
-- Joseph berkson
-- Machine learning
-- Data science
-- Predictive modeling
+- Statistical Modeling
+- Machine Learning
+- Data Science
 title: 'The Logistic Model: Explained'
 ---
 

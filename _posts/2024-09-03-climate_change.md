@@ -34,12 +34,10 @@ summary: As the climate crisis intensifies, data science has emerged as a key pl
   is shaping the future of environmental science and policy-making, helping us tackle
   one of the greatest challenges of our time.
 tags:
-- Climate modeling
-- Data analysis
-- Renewable energy
-- Risk assessment
-- Policy-making
-- Machine learning
+- Climate and Environment
+- Data Analysis
+- Risk Management
+- Machine Learning
 title: 'Data Science and the Climate Crisis: Innovative Approaches to Understanding
   and Mitigating Global Warming'
 ---

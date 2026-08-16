@@ -31,8 +31,8 @@ seo_description: An in-depth exploration of key probability distributions in mac
 seo_title: Probability Distributions in Machine Learning
 seo_type: article
 tags:
-- Probability distributions
-- Data analysis
+- Probability
+- Data Analysis
 title: Probability Distributions in Machine Learning
 ---
 

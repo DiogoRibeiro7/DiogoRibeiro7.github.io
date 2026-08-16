@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Mathematical Economics
+- Economics
 classes: wide
 date: '2022-01-01'
 excerpt: Explore exchange rate models like Purchasing Power Parity (PPP) and Uncovered Interest Parity (UIP), key frameworks in global economics.
@@ -17,14 +17,14 @@ keywords:
 - Purchasing power parity
 - Uncovered interest parity
 - Currency valuation
+redirect_from:
+- '/mathematical economics/exchange_rate_models_understanding_ppp_uip/'
 seo_description: Learn about exchange rate models such as Purchasing Power Parity (PPP) and Uncovered Interest Parity (UIP) and their role in international finance.
 seo_title: 'Exchange Rate Models: PPP and UIP Explained'
 seo_type: article
 summary: An overview of exchange rate models with a focus on Purchasing Power Parity (PPP) and Uncovered Interest Parity (UIP), including their principles, applications, and limitations.
 tags:
-- Exchange rates
-- Purchasing power parity
-- Uncovered interest parity
+- Economics
 title: 'Exchange Rate Models: Understanding PPP and UIP'
 ---
 

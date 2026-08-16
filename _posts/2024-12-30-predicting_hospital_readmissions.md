@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- HealthTech
+- Data Science
 classes: wide
 date: '2024-12-30'
 excerpt: Machine learning models are revolutionizing post-hospitalization care by
@@ -20,6 +20,8 @@ keywords:
 - Elderly patients
 - Post-hospital care
 - Predictive analytics
+redirect_from:
+- '/healthtech/predicting_hospital_readmissions/'
 seo_description: How machine learning predicts hospital readmissions in elderly patients using post-discharge data, adherence, and health conditions.
 seo_title: Predicting Hospital Readmissions with ML
 seo_type: article
@@ -28,10 +30,8 @@ summary: Hospital readmissions among elderly patients are a significant healthca
   to predict readmission risks by analyzing post-discharge data, health records, and
   treatment adherence, enabling optimized care and timely interventions.
 tags:
-- Hospital readmissions
-- Predictive analytics
-- Elderly care
-- Healthcare ai
+- Machine Learning
+- Healthcare
 title: Predicting Hospital Readmissions for Elderly Patients Using Machine Learning
 ---
 

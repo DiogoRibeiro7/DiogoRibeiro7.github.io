@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Python
+- Programming
 classes: wide
 date: '2024-07-11'
 header:
@@ -11,16 +11,15 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
   twitter_image: /assets/images/data_science_3.jpg
+redirect_from:
+- '/python/pre_commit/'
 seo_description: How pre-commit hooks enforce code quality in Python projects, and how to set them up in your Git workflow.
 seo_title: Pre-commit Hooks for Python Projects
 seo_type: article
 tags:
 - Python
-- Git
-- Pre-commit hooks
-- Devops
-- Bash
-- Yaml
+- MLOps
+- Programming
 title: Streamlining Your Workflow with Pre-commit Hooks in Python Projects
 ---
 

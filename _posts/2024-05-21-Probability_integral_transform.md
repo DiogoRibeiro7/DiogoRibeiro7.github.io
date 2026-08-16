@@ -34,21 +34,12 @@ summary: This article explains the Probability Integral Transform, its role in s
   modeling, and how it is applied in diverse fields like risk management, hypothesis
   testing, and Monte Carlo simulations.
 tags:
-- Probability integral transform
-- Cumulative distribution function
-- Uniform distribution
-- Copula construction
-- Goodness of fit
-- Monte carlo simulations
-- Hypothesis testing
-- Marketing mix modeling
-- Credit risk modeling
-- Financial risk management
+- Probability
+- Hypothesis Testing
+- Monte Carlo
+- Customer Analytics
+- Finance
 - R
-- Mathematics
-- Statistics
-- Data science
-- Machine learning
 title: 'Probability Integral Transform: Theory and Applications'
 ---
 

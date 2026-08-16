@@ -27,11 +27,8 @@ summary: This article explains the fundamental concepts behind Type I and Type I
   errors in statistical testing, covering their causes, how to minimize them, and
   the critical role of statistical power and sample size in data science.
 tags:
-- Statistical testing
-- Type ii error
-- Type i error
-- Data science
-- Hypothesis testing
+- Hypothesis Testing
+- Data Science
 title: 'Understanding Type I and Type II Errors in Statistical Testing: How to Minimize
   False Conclusions'
 ---

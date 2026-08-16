@@ -2,9 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Statistics
-- Data Science
-- Machine Learning
 classes: wide
 date: '2024-05-15'
 header:
@@ -14,24 +11,19 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.jpg
   twitter_image: /assets/images/data_science_3.jpg
+redirect_from:
+- '/mathematics/statistics/data science/machine learning/Feature_Engineering/'
 seo_description: How automated feature engineering creates and selects variables that improve model accuracy and reduce overfitting.
 seo_title: Automating Feature Engineering
 seo_type: article
 subtitle: Featuretools and TPOT for Efficient and Effective Feature Engineering
 tags:
-- Feature engineering
-- Machine learning
-- Data science
-- Automation tools
-- Featuretools
-- Tpot
-- Data cleaning
-- Data transformation
-- Feature creation
-- Feature selection
-- Genetic algorithms
-- Model optimization
-- Python
+- Feature Engineering
+- Machine Learning
+- Data Science
+- MLOps
+- Data Quality
+- Optimization
 title: Automating Feature Engineering
 ---
 

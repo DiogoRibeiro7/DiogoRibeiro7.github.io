@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Non-Parametric Tests
+- Statistics
 classes: wide
 date: '2023-11-16'
 excerpt: Learn how the Mann-Whitney U Test is used to compare two independent samples
@@ -23,6 +23,8 @@ keywords:
 - Medicine
 - Bash
 - Python
+redirect_from:
+- '/non-parametric tests/mannwhitney_u_test_nonparametric_comparison_two_independent_samples/'
 seo_description: The Mann-Whitney U test, a non-parametric method for comparing two independent samples, with applications in psychology, medicine, and ecology.
 seo_title: 'Mann-Whitney U Test: Comparing Two Independent Samples'
 seo_type: article
@@ -30,12 +32,10 @@ summary: The Mann-Whitney U Test is a non-parametric method used to compare two 
   samples. This article explains the test's assumptions, mathematical foundations,
   and its applications in fields like psychology, medicine, and ecology.
 tags:
-- Mann-whitney u test
-- Non-parametric statistics
-- Two independent samples
-- Hypothesis testing
-- Data analysis
-- Bash
+- Hypothesis Testing
+- Nonparametric Methods
+- Data Analysis
+- Programming
 - Python
 title: 'Mann-Whitney U Test: Non-Parametric Comparison of Two Independent Samples'
 ---

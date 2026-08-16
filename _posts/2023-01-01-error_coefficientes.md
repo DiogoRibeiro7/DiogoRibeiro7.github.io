@@ -35,11 +35,8 @@ summary: This article explores how error terms are handled in both multiple line
   regression and binary logistic regression, emphasizing their roles in statistical
   model performance and accuracy.
 tags:
-- Regression models
-- Error terms
-- Multiple linear regression
-- Binary logistic regression
-- Statistical models
+- Regression
+- Statistical Modeling
 title: The Role of Error Terms in Multiple Linear Regression and Binary Logistic Regression
 ---
 

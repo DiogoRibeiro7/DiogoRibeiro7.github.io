@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Python
-- Software Development
-- Version Control
+- Programming
 classes: wide
 date: '2024-08-19'
 excerpt: Learn how to use pre-commit tools in Python to enforce code quality and consistency
@@ -25,6 +23,8 @@ keywords:
 - Python development workflow
 - Bash
 - Yaml
+redirect_from:
+- '/python/software development/version control/pre_comit_tutorial/'
 seo_description: Pre-commit tools in Python for code quality and Git hooks, and how to integrate automated checks into your development process.
 seo_title: 'Pre-Commit Tools in Python: Best Practices and Guide'
 seo_type: article
@@ -34,13 +34,8 @@ summary: This guide provides an in-depth overview of pre-commit tools in Python,
   the development process.
 tags:
 - Python
-- Pre-commit
-- Code quality
-- Git hooks
-- Version control
-- Automation
-- Bash
-- Yaml
+- MLOps
+- Programming
 title: A Comprehensive Guide to Pre-Commit Tools in Python
 ---
 

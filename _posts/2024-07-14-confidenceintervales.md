@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Data Science
 classes: wide
 date: '2024-07-14'
 header:
@@ -12,14 +11,14 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_3.jpg
+redirect_from:
+- '/statistics/data science/confidenceintervales/'
 seo_description: The difference between confidence and prediction intervals, and what each tells you about uncertainty in an estimate.
 seo_title: Confidence vs. Prediction Intervals
 seo_type: article
 tags:
-- Uncertainty
-- Linear regression
-- Confidence interval
-- Prediction interval
+- Confidence Intervals
+- Regression
 title: 'Understanding Uncertainty in Statistical Estimates: Confidence and Prediction
   Intervals'
 ---

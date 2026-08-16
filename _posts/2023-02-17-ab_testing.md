@@ -33,11 +33,10 @@ seo_description: 'The statistics behind sequential testing in A/B tests: SPRT, e
 seo_title: Sequential Testing Methods for A/B Tests
 seo_type: article
 tags:
-- A/b testing
-- Sequential testing
-- Statistical methods
+- Experimental Design
+- Statistical Modeling
 - R
-- Javascript
+- Programming
 - Python
 title: Advanced Statistical Methods for Efficient A/B Testing
 ---

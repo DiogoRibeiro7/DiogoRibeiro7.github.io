@@ -24,9 +24,8 @@ seo_description: The linear algebra, calculus, probability, and optimization tha
 seo_title: Why Mathematics Is the Foundation of AI
 seo_type: article
 tags:
-- Mathematics
-- Machine learning
-- Linear algebra
+- Mathematical Modeling
+- Machine Learning
 - Optimization
 title: Why Mathematics Is the Foundation of AI
 ---

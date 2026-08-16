@@ -41,10 +41,10 @@ summary: This article explores the role of data science in business, highlightin
   chain optimization, and predictive analytics, showcasing how companies can leverage
   data science for competitive advantage.
 tags:
-- Data science
-- Business intelligence
-- Machine learning
-- Data analysis
+- Data Science
+- Business Intelligence
+- Machine Learning
+- Data Analysis
 title: Demystifying Data Science
 ---
 

@@ -23,11 +23,9 @@ seo_title: 'Maryam Mirzakhani: First Woman to Win the Fields Medal'
 seo_type: article
 summary: Maryam Mirzakhani was the first woman to win the Fields Medal, recognized for her pioneering work on the dynamics and geometry of Riemann surfaces and their moduli spaces. Her legacy continues to inspire the world of mathematics.
 tags:
-- Maryam mirzakhani
-- Fields medal
-- Hyperbolic geometry
-- Riemann surfaces
-- Women in mathematics
+- Biographies
+- Geometry
+- Mathematical Modeling
 title: 'Maryam Mirzakhani: The First Woman to Win the Fields Medal'
 ---
 

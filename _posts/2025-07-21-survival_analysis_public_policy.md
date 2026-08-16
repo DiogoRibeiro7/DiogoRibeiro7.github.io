@@ -1,15 +1,11 @@
 ---
+redirect_from:
+- '/public policy/data science/government analytics/survival_analysis_public_policy/'
 title: "Survival Analysis in Public Policy and Government: Applications, Methodology, and Implementation"
 categories:
-- Public Policy
 - Data Science
-- Government Analytics
 tags:
-- survival analysis
-- public policy
-- time-to-event modeling
-- government data
-- evidence-based policymaking
+- Survival Analysis
 author_profile: false
 seo_title: Survival Analysis for Public Policy in Python
 seo_description: How survival analysis models time-to-event data for public policy across health, housing, and education, with Python examples.

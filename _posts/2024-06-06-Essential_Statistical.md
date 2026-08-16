@@ -2,9 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Mathematics
-- Statistics
-- Data Analysis
 classes: wide
 date: '2024-06-06'
 header:
@@ -14,17 +11,17 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_7.jpg
+redirect_from:
+- '/data science/mathematics/statistics/data analysis/Essential_Statistical/'
 seo_description: The statistical concepts every data analyst needs, from descriptive measures like mean and median to interpreting data.
 seo_title: Essential Statistical Concepts for Data Analysts
 seo_type: article
 tags:
-- Descriptive statistics
-- Inferential statistics
-- Probability distributions
-- Sampling techniques
-- Bayesian statistics
-- Time series analysis
-- Multivariate analysis
+- Descriptive Statistics
+- Probability
+- Bayesian Statistics
+- Time Series
+- Multivariate Analysis
 title: Essential Statistical Concepts for Data Analysts
 ---
 

@@ -30,10 +30,8 @@ seo_description: Value at Risk (VaR) and Expected Shortfall (ES) compared as ris
 seo_title: 'VaR vs Expected Shortfall: A Data-Driven Analysis'
 seo_type: article
 tags:
-- Value at risk
-- Expected shortfall
-- Financial crisis
-- Risk models
+- Finance
+- Risk Management
 - Python
 title: 'Comparing Value at Risk (VaR) and Expected Shortfall (ES): A Data-Driven Analysis'
 ---

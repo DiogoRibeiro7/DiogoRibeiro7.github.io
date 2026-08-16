@@ -1,16 +1,13 @@
 ---
+redirect_from:
+- '/machine learning/data science/ai ethics/data_drift_and_fairness_monitoring_ai/'
 title: "Data Drift and Fairness: Monitoring Equity When Populations Change"
 categories:
 - Machine Learning
-- Data Science
-- AI Ethics
 tags:
 - Data Drift
-- Fairness
+- Ethics
 - Model Monitoring
-- Responsible AI
-- Bias Detection
-- Production Machine Learning
 author_profile: false
 seo_title: "Data Drift and Fairness in Production Machine Learning"
 seo_description: "A practical guide to monitoring model fairness under data drift, including subgroup performance, fairness metrics, delayed labels, alert design, and governance."

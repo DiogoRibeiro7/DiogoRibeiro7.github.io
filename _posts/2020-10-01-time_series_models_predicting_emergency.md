@@ -26,11 +26,9 @@ summary: A study comparing machine learning models (random forest, GBM) with uni
   time series models (ARIMA, ETS, Prophet) for predicting emergency department visits.
   Results show machine learning models perform better, though not substantially so.
 tags:
-- Emergency department
-- Time series forecasting
-- Machine learning
-- Gradient boosted machines
-- Random forest
+- Time Series
+- Machine Learning
+- Decision Trees
 title: Machine Learning vs. Univariate Time Series Models in Predicting Emergency
   Department Visit Volumes
 ---

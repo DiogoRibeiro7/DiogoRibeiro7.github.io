@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Artificial Intelligence
+- Machine Learning
 classes: wide
 excerpt: Statistical AI leverages probabilistic reasoning and data-driven inference to build adaptive and intelligent systems.
 keywords:
@@ -10,15 +10,16 @@ keywords:
 - Probabilistic Models
 - Machine Learning
 - Hidden Markov Models
+redirect_from:
+- '/artificial intelligence/statistical_ai/'
 seo_description: An in-depth exploration of statistical AI, its probabilistic foundations, classic models, and how it powers modern machine learning.
 seo_title: 'Statistical AI: The Probabilistic Foundations'
 summary: This article explores Statistical AI, focusing on its mathematical foundations, key statistical models, machine learning applications, and its role in advancing artificial intelligence.
 tags:
-- AI
-- Statistical Learning
+- Artificial Intelligence
 - Machine Learning
 - Probability
-- Bayesian Inference
+- Bayesian Statistics
 title: 'Statistical AI: Probabilistic Foundations of Artificial Intelligence'
 ---
 

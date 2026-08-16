@@ -25,9 +25,8 @@ seo_type: article
 summary: This overview demystifies neural networks by highlighting how layered structures
   learn complex patterns from data.
 tags:
-- Neural networks
-- Deep learning
-- Machine learning
+- Neural Networks
+- Machine Learning
 title: A Gentle Introduction to Neural Networks
 ---
 

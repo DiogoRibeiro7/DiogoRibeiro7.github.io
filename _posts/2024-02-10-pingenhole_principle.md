@@ -37,15 +37,10 @@ summary: This article delves into the Pigeonhole Principle, illustrating its pro
   simplicity and exploring its applications in various mathematical fields such as
   combinatorics, number theory, geometry, and data compression.
 tags:
-- Pigeonhole principle
-- Mathematical logic
 - Combinatorics
-- Data compression
+- Mathematical Modeling
 - Geometry
-- Number theory
-- Rubik's cube
-- Rational numbers
-- Mathematical proofs
+- Number Theory
 - R
 - Python
 title: 'Elegance of the Pigeonhole Principle: A Mathematical Odyssey'

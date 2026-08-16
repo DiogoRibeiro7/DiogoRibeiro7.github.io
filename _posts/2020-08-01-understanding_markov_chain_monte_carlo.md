@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Algorithms
+- Mathematics
 classes: wide
 date: '2020-08-01'
 excerpt: This article delves into the fundamentals of Markov Chain Monte Carlo (MCMC),
@@ -22,6 +22,8 @@ keywords:
 - Python
 - Bayesian inference
 - Bash
+redirect_from:
+- '/algorithms/understanding_markov_chain_monte_carlo/'
 seo_description: 'Markov Chain Monte Carlo (MCMC) explained: its algorithms and applications in statistics, probability theory, and numerical approximation.'
 seo_title: Comprehensive Guide to Markov Chain Monte Carlo (MCMC)
 seo_type: article
@@ -30,12 +32,12 @@ summary: Markov Chain Monte Carlo (MCMC) is an essential tool in probabilistic c
   algorithms like Metropolis-Hastings, and various applications in statistics and
   numerical integration.
 tags:
-- Markov chain monte carlo
-- Probability distributions
+- Stochastic Processes
+- Probability
 - Python
-- Bash
-- Bayesian statistics
-- Numerical methods
+- Programming
+- Bayesian Statistics
+- Numerical Methods
 title: Understanding Markov Chain Monte Carlo (MCMC)
 ---
 

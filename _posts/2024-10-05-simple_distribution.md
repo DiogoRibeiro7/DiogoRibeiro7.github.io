@@ -1,8 +1,7 @@
 ---
 author_profile: false
 categories:
-- Time-Series
-- Machine Learning
+- Time Series
 classes: wide
 date: '2024-10-05'
 excerpt: An in-depth review of the role of simple distributional properties, like
@@ -18,6 +17,8 @@ keywords:
 - Time-series classification
 - Simple distributional properties
 - Deep learning
+redirect_from:
+- '/time-series/machine learning/simple_distribution/'
 seo_description: Explore the effectiveness of using simple distributional properties
   as a baseline for time-series classification, compared to complex deep learning
   models.
@@ -27,9 +28,8 @@ summary: This article reviews time-series classification techniques, highlightin
   the importance of simple distributional properties such as mean and standard deviation
   as a baseline.
 tags:
-- Time-series classification
-- Distributional properties
-- Deep learning
+- Time Series
+- Neural Networks
 title: A Comprehensive Review of Simple Distributional Properties as a Baseline for
   Time-Series Classification
 ---

@@ -38,9 +38,8 @@ summary: This article provides a comprehensive exploration of Customer Lifetime 
   in data-driven marketing strategies. It also covers how CLV can be integrated with
   other business data to optimize customer retention and enhance profitability.
 tags:
-- Clv
-- Predictive analytics
-- Marketing strategy
+- Customer Analytics
+- Machine Learning
 - Python
 title: 'Customer Lifetime Value: An In-Depth Exploration for Data Practitioners and
   Marketers'

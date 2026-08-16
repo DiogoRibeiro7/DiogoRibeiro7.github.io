@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Biographies
 classes: wide
 date: '2024-01-07'
 excerpt: Marina Viazovska won the Fields Medal in 2022 for her remarkable solution to the sphere packing problem in 8 dimensions and her contributions to Fourier analysis and modular forms.
@@ -20,18 +19,17 @@ keywords:
 - E8 lattice
 - Fourier analysis contributions
 - Women in mathematics
+redirect_from:
+- '/mathematics/biographies/marina_viazovska_fields_medalist_and_pioneer_in_sphere_packing/'
 seo_description: How Marina Viazovska solved sphere packing in 8 dimensions and won the 2022 Fields Medal for her work in discrete geometry.
 seo_title: 'Marina Viazovska: Fields Medalist and Sphere Packing Pioneer'
 seo_type: article
 summary: Marina Viazovska is a Ukrainian mathematician who won the Fields Medal in 2022 for solving the sphere packing problem in 8 dimensions. Her elegant methods and groundbreaking work in discrete geometry and Fourier analysis continue to influence the field.
 tags:
-- Marina viazovska
-- Fields medal
-- Sphere packing
-- E8 lattice
-- Discrete geometry
-- Fourier analysis
-- Women in mathematics
+- Biographies
+- Geometry
+- Signal Processing
+- Mathematical Modeling
 title: 'Marina Viazovska: Fields Medalist and Pioneer in Sphere Packing'
 ---
 

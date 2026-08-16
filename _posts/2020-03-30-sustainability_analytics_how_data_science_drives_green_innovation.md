@@ -26,11 +26,9 @@ summary: In this article, we explore the role of data science in driving green i
   through sustainability analytics, examining how companies use data to optimize resources,
   cut waste, and enhance supply chain efficiency.
 tags:
-- Sustainability analytics
-- Data science
-- Green innovation
-- Resource optimization
-- Supply chain efficiency
+- Data Science
+- Optimization
+- Supply Chain
 title: 'Sustainability Analytics: How Data Science Drives Green Innovation'
 ---
 

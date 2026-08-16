@@ -25,12 +25,10 @@ seo_title: Using IoT and Data Science for Climate Action
 seo_type: article
 summary: Explore how IoT devices and data science combine to monitor and analyze environmental data, providing essential insights to support climate action and sustainability.
 tags:
-- Iot
-- Climate change
-- Environmental monitoring
-- Climate Action
+- Industrial IoT
+- Climate and Environment
+- Model Monitoring
 - Data Science
-- Internet of Things
 title: 'IoT and Data Science for Climate Action: Monitoring, Analysis, and Insights'
 ---
 

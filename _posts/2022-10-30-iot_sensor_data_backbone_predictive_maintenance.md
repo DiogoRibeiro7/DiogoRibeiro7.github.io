@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- IoT
+- Predictive Maintenance
 classes: wide
 date: '2022-10-30'
 excerpt: Learn how IoT-enabled sensors like vibration, temperature, and pressure sensors
@@ -20,6 +20,8 @@ keywords:
 - Predictive maintenance
 - Real-time monitoring
 - Industrial iot
+redirect_from:
+- '/iot/iot_sensor_data_backbone_predictive_maintenance/'
 seo_description: How IoT devices and sensors supply the real-time data behind predictive maintenance, and how sensor types contribute to equipment health monitoring.
 seo_title: How IoT and Sensor Data Power Predictive Maintenance
 seo_type: article
@@ -27,11 +29,9 @@ summary: This article delves into the critical role IoT and sensor data play in 
   maintenance, covering different types of sensors and their applications, the importance
   of real-time monitoring, and how the data is processed to optimize maintenance strategies.
 tags:
-- Iot
-- Sensor data
-- Predictive maintenance
-- Real-time monitoring
-- Industrial iot
+- Industrial IoT
+- Predictive Maintenance
+- Model Monitoring
 title: 'IoT and Sensor Data: The Backbone of Predictive Maintenance'
 ---
 

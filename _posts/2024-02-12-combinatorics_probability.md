@@ -32,14 +32,11 @@ summary: This article explores the intersection of combinatorics and probability
   uncovering how their mathematical synergies solve complex problems in data science,
   mathematics, and beyond.
 tags:
-- Mathematics
+- Mathematical Modeling
 - Combinatorics
-- Probability theory
-- Statistical analysis
-- Mathematical foundations
-- Data science
-- Educational resources
-- Mathematical applications
+- Probability
+- Statistical Modeling
+- Data Science
 title: Paths of Combinatorics and Probability
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

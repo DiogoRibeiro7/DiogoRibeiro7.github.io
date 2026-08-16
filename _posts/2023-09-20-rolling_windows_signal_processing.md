@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Signal Processing
+- Predictive Maintenance
 classes: wide
 date: '2023-09-20'
 excerpt: Explore the diverse applications of rolling windows in signal processing,
@@ -25,16 +25,17 @@ keywords:
 - Filtering techniques
 - Data smoothing
 - Python
+redirect_from:
+- '/signal processing/rolling_windows_signal_processing/'
 seo_description: Learn how rolling windows can be applied in signal processing for
   smoothing, feature extraction, and time-frequency analysis.
 seo_title: Unlock the Power of Rolling Windows in Signal Processing
 seo_type: article
 social_image: /assets/images/rollingwindow.png
 tags:
-- Rolling windows
-- Feature extraction
-- Signal smoothing
-- Time-frequency analysis
+- Time Series
+- Feature Engineering
+- Signal Processing
 - Python
 title: Rolling Windows in Signal Processing
 ---

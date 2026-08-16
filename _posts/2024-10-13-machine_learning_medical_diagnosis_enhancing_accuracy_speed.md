@@ -27,10 +27,9 @@ summary: This article explores the role of machine learning in improving the spe
   and accuracy of medical diagnosis, with a focus on CNNs and deep learning applications
   in detecting critical diseases.
 tags:
-- Medical diagnosis
-- Machine learning
-- Deep learning
-- Healthcare technology
+- Healthcare
+- Machine Learning
+- Neural Networks
 title: 'Machine Learning in Medical Diagnosis: Enhancing Accuracy and Speed'
 ---
 

@@ -23,10 +23,9 @@ seo_title: How Statistical Methods Power Machine Learning
 seo_type: article
 summary: Machine learning and statistics share deep connections. This article examines the ways statistical methods form the backbone of machine learning algorithms, exploring key techniques like regression, decision trees, and support vector machines.
 tags:
-- Machine learning
+- Machine Learning
 - Statistics
-- Algorithms
-- Data science
+- Data Science
 title: 'Machine Learning and Statistics: Bridging the Gap'
 ---
 

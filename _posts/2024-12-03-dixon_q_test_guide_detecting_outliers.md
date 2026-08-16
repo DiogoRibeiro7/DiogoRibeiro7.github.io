@@ -31,11 +31,10 @@ summary: Dixon's Q test is a statistical tool designed for detecting outliers in
   the Q statistic, compare it to reference Q values, and effectively detect outliers
   using the test.
 tags:
-- Dixon's q test
-- Outlier detection
-- Statistical methods
-- Hypothesis testing
-- Data analysis
+- Anomaly Detection
+- Statistical Modeling
+- Hypothesis Testing
+- Data Analysis
 - Python
 title: 'Dixon''s Q Test: A Guide for Detecting Outliers'
 ---

@@ -29,10 +29,8 @@ summary: This article delves into the application of K-means clustering in crime
   and predict criminal activity. The article includes a detailed exploration of data
   mining, clustering methods, and practical use cases.
 tags:
-- Data mining
-- K-means clustering
-- Machine learning
-- Crime analysis
+- Clustering
+- Machine Learning
 - Python
 title: 'Crime Analysis Using K-Means Clustering: Enhancing Security through Data Mining'
 ---

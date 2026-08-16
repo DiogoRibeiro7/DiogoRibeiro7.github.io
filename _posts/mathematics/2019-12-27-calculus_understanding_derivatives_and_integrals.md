@@ -22,10 +22,7 @@ seo_title: 'Calculus: Exploring Derivatives and Integrals'
 seo_type: article
 summary: Calculus is a branch of mathematics that focuses on change and accumulation. This article explores the key concepts of derivatives and integrals, explaining how they are used to solve problems in fields like physics, economics, and engineering.
 tags:
-- Calculus
-- Derivatives
-- Integrals
-- Mathematics
+- Mathematical Modeling
 title: 'Calculus: Understanding Derivatives and Integrals'
 ---
 

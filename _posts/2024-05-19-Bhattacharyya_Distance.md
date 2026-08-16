@@ -2,9 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Statistics
-- Data Science
-- Machine Learning
 classes: wide
 date: '2024-05-19'
 excerpt: Dive into Bhattacharyya distance, loss functions such as MSE and cross-entropy,
@@ -24,6 +21,8 @@ keywords:
 - Machine learning optimization
 - Kl divergence vs bhattacharyya distance
 - Loss functions in regression and classification
+redirect_from:
+- '/mathematics/statistics/data science/machine learning/Bhattacharyya_Distance/'
 seo_description: Bhattacharyya distance and loss functions such as MSE and cross-entropy, and how they optimize regression and classification models.
 seo_title: Bhattacharyya Distance and Loss Functions
 seo_type: article
@@ -32,19 +31,12 @@ summary: This article covers key similarity measures like Bhattacharyya distance
   explores essential loss functions such as mean squared error and cross-entropy,
   which are crucial for optimizing machine learning models.
 tags:
-- Bhattacharyya distance
-- Probability distributions
-- Kl divergence
-- Loss functions
+- Information Theory
+- Probability
+- Model Evaluation
 - Regression
 - Classification
-- Mean squared error
-- Cross-entropy loss
-- Machine learning optimization
-- Mathematics
-- Statistics
-- Data science
-- Machine learning
+- Machine Learning
 title: Similarity Measures and Loss Functions in Machine Learning
 ---
 

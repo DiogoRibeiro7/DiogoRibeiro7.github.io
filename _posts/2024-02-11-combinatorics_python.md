@@ -32,17 +32,11 @@ seo_title: 'Mastering Combinatorics with Python: A Practical Guide'
 seo_type: article
 subtitle: A Practical Guide
 tags:
-- Python programming
-- Combinatorial mathematics
-- Itertools library
-- Scientific computing
-- Probability theory
-- Mathematical software
-- Data analysis techniques
-- Algorithm development
-- Computational mathematics
-- Python libraries
 - Python
+- Mathematical Modeling
+- Probability
+- Data Analysis
+- Machine Learning
 - R
 title: Mastering Combinatorics with Python
 toc: false

@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- HealthTech
+- Data Science
 classes: wide
 date: '2024-02-12'
 excerpt: As AI revolutionizes elderly care, ethical concerns around privacy, autonomy,
@@ -20,6 +20,8 @@ keywords:
 - Big data privacy
 - Elderly autonomy
 - Informed consent
+redirect_from:
+- '/healthtech/ethical_considerations_elderly_care/'
 seo_description: This article explores the ethical challenges of using AI, big data,
   and machine learning in elderly care, focusing on privacy, autonomy, and informed
   consent.
@@ -31,10 +33,8 @@ summary: The integration of AI and machine learning in elderly care promises sig
   care systems, offering strategies to balance innovation with the dignity of elderly
   individuals.
 tags:
-- Ai in healthcare
-- Elderly care
-- Ethical ai
-- Privacy
+- Healthcare
+- Ethics
 title: Ethical Considerations in AI-Powered Elderly Care
 ---
 

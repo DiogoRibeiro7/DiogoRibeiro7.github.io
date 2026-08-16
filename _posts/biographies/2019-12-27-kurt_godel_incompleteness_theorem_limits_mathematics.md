@@ -23,15 +23,7 @@ seo_title: 'Kurt Gödel: Incompleteness Theorems and Mathematical Logic'
 seo_type: article
 summary: Kurt Gödel, one of the greatest logicians of the 20th century, is best known for his incompleteness theorems, which demonstrated the limitations of formal systems in mathematics. This article delves into his life, his revolutionary ideas, and his close relationship with Albert Einstein.
 tags:
-- Kurt Gödel
-- Incompleteness Theorem
-- Mathematical Logic
-- Gödel and Einstein
-- Philosophy of mathematics
-- Vienna Circle
-- Hilbert's Program
-- Gödel's rotating universe solution
-- Platonism in mathematics
+- Mathematical Modeling
 title: 'Kurt Gödel: Incompleteness Theorem and the Limits of Mathematics'
 ---
 

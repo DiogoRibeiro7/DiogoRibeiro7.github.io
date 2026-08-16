@@ -1,6 +1,4 @@
 ---
-redirect_from:
-- '/Machine Learning/Data Science/active_learning_label_efficiency_machine_learning/'
 title: "Active Learning for Machine Learning: Getting More Value from Fewer Labels"
 categories:
 - Machine Learning
@@ -9,7 +7,7 @@ tags:
 - Confidence Intervals
 author_profile: false
 seo_title: "Active Learning for Machine Learning"
-seo_description: "A practical guide to active learning in machine learning, covering label efficiency, uncertainty sampling, diversity, human review, data quality, and deployment."
+seo_description: 'Active learning for label efficiency: uncertainty sampling, diversity, and keeping data quality high under a limited labelling budget.'
 excerpt: "Active learning improves machine learning by choosing which examples to label, not merely by asking for more labeled data."
 summary: "This article explains active learning as a practical strategy for label-efficient machine learning. It covers uncertainty sampling, margin sampling, query by committee, diversity, representative sampling, human labeling workflows, validation design, failure modes, and when active learning is worth the operational cost."
 keywords:

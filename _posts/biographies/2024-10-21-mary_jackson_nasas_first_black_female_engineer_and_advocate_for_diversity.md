@@ -24,13 +24,8 @@ seo_title: 'Mary Jackson: NASA''s First Black Female Engineer'
 seo_type: article
 summary: Mary Jackson, NASA’s first Black female engineer, was a trailblazer in aerospace engineering and a lifelong advocate for equality and inclusion in STEM. Her work helped shape NASA’s early space missions, and her commitment to diversity created opportunities for future generations.
 tags:
-- Mary Jackson
-- NASA
-- Women in STEM
-- Aerospace Engineering
-- Diversity and Inclusion
-- African American Mathematicians
-- Mathematics
+- Biographies
+- Mathematical Modeling
 title: 'Mary Jackson: NASA''s First Black Female Engineer and Advocate for Diversity'
 ---
 

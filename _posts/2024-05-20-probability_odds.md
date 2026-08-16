@@ -29,14 +29,11 @@ summary: This article provides a detailed explanation of probability and odds, e
   and machine learning.
 tags:
 - Probability
-- Odds
-- Likelihood
-- Biostatistics
-- Event occurrence
-- Mathematics
+- Statistical Modeling
+- Mathematical Modeling
 - Statistics
-- Data science
-- Machine learning
+- Data Science
+- Machine Learning
 title: Understanding Probability and Odds
 ---
 

@@ -30,9 +30,9 @@ seo_title: 'Ethics in Data Science: Privacy, Bias, and Impact'
 seo_type: article
 subtitle: A Comprehensive Guide to Privacy, Bias, Social Impact and Responsible Decision-Making
 tags:
-- Data science
-- Artificial intelligence
-- Machine learning
+- Data Science
+- Artificial Intelligence
+- Machine Learning
 - Ethics
 title: Ethics in Data Science
 ---
