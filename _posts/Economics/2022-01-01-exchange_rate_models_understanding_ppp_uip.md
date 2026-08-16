@@ -28,100 +28,92 @@ tags:
 title: 'Exchange Rate Models: Understanding PPP and UIP'
 ---
 
-## Exchange Rate Models: Understanding PPP and UIP
+Exchange rates are among the hardest prices in economics to explain. Two parity conditions — Purchasing Power Parity and Uncovered Interest Parity — provide the standard theoretical anchors. Both are elegant, both are intuitive, and both are rejected by the data over short horizons. Understanding *why* they fail is more instructive than either condition alone.
 
-Exchange rate models are essential tools in international economics, helping to explain the dynamics of currency values and their movement in global markets. Two widely discussed models are Purchasing Power Parity (PPP) and Uncovered Interest Parity (UIP). These frameworks provide insights into the relationship between exchange rates, prices, and interest rates, forming the backbone of currency valuation theories.
+## Purchasing Power Parity
 
----
+PPP starts from the law of one price: an identical good should cost the same everywhere once prices are converted to a common currency. If it does not, arbitrage should close the gap.
 
-### **Purchasing Power Parity (PPP)**
+**Absolute PPP** applies this to the whole price level:
 
-Purchasing Power Parity (PPP) is a foundational model in exchange rate theory. It posits that in the long run, exchange rates should adjust to equalize the purchasing power of different currencies. In essence, a unit of currency should have the same purchasing power across countries when expressed in a common currency.
+$$
+S = \frac{P}{P^*},
+$$
 
-#### **Principle of PPP**
+where $S$ is the spot exchange rate in domestic currency per unit of foreign currency, $P$ the domestic price level and $P^*$ the foreign one. A basket costing £100 in Britain and <span class="tex2jax_ignore">$130</span> in the United States implies $S = 1.30$ dollars per pound.
 
-The concept of PPP is based on the "law of one price," which states that identical goods should cost the same in different countries after accounting for exchange rates. If the law of one price holds universally, the exchange rate between two currencies ($$ S $$) can be expressed as:
+**Relative PPP** is the weaker and more useful form. It claims not that levels equalise but that *changes* track inflation differentials:
 
-$$ S = \frac{P^*}{P} $$
+$$
+\frac{\Delta S}{S} \approx \pi - \pi^*,
+$$
 
-Where:
+so a country with inflation 3 percentage points above its trading partner should see its currency depreciate by roughly 3% a year. Relative PPP can hold even when absolute PPP fails, which matters because absolute PPP fails badly.
 
-- $$ S $$: Exchange rate (domestic currency per unit of foreign currency),
-- $$ P $$: Price level in the domestic country,
-- $$ P^* $$: Price level in the foreign country.
+### Why PPP Fails in the Short Run
 
-#### **Types of PPP**
+The empirical record is unambiguous: deviations from PPP are large and persistent, with a half-life of roughly three to five years. As a short-run predictor it is close to useless.
 
-1. **Absolute PPP:** Assumes price levels are directly proportional to exchange rates.  
-   Example: If a basket of goods costs <span class="tex2jax_ignore">$100</span> in the U.S. and €80 in the Eurozone, the exchange rate should be $$ S = 100/80 = 1.25 $$ USD/EUR.
+Several mechanisms explain this. Many goods are simply not tradable — housing, haircuts, medical care — and no arbitrage force acts on them. Transport costs, tariffs and distribution margins create bands within which price differences persist without any profitable trade. Price stickiness means nominal prices adjust slowly while exchange rates move continuously, so the ratio is knocked away from parity far faster than goods markets can restore it. And national price indices weight different baskets, so $P$ and $P^*$ are not measuring the same thing.
 
-2. **Relative PPP:** Focuses on the rate of change in price levels (inflation) to predict exchange rate movements over time. The formula is:
+The **Balassa-Samuelson effect** explains a systematic component of the deviation rather than treating it as noise. Rich countries have higher productivity in tradable sectors, which raises wages economy-wide, which raises the price of non-tradables, which makes their overall price level higher. Richer countries therefore have systematically overvalued currencies relative to absolute PPP — not an anomaly but a prediction.
 
-   $$ \frac{\Delta S}{S} = \pi^* - \pi $$
+This is why PPP-adjusted GDP comparisons are standard: market exchange rates systematically understate real incomes in poorer countries.
 
-   Where:
-   - $$ \pi^* $$: Foreign inflation rate,
-   - $$ \pi $$: Domestic inflation rate.
+## Uncovered Interest Parity
 
-#### **Applications of PPP**
+UIP concerns financial rather than goods arbitrage. If domestic assets pay more than foreign ones, capital should flow in until expected returns equalise:
 
-- **Currency Valuation:** Identifying overvalued or undervalued currencies compared to their PPP-implied values.
-- **Inflation Impact:** Linking inflation differentials to exchange rate adjustments.
-- **Global Comparisons:** Used by organizations like the IMF and World Bank for cross-country income and GDP comparisons.
+$$
+i - i^* = \mathbb{E}\!\left[\frac{\Delta S}{S}\right],
+$$
 
-#### **Limitations of PPP**
+the interest differential should equal the expected rate of depreciation. A currency offering 5% while its partner offers 2% must be expected to depreciate by about 3%, otherwise the higher rate is free money.
 
-- **Non-Tradable Goods:** PPP assumes all goods are tradable, ignoring services and local goods that do not enter international markets.
-- **Market Frictions:** Transaction costs, tariffs, and trade barriers can distort price equalization.
-- **Short-Term Deviations:** PPP is more relevant in the long term; short-term exchange rates are influenced by speculative forces and capital flows.
+The word **uncovered** is doing real work. Covered Interest Parity uses a forward contract to lock in the future rate, eliminating exchange risk, and CIP holds tightly in practice — it is close to an arbitrage identity, enforced by trade, and deviations were negligible until the 2008 crisis introduced funding frictions and balance-sheet costs that opened persistent small gaps.
 
----
+UIP instead leaves the position exposed and relies on *expectations*. That difference is why one holds and the other does not.
 
-### **Uncovered Interest Parity (UIP)**
+### The Forward Premium Puzzle
 
-Uncovered Interest Parity (UIP) describes the relationship between interest rate differentials and expected exchange rate movements. It assumes that differences in interest rates between two countries reflect anticipated changes in their exchange rates, aligning returns on foreign and domestic assets in a risk-neutral environment.
+UIP is not merely rejected by the data; it is rejected with the wrong sign. Regressing realised depreciation on the interest differential,
 
-#### **UIP Formula**
+$$
+\frac{\Delta S_{t+1}}{S_t} = \alpha + \beta (i_t - i_t^*) + \varepsilon_{t+1},
+$$
 
-The UIP condition can be expressed as:
+UIP predicts $\beta = 1$. Estimates across currencies and periods typically come out near zero or negative, often around $-0.8$.
 
-$$ E(S_{t+1}) - S_t = (i - i^*) $$
+A negative coefficient means high-interest currencies tend to *appreciate* rather than depreciate — the opposite of the prediction. This is the **forward premium puzzle**, and it is the empirical basis of the carry trade: borrow in a low-interest currency, lend in a high-interest one, and historically earn both the interest differential and a currency gain.
 
-Where:
+Three explanations compete. A time-varying **risk premium** would mean investors demand compensation for holding high-interest currencies, so the excess return is payment for risk rather than a free lunch — consistent with the carry trade's tendency to produce steady small gains punctuated by severe crashes. **Peso problems** attribute the pattern to small probabilities of large devaluations that happen not to occur in sample, so measured returns overstate expected returns. And **expectational errors** hold that market forecasts are simply biased, which survey data on exchange rate expectations partly supports.
 
-- $$ S_t $$: Spot exchange rate at time $$ t $$,
-- $$ E(S_{t+1}) $$: Expected exchange rate at time $$ t+1 $$,
-- $$ i $$: Domestic interest rate,
-- $$ i^* $$: Foreign interest rate.
+None of these is fully settled, which is unusual for a regularity documented this consistently for this long.
 
-This equation implies that if the domestic interest rate exceeds the foreign rate, the domestic currency is expected to depreciate in the future to offset the higher returns on domestic assets.
+## Comparing the Two
 
-#### **Applications of UIP**
+| | PPP | UIP |
+|---|---|---|
+| Arbitrage in | Goods markets | Capital markets |
+| Speed of adjustment | Very slow (half-life 3-5 years) | Should be immediate |
+| Short-run empirical support | Poor | Poor, and wrong-signed |
+| Long-run empirical support | Reasonable, especially relative PPP | Weak |
+| Main practical use | Long-run valuation, income comparison | Benchmark for excess returns |
 
-- **Forecasting Exchange Rates:** UIP provides a theoretical basis for predicting currency depreciation or appreciation.
-- **Interest Rate Arbitrage:** Explains the flow of capital seeking higher returns and its impact on exchange rates.
-- **Monetary Policy Analysis:** Helps central banks understand the implications of interest rate changes on currency values.
+The complementarity is real: PPP anchors the real exchange rate over long horizons while UIP concerns nominal returns over short ones. Their combination is the basis of the monetary model, in which the exchange rate is driven by relative money supplies and output.
 
-#### **Limitations of UIP**
+Meese and Rogoff's finding remains the disciplining fact: at horizons under a year, no structural exchange rate model — monetary, portfolio-balance, or otherwise — reliably beats a random walk out of sample. Decades of subsequent work has qualified this at longer horizons but not overturned it.
 
-- **Risk Premiums:** Investors may require compensation for risk, leading to deviations from UIP.
-- **Speculative Activity:** Expectations about future exchange rates can diverge due to speculative market behavior.
-- **Empirical Challenges:** In practice, UIP often fails in the short term due to factors like capital controls, market sentiment, and economic shocks.
+## What to Take From This
 
----
+Neither condition should be used as a short-run forecast. Both are useful as equilibrium benchmarks: a currency far from its PPP value is not guaranteed to revert soon, but the deviation is informative, and half-lives of several years mean the pull is real even when it is slow.
 
-### **Comparing PPP and UIP**
+The general lesson is worth more than either condition. Parity relationships describe forces that operate when nothing impedes them. Real markets are full of impediments — non-traded goods, sticky prices, risk premia, transaction costs, and expectations that are not rational in the model's sense. The gap between the parity condition and the data is not a failure of the theory so much as a measurement of those frictions, and that gap is usually the interesting quantity.
 
-| Aspect                  | Purchasing Power Parity (PPP)                | Uncovered Interest Parity (UIP)                |
-|-------------------------|----------------------------------------------|-----------------------------------------------|
-| **Focus**               | Prices of goods and services                | Interest rates and exchange rate expectations |
-| **Time Horizon**        | Long-term                                   | Short- to medium-term                         |
-| **Key Drivers**         | Inflation differentials                     | Interest rate differentials                   |
-| **Application**         | Currency valuation, inflation effects       | Exchange rate forecasting, monetary policy    |
-| **Limitations**         | Non-tradable goods, market frictions        | Risk premiums, speculative behavior           |
+## References
 
----
-
-### **Conclusion**
-
-Purchasing Power Parity (PPP) and Uncovered Interest Parity (UIP) are fundamental models for understanding exchange rate dynamics. While PPP emphasizes the role of price levels and inflation in determining currency values, UIP highlights the importance of interest rate differentials and future expectations. Together, these models provide a comprehensive framework for analyzing exchange rates, guiding policymakers, investors, and businesses in navigating the complexities of international finance.
+- Rogoff, K. (1996). The purchasing power parity puzzle. *Journal of Economic Literature*, 34(2), 647-668.
+- Fama, E. F. (1984). Forward and spot exchange rates. *Journal of Monetary Economics*, 14(3), 319-338.
+- Meese, R. A., & Rogoff, K. (1983). Empirical exchange rate models of the seventies: do they fit out of sample? *Journal of International Economics*, 14(1-2), 3-24.
+- Balassa, B. (1964). The purchasing-power parity doctrine: a reappraisal. *Journal of Political Economy*, 72(6), 584-596.
+- Engel, C. (2014). Exchange rates and interest parity. In *Handbook of International Economics* (Vol. 4). Elsevier.

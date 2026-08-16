@@ -39,36 +39,89 @@ title: 'Exploratory Data Analysis: A Beginner''s Guide'
 
 Exploratory Data Analysis (EDA) is the process of examining a dataset to understand its main characteristics before applying more formal statistical modeling or machine learning. By exploring your data upfront, you can identify patterns, spot anomalies, and test assumptions that might otherwise go unnoticed.
 
-## 1. Inspecting the Data
+The point is not to produce charts. It is to find out what the data can and cannot support before you commit to a model, because most modelling failures trace back to something that was visible in the raw data and never looked at.
 
-The first step in EDA is getting to know the dataset. Begin by loading it into a DataFrame with a tool like Pandas. Examine the column names, data types, and a few example rows to confirm that everything loaded correctly. Descriptive statistics such as mean, median, and standard deviation offer a quick snapshot of numerical columns, while frequency tables can help summarize categorical variables.
+## Inspecting the Data
 
-## 2. Cleaning and Preparing
+The first step is getting to know the dataset. Load it into a DataFrame, then examine the column names, data types, and a few example rows to confirm everything parsed correctly.
 
-Real-world datasets often contain missing values, duplicate rows, and inconsistent formats. Cleaning the data involves handling these issues—whether by removing or imputing missing values, correcting data types, or standardizing text fields. Proper cleaning ensures that later analysis is reliable and reproducible.
+```python
+import pandas as pd
 
-## 3. Visualizing Distributions and Relationships
+df = pd.read_csv("readings.csv")
 
-Visualization is central to EDA. Histograms and box plots reveal the distribution of numerical variables, while bar charts summarize categorical counts. Scatter plots and correlation matrices help uncover relationships between features. Tools like Matplotlib and Seaborn make it easy to create compelling visualizations that highlight trends and outliers.
+print(df.shape)                       # rows, columns
+print(df.dtypes)                      # silent parsing failures show up here
+print(df.head())
+print(df.describe(include="all").T)   # numeric and categorical together
+print(df.isna().mean().sort_values(ascending=False).head(10))
+```
 
-## 4. Drawing Initial Conclusions
+Two of these deserve attention. `dtypes` catches the most common silent failure: a numeric column read as `object` because a few rows contain `"N/A"`, a stray comma, or a footnote marker. Every later calculation on that column will either fail or quietly do something else.
 
-With the data cleaned and visualized, you can begin forming hypotheses about potential relationships or interesting patterns. These early insights guide further analysis, whether that means feature engineering, model selection, or identifying areas where more data might be needed.
+The missing-value proportions matter more than the counts. A column that is 3% missing is a nuisance; one that is 60% missing is a decision about whether the column exists at all.
 
-EDA serves as a critical foundation for any data science project. By taking the time to explore your data thoroughly, you set yourself up for more accurate models and better-informed decisions.
+## Cleaning and Preparing
 
-## 5. Using Summary Statistics
+Real-world datasets contain missing values, duplicate rows, and inconsistent formats. Cleaning involves handling these — removing or imputing missing values, correcting data types, standardising text fields.
 
-Summary statistics provide quick insights into the central tendencies and spread of your variables. Simple commands like `describe()` in Pandas generate the mean, median, and interquartile range for each numeric column. You can also calculate correlations to see how variables relate to one another before building more complex models.
+Before imputing anything, ask *why* a value is absent. If it is missing because a sensor fails when readings run high, imputing the mean systematically erases the extreme values you most needed. That is a modelling decision disguised as a cleaning step, and it should be made deliberately.
 
-## 6. Interactive Notebooks and Dashboards
+Duplicates deserve the same scepticism. `df.duplicated().sum()` counts exact repeats, but the more damaging kind is a near-duplicate — the same entity recorded twice with a different ID or a whitespace difference. Check for duplication on the columns that should uniquely identify a record, not on the whole row.
 
-Interactive tools make EDA more dynamic. Jupyter notebooks let you mix code and commentary so you can document findings as you go. Libraries such as Plotly and Altair add interactivity to your charts, while dashboards in tools like Streamlit or Tableau allow stakeholders to explore the data for themselves.
+Record every transformation. A cleaning step that lives only in a notebook cell you later edited is not reproducible, and the number you report will not be recoverable six months on.
 
-## 7. Common Pitfalls to Avoid
+## Summary Statistics and What They Hide
 
-Conducting EDA can reveal trends, but it is easy to overinterpret them. Avoid drawing definitive conclusions from small samples or ignoring the impact of outliers. Document each transformation so you can reproduce your work and ensure that visualizations are not misleading.
+Descriptive statistics give a quick read on central tendency and spread, but each one conceals a specific failure mode.
 
-## Conclusion
+The mean is pulled by outliers; comparing it against the median tells you about skew immediately. A mean well above the median means a long right tail, which is the normal shape for income, duration, and count data. Standard deviation assumes a roughly symmetric spread; on skewed data the interquartile range is more honest.
 
-Exploratory Data Analysis is both an art and a science. By leveraging descriptive statistics, thoughtful visualizations, and interactive tools, you can uncover valuable insights that guide every subsequent step of your project. A disciplined approach to EDA will keep your analyses on track and lead to stronger, more reliable results.
+Correlation is the most over-read of all. Pearson's $r$ measures *linear* association only, so a perfect parabola scores near zero. It is also acutely sensitive to outliers: a single extreme point can manufacture a strong correlation between unrelated variables or mask a real one.
+
+Anscombe's quartet is the standard demonstration — four datasets with identical means, variances, correlations and regression lines that look nothing alike when plotted. It is the argument for not stopping at the summary table.
+
+```python
+num = df.select_dtypes("number")
+print((num.mean() - num.median()).sort_values())   # skew indicator
+print(num.corr(numeric_only=True).round(2))
+print(num.corr(method="spearman").round(2))        # rank-based, outlier-resistant
+```
+
+Comparing Pearson against Spearman is a cheap diagnostic. Where they disagree sharply, the relationship is either non-linear or driven by a handful of points.
+
+## Visualising Distributions and Relationships
+
+Visualisation is central to EDA because shape is what summaries throw away. Histograms and box plots reveal the distribution of numerical variables, bar charts summarise categorical counts, and scatter plots expose relationships between features.
+
+Match the plot to the question. A histogram shows the shape of one variable and is sensitive to bin width, so try more than one. A box plot compares many groups compactly but hides multimodality entirely — a box plot of a two-humped distribution looks identical to a single-humped one with the same quartiles. When the sample is small enough, plot every point.
+
+Watch for the specific patterns that change what you do next: bimodality, which usually means two populations mixed together; a spike at zero, which often means "not measured" encoded as a number; values piled at a boundary, which suggests censoring or a clipped instrument; and repeated identical values, which can mean a stuck sensor or a default being recorded.
+
+## Common Pitfalls
+
+The biggest risk in EDA is that looking hard at data will always turn something up. If you test enough hypotheses generated by the same data you explored, the interesting ones will include a fair number of coincidences. Treat anything found during exploration as a hypothesis to be checked on data you have not looked at, not as a result.
+
+Related traps recur often enough to name. Drawing conclusions from small subgroups produces the most extreme apparent effects, because small samples vary most. Deleting outliers because they are inconvenient rather than because they are wrong removes exactly the observations that carry information about failure modes. And exploring the test set at all leaks information into every decision you subsequently make.
+
+Simpson's paradox deserves particular attention: a relationship visible in aggregate can reverse within every subgroup. Before trusting an aggregate trend, check whether it survives when you condition on the obvious grouping variable.
+
+## Interactive Tools
+
+Jupyter notebooks let you mix code and commentary so findings are documented as you go. Plotly and Altair add interactivity to charts, and dashboards in Streamlit let stakeholders explore the data themselves.
+
+Profiling libraries such as `ydata-profiling` generate a full report — distributions, correlations, missing-value patterns, and warnings — in a single call. These are excellent for the first pass and a poor substitute for the second, because they cannot tell you which of the anomalies they surface actually matter for your question.
+
+## Where EDA Leads
+
+EDA serves as the foundation for everything downstream. What you learn here decides which transformations are needed, which features are usable, which model families are plausible, and which questions the data simply cannot answer.
+
+A disciplined pass answers a short list before any modelling starts: what does one row represent, how much data is missing and why, what shape does the target variable have, which features are degenerate or duplicated, and what would have to be true for this dataset to be misleading. Getting those answers early is far cheaper than discovering them from a model that has already been trained, tuned, and reported.
+
+## References
+
+- Tukey, J. W. (1977). *Exploratory Data Analysis*. Addison-Wesley.
+- Anscombe, F. J. (1973). Graphs in statistical analysis. *The American Statistician*, 27(1), 17-21.
+- Wickham, H., & Grolemund, G. (2017). *R for Data Science*. O'Reilly Media.
+- Matejka, J., & Fitzmaurice, G. (2017). Same stats, different graphs: generating datasets with varied appearance and identical statistics. *Proceedings of CHI*, 1290-1294.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.

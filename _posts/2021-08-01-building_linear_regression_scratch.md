@@ -43,155 +43,173 @@ Why is this problem so often encountered in interviews? This challenge tests a v
 - Designing algorithms from the ground up.
 - Competence with numerical computing and performance optimizations.
 
-This article explores a step-by-step method to implement **Linear Regression** from scratch using the **Normal Equation** approach. Along the way, we’ll touch on the theoretical foundations, algorithm design, performance considerations, and techniques for evaluating the model.
+This article works through the Normal Equation approach, then shows why the textbook version of it is the wrong way to actually compute the answer.
 
 ## The Fundamentals of Linear Regression
 
-Linear regression models the relationship between a dependent variable (target) and one or more independent variables (features). The relationship is modeled using a straight line (in simple linear regression) or a hyperplane (in multiple linear regression). The mathematical formulation for a linear regression model is given by:
+The model predicts a response as a linear combination of features:
 
-$$ y = X \theta $$
+$$
+\hat{y} = X\beta, \qquad X \in \mathbb{R}^{n \times p},\ \beta \in \mathbb{R}^{p}.
+$$
 
-Where:
+Fitting means choosing $\beta$ to minimise the residual sum of squares:
 
-- $$y$$ is the vector of target values (dependent variable).
-- $$X$$ is the matrix of feature values (independent variables).
-- $$\theta$$ (theta) is the vector of coefficients (parameters or weights).
+$$
+S(\beta) = \lVert y - X\beta \rVert^2 .
+$$
 
-The goal of linear regression is to estimate the vector of parameters $$\theta$$ such that the error between the predicted and actual values of $$y$$ is minimized. This is typically done by minimizing the **sum of squared residuals**.
+Setting the gradient to zero gives the **normal equations**:
 
-### Solving Linear Regression: The Normal Equation
+$$
+X^\top X \beta = X^\top y,
+$$
 
-We will focus on the **Normal Equation** approach to solve for the parameters $$\theta$$. The formula for estimating $$\theta$$ is:
+whose textbook solution is $\hat{\beta} = (X^\top X)^{-1} X^\top y$.
 
-$$ \theta = (X^T X)^{-1} X^T y $$
+There is a useful geometric reading. The fitted values $X\hat{\beta}$ are the orthogonal projection of $y$ onto the column space of $X$, and the residual $y - X\hat{\beta}$ is orthogonal to every column of $X$. That orthogonality *is* the normal equations — the name comes from "normal" in the geometric sense.
 
-Where:
+## Why Not to Invert the Matrix
 
-- $$X^T$$ is the transpose of the feature matrix $$X$$.
-- $$(X^T X)^{-1}$$ is the inverse of the matrix $$X^T X$$.
-- $$y$$ is the vector of observed outputs.
+The formula $(X^\top X)^{-1} X^\top y$ is correct mathematics and poor numerics. Two problems compound.
 
-This method provides an exact solution without requiring iterative methods like **gradient descent**. However, matrix inversion can be computationally expensive, especially for large datasets, and may introduce numerical instability.
+Forming $X^\top X$ **squares the condition number** of $X$. If $X$ is moderately ill-conditioned — which correlated features guarantee — the product can be numerically singular even though the least-squares problem is perfectly well posed. Precision is lost before any solving begins.
 
-## Step-by-Step Implementation
+Explicitly inverting is then slower and less accurate than solving the system directly. `np.linalg.solve` uses a factorisation rather than computing an inverse and multiplying.
 
-### Step 1: Set Up the Data
+The robust approach skips $X^\top X$ altogether and factors $X$ directly. QR decomposition writes $X = QR$ with $Q$ orthonormal and $R$ upper triangular, reducing the problem to the triangular system $R\beta = Q^\top y$. SVD is more expensive still and handles rank deficiency gracefully by producing the minimum-norm solution, which is what `numpy.linalg.lstsq` does.
 
-The first step is setting up the dataset. For linear regression, we add an **intercept** term by inserting a column of ones to the feature matrix. This intercept term is critical as it allows the regression model to fit data that doesn't pass through the origin.
+The practical ranking: `lstsq` (SVD) is the safe default, QR is a good balance, `solve` on the normal equations is acceptable when $X$ is well conditioned, and explicit `inv` is essentially never right.
+
+## An Implementation
 
 ```python
 import numpy as np
 
-# Add a column of ones for the intercept term
-def add_intercept(X: np.ndarray) -> np.ndarray:
-    ones = np.ones((X.shape[0], 1))  # Create a column of ones
-    return np.hstack((ones, X))  # Horizontally stack the ones with the feature matrix
-```
 
-### Step 2: Implement the Normal Equation
-
-Now, we implement the Linear Regression class that encapsulates the functionality of fitting the model using the Normal Equation.
-
-```python
 class LinearRegression:
-    def __init__(self):
-        self.theta = None  # Parameters to be learned
-    
-    def fit(self, X: np.ndarray, y: np.ndarray) -> None:
-        """
-        Fits the model using the normal equation.
-        X: Feature matrix (without intercept term)
-        y: Target vector
-        """
-        X_b = add_intercept(X)  # Add the intercept term
-        # Normal Equation: theta = (X^T * X)^-1 * X^T * y
-        self.theta = np.linalg.inv(X_b.T.dot(X_b)).dot(X_b.T).dot(y)
+    """Least squares by QR, with a normal-equations path for comparison."""
 
-    def predict(self, X: np.ndarray) -> np.ndarray:
-        """
-        Makes predictions based on the learned parameters.
-        X: Feature matrix
-        Returns predicted values
-        """
-        X_b = add_intercept(X)  # Add the intercept term
-        return X_b.dot(self.theta)
+    def __init__(self, fit_intercept: bool = True, method: str = "qr"):
+        self.fit_intercept = fit_intercept
+        self.method = method
+        self.coef_ = None
+        self.intercept_ = 0.0
+
+    def _design(self, X):
+        X = np.asarray(X, dtype=float)
+        if X.ndim == 1:
+            X = X[:, None]
+        if self.fit_intercept:
+            X = np.hstack([np.ones((X.shape[0], 1)), X])
+        return X
+
+    def fit(self, X, y):
+        A = self._design(X)
+        y = np.asarray(y, dtype=float).ravel()
+        if A.shape[0] < A.shape[1]:
+            raise ValueError("fewer observations than parameters: underdetermined")
+
+        if self.method == "qr":
+            Q, R = np.linalg.qr(A)
+            beta = np.linalg.solve(R, Q.T @ y)
+        elif self.method == "svd":
+            beta, *_ = np.linalg.lstsq(A, y, rcond=None)
+        elif self.method == "normal":
+            beta = np.linalg.solve(A.T @ A, A.T @ y)
+        else:
+            raise ValueError(f"unknown method: {self.method}")
+
+        if self.fit_intercept:
+            self.intercept_, self.coef_ = beta[0], beta[1:]
+        else:
+            self.intercept_, self.coef_ = 0.0, beta
+        return self
+
+    def predict(self, X):
+        X = np.asarray(X, dtype=float)
+        if X.ndim == 1:
+            X = X[:, None]
+        return X @ self.coef_ + self.intercept_
+
+    def score(self, X, y):
+        """Coefficient of determination."""
+        y = np.asarray(y, dtype=float).ravel()
+        resid = ((y - self.predict(X)) ** 2).sum()
+        total = ((y - y.mean()) ** 2).sum()
+        return 1 - resid / total
 ```
 
-### Step 3: Evaluate Model Performance
+Separating `_design` from `fit` matters more than it looks: the intercept column must be added identically at fit and predict time, and doing it in two places is how that silently diverges.
 
-To evaluate the model, we calculate the **R-squared** metric, which represents the proportion of variance in the dependent variable that can be explained by the independent variables.
+## Seeing the Numerical Difference
 
-The formula for $$R^2$$ is:
-
-$$ R^2 = 1 - \frac{SS_{res}}{SS_{tot}} $$
-
-Where:
-
-- $$SS_{res}$$ is the residual sum of squares.
-- $$SS_{tot}$$ is the total sum of squares.
+Conditioning is not a theoretical concern. This constructs a design matrix with two nearly collinear columns:
 
 ```python
-def r_squared(y_true: np.ndarray, y_pred: np.ndarray) -> float:
-    """
-    Computes the R-squared value for the model.
-    y_true: Actual target values
-    y_pred: Predicted target values
-    """
-    ss_res = np.sum((y_true - y_pred) ** 2)  # Residual sum of squares
-    ss_tot = np.sum((y_true - np.mean(y_true)) ** 2)  # Total sum of squares
-    return 1 - (ss_res / ss_tot)
+rng = np.random.default_rng(0)
+n = 200
+x1 = rng.normal(size=n)
+x2 = x1 + rng.normal(scale=1e-6, size=n)      # almost a duplicate column
+X = np.column_stack([x1, x2, rng.normal(size=n)])
+beta_true = np.array([2.0, -1.0, 0.5])
+y = X @ beta_true + rng.normal(scale=0.01, size=n)
+
+print("condition number of X   :", f"{np.linalg.cond(X):.2e}")   # ~1.9e+06
+print("condition number of XtX :", f"{np.linalg.cond(X.T @ X):.2e}") # ~3.5e+12
+
+for m in ("svd", "qr", "normal"):
+    beta = LinearRegression(method=m).fit(X, y).coef_
+    print(f"{m:7} coefficients = {np.round(beta, 2)}")
 ```
 
-### Step 4: Testing the Implementation
+The condition number of $X^\top X$ comes out as the square of that of $X$ — 1.9e6 becomes 3.5e12 — which is precisely the precision loss described above.
 
-Let's test our linear regression implementation using synthetic data:
+The coefficients are the striking part. The true values are $[2, -1, 0.5]$, and every method returns something near $[-1134, 1135, 0.499]$. That is not a numerical bug: with two nearly identical columns, the data genuinely cannot distinguish "2 times $x_1$ minus 1 times $x_2$" from "−1134 times $x_1$ plus 1135 times $x_2$", because those are almost the same function. The problem is ill-posed, and no algorithm can recover what the data does not contain.
+
+What *is* recoverable is the identifiable combination. The sum of the first two coefficients comes back as 1.0007 against a true value of 1.0, under all three methods, and predictions are equally accurate in every case because the column space is unchanged.
+
+The methods do differ, but modestly here: SVD and QR agree to full displayed precision while the normal equations diverge in the fourth significant figure. At this conditioning that gap is small; it widens as the condition number approaches the limits of double precision, which is the argument for preferring a factorisation by default rather than only when trouble is already visible.
+
+The practical lesson is about interpretation more than arithmetic. If you need forecasts, collinearity may not matter. If you intend to read the coefficients, it matters completely — and a coefficient of −1134 where you expected 2 is the signal.
+
+## Regularisation as the Fix
+
+Ridge regression adds a penalty that both stabilises the numerics and controls variance:
+
+$$
+\hat{\beta}_{\text{ridge}} = (X^\top X + \lambda I)^{-1} X^\top y .
+$$
+
+Adding $\lambda$ to the diagonal makes the system invertible even when $X^\top X$ is singular, which is why ridge works when $p > n$ and ordinary least squares has no unique solution at all.
+
+Two implementation details are easy to get wrong. Do not penalise the intercept — shrinking it toward zero makes the fit depend on where the response happens to be centred. And standardise the features first, since the penalty applies equally to every coefficient and unscaled features are therefore penalised inconsistently.
+
+## Checking the Implementation
+
+Testing against a reference is the fastest way to catch mistakes:
 
 ```python
-# Create a toy dataset
-np.random.seed(42)  # Set random seed for reproducibility
-X = 2 * np.random.rand(100, 1)  # 100 data points with one feature
-y = 4 + 3 * X + np.random.randn(100, 1)  # Linear relationship with some noise
+from sklearn.linear_model import LinearRegression as SKLinear
 
-# Instantiate and train the model
-model = LinearRegression()
-model.fit(X, y)
+ours = LinearRegression().fit(X, y)
+theirs = SKLinear().fit(X, y)
 
-# Make predictions
-y_pred = model.predict(X)
-
-# Evaluate the model
-r2 = r_squared(y, y_pred)
-print(f"R-squared: {r2:.4f}")
+assert np.allclose(ours.predict(X), theirs.predict(X), atol=1e-8)
+assert np.isclose(ours.score(X, y), theirs.score(X, y))
 ```
 
-This will print the $$R^2$$ value, which indicates how well the model fits the data. For our synthetic dataset, you can expect a high $$R^2$$ value as the data follows a simple linear relationship.
+Worthwhile edge cases: a single feature, a perfectly collinear pair, a constant column, more parameters than observations, and `fit_intercept=False`. The constant column is a good test because it makes the design matrix rank-deficient once an intercept is added — SVD returns the minimum-norm solution, QR may not, and the normal equations fail outright. Knowing which behaviour you get is the point of writing it yourself.
 
-### A Closer Look at Algorithm Design and OOP
+## What the Exercise Is Actually For
 
-This implementation showcases essential skills in:
+You should use a library in production. The value in building this is understanding what the library is doing, so that when it warns about conditioning, returns implausible coefficients, or behaves differently from another implementation, the behaviour is legible rather than mysterious.
 
-- **Matrix Operations**: The Normal Equation involves matrix transposition, multiplication, and inversion, all of which require a solid grasp of linear algebra.
-- **Object-Oriented Design**: The class structure ensures that the regression logic is modular and reusable.
-- **Performance Considerations**: Although the Normal Equation provides an exact solution, matrix inversion has a time complexity of $$O(n^3)$$, making it inefficient for large datasets. In such cases, iterative methods like **Gradient Descent** are more appropriate.
+The transferable lesson is that the clean mathematical expression and the correct computation are not the same object. $(X^\top X)^{-1}X^\top y$ is how you write it; a QR or SVD factorisation is how you compute it. That gap recurs throughout numerical work.
 
-### Extending the Algorithm: Regularization and Stability
+## References
 
-#### Regularization
-
-To prevent issues with multicollinearity (when features are highly correlated), we can use **Ridge Regression**. This introduces a regularization term, modifying the Normal Equation as follows:
-
-$$ \theta = (X^T X + \lambda I)^{-1} X^T y $$
-
-Here, $$\lambda$$ is the regularization strength, and $$I$$ is the identity matrix, ensuring numerical stability by making $$X^T X + \lambda I$$ invertible.
-
-#### Numerical Stability
-
-Matrix inversion can be unstable, especially for large datasets. Libraries like **NumPy** internally use robust algorithms (e.g., **LAPACK**) to handle such operations efficiently, but issues can still arise with poorly conditioned matrices.
-
-### Final Thoughts
-
-Implementing a **Linear Regression** algorithm from scratch offers deep insights into machine learning's mathematical and computational foundations. It demonstrates your ability to build a solution from the ground up, highlighting skills in linear algebra, object-oriented design, and numerical computing.
-
-In interview settings, this exercise not only tests your coding abilities but also your understanding of trade-offs between **simplicity, performance, and scalability**.
-
-Having a solid grasp of these fundamentals will make you a more versatile and effective data scientist—so the next time you're asked to implement linear regression from scratch, you'll know exactly how to approach it!
+- Golub, G. H., & Van Loan, C. F. (2013). *Matrix Computations* (4th ed.). Johns Hopkins University Press.
+- Trefethen, L. N., & Bau, D. (1997). *Numerical Linear Algebra*. SIAM.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Hoerl, A. E., & Kennard, R. W. (1970). Ridge regression: biased estimation for nonorthogonal problems. *Technometrics*, 12(1), 55-67.

@@ -38,8 +38,7 @@ title: 'The Friedman Test: Non-Parametric Alternative to Repeated Measures ANOVA
 
 In data analysis, we often encounter situations where we need to compare three or more related groups. When the assumptions of normality or homogeneity of variances are not met, using parametric methods such as repeated measures ANOVA may not be appropriate. In such cases, the **Friedman test** offers a robust **non-parametric alternative**.
 
-The Friedman test is particularly useful for analyzing **ordinal data** or **non-normal distributions** in repeated measures designs, where the same subjects are measured under different conditions or across different time points. This article will provide a detailed explanation of the Friedman test, its application, and practical examples to help you understand when and how to use this method in your analyses.
-
+The Friedman test is particularly useful for analyzing **ordinal data** or **non-normal distributions** in repeated measures designs, where the same subjects are measured under different conditions or across different time points. This article explains the test, how it works, and when to use it.
 
 ## When and How to Use the Friedman Test
 
@@ -58,52 +57,82 @@ Despite being non-parametric, the Friedman test has its own set of assumptions:
 - **Ordinal or continuous data**: The test can handle both ordinal and continuous data as long as ranks can be assigned.
 - **Independence within groups**: While the measurements are related within subjects, the observations should be independent across subjects.
 
-### How the Friedman Test Works
+Two clarifications are worth making, because both are commonly misstated. "Non-parametric" does not mean assumption-free — it means no assumption about the *shape* of the distribution. The design assumptions above still bind, and a violated independence assumption invalidates the test just as thoroughly as it would a parametric one.
 
-The Friedman test ranks the data within each subject across the different treatments or time points. Once the ranks are calculated, the test computes the sum of ranks for each treatment. If the treatment effects are similar across all conditions, the rank sums should be approximately equal. However, if there is a treatment effect, some treatments will consistently receive higher or lower ranks.
+The test also does not require equal variances or symmetry, but it does assume that the blocks (subjects) are exchangeable and that there is no subject-by-treatment interaction. If a treatment helps some subjects and harms others in roughly equal measure, the rank sums can come out even and the test will report nothing while a real, heterogeneous effect exists.
 
-The test statistic for the Friedman test is calculated as follows:
+## How the Friedman Test Works
+
+The test ranks the data **within each subject** across the treatments, then compares the rank sums. This within-subject ranking is the crucial design feature: it removes any between-subject differences in overall level, so a consistently high-scoring participant contributes no more to the result than a consistently low-scoring one.
+
+If treatments are equivalent, each should collect roughly the same total rank. Systematic differences produce systematically different rank sums.
+
+With $n$ subjects and $k$ treatments, let $R_j$ be the sum of ranks for treatment $j$. The statistic is
 
 $$
-\chi_F^2 = \frac{12}{nk(k+1)} \sum_{j=1}^{k} R_j^2 - 3n(k+1)
+\chi_F^2 = \frac{12}{n k (k+1)} \sum_{j=1}^{k} R_j^2 - 3n(k+1),
 $$
 
-Where:
+which under the null follows approximately a chi-square distribution with $k-1$ degrees of freedom. The approximation is reasonable when $n$ is moderate; for small $n$ and $k$, exact distributions or a permutation test are preferable, since the asymptotic version is conservative there.
 
-- **n** is the number of subjects.
-- **k** is the number of conditions.
-- **R_j** is the sum of the ranks for condition j.
+Ties within a subject receive average ranks, and a tie correction should be applied when they are common — otherwise the statistic is deflated and the test loses power.
 
-The test statistic follows a chi-square distribution with **k-1 degrees of freedom**. A p-value is computed from the test statistic to determine whether to reject the null hypothesis.
+## A Worked Example
 
+Suppose eight assessors each rate three algorithms on a 1-10 usability scale. The same assessor rates all three, so the measurements are related.
 
-## Interpretation of Results and Post-Hoc Tests
+```python
+import numpy as np
+from scipy import stats
 
-If the Friedman test indicates that there is a significant difference between conditions, it does not specify **which** conditions are different. To determine this, you can use **post-hoc tests**, such as the **Wilcoxon signed-rank test** for pairwise comparisons between groups.
+# rows = assessors, columns = algorithms A, B, C
+scores = np.array([
+    [7, 8, 5], [6, 9, 6], [8, 8, 4], [5, 7, 5],
+    [7, 9, 6], [6, 8, 3], [8, 9, 5], [7, 7, 4],
+])
 
-### Post-Hoc Testing
+stat, p = stats.friedmanchisquare(*scores.T)
+print(f"Friedman chi-square = {stat:.3f}, p = {p:.5f}")
 
-After performing the Friedman test, post-hoc testing helps identify where the significant differences lie between conditions. Some common methods for post-hoc analysis include:
+# rank within each assessor, then sum per algorithm
+ranks = np.apply_along_axis(stats.rankdata, 1, scores)
+print("mean rank per algorithm:", ranks.mean(axis=0).round(2))
 
-- **Bonferroni correction**: This method adjusts the significance level to account for multiple comparisons.
-- **Wilcoxon signed-rank test**: For pairwise comparisons between specific conditions.
+# Kendall's W: the same information expressed as agreement, 0 to 1
+n, k = scores.shape
+W = stat / (n * (k - 1))
+print(f"Kendall's W = {W:.3f}")
+```
 
-### Interpretation of the Friedman Test Output
+A significant result says only that the algorithms are not interchangeable. It does not say which differ, and reporting the omnibus p-value alone is the most common way this test is under-used.
 
-- **p-value**: If the p-value is below a chosen significance level (e.g., 0.05), you reject the null hypothesis and conclude that at least one condition is different.
-- **Test statistic (χ²)**: The larger the test statistic, the greater the difference between the groups.
+Kendall's $W$ is worth computing alongside it. It rescales the same statistic onto $[0, 1]$ as a measure of agreement among the assessors, giving an effect size where the p-value gives only a decision.
 
+## Following Up a Significant Result
 
-## Conclusion
+Once the omnibus test rejects, pairwise comparisons identify where the differences lie — and those comparisons need adjusting for multiplicity, since three treatments give three pairs and five give ten.
 
-The **Friedman test** is a valuable tool for analyzing **non-parametric data** in repeated measures designs. It provides a robust alternative to repeated measures ANOVA when the assumptions of normality or equal variances are not met. By comparing the ranks of data within subjects across different conditions, the Friedman test can identify whether significant differences exist between groups.
+The Nemenyi test is the standard post-hoc for Friedman, comparing mean rank differences against a critical distance derived from the studentised range. It requires no distributional assumption beyond those already made. The Conover test is more powerful but should be used only after a significant omnibus result, since it borrows the overall rank variance.
 
-This test is particularly useful in situations where ordinal data, non-normal distributions, or small sample sizes make parametric methods inappropriate. Whether you’re comparing patient responses to different treatments over time or analyzing ranking data from surveys, the Friedman test is a flexible and reliable option.
+A simpler and often adequate route is pairwise Wilcoxon signed-rank tests with a Holm or Benjamini-Hochberg correction. Whichever you choose, decide before looking at the data, because selecting the post-hoc that yields significance is exactly the practice these corrections exist to prevent.
 
-### Further Reading
+## How It Compares to the Alternatives
 
-- **"Nonparametric Statistical Methods"** by Myles Hollander and Douglas A. Wolfe – A comprehensive resource on non-parametric methods, including the Friedman test.
-- **"Practical Statistics for Medical Research"** by Douglas G. Altman – Offers practical guidance on using the Friedman test and other statistical methods in medical research.
-- **Online Statistical Resources**: Many online tutorials and statistical software packages, like R or Python’s SciPy library, offer implementations of the Friedman test for practical use.
+Repeated measures ANOVA is the parametric counterpart. When its assumptions hold it is more powerful, so the Friedman test costs you something — the asymptotic relative efficiency is about 0.95 for three treatments under normality, rising as $k$ grows. That is a modest price for robustness.
 
----
+The choice is therefore not automatic. If the data are genuinely continuous and roughly normal, and sphericity holds or can be corrected for, repeated measures ANOVA is the better tool. If the data are ordinal, badly skewed, or contain outliers that would dominate a mean, the Friedman test is more trustworthy.
+
+For two related samples the Friedman test reduces to a form equivalent to the sign test, and the Wilcoxon signed-rank test is the more powerful choice there. For independent rather than related groups, the Kruskal-Wallis test is the correct analogue — applying Friedman to unrelated groups is a design error, not a robustness choice.
+
+## Reporting
+
+A complete report gives the statistic, degrees of freedom, sample size and p-value, together with mean ranks per condition, an effect size such as Kendall's $W$, and the post-hoc procedure with its adjusted p-values. Mean ranks matter because they show the direction of the effect, which the chi-square statistic alone conceals.
+
+Stating the design explicitly is equally important: readers need to know the measurements were repeated on the same subjects to judge whether the test was appropriate at all.
+
+## References
+
+- Friedman, M. (1937). The use of ranks to avoid the assumption of normality implicit in the analysis of variance. *Journal of the American Statistical Association*, 32(200), 675-701.
+- Conover, W. J. (1999). *Practical Nonparametric Statistics* (3rd ed.). Wiley.
+- Demšar, J. (2006). Statistical comparisons of classifiers over multiple data sets. *Journal of Machine Learning Research*, 7, 1-30.
+- Siegel, S., & Castellan, N. J. (1988). *Nonparametric Statistics for the Behavioral Sciences* (2nd ed.). McGraw-Hill.

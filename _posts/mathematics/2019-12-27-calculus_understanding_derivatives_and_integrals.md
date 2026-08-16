@@ -26,110 +26,131 @@ tags:
 title: 'Calculus: Understanding Derivatives and Integrals'
 ---
 
-## Calculus: Understanding Derivatives and Integrals
+Calculus is built on two operations that turn out to be inverses of each other: differentiation, which measures how fast something changes, and integration, which accumulates change into a total. Almost every quantitative method in data science rests on one or both.
 
-**Calculus** is a fundamental branch of mathematics that deals with continuous change and the accumulation of quantities. It is divided into two primary areas: **differential calculus**, which focuses on the concept of the **derivative** (the rate of change), and **integral calculus**, which deals with **integrals** (the accumulation of quantities, such as area under a curve). Together, derivatives and integrals form the backbone of many applications in science, engineering, economics, and beyond.
+## Derivatives: Measuring Change
 
-In this article, we will dive into the essential concepts of **derivatives** and **integrals**, explore how they are used to solve real-world problems, and highlight their importance across various fields.
+A **derivative** measures the rate at which a quantity changes with respect to another variable — how a function's output responds to a change in its input. Geometrically it is the slope of the curve at a point.
 
-### The Concept of Derivatives: Understanding Change
-
-A **derivative** represents the rate at which a quantity changes with respect to another variable. In simple terms, it measures how a function's output changes as its input changes. The most intuitive way to think of a derivative is as the **slope of a curve** at a given point.
-
-#### Definition of a Derivative
-
-For a function $$f(x)$$, the **derivative** at a point $$x = a$$ is defined as the limit:
+For a function $f(x)$, the derivative at $x = a$ is the limit
 
 $$
-f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
+f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}.
 $$
 
-This formula expresses how the function changes around the point $$a$$. If the slope is positive, the function is increasing at $$x = a$$, and if it is negative, the function is decreasing. When the slope is zero, the function has a **critical point**, which could be a local maximum, minimum, or a point of inflection.
+The fraction is the slope of the line through two points on the curve. Taking $h$ to zero slides the second point onto the first, and the secant becomes the tangent. The limit exists only when the curve has a well-defined direction there — which is why $|x|$ has no derivative at zero, and why ReLU networks are technically non-differentiable at the origin, a subtlety handled in practice by picking one of the one-sided slopes.
 
-#### Geometric Interpretation
+A positive derivative means the function is increasing; negative means decreasing; zero marks a **critical point**, which may be a maximum, a minimum, or a saddle. The second derivative distinguishes them: positive means the curve is convex there and the point is a minimum, negative means concave and a maximum.
 
-Geometrically, the derivative of a function at a given point corresponds to the slope of the **tangent line** to the curve at that point. For example, consider the function $$f(x) = x^2$$. Its derivative is $$f'(x) = 2x$$. At $$x = 1$$, the slope of the tangent line is 2, meaning the curve is increasing steeply. At $$x = 0$$, the slope is 0, indicating that the tangent is horizontal, and the curve has a **minimum** at this point.
+For $f(x) = x^2$ the derivative is $f'(x) = 2x$. At $x = 1$ the slope is 2; at $x = 0$ it is 0, and since $f''(x) = 2 > 0$ everywhere, that critical point is a minimum.
 
-#### Applications of Derivatives
+### Why Data Science Cares
 
-Derivatives have a wide array of applications across many fields:
+Nearly all model fitting is minimisation, and minimisation means finding where the derivative vanishes.
 
-- **Physics**: Derivatives are used to describe motion. For example, if $$s(t)$$ represents the position of an object over time, the derivative $$v(t) = \frac{ds}{dt}$$ gives the velocity, and the second derivative $$a(t) = \frac{d^2s}{dt^2}$$ provides the acceleration.
-  
-- **Economics**: In economics, the derivative of a cost or revenue function can be used to find the **marginal cost** or **marginal revenue**, which helps businesses optimize production and pricing strategies.
-
-- **Biology**: Derivatives are used to model population growth, with the rate of change of the population at a given time providing insight into how rapidly a population is increasing or decreasing.
-
-### The Concept of Integrals: Accumulating Quantities
-
-While derivatives measure how things change, **integrals** measure the total accumulation of quantities over an interval. The most common application of integration is to find the **area under a curve**.
-
-#### Definition of an Integral
-
-The **definite integral** of a function $$f(x)$$ over the interval $$[a, b]$$ is defined as:
+Gradient descent is the direct application. In several variables the analogue of the derivative is the **gradient** $\nabla f$, the vector of partial derivatives, which points in the direction of steepest increase. Stepping against it decreases the function:
 
 $$
-\int_a^b f(x) \, dx
+\theta_{t+1} = \theta_t - \eta \nabla f(\theta_t).
 $$
 
-This expression represents the accumulation of $$f(x)$$ from $$x = a$$ to $$x = b$$. If $$f(x)$$ represents velocity, for example, the integral will give the **total distance traveled** over the interval $$[a, b]$$.
+Backpropagation is the chain rule applied systematically to a composition of functions. If $z = g(h(x))$, then $\frac{dz}{dx} = g'(h(x)) \cdot h'(x)$; a neural network is a long composition, and training it means evaluating that product efficiently from the output backwards.
 
-#### The Fundamental Theorem of Calculus
+The chain rule also explains vanishing gradients. Multiplying many derivatives each smaller than one drives the product toward zero exponentially in depth, so early layers receive almost no signal — the motivation for ReLU activations, residual connections, and normalisation layers.
 
-The **Fundamental Theorem of Calculus** links derivatives and integrals, showing that they are inverse processes. It has two main parts:
+```python
+import numpy as np
 
-1. If $$F(x)$$ is the **antiderivative** of $$f(x)$$ (i.e., $$F'(x) = f(x)$$), then:
+def numerical_gradient(f, x, h=1e-5):
+    """Central difference: error is O(h^2), unlike the forward difference."""
+    x = np.asarray(x, dtype=float)
+    grad = np.zeros_like(x)
+    for i in range(x.size):
+        step = np.zeros_like(x); step[i] = h
+        grad[i] = (f(x + step) - f(x - step)) / (2 * h)
+    return grad
+
+f = lambda v: v[0]**2 + 3*v[1]**2 - 2*v[0]*v[1]      # analytic: [2x-2y, 6y-2x]
+point = np.array([1.0, 2.0])
+print("numerical :", numerical_gradient(f, point).round(6))
+print("analytic  :", np.array([2*1 - 2*2, 6*2 - 2*1]))
+```
+
+The central difference is worth knowing beyond textbooks: it is the standard way to verify a hand-derived gradient before trusting it in an optimiser, and a mismatch almost always means an error in the analytic derivation rather than in the approximation.
+
+Choosing $h$ involves a real trade-off. Too large and the approximation is poor; too small and subtracting two nearly equal floating-point numbers loses precision catastrophically. Around $10^{-5}$ balances the two for double precision.
+
+## Integrals: Accumulating Quantities
+
+Where the derivative takes a function apart, the **integral** puts it back together. The definite integral
 
 $$
-\int_a^b f(x) \, dx = F(b) - F(a)
+\int_a^b f(x)\,dx
 $$
 
-This means that the area under the curve $$f(x)$$ from $$a$$ to $$b$$ can be found by evaluating the antiderivative of $$f(x)$$ at the endpoints.
+is the limit of a sum of thin rectangles under the curve — the accumulated total of $f$ across the interval, and geometrically the signed area.
 
-2. The second part of the theorem states that **differentiation** and **integration** are inverse operations. If $$F(x)$$ is the antiderivative of $$f(x)$$, then:
-
-$$
-\frac{d}{dx} \left( \int_a^x f(t) \, dt \right) = f(x)
-$$
-
-#### Geometric Interpretation of Integrals
-
-The integral of a function represents the area under its curve. For example, if $$f(x) = x^2$$, the area under the curve from $$x = 0$$ to $$x = 1$$ is:
+The **Fundamental Theorem of Calculus** ties the two operations together. If $F$ is any antiderivative of $f$, then
 
 $$
-\int_0^1 x^2 \, dx = \frac{1}{3}
+\int_a^b f(x)\,dx = F(b) - F(a),
 $$
 
-This area can be interpreted as the total accumulation of $$x^2$$ over the interval $$[0, 1]$$.
+which says that accumulating a rate of change over an interval recovers the total change. Differentiation and integration are inverse operations, and that fact is what makes both tractable.
 
-#### Applications of Integrals
+### Why Data Science Cares
 
-Integrals are used in many practical applications to calculate accumulated quantities, such as:
+Probability is where integration earns its place. For a continuous random variable with density $f$,
 
-- **Physics**: In physics, integrals are used to compute quantities like **work** done by a force, **electric charge**, or **gravitational potential** over a distance. The area under a velocity-time graph, for example, gives the total distance traveled.
-  
-- **Economics**: Integrals are employed to calculate **consumer surplus** and **producer surplus** by integrating demand and supply curves over relevant price intervals.
-  
-- **Engineering**: Engineers use integrals to calculate quantities like **center of mass**, **moment of inertia**, and **energy consumption** in systems.
-  
-- **Probability**: In probability theory, integrals are used to calculate probabilities in continuous distributions, where the total probability is the area under the probability density function.
+$$
+P(a \le X \le b) = \int_a^b f(x)\,dx, \qquad \int_{-\infty}^{\infty} f(x)\,dx = 1 .
+$$
 
-### Practical Applications of Calculus
+Every probability statement about a continuous variable is an integral, and the requirement that a density integrates to one is what distinguishes a density from an arbitrary non-negative function.
 
-Calculus has profound implications for both theoretical and applied sciences. In addition to the specific applications in physics and economics mentioned above, calculus is used in:
+Expectations are integrals too:
 
-- **Medicine**: Calculus models the spread of diseases, the dynamics of drug concentration in the bloodstream, and the growth of tumors.
-  
-- **Computer Science**: Algorithms in machine learning, data science, and graphics heavily rely on optimization techniques, which use both derivatives and integrals.
-  
-- **Engineering**: Structural engineers use calculus to determine the stresses and forces within materials. Electrical engineers use calculus to analyze circuits and signals.
-  
-- **Environmental Science**: Calculus helps model the behavior of ecosystems, predict weather patterns, and estimate the rate of environmental degradation over time.
+$$
+\mathbb{E}[X] = \int_{-\infty}^{\infty} x f(x)\,dx .
+$$
 
-### Conclusion: The Power of Derivatives and Integrals
+This is why Bayesian inference is computationally demanding. The posterior requires the marginal likelihood $\int p(y \mid \theta)p(\theta)\,d\theta$, an integral over the whole parameter space with no closed form in realistic models. Markov Chain Monte Carlo exists precisely because that integral cannot be done analytically — it estimates the integral by sampling instead.
 
-Calculus is an indispensable tool in mathematics that allows us to understand and model change and accumulation. The concepts of **derivatives** and **integrals** are foundational not only to theoretical mathematics but also to the real-world applications found in physics, economics, biology, engineering, and beyond.
+Areas under curves recur in evaluation as well: ROC AUC and PR AUC are exactly what their names say.
 
-Through the use of derivatives, we gain insight into how systems evolve over time, while integrals allow us to measure total quantities and understand cumulative effects. Together, they form a unified framework that powers much of modern science and technology, making calculus one of the most important fields in mathematics.
+```python
+from scipy import integrate, stats
 
-Whether you're analyzing the motion of planets, optimizing business strategies, or developing cutting-edge technology, calculus provides the tools to tackle problems that involve change and accumulation.
+# P(-1.96 <= Z <= 1.96) for a standard normal, three ways
+exact = stats.norm.cdf(1.96) - stats.norm.cdf(-1.96)
+quad, _ = integrate.quad(stats.norm.pdf, -1.96, 1.96)
+
+grid = np.linspace(-1.96, 1.96, 10001)          # crude Riemann-style sum
+trapz = np.trapezoid(stats.norm.pdf(grid), grid)
+
+print(f"closed form : {exact:.8f}")
+print(f"quadrature  : {quad:.8f}")
+print(f"trapezoid   : {trapz:.8f}")
+```
+
+All three agree to roughly the familiar 0.95, which is where the "95% within about two standard deviations" rule of thumb comes from.
+
+## When the Integral Cannot Be Done
+
+Most integrals encountered in practice have no elementary antiderivative — the normal density is the standard example, which is why the normal CDF is tabulated rather than written in closed form.
+
+Three approaches handle this. **Quadrature** evaluates the integrand at chosen points with chosen weights and is highly accurate in one or two dimensions. **Monte Carlo integration** samples randomly and averages; its error falls as $1/\sqrt{N}$ regardless of dimension, which is slow in one dimension and decisive in fifty. **Conjugate priors** sidestep the problem in Bayesian work by choosing distributions whose integrals are known analytically.
+
+The dimension crossover is the practical point. Deterministic quadrature degrades exponentially as dimensions increase, while Monte Carlo does not, which is why high-dimensional Bayesian models are fitted by sampling rather than by numerical integration.
+
+## The Connection Worth Holding On To
+
+The two operations answer complementary questions: *how fast is this changing here* and *how much has accumulated overall*. Optimisation lives on the first — every fitted model is a derivative set to zero. Probability lives on the second — every statement about a continuous outcome is an integral. The Fundamental Theorem is what guarantees these are two views of one structure rather than two unrelated techniques.
+
+## References
+
+- Stewart, J. (2015). *Calculus: Early Transcendentals* (8th ed.). Cengage Learning.
+- Spivak, M. (2008). *Calculus* (4th ed.). Publish or Perish.
+- Deisenroth, M. P., Faisal, A. A., & Ong, C. S. (2020). *Mathematics for Machine Learning*. Cambridge University Press.
+- Nocedal, J., & Wright, S. J. (2006). *Numerical Optimization* (2nd ed.). Springer.
+- Robert, C. P., & Casella, G. (2004). *Monte Carlo Statistical Methods* (2nd ed.). Springer.

@@ -24,40 +24,107 @@ tags:
 title: Detecting Outliers Using Principal Component Analysis (PCA)
 ---
 
-Principal Component Analysis (PCA) is a robust technique used for dimensionality reduction while retaining critical information in datasets. Its sensitivity makes it particularly useful for detecting outliers in multivariate datasets. Detecting outliers can provide early warnings of abnormal conditions, allowing experts to identify and address issues before they escalate. However, detecting outliers in multivariate datasets can be challenging due to high dimensionality and the lack of labels. PCA offers several advantages in this context, including its ability to visualize data in reduced dimensions.
+Principal Component Analysis (PCA) is best known as a dimensionality reduction technique, but the same machinery detects outliers. The idea is direct: PCA learns the subspace the bulk of the data occupies, and points that do not fit that subspace stand out.
 
 ## Understanding Outlier Detection
 
-Outliers can be detected using univariate or multivariate approaches. In the univariate approach, outliers are detected by analyzing one variable at a time, often through data distribution analysis. In contrast, the multivariate approach uses multiple features to detect outliers with non-linear relationships or skewed distributions. The multivariate method is particularly powerful as it can capture complex interactions between variables that univariate methods might miss.
+An outlier is an observation that deviates markedly from the rest of the data. That definition is deliberately vague, because whether a point is an error, a rare event, or the most interesting observation in the dataset is a question the statistics cannot answer.
 
-## Anomalies vs. Novelties
+What the method can do is quantify *how* unusual a point is, and PCA offers a particular and useful notion of unusual.
 
-Anomalies and novelties represent deviations from expected behavior and are often referred to as outliers. The main distinction is that anomalies are deviations observed before, typically in the context of fraud, intrusion, or malfunction detection. Novelties are new, unseen deviations, useful for identifying new patterns or events. Detecting both can be challenging due to the subjective nature of defining what is considered normal or expected behavior, which varies based on the specific application.
+### Anomalies vs. Novelties
 
-## Principal Component Analysis for Outlier Detection
+The distinction is about what the training data contains. **Anomaly detection** assumes the training set is contaminated — anomalies are already present, and the task is to identify them. **Novelty detection** assumes the training set is clean and asks whether a *new* point belongs.
 
-Principal Component Analysis (PCA) is a linear transformation method that reduces dimensionality by identifying the directions (principal components) in which the data varies the most. This feature makes PCA sensitive to variables with different value ranges, including outliers. PCA allows for the visualization of data in two or three dimensions, facilitating the confirmation of outliers visually. Additionally, PCA provides good interpretability of response variables and can be combined with other methods to improve outlier detection accuracy.
+The difference is practical. In anomaly detection the outliers influence the fitted model, dragging the principal components toward themselves and partially masking their own deviation. In novelty detection the subspace is fitted on known-good data and new points are scored against it, which is the cleaner setup when it is available.
 
-### Methods for Outlier Detection in PCA
+## Two Distances, Two Kinds of Outlier
 
-PCA includes several methods for detecting outliers, such as Hotelling’s T2 and SPE/DmodX. These methods help identify samples that deviate significantly from the rest of the data based on their principal component scores. Hotelling’s T2 is based on the chi-square distribution of the principal component scores, while SPE/DmodX measures the distance between the actual observation and its projection using the principal components.
+PCA gives two genuinely different scores, and conflating them is the most common mistake in applying it.
 
-## Outlier Detection for Continuous Random Variables
+**Reconstruction error** measures distance *away from* the subspace. Project a point onto the first $k$ components, map it back, and measure how far it landed from the original:
 
-To demonstrate how PCA can be used for outlier detection in continuous random variables, we can consider the wine dataset from `sklearn`. This dataset includes 178 samples with 13 features and 3 wine classes. The first step involves normalizing the data, as the value ranges of features differ significantly. PCA can then be applied to detect outliers using Hotelling’s T2 and SPE/DmodX methods. These methods score each sample based on their deviation from the principal component distribution, allowing for the identification of outliers.
+$$
+e_i = \left\lVert x_i - \hat{x}_i \right\rVert^2, \qquad
+\hat{x}_i = \mu + W_k W_k^\top (x_i - \mu),
+$$
 
-### Visualizing Outliers
+where $W_k$ holds the first $k$ loading vectors. A large error means the point violates the correlation structure that holds for everything else — its features are individually plausible but jointly impossible.
 
-Visualization is central to interpreting PCA results. By plotting the principal components, outliers can be marked and analyzed further. For instance, plotting the first two principal components (PC1 and PC2) with marked outliers helps in understanding their distribution and identifying any patterns.
+**Mahalanobis distance** measures distance *within* the subspace. Using the retained components and their variances:
 
-## Outlier Detection for Categorical Variables
+$$
+d_i^2 = \sum_{j=1}^{k} \frac{z_{ij}^2}{\lambda_j},
+$$
 
-Detecting outliers in categorical variables involves discretizing the variables to make the distances comparable. One-hot encoding is typically used for this purpose, converting categorical variables into a binary matrix. Once the data is prepared, PCA can be applied similarly to the continuous case. The Student Performance dataset, containing 649 samples and 33 variables, can be used to demonstrate this approach. One-hot encoding results in a dataset with 177 columns, which can then be analyzed using PCA to detect outliers.
+where $z_{ij}$ is the score of point $i$ on component $j$ and $\lambda_j$ that component's variance. This finds points that follow the normal correlation pattern but are extreme along it — a genuinely large-but-consistent observation.
 
-### Interpreting Results
+These catch different things. A person 2.0 m tall weighing 110 kg has a large Mahalanobis distance and small reconstruction error: big, but proportioned normally. A person 1.5 m tall weighing 110 kg has the reverse: neither value is extreme alone, but the combination breaks the height-weight relationship. Monitoring only one of these misses half the outliers.
 
-The results from PCA can be used to identify overlapping outliers detected by different methods. For example, combining the results from Hotelling’s T2 and SPE/DmodX can provide a more robust set of outliers. Visualization tools, such as biplots, can further aid in interpreting these results by highlighting the contribution of each variable to the principal components and the position of outliers in the reduced-dimensional space.
+In process monitoring these are the classic $T^2$ and $Q$ (or SPE) statistics, and control charts are conventionally maintained for both.
 
-## Conclusion
+```python
+import numpy as np
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
 
-PCA is a powerful tool for multivariate outlier detection, offering the ability to reduce dimensionality while retaining essential information. By leveraging methods like Hotelling’s T2 and SPE/DmodX, PCA can effectively identify outliers in both continuous and categorical datasets. Visualization techniques enhance the interpretability of the results, making it easier to understand and act upon the detected outliers. While outlier detection can be challenging due to the subjective nature of defining normal behavior, PCA provides a systematic approach to uncovering deviations that warrant further investigation.
+X = StandardScaler().fit_transform(data)     # scaling is mandatory here
+
+pca = PCA(n_components=0.90)                 # keep 90% of variance
+Z = pca.fit_transform(X)
+X_hat = pca.inverse_transform(Z)
+
+spe = ((X - X_hat) ** 2).sum(axis=1)                       # Q / reconstruction
+t2 = (Z ** 2 / pca.explained_variance_).sum(axis=1)        # Hotelling's T-squared
+
+# thresholds from the observed distribution, not from a normal assumption
+spe_lim, t2_lim = np.percentile(spe, 99), np.percentile(t2, 99)
+flagged = (spe > spe_lim) | (t2 > t2_lim)
+
+print(f"components retained : {pca.n_components_}")
+print(f"flagged by SPE only : {((spe > spe_lim) & (t2 <= t2_lim)).sum()}")
+print(f"flagged by T2 only  : {((t2 > t2_lim) & (spe <= spe_lim)).sum()}")
+print(f"flagged by both     : {((spe > spe_lim) & (t2 > t2_lim)).sum()}")
+```
+
+The counts of "SPE only" versus "T² only" are worth printing every time — if they are both non-trivial, the two statistics are genuinely doing different work on your data.
+
+## Choices That Change the Answer
+
+**Scaling is not optional.** PCA maximises variance, so an unscaled feature measured in larger units dominates the components regardless of its importance. Standardise unless the features share meaningful units and their relative variances are themselves the signal.
+
+**How many components to keep** decides what counts as an outlier. Keep too many and the subspace absorbs the anomalies, shrinking their reconstruction error to nothing. Keep too few and ordinary variation looks anomalous. Retaining enough components for 90-95% of variance is a reasonable default, but the right number depends on where the noise floor sits.
+
+**PCA assumes linearity.** It finds a linear subspace, so data lying on a curved manifold will show large reconstruction error everywhere, and the method will report that most of the dataset is anomalous. Kernel PCA or an autoencoder handles curvature; the autoencoder is the direct non-linear generalisation of exactly this reconstruction-error idea.
+
+**Outliers corrupt the fit.** In the anomaly-detection setting the extreme points influence the covariance matrix that defines the subspace, masking themselves. Robust PCA, or fitting on a trimmed subset and scoring everything against it, mitigates this.
+
+## Setting a Threshold
+
+Distributional thresholds derived from the assumption of multivariate normality exist for both statistics, but production data is rarely multivariate normal and those limits tend to be badly calibrated.
+
+An empirical percentile of the training distribution is more defensible, with the caveat that it guarantees you flag that percentage of points whether or not anything is wrong. If the practical question is "how many cases can we investigate per day", setting the threshold from that capacity is more honest than pretending it came from theory.
+
+Where labels exist for even a small sample, use them: a precision-recall curve over the score answers whether the detector is useful far better than any distributional argument.
+
+## Categorical Data
+
+PCA operates on covariances and therefore expects continuous input. Applying it to one-hot encoded categories technically runs but yields components driven largely by category frequency.
+
+Better options exist: Multiple Correspondence Analysis is the categorical analogue of PCA, and for mixed data Factor Analysis of Mixed Data handles both types coherently. For purely categorical outlier detection, frequency-based methods such as the Frequent Patterns Outlier Factor address the problem directly rather than forcing it into a continuous frame.
+
+## Where PCA Fits Among the Alternatives
+
+PCA-based detection is fast, interpretable — the loadings say *which* variables drive an anomaly — and well suited to correlated numeric data, which is why it is standard in industrial process monitoring.
+
+It is a poor fit when relationships are strongly non-linear, when features are mostly categorical, or when anomalies are defined by local density rather than global structure. Isolation Forest handles high-dimensional numeric data without a linearity assumption; Local Outlier Factor finds points anomalous relative to their neighbourhood rather than to the whole dataset; autoencoders extend the reconstruction idea to non-linear manifolds.
+
+The most useful property PCA retains over all of these is explanation. When a point is flagged, the reconstruction residual decomposes across the original variables, so you can say which measurements are inconsistent — and in an operational setting, that is usually the difference between an alert someone acts on and one they ignore.
+
+## References
+
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).
+- Jackson, J. E., & Mudholkar, G. S. (1979). Control procedures for residuals associated with principal component analysis. *Technometrics*, 21(3), 341-349.
+- Aggarwal, C. C. (2017). *Outlier Analysis* (2nd ed.). Springer.
+- Candès, E. J., Li, X., Ma, Y., & Wright, J. (2011). Robust principal component analysis? *Journal of the ACM*, 58(3), 1-37.
+- Breunig, M. M., Kriegel, H.-P., Ng, R. T., & Sander, J. (2000). LOF: Identifying density-based local outliers. *Proceedings of SIGMOD*, 93-104.
