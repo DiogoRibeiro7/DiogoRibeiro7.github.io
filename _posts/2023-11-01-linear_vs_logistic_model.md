@@ -138,6 +138,8 @@ $$
 \text{Figure: Log-Odds vs. Probability}
 $$
 
+![A linear probability model and a logistic curve fitted to the same binary outcome. The straight line passes below zero and above one, predicting impossible probabilities; the logistic curve cannot.](/assets/images/figures/linear_vs_logistic.png){: width="1177" height="697" loading="lazy"}
+
 - When the probabilities are near the extremes (close to 0 or 1), the log-odds transformation creates a highly nonlinear relationship between predictors and probabilities, making logistic regression indispensable.
 - When the probabilities are moderate, the relationship becomes approximately linear, reducing the need for logistic regression.
 
