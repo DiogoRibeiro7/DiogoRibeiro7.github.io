@@ -21,7 +21,7 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page h-entry" itemscope itemtype="https://schema.org/{% if page.date %}BlogPosting{% else %}CreativeWork{% endif %}">
     {% unless page.header.overlay_color or page.header.overlay_image %}
     {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
       <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "
@@ -46,6 +46,7 @@ layout: default
       {% endunless %}
 
       <section class="page__content e-content" itemprop="text">
+        {% include content-provenance.html %}
         {% if page.toc %}
         <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
           <nav class="toc">
@@ -58,10 +59,12 @@ layout: default
         </aside>
         {% endif %}
         {{ content }}
-          <!-- Inserting Amazon Associates Link -->
+        {% if page.affiliate_books %}
+        <!-- Inserting Amazon Associates Link -->
         <div id="amazon-associates" style="margin-top:20px;">
           <a target="_blank" rel="noopener noreferrer" href="https://www.amazon.co.uk/gp/search?ie=UTF8&tag=diogoribeiro7-21&linkCode=ur2&linkId=6ff8fe6cd00ade16ded53c712a6667c8&camp=1634&creative=6738&index=books&keywords=data%20science%20and%20machine%20learning">Check out Data Science Books on Amazon</a>
         </div>
+        {% endif %}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{
             site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>

@@ -1,0 +1,25 @@
+{% assign author = page.author | default: page.authors[0] | default: site.author %}
+{% assign author = site.data.authors[author] | default: author %}
+
+{% if page.date %}
+<aside class="notice--info content-provenance" aria-label="Article provenance">
+  <p>
+    <strong>Author and editorial note.</strong>
+    Written by {{ author.name | default: site.name }}{% if author.role %}, {{ author.role }}{% endif %}.
+    This site prioritizes articles that add original analysis, code, examples, experiments, case experience,
+    or decision guidance instead of repeating commodity explanations.
+    {% if page.why_this_exists %}
+      <br><strong>Why this exists:</strong> {{ page.why_this_exists }}
+    {% endif %}
+    {% if page.evidence %}
+      <br><strong>Evidence used:</strong> {{ page.evidence }}
+    {% endif %}
+    {% if page.methodology %}
+      <br><strong>Method:</strong> {{ page.methodology }}
+    {% endif %}
+    {% if page.reviewed_at %}
+      <br><strong>Reviewed:</strong> <time datetime="{{ page.reviewed_at | date_to_xmlschema }}">{{ page.reviewed_at | date: "%B %-d, %Y" }}</time>
+    {% endif %}
+  </p>
+</aside>
+{% endif %}

@@ -1,36 +1,38 @@
 # Contributing
 
-This project uses several helper scripts to keep the Markdown posts and front matter consistent. These scripts can modify many files across the repository.
+This repository is a Jekyll site with a small set of Python utilities for
+validating and maintaining Markdown posts. Keep changes focused: article edits,
+site changes, and maintenance scripts should be easy to review separately.
 
-Because these updates are often large-scale, test them on a separate branch before merging.
+## Workflow
 
-## Running automation scripts
+Start from an up-to-date branch:
 
-1. Start from an up-to-date branch and create a new working branch:
+```bash
+git checkout master
+git pull
+git checkout -b my-change
+```
 
-   ```bash
-   git checkout master
-   git pull
-   git checkout -b automation-update
-   ```
+Before committing, review the diff:
 
-2. Run the automation scripts:
+```bash
+git status
+git diff
+```
 
-   ```bash
-   ./run_scripts.sh
-   ```
+## Validation
 
-   The scripts may rename files and update front matter, leading to many modified files.
+Run the project checks before opening a pull request:
 
-3. Review the changes:
+```bash
+pytest -q
+npm test
+bundle exec jekyll build
+```
 
-   ```bash
-   git status
-   git diff
-   ```
+## Python Utilities
 
-   Look carefully over the diff before committing because the updates can be large.
-
-4. Commit the desired changes and open a pull request.
-
-Running the scripts on a clean branch helps keep your history tidy and makes code review easier.
+Supported maintenance scripts are documented in `README.md`. Avoid adding broad
+one-off scripts that mutate many posts. If a new script is necessary, give it a
+narrow purpose, add tests, and include a dry-run mode when it writes files.

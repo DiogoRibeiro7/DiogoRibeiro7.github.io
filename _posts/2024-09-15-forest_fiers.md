@@ -161,7 +161,7 @@ As advancements in machine learning, IoT, and autonomous technologies continue, 
 5. **Kuligowski, R. J., Cronin, S. J., & Guarnieri, J. M. (2017).** "A review of satellite remote sensing of wildfires and fire management applications." *IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing*, 10(7), 2979-2993.
    - This review discusses the use of satellite remote sensing in wildfire management, offering insights into how machine learning algorithms are applied to satellite imagery for early fire detection.
 
-6. **European Forest Fire Information System (EFFIS).** [Forest Fires in Europe, Middle East, and North Africa 2020 Report](https://effis.jrc.ec.europa.eu/reports-and-publications/annual-fire-reports/)
+6. **European Forest Fire Information System (EFFIS).** [Forest Fires in Europe, Middle East, and North Africa 2020 Report](https://forest-fire.emergency.copernicus.eu/reports-and-publications/annual-fire-reports)
    - An official report from EFFIS providing statistics, analysis, and a comprehensive overview of forest fires in Europe, including Portugal. It includes information on fire causes, trends, and the impact of eucalyptus plantations.
 
 7. **Silva, C. A., & Fiedler, N. C. (2018).** "Machine Learning Approaches for Predicting Wildfire Dynamics in Eucalyptus Forests." *Fire Ecology*, 14(1), 85-100.
@@ -173,5 +173,5 @@ As advancements in machine learning, IoT, and autonomous technologies continue, 
 9. **Portugal's National Forest Strategy.** [Government of Portugal - ICNF (Instituto da Conservação da Natureza e das Florestas)](https://www.icnf.pt/)
    - The official website of Portugal's national forest management authority provides strategic plans, data, and reports on forest fire management, prevention strategies, and the role of eucalyptus in the country's forest landscape.
 
-10. **World Meteorological Organization (WMO).** [Weather, climate & water-related environmental factors contributing to forest fires](https://public.wmo.int/en/resources/bulletin/weather-climate-water-related-environmental-factors-contributing-forest-fires)
+10. **World Meteorological Organization (WMO).** [Vicious circle of climate change, wildfires and air pollution has major impacts](https://wmo.int/news/media-centre/vicious-circle-of-climate-change-wildfires-and-air-pollution-has-major-impacts)
     - A comprehensive overview of the environmental factors contributing to forest fires, providing context for the integration of weather and climate data into machine learning models for fire prediction.

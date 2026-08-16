@@ -90,9 +90,12 @@ og_image                 : /assets/images/data-science.png
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : Person
+  name                   : "Diogo Ribeiro"
   links: # An array of links to social media profiles
+    - "https://github.com/DiogoRibeiro7"
+    - "https://www.linkedin.com/in/diogo-ribeiro-9094604a/"
+    - "https://neverforget-1975.medium.com/"
 
 # Analytics
 analytics:
@@ -106,7 +109,9 @@ analytics:
 author:
   name             : "Diogo Ribeiro"
   avatar           : "/assets/images/me_myself_and_i.jpg"
-  bio              : "Just another boring **Data Science & Research Lead**, writing about Mathematics, Statistics, Data Science and Machine Learning."
+  role             : "Data Science & Research Lead"
+  expertise        : "Applied statistics, machine learning, forecasting, data engineering, and reproducible analytical workflows."
+  bio              : "**Data Science & Research Lead** writing practical notes on statistics, machine learning, forecasting, and data engineering. The useful posts here should add analysis, examples, code, experiments, or field judgment rather than paraphrase search results."
   location         : "Porto, Portugal and London, UK"
   email            : "hansolo.dj@gmail.com"
   links:

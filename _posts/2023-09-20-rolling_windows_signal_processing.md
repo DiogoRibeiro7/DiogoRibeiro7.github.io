@@ -331,7 +331,7 @@ This code demonstrates how to perform the Short-Time Fourier Transform on a sign
 
 3. **Signal Processing Using Python (SciPy)** by SciPy.org  
    - A collection of tutorials and documentation covering signal processing in Python, including smoothing, filtering, and rolling window operations.  
-   - [Link](https://scipy.org/doc/scipy/reference/signal.html)
+   - [Link](https://docs.scipy.org/doc/scipy/reference/signal.html)
 
 #### Academic Journals
 
@@ -345,17 +345,17 @@ This code demonstrates how to perform the Short-Time Fourier Transform on a sign
 
 #### Blogs and Articles
 
-1. **"A Comprehensive Guide to Time Series Analysis and Forecasting"** by Towards Data Science  
+1. **"A Guide to Time Series Analysis and Forecasting"** by Analytics Vidhya
    - An overview of time-series analysis techniques, including moving averages and feature extraction using rolling windows.  
-   - [Link](https://towardsdatascience.com/a-comprehensive-guide-to-time-series-analysis-and-forecasting-70b1a4d4889f)
+   - [Link](https://www.analyticsvidhya.com/blog/2022/05/a-comprehensive-guide-to-time-series-analysis-and-forecasting/)
 
 2. **"Signal Processing with Python - Analyzing Audio Signals with STFT"** by Real Python  
    - A practical guide on using Short-Time Fourier Transform (STFT) in Python for analyzing audio signals.  
    - [Link](https://realpython.com/python-scipy-fft/)
 
-3. **"Rolling Window Analysis of Time Series in Python"** by Analytics Vidhya  
+3. **"Lag Features and Rolling Features in Feature Engineering"** by Analytics Vidhya
    - A tutorial on how to perform rolling window analysis in Python, including implementation examples.  
-   - [Link](https://www.analyticsvidhya.com/blog/2020/09/rolling-window-analysis-time-series-python/)
+   - [Link](https://www.analyticsvidhya.com/blog/2026/02/lag-and-rolling-features/)
 
 #### Software and Toolkits
 

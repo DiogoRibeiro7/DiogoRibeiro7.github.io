@@ -170,10 +170,10 @@ Machine learning is revolutionizing forest fire management by providing advanced
 5. **Cortez, P., & Morais, A. (2007).** "A Data Mining Approach to Predict Forest Fires Using Meteorological Data." *Proceedings of the 13th Portuguese Conference on Artificial Intelligence*, 512-523.
    - This work presents a data mining approach using meteorological data for predicting forest fires, with a case study focusing on Portugal.
 
-6. **European Space Agency (ESA).** [Satellites in Support of Forest Fire Management](https://www.esa.int/Applications/Observing_the_Earth/Satellites_in_support_of_forest_fire_management)
+6. **European Space Agency (ESA).** [Space technology fights forest fires in Canada this summer](https://www.esa.int/Applications/Observing_the_Earth/Space_technology_fights_forest_fires_in_Canada_this_summer)
    - A report detailing the use of satellite technology for monitoring and managing forest fires, including the application of machine learning for analyzing satellite data.
 
-7. **European Forest Fire Information System (EFFIS).** [Forest Fires in Europe, Middle East, and North Africa 2021 Report](https://effis.jrc.ec.europa.eu/reports-and-publications/annual-fire-reports/)
+7. **European Forest Fire Information System (EFFIS).** [Forest Fires in Europe, Middle East, and North Africa 2021 Report](https://forest-fire.emergency.copernicus.eu/reports-and-publications/annual-fire-reports)
    - An annual report from EFFIS providing insights into forest fire occurrences, trends, and the role of advanced technologies, including machine learning, in fire management.
 
 8. **Rathore, V. S., & Kumar, S. (2019).** "Blockchain Technology for Secure Data Sharing in Forest Fire Management." *International Journal of Environmental Science and Technology*, 16(8), 4353-4362.
@@ -182,5 +182,5 @@ Machine learning is revolutionizing forest fire management by providing advanced
 9. **Pham, T. X., & Kim, J. (2019).** "Crowdsourcing in Forest Fire Monitoring: Enhancing Machine Learning Models with Community Data." *Remote Sensing*, 11(15), 1792.
    - This study discusses the integration of crowdsourced data with machine learning models for enhanced forest fire monitoring and early detection.
 
-10. **World Meteorological Organization (WMO).** [Climate, Weather, and Forest Fires](https://public.wmo.int/en/resources/bulletin/climate-weather-and-forest-fires)
+10. **World Meteorological Organization (WMO).** [Vicious circle of climate change, wildfires and air pollution has major impacts](https://wmo.int/news/media-centre/vicious-circle-of-climate-change-wildfires-and-air-pollution-has-major-impacts)
     - A resource by WMO that provides insights into how weather and climate factors contribute to forest fires and the importance of integrating this data into predictive models.

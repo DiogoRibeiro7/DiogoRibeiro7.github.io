@@ -50,6 +50,9 @@
 
 <title>{{ seo_title | default: site.title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
 <meta name="description" content="{{ seo_description }}">
+{% if page.robots %}
+<meta name="robots" content="{{ page.robots }}">
+{% endif %}
 
 {% if author.name %}
   <meta name="author" content="{{ author.name | default: author }}">
@@ -139,7 +142,9 @@
     {% else %}
       "@type": "Person",
       "name": {{ site.social.name | default: site.name | jsonify }},
-      "url": {{ '/' | absolute_url |jsonify }}{% if site.social.links %},
+      "url": {{ '/about/' | absolute_url | jsonify }}{% if site.author.role %},
+      "jobTitle": {{ site.author.role | jsonify }}{% endif %}{% if site.author.expertise %},
+      "knowsAbout": {{ site.author.expertise | jsonify }}{% endif %}{% if site.social.links %},
       "sameAs": {{ site.social.links | jsonify }}{% endif %}
     {% endif %}
   }
@@ -164,8 +169,11 @@
     "dateModified": {{ page.date | date_to_xmlschema | jsonify }}{% endif %},
     "author": {
       "@type": "Person",
-      "name": {{ author.name | default: site.name | jsonify }}{% if author.links %},
-      "url": {{ site.url | jsonify }}{% endif %}
+      "name": {{ author.name | default: site.name | jsonify }}{% if author.role %},
+      "jobTitle": {{ author.role | jsonify }}{% endif %}{% if author.expertise %},
+      "knowsAbout": {{ author.expertise | jsonify }}{% endif %},
+      "url": {{ '/about/' | absolute_url | jsonify }}{% if site.social.links %},
+      "sameAs": {{ site.social.links | jsonify }}{% endif %}
     },
     "publisher": {
       "@type": "Organization",

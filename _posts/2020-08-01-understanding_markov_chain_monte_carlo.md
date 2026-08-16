@@ -430,7 +430,7 @@ Here are some books, articles, and online resources for learning about Markov Ch
 6. **"Efficient Bayesian Inference for Multivariate Probit Models"** by James H. Albert and Siddhartha Chib  
    - **Journal**: *Journal of Econometrics*, 1993  
    - **Description**: This paper applies Gibbs sampling in a Bayesian framework to fit multivariate probit models, offering insights into MCMC's application in econometrics and statistics.  
-   - **DOI**: [10.1016/0304-4076(93)90061-B](https://doi.org/10.1016/0304-4076(93)90061-B)
+   - **DOI**: [10.1016/0304-4076(93)90061-9](https://doi.org/10.1016/0304-4076(93)90061-9)
 
 ### Online Resources
 
