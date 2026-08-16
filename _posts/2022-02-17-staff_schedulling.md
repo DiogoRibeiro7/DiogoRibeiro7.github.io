@@ -44,6 +44,8 @@ title: Optimizing Staff Scheduling with Linear Programming
 
 Imagine managing a coffee shop that operates 24/7, requiring staff to be scheduled across various shifts. To efficiently allocate staff while minimizing costs, we can utilize linear programming. This article demonstrates how to apply linear programming using the PuLP library in Python to find the optimal staffing solution.
 
+The same formulation applies to call centers, hospitals, warehouses, security operations, and maintenance crews. The core task is always the same: choose staffing levels for each shift so every demand window is covered while total cost and policy violations are minimized.
+
 ## Data and Problem Definition
 
 The coffee shop's daily schedule is divided into eight time windows, each demanding a different number of staff members. These time windows are:
@@ -92,7 +94,24 @@ pip install gdown
 
 #### Input Parameters
 
-We'll create a matrix to indicate which shift each time window belongs to and define other essential parameters.
+We'll create a coverage matrix to indicate which shifts cover each time window, then define the demand for each window.
+
+```python
+time_windows = [
+    "00:00-03:00", "03:00-06:00", "06:00-09:00", "09:00-12:00",
+    "12:00-15:00", "15:00-18:00", "18:00-21:00", "21:00-00:00"
+]
+
+demands = [15, 20, 55, 46, 59, 40, 48, 30]
+shifts = ["Shift_1", "Shift_2", "Shift_3", "Shift_4"]
+
+coverage = {
+    "Shift_1": [1, 1, 1, 0, 0, 0, 0, 0],  # 00:00-09:00
+    "Shift_2": [0, 0, 1, 1, 1, 0, 0, 0],  # 06:00-15:00
+    "Shift_3": [0, 0, 0, 0, 1, 1, 1, 0],  # 12:00-21:00
+    "Shift_4": [1, 0, 0, 0, 0, 0, 1, 1],  # 18:00-03:00
+}
+```
 
 #### Decision Variables
 
@@ -121,9 +140,14 @@ prob += sum(workers[shift] for shift in shifts)
 We need to ensure that the number of workers in each time window meets the required demand:
 
 ```python
-# Example constraint for time window 00:00 - 03:00
-prob += workers["Shift_1"] + workers["Shift_4"] >= 15
+for t, demand in enumerate(demands):
+    prob += (
+        sum(workers[shift] * coverage[shift][t] for shift in shifts) >= demand,
+        f"coverage_window_{t}"
+    )
 ```
+
+This loop is safer than writing every constraint by hand because it keeps the code aligned with the demand table.
 
 #### Solving the Problem
 
@@ -153,11 +177,10 @@ Visualizing the staffing schedule can help verify the solution. We can plot the 
 ```python
 import matplotlib.pyplot as plt
 
-# Example visualization code
-time_windows = ["00:00-03:00", "03:00-06:00", "06:00-09:00", "09:00-12:00", 
-                "12:00-15:00", "15:00-18:00", "18:00-21:00", "21:00-00:00"]
-demands = [15, 20, 55, 46, 59, 40, 48, 30]
-assigned_workers = [sum(workers[shift].varValue for shift in shifts) for _ in time_windows]
+assigned_workers = [
+    sum(workers[shift].varValue * coverage[shift][t] for shift in shifts)
+    for t in range(len(time_windows))
+]
 
 plt.bar(time_windows, demands, label='Demand')
 plt.bar(time_windows, assigned_workers, label='Assigned Workers', alpha=0.7)
@@ -167,8 +190,22 @@ plt.legend()
 plt.show()
 ```
 
+## Extending the Model
+
+The basic model minimizes total headcount, but real scheduling problems usually need richer constraints:
+
+- different hourly costs by shift;
+- maximum consecutive hours and rest periods;
+- minimum staffing by skill or certification;
+- part-time versus full-time worker limits;
+- fairness constraints so undesirable shifts rotate across employees.
+
+These additions usually fit naturally into the same integer programming formulation. The important step is to translate each policy into a measurable constraint before optimizing.
+
 ## Conclusion
 
 Using PuLP for linear programming in Python, we've optimized the staff scheduling for a 24/7 coffee shop. This method not only meets the staffing requirements but also minimizes labor costs. Such optimization techniques can be applied to various business operations to enhance efficiency and reduce expenses.
 
 By utilizing Python and PuLP, managers can solve complex scheduling problems with ease, ensuring optimal resource allocation and cost management.
+
+The model is intentionally small, but the pattern scales: define the decision variables, encode coverage, state the objective, add constraints, and inspect the solution against the operating reality before using it in production.

@@ -45,6 +45,8 @@ Supply chains have become more complex and interconnected, making optimization e
 
 In this article, we will explore how **data science** drives **supply chain optimization** and **industrial network analysis**, and how these methods can be used to maximize efficiency, reduce costs, and enhance overall performance.
 
+The useful framing is that supply chain analytics has three layers: prediction, optimization, and execution. Forecasting demand is valuable, but the value appears only when it changes purchase orders, inventory policies, routing plans, or production schedules. The analytical model and the operational process must be designed together.
+
 ## Understanding Supply Chain Optimization
 
 ### What is Supply Chain Optimization?
@@ -56,6 +58,8 @@ Key metrics in supply chain optimization include:
 - **Cost Efficiency:** Reducing operational costs such as transportation, warehousing, and inventory.
 - **Lead Time Reduction:** Decreasing the time it takes for goods to move through the supply chain.
 - **Service Levels:** Meeting customer demand without delays or stockouts.
+- **Resilience:** Maintaining acceptable service when suppliers, ports, machines, or routes fail.
+- **Working Capital:** Balancing safety stock against cash tied up in inventory.
 
 ### Historical Approaches vs. Modern Approaches
 
@@ -156,6 +160,18 @@ While data science offers immense potential for supply chain optimization, there
 - **Data Integration:** Supply chain data often comes from multiple sources with different formats, making it difficult to integrate and analyze in real-time.
 - **Scalability:** As supply chains grow larger and more complex, the computational power required to process data and optimize operations increases.
 - **Real-Time Processing:** Analyzing large datasets in real-time requires fast processing and decision-making, which can be challenging in high-volume environments.
+- **Incentive Misalignment:** Procurement, logistics, finance, and sales may optimize different metrics unless the objective function is explicit.
+- **Model Trust:** Planners need explanations for recommendations, especially when the model suggests expensive inventory or routing changes.
+
+### Operating Model for Analytics Teams
+
+A strong supply chain analytics function should maintain:
+
+- a shared data model for orders, inventory, capacity, lanes, suppliers, and service levels;
+- forecasting baselines for demand, lead time, and disruption probability;
+- optimization models with clearly documented constraints and business priorities;
+- scenario planning workflows for shocks such as supplier failure or demand spikes;
+- post-decision measurement that compares recommended plans with actual outcomes.
 
 ### Future Trends in Data Science for Supply Chains
 
@@ -170,3 +186,12 @@ Looking to the future, several trends are expected to shape supply chain optimiz
 **Supply chain optimization** and **industrial network analysis** are critical components of modern business operations, and **data science** is central to enhancing their effectiveness. By leveraging techniques such as **predictive analytics**, **machine learning**, and **graph theory**, businesses can optimize their supply chains, reduce costs, and improve customer satisfaction.
 
 As data science continues to evolve, the future of supply chains will be increasingly **smart, connected, and data-driven**, empowering businesses to thrive in a competitive global marketplace.
+
+The strongest supply chain systems are not simply automated. They are observable, stress-tested, and designed so planners can understand why a recommendation changed. That combination of optimization and human oversight is what turns analytics into reliable operational advantage.
+
+## References
+
+- Chopra, S., & Meindl, P. (2019). *Supply Chain Management: Strategy, Planning, and Operation* (7th ed.). Pearson.
+- Simchi-Levi, D., Kaminsky, P., & Simchi-Levi, E. (2021). *Designing and Managing the Supply Chain* (4th ed.). McGraw Hill.
+- Ahuja, R. K., Magnanti, T. L., & Orlin, J. B. (1993). *Network Flows: Theory, Algorithms, and Applications*. Prentice Hall.
+- Snyder, L. V., & Shen, Z.-J. M. (2019). *Fundamentals of Supply Chain Theory* (2nd ed.). Wiley.
