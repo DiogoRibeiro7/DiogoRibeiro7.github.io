@@ -11,8 +11,10 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.avif
   twitter_image: /assets/images/data_science_3.jpg
+permalink: '/data-science/outlier_algo/'
 redirect_from:
 - '/data science/machine learning/python/outlier_algo/'
+- '/data science/outlier_algo/'
 seo_description: How the Counts Outlier Detector (COD) uses multi-dimensional histograms to find interpretable outliers in data.
 seo_title: Interpretable Outlier Detection with COD
 seo_type: article
@@ -30,6 +32,8 @@ COD extends the idea of histogram-based outlier detection and supports multi-dim
 We look at 2d histograms first, but COD can support histograms up to 6 dimensions (we describe below why it does not go beyond this, and in fact, using only 2 or 3 or 4 dimensions will often work best).
 
 A 2d histogram can be viewed similarly as a heatmap. In the image below we see a histogram in 2d space where the data in each dimension is divided into 13 bins, creating 169 (13 x 13) bins in the 2d space. We can also see one point (circled) that is an outlier in the 2d space. This point is in a bin with very few items (in this case, only one item) and so can be identified as an outlier when examining this 2d space.
+
+![A two-dimensional histogram of bivariate data. Density is shown as a single-hue heatmap and the sparse cells at the edges hold the points an outlier detector flags.](/assets/images/figures/hist2d_outliers.png){: width="1561" height="649" loading="lazy"}
 
 This point is not an outlier in either 1d space; it is not unusual in the x dimension or the y dimension, so would be missed by HBOS and other tools that examine only single dimensions at a time.
 

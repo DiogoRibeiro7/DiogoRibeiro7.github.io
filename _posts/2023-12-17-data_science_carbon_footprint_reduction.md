@@ -1,6 +1,8 @@
 ---
+permalink: '/data-science/data_science_carbon_footprint_reduction/'
 redirect_from:
 - '/data science/sustainability/carbon management/data_science_carbon_footprint_reduction/'
+- '/data science/data_science_carbon_footprint_reduction/'
 title: "Data Science in Carbon Footprint Reduction: Leveraging Big Data and Machine Learning for Sustainable Operations"
 categories:
 - Data Science
@@ -370,3 +372,11 @@ The continued evolution of artificial intelligence technologies promises to enha
 **Foundation Models and Large Language Models**: Large language models (LLMs) trained on vast corpora of scientific literature, technical documentation, and environmental data can provide advanced reasoning capabilities for carbon reduction applications. These models can analyze complex environmental systems, generate optimization recommendations, and assist with policy analysis and regulatory compliance.
 
 Multimodal foundation models that can process text, images, and sensor data simultaneously will enable more comprehensive analysis of carbon reduction opportunities. These models can integrate satellite imagery, operational data, and expert knowledge to provide holistic assessments of emission sources and reduction strategies.
+
+## References
+
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and Practice* (3rd ed.). OTexts.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *Advances in Neural Information Processing Systems*, 28.

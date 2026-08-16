@@ -1,4 +1,7 @@
 ---
+permalink: '/machine-learning/active_learning_label_efficiency_machine_learning/'
+redirect_from:
+- '/machine learning/active_learning_label_efficiency_machine_learning/'
 title: "Active Learning for Machine Learning: Getting More Value from Fewer Labels"
 categories:
 - Machine Learning
@@ -350,3 +353,8 @@ But active learning is not only an algorithm. It is a workflow that includes hum
 Used well, active learning can make models better with fewer labels. Used carelessly, it can create biased datasets, noisy labels, and misleading evaluations.
 
 The practical lesson is simple: label acquisition is part of model design. Treat it with the same rigor as architecture, features, optimization, and deployment.
+
+## References
+
+- Efron, B. (1979). Bootstrap methods: another look at the jackknife. *Annals of Statistics*, 7(1), 1-26.
+- Kaufman, S., Rosset, S., Perlich, C., & Stitelman, O. (2012). Leakage in data mining: formulation, detection, and avoidance. *ACM Transactions on Knowledge Discovery from Data*, 6(4), 1-21.

@@ -16,6 +16,9 @@ header:
   twitter_image: /assets/images/data_science_6.jpg
 keywords:
 - Python
+permalink: '/machine-learning/prediction_errors_bias_variance_model/'
+redirect_from:
+- '/machine learning/prediction_errors_bias_variance_model/'
 seo_description: Prediction error, the bias-variance tradeoff, and evaluation techniques including cross-validation, bootstrap methods, and the .632 estimator.
 seo_title: 'Prediction Error: Bias, Variance, and Evaluation'
 seo_type: article

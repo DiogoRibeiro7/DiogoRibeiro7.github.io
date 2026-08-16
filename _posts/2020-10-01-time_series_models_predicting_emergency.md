@@ -19,6 +19,9 @@ keywords:
 - Gradient boosted machines
 - Resource allocation
 - Random forest
+permalink: '/machine-learning/time_series_models_predicting_emergency/'
+redirect_from:
+- '/machine learning/time_series_models_predicting_emergency/'
 seo_description: Comparing machine learning and univariate time series models for predicting emergency department visit volumes, with random forest performing best.
 seo_title: 'Forecasting ED Visit Volumes: ML vs Time Series'
 seo_type: article
@@ -137,3 +140,12 @@ Future research should explore the use of more advanced machine learning techniq
 This study compared machine learning models (random forest and GBM) with traditional univariate time series models (ARIMA, ETS, and Prophet) for predicting daily ED visit volumes at St. Joseph Mercy Ann Arbor. The results show that machine learning models, particularly random forest, outperformed time series models in terms of predictive accuracy, though the improvement was modest. The day of the week and weather-related variables were found to be important predictors of ED visits, highlighting the advantages of incorporating external factors into predictive models.
 
 While machine learning models provide a slight edge in accuracy, time series models like ETS still performed well and may be sufficient in some cases. Further research is needed to refine these models and explore additional features that could improve predictions. In practice, accurate ED visit forecasts can help hospitals allocate resources more effectively, ultimately improving patient care and operational efficiency.
+
+## References
+
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and Practice* (3rd ed.). OTexts.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

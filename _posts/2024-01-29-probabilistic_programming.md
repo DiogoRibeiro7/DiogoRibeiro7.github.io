@@ -139,3 +139,9 @@ def sampler(data, samples=4, mu_init=.5, proposal_width=.5, plot=False, mu_prior
 This algorithm navigates towards more probable values of mu but sometimes accepts less likely values, ensuring exploration of the parameter space. The sampler generates samples representing the posterior distribution of the model, confirmed by comparing the histogram of these samples to the analytically computed posterior.
 
 While this post simplifies some aspects, it aims to clarify the concept of MCMC and the Metropolis sampler. This foundation should help in understanding more technical discussions of MCMC algorithms like Hamiltonian Monte Carlo, which function similarly but with more sophisticated proposal mechanisms.
+
+## References
+
+- Hastings, W. K. (1970). Monte Carlo sampling methods using Markov chains and their applications. *Biometrika*, 57(1), 97-109.
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+- Hoffman, M. D., & Gelman, A. (2014). The No-U-Turn Sampler: adaptively setting path lengths in Hamiltonian Monte Carlo. *Journal of Machine Learning Research*, 15, 1593-1623.

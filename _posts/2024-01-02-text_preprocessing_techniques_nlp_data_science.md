@@ -21,8 +21,10 @@ keywords:
 - Stemming
 - Lemmatization
 - Text normalization
+permalink: '/machine-learning/text_preprocessing_techniques_nlp_data_science/'
 redirect_from:
 - '/natural language processing/text_preprocessing_techniques_nlp_data_science/'
+- '/machine learning/text_preprocessing_techniques_nlp_data_science/'
 seo_description: 'Essential text preprocessing for NLP: tokenization, stemming, lemmatization, stopword handling, and advanced cleaning with regex.'
 seo_title: 'NLP Text Preprocessing: Tokenization and Stemming'
 seo_type: article

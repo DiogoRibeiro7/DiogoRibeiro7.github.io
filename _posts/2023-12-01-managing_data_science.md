@@ -20,6 +20,9 @@ keywords:
 - Project management
 - Ai
 - Experimentation
+permalink: '/data-science/managing_data_science/'
+redirect_from:
+- '/data science/managing_data_science/'
 seo_description: Why managing data science projects like engineering projects sets them up to fail, and how scope, timelines, and process differ.
 seo_title: 'Managing Data Science Projects vs Engineering: Why It Fails'
 seo_type: article
@@ -124,3 +127,8 @@ It’s essential to **set realistic expectations** with stakeholders at the star
 ## Conclusion
 
 Treating data science like engineering is a recipe for failure. While engineering projects thrive on structure, known solutions, and clear timelines, data science projects require flexibility, experimentation, and a willingness to embrace uncertainty. By adopting an adaptive, discovery-focused approach to managing data science efforts, organizations can set their data teams up for success and unlock the full potential of their data-driven initiatives.
+
+## References
+
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.

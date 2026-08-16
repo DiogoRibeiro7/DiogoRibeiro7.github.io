@@ -38,11 +38,6 @@ tags:
 title: 'Mathematical Models of Inequality: Understanding Lorenz Curves and Gini Coefficients'
 ---
 
-<p align="center">
-  <img src="/assets/images/math_economics/math_economics.jpg" alt="Math economics - Mathematical Models of Inequality: Understanding Lorenz Curves and Gini Coefficients" loading="lazy">
-</p>
-<p align="center"><i>Mathematical Economics</i></p>
-
 Economic inequality, defined as the uneven distribution of income or wealth among a population, is a complex issue that affects societal structure, access to resources, and individual well-being. Researchers, policymakers, and economists often turn to mathematical models to understand, quantify, and compare inequality levels across regions or time periods. Among the most widely used tools are the **Lorenz Curve** and **Gini Coefficient**, both of which offer valuable insights into income distribution.
 
 This article explores these mathematical models in detail. We’ll examine the construction and interpretation of Lorenz curves, the calculation and significance of the Gini coefficient, and real-world applications of these models in measuring economic inequality.

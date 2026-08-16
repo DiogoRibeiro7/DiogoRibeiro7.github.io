@@ -1,6 +1,8 @@
 ---
+permalink: '/machine-learning/slice_based_model_evaluation_machine_learning/'
 redirect_from:
 - '/machine learning/data science/slice_based_model_evaluation_machine_learning/'
+- '/machine learning/slice_based_model_evaluation_machine_learning/'
 title: "Slice-Based Model Evaluation: Finding the Failures Average Metrics Hide"
 categories:
 - Machine Learning
@@ -345,3 +347,9 @@ Aggregate metrics compress those failures into a number that may look acceptable
 The value of slice analysis is practical. It helps teams find hidden failures, debug causes, prioritize data collection, evaluate fairness, monitor production systems, and decide where automation should be trusted.
 
 Good model evaluation is not only about asking whether the model is good. It is about asking where it is good enough, where it is fragile, and what the system should do about the difference.
+
+## References
+
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Efron, B. (1979). Bootstrap methods: another look at the jackknife. *Annals of Statistics*, 7(1), 1-26.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.

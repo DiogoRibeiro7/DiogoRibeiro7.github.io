@@ -20,6 +20,9 @@ keywords:
 - Hypothesis testing
 - Statistical analysis
 - Sample size
+permalink: '/data-science/ttest_vs_ztest_when_why_use_each/'
+redirect_from:
+- '/data science/ttest_vs_ztest_when_why_use_each/'
 seo_description: The key differences between the t-test and z-test, when to use each based on sample size and variance, and real-world applications.
 seo_title: 'T-Test vs. Z-Test: Differences and Uses'
 seo_type: article

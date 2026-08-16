@@ -165,3 +165,9 @@ A manager wants to compare employee performance ratings between two departments.
 Both the **independent t-test** and the **Mann-Whitney U test** are valuable tools for comparing two independent groups, but the choice between them depends on the nature of the data. The **independent t-test** is a parametric test that works well when the data is normally distributed and the variances are equal, while the **Mann-Whitney U test** is a non-parametric alternative that can handle non-normal data and is less sensitive to outliers.
 
 In practice, the independent t-test is often used when the normality assumption holds, especially in clinical trials and other experiments with continuous data. On the other hand, the Mann-Whitney U test is ideal for real-world data that may not meet these strict assumptions, making it a flexible and robust option for a wide range of applications.
+
+## References
+
+- Mann, H. B., & Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger than the other. *Annals of Mathematical Statistics*, 18(1), 50-60.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Wilcoxon, F. (1945). Individual comparisons by ranking methods. *Biometrics Bulletin*, 1(6), 80-83.

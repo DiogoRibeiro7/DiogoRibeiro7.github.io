@@ -19,8 +19,10 @@ keywords:
 - Catch22
 - Simple models
 - Feature engineering
+permalink: '/time-series/extending_simple_model/'
 redirect_from:
 - '/time-series/machine learning/extending_simple_model/'
+- '/time series/extending_simple_model/'
 seo_description: How simple time-series classification models can be extended with catch22 features, and the complexity-interpretability tradeoff.
 seo_title: Adding Catch22 to Time-Series Classification
 seo_type: article
@@ -115,3 +117,8 @@ Time-series classification is essential in fields ranging from healthcare to fin
 Starting with simple models provides interpretability, efficiency, and resistance to overfitting. This is especially valuable in domains where transparency is critical. By carefully balancing simplicity with the occasional need for additional features, practitioners can build models that are both effective and interpretable.
 
 As machine learning advances, simple models will continue to be central to time-series classification. By recognizing the importance of strong, interpretable baselines, we can ensure that the field develops models that are not only powerful but also practical.
+
+## References
+
+- Lubba, C. H., Sethi, S. S., Knaute, P., Schultz, S. R., Fulcher, B. D., & Jones, N. S. (2019). catch22: CAnonical Time-series CHaracteristics. *Data Mining and Knowledge Discovery*, 33, 1821-1852.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

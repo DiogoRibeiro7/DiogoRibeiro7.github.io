@@ -23,8 +23,10 @@ keywords:
 - Climate research
 - Bash
 - Python
+permalink: '/time-series/detecting_trends_timeseries_data/'
 redirect_from:
 - '/time-series analysis/detecting_trends_timeseries_data/'
+- '/time series/detecting_trends_timeseries_data/'
 seo_description: Explore the Mann-Kendall Test for detecting trends in time-series
   data, with applications in environmental studies, hydrology, and climate research.
 seo_title: Mann-Kendall Test for Trend Detection
@@ -223,3 +225,10 @@ The output will include information such as the trend direction, Z-score, p-valu
 The Mann-Kendall Test is a powerful and widely used tool for detecting trends in time-series data, especially in fields such as environmental science, hydrology, and climate research. Its non-parametric nature and robustness to missing data make it well-suited for real-world datasets that do not follow strict parametric assumptions. However, researchers must be aware of its limitations, particularly regarding autocorrelation and non-monotonic trends.
 
 By understanding the strengths and applications of the Mann-Kendall Test, analysts can use it effectively to uncover significant trends and draw meaningful conclusions from time-series data.
+
+## References
+
+- Kendall, M. G. (1975). *Rank Correlation Methods* (4th ed.). Charles Griffin.
+- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.

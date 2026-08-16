@@ -363,3 +363,8 @@ x <- custom_inv_cdf(u)
 # Plot the histogram of the generated samples
 hist(x, breaks = 50, main = "Custom Distribution", xlab = "Value", col = "blue")
 ```
+
+## References
+
+- Sklar, A. (1959). Fonctions de répartition à n dimensions et leurs marges. *Publications de l'Institut de Statistique de l'Université de Paris*, 8, 229-231.
+- Massey, F. J. (1951). The Kolmogorov-Smirnov test for goodness of fit. *Journal of the American Statistical Association*, 46(253), 68-78.

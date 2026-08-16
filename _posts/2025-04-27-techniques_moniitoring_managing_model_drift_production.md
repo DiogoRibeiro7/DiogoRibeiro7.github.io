@@ -21,8 +21,10 @@ keywords:
 - Seldon
 - Tfx
 - Retraining models
+permalink: '/machine-learning/techniques_moniitoring_managing_model_drift_production/'
 redirect_from:
 - '/machine learning/model monitoring/techniques_moniitoring_managing_model_drift_production/'
+- '/machine learning/techniques_moniitoring_managing_model_drift_production/'
 seo_description: Best practices and tools for monitoring model performance, detecting drift, and retraining models with MLflow, Seldon, and TFX.
 seo_title: Monitoring and Managing Model Drift in Production ML Systems
 seo_type: article

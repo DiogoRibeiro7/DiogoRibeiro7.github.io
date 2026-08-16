@@ -25,6 +25,9 @@ keywords:
 - Ethical ai development
 - Open data impact on ai
 - Future of machine learning
+permalink: '/machine-learning/large_languague_models/'
+redirect_from:
+- '/machine learning/large_languague_models/'
 seo_description: 'How vulnerable large language models are when open-source data platforms like Stack Overflow decline, and what that means for AI''s evolution.'
 seo_title: LLM Fragility Without Open-Source Data
 seo_type: article

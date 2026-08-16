@@ -19,6 +19,9 @@ keywords:
 - Green innovation
 - Resource optimization
 - Supply chain efficiency
+permalink: '/data-science/sustainability_analytics_how_data_science_drives_green_innovation/'
+redirect_from:
+- '/data science/sustainability_analytics_how_data_science_drives_green_innovation/'
 seo_description: How organizations use data science to improve sustainability in resource optimization, waste reduction, and energy efficiency.
 seo_title: Sustainability Analytics and Green Innovation
 seo_type: article

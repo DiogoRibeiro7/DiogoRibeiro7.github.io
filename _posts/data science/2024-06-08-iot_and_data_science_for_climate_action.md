@@ -20,6 +20,9 @@ keywords:
 - Climate Action
 - Data Science
 - Internet of Things
+permalink: '/data-science/iot_and_data_science_for_climate_action/'
+redirect_from:
+- '/data science/iot_and_data_science_for_climate_action/'
 seo_description: An in-depth exploration of IoT's role in monitoring climate conditions and how data science transforms this data into actionable insights for climate action.
 seo_title: Using IoT and Data Science for Climate Action
 seo_type: article
@@ -31,11 +34,6 @@ tags:
 - Data Science
 title: 'IoT and Data Science for Climate Action: Monitoring, Analysis, and Insights'
 ---
-
-<p align="center">
-  <img src="/assets/images/biographies/IoT-and-climate-change.png" alt="IoT and climate change - IoT and Data Science for Climate Action: Monitoring, Analysis, and Insights" loading="lazy">
-</p>
-<p align="center"><i>Climate Change</i></p>
 
 ## IoT and Data Science for Climate Action: Monitoring, Analysis, and Insights
 
@@ -159,3 +157,9 @@ Innovations in energy-efficient IoT devices, advanced machine learning algorithm
 ### Conclusion
 
 IoT and data science together provide a robust framework for monitoring, analyzing, and responding to environmental changes. Through real-time data collection, powerful analytical techniques, and the insights derived from massive data sets, we can better understand climate dynamics and implement data-driven strategies for sustainability. The potential of these technologies to transform climate action underscores the importance of investing in IoT infrastructure, data science capabilities, and policy frameworks that support environmentally responsible innovation. Embracing these tools is essential for building a resilient, sustainable future in the face of an ever-evolving climate crisis.
+
+## References
+
+- Tufte, E. R. (2001). *The Visual Display of Quantitative Information* (2nd ed.). Graphics Press.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.

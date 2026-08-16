@@ -22,6 +22,9 @@ keywords:
 - Global optimization
 - Non-convex loss functions
 - Python
+permalink: '/machine-learning/simuled_anneling/'
+redirect_from:
+- '/machine learning/simuled_anneling/'
 seo_description: How simulated annealing optimizes machine learning models by navigating complex loss functions to improve performance.
 seo_title: Optimizing Machine Learning Models with Simulated Annealing
 seo_type: article
@@ -260,3 +263,9 @@ The key strength of simulated annealing lies in its ability to explore the solut
 However, while simulated annealing offers a flexible optimization framework, it is not without its limitations. The performance of the algorithm is highly dependent on the proper choice of temperature schedules and stopping criteria. It can be computationally expensive, especially for large-scale models or extensive hyperparameter searches.
 
 In practice, combining simulated annealing with other optimization techniques, such as grid search or random search, can yield even better results by taking advantage of the strengths of multiple approaches. As machine learning models continue to grow in complexity, simulated annealing remains a valuable tool for practitioners seeking to optimize their models for better performance.
+
+## References
+
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.

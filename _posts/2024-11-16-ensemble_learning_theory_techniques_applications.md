@@ -21,8 +21,10 @@ keywords:
 - Stacking
 - Random forest
 - Xgboost
+permalink: '/machine-learning/ensemble_learning_theory_techniques_applications/'
 redirect_from:
 - '/machine-learning/model-combination/ensemble_learning_theory_techniques_applications/'
+- '/machine learning/ensemble_learning_theory_techniques_applications/'
 seo_description: 'Ensemble learning explained: how bagging, boosting, and stacking work, when to use them, and their real-world applications.'
 seo_title: 'Ensemble Methods: Bagging, Boosting, and Stacking'
 seo_type: article
@@ -127,3 +129,12 @@ While ensembles are less transparent than individual models, tools exist for int
 
 
 Ensemble methods offer a powerful, flexible strategy to enhance predictive modeling. By aggregating the strengths of multiple models, they provide superior performance, resilience, and adaptability. Whether the goal is to reduce variance through bagging, correct bias through boosting, or intelligently combine heterogeneous models via stacking, ensemble learning equips practitioners with a robust set of tools. While ensembles may increase complexity, the performance and reliability they bring make them a mainstay of modern machine learning.
+
+## References
+
+- Breiman, L. (1996). Bagging predictors. *Machine Learning*, 24(2), 123-140.
+- Efron, B. (1979). Bootstrap methods: another look at the jackknife. *Annals of Statistics*, 7(1), 1-26.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.

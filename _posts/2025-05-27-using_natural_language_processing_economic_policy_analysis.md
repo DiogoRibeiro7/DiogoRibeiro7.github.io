@@ -21,8 +21,10 @@ keywords:
 - Machine learning for policy
 - Government document analysis
 - Python
+permalink: '/machine-learning/using_natural_language_processing_economic_policy_analysis/'
 redirect_from:
 - '/natural language processing/economics/policy analysis/using_natural_language_processing_economic_policy_analysis/'
+- '/machine learning/using_natural_language_processing_economic_policy_analysis/'
 seo_description: How NLP techniques analyze political texts and government documents to assess and predict economic policy impacts.
 seo_title: NLP for Economic Policy Analysis
 seo_type: article

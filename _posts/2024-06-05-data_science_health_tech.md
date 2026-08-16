@@ -22,8 +22,10 @@ keywords:
 - Machine learning for health
 - Healthcare operations improvement
 - Patient outcomes and ai
+permalink: '/data-science/data_science_health_tech/'
 redirect_from:
 - '/data science/mathematics/statistics/data analysis/healthcare technology/data_science_health_tech/'
+- '/data science/data_science_health_tech/'
 seo_description: How data science is transforming healthcare through predictive analytics, machine learning, personalized medicine, and real-time monitoring.
 seo_title: The Advantages of Data Science in Healthcare Technology
 seo_type: article

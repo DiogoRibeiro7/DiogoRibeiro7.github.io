@@ -23,6 +23,9 @@ keywords:
 - Distance metrics
 - Machine learning
 - Python
+permalink: '/data-science/shared_nearest_neighbors/'
+redirect_from:
+- '/data science/shared_nearest_neighbors/'
 seo_description: An exploration of Shared Nearest Neighbors (SNN) as a distance metric,
   and its application in outlier detection, clustering, and density-based algorithms.
 seo_title: Shared Nearest Neighbors in Outlier Detection
@@ -233,3 +236,9 @@ Shared Nearest Neighbors (SNN) represents a powerful alternative to traditional 
 While SNN may not always outperform simpler metrics like Euclidean or Manhattan distances, it is a robust tool that can be invaluable in certain scenarios. Its flexibility across multiple machine learning algorithms, combined with its adaptability to complex data structures, makes it a worthwhile addition to any data scientist's toolkit.
 
 Whether you're dealing with fraud detection, anomaly detection in networks, or complex clustering tasks, experimenting with SNN could provide the extra edge needed to tackle difficult datasets.
+
+## References
+
+- Ester, M., Kriegel, H.-P., Sander, J., & Xu, X. (1996). A density-based algorithm for discovering clusters in large spatial databases with noise. *Proceedings of KDD*, 226-231.
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.
+- Breunig, M. M., Kriegel, H.-P., Ng, R. T., & Sander, J. (2000). LOF: Identifying density-based local outliers. *Proceedings of SIGMOD*, 93-104.

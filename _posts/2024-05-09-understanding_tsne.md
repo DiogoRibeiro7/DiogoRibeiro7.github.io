@@ -162,3 +162,11 @@ Through its applications and ability to be integrated into various stages of mac
 Throughout this article, we have explored the intricacies and applications of t-Distributed Stochastic Neighbor Embedding (t-SNE), a powerful technique for dimensionality reduction and visualization of high-dimensional data. We began by understanding the challenges posed by high-dimensional data and discussed how traditional techniques like PCA compare with t-SNE, particularly highlighting t-SNE's ability to capture complex nonlinear relationships within data. We then examined a practical tutorial on implementing t-SNE using popular programming tools like Python's scikit-learn, and discussed how to fine-tune the process through critical parameters such as perplexity, learning rate, and number of iterations.
 
 We explored a variety of use cases across different fields, from genomics and image processing to social network analysis, showcasing t-SNE's versatility and effectiveness in revealing hidden structures and patterns in complex datasets. We examined how t-SNE can be integrated with other machine learning workflows, enhancing exploratory data analysis, feature engineering, and the interpretability of machine learning models.
+
+## References
+
+- van der Maaten, L., & Hinton, G. (2008). Visualizing data using t-SNE. *Journal of Machine Learning Research*, 9, 2579-2605.
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).
+- Kullback, S., & Leibler, R. A. (1951). On information and sufficiency. *Annals of Mathematical Statistics*, 22(1), 79-86.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.

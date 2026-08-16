@@ -235,3 +235,10 @@ In this article, we've explored the advanced method of kernel clustering in R, h
 We covered the practical aspects of implementing kernel clustering in R, from setting up the necessary software environment to executing the kkmeans function with different kernel options. Key considerations for preparing data and choosing the right kernel were discussed to enhance clustering outcomes. The tutorial provided a step-by-step guide on using kernel K-means, including tips on parameter tuning and visualizing the results to interpret and evaluate clusters effectively.
 
 We dived into advanced topics such as comparing different kernels and integrating kernel clustering with other data analysis methods. This discussion aimed to provide a deeper understanding of how various kernels affect clustering results and how kernel clustering can be part of a larger data analysis workflow. By exploring these advanced topics, data scientists and researchers can leverage kernel clustering to derive richer insights from complex datasets and enhance the applicability of clustering techniques in diverse domains.
+
+## References
+
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).
+- van der Maaten, L., & Hinton, G. (2008). Visualizing data using t-SNE. *Journal of Machine Learning Research*, 9, 2579-2605.
+- Ester, M., Kriegel, H.-P., Sander, J., & Xu, X. (1996). A density-based algorithm for discovering clusters in large spatial databases with noise. *Proceedings of KDD*, 226-231.

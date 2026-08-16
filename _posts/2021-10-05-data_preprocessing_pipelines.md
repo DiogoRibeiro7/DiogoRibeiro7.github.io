@@ -18,6 +18,9 @@ keywords:
 - Pipelines
 - Data cleaning
 - Feature engineering
+permalink: '/data-science/data_preprocessing_pipelines/'
+redirect_from:
+- '/data science/data_preprocessing_pipelines/'
 seo_description: Discover best practices for building reusable data preprocessing
   pipelines that handle missing values, encoding, and feature scaling.
 seo_title: Building Data Preprocessing Pipelines for Reliable Models

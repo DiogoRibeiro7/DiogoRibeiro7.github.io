@@ -265,3 +265,9 @@ The Chi-Square test is an essential tool for analyzing categorical data, offerin
 However, like any statistical tool, the Chi-Square test must be applied carefully, considering its assumptions and limitations. With increasing access to computational tools and larger datasets, the test continues to be a foundational method in data analysis, though researchers must be mindful of sample size effects and the applicability of the test to their data type.
 
 As data collection becomes more sophisticated, future developments in the field may include improved tests for small samples or more refined methods to measure relationships in larger contingency tables. Researchers will continue to rely on the Chi-Square test as a robust method for making data-driven decisions in an array of fields.
+
+## References
+
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Mann, H. B., & Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger than the other. *Annals of Mathematical Statistics*, 18(1), 50-60.
+- Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. *Journal of the American Statistical Association*, 47(260), 583-621.

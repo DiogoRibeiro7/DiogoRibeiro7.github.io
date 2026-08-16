@@ -18,8 +18,10 @@ keywords:
 - Biological computation
 - Reservoir computing
 - python
+permalink: '/machine-learning/exploring_liquid_state_machine/'
 redirect_from:
 - '/machine learning/computational neuroscience/neural networks/exploring_liquid_state_machine/'
+- '/machine learning/exploring_liquid_state_machine/'
 seo_description: The Liquid State Machine, a computational model inspired by biological neural networks, and its applications.
 seo_title: The Liquid State Machine Explained
 seo_type: article

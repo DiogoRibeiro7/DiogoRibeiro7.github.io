@@ -20,8 +20,10 @@ keywords:
 - Econometrics
 - Causality in finance
 - Temporal causality
+permalink: '/data-science/granger_causality_test/'
 redirect_from:
 - '/data science/statistics/granger_causality_test/'
+- '/data science/granger_causality_test/'
 seo_description: A detailed exploration of the Granger causality test, its theoretical
   foundations, and applications in economics, climate science, and finance.
 seo_title: Granger Causality in Time-Series Data
@@ -105,3 +107,8 @@ Another limitation is that the test requires both series to be stationary. If th
 The Granger causality test is a powerful tool for exploring temporal relationships in time-series data, offering valuable applications in diverse fields such as economics, climate science, and finance. By identifying whether one time-series can predict another, researchers and analysts can gain deeper insights into the interdependencies within complex systems. However, as with any statistical tool, the Granger causality test must be applied carefully, with consideration of its assumptions and limitations.
 
 Whether forecasting economic trends, predicting climate patterns, or analyzing financial markets, the Granger causality test provides a robust framework for understanding temporal causality and improving decision-making based on data-driven insights.
+
+## References
+
+- Granger, C. W. J. (1969). Investigating causal relations by econometric models and cross-spectral methods. *Econometrica*, 37(3), 424-438.
+- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.

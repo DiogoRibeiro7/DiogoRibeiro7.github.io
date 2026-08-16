@@ -22,6 +22,9 @@ keywords:
 - Machine learning in climate change
 - Environmental science
 - Policy-making
+permalink: '/data-science/climate_change/'
+redirect_from:
+- '/data science/climate_change/'
 seo_description: How data science drives climate modeling, risk assessment, and policy-making, and the role of machine learning in the climate crisis.
 seo_title: Data Science and Climate Change
 seo_type: article

@@ -21,6 +21,9 @@ keywords:
 - Data transformation
 - Statistical modeling
 - Model assumptions
+permalink: '/data-science/critical_considerations_before_using_boxcox_transformation_hypothesis_testing/'
+redirect_from:
+- '/data science/critical_considerations_before_using_boxcox_transformation_hypothesis_testing/'
 seo_description: 'A guide to evaluating the Box-Cox transformation in hypothesis testing: what it is for, how to interpret it, and when to use alternatives.'
 seo_title: 'Box-Cox Transformation: What to Check First'
 seo_type: article
@@ -146,3 +149,8 @@ The Box-Cox transformation aims to address issues with non-normal residuals, het
 The Box-Cox transformation is a powerful tool, but like any statistical method, it should be applied thoughtfully and with a clear understanding of its purpose, limitations, and impact on the model and hypothesis testing process. By asking the right questions before applying the transformation, you can avoid many of the pitfalls associated with its use, ensure accurate hypothesis testing, and maintain the interpretability of your results.
 
 The key takeaway is to always evaluate the purpose of the transformation, how it affects your hypothesis, and whether there are alternative methods that might be more suitable for your data. Careful consideration of the context and implications of the transformation will lead to more reliable and meaningful insights from your analysis.
+
+## References
+
+- Box, G. E. P., & Cox, D. R. (1964). An analysis of transformations. *Journal of the Royal Statistical Society: Series B*, 26(2), 211-252.
+- McCullagh, P., & Nelder, J. A. (1989). *Generalized Linear Models* (2nd ed.). Chapman & Hall.

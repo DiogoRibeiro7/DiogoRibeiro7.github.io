@@ -611,3 +611,10 @@ Consider a clinical trial where researchers want to compare the mean cholesterol
 By leveraging the t-Distribution, researchers can conduct reliable hypothesis tests and construct accurate confidence intervals in clinical trials, even with small sample sizes, leading to more informed and valid conclusions about treatment effects and population parameters.
 
 These distributions provide the mathematical framework to model different types of data and derive probabilities. They are essential for analyzing clinical trial results and making informed decisions.
+
+## References
+
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.

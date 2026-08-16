@@ -19,8 +19,10 @@ keywords:
 - Inferential statistics
 - Data analysis
 - Business analytics
+permalink: '/data-science/understanding_statistical_significance_data_analysis/'
 redirect_from:
 - '/data science/statistics/understanding_statistical_significance_data_analysis/'
+- '/data science/understanding_statistical_significance_data_analysis/'
 seo_description: 'Statistical significance explained: hypothesis testing, p-values, confidence intervals, and their role in data-driven decisions.'
 seo_title: Statistical Significance in Data Analysis
 seo_type: article
@@ -197,3 +199,10 @@ An adequate sample size is essential for detecting statistically significant eff
 ## Conclusion
 
 Statistical significance is a fundamental concept in data analysis that enables analysts to draw reliable conclusions from data. By understanding key principles such as hypothesis testing, p-values, confidence intervals, and the distinction between statistical and practical significance, analysts can make informed decisions that drive business success. Whether you are designing experiments, interpreting the results of a regression model, or comparing the effectiveness of different strategies, statistical significance provides the tools needed to separate meaningful insights from random noise. Careful consideration of sample size and the balance between Type I and Type II errors ensures that the conclusions drawn from data are both valid and actionable. Statistical significance is not just a technical concept; it is a cornerstone of evidence-based decision-making in today's data-driven world.
+
+## References
+
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
+- Mann, H. B., & Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger than the other. *Annals of Mathematical Statistics*, 18(1), 50-60.
+- Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. *Journal of the American Statistical Association*, 47(260), 583-621.

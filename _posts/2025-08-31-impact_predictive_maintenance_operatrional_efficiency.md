@@ -1,6 +1,8 @@
 ---
+permalink: '/data-science/impact_predictive_maintenance_operatrional_efficiency/'
 redirect_from:
 - '/data science/industrial analytics/predictive maintenance/impact_predictive_maintenance_operatrional_efficiency/'
+- '/data science/impact_predictive_maintenance_operatrional_efficiency/'
 title: >-
   The Impact of Predictive Maintenance on Operational Efficiency: A Data Science
   Perspective
@@ -962,3 +964,12 @@ Conversely, successful PdM implementations create sustainable competitive advant
 The convergence of advanced analytics, IoT sensing, and cloud computing has created unprecedented opportunities for operational excellence. Data scientists and industrial engineers who master these integrated approaches will drive the next generation of manufacturing and industrial competitiveness.
 
 The evidence is clear: predictive maintenance delivers substantial, quantifiable improvements in operational efficiency. The question for industrial organizations is not whether to implement PdM, but how quickly and effectively they can transform their maintenance operations to capture these proven benefits.
+
+## References
+
+- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.
+- Dickey, D. A., & Fuller, W. A. (1979). Distribution of the estimators for autoregressive time series with a unit root. *Journal of the American Statistical Association*, 74(366), 427-431.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Efron, B. (1979). Bootstrap methods: another look at the jackknife. *Annals of Statistics*, 7(1), 1-26.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

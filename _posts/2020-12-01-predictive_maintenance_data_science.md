@@ -21,6 +21,9 @@ keywords:
 - Regression
 - Machine learning
 - Data science
+permalink: '/data-science/predictive_maintenance_data_science/'
+redirect_from:
+- '/data science/predictive_maintenance_data_science/'
 seo_description: How data science powers predictive maintenance through regression, anomaly detection, and clustering for failure forecasting and schedule optimization.
 seo_title: 'Predictive Maintenance: Techniques and Applications'
 seo_type: article
@@ -140,3 +143,10 @@ As data science and machine learning technologies continue to evolve, predictive
 ### Conclusion
 
 The role of data science in predictive maintenance is crucial for optimizing industrial operations and reducing costs. By employing techniques such as regression analysis, anomaly detection, and clustering, organizations can forecast equipment failures and optimize maintenance schedules with greater precision. As industries continue to embrace data-driven strategies, predictive maintenance will become even more essential for maintaining operational efficiency and extending the lifespan of critical assets.
+
+## References
+
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Liu, F. T., Ting, K. M., & Zhou, Z.-H. (2008). Isolation forest. *Proceedings of ICDM*, 413-422.
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.
+- Ester, M., Kriegel, H.-P., Sander, J., & Xu, X. (1996). A density-based algorithm for discovering clusters in large spatial databases with noise. *Proceedings of KDD*, 226-231.

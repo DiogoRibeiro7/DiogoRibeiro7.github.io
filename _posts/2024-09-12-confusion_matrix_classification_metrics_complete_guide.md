@@ -20,8 +20,10 @@ keywords:
 - Classification metrics
 - Model evaluation
 - Threshold tuning
+permalink: '/machine-learning/confusion_matrix_classification_metrics_complete_guide/'
 redirect_from:
 - '/machine-learning/model-evaluation/confusion_matrix_classification_metrics_complete_guide/'
+- '/machine learning/confusion_matrix_classification_metrics_complete_guide/'
 seo_description: Understand the confusion matrix, key classification metrics like
   precision and recall, and when to use each based on real-world cost trade-offs.
 seo_title: 'Confusion Matrix: Metrics and Trade-Offs'

@@ -25,6 +25,9 @@ keywords:
 - Pattern recognition
 - Bioinformatics
 - Data analysis
+permalink: '/data-science/realworld_data_distributions/'
+redirect_from:
+- '/data science/realworld_data_distributions/'
 seo_description: Clustering algorithms including K-Means, DBSCAN, and Spectral Clustering, and how they reveal hidden patterns in data.
 seo_title: 'Clustering Explained: How Algorithms Group Data'
 seo_type: article
@@ -154,3 +157,10 @@ This dance of data, with its roots anchored in the foundational principles of ma
 The journey of clustering is an ongoing one, where each step forward reveals new patterns, uncovers hidden connections, and illuminates the myriad ways in which data mirrors the complexity of life itself. It is a dance that invites all—novices and experts alike—to participate, learn, and contribute to the ever-expanding knowledge of the universe's data-driven narrative.
 
 As the dance of clustering goes on, it remains a testament to the human quest for understanding, a celebration of our ability to make sense of the world through data. In the grand ballroom of data science, clustering stands as a beacon of exploration, a technique that continually evolves, adapts, and inspires, reflecting the ever-changing, patterned beauty of the world around us.
+
+## References
+
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.
+- Ester, M., Kriegel, H.-P., Sander, J., & Xu, X. (1996). A density-based algorithm for discovering clusters in large spatial databases with noise. *Proceedings of KDD*, 226-231.
+- Ng, A. Y., Jordan, M. I., & Weiss, Y. (2002). On spectral clustering: analysis and an algorithm. *Advances in Neural Information Processing Systems*, 14.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

@@ -1,6 +1,8 @@
 ---
+permalink: '/data-science/survival_analysis_public_policy/'
 redirect_from:
 - '/public policy/data science/government analytics/survival_analysis_public_policy/'
+- '/data science/survival_analysis_public_policy/'
 title: "Survival Analysis in Public Policy and Government: Applications, Methodology, and Implementation"
 categories:
 - Data Science

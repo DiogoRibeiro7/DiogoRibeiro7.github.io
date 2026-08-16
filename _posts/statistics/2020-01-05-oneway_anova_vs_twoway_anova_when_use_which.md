@@ -212,3 +212,9 @@ Two-way ANOVA is particularly useful when researchers are interested in understa
 Both **one-way ANOVA** and **two-way ANOVA** are powerful statistical tools used to test for differences in group means. **One-way ANOVA** is appropriate when analyzing a single factor, while **two-way ANOVA** is necessary when investigating two factors and their interaction. Understanding the distinctions between these tests and their assumptions is crucial for choosing the right method in data analysis.
 
 Two-way ANOVA’s ability to explore **interaction effects** provides deeper insights into how different factors work together to influence the outcome. Whether you are analyzing the effectiveness of medical treatments, comparing product strategies, or studying behavior patterns, ANOVA is an invaluable tool for drawing meaningful conclusions from data.
+
+## References
+
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. *Journal of the American Statistical Association*, 47(260), 583-621.
+- Friedman, M. (1937). The use of ranks to avoid the assumption of normality implicit in the analysis of variance. *Journal of the American Statistical Association*, 32(200), 675-701.

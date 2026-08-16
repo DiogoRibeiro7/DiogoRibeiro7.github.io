@@ -11,8 +11,10 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.avif
   twitter_image: /assets/images/data_science_6.jpg
+permalink: '/data-science/missing_data/'
 redirect_from:
 - '/epidemiology/data science/medical research/statistics/clinical studies/missing_data/'
+- '/data science/missing_data/'
 seo_description: How to handle missing data in clinical research, the biases that arise when it is ignored, and the methods that address it.
 seo_title: Handling Missing Data in Clinical Research
 seo_type: article

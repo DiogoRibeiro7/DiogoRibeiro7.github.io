@@ -14,8 +14,10 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_1.jpg
+permalink: '/data-science/randomized_inference/'
 redirect_from:
 - '/data science/machine learning/randomized_inference/'
+- '/data science/randomized_inference/'
 seo_description: Learn the importance of validating anomaly detection models like
   COPOD. Explore the pitfalls of assuming variable independence in high-dimensional
   data.

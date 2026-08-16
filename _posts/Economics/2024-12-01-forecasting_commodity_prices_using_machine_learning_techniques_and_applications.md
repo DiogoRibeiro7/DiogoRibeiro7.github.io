@@ -252,3 +252,12 @@ Forecasting commodity prices has always been a challenging task due to the volat
 From simple models like linear regression to advanced techniques like neural networks and gradient boosting machines, machine learning offers a wide range of tools for building predictive models. Additionally, by incorporating macroeconomic indicators, supply-demand dynamics, geopolitical factors, and market sentiment, machine learning models can provide more comprehensive and accurate forecasts.
 
 While challenges remain, particularly in terms of data quality, volatility, and model interpretability, the future of machine learning in commodity price forecasting is bright. As new algorithms and data sources become available, machine learning models will play an increasingly important role in helping traders, investors, and policymakers navigate the complexities of commodity markets.
+
+## References
+
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Sims, C. A. (1980). Macroeconomics and reality. *Econometrica*, 48(1), 1-48.
+- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.
+- Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and Practice* (3rd ed.). OTexts.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.

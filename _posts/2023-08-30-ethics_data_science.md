@@ -25,6 +25,9 @@ keywords:
 - Fairness in machine learning
 - Algorithmic bias
 - Ethical challenges in ai
+permalink: '/data-science/ethics_data_science/'
+redirect_from:
+- '/data science/ethics_data_science/'
 seo_description: 'The ethical challenges in data science: privacy protection, bias, social impact, and responsible decision-making for AI systems.'
 seo_title: 'Ethics in Data Science: Privacy, Bias, and Impact'
 seo_type: article

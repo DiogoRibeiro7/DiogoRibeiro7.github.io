@@ -24,6 +24,9 @@ keywords:
 - Health analytics
 - Data science
 - Machine learning
+permalink: '/data-science/using_wearable_technology_big_data_health_monitoring/'
+redirect_from:
+- '/data science/using_wearable_technology_big_data_health_monitoring/'
 seo_description: How wearable technology and big data analytics are transforming health monitoring, early diagnosis, and preventive care.
 seo_title: Using Wearable Technology and Big Data for Health Monitoring
 seo_type: article

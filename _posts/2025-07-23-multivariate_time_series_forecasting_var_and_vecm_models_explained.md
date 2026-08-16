@@ -1,6 +1,8 @@
 ---
+permalink: '/time-series/multivariate_time_series_forecasting_var_and_vecm_models_explained/'
 redirect_from:
 - '/time series/econometrics/forecasting/multivariate_time_series_forecasting_var_and_vecm_models_explained/'
+- '/time series/multivariate_time_series_forecasting_var_and_vecm_models_explained/'
 title: 'Multivariate Time Series Forecasting: VAR and VECM Models Explained'
 categories:
 - Time Series
@@ -339,3 +341,12 @@ Typical Applications    | Short-term forecasting, impulse analysis        | Long
 14. **Non-linear Extensions**: Consider non-linear extensions like Threshold VAR or Markov-Switching VAR for regime-dependent dynamics.
 
 15. **Computational Efficiency**: Implement efficient algorithms for large-scale multivariate systems.
+
+## References
+
+- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.
+- Sims, C. A. (1980). Macroeconomics and reality. *Econometrica*, 48(1), 1-48.
+- Engle, R. F., & Granger, C. W. J. (1987). Co-integration and error correction: representation, estimation, and testing. *Econometrica*, 55(2), 251-276.
+- Dickey, D. A., & Fuller, W. A. (1979). Distribution of the estimators for autoregressive time series with a unit root. *Journal of the American Statistical Association*, 74(366), 427-431.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Granger, C. W. J. (1969). Investigating causal relations by econometric models and cross-spectral methods. *Econometrica*, 37(3), 424-438.

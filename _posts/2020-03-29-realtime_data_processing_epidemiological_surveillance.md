@@ -21,8 +21,10 @@ keywords:
 - Disease tracking
 - Real-time analytics
 - Public health data
+permalink: '/data-science/realtime_data_processing_epidemiological_surveillance/'
 redirect_from:
 - '/data science/epidemiology/realtime_data_processing_epidemiological_surveillance/'
+- '/data science/realtime_data_processing_epidemiological_surveillance/'
 seo_description: How real-time platforms like Apache Flink improve epidemiological surveillance, enabling accurate and timely disease tracking and outbreak detection.
 seo_title: Real-Time Epidemiological Surveillance with Flink
 seo_type: article

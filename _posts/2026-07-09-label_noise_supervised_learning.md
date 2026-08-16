@@ -1,4 +1,7 @@
 ---
+permalink: '/machine-learning/label_noise_supervised_learning/'
+redirect_from:
+- '/machine learning/statistics/data science/label_noise_supervised_learning/'
 title: "Label Noise in Supervised Learning: When the Target Cannot Be Trusted"
 categories:
 - Machine Learning
@@ -13,7 +16,7 @@ tags:
 - Predictive Maintenance
 author_profile: false
 seo_title: "Label Noise in Supervised Learning"
-seo_description: "A practical guide to label noise in supervised learning, covering noisy targets, annotation error, delayed labels, health and maintenance examples, robust training, and evaluation."
+seo_description: 'Label noise in supervised learning: noisy targets, annotation error, delayed labels, and how to train and evaluate robustly.'
 excerpt: "Label noise is one of the most damaging data quality problems in supervised learning because it corrupts the target the model is trained to imitate."
 summary: "This article explains label noise in supervised learning and why it matters in applied machine learning. It covers random and systematic label errors, healthcare and predictive maintenance examples, effects on model training and evaluation, methods for detecting noisy labels, robust training strategies, and governance practices for trustworthy supervised learning."
 keywords:
@@ -302,3 +305,8 @@ In healthcare, labels can reflect coding practice, access to care, delayed outco
 The solution is not simply more data or a larger model. It is better target definition, stronger label metadata, clean evaluation sets, robust training, careful review of suspicious examples, and monitoring of the labeling process over time.
 
 Supervised learning starts with labels. If those labels are not trustworthy, model quality is built on weak ground.
+
+## References
+
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

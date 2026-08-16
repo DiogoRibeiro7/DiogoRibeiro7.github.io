@@ -11,8 +11,10 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
   twitter_image: /assets/images/data_science_7.jpg
+permalink: '/data-science/poisson_distribution/'
 redirect_from:
 - '/data science/statistics/r programming/probability and statistics/data analysis/poisson_distribution/'
+- '/data science/poisson_distribution/'
 seo_description: How to model count events with the Poisson distribution in R, from data preparation to fitting and assessing the model.
 seo_title: Modeling Count Events with Poisson Distribution in R
 seo_type: article

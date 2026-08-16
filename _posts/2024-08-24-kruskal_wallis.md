@@ -162,3 +162,10 @@ When data are normally distributed, ANOVA typically provides more precise estima
 The Kruskal-Wallis test is an essential tool for researchers dealing with non-parametric data or situations where parametric assumptions are not met. Its flexibility in handling ordinal data, non-normal distributions, and small sample sizes makes it a versatile choice in various research settings. However, proper application and interpretation are crucial to avoid common pitfalls, such as misunderstanding the nature of the test or overlooking the need for post-hoc analyses.
 
 By understanding the mechanics, advantages, challenges, and practical implementations of the Kruskal-Wallis test, researchers can make more informed decisions about when and how to use this powerful statistical method.
+
+## References
+
+- Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. *Journal of the American Statistical Association*, 47(260), 583-621.
+- Mann, H. B., & Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger than the other. *Annals of Mathematical Statistics*, 18(1), 50-60.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.

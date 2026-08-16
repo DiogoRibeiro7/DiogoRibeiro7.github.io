@@ -19,6 +19,9 @@ keywords:
 - Machine Learning
 - Clinical Data
 - Diagnosis
+permalink: '/data-science/natural_language_processing_nlp_healthcare_extracting_insights_unstructured_data/'
+redirect_from:
+- '/data science/natural_language_processing_nlp_healthcare_extracting_insights_unstructured_data/'
 seo_description: How Natural Language Processing extracts insights from unstructured healthcare data such as clinical notes and patient records.
 seo_title: 'NLP in Healthcare: Insights from Unstructured Data'
 seo_type: article

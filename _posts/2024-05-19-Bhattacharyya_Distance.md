@@ -169,3 +169,8 @@ Understanding the Bhattacharyya distance and common loss functions equips you wi
 On the other hand, loss functions are central to the training of machine learning models. They guide the optimization process by quantifying the error between predicted and actual values, which is crucial for improving model accuracy. Each loss function has its specific use cases and advantages, from handling outliers to dealing with classification margins.
 
 By integrating these concepts into your machine learning workflow, you can make more informed decisions about model selection, evaluation, and optimization. Whether you are working on regression tasks, where minimizing errors is crucial, or on classification tasks, where precise categorization is key, these tools and techniques will help enhance your models' performance and reliability.
+
+## References
+
+- Kullback, S., & Leibler, R. A. (1951). On information and sufficiency. *Annals of Mathematical Statistics*, 22(1), 79-86.
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.

@@ -1,6 +1,8 @@
 ---
+permalink: '/predictive-maintenance/introduction_predictive_maintenance_industrial_operations/'
 redirect_from:
 - '/industry 4.0/predictive maintenance/data analytics/introduction_predictive_maintenance_industrial_operations/'
+- '/predictive maintenance/introduction_predictive_maintenance_industrial_operations/'
 title: "Introduction to Predictive Maintenance: Transforming Industrial Operations Through Intelligent Asset Management"
 categories:
 - Predictive Maintenance

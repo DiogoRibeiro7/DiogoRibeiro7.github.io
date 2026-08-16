@@ -22,8 +22,10 @@ keywords:
 - Sarima
 - R
 - Arma
+permalink: '/time-series/arima_time_series/'
 redirect_from:
 - '/time series analysis/arima_time_series/'
+- '/time series/arima_time_series/'
 seo_description: 'The ARIMA model explained: components, parameter identification, validation, and applications, with comparisons to ARIMAX, SARIMA, and ARMA.'
 seo_title: 'Comprehensive ARIMA Model Guide: Time Series Analysis'
 seo_type: article

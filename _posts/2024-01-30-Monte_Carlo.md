@@ -446,3 +446,11 @@ MCMC methods are poised to remain at the forefront of Bayesian analysis and prob
 - **"Hamiltonian Monte Carlo" by M.D. Hoffman and A. Gelman in the Journal of Machine Learning Research (2014)**: A pivotal paper on the Hamiltonian Monte Carlo method, an important variant of MCMC.
 
 - **"The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo" by M.D. Hoffman and A. Gelman in the Journal of Machine Learning Research (2011)**: Introduces the No-U-Turn Sampler, an extension of Hamiltonian Monte Carlo.
+
+## References
+
+- Hastings, W. K. (1970). Monte Carlo sampling methods using Markov chains and their applications. *Biometrika*, 57(1), 97-109.
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Hoffman, M. D., & Gelman, A. (2014). The No-U-Turn Sampler: adaptively setting path lengths in Hamiltonian Monte Carlo. *Journal of Machine Learning Research*, 15, 1593-1623.
+- Tufte, E. R. (2001). *The Visual Display of Quantitative Information* (2nd ed.). Graphics Press.

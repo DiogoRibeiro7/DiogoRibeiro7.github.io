@@ -11,6 +11,9 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.avif
   twitter_image: /assets/images/data_science_7.jpg
+permalink: '/data-science/latentclass/'
+redirect_from:
+- '/data science/latentclass/'
 seo_description: How Latent Class Analysis identifies unobservable subgroups in a population from responses to multiple observed variables.
 seo_title: 'Latent Class Analysis: Finding Hidden Subgroups'
 seo_type: article

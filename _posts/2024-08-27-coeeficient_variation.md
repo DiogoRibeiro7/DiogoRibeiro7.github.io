@@ -280,3 +280,9 @@ fn main() {
     println!("The Coefficient of Variation (CV) is: {:.2}%", cv);
 }
 ```
+
+## References
+
+- Iglewicz, B., & Hoaglin, D. C. (1993). *How to Detect and Handle Outliers*. ASQC Quality Press.
+- Efron, B. (1979). Bootstrap methods: another look at the jackknife. *Annals of Statistics*, 7(1), 1-26.
+- Lorenz, M. O. (1905). Methods of measuring the concentration of wealth. *Publications of the American Statistical Association*, 9(70), 209-219.

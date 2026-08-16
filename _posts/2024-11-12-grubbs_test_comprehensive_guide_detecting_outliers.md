@@ -259,3 +259,9 @@ else:
 print(f"Grubbs' Test Statistic: {G}")
 print(f"Critical Value: {critical_value}")
 ```
+
+## References
+
+- Grubbs, F. E. (1969). Procedures for detecting outlying observations in samples. *Technometrics*, 11(1), 1-21.
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
+- Dixon, W. J. (1951). Ratios involving extreme values. *Annals of Mathematical Statistics*, 22(1), 68-78.

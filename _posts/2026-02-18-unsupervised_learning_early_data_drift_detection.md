@@ -1,6 +1,8 @@
 ---
+permalink: '/machine-learning/unsupervised_learning_early_data_drift_detection/'
 redirect_from:
 - '/machine learning/data science/model monitoring/unsupervised_learning_early_data_drift_detection/'
+- '/machine learning/unsupervised_learning_early_data_drift_detection/'
 title: "Using Unsupervised Learning for Early Data Drift Detection"
 categories:
 - Machine Learning
@@ -179,3 +181,10 @@ Over time, this feedback helps distinguish harmless distribution movement from s
 Unsupervised learning can make data drift visible before labels arrive, but it must be used with discipline. Clustering, reconstruction error, density methods, and embedding distances are not magic detectors. They are measurement tools whose value depends on representation quality, window design, threshold calibration, cohort analysis, and response workflow.
 
 The best systems treat unsupervised drift detection as an early warning layer. They do not ask it to prove model failure. They ask it to reveal when production data has moved far enough from familiar territory that the organization should look closer, collect evidence faster, and decide whether the model still deserves trust.
+
+## References
+
+- Quiñonero-Candela, J., Sugiyama, M., Schwaighofer, A., & Lawrence, N. D. (Eds.). (2009). *Dataset Shift in Machine Learning*. MIT Press.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Liu, F. T., Ting, K. M., & Zhou, Z.-H. (2008). Isolation forest. *Proceedings of ICDM*, 413-422.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.

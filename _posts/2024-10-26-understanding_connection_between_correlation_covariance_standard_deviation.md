@@ -22,6 +22,9 @@ keywords:
 - Data analysis
 - Mathematics
 - Statistics
+permalink: '/data-science/understanding_connection_between_correlation_covariance_standard_deviation/'
+redirect_from:
+- '/data science/understanding_connection_between_correlation_covariance_standard_deviation/'
 seo_description: The mathematical relationships between correlation, covariance, and standard deviation, and how they connect in data analysis.
 seo_title: Correlation, Covariance, and Standard Deviation
 seo_type: article

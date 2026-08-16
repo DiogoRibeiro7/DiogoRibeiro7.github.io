@@ -154,3 +154,10 @@ print('Statistic: %.3f' % result.statistic)
 Ultimately, the decision between the Shapiro-Wilk and Anderson-Darling tests depends on your sample size and the nature of the deviations you want to detect. For small samples, the Shapiro-Wilk test is a powerful and reliable option, while the Anderson-Darling test offers a more flexible and tail-sensitive approach, particularly useful for larger datasets.
 
 Both tests provide valuable insights into the distribution of your data, ensuring you can make informed decisions in parametric testing and beyond.
+
+## References
+
+- Shapiro, S. S., & Wilk, M. B. (1965). An analysis of variance test for normality (complete samples). *Biometrika*, 52(3-4), 591-611.
+- Anderson, T. W., & Darling, D. A. (1954). A test of goodness of fit. *Journal of the American Statistical Association*, 49(268), 765-769.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Massey, F. J. (1951). The Kolmogorov-Smirnov test for goodness of fit. *Journal of the American Statistical Association*, 46(253), 68-78.

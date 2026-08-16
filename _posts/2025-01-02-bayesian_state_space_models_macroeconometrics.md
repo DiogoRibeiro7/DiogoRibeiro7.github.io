@@ -20,8 +20,10 @@ keywords:
 - Kalman filter
 - State space models
 - Particle filtering
+permalink: '/data-science/bayesian_state_space_models_macroeconometrics/'
 redirect_from:
 - '/macroeconometrics/bayesian_state_space_models_macroeconometrics/'
+- '/data science/bayesian_state_space_models_macroeconometrics/'
 seo_description: 'Bayesian state space models in macroeconometrics: their applications, estimation techniques, and handling of large datasets.'
 seo_title: Bayesian State Space Models in Macroeconometrics
 seo_type: article
@@ -136,3 +138,11 @@ Another area where future research is needed is in the **handling of non-lineari
 Finally, there is a growing recognition of the importance of **real-time data** in macroeconomic analysis. As new data becomes available, state space models can be updated to reflect the latest information, providing more accurate forecasts and policy recommendations. However, this requires further development of **real-time filtering algorithms** that can handle the challenges of missing or noisy data.
 
 Bayesian state space models have become an indispensable tool in macroeconometrics, offering a flexible and powerful framework for analyzing dynamic relationships between economic variables. While challenges remain, recent advancements in computational techniques and model specification have paved the way for even broader applications of these models in the future.
+
+## References
+
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Sims, C. A. (1980). Macroeconomics and reality. *Econometrica*, 48(1), 1-48.
+- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.

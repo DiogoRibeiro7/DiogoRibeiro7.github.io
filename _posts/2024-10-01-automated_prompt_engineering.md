@@ -21,6 +21,9 @@ keywords:
 - Opro
 - Random prompt optimization
 - Python
+permalink: '/machine-learning/automated_prompt_engineering/'
+redirect_from:
+- '/machine learning/automated_prompt_engineering/'
 seo_description: 'Automated Prompt Engineering (APE): strategies for automatically generating and refining prompts to improve large language models.'
 seo_title: 'Automated Prompt Engineering (APE): Optimizing LLMs'
 seo_type: article

@@ -22,8 +22,10 @@ keywords:
 - Anomaly detection methods
 - Machine learning outlier techniques
 - Python
+permalink: '/data-science/outlier_detection/'
 redirect_from:
 - '/data science/machine learning/outlier_detection/'
+- '/data science/outlier_detection/'
 seo_description: Outlier detection in machine learning using distance metrics and metric learning, and how they improve anomaly detection accuracy.
 seo_title: Outlier Detection with Distance Metric Learning
 seo_type: article
@@ -153,3 +155,8 @@ DML requires careful tuning but can produce robust and intuitive results, making
 Distance Metric Learning offers a powerful alternative to traditional outlier detection methods by learning from the data to determine the most appropriate distance metric. This method is particularly effective in complex datasets with mixed data types and interrelated features.
 
 While no single outlier detection method is universally best, DML provides a valuable tool for detecting outliers, especially when combined with other methods. It requires careful tuning but can yield strong and intuitive results, making it a useful technique in the data scientist's toolkit.
+
+## References
+
+- Breunig, M. M., Kriegel, H.-P., Ng, R. T., & Sander, J. (2000). LOF: Identifying density-based local outliers. *Proceedings of SIGMOD*, 93-104.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.

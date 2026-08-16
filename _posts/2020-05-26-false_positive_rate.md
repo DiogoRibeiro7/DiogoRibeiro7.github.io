@@ -20,6 +20,9 @@ keywords:
 - Machine learning
 - Fpr
 - Binary classification metrics
+permalink: '/machine-learning/false_positive_rate/'
+redirect_from:
+- '/machine learning/false_positive_rate/'
 seo_description: A comprehensive analysis of the False Positive Rate (FPR), including
   its role in machine learning, strengths, weaknesses, use cases, and alternative
   metrics.

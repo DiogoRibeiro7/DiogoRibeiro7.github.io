@@ -21,8 +21,10 @@ keywords:
 - Time series forecasting
 - R
 - Python
+permalink: '/time-series/introduction_seasonal_decomposition_time_series/'
 redirect_from:
 - '/time series analysis/introduction_seasonal_decomposition_time_series/'
+- '/time series/introduction_seasonal_decomposition_time_series/'
 seo_description: How STL and X-13-SEATS decomposition model seasonality in time series data, with practical examples in R and Python.
 seo_title: STL and X-13 Methods for Time Series Decomposition
 seo_type: article
@@ -111,3 +113,8 @@ Both STL and X-13-SEATS have their respective strengths, and choosing the right 
 Seasonal decomposition is a critical tool in time series analysis, allowing us to break down complex data into its trend, seasonal, and residual components. Both **STL** and **X-13-SEATS** offer powerful techniques for this decomposition, each with its unique strengths. STL excels in handling evolving seasonal patterns, giving users flexibility and control over the decomposition process. On the other hand, X-13-SEATS provides a more robust framework for structured, official time series data, particularly with its integration of ARIMA modeling and the ability to handle trading day adjustments.
 
 By understanding the principles behind these methods and learning how to implement them in **R** or **Python**, analysts and forecasters can significantly enhance their ability to model seasonality and improve the accuracy of their predictions. Whether analyzing economic indicators, climate data, or retail trends, STL and X-13-SEATS remain indispensable tools in the modern data analyst's toolkit.
+
+## References
+
+- Cleveland, R. B., Cleveland, W. S., McRae, J. E., & Terpenning, I. (1990). STL: A seasonal-trend decomposition procedure based on loess. *Journal of Official Statistics*, 6(1), 3-73.
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.

@@ -22,6 +22,9 @@ keywords:
 - Data drift detection
 - Covariate shift management
 - Model performance tracking
+permalink: '/machine-learning/adaptive_performance_estimation_machine_learning/'
+redirect_from:
+- '/machine learning/adaptive_performance_estimation_machine_learning/'
 seo_description: Adaptive performance estimation in machine learning with CBPE and PAPE, and how to monitor data drift and covariate shift.
 seo_title: 'Adaptive ML Performance Estimation: CBPE and PAPE'
 seo_type: article

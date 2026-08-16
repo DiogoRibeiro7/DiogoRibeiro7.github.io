@@ -20,6 +20,9 @@ keywords:
 - Optimization theory
 - Machine learning foundations
 - Deep learning
+permalink: '/data-science/math_fundamentals/'
+redirect_from:
+- '/data science/math_fundamentals/'
 seo_description: The linear algebra, calculus, probability, and optimization that sit beneath machine learning, and why skipping them holds practitioners back.
 seo_title: Why Mathematics Is the Foundation of AI
 seo_type: article

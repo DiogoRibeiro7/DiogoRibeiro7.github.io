@@ -20,6 +20,9 @@ keywords:
 - System maintenance
 - Predictive maintenance
 - Python
+permalink: '/predictive-maintenance/Mean_Time_Between_Failures/'
+redirect_from:
+- '/predictive maintenance/Mean_Time_Between_Failures/'
 seo_description: An in-depth explanation of Mean Time Between Failures (MTBF), its
   importance, strengths, weaknesses, and related metrics like MTTR and MTTF.
 seo_title: What is Mean Time Between Failures (MTBF)?

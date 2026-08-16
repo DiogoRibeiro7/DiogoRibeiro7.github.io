@@ -165,3 +165,11 @@ Think of your preregistration as a recipe. If another researcher followed it pre
 - [Mplus User's Guide](https://www.statmodel.com/download/usersguide/MplusUserGuideVer_8.pdf)
 - [semopy Documentation](https://semopy.com/)
 - [Specifying and Visualizing Specification Curves](https://journals.sagepub.com/doi/10.1177/2515245919864955)
+
+## References
+
+- Kline, R. B. (2015). *Principles and Practice of Structural Equation Modeling* (4th ed.). Guilford Press.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
+- Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. *Journal of the Royal Statistical Society: Series B*, 57(1), 289-300.

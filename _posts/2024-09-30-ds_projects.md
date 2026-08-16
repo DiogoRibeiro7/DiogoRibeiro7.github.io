@@ -18,8 +18,10 @@ keywords:
 - Model deployment
 - Research validation
 - Best practices
+permalink: '/data-science/ds_projects/'
 redirect_from:
 - '/data science/machine learning/ds_projects/'
+- '/data science/ds_projects/'
 seo_description: A detailed checklist for Data Science professionals to validate research
   and model integrity before deployment.
 seo_title: Data Science Project Checklist Before Deployment
@@ -146,3 +148,10 @@ As you work through this list, remember that the key to success lies not just in
 Investing time in ensuring the integrity of your research will ultimately save you from unnecessary complications in production. So, take a deep breath, methodically assess your project, and when you finally declare “success,” do so with confidence.
 
 As this list evolves, your feedback will be invaluable. Let it serve not only as a resource but as a reminder of the importance of diligence in the field of data science. Happy checking!
+
+## References
+
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *Advances in Neural Information Processing Systems*, 28.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

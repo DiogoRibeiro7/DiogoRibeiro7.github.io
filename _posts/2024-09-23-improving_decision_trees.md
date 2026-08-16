@@ -20,6 +20,9 @@ keywords:
 - Interpretable models
 - Classification
 - Python
+permalink: '/machine-learning/improving_decision_trees/'
+redirect_from:
+- '/machine learning/improving_decision_trees/'
 seo_description: How Genetic Algorithms improve decision tree performance, yielding interpretable models with higher accuracy at the same size.
 seo_title: Enhancing Decision Trees with Genetic Algorithms
 seo_type: article
@@ -310,3 +313,12 @@ Mutation introduces randomness by modifying hyperparameters of the tree, such as
 #### Evolution
 
 The trees evolve over multiple generations by selecting the best-performing trees, combining them through crossover, and applying mutations. The best tree is chosen from the final generation.
+
+## References
+
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.
+- Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of KDD*, 785-794.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Efron, B. (1979). Bootstrap methods: another look at the jackknife. *Annals of Statistics*, 7(1), 1-26.

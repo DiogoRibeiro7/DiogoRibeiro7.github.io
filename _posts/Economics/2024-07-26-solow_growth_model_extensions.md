@@ -33,10 +33,7 @@ tags:
 title: 'Solow Growth Model and Extensions: Technological Change and Human Capital'
 ---
 
-<p align="center">
-  <img src="/assets/images/economics/solowdia.jpg" alt="Solowdia - Solow Growth Model and Extensions: Technological Change and Human Capital" loading="lazy">
-</p>
-<p align="center"><i>Solow Growth Model</i></p>
+![Solow model capital accumulation: the saving curve s*f(k) crosses the break-even line (n+g+d)k once, at the steady state. Below it capital per worker grows; above it, it shrinks.](/assets/images/figures/solow_steady_state.png){: width="1177" height="697" loading="lazy"}
 
 The Solow Growth Model has become a foundational tool in economic growth theory, shedding light on how capital accumulation, labor, and population growth contribute to economic growth. However, this basic model does not account for some of the most crucial determinants of long-term growth: technological progress and human capital investment. By extending the Solow model to incorporate these elements, economists can better understand and predict economic growth trends across different countries and time periods.
 

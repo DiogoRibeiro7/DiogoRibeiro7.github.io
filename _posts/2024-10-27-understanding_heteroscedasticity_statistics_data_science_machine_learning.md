@@ -177,3 +177,9 @@ Another example of heteroscedasticity can be found in social media data. The var
 Heteroscedasticity is a common issue in regression analysis, data science, and machine learning models. It occurs when the variance of residuals is not constant, which can lead to inefficient estimates, biased standard errors, and unreliable hypothesis testing. By understanding the causes and implications of heteroscedasticity, researchers can apply appropriate diagnostic tests and corrective techniques to improve model accuracy.
 
 Methods such as weighted least squares, generalized least squares, and robust standard errors provide effective ways to deal with heteroscedasticity, ensuring that statistical models produce valid and reliable results. Whether analyzing economic data, social media trends, or biological measurements, it is crucial to detect and correct for heteroscedasticity to make more accurate predictions and draw meaningful insights from the data.
+
+## References
+
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Breusch, T. S., & Pagan, A. R. (1979). A simple test for heteroscedasticity and random coefficient variation. *Econometrica*, 47(5), 1287-1294.
+- White, H. (1980). A heteroskedasticity-consistent covariance matrix estimator and a direct test for heteroskedasticity. *Econometrica*, 48(4), 817-838.

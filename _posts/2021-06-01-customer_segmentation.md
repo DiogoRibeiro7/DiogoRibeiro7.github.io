@@ -23,6 +23,9 @@ keywords:
 - Rfm segmentation
 - Machine learning
 - Python
+permalink: '/data-science/customer_segmentation/'
+redirect_from:
+- '/data science/customer_segmentation/'
 seo_description: 'RFM segmentation for customer retention and marketing: what it measures and how to implement RFM clustering with unsupervised learning.'
 seo_title: 'RFM Segmentation: Measuring Customer Value'
 seo_type: article

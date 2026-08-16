@@ -24,6 +24,9 @@ keywords:
 - Proportional hazards assumption
 - R
 - Python
+permalink: '/data-science/cox_proportional_hazards_model/'
+redirect_from:
+- '/data science/cox_proportional_hazards_model/'
 seo_description: Explore the Cox Proportional Hazards Model and its application in
   survival analysis, with examples from clinical trials and medical research.
 seo_title: Cox Proportional Hazards in Survival Analysis
@@ -288,3 +291,11 @@ Despite its strengths, the Cox model has limitations, particularly when dealing 
 In clinical trials, epidemiological studies, and healthcare cost analyses, the Cox model provides critical insights into how various factors influence patient outcomes. By continuing to refine and apply the Cox model in diverse research settings, we can enhance our understanding of survival dynamics and improve medical decision-making.
 
 As the field of survival analysis evolves, new techniques and extensions to the Cox model will continue to emerge, offering even greater flexibility and power in analyzing time-to-event data. Whether through the development of personalized risk prediction models or the application of advanced statistical methods, the Cox model will remain a vital tool in the quest to improve patient care and outcomes.
+
+## References
+
+- Cox, D. R. (1972). Regression models and life-tables. *Journal of the Royal Statistical Society: Series B*, 34(2), 187-220.
+- Kaplan, E. L., & Meier, P. (1958). Nonparametric estimation from incomplete observations. *Journal of the American Statistical Association*, 53(282), 457-481.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.

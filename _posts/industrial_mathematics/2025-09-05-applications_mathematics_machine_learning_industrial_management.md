@@ -1,6 +1,8 @@
 ---
+permalink: '/data-science/applications_mathematics_machine_learning_industrial_management/'
 redirect_from:
 - '/industrial management/data science/artificial intelligence/applications_mathematics_machine_learning_industrial_management/'
+- '/data science/applications_mathematics_machine_learning_industrial_management/'
 title: "Applications of Mathematics and Machine Learning in Industrial Management: A Comprehensive Review"
 categories:
 - Data Science

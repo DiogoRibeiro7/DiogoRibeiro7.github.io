@@ -322,3 +322,9 @@ print("Benjamini-Hochberg (FDR):", benjamini_hochberg_results)
 ```
 
 This appendix provides base Python implementations of multiple testing corrections using `NumPy`. These corrections (Bonferroni, Holm-Bonferroni, and Benjamini-Hochberg) are essential for controlling Type I error rates and ensuring the validity of results when conducting multiple hypothesis tests in experiments.
+
+## References
+
+- Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. *Journal of the Royal Statistical Society: Series B*, 57(1), 289-300.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.

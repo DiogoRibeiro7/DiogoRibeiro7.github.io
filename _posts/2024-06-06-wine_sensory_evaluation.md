@@ -11,8 +11,10 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.avif
   twitter_image: /assets/images/data_science_8.avif
+permalink: '/data-science/wine_sensory_evaluation/'
 redirect_from:
 - '/wine science/sensory evaluation/data analysis/oenology/food science/consumer behavior/marketing/wine_sensory_evaluation/'
+- '/data science/wine_sensory_evaluation/'
 seo_description: How wine sensory evaluation works, from sensory lexicons and emotional response to the statistical techniques used to analyze results.
 seo_title: Wine Sensory Evaluation and Statistical Analysis
 seo_type: article

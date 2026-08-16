@@ -20,6 +20,9 @@ keywords:
 - Data science
 - Ordinal regression
 - Marginal effects
+permalink: '/data-science/ordinal_regression/'
+redirect_from:
+- '/data science/ordinal_regression/'
 seo_description: The principles of ordinal regression, its real-world applications, and how to interpret results using marginal effects, with Python examples.
 seo_title: 'Ordinal Regression: Models and Marginal Effects'
 seo_type: article

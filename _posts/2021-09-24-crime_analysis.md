@@ -20,6 +20,9 @@ keywords:
 - K-means clustering
 - Data mining
 - Python
+permalink: '/data-science/crime_analysis/'
+redirect_from:
+- '/data science/crime_analysis/'
 seo_description: Explore how K-means clustering can enhance crime analysis by identifying
   patterns, predicting trends, and improving crime prevention through data mining.
 seo_title: Crime Analysis Using K-Means Clustering
@@ -218,3 +221,10 @@ print("Cluster centers:\n", kmeans.cluster_centers_)
 ```
 
 This Python code performs K-means clustering on a crime dataset, groups the data into five clusters, and visualizes the results using a scatter plot. Adjustments can be made based on the dataset and specific analysis needs.
+
+## References
+
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.
+- Ester, M., Kriegel, H.-P., Sander, J., & Xu, X. (1996). A density-based algorithm for discovering clusters in large spatial databases with noise. *Proceedings of KDD*, 226-231.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Tufte, E. R. (2001). *The Visual Display of Quantitative Information* (2nd ed.). Graphics Press.

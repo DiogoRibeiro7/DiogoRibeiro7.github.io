@@ -22,8 +22,10 @@ keywords:
 - Signal quality in wireless communication
 - Antenna design adjustments
 - Python
+permalink: '/predictive-maintenance/RSSI_body_effects/'
 redirect_from:
 - '/wireless communication/signal processing/network engineering/RSSI_body_effects/'
+- '/predictive maintenance/RSSI_body_effects/'
 seo_description: How the human body affects RSSI in wireless communication through absorption, reflection, and shadowing, and how to mitigate it.
 seo_title: How the Human Body Affects RSSI Signals
 seo_type: article
@@ -288,3 +290,9 @@ Using multiple receivers can significantly enhance the accuracy of presence dete
 - **Enhanced Detection:** By analyzing the combined data, you can more accurately detect and locate human presence, even in larger or more complex environments.
 
 Using RSSI for presence detection involves setting up a reliable measurement system, establishing a baseline, and monitoring for significant changes in signal strength. Advanced methods like machine learning, Kalman filtering, and multiple receivers can greatly enhance the accuracy and reliability of presence detection systems. These techniques allow for real-time detection, adaptability to different environments, and improved robustness against noise and other variances in the RSSI data. If you need more detailed implementation or have specific requirements, feel free to ask!
+
+## References
+
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

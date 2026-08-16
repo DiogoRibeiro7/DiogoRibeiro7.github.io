@@ -20,6 +20,9 @@ keywords:
 - Time series
 - Demand forecasting
 - Python
+permalink: '/machine-learning/demand_forecast_supply_chain/'
+redirect_from:
+- '/machine learning/demand_forecast_supply_chain/'
 seo_description: How customer behavior and predictive models improve supply chain demand forecasting, using the BG/NBD model for better accuracy.
 seo_title: Demand Forecasting in Supply Chain Using Customer Behavior
 seo_type: article

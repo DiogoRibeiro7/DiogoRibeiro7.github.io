@@ -18,6 +18,9 @@ keywords:
 - Grid search
 - Random search
 - Bayesian optimization
+permalink: '/machine-learning/hyperparameter_tuning_strategies/'
+redirect_from:
+- '/machine learning/hyperparameter_tuning_strategies/'
 seo_description: Learn when to use grid search, random search, and Bayesian optimization
   to tune machine learning models effectively.
 seo_title: Effective Hyperparameter Tuning Methods

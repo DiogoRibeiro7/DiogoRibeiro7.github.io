@@ -22,6 +22,9 @@ keywords:
 - Feature engineering
 - Overfitting
 - Mercedes-benz challenge
+permalink: '/machine-learning/rare_labels_machine_learning/'
+redirect_from:
+- '/machine learning/rare_labels_machine_learning/'
 seo_description: How rare labels in categorical variables cause overfitting in machine learning, and how to handle them with feature engineering.
 seo_title: Handling Rare Labels in Categorical Variables
 seo_type: article
@@ -152,3 +155,9 @@ encoded_vars = encoder.fit_transform(data[[categorical_var]])
 Rare labels in categorical variables can have a significant impact on machine learning model performance. If not handled properly, they can introduce noise, lead to overfitting, and decrease generalization. Depending on the context and the model, rare labels can be grouped, encoded, or transformed in ways that mitigate their impact. While they may sometimes provide valuable information—especially in cases like fraud detection—it's essential to apply appropriate preprocessing techniques to ensure robust model performance.
 
 In the Mercedes-Benz Greener Manufacturing Challenge, for example, properly handling rare labels could improve the accuracy of predicting testing times for various car configurations.
+
+## References
+
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.

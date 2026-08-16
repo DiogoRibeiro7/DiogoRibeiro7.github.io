@@ -18,8 +18,10 @@ keywords:
 - Zero-inflated data
 - Threshold classification
 - Statistical modeling
+permalink: '/time-series/threshold_classification_zero_inflated_time_series/'
 redirect_from:
 - '/time series analysis/threshold_classification_zero_inflated_time_series/'
+- '/time series/threshold_classification_zero_inflated_time_series/'
 seo_description: A method for threshold classification in zero-inflated time series using stationary distributions and parametric modeling.
 seo_title: Threshold Classification for Zero-Inflated Series
 seo_type: article

@@ -164,3 +164,10 @@ plt.show()
 **Benefit**: Understanding these shifts informs policy decisions and strategies for mitigating climate change effects.
 
 By applying these models, analysts can gain deeper insights into complex financial systems, improving decision-making and risk management. These tools are essential for navigating the dynamic and often unpredictable nature of financial markets.
+
+## References
+
+- Sklar, A. (1959). Fonctions de répartition à n dimensions et leurs marges. *Publications de l'Institut de Statistique de l'Université de Paris*, 8, 229-231.
+- Bollerslev, T. (1986). Generalized autoregressive conditional heteroskedasticity. *Journal of Econometrics*, 31(3), 307-327.
+- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.

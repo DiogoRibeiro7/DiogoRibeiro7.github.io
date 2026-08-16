@@ -374,3 +374,9 @@ A posterior distribution tells us what is plausible. A loss function tells us wh
 For data science, this connection is essential. Models do not create value because they estimate probabilities. They create value when those probabilities lead to better choices under uncertainty.
 
 The best data products therefore do more than predict. They help decide.
+
+## References
+
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *Advances in Neural Information Processing Systems*, 28.
+- Efron, B. (1979). Bootstrap methods: another look at the jackknife. *Annals of Statistics*, 7(1), 1-26.

@@ -22,6 +22,9 @@ keywords:
 - Gradient boosting
 - Business analytics
 - Python
+permalink: '/machine-learning/causal_inference/'
+redirect_from:
+- '/machine learning/causal_inference/'
 seo_description: Learn how monotonic constraints improve predictions in causal machine
   learning and real-world applications like real estate, healthcare, and marketing.
 seo_title: Causal Machine Learning with Monotonic Constraints
@@ -218,3 +221,9 @@ model = lgb.train(params, train_data)
 # Make predictions
 predictions = model.predict(X_test)
 ```
+
+## References
+
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

@@ -20,8 +20,10 @@ keywords:
 - Distributional properties
 - Machine learning
 - Benchmarking
+permalink: '/time-series/evaluating_distributions/'
 redirect_from:
 - '/time-series/machine learning/evaluating_distributions/'
+- '/time series/evaluating_distributions/'
 seo_description: How simple distributional properties perform in time-series classification benchmarks on the UEA/UCR repository.
 seo_title: Simple Baselines for Time-Series Classification
 seo_type: article
@@ -105,3 +107,8 @@ While deep learning models excel in large datasets, they are often prone to **ov
 One of the most significant advantages of simple models is their **interpretability**. Complex models like deep neural networks are often "black boxes" that provide accurate predictions without offering insights into how those predictions are made. This lack of transparency can hinder trust and decision-making, especially in fields like healthcare and finance.
 
 In contrast, models based on features like mean and standard deviation are **easy to interpret**, enabling practitioners to validate the model’s predictions and trust its outputs.
+
+## References
+
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Lubba, C. H., Sethi, S. S., Knaute, P., Schultz, S. R., Fulcher, B. D., & Jones, N. S. (2019). catch22: CAnonical Time-series CHaracteristics. *Data Mining and Knowledge Discovery*, 33, 1821-1852.

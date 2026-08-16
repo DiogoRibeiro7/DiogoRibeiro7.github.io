@@ -126,3 +126,11 @@ As computing power and data availability continue to grow, the importance of sou
 Statistical modeling remains a foundational pillar of modern analytics. As data grow in complexity and volume, the interplay between classical statistical theory and contemporary computational methods will only deepen. Emerging areas such as causal inference, probabilistic programming, and explainable AI continue to evolve the landscape.
 
 Ultimately, the goal of a statistical model is not just to fit data, but to **understand the processes behind it**, to **make reliable predictions**, and to **support evidence-based decisions**. In that pursuit, statistical models will remain indispensable.
+
+## References
+
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+- McCullagh, P., & Nelder, J. A. (1989). *Generalized Linear Models* (2nd ed.). Chapman & Hall.
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and Practice* (3rd ed.). OTexts.
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.

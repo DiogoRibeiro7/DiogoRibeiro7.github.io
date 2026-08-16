@@ -21,8 +21,10 @@ keywords:
 - Preventing overfitting
 - Machine learning model validation
 - Data science methodologies
+permalink: '/machine-learning/cross_validation/'
 redirect_from:
 - '/machine learning/data science/cross_validation/'
+- '/machine learning/cross_validation/'
 seo_description: Explore various cross-validation techniques in machine learning,
   their importance, and how they help ensure robust model performance by minimizing
   overfitting.

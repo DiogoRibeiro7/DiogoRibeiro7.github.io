@@ -29,6 +29,9 @@ keywords:
 - Dimensionality reduction
 - Machine learning
 - Gaussian process regression
+permalink: '/machine-learning/regression_tasks/'
+redirect_from:
+- '/machine learning/regression_tasks/'
 seo_description: How to select a regression algorithm based on complexity, dimensionality, and the need for probabilistic output, with code examples.
 seo_title: Choosing the Right Regression Model
 seo_type: article
@@ -294,3 +297,12 @@ In this article, we:
 - Briefly touched upon other popular regression techniques such as XGBoost and Random Forests.
 
 Remember, the key to effective regression modeling lies in understanding your dataset and choosing a method that aligns with its structure and your objectives.
+
+## References
+
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).
+- Rasmussen, C. E., & Williams, C. K. I. (2006). *Gaussian Processes for Machine Learning*. MIT Press.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of KDD*, 785-794.
+- Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.

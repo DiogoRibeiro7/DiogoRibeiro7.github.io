@@ -1,6 +1,8 @@
 ---
+permalink: '/machine-learning/probability_calibration_machine_learning/'
 redirect_from:
 - '/machine-learning/uncertainty-quantification/model-evaluation/probability_calibration_machine_learning/'
+- '/machine learning/probability_calibration_machine_learning/'
 title: "Probability Calibration in Machine Learning: From Classical Methods to Modern Approaches and Venn–ABERS Predictors"
 categories:
 - Machine Learning

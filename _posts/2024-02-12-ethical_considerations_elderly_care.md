@@ -20,8 +20,10 @@ keywords:
 - Big data privacy
 - Elderly autonomy
 - Informed consent
+permalink: '/data-science/ethical_considerations_elderly_care/'
 redirect_from:
 - '/healthtech/ethical_considerations_elderly_care/'
+- '/data science/ethical_considerations_elderly_care/'
 seo_description: This article explores the ethical challenges of using AI, big data,
   and machine learning in elderly care, focusing on privacy, autonomy, and informed
   consent.

@@ -19,6 +19,9 @@ keywords:
 - Environmental monitoring
 - Satellite data
 - Predictive analytics
+permalink: '/data-science/big_data_climate_change_mitigation/'
+redirect_from:
+- '/data science/big_data_climate_change_mitigation/'
 seo_description: How big data monitors and predicts climate change through satellite data, sensors, and environmental monitoring systems.
 seo_title: How Big Data Can Help Mitigate Climate Change
 seo_type: article

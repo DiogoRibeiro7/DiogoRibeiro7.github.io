@@ -26,6 +26,9 @@ keywords:
 - Loyalty programs
 - Data analytics
 - Python
+permalink: '/machine-learning/customer_life_value/'
+redirect_from:
+- '/machine learning/customer_life_value/'
 seo_description: What Customer Lifetime Value (CLV) measures, and how it shapes customer retention, acquisition, and marketing strategy.
 seo_title: Customer Lifetime Value and Business Growth
 seo_type: article

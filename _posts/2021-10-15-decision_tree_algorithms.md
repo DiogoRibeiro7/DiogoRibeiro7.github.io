@@ -18,6 +18,9 @@ keywords:
 - Classification
 - Tree pruning
 - Machine learning
+permalink: '/machine-learning/decision_tree_algorithms/'
+redirect_from:
+- '/machine learning/decision_tree_algorithms/'
 seo_description: Learn the mechanics of decision tree algorithms, including entropy-based
   splits and pruning techniques that prevent overfitting.
 seo_title: How Decision Trees Work and Why Pruning Matters

@@ -25,8 +25,10 @@ keywords:
 - Customer behavior prediction
 - Data-driven decision-making
 - Python
+permalink: '/machine-learning/model_customer_behaviour/'
 redirect_from:
 - '/machine learning/data science/model_customer_behaviour/'
+- '/machine learning/model_customer_behaviour/'
 seo_description: How Markov chains model and predict customer behavior in cloud services, supporting data-driven retention strategies.
 seo_title: Modeling Cloud Customer Behavior with Markov Chains
 seo_type: article

@@ -17,8 +17,10 @@ keywords:
 - Women scientists
 - Astronomy history
 - Mathematical physics
+permalink: '/data-science/mary_somerville_pioneer_astronomy_mathematical_physics/'
 redirect_from:
 - '/science history/mary_somerville_pioneer_astronomy_mathematical_physics/'
+- '/data science/mary_somerville_pioneer_astronomy_mathematical_physics/'
 seo_description: Mary Somerville, a pioneering scientist in astronomy and mathematical physics who brought science to a wider public.
 seo_title: 'Mary Somerville: Astronomy and Mathematical Physics'
 seo_type: article

@@ -18,8 +18,10 @@ keywords:
 - Time Series Forecasting
 - Sherman-Morrison Formula
 - python
+permalink: '/machine-learning/understanding_incremental_learning_time_series_forecasting/'
 redirect_from:
 - '/machine learning/data science/time series/understanding_incremental_learning_time_series_forecasting/'
+- '/machine learning/understanding_incremental_learning_time_series_forecasting/'
 seo_description: How incremental learning enables continuous model updates in time series forecasting without full retraining.
 seo_title: Incremental Learning for Time Series Forecasting
 seo_type: article
@@ -434,3 +436,8 @@ This appendix demonstrates how incremental learning can be implemented in Python
 2. Neural Networks with Stochastic Gradient Descent: Incrementally updates weights and biases using gradient descent in response to each new data point.
 
 These approaches provide a foundation for adapting time series forecasting models in real-time, optimizing them for applications where data is continuously generated and immediate adaptability is required.
+
+## References
+
+- Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and Practice* (3rd ed.). OTexts.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

@@ -19,6 +19,9 @@ keywords:
 - Exploratory data analysis python
 - Data science pandas
 - Python
+permalink: '/data-science/exploratory_data_analysis_techniques_pandas/'
+redirect_from:
+- '/data science/exploratory_data_analysis_techniques_pandas/'
 seo_description: 'A guide to Exploratory Data Analysis (EDA) with Pandas in Python: data loading, cleaning, visualization, and advanced techniques.'
 seo_title: Exploratory Data Analysis (EDA) with Pandas
 seo_type: article
@@ -621,3 +624,10 @@ plt.show()
 sns.scatterplot(x='Age', y='Fare', hue='Survived', data=titanic_data)
 plt.show()
 ```
+
+## References
+
+- Tufte, E. R. (2001). *The Visual Display of Quantitative Information* (2nd ed.). Graphics Press.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Liu, F. T., Ting, K. M., & Zhou, Z.-H. (2008). Isolation forest. *Proceedings of ICDM*, 413-422.
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).

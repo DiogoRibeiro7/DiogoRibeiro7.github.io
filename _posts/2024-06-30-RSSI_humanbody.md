@@ -22,8 +22,10 @@ keywords:
 - Shadowing
 - Interference
 - Beamforming
+permalink: '/predictive-maintenance/RSSI_humanbody/'
 redirect_from:
 - '/signal processing/RSSI_humanbody/'
+- '/predictive maintenance/RSSI_humanbody/'
 seo_description: How the human body affects RSSI in wireless networks, and strategies for handling signal attenuation, interference, and multipath effects.
 seo_title: 'Effects of a Human Body on RSSI: Challenges and Mitigations'
 seo_type: article

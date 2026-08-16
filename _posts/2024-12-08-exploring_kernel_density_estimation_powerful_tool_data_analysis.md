@@ -22,8 +22,10 @@ keywords:
 - High-dimensional data analysis
 - Python
 - R
+permalink: '/data-science/exploring_kernel_density_estimation_powerful_tool_data_analysis/'
 redirect_from:
 - '/data science/machine learning/statistics/exploring_kernel_density_estimation_powerful_tool_data_analysis/'
+- '/data science/exploring_kernel_density_estimation_powerful_tool_data_analysis/'
 seo_description: 'Kernel Density Estimation (KDE) explained: core concepts, applications, and advantages in machine learning and statistics.'
 seo_title: A Guide to Kernel Density Estimation
 seo_type: article
@@ -265,3 +267,12 @@ This R code generates a KDE plot of the sepal_length variable, allowing for deta
 Kernel Density Estimation (KDE) is a versatile and powerful tool for estimating the probability density function of complex data distributions. Its flexibility and non-parametric nature make it an invaluable method in many fields, from finance and fraud detection to ecology and medical research. While it comes with challenges, such as bandwidth selection and computational complexity, modern advancements in algorithms and hardware have made KDE accessible to a wide range of users.
 
 KDE’s ability to model intricate, multimodal distributions without predefined assumptions allows data scientists and analysts to explore patterns in data that might otherwise go unnoticed. As data sets become larger and more complex, KDE remains a crucial technique in the data analyst’s toolkit, offering both deep insights and practical solutions for real-world problems.
+
+## References
+
+- Parzen, E. (1962). On estimation of a probability density function and mode. *Annals of Mathematical Statistics*, 33(3), 1065-1076.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Tufte, E. R. (2001). *The Visual Display of Quantitative Information* (2nd ed.). Graphics Press.
+- Silverman, B. W. (1986). *Density Estimation for Statistics and Data Analysis*. Chapman & Hall.
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).
+- van der Maaten, L., & Hinton, G. (2008). Visualizing data using t-SNE. *Journal of Machine Learning Research*, 9, 2579-2605.

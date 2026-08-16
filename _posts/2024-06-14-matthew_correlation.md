@@ -27,6 +27,9 @@ keywords:
 - Mathematics
 - Statistics
 - Data science
+permalink: '/machine-learning/matthew_correlation/'
+redirect_from:
+- '/machine learning/matthew_correlation/'
 seo_description: Matthews Correlation Coefficient (MCC), a key metric for evaluating binary classifiers on imbalanced data, and why it beats simpler metrics.
 seo_title: Matthews Correlation Coefficient (MCC) Explained
 seo_type: article

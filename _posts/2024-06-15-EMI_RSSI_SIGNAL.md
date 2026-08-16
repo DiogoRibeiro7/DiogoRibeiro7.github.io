@@ -11,8 +11,10 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_2.avif
   twitter_image: /assets/images/data_science_8.avif
+permalink: '/predictive-maintenance/EMI_RSSI_SIGNAL/'
 redirect_from:
 - '/wireless communication/signal processing/data science/network engineering/EMI_RSSI_SIGNAL/'
+- '/predictive maintenance/EMI_RSSI_SIGNAL/'
 seo_description: How electromagnetic interference degrades RSSI in wireless systems, and what it means for signal quality and reliability.
 seo_title: How Electromagnetic Interference Affects RSSI
 seo_type: article

@@ -28,6 +28,9 @@ keywords:
 - Machine learning models
 - Statistical methods
 - Python
+permalink: '/machine-learning/detect_multivariate_data_drift/'
+redirect_from:
+- '/machine learning/detect_multivariate_data_drift/'
 seo_description: Learn how to detect multivariate data drift and monitor your machine
   learning model's performance using PCA and Reconstruction Error.
 seo_title: Multivariate Data Drift with PCA

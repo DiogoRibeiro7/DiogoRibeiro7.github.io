@@ -1,6 +1,8 @@
 ---
+permalink: '/data-science/role_natural_language_processing_predictive_maintenance/'
 redirect_from:
 - '/data science/industrial ai/natural language processing/predictive maintenance/role_natural_language_processing_predictive_maintenance/'
+- '/data science/role_natural_language_processing_predictive_maintenance/'
 title: >-
   The Role of Natural Language Processing in Predictive Maintenance: Leveraging
   Unstructured Data for Enhanced Industrial Intelligence
@@ -2685,3 +2687,12 @@ Organizations should prioritize implementation based on:
 The successful integration of natural language processing with predictive maintenance represents not merely a technological upgrade, but a fundamental transformation in how industrial organizations capture, analyze, and operationalize maintenance intelligence. Early adopters will establish sustainable competitive advantages through superior operational efficiency, enhanced safety performance, and optimized asset utilization.
 
 The convergence of advancing NLP capabilities, decreasing implementation costs, and increasing competitive pressures creates a compelling case for immediate action. Organizations delaying implementation risk falling behind competitors who leverage these technologies to achieve operational excellence and strategic advantage in the evolving industrial landscape.# The Role of Natural Language Processing in Predictive Maintenance: Leveraging Unstructured Data for Enhanced Industrial Intelligence
+
+## References
+
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
+- Wilcoxon, F. (1945). Individual comparisons by ranking methods. *Biometrics Bulletin*, 1(6), 80-83.
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. *Journal of the American Statistical Association*, 47(260), 583-621.

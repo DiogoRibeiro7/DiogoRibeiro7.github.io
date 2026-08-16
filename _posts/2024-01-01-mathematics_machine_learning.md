@@ -30,6 +30,9 @@ keywords:
 - Machine learning algorithms
 - Generalization in machine learning
 - Concentration inequalities in machine learning
+permalink: '/machine-learning/mathematics_machine_learning/'
+redirect_from:
+- '/machine learning/mathematics_machine_learning/'
 seo_description: 'The mathematical foundations of machine learning: classification, regression, empirical risk minimization, decision trees, and random forests.'
 seo_title: 'Mathematics of Machine Learning: Key Concepts and Methods'
 seo_type: article
@@ -273,3 +276,9 @@ Where $$ VC(H) $$ is the VC dimension of the hypothesis class $$ H $$, and $$ n 
 Mathematics plays a central role in machine learning, providing the tools and frameworks needed to design algorithms, assess their performance, and ensure they generalize well to new data. Through concepts such as loss functions, risk minimization, bias-variance tradeoff, cross-validation, decision trees, and statistical learning theory, we can understand the behavior of machine learning models and make informed choices about how to apply them in practice.
 
 As machine learning continues to evolve, the mathematical foundations will remain essential in developing more powerful algorithms and understanding their theoretical properties.
+
+## References
+
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

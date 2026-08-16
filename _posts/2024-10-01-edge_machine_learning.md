@@ -27,6 +27,9 @@ keywords:
 - Machine learning pipelines for edge devices
 - Yaml
 math: true
+permalink: '/machine-learning/edge_machine_learning/'
+redirect_from:
+- '/machine learning/edge_machine_learning/'
 seo_description: How to implement continuous machine learning deployment on edge devices with MLOps, using a smart agriculture system as an example.
 seo_title: Continuous ML Deployment for Edge Devices
 seo_type: article

@@ -1,6 +1,8 @@
 ---
+permalink: '/machine-learning/data_drift_and_fairness_monitoring_ai/'
 redirect_from:
 - '/machine learning/data science/ai ethics/data_drift_and_fairness_monitoring_ai/'
+- '/machine learning/data_drift_and_fairness_monitoring_ai/'
 title: "Data Drift and Fairness: Monitoring Equity When Populations Change"
 categories:
 - Machine Learning
@@ -230,3 +232,8 @@ Data drift changes more than model accuracy. It can change who benefits, who is 
 Fairness monitoring must therefore be continuous, subgroup-aware, and connected to governance. It should track data quality, input drift, score behavior, decision rates, outcome errors, and real-world impact. It should make uncertainty visible and route alerts to people with authority to act.
 
 Responsible AI is not achieved by a one-time fairness assessment. It is maintained through disciplined monitoring, honest diagnosis, and the willingness to change the system when evidence shows that equity is degrading.
+
+## References
+
+- Quiñonero-Candela, J., Sugiyama, M., Schwaighofer, A., & Lawrence, N. D. (Eds.). (2009). *Dataset Shift in Machine Learning*. MIT Press.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.

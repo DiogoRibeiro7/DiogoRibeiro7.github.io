@@ -1,6 +1,8 @@
 ---
+permalink: '/machine-learning/data_drift_concept_drift_understanding_differences_implications/'
 redirect_from:
 - '/machine learning/model monitoring/data_drift_concept_drift_understanding_differences_implications/'
+- '/machine learning/data_drift_concept_drift_understanding_differences_implications/'
 title: 'Data Drift vs. Concept Drift: Understanding the Differences and Implications'
 categories:
 - Machine Learning
@@ -213,3 +215,12 @@ The future of drift management lies in systems that embrace change as a fundamen
 As machine learning systems become increasingly critical to business operations and societal functions, the ability to detect, understand, and mitigate drift becomes not just a technical necessity but a competitive differentiator and, in many cases, a regulatory requirement. The organizations that master the subtle but crucial distinctions between data drift and concept drift, and develop appropriate responses to each, will be best positioned to harness the full potential of artificial intelligence in our rapidly changing world.
 
 The journey toward drift-resilient machine learning systems is ongoing, with new challenges emerging as AI applications expand into new domains and existing systems face increasingly dynamic environments. However, the fundamental principles of comprehensive monitoring, rapid adaptation, and human-AI collaboration provide a foundation for addressing these challenges. By understanding the differences between data drift and concept drift and implementing appropriate detection and mitigation strategies, organizations can build machine learning systems that maintain their value and reliability over time, regardless of how the world around them changes.
+
+## References
+
+- Quiñonero-Candela, J., Sugiyama, M., Schwaighofer, A., & Lawrence, N. D. (Eds.). (2009). *Dataset Shift in Machine Learning*. MIT Press.
+- Massey, F. J. (1951). The Kolmogorov-Smirnov test for goodness of fit. *Journal of the American Statistical Association*, 46(253), 68-78.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Kullback, S., & Leibler, R. A. (1951). On information and sufficiency. *Annals of Mathematical Statistics*, 22(1), 79-86.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *Advances in Neural Information Processing Systems*, 28.

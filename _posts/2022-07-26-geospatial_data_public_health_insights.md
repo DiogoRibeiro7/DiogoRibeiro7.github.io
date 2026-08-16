@@ -21,8 +21,10 @@ keywords:
 - Public health
 - Gis
 - Data science
+permalink: '/data-science/geospatial_data_public_health_insights/'
 redirect_from:
 - '/data science/public health/geospatial_data_public_health_insights/'
+- '/data science/geospatial_data_public_health_insights/'
 seo_description: How geospatial data is transforming public health, and how spatial epidemiology tracks disease outbreaks to guide health interventions.
 seo_title: Spatial Epidemiology and Geospatial Data
 seo_type: article
@@ -154,3 +156,8 @@ While spatial epidemiology offers tremendous benefits, there are also challenges
 As the world faces growing challenges from global pandemics, climate change, and emerging diseases, **spatial epidemiology** will continue to play a critical role in public health. By combining **geospatial data** with **data science techniques**, spatial epidemiology provides public health officials with the tools to better understand disease patterns, predict outbreaks, and design targeted interventions.
 
 With advances in technology, such as the increasing availability of **real-time geospatial data** from satellites, mobile devices, and wearable health monitors, the future of spatial epidemiology looks promising. This field will continue to be at the forefront of efforts to protect public health by identifying and mitigating the factors that drive the spread of disease.
+
+## References
+
+- Tufte, E. R. (2001). *The Visual Display of Quantitative Information* (2nd ed.). Graphics Press.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.

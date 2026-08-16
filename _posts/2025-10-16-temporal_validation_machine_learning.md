@@ -1,4 +1,7 @@
 ---
+permalink: '/machine-learning/temporal_validation_machine_learning/'
+redirect_from:
+- '/machine learning/temporal_validation_machine_learning/'
 title: "Temporal Validation in Machine Learning: Testing Models Against the Future"
 categories:
 - Machine Learning
@@ -361,3 +364,9 @@ It matters because real machine learning systems operate in time. Data arrives, 
 Good temporal validation respects that sequence. It uses time-based splits, point-in-time features, delayed-label logic, rolling backtests, realistic preprocessing, and deployment-matched horizons. It evaluates not only whether the model predicts well, but whether it remains useful as the world moves.
 
 For production machine learning, this is one of the most important habits a team can build. If the validation design lets the future leak into the past, the model has already passed a test it will never get in the real world.
+
+## References
+
+- Quiñonero-Candela, J., Sugiyama, M., Schwaighofer, A., & Lawrence, N. D. (Eds.). (2009). *Dataset Shift in Machine Learning*. MIT Press.
+- Saito, T., & Rehmsmeier, M. (2015). The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets. *PLOS ONE*, 10(3), e0118432.
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *Advances in Neural Information Processing Systems*, 28.

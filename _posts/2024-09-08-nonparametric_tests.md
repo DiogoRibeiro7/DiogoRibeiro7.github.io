@@ -391,3 +391,9 @@ print(f"Fraction of rejections for same medians: {fraction_rejections} / {total_
 - **Quantile Regression:** The quantile regression is performed using the `statsmodels` library's `QuantReg` function.
 
 This Python implementation allows you to replicate and explore the findings discussed in the article using Python, providing an alternative to the R and Ruby versions.
+
+## References
+
+- Mann, H. B., & Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger than the other. *Annals of Mathematical Statistics*, 18(1), 50-60.
+- Wilcoxon, F. (1945). Individual comparisons by ranking methods. *Biometrics Bulletin*, 1(6), 80-83.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.

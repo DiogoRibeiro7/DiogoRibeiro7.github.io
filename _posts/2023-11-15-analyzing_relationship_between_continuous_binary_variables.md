@@ -20,8 +20,10 @@ keywords:
 - Educational testing
 - Psychology
 - Medical diagnostics
+permalink: '/data-science/analyzing_relationship_between_continuous_binary_variables/'
 redirect_from:
 - '/data analysis/analyzing_relationship_between_continuous_binary_variables/'
+- '/data science/analyzing_relationship_between_continuous_binary_variables/'
 seo_description: Biserial and point-biserial correlation for continuous and binary variables, with applications in educational testing, psychology, and diagnostics.
 seo_title: Biserial vs. Point-Biserial Correlation
 seo_type: article

@@ -27,6 +27,9 @@ keywords:
 - Artificial intelligence
 - Technology
 - Python
+permalink: '/machine-learning/monitoring_drift/'
+redirect_from:
+- '/machine learning/monitoring_drift/'
 seo_description: 'Machine learning monitoring beyond univariate drift detection: direct loss estimation, outlier detection, and avoiding alarm fatigue.'
 seo_title: ML Monitoring Beyond Univariate Drift Detection
 seo_type: article

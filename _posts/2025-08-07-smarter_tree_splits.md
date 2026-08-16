@@ -1,6 +1,8 @@
 ---
+permalink: '/machine-learning/smarter_tree_splits/'
 redirect_from:
 - '/machine-learning/tree-algorithms/smarter_tree_splits/'
+- '/machine learning/smarter_tree_splits/'
 title: "Smarter Tree Splits: Understanding Friedman MSE in Regression Trees"
 categories:
 - Machine Learning

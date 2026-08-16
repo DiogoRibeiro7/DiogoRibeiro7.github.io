@@ -23,6 +23,9 @@ keywords:
 - Neural networks
 - Support vector machines
 - Python
+permalink: '/machine-learning/magnitude_matter_machine_learning/'
+redirect_from:
+- '/machine learning/magnitude_matter_machine_learning/'
 seo_description: Why variable magnitude matters in machine learning, its impact on regression coefficients, and how feature scaling helps.
 seo_title: Does Variable Magnitude Matter in ML Models?
 seo_type: article
@@ -313,3 +316,12 @@ This appendix provided Python code to:
 - Apply feature scaling and evaluate Support Vector Machines.
 
 These steps help determine whether a linear relationship exists and how different models perform on linear and non-linear features, aiding in selecting the appropriate model for a given dataset.
+
+## References
+
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.

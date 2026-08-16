@@ -146,3 +146,10 @@ An ecologist is studying the distribution of bird species in two different regio
 The **Kolmogorov-Smirnov test** is a powerful, versatile tool for assessing the goodness-of-fit in non-parametric data and comparing two distributions. Its ability to test data against any theoretical distribution—without the need for strong parametric assumptions—makes it particularly useful in many fields, from finance to ecology.
 
 While the K-S test has some limitations, such as lower sensitivity compared to tests like Shapiro-Wilk for detecting deviations from normality, its flexibility and simplicity make it a popular choice for distributional comparisons. By understanding how to use the K-S test and interpreting its results, data scientists and researchers can draw meaningful conclusions about the underlying patterns in their data.
+
+## References
+
+- Massey, F. J. (1951). The Kolmogorov-Smirnov test for goodness of fit. *Journal of the American Statistical Association*, 46(253), 68-78.
+- Shapiro, S. S., & Wilk, M. B. (1965). An analysis of variance test for normality (complete samples). *Biometrika*, 52(3-4), 591-611.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Anderson, T. W., & Darling, D. A. (1954). A test of goodness of fit. *Journal of the American Statistical Association*, 49(268), 765-769.

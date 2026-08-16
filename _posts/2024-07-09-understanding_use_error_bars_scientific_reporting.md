@@ -21,8 +21,10 @@ keywords:
 - Statistical reporting
 - Scientific analysis
 - Error representation in research
+permalink: '/data-science/understanding_use_error_bars_scientific_reporting/'
 redirect_from:
 - '/research methodology/understanding_use_error_bars_scientific_reporting/'
+- '/data science/understanding_use_error_bars_scientific_reporting/'
 seo_description: How error bars represent variability, standard deviation, standard error, and confidence intervals in scientific reporting.
 seo_title: 'Understanding Error Bars: A Guide to Scientific Reporting'
 seo_type: article

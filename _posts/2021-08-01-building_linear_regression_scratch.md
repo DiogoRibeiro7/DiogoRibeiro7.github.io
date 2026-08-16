@@ -18,6 +18,9 @@ keywords:
 - Normal equation
 - Python
 - Data science interviews
+permalink: '/machine-learning/building_linear_regression_scratch/'
+redirect_from:
+- '/machine learning/building_linear_regression_scratch/'
 seo_description: 'Build a linear regression model from scratch with the Normal Equation: theoretical foundations, algorithm design, and Python implementation.'
 seo_title: 'Linear Regression from Scratch: Normal Equation'
 seo_type: article

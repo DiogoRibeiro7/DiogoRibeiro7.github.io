@@ -22,8 +22,10 @@ keywords:
 - Sustainability models
 - Resource efficiency
 - Python
+permalink: '/data-science/circular_economy/'
 redirect_from:
 - '/sustainability/data science/circular economy/circular_economy/'
+- '/data science/circular_economy/'
 seo_description: How to implement circular economy models with Python and network analysis, using data science and systems thinking for sustainability.
 seo_title: Circular Economy Models with Python and Network Analysis
 seo_type: article

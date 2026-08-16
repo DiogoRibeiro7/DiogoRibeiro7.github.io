@@ -28,6 +28,9 @@ keywords:
 - Pattern recognition
 - Data compression
 - Python
+permalink: '/data-science/PCA_explained/'
+redirect_from:
+- '/data science/PCA_explained/'
 seo_description: A comprehensive guide to Principal Component Analysis (PCA), covering
   feature selection, dimension reduction, explained variance, and outlier detection.
 seo_title: Principal Component Analysis (PCA) Guide
@@ -443,3 +446,9 @@ plt.show()
 
 print("Outliers identified by the SPE/DmodX method:", outliers_spe.index)
 ```
+
+## References
+
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.

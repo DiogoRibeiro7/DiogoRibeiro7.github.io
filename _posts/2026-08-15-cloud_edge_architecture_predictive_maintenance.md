@@ -1,6 +1,8 @@
 ---
+permalink: '/data-science/cloud_edge_architecture_predictive_maintenance/'
 redirect_from:
 - '/data science/industrial analytics/predictive maintenance/cloud_edge_architecture_predictive_maintenance/'
+- '/data science/cloud_edge_architecture_predictive_maintenance/'
 title: "Cloud Computing and Edge Analytics in Predictive Maintenance"
 categories:
 - Data Science
@@ -171,3 +173,9 @@ The best architecture is usually layered. Simple local rules catch urgent proble
 Cloud computing and edge analytics are complementary parts of predictive maintenance. The edge provides local speed, resilience, and efficient preprocessing. The cloud provides scale, historical depth, fleet learning, and centralized governance.
 
 Successful predictive maintenance architecture starts from operational requirements: latency, lead time, reliability, data volume, model complexity, and workflow integration. When those requirements guide the design, the result is a system that does more than analyze sensor data. It supports reliable, scalable, and actionable maintenance decisions.
+
+## References
+
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *Advances in Neural Information Processing Systems*, 28.
