@@ -15,6 +15,9 @@ header:
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - Python
+- Gaussian Processes
+- Bayesian forecasting
+- Kernel methods
 permalink: '/machine-learning/guassian_processes/'
 redirect_from:
 - '/machine learning/guassian_processes/'
@@ -32,6 +35,8 @@ title: Gaussian Processes for Time-Series Analysis in Python
 Gaussian Processes (GPs) are a highly flexible Bayesian tool that can be employed in a variety of modeling tasks, including time-series analysis. While traditional methods like ARIMA focus on generative processes, Gaussian Processes approach the problem from a curve-fitting perspective, allowing the user to define how different temporal components—such as trend, seasonality, and noise—should behave.
 
 This post examines the mechanics of GPs, how they work in the context of time-series data, and practical ways to implement them using Python.
+
+The main advantage of a GP is not only the forecast mean. It is the explicit uncertainty around the forecast and the ability to encode structure through kernels. That makes GPs useful when observations are sparse, measurement noise matters, or a domain expert can describe the shape of the process better than a black-box model can infer it from data alone.
 
 ## Simulating Time Series Data
 
@@ -126,9 +131,10 @@ def cov_periodic(xa, xb, sigma, l, p):
 In practice, we combine different kernels to model the complex dynamics of a time series. For example, by summing an exponentiated quadratic kernel (to capture long-term trends) with a periodic kernel (for seasonality), and adding white noise to account for random fluctuations, we get a more comprehensive model.
 
 ```python
-# Combining kernels
-Sigma_exp_quad = cov_exp_quad(y, y, 1, len(y))
-Sigma_periodic = cov_periodic(y, y, 1, 1, 25)
+# Combining kernels over the input index, not the observed target values
+x_train = np.arange(1, 101)
+Sigma_exp_quad = cov_exp_quad(x_train, x_train, 1, 20)
+Sigma_periodic = cov_periodic(x_train, x_train, 1, 3, 25)
 Sigma_white_noise = np.eye(len(Sigma_exp_quad)) * 0.01
 Sigma_comb = Sigma_exp_quad + Sigma_periodic + Sigma_white_noise
 ```
@@ -179,8 +185,7 @@ def gp_posterior(x_train, x_pred, y_train, kernel, noise=0.05, **kernel_params):
     
     return mu_s, cov_s
 
-# Define training data (timepoints 1 to 100) and new points to predict
-x_train = np.arange(1, 101)
+# Define training data and new points to predict
 x_pred = np.linspace(1, 100, 50)
 y_train = y
 
@@ -201,8 +206,20 @@ plt.show()
 
 Gaussian Processes offer a flexible and interpretable approach to modeling time series. By carefully selecting and combining kernels, we can capture trends, seasonality, and noise, making them an invaluable tool in the machine learning and statistical toolkit.
 
+## Practical Limitations
+
+Gaussian Processes are elegant, but they are not a free replacement for every forecasting model:
+
+- **Computational cost:** exact GP inference scales cubically with the number of observations, so large datasets need sparse or approximate GP methods.
+- **Kernel misspecification:** a poorly chosen kernel can make the posterior look precise while missing the real structure of the process.
+- **Extrapolation:** GPs extrapolate according to the kernel assumptions. If the future regime changes, the uncertainty bands may still be misleading.
+- **Feature design:** for multivariate time series, calendar effects, interventions, and external regressors must be encoded deliberately.
+
+Use GPs when uncertainty, smoothness assumptions, and interpretable structure are important. For high-volume operational forecasting, compare them against simpler state-space, ARIMA, gradient boosting, and deep learning baselines.
+
 ## References
 
 - Rasmussen, C. E., & Williams, C. K. I. (2006). *Gaussian Processes for Machine Learning*. MIT Press.
 - Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
 - Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+- Roberts, S., Osborne, M., Ebden, M., Reece, S., Gibson, N., & Aigrain, S. (2013). Gaussian processes for time-series modelling. *Philosophical Transactions of the Royal Society A*, 371(1984).

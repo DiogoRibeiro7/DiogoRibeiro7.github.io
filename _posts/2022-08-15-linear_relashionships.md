@@ -40,6 +40,8 @@ In machine learning, many models assume a **linear relationship** between predic
 
 Understanding this linear assumption is critical for ensuring model performance, as fitting a model that assumes linearity to non-linear data can lead to poor predictions. This article will explore models that assume linear relationships, discuss why it’s important to recognize these assumptions, and examine what to do when the assumption is not valid.
 
+The practical question is not "is the world linear?" It is whether a linear approximation is good enough for the decision being made. Linear models often remain strong baselines because they are stable, interpretable, fast to train, and easier to audit than more flexible alternatives.
+
 ## Algorithms That Assume Linear Relationships
 
 Several machine learning models are built on the assumption that the relationship between predictors and the outcome is linear. The most common ones include:
@@ -90,6 +92,16 @@ Linear models are computationally efficient, making them suitable for high-dimen
 
 When a linear relationship does not exist between the predictors and the outcome, several strategies can be used to improve model performance:
 
+Before changing models, diagnose the problem. Useful checks include:
+
+- residual plots against fitted values and individual predictors;
+- partial dependence or accumulated local effects plots;
+- calibration curves for probabilistic classifiers;
+- comparison against a simple tree-based baseline;
+- cross-validation split by time, group, or geography when those structures matter.
+
+If the residuals show a clear pattern, the model is missing structure. If the pattern only appears in one segment, the issue may be interaction effects or population heterogeneity rather than global non-linearity.
+
 ### 1. **Transforming Variables**
 
 One common approach to reveal linear relationships is to apply **mathematical transformations** to the predictors. For instance, logarithmic or polynomial transformations can convert non-linear data into a form that better fits the assumptions of linear models.
@@ -103,6 +115,10 @@ Discretizing continuous variables into bins or categories can also simplify non-
 ### 3. **Using Non-Linear Models**
 
 When transformations are not effective, switching to a non-linear model like **Random Forests**, **Gradient Boosting**, or **Neural Networks** might be the best approach. These models can capture more complex interactions between predictors and the outcome, leading to better performance.
+
+### 4. **Adding Interactions and Splines**
+
+There is a middle ground between a plain linear model and a fully flexible black-box model. Interaction terms allow the effect of one variable to depend on another, while spline functions let the model learn smooth non-linear shapes. Generalized additive models are especially useful when interpretability remains important but straight-line effects are too restrictive.
 
 ## Real-Life Example: Predicting House Prices
 
@@ -139,6 +155,8 @@ In machine learning, understanding the assumptions of linear models is essential
 
 For practitioners, the ability to recognize linear and non-linear relationships in the data is crucial for building models that both perform well and meet business or regulatory requirements.
 
+Linear models should usually be the first serious baseline, not the final answer by default. Fit them, inspect their errors, compare them against more flexible models, and choose the simplest model that captures the structure required by the use case.
+
 ## References
 
 - Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
@@ -146,3 +164,4 @@ For practitioners, the ability to recognize linear and non-linear relationships 
 - Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
 - Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
 - Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.
+- Wood, S. N. (2017). *Generalized Additive Models: An Introduction with R* (2nd ed.). CRC Press.
