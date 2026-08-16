@@ -25,10 +25,8 @@ seo_type: article
 summary: This post outlines reliable approaches for serving machine learning models
   in production environments and keeping them up to date.
 tags:
-- Deployment
-- Mlops
-- Production
-- Data science
+- MLOps
+- Data Science
 title: 'Model Deployment: Best Practices and Tips'
 ---
 

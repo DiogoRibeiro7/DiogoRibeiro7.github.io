@@ -34,6 +34,7 @@ group :jekyll_plugins do
     # gem "webrick" # Add this line
     gem "jekyll-seo-tag"
     gem "jekyll-sitemap"
+    gem "jekyll-redirect-from"		# keeps pre-consolidation category URLs alive
     gem 'jekyll-include-cache'			# gem to speed up Liquid parsing
     gem 'jekyll-commonmark'			    # gem to speed up Markdown
     gem 'liquid-md5'

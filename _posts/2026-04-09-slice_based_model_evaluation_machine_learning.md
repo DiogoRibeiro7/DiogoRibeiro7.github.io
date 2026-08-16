@@ -1,18 +1,15 @@
 ---
+redirect_from:
+- '/machine learning/data science/slice_based_model_evaluation_machine_learning/'
 title: "Slice-Based Model Evaluation: Finding the Failures Average Metrics Hide"
 categories:
 - Machine Learning
-- Data Science
 tags:
 - Model Evaluation
-- Error Analysis
-- Slice Analysis
-- Machine Learning Monitoring
-- Model Reliability
-- Subgroup Analysis
+- Model Monitoring
 author_profile: false
 seo_title: "Slice-Based Model Evaluation for Machine Learning"
-seo_description: "A practical guide to slice-based model evaluation in machine learning, focused on subgroup performance, hidden failure modes, error analysis, monitoring, and reliable deployment."
+seo_description: 'Slice-based model evaluation: finding the subgroup failures that average metrics hide, and monitoring them in production.'
 excerpt: "Slice-based evaluation exposes where a machine learning model fails by breaking aggregate performance into meaningful subgroups, conditions, and operational contexts."
 summary: "This article explains slice-based model evaluation as a practical method for finding hidden machine learning failures. It covers why average metrics are insufficient, how to define useful slices, how to avoid noisy comparisons, how slice analysis connects to fairness and monitoring, and how to turn error analysis into model improvements."
 keywords:

@@ -1,16 +1,14 @@
 ---
+redirect_from:
+- '/transportation/data science/machine learning/traffic_prediction_advanced_analytics_smart_transportation_systems/'
 title: 'Traffic Prediction: Advanced Analytics for Smart Transportation Systems'
 categories:
-  - Transportation
-  - Data Science
-  - Machine Learning
+- Environment
 tags:
-  - Traffic Prediction
-  - Smart Cities
-  - Intelligent Transportation Systems
-  - Time Series Forecasting
-  - Deep Learning
-  - Feature Engineering
+- Transportation
+- Time Series
+- Neural Networks
+- Feature Engineering
 author_profile: false
 seo_title: Advanced Traffic Prediction with Smart Analytics and AI
 seo_description: 'Traffic prediction with AI and advanced analytics: data sources, preprocessing, modeling, and evaluation techniques.'

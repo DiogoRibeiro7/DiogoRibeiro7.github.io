@@ -27,11 +27,8 @@ tags:
 - Natural Language Processing
 - Healthcare
 - Machine Learning
-- Unstructured Data
-- Clinical Notes
 - Data Analysis
 - Data Science
-- null
 title: 'Natural Language Processing (NLP) in Healthcare: Extracting Insights from Unstructured Data'
 ---
 

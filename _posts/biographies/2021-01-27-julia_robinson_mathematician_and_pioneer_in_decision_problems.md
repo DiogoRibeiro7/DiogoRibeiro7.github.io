@@ -23,11 +23,8 @@ seo_title: 'Julia Robinson and Hilbert''s Tenth Problem'
 seo_type: article
 summary: This article delves into the life and legacy of Julia Robinson, a pioneering mathematician who contributed significantly to solving Hilbert's Tenth Problem. Learn about her groundbreaking work in decision problems and her impact on mathematics.
 tags:
-- Julia robinson
-- Number theory
-- Decision problems
-- Hilbert's tenth problem
-- Women in mathematics
+- Number Theory
+- Mathematical Modeling
 title: 'Julia Robinson: Mathematician and Pioneer in Decision Problems'
 ---
 

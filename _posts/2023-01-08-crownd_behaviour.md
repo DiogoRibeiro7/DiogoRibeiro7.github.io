@@ -30,11 +30,8 @@ seo_title: Mathematical Models of Pedestrian Behavior
 seo_type: article
 subtitle: Understanding Pedestrian Behavior through Mathematical Models
 tags:
-- Mathematical modeling
-- Pedestrian behavior
-- Urban planning
-- Crowd management
-- Traffic control
+- Mathematical Modeling
+- Transportation
 title: Walking the Mathematical Path
 ---
 

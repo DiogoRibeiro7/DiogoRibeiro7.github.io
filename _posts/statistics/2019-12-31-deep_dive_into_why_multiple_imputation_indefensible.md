@@ -22,9 +22,7 @@ seo_title: 'The Case Against Multiple Imputation: An In-depth Look'
 seo_type: article
 summary: Multiple imputation is widely regarded as the gold standard for handling missing data, but it carries significant conceptual and interpretative challenges. We will explore its weaknesses and propose an alternative using single stochastic imputation and deterministic sensitivity analysis.
 tags:
-- Multiple imputation
-- Missing data
-- Data imputation
+- Missing Data
 title: A Deep Dive into Why Multiple Imputation is Indefensible
 ---
 

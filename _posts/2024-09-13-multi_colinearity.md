@@ -30,10 +30,8 @@ summary: Multicollinearity occurs when independent variables in a regression mod
   and discusses various techniques, such as variance inflation factor (VIF) and ridge
   regression, to detect and mitigate its effects.
 tags:
-- Multicollinearity
-- Regression analysis
-- Collinearity
-- Statistical modeling
+- Regression
+- Statistical Modeling
 title: 'Multicollinearity: A Comprehensive Exploration'
 ---
 

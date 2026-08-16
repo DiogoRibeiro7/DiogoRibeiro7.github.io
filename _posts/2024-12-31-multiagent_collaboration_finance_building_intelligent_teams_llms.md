@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Finance
-- Artificial Intelligence
-- Multi-Agent Systems
+- Economics
 classes: wide
 date: '2024-12-31'
 excerpt: Multi-agent systems are redefining how financial tasks like M&A analysis can be approached, using teams of collaborative LLMs with distinct responsibilities.
@@ -20,16 +18,15 @@ keywords:
 - AutoGen
 - M&A analysis
 - CrewAI
+redirect_from:
+- '/finance/artificial intelligence/multi-agent systems/multiagent_collaboration_finance_building_intelligent_teams_llms/'
 seo_description: 'How multi-agent LLM systems like AutoGen, CrewAI, and OpenDevin simulate analyst, compliance, and auditor roles in M&A analysis.'
 seo_title: Multi-Agent Collaboration in Finance with LLMs
 seo_type: article
 summary: This article explores the rise of multi-agent architectures in finance, using tools like AutoGen and CrewAI to simulate collaborative roles in tasks like M&A, compliance review, and financial reporting.
 tags:
-- LLM agents
-- AutoGen
-- CrewAI
-- Financial automation
-- M&A analysis
+- Natural Language Processing
+- MLOps
 title: 'Multi-Agent Collaboration in Finance: Building Intelligent Teams with LLMs'
 ---
 

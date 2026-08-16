@@ -25,9 +25,7 @@ seo_type: article
 summary: Learn how to interpret common classification and regression metrics to choose
   the best model for your data.
 tags:
-- Accuracy
-- F1-score
-- Rmse
+- Model Evaluation
 title: A Guide to Model Evaluation Metrics
 ---
 

@@ -26,9 +26,8 @@ seo_type: article
 summary: Explore heteroscedasticity in regression analysis, its consequences, how
   to test for it, and practical solutions for correcting it when detected.
 tags:
-- Regression analysis
-- Econometrics
-- Heteroscedasticity
+- Regression
+- Economics
 title: 'Heteroscedasticity: Statistical Tests and Solutions'
 ---
 

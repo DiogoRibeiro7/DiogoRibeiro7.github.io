@@ -1,8 +1,7 @@
 ---
 author_profile: false
 categories:
-- Time-Series
-- Machine Learning
+- Time Series
 classes: wide
 date: '2024-10-06'
 excerpt: A comprehensive review of simple distributional properties such as mean and
@@ -21,6 +20,8 @@ keywords:
 - Distributional properties
 - Machine learning
 - Benchmarking
+redirect_from:
+- '/time-series/machine learning/evaluating_distributions/'
 seo_description: How simple distributional properties perform in time-series classification benchmarks on the UEA/UCR repository.
 seo_title: Simple Baselines for Time-Series Classification
 seo_type: article
@@ -28,9 +29,7 @@ summary: This article discusses the use of simple distributional properties as a
   for time-series classification, focusing on benchmarks from the UEA/UCR repository
   and comparing simple and complex models.
 tags:
-- Time-series classification
-- Uea/ucr repository
-- Simple models
+- Time Series
 title: Evaluating Simple Distributional Properties for Time-Series Classification
   Benchmarks
 ---

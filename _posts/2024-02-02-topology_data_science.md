@@ -31,18 +31,12 @@ seo_type: article
 subtitle: Exploring Topological Data Analysis and Its Impact on Uncovering Hidden
   Insights in Complex Data Sets
 tags:
-- Topological data analysis (tda)
-- Data science
-- Machine learning
-- Persistent homology
-- Mapper algorithm
-- High-dimensional data
-- Big data analytics
-- Network analysis
-- Anomaly detection
-- Computational topology
-- Mathematical foundations of data science
-- Interdisciplinary approaches in data analysis
+- Data Science
+- Machine Learning
+- Data Analysis
+- Data Engineering
+- Graph Theory
+- Anomaly Detection
 title: Convergence of Topology and Data Science
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

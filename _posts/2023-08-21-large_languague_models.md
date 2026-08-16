@@ -35,10 +35,9 @@ summary: An exploration into the challenges faced by Large Language Models (LLMs
   dependent on these data sources, and the broader implications for ethical AI development
   and the future of machine learning.
 tags:
-- Llm
-- Open-source data
-- Machine learning models
-- Ai ethics
+- Natural Language Processing
+- Machine Learning
+- Ethics
 title: The Vulnerability of Large Language Models to the Closure of Open-Source Data
   Platforms
 ---

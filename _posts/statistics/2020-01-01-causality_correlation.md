@@ -23,11 +23,8 @@ seo_title: 'Causality Beyond Correlation: Paradoxes and Graphs'
 seo_type: article
 summary: An in-depth exploration of the limits of correlation in data interpretation, highlighting Simpson's and Berkson's paradoxes and introducing causal graphs as a tool for uncovering true causal relationships.
 tags:
-- Simpson's paradox
-- Berkson's paradox
 - Correlation
-- Data science
-- Causal inference
+- Data Science
 title: 'Causality Beyond Correlation: Simpson''s and Berkson''s Paradoxes'
 ---
 

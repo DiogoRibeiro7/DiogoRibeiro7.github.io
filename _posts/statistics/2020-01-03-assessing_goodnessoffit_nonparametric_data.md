@@ -23,11 +23,9 @@ seo_title: Kolmogorov-Smirnov Test for Goodness-of-Fit
 seo_type: article
 summary: This article explains the Kolmogorov-Smirnov (K-S) test for assessing the goodness-of-fit of non-parametric data. We compare the K-S test to other goodness-of-fit tests, such as Shapiro-Wilk, and provide real-world use cases, including testing whether a dataset follows a specific distribution.
 tags:
-- Kolmogorov-smirnov test
-- Goodness-of-fit tests
-- Non-parametric data
-- Shapiro-wilk test
-- Distribution fitting
+- Hypothesis Testing
+- Nonparametric Methods
+- Probability
 title: 'Kolmogorov-Smirnov Test: Assessing Goodness-of-Fit in Non-Parametric Data'
 ---
 

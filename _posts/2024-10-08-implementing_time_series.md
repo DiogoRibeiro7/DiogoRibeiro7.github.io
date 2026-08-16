@@ -1,8 +1,7 @@
 ---
 author_profile: false
 categories:
-- Time-Series
-- Machine Learning
+- Time Series
 classes: wide
 date: '2024-10-08'
 excerpt: Explore time-series classification in Python with step-by-step examples using
@@ -20,6 +19,8 @@ keywords:
 - Catch22
 - Python
 - Uea/ucr
+redirect_from:
+- '/time-series/machine learning/implementing_time_series/'
 seo_description: How to implement time-series classification in Python with simple models, catch22 features, and UEA/UCR benchmarking.
 seo_title: Time-Series Classification in Python with Catch22
 seo_type: article
@@ -28,9 +29,8 @@ summary: This article provides Python code for time-series classification, cover
   and statistical significance testing.
 tags:
 - Python
-- Time-series classification
-- Catch22
-- Uea/ucr
+- Time Series
+- Machine Learning
 title: 'Implementing Time-Series Classification: From Simple Models to Advanced Feature
   Sets'
 ---

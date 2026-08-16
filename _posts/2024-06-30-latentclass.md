@@ -15,23 +15,10 @@ seo_description: How Latent Class Analysis identifies unobservable subgroups in 
 seo_title: 'Latent Class Analysis: Finding Hidden Subgroups'
 seo_type: article
 tags:
-- Latent class analysis
-- Structural equation modeling
-- Multivariate categorical data
-- Latent classes
-- Conditional independence
-- Maximum likelihood estimation
-- Data simplification
-- Hidden patterns
-- Case study
-- Model specification
-- Estimation process
-- Class membership
-- Statistical modeling
-- Research applications
-- Data patterns
-- Decision making
-- Statistical independence
+- Statistical Modeling
+- Multivariate Analysis
+- Probability
+- Business Intelligence
 title: 'Latent Class Analysis: Unveiling Hidden Patterns in Data'
 ---
 

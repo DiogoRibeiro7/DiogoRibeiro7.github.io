@@ -23,11 +23,7 @@ seo_title: 'One-Way ANOVA vs. Two-Way ANOVA: When to Use Which'
 seo_type: article
 summary: This article discusses one-way and two-way ANOVA, focusing on when to use each method. It explains how two-way ANOVA is useful for analyzing interactions between factors and details the interpretation of main effects and interactions.
 tags:
-- One-way anova
-- Two-way anova
-- Interaction effects
-- Main effects
-- Hypothesis testing
+- Hypothesis Testing
 title: 'One-Way ANOVA vs. Two-Way ANOVA: When to Use Which'
 ---
 

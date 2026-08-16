@@ -31,15 +31,12 @@ seo_title: 'Demystifying MCMC: A Hands-On Guide to Bayesian Inference'
 seo_type: article
 subtitle: Understanding the Metropolis Algorithm Through Code
 tags:
-- Data science
-- Mathematical modeling
-- Statistical methods
-- Machine learning
-- Statistical analysis
+- Data Science
+- Mathematical Modeling
+- Statistical Modeling
+- Machine Learning
 - Probability
-- Probabilistic programming
-- Bayesian statistics
-- Python
+- Programming
 title: 'Demystifying MCMC: A Practical Guide to Bayesian Inference'
 ---
 

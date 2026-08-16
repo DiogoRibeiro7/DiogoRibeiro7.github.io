@@ -28,14 +28,8 @@ seo_title: Capture-Mark-Recapture and its Statistical Reliability
 seo_type: article
 summary: This article delves into the statistical reliability of Capture-Mark-Recapture (CMR) methods in wildlife population estimation. It explains the six critical assumptions that must be fulfilled to achieve accurate results, and discusses the consequences of violating these assumptions, highlighting the importance of careful study design.
 tags:
-- Capture-mark-recapture
-- Wildlife statistics
-- Population estimation
-- Sampling methods
-- Ecological statistics
-- Statistical models
-- Biostatistics
-- Statistical assumptions
+- Statistics
+- Statistical Modeling
 title: Is Capture-Mark-Recapture a Reliable Method for Estimating Wildlife Populations?
 ---
 

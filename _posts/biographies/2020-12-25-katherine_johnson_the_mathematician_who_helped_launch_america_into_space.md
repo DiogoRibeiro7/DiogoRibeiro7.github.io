@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Biographies
 classes: wide
 date: '2020-12-25'
 excerpt: Katherine Johnson was a trailblazing mathematician at NASA whose calculations for the Mercury and Apollo missions helped guide U.S. space exploration. Learn about her groundbreaking contributions to applied mathematics.
@@ -19,17 +18,15 @@ keywords:
 - Apollo missions calculations
 - Mercury space missions
 - Women pioneers in stem
+redirect_from:
+- '/mathematics/biographies/katherine_johnson_the_mathematician_who_helped_launch_america_into_space/'
 seo_description: Katherine Johnson, the NASA mathematician whose trajectory calculations were critical to the Mercury and Apollo missions.
 seo_title: 'Katherine Johnson: The NASA Mathematician'
 seo_type: article
 summary: Katherine Johnson was a brilliant mathematician whose work at NASA included calculating trajectories for the Mercury and Apollo space missions. Her contributions to applied mathematics were essential to the success of U.S. space exploration, making her a key figure in American scientific history.
 tags:
-- Katherine johnson
-- Nasa
-- Women in stem
-- Mercury program
-- Apollo space missions
-- Applied mathematics
+- Biographies
+- Mathematical Modeling
 title: 'Katherine Johnson: The Mathematician Who Helped Launch America into Space'
 ---
 

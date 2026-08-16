@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Bayesian Inference
 classes: wide
 date: '2024-11-15'
 excerpt: This article critically examines the use of Bayesian posterior distributions
@@ -23,6 +22,8 @@ keywords:
 - R
 - Scala
 - Go
+redirect_from:
+- '/statistics/bayesian inference/critical_examination_bayesian_posteriors_test_statistics/'
 seo_description: A critical examination of Bayesian posteriors as test statistics,
   exploring their utility and limitations in statistical inference.
 seo_title: Bayesian Posteriors as Test Statistics
@@ -30,13 +31,12 @@ seo_type: article
 summary: An in-depth analysis of Bayesian posteriors as test statistics, examining
   their practical utility, sufficiency, and the challenges in interpreting them.
 tags:
-- Bayesian posteriors
-- Test statistics
-- Likelihoods
+- Bayesian Statistics
+- Hypothesis Testing
+- Probability
 - Python
 - R
-- Scala
-- Go
+- Programming
 title: A Critical Examination of Bayesian Posteriors as Test Statistics
 ---
 

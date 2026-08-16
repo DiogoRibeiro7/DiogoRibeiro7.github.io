@@ -1,17 +1,13 @@
 ---
+redirect_from:
+- '/machine-learning/tree-algorithms/smarter_tree_splits/'
 title: "Smarter Tree Splits: Understanding Friedman MSE in Regression Trees"
 categories:
-- machine-learning
-- tree-algorithms
+- Machine Learning
 
 tags:
-- decision-trees
-- regression
-- MSE
-- gradient-boosting
-- scikit-learn
-- xgboost
-- lightgbm
+- Decision Trees
+- Regression
 
 author_profile: false
 seo_title: "Friedman MSE vs Classic MSE in Regression Trees"

@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Natural Language Processing
+- Machine Learning
 classes: wide
 date: '2024-01-02'
 excerpt: Text preprocessing is a crucial step in NLP for transforming raw text into
@@ -21,6 +21,8 @@ keywords:
 - Stemming
 - Lemmatization
 - Text normalization
+redirect_from:
+- '/natural language processing/text_preprocessing_techniques_nlp_data_science/'
 seo_description: 'Essential text preprocessing for NLP: tokenization, stemming, lemmatization, stopword handling, and advanced cleaning with regex.'
 seo_title: 'NLP Text Preprocessing: Tokenization and Stemming'
 seo_type: article
@@ -30,12 +32,7 @@ summary: This article provides an in-depth look at text preprocessing techniques
   advanced cleaning techniques such as regex for handling misspellings, slang, and
   abbreviations.
 tags:
-- Text preprocessing
-- Tokenization
-- Stemming
-- Lemmatization
-- Nlp techniques
-- Text normalization
+- Natural Language Processing
 title: Text Preprocessing Techniques for NLP in Data Science
 ---
 

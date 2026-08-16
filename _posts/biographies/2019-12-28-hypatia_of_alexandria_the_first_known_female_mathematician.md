@@ -23,11 +23,9 @@ seo_title: 'Hypatia of Alexandria: The First Known Female Mathematician'
 seo_type: article
 summary: Learn about Hypatia of Alexandria, the first known female mathematician. Discover her contributions to mathematics and astronomy, her philosophical influence, and the enduring legacy of her work in science and philosophy.
 tags:
-- Hypatia of alexandria
-- Ancient mathematics
+- Mathematical Modeling
 - Geometry
-- Astronomy
-- Women in science
+- Biographies
 title: 'Hypatia of Alexandria: The First Known Female Mathematician'
 ---
 

@@ -27,10 +27,7 @@ summary: This article explores why managing data science projects with the same 
   as engineering leads to failure, explaining how the unknown nature of data science
   solutions differs from engineering's structured approach.
 tags:
-- Data science
-- Engineering
-- Project management
-- Ai/ml
+- Data Science
 title: Why Managing Data Science Like Engineering Leads to Failure
 ---
 

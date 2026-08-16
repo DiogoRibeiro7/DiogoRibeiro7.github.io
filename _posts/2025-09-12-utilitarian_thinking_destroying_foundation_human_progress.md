@@ -1,15 +1,11 @@
 ---
+redirect_from:
+- '/philosophy of science/higher education/research policy/utilitarian_thinking_destroying_foundation_human_progress/'
 title: "The Intellectual Crisis: How Utilitarian Thinking is Destroying the Foundation of Human Progress"
 categories:
-- Philosophy of Science
-- Higher Education
-- Research Policy
+- Research
 tags:
-- Pure Research
-- Utilitarianism
-- Academic Freedom
-- Intellectual Culture
-- Innovation Policy
+- Research Methodology
 author_profile: false
 seo_title: Why Pure Inquiry Matters More Than Ever
 seo_description: How utilitarian pressures are turning academia toward short-term gains, and why pure research must be protected.

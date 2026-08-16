@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Data Engineering
+- Programming
 classes: wide
 date: '2023-12-30'
 excerpt: This article explores the fundamentals of data engineering, including the
@@ -19,6 +19,8 @@ keywords:
 - Elt
 - Data science
 - Data pipelines
+redirect_from:
+- '/data engineering/data_engineering_introduction/'
 seo_description: An in-depth overview of Data Engineering, discussing the ETL and
   ELT processes, data pipelines, and the necessary skills for data engineers.
 seo_title: 'Data Engineering: Skills, ETL, and ELT'
@@ -27,10 +29,8 @@ summary: Data Engineering is critical for managing and processing large datasets
   Learn about the skills, processes like ETL and ELT, and how they fit into modern
   data workflows.
 tags:
-- Etl
-- Data pipelines
-- Elt
-- Big data
+- Data Engineering
+- MLOps
 title: 'Introduction to Data Engineering: Processes, Skills, and Tools'
 ---
 

@@ -16,11 +16,9 @@ seo_description: 'The theoretical foundations of Simpson''s Paradox, and how lur
 seo_title: 'Simpson''s Paradox and Lurking Variables'
 seo_type: article
 tags:
-- Simpson's paradox
-- Lurking variables
-- Data aggregation
-- Statistical paradoxes
-- Data visualization
+- Correlation
+- Data Quality
+- Data Visualization
 title: 'Simpson’s Paradox: Theoretical Foundations and Implications in Data Analysis'
 ---
 

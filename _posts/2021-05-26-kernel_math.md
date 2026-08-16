@@ -38,13 +38,11 @@ summary: Kernel Density Estimation (KDE) is a non-parametric method used to esti
   With a focus on practical insights and theoretical rigor, the article offers a comprehensive
   guide to understanding KDE.
 tags:
-- Non-parametric statistics
-- Multivariate kde
-- Kernel functions
-- Machine learning
-- Kernel density estimation
-- Bandwidth selection
-- Data science
+- Nonparametric Methods
+- Multivariate Analysis
+- Machine Learning
+- Statistical Modeling
+- Data Science
 title: The Math Behind Kernel Density Estimation
 ---
 

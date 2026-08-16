@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Statistics
 classes: wide
 date: '2020-01-14'
 excerpt: Residual diagnostics often trigger debates, especially when tests like Shapiro-Wilk
@@ -22,6 +21,8 @@ keywords:
 - Generalized least squares
 - Mixed models
 - Statistical modeling
+redirect_from:
+- '/data science/statistics/real_issues_residual_diagnostics_model_fitting/'
 seo_description: Why Shapiro-Wilk falls short in residual diagnostics, and what to check instead when fitting models to longitudinal data with GLS and robust alternatives.
 seo_title: Residual Diagnostics Beyond Shapiro-Wilk
 seo_type: article
@@ -31,10 +32,8 @@ summary: In this article, we examine why the Shapiro-Wilk test should not be the
   role of kurtosis, skewness, and the practical impact of non-normality on parameter
   estimates.
 tags:
-- Residual analysis
-- Longitudinal data
-- Generalized least squares
-- Parametric models
+- Regression
+- Survival Analysis
 title: 'Don''t Get MAD About Shapiro-Wilk: Real Issues in Residual Diagnostics and
   Model Fitting'
 ---

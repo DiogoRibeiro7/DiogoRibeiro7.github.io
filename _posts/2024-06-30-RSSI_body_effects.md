@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Wireless Communication
-- Signal Processing
-- Network Engineering
+- Predictive Maintenance
 classes: wide
 date: '2024-06-30'
 header:
@@ -24,6 +22,8 @@ keywords:
 - Signal quality in wireless communication
 - Antenna design adjustments
 - Python
+redirect_from:
+- '/wireless communication/signal processing/network engineering/RSSI_body_effects/'
 seo_description: How the human body affects RSSI in wireless communication through absorption, reflection, and shadowing, and how to mitigate it.
 seo_title: How the Human Body Affects RSSI Signals
 seo_type: article
@@ -31,16 +31,7 @@ summary: This article provides a comprehensive analysis of how the human body im
   RSSI, covering absorption, reflection, shadowing, and proximity effects, and offering
   practical approaches to mitigate signal interference.
 tags:
-- Rssi
-- Absorption
-- Reflection
-- Shadowing
-- Proximity effects
-- Capacitive coupling
-- Resonant effects
-- Antenna design
-- Dynamic adjustment
-- Signal quality
+- Industrial IoT
 - Python
 title: 'How the Human Body Affects RSSI: Detailed Analysis and Practical Approaches'
 ---

@@ -1,15 +1,12 @@
 ---
+redirect_from:
+- '/time series/data science/forecasting/handling_non-stationarity_time_series_data/'
 title: "Handling Non-Stationarity in Time Series Data: Techniques and Best Practices"
 categories:
 - Time Series
-- Data Science
-- Forecasting
 tags:
-- non-stationary data
-- time series analysis
-- ADF test
-- KPSS test
-- data transformation
+- Time Series
+- Feature Engineering
 author_profile: false
 seo_title: "Handling Non-Stationarity in Time Series Data"
 seo_description: "Learn how to detect and handle non-stationary time series using statistical tests, transformations, and modeling techniques to build robust forecasting models."

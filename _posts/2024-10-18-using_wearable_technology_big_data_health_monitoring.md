@@ -31,14 +31,11 @@ summary: This article explores the role of wearable technology and big data in h
   monitoring, examining how these tools support chronic disease management, early
   diagnosis, and preventive healthcare.
 tags:
-- Wearable technology
-- Big data
-- Health monitoring
-- Chronic disease
-- Preventive healthcare
-- Health analytics
-- Data science
-- Machine learning
+- Healthcare
+- Data Engineering
+- Model Monitoring
+- Data Science
+- Machine Learning
 title: Using Wearable Technology and Big Data for Health Monitoring
 ---
 

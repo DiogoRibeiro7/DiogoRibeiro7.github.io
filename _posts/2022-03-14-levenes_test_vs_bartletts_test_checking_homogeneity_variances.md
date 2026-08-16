@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Hypothesis Testing
+- Statistics
 classes: wide
 date: '2022-03-14'
 excerpt: Levene's Test and Bartlett's Test are key tools for checking homogeneity of variances in data. Learn when to use each test, based on normality assumptions, and how they relate to tests like ANOVA.
@@ -18,16 +18,16 @@ keywords:
 - Homogeneity of variances
 - Anova
 - Hypothesis testing
+redirect_from:
+- '/hypothesis testing/levenes_test_vs_bartletts_test_checking_homogeneity_variances/'
 seo_description: 'Comparing Levene''s and Bartlett''s tests for homogeneity of variances, when to use each based on normality, and how they pair with ANOVA.'
 seo_title: 'Levene''s Test vs. Bartlett''s Test for Variance'
 seo_type: article
 summary: This article provides a detailed comparison between Levene's Test and Bartlett’s Test for assessing the homogeneity of variances in data. It explains the differences in when to use these tests—parametric vs. non-parametric data, normal vs. non-normal data—and their applications alongside statistical tests like ANOVA.
 tags:
-- Levene's test
-- Bartlett’s test
-- Homogeneity of variances
-- Anova
-- Parametric and non-parametric tests
+- Descriptive Statistics
+- Hypothesis Testing
+- Nonparametric Methods
 title: 'Levene''s Test vs. Bartlett’s Test: Checking for Homogeneity of Variances'
 ---
 

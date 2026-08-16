@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Data Analysis
+- Data Science
 classes: wide
 date: '2024-10-28'
 excerpt: An in-depth look at normality tests, their limitations, and the necessity
@@ -23,6 +23,8 @@ keywords:
 - Ruby
 - Scala
 - Go
+redirect_from:
+- '/data analysis/understanding_normality_tests_deep_dive_into_their_power_limitations/'
 seo_description: An in-depth exploration of normality tests, their limitations, and
   the importance of visual inspection for assessing whether data follow a normal distribution.
 seo_title: 'Understanding Normality Tests: A Deep Dive'
@@ -31,14 +33,12 @@ summary: This article delves into the intricacies of normality testing, revealin
   the limitations of common tests and emphasizing the importance of visual tools like
   QQ plots and CDF plots.
 tags:
-- Normality tests
-- Statistical methods
-- Data visualization
+- Hypothesis Testing
+- Statistical Modeling
+- Data Visualization
 - Python
 - R
-- Ruby
-- Scala
-- Go
+- Programming
 title: 'Understanding Normality Tests: A Deep Dive into Their Power and Limitations'
 ---
 

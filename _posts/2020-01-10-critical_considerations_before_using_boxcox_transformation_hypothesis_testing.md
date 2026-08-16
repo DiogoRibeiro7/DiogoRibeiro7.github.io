@@ -28,10 +28,10 @@ summary: This article outlines key considerations when using the Box-Cox transfo
   including its purpose, effects on hypothesis testing, interpretation challenges,
   alternatives, and how to handle missing data, outliers, and model assumptions.
 tags:
-- Box-cox transformation
-- Hypothesis testing
-- Statistical modeling
-- Data transformation
+- Regression
+- Hypothesis Testing
+- Statistical Modeling
+- Feature Engineering
 title: Critical Considerations Before Using the Box-Cox Transformation for Hypothesis
   Testing
 ---

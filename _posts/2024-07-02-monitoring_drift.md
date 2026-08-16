@@ -35,20 +35,12 @@ summary: A deep dive into advanced machine learning monitoring techniques that e
   such as direct loss estimation, outlier detection, and best practices for addressing
   alarm fatigue in AI systems deployed in production.
 tags:
-- Data drift
-- Direct loss estimation
-- Ml monitoring
-- Model performance
-- Alarm fatigue
-- Predictive analytics
-- Data science best practices
-- Ai in production
-- Outliers detection
-- Data science
-- Model monitoring
-- Artificial intelligence
-- Technology
-- Python
+- Data Drift
+- Statistical Modeling
+- Model Monitoring
+- Machine Learning
+- Data Science
+- Artificial Intelligence
 title: 'Machine Learning Monitoring: Moving Beyond Univariate Data Drift Detection'
 ---
 

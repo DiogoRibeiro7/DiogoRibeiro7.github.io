@@ -27,10 +27,8 @@ summary: A comprehensive guide to understanding the differences between t-tests 
   z-tests, covering when to use each test, their assumptions, and examples of one-sample,
   two-sample, and paired t-tests.
 tags:
-- T-test
-- Z-test
-- Hypothesis testing
-- Statistical analysis
+- Hypothesis Testing
+- Statistical Modeling
 title: 'T-Test vs. Z-Test: When and Why to Use Each'
 ---
 

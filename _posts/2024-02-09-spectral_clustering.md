@@ -27,12 +27,10 @@ seo_title: Spectral Clustering and Dimensionality Reduction
 seo_type: article
 subtitle: A Comprehensive Guide to Spectral Clustering
 tags:
-- Data science
-- Machine learning
-- Clustering algorithms
-- Spectral clustering
-- Data analysis
-- Pattern recognition
+- Data Science
+- Machine Learning
+- Clustering
+- Data Analysis
 title: The Power of Dimensionality Reduction
 toc: false
 toc_label: The Complexity of Real-World Data Distributions

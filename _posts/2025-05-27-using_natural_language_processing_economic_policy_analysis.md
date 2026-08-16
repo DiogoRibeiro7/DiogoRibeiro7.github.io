@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Natural Language Processing
-- Economics
-- Policy Analysis
+- Machine Learning
 classes: wide
 date: '2025-05-27'
 excerpt: Natural Language Processing offers powerful tools for interpreting economic
@@ -23,6 +21,8 @@ keywords:
 - Machine learning for policy
 - Government document analysis
 - Python
+redirect_from:
+- '/natural language processing/economics/policy analysis/using_natural_language_processing_economic_policy_analysis/'
 seo_description: How NLP techniques analyze political texts and government documents to assess and predict economic policy impacts.
 seo_title: NLP for Economic Policy Analysis
 seo_type: article
@@ -30,11 +30,9 @@ summary: This article examines how NLP techniques are applied to analyze politic
   speeches, government reports, and legislative texts to better understand and forecast
   economic policy trends and impacts.
 tags:
-- Nlp
-- Economic policy
-- Text mining
-- Political analysis
-- Machine learning
+- Natural Language Processing
+- Economics
+- Machine Learning
 - Python
 title: Using Natural Language Processing for Economic Policy Analysis
 ---

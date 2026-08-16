@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- HealthTech
+- Data Science
 classes: wide
 date: '2024-12-01'
 excerpt: The integration of IoT and big data is revolutionizing elderly care by enabling
@@ -20,6 +20,8 @@ keywords:
 - Elderly care
 - Health emergencies
 - Smart homes
+redirect_from:
+- '/healthtech/remote_monitoring_elderly_care/'
 seo_description: How IoT devices, wearables, and health monitors use big data to remotely monitor older adults and detect emergencies in real time.
 seo_title: IoT and Big Data in Remote Monitoring for Elderly Care
 seo_type: article
@@ -28,11 +30,10 @@ summary: IoT-enabled devices and big data are transforming elderly care by enabl
   technologies offer continuous health tracking and quick responses to emergencies
   like heart attacks, strokes, or falls, ensuring that seniors remain safe and healthy.
 tags:
-- Elderly care
-- Iot
-- Big data
-- Remote monitoring
-- Health monitoring
+- Healthcare
+- Industrial IoT
+- Data Engineering
+- Model Monitoring
 title: 'Remote Monitoring and Elderly Care: How IoT and Big Data are Keeping Seniors
   Safe'
 ---

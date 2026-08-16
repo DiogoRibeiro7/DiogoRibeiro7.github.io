@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Data Science
-- Time Series
 classes: wide
 date: '2022-05-18'
 excerpt: Discover incremental learning in time series forecasting, a technique that dynamically updates models with new data for better accuracy and efficiency.
@@ -20,16 +18,16 @@ keywords:
 - Time Series Forecasting
 - Sherman-Morrison Formula
 - python
+redirect_from:
+- '/machine learning/data science/time series/understanding_incremental_learning_time_series_forecasting/'
 seo_description: How incremental learning enables continuous model updates in time series forecasting without full retraining.
 seo_title: Incremental Learning for Time Series Forecasting
 seo_type: article
 summary: This article discusses incremental learning, its applications to time series forecasting, and how methods like the Sherman–Morrison formula support dynamic model updates without retraining.
 tags:
-- Incremental Learning
-- Online Learning
-- Time Series Forecasting
-- Dynamic Model Updating
-- python
+- Supervised Learning
+- Time Series
+- Python
 title: Understanding Incremental Learning in Time Series Forecasting
 ---
 

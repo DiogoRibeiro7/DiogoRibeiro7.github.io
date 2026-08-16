@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Medical Research
 classes: wide
 date: '2020-01-11'
 excerpt: The Log-Rank test is a vital statistical method used to compare survival
@@ -22,6 +21,8 @@ keywords:
 - Survival analysis
 - Medical statistics
 - Epidemiology
+redirect_from:
+- '/statistics/medical research/logrank_test_comparing_survival_curves_clinical_studies/'
 seo_description: A comprehensive guide to the Log-Rank test, a statistical tool for
   comparing survival distributions in clinical trials and medical research.
 seo_title: 'Log-Rank Test: Comparing Survival Curves'
@@ -30,10 +31,9 @@ summary: Discover how the Log-Rank test is used to compare survival curves in cl
   studies, with detailed insights into its applications in clinical trials, epidemiology,
   and medical research.
 tags:
-- Log-rank test
-- Survival analysis
-- Clinical trials
-- Medical research
+- Survival Analysis
+- Experimental Design
+- Healthcare
 - Epidemiology
 title: 'Log-Rank Test: Comparing Survival Curves in Clinical Studies'
 ---

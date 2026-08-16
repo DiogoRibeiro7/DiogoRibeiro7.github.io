@@ -26,11 +26,10 @@ summary: To excel in data science, you need more than coding skills. This articl
   explains how mathematics and statistics underpin popular algorithms and why understanding
   them prevents costly mistakes.
 tags:
-- Mathematics
+- Mathematical Modeling
 - Statistics
-- Machine learning
-- Data science
-- Algorithms
+- Machine Learning
+- Data Science
 title: Why Data Scientists Need Math and Statistics
 ---
 

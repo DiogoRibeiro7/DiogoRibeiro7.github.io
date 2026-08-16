@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Mathematical Economics
+- Economics
 classes: wide
 date: '2020-01-01'
 excerpt: This article delves into mathematical models of inequality, focusing on the Lorenz curve and Gini coefficient to measure and interpret economic disparities.
@@ -23,24 +23,18 @@ keywords:
 - Python
 - Java
 - JavaScript
+redirect_from:
+- '/mathematical economics/mathematical_models_inequality_understanding_lorenz_curves_gini_coefficients/'
 seo_description: Explore mathematical models of inequality, including the Lorenz curve and Gini coefficient, and learn how they quantify economic inequality.
 seo_title: Lorenz Curves and Gini Coefficients Explained
 seo_type: article
 summary: A comprehensive guide to understanding and applying Lorenz curves and Gini coefficients to measure economic inequality.
 tags:
-- Lorenz curve
-- Gini coefficient
-- Economic inequality
 - Economics
 - Statistics
-- Inequality
-- Data science
+- Data Science
 - Python
-- Java
-- Javascript
-- python
-- java
-- javascript
+- Programming
 title: 'Mathematical Models of Inequality: Understanding Lorenz Curves and Gini Coefficients'
 ---
 

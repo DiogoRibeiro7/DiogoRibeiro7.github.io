@@ -15,20 +15,12 @@ seo_description: How stepwise regression works, the criteria used for variable s
 seo_title: 'Stepwise Regression: Methods and Concerns'
 seo_type: article
 tags:
-- Stepwise regression
-- Model selection
-- Regression analysis
-- Overfitting
-- Statistical methods
-- Predictive modeling
-- Forward selection
-- Backward elimination
-- Efroymson algorithm
+- Regression
+- Statistical Modeling
+- Regularization
+- Machine Learning
 - Python
 - R
-- Julia
-- Statistics
-- Data science
 title: 'Stepwise Regression: Methodology, Applications, and Concerns'
 ---
 

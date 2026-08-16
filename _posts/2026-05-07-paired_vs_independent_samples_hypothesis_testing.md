@@ -1,16 +1,11 @@
 ---
+redirect_from:
+- '/statistics/data analysis/hypothesis testing/paired_vs_independent_samples_hypothesis_testing/'
 title: "Paired vs. Independent Samples: The Design Choice Behind the Test"
 categories:
 - Statistics
-- Data Analysis
-- Hypothesis Testing
 tags:
-- Paired Samples
-- Independent Samples
-- T Test
-- Wilcoxon Signed-Rank Test
-- Mann-Whitney U Test
-- Study Design
+- Hypothesis Testing
 author_profile: false
 seo_title: "Paired vs Independent Samples in Hypothesis Testing"
 seo_description: "A practical guide to deciding whether data are paired or independent, and how that design choice affects t-tests, rank tests, effect sizes, and interpretation."

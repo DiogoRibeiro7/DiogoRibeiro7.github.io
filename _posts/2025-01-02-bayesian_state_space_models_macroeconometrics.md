@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Macroeconometrics
+- Data Science
 classes: wide
 date: '2025-01-02'
 excerpt: Explore the critical role of Bayesian state space models in macroeconometric
@@ -20,6 +20,8 @@ keywords:
 - Kalman filter
 - State space models
 - Particle filtering
+redirect_from:
+- '/macroeconometrics/bayesian_state_space_models_macroeconometrics/'
 seo_description: 'Bayesian state space models in macroeconometrics: their applications, estimation techniques, and handling of large datasets.'
 seo_title: Bayesian State Space Models in Macroeconometrics
 seo_type: article
@@ -27,10 +29,9 @@ summary: This article provides an in-depth explanation of Bayesian state space m
   in macroeconometrics, covering estimation techniques, high-dimensional data challenges,
   and advanced approaches to non-linear and non-Gaussian models.
 tags:
-- Bayesian methods
-- State space models
-- Time series
-- Macroeconomics
+- Bayesian Statistics
+- Time Series
+- Economics
 title: Bayesian State Space Models in Macroeconometrics
 ---
 

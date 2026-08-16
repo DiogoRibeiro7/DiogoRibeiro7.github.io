@@ -30,10 +30,8 @@ summary: Learn about the Chi-Square test for categorical data analysis, includin
   its use in goodness-of-fit and independence tests, and how it's applied in fields
   such as survey data analysis and genetics.
 tags:
-- Chi-square test
-- Categorical data
-- Goodness-of-fit
-- Statistical testing
+- Hypothesis Testing
+- Data Analysis
 - Python
 title: 'Chi-Square Test: Exploring Categorical Data and Goodness-of-Fit'
 ---

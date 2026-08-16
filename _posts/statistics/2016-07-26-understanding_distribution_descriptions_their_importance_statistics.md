@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Data Science
 classes: wide
 date: '2016-07-26'
 excerpt: Dive into the intricacies of describing distributions, understand the mathematics behind common distributions, and see their applications in parametric statistics across multiple disciplines.
@@ -19,15 +18,16 @@ keywords:
 - Parametric
 - Data analysis
 - Normal distribution
+redirect_from:
+- '/statistics/data science/understanding_distribution_descriptions_their_importance_statistics/'
 seo_description: How to describe statistical distributions, their mathematical properties, and applications in finance, medicine, and engineering.
 seo_title: Describing Distributions for Parametric Statistics
 seo_type: article
 summary: This article explains the role of distribution descriptions in parametric statistics, examining key distributions, their parameters, and the importance of distributional assumptions in real-world data analysis.
 tags:
 - Statistics
-- Data analysis
-- Distributions
-- Parametric statistics
+- Data Analysis
+- Probability
 title: A Comprehensive Guide to Describing Distributions and Their Role in Parametric Statistics
 ---
 

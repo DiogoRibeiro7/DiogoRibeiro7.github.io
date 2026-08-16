@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Data Science
-- Machine Learning
 classes: wide
 date: '2024-09-06'
 excerpt: Explore the complexity of real-world data distributions beyond the normal
@@ -23,6 +21,8 @@ keywords:
 - Central limit theorem applications
 - Extreme value theory
 - Statistical analysis beyond normality
+redirect_from:
+- '/statistics/data science/machine learning/normality/'
 seo_description: 'Real-world data distributions explained: heavy tails, the Central Limit Theorem, and Extreme Value Theory, and why they matter.'
 seo_title: 'Beyond Normal: Real-World Data Distributions'
 seo_type: article
@@ -31,12 +31,7 @@ summary: This article delves into the complexity of real-world data distribution
   and heavy-tailed distributions, the Central Limit Theorem, and the application of
   Extreme Value Theory in data analysis.
 tags:
-- Normal distribution
-- Central limit theorem
-- Log-normal distribution
-- Extreme value theory
-- Heavy-tailed distributions
-- Fisher-tippett-gnedenko theorem
+- Probability
 title: 'Beyond Normality: The Complexity of Real-World Data Distributions'
 ---
 

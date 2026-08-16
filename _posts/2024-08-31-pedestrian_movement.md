@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Simulation Models
+- Data Science
 classes: wide
 date: '2024-08-31'
 excerpt: Explore the simulation of pedestrian evacuation in environments impacted
@@ -24,6 +24,8 @@ keywords:
 - Bash
 - Python
 - Fortran
+redirect_from:
+- '/simulation models/pedestrian_movement/'
 seo_description: Simulating pedestrian evacuation in smoke-affected spaces with the Social Force Model and Advection-Diffusion Equation.
 seo_title: Pedestrian Evacuation in Smoke-Filled Spaces
 seo_type: article
@@ -32,15 +34,10 @@ summary: This article examines simulation models for pedestrian evacuation in sm
   the Advection-Diffusion Equation, and numerical methods for optimizing evacuation
   strategies during emergencies.
 tags:
-- Pedestrian evacuation
-- Smoke propagation
-- Social force model
-- Advection-diffusion equation
-- Numerical methods
-- Emergency preparedness
-- Bash
+- Transportation
+- Numerical Methods
+- Programming
 - Python
-- Fortran
 title: Simulating Pedestrian Evacuation in Smoke-Affected Environments
 ---
 

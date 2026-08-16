@@ -40,8 +40,7 @@ summary: Principal Component Analysis (PCA) is a powerful technique in data scie
   or to improve machine learning models, this guide will help you grasp its key principles,
   including how to interpret explained variance and identify significant components.
 tags:
-- Pca
-- Dimensionality reduction
+- Dimensionality Reduction
 - Python
 title: 'Understanding PCA: A Step-by-Step Guide to Principal Component Analysis'
 ---

@@ -26,9 +26,9 @@ summary: This post walks through frequentist hypothesis testing, showing how to 
   null and alternative hypotheses and interpret the results in practical data science
   tasks.
 tags:
-- Hypothesis testing
+- Hypothesis Testing
 - Statistics
-- Experiments
+- Experimental Design
 title: Applying Hypothesis Testing in the Real World
 ---
 

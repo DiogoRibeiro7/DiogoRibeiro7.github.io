@@ -33,12 +33,11 @@ summary: Shared Nearest Neighbors (SNN) is a distance metric designed to enhance
   metrics like Euclidean and Manhattan, providing robust performance in complex data
   scenarios.
 tags:
-- Machine learning
-- Outlier detection
+- Machine Learning
+- Anomaly Detection
 - Clustering
-- Data science
-- Distance metrics
-- K-nearest neighbors
+- Data Science
+- Mathematical Modeling
 - Python
 title: Exploring Shared Nearest Neighbors (SNN) for Outlier Detection
 ---

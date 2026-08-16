@@ -31,12 +31,9 @@ seo_type: article
 summary: A comprehensive guide to the Cox Proportional Hazards Model, its assumptions,
   and applications in survival analysis and clinical trials.
 tags:
-- Cox proportional hazards model
-- Survival analysis
-- Medical studies
-- Clinical trials
-- Time-to-event data
-- Censored data
+- Survival Analysis
+- Healthcare
+- Experimental Design
 - R
 - Python
 title: 'Cox Proportional Hazards Model: A Guide to Survival Analysis in Medical Studies'

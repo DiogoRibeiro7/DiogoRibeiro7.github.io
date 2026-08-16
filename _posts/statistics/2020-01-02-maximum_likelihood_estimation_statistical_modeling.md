@@ -25,11 +25,10 @@ seo_title: 'MLE: A Key Tool in Data Science'
 seo_type: article
 summary: This article covers the essentials of Maximum Likelihood Estimation (MLE), breaking down its mathematical foundation, importance in data science, practical applications, and limitations.
 tags:
-- Statistical modeling
-- Bash
-- Maximum likelihood estimation
-- Data science
-- Mle
+- Statistical Modeling
+- Programming
+- Probability
+- Data Science
 - Python
 title: 'Maximum Likelihood Estimation (MLE): Statistical Modeling in Data Science'
 ---

@@ -1,15 +1,13 @@
 ---
+redirect_from:
+- '/finance/data science/risk modeling/survival_analysis_applied_finance/'
 title: "Survival Analysis Applied to Finance: A Comprehensive Guide"
 categories:
-- finance
-- data science
-- risk modeling
+- Economics
 tags:
-- survival analysis
-- credit risk
-- prepayment modeling
-- investment analysis
-- customer retention
+- Survival Analysis
+- Finance
+- Customer Analytics
 author_profile: false
 seo_title: 'Survival Analysis in Finance: Techniques and Cases'
 seo_description: 'A complete guide to survival analysis in finance: time-to-event modeling for credit risk, investment analysis, and churn.'

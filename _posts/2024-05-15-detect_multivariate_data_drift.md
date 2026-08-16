@@ -37,19 +37,12 @@ summary: A detailed guide on detecting multivariate data drift using Principal C
   Analysis (PCA) and Reconstruction Error to monitor changes in data structure and
   ensure model performance in production environments.
 tags:
-- Multivariate data drift
-- Principal component analysis (pca)
-- Reconstruction error
-- Data monitoring
-- Machine learning model validation
-- Feature space analysis
-- Dimensionality reduction
-- Model performance
-- Mathematics
+- Multivariate Analysis
+- Dimensionality Reduction
+- Model Monitoring
+- Mathematical Modeling
 - Statistics
-- Data science
-- Production data
-- Python
+- Data Science
 title: Detect Multivariate Data Drift
 ---
 

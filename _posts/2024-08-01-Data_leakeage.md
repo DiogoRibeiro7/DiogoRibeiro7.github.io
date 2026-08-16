@@ -15,9 +15,7 @@ seo_description: What data leakage is, the forms it takes including feature, lab
 seo_title: 'Data Leakage in ML: Causes and Prevention'
 seo_type: article
 tags:
-- Data leakage
-- Data science
-- Model integrity
+- Data Science
 - Python
 title: 'Understanding Data Leakage in Machine Learning: Causes, Types, and Prevention'
 ---

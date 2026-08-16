@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Time Series Analysis
+- Time Series
 classes: wide
 date: '2020-06-10'
 excerpt: Learn the fundamentals of ARIMA modeling for time series analysis. This guide
@@ -22,6 +22,8 @@ keywords:
 - Sarima
 - R
 - Arma
+redirect_from:
+- '/time series analysis/arima_time_series/'
 seo_description: 'The ARIMA model explained: components, parameter identification, validation, and applications, with comparisons to ARIMAX, SARIMA, and ARMA.'
 seo_title: 'Comprehensive ARIMA Model Guide: Time Series Analysis'
 seo_type: article
@@ -29,8 +31,7 @@ summary: This guide provides an in-depth exploration of ARIMA modeling for time 
   data, discussing its core components, parameter estimation, validation, and comparison
   with models like ARIMAX, SARIMA, and ARMA.
 tags:
-- Arima
-- Time series
+- Time Series
 - Forecasting
 - R
 - Python

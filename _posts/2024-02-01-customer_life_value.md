@@ -31,15 +31,9 @@ seo_title: Customer Lifetime Value and Business Growth
 seo_type: article
 subtitle: A Key Metric for Business Growth
 tags:
-- Clv
-- Business strategy
-- Customer retention
-- Marketing analytics
-- Customer acquisition
-- Data analytics
-- Crm (customer relationship management)
-- Business growth
-- Loyalty programs
+- Customer Analytics
+- Business Intelligence
+- Data Analysis
 - Python
 title: Understanding Customer Lifetime Value
 toc: false

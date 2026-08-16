@@ -30,10 +30,8 @@ summary: Learn how correlation, covariance, and standard deviation are mathemati
   dependencies and variability in data.
 tags:
 - Correlation
-- Covariance
-- Standard deviation
-- Linear relationships
-- Mathematics
+- Descriptive Statistics
+- Mathematical Modeling
 - Statistics
 title: Understanding the Connection Between Correlation, Covariance, and Standard
   Deviation

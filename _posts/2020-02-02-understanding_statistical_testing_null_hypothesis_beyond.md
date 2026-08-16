@@ -26,9 +26,8 @@ summary: This article delves into the core principles of hypothesis testing, the
   of the null hypothesis, and the various statistical tools used to test data compatibility
   with theoretical distributions.
 tags:
-- Hypothesis testing
-- Null hypothesis
-- Statistical methods
+- Hypothesis Testing
+- Statistical Modeling
 title: 'Understanding Statistical Testing: The Null Hypothesis and Beyond'
 ---
 

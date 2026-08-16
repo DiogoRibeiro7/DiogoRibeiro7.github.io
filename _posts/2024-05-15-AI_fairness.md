@@ -2,10 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Statistics
-- Data Science
-- Machine Learning
-- Ethics Research
 classes: wide
 date: '2024-05-15'
 header:
@@ -15,31 +11,15 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_3.jpg
+redirect_from:
+- '/mathematics/statistics/data science/machine learning/ethics research/AI_fairness/'
 seo_description: 'AI fairness explained: how to measure it, where bias comes from, and the strategies used to mitigate unfairness in machine learning.'
 seo_title: 'Navigating AI Fairness: Metrics and Mitigation'
 seo_type: article
 subtitle: Challenges, Metrics, and Mitigation Techniques
 tags:
-- Ai fairness
-- Bias in ai
-- Machine learning fairness
-- Demographic parity
-- Equal opportunity
-- Statistical parity
-- Consistency in ai
-- Individual fairness
-- Counterfactual fairness
-- Unbiased ai
-- Fairness through unawareness
-- Transparency in ai
-- Ai ethics
-- Bias mitigation techniques
-- Adversarial learning
-- Data collection bias
-- Fairness metrics
-- Ai fairness libraries
-- Fairness in machine learning
-- Ai discrimination
+- Ethics
+- Machine Learning
 title: Navigating AI Fairness
 ---
 

@@ -36,10 +36,10 @@ summary: Data drift can significantly affect the accuracy of credit risk models,
   robustness of credit risk models, ensuring they remain effective over time despite
   changes in underlying data distributions.
 tags:
-- Credit risk modeling
-- Data drift
-- Machine learning
-- Multivariate analysis
+- Finance
+- Data Drift
+- Machine Learning
+- Multivariate Analysis
 title: Solving Data Drift Issues in Credit Risk Models
 ---
 

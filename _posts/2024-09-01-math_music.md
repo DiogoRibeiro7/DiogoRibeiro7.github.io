@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Music
-- Technology
 classes: wide
 date: '2024-09-01'
 excerpt: Discover how mathematics influences electronic music creation through sound
@@ -23,6 +21,8 @@ keywords:
 - Digital signal processing
 - Generative music
 - Rhythm and numbers
+redirect_from:
+- '/mathematics/music/technology/math_music/'
 seo_description: How mathematics drives electronic music, from sound synthesis to algorithmic composition, rhythm, and signal processing.
 seo_title: The Mathematics of Electronic Music
 seo_type: article
@@ -31,12 +31,7 @@ summary: This article explores the intersection of mathematics and electronic mu
   rhythm, and generative music creation. It delves into the technical aspects of digital
   signal processing and algorithmic composition in music technology.
 tags:
-- Sound synthesis
-- Algorithmic composition
-- Digital signal processing
-- Rhythm
-- Generative music
-- Mathematics in music
+- Signal Processing
 title: 'Mathematics and Electronic Music: The Symphony of Numbers'
 ---
 

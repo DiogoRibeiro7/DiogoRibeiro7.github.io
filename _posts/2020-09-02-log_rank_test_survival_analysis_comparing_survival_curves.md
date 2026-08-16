@@ -28,11 +28,9 @@ summary: This article provides a comprehensive guide to the log-rank test in sur
   two or more groups. We explain how to interpret Kaplan-Meier curves, p-values from
   the log-rank test, and real-world applications in clinical trials.
 tags:
-- Log-rank test
-- Survival analysis
-- Medical statistics
-- Kaplan-meier curves
-- P-values
+- Survival Analysis
+- Statistical Modeling
+- Hypothesis Testing
 title: 'Log-Rank Test in Survival Analysis: Comparing Survival Curves'
 ---
 

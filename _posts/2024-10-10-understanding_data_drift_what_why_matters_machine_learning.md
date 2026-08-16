@@ -28,11 +28,8 @@ summary: This article explains the concept of data drift, focusing on how change
   types of data drift, such as covariate, label, and concept drift, providing examples
   from industries like finance and healthcare.
 tags:
-- Data drift
-- Machine learning models
-- Covariate drift
-- Concept drift
-- Label drift
+- Data Drift
+- Machine Learning
 title: 'Understanding Data Drift: What It Is and Why It Matters in Machine Learning'
 ---
 

@@ -39,9 +39,9 @@ summary: Data quality is a crucial, yet often overlooked, aspect of data science
   guide covers key strategies for maintaining high-quality data across the lifecycle
   of any data-driven project.
 tags:
-- Data science
-- Data engineering
-- Data quality
+- Data Science
+- Data Engineering
+- Data Quality
 title: 'The Unseen Art of Data Quality: Bridging the Gap Between Collection and Utilization'
 ---
 

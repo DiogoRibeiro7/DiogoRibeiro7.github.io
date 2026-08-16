@@ -30,9 +30,8 @@ summary: Regression and path analysis are both important statistical methods, bu
   This comprehensive article delves into the theoretical and practical distinctions
   between these two methods.
 tags:
-- Regression analysis
-- Path analysis
-- Structural equation modeling
+- Regression
+- Statistical Modeling
 title: Understanding the Difference Between Regression and Path Analysis
 ---
 

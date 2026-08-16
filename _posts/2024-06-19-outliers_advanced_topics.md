@@ -2,9 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Statistics
-- Data Science
-- Data Analysis
 classes: wide
 date: '2024-06-19'
 header:
@@ -14,20 +11,18 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
   twitter_image: /assets/images/data_science_5.jpg
+redirect_from:
+- '/mathematics/statistics/data science/data analysis/outliers_advanced_topics/'
 seo_description: Types and causes of outliers in data analysis, and the visual and statistical methods used to detect them.
 seo_title: 'Outliers in Data Analysis: Advanced Techniques'
 seo_type: article
 tags:
-- Outliers
-- Robust statistics
-- Data analysis
-- Measurement error
-- Heavy-tailed distributions
-- Mixture models
-- Extreme observations
-- Novelty detection
-- Box plots
-- Statistical methods
+- Anomaly Detection
+- Robust Statistics
+- Data Analysis
+- Data Quality
+- Probability
+- Statistical Modeling
 title: 'Exploring Outliers in Data Analysis: Advanced Concepts and Techniques'
 ---
 

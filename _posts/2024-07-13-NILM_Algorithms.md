@@ -1,8 +1,7 @@
 ---
 author_profile: false
 categories:
-- Energy Efficiency
-- Smart Technology
+- Predictive Maintenance
 classes: wide
 date: '2024-07-13'
 header:
@@ -12,13 +11,14 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
   twitter_image: /assets/images/data_science_3.jpg
+redirect_from:
+- '/energy efficiency/smart technology/NILM_Algorithms/'
 seo_description: How NILM algorithms disaggregate total building energy into individual appliance usage, from feature extraction to event detection.
 seo_title: NILM Algorithms for Energy Disaggregation
 seo_type: article
 tags:
-- Nilm
-- Energy monitoring
-- Smart meters
+- Predictive Maintenance
+- Model Monitoring
 title: 'Disaggregating Energy Consumption: The NILM Algorithms'
 ---
 

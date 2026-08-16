@@ -1,8 +1,7 @@
 ---
 author_profile: false
 categories:
-- machine-learning
-- model-evaluation
+- Machine Learning
 classes: wide
 date: '2024-09-12'
 excerpt: A detailed guide on the confusion matrix and performance metrics in machine
@@ -21,6 +20,8 @@ keywords:
 - Classification metrics
 - Model evaluation
 - Threshold tuning
+redirect_from:
+- '/machine-learning/model-evaluation/confusion_matrix_classification_metrics_complete_guide/'
 seo_description: Understand the confusion matrix, key classification metrics like
   precision and recall, and when to use each based on real-world cost trade-offs.
 seo_title: 'Confusion Matrix: Metrics and Trade-Offs'
@@ -30,11 +31,8 @@ summary: This guide explores the confusion matrix, explains how to calculate acc
   metric based on the application context. Includes threshold tuning techniques and
   real-world case studies.
 tags:
-- Confusion-matrix
-- Precision
-- Recall
-- F1-score
-- Model-performance
+- Model Evaluation
+- Model Monitoring
 title: 'Confusion Matrix and Classification Metrics: A Complete Guide'
 ---
 

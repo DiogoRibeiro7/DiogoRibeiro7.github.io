@@ -2,9 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Statistics
-- Data Science
-- Economy
 classes: wide
 date: '2024-05-10'
 header:
@@ -14,21 +11,17 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_1.jpg
+redirect_from:
+- '/mathematics/statistics/data science/economy/data_analysis_gdp/'
 seo_description: Why aggregated GDP figures mislead data science analysis, from measurement and timeliness problems to the dimensions GDP never captures.
 seo_title: Limitations of Aggregated GDP Data
 seo_type: article
 subtitle: Exploring the Shortcomings of GDP as a Sole Economic Indicator in Data Science
   Applications
 tags:
-- Gdp limitations
-- Economic analysis
-- Data aggregation
-- Real-time data
-- Economic indicators
-- Data quality
-- Comparative analysis
-- Alternative metrics
-- Data analysis
+- Economics
+- Data Quality
+- Data Analysis
 title: The Limitations of Aggregated GDP Data in Data Science Analysis
 ---
 

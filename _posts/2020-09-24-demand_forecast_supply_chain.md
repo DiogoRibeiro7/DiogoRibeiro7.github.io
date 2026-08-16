@@ -28,10 +28,8 @@ summary: This article explores the use of customer behavior modeling to improve 
   the Lifetimes Python library are used to predict repurchases and optimize sales
   predictions over a future period.
 tags:
-- Customer behavior
+- Customer Analytics
 - Python
-- Demand forecasting
-- Repurchase models
 title: A Predictive Approach for Demand Forecasting in the Supply Chain Using Customer
   Behavior Modeling
 ---

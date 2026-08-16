@@ -30,14 +30,12 @@ summary: This article discusses the importance of variable magnitude in machine 
   models, how feature scaling enhances model performance, and the distinctions between
   models that are sensitive to the scale of variables and those that are not.
 tags:
-- Feature scaling
-- Linear regression
-- Support vector machines
-- Neural networks
-- Knn
-- Pca
-- Random forests
-- Python
+- Feature Engineering
+- Regression
+- Classification
+- Neural Networks
+- Clustering
+- Dimensionality Reduction
 title: Does the Magnitude of the Variable Matter in Machine Learning?
 ---
 

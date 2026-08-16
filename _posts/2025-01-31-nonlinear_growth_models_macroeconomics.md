@@ -1,8 +1,7 @@
 ---
 author_profile: false
 categories:
-- Macroeconomics
-- Economic Modeling
+- Economics
 classes: wide
 date: '2025-01-31'
 excerpt: Nonlinear growth models offer a richer and more realistic framework for understanding
@@ -21,6 +20,8 @@ keywords:
 - Economic growth theory
 - Endogenous growth
 - Differential equations
+redirect_from:
+- '/macroeconomics/economic modeling/nonlinear_growth_models_macroeconomics/'
 seo_description: Explore how nonlinearities shape long-term economic growth and stability,
   from endogenous feedback effects to bifurcations in policy-driven growth models.
 seo_title: Nonlinear Growth Models in Macroeconomics
@@ -29,11 +30,7 @@ summary: This article explores the emergence and importance of non-linear dynami
   in macroeconomic growth models, highlighting key mechanisms, implications for long-term
   development, and policy design.
 tags:
-- Nonlinear dynamics
-- Economic growth
-- Solow model
-- Endogenous growth
-- Phase transitions
+- Economics
 title: Nonlinear Growth Models in Macroeconomics
 ---
 

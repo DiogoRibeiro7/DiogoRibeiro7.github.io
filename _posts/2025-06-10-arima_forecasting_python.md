@@ -25,10 +25,9 @@ seo_type: article
 summary: This tutorial walks through the basics of ARIMA modeling, from identifying
   parameters to validating forecasts on real data.
 tags:
-- Arima
+- Time Series
 - Forecasting
 - Python
-- Time series
 title: 'ARIMA Modeling in Python: A Quick Start Guide'
 ---
 

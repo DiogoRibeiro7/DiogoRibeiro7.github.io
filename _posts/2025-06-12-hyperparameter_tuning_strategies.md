@@ -25,10 +25,9 @@ seo_type: article
 summary: This guide covers systematic approaches for searching the hyperparameter
   space, along with libraries that automate the process.
 tags:
-- Hyperparameters
-- Model selection
+- Statistical Modeling
 - Optimization
-- Machine learning
+- Machine Learning
 title: Hyperparameter Tuning Strategies
 ---
 

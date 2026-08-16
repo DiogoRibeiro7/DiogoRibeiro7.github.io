@@ -36,15 +36,11 @@ summary: Importance Sampling is an advanced technique used to improve the effici
   resources on rare but impactful loss events, it enhances the accuracy of risk predictions,
   particularly when working with complex copula models.
 tags:
-- Importance sampling
-- Monte carlo simulation
-- Credit risk
-- Copula models
-- Portfolio risk
+- Monte Carlo
+- Finance
 - Python
 - R
-- Ruby
-- Rust
+- Programming
 title: Importance Sampling for Portfolio Credit Risk
 ---
 

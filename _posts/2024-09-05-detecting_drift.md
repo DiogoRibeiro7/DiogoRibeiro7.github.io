@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Machine Learning
 classes: wide
 date: '2024-09-05'
 excerpt: Explore the challenges of using traditional hypothesis testing for detecting
@@ -22,6 +21,8 @@ keywords:
 - Data monitoring in machine learning
 - Bayesian methods in data science
 - Model adaptation and data drift
+redirect_from:
+- '/data science/machine learning/detecting_drift/'
 seo_description: Why hypothesis testing falls short for detecting data drift, and how Bayesian probability offers a better framework for monitoring shifts.
 seo_title: 'Data Drift: Hypothesis Tests vs. Bayesian Methods'
 seo_type: article
@@ -30,11 +31,10 @@ summary: This article explores the limitations of using hypothesis testing to de
   alternative approach, offering a more flexible and adaptive method for monitoring
   data shifts and maintaining model performance.
 tags:
-- Data drift
-- Hypothesis testing
-- Bayesian probability
-- Data monitoring
-- Model adaptation
+- Data Drift
+- Hypothesis Testing
+- Bayesian Statistics
+- Model Monitoring
 title: 'The Limitations of Hypothesis Testing for Detecting Data Drift: A Bayesian
   Alternative'
 ---

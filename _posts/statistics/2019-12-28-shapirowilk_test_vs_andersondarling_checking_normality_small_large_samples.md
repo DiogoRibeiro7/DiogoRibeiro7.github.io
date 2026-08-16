@@ -25,10 +25,8 @@ seo_title: Shapiro-Wilk vs Anderson-Darling Normality Tests
 seo_type: article
 summary: This article compares the Shapiro-Wilk and Anderson-Darling tests, emphasizing how sample size and distribution characteristics influence the choice of method when assessing normality.
 tags:
-- Normality testing
-- Shapiro-wilk test
-- Anderson-darling test
-- Sample size
+- Hypothesis Testing
+- Sample Size
 - Python
 title: 'Shapiro-Wilk Test vs. Anderson-Darling: Checking for Normality in Small vs. Large Samples'
 ---

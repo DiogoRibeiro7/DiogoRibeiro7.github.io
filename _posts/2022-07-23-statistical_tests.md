@@ -34,8 +34,8 @@ summary: This article explains the universal structure of statistical tests, foc
   on the comparison between observed and expected data that forms the foundation of
   hypothesis testing and statistical inference.
 tags:
-- Statistical tests
-- Data analysis
+- Hypothesis Testing
+- Data Analysis
 title: The Structure Behind Most Statistical Tests
 ---
 

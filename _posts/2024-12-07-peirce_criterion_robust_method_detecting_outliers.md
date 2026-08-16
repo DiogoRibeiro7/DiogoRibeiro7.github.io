@@ -30,11 +30,10 @@ summary: Peirce's Criterion is a robust statistical tool for detecting and remov
   and its advantages in ensuring data integrity. Learn how to apply this method to
   improve the accuracy and reliability of your statistical analyses.
 tags:
-- Peirce's criterion
-- Outlier detection
-- Robust statistics
-- Hypothesis testing
-- Data analysis
+- Anomaly Detection
+- Robust Statistics
+- Hypothesis Testing
+- Data Analysis
 - R
 title: 'Peirce''s Criterion: A Robust Method for Detecting Outliers'
 ---

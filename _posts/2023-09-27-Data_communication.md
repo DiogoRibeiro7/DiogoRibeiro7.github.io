@@ -29,9 +29,8 @@ seo_description: The role of communication in data-driven work, and how to balan
 seo_title: 'Data and Communication: Orchestrating a Harmonious Future'
 seo_type: article
 tags:
-- Communication
-- Data analysis
-- Storytelling
+- Research Methodology
+- Data Analysis
 title: Data and Communication
 ---
 

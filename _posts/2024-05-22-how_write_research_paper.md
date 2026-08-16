@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Research Methodology
+- Data Science
 classes: wide
 date: '2024-05-22'
 excerpt: Master the process of writing a research paper with tips on developing a
@@ -23,6 +23,8 @@ keywords:
 - Proofreading techniques
 - Thesis development
 - Structuring research papers
+redirect_from:
+- '/research methodology/how_write_research_paper/'
 seo_description: 'How to write a research paper: thesis development, organizing notes, formatting citations, and proofreading techniques.'
 seo_title: 'How to Write a Research Paper: Tips for Academic Writing'
 seo_type: article
@@ -30,26 +32,7 @@ summary: This guide provides essential tips for writing a research paper, from o
   and drafting to editing and revising, with insights on thesis statements, literature
   reviews, and formatting citations.
 tags:
-- Research paper writing
-- Academic writing tips
-- Thesis statement development
-- Research methodology
-- Literature review process
-- Writing an outline
-- Drafting a research paper
-- Editing and revising papers
-- Proofreading techniques
-- Formatting academic papers
-- Citation styles (apa, mla, chicago)
-- In-depth research
-- Organizing research notes
-- Academic research tips
-- Effective writing strategies
-- Managing research projects
-- Structuring research papers
-- Finalizing research documents
-- Research paper guidelines
-- Academic paper structure
+- Research Methodology
 title: How to Write a Research Paper
 ---
 

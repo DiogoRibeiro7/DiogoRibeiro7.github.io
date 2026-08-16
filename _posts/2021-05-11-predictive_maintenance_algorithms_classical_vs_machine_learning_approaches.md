@@ -29,12 +29,10 @@ summary: A deep dive into how classical predictive maintenance algorithms, such 
   ARIMA, compare with machine learning models, examining their strengths and weaknesses
   in terms of performance, accuracy, and scalability.
 tags:
-- Predictive maintenance
-- Statistical models
-- Machine learning
-- Predictive algorithms
-- Arima
-- Industrial analytics
+- Predictive Maintenance
+- Statistical Modeling
+- Machine Learning
+- Time Series
 title: 'A Comparison of Predictive Maintenance Algorithms: Classical vs. Machine Learning
   Approaches'
 ---

@@ -26,9 +26,7 @@ summary: Synthetic Minority Over-sampling Technique (SMOTE) creates artificial e
   to balance classes, but ignoring its assumptions can distort your dataset and harm
   model performance.
 tags:
-- Smote
-- Class imbalance
-- Machine learning
+- Machine Learning
 title: Why SMOTE Isn't Always the Answer
 ---
 

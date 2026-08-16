@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Mathematical Economics
+- Economics
 classes: wide
 date: '2024-11-18'
 excerpt: Optimal control theory, employing Hamiltonian and Lagrangian methods, offers powerful tools in modeling and optimizing fiscal and monetary policy.
@@ -19,16 +19,14 @@ keywords:
 - Hamiltonian economics
 - Lagrangian economics
 - Economics
+redirect_from:
+- '/mathematical economics/optimal_control_theory_in_economics/'
 seo_description: How Hamiltonian and Lagrangian techniques apply to economic models, particularly for optimizing fiscal and monetary policy.
 seo_title: Optimal Control Theory in Economics
 seo_type: article
 summary: This article examines the application of Hamiltonian and Lagrangian techniques in optimal control theory for fiscal and monetary policy, exploring their significance in economic modeling.
 tags:
-- Optimal control theory
-- Hamiltonian method
-- Lagrangian method
-- Fiscal policy
-- Monetary policy
+- Economics
 title: 'Optimal Control Theory in Economics: Hamiltonian and Lagrangian Techniques in Fiscal and Monetary Policy Models'
 ---
 

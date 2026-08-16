@@ -25,11 +25,9 @@ seo_title: 'Polynomial Regression: Why It’s Still Linear Regression'
 seo_type: article
 summary: Polynomial regression models the relationship between the response variable and explanatory variables using a pth-order polynomial. Although this suggests a nonlinear relationship between the response and explanatory variables, it is still linear regression, as the linearity pertains to the relationship between the response variable and the regression coefficients.
 tags:
-- Polynomial regression
-- Regression analysis
-- Statistical modeling
-- Linear regression
-- Machine learning algorithms
+- Regression
+- Statistical Modeling
+- Machine Learning
 title: 'Understanding Polynomial Regression: Why It''s Still Linear Regression'
 ---
 

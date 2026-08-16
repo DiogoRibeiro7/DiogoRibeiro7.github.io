@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Data Analysis
+- Data Science
 classes: wide
 date: '2024-02-14'
 excerpt: Sequential change-point detection plays a crucial role in real-time monitoring
@@ -26,13 +26,14 @@ keywords:
 - Sequential change-point algorithms
 - Time series analysis
 - Python
+redirect_from:
+- '/data analysis/advanced_sequential_changepoint/'
 seo_description: Advanced methods for sequential change-point detection in univariate models, covering theory, applications, and key statistical techniques.
 seo_title: Sequential Change-Point Detection Techniques
 seo_type: article
 tags:
-- Change-point detection
-- Univariate models
-- Sequential analysis
+- Data Drift
+- Experimental Design
 - Python
 title: Advanced Sequential Change-Point Detection for Univariate Models
 ---

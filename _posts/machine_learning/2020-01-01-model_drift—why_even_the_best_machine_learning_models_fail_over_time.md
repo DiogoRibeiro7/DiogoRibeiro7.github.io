@@ -24,11 +24,8 @@ seo_title: 'Model Drift in Production: Case Studies'
 seo_type: article
 summary: This article explores model drift, its causes, real-world impact, and strategies to detect and mitigate its effects in production machine learning systems.
 tags:
-- Model drift
-- Data drift
-- Concept drift
-- Ml model monitoring
-- Ai lifecycle
+- Data Drift
+- Model Monitoring
 title: 'Model Drift in Production: Case Studies'
 ---
 

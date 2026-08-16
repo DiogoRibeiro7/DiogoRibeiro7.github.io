@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Public Health
 classes: wide
 date: '2022-07-26'
 excerpt: Spatial epidemiology combines geospatial data with data science techniques
@@ -22,6 +21,8 @@ keywords:
 - Public health
 - Gis
 - Data science
+redirect_from:
+- '/data science/public health/geospatial_data_public_health_insights/'
 seo_description: How geospatial data is transforming public health, and how spatial epidemiology tracks disease outbreaks to guide health interventions.
 seo_title: Spatial Epidemiology and Geospatial Data
 seo_type: article
@@ -30,11 +31,8 @@ summary: This article explores the importance of geospatial data in spatial epid
   the integration of spatial data with data science methods and how these insights
   are applied to public health decision-making and intervention strategies.
 tags:
-- Spatial epidemiology
-- Geospatial data
-- Disease surveillance
-- Data science
-- Public health
+- Epidemiology
+- Data Science
 title: 'Spatial Epidemiology: Geospatial Data for Public Health Insights'
 ---
 

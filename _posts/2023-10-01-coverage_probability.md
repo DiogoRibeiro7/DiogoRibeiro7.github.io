@@ -27,9 +27,8 @@ summary: In statistical estimation theory, coverage probability measures the lik
   explains its importance in statistical theory, prediction intervals, and nominal
   coverage probability.
 tags:
-- Confidence intervals
-- Statistical theory
-- Estimation
+- Confidence Intervals
+- Statistical Modeling
 title: 'Coverage Probability: Explained'
 ---
 

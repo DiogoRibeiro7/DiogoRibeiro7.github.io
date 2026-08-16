@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Computational Neuroscience
-- Neural Networks
 classes: wide
 date: '2024-11-12'
 excerpt: The Liquid State Machine offers a unique framework for computations within biological neural networks and adaptive artificial intelligence. Explore its fundamentals, theoretical background, and practical applications.
@@ -20,17 +18,15 @@ keywords:
 - Biological computation
 - Reservoir computing
 - python
+redirect_from:
+- '/machine learning/computational neuroscience/neural networks/exploring_liquid_state_machine/'
 seo_description: The Liquid State Machine, a computational model inspired by biological neural networks, and its applications.
 seo_title: The Liquid State Machine Explained
 seo_type: article
 summary: This comprehensive guide to the Liquid State Machine (LSM) model explores its foundations, significance in biological computations, and applications in machine learning, providing a deep dive into how LSMs leverage neural plasticity and random circuits for advanced computations.
 tags:
-- Liquid state machine
-- Spiking neural networks
-- Biological computation
-- Reservoir computing
-- Neural modeling
-- python
+- Neural Networks
+- Python
 title: 'Exploring the Liquid State Machine: A Computational Model for Neural Networks and Beyond'
 ---
 

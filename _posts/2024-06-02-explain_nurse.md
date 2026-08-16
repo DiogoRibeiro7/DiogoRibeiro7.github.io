@@ -1,11 +1,7 @@
 ---
 author_profile: false
 categories:
-- Healthcare Education
-- Statistical Methods
-- Data Interpretation
-- Nursing Practice
-- Professional Development
+- Research
 classes: wide
 date: '2024-06-02'
 header:
@@ -15,18 +11,16 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_8.jpg
+redirect_from:
+- '/healthcare education/statistical methods/data interpretation/nursing practice/professional development/explain_nurse/'
 seo_description: How weighted moving averages and standard deviation work in health care, explained for nurses and clinical decision-making.
 seo_title: Weighted Moving Average in Health Care
 seo_type: article
 tags:
-- Nursing education
-- Statistical analysis
-- Data interpretation in healthcare
-- Weighted moving average
-- Standard deviation
-- Clinical data
-- Nursing practice
-- Professional skills
+- Healthcare
+- Statistical Modeling
+- Time Series
+- Descriptive Statistics
 title: Explaining Weighted Moving Average and Standard Deviation in Health Care
 ---
 

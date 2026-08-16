@@ -1,15 +1,12 @@
 ---
+redirect_from:
+- '/mathematics/statistics/data science/bayesian_decision_theory_data_science/'
 title: "Bayesian Decision Theory for Data Science: From Uncertainty to Action"
 categories:
 - Mathematics
-- Statistics
-- Data Science
 tags:
 - Bayesian Statistics
-- Decision Theory
-- Risk
-- Uncertainty
-- Experimentation
+- Confidence Intervals
 - Machine Learning
 author_profile: false
 seo_title: "Bayesian Decision Theory for Data Science"

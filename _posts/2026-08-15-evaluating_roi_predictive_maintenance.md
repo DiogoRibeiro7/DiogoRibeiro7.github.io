@@ -1,16 +1,12 @@
 ---
+redirect_from:
+- '/data science/industrial analytics/predictive maintenance/evaluating_roi_predictive_maintenance/'
 title: "Evaluating the ROI of Predictive Maintenance: A Practical Measurement Framework"
 categories:
 - Data Science
-- Industrial Analytics
-- Predictive Maintenance
 tags:
 - Predictive Maintenance
-- ROI
-- Maintenance Analytics
 - Industrial IoT
-- Asset Management
-- Decision Science
 author_profile: false
 seo_title: "How to Evaluate Predictive Maintenance ROI"
 seo_description: "A practical framework for measuring predictive maintenance ROI, including cost drivers, baseline design, benefit attribution, and common measurement mistakes."

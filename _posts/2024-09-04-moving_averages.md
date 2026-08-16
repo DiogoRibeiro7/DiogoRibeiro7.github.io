@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Behavioral Analysis
+- Data Science
 classes: wide
 date: '2024-09-04'
 header:
@@ -11,13 +11,14 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.jpg
   twitter_image: /assets/images/data_science_4.jpg
+redirect_from:
+- '/behavioral analysis/moving_averages/'
 seo_description: How moving averages reveal trends in human behavior far beyond stock trading, and how to tune them for behavioral data.
 seo_title: Moving Averages Beyond Financial Markets
 seo_type: article
 tags:
-- Moving averages
-- Behavioral patterns
-- Data analysis
+- Time Series
+- Data Analysis
 title: Using Moving Averages to Analyze Behavior Beyond Financial Markets
 ---
 

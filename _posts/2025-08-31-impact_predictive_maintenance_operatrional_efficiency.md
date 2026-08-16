@@ -1,17 +1,16 @@
 ---
+redirect_from:
+- '/data science/industrial analytics/predictive maintenance/impact_predictive_maintenance_operatrional_efficiency/'
 title: >-
   The Impact of Predictive Maintenance on Operational Efficiency: A Data Science
   Perspective
 categories:
-  - Data Science
-  - Industrial Analytics
-  - Predictive Maintenance
+- Data Science
 tags:
-  - Predictive Maintenance
-  - Machine Learning
-  - Industrial IoT
-  - Operational Efficiency
-  - Condition Monitoring
+- Predictive Maintenance
+- Machine Learning
+- Industrial IoT
+- Model Monitoring
 author_profile: false
 seo_title: Predictive Maintenance and Operational Efficiency
 seo_description: 'The impact of predictive maintenance on industrial operations: data science methods, ML architectures, and measured outcomes.'

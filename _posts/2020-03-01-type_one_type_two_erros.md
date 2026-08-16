@@ -27,11 +27,8 @@ summary: This article provides an in-depth exploration of Type I and Type II err
   in hypothesis testing, explaining their importance, the trade-offs between them,
   and how they impact decisions in various domains, from clinical trials to business.
 tags:
-- Type ii error
-- False positive
-- False negative
-- Hypothesis testing
-- Type i error
+- Hypothesis Testing
+- Model Evaluation
 title: Understanding Type I and Type II Errors in Hypothesis Testing
 ---
 

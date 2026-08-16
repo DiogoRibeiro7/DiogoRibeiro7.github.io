@@ -26,11 +26,10 @@ summary: In this article, we examine the intersection of big data and climate sc
   focusing on how large-scale data collection and analysis are transforming our ability
   to monitor, predict, and mitigate climate change.
 tags:
-- Big data
-- Climate change
-- Environmental monitoring
-- Predictive analytics
-- Satellite data
+- Data Engineering
+- Climate and Environment
+- Model Monitoring
+- Machine Learning
 title: Big Data for Climate Change Mitigation
 ---
 

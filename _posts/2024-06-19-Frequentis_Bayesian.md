@@ -2,10 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Statistics
-- Data Science
-- Philosophy
-- Probability
 classes: wide
 date: '2024-06-19'
 header:
@@ -15,24 +11,19 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
   twitter_image: /assets/images/data_science_1.jpg
+redirect_from:
+- '/mathematics/statistics/data science/philosophy/probability/Frequentis_Bayesian/'
 seo_description: The Sunrise Problem compared through Bayesian and frequentist lenses, and what it reveals about inference from limited data.
 seo_title: 'The Sunrise Problem: Bayesian vs Frequentist'
 seo_type: article
 subtitle: Understanding the Probability of the Sun Rising Tomorrow
 tags:
-- Bayesian inference
-- Frequentist probability
-- Rule of succession
-- Sunrise problem
-- Richard price
-- Thomas bayes
-- Probability theory
-- Risk assessment
-- Reliability engineering
-- Medical diagnostics
-- Hypothesis testing
-- Survival analysis
-- Philosophy of science
+- Bayesian Statistics
+- Probability
+- Risk Management
+- Healthcare
+- Hypothesis Testing
+- Survival Analysis
 title: 'The Sunrise Problem: A Bayesian vs Frequentist Perspective'
 ---
 

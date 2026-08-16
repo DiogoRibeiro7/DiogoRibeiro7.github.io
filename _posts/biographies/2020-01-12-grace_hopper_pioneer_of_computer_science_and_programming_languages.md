@@ -23,12 +23,8 @@ seo_title: 'Grace Hopper: Pioneer of COBOL and Computing'
 seo_type: article
 summary: Grace Hopper, a pioneer in computer science, is best known for developing the first compiler for programming languages and playing a critical role in the creation of COBOL. Her work transformed how computers are programmed and coined the term 'debugging' for fixing computer issues.
 tags:
-- Grace hopper
-- Computer science
-- Programming languages
-- Cobol
-- Compiler development
-- Women in stem
+- Programming
+- Biographies
 title: 'Grace Hopper: Pioneer of Computer Science and Programming Languages'
 ---
 

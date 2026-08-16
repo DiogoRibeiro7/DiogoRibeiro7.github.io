@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Finance
-- Natural Language Processing
-- Case Study
+- Economics
 classes: wide
 date: '2025-04-25'
 excerpt: This case study shows how an LLM-powered agent automates the analysis of earnings call transcripts—summarizing key points, extracting financial guidance, and improving analyst productivity.
@@ -21,17 +19,16 @@ keywords:
 - OpenAI
 - Financial text analysis
 - python
+redirect_from:
+- '/finance/natural language processing/case study/case_study_how_llm_agent_streamlines_quarterly_earnings_calls_analysts/'
 seo_description: Explore how large language model agents can automate and streamline the analysis of quarterly earnings calls for financial analysts using OpenAI and LangChain.
 seo_title: LLM Agents for Automated Earnings Call Analysis
 seo_type: article
 summary: Learn how an LLM agent built with LangChain and OpenAI API can extract financial guidance, sentiment, and KPIs from quarterly earnings call transcripts, automating a time-consuming task for financial analysts.
 tags:
-- LLM agents
-- Earnings call analysis
-- Financial automation
-- LangChain
-- OpenAI
-- python
+- Natural Language Processing
+- MLOps
+- Python
 title: 'Case Study: How an LLM Agent Streamlines Quarterly Earnings Calls for Analysts'
 ---
 

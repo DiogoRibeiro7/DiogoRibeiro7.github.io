@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Science and Engineering
+- Research
 classes: wide
 date: '2023-09-08'
 excerpt: This article explores the complex interplay between traffic control, pedestrian
@@ -21,15 +21,14 @@ keywords:
 - Intelligent traffic systems
 - Mathematical models in traffic flow
 - Crowd management
+redirect_from:
+- '/science and engineering/dynamics_traffic_control_pedestrian_behavior/'
 seo_description: An in-depth analysis of how traffic control systems and pedestrian
   dynamics can be modeled using principles of fluid dynamics.
 seo_title: Traffic Control, Pedestrian Dynamics, and Fluid Dynamics
 seo_type: article
 tags:
-- Traffic control
-- Pedestrian dynamics
-- Fluid dynamics
-- Urban planning
+- Transportation
 title: Exploring the Dynamics of Traffic Control and Pedestrian Behavior Through the
   Lens of Fluid Dynamics
 ---

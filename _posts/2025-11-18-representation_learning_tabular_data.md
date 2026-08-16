@@ -1,6 +1,4 @@
 ---
-redirect_from:
-- '/Machine Learning/Data Science/representation_learning_tabular_data/'
 title: "Representation Learning for Tabular Data: Beyond Manual Feature Engineering"
 categories:
 - Machine Learning
@@ -10,7 +8,7 @@ tags:
 - Neural Networks
 author_profile: false
 seo_title: "Representation Learning for Tabular Data"
-seo_description: "A practical guide to representation learning for tabular data, covering embeddings, feature interactions, inductive bias, gradient boosting, neural networks, and evaluation."
+seo_description: 'Representation learning for tabular data: embeddings, feature interactions, inductive bias, and how it compares to gradient boosting.'
 excerpt: "Representation learning for tabular data is not about replacing feature engineering blindly. It is about learning useful structure while respecting the constraints of business data."
 summary: "This article explains how representation learning applies to tabular machine learning. It discusses categorical embeddings, feature interactions, supervised and self-supervised representations, why gradient boosting remains strong, where neural networks help, and how to evaluate learned features without leaking information."
 keywords:

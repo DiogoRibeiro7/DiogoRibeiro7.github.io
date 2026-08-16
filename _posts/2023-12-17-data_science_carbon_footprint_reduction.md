@@ -1,17 +1,13 @@
 ---
+redirect_from:
+- '/data science/sustainability/carbon management/data_science_carbon_footprint_reduction/'
 title: "Data Science in Carbon Footprint Reduction: Leveraging Big Data and Machine Learning for Sustainable Operations"
 categories:
 - Data Science
-- Sustainability
-- Carbon Management
 tags:
-- carbon footprint
-- machine learning
-- big data
-- emissions reduction
-- sustainable operations
-- green technology
-- carbon intelligence
+- Climate and Environment
+- Machine Learning
+- Data Engineering
 author_profile: false
 seo_title: "How Data Science Reduces Carbon Footprints Across Industries"
 seo_description: How big data and machine learning enable carbon footprint reduction in transportation, manufacturing, and beyond.

@@ -27,7 +27,7 @@ summary: This post reviews essential probability concepts like random variables,
 tags:
 - Probability
 - Statistics
-- Data science
+- Data Science
 title: Probability Theory Basics for Data Science
 ---
 

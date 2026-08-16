@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Statistics
 classes: wide
 date: '2024-09-18'
 excerpt: Unlock the power of Bayesian statistics in machine learning through probabilistic
@@ -26,6 +25,8 @@ keywords:
 - Probabilistic programming
 - Bayesian networks
 - Uncertainty quantification
+redirect_from:
+- '/machine learning/statistics/bayesian_statistics_machine_learning/'
 seo_description: 'Bayesian statistics in machine learning: probabilistic reasoning, uncertainty quantification, and practical applications.'
 seo_title: Demystifying Bayesian Statistics in Machine Learning
 seo_type: article
@@ -39,9 +40,8 @@ summary: Bayesian statistics provides a powerful framework for dealing with unce
   guide offers valuable insights into the real-world applications of Bayesian statistics
   in AI.
 tags:
-- Bayesian statistics
-- Probabilistic reasoning
-- Artificial intelligence
+- Bayesian Statistics
+- Artificial Intelligence
 title: Demystifying Bayesian Statistics for Machine Learning
 ---
 

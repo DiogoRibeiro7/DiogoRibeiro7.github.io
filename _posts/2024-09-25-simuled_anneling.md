@@ -31,11 +31,7 @@ summary: Simulated annealing is a probabilistic optimization technique inspired 
   find global solutions.
 tags:
 - Optimization
-- Simulated annealing
-- Algorithms
-- Hyperparameter tuning
-- Machine learning models
-- Non-convex optimization
+- Machine Learning
 - Python
 title: Optimizing Machine Learning Models using Simulated Annealing
 ---

@@ -24,10 +24,8 @@ seo_title: Differential Equations in Economic Growth Models
 seo_type: article
 summary: A comprehensive discussion of how differential equations are applied in macroeconomic growth models, with a special focus on the Solow and Romer growth models, dynamic systems, and optimal control theory.
 tags:
-- Economic Growth
-- Differential Equations
-- Solow Growth Model
-- Romer Endogenous Growth Model
+- Economics
+- Numerical Methods
 title: Differential Equations in Growth Models
 ---
 

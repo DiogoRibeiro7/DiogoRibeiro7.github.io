@@ -23,10 +23,7 @@ seo_title: 'Ada Lovelace: The First Computer Programmer'
 seo_type: article
 summary: Ada Lovelace is recognized as the first computer programmer, thanks to her collaboration with Charles Babbage on the Analytical Engine and her groundbreaking work on algorithms and computational theory. This extensive article explores her life, contributions, and lasting impact on the world of computing.
 tags:
-- Ada lovelace
-- Computer science
-- History of computing
-- Analytical engine
+- Programming
 title: 'Ada Lovelace: The First Computer Programmer'
 ---
 

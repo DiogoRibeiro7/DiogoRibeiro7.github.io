@@ -22,10 +22,8 @@ seo_title: Chi-Square Test for Categorical Data
 seo_type: article
 summary: An exploration of the Chi-Square Test, focusing on its use in testing the association between categorical variables and examining goodness-of-fit in statistical analysis.
 tags:
-- Categorical data
-- Chi-square test
-- Independence test
-- Goodness-of-fit
+- Data Analysis
+- Hypothesis Testing
 title: 'Chi-Square Test: Testing Categorical Data'
 ---
 

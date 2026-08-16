@@ -22,9 +22,8 @@ seo_title: 'Chi-Square Test: Applications and Limits'
 seo_type: article
 summary: An in-depth exploration of the Chi-Square Test, focusing on its uses for goodness-of-fit and independence testing in categorical data analysis.
 tags:
-- Chi-square test
-- Goodness-of-fit
-- Categorical data
+- Hypothesis Testing
+- Data Analysis
 title: 'The Chi-Square Test in Practice: Applications and Limits'
 ---
 

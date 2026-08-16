@@ -1,16 +1,12 @@
 ---
+redirect_from:
+- '/time series/model evaluation/forecasting/evaluating_time_series_forecasting_models_metrics_best_bractices/'
 title: 'Evaluating Time Series Forecasting Models: Metrics and Best Practices'
 categories:
-  - Time Series
-  - Model Evaluation
-  - Forecasting
+- Time Series
 tags:
-  - RMSE
-  - MAE
-  - MAPE
-  - model validation
-  - rolling-origin evaluation
-  - forecasting metrics
+- Model Evaluation
+- Model Monitoring
 author_profile: false
 seo_title: Evaluating Time Series Forecasting Models
 seo_description: How to evaluate time series forecasts with RMSE, MAE, AIC, and BIC, plus validation strategies and coding examples.

@@ -23,10 +23,8 @@ seo_title: AUC-PR vs. AUC-ROC on Imbalanced Data
 seo_type: article
 summary: In this article, we explore why AUC-PR (Area Under Precision-Recall Curve) is a superior metric for evaluating binary classifiers on imbalanced datasets compared to AUC-ROC and Gini. We discuss how class imbalance distorts performance metrics and provide real-world examples of why Precision-Recall curves give a clearer understanding of model performance on rare events.
 tags:
-- Binary classifiers
-- Imbalanced data
-- Auc-pr
-- Precision-recall
+- Classification
+- Model Evaluation
 title: 'Evaluating Binary Classifiers on Imbalanced Datasets: Why AUC-PR Beats AUC-ROC and Gini'
 ---
 

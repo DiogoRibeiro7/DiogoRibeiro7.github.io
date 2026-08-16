@@ -1,16 +1,13 @@
 ---
+redirect_from:
+- '/mathematics/data science/signal processing/fourier_analysis_for_data_science/'
 title: "Fourier Analysis for Data Science: From Signals to Features"
 categories:
 - Mathematics
-- Data Science
-- Signal Processing
 tags:
-- Fourier Analysis
-- Fourier Transform
+- Signal Processing
 - Time Series
 - Feature Engineering
-- Signal Processing
-- Spectral Analysis
 author_profile: false
 seo_title: "Fourier Analysis for Data Science"
 seo_description: 'An accessible introduction to Fourier analysis for data science: periodicity, frequency-domain features, aliasing, and leakage.'

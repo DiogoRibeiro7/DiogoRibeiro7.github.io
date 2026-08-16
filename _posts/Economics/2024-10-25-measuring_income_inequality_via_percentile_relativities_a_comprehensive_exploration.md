@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Mathematical Economics
+- Economics
 classes: wide
 date: '2024-10-25'
 excerpt: This article delves deeply into percentile relativity indices, a novel approach to measuring income inequality, offering fresh insights into income distribution and its societal implications.
@@ -21,18 +21,16 @@ keywords:
 - Statistics
 - Social sciences
 - Python
+redirect_from:
+- '/mathematical economics/measuring_income_inequality_via_percentile_relativities_a_comprehensive_exploration/'
 seo_description: Percentile-based measures of income inequality compared with the Gini Index, including approaches from Brazauskas, Greselin, and Zitikis.
 seo_title: Measuring Income Inequality via Percentile Relativities
 seo_type: article
 summary: This article explores the measurement of income inequality through percentile relativities, comparing it with traditional metrics like the Gini Index. It discusses new inequality indices, their application in real-world data, and their policy implications.
 tags:
-- Income inequality
-- Percentile relativities
-- Gini index
-- Statistical measures
-- Inequality indices
+- Economics
+- Descriptive Statistics
 - Statistics
-- Social sciences
 - Python
 title: 'Measuring Income Inequality via Percentile Relativities: A Comprehensive Exploration'
 ---

@@ -26,7 +26,7 @@ summary: This article introduces simple linear regression and the least squares 
 tags:
 - Regression
 - Statistics
-- Data science
+- Data Science
 title: A Primer on Simple Linear Regression
 ---
 

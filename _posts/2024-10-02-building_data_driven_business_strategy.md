@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Business Intelligence
+- Economics
 classes: wide
 date: '2024-10-02'
 excerpt: A data-driven business strategy integrates Business Intelligence and Data
@@ -18,6 +18,8 @@ keywords:
 - Data science
 - Data-driven strategy
 - Predictive analytics
+redirect_from:
+- '/business intelligence/building_data_driven_business_strategy/'
 seo_description: How to build a data-driven business strategy by blending Business Intelligence and Data Science to improve decision-making.
 seo_title: Building a Data-Driven Business Strategy
 seo_type: article
@@ -27,10 +29,8 @@ summary: Discover how Business Intelligence and Data Science can work together t
   of companies like Walmart, Uber, and Netflix, and explore the necessary infrastructure
   to support a data-driven organization.
 tags:
-- Bi
-- Data science
-- Predictive analytics
-- Data strategy
+- Data Science
+- Machine Learning
 title: 'Building a Data-Driven Business Strategy: The Role of Business Intelligence
   and Data Science'
 ---

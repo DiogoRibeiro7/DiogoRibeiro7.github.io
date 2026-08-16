@@ -35,9 +35,8 @@ summary: Monotonic constraints play a vital role in enhancing the reliability an
   businesses make more accurate and actionable predictions while maintaining transparency
   in their machine learning models.
 tags:
-- Causal ml
-- Monotonic constraints
-- Business applications
+- Correlation
+- Optimization
 - Python
 title: 'Causal Insights in Machine Learning: Monotonic Constraints for Better Predictions'
 ---

@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Operations Research
+- Economics
 classes: wide
 date: '2021-12-24'
 excerpt: Linear Programming is the foundation of optimization in operations research.
@@ -31,15 +31,13 @@ keywords:
 - Scalable lp solutions
 - First-order methods
 - Computational optimization
+redirect_from:
+- '/operations research/linear_programming/'
 seo_description: Linear programming from Simplex and interior-point methods to PDLP, a scalable first-order solver for very large LP problems.
 seo_title: Linear Programming and PDLP at Scale
 seo_type: article
 tags:
-- Primal-dual hybrid gradient method
-- First-order methods
-- Computational optimization
-- Linear programming
-- Or-tools
+- Optimization
 title: 'Exploring Classic Linear Programming (LP) Problems and Scalable Solutions:
   A Deep Dive into PDLP'
 ---

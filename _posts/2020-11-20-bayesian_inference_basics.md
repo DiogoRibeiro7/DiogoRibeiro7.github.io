@@ -25,8 +25,8 @@ seo_type: article
 summary: Learn how Bayesian inference updates prior beliefs into posterior distributions,
   providing a flexible framework for reasoning under uncertainty.
 tags:
-- Bayesian
-- Inference
+- Bayesian Statistics
+- Statistical Modeling
 - Statistics
 title: Bayesian Inference Explained
 ---

@@ -1,16 +1,14 @@
 ---
+redirect_from:
+- '/data science/industrial analytics/predictive maintenance/data_visualization_dashboards_predictive_maintenance/'
 title: "Data Visualization and Dashboards for Predictive Maintenance"
 categories:
 - Data Science
-- Industrial Analytics
-- Predictive Maintenance
 tags:
 - Predictive Maintenance
 - Data Visualization
-- Dashboards
+- Business Intelligence
 - Industrial IoT
-- Maintenance Planning
-- Decision Support
 author_profile: false
 seo_title: "Predictive Maintenance Dashboards and Data Visualization"
 seo_description: "A practical guide to designing predictive maintenance dashboards that connect sensor data, model outputs, asset health, and maintenance decisions."

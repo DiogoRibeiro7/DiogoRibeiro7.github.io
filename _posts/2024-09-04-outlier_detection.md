@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Machine Learning
 classes: wide
 date: '2024-09-04'
 excerpt: Explore the intricacies of outlier detection using distance metrics and metric
@@ -23,6 +22,8 @@ keywords:
 - Anomaly detection methods
 - Machine learning outlier techniques
 - Python
+redirect_from:
+- '/data science/machine learning/outlier_detection/'
 seo_description: Outlier detection in machine learning using distance metrics and metric learning, and how they improve anomaly detection accuracy.
 seo_title: Outlier Detection with Distance Metric Learning
 seo_type: article
@@ -31,11 +32,9 @@ summary: This comprehensive guide explores outlier detection using distance metr
   Forests and distance metric learning in identifying anomalies and improving detection
   accuracy in machine learning models.
 tags:
-- Outlier detection
-- Distance metrics
-- Random forest
-- Distance metric learning
-- Anomaly detection
+- Anomaly Detection
+- Mathematical Modeling
+- Decision Trees
 - Python
 title: 'Understanding Outlier Detection: A Deep Dive into Distance Metric Learning'
 ---

@@ -26,8 +26,7 @@ summary: A comprehensive guide on Exploratory Data Analysis (EDA) using Pandas, 
   essential techniques for understanding, cleaning, and analyzing datasets in Python.
 tags:
 - Python
-- Pandas
-- Eda
+- Exploratory Data Analysis
 title: Exploratory Data Analysis (EDA) Techniques with Pandas
 ---
 

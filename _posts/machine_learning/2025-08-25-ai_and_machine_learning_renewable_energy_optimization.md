@@ -1,14 +1,12 @@
 ---
+redirect_from:
+- '/renewable energy/artificial intelligence/machine learning/ai_and_machine_learning_renewable_energy_optimization/'
 title: "AI and Machine Learning in Renewable Energy Optimization: Powering the Future of Sustainable Energy"
 categories:
-- Renewable Energy
-- Artificial Intelligence
-- Machine Learning
+- Environment
 tags:
-- AI
-- ML
-- Smart Grid
-- Energy Storage
+- Artificial Intelligence
+- Climate and Environment
 - Forecasting
 header:
   image: /assets/images/data_science_11.jpg

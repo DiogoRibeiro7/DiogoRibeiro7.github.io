@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Operations Research
-- Data Science
-- Logistics
+- Economics
 classes: wide
 date: '2024-08-25'
 excerpt: Learn how to solve the Vehicle Routing Problem (VRP) using Python and optimization
@@ -25,6 +23,8 @@ keywords:
 - Supply chain management
 - Bash
 - Python
+redirect_from:
+- '/operations research/data science/logistics/Vehicle_Routing_Problem/'
 seo_description: How to solve the Vehicle Routing Problem (VRP) in Python, covering optimization techniques for transportation and logistics.
 seo_title: Solving the Vehicle Routing Problem in Python
 seo_type: article
@@ -33,13 +33,12 @@ summary: This comprehensive guide explains how to solve the Vehicle Routing Prob
   in transportation, logistics, and supply chain management to improve operational
   efficiency.
 tags:
-- Vehicle routing problem
+- Supply Chain
 - Python
 - Optimization
 - Transportation
-- Algorithms
-- Logistics
-- Bash
+- Machine Learning
+- Programming
 title: Implementing Vehicle Routing Problem Solutions with Python
 ---
 

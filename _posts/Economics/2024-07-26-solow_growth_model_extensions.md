@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Mathematical Economics
+- Economics
 classes: wide
 date: '2024-07-26'
 excerpt: An exploration of the Solow Growth Model's extensions, including the effects of technological advancement and human capital on economic growth.
@@ -21,18 +21,15 @@ keywords:
 - Economics
 - Growth Theory
 - Quantitative Analysis
+redirect_from:
+- '/mathematical economics/solow_growth_model_extensions/'
 seo_description: Explore extensions to the Solow Growth Model, incorporating technological progress and human capital to understand long-term economic growth.
 seo_title: 'Solow Growth Model: Technology and Human Capital'
 seo_type: article
 summary: This article delves into the Solow Growth Model and its extensions, examining how technological change and human capital influence economic growth.
 tags:
-- Solow growth model
-- Economic growth
-- Technological change
-- Human capital
 - Economics
-- Growth Theory
-- Quantitative Analysis
+- Mathematical Modeling
 title: 'Solow Growth Model and Extensions: Technological Change and Human Capital'
 ---
 

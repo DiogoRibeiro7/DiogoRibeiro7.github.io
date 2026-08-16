@@ -1,15 +1,11 @@
 ---
+redirect_from:
+- '/mathematics/science policy/research funding/the_dangerous_push_towards_pratical_mathematics/'
 title: "The Dangerous Push Toward Practical Mathematics: Why Pure Research Must Remain Protected"
 categories:
 - Mathematics
-- Science Policy
-- Research Funding
 tags:
-- Pure Mathematics
-- Applied Mathematics
-- Scientific Innovation
-- Academic Policy
-- Mathematical History
+- Mathematical Modeling
 author_profile: false
 seo_title: Why Pure Mathematics Must Be Protected
 seo_description: A defense of pure mathematics against pressure for immediate application, and its role in long-term innovation.

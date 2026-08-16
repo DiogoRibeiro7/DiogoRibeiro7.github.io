@@ -1,14 +1,13 @@
 ---
+redirect_from:
+- '/machine learning/model monitoring/data_drift_concept_drift_understanding_differences_implications/'
 title: 'Data Drift vs. Concept Drift: Understanding the Differences and Implications'
 categories:
-  - Machine Learning
-  - Model Monitoring
+- Machine Learning
 tags:
-  - data drift
-  - concept drift
-  - MLOps
-  - AI reliability
-  - model monitoring
+- Data Drift
+- MLOps
+- Model Monitoring
 author_profile: false
 seo_title: Data Drift vs. Concept Drift in Machine Learning
 seo_description: The differences between data drift and concept drift, how each affects models in production, and how to detect them.

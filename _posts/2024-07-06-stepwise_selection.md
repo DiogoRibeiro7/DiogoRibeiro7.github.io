@@ -2,8 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Data Science
-- Regression Analysis
 classes: wide
 date: '2024-07-06'
 header:
@@ -13,14 +11,15 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
   twitter_image: /assets/images/data_science_5.jpg
+redirect_from:
+- '/statistics/data science/regression analysis/stepwise_selection/'
 seo_description: Why stepwise selection biases coefficients upward, the consequences for your estimates, and the broader implications.
 seo_title: Why Stepwise Selection Ruins Your Estimates
 seo_type: article
 tags:
-- Stepwise selection
-- Regression models
-- Statistical bias
-- Variable selection
+- Regression
+- Statistical Modeling
+- Feature Engineering
 title: Stepwise Selection Algorithms Almost Always Ruin Statistical Estimates
 ---
 

@@ -27,10 +27,8 @@ seo_title: The Fowlkes-Mallows Index in Clustering
 seo_type: article
 summary: Learn about the Fowlkes-Mallows Index, a statistical tool for assessing clustering and classification accuracy, its applications, and how it aids in validating algorithm performance.
 tags:
-- Fowlkes-mallows index
 - Clustering
 - Classification
-- Fmi
 - Machine Learning
 - Data Science
 title: 'Understanding the Fowlkes-Mallows Index: A Tool for Clustering and Classification Evaluation'

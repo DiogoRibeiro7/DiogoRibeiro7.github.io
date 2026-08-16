@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Mathematics
-- Biographies
 classes: wide
 date: '2022-05-26'
 excerpt: Dorothy Vaughan was a pioneering mathematician and computer scientist who led NASA's computing division and became a leader in FORTRAN programming. She overcame racial and gender barriers to contribute to the U.S. space program.
@@ -19,17 +18,15 @@ keywords:
 - African american women in stem
 - Fortran programming expert
 - Hidden figures
+redirect_from:
+- '/mathematics/biographies/dorothy_vaughan_pioneering_mathematician_and_nasa_computer_scientist/'
 seo_description: 'Dorothy Vaughan, who led NASA''s computing division and became a FORTRAN expert while facing significant barriers.'
 seo_title: 'Dorothy Vaughan: Pioneering Mathematician and Leader at NASA'
 seo_type: article
 summary: Dorothy Vaughan was a groundbreaking mathematician and computer scientist who led the computing division at NASA during a pivotal time in the space race. She became an expert in FORTRAN programming and broke barriers as an African American woman in STEM.
 tags:
-- Dorothy vaughan
-- Nasa
-- Fortran
-- Women in stem
-- African american mathematicians
-- Computer science
+- Biographies
+- Programming
 title: 'Dorothy Vaughan: Pioneering Mathematician and NASA Computer Scientist'
 ---
 

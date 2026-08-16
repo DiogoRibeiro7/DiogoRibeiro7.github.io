@@ -1,9 +1,7 @@
 ---
 author_profile: false
 categories:
-- Finance
-- Artificial Intelligence
-- Large Language Models
+- Economics
 classes: wide
 date: '2025-04-30'
 excerpt: Large Language Model (LLM) agents are revolutionizing the finance industry
@@ -22,6 +20,8 @@ keywords:
 - Financial automation
 - Natural language processing
 - Financial data analysis
+redirect_from:
+- '/finance/artificial intelligence/large language models/llm_agents_finance_intelligent_automation_analysis/'
 seo_description: How Large Language Model agents are reshaping finance by automating analysis, reporting, and decision-making.
 seo_title: 'LLM Agents in Finance: Transforming Workflows'
 seo_type: article
@@ -29,11 +29,10 @@ summary: This article examines the rise of LLM-powered agents in finance, discus
   how autonomous AI systems built on large language models are transforming risk assessment,
   portfolio management, regulatory compliance, and market analysis.
 tags:
-- Llm agents
-- Finance automation
-- Financial analysis
-- Ai assistants
-- Autonomous agents
+- Natural Language Processing
+- MLOps
+- Finance
+- Artificial Intelligence
 title: 'LLM Agents in Finance: Unlocking Intelligent Automation and Analysis'
 ---
 

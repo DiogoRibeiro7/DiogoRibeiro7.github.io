@@ -30,12 +30,10 @@ seo_title: 'The Bell Curve: Understanding Normal Distribution'
 seo_type: article
 subtitle: The Normal Distribution
 tags:
-- Data science
-- Mathematical modeling
-- Statistical methods
-- Machine learning
-- Statistical analysis
-- Bell curve
+- Data Science
+- Mathematical Modeling
+- Statistical Modeling
+- Machine Learning
 - Python
 title: A Closer Look at the Classic Bell Curve
 ---

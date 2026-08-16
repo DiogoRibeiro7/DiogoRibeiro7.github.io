@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Machine Learning
-- Data Science
 classes: wide
 date: '2024-09-20'
 excerpt: Understand how Markov chains can be used to model customer behavior in cloud
@@ -26,6 +25,8 @@ keywords:
 - Customer behavior prediction
 - Data-driven decision-making
 - Python
+redirect_from:
+- '/machine learning/data science/model_customer_behaviour/'
 seo_description: How Markov chains model and predict customer behavior in cloud services, supporting data-driven retention strategies.
 seo_title: Modeling Cloud Customer Behavior with Markov Chains
 seo_type: article
@@ -38,11 +39,11 @@ summary: This article explores how Markov chains can be used to model customer b
   and practical applications, readers are introduced to the mechanics of Markov chains
   and their potential impact on cloud-based services.
 tags:
-- Cloud computing
-- Customer behavior
-- Markov chains
-- Data analysis
-- Predictive modeling
+- MLOps
+- Customer Analytics
+- Stochastic Processes
+- Data Analysis
+- Machine Learning
 - Python
 title: Deciphering Cloud Customer Behavior
 toc: false

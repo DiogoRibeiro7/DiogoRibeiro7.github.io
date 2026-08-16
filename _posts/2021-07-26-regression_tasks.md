@@ -33,12 +33,8 @@ seo_description: How to select a regression algorithm based on complexity, dimen
 seo_title: Choosing the Right Regression Model
 seo_type: article
 tags:
-- Polynomial regression
-- Support vector regression
 - Regression
-- Gaussian process regression
-- Machine learning algorithms
-- Principal component regression
+- Machine Learning
 - Python
 title: 'A Guide to Regression Tasks: Choosing the Right Approach'
 ---

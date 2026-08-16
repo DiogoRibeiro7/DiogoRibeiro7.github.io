@@ -1,16 +1,14 @@
 ---
+redirect_from:
+- '/machine learning/data science/model monitoring/unsupervised_learning_early_data_drift_detection/'
 title: "Using Unsupervised Learning for Early Data Drift Detection"
 categories:
 - Machine Learning
-- Data Science
-- Model Monitoring
 tags:
 - Data Drift
 - Unsupervised Learning
 - Model Monitoring
-- Autoencoders
 - Clustering
-- Production Machine Learning
 author_profile: false
 seo_title: "Unsupervised Learning for Early Data Drift Detection"
 seo_description: "A practical article on using clustering, density estimation, embeddings, and autoencoders to detect data drift before model performance labels arrive."

@@ -1,7 +1,7 @@
 ---
 author_profile: false
 categories:
-- Health Monitoring
+- Healthcare
 classes: wide
 date: '2021-05-12'
 excerpt: Discover the significance of heart rate variability (HRV) and how the coefficient
@@ -19,6 +19,8 @@ keywords:
 - Cardiovascular health
 - Fitness monitoring
 - Stress assessment
+redirect_from:
+- '/health monitoring/understanding_heart_rate_variability_through_lens_coefficient_variation_health_monitoring/'
 seo_description: Explore how the coefficient of variation offers deeper insights into
   heart rate variability and health monitoring.
 seo_title: Understanding HRV and Coefficient of Variation
@@ -27,9 +29,7 @@ summary: This article delves into heart rate variability (HRV), focusing on the 
   of variation (CV) as a critical metric for understanding cardiovascular health and
   overall well-being.
 tags:
-- Heart rate variability
-- Coefficient of variation
-- Health metrics
+- Descriptive Statistics
 title: Understanding Heart Rate Variability Through the Lens of the Coefficient of
   Variation in Health Monitoring
 ---

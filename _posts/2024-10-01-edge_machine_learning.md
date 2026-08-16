@@ -37,12 +37,9 @@ summary: This article explores how to implement continuous machine learning depl
   processing, lower latency, and improved decision-making in environments with limited
   connectivity.
 tags:
-- Mlops
-- Edge ai
-- Continuous deployment
-- Smart devices
-- Iot
-- Yaml
+- MLOps
+- Industrial IoT
+- Programming
 title: Implementing Continuous Machine Learning Deployment on Edge Devices
 ---
 

@@ -32,14 +32,12 @@ summary: This article explores the broader landscape of nonparametric tests, foc
   quantile regression and highlights how these approaches are used for robust statistical
   analysis without strict distributional assumptions.
 tags:
-- Nonparametric tests
-- Quantile regression
-- Mann-whitney test
-- Robust statistical methods
+- Nonparametric Methods
+- Regression
+- Hypothesis Testing
+- Robust Statistics
 - R
-- Bash
-- Ruby
-- Python
+- Programming
 title: 'The Real Power of Nonparametric Tests: Beyond Mann-Whitney'
 ---
 

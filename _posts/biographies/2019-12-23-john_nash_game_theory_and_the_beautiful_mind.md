@@ -23,10 +23,8 @@ seo_title: 'John Nash: Game Theory and the Mind Behind the Mathematics'
 seo_type: article
 summary: John Nash, the mathematical genius who revolutionized game theory and economics, is also remembered for his personal battle with schizophrenia. This biography delves into his contributions to mathematics and economics, as well as his complex personal journey, which became the basis of the film *A Beautiful Mind*.
 tags:
-- John nash
-- Game theory
+- Game Theory
 - Economics
-- Schizophrenia
 title: 'John Nash: Game Theory and the Beautiful Mind'
 ---
 

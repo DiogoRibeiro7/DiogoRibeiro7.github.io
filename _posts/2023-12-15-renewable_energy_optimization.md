@@ -1,17 +1,13 @@
 ---
+redirect_from:
+- '/renewable energy/artificial intelligence/energy systems/renewable_energy_optimization/'
 title: "AI and Machine Learning in Renewable Energy Optimization: Transforming the Future of Clean Energy"
 categories:
-- Renewable Energy
-- Artificial Intelligence
-- Energy Systems
+- Environment
 tags:
-- AI
+- Artificial Intelligence
 - Machine Learning
-- Renewable Energy
-- Energy Forecasting
-- Smart Grid
-- Energy Storage
-- Clean Energy
+- Climate and Environment
 author_profile: false
 seo_title: AI and ML for Renewable Energy Systems
 seo_description: How AI and machine learning are reshaping renewable energy forecasting, grid management, and storage optimization for a clean energy future.

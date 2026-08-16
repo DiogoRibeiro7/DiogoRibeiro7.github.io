@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Statistics
-- Data Analysis
 classes: wide
 date: '2024-08-24'
 excerpt: Discover the Kruskal-Wallis Test, a powerful non-parametric statistical method
@@ -23,6 +22,8 @@ keywords:
 - Statistical data analysis
 - R
 - Python
+redirect_from:
+- '/statistics/data analysis/kruskal_wallis/'
 seo_description: 'The Kruskal-Wallis test, a non-parametric alternative to ANOVA for independent samples: its assumptions and how to interpret results.'
 seo_title: 'Kruskal-Wallis Test: A Non-Parametric Guide'
 seo_type: article
@@ -31,11 +32,8 @@ summary: This comprehensive guide explains the Kruskal-Wallis Test, a non-parame
   normal distribution. It discusses when to use the test, its assumptions, and how
   to interpret the results in data analysis.
 tags:
-- Kruskal-wallis test
-- Non-parametric methods
-- Anova
-- Statistical tests
-- Hypothesis testing
+- Hypothesis Testing
+- Nonparametric Methods
 - R
 - Python
 title: 'The Kruskal-Wallis Test: A Comprehensive Guide to Non-Parametric Analysis'

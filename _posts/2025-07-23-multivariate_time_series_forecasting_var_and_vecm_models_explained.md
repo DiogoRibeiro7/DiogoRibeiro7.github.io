@@ -1,16 +1,12 @@
 ---
+redirect_from:
+- '/time series/econometrics/forecasting/multivariate_time_series_forecasting_var_and_vecm_models_explained/'
 title: 'Multivariate Time Series Forecasting: VAR and VECM Models Explained'
 categories:
-  - Time Series
-  - Econometrics
-  - Forecasting
+- Time Series
 tags:
-  - VAR
-  - VECM
-  - cointegration
-  - Johansen test
-  - Python
-  - stationarity
+- Python
+- Time Series
 author_profile: false
 seo_title: 'Multivariate Forecasting: VAR vs VECM in Python'
 seo_description: >-

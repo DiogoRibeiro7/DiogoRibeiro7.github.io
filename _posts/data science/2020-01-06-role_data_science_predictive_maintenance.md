@@ -24,11 +24,9 @@ seo_title: How Data Science Powers Predictive Maintenance
 seo_type: article
 summary: An in-depth look at how data science techniques such as regression, clustering, anomaly detection, and machine learning are transforming predictive maintenance across various industries.
 tags:
-- Predictive maintenance
-- Machine learning
-- Industrial iot
-- Industrial analytics
-- Predictive analytics
+- Predictive Maintenance
+- Machine Learning
+- Industrial IoT
 title: Leveraging Data Science Techniques for Predictive Maintenance
 ---
 

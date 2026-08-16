@@ -1,6 +1,4 @@
 ---
-redirect_from:
-- '/Machine Learning/Data Science/selective_prediction_abstention_machine_learning/'
 title: "Selective Prediction in Machine Learning: When Models Should Abstain"
 categories:
 - Machine Learning
@@ -9,7 +7,7 @@ tags:
 - Risk Management
 author_profile: false
 seo_title: "Selective Prediction in Machine Learning"
-seo_description: "A practical guide to selective prediction in machine learning, covering abstention, confidence thresholds, risk-coverage trade-offs, calibration, human review, and deployment."
+seo_description: 'Selective prediction in machine learning: abstention, confidence thresholds, risk-coverage trade-offs, and routing to human review.'
 excerpt: "Selective prediction gives machine learning systems a third option: predict when confidence is adequate and abstain when the cost of being wrong is too high."
 summary: "This article explains selective prediction as a practical design pattern for reliable machine learning systems. It covers abstention, reject options, confidence scores, calibration, risk-coverage curves, conformal-style sets, human review, operational constraints, fairness risks, and monitoring."
 keywords:

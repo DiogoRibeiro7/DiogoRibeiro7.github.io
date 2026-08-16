@@ -29,9 +29,9 @@ seo_title: The Myth and Reality of Sample Size in Statistical Analysis
 seo_type: article
 subtitle: A Nuanced Perspective
 tags:
-- Data analysis
-- Sample size
-- Statistical accuracy
+- Data Analysis
+- Sample Size
+- Model Evaluation
 title: The Myth and Reality of Sample Size in Statistical Analysis
 ---
 

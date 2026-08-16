@@ -30,10 +30,8 @@ summary: This article provides a detailed examination of the False Positive Rate
   it plays a crucial role.
 tags:
 - R
-- False positive rate
-- Model evaluation
-- Machine learning metrics
-- Binary classification
+- Model Evaluation
+- Classification
 title: Analysis of the False Positive Rate (FPR) in Machine Learning
 ---
 

@@ -28,10 +28,7 @@ seo_title: 'Paul Erdős: The Prodigy Who Changed Mathematics'
 seo_type: article
 subtitle: A Mathematician for the Ages
 tags:
-- Paul erdős
-- Mathematical genius
-- Number theory
-- Collaboration in science
+- Number Theory
 title: The Life and Legacy of Paul Erdős
 ---
 

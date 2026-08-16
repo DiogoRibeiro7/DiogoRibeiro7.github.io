@@ -26,15 +26,12 @@ subtitle: Complex Probabilities with Markov Chain Monte Carlo
 summary: A comprehensive guide to understanding Bayesian statistics and MCMC methods,
   including real-world applications and Python examples.
 tags:
-- Bayesian statistics
-- Markov chain monte carlo (mcmc)
-- Statistical computing
-- Data analysis techniques
-- Probability theory
-- Python programming for statistics
-- Predictive modeling
-- Machine learning algorithms
+- Bayesian Statistics
+- Stochastic Processes
+- Data Analysis
+- Probability
 - Python
+- Machine Learning
 title: 'Mastering Bayesian Statistics: An In-Depth Guide to MCMC'
 ---
 

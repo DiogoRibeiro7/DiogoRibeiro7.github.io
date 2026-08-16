@@ -2,7 +2,6 @@
 author_profile: false
 categories:
 - Data Science
-- Statistics
 classes: wide
 date: '2020-01-13'
 excerpt: Most diagrams for choosing statistical tests miss the bigger picture. Here's a bold, practical approach that emphasizes interpretation over mechanistic rules, and cuts through statistical misconceptions like the N>30 rule.
@@ -19,15 +18,16 @@ keywords:
 - Data Science
 - Hypothesis Testing
 - Nonparametric Tests
+redirect_from:
+- '/data science/statistics/rethinking_statistical_test_selection_why_diagrams_failing_us/'
 seo_description: 'A critical take on statistical test selection: move past decision diagrams and N>30 pseudorules toward meaningful interpretation and robust testing.'
 seo_title: Rethinking How We Choose Statistical Tests
 seo_type: article
 summary: This article critiques popular frameworks for selecting statistical tests, offering a robust, more flexible alternative that emphasizes interpretation and realistic outcomes over pseudorules and data transformations. Learn why techniques like Welch’s t-test and permutation tests are better than many 'classics'.
 tags:
-- Statistical Analysis
+- Statistical Modeling
 - Data Science
-- Testing Frameworks
-- Welch Test
+- Hypothesis Testing
 title: 'Rethinking Statistical Test Selection: Why the Diagrams Are Failing Us'
 ---
 
