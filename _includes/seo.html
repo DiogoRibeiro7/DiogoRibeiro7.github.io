@@ -74,25 +74,32 @@
   <meta property="og:image" content="{{ page_teaser_image }}">
 {% endif %}
 
+{%- comment -%}
+  Twitter/X card tags do not require a site username. Gating the whole block
+  on site.twitter.username meant no card was emitted at all, so shared links
+  rendered as bare URLs.
+{%- endcomment -%}
+<meta name="twitter:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
+<meta name="twitter:url" content="{{ canonical_url }}">
+{% if seo_description %}
+  <meta name="twitter:description" content="{{ seo_description }}">
+{% endif %}
+
+{% if page_large_image %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ page_large_image }}">
+{% elsif page_teaser_image %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ page_teaser_image }}">
+{% else %}
+  <meta name="twitter:card" content="summary">
+{% endif %}
+
 {% if site.twitter.username %}
   <meta name="twitter:site" content="@{{ site.twitter.username | replace: "@", "" }}">
-  <meta name="twitter:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
-  <meta name="twitter:description" content="{{ seo_description }}">
-  <meta name="twitter:url" content="{{ canonical_url }}">
-
-  {% if page_large_image %}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ page_large_image }}">
-  {% else %}
-    <meta name="twitter:card" content="summary">
-    {% if page_teaser_image %}
-      <meta name="twitter:image" content="{{ page_teaser_image }}">
-    {% endif %}
-  {% endif %}
-
-  {% if author_twitter %}
-    <meta name="twitter:creator" content="@{{ author_twitter }}">
-  {% endif %}
+{% endif %}
+{% if author_twitter %}
+  <meta name="twitter:creator" content="@{{ author_twitter }}">
 {% endif %}
 
 {% if page.date %}
@@ -137,6 +144,41 @@
     {% endif %}
   }
 </script>
+
+{%- comment -%}
+  Article-level structured data. Without it a post only carried the site-wide
+  Person schema, so search engines had no machine-readable headline, date,
+  author or image for the article itself.
+{%- endcomment -%}
+{% if og_type == "article" and page.title %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": {{ canonical_url | jsonify }} },
+    "headline": {{ page.title | markdownify | strip_html | strip_newlines | escape_once | jsonify }},
+    "url": {{ canonical_url | jsonify }}{% if seo_description %},
+    "description": {{ seo_description | jsonify }}{% endif %}{% if page.date %},
+    "datePublished": {{ page.date | date_to_xmlschema | jsonify }}{% endif %}{% if page.last_modified_at %},
+    "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }}{% elsif page.date %},
+    "dateModified": {{ page.date | date_to_xmlschema | jsonify }}{% endif %},
+    "author": {
+      "@type": "Person",
+      "name": {{ author.name | default: site.name | jsonify }}{% if author.links %},
+      "url": {{ site.url | jsonify }}{% endif %}
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ site.title | jsonify }}{% if site_og_image %},
+      "logo": { "@type": "ImageObject", "url": {{ site_og_image | jsonify }} }{% endif %}
+    }{% if page_large_image %},
+    "image": {{ page_large_image | jsonify }}{% elsif page_teaser_image %},
+    "image": {{ page_teaser_image | jsonify }}{% endif %}{% if page.categories and page.categories.first %},
+    "articleSection": {{ page.categories.first | jsonify }}{% endif %}{% if page.tags and page.tags.size > 0 %},
+    "keywords": {{ page.tags | join: ", " | jsonify }}{% endif %}
+  }
+</script>
+{% endif %}
 
 {% if site.google_site_verification %}
   <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
