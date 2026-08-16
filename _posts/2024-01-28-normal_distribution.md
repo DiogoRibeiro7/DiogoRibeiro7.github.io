@@ -7,12 +7,12 @@ date: '2024-01-28'
 excerpt: Discover the significance of the Normal Distribution, also known as the Bell
   Curve, in statistics and its widespread application in real-world scenarios.
 header:
-  image: /assets/images/data_science_9.jpg
-  og_image: /assets/images/data_science_9.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
+  og_image: /assets/images/data_science_9.webp
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Normal distribution
 - Bell curve
@@ -38,7 +38,7 @@ tags:
 title: A Closer Look at the Classic Bell Curve
 ---
 
-![Example Image](/assets/images/normal_distribution/Bell-Curve.png)
+![Bell Curve - A Closer Look at the Classic Bell Curve](/assets/images/normal_distribution/Bell-Curve.png){: width="1200" height="800" loading="lazy"}
 
 In the bustling tapestry of life, patterns and chaos dance together in an intricate ballet. We humans, driven by an innate curiosity, seek to understand this dance, to find meaning in the seemingly random, to discern the hidden rhythms of nature. This quest has led us to the doorstep of probability and statistics, a realm where numbers and theories intertwine to reveal the secrets of the universe.
 

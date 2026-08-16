@@ -7,12 +7,12 @@ date: '2022-03-15'
 excerpt: Explore Bayesian A/B testing as a powerful framework for analyzing conversion
   rates, providing more nuanced insights than traditional frequentist approaches.
 header:
-  image: /assets/images/data_science_8.jpg
-  og_image: /assets/images/data_science_9.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
+  og_image: /assets/images/data_science_9.webp
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_8.avif
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Bayesian a/b testing
 - Conversion rate analysis

@@ -7,12 +7,12 @@ date: '2025-06-12'
 excerpt: Hyperparameter tuning can drastically improve model performance. Explore
   common search strategies and tools.
 header:
-  image: /assets/images/data_science_15.jpg
-  og_image: /assets/images/data_science_15.jpg
-  overlay_image: /assets/images/data_science_15.jpg
+  image: /assets/images/data_science_15.webp
+  og_image: /assets/images/data_science_15.webp
+  overlay_image: /assets/images/data_science_15.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_15.jpg
-  twitter_image: /assets/images/data_science_15.jpg
+  teaser: /assets/images/data_science_15.webp
+  twitter_image: /assets/images/data_science_15.webp
 keywords:
 - Hyperparameter tuning
 - Grid search

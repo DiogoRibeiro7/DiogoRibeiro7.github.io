@@ -32,6 +32,8 @@ title: 'Understanding Prediction Error: Bias, Variance, and Model Evaluation Tec
 
 Predicting outcomes using statistical or machine learning models is central to data science, machine learning, and predictive analytics. A common goal is to predict a target variable $$ Y $$ from a set of predictors $$ X $$ using a predictive function $$ f $$, often parameterized and estimated from the data. In practice, after building a model, we want to know how well it will predict unseen data. However, simply assessing the performance of the model on the training set, often referred to as **training error**, can give a misleadingly optimistic impression. This article explores different methods for estimating prediction error and addresses the bias-variance tradeoff in model evaluation, focusing on **cross-validation**, **bootstrap methods**, and their variants, including **Efron and Tibshirani's .632 estimator**.
 
+![Training and test error against model complexity. Training error falls monotonically while test error turns upward, and the gap between them is the overfitting penalty.](/assets/images/figures/bias_variance.png){: width="1177" height="697" loading="lazy"}
+
 ## The Basics: Predicting $$ Y $$ from $$ X $$
 
 Consider the problem where we aim to predict a response $$ Y $$ using a set of predictors $$ X $$ through a function $$ f $$. Often, $$ f $$ is estimated from data, and it can take the form of a linear model, for instance, $$ f(X) = X\beta $$, where $$ \beta $$ are parameters estimated from the data. In more flexible settings, $$ f $$ could represent a more complex model like decision trees, random forests, or neural networks. 

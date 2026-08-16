@@ -9,11 +9,11 @@ excerpt: This article dives into the implementation of continuous machine learni
   agriculture use case.
 header:
   image: /assets/images/Edge-Computing.png
-  og_image: /assets/images/data_science_2.jpg
+  og_image: /assets/images/data_science_2.avif
   overlay_image: /assets/images/Edge-Computing.png
   show_overlay_excerpt: false
   teaser: /assets/images/Edge-Computing.png
-  twitter_image: /assets/images/data_science_2.jpg
+  twitter_image: /assets/images/data_science_2.avif
 keywords:
 - Edge machine learning
 - Continuous deployment on edge devices
@@ -43,7 +43,7 @@ tags:
 title: Implementing Continuous Machine Learning Deployment on Edge Devices
 ---
 
-![Example Image](/assets/images/edge-devices.png)
+![Edge devices - Implementing Continuous Machine Learning Deployment on Edge Devices](/assets/images/edge-devices.png){: width="694" height="439" loading="lazy"}
 <div align="center"><em>Machine Learning in Edge Devices</em></div>
 
 Running machine learning (ML) inference on edge devices—closer to where the data is generated—provides numerous advantages compared to centralized cloud-based inference. These benefits include real-time processing, reduced latency, enhanced privacy, lower operational costs, and the ability to function in environments with intermittent or no internet connectivity. However, setting up an end-to-end ML system for continuous deployment on edge devices presents unique challenges. The process can be significantly more complex than deploying ML models in a centralized cloud environment, primarily due to the distributed nature of edge devices and the need for real-time updates.

@@ -9,11 +9,11 @@ excerpt: As AI revolutionizes elderly care, ethical concerns around privacy, aut
   advancements with the dignity and personal preferences of elderly individuals.
 header:
   image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_9.webp
   overlay_image: /assets/images/data_science_5.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Ai in elderly care
 - Ethics in healthcare

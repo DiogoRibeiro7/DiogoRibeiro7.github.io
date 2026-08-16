@@ -27,7 +27,7 @@ tags:
 title: 'The Sunrise Problem: A Bayesian vs Frequentist Perspective'
 ---
 
-![Example Image](/assets/images/sunrise.jpg)
+![Sunrise - The Sunrise Problem: A Bayesian vs Frequentist Perspective](/assets/images/sunrise.jpg){: width="2048" height="1536" loading="lazy"}
 <p align="center"><i>Sunrise in Lisbon Harbour, December 2020</i></p>
 
 ## Introduction

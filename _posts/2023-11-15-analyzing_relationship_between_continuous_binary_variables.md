@@ -8,12 +8,12 @@ excerpt: Learn the differences between biserial and point-biserial correlation m
   and discover how they can be applied to analyze relationships between continuous
   and binary variables in educational testing, psychology, and medical diagnostics.
 header:
-  image: /assets/images/data_science_9.jpg
-  og_image: /assets/images/data_science_9.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
+  og_image: /assets/images/data_science_9.webp
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Biserial correlation
 - Point-biserial correlation

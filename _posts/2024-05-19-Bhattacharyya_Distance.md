@@ -8,12 +8,12 @@ excerpt: Dive into Bhattacharyya distance, loss functions such as MSE and cross-
   and their applications in optimizing machine learning models for classification
   and regression.
 header:
-  image: /assets/images/data_science_9.jpg
-  og_image: /assets/images/data_science_2.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
+  og_image: /assets/images/data_science_2.avif
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_9.webp
+  twitter_image: /assets/images/data_science_2.avif
 keywords:
 - Bhattacharyya distance in machine learning
 - Essential loss functions

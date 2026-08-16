@@ -7,12 +7,12 @@ date: '2022-10-15'
 excerpt: Learn how time series decomposition reveals trend, seasonality, and residual
   components for clearer forecasting insights.
 header:
-  image: /assets/images/data_science_12.jpg
-  og_image: /assets/images/data_science_12.jpg
-  overlay_image: /assets/images/data_science_12.jpg
+  image: /assets/images/data_science_12.webp
+  og_image: /assets/images/data_science_12.webp
+  overlay_image: /assets/images/data_science_12.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_12.jpg
-  twitter_image: /assets/images/data_science_12.jpg
+  teaser: /assets/images/data_science_12.webp
+  twitter_image: /assets/images/data_science_12.webp
 keywords:
 - Time series
 - Trend

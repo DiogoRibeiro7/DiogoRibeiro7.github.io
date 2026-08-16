@@ -8,12 +8,12 @@ excerpt: Discover how data science, a multidisciplinary field combining statisti
   computer science, and domain expertise, can drive better business decisions and
   outcomes.
 header:
-  image: /assets/images/data_science_9.jpg
-  og_image: /assets/images/data_science_8.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
+  og_image: /assets/images/data_science_8.avif
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_9.webp
+  twitter_image: /assets/images/data_science_8.avif
 keywords:
 - Data science
 - Business intelligence
@@ -48,7 +48,7 @@ tags:
 title: Demystifying Data Science
 ---
 
-![Example Image](/assets/images/data_has_better_idea.jpg)
+![Data has better idea - Demystifying Data Science](/assets/images/data_has_better_idea.jpg){: width="4032" height="3024" loading="lazy"}
 
 Data science has emerged as one of the most powerful tools in the modern business landscape. From Silicon Valley startups to Fortune 500 companies, businesses are increasingly harnessing the power of data to gain competitive advantages. But despite its growing prominence, data science remains a somewhat elusive concept to many.
 

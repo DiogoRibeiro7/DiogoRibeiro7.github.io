@@ -8,11 +8,11 @@ excerpt: Discover the universal structure behind statistical tests, highlighting
   core comparison between observed and expected data that drives hypothesis testing
   and data analysis.
 header:
-  image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
   og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.avif
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - Statistical tests

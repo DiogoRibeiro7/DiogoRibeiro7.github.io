@@ -23,12 +23,12 @@ keywords:
 classes: wide
 date: '2025-07-26'
 header:
-  image: /assets/images/data_science_8.jpg
-  og_image: /assets/images/data_science_8.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
+  og_image: /assets/images/data_science_8.avif
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.avif
+  twitter_image: /assets/images/data_science_8.avif
 ---
 
 Building upon the foundational concepts of predictive maintenance, the integration of machine learning and artificial intelligence represents the cutting edge of asset management technology. While traditional predictive maintenance techniques provide valuable insights through statistical analysis and threshold-based monitoring, machine learning approaches unlock unprecedented capabilities to identify complex patterns, predict failure modes with greater accuracy, and optimize maintenance strategies through continuous learning from operational data.

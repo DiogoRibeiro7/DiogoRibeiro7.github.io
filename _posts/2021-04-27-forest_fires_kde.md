@@ -36,7 +36,7 @@ tags:
 title: 'GIS-Based Forest Fire Hotspot Identification: A Comprehensive Approach Using Contributory Factors'
 ---
 
-![Example Image](/assets/images/forest_fire_kde_2.png)
+![Forest fire kde 2 - GIS-Based Forest Fire Hotspot Identification: A Comprehensive Approach Using Contributory Factors](/assets/images/forest_fire_kde_2.png){: width="850" height="1525" loading="lazy"}
 
 ### Introduction
 

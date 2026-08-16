@@ -31,7 +31,7 @@ tags:
 title: The New Illiteracy That’s Crippling Our Decision-Making
 ---
 
-![Example Image](/assets/images/inumeracy.jpg)
+![Inumeracy - The New Illiteracy That’s Crippling Our Decision-Making](/assets/images/inumeracy.jpg){: width="1400" height="1867" loading="lazy"}
 
 In an era where data has been dubbed “the new oil,” one would expect a corresponding surge in our collective ability to understand, interpret, and wield numbers. Yet, here we are, facing a paradox that is as unsettling as it is overlooked. Welcome to the age of innumeracy — the inability to understand and work with numbers — a phenomenon that is fast becoming the new illiteracy of our time.
 

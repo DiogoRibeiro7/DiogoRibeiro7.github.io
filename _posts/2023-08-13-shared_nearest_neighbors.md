@@ -8,11 +8,11 @@ excerpt: SNN is a distance metric that enhances traditional methods like k Neare
   Neighbors, especially in high-dimensional, variable-density datasets.
 header:
   image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_9.webp
   overlay_image: /assets/images/data_science_5.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Shared nearest neighbors
 - Snn

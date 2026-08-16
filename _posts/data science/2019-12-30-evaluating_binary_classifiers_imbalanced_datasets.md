@@ -6,12 +6,12 @@ classes: wide
 date: '2019-12-30'
 excerpt: AUC-ROC and Gini are popular metrics for evaluating binary classifiers, but they can be misleading on imbalanced datasets. Discover why AUC-PR, with its focus on Precision and Recall, offers a better evaluation for handling rare events.
 header:
-  image: /assets/images/data_science_8.jpg
-  og_image: /assets/images/data_science_8.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
+  og_image: /assets/images/data_science_8.avif
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.avif
+  twitter_image: /assets/images/data_science_8.avif
 keywords:
 - Auc-pr
 - Precision-recall

@@ -45,7 +45,7 @@ tags:
 title: Demystifying Bayesian Statistics for Machine Learning
 ---
 
-![Thomas Bayes](/assets/images/thomas-bayes.jpg)
+![Thomas Bayes](/assets/images/thomas-bayes.jpg){: width="580" height="358" loading="lazy"}
 <div align="center"><em>Bayes</em></div>
 
 The rapid advancement of machine learning has transformed industries globally, from healthcare and finance to entertainment and transportation. A cornerstone of these developments is the ability of machines to learn from data, make predictions, and assist in decision-making processes. While frequentist statistics has long been the backbone of statistical inference, Bayesian statistics has emerged as a powerful alternative, offering a fundamentally different approach to probability and inference. This article aims to demystify Bayesian statistics and explore its profound impact on machine learning.

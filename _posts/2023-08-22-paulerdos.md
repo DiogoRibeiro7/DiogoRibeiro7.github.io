@@ -6,11 +6,11 @@ classes: wide
 date: '2023-08-22'
 excerpt: Delve into the fascinating life of Paul Erdős, a wandering mathematician whose love for numbers and collaboration reshaped the world of mathematics.
 header:
-  image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
   og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - Paul erdős biography
@@ -32,7 +32,7 @@ tags:
 title: The Life and Legacy of Paul Erdős
 ---
 
-![Example Image](/assets/images/Erdos_Paul.jpg)
+![Erdos Paul - The Life and Legacy of Paul Erdős](/assets/images/Erdos_Paul.jpg){: width="1120" height="814" loading="lazy"}
 <p align="center"><i>Paul Erdös</i></p>
 
 When one speaks of Paul Erdős, it's as if one has whispered the secret name of a mathematical deity, summoning forth the very essence of intellectual curiosity and rigorous thought. Erdős was no mere mathematician, though his contributions would have sufficed to solidify that title. He was, in essence, a philosopher of numbers, a sage who sought not just solutions, but the ethereal beauty that underpins the logical structure of the universe.
@@ -96,7 +96,7 @@ But let us not forget, to participate in this web of intellectual camaraderie, t
 
 And so, the Erdős number stands not just as a legacy of one man's brilliance but as an eternal monument to the power of collaborative genius. How splendidly fitting that a life dedicated to the collective pursuit of knowledge should leave behind such a resonant echo, reverberating through the annals of academic history.
 
-![Example Image](/assets/images/erdos_graph.png)
+![Erdos graph - The Life and Legacy of Paul Erdős](/assets/images/erdos_graph.jpg){: width="532" height="359" loading="lazy"}
 <p align="center"><i>Erdös Graph</i></p>
 
 ## Prolific Output: The Sage Who Never Rested
@@ -162,11 +162,11 @@ Hungarian Academy of Sciences - Erdős Biography
 
 But remember, the story of Paul Erdős, like all great stories, is eternal. It invites you to participate, to learn, and to add your own insights into the life of this remarkable man.
 
-![Example Image](/assets/images/n_is_number.jpeg)
+![N is number - The Life and Legacy of Paul Erdős](/assets/images/n_is_number.jpeg){: width="174" height="289" loading="lazy"}
 <p align="left"><i>N is a Number</i></p>
 
-![Example Image](/assets/images/proofs_from_the_book.png)
+![Proofs from the book - The Life and Legacy of Paul Erdős](/assets/images/proofs_from_the_book.png){: width="743" height="862" loading="lazy"}
 <p align="center"><i>Proofs from The Book</i></p>
 
-![Example Image](/assets/images/the_man.jpg)
+![The man - The Life and Legacy of Paul Erdős](/assets/images/the_man.jpg){: width="614" height="1000" loading="lazy"}
 <p align="center"><i>The Man Who Loved Only Numbers</i></p>

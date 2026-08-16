@@ -7,12 +7,12 @@ date: '2020-11-20'
 excerpt: Explore the fundamentals of Bayesian inference and how prior beliefs combine
   with data to form posterior conclusions.
 header:
-  image: /assets/images/data_science_12.jpg
-  og_image: /assets/images/data_science_12.jpg
-  overlay_image: /assets/images/data_science_12.jpg
+  image: /assets/images/data_science_12.webp
+  og_image: /assets/images/data_science_12.webp
+  overlay_image: /assets/images/data_science_12.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_12.jpg
-  twitter_image: /assets/images/data_science_12.jpg
+  teaser: /assets/images/data_science_12.webp
+  twitter_image: /assets/images/data_science_12.webp
 keywords:
 - Bayesian statistics
 - Priors

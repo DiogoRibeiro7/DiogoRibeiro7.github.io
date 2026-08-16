@@ -5,12 +5,12 @@ categories:
 classes: wide
 date: '2024-06-02'
 header:
-  image: /assets/images/data_science_8.jpg
-  og_image: /assets/images/data_science_8.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
+  og_image: /assets/images/data_science_8.avif
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.avif
+  twitter_image: /assets/images/data_science_8.avif
 redirect_from:
 - '/healthcare education/statistical methods/data interpretation/nursing practice/professional development/explain_nurse/'
 seo_description: How weighted moving averages and standard deviation work in health care, explained for nurses and clinical decision-making.

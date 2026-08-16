@@ -31,7 +31,7 @@ title: 'Katherine Johnson: The Mathematician Who Helped Launch America into Spac
 ---
 
 <p align="center">
-  <img src="/assets/images/biographies/ katherine_johnson.jpg" alt="Example Image">
+  <img src="/assets/images/biographies/ katherine_johnson.jpg" alt="Katherine johnson - Katherine Johnson: The Mathematician Who Helped Launch America into Space" loading="lazy" width="1000" height="600">
 </p>
 <p align="center"><i> Katherine Johnson</i></p>
 

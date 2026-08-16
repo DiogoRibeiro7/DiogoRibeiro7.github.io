@@ -7,12 +7,12 @@ date: '2024-10-02'
 excerpt: A data-driven business strategy integrates Business Intelligence and Data
   Science to drive informed decisions, optimize resources, and stay competitive.
 header:
-  image: /assets/images/data_science_9.jpg
-  og_image: /assets/images/data_science_9.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
+  og_image: /assets/images/data_science_9.webp
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Business intelligence
 - Data science

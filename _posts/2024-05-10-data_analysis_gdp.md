@@ -25,7 +25,7 @@ tags:
 title: The Limitations of Aggregated GDP Data in Data Science Analysis
 ---
 
-![Example Image](/assets/images/gdp.jpg)
+![Gdp - The Limitations of Aggregated GDP Data in Data Science Analysis](/assets/images/gdp.jpg){: width="1500" height="1002" loading="lazy"}
 
 The Gross Domestic Product (GDP) serves as a pivotal metric in economics, quantifying the total monetary value of all goods and services produced within a country during a specific period. As a comprehensive indicator of economic activity, GDP is integral to assessing the health and stability of a nation’s economy. Economists, policymakers, and analysts rely on GDP to make informed decisions about economic policy and investment.
 

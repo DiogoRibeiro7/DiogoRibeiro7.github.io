@@ -5,11 +5,11 @@ categories:
 classes: wide
 date: '2024-05-15'
 header:
-  image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
   og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
   twitter_image: /assets/images/data_science_3.jpg
 redirect_from:
 - '/mathematics/statistics/data science/machine learning/Feature_Engineering/'

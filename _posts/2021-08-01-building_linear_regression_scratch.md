@@ -7,12 +7,12 @@ date: '2021-08-01'
 excerpt: A step-by-step guide to implementing Linear Regression from scratch using
   the Normal Equation method, complete with Python code and evaluation techniques.
 header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_2.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
+  og_image: /assets/images/data_science_2.avif
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
+  twitter_image: /assets/images/data_science_2.avif
 keywords:
 - Linear regression
 - Normal equation

@@ -29,7 +29,7 @@ tags:
 title: 'Hypatia of Alexandria: The First Known Female Mathematician'
 ---
 
-![Example Image](/assets/images/biographies/hypatia.jpg)
+![Hypatia - Hypatia of Alexandria: The First Known Female Mathematician](/assets/images/biographies/hypatia.jpg){: width="1344" height="896" loading="lazy"}
 <p align="center"><i>Hypatia of Alexandria</i></p>
 
 ## Hypatia of Alexandria: The First Known Female Mathematician

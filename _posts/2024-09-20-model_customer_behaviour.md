@@ -50,7 +50,7 @@ toc: false
 toc_label: The Complexity of Real-World Data Distributions
 ---
 
-![Example Image](/assets/images/markov_chain.png)
+![Markov chain - Deciphering Cloud Customer Behavior](/assets/images/markov_chain.png){: width="1024" height="1024" loading="lazy"}
 
 In the dynamics of cloud services, comprehending customer behavior is pivotal. This understanding not only informs service enhancements but also drives strategic decision-making and customer engagement. The variability and complexity of customer interactions with cloud-based products necessitate a robust analytical approach to accurately predict future usage patterns and preferences.
 

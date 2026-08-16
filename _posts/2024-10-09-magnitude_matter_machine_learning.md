@@ -9,11 +9,11 @@ excerpt: The magnitude of variables in machine learning models can have signific
   metrics. This article explores why feature scaling is crucial and which models are
   sensitive to variable magnitude.
 header:
-  image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
   og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - Variable magnitude

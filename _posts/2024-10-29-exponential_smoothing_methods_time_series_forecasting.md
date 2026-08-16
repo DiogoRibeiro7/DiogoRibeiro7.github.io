@@ -9,12 +9,12 @@ excerpt: This detailed guide covers exponential smoothing methods for time serie
   how these methods work, how they compare to ARIMA, and practical applications in
   retail, finance, and inventory management.
 header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_2.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
+  og_image: /assets/images/data_science_2.avif
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
+  twitter_image: /assets/images/data_science_2.avif
 keywords:
 - Exponential smoothing
 - Ets

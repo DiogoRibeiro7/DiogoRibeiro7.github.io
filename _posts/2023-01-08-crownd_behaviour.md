@@ -35,7 +35,7 @@ tags:
 title: Walking the Mathematical Path
 ---
 
-![Example Image](/assets/images/pedestrians.jpeg)
+![Pedestrians - Walking the Mathematical Path](/assets/images/pedestrians.webp){: width="959" height="639" loading="lazy"}
 
 In the bustling streets of modern cities, the pedestrian becomes both an observer and a participant in the intricate dance of urban life. As cars whiz by and skyscrapers stretch towards the heavens, it's easy to overlook the humble walker. Yet, understanding pedestrian behavior is not just a matter of curiosity; it's a necessity that has far-reaching implications in various fields such as urban planning, crowd management, and traffic control.
 

@@ -9,11 +9,11 @@ excerpt: Learn the core concepts of binary classification, explore common algori
   recall, and F1-score.
 header:
   image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_8.avif
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_8.avif
 keywords:
 - Binary classification
 - Machine learning

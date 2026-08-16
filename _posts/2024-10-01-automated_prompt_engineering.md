@@ -8,11 +8,11 @@ excerpt: Explore Automated Prompt Engineering (APE), a powerful method to automa
   and optimize prompts for Large Language Models, enhancing their task performance
   and efficiency.
 header:
-  image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
   og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.avif
   twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - Automated prompt engineering

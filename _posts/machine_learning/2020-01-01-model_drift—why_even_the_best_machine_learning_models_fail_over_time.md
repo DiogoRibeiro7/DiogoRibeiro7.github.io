@@ -6,12 +6,12 @@ classes: wide
 date: '2020-01-01'
 excerpt: Machine learning models degrade over time due to model drift, which includes data drift, concept drift, and feature drift. Learn how to detect, measure, and mitigate these challenges.
 header:
-  image: /assets/images/data_science_9.jpg
-  og_image: /assets/images/data_science_9.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
+  og_image: /assets/images/data_science_9.webp
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Model drift
 - Machine learning degradation
@@ -46,12 +46,12 @@ excerpt: Machine learning models degrade over time due to model drift, which inc
   data drift, concept drift, and feature drift. Learn how to detect, measure, and
   mitigate these challenges.
 header:
-  image: /assets/images/data_science_9.jpg
-  og_image: /assets/images/data_science_9.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
+  og_image: /assets/images/data_science_9.webp
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Model drift
 - Machine learning degradation
@@ -105,12 +105,12 @@ excerpt: Machine learning models degrade over time due to model drift, which inc
   data drift, concept drift, and feature drift. Learn how to detect, measure, and
   mitigate these challenges.
 header:
-  image: /assets/images/data_science_9.jpg
-  og_image: /assets/images/data_science_9.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
+  og_image: /assets/images/data_science_9.webp
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Model drift
 - Machine learning degradation
@@ -155,12 +155,12 @@ excerpt: Machine learning models degrade over time due to model drift, which inc
   data drift, concept drift, and feature drift. Learn how to detect, measure, and
   mitigate these challenges.
 header:
-  image: /assets/images/data_science_9.jpg
-  og_image: /assets/images/data_science_9.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
+  og_image: /assets/images/data_science_9.webp
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Model drift
 - Machine learning degradation

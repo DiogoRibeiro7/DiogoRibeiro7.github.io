@@ -9,11 +9,11 @@ excerpt: This article explores the often-overlooked importance of data quality i
   collection, and quality assurance.
 header:
   image: /assets/images/what-is-data-quality.jpg
-  og_image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_9.webp
   overlay_image: /assets/images/what-is-data-quality.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/what-is-data-quality.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Data quality
 - Data design
@@ -45,7 +45,7 @@ tags:
 title: 'The Unseen Art of Data Quality: Bridging the Gap Between Collection and Utilization'
 ---
 
-![Data Quality](/assets/images/what-is-data-quality.png)
+![Data Quality](/assets/images/what-is-data-quality.png){: width="880" height="646" loading="lazy"}
 <div align="center"><em>Image showcasing data quality as a core foundation in data-driven projects</em></div>
 
 In today’s data-driven world, we often overlook one of the most critical aspects of any data initiative: data quality. While organizations across industries are investing heavily in advanced analytics, machine learning, and artificial intelligence, many fail to acknowledge that without high-quality data, these investments may fail to deliver meaningful results. The saying “Garbage In, Garbage Out” aptly describes this dilemma—if the input data is flawed, no amount of sophisticated processing can rectify it.
@@ -131,12 +131,12 @@ To resolve these problems, the company assembles a team with three key roles:
 
 ### **Data Engineer:**
 
-![Example Image](/assets/images/Data-Engineers.jpeg)
+![Data Engineers - The Unseen Art of Data Quality: Bridging the Gap Between Collection and Utilization](/assets/images/Data-Engineers.jpeg){: width="780" height="496" loading="lazy"}
 <div align="center"><em>Data Engineer in the Data World</em></div>
 
 The data engineer is central to ensuring that data is accurate, consistent, and fit for analysis. In this context, the data engineer is responsible for building an **automated data pipeline** that streamlines the flow of transaction data from the source (such as a database or data warehouse) to its final destination, where it can be analyzed and used for business insights. 
 
-![Example Image](/assets/images/Napa-Data-Engineering-Image.jpg)
+![Napa Data Engineering Image - The Unseen Art of Data Quality: Bridging the Gap Between Collection and Utilization](/assets/images/Napa-Data-Engineering-Image.jpg){: width="2000" height="717" loading="lazy"}
 
 This pipeline not only automates the ingestion of data but also performs **data cleansing** and **validation** tasks, which are essential for maintaining data quality.
 
@@ -185,7 +185,7 @@ This pipeline not only automates the ingestion of data but also performs **data 
 
 By automating the data pipeline, the data engineer ensures that the organization can consistently rely on accurate, clean, and high-quality data. This forms the backbone of any data-driven strategy, enabling the company to make informed decisions, optimize operations, and better serve customers.
 
-![Example Image](/assets/images/data_scientist.jpg)
+![Data scientist - The Unseen Art of Data Quality: Bridging the Gap Between Collection and Utilization](/assets/images/data_scientist.jpg){: width="1200" height="911" loading="lazy"}
 <div align="center"><em>Data Scientist in the Data World</em></div>
 
 ### **Data Scientist:**
@@ -353,7 +353,7 @@ Through their comprehensive oversight of data governance, privacy, and security,
 
 Ultimately, the data steward's efforts contribute to a data environment that fosters **responsible data use** and enhances **organizational efficiency**. This ensures that the company can leverage data for strategic insights while safeguarding it from risks, thus improving overall customer satisfaction and driving business success.
 
-![Example Image](/assets/images/seo-hero-data-quality_vmeldu.jpg)
+![Seo hero data quality vmeldu - The Unseen Art of Data Quality: Bridging the Gap Between Collection and Utilization](/assets/images/seo-hero-data-quality_vmeldu.jpg){: width="1408" height="1100" loading="lazy"}
 
 ## Conclusion: A Call for Data Quality Leadership
 

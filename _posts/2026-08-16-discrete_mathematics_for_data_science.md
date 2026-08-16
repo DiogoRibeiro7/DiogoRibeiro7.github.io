@@ -24,12 +24,12 @@ keywords:
 classes: wide
 date: '2026-08-16'
 header:
-  image: /assets/images/erdos_graph.png
-  og_image: /assets/images/erdos_graph.png
-  overlay_image: /assets/images/erdos_graph.png
+  image: /assets/images/erdos_graph.jpg
+  og_image: /assets/images/erdos_graph.jpg
+  overlay_image: /assets/images/erdos_graph.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/erdos_graph.png
-  twitter_image: /assets/images/erdos_graph.png
+  teaser: /assets/images/erdos_graph.jpg
+  twitter_image: /assets/images/erdos_graph.jpg
 ---
 
 Discrete mathematics is often introduced as the mathematics of computer science. That description is correct, but too narrow for modern data work. Data scientists also rely on discrete mathematics whenever they define categories, build features, validate schemas, search through possibilities, compare experimental groups, model networks, schedule resources, or reason about algorithms.

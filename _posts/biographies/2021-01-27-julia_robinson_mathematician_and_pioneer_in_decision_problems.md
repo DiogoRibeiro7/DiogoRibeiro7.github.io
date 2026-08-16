@@ -29,7 +29,7 @@ title: 'Julia Robinson: Mathematician and Pioneer in Decision Problems'
 ---
 
 <p align="center">
-  <img src="/assets/images/biographies/Julia_Robinson.jpg" alt="Example Image">
+  <img src="/assets/images/biographies/Julia_Robinson.jpg" alt="Julia Robinson - Julia Robinson: Mathematician and Pioneer in Decision Problems" loading="lazy" width="260" height="177">
 </p>
 <p align="center"><i>Julia Robinson</i></p>
 

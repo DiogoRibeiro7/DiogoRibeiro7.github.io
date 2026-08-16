@@ -5,12 +5,12 @@ categories:
 classes: wide
 date: '2024-06-15'
 header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_8.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
+  og_image: /assets/images/data_science_8.avif
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_2.avif
+  twitter_image: /assets/images/data_science_8.avif
 redirect_from:
 - '/wireless communication/signal processing/data science/network engineering/EMI_RSSI_SIGNAL/'
 seo_description: How electromagnetic interference degrades RSSI in wireless systems, and what it means for signal quality and reliability.

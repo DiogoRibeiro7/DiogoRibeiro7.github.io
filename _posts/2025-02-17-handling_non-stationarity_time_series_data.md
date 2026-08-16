@@ -21,12 +21,12 @@ keywords:
 classes: wide
 date: '2025-02-17'
 header:
-  image: /assets/images/data_science_12.jpg
-  og_image: /assets/images/data_science_12.jpg
-  overlay_image: /assets/images/data_science_12.jpg
+  image: /assets/images/data_science_12.webp
+  og_image: /assets/images/data_science_12.webp
+  overlay_image: /assets/images/data_science_12.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_12.jpg
-  twitter_image: /assets/images/data_science_12.jpg
+  teaser: /assets/images/data_science_12.webp
+  twitter_image: /assets/images/data_science_12.webp
 ---
 
 ## Introduction

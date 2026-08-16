@@ -5,11 +5,11 @@ categories:
 classes: wide
 date: '2024-06-11'
 header:
-  image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
   og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
   twitter_image: /assets/images/data_science_7.jpg
 redirect_from:
 - '/mathematics/statistics/data science/medical research/survival_analysis/'
@@ -25,6 +25,9 @@ tags:
 - Python
 title: 'Estimating Survival Functions: Parametric and Non-Parametric Approaches'
 ---
+
+
+![Kaplan-Meier survival curves for two treatment groups, with censored observations marked. The treatment group's curve stays above the control throughout follow-up.](/assets/images/figures/kaplan_meier.png){: width="1177" height="697" loading="lazy"}
 
 ## Introduction
 

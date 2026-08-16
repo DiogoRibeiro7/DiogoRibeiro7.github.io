@@ -6,11 +6,11 @@ classes: wide
 date: '2024-06-13'
 header:
   image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_2.jpg
+  og_image: /assets/images/data_science_2.avif
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  twitter_image: /assets/images/data_science_2.avif
 seo_description: How stepwise regression works, the criteria used for variable selection, and the serious concerns about its use.
 seo_title: 'Stepwise Regression: Methods and Concerns'
 seo_type: article
@@ -24,7 +24,7 @@ tags:
 title: 'Stepwise Regression: Methodology, Applications, and Concerns'
 ---
 
-![Example Image](/assets/images/obtain-unbiased-estimates-with-stepwise-selection-by-splitting-the-dataset.png)
+![Obtain unbiased estimates with stepwise selection by splitting the dataset - Stepwise Regression: Methodology, Applications, and Concerns](/assets/images/obtain-unbiased-estimates-with-stepwise-selection-by-splitting-the-dataset.png){: width="500" height="300" loading="lazy"}
 <p align="center"><i>Stepwise Regression</i></p>
 
 Stepwise regression is a widely used technique in statistical modeling for selecting predictive variables. This method involves an automated procedure that iteratively adds or removes variables from a regression model based on predefined statistical criteria. The primary goal of stepwise regression is to identify a subset of variables that contribute most significantly to predicting the outcome variable, thereby optimizing the model's fit.

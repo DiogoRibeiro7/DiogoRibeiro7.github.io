@@ -28,7 +28,7 @@ tags:
 title: 'Grace Hopper: Pioneer of Computer Science and Programming Languages'
 ---
 
-![Example Image](/assets/images/biographies/grace-hopper.jpg)
+![Grace hopper - Grace Hopper: Pioneer of Computer Science and Programming Languages](/assets/images/biographies/grace-hopper.jpg){: width="410" height="258" loading="lazy"}
 <p align="center"><i>Hypatia of Alexandria</i></p>
 
 ## Grace Hopper: Pioneer of Computer Science and Programming Languages

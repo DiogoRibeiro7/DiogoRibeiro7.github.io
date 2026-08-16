@@ -28,7 +28,7 @@ tags:
 title: 'John Nash: Game Theory and the Beautiful Mind'
 ---
 
-![John Nash](/assets/images/biographies/john_nash.jpg)
+![John Nash](/assets/images/biographies/john_nash.jpg){: width="800" height="450" loading="lazy"}
 <p align="center"><i>John Nash</i></p>
 
 ## John Nash: Game Theory and the Beautiful Mind

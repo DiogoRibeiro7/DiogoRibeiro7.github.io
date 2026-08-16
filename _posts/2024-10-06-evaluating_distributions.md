@@ -8,11 +8,11 @@ excerpt: A comprehensive review of simple distributional properties such as mean
   standard deviation as a strong baseline for time-series classification in standardized
   benchmarks.
 header:
-  image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
   og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.avif
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - Time-series classification

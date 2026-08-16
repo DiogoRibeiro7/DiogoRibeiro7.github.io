@@ -36,7 +36,7 @@ toc: false
 toc_label: The Complexity of Real-World Data Distributions
 ---
 
-![Example Image](/assets/images/spectral-clustering.jpg)
+![Spectral clustering - The Power of Dimensionality Reduction](/assets/images/spectral-clustering.jpg){: width="900" height="580" loading="lazy"}
 
 This article examines the depths of spectral clustering, an advanced technique in machine learning that transcends the capabilities of traditional clustering methods. Spectral clustering shines where conventional approaches falter, particularly in its adeptness at navigating the complexities of high-dimensional and non-linearly separable data. Through a detailed exploration of its mathematical underpinnings, algorithmic processes, practical implementations, and the challenges it faces, we aim to uncover how spectral clustering offers a powerful lens for identifying intricate patterns embedded within vast datasets.
 

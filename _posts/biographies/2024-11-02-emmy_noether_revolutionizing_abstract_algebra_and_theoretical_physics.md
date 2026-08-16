@@ -6,12 +6,12 @@ classes: wide
 date: '2024-11-02'
 excerpt: Emmy Noether’s work in algebra and physics established her as a pioneer, particularly through her groundbreaking theorem linking symmetries to conservation laws.
 header:
-  image: /assets/images/data_science_12.jpg
-  og_image: /assets/images/data_science_12.jpg
-  overlay_image: /assets/images/data_science_12.jpg
+  image: /assets/images/data_science_12.webp
+  og_image: /assets/images/data_science_12.webp
+  overlay_image: /assets/images/data_science_12.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_12.jpg
-  twitter_image: /assets/images/data_science_12.jpg
+  teaser: /assets/images/data_science_12.webp
+  twitter_image: /assets/images/data_science_12.webp
 keywords:
 - Emmy Noether
 - Noether's Theorem
@@ -31,7 +31,7 @@ title: 'Emmy Noether: Revolutionizing Abstract Algebra and Theoretical Physics'
 ---
 
 <p align="center">
-  <img src="/assets/images/biographies/emmy_noether.jpg" alt="Example Image">
+  <img src="/assets/images/biographies/emmy_noether.avif" alt="Emmy noether - Emmy Noether: Revolutionizing Abstract Algebra and Theoretical Physics" loading="lazy" width="1280" height="720">
 </p>
 <p align="center"><i>Emmy Noether</i></p>
 

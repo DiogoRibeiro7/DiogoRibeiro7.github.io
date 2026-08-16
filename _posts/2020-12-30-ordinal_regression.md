@@ -9,11 +9,11 @@ excerpt: Explore the architecture of ordinal regression models, their applicatio
   models using Python.
 header:
   image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_9.webp
   overlay_image: /assets/images/data_science_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Python
 - Statistical models

@@ -1,12 +1,12 @@
 ---
 date: '2030-01-01'
 header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_8.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
+  og_image: /assets/images/data_science_8.avif
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_2.avif
+  twitter_image: /assets/images/data_science_8.avif
 seo_type: article
 tags: []
 ---

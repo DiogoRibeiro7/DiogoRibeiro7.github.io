@@ -40,6 +40,8 @@ title: A Comprehensive Guide to ARIMA Time Series Modeling
 
 Time series forecasting is a crucial method used in various fields such as economics, finance, and meteorology. One of the most widely used models in this domain is ARIMA, which stands for AutoRegressive Integrated Moving Average. In this guide, we will explore the fundamental aspects of ARIMA modeling, its components, methods for identifying parameters, and the process of model validation. Additionally, we will compare ARIMA with related models like ARIMAX, SARIMA, and ARMA.
 
+![Autocorrelation and partial autocorrelation of a simulated AR(2) series. The ACF decays gradually while the PACF cuts off after lag 2, the signature used to identify the order.](/assets/images/figures/acf_pacf.png){: width="1561" height="569" loading="lazy"}
+
 ## Understanding the ARIMA Model
 
 The ARIMA model combines three essential components: the AutoRegressive (AR) part, the Integrated (I) part, and the Moving Average (MA) part. Each plays a specific role in modeling time series data, and together they provide a robust framework for forecasting.

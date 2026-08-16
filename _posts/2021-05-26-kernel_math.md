@@ -9,11 +9,11 @@ excerpt: Explore the foundations, concepts, and mathematics behind Kernel Densit
   density functions.
 header:
   excerpt: false
-  image: /assets/images/kernel_math.jpg
+  image: /assets/images/kernel_math.webp
   og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/kernel_math.jpg
+  overlay_image: /assets/images/kernel_math.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/kernel_math.jpg
+  teaser: /assets/images/kernel_math.webp
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - Non-parametric statistics

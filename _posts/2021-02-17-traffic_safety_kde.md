@@ -45,7 +45,7 @@ title: 'Traffic Safety with Data: A Comprehensive Approach Using Kernel Density 
   (KDE) to Detect Traffic Accident Hotspots'
 ---
 
-![Example Image](/assets/images/traffic_kde_3.png)
+![Traffic kde 3 - Traffic Safety with Data: A Comprehensive Approach Using Kernel Density Estimation (KDE) to Detect Traffic Accident Hotspots](/assets/images/traffic_kde_3.png){: width="600" height="404" loading="lazy"}
 
 ### Introduction
 

@@ -7,11 +7,11 @@ date: '2020-02-01'
 excerpt: Learn the key differences between ANOVA and Kruskal-Wallis tests, and understand
   when to use each method based on your data's assumptions and characteristics.
 header:
-  image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
   og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
   twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - Kruskal-wallis

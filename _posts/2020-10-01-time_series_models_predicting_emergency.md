@@ -8,11 +8,11 @@ excerpt: A comparison between machine learning models and univariate time series
   for predicting emergency department visit volumes, focusing on predictive accuracy.
 header:
   image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_8.avif
   overlay_image: /assets/images/data_science_5.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_8.avif
 keywords:
 - Time series models
 - Emergency department prediction

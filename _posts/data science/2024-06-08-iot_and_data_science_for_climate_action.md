@@ -33,7 +33,7 @@ title: 'IoT and Data Science for Climate Action: Monitoring, Analysis, and Insig
 ---
 
 <p align="center">
-  <img src="/assets/images/biographies/IoT-and-climate-change.png" alt="Example Image">
+  <img src="/assets/images/biographies/IoT-and-climate-change.png" alt="IoT and climate change - IoT and Data Science for Climate Action: Monitoring, Analysis, and Insights" loading="lazy">
 </p>
 <p align="center"><i>Climate Change</i></p>
 

@@ -7,11 +7,11 @@ date: '2023-11-30'
 excerpt: Beneath the headlines about AI sits a layer most discussions skip - the linear algebra, calculus, probability, and optimization that make it work.
 header:
   image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_9.webp
   overlay_image: /assets/images/data_science_6.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Mathematics for AI
 - Linear algebra
@@ -30,7 +30,7 @@ tags:
 title: Why Mathematics Is the Foundation of AI
 ---
 
-![Example Image](/assets/images/1725604108590.jpeg)
+![Illustration for Why Mathematics Is the Foundation of AI](/assets/images/1725604108590.jpeg){: width="564" height="564" loading="lazy"}
 
 Artificial Intelligence (AI) is often portrayed as a transformative technology capable of altering industries and the way society functions. Terms like Machine Learning (ML) and Deep Learning (DL) are used in discussions about self-driving cars, intelligent assistants, or creative tasks like art generation. However, beneath these high-level concepts lies an often-overlooked foundation: mathematics. Mathematics forms the essential framework that enables AI to operate, much like the submerged portion of an iceberg that supports the visible part.
 

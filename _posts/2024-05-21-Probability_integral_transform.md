@@ -7,11 +7,11 @@ date: '2024-05-21'
 excerpt: An in-depth guide to understanding and applying the Probability Integral
   Transform in various fields, from finance to statistics.
 header:
-  image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
   og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - Probability integral transform
@@ -43,7 +43,7 @@ tags:
 title: 'Probability Integral Transform: Theory and Applications'
 ---
 
-![Example Image](/assets/images/ProbIntegralTransform.png)
+![ProbIntegralTransform - Probability Integral Transform: Theory and Applications](/assets/images/ProbIntegralTransform.png){: width="1280" height="720" loading="lazy"}
 
 ## Introduction
 

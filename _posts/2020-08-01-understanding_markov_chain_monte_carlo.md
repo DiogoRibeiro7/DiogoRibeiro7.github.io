@@ -43,6 +43,8 @@ title: Understanding Markov Chain Monte Carlo (MCMC)
 
 Markov Chain Monte Carlo (MCMC) is a powerful and widely-used class of algorithms designed to sample from probability distributions, especially when direct analytic computation becomes challenging. It has found applications in various domains, particularly in Bayesian statistics, physics, machine learning, and complex probabilistic models. This article explores the foundational concepts behind MCMC, how it works, different MCMC algorithms, and its importance in modern statistical and numerical methods.
 
+![Markov chain Monte Carlo output: four chains exploring the same posterior on the left, and the pooled posterior histogram against the analytic density on the right.](/assets/images/figures/mcmc_trace.png){: width="1561" height="569" loading="lazy"}
+
 ## What is Markov Chain Monte Carlo?
 
 At its core, Markov Chain Monte Carlo is a family of algorithms that relies on Markov chains to sample from a target probability distribution. The target distribution is typically one that is difficult to sample from directly due to its high-dimensional nature or the complexity of its mathematical form. MCMC methods are designed to approximate this distribution over time by generating a sequence of dependent samples, which, in the long run, tend to represent the target distribution more accurately.

@@ -34,7 +34,7 @@ tags:
 title: Data and Communication
 ---
 
-![Example Image](/assets/images/communication.jpg)
+![Communication - Data and Communication](/assets/images/communication.jpg){: width="2048" height="1366" loading="lazy"}
 
 ## Why Communication is a Cornerstone in Any Business Setting
 

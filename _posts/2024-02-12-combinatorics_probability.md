@@ -7,11 +7,11 @@ date: '2024-02-12'
 excerpt: Dive into the intersection of combinatorics and probability, exploring how
   these fields work together to solve problems in mathematics, data science, and beyond.
 header:
-  image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
   og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
   twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - Combinatorics
