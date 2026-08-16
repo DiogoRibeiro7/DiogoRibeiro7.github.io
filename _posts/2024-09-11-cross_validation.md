@@ -8,12 +8,12 @@ excerpt: An exploration of cross-validation techniques in machine learning, focu
   on methods to evaluate and enhance model performance while mitigating overfitting
   risks.
 header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_8.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
+  og_image: /assets/images/data_science_8.avif
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_2.avif
+  twitter_image: /assets/images/data_science_8.avif
 keywords:
 - Cross-validation techniques
 - K-fold cross-validation

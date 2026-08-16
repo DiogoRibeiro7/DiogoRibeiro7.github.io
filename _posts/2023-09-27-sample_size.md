@@ -7,11 +7,11 @@ date: '2023-09-27'
 excerpt: Dive into the nuances of sample size in statistical analysis, challenging
   the common belief that larger samples always lead to better results.
 header:
-  image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
   og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.avif
   twitter_image: /assets/images/data_science_5.jpg
 keywords:
 - Sample size
@@ -35,7 +35,7 @@ tags:
 title: The Myth and Reality of Sample Size in Statistical Analysis
 ---
 
-![Example Image](/assets/images/sample_1.png)
+![Sample 1 - The Myth and Reality of Sample Size in Statistical Analysis](/assets/images/sample_1.png){: width="320" height="126" loading="lazy"}
 
 The idea that a larger sample size leads to more accurate statistical analysis is a cornerstone in the field of statistics and data science. It's a principle taught in introductory courses and often cited in research papers and industry reports. The logic seems straightforward: the more data you have, the closer you get to representing the true nature of the population you're studying. This belief influences decisions in various sectors, from healthcare and manufacturing to energy and logistics. Researchers allocate resources, time, and effort to collect larger samples, all in the pursuit of accuracy.
 

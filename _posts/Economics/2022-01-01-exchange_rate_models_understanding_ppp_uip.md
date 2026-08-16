@@ -6,12 +6,12 @@ classes: wide
 date: '2022-01-01'
 excerpt: Explore exchange rate models like Purchasing Power Parity (PPP) and Uncovered Interest Parity (UIP), key frameworks in global economics.
 header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_2.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
+  og_image: /assets/images/data_science_2.avif
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
+  twitter_image: /assets/images/data_science_2.avif
 keywords:
 - Exchange rate models
 - Purchasing power parity

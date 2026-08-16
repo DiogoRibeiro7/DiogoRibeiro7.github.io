@@ -9,11 +9,11 @@ date: '2030-01-01'
 excerpt: A list of 15 article ideas covering statistical tests, ranging from ANOVA and Kruskal-Wallis to non-parametric tests and power analysis.
 header:
   image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_2.jpg
+  og_image: /assets/images/data_science_2.avif
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  twitter_image: /assets/images/data_science_2.avif
 keywords:
 - Statistical tests
 - Anova

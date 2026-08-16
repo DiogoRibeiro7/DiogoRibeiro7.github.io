@@ -39,7 +39,7 @@ title: 'Mathematical Models of Inequality: Understanding Lorenz Curves and Gini 
 ---
 
 <p align="center">
-  <img src="/assets/images/math_economics/math_economics.jpg" alt="Example Image">
+  <img src="/assets/images/math_economics/math_economics.jpg" alt="Math economics - Mathematical Models of Inequality: Understanding Lorenz Curves and Gini Coefficients" loading="lazy">
 </p>
 <p align="center"><i>Mathematical Economics</i></p>
 
@@ -48,9 +48,11 @@ Economic inequality, defined as the uneven distribution of income or wealth amon
 This article explores these mathematical models in detail. We’ll examine the construction and interpretation of Lorenz curves, the calculation and significance of the Gini coefficient, and real-world applications of these models in measuring economic inequality.
 
 <p align="center">
-  <img src="/assets/images/math_economics/lorenz-curve.png" alt="Example Image">
+  <img src="/assets/images/math_economics/lorenz-curve.png" alt="Lorenz curve - Mathematical Models of Inequality: Understanding Lorenz Curves and Gini Coefficients" loading="lazy" width="488" height="294">
 </p>
 <p align="center"><i>Lorenz Curve vs. Inequality</i></p>
+
+![Lorenz curve for a simulated income distribution, plotted against the line of perfect equality. The shaded gap between them is the area the Gini coefficient measures.](/assets/images/figures/lorenz_gini.png){: width="802" height="825" loading="lazy"}
 
 ## Introduction to Economic Inequality
 

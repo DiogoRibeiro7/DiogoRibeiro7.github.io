@@ -31,7 +31,7 @@ title: 'Dorothy Vaughan: Pioneering Mathematician and NASA Computer Scientist'
 ---
 
 <p align="center">
-  <img src="/assets/images/biographies/Dorothy_Vaughan.jpg" alt="Example Image">
+  <img src="/assets/images/biographies/Dorothy_Vaughan.jpg" alt="Dorothy Vaughan - Dorothy Vaughan: Pioneering Mathematician and NASA Computer Scientist" loading="lazy" width="435" height="896">
 </p>
 <p align="center"><i>Dorothy Vaughan</i></p>
 

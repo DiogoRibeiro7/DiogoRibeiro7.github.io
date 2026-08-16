@@ -43,7 +43,7 @@ tags:
 title: Solving Data Drift Issues in Credit Risk Models
 ---
 
-![Data Quality](/assets/images/model_drift.jpeg)
+![Data Quality](/assets/images/model_drift.webp){: width="937" height="378" loading="lazy"}
 
 In the evolving field of credit risk modeling, data drift represents a major challenge that can compromise model reliability. As economic conditions fluctuate, borrowers’ credit behaviors tend to change, leading to significant shifts in the data distribution that predictive models depend on. This article provides a detailed examination of how a credit risk model encountered data drift, the methods used to address the issue, and the resulting improvements in model performance.
 

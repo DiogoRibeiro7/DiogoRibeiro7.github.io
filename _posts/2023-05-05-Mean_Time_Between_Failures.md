@@ -7,11 +7,11 @@ date: '2023-05-05'
 excerpt: Explore the key concepts of Mean Time Between Failures (MTBF), how it is
   calculated, its applications, and its alternatives in system reliability.
 header:
-  image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
   og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
   twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - Mtbf

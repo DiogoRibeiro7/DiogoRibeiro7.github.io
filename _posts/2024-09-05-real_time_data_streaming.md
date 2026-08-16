@@ -8,11 +8,11 @@ excerpt: Learn how to implement real-time data streaming using Python and Apache
   This guide covers key concepts, setup, and best practices for managing data streams
   in real-time processing pipelines.
 header:
-  image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
   og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
   twitter_image: /assets/images/data_science_6.jpg
 keywords:
 - Real-time data streaming

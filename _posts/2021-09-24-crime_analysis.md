@@ -8,11 +8,11 @@ excerpt: This article explores the use of K-means clustering in crime analysis, 
   practical implementation, case studies, and future directions.
 header:
   image: /assets/images/machine_learning/machine_learning_3.jpeg
-  og_image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_9.webp
   overlay_image: /assets/images/machine_learning/machine_learning_3.jpeg
   show_overlay_excerpt: false
   teaser: /assets/images/machine_learning/machine_learning_3.jpeg
-  twitter_image: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Law enforcement
 - Crime analysis
@@ -35,7 +35,7 @@ tags:
 title: 'Crime Analysis Using K-Means Clustering: Enhancing Security through Data Mining'
 ---
 
-![Example Image](/assets/images/crime_analysis.png)
+![Crime analysis - Crime Analysis Using K-Means Clustering: Enhancing Security through Data Mining](/assets/images/crime_analysis.png){: width="825" height="654" loading="lazy"}
 
 Crime is an ever-present challenge in every part of the world, requiring the full attention of governments, law enforcement agencies, and policy-makers. The ability to analyze crime data to discover trends, detect hotspots, and predict future occurrences can significantly contribute to reducing crime rates. In the era of big data, new analytical techniques have emerged to handle the vast datasets that characterize modern crime records. Among these techniques, data mining has gained traction as an effective way to extract meaningful insights from large datasets, aiding law enforcement agencies in combatting criminal activities.
 

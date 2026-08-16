@@ -20,12 +20,12 @@ keywords:
 classes: wide
 date: '2025-12-10'
 header:
-  image: /assets/images/model_drift.jpeg
-  og_image: /assets/images/model_drift.jpeg
-  overlay_image: /assets/images/model_drift.jpeg
+  image: /assets/images/model_drift.webp
+  og_image: /assets/images/model_drift.webp
+  overlay_image: /assets/images/model_drift.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/model_drift.jpeg
-  twitter_image: /assets/images/model_drift.jpeg
+  teaser: /assets/images/model_drift.webp
+  twitter_image: /assets/images/model_drift.webp
 ---
 
 Many machine learning systems are designed as if every input must receive an automatic answer. A classifier assigns a label. A regression model returns a number. A recommender ranks items. A fraud model approves or rejects a transaction. This framing is convenient for benchmarks, but it is often too rigid for real systems.

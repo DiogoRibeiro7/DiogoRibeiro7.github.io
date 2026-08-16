@@ -5,11 +5,11 @@ categories:
 classes: wide
 date: '2024-06-30'
 header:
-  image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
   og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.avif
   twitter_image: /assets/images/data_science_7.jpg
 seo_description: How Latent Class Analysis identifies unobservable subgroups in a population from responses to multiple observed variables.
 seo_title: 'Latent Class Analysis: Finding Hidden Subgroups'

@@ -34,7 +34,7 @@ title: 'Marina Viazovska: Fields Medalist and Pioneer in Sphere Packing'
 ---
 
 <p align="center">
-  <img src="/assets/images/biographies/marina_viazovska.jpg" alt="Example Image">
+  <img src="/assets/images/biographies/marina_viazovska.jpg" alt="Marina viazovska - Marina Viazovska: Fields Medalist and Pioneer in Sphere Packing" loading="lazy" width="800" height="533">
 </p>
 <p align="center"><i>Marina Viazovska</i></p>
 

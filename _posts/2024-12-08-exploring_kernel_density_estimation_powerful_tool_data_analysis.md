@@ -45,6 +45,8 @@ In the rapidly evolving fields of data science and machine learning, understandi
 
 This article provides an in-depth exploration of KDE, from its core principles to its applications in real-world scenarios. We will explore the mathematical foundations, discuss its advantages and limitations, and dive into practical use cases that showcase how KDE can be applied to solve complex problems across various industries.
 
+![Kernel density estimates of the same sample under three bandwidths. Too small is spiky and overfits; too large washes out the two modes that are really there.](/assets/images/figures/kde_bandwidth.png){: width="1177" height="697" loading="lazy"}
+
 ## Introduction to Kernel Density Estimation (KDE)
 
 ### What is KDE?

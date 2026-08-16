@@ -24,12 +24,12 @@ keywords:
 classes: wide
 date: '2026-08-15'
 header:
-  image: /assets/images/data_science_11.jpg
-  og_image: /assets/images/data_science_11.jpg
-  overlay_image: /assets/images/data_science_11.jpg
+  image: /assets/images/data_science_11.avif
+  og_image: /assets/images/data_science_11.avif
+  overlay_image: /assets/images/data_science_11.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_11.jpg
-  twitter_image: /assets/images/data_science_11.jpg
+  teaser: /assets/images/data_science_11.avif
+  twitter_image: /assets/images/data_science_11.avif
 ---
 
 Predictive maintenance dashboards often fail because they are designed as data displays rather than decision tools. They show vibration traces, temperature lines, anomaly scores, and model probabilities, but they do not clearly answer the questions maintenance teams face: Which asset needs attention? How urgent is the risk? What evidence supports the alert? What action should be planned next?

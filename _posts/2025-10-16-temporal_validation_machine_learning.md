@@ -21,12 +21,12 @@ keywords:
 classes: wide
 date: '2025-10-16'
 header:
-  image: /assets/images/data_science_10.jpg
-  og_image: /assets/images/data_science_10.jpg
-  overlay_image: /assets/images/data_science_10.jpg
+  image: /assets/images/data_science_10.avif
+  og_image: /assets/images/data_science_10.avif
+  overlay_image: /assets/images/data_science_10.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_10.jpg
-  twitter_image: /assets/images/data_science_10.jpg
+  teaser: /assets/images/data_science_10.avif
+  twitter_image: /assets/images/data_science_10.avif
 ---
 
 Machine learning evaluation often begins with a random train-test split. The dataset is shuffled, part of it is used for training, and the rest is held out for testing. For many static problems this is a reasonable starting point. For systems that make decisions over time, it can be badly misleading.

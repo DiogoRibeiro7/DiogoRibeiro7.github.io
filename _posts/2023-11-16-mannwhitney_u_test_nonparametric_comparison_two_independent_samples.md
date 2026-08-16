@@ -8,12 +8,12 @@ excerpt: Learn how the Mann-Whitney U Test is used to compare two independent sa
   in non-parametric statistics, with applications in fields such as psychology, medicine,
   and ecology.
 header:
-  image: /assets/images/data_science_8.jpg
-  og_image: /assets/images/data_science_8.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
+  og_image: /assets/images/data_science_8.avif
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.avif
+  twitter_image: /assets/images/data_science_8.avif
 keywords:
 - Mann-whitney u test
 - Non-parametric test

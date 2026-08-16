@@ -1,0 +1,97 @@
+# House chart style for diogoribeiro7.github.io
+#
+# Palette and mark specs validated against the site's real surface (#f7f9fa):
+#   python validate_palette.py "#2a78d6,#eb6834,#1baf7a,#eda100,#e87ba4,#008300,#4a3aa7,#e34948" \
+#          --mode light --surface "#f7f9fa"
+#   -> all checks pass. Contrast WARN on aqua/yellow/magenta (<3:1): those slots
+#      require relief, i.e. a visible legend or direct labels. Every figure here
+#      ships a legend for >=2 series, so the relief condition is met.
+#
+# Slot order is the CVD-safety mechanism, not cosmetics. Assign colours in the
+# order below and never cycle past slot 8 - fold extra series into "Other" or
+# facet into small multiples instead.
+#
+# For scatter / bubble charts every pair is on screen at once; only the first
+# THREE slots validate under --pairs all. Cap those forms at three series.
+
+# --- figure ------------------------------------------------------------------
+figure.figsize:      7.2, 4.2
+figure.dpi:          160
+savefig.dpi:         160
+figure.facecolor:    f7f9fa
+savefig.facecolor:   f7f9fa
+savefig.bbox:        tight
+savefig.pad_inches:  0.12
+figure.constrained_layout.use: True
+
+# --- surface -----------------------------------------------------------------
+axes.facecolor:      f7f9fa
+axes.edgecolor:      c3c2b7
+axes.linewidth:      0.8
+
+# --- ink ---------------------------------------------------------------------
+text.color:          0b0b0b
+axes.labelcolor:     52514e
+xtick.color:         898781
+ytick.color:         898781
+xtick.labelcolor:    52514e
+ytick.labelcolor:    52514e
+
+# --- typography (system sans; no display or serif face) ----------------------
+font.family:         sans-serif
+font.sans-serif:     Segoe UI, DejaVu Sans, Helvetica, Arial, sans-serif
+font.size:           10.5
+axes.titlesize:      12.5
+axes.titleweight:    semibold
+axes.titlelocation:  left
+axes.titlepad:       10.0
+axes.labelsize:      10.0
+legend.fontsize:     9.5
+xtick.labelsize:     9.5
+ytick.labelsize:     9.5
+
+# --- spines: recessive, only where they carry meaning ------------------------
+axes.spines.top:     False
+axes.spines.right:   False
+axes.spines.left:    False
+axes.spines.bottom:  True
+
+# --- grid: hairline, solid, never dashed, behind the data --------------------
+axes.grid:           True
+axes.grid.axis:      y
+grid.color:          e1e0d9
+grid.linewidth:      0.8
+grid.linestyle:      -
+grid.alpha:          1.0
+axes.axisbelow:      True
+
+# --- ticks: no tick marks, labels carry it -----------------------------------
+xtick.major.size:    0
+ytick.major.size:    0
+xtick.minor.size:    0
+ytick.minor.size:    0
+xtick.major.pad:     6
+ytick.major.pad:     6
+
+# --- marks -------------------------------------------------------------------
+lines.linewidth:     2.0
+lines.solid_capstyle: round
+lines.solid_joinstyle: round
+lines.markersize:    5.0
+lines.markeredgewidth: 2.0
+lines.markeredgecolor: f7f9fa
+patch.linewidth:     0.0
+patch.force_edgecolor: False
+hatch.linewidth:     1.0
+scatter.edgecolors:  f7f9fa
+
+# --- legend: always present for >=2 series, no box ---------------------------
+legend.frameon:      False
+legend.loc:          best
+legend.handlelength: 1.6
+legend.handletextpad: 0.6
+legend.columnspacing: 1.4
+legend.borderaxespad: 0.0
+
+# --- categorical slots, in fixed validated order -----------------------------
+axes.prop_cycle: cycler('color', ['2a78d6', 'eb6834', '1baf7a', 'eda100', 'e87ba4', '008300', '4a3aa7', 'e34948'])

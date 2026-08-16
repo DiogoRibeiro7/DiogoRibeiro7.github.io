@@ -10,11 +10,11 @@ excerpt: PDEs offer a powerful framework for understanding complex systems in fi
   models.
 header:
   image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_2.jpg
+  og_image: /assets/images/data_science_2.avif
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  twitter_image: /assets/images/data_science_2.avif
 keywords:
 - Partial differential equations
 - Pdes
@@ -34,7 +34,7 @@ tags:
 title: Introduction to Partial Differential Equations (PDEs) from a Data Science Perspective
 ---
 
-![Example Image](/assets/images/pde.jpg)
+![Pde - Introduction to Partial Differential Equations (PDEs) from a Data Science Perspective](/assets/images/pde.webp){: width="1024" height="768" loading="lazy"}
 
 Partial Differential Equations (PDEs) are fundamental in the modeling of various natural phenomena, ranging from fluid dynamics and heat transfer to quantum mechanics and finance. As a data scientist or data analyst, you may wonder why PDEs should be of interest, given that your field often focuses on data-driven methods such as machine learning and statistical analysis. The answer lies in the fact that PDEs provide a powerful framework for understanding the underlying processes governing many real-world systems. This is critical in areas such as physics-informed machine learning, time-series forecasting, and high-dimensional data analysis.
 

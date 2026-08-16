@@ -1,0 +1,51 @@
+{%- comment -%}
+  Topically related posts, drawn from shared tags then the shared category.
+
+  Jekyll's site.related_posts is only genuinely related when LSI is enabled;
+  with `lsi: false` it degrades to "the most recent posts", which gives the
+  reader no reason to click. Now that tags are a controlled 71-term
+  vocabulary and every post has exactly one category, overlap is meaningful.
+
+  Candidates come from site.tags / site.categories, which Jekyll builds once,
+  so this stays linear per page rather than scanning every post per post.
+{%- endcomment -%}
+
+{%- assign candidates = "" | split: "" -%}
+{%- for t in page.tags limit: 4 -%}
+  {%- assign bucket = site.tags[t] -%}
+  {%- if bucket -%}
+    {%- assign candidates = candidates | concat: bucket -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign cat = page.categories.first -%}
+{%- if cat -%}
+  {%- assign bucket = site.categories[cat] -%}
+  {%- if bucket -%}
+    {%- assign candidates = candidates | concat: bucket -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment -%}
+  A post appearing under several of this page's tags shows up more than once;
+  keeping the first occurrences before uniq means the most-overlapping posts
+  survive, which is the ranking we want.
+{%- endcomment -%}
+{%- assign candidates = candidates | uniq -%}
+
+{%- assign related = "" | split: "" -%}
+{%- for post in candidates -%}
+  {%- if post.url != page.url and related.size < 4 -%}
+    {%- assign related = related | push: post -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if related.size > 0 -%}
+<div class="page__related">
+  <h2 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h2>
+  <div class="grid__wrapper">
+    {%- for post in related -%}
+      {%- include archive-single.html type="grid" -%}
+    {%- endfor -%}
+  </div>
+</div>
+{%- endif -%}

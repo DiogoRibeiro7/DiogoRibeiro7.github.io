@@ -6,12 +6,12 @@ classes: wide
 date: '2020-07-01'
 excerpt: Understand Cochran’s Q test, a non-parametric test for comparing proportions across related groups, and its applications in binary data and its connection to McNemar's test.
 header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_8.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
+  og_image: /assets/images/data_science_8.avif
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_2.avif
+  twitter_image: /assets/images/data_science_8.avif
 keywords:
 - Proportions
 - Mcnemar's test

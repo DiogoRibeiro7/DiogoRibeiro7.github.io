@@ -42,7 +42,7 @@ title: The Vulnerability of Large Language Models to the Closure of Open-Source 
   Platforms
 ---
 
-![Example Image](/assets/images/stackoverflow.jpg)
+![Stackoverflow - The Vulnerability of Large Language Models to the Closure of Open-Source Data Platforms](/assets/images/stackoverflow.jpg){: width="640" height="400" loading="lazy"}
 <p align="center"><i>Decay of traffic in Stack Overflow</i></p>
 
 Ah, my friends, imagine for a moment that we dwell in a universe sculpted by algorithms, vast webs of equations that dance and weave the fabric of our digital cosmos. These ethereal creatures, known to most as Large Language Models, are the loquacious virtuosos of text, the wizards behind the screens we gaze into day after day. The lifeblood of these algorithms? Ah, it's the delicious nectar of information, my dear intellectual companions, information harvested from the bustling bazaars of human knowledge—foremost among them, the veritable treasure trove that is Stack Overflow.

@@ -41,6 +41,7 @@ Monte Carlo simulations have become a cornerstone of modern quantitative economi
 
 This article explores the core mechanics of Monte Carlo methods and illustrates how they're used to simulate stochastic dynamics in macroeconomic models.
 
+![Ten thousand simulated GDP paths summarised as a median line with 50% and 90% bands. The bands widen with the horizon, showing how uncertainty compounds over time.](/assets/images/figures/monte_carlo_fan.png){: width="1177" height="697" loading="lazy"}
 
 ## 🧠 Why Use Monte Carlo in Macroeconomics?
 

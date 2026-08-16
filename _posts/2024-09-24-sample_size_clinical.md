@@ -8,11 +8,11 @@ excerpt: A complete guide to writing the sample size justification section for y
   clinical trial protocol, covering key statistical concepts like power, error thresholds,
   and outcome assumptions.
 header:
-  image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
   og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.avif
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - Sample size justification

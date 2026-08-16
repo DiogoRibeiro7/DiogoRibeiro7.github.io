@@ -37,7 +37,7 @@ tags:
 title: The Fears Surrounding Artificial Intelligence
 ---
 
-![Example Image](/assets/images/artificial.jpg)
+![Artificial - The Fears Surrounding Artificial Intelligence](/assets/images/artificial.jpg){: width="720" height="480" loading="lazy"}
 
 As we progress further into the digital age the fields of artificial intelligence, automation and machine learning continue to advance fast. These technological evolutions have the potential to revolutionise our world, offering countless benefits and efficiencies. However these transformative changes also bring with them a host of concerns and fears.
 

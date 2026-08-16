@@ -31,7 +31,7 @@ title: 'Optimal Control Theory in Economics: Hamiltonian and Lagrangian Techniqu
 ---
 
 <p align="center">
-  <img src="/assets/images/economics/optimal_control.jpeg" alt="Example Image">
+  <img src="/assets/images/economics/optimal_control.jpeg" alt="Optimal control - Optimal Control Theory in Economics: Hamiltonian and Lagrangian Techniques in Fiscal and Monetary Policy Models" loading="lazy" width="240" height="210">
 </p>
 <p align="center"><i>Optimal Control</i></p>
 

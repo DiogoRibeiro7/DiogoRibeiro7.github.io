@@ -33,7 +33,7 @@ title: 'Correlation vs. Causation: Understanding Relationships Between Variables
 ---
 
 <p align="center">
-  <img src="/assets/images/statistics/correlation_causation.jpeg" alt="Example Image">
+  <img src="/assets/images/statistics/correlation_causation.jpeg" alt="Correlation causation - Correlation vs. Causation: Understanding Relationships Between Variables" loading="lazy" width="251" height="201">
 </p>
 <p align="center"><i>Correlation vs. Causation</i></p>
 

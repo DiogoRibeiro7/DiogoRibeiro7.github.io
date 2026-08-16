@@ -8,11 +8,11 @@ excerpt: Learn about sequential detection techniques for identifying switches in
   with changing structures. Explore methods for detecting structural changes in time-series
   data and dynamic systems.
 header:
-  image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
   og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
   twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - Change-point detection

@@ -6,11 +6,11 @@ classes: wide
 date: '2024-06-05'
 header:
   image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_8.avif
   overlay_image: /assets/images/data_science_7.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_8.avif
 keywords:
 - Poisson distribution
 - Sensor activations

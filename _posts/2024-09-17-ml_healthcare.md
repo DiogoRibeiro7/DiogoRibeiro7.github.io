@@ -8,11 +8,11 @@ excerpt: Discover how machine learning is revolutionizing healthcare analytics, 
   predictive patient outcomes to personalized medicine, and the challenges faced in
   integrating ML into healthcare.
 header:
-  image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
   og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - Healthcare analytics
@@ -46,7 +46,7 @@ tags:
 title: How Machine Learning is Transforming Healthcare Analytics
 ---
 
-![Example Image](/assets/images/machine-learning.jpg)
+![Machine learning - How Machine Learning is Transforming Healthcare Analytics](/assets/images/machine-learning.jpg){: width="1600" height="1065" loading="lazy"}
 <div align="center"><em>Machine Learning in Healthcare</em></div>
 
 Machine learning (ML) is reshaping industries globally, and healthcare is at the forefront of this transformation. With the rapid digitalization of medical records, advances in medical imaging technology, and the widespread use of wearable health devices, the healthcare industry is generating an unprecedented amount of data. This explosion of information, combined with the growing need for efficient healthcare delivery, has positioned machine learning as a critical tool for transforming healthcare analytics. By harnessing the power of ML, healthcare providers can gain deeper insights into patient care, improve operational efficiency, and tailor treatments to individual patients in ways that were previously unimaginable.

@@ -22,12 +22,12 @@ keywords:
 classes: wide
 date: '2026-08-15'
 header:
-  image: /assets/images/data_science_10.jpg
-  og_image: /assets/images/data_science_10.jpg
-  overlay_image: /assets/images/data_science_10.jpg
+  image: /assets/images/data_science_10.avif
+  og_image: /assets/images/data_science_10.avif
+  overlay_image: /assets/images/data_science_10.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_10.jpg
-  twitter_image: /assets/images/data_science_10.jpg
+  teaser: /assets/images/data_science_10.avif
+  twitter_image: /assets/images/data_science_10.avif
 ---
 
 Predictive maintenance is often sold as a direct path to lower downtime, lower maintenance cost, and longer asset life. Those benefits are possible, but they are not automatic. A model that predicts failures with impressive accuracy can still fail to create value if the organization cannot act on the signal, if spare parts are unavailable, if maintenance windows are rigid, or if false alarms consume technician capacity.

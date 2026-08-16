@@ -30,7 +30,7 @@ title: 'Mary Jackson: NASA''s First Black Female Engineer and Advocate for Diver
 ---
 
 <p align="center">
-  <img src="/assets/images/biographies/Mary_Jackson.jpg" alt="Example Image">
+  <img src="/assets/images/biographies/Mary_Jackson.jpg" alt="Mary Jackson - Mary Jackson: NASA's First Black Female Engineer and Advocate for Diversity" loading="lazy" width="1024" height="829">
 </p>
 <p align="center"><i>Mary Jackson</i></p>
 

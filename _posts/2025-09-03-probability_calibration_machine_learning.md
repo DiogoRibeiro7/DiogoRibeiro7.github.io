@@ -24,12 +24,12 @@ keywords:
 classes: wide
 date: '2025-09-03'
 header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_2.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
+  og_image: /assets/images/data_science_2.avif
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
+  twitter_image: /assets/images/data_science_2.avif
 ---
 
 Probability calibration is a fundamental step in modern machine learning pipelines, ensuring that predicted probabilities faithfully reflect observed frequencies. While classical methods such as Platt scaling and isotonic regression are widely adopted, they come with important limitations, including restrictive assumptions and vulnerability to overfitting, particularly when calibration data are scarce. This comprehensive review examines the evolution of calibration methods, from early histogram binning approaches to modern neural calibration techniques and conformal prediction methods. We highlight the theoretical foundations, practical challenges, and empirical performance of various approaches, with particular attention to Venn–ABERS predictors, which provide interval-based probability estimates with provable validity guarantees. The article also covers evaluation metrics, domain-specific applications, and emerging trends in uncertainty quantification, providing practitioners with a thorough guide to selecting and implementing appropriate calibration methods for their specific contexts.

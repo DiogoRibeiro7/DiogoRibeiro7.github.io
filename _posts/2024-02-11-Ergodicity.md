@@ -419,7 +419,7 @@ To visualize the concepts discussed in the article, let's outline the content an
 
 ### Figure 1: Two Observables' Approach to Ergodicity for Bernoulli Trials
 
-![Example Image](/assets/images/fig_1.jpeg)
+![Fig 1 - Distinguishing Ergodic Regimes from Processes](/assets/images/fig_1.jpeg){: width="1400" height="600" loading="lazy"}
 
 **Content Description:**
 
@@ -431,7 +431,7 @@ Each panel might include a hypothetical plot showing how each observable evolves
 
 ### Figure 2: Evolution of Time-Averaged Observable
 
-![Example Image](/assets/images/fig_2.jpeg)
+![Fig 2 - Distinguishing Ergodic Regimes from Processes](/assets/images/fig_2.jpeg){: width="600" height="400" loading="lazy"}
 
 **Content Description:**
 
@@ -441,7 +441,7 @@ The x-axis represents the number of trials, while the y-axis represents the valu
 
 ### Figure 3: Evolution of Time-Averaged Mean
 
-![Example Image](/assets/images/fig_3.jpeg)
+![Fig 3 - Distinguishing Ergodic Regimes from Processes](/assets/images/fig_3.jpeg){: width="600" height="400" loading="lazy"}
 
 **Content Description:**
 

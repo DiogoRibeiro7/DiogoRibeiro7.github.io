@@ -22,12 +22,12 @@ keywords:
 classes: wide
 date: '2026-08-16'
 header:
-  image: /assets/images/kernel_math.jpg
-  og_image: /assets/images/kernel_math.jpg
-  overlay_image: /assets/images/kernel_math.jpg
+  image: /assets/images/kernel_math.webp
+  og_image: /assets/images/kernel_math.webp
+  overlay_image: /assets/images/kernel_math.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/kernel_math.jpg
-  twitter_image: /assets/images/kernel_math.jpg
+  teaser: /assets/images/kernel_math.webp
+  twitter_image: /assets/images/kernel_math.webp
 ---
 
 Most data scientists learn probability models as equations. A normal distribution has a mean and variance. A logistic regression model has coefficients. A neural network has weights. A Bayesian model has priors, likelihoods, and posteriors. This algebraic view is necessary, but it hides something important: probability models also have geometry.

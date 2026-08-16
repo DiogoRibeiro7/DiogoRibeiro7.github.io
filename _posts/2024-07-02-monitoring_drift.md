@@ -6,11 +6,11 @@ classes: wide
 date: '2024-07-02'
 header:
   image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_2.jpg
+  og_image: /assets/images/data_science_2.avif
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  twitter_image: /assets/images/data_science_2.avif
 keywords:
 - Data drift detection
 - Direct loss estimation

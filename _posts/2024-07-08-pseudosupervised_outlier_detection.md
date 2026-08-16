@@ -5,11 +5,11 @@ categories:
 classes: wide
 date: '2024-07-08'
 header:
-  image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
   og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
   twitter_image: /assets/images/data_science_1.jpg
 redirect_from:
 - '/mathematics/statistics/data science/machine learning/pseudosupervised_outlier_detection/'

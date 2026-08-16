@@ -39,6 +39,9 @@ tags:
 title: 'Smoothing Time Series Data: Moving Averages vs. Savitzky-Golay Filters'
 ---
 
+
+![A noisy signal smoothed by a moving average and by a Savitzky-Golay filter. The moving average flattens the peaks; Savitzky-Golay keeps their height and position.](/assets/images/figures/savitzky_golay.png){: width="1177" height="697" loading="lazy"}
+
 ## Introduction
 
 ### Brief Introduction to Time Series Data and the Importance of Smoothing

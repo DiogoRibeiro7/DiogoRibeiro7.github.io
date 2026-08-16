@@ -30,7 +30,7 @@ title: 'Mary Somerville: Pioneer in Astronomy and Mathematical Physics'
 ---
 
 <p align="center">
-  <img src="/assets/images/biographies/marysomerville.jpg" alt="Example Image">
+  <img src="/assets/images/biographies/marysomerville.webp" alt="Marysomerville - Mary Somerville: Pioneer in Astronomy and Mathematical Physics" loading="lazy" width="1200" height="800">
 </p>
 <p align="center"><i>Mary Somerville</i></p>
 

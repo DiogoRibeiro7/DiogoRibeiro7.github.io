@@ -9,11 +9,11 @@ excerpt: Machine learning models are revolutionizing post-hospitalization care b
   optimize treatment and reduce complications.
 header:
   image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_9.jpg
+  og_image: /assets/images/data_science_9.webp
   overlay_image: /assets/images/data_science_4.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Machine learning
 - Hospital readmissions

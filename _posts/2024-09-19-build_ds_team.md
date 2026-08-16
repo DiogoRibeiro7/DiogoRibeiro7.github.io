@@ -47,7 +47,7 @@ title: 'The Great Title Debate: Should Data Science Teams Assign Different Job T
 toc: false
 ---
 
-![Data Scientist](/assets/images/data_scientist.jpg)
+![Data Scientist](/assets/images/data_scientist.jpg){: width="1200" height="911" loading="lazy"}
 
 In data science and machine learning, organizations are continually refining their team structures to maximize efficiency, innovation, and collaboration. One critical aspect of team formation that often sparks debate is the assignment of job titles, especially in teams comprising both software engineers (SWEs) and machine learning (ML) researchers. The question at hand is whether these team members should be given distinct job titles reflecting their specialized roles or uniform titles that promote a sense of equality and unity within the team.
 

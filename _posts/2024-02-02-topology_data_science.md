@@ -8,11 +8,11 @@ excerpt: Dive into Topological Data Analysis (TDA) and discover how its methods,
   as persistent homology and the mapper algorithm, help uncover hidden insights in
   high-dimensional and complex datasets.
 header:
-  image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
   og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.avif
   twitter_image: /assets/images/data_science_1.jpg
 keywords:
 - Topological data analysis

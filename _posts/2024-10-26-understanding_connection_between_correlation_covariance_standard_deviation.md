@@ -8,12 +8,12 @@ excerpt: This article explores the deep connections between correlation, covaria
   and standard deviation, three fundamental concepts in statistics and data science
   that quantify relationships and variability in data.
 header:
-  image: /assets/images/data_science_15.jpg
-  og_image: /assets/images/data_science_15.jpg
-  overlay_image: /assets/images/data_science_15.jpg
+  image: /assets/images/data_science_15.webp
+  og_image: /assets/images/data_science_15.webp
+  overlay_image: /assets/images/data_science_15.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_15.jpg
-  twitter_image: /assets/images/data_science_15.jpg
+  teaser: /assets/images/data_science_15.webp
+  twitter_image: /assets/images/data_science_15.webp
 keywords:
 - Correlation
 - Covariance

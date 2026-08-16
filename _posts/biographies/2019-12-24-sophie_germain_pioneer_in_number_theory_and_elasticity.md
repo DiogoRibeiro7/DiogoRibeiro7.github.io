@@ -28,7 +28,7 @@ tags:
 title: 'Sophie Germain: Pioneer in Number Theory and Elasticity'
 ---
 
-![Example Image](/assets/images/biographies/sophiegermain.jpg)
+![Sophiegermain - Sophie Germain: Pioneer in Number Theory and Elasticity](/assets/images/biographies/sophiegermain.jpg){: width="1920" height="1080" loading="lazy"}
 <p align="center"><i>Ada Lovelace</i></p>
 
 ## Sophie Germain: Pioneer in Number Theory and Elasticity

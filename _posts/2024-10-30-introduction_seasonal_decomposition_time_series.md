@@ -8,12 +8,12 @@ excerpt: This article provides an in-depth look at STL and X-13-SEATS, two power
   methods for decomposing time series into trend, seasonal, and residual components.
   Learn how these methods help model seasonality in time series forecasting.
 header:
-  image: /assets/images/data_science_8.jpg
-  og_image: /assets/images/data_science_8.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
+  og_image: /assets/images/data_science_8.avif
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.avif
+  twitter_image: /assets/images/data_science_8.avif
 keywords:
 - Stl
 - X-13

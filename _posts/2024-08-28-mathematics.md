@@ -8,12 +8,12 @@ excerpt: Explore how mathematics shapes modern society across fields like techno
   education, and problem-solving. This article delves into the often overlooked impact
   of mathematics on innovation and societal progress.
 header:
-  image: /assets/images/data_science_8.jpg
-  og_image: /assets/images/data_science_2.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
+  og_image: /assets/images/data_science_2.avif
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_8.avif
+  twitter_image: /assets/images/data_science_2.avif
 keywords:
 - Mathematics in society
 - Mathematical innovation

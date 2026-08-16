@@ -30,12 +30,12 @@ keywords:
 classes: wide
 date: '2025-08-13'
 header:
-  image: /assets/images/data_science_10.jpg
-  og_image: /assets/images/data_science_10.jpg
-  overlay_image: /assets/images/data_science_10.jpg
+  image: /assets/images/data_science_10.avif
+  og_image: /assets/images/data_science_10.avif
+  overlay_image: /assets/images/data_science_10.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_10.jpg
-  twitter_image: /assets/images/data_science_10.jpg
+  teaser: /assets/images/data_science_10.avif
+  twitter_image: /assets/images/data_science_10.avif
 ---
 
 Structural Equation Modeling (SEM) is a powerful analytical tool, capable of modeling complex latent structures and causal relationships between variables. From psychology to marketing, SEM is used in diverse fields to test theoretical models with observed data. Yet, the same flexibility that makes SEM attractive also opens the door to excessive researcher degrees of freedom. Without constraints, analysts can tweak specifications post hoc--knowingly or unknowingly--to produce more favorable results.

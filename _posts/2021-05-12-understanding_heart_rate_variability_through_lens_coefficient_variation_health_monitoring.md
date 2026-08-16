@@ -7,12 +7,12 @@ date: '2021-05-12'
 excerpt: Discover the significance of heart rate variability (HRV) and how the coefficient
   of variation (CV) provides a more nuanced view of cardiovascular health.
 header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_2.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
+  og_image: /assets/images/data_science_2.avif
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
+  twitter_image: /assets/images/data_science_2.avif
 keywords:
 - Heart rate variability
 - Coefficient of variation

@@ -36,6 +36,7 @@ Statistical hypothesis testing is one of the most widely used methods in researc
 
 In this article, we will explore the concepts of Type I and Type II errors, how they arise, how to balance them, and their implications in real-world contexts like clinical trials and business decisions.
 
+![Null and alternative sampling distributions overlapping at a critical value. The shaded tail on the left is the Type I error rate; the shaded region on the right is the Type II error rate.](/assets/images/figures/type_i_ii.png){: width="1241" height="665" loading="lazy"}
 
 ## Type I Error: False Positives
 

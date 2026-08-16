@@ -5,12 +5,12 @@ categories:
 classes: wide
 date: '2024-05-10'
 header:
-  image: /assets/images/data_science_9.jpg
-  og_image: /assets/images/data_science_9.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
+  og_image: /assets/images/data_science_9.webp
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
+  twitter_image: /assets/images/data_science_9.webp
 redirect_from:
 - '/mathematics/statistics/data science/stratified_sampling/'
 seo_description: How stratified sampling improves representativeness and accuracy by dividing a population into subgroups before sampling.

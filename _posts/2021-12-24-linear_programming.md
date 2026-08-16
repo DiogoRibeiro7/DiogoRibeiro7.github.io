@@ -44,7 +44,7 @@ title: 'Exploring Classic Linear Programming (LP) Problems and Scalable Solution
 
 ## Introduction
 
-![Example Image](/assets/images/linear_program.jpg)
+![Linear program - Exploring Classic Linear Programming (LP) Problems and Scalable Solutions: A Deep Dive into PDLP](/assets/images/linear_program.jpg){: width="1024" height="642" loading="lazy"}
 
 **Classic linear programming (LP)** problems are some of the most foundational in computer science and operations research. Since its inception, LP has been critical in solving optimization problems across industries such as manufacturing, logistics, finance, networking, and more. As a cornerstone of **mathematical programming**, LP has significantly influenced the development of today’s sophisticated modeling frameworks and algorithmic approaches for **data-driven decision making**.
 

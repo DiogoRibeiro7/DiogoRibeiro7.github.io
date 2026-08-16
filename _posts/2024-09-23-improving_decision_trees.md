@@ -7,11 +7,11 @@ date: '2024-09-23'
 excerpt: A deep dive into using Genetic Algorithms to create more accurate, interpretable
   decision trees for classification tasks.
 header:
-  image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
   og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
   twitter_image: /assets/images/data_science_4.jpg
 keywords:
 - Decision trees

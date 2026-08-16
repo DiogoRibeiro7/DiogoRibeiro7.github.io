@@ -37,7 +37,7 @@ tags:
 title: Ethics in Data Science
 ---
 
-![Example Image](/assets/images/data_ethics_1.jpg)
+![Data ethics 1 - Ethics in Data Science](/assets/images/data_ethics_1.jpg){: width="1140" height="760" loading="lazy"}
 
 In the age of big data and artificial intelligence, data science has emerged as a transformative force, reshaping industries, driving innovation, and unlocking new frontiers of knowledge. From personalized healthcare to intelligent transportation systems, data science applications are ubiquitous, touching every aspect of our lives. Yet, with great power comes great responsibility. The ethical considerations in data science are not mere academic concerns; they are vital, real-world issues that demand immediate attention.
 
@@ -61,7 +61,7 @@ The field of data science is evolving at a breakneck pace. New algorithms, techn
 
 The time to address these ethical considerations is now. As data scientists, policymakers, industry leaders, and citizens, we must engage in a collective effort to navigate the moral frontiers of data science. We must build a future where data science thrives not just as a technological marvel but as a responsible and ethical discipline that serves the greater good.
 
-![Example Image](/assets/images/data_ethics.png)
+![Data ethics - Ethics in Data Science](/assets/images/data_ethics.png){: width="1024" height="888" loading="lazy"}
 
 ## Privacy Protection
 

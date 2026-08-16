@@ -30,12 +30,12 @@ keywords:
 classes: wide
 date: '2025-09-01'
 header:
-  image: /assets/images/data_science_15.jpg
-  og_image: /assets/images/data_science_15.jpg
-  overlay_image: /assets/images/data_science_15.jpg
+  image: /assets/images/data_science_15.webp
+  og_image: /assets/images/data_science_15.webp
+  overlay_image: /assets/images/data_science_15.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_15.jpg
-  twitter_image: /assets/images/data_science_15.jpg
+  teaser: /assets/images/data_science_15.webp
+  twitter_image: /assets/images/data_science_15.webp
 ---
 
 ## Introduction

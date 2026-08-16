@@ -39,7 +39,7 @@ tags:
 title: Applying R Functions on Rolling Windows Using the `runner` Package
 ---
 
-![Example Image](/assets/images/rolling_image.png)
+![Rolling image - Applying R Functions on Rolling Windows Using the `runner` Package](/assets/images/rolling_image.png){: width="850" height="395" loading="lazy"}
 <div align="center"><em>Rolling Window</em></div>
 
 ## Overview of the `runner` Package

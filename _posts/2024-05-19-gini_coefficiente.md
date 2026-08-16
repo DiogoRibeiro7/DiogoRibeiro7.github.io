@@ -8,11 +8,11 @@ excerpt: Learn about the Normalized Gini Coefficient and Default Rate, two essen
   metrics in credit scoring and risk assessment. Explore their significance in evaluating
   credit risk and loan defaults.
 header:
-  image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
   og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
   twitter_image: /assets/images/data_science_7.jpg
 keywords:
 - Normalized gini coefficient

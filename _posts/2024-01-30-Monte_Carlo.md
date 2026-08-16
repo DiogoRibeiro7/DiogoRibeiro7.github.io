@@ -35,7 +35,7 @@ tags:
 title: 'Mastering Bayesian Statistics: An In-Depth Guide to MCMC'
 ---
 
-![Example Image](/assets/images/Markov-chain-Monte-Carlo-sampling-using-random-walk.jpeg)
+![Markov chain Monte Carlo sampling using random walk - Mastering Bayesian Statistics: An In-Depth Guide to MCMC](/assets/images/Markov-chain-Monte-Carlo-sampling-using-random-walk.jpeg){: width="850" height="499" loading="lazy"}
 <div align="center"><em>Markov Chain Monte Carlo</em></div>
 
 ## Brief Overview of Bayesian Statistics

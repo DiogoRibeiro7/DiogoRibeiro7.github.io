@@ -6,12 +6,12 @@ classes: wide
 date: '2019-12-29'
 excerpt: Splines are powerful tools for modeling complex, nonlinear relationships in data. In this article, we'll explore what splines are, how they work, and how they are used in data analysis, statistics, and machine learning.
 header:
-  image: /assets/images/data_science_19.jpg
-  og_image: /assets/images/data_science_19.jpg
-  overlay_image: /assets/images/data_science_19.jpg
+  image: /assets/images/data_science_19.webp
+  og_image: /assets/images/data_science_19.webp
+  overlay_image: /assets/images/data_science_19.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_19.jpg
-  twitter_image: /assets/images/data_science_19.jpg
+  teaser: /assets/images/data_science_19.webp
+  twitter_image: /assets/images/data_science_19.webp
 keywords:
 - Splines
 - Spline regression
@@ -47,6 +47,8 @@ In this article, we’ll explore:
 - **How they work**
 - **The different types of splines**
 - **Practical uses of splines in regression, smoothing, and machine learning**
+
+![A cubic spline, a degree-10 polynomial, and a straight line fitted to the same curved data. The polynomial oscillates near the edges while the spline follows the shape.](/assets/images/figures/splines_fit.png){: width="1177" height="697" loading="lazy"}
 
 ## What Are Splines?
 

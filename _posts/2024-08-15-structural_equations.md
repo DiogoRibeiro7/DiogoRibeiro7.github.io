@@ -8,11 +8,11 @@ excerpt: Learn the fundamentals of Structural Equation Modeling (SEM) with laten
   variables. This guide covers measurement models, path analysis, factor loadings,
   and more for researchers and statisticians.
 header:
-  image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
   og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
   twitter_image: /assets/images/data_science_6.jpg
 keywords:
 - Structural equation modeling

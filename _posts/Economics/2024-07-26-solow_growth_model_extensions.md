@@ -34,7 +34,7 @@ title: 'Solow Growth Model and Extensions: Technological Change and Human Capita
 ---
 
 <p align="center">
-  <img src="/assets/images/economics/solowdia.jpg" alt="Example Image">
+  <img src="/assets/images/economics/solowdia.jpg" alt="Solowdia - Solow Growth Model and Extensions: Technological Change and Human Capital" loading="lazy">
 </p>
 <p align="center"><i>Solow Growth Model</i></p>
 

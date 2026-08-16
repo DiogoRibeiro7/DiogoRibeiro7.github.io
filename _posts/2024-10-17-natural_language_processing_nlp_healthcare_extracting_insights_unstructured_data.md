@@ -6,12 +6,12 @@ classes: wide
 date: '2024-10-17'
 excerpt: Natural Language Processing (NLP) is revolutionizing healthcare by enabling the extraction of valuable insights from unstructured data. This article explores NLP applications, including extracting patient insights, mining medical literature, and aiding diagnosis.
 header:
-  image: /assets/images/data_science_15.jpg
-  og_image: /assets/images/data_science_15.jpg
-  overlay_image: /assets/images/data_science_15.jpg
+  image: /assets/images/data_science_15.webp
+  og_image: /assets/images/data_science_15.webp
+  overlay_image: /assets/images/data_science_15.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_15.jpg
-  twitter_image: /assets/images/data_science_15.jpg
+  teaser: /assets/images/data_science_15.webp
+  twitter_image: /assets/images/data_science_15.webp
 keywords:
 - Natural Language Processing
 - Healthcare

@@ -6,12 +6,12 @@ classes: wide
 date: '2020-01-13'
 excerpt: Most diagrams for choosing statistical tests miss the bigger picture. Here's a bold, practical approach that emphasizes interpretation over mechanistic rules, and cuts through statistical misconceptions like the N>30 rule.
 header:
-  image: /assets/images/data_science_8.jpg
-  og_image: /assets/images/data_science_8.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
+  og_image: /assets/images/data_science_8.avif
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  teaser: /assets/images/data_science_8.avif
+  twitter_image: /assets/images/data_science_8.avif
 keywords:
 - Statistical Tests
 - Welch t-test

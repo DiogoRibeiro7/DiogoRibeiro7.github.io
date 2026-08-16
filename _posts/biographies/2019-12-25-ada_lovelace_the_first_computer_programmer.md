@@ -27,7 +27,7 @@ tags:
 title: 'Ada Lovelace: The First Computer Programmer'
 ---
 
-![Example Image](/assets/images/biographies/Ada-Lovelace.png)
+![Ada Lovelace - Ada Lovelace: The First Computer Programmer](/assets/images/biographies/Ada-Lovelace.jpg){: width="1000" height="500" loading="lazy"}
 <p align="center"><i>Ada Lovelace</i></p>
 
 ## Ada Lovelace: The First Computer Programmer

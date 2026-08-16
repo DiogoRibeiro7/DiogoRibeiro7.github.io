@@ -28,12 +28,12 @@ keywords:
 classes: wide
 date: '2025-08-24'
 header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_2.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
+  og_image: /assets/images/data_science_2.avif
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
+  twitter_image: /assets/images/data_science_2.avif
 ---
 
 In machine learning and artificial intelligence, the longevity and reliability of deployed models face constant challenges from an ever-changing world. While machine learning practitioners often focus intensively on model development, feature engineering, and initial performance optimization, the post-deployment phase presents a different set of challenges that can significantly impact model effectiveness. Among these challenges, two phenomena stand out as particularly critical: data drift and concept drift. These seemingly subtle but profoundly impactful changes in the underlying patterns of data can transform a high-performing model into an unreliable predictor, sometimes without immediate detection.

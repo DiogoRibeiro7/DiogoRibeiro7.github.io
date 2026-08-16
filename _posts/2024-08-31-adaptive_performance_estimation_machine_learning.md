@@ -8,12 +8,12 @@ excerpt: Explore adaptive performance estimation techniques in machine learning,
   methods like CBPE and PAPE. Learn how these approaches help monitor model performance
   and detect issues like data drift and covariate shift.
 header:
-  image: /assets/images/data_science_8.jpg
-  og_image: /assets/images/data_science_9.jpg
-  overlay_image: /assets/images/data_science_8.jpg
+  image: /assets/images/data_science_8.avif
+  og_image: /assets/images/data_science_9.webp
+  overlay_image: /assets/images/data_science_8.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_8.avif
+  twitter_image: /assets/images/data_science_9.webp
 keywords:
 - Adaptive performance estimation
 - Machine learning monitoring

@@ -7,11 +7,11 @@ date: '2020-05-01'
 excerpt: Learn about the Shapiro-Wilk and Anderson-Darling tests for normality, their differences, and how they guide decisions between parametric and non-parametric statistical methods.
 header:
   image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_8.avif
   overlay_image: /assets/images/data_science_3.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_8.avif
 keywords:
 - Anderson-darling test
 - Non-parametric methods

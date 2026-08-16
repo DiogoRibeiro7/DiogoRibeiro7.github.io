@@ -8,11 +8,11 @@ excerpt: Explore the diverse applications of rolling windows in signal processin
   covering both the underlying theory and practical implementations.
 header:
   image: /assets/images/download.png
-  og_image: /assets/images/data_science_8.jpg
+  og_image: /assets/images/data_science_8.avif
   overlay_image: /assets/images/download.png
   show_overlay_excerpt: false
   teaser: /assets/images/download.png
-  twitter_image: /assets/images/data_science_8.jpg
+  twitter_image: /assets/images/data_science_8.avif
 keywords:
 - Rolling windows
 - Signal processing
@@ -40,7 +40,7 @@ tags:
 title: Rolling Windows in Signal Processing
 ---
 
-![Example Image](/assets/images/rollingwindow.png)
+![Rollingwindow - Rolling Windows in Signal Processing](/assets/images/rollingwindow.png){: width="627" height="483" loading="lazy"}
 <div align="center"><em>Rolling Window</em></div>
 
 The concept of rolling windows is deceptively simple, yet it holds significant power in signal processing and data analysis. Much like managing tasks in small portions, rolling windows allow us to break down complex datasets into manageable segments. This approach enables a range of analyses, from smoothing noisy signals to extracting critical features and performing time-frequency transformations.
