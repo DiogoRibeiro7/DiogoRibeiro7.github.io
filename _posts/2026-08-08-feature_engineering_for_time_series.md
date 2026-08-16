@@ -28,6 +28,16 @@ keywords:
   - calendar effects
 classes: wide
 date: '2026-08-08'
+why_this_exists: >-
+  Many strong tabular models fail in production because their time-series
+  features accidentally include information from the future.
+evidence: >-
+  Uses lag, rolling-window, calendar, and forecast-horizon examples to expose
+  the exact leakage points.
+methodology: >-
+  Treats each feature as an availability question: would this value have been
+  known at the time the forecast was made?
+reviewed_at: '2026-08-16'
 header:
   image: /assets/images/data_science_2.avif
   og_image: /assets/images/data_science_2.avif

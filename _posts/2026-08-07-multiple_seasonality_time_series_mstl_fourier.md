@@ -28,6 +28,16 @@ keywords:
   - high-frequency forecasting
 classes: wide
 date: '2026-08-07'
+why_this_exists: >-
+  High-frequency time series rarely have one clean seasonal period, but many
+  introductions still explain seasonality as if one index is enough.
+evidence: >-
+  Uses electricity-demand style daily, weekly, and annual cycles to compare
+  MSTL, TBATS, and Fourier-term approaches.
+methodology: >-
+  Breaks the modeling choice down by seasonal period, data frequency,
+  interpretability, and implementation burden.
+reviewed_at: '2026-08-16'
 header:
   image: /assets/images/data_science_3.jpg
   og_image: /assets/images/data_science_3.jpg

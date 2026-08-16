@@ -64,6 +64,24 @@ The Jekyll build may report existing theme deprecation warnings. Treat build
 failures as blockers; warnings should be reviewed when they point to content in
 this repository rather than upstream theme code.
 
+## Editorial Standard
+
+New posts should have a reader-first reason to exist. Prefer articles built from
+original analysis, code, experiments, worked examples, case studies, or practical
+decision guidance. Avoid adding generic paraphrases of material already widely
+available elsewhere.
+
+Substantial posts can expose their contribution in front matter:
+
+```yaml
+why_this_exists: "What this post adds beyond a generic tutorial."
+evidence: "Dataset, simulation, source material, or project experience used."
+methodology: "How the analysis, comparison, or example was produced."
+reviewed_at: 2026-08-16
+```
+
+Those fields render in the article provenance note and make review easier.
+
 ## Supported Python Utilities
 
 The Python surface is intentionally small. Keep scripts only when they are

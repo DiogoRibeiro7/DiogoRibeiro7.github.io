@@ -29,6 +29,16 @@ keywords:
   - range-based evaluation
 classes: wide
 date: '2026-08-12'
+why_this_exists: >-
+  Time-series anomalies are contextual and range-based; generic point outlier
+  detection misses what operators actually need to investigate.
+evidence: >-
+  Uses temperature, server traffic, residual, contextual, and collective
+  anomaly examples.
+methodology: >-
+  Classifies anomalies by failure mode first, then maps each class to suitable
+  detection and evaluation strategies.
+reviewed_at: '2026-08-16'
 header:
   image: /assets/images/data_science_9.webp
   og_image: /assets/images/data_science_9.webp

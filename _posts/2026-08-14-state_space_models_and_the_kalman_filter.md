@@ -28,6 +28,16 @@ keywords:
   - recursive estimation
 classes: wide
 date: '2026-08-14'
+why_this_exists: >-
+  The Kalman filter is often taught as a tracking algorithm, but it is more
+  useful to analysts as a general framework for noisy latent-state estimation.
+evidence: >-
+  Uses measurement-versus-state examples and connections to exponential
+  smoothing, ARIMA, and structural time-series models.
+methodology: >-
+  Builds the explanation around the prediction/update recursion and the
+  modeling separation between hidden state and observed measurement.
+reviewed_at: '2026-08-16'
 header:
   image: /assets/images/data_science_10.avif
   og_image: /assets/images/data_science_10.avif

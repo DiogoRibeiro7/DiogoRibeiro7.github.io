@@ -28,6 +28,16 @@ keywords:
   - TSB
 classes: wide
 date: '2026-08-05'
+why_this_exists: >-
+  Intermittent demand is often treated with ordinary forecasting tools even
+  when the zero-heavy data shape makes those tools operationally misleading.
+evidence: >-
+  Uses a spare-parts inventory scenario and the Croston/SBA/TSB method family
+  to show why demand size and demand timing must be separated.
+methodology: >-
+  Compares model assumptions, metric behavior, and inventory implications for
+  sparse demand rather than listing forecasting methods generically.
+reviewed_at: '2026-08-16'
 header:
   image: /assets/images/data_science_1.jpg
   og_image: /assets/images/data_science_1.jpg

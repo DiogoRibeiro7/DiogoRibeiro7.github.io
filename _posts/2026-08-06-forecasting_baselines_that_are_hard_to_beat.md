@@ -27,6 +27,16 @@ keywords:
   - forecast skill
 classes: wide
 date: '2026-08-06'
+why_this_exists: >-
+  Forecasting projects often report error numbers without proving that a model
+  beats a simple baseline, which makes the reported skill uninterpretable.
+evidence: >-
+  Uses naive, seasonal naive, drift, mean, and scaled-error baselines common in
+  practical forecasting evaluation.
+methodology: >-
+  Frames each baseline as an assumption test and explains when failure to beat
+  it is a decision-relevant result.
+reviewed_at: '2026-08-16'
 header:
   image: /assets/images/data_science_7.jpg
   og_image: /assets/images/data_science_7.jpg

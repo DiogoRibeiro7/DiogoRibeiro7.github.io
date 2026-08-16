@@ -28,6 +28,16 @@ keywords:
   - conformal prediction
 classes: wide
 date: '2026-08-11'
+why_this_exists: >-
+  Many decisions depend on the upper or lower tail of future outcomes, while a
+  point forecast hides the distribution that drives the decision.
+evidence: >-
+  Uses service-level, inventory, quantile, pinball-loss, and conformal
+  forecasting concepts to connect scoring with decisions.
+methodology: >-
+  Starts from the decision cost, maps it to the needed quantile or interval,
+  and then evaluates forecasts with a matching loss.
+reviewed_at: '2026-08-16'
 header:
   image: /assets/images/data_science_5.jpg
   og_image: /assets/images/data_science_5.jpg

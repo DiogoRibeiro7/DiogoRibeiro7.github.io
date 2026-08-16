@@ -28,6 +28,16 @@ keywords:
   - grouped time series
 classes: wide
 date: '2026-08-09'
+why_this_exists: >-
+  Real forecasting systems need numbers that add up across products, stores,
+  regions, and totals, but independently fitted models rarely do.
+evidence: >-
+  Uses retail and supply-chain hierarchy examples plus bottom-up, top-down,
+  and optimal reconciliation concepts.
+methodology: >-
+  Compares reconciliation methods by the assumptions they make about noise,
+  aggregation, and where forecast signal is strongest.
+reviewed_at: '2026-08-16'
 header:
   image: /assets/images/data_science_4.jpg
   og_image: /assets/images/data_science_4.jpg

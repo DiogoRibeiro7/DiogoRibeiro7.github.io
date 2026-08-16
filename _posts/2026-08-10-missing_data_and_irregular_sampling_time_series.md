@@ -29,6 +29,16 @@ keywords:
   - forward fill
 classes: wide
 date: '2026-08-10'
+why_this_exists: >-
+  Missing time-series intervals change the meaning of lags, windows, and
+  seasonal features, so table-style imputation advice is not enough.
+evidence: >-
+  Uses sensor-style missingness, resampling, forward-fill, and interpolation
+  examples to show what each repair assumes.
+methodology: >-
+  Separates missing values from irregular timestamps and evaluates each fix by
+  the data-generating mechanism it implies.
+reviewed_at: '2026-08-16'
 header:
   image: /assets/images/data_science_8.avif
   og_image: /assets/images/data_science_8.avif

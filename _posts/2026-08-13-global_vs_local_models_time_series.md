@@ -27,6 +27,16 @@ keywords:
   - many related series
 classes: wide
 date: '2026-08-13'
+why_this_exists: >-
+  Forecasting many related series is no longer only a one-model-per-series
+  problem, and the local-versus-global choice changes the whole workflow.
+evidence: >-
+  Uses SKU/store examples and lessons from large forecasting competitions to
+  explain cross-learning and scaling requirements.
+methodology: >-
+  Compares local and global models by sample size, feature design,
+  heterogeneity, evaluation, and operational maintenance.
+reviewed_at: '2026-08-16'
 header:
   image: /assets/images/data_science_6.jpg
   og_image: /assets/images/data_science_6.jpg
