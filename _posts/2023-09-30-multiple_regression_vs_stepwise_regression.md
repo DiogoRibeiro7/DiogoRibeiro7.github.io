@@ -342,3 +342,9 @@ print("Model Coefficients:", final_model.coef_)
 After running the stepwise regression, the selected_predictors will show which variables were chosen as the most significant predictors based on the AIC criterion. The final model will contain only these predictors, and you can assess its performance using metrics like $R^2$ and mean squared error (MSE).
 
 These Python examples illustrate how to implement both multiple regression and stepwise regression using statsmodels and sklearn. While multiple regression allows for the inclusion of all predictors, stepwise regression helps in selecting the most significant ones, leading to more parsimonious models. By understanding and applying these techniques, you can build effective predictive models tailored to your specific datasets and research questions.
+
+## References
+
+- Harrell, F. E. (2015). *Regression Modeling Strategies* (2nd ed.). Springer.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.

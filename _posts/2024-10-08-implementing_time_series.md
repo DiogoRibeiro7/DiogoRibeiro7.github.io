@@ -19,8 +19,10 @@ keywords:
 - Catch22
 - Python
 - Uea/ucr
+permalink: '/time-series/implementing_time_series/'
 redirect_from:
 - '/time-series/machine learning/implementing_time_series/'
+- '/time series/implementing_time_series/'
 seo_description: How to implement time-series classification in Python with simple models, catch22 features, and UEA/UCR benchmarking.
 seo_title: Time-Series Classification in Python with Catch22
 seo_type: article
@@ -237,3 +239,9 @@ This article demonstrates how to implement time-series classification using **si
 In many real-world applications, starting with simple features like the **mean** and **standard deviation** can be highly effective. When needed, additional complexity (such as the **catch22** feature set) can be introduced, but the key is to ensure that this added complexity yields **meaningful improvements**.
 
 Feel free to experiment with these scripts on your own datasets and explore how well these methods perform in different domains!
+
+## References
+
+- Lubba, C. H., Sethi, S. S., Knaute, P., Schultz, S. R., Fulcher, B. D., & Jones, N. S. (2019). catch22: CAnonical Time-series CHaracteristics. *Data Mining and Knowledge Discovery*, 33, 1821-1852.
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

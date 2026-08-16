@@ -218,3 +218,12 @@ Feature engineering is a vital component of the machine learning workflow, centr
 Automation tools like Featuretools and TPOT offer significant value by simplifying and streamlining the feature engineering process. Featuretools automates the creation of complex features, uncovering hidden relationships in the data, while TPOT optimizes the entire machine learning pipeline, from feature selection to model hyperparameter tuning. These tools reduce the manual effort involved, allowing data scientists to focus on higher-level analysis and problem-solving.
 
 We encourage you to explore these powerful tools to enhance your machine learning projects. By leveraging automation in feature engineering, you can improve the efficiency and effectiveness of your modeling efforts, ultimately leading to better and more robust machine learning solutions.
+
+## References
+
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).

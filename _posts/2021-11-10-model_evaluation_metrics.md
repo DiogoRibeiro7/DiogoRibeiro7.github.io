@@ -18,6 +18,9 @@ keywords:
 - Precision
 - Recall
 - Regression metrics
+permalink: '/machine-learning/model_evaluation_metrics/'
+redirect_from:
+- '/machine learning/model_evaluation_metrics/'
 seo_description: A concise overview of essential metrics like precision, recall, F1-score,
   and RMSE for measuring model performance.
 seo_title: Essential Metrics for Evaluating Machine Learning Models

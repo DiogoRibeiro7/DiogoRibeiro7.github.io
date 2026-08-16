@@ -19,6 +19,9 @@ keywords:
 - Python
 - Pandas
 - Data cleaning
+permalink: '/data-science/exploratory_data_analysis_intro/'
+redirect_from:
+- '/data science/exploratory_data_analysis_intro/'
 seo_description: Learn the fundamentals of Exploratory Data Analysis using Python,
   including data cleaning, visualization, and summary statistics.
 seo_title: Beginner's Guide to Exploratory Data Analysis (EDA)

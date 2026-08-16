@@ -21,8 +21,10 @@ keywords:
 - Machine learning success
 - Adapting to new tools
 - Technology in machine learning
+permalink: '/machine-learning/fundamentals_matter/'
 redirect_from:
 - '/machine learning/technology/fundamentals_matter/'
+- '/machine learning/fundamentals_matter/'
 seo_description: Why mastering machine learning fundamentals matters more than mastering specific tools, and the principles behind successful projects.
 seo_title: 'Machine Learning Fundamentals vs Tools: What Matters Most'
 seo_type: article
@@ -81,3 +83,9 @@ In the ever-changing field of machine learning, it’s easy to get caught up in 
 Mastering the basics—matrix multiplication, activation functions, prompt engineering, retrieval generation, statistical modeling, mathematical optimization, data storage, and next-token prediction—will give you the flexibility to adapt to new tools as they emerge. In a field that’s constantly evolving, this adaptability is your greatest asset.
 
 So, whether you’re just starting out in machine learning or you’re an experienced practitioner, remember that tools come and go, but fundamentals last forever. By focusing on the core principles that underpin the technology, you’ll ensure that your skills remain valuable, no matter what changes the future may bring.
+
+## References
+
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *Advances in Neural Information Processing Systems*, 28.
+- Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of KDD*, 785-794.
+- Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.

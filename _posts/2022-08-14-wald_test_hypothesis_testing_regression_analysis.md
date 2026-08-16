@@ -214,3 +214,9 @@ Additionally, like all statistical tests, the Wald test is subject to the risk o
 The Wald test is a powerful and versatile tool for hypothesis testing in regression analysis. It is widely used in various types of regression models, including linear regression, logistic regression, Poisson regression, and generalized linear models. While the Wald test is computationally simple and easy to implement, it has some limitations, particularly in small samples or when parameter estimates are near the boundary of the parameter space.
 
 Understanding the theoretical underpinnings of the Wald test, along with its practical applications and limitations, is essential for anyone working with regression models. By carefully interpreting the results of the Wald test and considering alternative hypothesis testing methods like the likelihood ratio test and the score test, researchers can make more informed decisions and draw more accurate conclusions from their data.
+
+## References
+
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- McCullagh, P., & Nelder, J. A. (1989). *Generalized Linear Models* (2nd ed.). Chapman & Hall.
+- Efron, B. (1979). Bootstrap methods: another look at the jackknife. *Annals of Statistics*, 7(1), 1-26.

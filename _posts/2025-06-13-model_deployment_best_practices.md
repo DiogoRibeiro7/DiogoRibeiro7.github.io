@@ -18,6 +18,9 @@ keywords:
 - Mlops
 - Monitoring
 - Scalability
+permalink: '/data-science/model_deployment_best_practices/'
+redirect_from:
+- '/data science/model_deployment_best_practices/'
 seo_description: Understand essential steps for taking models from development to
   production, including containerization, monitoring, and retraining.
 seo_title: Best Practices for Model Deployment
@@ -186,3 +189,9 @@ By embracing advanced containerization, strong security practices, comprehensive
 - Fostering a culture of collaboration between data scientists, devops, and security teams.
 
 With these practices in place, model deployment becomes not a one-off project but a sustainable capability for continuous innovation and business value delivery.
+
+## References
+
+- Quiñonero-Candela, J., Sugiyama, M., Schwaighofer, A., & Lawrence, N. D. (Eds.). (2009). *Dataset Shift in Machine Learning*. MIT Press.
+- Kullback, S., & Leibler, R. A. (1951). On information and sufficiency. *Annals of Mathematical Statistics*, 22(1), 79-86.
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *Advances in Neural Information Processing Systems*, 28.

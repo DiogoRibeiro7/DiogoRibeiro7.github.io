@@ -278,3 +278,8 @@ else:
 print(f"Dixon's Q Statistic: {Q_statistic}")
 print(f"Critical Q Value: {Q_critical}")
 ```
+
+## References
+
+- Dixon, W. J. (1951). Ratios involving extreme values. *Annals of Mathematical Statistics*, 22(1), 68-78.
+- Grubbs, F. E. (1969). Procedures for detecting outlying observations in samples. *Technometrics*, 11(1), 1-21.

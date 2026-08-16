@@ -20,8 +20,10 @@ keywords:
 - Multi-class classification
 - Neural networks
 - Entropy
+permalink: '/machine-learning/estimating_uncertainty_neural_networks_using_monte_carlo_dropout/'
 redirect_from:
 - '/neural networks/estimating_uncertainty_neural_networks_using_monte_carlo_dropout/'
+- '/machine learning/estimating_uncertainty_neural_networks_using_monte_carlo_dropout/'
 seo_description: How Monte Carlo dropout estimates uncertainty in neural networks for multi-class classification, and the methods used to derive uncertainty scores.
 seo_title: Monte Carlo Dropout for Uncertainty Estimation
 seo_type: article
@@ -196,3 +198,9 @@ Monte Carlo dropout offers a practical and scalable way to estimate uncertainty 
 Each method has its strengths and is suited to different types of problems. For simple tasks, maximum class probability and entropy offer computationally efficient ways to estimate uncertainty. For more complex or high-stakes applications, variance-based methods and normal approximation provide deeper insights into the model's confidence.
 
 As uncertainty estimation becomes increasingly important in machine learning applications, Monte Carlo dropout stands out as a powerful tool that can be easily integrated into existing models. However, it is important to be mindful of the method’s limitations, particularly with respect to computational cost and the choice of dropout rate. With proper tuning and calibration, Monte Carlo dropout can significantly enhance the robustness and reliability of neural network predictions, making it an essential technique in the machine learning toolbox.
+
+## References
+
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.

@@ -25,6 +25,9 @@ keywords:
 - Gis
 - Bash
 - Python
+permalink: '/data-science/traffic_safety_kde/'
+redirect_from:
+- '/data science/traffic_safety_kde/'
 seo_description: How Kernel Density Estimation detects traffic accident hotspots and improves urban road safety, with case studies from Japan.
 seo_title: Using KDE for Traffic Accident Hotspots Detection
 seo_type: article

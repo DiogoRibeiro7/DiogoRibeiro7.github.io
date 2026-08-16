@@ -20,8 +20,10 @@ keywords:
 - Forecasting
 - Time series
 - Arimax
+permalink: '/time-series/arimax_time_series/'
 redirect_from:
 - '/time series analysis/arimax_time_series/'
+- '/time series/arimax_time_series/'
 seo_description: The ARIMAX model for time series forecasting with exogenous variables, and how it builds on ARIMA to improve predictive performance.
 seo_title: 'ARIMAX Time Series Model: An In-Depth Guide'
 seo_type: article

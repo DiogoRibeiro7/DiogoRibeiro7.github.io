@@ -275,3 +275,8 @@ The future of SEM and latent variable modeling looks promising, with ongoing adv
 The integration of SEM with machine learning and big data analytics presents exciting opportunities for uncovering deeper insights and predictive models that can navigate the vast landscapes of unstructured data. This convergence of traditional statistical methods with cutting-edge computational techniques will likely fuel innovative research and practical applications, from personalized medicine and tailored educational interventions to dynamic market analysis and beyond.
 
 Ultimately, the continued evolution of SEM and latent variable modeling hinges on a delicate balance between methodological rigor, theoretical grounding, and innovative application. As researchers and practitioners push the boundaries of what’s possible with SEM, the methodology will undoubtedly remain a cornerstone in the quest to decipher the complexities of the world around us, offering a beacon for those seeking to illuminate the unseen structures that shape our experiences and interactions.
+
+## References
+
+- Kline, R. B. (2015). *Principles and Practice of Structural Equation Modeling* (4th ed.). Guilford Press.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

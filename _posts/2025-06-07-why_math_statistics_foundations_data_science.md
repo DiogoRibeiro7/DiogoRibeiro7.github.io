@@ -18,6 +18,9 @@ keywords:
 - Statistics fundamentals
 - Machine learning theory
 - Algorithms
+permalink: '/data-science/why_math_statistics_foundations_data_science/'
+redirect_from:
+- '/data science/why_math_statistics_foundations_data_science/'
 seo_description: Explore why a solid grasp of math and statistics is crucial for data
   scientists and how ignoring the underlying theory can lead to faulty models.
 seo_title: 'Math and Statistics: The Bedrock of Data Science'
@@ -97,3 +100,12 @@ It’s easy to get caught up in the latest frameworks or model architectures. Bu
 Practitioners who invest in theory are the ones who debug models faster, build more robust systems, and adapt when tools or datasets shift. They’re also the ones who communicate results with precision—because they know what their models are really doing.
 
 Data science isn’t just about prediction. It’s about reasoning under uncertainty. And that means we need the mathematical and statistical tools to reason well.
+
+## References
+
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.
+- Shannon, C. E. (1948). A mathematical theory of communication. *Bell System Technical Journal*, 27(3), 379-423.

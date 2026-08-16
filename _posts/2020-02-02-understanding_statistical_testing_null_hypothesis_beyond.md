@@ -109,3 +109,10 @@ Before diving into any kind of statistical analysis, it is essential to think cr
 ## Conclusion
 
 Statistical hypothesis testing is a powerful but nuanced tool. Understanding the limitations of the null hypothesis and the diversity of statistical tests available is essential for making accurate inferences from data. While it is impossible to prove the null hypothesis, careful consideration of the different ways in which data can deviate from theoretical patterns—along with thoughtful selection of appropriate statistical tests—can provide deeper insights into the underlying processes generating the data. By recognizing that no single test or framework can capture the full complexity of real-world data, analysts can approach hypothesis testing with greater precision and understanding.
+
+## References
+
+- Massey, F. J. (1951). The Kolmogorov-Smirnov test for goodness of fit. *Journal of the American Statistical Association*, 46(253), 68-78.
+- Anderson, T. W., & Darling, D. A. (1954). A test of goodness of fit. *Journal of the American Statistical Association*, 49(268), 765-769.
+- Shapiro, S. S., & Wilk, M. B. (1965). An analysis of variance test for normality (complete samples). *Biometrika*, 52(3-4), 591-611.
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.

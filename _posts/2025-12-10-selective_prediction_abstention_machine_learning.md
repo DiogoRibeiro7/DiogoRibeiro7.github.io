@@ -1,4 +1,7 @@
 ---
+permalink: '/machine-learning/selective_prediction_abstention_machine_learning/'
+redirect_from:
+- '/machine learning/selective_prediction_abstention_machine_learning/'
 title: "Selective Prediction in Machine Learning: When Models Should Abstain"
 categories:
 - Machine Learning
@@ -347,3 +350,9 @@ A good model is not only one that predicts accurately. It is one that knows the 
 The technical work matters: calibration, risk-coverage curves, uncertainty estimates, out-of-distribution signals, and threshold tuning. But the operational work matters just as much: review capacity, fairness, delay, cost, user experience, and monitoring.
 
 Selective prediction is therefore a reliability pattern. It turns uncertainty from an invisible weakness into an explicit part of the system design.
+
+## References
+
+- Niculescu-Mizil, A., & Caruana, R. (2005). Predicting good probabilities with supervised learning. *Proceedings of ICML*, 625-632.
+- Vovk, V., Gammerman, A., & Shafer, G. (2005). *Algorithmic Learning in a Random World*. Springer.
+- Quiñonero-Candela, J., Sugiyama, M., Schwaighofer, A., & Lawrence, N. D. (Eds.). (2009). *Dataset Shift in Machine Learning*. MIT Press.

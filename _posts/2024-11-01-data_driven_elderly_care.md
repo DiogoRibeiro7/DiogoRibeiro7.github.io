@@ -20,8 +20,10 @@ keywords:
 - Elderly care
 - Data-driven healthcare
 - Personalized medicine
+permalink: '/data-science/data_driven_elderly_care/'
 redirect_from:
 - '/healthtech/data_driven_elderly_care/'
+- '/data science/data_driven_elderly_care/'
 seo_description: How predictive analytics helps manage chronic diseases such as diabetes, arthritis, and cardiovascular conditions in older adults.
 seo_title: Data Science for Managing Chronic Diseases in the Elderly
 seo_type: article

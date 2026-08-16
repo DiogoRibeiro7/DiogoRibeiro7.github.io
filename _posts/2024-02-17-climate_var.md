@@ -25,6 +25,9 @@ keywords:
 - Climate finance
 - Sustainability and risk
 - Python
+permalink: '/data-science/climate_var/'
+redirect_from:
+- '/data science/climate_var/'
 seo_description: Climate Value at Risk (VaR) from a data science perspective, and its importance for financial risk assessment under climate change.
 seo_title: 'Climate VaR: Data Science and Financial Risk Assessment'
 seo_type: article
@@ -159,3 +162,8 @@ The code simulates asset returns by incorporating climate sensitivity into histo
 ### The Future of Climate VaR in Financial Risk Management
 
 As climate change continues to pose unprecedented challenges, Climate VaR provides a data-driven approach to assess and manage climate-related financial risks. Data science is central to this process, offering sophisticated modeling techniques, scenario analysis, and high-resolution data to accurately estimate potential losses. By integrating Climate VaR into their risk management strategies, companies and investors can better navigate the evolving landscape of climate risks, safeguarding their assets and contributing to a more resilient financial system.
+
+## References
+
+- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.

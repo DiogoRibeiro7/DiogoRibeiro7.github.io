@@ -22,8 +22,10 @@ keywords:
 - Data visualization
 - Python
 - Unknown
+permalink: '/data-science/savitzky_golay/'
 redirect_from:
 - '/data science/time series analysis/machine learning/data processing/savitzky_golay/'
+- '/data science/savitzky_golay/'
 seo_description: 'Smoothing time series with Moving Averages and Savitzky-Golay filters: their differences, benefits, and Python implementations.'
 seo_title: Moving Averages vs. Savitzky-Golay Smoothing
 seo_type: article

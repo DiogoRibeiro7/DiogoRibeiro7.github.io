@@ -1,6 +1,8 @@
 ---
+permalink: '/time-series/evaluating_time_series_forecasting_models_metrics_best_bractices/'
 redirect_from:
 - '/time series/model evaluation/forecasting/evaluating_time_series_forecasting_models_metrics_best_bractices/'
+- '/time series/evaluating_time_series_forecasting_models_metrics_best_bractices/'
 title: 'Evaluating Time Series Forecasting Models: Metrics and Best Practices'
 categories:
 - Time Series
@@ -325,3 +327,11 @@ In applied settings, evaluation must balance accuracy with computational efficie
 Evaluating time series forecasting models is a nuanced process that requires both statistical rigor and practical judgment. By carefully choosing appropriate accuracy metrics, implementing robust validation strategies, and thoroughly analyzing residuals, practitioners can ensure that their forecasts are not only accurate in historical data but also reliable in predicting the future.
 
 As the field evolves, with deep learning, probabilistic forecasts, and hybrid models gaining traction, the principles of evaluation remain central. Strong evaluation practices form the foundation for trustworthy and actionable time series forecasting.
+
+## References
+
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and Practice* (3rd ed.). OTexts.
+- Bollerslev, T. (1986). Generalized autoregressive conditional heteroskedasticity. *Journal of Econometrics*, 31(3), 307-327.
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Box, G. E. P., & Cox, D. R. (1964). An analysis of transformations. *Journal of the Royal Statistical Society: Series B*, 26(2), 211-252.

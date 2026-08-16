@@ -115,3 +115,11 @@ The Log-Rank test remains a cornerstone of survival analysis, especially in clin
 However, as with any statistical method, the Log-Rank test has limitations that must be carefully considered, particularly regarding its assumptions about proportional hazards and independent censoring. In situations where these assumptions are violated, alternative methods such as Cox regression or Wilcoxon tests should be employed.
 
 Future developments in survival analysis will likely focus on addressing these limitations, providing researchers with more flexible tools for analyzing complex, time-to-event data in clinical and epidemiological settings.
+
+## References
+
+- Mantel, N. (1966). Evaluation of survival data and two new rank order statistics arising in its consideration. *Cancer Chemotherapy Reports*, 50(3), 163-170.
+- Wilcoxon, F. (1945). Individual comparisons by ranking methods. *Biometrics Bulletin*, 1(6), 80-83.
+- Cox, D. R. (1972). Regression models and life-tables. *Journal of the Royal Statistical Society: Series B*, 34(2), 187-220.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Kaplan, E. L., & Meier, P. (1958). Nonparametric estimation from incomplete observations. *Journal of the American Statistical Association*, 53(282), 457-481.

@@ -19,6 +19,9 @@ keywords:
 - Machine learning
 - Predictive analytics
 - Industrial analytics
+permalink: '/data-science/role_data_science_predictive_maintenance/'
+redirect_from:
+- '/data science/role_data_science_predictive_maintenance/'
 seo_description: How regression, clustering, and anomaly detection power predictive maintenance and help forecast equipment failures.
 seo_title: How Data Science Powers Predictive Maintenance
 seo_type: article
@@ -229,3 +232,11 @@ Data science has emerged as a critical enabler of predictive maintenance, transf
 The applications of predictive maintenance span across various industries, including manufacturing, energy, healthcare, and transportation, each benefiting from improved operational efficiency and cost savings. As technology continues to evolve, advancements in IoT, AI, cloud computing, and digital twin technology will further enhance PdM capabilities, making it more accurate, accessible, and scalable.
 
 The future of PdM lies in the integration of these cutting-edge technologies, providing companies with predictive insights that will not only prevent equipment failures but also drive continuous improvements in operational performance. By embracing predictive maintenance, organizations can move towards a future where downtime is minimized, maintenance costs are reduced, and asset utilization is maximized.
+
+## References
+
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Liu, F. T., Ting, K. M., & Zhou, Z.-H. (2008). Isolation forest. *Proceedings of ICDM*, 413-422.
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.
+- Ester, M., Kriegel, H.-P., Sander, J., & Xu, X. (1996). A density-based algorithm for discovering clusters in large spatial databases with noise. *Proceedings of KDD*, 226-231.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.

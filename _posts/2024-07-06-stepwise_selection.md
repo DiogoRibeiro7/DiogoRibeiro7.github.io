@@ -164,3 +164,12 @@ To achieve unbiased and robust estimates, it is essential to avoid techniques li
 - **Bayesian Methods**: By incorporating prior information, Bayesian approaches can provide more stable and unbiased estimates.
 
 By focusing on unbiased estimation procedures and robust modeling strategies, researchers can ensure that their regression models provide accurate and meaningful insights, leading to better decision-making and scientific conclusions.
+
+## References
+
+- Harrell, F. E. (2015). *Regression Modeling Strategies* (2nd ed.). Springer.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).

@@ -20,6 +20,9 @@ keywords:
 - Machine learning regression
 - Nonlinear regression models
 - Linear regression
+permalink: '/machine-learning/polynomial_regression/'
+redirect_from:
+- '/machine learning/polynomial_regression/'
 seo_description: Why polynomial regression is mathematically a form of linear regression, even though it models nonlinear relationships between variables.
 seo_title: 'Polynomial Regression: Why It’s Still Linear Regression'
 seo_type: article

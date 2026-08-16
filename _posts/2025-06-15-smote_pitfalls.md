@@ -18,6 +18,9 @@ keywords:
 - Oversampling
 - Imbalanced data
 - Machine learning pitfalls
+permalink: '/machine-learning/smote_pitfalls/'
+redirect_from:
+- '/machine learning/smote_pitfalls/'
 seo_description: Understand the drawbacks of applying SMOTE for imbalanced datasets
   and why improper use may reduce model reliability.
 seo_title: 'When SMOTE Backfires: Synthetic Oversampling Risks'
@@ -80,3 +83,10 @@ Following these practices helps preserve the integrity of the original data dist
 ## Final Thoughts
 
 SMOTE remains one of the most widely adopted tools for addressing imbalanced classification, thanks to its conceptual simplicity and ease of implementation. Yet, as with any data augmentation method, it carries inherent risks of distortion and overfitting, particularly in noisy or high-dimensional feature spaces. By understanding SMOTE’s underlying assumptions and combining it with noise mitigation, dimensionality reduction, and robust validation, practitioners can harness its benefits without succumbing to its pitfalls. When applied thoughtfully—and complemented by alternative imbalance-handling techniques—SMOTE can form one component of a comprehensive strategy for fair and accurate classification.
+
+## References
+
+- Chawla, N. V., Bowyer, K. W., Hall, L. O., & Kegelmeyer, W. P. (2002). SMOTE: Synthetic minority over-sampling technique. *Journal of Artificial Intelligence Research*, 16, 321-357.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.
+- Breiman, L. (1996). Bagging predictors. *Machine Learning*, 24(2), 123-140.

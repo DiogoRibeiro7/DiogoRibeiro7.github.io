@@ -1,6 +1,8 @@
 ---
+permalink: '/predictive-maintenance/reinforcement_learning_optimizing_maintenance/'
 redirect_from:
 - '/industrial ai/predictive maintenance/machine learning/reinforcement_learning_optimizing_maintenance/'
+- '/predictive maintenance/reinforcement_learning_optimizing_maintenance/'
 title: >-
   The Role of Reinforcement Learning in Optimizing Maintenance Strategies:
   Dynamic Predictive Maintenance Through Reward-Based Learning

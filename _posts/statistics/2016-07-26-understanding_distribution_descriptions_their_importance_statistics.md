@@ -183,3 +183,10 @@ In manufacturing and engineering, the **Weibull distribution** is widely used to
 ## Conclusion
 
 Describing distributions through parameters is fundamental to parametric statistics, allowing for rigorous statistical analysis, data modeling, and prediction. By understanding distributions such as the normal, binomial, Poisson, and exponential, analysts can interpret complex datasets, select appropriate models, and conduct reliable hypothesis tests across diverse applications. Although parametric methods offer precision and power, it is essential to validate distributional assumptions to ensure accurate and meaningful insights.
+
+## References
+
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Mann, H. B., & Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger than the other. *Annals of Mathematical Statistics*, 18(1), 50-60.
+- Wilcoxon, F. (1945). Individual comparisons by ranking methods. *Biometrics Bulletin*, 1(6), 80-83.

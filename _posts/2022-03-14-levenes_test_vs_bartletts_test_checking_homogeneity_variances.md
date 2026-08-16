@@ -156,3 +156,8 @@ Both **Levene’s Test** and **Bartlett’s Test** are essential tools for asses
 - **Bartlett’s Test** is more powerful when data is normally distributed, but its sensitivity to non-normality limits its use in many real-world scenarios.
 
 For most practical applications, especially when working with real-world data that may not meet the normality assumption, **Levene’s Test** is the safer option. However, in cases where data normality is assured, **Bartlett’s Test** offers greater power and precision. Understanding when to apply each test ensures that statistical analyses are both valid and reliable, particularly when used alongside tests like ANOVA that assume equal variances.
+
+## References
+
+- Levene, H. (1960). Robust tests for equality of variances. In *Contributions to Probability and Statistics* (pp. 278-292). Stanford University Press.
+- Bartlett, M. S. (1937). Properties of sufficiency and statistical tests. *Proceedings of the Royal Society A*, 160(901), 268-282.

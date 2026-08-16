@@ -25,6 +25,9 @@ keywords:
 - Network analysis
 - Interdisciplinary data science
 - Mathematical foundations
+permalink: '/data-science/topology_data_science/'
+redirect_from:
+- '/data science/topology_data_science/'
 seo_description: Topological Data Analysis (TDA) in data science, from persistent homology to the mapper algorithm, revealing structure in complex datasets.
 seo_title: Topological Data Analysis (TDA) in Data Science
 seo_type: article

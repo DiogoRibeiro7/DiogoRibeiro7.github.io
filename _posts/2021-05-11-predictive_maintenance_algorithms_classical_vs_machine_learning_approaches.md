@@ -22,6 +22,9 @@ keywords:
 - Predictive analytics
 - Industrial analytics
 - Predictive algorithms
+permalink: '/machine-learning/predictive_maintenance_algorithms_classical_vs_machine_learning_approaches/'
+redirect_from:
+- '/machine learning/predictive_maintenance_algorithms_classical_vs_machine_learning_approaches/'
 seo_description: Comparing classical models like ARIMA with machine learning approaches for predictive maintenance on performance, accuracy, and scalability.
 seo_title: 'Predictive Maintenance: Classical vs. ML Methods'
 seo_type: article
@@ -231,3 +234,11 @@ Predictive maintenance algorithms are central to reducing downtime, extending eq
 The choice between classical and machine learning approaches depends on various factors, including the complexity of the data, the availability of computational resources, and the need for model interpretability. As industries continue to adopt predictive maintenance strategies, the combination of these two approaches will likely provide the most robust and scalable solutions.
 
 ---
+
+## References
+
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and Practice* (3rd ed.). OTexts.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

@@ -20,8 +20,10 @@ keywords:
 - Wearable technology
 - Elderly care
 - Health monitoring
+permalink: '/data-science/machine_learning_fall_prediction/'
 redirect_from:
 - '/healthtech/machine_learning_fall_prediction/'
+- '/data science/machine_learning_fall_prediction/'
 seo_description: Learn how machine learning models are used to predict and prevent
   falls among the elderly by analyzing sensor data, wearables, and health history.
 seo_title: Machine Learning for Fall Prevention in the Elderly

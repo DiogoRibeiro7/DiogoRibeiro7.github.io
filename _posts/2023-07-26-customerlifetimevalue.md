@@ -30,6 +30,9 @@ keywords:
 - Customer profitability analysis
 - Clv metrics
 - Python
+permalink: '/data-science/customerlifetimevalue/'
+redirect_from:
+- '/data science/customerlifetimevalue/'
 seo_description: 'A guide to Customer Lifetime Value (CLV): how to calculate and predict it, integrate it with business data, and use it in marketing strategy.'
 seo_title: 'Customer Lifetime Value (CLV): A Practical Guide'
 seo_type: article

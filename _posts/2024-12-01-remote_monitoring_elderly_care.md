@@ -20,8 +20,10 @@ keywords:
 - Elderly care
 - Health emergencies
 - Smart homes
+permalink: '/data-science/remote_monitoring_elderly_care/'
 redirect_from:
 - '/healthtech/remote_monitoring_elderly_care/'
+- '/data science/remote_monitoring_elderly_care/'
 seo_description: How IoT devices, wearables, and health monitors use big data to remotely monitor older adults and detect emergencies in real time.
 seo_title: IoT and Big Data in Remote Monitoring for Elderly Care
 seo_type: article

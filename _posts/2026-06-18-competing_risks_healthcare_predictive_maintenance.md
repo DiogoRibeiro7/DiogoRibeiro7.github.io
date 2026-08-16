@@ -1,4 +1,7 @@
 ---
+permalink: '/statistics/competing_risks_healthcare_predictive_maintenance/'
+redirect_from:
+- '/statistics/data science/healthcare/competing_risks_healthcare_predictive_maintenance/'
 title: "Competing Risks in Healthcare and Predictive Maintenance"
 categories:
 - Statistics
@@ -13,7 +16,7 @@ tags:
 - Risk Modeling
 author_profile: false
 seo_title: "Competing Risks in Healthcare and Predictive Maintenance"
-seo_description: "A practical statistics guide to competing risks in healthcare and predictive maintenance, covering cumulative incidence, cause-specific hazards, Fine-Gray models, censoring, and decision-making."
+seo_description: 'Competing risks in healthcare and predictive maintenance: cumulative incidence, cause-specific hazards, Fine-Gray models, and censoring.'
 excerpt: "Competing risks occur when more than one event can happen, and one event changes or prevents the chance of observing another."
 summary: "This article explains competing risks as a practical statistical framework for healthcare and predictive maintenance. It covers why ordinary survival analysis can mislead when event types compete, how cumulative incidence differs from Kaplan-Meier estimates, when to use cause-specific hazards and Fine-Gray models, and how these ideas support clinical and maintenance decisions."
 keywords:
@@ -322,3 +325,8 @@ The main lesson is that event probabilities must be modeled in the world where c
 Cumulative incidence estimates absolute probability. Cause-specific hazards explain event processes. Fine-Gray models connect covariates to cumulative incidence. Together, these tools help analysts distinguish mechanism from prediction and relative effects from decision-relevant risk.
 
 In healthcare, this can clarify recurrence, mortality, readmission, and treatment risk. In predictive maintenance, it can separate failure modes, replacement policies, and decommissioning. In both domains, competing-risks analysis prevents a common statistical error: acting as if only one kind of event can happen.
+
+## References
+
+- Kaplan, E. L., & Meier, P. (1958). Nonparametric estimation from incomplete observations. *Journal of the American Statistical Association*, 53(282), 457-481.
+- Cox, D. R. (1972). Regression models and life-tables. *Journal of the Royal Statistical Society: Series B*, 34(2), 187-220.

@@ -222,3 +222,8 @@ The quest for larger sample sizes in statistical analysis is often driven by the
 The quality of the data and the design of the experiment are equally, if not more, important than the sheer size of the sample. A well-designed experiment serves as the bedrock of valid and reliable research, setting the stage for data that is both robust and generalizable. Financial and time costs associated with large samples further underscore the need for a more balanced and thoughtful approach.
 
 While the allure of large sample sizes is understandable, a balanced approach that takes into account the quality of the data, the integrity of the experimental design, and the practical implications is essential for conducting meaningful and valid statistical analyses.
+
+## References
+
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

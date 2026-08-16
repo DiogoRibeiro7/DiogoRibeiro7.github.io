@@ -25,8 +25,10 @@ keywords:
 - Career development
 - Employee motivation
 - Team management
+permalink: '/data-science/build_ds_team/'
 redirect_from:
 - '/data science/team management/organizational behavior/build_ds_team/'
+- '/data science/build_ds_team/'
 seo_description: The pros and cons of uniform versus specialized job titles in data science teams, and how they affect collaboration.
 seo_title: 'Job Titles in Data Science Teams: Uniform or Not'
 seo_type: article

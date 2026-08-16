@@ -22,6 +22,9 @@ keywords:
 - Linear regression
 - Lasso
 - Python
+permalink: '/machine-learning/Least_Angle_Regression/'
+redirect_from:
+- '/machine learning/Least_Angle_Regression/'
 seo_description: Least Angle Regression (LARS), a regression algorithm combining efficiency with feature selection, and its role in modern modeling.
 seo_title: 'Least Angle Regression (LARS): Method and Applications'
 seo_type: article
@@ -161,3 +164,11 @@ plt.ylabel("Coefficient Value")
 plt.grid(True)
 plt.show()
 ```
+
+## References
+
+- Efron, B., Hastie, T., Johnstone, I., & Tibshirani, R. (2004). Least angle regression. *Annals of Statistics*, 32(2), 407-499.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.
+- Harrell, F. E. (2015). *Regression Modeling Strategies* (2nd ed.). Springer.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- McCullagh, P., & Nelder, J. A. (1989). *Generalized Linear Models* (2nd ed.). Chapman & Hall.

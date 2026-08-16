@@ -22,6 +22,9 @@ keywords:
 - Clustering
 - python
 - plaintext
+permalink: '/machine-learning/understanding_fowlkes_mallows_index/'
+redirect_from:
+- '/machine learning/understanding_fowlkes_mallows_index/'
 seo_description: Explore the Fowlkes-Mallows Index (FMI) for assessing clustering and classification similarity, and its applications in data science and machine learning.
 seo_title: The Fowlkes-Mallows Index in Clustering
 seo_type: article

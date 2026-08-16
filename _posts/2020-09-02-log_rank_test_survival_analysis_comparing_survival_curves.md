@@ -20,6 +20,9 @@ keywords:
 - Survival curves
 - Kaplan-meier curves
 - P-values
+permalink: '/data-science/log_rank_test_survival_analysis_comparing_survival_curves/'
+redirect_from:
+- '/data science/log_rank_test_survival_analysis_comparing_survival_curves/'
 seo_description: 'The log-rank test in survival analysis: how it compares survival times in medical studies, and how to interpret survival curves and p-values.'
 seo_title: The Log-Rank Test in Survival Analysis
 seo_type: article
@@ -139,3 +142,9 @@ While the log-rank test is a powerful tool for comparing survival curves, it has
 The log-rank test is an essential tool in survival analysis, especially in the medical field, where it is used to compare the survival times of different patient groups. By providing a way to statistically assess whether the survival distributions of two or more groups differ significantly, the log-rank test is crucial for evaluating the effectiveness of treatments and interventions in clinical trials.
 
 Understanding Kaplan-Meier survival curves and how to interpret p-values from the log-rank test is key for medical researchers aiming to draw meaningful conclusions about survival outcomes. While the log-rank test has limitations, its simplicity and power make it a widely used method for comparing survival curves in studies across various fields.
+
+## References
+
+- Mantel, N. (1966). Evaluation of survival data and two new rank order statistics arising in its consideration. *Cancer Chemotherapy Reports*, 50(3), 163-170.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Kaplan, E. L., & Meier, P. (1958). Nonparametric estimation from incomplete observations. *Journal of the American Statistical Association*, 53(282), 457-481.

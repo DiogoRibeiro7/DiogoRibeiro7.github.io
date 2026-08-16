@@ -26,6 +26,9 @@ keywords:
 - Data analysis with probability distributions
 - Distribution types in machine learning
 - Modeling uncertainty in ai
+permalink: '/machine-learning/probability_machine_learning/'
+redirect_from:
+- '/machine learning/probability_machine_learning/'
 seo_description: An in-depth exploration of key probability distributions in machine
   learning, including Bernoulli, Multinoulli, Gaussian, Exponential, and Beta distributions.
 seo_title: Probability Distributions in Machine Learning

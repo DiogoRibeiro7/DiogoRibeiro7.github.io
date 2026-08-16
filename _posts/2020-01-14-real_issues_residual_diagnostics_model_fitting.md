@@ -21,8 +21,10 @@ keywords:
 - Generalized least squares
 - Mixed models
 - Statistical modeling
+permalink: '/data-science/real_issues_residual_diagnostics_model_fitting/'
 redirect_from:
 - '/data science/statistics/real_issues_residual_diagnostics_model_fitting/'
+- '/data science/real_issues_residual_diagnostics_model_fitting/'
 seo_description: Why Shapiro-Wilk falls short in residual diagnostics, and what to check instead when fitting models to longitudinal data with GLS and robust alternatives.
 seo_title: Residual Diagnostics Beyond Shapiro-Wilk
 seo_type: article
@@ -124,3 +126,8 @@ Statistical models are ultimately **practical tools**—they’re designed to he
 **Don’t get MAD** (Mean Absolute Deviation, for the pun-inclined) about Shapiro-Wilk when it flags deviations from normality. Look at the **broader picture**: how do your residuals behave? Are there any **outliers** or **heavy tails** that could distort your results? Is your model robust to minor deviations from assumptions?
 
 By understanding these nuances, you can make informed decisions that go beyond mechanistic rules and focus on what really matters: the **interpretation** and **practical significance** of your findings.
+
+## References
+
+- Shapiro, S. S., & Wilk, M. B. (1965). An analysis of variance test for normality (complete samples). *Biometrika*, 52(3-4), 591-611.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.

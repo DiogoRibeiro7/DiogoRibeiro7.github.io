@@ -26,8 +26,10 @@ keywords:
 - Clinical implementation challenges
 - Predictive patient outcomes
 - Real-time medical data analysis
+permalink: '/data-science/ml_healthcare/'
 redirect_from:
 - '/data analytics/ml_healthcare/'
+- '/data science/ml_healthcare/'
 seo_description: 'How machine learning is changing healthcare analytics: predictive patient outcomes, personalized medicine, and medical imaging.'
 seo_title: Machine Learning in Healthcare Analytics
 seo_type: article

@@ -211,3 +211,8 @@ The results of MANOVA are often more complex to interpret than those of ANOVA. S
 Both ANOVA and MANOVA are powerful tools for analyzing group differences in experimental designs. ANOVA is well-suited for situations where there is a single dependent variable, while MANOVA is ideal for experiments involving multiple, related dependent variables. By accounting for the correlations between outcomes, MANOVA provides a more comprehensive test of group differences and reduces the risk of Type I errors when multiple outcomes are measured.
 
 In fields like clinical trials, psychology, and education, where researchers often measure multiple related outcomes, MANOVA offers distinct advantages over separate ANOVAs. However, its increased complexity, more stringent assumptions, and greater sample size requirements should be carefully considered. By understanding when and how to use MANOVA effectively, researchers can gain deeper insights into the effects of their experimental manipulations and make more informed decisions about their data.
+
+## References
+
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.

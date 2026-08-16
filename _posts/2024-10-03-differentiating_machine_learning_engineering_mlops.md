@@ -20,6 +20,9 @@ keywords:
 - Ai infrastructure
 - Model deployment
 - Ml pipelines
+permalink: '/machine-learning/differentiating_machine_learning_engineering_mlops/'
+redirect_from:
+- '/machine learning/differentiating_machine_learning_engineering_mlops/'
 seo_description: An in-depth exploration of the roles of Machine Learning Engineers
   (MLE) and MLOps engineers, their overlaps, and distinctions in modern ML pipelines.
 seo_title: Machine Learning Engineering vs. MLOps

@@ -22,8 +22,10 @@ keywords:
 - Sustainable building practices
 - Carbon footprint reduction
 - Python
+permalink: '/data-science/energie_efficiency/'
 redirect_from:
 - '/data science/machine learning/sustainability/energie_efficiency/'
+- '/data science/energie_efficiency/'
 seo_description: How to apply machine learning and Python to building energy efficiency analysis, optimizing usage and reducing environmental impact.
 seo_title: Building Energy Efficiency with Python and ML
 seo_type: article
@@ -210,3 +212,12 @@ Post-deployment, it is crucial to continuously monitor the model's performance t
 ### Conclusion
 
 Building energy efficiency analysis is a complex but essential task in the quest for sustainability. Python and machine learning provide robust tools to analyze vast amounts of data, enabling the development of predictive models that can optimize energy use. From data collection and preprocessing to model deployment and monitoring, every step in the machine learning pipeline is central to enhancing the energy efficiency of buildings. As the push for greener and more sustainable buildings continues, the synergy between data science and energy management will become increasingly pivotal.
+
+## References
+
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *Advances in Neural Information Processing Systems*, 28.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Liu, F. T., Ting, K. M., & Zhou, Z.-H. (2008). Isolation forest. *Proceedings of ICDM*, 413-422.

@@ -138,3 +138,9 @@ In some cases, heteroscedasticity may be a sign that the model is misspecified. 
 ## Conclusion
 
 Heteroscedasticity is a common issue in regression analysis that can lead to inefficient estimates and unreliable hypothesis tests. Detecting it is essential to ensure the robustness of a model. Various tests, such as the Breusch-Pagan, White, and Goldfeld-Quandt tests, help in identifying heteroscedasticity. Once detected, corrective actions—such as transforming the dependent variable, applying Weighted Least Squares, or using robust standard errors—can be applied to mitigate its effects. Addressing heteroscedasticity is a critical step in ensuring that regression models remain accurate and reliable.
+
+## References
+
+- Breusch, T. S., & Pagan, A. R. (1979). A simple test for heteroscedasticity and random coefficient variation. *Econometrica*, 47(5), 1287-1294.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- White, H. (1980). A heteroskedasticity-consistent covariance matrix estimator and a direct test for heteroskedasticity. *Econometrica*, 48(4), 817-838.

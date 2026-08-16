@@ -17,8 +17,10 @@ keywords:
 - Time-series classification
 - Simple distributional properties
 - Deep learning
+permalink: '/time-series/simple_distribution/'
 redirect_from:
 - '/time-series/machine learning/simple_distribution/'
+- '/time series/simple_distribution/'
 seo_description: Explore the effectiveness of using simple distributional properties
   as a baseline for time-series classification, compared to complex deep learning
   models.
@@ -85,3 +87,9 @@ For example, in a dataset like the GunPoint dataset—where the task is to class
 ### Comparison of Simple Features vs. Complex Temporal Features
 
 While complex time-series features—such as autocorrelation, periodicity, or dynamic patterns—offer a more detailed analysis, they are not always necessary. In many cases, simpler features provide sufficient information for classification. The challenge lies in determining when it is worth incorporating complex features, as this can lead to overfitting and poor generalizability.
+
+## References
+
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

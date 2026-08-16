@@ -20,8 +20,10 @@ keywords:
 - Elderly patients
 - Post-hospital care
 - Predictive analytics
+permalink: '/data-science/predicting_hospital_readmissions/'
 redirect_from:
 - '/healthtech/predicting_hospital_readmissions/'
+- '/data science/predicting_hospital_readmissions/'
 seo_description: How machine learning predicts hospital readmissions in elderly patients using post-discharge data, adherence, and health conditions.
 seo_title: Predicting Hospital Readmissions with ML
 seo_type: article
@@ -172,3 +174,11 @@ In the future, predictive models may also incorporate **genomic data**, allowing
 ## Conclusion
 
 Machine learning has the potential to revolutionize hospital readmission prediction and post-hospitalization care for elderly patients. By analyzing post-discharge data, treatment adherence, and other factors, predictive models can identify high-risk individuals and enable timely interventions to prevent complications. As healthcare systems continue to embrace AI and predictive analytics, the future of elderly care will become more proactive, personalized, and cost-effective, ultimately improving outcomes for patients and reducing the strain on healthcare providers.
+
+## References
+
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.

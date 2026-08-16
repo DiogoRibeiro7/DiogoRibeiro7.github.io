@@ -21,8 +21,10 @@ keywords:
 - Chi-square test
 - Evidently ai
 - Nannyml
+permalink: '/machine-learning/detect_data_drift_machine_learning_models/'
 redirect_from:
 - '/machine learning/model monitoring/detect_data_drift_machine_learning_models/'
+- '/machine learning/detect_data_drift_machine_learning_models/'
 seo_description: How to detect data drift with KL Divergence and PSI, and tools like NannyML and Evidently AI for maintaining accuracy in production.
 seo_title: 'Detecting Data Drift in Machine Learning: Methods and Tools'
 seo_type: article
@@ -145,3 +147,10 @@ GitHub: [https://github.com/evidentlyai/evidently](https://github.com/evidentlya
 Detecting data drift is not just about protecting model accuracy—it’s about preserving the integrity of decisions made from your ML system. By combining statistical rigor with modern monitoring tools, teams can catch distributional shifts early and take proactive steps before model performance deteriorates.
 
 Data is never static, and neither should your monitoring strategy be. Embrace drift detection as a continuous process, not a one-time diagnostic. In doing so, you ensure your models remain as adaptive as the environments they serve.
+
+## References
+
+- Quiñonero-Candela, J., Sugiyama, M., Schwaighofer, A., & Lawrence, N. D. (Eds.). (2009). *Dataset Shift in Machine Learning*. MIT Press.
+- Kullback, S., & Leibler, R. A. (1951). On information and sufficiency. *Annals of Mathematical Statistics*, 22(1), 79-86.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Massey, F. J. (1951). The Kolmogorov-Smirnov test for goodness of fit. *Journal of the American Statistical Association*, 46(253), 68-78.

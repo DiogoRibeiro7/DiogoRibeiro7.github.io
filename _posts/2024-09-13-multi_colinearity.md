@@ -146,3 +146,9 @@ When multicollinearity is present, the matrix $$ X^T X $$ becomes close to singu
 ### Conclusion
 
 Multicollinearity, whether perfect or imperfect, is a critical concept in regression analysis. While it complicates the estimation of individual coefficients, it does not inherently reduce the predictive power of a model. Careful diagnostic checks and thoughtful strategies, such as PCA or regularization techniques, can mitigate its effects and help improve the robustness of the regression model. Understanding multicollinearity’s impact on model interpretation and estimation is key to building more reliable and interpretable statistical models.
+
+## References
+
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.
+- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.

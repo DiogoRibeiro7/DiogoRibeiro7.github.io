@@ -11,8 +11,10 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_8.avif
   twitter_image: /assets/images/data_science_7.jpg
+permalink: '/data-science/Essential_Statistical/'
 redirect_from:
 - '/data science/mathematics/statistics/data analysis/Essential_Statistical/'
+- '/data science/Essential_Statistical/'
 seo_description: The statistical concepts every data analyst needs, from descriptive measures like mean and median to interpreting data.
 seo_title: Essential Statistical Concepts for Data Analysts
 seo_type: article
@@ -407,3 +409,11 @@ Time series analysis is crucial for analyzing data collected over time. Techniqu
 Multivariate analysis allows for the examination of multiple variables simultaneously, providing deeper insights into complex datasets. Techniques such as Principal Component Analysis (PCA), factor analysis, and cluster analysis help in reducing dimensionality, identifying underlying factors, and grouping similar observations. These methods are essential for uncovering hidden patterns and making sense of high-dimensional data.
 
 These statistical concepts and techniques are indispensable for data analysts. They provide the necessary tools to effectively summarize data, identify patterns, test hypotheses, and make data-driven decisions. Mastery of these concepts empowers analysts to derive actionable insights and contribute to evidence-based decision-making processes, ultimately adding significant value to their organizations.
+
+## References
+
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and Practice* (3rd ed.). OTexts.
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.
+- Ester, M., Kriegel, H.-P., Sander, J., & Xu, X. (1996). A density-based algorithm for discovering clusters in large spatial databases with noise. *Proceedings of KDD*, 226-231.

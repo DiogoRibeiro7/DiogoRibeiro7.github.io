@@ -19,6 +19,9 @@ keywords:
 - Extreme weather
 - Sea level rise
 - Biodiversity
+permalink: '/machine-learning/role_machine_learning_predicting_climate_change_impacts/'
+redirect_from:
+- '/machine learning/role_machine_learning_predicting_climate_change_impacts/'
 seo_description: Exploring how machine learning is used to predict extreme weather, sea-level rise, and biodiversity loss due to climate change.
 seo_title: Machine Learning and Climate Change
 seo_type: article

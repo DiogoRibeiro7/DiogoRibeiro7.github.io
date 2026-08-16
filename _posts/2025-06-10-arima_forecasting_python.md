@@ -147,3 +147,9 @@ For series with strong seasonality, the Seasonal ARIMA extension (SARIMA) incorp
 ## Practical Tips and Best Practices
 
 Successful ARIMA modeling hinges on judicious preprocessing, thorough diagnostics, and transparent communication. Always visualize both the series and residuals. Document the rationale behind differencing and order choices. Compare multiple candidate models using AIC/BIC and cross-validation. Finally, present forecast intervals alongside point predictions to convey uncertainty. By integrating classical rigor with Python’s rich ecosystem, practitioners can deploy ARIMA models that remain reliable baselines and trustworthy forecasting tools for time-series challenges.
+
+## References
+
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Dickey, D. A., & Fuller, W. A. (1979). Distribution of the estimators for autoregressive time series with a unit root. *Journal of the American Statistical Association*, 74(366), 427-431.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

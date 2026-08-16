@@ -18,6 +18,9 @@ keywords:
 - Bias mitigation
 - Responsible ai
 - Transparency
+permalink: '/data-science/data_ethics_machine_learning/'
+redirect_from:
+- '/data science/data_ethics_machine_learning/'
 seo_description: Examine the ethical challenges of machine learning, from biased data
   to algorithmic transparency, and learn best practices for responsible AI.
 seo_title: Data Ethics in Machine Learning

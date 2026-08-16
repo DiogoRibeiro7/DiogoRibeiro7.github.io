@@ -23,8 +23,10 @@ keywords:
 - Seasonal time series
 - Python
 - Bash
+permalink: '/time-series/time_series_forecasting_sarima_seasonal_arima_explained/'
 redirect_from:
 - '/time series/forecasting/data science/time_series_forecasting_sarima_seasonal_arima_explained/'
+- '/time series/time_series_forecasting_sarima_seasonal_arima_explained/'
 seo_description: How SARIMA extends ARIMA to handle seasonality in forecasting, covering model selection, parameters, and Python implementation.
 seo_title: 'SARIMA: Seasonal ARIMA Forecasting Explained'
 seo_type: article
@@ -422,3 +424,12 @@ SARIMA is a strong choice:
 SARIMA is a foundational tool in time series forecasting that offers robustness, flexibility, and interpretability. By incorporating seasonal components directly into its structure, SARIMA outperforms standard ARIMA in datasets where cyclic behavior plays a major role.
 
 With tools like `statsmodels` and `pmdarima`, implementing SARIMA in Python is not only feasible but also highly effective. Whether you're forecasting sales, energy demand, or traffic patterns, understanding and applying SARIMA equips you with a statistically sound approach to seasonal prediction.
+
+## References
+
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Ljung, G. M., & Box, G. E. P. (1978). On a measure of lack of fit in time series models. *Biometrika*, 65(2), 297-303.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Shapiro, S. S., & Wilk, M. B. (1965). An analysis of variance test for normality (complete samples). *Biometrika*, 52(3-4), 591-611.
+- Breusch, T. S., & Pagan, A. R. (1979). A simple test for heteroscedasticity and random coefficient variation. *Econometrica*, 47(5), 1287-1294.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.

@@ -205,3 +205,10 @@ In the output, the U statistic provides the test statistic for the Mann-Whitney 
 The Mann-Whitney U Test is a powerful and widely used non-parametric test for comparing two independent samples, especially when the data do not meet the assumptions of parametric tests like the independent samples t-test. By ranking the data and comparing the sums of the ranks, the Mann-Whitney U Test provides a robust method for detecting differences between groups in a wide range of fields, including psychology, medicine, and ecology.
 
 Its non-parametric nature, ease of use, and applicability to small sample sizes make the Mann-Whitney U Test an essential tool for researchers working with non-normally distributed data or ordinal data. By understanding when and how to apply the Mann-Whitney U Test, researchers can confidently analyze their data and draw meaningful conclusions about group differences.
+
+## References
+
+- Mann, H. B., & Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger than the other. *Annals of Mathematical Statistics*, 18(1), 50-60.
+- Wilcoxon, F. (1945). Individual comparisons by ranking methods. *Biometrics Bulletin*, 1(6), 80-83.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. *Journal of the American Statistical Association*, 47(260), 583-621.

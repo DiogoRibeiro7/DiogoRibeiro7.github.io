@@ -23,6 +23,9 @@ keywords:
 - Go
 - Statistics
 - Machine Learning
+permalink: '/data-science/understanding_splines_what_they_how_they_used_data_analysis/'
+redirect_from:
+- '/data science/understanding_splines_what_they_how_they_used_data_analysis/'
 seo_description: What splines are, how they work, and where they apply in regression, data smoothing, and machine learning.
 seo_title: What Are Splines? Uses in Data Analysis
 seo_type: article

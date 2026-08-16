@@ -30,6 +30,9 @@ keywords:
 - Ai in business
 - Data science for revenue growth
 - Data science trends in business
+permalink: '/data-science/demystifying_data_science/'
+redirect_from:
+- '/data science/demystifying_data_science/'
 seo_description: Learn what data science is and how it can transform your business
   through improved decision-making, cost savings, and increased revenue.
 seo_title: 'Data Science: A Guide to Its Business Benefits'

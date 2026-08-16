@@ -1,6 +1,8 @@
 ---
+permalink: '/time-series/handling_non-stationarity_time_series_data/'
 redirect_from:
 - '/time series/data science/forecasting/handling_non-stationarity_time_series_data/'
+- '/time series/handling_non-stationarity_time_series_data/'
 title: "Handling Non-Stationarity in Time Series Data: Techniques and Best Practices"
 categories:
 - Time Series
@@ -394,3 +396,12 @@ Handling non-stationarity is at the heart of effective time series analysis. Whe
 Through techniques like differencing, transformations, detrending, and decomposition, coupled with rigorous statistical testing (ADF, KPSS), analysts can systematically tackle non-stationarity. Beyond these, advanced models provide flexible tools to handle complex realities of real-world data.
 
 In practice, the journey from raw, messy, evolving time series to a stationary, model-ready dataset is iterative and nuanced. It requires not just mechanical application of transformations, but also an understanding of the underlying processes driving the data. By combining methodological rigor with domain insight, analysts can ensure robust and meaningful forecasting outcomes.
+
+## References
+
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Dickey, D. A., & Fuller, W. A. (1979). Distribution of the estimators for autoregressive time series with a unit root. *Journal of the American Statistical Association*, 74(366), 427-431.
+- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.
+- Box, G. E. P., & Cox, D. R. (1964). An analysis of transformations. *Journal of the Royal Statistical Society: Series B*, 26(2), 211-252.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Bollerslev, T. (1986). Generalized autoregressive conditional heteroskedasticity. *Journal of Econometrics*, 31(3), 307-327.

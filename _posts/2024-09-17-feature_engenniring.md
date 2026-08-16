@@ -26,8 +26,10 @@ keywords:
 - Robust feature engineering
 - Data cleaning for machine learning
 - Python
+permalink: '/machine-learning/feature_engenniring/'
 redirect_from:
 - '/machine learning/data science/feature_engenniring/'
+- '/machine learning/feature_engenniring/'
 seo_description: Five common feature engineering mistakes, including data leakage and over-engineering, and how to avoid them.
 seo_title: 5 Common Feature Engineering Mistakes to Avoid
 seo_type: article
@@ -215,3 +217,11 @@ high_corr_var = [(corr_matrix.index[x], corr_matrix.columns[y]) for x, y in zip(
 X_train_reduced = pd.DataFrame(X_train_scaled, columns=X_train.columns).drop(columns=[var[1] for var in high_corr_var])
 X_test_reduced = pd.DataFrame(X_test_scaled, columns=X_train.columns).drop(columns=[var[1] for var in high_corr_var])
 ```
+
+## References
+
+- Kaufman, S., Rosset, S., Perlich, C., & Stitelman, O. (2012). Leakage in data mining: formulation, detection, and avoidance. *ACM Transactions on Knowledge Discovery from Data*, 6(4), 1-21.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).

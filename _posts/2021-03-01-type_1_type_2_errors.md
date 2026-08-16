@@ -229,3 +229,9 @@ Type I and Type II errors are an inevitable part of statistical testing, but by 
 - **Sample Size**: A critical factor that influences both Type I and Type II errors. The right sample size balances the need to detect true effects without detecting irrelevant ones.
 
 By maintaining an awareness of these errors and employing strategies such as power analysis, optimal experimental design, and cross-validation, you can improve the rigor of your work and avoid costly mistakes in decision-making.
+
+## References
+
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.

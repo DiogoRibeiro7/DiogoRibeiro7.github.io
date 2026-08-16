@@ -155,3 +155,12 @@ Bayesian methods are essential in machine learning applications like **Naive Bay
 The relationship between **machine learning** and **statistics** is deeply intertwined. Statistical methods form the foundation of many machine learning algorithms, from the simplest linear models to the most complex ensemble methods and deep learning architectures. Machine learning has, in many ways, expanded on statistical concepts, applying them to large-scale data analysis and real-world applications with a focus on prediction and automation.
 
 By understanding the statistical principles that underlie machine learning algorithms, we can build better models, interpret their results more effectively, and continue to push the boundaries of what both fields can achieve. The gap between statistics and machine learning is narrowing, as both fields evolve and influence each other, driving advancements in data science, artificial intelligence, and decision-making systems.
+
+## References
+
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Breiman, L. (1996). Bagging predictors. *Machine Learning*, 24(2), 123-140.
+- Efron, B. (1979). Bootstrap methods: another look at the jackknife. *Annals of Statistics*, 7(1), 1-26.

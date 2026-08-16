@@ -24,8 +24,10 @@ keywords:
 - Bash
 - Python
 - Fortran
+permalink: '/data-science/pedestrian_movement/'
 redirect_from:
 - '/simulation models/pedestrian_movement/'
+- '/data science/pedestrian_movement/'
 seo_description: Simulating pedestrian evacuation in smoke-affected spaces with the Social Force Model and Advection-Diffusion Equation.
 seo_title: Pedestrian Evacuation in Smoke-Filled Spaces
 seo_type: article

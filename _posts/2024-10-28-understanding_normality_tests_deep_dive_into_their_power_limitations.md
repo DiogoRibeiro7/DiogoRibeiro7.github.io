@@ -23,8 +23,10 @@ keywords:
 - Ruby
 - Scala
 - Go
+permalink: '/data-science/understanding_normality_tests_deep_dive_into_their_power_limitations/'
 redirect_from:
 - '/data analysis/understanding_normality_tests_deep_dive_into_their_power_limitations/'
+- '/data science/understanding_normality_tests_deep_dive_into_their_power_limitations/'
 seo_description: An in-depth exploration of normality tests, their limitations, and
   the importance of visual inspection for assessing whether data follow a normal distribution.
 seo_title: 'Understanding Normality Tests: A Deep Dive'
@@ -717,3 +719,12 @@ func main() {
 	gearyKurtosis(data)
 }
 ```
+
+## References
+
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Iglewicz, B., & Hoaglin, D. C. (1993). *How to Detect and Handle Outliers*. ASQC Quality Press.
+- Massey, F. J. (1951). The Kolmogorov-Smirnov test for goodness of fit. *Journal of the American Statistical Association*, 46(253), 68-78.
+- Anderson, T. W., & Darling, D. A. (1954). A test of goodness of fit. *Journal of the American Statistical Association*, 49(268), 765-769.
+- Shapiro, S. S., & Wilk, M. B. (1965). An analysis of variance test for normality (complete samples). *Biometrika*, 52(3-4), 591-611.
+- Tufte, E. R. (2001). *The Visual Display of Quantitative Information* (2nd ed.). Graphics Press.

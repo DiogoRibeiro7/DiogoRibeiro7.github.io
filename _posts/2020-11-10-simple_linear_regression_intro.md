@@ -17,6 +17,9 @@ keywords:
 - Linear regression
 - Least squares
 - Data analysis
+permalink: '/data-science/simple_linear_regression_intro/'
+redirect_from:
+- '/data science/simple_linear_regression_intro/'
 seo_description: Discover the mechanics of simple linear regression and how to interpret
   slope and intercept when fitting a straight line to data.
 seo_title: A Primer on Simple Linear Regression

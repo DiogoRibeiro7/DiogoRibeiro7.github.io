@@ -18,8 +18,10 @@ keywords:
 - Data Science
 - Hypothesis Testing
 - Nonparametric Tests
+permalink: '/data-science/rethinking_statistical_test_selection_why_diagrams_failing_us/'
 redirect_from:
 - '/data science/statistics/rethinking_statistical_test_selection_why_diagrams_failing_us/'
+- '/data science/rethinking_statistical_test_selection_why_diagrams_failing_us/'
 seo_description: 'A critical take on statistical test selection: move past decision diagrams and N>30 pseudorules toward meaningful interpretation and robust testing.'
 seo_title: Rethinking How We Choose Statistical Tests
 seo_type: article
@@ -145,3 +147,12 @@ Here’s why: **Permutation testing** naturally performs under the true null hyp
 If you’ve been relying on the same diagrams and pseudorules for choosing statistical tests, it’s time to rethink your approach. These flowcharts may be a decent introduction, but they often ignore the complexities of real-world data. By focusing on meaningful interpretations, using robust methods like **Welch’s t-test**, and avoiding unnecessary data transformations, you can make better decisions and gain deeper insights from your data.
 
 Remember, statistical tests are tools—not laws to be followed blindly. The real power lies in understanding what your data is telling you and choosing methods that respect its structure without distorting the interpretation.
+
+## References
+
+- Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. *Journal of the American Statistical Association*, 47(260), 583-621.
+- Friedman, M. (1937). The use of ranks to avoid the assumption of normality implicit in the analysis of variance. *Journal of the American Statistical Association*, 32(200), 675-701.
+- Mann, H. B., & Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger than the other. *Annals of Mathematical Statistics*, 18(1), 50-60.
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Wilcoxon, F. (1945). Individual comparisons by ranking methods. *Biometrics Bulletin*, 1(6), 80-83.
+- Kaplan, E. L., & Meier, P. (1958). Nonparametric estimation from incomplete observations. *Journal of the American Statistical Association*, 53(282), 457-481.

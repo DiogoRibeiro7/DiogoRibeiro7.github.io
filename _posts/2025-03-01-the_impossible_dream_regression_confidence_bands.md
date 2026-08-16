@@ -281,3 +281,11 @@ In the end, statistics is about making principled decisions under uncertainty. U
 The dream of assumption-free confidence bands may be impossible, but the reality of principled, assumption-aware uncertainty quantification is both achievable and valuable. Sometimes the most important discoveries in science are not about what we can do, but about understanding clearly what we cannot do--and why.
 
 _The impossibility of regression confidence bands reminds us that in statistics, as in life, there are no free lunches. But armed with this understanding, we can at least make informed choices about which meals to pay for._
+
+## References
+
+- Vovk, V., Gammerman, A., & Shafer, G. (2005). *Algorithmic Learning in a Random World*. Springer.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+- Rasmussen, C. E., & Williams, C. K. I. (2006). *Gaussian Processes for Machine Learning*. MIT Press.
+- Efron, B. (1979). Bootstrap methods: another look at the jackknife. *Annals of Statistics*, 7(1), 1-26.

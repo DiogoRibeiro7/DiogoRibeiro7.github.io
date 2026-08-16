@@ -21,6 +21,9 @@ keywords:
 - Logistic regression
 - Lda
 - Feature transformation
+permalink: '/machine-learning/linear_relashionships/'
+redirect_from:
+- '/machine learning/linear_relashionships/'
 seo_description: Machine learning models that assume linear relationships, including linear regression, logistic regression, and LDA, and why the assumption matters.
 seo_title: Why Linear Relationships Matter in ML
 seo_type: article
@@ -135,3 +138,11 @@ In real-world problems like predicting house prices, **linear relationships** be
 In machine learning, understanding the assumptions of linear models is essential for choosing the right algorithm and ensuring accurate predictions. While linear models like **Linear Regression**, **Logistic Regression**, and **LDA** offer simplicity and interpretability, they perform best when the relationship between predictors and the target is genuinely linear. When this assumption is not met, transformations or non-linear models can provide more effective solutions.
 
 For practitioners, the ability to recognize linear and non-linear relationships in the data is crucial for building models that both perform well and meet business or regulatory requirements.
+
+## References
+
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.

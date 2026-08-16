@@ -25,6 +25,9 @@ keywords:
 - Importance of data roles
 - Data validation
 - Data governance
+permalink: '/data-science/data_design/'
+redirect_from:
+- '/data science/data_design/'
 seo_description: Why data quality matters, the need for defined roles in data design and collection, and the impact on data science.
 seo_title: The Critical Role of Data Quality in the Data Industry
 seo_type: article
@@ -362,3 +365,12 @@ The path to successful data-driven decision-making begins with high-quality data
 Organizations need to stop treating data quality as an afterthought and instead embrace it as a critical component of their data strategies. By establishing clear roles and responsibilities—whether through data stewards, curators, or quality engineers—and implementing structured frameworks for data governance, companies can ensure the accuracy, completeness, and reliability of their data, setting the stage for meaningful and actionable insights.
 
 As the demand for high-quality data continues to grow, so too must the industry's commitment to recognizing and investing in the unseen art of data quality.
+
+## References
+
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).

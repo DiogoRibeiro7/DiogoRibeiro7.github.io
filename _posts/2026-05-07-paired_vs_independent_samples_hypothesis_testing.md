@@ -201,3 +201,10 @@ The principle remains the same: the analysis should reflect how the data were ge
 The choice between paired and independent samples is a design decision before it is a statistical test decision. Paired analysis is appropriate when observations are linked and the within-pair difference is meaningful. Independent analysis is appropriate when groups consist of different, unrelated units.
 
 Good analysis begins by asking what creates dependence in the data. Once that structure is clear, the choice of paired t-test, independent t-test, Wilcoxon signed-rank test, Mann-Whitney U test, regression model, or mixed model becomes much less mechanical and much more defensible.
+
+## References
+
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Wilcoxon, F. (1945). Individual comparisons by ranking methods. *Biometrics Bulletin*, 1(6), 80-83.
+- Mann, H. B., & Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger than the other. *Annals of Mathematical Statistics*, 18(1), 50-60.
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.

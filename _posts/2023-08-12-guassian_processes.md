@@ -15,6 +15,9 @@ header:
   twitter_image: /assets/images/data_science_3.jpg
 keywords:
 - Python
+permalink: '/machine-learning/guassian_processes/'
+redirect_from:
+- '/machine learning/guassian_processes/'
 seo_description: Explore Gaussian Processes and their application in time-series analysis.
   Learn the theory, mathematical background, and practical implementations in Python.
 seo_title: 'Gaussian Processes for Time Series: A Deep Dive in Python'
@@ -197,3 +200,9 @@ plt.show()
 ```
 
 Gaussian Processes offer a flexible and interpretable approach to modeling time series. By carefully selecting and combining kernels, we can capture trends, seasonality, and noise, making them an invaluable tool in the machine learning and statistical toolkit.
+
+## References
+
+- Rasmussen, C. E., & Williams, C. K. I. (2006). *Gaussian Processes for Machine Learning*. MIT Press.
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.

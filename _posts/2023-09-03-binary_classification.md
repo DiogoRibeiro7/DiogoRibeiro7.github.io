@@ -25,6 +25,9 @@ keywords:
 - Model evaluation metrics
 - Classification problems
 - Machine learning applications
+permalink: '/machine-learning/binary_classification/'
+redirect_from:
+- '/machine learning/binary_classification/'
 seo_description: 'The fundamentals of binary classification: key algorithms, evaluation metrics such as precision and recall, and real-world applications.'
 seo_title: 'Binary Classification: Methods and Metrics'
 seo_type: article
@@ -119,3 +122,10 @@ The choice of classifier depends on several factors, including:
 ## Conclusion
 
 Binary classification is a fundamental yet complex task in machine learning. While the basic idea is simple—classifying data into one of two categories—the real challenge lies in choosing the right model and evaluating its performance accurately. By understanding the nuances of different classifiers and metrics, one can make informed decisions that lead to better predictive performance and more reliable results in real-world applications.
+
+## References
+
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.

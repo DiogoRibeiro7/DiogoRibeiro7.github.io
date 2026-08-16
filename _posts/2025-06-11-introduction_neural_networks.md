@@ -18,6 +18,9 @@ keywords:
 - Deep learning
 - Backpropagation
 - Activation functions
+permalink: '/machine-learning/introduction_neural_networks/'
+redirect_from:
+- '/machine learning/introduction_neural_networks/'
 seo_description: Get a beginner-friendly overview of neural networks, covering layers,
   activation functions, and how training works via backpropagation.
 seo_title: Neural Networks Explained Simply

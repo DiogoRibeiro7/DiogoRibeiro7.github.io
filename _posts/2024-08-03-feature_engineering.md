@@ -22,8 +22,10 @@ keywords:
 - Machine learning models
 - Predictive analytics
 - Python
+permalink: '/machine-learning/feature_engineering/'
 redirect_from:
 - '/machine learning/data science/feature_engineering/'
+- '/machine learning/feature_engineering/'
 seo_description: Explore powerful feature engineering techniques that boost the performance
   of machine learning models by improving data preprocessing and feature selection.
 seo_title: Feature Engineering for Better Machine Learning Models
@@ -239,3 +241,12 @@ for i in range(data.shape[1]):
 ## Conclusion
 
 Feature engineering is an art and science that significantly impacts the performance of machine learning models. The techniques outlined in this article provide a toolkit for transforming raw data into meaningful features that can enhance model accuracy, reduce complexity, and improve interpretability. By carefully applying these techniques, you can unlock the full potential of your data, leading to more robust and reliable machine learning models.
+
+## References
+
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- van der Maaten, L., & Hinton, G. (2008). Visualizing data using t-SNE. *Journal of Machine Learning Research*, 9, 2579-2605.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.

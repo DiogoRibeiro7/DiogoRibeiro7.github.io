@@ -1,6 +1,8 @@
 ---
+permalink: '/data-science/data_visualization_dashboards_predictive_maintenance/'
 redirect_from:
 - '/data science/industrial analytics/predictive maintenance/data_visualization_dashboards_predictive_maintenance/'
+- '/data science/data_visualization_dashboards_predictive_maintenance/'
 title: "Data Visualization and Dashboards for Predictive Maintenance"
 categories:
 - Data Science

@@ -26,6 +26,9 @@ keywords:
 - Tail risk
 - Risk metrics
 - Python
+permalink: '/data-science/value_risk_expected_shortfall/'
+redirect_from:
+- '/data science/value_risk_expected_shortfall/'
 seo_description: Value at Risk (VaR) and Expected Shortfall (ES) compared as risk models, and how each performs under different market conditions.
 seo_title: 'VaR vs Expected Shortfall: A Data-Driven Analysis'
 seo_type: article

@@ -24,6 +24,9 @@ keywords:
 - Detecting data drift
 - Credit risk assessment
 - Adapting models to data changes
+permalink: '/data-science/data_drift_example/'
+redirect_from:
+- '/data science/data_drift_example/'
 seo_description: Explore a practical approach to solving data drift in credit risk
   models, focusing on multivariate analysis and its impact on model performance.
 seo_title: 'Addressing Data Drift in Credit Risk Models: A Case Study'

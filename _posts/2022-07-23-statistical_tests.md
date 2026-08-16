@@ -138,3 +138,8 @@ For researchers and data analysts, recognizing this universal framework can enha
 ## Conclusion
 
 The revelation that most statistical tests are built on the comparison of observed versus expected data is a powerful tool for anyone studying or applying statistics. It highlights the universality and simplicity underlying these analytical techniques, fostering a deeper understanding and more confident application of statistical tests in various fields of research and data analysis.
+
+## References
+
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Wilcoxon, F. (1945). Individual comparisons by ranking methods. *Biometrics Bulletin*, 1(6), 80-83.

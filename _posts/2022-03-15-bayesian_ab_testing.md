@@ -204,3 +204,10 @@ This model captures the dynamics of behavioral changes over time. We can then vi
 Bayesian A/B testing provides a flexible and intuitive framework for analyzing conversion rates and user behavior. While frequentist methods, such as the **Chi-square test**, are simpler and more familiar, they come with limitations related to **sample size sensitivity**, **multiple comparisons**, and **p-value interpretation**. Bayesian methods, on the other hand, allow for more nuanced analysis, direct probability statements, and the incorporation of prior knowledge.
 
 Whether conducting straightforward A/B tests for conversion rates or analyzing complex behavioral changes over time, Bayesian inference offers powerful tools to model uncertainty and provide richer insights. As A/B testing continues to be central to digital marketing and website optimization, leveraging Bayesian techniques can help businesses make more informed, data-driven decisions.
+
+## References
+
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
+- Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. *Journal of the Royal Statistical Society: Series B*, 57(1), 289-300.
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.

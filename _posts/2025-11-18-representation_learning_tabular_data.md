@@ -1,4 +1,7 @@
 ---
+permalink: '/machine-learning/representation_learning_tabular_data/'
+redirect_from:
+- '/machine learning/representation_learning_tabular_data/'
 title: "Representation Learning for Tabular Data: Beyond Manual Feature Engineering"
 categories:
 - Machine Learning
@@ -264,3 +267,10 @@ Tables are already structured by measurement systems, business processes, relati
 Good tabular representation learning respects that structure. It uses embeddings, learned interactions, pretraining, and multimodal encoders where they solve real problems. It keeps strong baselines in view. It validates against leakage. It evaluates calibration, stability, subgroup behavior, and operational cost.
 
 The point is not to make feature engineering disappear. The point is to let models learn the parts of representation that are too complex, too sparse, or too dynamic to write by hand, while preserving the domain knowledge that makes tabular data useful in the first place.
+
+## References
+
+- Kaufman, S., Rosset, S., Perlich, C., & Stitelman, O. (2012). Leakage in data mining: formulation, detection, and avoidance. *ACM Transactions on Knowledge Discovery from Data*, 6(4), 1-21.
+- Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.
+- Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of KDD*, 785-794.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

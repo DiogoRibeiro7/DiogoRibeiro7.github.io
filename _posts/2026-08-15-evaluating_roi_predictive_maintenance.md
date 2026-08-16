@@ -1,6 +1,8 @@
 ---
+permalink: '/data-science/evaluating_roi_predictive_maintenance/'
 redirect_from:
 - '/data science/industrial analytics/predictive maintenance/evaluating_roi_predictive_maintenance/'
+- '/data science/evaluating_roi_predictive_maintenance/'
 title: "Evaluating the ROI of Predictive Maintenance: A Practical Measurement Framework"
 categories:
 - Data Science

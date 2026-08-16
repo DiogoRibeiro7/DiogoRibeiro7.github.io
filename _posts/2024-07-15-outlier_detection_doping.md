@@ -20,8 +20,10 @@ keywords:
 - Evaluating ml models
 - Robust data models
 - Python
+permalink: '/data-science/outlier_detection_doping/'
 redirect_from:
 - '/data science/machine learning/outlier_detection_doping/'
+- '/data science/outlier_detection_doping/'
 seo_description: How to test and evaluate outlier detection models with data doping, and how doping affects model performance.
 seo_title: Evaluating Outlier Detectors with Data Doping Techniques
 seo_type: article

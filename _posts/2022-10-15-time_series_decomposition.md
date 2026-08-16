@@ -19,8 +19,10 @@ keywords:
 - Seasonality
 - Forecasting
 - Decomposition
+permalink: '/data-science/time_series_decomposition/'
 redirect_from:
 - '/data science/time series/time_series_decomposition/'
+- '/data science/time_series_decomposition/'
 seo_description: Discover how to separate trend and seasonal patterns from a time
   series using additive or multiplicative decomposition.
 seo_title: Time Series Decomposition Made Simple

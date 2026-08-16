@@ -213,3 +213,8 @@ In educational research, **regression** might be used to study the effect of par
 However, both techniques rely on certain assumptions, and their proper use depends on the nature of the data and the research objectives. Researchers should carefully consider the complexity of their models and the relationships between variables when deciding whether to use regression or path analysis.
 
 Ultimately, the choice between regression and path analysis is not an either/or decision but rather a question of which method best fits the research design and goals. In many cases, these techniques can complement each other, with regression providing a foundation for understanding direct relationships and path analysis offering a more nuanced view of causal mechanisms.
+
+## References
+
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Kline, R. B. (2015). *Principles and Practice of Structural Equation Modeling* (4th ed.). Guilford Press.

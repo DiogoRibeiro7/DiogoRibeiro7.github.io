@@ -21,8 +21,10 @@ keywords:
 - Data monitoring in machine learning
 - Bayesian methods in data science
 - Model adaptation and data drift
+permalink: '/data-science/detecting_drift/'
 redirect_from:
 - '/data science/machine learning/detecting_drift/'
+- '/data science/detecting_drift/'
 seo_description: Why hypothesis testing falls short for detecting data drift, and how Bayesian probability offers a better framework for monitoring shifts.
 seo_title: 'Data Drift: Hypothesis Tests vs. Bayesian Methods'
 seo_type: article
@@ -94,3 +96,8 @@ While hypothesis testing has its place in statistical analysis, its limitations 
 By treating parameters as random variables and incorporating prior knowledge, Bayesian methods provide a richer and more flexible framework for drift detection. As data science continues to evolve, embracing these advanced techniques will be key to maintaining robust and reliable models in production.
 
 In data science, it's essential to move beyond traditional methods and adopt approaches that are better suited to the challenges of modern, real-world applications. Bayesian probability is one such approach, offering a powerful tool for detecting and managing data drift in production environments.
+
+## References
+
+- Quiñonero-Candela, J., Sugiyama, M., Schwaighofer, A., & Lawrence, N. D. (Eds.). (2009). *Dataset Shift in Machine Learning*. MIT Press.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.

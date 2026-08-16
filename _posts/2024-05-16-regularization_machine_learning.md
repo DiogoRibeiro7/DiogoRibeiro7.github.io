@@ -244,3 +244,9 @@ Regularization is an essential tool in the machine learning practitioner's toolk
 - **Enhance Model Stability:** By reducing the influence of individual features and handling multicollinearity, regularization leads to more stable and reliable models.
 
 Understanding and applying regularization techniques is crucial for building effective machine learning models. It ensures that models are not only accurate but also interpretable, stable, and capable of performing well in real-world scenarios. As we continue to advance in the field of machine learning, regularization remains a fundamental practice for achieving high-quality, reliable models.
+
+## References
+
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.
+- Zou, H., & Hastie, T. (2005). Regularization and variable selection via the elastic net. *Journal of the Royal Statistical Society: Series B*, 67(2), 301-320.

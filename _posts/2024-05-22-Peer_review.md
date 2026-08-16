@@ -11,8 +11,10 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_9.webp
   twitter_image: /assets/images/data_science_1.jpg
+permalink: '/data-science/Peer_review/'
 redirect_from:
 - '/academic writing/research methodology/political communication/social media studies/digital democracy/social network analysis/political sociology/Peer_review/'
+- '/data science/Peer_review/'
 seo_description: A critical review of a study on filter bubbles and MP interactions on Twitter, covering its limitations and research directions.
 seo_title: 'Review: Filter Bubbles Among MPs on Twitter'
 seo_type: article
@@ -113,3 +115,8 @@ From a data science perspective, the study "Bursting the (Filter) Bubble: Intera
 5. **Apply Advanced Statistical Methods**: Utilize more sophisticated statistical models to better capture the complexities of interaction patterns and their determinants.
 
 While the study offers valuable insights into MPs' Twitter interactions, adopting more advanced data science methodologies and tools could significantly enhance the depth and reliability of future research in this area.
+
+## References
+
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
+- McCullagh, P., & Nelder, J. A. (1989). *Generalized Linear Models* (2nd ed.). Chapman & Hall.

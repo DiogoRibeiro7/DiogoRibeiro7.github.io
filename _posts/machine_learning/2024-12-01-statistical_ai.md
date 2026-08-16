@@ -10,8 +10,10 @@ keywords:
 - Probabilistic Models
 - Machine Learning
 - Hidden Markov Models
+permalink: '/machine-learning/statistical_ai/'
 redirect_from:
 - '/artificial intelligence/statistical_ai/'
+- '/machine learning/statistical_ai/'
 seo_description: An in-depth exploration of statistical AI, its probabilistic foundations, classic models, and how it powers modern machine learning.
 seo_title: 'Statistical AI: The Probabilistic Foundations'
 summary: This article explores Statistical AI, focusing on its mathematical foundations, key statistical models, machine learning applications, and its role in advancing artificial intelligence.

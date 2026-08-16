@@ -24,8 +24,10 @@ keywords:
 - Data science
 - Machine learning
 - Python
+permalink: '/data-science/entropy_data_science/'
 redirect_from:
 - '/data science/machine learning/entropy_data_science/'
+- '/data science/entropy_data_science/'
 seo_description: The role entropy plays in data science and machine learning, from decision trees to uncertainty quantification and information theory.
 seo_title: Entropy in Data Science and Machine Learning
 seo_type: article
@@ -407,3 +409,11 @@ print(f"Reconstruction Error (Anomalies): {reconstruction_error}")
 The code snippets in this appendix cover various applications of entropy in data science and machine learning. From calculating entropy and information gain in decision trees to using mutual information for feature selection, cross-entropy loss in classification, and entropy regularization in reinforcement learning, these examples illustrate how entropy can be a powerful tool in solving complex machine learning tasks.
 
 With these Python implementations, data scientists and machine learning practitioners can better understand how to leverage entropy for uncertainty quantification, feature importance, and model optimization.
+
+## References
+
+- Shannon, C. E. (1948). A mathematical theory of communication. *Bell System Technical Journal*, 27(3), 379-423.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.

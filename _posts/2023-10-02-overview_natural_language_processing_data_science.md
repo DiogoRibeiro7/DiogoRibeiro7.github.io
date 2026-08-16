@@ -23,8 +23,10 @@ keywords:
 - Spacy
 - Hugging face
 - Data science
+permalink: '/machine-learning/overview_natural_language_processing_data_science/'
 redirect_from:
 - '/natural language processing/overview_natural_language_processing_data_science/'
+- '/machine learning/overview_natural_language_processing_data_science/'
 seo_description: Explore how Natural Language Processing (NLP) fits into data science,
   common NLP tasks, popular libraries like NLTK and SpaCy, and real-world applications.
 seo_title: 'NLP in Data Science: Tasks, Tools, and Uses'

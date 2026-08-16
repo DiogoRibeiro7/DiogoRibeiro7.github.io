@@ -193,3 +193,8 @@ Yet, the value of these disciplines extends far beyond their mathematical interp
 This exploration should serve not only as an affirmation of the critical role played by combinatorics and probability in mathematical and scientific inquiry but also as an invitation to further investigation. There are still many depths to be plumbed and connections to be discovered within these disciplines. As we continue to push the boundaries of knowledge and technology, the study of combinatorics and probability will undoubtedly reveal new insights and applications, reinforcing their status as indispensable tools in our quest to understand and shape the world around us.
 
 Therefore, let us encourage not just the continued academic pursuit of these fields but also their application across various domains. By fostering a deeper appreciation and understanding of combinatorics and probability, we equip ourselves with the means to unlock new discoveries, solve complex problems, and navigate the uncertainties of an ever-changing world with confidence and creativity.
+
+## References
+
+- Shannon, C. E. (1948). A mathematical theory of communication. *Bell System Technical Journal*, 27(3), 379-423.
+- Black, F., & Scholes, M. (1973). The pricing of options and corporate liabilities. *Journal of Political Economy*, 81(3), 637-654.

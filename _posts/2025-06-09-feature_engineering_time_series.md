@@ -19,6 +19,9 @@ keywords:
 - Rolling windows
 - Seasonality
 - Python
+permalink: '/machine-learning/feature_engineering_time_series/'
+redirect_from:
+- '/machine learning/feature_engineering_time_series/'
 seo_description: Discover practical methods for crafting informative features from
   time series data, including lags, moving averages, and trend extraction.
 seo_title: Feature Engineering for Time Series Data
@@ -213,3 +216,11 @@ y = df['y']
 Use pipelines (e.g., scikit-learn’s Pipeline) to keep preprocessing, feature engineering, and modeling reproducible and version-controlled.
 
 By thoughtfully engineering temporal features—from simple lags to spectral and event-driven signals—you unlock hidden structures in your data. Paired with rigorous validation and domain expertise, these techniques can transform raw time series into powerful predictors, elevating model performance across forecasting tasks.
+
+## References
+
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.
+- Cleveland, R. B., Cleveland, W. S., McRae, J. E., & Terpenning, I. (1990). STL: A seasonal-trend decomposition procedure based on loess. *Journal of Official Statistics*, 6(1), 3-73.
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

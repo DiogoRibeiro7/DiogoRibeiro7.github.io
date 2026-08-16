@@ -18,6 +18,9 @@ keywords:
 - Charts
 - Communication
 - Best practices
+permalink: '/data-science/data_visualization_best_practices/'
+redirect_from:
+- '/data science/data_visualization_best_practices/'
 seo_description: Guidelines for selecting chart types, choosing colors, and avoiding
   clutter when visualizing data for stakeholders.
 seo_title: Data Visualization Best Practices

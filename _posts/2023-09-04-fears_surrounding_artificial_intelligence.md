@@ -25,6 +25,9 @@ keywords:
 - Ethical dilemmas in ai
 - Ai in automation
 - Future of ai
+permalink: '/data-science/fears_surrounding_artificial_intelligence/'
+redirect_from:
+- '/data science/fears_surrounding_artificial_intelligence/'
 seo_description: The fears surrounding artificial intelligence, from job displacement and data privacy to ethical dilemmas and the real limits of AI.
 seo_title: The Fears and Challenges of AI and Automation
 seo_type: article

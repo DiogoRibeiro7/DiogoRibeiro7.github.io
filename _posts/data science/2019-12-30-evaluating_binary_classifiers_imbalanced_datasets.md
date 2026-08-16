@@ -18,6 +18,9 @@ keywords:
 - Binary classifiers
 - Imbalanced data
 - Machine learning metrics
+permalink: '/data-science/evaluating_binary_classifiers_imbalanced_datasets/'
+redirect_from:
+- '/data science/evaluating_binary_classifiers_imbalanced_datasets/'
 seo_description: Why AUC-PR is more informative than AUC-ROC or Gini when evaluating binary classifiers on imbalanced data.
 seo_title: AUC-PR vs. AUC-ROC on Imbalanced Data
 seo_type: article
@@ -111,3 +114,8 @@ In practice, when evaluating models on tasks like **fraud detection**, **default
 - When evaluating binary classifiers on **imbalanced datasets**, always consider using **AUC-PR** as it offers a more honest assessment of your model's strengths and weaknesses.
 
 In your next machine learning project, especially when handling imbalanced datasets, prioritize **AUC-PR** over AUC-ROC and Gini for a clearer, more accurate evaluation of your model’s ability to manage rare but critical events.
+
+## References
+
+- Saito, T., & Rehmsmeier, M. (2015). The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets. *PLOS ONE*, 10(3), e0118432.
+- Lorenz, M. O. (1905). Methods of measuring the concentration of wealth. *Publications of the American Statistical Association*, 9(70), 209-219.

@@ -23,8 +23,10 @@ keywords:
 - Proofreading techniques
 - Thesis development
 - Structuring research papers
+permalink: '/data-science/how_write_research_paper/'
 redirect_from:
 - '/research methodology/how_write_research_paper/'
+- '/data science/how_write_research_paper/'
 seo_description: 'How to write a research paper: thesis development, organizing notes, formatting citations, and proofreading techniques.'
 seo_title: 'How to Write a Research Paper: Tips for Academic Writing'
 seo_type: article

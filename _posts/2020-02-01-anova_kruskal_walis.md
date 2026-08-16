@@ -109,3 +109,7 @@ When analyzing data, choosing the right statistical test is critical to drawing 
 
 The key takeaway is that both tests serve similar purposes but are designed for different types of data. By understanding the assumptions and mechanics of each, you can ensure that you are using the correct test for your analysis, leading to more reliable and valid results.
 
+## References
+
+- Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. *Journal of the American Statistical Association*, 47(260), 583-621.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.

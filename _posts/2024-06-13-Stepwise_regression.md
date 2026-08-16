@@ -11,6 +11,9 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/data_science_4.jpg
   twitter_image: /assets/images/data_science_2.avif
+permalink: '/machine-learning/Stepwise_regression/'
+redirect_from:
+- '/machine learning/Stepwise_regression/'
 seo_description: How stepwise regression works, the criteria used for variable selection, and the serious concerns about its use.
 seo_title: 'Stepwise Regression: Methods and Concerns'
 seo_type: article

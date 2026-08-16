@@ -582,3 +582,12 @@ plt.show()
 ```
 
 This appendix has provided code examples for performing survival analysis using both parametric and non-parametric methods. The examples demonstrate how to fit and visualize survival functions using the Kaplan-Meier estimator, Weibull model, Cox Proportional Hazards model, and Random Survival Forest. These tools offer a range of approaches to handle different types of survival data, helping researchers and analysts to choose the best method for their specific needs.
+
+## References
+
+- Kaplan, E. L., & Meier, P. (1958). Nonparametric estimation from incomplete observations. *Journal of the American Statistical Association*, 53(282), 457-481.
+- Massey, F. J. (1951). The Kolmogorov-Smirnov test for goodness of fit. *Journal of the American Statistical Association*, 46(253), 68-78.
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
+- Cox, D. R. (1972). Regression models and life-tables. *Journal of the Royal Statistical Society: Series B*, 34(2), 187-220.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.

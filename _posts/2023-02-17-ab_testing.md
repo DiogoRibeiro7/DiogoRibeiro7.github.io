@@ -29,6 +29,9 @@ keywords:
 - R
 - Javascript
 - Python
+permalink: '/data-science/ab_testing/'
+redirect_from:
+- '/data science/ab_testing/'
 seo_description: 'The statistics behind sequential testing in A/B tests: SPRT, error control, practical implementation, and common pitfalls.'
 seo_title: Sequential Testing Methods for A/B Tests
 seo_type: article

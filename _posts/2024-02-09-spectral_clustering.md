@@ -22,6 +22,9 @@ keywords:
 - Data analysis
 - Pattern recognition
 - Unsupervised learning
+permalink: '/data-science/spectral_clustering/'
+redirect_from:
+- '/data science/spectral_clustering/'
 seo_description: How spectral clustering uses dimensionality reduction to improve data analysis and pattern recognition in machine learning.
 seo_title: Spectral Clustering and Dimensionality Reduction
 seo_type: article
@@ -284,3 +287,9 @@ Looking ahead, the integration of spectral clustering with emerging technologies
 As we navigate the ever-expanding universe of data, the importance of tools that can discern the subtle whispers of structure within the cacophony of information cannot be overstated. Spectral clustering, with its deep mathematical foundations and proven practical applications, is poised to continue its vital role in this endeavor. It not only equips researchers and practitioners with the means to unravel the complexities of data but also illuminates the path toward extracting profound and actionable insights.
 
 In the grand narrative of data science, spectral clustering emerges as a beacon of analytical precision and insight, guiding the exploration of data in its myriad forms. As the discipline evolves, so too will spectral clustering, adapting to new challenges and seizing opportunities to further our understanding of the data that shapes our world.
+
+## References
+
+- Ng, A. Y., Jordan, M. I., & Weiss, Y. (2002). On spectral clustering: analysis and an algorithm. *Advances in Neural Information Processing Systems*, 14.
+- Lloyd, S. P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory*, 28(2), 129-137.
+- Ester, M., Kriegel, H.-P., Sander, J., & Xu, X. (1996). A density-based algorithm for discovering clusters in large spatial databases with noise. *Proceedings of KDD*, 226-231.
