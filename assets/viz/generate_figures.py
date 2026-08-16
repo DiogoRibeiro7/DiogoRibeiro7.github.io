@@ -141,7 +141,7 @@ def kaplan_meier():
         cens = obs[ev == 0]
         cy = [ys[max(0, np.searchsorted(xs, v) - 1)] for v in cens]
         ax.plot(cens, cy, linestyle="none", marker="|", markersize=7,
-                color=P[i], markeredgewidth=1.4)
+                color=P[i], markeredgecolor=P[i], markeredgewidth=1.4)
     ax.set_title("Kaplan-Meier estimate, censored observations ticked")
     ax.set_xlabel("time"); ax.set_ylabel("survival probability")
     ax.set_ylim(0, 1.02); ax.set_xlim(0, 40)
@@ -347,7 +347,7 @@ def kde_bandwidth():
 
     fig, ax = plt.subplots()
     ax.plot(sample, np.full(sample.size, -0.006), "|", color=hs.INK_MUTED,
-            markeredgewidth=0.8, markersize=6)
+            markeredgecolor=hs.INK_MUTED, markeredgewidth=0.8, markersize=6)
     for i, (h, name) in enumerate([(0.12, "h = 0.12 (undersmoothed)"),
                                    (0.45, "h = 0.45 (about right)"),
                                    (1.40, "h = 1.40 (oversmoothed)")]):
@@ -422,6 +422,261 @@ def monte_carlo_fan():
     ax.set_title("Persistent shocks make the fan widen faster than the horizon")
     ax.set_xlabel("year"); ax.set_ylabel("GDP index (start = 100)")
     ax.legend()
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("drift_monitoring_architecture",
+        "Architecture diagram for production drift monitoring. Production data "
+        "flows through validation, feature monitoring, prediction monitoring, "
+        "label monitoring, decision monitoring, and response actions.")
+def drift_monitoring_architecture():
+    from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
+
+    fig, ax = plt.subplots(figsize=(10.6, 5.2))
+    ax.set_axis_off()
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 5)
+
+    boxes = [
+        ("Production\ninputs", 0.25, 3.25, 1.55, 0.75, P[0]),
+        ("Data quality\nchecks", 2.15, 3.25, 1.55, 0.75, P[2]),
+        ("Feature drift\nmonitoring", 4.05, 3.25, 1.55, 0.75, P[0]),
+        ("Prediction\nmonitoring", 5.95, 3.25, 1.55, 0.75, P[3]),
+        ("Labels and\noutcomes", 4.05, 1.45, 1.55, 0.75, P[1]),
+        ("Decision\nmonitoring", 5.95, 1.45, 1.55, 0.75, P[4]),
+        ("Response:\nfix, recalibrate,\nretrain, pause", 8.0, 2.35, 1.75, 1.05, P[7]),
+    ]
+
+    for text, x, y, w, h, color in boxes:
+        ax.add_patch(FancyBboxPatch(
+            (x, y), w, h, boxstyle="round,pad=0.025,rounding_size=0.08",
+            facecolor=color, alpha=0.16, edgecolor=color, linewidth=1.8))
+        ax.text(x + w / 2, y + h / 2, text, ha="center", va="center",
+                fontsize=10.2, color=hs.INK_PRIMARY, fontweight="semibold")
+
+    arrows = [
+        ((1.8, 3.63), (2.15, 3.63)),
+        ((3.7, 3.63), (4.05, 3.63)),
+        ((5.6, 3.63), (5.95, 3.63)),
+        ((7.5, 3.63), (8.0, 3.0)),
+        ((4.83, 3.25), (4.83, 2.2)),
+        ((5.6, 1.83), (5.95, 1.83)),
+        ((7.5, 1.83), (8.0, 2.75)),
+    ]
+    for start, end in arrows:
+        ax.add_patch(FancyArrowPatch(start, end, arrowstyle="-|>",
+                                     mutation_scale=14, linewidth=1.4,
+                                     color=hs.INK_MUTED))
+
+    ax.text(0.25, 4.55, "Monitoring should separate signal, impact, and action",
+            fontsize=13.5, fontweight="semibold", color=hs.INK_PRIMARY)
+    ax.text(0.25, 4.25,
+            "Feature changes are early signals; mature labels and decision metrics tell whether action is needed.",
+            fontsize=10.2, color=hs.INK_SECONDARY)
+    ax.text(4.15, 0.72, "Label delay means outcome monitoring lags production.",
+            fontsize=9.6, color=hs.INK_SECONDARY)
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("feature_drift_distribution",
+        "Training and production feature distributions after a sensor scaling "
+        "change. The production distribution shifts right, creating feature "
+        "drift before labels are available.")
+def feature_drift_distribution():
+    train = RNG.normal(0.0, 1.0, 6000)
+    prod = RNG.normal(0.85, 1.15, 6000)
+    bins = np.linspace(-4, 5, 80)
+
+    fig, ax = plt.subplots()
+    ax.hist(train, bins=bins, density=True, alpha=0.38, color=P[0],
+            label="Training period")
+    ax.hist(prod, bins=bins, density=True, alpha=0.42, color=P[1],
+            label="Production period")
+    ax.axvline(np.mean(train), color=P[0], lw=2)
+    ax.axvline(np.mean(prod), color=P[1], lw=2)
+    ax.annotate("mean shifted", xy=(np.mean(prod), 0.32), xytext=(1.95, 0.42),
+                fontsize=9.5, color=hs.INK_SECONDARY,
+                arrowprops=dict(arrowstyle="-", color=hs.INK_MUTED, lw=1))
+    ax.set_title("Feature drift: the input distribution moved")
+    ax.set_xlabel("standardized sensor value")
+    ax.set_ylabel("density")
+    ax.legend()
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("concept_drift_boundary",
+        "The same input feature has a different relationship with the outcome "
+        "after deployment. The production risk curve shifts relative to the "
+        "training risk curve, illustrating concept drift.")
+def concept_drift_boundary():
+    x = np.linspace(-4, 4, 400)
+    train = 1 / (1 + np.exp(-1.6 * (x - 0.1)))
+    prod = 1 / (1 + np.exp(-1.15 * (x - 1.0)))
+
+    fig, ax = plt.subplots()
+    ax.plot(x, train, color=P[0], label="Training relationship")
+    ax.plot(x, prod, color=P[1], label="Production relationship")
+    ax.axhline(0.5, color=hs.BASELINE, lw=1)
+    ax.axvline(0.1, color=P[0], lw=1.4, alpha=0.75)
+    ax.axvline(1.0, color=P[1], lw=1.4, alpha=0.75)
+    ax.annotate("same score threshold,\ndifferent real risk",
+                xy=(0.55, 0.5), xytext=(-2.8, 0.64),
+                fontsize=9.5, color=hs.INK_SECONDARY,
+                arrowprops=dict(arrowstyle="-", color=hs.INK_MUTED, lw=1))
+    ax.set_title("Concept drift: the feature-target relationship changed")
+    ax.set_xlabel("feature value")
+    ax.set_ylabel("probability of event")
+    ax.set_ylim(0, 1)
+    ax.legend()
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("prediction_drift_threshold",
+        "Daily alert volume from a fixed score threshold. Alert counts rise "
+        "after a distribution shift even though the threshold does not change.")
+def prediction_drift_threshold():
+    days = np.arange(1, 91)
+    baseline = 95 + 8 * np.sin(days / 5.5) + RNG.normal(0, 5, days.size)
+    shifted = baseline.copy()
+    shifted[54:] += np.linspace(25, 95, days.size - 54)
+    shifted = np.maximum(shifted, 0)
+
+    fig, ax = plt.subplots()
+    ax.plot(days, shifted, color=P[0], label="Alerts above fixed threshold")
+    ax.axvline(55, color=P[1], lw=2, label="Distribution shift")
+    ax.axhline(140, color=P[7], lw=1.8, label="Review capacity")
+    ax.fill_between(days, 140, shifted, where=shifted > 140,
+                    color=P[7], alpha=0.14)
+    ax.annotate("threshold unchanged,\nworkload changed",
+                xy=(75, shifted[74]), xytext=(43, 188),
+                fontsize=9.5, color=hs.INK_SECONDARY,
+                arrowprops=dict(arrowstyle="-", color=hs.INK_MUTED, lw=1))
+    ax.set_title("Prediction drift: scores cross the action threshold more often")
+    ax.set_xlabel("day")
+    ax.set_ylabel("daily alerts")
+    ax.legend()
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("solow_steady_state",
+        "Solow model capital accumulation: the saving curve s*f(k) crosses the "
+        "break-even line (n+g+d)k once, at the steady state. Below it capital "
+        "per worker grows; above it, it shrinks.")
+def solow_steady_state():
+    alpha, s, n, g, delta = 0.35, 0.25, 0.01, 0.02, 0.05
+    k = np.linspace(0.01, 14, 600)
+    saving = s * k ** alpha
+    breakeven = (n + g + delta) * k
+    kstar = (s / (n + g + delta)) ** (1 / (1 - alpha))
+
+    fig, ax = plt.subplots()
+    ax.plot(k, k ** alpha, color=hs.INK_MUTED, lw=1.6, label="Output per worker $f(k)$")
+    ax.plot(k, saving, color=P[0], label="Saving $s\\,f(k)$")
+    ax.plot(k, breakeven, color=P[1], label="Break-even $(n+g+\\delta)k$")
+    ax.fill_between(k, saving, breakeven, where=saving > breakeven,
+                    color=P[0], alpha=0.10)
+    ax.axvline(kstar, color=hs.INK_PRIMARY, lw=1.0)
+    ax.annotate(f"steady state $k^*$ = {kstar:.1f}",
+                xy=(kstar, s * kstar ** alpha), xytext=(kstar + 1.1, 0.55),
+                fontsize=9.5, color=hs.INK_SECONDARY,
+                arrowprops=dict(arrowstyle="-", lw=1, color=hs.INK_MUTED))
+    ax.set_title("Concave returns give the Solow model one stable steady state")
+    ax.set_xlabel("capital per effective worker $k$")
+    ax.set_ylabel("output / investment per worker")
+    ax.set_xlim(0, 14)
+    ax.set_ylim(0, 2.6)
+    ax.legend()
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("linear_vs_logistic",
+        "A linear probability model and a logistic curve fitted to the same "
+        "binary outcome. The straight line passes below zero and above one, "
+        "predicting impossible probabilities; the logistic curve cannot.")
+def linear_vs_logistic():
+    x = np.concatenate([RNG.normal(-1.4, 1.1, 160), RNG.normal(2.2, 1.1, 160)])
+    p = 1 / (1 + np.exp(-(1.4 * x - 0.6)))
+    y = (RNG.random(x.size) < p).astype(float)
+
+    b1, b0 = np.polyfit(x, y, 1)
+    # logistic fit by Newton steps on the log-likelihood
+    w = np.zeros(2)
+    X = np.column_stack([np.ones_like(x), x])
+    for _ in range(60):
+        eta = X @ w
+        mu = 1 / (1 + np.exp(-eta))
+        W = mu * (1 - mu) + 1e-9
+        w += np.linalg.solve((X * W[:, None]).T @ X, X.T @ (y - mu))
+
+    grid = np.linspace(x.min() - 1.5, x.max() + 1.5, 400)
+    lin = b0 + b1 * grid
+    log = 1 / (1 + np.exp(-(w[0] + w[1] * grid)))
+
+    fig, ax = plt.subplots()
+    ax.axhspan(1.0, 1.35, color=hs.INK_MUTED, alpha=0.10)
+    ax.axhspan(-0.35, 0.0, color=hs.INK_MUTED, alpha=0.10)
+    # observed 0/1 outcomes as a rug, drawn after the bands so it stays visible
+    ax.plot(x, y, "|", color=hs.INK_SECONDARY,
+            markeredgecolor=hs.INK_SECONDARY, markeredgewidth=1.0,
+            markersize=10, alpha=0.55, zorder=4)
+    ax.plot(grid, lin, color=P[1], label="Linear probability model")
+    ax.plot(grid, log, color=P[0], label="Logistic regression")
+    ax.axhline(0, color=hs.BASELINE, lw=0.8)
+    ax.axhline(1, color=hs.BASELINE, lw=0.8)
+    # point at the line where it has already dropped below zero
+    xneg = -b0 / b1 - 1.2
+    ax.annotate("impossible probabilities", xy=(xneg, b0 + b1 * xneg),
+                xytext=(xneg + 0.6, -0.27), fontsize=9.5,
+                color=hs.INK_SECONDARY, ha="left",
+                arrowprops=dict(arrowstyle="-", lw=1, color=hs.INK_MUTED))
+    ax.set_title("A straight line leaves the unit interval; a logistic curve cannot")
+    ax.set_xlabel("predictor"); ax.set_ylabel("P(outcome = 1)")
+    ax.set_ylim(-0.35, 1.35)
+    ax.legend(loc="center right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("hist2d_outliers",
+        "A two-dimensional histogram of bivariate data. Density is shown as a "
+        "single-hue heatmap and the sparse cells at the edges hold the points "
+        "an outlier detector flags.")
+def hist2d_outliers():
+    core = RNG.multivariate_normal([0, 0], [[1, 0.65], [0.65, 1]], 4000)
+    strays = RNG.uniform(-5, 5, size=(45, 2))
+    data = np.vstack([core, strays])
+
+    fig, axes = plt.subplots(1, 2, figsize=(9.6, 3.9))
+    h = axes[0].hist2d(data[:, 0], data[:, 1], bins=40, range=[[-5, 5], [-5, 5]],
+                       cmap=hs.sequential_cmap(), cmin=1)
+    axes[0].set_title("2D histogram: density per cell", fontsize=11)
+    cb = fig.colorbar(h[3], ax=axes[0])
+    cb.outline.set_visible(False)
+    cb.set_label("count", color=hs.INK_SECONDARY)
+
+    counts, xe, ye = np.histogram2d(data[:, 0], data[:, 1], bins=40,
+                                    range=[[-5, 5], [-5, 5]])
+    ix = np.clip(np.digitize(data[:, 0], xe) - 1, 0, 39)
+    iy = np.clip(np.digitize(data[:, 1], ye) - 1, 0, 39)
+    sparse = counts[ix, iy] <= 1
+    axes[1].plot(data[~sparse, 0], data[~sparse, 1], "o", markersize=3,
+                 color=hs.INK_MUTED, alpha=0.35, markeredgecolor="none",
+                 label="Dense cells")
+    axes[1].plot(data[sparse, 0], data[sparse, 1], "o", markersize=5,
+                 color=P[1], markeredgecolor=hs.SURFACE, markeredgewidth=1.2,
+                 label="Sparse cells (flagged)")
+    axes[1].set_title("Points falling in near-empty cells", fontsize=11)
+    axes[1].set_xlim(-5, 5); axes[1].set_ylim(-5, 5)
+    axes[1].legend()
+    for ax in axes:
+        ax.set_xlabel("feature 1")
+    axes[0].set_ylabel("feature 2")
     return fig
 
 
