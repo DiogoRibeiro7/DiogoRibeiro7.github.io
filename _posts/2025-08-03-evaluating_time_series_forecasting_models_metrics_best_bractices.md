@@ -46,6 +46,8 @@ Evaluation of time series models requires a careful selection of performance met
 
 This article provides a comprehensive overview of how to evaluate time series forecasting models. We discuss the most commonly used performance metrics such as RMSE, MAE, MAPE, AIC, and BIC, highlight best practices for model validation (including rolling-origin evaluation and time series cross-validation), and provide guidance on interpreting results for model improvement. Practical examples in Python and R are included for hands-on understanding.
 
+The most common evaluation mistake is treating forecast accuracy as a single number. A model can look strong on average and still fail exactly where the business depends on it: peak demand, rare failures, turning points, or long forecast horizons. A serious evaluation report should therefore separate horizon accuracy, bias, interval calibration, and operational cost.
+
 ## 1\. Importance of Evaluation in Time Series Forecasting
 
 Evaluation ensures that forecasts are accurate, reliable, and robust under real-world conditions. Without proper evaluation:
@@ -59,6 +61,14 @@ Therefore, evaluation is not just a technical step but a critical component of t
 ## 2\. Forecast Accuracy Metrics
 
 Performance metrics quantify how well a model's predictions match the observed values. Below are the most widely used metrics for time series forecasting.
+
+| Question | Prefer | Avoid relying only on |
+|----------|--------|-----------------------|
+| Are typical errors small and interpretable? | MAE, MASE | RMSE |
+| Are large misses especially costly? | RMSE, pinball loss by quantile | MAPE |
+| Do series have different scales? | MASE, RMSSE, normalized RMSE | raw MAE |
+| Are zero or near-zero values common? | MAE, MASE, sMAPE with caution | MAPE |
+| Are probabilistic forecasts required? | coverage, interval score, CRPS | point forecast RMSE |
 
 ## 2.1 Mean Absolute Error (MAE)
 
@@ -175,6 +185,10 @@ AIC(model); BIC(model)
 ## 3\. Model Validation Techniques
 
 Metrics alone are insufficient; how we validate the model matters equally. Standard random cross-validation is inappropriate for time series due to temporal dependencies.
+
+### 3.0 Leakage Checks Before Validation
+
+Before comparing models, check whether the feature pipeline leaks future information. Common leakage sources include rolling statistics computed with centered windows, target encodings fit on the full dataset, calendar features released after the prediction time, and normalization parameters estimated using both train and test periods. Leakage usually produces suspiciously smooth residuals and unrealistically stable test performance.
 
 ## 3.1 Train-Test Split
 
@@ -321,6 +335,8 @@ In applied settings, evaluation must balance accuracy with computational efficie
 - **Analyze residuals.** Residual diagnostics reveal systematic issues.
 - **Prevent overfitting.** Simplicity often outperforms over-complex models.
 - **Match evaluation to context.** Select metrics aligned with application needs (e.g., absolute errors vs percentage errors).
+- **Report performance by horizon.** A one-step forecast and a twelve-step forecast are different products.
+- **Benchmark against simple baselines.** Seasonal naive, last-value, and moving-average baselines prevent overvaluing complexity.
 
 ## Conclusion
 
