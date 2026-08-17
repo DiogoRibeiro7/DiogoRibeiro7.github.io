@@ -42,7 +42,7 @@ Regime-switching models allow the parameters themselves to change, with the regi
 
 ## The Markov-Switching Structure
 
-Let $S_t \in \{1, \dots, K\}$ be an unobserved regime. Conditional on it, the observation follows a regime-specific model — in the simplest case a different mean and variance:
+Let $S_t \in \lbrace 1, \dots, K\rbrace$ be an unobserved regime. Conditional on it, the observation follows a regime-specific model — in the simplest case a different mean and variance:
 
 $$
 y_t \mid S_t = k \sim \mathcal{N}(\mu_k, \sigma_k^2).

@@ -54,7 +54,7 @@ N-BEATS discards recurrence entirely. It is a deep stack of fully connected bloc
 
 This residual arrangement is the architectural idea, and it produces something unusual for a neural model: interpretability by construction. In the interpretable variant, blocks are constrained to specific basis functions — polynomial for trend, Fourier for seasonality — so the output decomposes into named components much like a classical decomposition.
 
-N-BEATS produces the whole horizon in one forward pass rather than step by step, avoiding compounding error and running considerably faster than autoregressive generation. It was the first pure deep learning model to beat the M4 winner on that benchmark.
+N-BEATS produces the whole horizon in one forward pass rather than step by step, avoiding compounding error and running considerably faster than autoregressive generation. Its authors report outperforming the M4 competition winner, which was notable because the deep learning entries to M4 itself had not managed that.
 
 Its limitation is that the basic form is univariate and point-valued: it does not natively take covariates, and it does not produce a predictive distribution without additional machinery. NHITS extends it with multi-rate sampling that improves long-horizon performance.
 

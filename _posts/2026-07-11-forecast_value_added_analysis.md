@@ -54,7 +54,7 @@ Two comparisons matter, and both are needed.
 
 **Against the preceding step.** Does the planner's override improve on the statistical baseline? Does the consensus number improve on the planner's? Each stage is judged against the thing it modified, not against the naive.
 
-The output is conventionally a stairstep table:
+The output is conventionally a stairstep table. The figures below are illustrative rather than from the worked example that follows:
 
 | Process step | MAPE | FVA vs naive | FVA vs previous |
 |---|---|---|---|

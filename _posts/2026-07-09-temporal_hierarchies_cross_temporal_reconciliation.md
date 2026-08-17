@@ -90,7 +90,7 @@ $$
 
 with $S$ now encoding temporal rather than categorical summation.
 
-The reported benefit is consistent across studies: reconciled forecasts beat the base forecasts at *every* level, including the level each was optimised for. The monthly forecast improves because the annual forecast contributes information about trend that the monthly data alone estimates poorly, and the annual forecast improves because monthly data pins down the recent level more precisely.
+The reported benefit is that reconciled forecasts tend to improve on the base forecasts across levels, including the level each was optimised for — not merely at the levels that were incoherent. The monthly forecast improves because the annual forecast contributes information about trend that the monthly data alone estimates poorly, and the annual forecast improves because monthly data pins down the recent level more precisely.
 
 Reconciliation also handles a mundane but common organisational problem. Finance forecasts annually, operations forecast monthly, and the two numbers differ. Temporal reconciliation gives a principled way to align them rather than scaling one to match the other.
 
