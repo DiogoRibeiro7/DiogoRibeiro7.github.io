@@ -1358,6 +1358,7 @@ alert_manager = IntelligentAlertManager()
 
 ### 4.3 Performance Analytics and Optimization
 
+{% raw %}
 ```python
 from airflow.models import TaskInstance, DagRun
 from airflow.utils.db import provide_session
@@ -1794,6 +1795,7 @@ class PerformanceAnalyzer:
 # Global performance analyzer
 performance_analyzer = PerformanceAnalyzer()
 ```
+{% endraw %}
 
 ## 5\. Scaling and High Availability Patterns
 
