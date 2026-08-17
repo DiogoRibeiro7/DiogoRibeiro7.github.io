@@ -101,7 +101,7 @@ The check that matters is the last line: at each $\tau$ the lowest pinball loss 
 
 Several routes lead to a predictive distribution.
 
-**Fit one model per quantile.** Gradient boosting libraries accept a quantile objective directly, so training at $\tau \in \{0.1, 0.5, 0.9\}$ gives three models describing the distribution's shape. Simple and flexible; the drawback is that independently fitted quantiles can **cross** — the predicted 90th percentile falling below the 50th — which is incoherent and needs sorting or a monotonicity constraint.
+**Fit one model per quantile.** Gradient boosting libraries accept a quantile objective directly, so training at $\tau \in \lbrace 0.1, 0.5, 0.9\rbrace$ gives three models describing the distribution's shape. Simple and flexible; the drawback is that independently fitted quantiles can **cross** — the predicted 90th percentile falling below the 50th — which is incoherent and needs sorting or a monotonicity constraint.
 
 **Use a parametric model's own intervals.** ARIMA and exponential smoothing in state space form produce prediction intervals from their error variance. These are principled but depend on the model's distributional assumption, usually normality, which understates the tails of most real demand.
 

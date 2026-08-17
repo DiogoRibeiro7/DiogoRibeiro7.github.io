@@ -35,7 +35,7 @@ Probability theory provides the mathematical foundation for modeling uncertainty
 
 ## The Sample Space and Its Events
 
-Every probabilistic argument starts with a sample space $\Omega$, the set of all outcomes an experiment can produce. A single roll of a die has $\Omega = \{1,2,3,4,5,6\}$; a request to a web service might have $\Omega = \{\text{success}, \text{timeout}, \text{error}\}$. An *event* is any subset of $\Omega$, and a probability measure $P$ assigns each event a number in $[0,1]$ subject to three constraints:
+Every probabilistic argument starts with a sample space $\Omega$, the set of all outcomes an experiment can produce. A single roll of a die has $\Omega = \lbrace 1,2,3,4,5,6\rbrace$; a request to a web service might have $\Omega = \lbrace \text{success}, \text{timeout}, \text{error}\rbrace$. An *event* is any subset of $\Omega$, and a probability measure $P$ assigns each event a number in $[0,1]$ subject to three constraints:
 
 $$
 P(\Omega) = 1, \qquad P(A) \ge 0, \qquad
