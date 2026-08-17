@@ -12,7 +12,7 @@ header:
   og_image: /assets/images/data_science_1.jpg
 seo_type: article
 seo_title: "Open Source Projects and Packages"
-seo_description: "Open-source Python and R packages by Diogo Ribeiro, including PyPI packages for survival simulation, physics-informed neural networks, QCA, time-series representations and WiFi activity recognition."
+seo_description: "Open-source Python and R packages for survival simulation, physics-informed neural networks, QCA and time-series representations."
 ---
 
 ## Open Source Projects & Packages
@@ -25,21 +25,21 @@ The Python projects below are published on PyPI under [DiogoRibeiro7](https://py
 
 | Package | Current release | Install | Purpose |
 | --- | --- | --- | --- |
-| [wifi-activity-recognition](https://pypi.org/project/wifi-activity-recognition/) | 0.2.0 | `pip install wifi-activity-recognition` | Human activity recognition using WiFi CSI and computer vision workflows. |
-| [tscv-vision](https://pypi.org/project/tscv-vision/) | 0.4.0 | `pip install tscv-vision` | NumPy-first structured representation engineering for time series. |
-| [pinnlab](https://pypi.org/project/pinnlab/) | 0.6.1 | `pip install pinnlab` | Physics-informed neural network implementations. |
-| [setqca](https://pypi.org/project/setqca/) | 0.2.0 | `pip install setqca` | Native Python toolkit for crisp-set and fuzzy-set qualitative comparative analysis. |
-| [gen-surv](https://pypi.org/project/gen-surv/) | 2.0.0 | `pip install gen-surv` | Survival-data simulation and visualization for statistical research and benchmarking. |
-| [pinn-rk](https://pypi.org/project/pinn-rk/) | 0.6.0 | `pip install pinn-rk` | Runge-Kutta physics-informed neural networks with time-discrete losses in PyTorch. |
+| [wifi-activity-recognition](/packages/wifi-activity-recognition/) | 0.2.0 | `pip install wifi-activity-recognition` | Human activity recognition using WiFi CSI and computer vision workflows. |
+| [tscv-vision](/packages/tscv-vision/) | 0.4.0 | `pip install tscv-vision` | NumPy-first structured representation engineering for time series. |
+| [pinnlab](/packages/pinnlab/) | 0.6.1 | `pip install pinnlab` | Physics-informed neural network implementations. |
+| [setqca](/packages/setqca/) | 0.2.0 | `pip install setqca` | Native Python toolkit for crisp-set and fuzzy-set qualitative comparative analysis. |
+| [gen-surv](/packages/gensurvpy/) | 2.0.0 | `pip install gen-surv` | Survival-data simulation and visualization for statistical research and benchmarking. |
+| [pinn-rk](/packages/pinn-rk/) | 0.6.0 | `pip install pinn-rk` | Runge-Kutta physics-informed neural networks with time-discrete losses in PyTorch. |
 
 ### Scientific Machine Learning
 
-#### [pinnlab](https://pypi.org/project/pinnlab/)
+#### [pinnlab](/packages/pinnlab/)
 
 Physics-informed neural network implementations for experiments where differential equations, boundary conditions and neural approximators need to live in the same workflow.
 
+- **Project page:** [pinnlab](/packages/pinnlab/)
 - **PyPI:** [pinnlab](https://pypi.org/project/pinnlab/)
-- **Documentation:** [DiogoRibeiro7.github.io/pinn](https://DiogoRibeiro7.github.io/pinn)
 - **Source:** [github.com/DiogoRibeiro7/pinn](https://github.com/DiogoRibeiro7/pinn)
 - **Requires Python:** `>=3.10`
 
@@ -47,12 +47,12 @@ Physics-informed neural network implementations for experiments where differenti
 pip install pinnlab
 ```
 
-#### [pinn-rk](https://pypi.org/project/pinn-rk/)
+#### [pinn-rk](/packages/pinn-rk/)
 
 Runge-Kutta PINNs for time-discrete physics-informed learning, including Gauss, Radau and Lobatto style losses in PyTorch.
 
+- **Project page:** [pinn-rk](/packages/pinn-rk/)
 - **PyPI:** [pinn-rk](https://pypi.org/project/pinn-rk/)
-- **Documentation:** [diogoribeiro7.github.io/pinn-rk](https://diogoribeiro7.github.io/pinn-rk)
 - **Source:** [github.com/DiogoRibeiro7/pinn-rk](https://github.com/DiogoRibeiro7/pinn-rk)
 - **Requires Python:** `>=3.10,<3.13`
 
@@ -76,12 +76,12 @@ A Python package for simulating survival data and producing visualizations under
 pip install gen-surv
 ```
 
-#### [setqca](https://pypi.org/project/setqca/)
+#### [setqca](/packages/setqca/)
 
 A native Python toolkit for crisp-set and fuzzy-set Qualitative Comparative Analysis. It belongs with the research-methods part of the site because it helps encode configurational arguments, not just fit predictive models.
 
+- **Project page:** [setqca](/packages/setqca/)
 - **PyPI:** [setqca](https://pypi.org/project/setqca/)
-- **Documentation:** [diogoribeiro7.github.io/setqca-python](https://diogoribeiro7.github.io/setqca-python/)
 - **Source:** [github.com/DiogoRibeiro7/setqca-python](https://github.com/DiogoRibeiro7/setqca-python)
 - **Requires Python:** `>=3.11,<4.0`
 
@@ -91,12 +91,12 @@ pip install setqca
 
 ### Time Series, Signals and Activity Recognition
 
-#### [tscv-vision](https://pypi.org/project/tscv-vision/)
+#### [tscv-vision](/packages/tscv-vision/)
 
 Structured representation engineering for time series with a NumPy-first API. This package is a better fit for reusable transformations and experiments than one-off notebook code.
 
+- **Project page:** [tscv-vision](/packages/tscv-vision/)
 - **PyPI:** [tscv-vision](https://pypi.org/project/tscv-vision/)
-- **Documentation:** [GitHub README](https://github.com/DiogoRibeiro7/tscv-vision#readme)
 - **Source:** [github.com/DiogoRibeiro7/tscv-vision](https://github.com/DiogoRibeiro7/tscv-vision)
 - **Requires Python:** `>=3.10,<3.13`
 
@@ -104,12 +104,12 @@ Structured representation engineering for time series with a NumPy-first API. Th
 pip install tscv-vision
 ```
 
-#### [wifi-activity-recognition](https://pypi.org/project/wifi-activity-recognition/)
+#### [wifi-activity-recognition](/packages/wifi-activity-recognition/)
 
 A package for human activity recognition using WiFi channel-state information and computer vision workflows. It sits at the intersection of sensing, signal processing and applied machine learning.
 
+- **Project page:** [wifi-activity-recognition](/packages/wifi-activity-recognition/)
 - **PyPI:** [wifi-activity-recognition](https://pypi.org/project/wifi-activity-recognition/)
-- **Documentation:** [wifi-activity-recognition.readthedocs.io](https://wifi-activity-recognition.readthedocs.io/)
 - **Source:** [github.com/diogoribeiro7/wifi-csi-activity-recognition](https://github.com/diogoribeiro7/wifi-csi-activity-recognition)
 - **Requires Python:** `>=3.10`
 
