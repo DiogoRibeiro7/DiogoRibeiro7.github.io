@@ -7,23 +7,23 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Basic Usage Tutorial &mdash; gen_surv 2.0.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../static/sphinx-design.min.css?v=95c83b7e" />
-      <link rel="stylesheet" type="text/css" href="../static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
   
     <link rel="canonical" href="https://diogoribeiro7.github.io/packages/gensurvpy/tutorials/basic_usage.html" />
-      <script src="../static/jquery.js?v=5d32c60e"></script>
-      <script src="../static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../static/documentation_options.js?v=51b770b3"></script>
-      <script src="../static/doctools.js?v=9a2dae69"></script>
-      <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../static/clipboard.min.js?v=a7894cd8"></script>
-      <script src="../static/copybutton.js?v=30646c52"></script>
-      <script src="../static/design-tabs.js?v=f930bc37"></script>
-    <script src="../static/js/theme.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=51b770b3"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=30646c52"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="API Reference" href="../api/index.html" />
@@ -101,7 +101,7 @@
           <li class="breadcrumb-item"><a href="index.html">Tutorials</a></li>
       <li class="breadcrumb-item active">Basic Usage Tutorial</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../sources/tutorials/basic_usage.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/tutorials/basic_usage.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -120,18 +120,18 @@
 
 <span class="c1"># Generate basic CPHM data</span>
  <span class="n">df</span> <span class="o">=</span> <span class="n">generate</span><span class="p">(</span>
-     <span class="n">model</span><span class="o">=</span><span class="s2">&quot;cphm&quot;</span><span class="p">,</span>
+     <span class="n">model</span><span class="o">=</span><span class="s2">"cphm"</span><span class="p">,</span>
      <span class="n">n</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
      <span class="n">beta</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
     <span class="n">covariate_range</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
-     <span class="n">model_cens</span><span class="o">=</span><span class="s2">&quot;exponential&quot;</span><span class="p">,</span>
+     <span class="n">model_cens</span><span class="o">=</span><span class="s2">"exponential"</span><span class="p">,</span>
      <span class="n">cens_par</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
      <span class="n">seed</span><span class="o">=</span><span class="mi">42</span>  <span class="c1"># For reproducibility</span>
  <span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dataset shape: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Event rate: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">First 5 rows:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Dataset shape: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Event rate: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">'status'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">First 5 rows:"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -164,11 +164,11 @@
 <h3>Uniform Censoring<a class="headerlink" href="#uniform-censoring" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Censoring times uniformly distributed on [0, cens_par]</span>
 <span class="n">df_uniform</span> <span class="o">=</span> <span class="n">generate</span><span class="p">(</span>
-    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;cphm&quot;</span><span class="p">,</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">"cphm"</span><span class="p">,</span>
     <span class="n">n</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
     <span class="n">beta</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
     <span class="n">covariate_range</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
-    <span class="n">model_cens</span><span class="o">=</span><span class="s2">&quot;uniform&quot;</span><span class="p">,</span>
+    <span class="n">model_cens</span><span class="o">=</span><span class="s2">"uniform"</span><span class="p">,</span>
     <span class="n">cens_par</span><span class="o">=</span><span class="mf">3.0</span>
 <span class="p">)</span>
 </pre></div>
@@ -178,11 +178,11 @@
 <h3>Exponential Censoring<a class="headerlink" href="#exponential-censoring" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Censoring times exponentially distributed with mean cens_par</span>
 <span class="n">df_exponential</span> <span class="o">=</span> <span class="n">generate</span><span class="p">(</span>
-    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;cphm&quot;</span><span class="p">,</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">"cphm"</span><span class="p">,</span>
     <span class="n">n</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
     <span class="n">beta</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
     <span class="n">covariate_range</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
-    <span class="n">model_cens</span><span class="o">=</span><span class="s2">&quot;exponential&quot;</span><span class="p">,</span>
+    <span class="n">model_cens</span><span class="o">=</span><span class="s2">"exponential"</span><span class="p">,</span>
     <span class="n">cens_par</span><span class="o">=</span><span class="mf">2.0</span>
 <span class="p">)</span>
 </pre></div>
@@ -199,17 +199,17 @@
 <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 
 <span class="c1"># Histogram of survival times</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Distribution of Observed Times&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'time'</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Time'</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Frequency'</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Distribution of Observed Times'</span><span class="p">)</span>
 
 <span class="c1"># Event rate vs covariate</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;covariate_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;covariate&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">event_rate</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;covariate_bin&#39;</span><span class="p">)[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">event_rate</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Event Rate&#39;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Event Rate by Covariate Level&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'covariate_bin'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'covariate'</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">event_rate</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'covariate_bin'</span><span class="p">)[</span><span class="s1">'status'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">event_rate</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'bar'</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Event Rate'</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Event Rate by Covariate Level'</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -223,7 +223,7 @@ Here’s how to simulate data using this model:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">gen_surv</span><span class="w"> </span><span class="kn">import</span> <span class="n">generate</span>
 
 <span class="n">df_mixture</span> <span class="o">=</span> <span class="n">generate</span><span class="p">(</span>
-    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;mixture_cure&quot;</span><span class="p">,</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">"mixture_cure"</span><span class="p">,</span>
     <span class="n">n</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
     <span class="n">cure_fraction</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
     <span class="n">betas_survival</span><span class="o">=</span><span class="p">[</span><span class="mf">0.8</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">],</span>
@@ -231,7 +231,7 @@ Here’s how to simulate data using this model:</p>
     <span class="n">seed</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">df_mixture</span><span class="p">[[</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;cured&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_mixture</span><span class="p">[[</span><span class="s2">"time"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">,</span> <span class="s2">"cured"</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 </div>
 </section>

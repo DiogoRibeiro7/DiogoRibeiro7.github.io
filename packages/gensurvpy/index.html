@@ -7,23 +7,23 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>gen_surv: Survival Data Simulation in Python &mdash; gen_surv 2.0.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="static/sphinx-design.min.css?v=95c83b7e" />
-      <link rel="stylesheet" type="text/css" href="static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
 
   
     <link rel="canonical" href="https://diogoribeiro7.github.io/packages/gensurvpy/index.html" />
-      <script src="static/jquery.js?v=5d32c60e"></script>
-      <script src="static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="static/documentation_options.js?v=51b770b3"></script>
-      <script src="static/doctools.js?v=9a2dae69"></script>
-      <script src="static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="static/clipboard.min.js?v=a7894cd8"></script>
-      <script src="static/copybutton.js?v=30646c52"></script>
-      <script src="static/design-tabs.js?v=f930bc37"></script>
-    <script src="static/js/theme.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=51b770b3"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=30646c52"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Getting Started" href="getting_started.html" /> 
@@ -80,7 +80,7 @@
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">gen_surv: Survival Data Simulation in Python</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="sources/index.md.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/index.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -109,7 +109,7 @@
 </div>
 <p>Generate your first dataset:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">gen_surv</span><span class="w"> </span><span class="kn">import</span> <span class="n">generate</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">generate</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;cphm&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">covariate_range</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">generate</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"cphm"</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">covariate_range</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
@@ -283,11 +283,11 @@ details and notation are provided on the <a class="reference internal" href="the
 
 <span class="c1"># Basic CPHM with uniform censoring</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
-    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;cphm&quot;</span><span class="p">,</span> 
+    <span class="n">model</span><span class="o">=</span><span class="s2">"cphm"</span><span class="p">,</span> 
     <span class="n">n</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> 
     <span class="n">beta</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> 
     <span class="n">covariate_range</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
-    <span class="n">model_cens</span><span class="o">=</span><span class="s2">&quot;uniform&quot;</span><span class="p">,</span> 
+    <span class="n">model_cens</span><span class="o">=</span><span class="s2">"uniform"</span><span class="p">,</span> 
     <span class="n">cens_par</span><span class="o">=</span><span class="mf">3.0</span>
 <span class="p">)</span>
 </pre></div>
@@ -297,11 +297,11 @@ details and notation are provided on the <a class="reference internal" href="the
 <h3>Accelerated Failure Time Model<a class="headerlink" href="#accelerated-failure-time-model" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># AFT with log-normal distribution</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
-    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;aft_ln&quot;</span><span class="p">,</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">"aft_ln"</span><span class="p">,</span>
     <span class="n">n</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
     <span class="n">beta</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
     <span class="n">sigma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
-    <span class="n">model_cens</span><span class="o">=</span><span class="s2">&quot;exponential&quot;</span><span class="p">,</span>
+    <span class="n">model_cens</span><span class="o">=</span><span class="s2">"exponential"</span><span class="p">,</span>
     <span class="n">cens_par</span><span class="o">=</span><span class="mf">2.0</span>
 <span class="p">)</span>
 </pre></div>
@@ -311,11 +311,11 @@ details and notation are provided on the <a class="reference internal" href="the
 <h3>Multi-State Markov Model<a class="headerlink" href="#multi-state-markov-model" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Three-state illness-death model</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
-    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;cmm&quot;</span><span class="p">,</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">"cmm"</span><span class="p">,</span>
     <span class="n">n</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
     <span class="n">qmat</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
     <span class="n">p0</span><span class="o">=</span><span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
-    <span class="n">model_cens</span><span class="o">=</span><span class="s2">&quot;uniform&quot;</span><span class="p">,</span>
+    <span class="n">model_cens</span><span class="o">=</span><span class="s2">"uniform"</span><span class="p">,</span>
     <span class="n">cens_par</span><span class="o">=</span><span class="mf">5.0</span>
 <span class="p">)</span>
 </pre></div>
