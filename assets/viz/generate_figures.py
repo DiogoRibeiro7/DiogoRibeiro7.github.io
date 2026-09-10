@@ -681,6 +681,415 @@ def hist2d_outliers():
 
 
 # --------------------------------------------------------------------------
+# --------------------------------------------------------------------------
+@figure("regression_to_the_mean_scatter",
+        "Monthly failure counts for 500 machines in two consecutive months with "
+        "nothing changed between them. The worst decile in month one, "
+        "highlighted, falls back toward the fleet mean in month two and lands "
+        "on the regression line rather than the identity line.")
+def regression_to_the_mean_scatter():
+    r = np.random.default_rng(42)
+    n = 500
+    rate = r.gamma(4.0, 1.0, n)
+    m1 = r.poisson(rate)
+    m2 = r.poisson(rate)
+    k = n // 10
+    worst = np.argsort(m1)[-k:]
+    rest = np.setdiff1d(np.arange(n), worst)
+    rho = np.corrcoef(m1, m2)[0, 1]
+    mu = m1.mean()
+    jit = lambda v: v + r.uniform(-0.3, 0.3, v.size)
+
+    fig, ax = plt.subplots(figsize=(6.4, 5.2))
+    ax.scatter(jit(m1[rest]), jit(m2[rest]), s=14, color=hs.INK_MUTED,
+               alpha=0.5, label="Other machines")
+    ax.scatter(jit(m1[worst]), jit(m2[worst]), s=20, color=P[1],
+               alpha=0.9, label="Worst 10% in month 1")
+    lim = np.array([-0.5, max(m1.max(), m2.max()) + 1.0])
+    ax.plot(lim, lim, color=hs.BASELINE, lw=1.4, label="No change (y = x)")
+    ax.plot(lim, mu + rho * (lim - mu), color=P[0], lw=2.2,
+            label=f"Expected month 2 (rho = {rho:.2f})")
+    mx, my = m1[worst].mean(), m2[worst].mean()
+    ax.plot([mx], [my], marker="D", markersize=9, color=P[1],
+            markeredgecolor=hs.SURFACE, zorder=6)
+    ax.annotate(f"worst-decile mean\n{mx:.1f} in month 1, {my:.1f} in month 2",
+                xy=(mx, my), xytext=(-150, 60), textcoords="offset points",
+                fontsize=9.5, color=hs.INK_SECONDARY,
+                arrowprops=dict(arrowstyle="-", color=hs.INK_MUTED, lw=1))
+    ax.set_xlabel("failures in month 1")
+    ax.set_ylabel("failures in month 2")
+    ax.set_title("Selected on month 1, the worst decile lands on the regression line")
+    ax.set_xlim(lim); ax.set_ylim(lim)
+    ax.grid(axis="both")
+    ax.legend(loc="upper left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("drift_alert_power_curves",
+        "Share of drifting features flagged per day against the size of the "
+        "shift, for an uncorrected daily test, Benjamini-Hochberg and "
+        "Bonferroni, with 200 features monitored and five drifting. The "
+        "corrections cost power only for subtle shifts, and the uncorrected "
+        "test pays for its power with two false alerts for every true one.")
+def drift_alert_power_curves():
+    from matplotlib.ticker import PercentFormatter
+    from scipy import stats
+    r = np.random.default_rng(7)
+    m, n_ref, n_batch, alpha, days = 200, 2000, 500, 0.05, 30
+    drifted = np.arange(5)
+
+    def bh(p, q):
+        order = np.argsort(p)
+        below = np.where(p[order] <= q * np.arange(1, m + 1) / m)[0]
+        rej = np.zeros(m, bool)
+        if below.size:
+            rej[order[:below.max() + 1]] = True
+        return rej
+
+    shifts = [0.05, 0.1, 0.15, 0.2, 0.3, 0.5]
+    power = {"raw": [], "bonf": [], "bh": []}
+    for delta in shifts:
+        acc = {k: [] for k in power}
+        for _ in range(days):
+            p = np.array([stats.ks_2samp(
+                r.normal(size=n_ref),
+                r.normal(loc=delta if j < 5 else 0.0, size=n_batch)).pvalue
+                for j in range(m)])
+            flags = {"raw": p < alpha, "bonf": p < alpha / m, "bh": bh(p, 0.05)}
+            for k, f in flags.items():
+                acc[k].append(f[drifted].mean())
+        for k in power:
+            power[k].append(np.mean(acc[k]))
+
+    fig, ax = plt.subplots()
+    series = (("raw", "Uncorrected, alpha = 0.05", P[1]),
+              ("bh", "Benjamini-Hochberg, q = 0.05", P[0]),
+              ("bonf", "Bonferroni", P[2]))
+    for k, label, col in series:
+        ax.plot(shifts, power[k], marker="o", color=col, label=label)
+    ax.set_xlabel("shift in the drifting features (standard deviations)")
+    ax.set_ylabel("drifting features flagged per day")
+    ax.set_ylim(0, 1.04)
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0))
+    ax.set_title("Corrections cost power only where the shift is subtle")
+    ax.legend(loc="lower right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("drift_alert_bursts",
+        "Daily false-alert counts over 60 days with no drift anywhere, for 200 "
+        "independent features and for 200 features that share ten latent "
+        "factors. The average is the same; correlated features produce quiet "
+        "days and bursts, so a burst on its own is not evidence of drift.")
+def drift_alert_bursts():
+    from scipy import stats
+    r = np.random.default_rng(21)
+    m, n_ref, n_batch, alpha = 200, 2000, 500, 0.05
+    load = r.normal(size=(m, 10)) * np.sqrt(0.8 / 10)
+
+    def batch(n):
+        f = r.normal(size=(n, 10))
+        return f @ load.T + r.normal(scale=np.sqrt(0.2), size=(n, m))
+
+    ind, cor = [], []
+    for _ in range(60):
+        p_ind = np.array([stats.ks_2samp(r.normal(size=n_ref),
+                                         r.normal(size=n_batch)).pvalue
+                          for _ in range(m)])
+        ref, new = batch(n_ref), batch(n_batch)
+        p_cor = np.array([stats.ks_2samp(ref[:, j], new[:, j]).pvalue
+                          for j in range(m)])
+        ind.append((p_ind < alpha).sum())
+        cor.append((p_cor < alpha).sum())
+
+    fig, ax = plt.subplots()
+    bins = np.arange(0, 40, 2)
+    ax.hist(ind, bins=bins, color=P[0], alpha=0.85,
+            label=f"Independent features (sd {np.std(ind):.1f})")
+    ax.hist(cor, bins=bins, color=P[1], alpha=0.6,
+            label=f"Correlated features (sd {np.std(cor):.1f})")
+    ax.axvline(alpha * m, color=hs.INK_MUTED, lw=1.2)
+    ax.annotate("expected: 10 per day", xy=(alpha * m, ax.get_ylim()[1] * 0.92),
+                xytext=(8, 0), textcoords="offset points",
+                fontsize=9.5, color=hs.INK_SECONDARY)
+    ax.set_xlabel("false alerts per day (no drift anywhere)")
+    ax.set_ylabel("days")
+    ax.set_title("Correlated features turn a steady trickle of false alerts into bursts")
+    ax.legend()
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("permutation_importance_methods",
+        "Four importance methods applied to the same random forest and the "
+        "same four features: a driver, a near-duplicate of it with no effect "
+        "of its own, a weak independent feature and noise. Each method ranks "
+        "the features differently because each answers a different question.")
+def permutation_importance_methods():
+    from sklearn.ensemble import RandomForestRegressor
+    from sklearn.inspection import permutation_importance
+    from sklearn.metrics import mean_squared_error
+    from sklearn.model_selection import train_test_split
+    r = np.random.default_rng(0)
+    n = 4000
+    x1 = r.normal(size=n)
+    x2 = x1 + r.normal(scale=0.2, size=n)
+    x3 = r.normal(size=n)
+    x4 = r.normal(size=n)
+    y = 2.0 * x1 + 0.5 * x3 + r.normal(size=n)
+    X = np.column_stack([x1, x2, x3, x4])
+    Xtr, Xte, ytr, yte = train_test_split(X, y, test_size=0.5, random_state=0)
+
+    def fit(Xa, ya):
+        return RandomForestRegressor(n_estimators=300, min_samples_leaf=5,
+                                     max_features=2, random_state=0,
+                                     n_jobs=-1).fit(Xa, ya)
+
+    rf = fit(Xtr, ytr)
+    base = mean_squared_error(yte, rf.predict(Xte))
+    perm = permutation_importance(rf, Xte, yte, n_repeats=20, random_state=0,
+                                  scoring="neg_mean_squared_error").importances_mean
+
+    g = np.random.default_rng(0)
+    def group(cols):
+        out = []
+        for _ in range(20):
+            Xp = Xte.copy()
+            p = g.permutation(len(Xte))
+            Xp[:, cols] = Xp[p][:, cols]
+            out.append(mean_squared_error(yte, rf.predict(Xp)) - base)
+        return np.mean(out)
+
+    def conditional(col, cond, n_bins=20, repeats=20):
+        c = np.random.default_rng(0)
+        edges = np.quantile(Xte[:, cond], np.linspace(0, 1, n_bins + 1))
+        bins = np.clip(np.searchsorted(edges, Xte[:, cond], side="right") - 1,
+                       0, n_bins - 1)
+        out = []
+        for _ in range(repeats):
+            Xp = Xte.copy()
+            for b in range(n_bins):
+                idx = np.where(bins == b)[0]
+                Xp[idx, col] = Xp[c.permutation(idx), col]
+            out.append(mean_squared_error(yte, rf.predict(Xp)) - base)
+        return np.mean(out)
+
+    def drop(j):
+        cols = [c for c in range(4) if c != j]
+        mdl = fit(Xtr[:, cols], ytr)
+        return mean_squared_error(yte, mdl.predict(Xte[:, cols])) - base
+
+    names = ["x1\ndriver", "x2\nduplicate", "x3\nweak", "x4\nnoise"]
+    panels = [
+        ("Permutation", names, perm),
+        ("Group permutation", ["x1 + x2", "x3", "x4"],
+         [group([0, 1]), perm[2], perm[3]]),
+        ("Conditional permutation", names,
+         [conditional(0, 1), conditional(1, 0), conditional(2, 0), conditional(3, 0)]),
+        ("Drop-column refit", names, [drop(j) for j in range(4)]),
+    ]
+    fig, axes = plt.subplots(1, 4, figsize=(10.4, 3.4))
+    for ax, (title, labels, vals) in zip(axes, panels):
+        ax.bar(labels, vals, color=P[0], width=0.62)
+        ax.set_title(title, fontsize=11)
+        ax.axhline(0, color=hs.BASELINE, lw=0.8)
+        ax.tick_params(axis="x", labelsize=8.5)
+    axes[0].set_ylabel("increase in test MSE")
+    fig.suptitle("Same model, same data, four different answers",
+                 x=0.012, ha="left", fontsize=12.5, fontweight="semibold")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("test_set_size_ranking",
+        "How often a test set ranks two classifiers correctly, against test-set "
+        "size, when model B is one accuracy point better than model A and the "
+        "two disagree on about eight percent of cases. Evaluating both on the same "
+        "test set beats separate test sets at every size, and a paired test "
+        "reaches significance long before two independent confidence "
+        "intervals stop overlapping.")
+def test_set_size_ranking():
+    from matplotlib.ticker import PercentFormatter
+    from scipy import stats
+    tau = 0.5
+    qA = stats.norm.ppf(0.90) * np.sqrt(1 + tau ** 2)
+    qB = stats.norm.ppf(0.91) * np.sqrt(1 + tau ** 2)
+
+    def draw(n, r):
+        d = r.normal(size=n)
+        a = d + r.normal(scale=tau, size=n) < qA
+        b = d + r.normal(scale=tau, size=n) < qB
+        return a, b
+
+    rng3 = np.random.default_rng(3)
+    reps = 2000
+    sizes = [200, 500, 1000, 2000, 5000, 10000, 20000]
+    rows = []
+    for n in sizes:
+        same = sep = mcn = disj = 0
+        for _ in range(reps):
+            a, b = draw(n, rng3)
+            same += b.mean() > a.mean()
+            a2, _ = draw(n, rng3)
+            sep += b.mean() > a2.mean()
+            b_, c_ = np.sum(~a & b), np.sum(a & ~b)
+            if b_ + c_ > 0:
+                mcn += (stats.binomtest(int(b_), int(b_ + c_)).pvalue < 0.05
+                        and b_ > c_)
+            ha = 1.96 * np.sqrt(a.mean() * (1 - a.mean()) / n)
+            hb = 1.96 * np.sqrt(b.mean() * (1 - b.mean()) / n)
+            disj += (b.mean() - hb) > (a.mean() + ha)
+        rows.append([same, sep, mcn, disj])
+    rows = np.array(rows) / reps
+
+    fig, ax = plt.subplots()
+    series = ((0, "Same test set: B measures higher", P[0]),
+              (1, "Separate test sets: B measures higher", P[2]),
+              (2, "Paired (McNemar) test significant", P[1]),
+              (3, "Independent 95% intervals disjoint", P[3]))
+    for j, label, col in series:
+        ax.plot(sizes, rows[:, j], marker="o", color=col, label=label)
+    ax.set_xscale("log")
+    ax.set_xticks(sizes)
+    ax.set_xticklabels([f"{s:,}" for s in sizes])
+    ax.set_xlabel("test-set size")
+    ax.set_ylabel("share of test sets")
+    ax.set_ylim(0, 1.04)
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0))
+    ax.set_title("A one-point difference needs thousands of test cases to show")
+    ax.legend(loc="center right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("extreme_value_tail_plot",
+        "Exceedance probability per hour against load level for three years "
+        "of simulated hourly peak load, on a log scale. The empirical tail "
+        "ends at the sample maximum; a normal fit falls off far too quickly; "
+        "the generalised Pareto fit above the 98th percentile extrapolates to "
+        "the ten-year and hundred-year levels close to the true tail.")
+def extreme_value_tail_plot():
+    from scipy import stats
+    r = np.random.default_rng(0)
+    df, loc, scale, H = 4, 100.0, 10.0, 8760
+    n = 3 * H
+    x = loc + scale * r.standard_t(df, n)
+    u = np.quantile(x, 0.98)
+    exc = x[x > u] - u
+    xi, _, sigma = stats.genpareto.fit(exc, floc=0)
+    zeta = np.mean(x > u)
+
+    grid = np.linspace(u, 620, 400)
+    true_sf = stats.t.sf((grid - loc) / scale, df)
+    norm_sf = stats.norm.sf(grid, x.mean(), x.std())
+    gpd_sf = zeta * (1 + xi * (grid - u) / sigma) ** (-1 / xi)
+    top = np.sort(x[x > u])[::-1]
+    emp_p = (np.arange(len(top)) + 1) / n
+
+    fig, ax = plt.subplots(figsize=(7.2, 4.6))
+    ax.scatter(top, emp_p, s=9, color=hs.INK_MUTED, alpha=0.6,
+               label="Observed (3 years)")
+    ax.plot(grid, true_sf, color=hs.INK_PRIMARY, lw=1.6, label="True tail")
+    ax.plot(grid, gpd_sf, color=P[0], label="Generalised Pareto fit")
+    ax.plot(grid, norm_sf, color=P[1], label="Normal fit")
+    for T, name in ((10, "10-year level"), (100, "100-year level")):
+        p = 1 / (T * H)
+        ax.axhline(p, color=hs.BASELINE, lw=1.0)
+        ax.annotate(name, xy=(132, p), xytext=(0, 4), textcoords="offset points",
+                    fontsize=9, color=hs.INK_SECONDARY)
+    ax.set_yscale("log")
+    ax.set_ylim(3e-7, 3e-2)
+    ax.set_xlim(125, 620)
+    ax.set_xlabel("hourly peak load")
+    ax.set_ylabel("probability an hour exceeds the level")
+    ax.set_title("The data end at the sample maximum; the tail does not")
+    ax.legend(loc="upper right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("censored_labels_cohorts",
+        "Mean predicted twelve-month churn probability by months since "
+        "signup, for held-out customers, from three models trained on the "
+        "same extract. The naive model, trained on whether a customer had "
+        "churned by the extract date, predicts almost no risk for recent "
+        "customers and too much for old ones. A fixed-horizon label and a "
+        "discrete-time hazard model both track the true probability.")
+def censored_labels_cohorts():
+    from sklearn.ensemble import HistGradientBoostingClassifier
+    from sklearn.linear_model import LogisticRegression
+    r = np.random.default_rng(0)
+    N, H = 20000, 12
+    signup = r.uniform(0, 36, N)
+    x1, x2 = r.normal(size=N), r.normal(size=N)
+    lam = 18 * np.exp(-(0.8 * x1 - 0.6 * x2))
+    k = 1.3
+    T = lam * r.weibull(k, N)
+    followup = 36 - signup
+    churned_by_extract = T <= followup
+    p12_true = 1 - np.exp(-(H / lam) ** k)
+    event12 = T <= H
+    test = r.uniform(size=N) < 0.25
+    tr = ~test
+    full = followup >= H
+
+    gbm = lambda: HistGradientBoostingClassifier(max_iter=200, learning_rate=0.05,
+                                                 random_state=0)
+    Xn = np.column_stack([x1, x2, followup])
+    p_naive = gbm().fit(Xn[tr], churned_by_extract[tr]).predict_proba(Xn[test])[:, 1]
+    Xf = np.column_stack([x1, x2])
+    p_fixed = gbm().fit(Xf[tr & full], event12[tr & full]).predict_proba(Xf[test])[:, 1]
+
+    def person_months(idx):
+        rows, ys = [], []
+        for i in idx:
+            last = int(np.ceil(min(T[i], followup[i], H)))
+            for m in range(1, max(last, 1) + 1):
+                rows.append((x1[i], x2[i], m))
+                ys.append(int(T[i] <= m and T[i] > m - 1 and m <= followup[i] + 1e-9))
+        return np.array(rows), np.array(ys)
+
+    def design(rows):
+        m = rows[:, 2].astype(int)
+        return np.column_stack([rows[:, :2], np.eye(H)[m - 1]])
+
+    R, Y = person_months(np.where(tr)[0])
+    haz = LogisticRegression(C=10.0, max_iter=2000).fit(design(R), Y)
+    idx = np.where(test)[0]
+    surv = np.ones(len(idx))
+    for m in range(1, H + 1):
+        rows = np.column_stack([x1[idx], x2[idx], np.full(len(idx), m)])
+        surv *= 1 - haz.predict_proba(design(rows))[:, 1]
+    p_haz = 1 - surv
+
+    ten = followup[test]
+    bins = [(0, 3), (3, 6), (6, 12), (12, 24), (24, 36)]
+    labels = [f"{lo}-{hi}" for lo, hi in bins]
+    def by_cohort(p):
+        return [p[(ten >= lo) & (ten < hi)].mean() for lo, hi in bins]
+
+    fig, ax = plt.subplots()
+    xs = np.arange(len(bins))
+    ax.plot(xs, by_cohort(p12_true[test]), color=hs.INK_PRIMARY, lw=1.6,
+            label="True 12-month probability")
+    ax.plot(xs, by_cohort(p_naive), marker="o", color=P[1],
+            label="Naive: churned by extract date")
+    ax.plot(xs, by_cohort(p_fixed), marker="o", color=P[2],
+            label="Fixed 12-month horizon")
+    ax.plot(xs, by_cohort(p_haz), marker="o", color=P[0],
+            label="Discrete-time hazard model")
+    ax.set_xticks(xs)
+    ax.set_xticklabels(labels)
+    ax.set_xlabel("months since signup at the data extract")
+    ax.set_ylabel("mean predicted 12-month churn")
+    ax.set_ylim(0, 0.85)
+    ax.set_title("Censored labels teach the model that new customers never churn")
+    ax.legend(loc="upper left")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
