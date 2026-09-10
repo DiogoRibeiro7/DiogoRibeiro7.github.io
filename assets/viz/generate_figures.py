@@ -1271,6 +1271,183 @@ def measurement_error_attenuation_simex():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("equivalence_testing_power",
+        "Share of paired comparisons reaching each conclusion against the "
+        "number of test cases, with a one-point equivalence margin and a "
+        "six-point standard deviation of the per-item difference. A "
+        "challenger that is truly 1.5 points worse produces a non-significant "
+        "t-test more than half the time at 50 cases, which is not evidence "
+        "that it is no worse; two identical models need about 300 cases "
+        "before the equivalence test can say so.")
+def equivalence_testing_power():
+    from matplotlib.ticker import PercentFormatter
+    from scipy import stats
+    r = np.random.default_rng(0)
+    sigma_d, margin = 6.0, 1.0
+
+    def outcomes(n, delta, reps=4000):
+        t_sig = tost_eq = 0
+        for _ in range(reps):
+            d = r.normal(delta, sigma_d, n)
+            m, se = d.mean(), d.std(ddof=1) / np.sqrt(n)
+            t_sig += abs(m / se) > stats.t.ppf(0.975, n - 1)
+            lo = m - stats.t.ppf(0.95, n - 1) * se
+            hi = m + stats.t.ppf(0.95, n - 1) * se
+            tost_eq += (lo > -margin) and (hi < margin)
+        return t_sig / reps, tost_eq / reps
+
+    sizes = [50, 100, 200, 400, 800, 1600, 3200]
+    ident = [outcomes(n, 0.0)[1] for n in sizes]
+    worse15 = [1 - outcomes(n, -1.5)[0] for n in sizes]
+    worse05 = [outcomes(n, -0.5)[1] for n in sizes]
+
+    fig, ax = plt.subplots()
+    ax.plot(sizes, worse15, marker="o", color=P[1],
+            label="t-test not significant, challenger 1.5 points worse")
+    ax.plot(sizes, ident, marker="o", color=P[0],
+            label="Equivalence shown, models identical")
+    ax.plot(sizes, worse05, marker="o", color=P[2],
+            label="Equivalence shown, challenger 0.5 points worse")
+    ax.set_xscale("log")
+    ax.set_xticks(sizes)
+    ax.set_xticklabels([f"{s:,}" for s in sizes])
+    ax.set_xlabel("paired test cases")
+    ax.set_ylabel("share of comparisons")
+    ax.set_ylim(0, 1.04)
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0))
+    ax.set_title("A non-significant difference is not equivalence")
+    ax.legend(loc="center right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("block_bootstrap_coverage",
+        "Coverage of a nominal 95 percent bootstrap interval for the mean of "
+        "an autocorrelated series of 200 points, against the block length "
+        "used in the bootstrap, for four levels of autocorrelation. With "
+        "independent data any block length near one is fine; as dependence "
+        "grows the naive bootstrap collapses and longer blocks recover most, "
+        "though not all, of the nominal coverage.")
+def block_bootstrap_coverage():
+    from matplotlib.ticker import PercentFormatter
+
+    def ar1(n, phi, r):
+        x = np.empty(n)
+        x[0] = r.normal(0, 1 / np.sqrt(1 - phi ** 2))
+        e = r.normal(size=n)
+        for t in range(1, n):
+            x[t] = phi * x[t - 1] + e[t]
+        return x
+
+    def block_ci(x, block, B, r):
+        n = len(x)
+        nb = int(np.ceil(n / block))
+        means = np.empty(B)
+        for b in range(B):
+            starts = r.integers(0, n - block + 1, nb)
+            idx = (starts[:, None] + np.arange(block)[None, :]).ravel()[:n]
+            means[b] = x[idx].mean()
+        return np.percentile(means, [2.5, 97.5])
+
+    n, reps = 200, 400
+    blocks = [1, 2, 5, 10, 20, 40]
+    phis = [0.0, 0.3, 0.7, 0.9]
+    cov = np.zeros((len(phis), len(blocks)))
+    for i, phi in enumerate(phis):
+        for s in range(reps):
+            r = np.random.default_rng(s)
+            x = ar1(n, phi, r)
+            for j, b in enumerate(blocks):
+                lo, hi = block_ci(x, b, 400, r)
+                cov[i, j] += lo <= 0 <= hi
+    cov /= reps
+
+    fig, ax = plt.subplots()
+    for i, (phi, col) in enumerate(zip(phis, (hs.INK_MUTED, P[2], P[0], P[1]))):
+        ax.plot(blocks, cov[i], marker="o", color=col,
+                label=f"autocorrelation {phi:.1f}")
+    ax.axhline(0.95, color=hs.BASELINE, lw=1.2)
+    ax.annotate("nominal 95%", xy=(1, 0.95), xytext=(0, 5), textcoords="offset points",
+                fontsize=9.5, color=hs.INK_SECONDARY)
+    ax.set_xscale("log")
+    ax.set_xticks(blocks)
+    ax.set_xticklabels([str(b) for b in blocks])
+    ax.set_xlabel("block length (1 = ordinary bootstrap)")
+    ax.set_ylabel("coverage of the 95% interval")
+    ax.set_ylim(0.25, 1.0)
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0))
+    ax.set_title("The ordinary bootstrap breaks as soon as observations are dependent")
+    ax.legend(loc="lower right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("synthetic_control_paths",
+        "Left: monthly outcome for a treated unit and its synthetic control, "
+        "a weighted average of donor units chosen to match the treated unit "
+        "over the 36 months before the intervention; the gap after month 36 "
+        "is the estimated effect. Right: the same gap for the treated unit "
+        "against the gaps obtained by treating each donor as if it had been "
+        "treated, which is the placebo distribution the effect is judged "
+        "against.")
+def synthetic_control_paths():
+    from scipy.optimize import minimize
+    r = np.random.default_rng(0)
+    n_donors, pre, post, effect = 20, 36, 12, -8.0
+    T = pre + post
+    trend = np.cumsum(r.normal(0.3, 1.0, T)) + 100
+    season = 10 * np.sin(np.arange(T) * 2 * np.pi / 12)
+    f = np.column_stack([trend, season])
+    loads = r.uniform(0.3, 1.5, (n_donors + 1, 2))
+    loads[0] = (1.2, 0.9)
+    mu = r.uniform(-20, 20, n_donors + 1)
+    Y = mu[:, None] + loads @ f.T + r.normal(0, 2.0, (n_donors + 1, T))
+    Y[0, pre:] += effect
+
+    def synth_weights(y_treated, Y_donors):
+        k = Y_donors.shape[0]
+        obj = lambda w: np.mean((y_treated - w @ Y_donors) ** 2)
+        res = minimize(obj, np.full(k, 1 / k), method="SLSQP", bounds=[(0, 1)] * k,
+                       constraints={"type": "eq", "fun": lambda w: w.sum() - 1},
+                       options={"maxiter": 500})
+        return res.x
+
+    gaps = []
+    for j in range(n_donors + 1):
+        others = np.delete(Y, j, axis=0)
+        wj = synth_weights(Y[j, :pre], others[:, :pre])
+        gaps.append(Y[j] - wj @ others)
+    gaps = np.array(gaps)
+    synth = Y[0] - gaps[0]
+    months = np.arange(1, T + 1)
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10.4, 4.0))
+    ax1.plot(months, Y[0], color=P[0], label="Treated unit")
+    ax1.plot(months, synth, color=P[1], label="Synthetic control")
+    ax1.axvline(pre + 0.5, color=hs.INK_MUTED, lw=1.2)
+    ax1.annotate("intervention", xy=(pre + 0.5, ax1.get_ylim()[1]), xytext=(-6, -14),
+                 textcoords="offset points", ha="right", fontsize=9.5, color=hs.INK_SECONDARY)
+    ax1.set_xlabel("month")
+    ax1.set_ylabel("outcome")
+    ax1.set_title("Treated unit and its synthetic control", fontsize=11.5)
+    ax1.legend(loc="upper left")
+
+    for j in range(1, n_donors + 1):
+        ax2.plot(months, gaps[j], color=hs.INK_MUTED, lw=1.0, alpha=0.45)
+    ax2.plot(months, gaps[0], color=P[0], lw=2.2, label="Treated unit")
+    ax2.plot([], [], color=hs.INK_MUTED, lw=1.0, label="Each donor treated as a placebo")
+    ax2.axvline(pre + 0.5, color=hs.INK_MUTED, lw=1.2)
+    ax2.axhline(0, color=hs.BASELINE, lw=1.0)
+    ax2.set_xlabel("month")
+    ax2.set_ylabel("gap: unit minus its synthetic control")
+    ax2.set_title("Placebo gaps", fontsize=11.5)
+    ax2.legend(loc="lower left")
+    fig.suptitle("The effect is the gap after the intervention, judged against placebo gaps",
+                 x=0.012, ha="left", fontsize=12.5, fontweight="semibold")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
