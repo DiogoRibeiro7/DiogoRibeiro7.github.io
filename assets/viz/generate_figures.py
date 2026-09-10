@@ -1448,6 +1448,237 @@ def synthetic_control_paths():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("queue_wait_vs_utilisation",
+        "Left: mean time waiting in queue, in units of the mean service time, "
+        "against server utilisation for three levels of service-time "
+        "variability, with simulated points for exponential service. The "
+        "curves are flat below 70 percent and vertical above 90. Right: "
+        "waiting times through a day in which one hour runs at 130 percent "
+        "load and every other hour at 80; the backlog takes four hours to "
+        "drain.")
+def queue_wait_vs_utilisation():
+    r = np.random.default_rng(0)
+
+    def gg1_wait(arrivals, services):
+        w = np.empty(len(services))
+        w[0] = 0.0
+        for i in range(1, len(services)):
+            w[i] = max(0.0, w[i - 1] + services[i - 1] - arrivals[i])
+        return w
+
+    N = 200000
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10.4, 4.0))
+    rhos = np.linspace(0.02, 0.97, 300)
+    for cs2, col, label in ((0.0, P[2], "Deterministic service"),
+                            (1.0, P[0], "Exponential service"),
+                            (4.0, P[1], "High-variability service (c² = 4)")):
+        ax1.plot(rhos, rhos / (1 - rhos) * (1 + cs2) / 2, color=col, label=label)
+    sim_rhos = [0.5, 0.7, 0.8, 0.9, 0.95]
+    pts = []
+    for rho in sim_rhos:
+        a = r.exponential(1 / rho, N)
+        s = r.exponential(1.0, N)
+        pts.append(gg1_wait(a, s)[N // 10:].mean())
+    ax1.plot(sim_rhos, pts, "o", color=P[0], markersize=7, label="Simulated, exponential")
+    ax1.set_xlim(0, 1)
+    ax1.set_ylim(0, 25)
+    ax1.set_xlabel("utilisation")
+    ax1.set_ylabel("mean wait (multiples of service time)")
+    ax1.set_title("Waiting against utilisation", fontsize=11.5)
+    ax1.legend(loc="upper left")
+
+    rr = np.random.default_rng(3)
+    hours, per_hour = 24, 60
+    rates = np.where(np.arange(hours) == 8, 1.3, 0.8)
+    a, s = [], []
+    for h in range(hours):
+        n = rr.poisson(rates[h] * per_hour)
+        a.append(np.sort(rr.uniform(h * per_hour, (h + 1) * per_hour, n)))
+        s.append(rr.exponential(1.0, n))
+    arr = np.concatenate(a)
+    srv = np.concatenate(s)
+    inter = np.diff(np.concatenate([[0.0], arr]))
+    w = gg1_wait(inter, srv)
+    ax2.scatter(arr / 60, w, s=5, color=hs.INK_MUTED, alpha=0.35, label="Each arrival")
+    hourly = [w[(arr >= h * 60) & (arr < (h + 1) * 60)].mean() for h in range(hours)]
+    ax2.plot(np.arange(hours) + 0.5, hourly, color=P[0], marker="o", markersize=4,
+             label="Hourly mean")
+    ax2.axvspan(8, 9, color=P[1], alpha=0.18, lw=0)
+    ax2.annotate("130% load", xy=(8.5, ax2.get_ylim()[1] * 0.93), ha="center",
+                 fontsize=9.5, color=hs.INK_SECONDARY)
+    ax2.set_xlabel("hour of day")
+    ax2.set_ylabel("wait (minutes)")
+    ax2.set_xlim(0, 24)
+    ax2.set_title("One overloaded hour, four hours of backlog", fontsize=11.5)
+    ax2.legend(loc="upper right")
+    fig.suptitle("Utilisation is cheap until it is not",
+                 x=0.012, ha="left", fontsize=12.5, fontweight="semibold")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("changepoint_segmentation_penalty",
+        "Left: a series with four shifts in mean, the segment means found by "
+        "exact penalised partitioning, and the detected change points. "
+        "Right: the number of change points found against the penalty, as a "
+        "multiple of log n, for independent noise and for autocorrelated "
+        "noise with the same shifts. With independent noise the count "
+        "settles on the true four over a wide range of penalties; with "
+        "autocorrelation the same penalties find dozens.")
+def changepoint_segmentation_penalty():
+    def make_series(r, n=600, phi=0.0):
+        bounds = [0, 120, 200, 350, 420, 600]
+        means = [0.0, 1.5, 0.0, -1.2, 1.0]
+        mu = np.zeros(n)
+        for (a, b), m in zip(zip(bounds[:-1], bounds[1:]), means):
+            mu[a:b] = m
+        e = r.normal(size=n)
+        if phi:
+            for t in range(1, n):
+                e[t] = phi * e[t - 1] + np.sqrt(1 - phi ** 2) * e[t]
+        return mu + e, bounds[1:-1]
+
+    def optimal_partition(x, penalty):
+        n = len(x)
+        cs = np.concatenate([[0.0], np.cumsum(x)])
+        cs2 = np.concatenate([[0.0], np.cumsum(x ** 2)])
+        def cost(a, b):
+            s, s2 = cs[b] - cs[a], cs2[b] - cs2[a]
+            return s2 - s * s / (b - a)
+        F = np.full(n + 1, np.inf)
+        F[0] = -penalty
+        last = np.zeros(n + 1, dtype=int)
+        for b in range(1, n + 1):
+            cands = [F[a] + cost(a, b) + penalty for a in range(b)]
+            a = int(np.argmin(cands))
+            F[b] = cands[a]
+            last[b] = a
+        cps, b = [], n
+        while last[b] > 0:
+            cps.append(last[b])
+            b = last[b]
+        return sorted(cps)
+
+    def robust_sigma(x):
+        d = np.diff(x)
+        return np.median(np.abs(d - np.median(d))) / 0.6745 / np.sqrt(2)
+
+    x, true_cps = make_series(np.random.default_rng(0))
+    xa, _ = make_series(np.random.default_rng(1), phi=0.6)
+    n = len(x)
+    cps = optimal_partition(x, 2 * np.log(n) * robust_sigma(x) ** 2)
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10.4, 4.0))
+    ax1.plot(x, color=hs.INK_MUTED, lw=0.9, alpha=0.8, label="Series")
+    b = [0] + cps + [n]
+    for a, c in zip(b[:-1], b[1:]):
+        ax1.plot([a, c - 1], [x[a:c].mean()] * 2, color=P[0], lw=2.4)
+    ax1.plot([], [], color=P[0], lw=2.4, label="Segment means")
+    for cp in cps:
+        ax1.axvline(cp, color=P[1], lw=1.2)
+    ax1.plot([], [], color=P[1], lw=1.2, label="Detected change points")
+    ax1.set_xlabel("time")
+    ax1.set_ylabel("value")
+    ax1.set_title("Independent noise, penalty 2 log n", fontsize=11.5)
+    ax1.legend(loc="lower left")
+
+    mults = [0.5, 1, 2, 4, 8, 16]
+    counts_iid = [len(optimal_partition(x, m * np.log(n) * robust_sigma(x) ** 2)) for m in mults]
+    counts_ar = [len(optimal_partition(xa, m * np.log(n) * robust_sigma(xa) ** 2)) for m in mults]
+    ax2.plot(mults, counts_iid, marker="o", color=P[0], label="Independent noise")
+    ax2.plot(mults, counts_ar, marker="o", color=P[1], label="Autocorrelated noise (0.6)")
+    ax2.axhline(4, color=hs.BASELINE, lw=1.2)
+    ax2.annotate("true count: 4", xy=(16, 4), xytext=(0, 5), textcoords="offset points",
+                 ha="right", fontsize=9.5, color=hs.INK_SECONDARY)
+    ax2.set_xscale("log")
+    ax2.set_yscale("log")
+    ax2.set_xticks(mults)
+    ax2.set_xticklabels([str(m) for m in mults])
+    ax2.set_yticks([1, 2, 4, 10, 30, 100])
+    ax2.set_yticklabels(["1", "2", "4", "10", "30", "100"])
+    ax2.set_xlabel("penalty, as a multiple of log n")
+    ax2.set_ylabel("change points found")
+    ax2.set_title("The penalty decides how many", fontsize=11.5)
+    ax2.legend(loc="upper right")
+    fig.suptitle("Offline change-point detection is a penalised partition",
+                 x=0.012, ha="left", fontsize=12.5, fontweight="semibold")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("distance_concentration",
+        "Left: relative contrast, the gap between the farthest and nearest "
+        "neighbour as a share of the nearest distance, against dimension for "
+        "uniform and Gaussian data; it falls toward zero, so every point "
+        "becomes about equally far from every other. Right: accuracy of a "
+        "nearest-neighbour classifier as noise dimensions are added to two "
+        "informative ones, against the same classifier after projecting to "
+        "two components and against logistic regression.")
+def distance_concentration():
+    from sklearn.decomposition import PCA
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.neighbors import KNeighborsClassifier
+    r = np.random.default_rng(0)
+    dims = [1, 2, 5, 10, 20, 50, 100, 500, 2000]
+    contrast = {"uniform": [], "gaussian": []}
+    for d in dims:
+        for name, gen in (("uniform", lambda n: r.uniform(size=(n, d))),
+                          ("gaussian", lambda n: r.normal(size=(n, d)))):
+            X = gen(1000)
+            Q = gen(50)
+            D = np.sqrt(((Q[:, None, :] - X[None, :, :]) ** 2).sum(-1))
+            contrast[name].append(np.mean((D.max(1) - D.min(1)) / D.min(1)))
+
+    def dataset(n, noise_dims, rr):
+        y = rr.integers(0, 2, n)
+        X = rr.normal(size=(n, 2)) + 1.5 * y[:, None] * np.array([1.0, 1.0])
+        return np.column_stack([X, rr.normal(size=(n, noise_dims))]), y
+
+    noise = [0, 5, 20, 50, 100, 500]
+    acc = []
+    for nd in noise:
+        rows = []
+        for rep in range(5):
+            rr = np.random.default_rng(10 * nd + rep)
+            Xtr, ytr = dataset(1000, nd, rr)
+            Xte, yte = dataset(2000, nd, rr)
+            knn = KNeighborsClassifier(5).fit(Xtr, ytr).score(Xte, yte)
+            pca = PCA(2, svd_solver="full").fit(Xtr)
+            knn_pca = KNeighborsClassifier(5).fit(pca.transform(Xtr), ytr).score(
+                pca.transform(Xte), yte)
+            lr = LogisticRegression(max_iter=2000).fit(Xtr, ytr).score(Xte, yte)
+            rows.append((knn, knn_pca, lr))
+        acc.append(np.mean(rows, axis=0))
+    acc = np.array(acc)
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10.4, 4.0))
+    ax1.plot(dims, contrast["uniform"], marker="o", color=P[0], label="Uniform")
+    ax1.plot(dims, contrast["gaussian"], marker="o", color=P[1], label="Gaussian")
+    ax1.set_xscale("log")
+    ax1.set_yscale("log")
+    ax1.set_xlabel("dimension")
+    ax1.set_ylabel("relative contrast (farthest - nearest) / nearest")
+    ax1.set_title("Distances concentrate", fontsize=11.5)
+    ax1.legend(loc="upper right")
+
+    xs = np.arange(len(noise))
+    ax2.plot(xs, acc[:, 0], marker="o", color=P[1], label="k-NN on all dimensions")
+    ax2.plot(xs, acc[:, 1], marker="o", color=P[0], label="k-NN after PCA to 2")
+    ax2.plot(xs, acc[:, 2], marker="o", color=P[2], label="Logistic regression")
+    ax2.axhline(0.5, color=hs.BASELINE, lw=1.0)
+    ax2.set_xticks(xs)
+    ax2.set_xticklabels([str(n) for n in noise])
+    ax2.set_xlabel("noise dimensions added to two informative ones")
+    ax2.set_ylabel("test accuracy")
+    ax2.set_ylim(0.45, 1.0)
+    ax2.set_title("Nearest neighbours drown in irrelevant dimensions", fontsize=11.5)
+    ax2.legend(loc="lower left")
+    fig.suptitle("High dimensions make every neighbour equally far",
+                 x=0.012, ha="left", fontsize=12.5, fontweight="semibold")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
