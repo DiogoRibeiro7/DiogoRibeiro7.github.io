@@ -1090,6 +1090,187 @@ def censored_labels_cohorts():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("learning_curves_extrapolation",
+        "Test error against training-set size for a logistic regression and "
+        "a gradient boosting classifier on the same simulated task, with the "
+        "Bayes error rate. Power-law curves fitted to the five smallest sizes "
+        "predict the held-out larger sizes: the boosting curve heads for the "
+        "Bayes rate, the logistic curve for a floor three times higher.")
+def learning_curves_extrapolation():
+    from scipy.optimize import curve_fit
+    from sklearn.ensemble import HistGradientBoostingClassifier
+    from sklearn.linear_model import LogisticRegression
+    r = np.random.default_rng(0)
+
+    def make(n, r):
+        X = r.normal(size=(n, 12))
+        logit = (1.2 * X[:, 0] - 1.0 * X[:, 1] + 0.8 * X[:, 2]
+                 + 1.5 * X[:, 0] * X[:, 1] + 1.0 * (X[:, 3] ** 2 - 1) - 0.6 * X[:, 4])
+        p = 1 / (1 + np.exp(-logit))
+        return X, (r.uniform(size=n) < p).astype(int), p
+
+    Xte, yte, pte = make(50000, r)
+    bayes = np.mean(np.minimum(pte, 1 - pte))
+    sizes = [250, 500, 1000, 2000, 4000, 8000, 16000, 32000]
+    Xpool, ypool, _ = make(32000 * 3, r)
+    models = {
+        "logistic": lambda: LogisticRegression(max_iter=2000),
+        "boosting": lambda: HistGradientBoostingClassifier(
+            max_iter=300, learning_rate=0.05, early_stopping=True, random_state=0),
+    }
+    curves = {k: [] for k in models}
+    for n in sizes:
+        for name, mk in models.items():
+            errs = []
+            for rep in range(3):
+                idx = np.random.default_rng(100 * n + rep).choice(len(Xpool), n, replace=False)
+                m = mk().fit(Xpool[idx], ypool[idx])
+                errs.append(1 - (m.predict(Xte) == yte).mean())
+            curves[name].append(np.mean(errs))
+
+    power = lambda n, a, b, c: a + b * n ** (-c)
+    grid = np.logspace(np.log10(250), np.log10(32000), 200)
+    fig, ax = plt.subplots()
+    for name, col, label in (("logistic", P[1], "Logistic regression"),
+                             ("boosting", P[0], "Gradient boosting")):
+        es = np.array(curves[name])
+        (a, b, c), _ = curve_fit(power, np.array(sizes[:5], float), es[:5],
+                                 p0=[es[4] * 0.9, 1.0, 0.5],
+                                 bounds=([0, 0, 0.05], [1, 100, 2]), maxfev=20000)
+        ax.plot(grid, power(grid, a, b, c), color=col, lw=1.2, alpha=0.7)
+        ax.plot(sizes[:5], es[:5], "o", color=col, markersize=6, label=f"{label}, used for fit")
+        ax.plot(sizes[5:], es[5:], "o", markerfacecolor=hs.SURFACE, markeredgecolor=col,
+                markeredgewidth=1.8, markersize=6, label=f"{label}, held out")
+        hs.label_end(ax, 32000, power(32000, a, b, c), f"fit predicts {power(32000, a, b, c):.3f}", col)
+    ax.axhline(bayes, color=hs.INK_MUTED, lw=1.2)
+    ax.annotate(f"Bayes error {bayes:.3f}", xy=(260, bayes), xytext=(0, -12),
+                textcoords="offset points", fontsize=9.5, color=hs.INK_SECONDARY)
+    ax.set_xscale("log")
+    ax.set_xticks(sizes)
+    ax.set_xticklabels([f"{s:,}" for s in sizes])
+    ax.set_xlabel("training examples")
+    ax.set_ylabel("test error rate")
+    ax.set_ylim(0.19, 0.34)
+    ax.set_title("A power law fitted to small sizes predicts the large ones")
+    ax.legend(loc="upper right", ncol=2)
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("quantile_regression_bands",
+        "Simulated delivery times for 5 km deliveries against network load, "
+        "with the 90 percent interval from ordinary least squares plus a "
+        "normal residual, and from linear quantile regression at the 5th and "
+        "95th percentiles. The least-squares band has constant width and "
+        "misses the pattern; the quantile band widens with load and sits "
+        "asymmetrically around the median.")
+def quantile_regression_bands():
+    import statsmodels.api as sm
+    r = np.random.default_rng(0)
+    n = 6000
+    distance = r.uniform(1, 10, n)
+    load = r.uniform(0, 1, n)
+    mu = 20 + 3.0 * distance
+    sigma = 2 + 12 * load
+    y = mu + sigma * (r.gamma(2.0, 1.0, n) - 2.0) / np.sqrt(2.0)
+    X = sm.add_constant(np.column_stack([distance, load]))
+    tr = np.arange(n) < 4000
+    ols = sm.OLS(y[tr], X[tr]).fit()
+    sd = ols.resid.std()
+    q05 = sm.QuantReg(y[tr], X[tr]).fit(q=0.05)
+    q50 = sm.QuantReg(y[tr], X[tr]).fit(q=0.5)
+    q95 = sm.QuantReg(y[tr], X[tr]).fit(q=0.95)
+
+    # fresh deliveries at 5 km for the picture
+    m = 2500
+    lp = r.uniform(0, 1, m)
+    yp = 20 + 15.0 + (2 + 12 * lp) * (r.gamma(2.0, 1.0, m) - 2.0) / np.sqrt(2.0)
+    grid = np.linspace(0, 1, 100)
+    Xg = sm.add_constant(np.column_stack([np.full(100, 5.0), grid]), has_constant="add")
+
+    fig, ax = plt.subplots(figsize=(7.2, 4.6))
+    ax.scatter(lp, yp, s=7, color=hs.INK_MUTED, alpha=0.35, label="Deliveries at 5 km")
+    ax.plot(grid, ols.predict(Xg) + 1.645 * sd, color=P[1], label="OLS + normal, 5th to 95th")
+    ax.plot(grid, ols.predict(Xg) - 1.645 * sd, color=P[1])
+    ax.plot(grid, q95.predict(Xg), color=P[0], label="Quantile regression, 5th to 95th")
+    ax.plot(grid, q05.predict(Xg), color=P[0])
+    ax.plot(grid, q50.predict(Xg), color=P[0], lw=1.2, alpha=0.7, label="Quantile regression, median")
+    ax.set_xlabel("network load")
+    ax.set_ylabel("delivery time (minutes)")
+    ax.set_ylim(0, 110)
+    ax.set_title("One interval width cannot fit a spread that changes with load")
+    ax.legend(loc="upper left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("measurement_error_attenuation_simex",
+        "Left: the fitted regression slope against the reliability of the "
+        "predictor, when the true slope is one; noise in the predictor "
+        "shrinks the slope in proportion to the share of variance that is "
+        "noise. Right: simulation-extrapolation for a predictor with "
+        "reliability 0.6, refitting the slope with extra noise added and "
+        "extrapolating back to the noise-free case; the quadratic "
+        "extrapolant under-corrects, the rational one recovers the truth.")
+def measurement_error_attenuation_simex():
+    from scipy.optimize import curve_fit
+    r = np.random.default_rng(0)
+    n = 20000
+    x_true = r.normal(size=n)
+    y = 1.0 * x_true + r.normal(scale=1.0, size=n)
+    rels = [1.0, 0.8, 0.6, 0.4, 0.2]
+    slopes_rel = []
+    for rel in rels:
+        su = np.sqrt((1 - rel) / rel)
+        slopes_rel.append(np.polyfit(x_true + r.normal(scale=su, size=n), y, 1)[0])
+    # consume the two-predictor draws so the SIMEX section matches the post
+    z = r.normal(size=n)
+    x1 = z + r.normal(scale=0.7, size=n)
+    x2 = z + r.normal(scale=0.7, size=n)
+    y2 = 1.0 * x1 + r.normal(size=n)
+    for su in (0.0, 0.5, 1.0, 1.5):
+        r.normal(scale=su, size=n)
+    rel = 0.6
+    su = np.sqrt((1 - rel) / rel)
+    x_obs = x_true + r.normal(scale=su, size=n)
+    lams = np.array([0.0, 0.5, 1.0, 1.5, 2.0])
+    slopes = np.array([np.mean([np.polyfit(x_obs + r.normal(scale=np.sqrt(l) * su, size=n),
+                                           y, 1)[0] for _ in range(20)]) for l in lams])
+    quad = np.polyfit(lams, slopes, 2)
+    rational = lambda lam, a, b: a / (b + lam)
+    (a, b), _ = curve_fit(rational, lams, slopes, p0=[1.0, 2.0])
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10.4, 4.0))
+    rg = np.linspace(0.1, 1.0, 100)
+    ax1.plot(rg, rg, color=hs.INK_MUTED, lw=1.4, label="Theory: slope = reliability")
+    ax1.plot(rels, slopes_rel, "o", color=P[0], markersize=7, label="Simulated fit")
+    ax1.axhline(1.0, color=hs.BASELINE, lw=1.0)
+    ax1.set_xlabel("reliability of the predictor (signal share of its variance)")
+    ax1.set_ylabel("fitted slope (true slope = 1)")
+    ax1.set_xlim(0, 1.05); ax1.set_ylim(0, 1.1)
+    ax1.set_title("Attenuation", fontsize=11.5)
+    ax1.legend(loc="upper left")
+
+    lg = np.linspace(-1, 2, 200)
+    ax2.plot(lg, np.polyval(quad, lg), color=P[1], lw=1.6, label="Quadratic extrapolant")
+    ax2.plot(lg, rational(lg, a, b), color=P[0], lw=1.6, label="Rational extrapolant")
+    ax2.plot(lams, slopes, "o", color=hs.INK_PRIMARY, markersize=6, label="Refits with added noise")
+    ax2.plot([-1], [1.0], marker="D", markersize=8, color=P[2], markeredgecolor=hs.SURFACE,
+             label="True slope")
+    ax2.axvline(0, color=hs.BASELINE, lw=1.0)
+    ax2.annotate("observed data", xy=(0, 0.35), xytext=(4, 0), textcoords="offset points",
+                 fontsize=9, color=hs.INK_SECONDARY)
+    ax2.set_xlabel("added noise variance, as a multiple of the existing noise")
+    ax2.set_ylabel("fitted slope")
+    ax2.set_ylim(0.2, 1.1)
+    ax2.set_title("Simulation-extrapolation", fontsize=11.5)
+    ax2.legend(loc="upper right")
+    fig.suptitle("Noise in a predictor pulls its slope toward zero, predictably",
+                 x=0.012, ha="left", fontsize=12.5, fontweight="semibold")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
