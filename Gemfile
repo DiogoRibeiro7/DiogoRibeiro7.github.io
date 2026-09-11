@@ -14,5 +14,8 @@ gem "rake"
 
 group :development do
   gem "tzinfo-data" # IANA timezone database on Windows
-  gem "wdm", ">= 0.1.0" if Gem.win_platform?
+  # Declared through `platforms` rather than a Ruby conditional so the lockfile
+  # lists the same dependencies on every platform; bundler in frozen mode on
+  # Linux CI otherwise reports wdm as deleted from the Gemfile.
+  gem "wdm", ">= 0.1.0", platforms: [:mingw, :x64_mingw, :mswin]
 end

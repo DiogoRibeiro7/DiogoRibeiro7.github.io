@@ -43,7 +43,7 @@ jobs:
           npm ci --no-audit --no-fund
           npm run build:js
       - name: Copy theme assets into the site
-        run: python scripts/sync_theme_assets.py
+        run: python3 scripts/sync_theme_assets.py
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
