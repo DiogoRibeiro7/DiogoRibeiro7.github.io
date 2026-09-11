@@ -1998,6 +1998,156 @@ def berkson_selection_correlation():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("cuped_variance_reduction",
+        "Standard error of the estimated treatment effect against the "
+        "correlation between a pre-experiment covariate and the outcome, "
+        "with 2,000 users per arm, for the plain difference in means, CUPED "
+        "and stratification by covariate quartile. CUPED follows the square "
+        "root of 1 minus the squared correlation; at a correlation of 0.85 "
+        "its standard error is about half the unadjusted one, which is the "
+        "same precision as four times the users.")
+def cuped_variance_reduction():
+    r = np.random.default_rng(0)
+    n, sd = 2000, 10.0
+
+    def draw(rho):
+        t = np.repeat([0, 1], n)
+        x = r.normal(50, sd, 2 * n)
+        y = 50 + rho * (x - 50) + r.normal(0, sd * np.sqrt(1 - rho ** 2), 2 * n)
+        return t, x, y
+
+    def diff(t, y):
+        return y[t == 1].mean() - y[t == 0].mean()
+
+    def cuped(t, x, y):
+        theta = np.cov(x, y, ddof=1)[0, 1] / x.var(ddof=1)
+        return diff(t, y - theta * (x - x.mean()))
+
+    def strat(t, x, y, k=4):
+        s = np.digitize(x, np.quantile(x, np.linspace(0, 1, k + 1)[1:-1]))
+        return sum(np.mean(s == j) * diff(t[s == j], y[s == j]) for j in range(k))
+
+    rhos = np.linspace(0, 0.9, 10)
+    se = {"diff": [], "cuped": [], "strat": []}
+    for rho in rhos:
+        e = {"diff": [], "cuped": [], "strat": []}
+        for _ in range(1200):
+            t, x, y = draw(rho)
+            e["diff"].append(diff(t, y)); e["cuped"].append(cuped(t, x, y)); e["strat"].append(strat(t, x, y))
+        for k in se:
+            se[k].append(np.std(e[k]))
+    base = sd * np.sqrt(2 / n)
+
+    fig, ax = plt.subplots()
+    ax.plot(rhos, se["diff"], marker="o", color=P[1], label="Difference in means")
+    ax.plot(rhos, se["strat"], marker="o", color=P[3], label="Stratified by covariate quartile")
+    ax.plot(rhos, se["cuped"], marker="o", color=P[0], label="CUPED (regression adjustment gives the same)")
+    ax.plot(rhos, base * np.sqrt(1 - rhos ** 2), color=P[0], lw=1, ls="--", label="Theory: SE × √(1 − ρ²)")
+    ax.set_xlabel("correlation between the pre-experiment covariate and the outcome")
+    ax.set_ylabel("standard error of the estimated effect")
+    ax.set_ylim(0, 0.36)
+    ax.set_title("A correlated covariate buys the precision of more users")
+    ax.legend(loc="lower left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("bandit_cumulative_regret",
+        "Cumulative conversions lost against the number of users, relative "
+        "to always showing the better of two variants with conversion rates "
+        "of 10 and 13 percent, averaged over 100 runs. A fixed even split "
+        "loses conversions at a constant rate for the whole test; Thompson "
+        "sampling loses them quickly at first and then almost stops as it "
+        "shifts traffic to the winner; an even split for the first quarter "
+        "followed by exploiting the observed winner sits in between.")
+def bandit_cumulative_regret():
+    r = np.random.default_rng(0)
+    p = np.array([0.10, 0.13])
+    horizon, runs = 20000, 100
+    grid = np.arange(0, horizon + 1, 500)
+
+    def thompson():
+        n = np.zeros(2); s = np.zeros(2); lost = np.zeros(horizon)
+        for i in range(horizon):
+            a = np.argmax(r.beta(1 + s, 1 + n - s))
+            n[a] += 1; s[a] += r.random() < p[a]
+            lost[i] = p.max() - p[a]
+        return np.cumsum(lost)
+
+    def even_then_exploit(share):
+        n_test = int(horizon * share)
+        arms = np.tile([0, 1], n_test // 2 + 1)[:n_test]
+        conv = r.random(n_test) < p[arms]
+        rates = [conv[arms == a].mean() for a in (0, 1)]
+        best = int(np.argmax(rates))
+        lost = np.concatenate([p.max() - p[arms], np.full(horizon - n_test, p.max() - p[best])])
+        return np.cumsum(lost)
+
+    curves = {"Thompson sampling": np.mean([thompson() for _ in range(runs)], axis=0),
+              "Even split for a quarter, then exploit": np.mean([even_then_exploit(0.25) for _ in range(runs)], axis=0),
+              "Even split for the whole test": np.mean([even_then_exploit(1.0) for _ in range(runs)], axis=0)}
+
+    fig, ax = plt.subplots()
+    for (name, c), col in zip(curves.items(), (P[0], P[2], P[1])):
+        ax.plot(grid, np.concatenate([[0], c[grid[1:] - 1]]), color=col, lw=2, label=name)
+    ax.set_xlabel("users")
+    ax.set_ylabel("expected conversions lost to the worse variant")
+    ax.set_title("What exploration costs, and when it stops costing")
+    ax.legend(loc="upper left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("recurrent_events_mcf",
+        "Mean cumulative failures per machine against age for a simulated "
+        "fleet with recurring failures, estimated with proper risk sets, for "
+        "all machines and for harsh and normal sites separately, alongside "
+        "the naive average count that ignores which machines are still under "
+        "observation. The naive curve flattens after two years, where "
+        "observation ends for many machines; the proper estimate keeps "
+        "climbing at the true rate.")
+def recurrent_events_mcf():
+    r = np.random.default_rng(0)
+    n = 400
+    env = r.choice(["normal", "harsh"], n, p=[0.6, 0.4])
+    frailty = r.gamma(2.0, 0.5, n)
+    rate = 0.8 * np.where(env == "harsh", 2.0, 1.0) * frailty
+    observed = r.uniform(1.0, 3.0, n)
+    events = []
+    for i in range(n):
+        t = 0.0
+        while True:
+            t += r.exponential(1 / rate[i])
+            if t > observed[i]:
+                break
+            events.append((i, t))
+    events = np.array(events)
+    grid = np.linspace(0.05, 3.0, 60)
+
+    def mcf(mask):
+        ev = events[np.isin(events[:, 0], np.where(mask)[0])][:, 1]
+        obs = observed[mask]
+        ev = np.sort(ev)
+        inc = 1.0 / np.array([np.sum(obs >= a) for a in ev])
+        return np.array([inc[ev <= g].sum() for g in grid])
+
+    def naive(mask):
+        idx = np.where(mask)[0]
+        return np.array([np.mean([np.sum((events[:, 0] == i) & (events[:, 1] <= g)) for i in idx]) for g in grid])
+
+    fig, ax = plt.subplots()
+    ax.plot(grid, mcf(env == "harsh"), color=P[1], lw=2, label="Harsh sites, mean cumulative function")
+    ax.plot(grid, mcf(np.ones(n, bool)), color=P[0], lw=2.2, label="All machines, mean cumulative function")
+    ax.plot(grid, mcf(env == "normal"), color=P[2], lw=2, label="Normal sites, mean cumulative function")
+    ax.plot(grid, naive(np.ones(n, bool)), color=P[3], lw=2, ls="--", label="All machines, naive average count")
+    ax.set_xlabel("age (years)")
+    ax.set_ylabel("cumulative failures per machine")
+    ax.set_title("Counting failures per machine needs a risk set")
+    ax.legend(loc="upper left")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
