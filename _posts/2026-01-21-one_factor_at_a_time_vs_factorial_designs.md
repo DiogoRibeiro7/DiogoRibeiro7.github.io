@@ -215,6 +215,8 @@ There are situations in which sequential single changes are right. When a run is
 
 Outside those cases, the factorial design is not a more sophisticated option. It is the experiment, and the one-at-a-time sequence is a set of measurements that happen to be taken at one corner of it.
 
+The designs in this post are small enough to write by hand, as the code above does. For larger screens, fractions with their alias structure reported, and the ANOVA and diagnostics that follow, [industrialstats](/packages/industrialstats/) generates the design matrices reproducibly and fits the effects, with the same coded-factor conventions used here.
+
 ## What to Do
 
 1. **List the factors and their two levels** before running anything, including the ones believed not to matter. Four factors at two levels is sixteen runs; six is sixty-four, or sixteen in a quarter fraction.

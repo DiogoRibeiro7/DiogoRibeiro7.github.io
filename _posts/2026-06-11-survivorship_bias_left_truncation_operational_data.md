@@ -104,6 +104,8 @@ print(f"mean age in service {age_now[in_service].mean():.2f} y; survivors' event
 
 Of 20,000 units installed, 7,644 (38 percent) are in service at year twelve. Harsh sites account for 40 percent of installations and 32 percent of survivors. The survivors' mean age is 3.4 years, and the lifetimes they will eventually reach average 6.9 years against 4.7 for the fleet as a whole: the snapshot has selected units that live half as long again as a typical one, before a single failure has been observed.
 
+The fleet takes a dozen lines of NumPy because one Weibull family and one covariate are all the argument needs. When the question involves competing failure modes, cure fractions, recurrent events or multi-state processes, [gen-surv](/packages/gensurvpy/) generates survival data with a known truth for exactly this kind of check, and the left-truncation comparison below works unchanged on its output.
+
 ## Estimating the Lifetime Three Ways
 
 The study cohort is the 7,644 survivors. Each enters at its current age and exits at failure or at the end of the two-year window, whichever is first; 2,940 fail in the window. The Kaplan-Meier estimator below takes an optional entry age, and the only thing the entry age changes is the risk set: a unit is at risk of failing at age $t$ only if it was under observation at $t$, that is, if it entered before $t$ and had not yet exited.
