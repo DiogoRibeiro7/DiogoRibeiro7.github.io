@@ -1839,6 +1839,165 @@ def survivorship_left_truncation():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("ratio_metric_false_positives",
+        "False positive rate of A/A tests on a per-session conversion rate, "
+        "against the mean number of sessions per user, with 2,000 users per "
+        "arm. Treating sessions as independent trials pushes the rate from 5 "
+        "percent at one session per user to above 20 percent at ten, and the "
+        "more users differ in their propensity to convert the worse it gets; "
+        "the delta method with users as the unit stays at 5 percent.")
+def ratio_metric_false_positives():
+    from matplotlib.ticker import PercentFormatter
+    r = np.random.default_rng(0)
+
+    def experiment(n_users, kappa, mean_sessions):
+        out = []
+        for _ in range(2):
+            p = r.beta(0.10 * kappa, 0.90 * kappa, n_users)
+            s = 1 + r.poisson(mean_sessions - 1, n_users)
+            out.append((s, r.binomial(s, p)))
+        return out
+
+    def naive_z(a, b):
+        (sa, ca), (sb, cb) = a, b
+        pa, pb = ca.sum() / sa.sum(), cb.sum() / sb.sum()
+        pooled = (ca.sum() + cb.sum()) / (sa.sum() + sb.sum())
+        return (pb - pa) / np.sqrt(pooled * (1 - pooled) * (1 / sa.sum() + 1 / sb.sum()))
+
+    def delta_var(s, c):
+        n, mx, my = len(s), s.mean(), c.mean()
+        vx, vy, cxy = s.var(ddof=1), c.var(ddof=1), np.cov(s, c, ddof=1)[0, 1]
+        return (vy - 2 * (my / mx) * cxy + (my / mx) ** 2 * vx) / (mx ** 2 * n)
+
+    def delta_z(a, b):
+        (sa, ca), (sb, cb) = a, b
+        return (cb.sum() / sb.sum() - ca.sum() / sa.sum()) / np.sqrt(delta_var(sa, ca) + delta_var(sb, cb))
+
+    sessions = [1, 2, 3, 5, 10]
+    rows = {}
+    for kappa in (20.0, 4.0):
+        naive, delta = [], []
+        for ms in sessions:
+            hits = np.zeros(2)
+            for _ in range(1200):
+                a, b = experiment(2000, kappa, ms)
+                hits += np.abs([naive_z(a, b), delta_z(a, b)]) > 1.96
+            naive.append(hits[0] / 1200); delta.append(hits[1] / 1200)
+        rows[kappa] = (naive, delta)
+
+    fig, ax = plt.subplots()
+    ax.plot(sessions, rows[4.0][0], marker="o", color=P[1], label="Sessions as independent trials, strongly heterogeneous users")
+    ax.plot(sessions, rows[20.0][0], marker="o", color=P[3], label="Sessions as independent trials, mildly heterogeneous users")
+    ax.plot(sessions, rows[4.0][1], marker="o", color=P[0], label="Delta method, users as the unit (strongly heterogeneous)")
+    ax.axhline(0.05, color=P[2], lw=1, ls="--", label="Nominal 5 percent")
+    ax.set_xscale("log")
+    ax.set_xticks(sessions)
+    ax.set_xticklabels([str(s) for s in sessions])
+    ax.set_xlabel("mean sessions per user")
+    ax.set_ylabel("A/A tests declared significant")
+    ax.set_ylim(0, 0.32)
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_title("The session-level test finds effects that are not there")
+    ax.legend(loc="upper left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("staggered_did_event_study",
+        "Treatment effect by periods since adoption in a staggered rollout "
+        "where the effect grows with exposure. The group-time estimates track "
+        "the true dynamic effect at every exposure; the single two-way "
+        "fixed-effects coefficient, drawn as a horizontal line, reports less "
+        "than half the true average effect on the treated because it uses "
+        "already-treated units as controls for later adopters.")
+def staggered_did_event_study():
+    r = np.random.default_rng(0)
+    n_units, n_periods = 60, 20
+    g_of = np.array([5] * 15 + [10] * 15 + [15] * 15 + [-1] * 15)     # -1 = never treated
+
+    def simulate():
+        unit_fe = r.normal(0, 1, n_units)
+        time_fe = np.linspace(0, 2, n_periods) + r.normal(0, 0.2, n_periods)
+        t = np.arange(n_periods)[None, :]
+        g = g_of[:, None]
+        D = (g >= 0) & (t >= g)
+        tau = np.where(D, 0.2 * (t - g + 1), 0.0)
+        Y = unit_fe[:, None] + time_fe[None, :] + tau + r.normal(0, 1, (n_units, n_periods))
+        return Y, D.astype(float), tau
+
+    def twfe(Y, D):
+        Yd = Y - Y.mean(1, keepdims=True) - Y.mean(0, keepdims=True) + Y.mean()
+        Dd = D - D.mean(1, keepdims=True) - D.mean(0, keepdims=True) + D.mean()
+        return (Dd * Yd).sum() / (Dd ** 2).sum()
+
+    ks = np.arange(10)
+    est = np.zeros(len(ks)); tw = []; att = []
+    draws = 200
+    for _ in range(draws):
+        Y, D, tau = simulate()
+        tw.append(twfe(Y, D)); att.append(tau[D == 1].mean())
+        for k in ks:
+            vals = []
+            for g in (5, 10, 15):
+                t = g + k
+                if t >= n_periods:
+                    continue
+                tr = g_of == g
+                co = (g_of == -1) | (g_of > t)
+                vals.append((Y[tr, t] - Y[tr, g - 1]).mean() - (Y[co, t] - Y[co, g - 1]).mean())
+            est[k] += np.mean(vals) / draws
+
+    fig, ax = plt.subplots()
+    ax.plot(ks, 0.2 * (ks + 1), color=P[0], lw=2.2, label="True effect by exposure")
+    ax.plot(ks, est, marker="o", color=P[2], ls="--", label="Group-time estimates (not-yet-treated controls)")
+    ax.axhline(np.mean(att), color=P[0], lw=1, ls=":", label=f"True average effect on the treated ({np.mean(att):.2f})")
+    ax.axhline(np.mean(tw), color=P[1], lw=2, ls="--", label=f"Two-way fixed effects coefficient ({np.mean(tw):.2f})")
+    ax.set_xlabel("periods since adoption")
+    ax.set_ylabel("treatment effect")
+    ax.set_xticks(ks)
+    ax.set_title("A single coefficient cannot summarise a growing effect")
+    ax.legend(loc="upper left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("berkson_selection_correlation",
+        "Correlation between two independent ticket attributes, severity and "
+        "customer value, among the tickets that were escalated, against the "
+        "share of tickets escalated, when escalation depends on the sum of "
+        "the two. In the whole population the correlation is zero; the more "
+        "selective the escalation, the more negative the correlation among "
+        "the escalated tickets, reaching minus 0.65 at one percent.")
+def berkson_selection_correlation():
+    from matplotlib.ticker import PercentFormatter
+    r = np.random.default_rng(0)
+    n = 200000
+    severity, value = r.normal(0, 1, n), r.normal(0, 1, n)
+    score = severity + value + r.normal(0, 0.5, n)
+    shares = [0.5, 0.3, 0.15, 0.05, 0.02, 0.01]
+    corr = []
+    for sh in shares:
+        sel = score > np.quantile(score, 1 - sh)
+        corr.append(np.corrcoef(severity[sel], value[sel])[0, 1])
+
+    fig, ax = plt.subplots()
+    ax.plot(shares, corr, marker="o", color=P[1], label="Correlation among escalated tickets")
+    ax.axhline(0, color=P[0], lw=1.5, ls="--", label="Correlation in all tickets (independent attributes)")
+    ax.set_xscale("log")
+    ax.invert_xaxis()
+    ax.set_xticks(shares)
+    ax.xaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_xlabel("share of tickets escalated (more selective to the right)")
+    ax.set_ylabel("correlation of severity and customer value")
+    ax.set_ylim(-0.8, 0.15)
+    for sh, c in zip(shares, corr):
+        ax.annotate(f"{c:+.2f}", (sh, c), textcoords="offset points", xytext=(0, -14), ha="center", fontsize=9, color=P[1])
+    ax.set_title("Selecting on a sum makes independent things look opposed")
+    ax.legend(loc="upper left")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
