@@ -1,0 +1,31 @@
+---
+layout: page
+title: All articles
+subtitle: Newest first
+seo_title: "All Articles by Diogo Ribeiro"
+seo_description: "Every article on statistics, machine learning, time series, mathematics and data engineering, newest first."
+---
+
+<div class="card-grid">
+  {% for post in paginator.posts %}
+    <article class="card">
+      {% if post.teaser %}
+      <a class="card-media" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.teaser | relative_url }}" alt="" loading="lazy" decoding="async" /></a>
+      {% endif %}
+      <p class="card-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time></p>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      <a class="card-link" href="{{ post.url | relative_url }}">Read article</a>
+    </article>
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" aria-label="Article pagination">
+  <div class="pagination__links">
+    {% if paginator.previous_page %}<a class="btn btn-secondary" href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a>{% endif %}
+    <span class="pagination__info">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}<a class="btn btn-secondary" href="{{ paginator.next_page_path | relative_url }}">Older &rarr;</a>{% endif %}
+  </div>
+</nav>
+{% endif %}

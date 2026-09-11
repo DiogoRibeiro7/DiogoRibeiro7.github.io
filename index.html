@@ -1,11 +1,11 @@
 ---
-layout: home
-author_profile: true
+layout: page
 title: "Diogo Ribeiro"
 seo_title: "Statistics, Machine Learning and Applied Mathematics"
 seo_description: "Research, technical articles and open-source software on statistical modelling, machine learning, time series, data systems and applied mathematics."
 header:
   overlay_image: /assets/images/data_has_better_idea.jpg
+permalink: /
 ---
 
 <h2>Statistics, Machine Learning &amp; Applied Mathematics</h2>
@@ -21,76 +21,71 @@ header:
   <a class="btn" href="/packages/">Projects and packages</a>
 </p>
 
+<h2>Latest articles</h2>
+
+<div class="card-grid">
+{% for post in site.posts limit: 6 %}
+  <article class="card">
+    {% if post.teaser %}<a class="card-media" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.teaser | relative_url }}" alt="" loading="lazy" decoding="async" /></a>{% endif %}
+    <p class="card-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time></p>
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+  </article>
+{% endfor %}
+</div>
+
+<p><a class="btn btn-secondary" href="/blog/">All articles</a></p>
+
 <h2>Selected work</h2>
 
 <p>These are better entry points than the chronological archive.</p>
 
-<div class="grid__wrapper">
-  <div class="grid__item">
-    <article class="archive__item card">
-      <h3 class="archive__item-title"><a href="/machine-learning/detect_data_drift_machine_learning_models/">How to Detect Data Drift in Machine Learning Models</a></h3>
+<div class="card-grid">
+  <article class="card">
+      <h3><a href="/machine-learning/detect_data_drift_machine_learning_models/">How to Detect Data Drift in Machine Learning Models</a></h3>
       <p>Production monitoring, statistical tests, drift signals, and the distinction between detectable distribution movement and model failure.</p>
     </article>
-  </div>
-  <div class="grid__item">
-    <article class="archive__item card">
-      <h3 class="archive__item-title"><a href="/machine-learning/probability_calibration_machine_learning/">Probability Calibration in Machine Learning</a></h3>
+  <article class="card">
+      <h3><a href="/machine-learning/probability_calibration_machine_learning/">Probability Calibration in Machine Learning</a></h3>
       <p>Why probability outputs need calibration, how to score them, and where Venn-Abers style predictors fit.</p>
     </article>
-  </div>
-  <div class="grid__item">
-    <article class="archive__item card">
-      <h3 class="archive__item-title"><a href="/time-series/forecasting_baselines_that_are_hard_to_beat/">Forecasting Baselines That Are Hard to Beat</a></h3>
+  <article class="card">
+      <h3><a href="/time-series/forecasting_baselines_that_are_hard_to_beat/">Forecasting Baselines That Are Hard to Beat</a></h3>
       <p>A practical argument for naive and seasonal baselines before treating any forecasting metric as evidence of skill.</p>
     </article>
-  </div>
-  <div class="grid__item">
-    <article class="archive__item card">
-      <h3 class="archive__item-title"><a href="/statistics/conformal_prediction_operational_risk/">Conformal Prediction for Operational Risk Decisions</a></h3>
+  <article class="card">
+      <h3><a href="/statistics/conformal_prediction_operational_risk/">Conformal Prediction for Operational Risk Decisions</a></h3>
       <p>Prediction intervals connected to decisions, not just uncertainty decoration.</p>
     </article>
-  </div>
 </div>
 
 <h2>Explore by topic</h2>
 
-<div class="grid__wrapper">
-  <div class="grid__item">
-    <article class="archive__item card">
-      <h3 class="archive__item-title"><a href="/statistics/">Statistics & Probability</a></h3>
+<div class="card-grid">
+  <article class="card">
+      <h3><a href="/statistics/">Statistics & Probability</a></h3>
       <p>Inference, modelling, probability, diagnostics, survival analysis, robust methods and uncertainty.</p>
     </article>
-  </div>
-  <div class="grid__item">
-    <article class="archive__item card">
-      <h3 class="archive__item-title"><a href="/machine-learning/">Machine Learning</a></h3>
+  <article class="card">
+      <h3><a href="/machine-learning/">Machine Learning</a></h3>
       <p>Model evaluation, monitoring, calibration, drift, tabular learning, data quality and MLOps.</p>
     </article>
-  </div>
-  <div class="grid__item">
-    <article class="archive__item card">
-      <h3 class="archive__item-title"><a href="/time-series/">Time Series & Forecasting</a></h3>
+  <article class="card">
+      <h3><a href="/time-series/">Time Series & Forecasting</a></h3>
       <p>Forecasting, baselines, seasonality, anomaly detection, feature engineering and state-space models.</p>
     </article>
-  </div>
-  <div class="grid__item">
-    <article class="archive__item card">
-      <h3 class="archive__item-title"><a href="/mathematics/">Mathematics</a></h3>
+  <article class="card">
+      <h3><a href="/mathematics/">Mathematics</a></h3>
       <p>Applied mathematics, stochastic processes, optimization, graph theory and the foundations behind data science.</p>
     </article>
-  </div>
-  <div class="grid__item">
-    <article class="archive__item card">
-      <h3 class="archive__item-title"><a href="/data-engineering/">Data Engineering & Systems</a></h3>
+  <article class="card">
+      <h3><a href="/data-engineering/">Data Engineering & Systems</a></h3>
       <p>Pipelines, monitoring, real-time processing, software practice and production data systems.</p>
     </article>
-  </div>
-  <div class="grid__item">
-    <article class="archive__item card">
-      <h3 class="archive__item-title"><a href="/research-methods/">Research Methods & Causal Inference</a></h3>
+  <article class="card">
+      <h3><a href="/research-methods/">Research Methods & Causal Inference</a></h3>
       <p>Experimental design, causal reasoning, preregistration, measurement, ethics and research policy.</p>
     </article>
-  </div>
 </div>
 
 <h2>Open-source projects</h2>

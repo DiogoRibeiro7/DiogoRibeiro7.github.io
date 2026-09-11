@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "Papers & Research Repositories"
 permalink: /papers/
 author_profile: true

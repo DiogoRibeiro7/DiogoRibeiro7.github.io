@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "Mathematics"
 permalink: /mathematics/
 author_profile: true
@@ -18,10 +18,10 @@ The mathematics section exists for foundations that help technical work survive 
 
 ## Applied foundations
 
-{% include hub-post-list.html category="Mathematics" limit=12 %}
+{% include_relative _partials/hub-post-list.html category="Mathematics" limit=12 %}
 
 ## Mathematical modelling
 
 Optimization, stochastic processes, graph theory and numerical methods.
 
-{% include hub-post-list.html tag="Mathematical Modeling" limit=10 %}
+{% include_relative _partials/hub-post-list.html tag="Mathematical Modeling" limit=10 %}

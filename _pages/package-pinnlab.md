@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "pinnlab"
 permalink: /packages/pinnlab/
 author_profile: true

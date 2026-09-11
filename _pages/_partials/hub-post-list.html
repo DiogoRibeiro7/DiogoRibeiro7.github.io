@@ -1,0 +1,31 @@
+{%- comment -%}
+Lists posts that match a category or a tag, newest first, as DataLog cards.
+Used by the topic hub pages through include_relative:
+
+  {% include_relative _partials/hub-post-list.html category="Statistics" limit=8 %}
+  {% include_relative _partials/hub-post-list.html tag="Forecasting" limit=8 %}
+{%- endcomment -%}
+{%- assign limit = include.limit | default: 8 -%}
+{%- assign shown = 0 -%}
+<div class="card-grid hub-post-list">
+{%- for post in site.posts -%}
+  {%- assign matches = false -%}
+  {%- if include.category and post.categories contains include.category -%}{%- assign matches = true -%}{%- endif -%}
+  {%- if include.tag and post.tags contains include.tag -%}{%- assign matches = true -%}{%- endif -%}
+  {%- if matches and shown < limit -%}
+  <article class="card">
+    {%- if post.teaser -%}
+    <a class="card-media" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.teaser | relative_url }}" alt="" loading="lazy" decoding="async" /></a>
+    {%- endif -%}
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p class="card-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time></p>
+    <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+    <a class="card-link" href="{{ post.url | relative_url }}">Read article</a>
+  </article>
+  {%- assign shown = shown | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+</div>
+{%- if shown == 0 -%}
+<p>No posts found for this section yet.</p>
+{%- endif -%}

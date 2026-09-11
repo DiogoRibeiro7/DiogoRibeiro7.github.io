@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "Package Documentation"
 permalink: /docs/
 author_profile: true

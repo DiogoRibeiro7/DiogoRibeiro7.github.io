@@ -1,0 +1,22 @@
+{
+  "core": "/assets/js/dist/core.js",
+  "loader": "/assets/js/dist/loader.js",
+  "features": {
+    "search": "/assets/js/dist/search.js",
+    "math": "/assets/js/dist/math.js",
+    "visualizations": "/assets/js/dist/visualizations.js",
+    "notebook": "/assets/js/dist/notebook.js",
+    "academic": "/assets/js/dist/academic.js",
+    "analytics-dashboard": "/assets/js/dist/analytics-dashboard.js"
+  },
+  "entrypoints": {
+    "core": "/assets/js/dist/core.js",
+    "loader": "/assets/js/dist/loader.js",
+    "search": "/assets/js/dist/search.js",
+    "math": "/assets/js/dist/math.js",
+    "visualizations": "/assets/js/dist/visualizations.js",
+    "notebook": "/assets/js/dist/notebook.js",
+    "academic": "/assets/js/dist/academic.js",
+    "analytics-dashboard": "/assets/js/dist/analytics-dashboard.js"
+  }
+}

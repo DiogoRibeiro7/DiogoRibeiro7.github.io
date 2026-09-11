@@ -1,325 +1,197 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
+# =============================================================================
+# Site identity
+# =============================================================================
+name: "Diogo Ribeiro"
+title: "Diogo Ribeiro"
+locale: en_US
+email: hansolo.dj@gmail.com
+description: "Statistics, machine learning, applied mathematics and open-source software by Diogo Ribeiro."
+url: "https://diogoribeiro7.github.io"
+baseurl: ""
+repository: "https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io"
+repository_url: https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io
+logo: "/assets/images/data-science.png"
+google_site_verification: 3zvWdJgBM6quLnCDWPNBIcLiDJLz4B0AXGM79WDhCPY
+google_analytics: G-K7H5RM6S8Y
 
-# Theme Settings
-#
-# Review documentation to determine if you should use `theme` or `remote_theme`
-# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
-
-# theme                  : "minimal-mistakes-jekyll"
-remote_theme             : "mmistakes/minimal-mistakes@4.26.2"
-minimal_mistakes_skin    : "air" #"dark"  "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
-# Site Settings
-locale                   : "en"
-title                    : "Diogo Ribeiro"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Diogo Ribeiro"
-description              : "Statistics, machine learning, applied mathematics and open-source software by Diogo Ribeiro."
-url                      : "https://diogoribeiro7.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/data-science.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : true # true, false (default)
-words_per_minute         : 200
-comments:
-  provider               : # "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
-  disqus:
-    shortname            : # https-diogoribeiro7-github-io
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-  utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
-  giscus:
-    repo_id              : # Shown during giscus setup at https://giscus.app
-    category_name        : # Full text name of the category
-    category_id          : # Shown during giscus setup at https://giscus.app
-    discussion_term      : # "pathname" (default), "url", "title", "og:title"
-    reactions_enabled    : # '1' for enabled (default), '0' for disabled
-    theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
-  staticman:
-    branch               : # "master"
-    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
-reCaptcha:
-  siteKey                :
-  secret                 :
-atom_feed:
-  path                   : # blank (default) uses feed.xml
-  hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
-lunr:
-  search_within_pages    : # true, false (default)
-algolia:
-  application_id         : # YOUR_APPLICATION_ID
-  index_name             : # YOUR_INDEX_NAME
-  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
-  powered_by             : # true (default), false
-google:
-  search_engine_id       : 55c6248c80ad04db1
-  instant_search         : true # false (default), true
-# SEO Related
-google_site_verification : 3zvWdJgBM6quLnCDWPNBIcLiDJLz4B0AXGM79WDhCPY
-bing_site_verification   :
-naver_site_verification  :
-yandex_site_verification :
-baidu_site_verification  :
-
-# Social Sharing
-twitter:
-  username               :
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 : /assets/images/data-science.png
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : Person
-  name                   : "Diogo Ribeiro"
-  links: # An array of links to social media profiles
-    - "https://github.com/DiogoRibeiro7"
-    - "https://www.linkedin.com/in/diogo-ribeiro-9094604a/"
-    - "https://neverforget-1975.medium.com/"
-
-# Analytics
-analytics:
-  provider               : google-gtag # false (default), "google", "google-universal", "google-gtag", "custom"
-  google:
-    tracking_id          : G-K7H5RM6S8Y
-    anonymize_ip         : # true, false (default)
-
-
-# Site Author
 author:
-  name             : "Diogo Ribeiro"
-  avatar           : "/assets/images/me_myself_and_i.jpg"
-  role             : "Data Science & Research Lead"
-  expertise        : "Applied statistics, machine learning, forecasting, data engineering, and reproducible analytical workflows."
-  bio              : "**Data Science & Research Lead** writing practical notes on statistics, machine learning, forecasting, and data engineering. The useful posts here should add analysis, examples, code, experiments, or field judgment rather than paraphrase search results."
-  location         : "Porto, Portugal and London, UK"
-  email            : "hansolo.dj@gmail.com"
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/DiogoRibeiro7"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/diogo-ribeiro-9094604a/"
-    - label: "Medium"
-      icon: "fab fa-fw fa-medium"
-      url: "https://neverforget-1975.medium.com/"
-    - label: "Buy Me a Coffee"
-      icon: "fas fa-fw fa-coffee"
-      url: "https://www.buymeacoffee.com/diogoribeiro7"
+  name: "Diogo Ribeiro"
+  email: hansolo.dj@gmail.com
+  affiliation: "Data Science & Research Lead"
+  location: "Porto, Portugal and London, UK"
+  github: DiogoRibeiro7
+  linkedin: diogo-ribeiro-9094604a
+  orcid: https://orcid.org/0009-0001-2022-7072
+  avatar: "/assets/images/me_myself_and_i.jpg"
+  bio: "Data Science & Research Lead writing practical notes on statistics, machine learning, forecasting and data engineering."
 
-# Site Footer
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/DiogoRibeiro7"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/diogo-ribeiro-9094604a/"
-    - label: "Medium"
-      icon: "fab fa-fw fa-medium"
-      url: "https://neverforget-1975.medium.com/"
+brand:
+  tagline: "Statistics, machine learning and applied mathematics for practitioners."
+  accent_symbol: "∀ data · Σ insights"
 
+# =============================================================================
+# DataLog theme, checked out as the vendor/datalog git submodule.
+# Jekyll reads layouts, includes, plugins and Sass from there directly.
+# Assets and theme data files cannot be redirected and are copied in by
+# scripts/sync_theme_assets.py after each submodule update.
+# =============================================================================
+layouts_dir: vendor/datalog/_layouts
+includes_dir: vendor/datalog/_includes
+plugins_dir: vendor/datalog/_plugins
+sass:
+  sass_dir: vendor/datalog/_sass
+  style: compressed
 
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - package-lock.json
-  - Rakefile
-  - README
-  - tmp
-  # - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-
-# Conversion
+# =============================================================================
+# Content
+# =============================================================================
 markdown: kramdown
 highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-
-# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-
-# Outputting
+  math_engine: mathjax
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+excerpt_separator: "\n\n"
 permalink: /:categories/:title/
-paginate: 10 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+paginate: 10
+paginate_path: "/blog/page:num/"
+timezone: Europe/Lisbon
 
+include:
+  - _pages
+exclude:
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - LICENSE
+  - Rakefile
+  - package.json
+  - package-lock.json
+  - requirements.txt
+  - scripts
+  - tests
+  - test.js
+  - "*.py"
+  - __pycache__
+  - frontmatter
+  - front_matter_report.txt
+  - files_with_multiple_categories.txt
+  - staticman.yml
+  - tmp
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
 
-# Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jekyll-include-cache
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-include-cache
   - jekyll-redirect-from
 
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
-  - jekyll-seo-tag
-  - jekyll-redirect-from
-
-
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path>/my-awesome-category/index.html ~> path: /
+# Archive anchor pages, the same keys Minimal Mistakes used. Post tags and
+# categories link to /tags/#slug and /categories/#slug.
 category_archive:
   type: liquid
   path: /categories/
 tag_archive:
   type: liquid
   path: /tags/
-year_archive:
-  type: liquid
-  path: /year-archive/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
 
-
-# HTML Compression
-# - https://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
-# Collections
-collections:
-  profile:
-    output: true
-    permalink: /:collection/:path/
-
-
-# Defaults
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: false
-      read_time: false
-      comments: true
-      share: true
-      related: true
+      layout: post
+      toc: true
+      toc_label: On this page
+      author: Diogo Ribeiro
+      mathjax: true
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      show_author: false # pages are site chrome, not articles: no byline
+
+# =============================================================================
+# Theme features
+# =============================================================================
+notebooks:
+  enabled: false
+features:
+  mathjax: true
+  math_toolkit: true
+  math_search: false
+  search: false
+  accessibility_skip_link: true
+  dark_mode_toggle: true
+  notebook_support: false
+  portfolio: false
+  datasets: false
+  visualizations: false
+  academic_dashboard: false
+  citation_tracking: false
+  academic_calendar: false
+critical_css:
+  enabled: false
+theme_options:
+  math:
+    engine: mathjax
+    output: chtml
+    equation_numbering: true
+    accessibility: true
+    render_on_load: true
+    mathjax_cdn: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+  syntax_highlighting:
+    engine: prism
+    cdn: https://cdn.jsdelivr.net/npm/prismjs@1.29.0
+    themes:
+      light: prism-coy
+      dark: prism-tomorrow
+    components:
+      - core
+      - python
+      - r
+      - sql
+      - bash
+  localization:
+    default_locale: en
+    locales:
+      - code: en
+        label: English
+        url: /
+integrations:
+  github:
+    owner: DiogoRibeiro7
+    api_base: https://api.github.com/repos
+    cache_ttl: 43200
+    enabled: false
+  binder:
+    enabled: false
+  colab:
+    enabled: false
+datalog_plugins:
+  enabled: []
+  options: {}
+seo:
+  type: "Person"
+  name: "Diogo Ribeiro"
+  description: "Statistics, machine learning, applied mathematics and open-source software."
+social:
+  github: DiogoRibeiro7
+  linkedin: diogo-ribeiro-9094604a
+  default_image: /assets/images/data-science.png

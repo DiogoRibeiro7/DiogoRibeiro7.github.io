@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "Time Series & Forecasting"
 permalink: /time-series/
 author_profile: true
@@ -20,10 +20,10 @@ Time series work is where modelling assumptions meet time, operations and data c
 
 Baselines, probabilistic forecasts, hierarchical reconciliation, intermittent demand and model evaluation.
 
-{% include hub-post-list.html category="Time Series" limit=12 %}
+{% include_relative _partials/hub-post-list.html category="Time Series" limit=12 %}
 
 ## Diagnostics and data quality
 
 Non-stationarity, missing intervals, anomaly detection, feature leakage and seasonal structure.
 
-{% include hub-post-list.html tag="Time Series" limit=12 %}
+{% include_relative _partials/hub-post-list.html tag="Time Series" limit=12 %}

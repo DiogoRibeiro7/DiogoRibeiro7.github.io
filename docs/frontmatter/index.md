@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "frontmatter package"
 parent: Package Documentation
 nav_order: 1

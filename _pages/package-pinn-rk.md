@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "pinn-rk"
 permalink: /packages/pinn-rk/
 author_profile: true

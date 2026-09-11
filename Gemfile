@@ -1,44 +1,18 @@
 source "https://rubygems.org"
 
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
+# The DataLog theme lives in the vendor/datalog git submodule. Depending on
+# its gemspec installs every gem its layouts and plugins need. Jekyll reads
+# the theme's directories through layouts_dir, includes_dir, plugins_dir and
+# sass_dir in _config.yml rather than through the gem, because Jekyll does
+# not load a theme gem's _plugins and DataLog's layouts depend on them.
+gem "datalog-theme", path: "vendor/datalog"
 
-# gem "github-pages", group: :jekyll_plugins
-
-# To upgrade, run `bundle update`.
-
-# gem 'github-pages', group: :jekyll_plugins
-gem "jekyll-remote-theme"
-gem "minimal-mistakes-jekyll"
+gem "jekyll", "~> 4.3"
+gem "loofah", "~> 2.25" # used by the theme's notebook and HTML sanitiser plugins
 gem "webrick"
 gem "rake"
-# gem 'liquid-c'
 
-# The following plugins are automatically loaded by the theme-gem:
-#   gem "jekyll-paginate"
-#   gem "jekyll-sitemap"
-#   gem "jekyll-gist"
-#   gem "jekyll-feed"
-#   gem "jekyll-include-cache"
-#
-# If you have any other plugins, put them here!
-# Cf. https://jekyllrb.com/docs/plugins/installation/
-group :jekyll_plugins do
-    gem "jekyll"
-    # gem "webrick" # Add this line
-    gem "jekyll-seo-tag"
-    gem "jekyll-sitemap"
-    gem "jekyll-redirect-from"		# keeps pre-consolidation category URLs alive
-    gem 'jekyll-include-cache'			# gem to speed up Liquid parsing
-    gem 'jekyll-commonmark'			    # gem to speed up Markdown
-    gem 'liquid-md5'
-    gem 'jekyll-archives'
-    gem 'octopress'
-    gem "kramdown-parser-gfm"
+group :development do
+  gem "tzinfo-data" # IANA timezone database on Windows
+  gem "wdm", ">= 0.1.0" if Gem.win_platform?
 end

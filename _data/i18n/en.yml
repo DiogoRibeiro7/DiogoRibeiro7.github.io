@@ -1,0 +1,438 @@
+---
+date:
+  formats:
+    long: "%B %-d, %Y"
+    datetime: "%B %-d, %Y %H:%M"
+  months:
+    1: January
+    2: February
+    3: March
+    4: April
+    5: May
+    6: June
+    7: July
+    8: August
+    9: September
+    10: October
+    11: November
+    12: December
+  months_short:
+    1: Jan
+    2: Feb
+    3: Mar
+    4: Apr
+    5: May
+    6: Jun
+    7: Jul
+    8: Aug
+    9: Sep
+    10: Oct
+    11: Nov
+    12: Dec
+  weekdays:
+    0: Sunday
+    1: Monday
+    2: Tuesday
+    3: Wednesday
+    4: Thursday
+    5: Friday
+    6: Saturday
+  weekdays_short:
+    0: Sun
+    1: Mon
+    2: Tue
+    3: Wed
+    4: Thu
+    5: Fri
+    6: Sat
+global:
+  skip_to_main: Skip to main content
+  math_ready: Mathematical content is ready
+  math_loading: Loading mathematical content
+header:
+  reading_progress: "Reading progress:"
+  reading_progress_suffix: "%"
+  brand_symbol: "∀ data · Σ insights"
+  brand_home: "{{site}} home"
+  logo_title: DataLog logo
+  dark_mode_toggle: Toggle dark mode for code readability
+  navigation_toggle: Toggle navigation
+  language_switcher_label: Switch site language
+  search_label: Search notebooks, tutorials, and code snippets
+  search_placeholder: Search code, equations, and insights
+  search_button: Search
+  utilities_toggle_label: Show filters and academic links
+  utilities_toggle_text: Filters & quick links
+  language_filter_label: Language & framework
+  language_filter_placeholder: Select focus
+  quick_links_aria: Popular tutorials
+  quick_links_title: Popular resources
+  quick_links:
+    defaults:
+      getting_started: Getting started with the theme
+      notebooks: Sample notebook workflow
+      research: Reproducible research guide
+  academic_profiles_aria: Academic profiles
+  academic_profiles_title: Academic profiles
+  academic_affiliation: "Affiliation: {{affiliation}}"
+  languages_aria: Available site languages
+  languages_title: Site languages
+navigation:
+  primary_label: Primary navigation
+  description_default: "{{section}} resources"
+  header:
+    blog:
+      title: Blog
+      description: Tutorials, walkthroughs, and code-along guides
+    research:
+      title: Research
+      description: Papers, replication studies, and documentation
+    projects:
+      title: Projects
+      description: Interactive case studies with GitHub integration
+    datasets:
+      title: Datasets
+      description: Curated data sources with licensing metadata
+    visualizations:
+      title: Visualizations
+      description: Plotly, D3, and Observable notebooks
+    academic:
+      title: Academic Ops
+      description: Citation metrics, submissions, and collaboration hub
+    about:
+      title: About
+      description: Research profile, credentials, and contact
+  quick_links:
+    getting_started: Getting started with the DataLog workflow
+    publish_notebook: Publish a Jupyter notebook as a post
+    predictive_modeling: Explore predictive modeling projects
+    research_checklist: Research methodology checklist
+    submission_tracker: Track conference submissions
+  footer:
+    privacy: Privacy
+    accessibility: Accessibility
+    tutorials: Tutorials index
+    archive: Archive by topic
+    contact: Contact
+  content:
+    research_areas:
+      title: Research areas
+      machine_learning:
+        label: Machine Learning
+        description: Supervised, unsupervised, and deep learning case studies
+      statistics:
+        label: Statistics
+        description: Experimental design, inference, and hypothesis testing
+      visualization:
+        label: Data Visualization
+        description: Storytelling dashboards and narrative graphics
+      reproducibility:
+        label: Reproducibility
+        description: Open science workflows and methodology best practices
+    methodologies:
+      title: Methodologies
+      experimental_design: Experimental design
+      bayesian: Bayesian modeling
+      eda: Exploratory data analysis
+      causal_inference: Causal inference
+  languages:
+    title: Programming Languages
+    items:
+      python: Python
+      r: R
+      sql: SQL
+      julia: Julia
+      javascript: JavaScript
+home:
+  latest_research: Latest Research Notes
+  reading_time_one: 1 min read
+  reading_time_many: "{{minutes}} mins read"
+  read_post: "Read {{title}}"
+  read_more: Read more
+  featured_projects: Featured Projects
+  view_project: View project
+article:
+  meta:
+    published: Published
+    updated: Updated
+    author: Author
+post:
+  provenance:
+    heading: Author and editorial note
+    why: Why this exists
+    evidence: Evidence used
+    method: Method
+    reviewed: Reviewed
+  article_information: Article information
+  meta:
+    published: Published
+    author: Author
+    reading_time: Reading time
+    difficulty: Difficulty
+    runtime: Runtime
+    notebook: Notebook
+  reading_time:
+    one: 1 min read
+    many: "{{minutes}} mins read"
+  difficulty_default: Intermediate
+  toc_heading: On this page
+  notebook:
+    open_external: Open Jupyter Notebook
+    download: Download Jupyter Notebook
+  topics_heading: Topics
+  share:
+    label: Share this article
+    twitter: Share on X (Twitter)
+    linkedin: Share on LinkedIn
+    reddit: Discuss on Reddit
+  interactive:
+    label: Interactive resources
+    launch: Launch demo
+    guidance: "Embed interactive plots, widgets, and demos using <code>&lt;figure&gt;</code>, <code>&lt;iframe&gt;</code>, or <code>&lt;div class=\"interactive-embed\"&gt;</code> containers. Ensure each embed includes descriptive captions for accessibility."
+  slides:
+    label: Presentation deck
+  bibliography:
+    label: References
+  comments:
+    label: Discussion
+    cta: Share feedback or ask a question below.
+dataset:
+  last_updated: "Last updated:"
+  license: "License:"
+  download: Download dataset
+  schema_title: Data Schema
+  schema:
+    field: Field
+    description: Description
+    type: Type
+notebook:
+  label: Interactive Notebook
+  meta:
+    published: "Published:"
+    updated: "Last updated:"
+    executed: "Executed:"
+    kernel: "Kernel:"
+    language: "Language:"
+    difficulty: "Difficulty:"
+    runtime: "Runtime:"
+  actions:
+    download: Download .ipynb
+    launch_binder: Launch in Binder
+    open_colab: Open in Colab
+academic_dashboard:
+  header:
+    title: Academic integration hub
+    description: Monitor publication metrics, synchronize academic profiles, and coordinate submissions, funding, and mentorship opportunities.
+  profiles:
+    title: Academic profiles & synchronization
+    view_profile: View profile
+    user_id: User ID
+    total_citations: Total citations
+    h_index: h-index
+    i10_index: i10-index
+    sync_scope: Sync scope
+    last_synced: Last synced
+    featured_projects: Featured projects
+    collections: Collections
+    auto_update: Auto update
+  citations:
+    title: Citation metrics
+    total: Total citations
+    h_index: h-index
+    i10_index: i10-index
+    since_title: "Since {{period}}"
+    total_label: "Total:"
+    h_index_label: "h-index:"
+    i10_index_label: "i10-index:"
+    per_publication: Per-publication snapshot
+    updated: "Updated {{date}}"
+    timeline: Citations by year
+  bibliography:
+    title: Automatic bibliography
+    description: Download or copy the combined bibliography generated from synced BibTeX files.
+    copy: Copy bibliography
+    download: "Download {{format}}"
+  submissions:
+    title: Conference & journal submissions
+    description: Track manuscript status, collaborators, and upcoming deadlines.
+    filter_label: Filter by status
+    all_statuses: All statuses
+    deadline: Deadline
+    status: Status
+    submitted: Submitted
+    collaborators: Collaborators
+  workflow:
+    title: Peer review & collaboration workflow
+    peer_review:
+      aria_label: Peer review assignments
+      title: Peer review assignments
+      status_label: "Status:"
+      dates: "Assigned {{assigned}} · Due {{due}}"
+    collaborations:
+      aria_label: Collaboration initiatives
+      title: Collaboration initiatives
+      contact: "Contact:"
+  calendar:
+    title: Academic calendar
+    filter_label: Show events for
+    all_types: All event types
+    starts: Starts
+    ends: Ends
+    submission_deadline: Submission deadline
+  funding:
+    title: Grant & funding activity
+    amount: Amount
+    status: Status
+    decision_deadline: Decision / deadline
+  opportunities:
+    title: Collaboration opportunities
+  mentorship:
+    title: Mentorship programs
+    offering: Offering
+    cohorts: Cohorts
+    schedule: Schedule
+    application_deadline: Application deadline
+  networking:
+    title: Academic networking channels
+    communities: Communities
+    mentorship_channels: Mentorship channels
+citation_tools:
+  heading: How to cite
+  summary: Use the quick export buttons to save citations for reference managers or copy the formatted text directly.
+  copy: Copy
+  formats:
+    bibtex: BibTeX
+    ris: RIS
+    endnote: EndNote
+  aria:
+    bibtex: BibTeX entry
+    ris: RIS entry
+    endnote: EndNote entry
+open_science_badges:
+  title: Open science & reproducibility badges
+  description: These badges highlight the transparency practices applied to this work. Hover or focus on each badge to learn more about the criteria.
+visualization_card:
+  version: Version
+  updated: Updated
+  source: Source
+  view_repository: View repository
+  open_demo: Open live demo
+  download_snapshot: Download snapshot
+project:
+  header:
+    eyebrow: Project Showcase
+    key_technologies: Key Technologies
+    github_repository: GitHub Repository
+  github:
+    stats:
+      stars: Stars
+      forks: Forks
+      open_issues: Open Issues
+      primary_language: Primary Language
+    unavailable: N/A
+  demo:
+    title: Live Demo & Visualizations
+    launch: Launch Interactive Demo
+  sections:
+    problem_statement: Problem Statement
+    solution_approach: Solution Approach
+    results_findings: Results & Findings
+    challenges: Challenges & Lessons Learned
+    datasets_sources: Datasets & Sources
+    model_performance: Model Performance
+    future_work: Future Work & Improvements
+    collaboration_contributions: Collaboration & Contributions
+    read_guidelines: Read Contribution Guidelines
+    related_projects: Related Projects
+    similar_work: Similar Work & References
+  metrics:
+    aria_label: Project metrics
+  footer:
+    last_updated: "Last updated:"
+    view_source: View source on GitHub
+  tags_label: Notebook tags
+  sidebar_label: Notebook details
+  sidebar:
+    overview: Notebook overview
+    code_cells: code cells
+    markdown_cells: markdown cells
+    error_outputs: error outputs
+    execution: Execution metadata
+    kernel: Kernel
+    not_specified: Not specified
+    language: Language
+    na: N/A
+    file: File
+    branch: Branch
+    runtime: Runtime
+    run_online: Run online
+    launch_binder: Launch interactive session on Binder
+    open_colab: Open notebook in Google Colab
+    version_history: Version history
+    last_commit: "Last commit {{commit}}."
+    view_latest: View latest revision
+footer:
+  heading: Site footer
+  about_title: "About {{site}}"
+  orcid_label: "ORCID: {{id}}"
+  citation_notice: "© {{year}} {{author}}. Cite responsibly when reusing analyses and materials."
+  stay_connected: Stay connected
+  follow_default: Follow along on Twitter, LinkedIn, GitHub, and Kaggle for release announcements.
+  professional_profiles: Professional profiles
+  explore_content: Explore content
+  research_areas: Research areas
+  methodologies: Methodologies
+  languages_frameworks: Languages & frameworks
+  subscribe_title: Subscribe for updates
+  subscribe_description: Get notified about new tutorials, research summaries, datasets, and reproducible notebooks.
+  newsletter_label: Email address
+  newsletter_placeholder: your.email@example.com
+  newsletter_button: Join newsletter
+  newsletter_privacy: We respect your inbox. Unsubscribe anytime.
+  rss_feeds: RSS feeds
+  collaborate_title: Collaborate
+  collaborate_description: Interested in research collaborations, peer review, or guest tutorials?
+  professional_inquiries: "Professional inquiries: {{email}}"
+  contribute_github: Contribute on GitHub
+  open_source_title: Open source
+  open_source_description: We welcome issues, pull requests, and discussion around reproducibility and ethical data science.
+  view_source: View source on GitHub
+  open_issues: Open issues & discussions
+  contribution_guidelines: Contribution guidelines
+  request_guidelines: Request access to contribution guidelines
+  community_resources: Community resources
+  academic_integrity: Academic integrity
+  open_science_title: Commitment to open science
+  open_science_default: Every project highlights datasets, computational environments, and validation metrics to encourage transparent, reproducible research.
+  open_science_support: Version-controlled notebooks and containerized workflows are shared whenever feasible to streamline replication efforts.
+analytics:
+  dashboard:
+    title: Analytics overview
+    description: "Insights powered by Google Analytics 4, refreshed every 24 hours."
+    disabled: "Connect Google Analytics 4 to populate this dashboard. Cached results are reused for 24 hours."
+    last_updated: Last updated
+    last_updated_unknown: "Last updated: pending"
+    cache_window: Data cached for 24 hours
+    top_posts: Top posts
+    search_terms: Search queries
+    visitor_trends: Visitor trends
+    engagement: Engagement by post
+    events: Notebook & demo events
+    scholar: Google Scholar
+    scholar_total: Total citations
+    scholar_trend: Citations by year
+    monthly_reports: Monthly reports
+    loading: Loading analytics…
+    no_results: No data available
+    no_searches: No search queries recorded
+    no_reports: No monthly reports available
+    table:
+      post: Post
+      views: Views
+      engagement: Engagement (s)
+      query: Query
+      sessions: Sessions
+      month: Month
+      users: Users
+      new_users: New users
+      page_views: Page views

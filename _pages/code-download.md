@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "Code Download"
 permalink: /code/
 author_profile: true

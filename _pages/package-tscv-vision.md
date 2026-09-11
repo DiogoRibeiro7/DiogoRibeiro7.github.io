@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "tscv-vision"
 permalink: /packages/tscv-vision/
 author_profile: true
