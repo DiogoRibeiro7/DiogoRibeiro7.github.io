@@ -51,12 +51,12 @@ methodology: >-
   effect-size gate to large batches.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/headers/photo-earth.jpg
-  og_image: /assets/images/headers/photo-earth.jpg
-  overlay_image: /assets/images/headers/photo-earth.jpg
+  image: /assets/images/headers/walks.jpg
+  og_image: /assets/images/headers/walks.jpg
+  overlay_image: /assets/images/headers/walks.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-earth.jpg
-  twitter_image: /assets/images/headers/photo-earth.jpg
+  teaser: /assets/images/headers/walks.jpg
+  twitter_image: /assets/images/headers/walks.jpg
 ---
 A drift monitor is built the obvious way: for each input feature, compare today's batch with a reference window using a two-sample test, and alert when the p-value drops below 0.05. It works on the first day. By the second week the channel has hundreds of alerts, the model has not changed, and the engineer on call has muted it. The monitor is now worse than no monitor, because it produces the impression that someone is watching.
 

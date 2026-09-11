@@ -52,12 +52,12 @@ methodology: >-
   variables scaled by the binomial standard error.
 reviewed_at: '2026-09-11'
 header:
-  image: /assets/images/headers/blocks.jpg
-  og_image: /assets/images/headers/blocks.jpg
-  overlay_image: /assets/images/headers/blocks.jpg
+  image: /assets/images/headers/constellation.jpg
+  og_image: /assets/images/headers/constellation.jpg
+  overlay_image: /assets/images/headers/constellation.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/blocks.jpg
-  twitter_image: /assets/images/headers/blocks.jpg
+  teaser: /assets/images/headers/constellation.jpg
+  twitter_image: /assets/images/headers/constellation.jpg
 ---
 The search ran overnight: a hundred combinations of learning rate, depth, regularisation and feature set, each trained and scored on the same thousand-case validation split. The best configuration reached 82.4 percent accuracy, two and a half points above the incumbent, and the number went into the slide. In production the model ran at 80 percent, which is what the incumbent did.
 

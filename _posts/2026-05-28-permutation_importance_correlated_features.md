@@ -51,12 +51,13 @@ methodology: >-
   correlation-cluster importance on the twelve-sensor example.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/headers/skyline.jpg
-  og_image: /assets/images/headers/skyline.jpg
-  overlay_image: /assets/images/headers/skyline.jpg
+  image: /assets/images/headers/photo-geometry.jpg
+  og_image: /assets/images/headers/photo-geometry.jpg
+  overlay_image: /assets/images/headers/photo-geometry.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/skyline.jpg
-  twitter_image: /assets/images/headers/skyline.jpg
+  teaser: /assets/images/headers/photo-geometry.jpg
+  twitter_image: /assets/images/headers/photo-geometry.jpg
 ---
 Someone asks which sensors matter. The answer is a bar chart from permutation importance: shuffle each column, see how much the error rises, rank. It is model-agnostic, cheap, and available in one function call. With correlated inputs it can put a sensor that does nothing above one that drives the outcome, while stripping the real driver of a third of its score. None of that is a bug.
 

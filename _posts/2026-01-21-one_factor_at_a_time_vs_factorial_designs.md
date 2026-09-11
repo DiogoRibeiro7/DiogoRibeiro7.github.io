@@ -52,13 +52,12 @@ methodology: >-
   errors are checked against the closed form for two-level designs.
 reviewed_at: '2026-09-11'
 header:
-  image: /assets/images/headers/photo-waves.jpg
-  og_image: /assets/images/headers/photo-waves.jpg
-  overlay_image: /assets/images/headers/photo-waves.jpg
-  overlay_filter: 0.4
+  image: /assets/images/headers/skyline.jpg
+  og_image: /assets/images/headers/skyline.jpg
+  overlay_image: /assets/images/headers/skyline.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-waves.jpg
-  twitter_image: /assets/images/headers/photo-waves.jpg
+  teaser: /assets/images/headers/skyline.jpg
+  twitter_image: /assets/images/headers/skyline.jpg
 ---
 A production line has four settings the engineers believe matter: a temperature, a feed rate, a catalyst grade and a mixing time. The current recipe is the baseline. To improve it they do the careful thing. Holding everything else at baseline, they raise the temperature and run three batches. Yield drops by a point. They put the temperature back, raise the feed rate, run three more batches. Yield drops by two. They try the catalyst: nothing. The mixing time: up by one. Fifteen batches later they keep the longer mixing time and file a report saying the other three settings are already where they should be.
 

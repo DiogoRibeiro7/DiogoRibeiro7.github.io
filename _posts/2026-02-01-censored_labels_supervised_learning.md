@@ -51,12 +51,12 @@ methodology: >-
   the true probability, and against the true outcome for held-out customers.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/headers/photo-lights.jpg
-  og_image: /assets/images/headers/photo-lights.jpg
-  overlay_image: /assets/images/headers/photo-lights.jpg
+  image: /assets/images/headers/cells.jpg
+  og_image: /assets/images/headers/cells.jpg
+  overlay_image: /assets/images/headers/cells.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-lights.jpg
-  twitter_image: /assets/images/headers/photo-lights.jpg
+  teaser: /assets/images/headers/cells.jpg
+  twitter_image: /assets/images/headers/cells.jpg
 ---
 A churn model starts with a database extract. Each customer has features and a status field, and the label is whether the status says churned. Customers who signed up last month have not churned, because almost nobody churns in their first month. The model learns this, reports an AUC of 0.90, and predicts a churn probability below one percent for every new signup. The retention team, which asked which new customers to call, receives a list of long-tenured accounts instead, and the model is technically doing exactly what it was trained to do.
 

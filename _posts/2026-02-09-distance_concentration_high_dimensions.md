@@ -52,12 +52,12 @@ methodology: >-
   twenty repetitions, and measures the skewness of k-occurrence counts.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/headers/photo-stars.jpg
-  og_image: /assets/images/headers/photo-stars.jpg
-  overlay_image: /assets/images/headers/photo-stars.jpg
+  image: /assets/images/headers/field.jpg
+  og_image: /assets/images/headers/field.jpg
+  overlay_image: /assets/images/headers/field.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-stars.jpg
-  twitter_image: /assets/images/headers/photo-stars.jpg
+  teaser: /assets/images/headers/field.jpg
+  twitter_image: /assets/images/headers/field.jpg
 ---
 A monitoring system computes a signature of two thousand features for each machine in a fleet and flags a machine when its nearest neighbours are far away. It is a reasonable design in two dimensions and in ten. In two thousand it flags nothing, or everything, depending on the threshold, because every machine's nearest neighbour is far away, and about as far as its farthest. The failure is not in the data or the code. It is in what distance means when there are many coordinates, and it is worth seeing measured before trusting any method that ranks points by how close they are.
 

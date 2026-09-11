@@ -38,13 +38,12 @@ methodology: >-
   heterogeneity, evaluation, and operational maintenance.
 reviewed_at: '2026-08-16'
 header:
-  image: /assets/images/headers/photo-waves.jpg
-  og_image: /assets/images/headers/photo-waves.jpg
-  overlay_image: /assets/images/headers/photo-waves.jpg
-  overlay_filter: 0.4
+  image: /assets/images/headers/photo-calculator.jpg
+  og_image: /assets/images/headers/photo-calculator.jpg
+  overlay_image: /assets/images/headers/photo-calculator.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-waves.jpg
-  twitter_image: /assets/images/headers/photo-waves.jpg
+  teaser: /assets/images/headers/photo-calculator.jpg
+  twitter_image: /assets/images/headers/photo-calculator.jpg
 ---
 Classical forecasting fits one model per series. Each SKU, sensor or store gets its own ARIMA, with its own parameters estimated from its own history. This is the **local** approach, and it was the default for fifty years.
 

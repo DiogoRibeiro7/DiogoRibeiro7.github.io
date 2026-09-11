@@ -91,9 +91,11 @@ python generate_headers.py             # all headers
 python generate_headers.py walks cells # named headers only
 ```
 
-`assets/viz/fetch_headers.py` adds photographs from Wikimedia Commons, keeping only
-CC0 and public-domain files and recording each one's author, licence and source
-page in `assets/images/headers/CREDITS.md`. Bright photographs need
+`assets/viz/fetch_headers.py` adds photographs from Wikimedia Commons under CC0,
+public-domain, CC BY or CC BY-SA licences and records each one's author, licence
+and source page in `assets/images/headers/CREDITS.md` and `_data/image_credits.yml`,
+which `_pages/image-credits.md` renders at `/image-credits/` (linked from the footer)
+to satisfy the attribution the CC BY licences require. Bright photographs need
 `overlay_filter: 0.4` in the post's `header` block so the title stays readable.
 
 Point a post at one through the `header` block (`image`, `overlay_image`,

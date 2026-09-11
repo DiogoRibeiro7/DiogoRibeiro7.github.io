@@ -39,13 +39,13 @@ methodology: >-
   and then evaluates forecasts with a matching loss.
 reviewed_at: '2026-08-16'
 header:
-  image: /assets/images/headers/photo-geometry.jpg
-  og_image: /assets/images/headers/photo-geometry.jpg
-  overlay_image: /assets/images/headers/photo-geometry.jpg
+  image: /assets/images/headers/photo-dice.jpg
+  og_image: /assets/images/headers/photo-dice.jpg
+  overlay_image: /assets/images/headers/photo-dice.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-geometry.jpg
-  twitter_image: /assets/images/headers/photo-geometry.jpg
+  teaser: /assets/images/headers/photo-dice.jpg
+  twitter_image: /assets/images/headers/photo-dice.jpg
 ---
 "We expect 1,200 units next week." That sentence is almost never what the decision needs. Stock is set to cover demand with some service level, staffing is planned against a plausible peak, and capacity is sized for a bad day rather than an average one. Every one of those is a question about the *distribution*, and a point forecast has already thrown it away.
 

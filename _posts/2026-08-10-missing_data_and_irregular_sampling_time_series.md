@@ -40,13 +40,13 @@ methodology: >-
   the data-generating mechanism it implies.
 reviewed_at: '2026-08-16'
 header:
-  image: /assets/images/headers/photo-bridge.jpg
-  og_image: /assets/images/headers/photo-bridge.jpg
-  overlay_image: /assets/images/headers/photo-bridge.jpg
+  image: /assets/images/headers/photo-wafer.jpg
+  og_image: /assets/images/headers/photo-wafer.jpg
+  overlay_image: /assets/images/headers/photo-wafer.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-bridge.jpg
-  twitter_image: /assets/images/headers/photo-bridge.jpg
+  teaser: /assets/images/headers/photo-wafer.jpg
+  twitter_image: /assets/images/headers/photo-wafer.jpg
 ---
 A missing cell in a table is a nuisance. A missing interval in a time series is something else: every lag, rolling window and seasonal index computed downstream silently assumes the observations are evenly spaced, and a gap breaks that assumption without raising an error.
 

@@ -52,12 +52,12 @@ methodology: >-
   noisy training labels.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/headers/photo-terrain.jpg
-  og_image: /assets/images/headers/photo-terrain.jpg
-  overlay_image: /assets/images/headers/photo-terrain.jpg
+  image: /assets/images/headers/waves.jpg
+  og_image: /assets/images/headers/waves.jpg
+  overlay_image: /assets/images/headers/waves.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-terrain.jpg
-  twitter_image: /assets/images/headers/photo-terrain.jpg
+  teaser: /assets/images/headers/waves.jpg
+  twitter_image: /assets/images/headers/waves.jpg
 ---
 The request arrives as a budget line. Labeling another ten thousand examples will cost twenty thousand euros and six weeks. Will the model be better enough to justify it? The usual answers are a shrug and "more data is always better". Neither is an estimate. The learning curve is, and it is cheap to produce from data already in hand.
 

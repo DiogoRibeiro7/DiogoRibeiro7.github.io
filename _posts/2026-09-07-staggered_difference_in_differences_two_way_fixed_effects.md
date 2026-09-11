@@ -56,12 +56,12 @@ methodology: >-
   into an event study checked against the true dynamic effect.
 reviewed_at: '2026-09-11'
 header:
-  image: /assets/images/headers/photo-stars.jpg
-  og_image: /assets/images/headers/photo-stars.jpg
-  overlay_image: /assets/images/headers/photo-stars.jpg
+  image: /assets/images/headers/photo-motherboard.jpg
+  og_image: /assets/images/headers/photo-motherboard.jpg
+  overlay_image: /assets/images/headers/photo-motherboard.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-stars.jpg
-  twitter_image: /assets/images/headers/photo-stars.jpg
+  teaser: /assets/images/headers/photo-motherboard.jpg
+  twitter_image: /assets/images/headers/photo-motherboard.jpg
 ---
 The new routing logic went to fifteen regions in month five, fifteen more in month ten, fifteen more in month fifteen, and fifteen regions are still waiting. The analyst has twenty months of a per-region outcome, fits a regression with region fixed effects, month fixed effects and a dummy for "routing logic active", and reads off the coefficient: 0.6. The team had hoped for one.
 

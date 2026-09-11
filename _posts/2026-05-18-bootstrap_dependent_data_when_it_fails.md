@@ -51,12 +51,13 @@ methodology: >-
   distribution of a sample maximum can cover the quantile it estimates.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/headers/sparklines.jpg
-  og_image: /assets/images/headers/sparklines.jpg
-  overlay_image: /assets/images/headers/sparklines.jpg
+  image: /assets/images/headers/photo-bridge.jpg
+  og_image: /assets/images/headers/photo-bridge.jpg
+  overlay_image: /assets/images/headers/photo-bridge.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/sparklines.jpg
-  twitter_image: /assets/images/headers/sparklines.jpg
+  teaser: /assets/images/headers/photo-bridge.jpg
+  twitter_image: /assets/images/headers/photo-bridge.jpg
 ---
 The bootstrap's promise is that a sampling distribution can be read off the data. Resample the observations with replacement, recompute the statistic, repeat a thousand times, and the spread of the results is the spread the statistic would have had across repeated samples. No formula, no normality, no derivation. It is one of the most useful ideas in applied statistics and it rests on one assumption that is easy to forget: that resampling the observations reproduces the way the data were generated.
 
