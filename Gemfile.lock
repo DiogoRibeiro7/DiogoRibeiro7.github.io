@@ -1,7 +1,7 @@
 PATH
   remote: vendor/datalog
   specs:
-    datalog-theme (0.6.0)
+    datalog-theme (0.6.1)
       fastimage (>= 2.2)
       googleauth (>= 1.9)
       jekyll (~> 4.3)
