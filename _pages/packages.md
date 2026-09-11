@@ -12,7 +12,7 @@ header:
   og_image: /assets/images/data_science_1.jpg
 seo_type: article
 seo_title: "Open Source Projects and Packages"
-seo_description: "Open-source Python and R packages for survival simulation, physics-informed neural networks, QCA and time-series representations."
+seo_description: "Open-source Python and R packages for survival simulation, heavy-tailed distributions, design of experiments, physics-informed neural networks, QCA, anomaly detection, imbalanced-learning diagnostics and time-series representations."
 ---
 
 ## Open Source Projects & Packages
@@ -29,8 +29,15 @@ The Python projects below are published on PyPI under [DiogoRibeiro7](https://py
 | [tscv-vision](/packages/tscv-vision/) | 0.4.0 | `pip install tscv-vision` | NumPy-first structured representation engineering for time series. |
 | [pinnlab](/packages/pinnlab/) | 0.6.1 | `pip install pinnlab` | Physics-informed neural network implementations. |
 | [setqca](/packages/setqca/) | 0.2.0 | `pip install setqca` | Native Python toolkit for crisp-set and fuzzy-set qualitative comparative analysis. |
-| [gen-surv](/packages/gensurvpy/) | 2.0.0 | `pip install gen-surv` | Survival-data simulation and visualization for statistical research and benchmarking. |
+| [gen-surv](/packages/gensurvpy/) | 3.1.2 | `pip install gen-surv` | Survival-data simulation with a known truth: twelve models from proportional hazards to multi-state processes. |
 | [pinn-rk](/packages/pinn-rk/) | 0.6.0 | `pip install pinn-rk` | Runge-Kutta physics-informed neural networks with time-discrete losses in PyTorch. |
+| [heavytails](/packages/heavytails/) | 0.6.3 | `pip install heavytails` | Heavy-tailed distributions, tail index estimators and extreme value diagnostics, vectorised over NumPy. |
+| [industrialstats](/packages/industrialstats/) | 0.2.0 | `pip install industrialstats` | Industrial statistics and design of experiments: design generators, ANOVA, diagnostics, power and response surfaces. |
+| [sensor-modeling](/packages/sensor-modeling/) | 0.2.0 | `pip install sensor-modeling` | Interpretable, probabilistic, privacy-preserving analysis of behavioural and ambient sensor data. |
+| [cfad](/packages/cfad/) | 0.2.2 | `pip install cfad` | Characteristic-function detection of distributional-shape changes in financial time series. |
+| [oversampleqa](/packages/oversampleqa/) | 0.8.0 | `pip install oversampleqa` | Validation, audit and benchmarking of oversampling methods for imbalanced classification. |
+| [anomalybench](/packages/anomalybench/) | 0.6.1 | `pip install anomalybench` | Benchmarking suite for anomaly detection algorithms with dataset loaders and a CLI. |
+| [DataExcept](/packages/dataexcept/) | 1.6.0 | `pip install DataExcept` | Structured, hierarchical exception classes for data science and machine learning pipelines. |
 
 ### Scientific Machine Learning
 
@@ -64,11 +71,11 @@ pip install pinn-rk
 
 #### [gen-surv](/packages/gensurvpy/)
 
-A Python package for simulating survival data and producing visualizations under Cox proportional hazards, accelerated failure time, multi-state, time-dependent covariate, hidden Markov, competing risks, mixture cure and piecewise exponential models.
+Simulate survival data with a known truth. Version 3 generates time-to-event datasets from twelve models spanning proportional hazards, accelerated failure time, competing risks, cure fractions, piecewise hazards, recurrent events and two illness-death processes, so an estimator can be tested against parameters you chose yourself. It started as a Python port of the R package genSurv and now goes well past the original's four models; it ships `py.typed`, and only the two scikit-survival conversion helpers need an optional extra.
 
 - **PyPI:** [gen-surv](https://pypi.org/project/gen-surv/)
 - **Documentation on this site:** [genSurvPy](/packages/gensurvpy/)
-- **External documentation:** [gensurvpy.readthedocs.io](https://gensurvpy.readthedocs.io/en/latest/)
+- **External documentation:** [diogoribeiro7.github.io/genSurvPy](https://diogoribeiro7.github.io/genSurvPy/)
 - **Source:** [github.com/DiogoRibeiro7/genSurvPy](https://github.com/DiogoRibeiro7/genSurvPy)
 - **Requires Python:** `>=3.11,<3.14`
 
@@ -87,6 +94,32 @@ A native Python toolkit for crisp-set and fuzzy-set Qualitative Comparative Anal
 
 ```bash
 pip install setqca
+```
+
+#### [heavytails](/packages/heavytails/)
+
+Heavy-tailed distributions, tail index estimators and extreme value diagnostics with NumPy-backed vectorised evaluation. Densities, quantiles and samplers are derived from first principles, survival functions are computed directly so they hold far into the tail, and the applied layer covers peaks-over-threshold analysis, return levels, tail-risk measures, copulas and GARCH fitting.
+
+- **Project page:** [heavytails](/packages/heavytails/)
+- **PyPI:** [heavytails](https://pypi.org/project/heavytails/)
+- **Source:** [github.com/DiogoRibeiro7/heavytails](https://github.com/DiogoRibeiro7/heavytails)
+- **Requires Python:** `>=3.10,<3.14`
+
+```bash
+pip install heavytails
+```
+
+#### [industrialstats](/packages/industrialstats/)
+
+Industrial statistics and design of experiments: reproducible design generators, ANOVA with Type I, II and III sums of squares, effect sizes, multiple comparisons, contrasts, mixed-effects models, diagnostics, power and sample-size calculations and response-surface optimisation, validated against textbook results and reference software. Pre-1.0, with provisional methods labelled as such.
+
+- **Project page:** [industrialstats](/packages/industrialstats/)
+- **PyPI:** [industrialstats](https://pypi.org/project/industrialstats/)
+- **Source:** [github.com/DiogoRibeiro7/industrialstats](https://github.com/DiogoRibeiro7/industrialstats)
+- **Requires Python:** `>=3.11,<3.15`
+
+```bash
+pip install industrialstats
 ```
 
 ### Time Series, Signals and Activity Recognition
@@ -115,6 +148,73 @@ A package for human activity recognition using WiFi channel-state information an
 
 ```bash
 pip install wifi-activity-recognition
+```
+
+#### [sensor-modeling](/packages/sensor-modeling/)
+
+A research toolkit for behavioural and ambient sensor data in assisted living, digital health and smart-home studies: an end-to-end pipeline from heterogeneous sensor observations to explained alerts, built on Bernoulli autoregressive models, hidden Markov models, change-point detection and non-homogeneous Poisson processes. Research software, not a medical device.
+
+- **Project page:** [sensor-modeling](/packages/sensor-modeling/)
+- **PyPI:** [sensor-modeling](https://pypi.org/project/sensor-modeling/)
+- **Source:** [github.com/DiogoRibeiro7/behavioral-sensing-research](https://github.com/DiogoRibeiro7/behavioral-sensing-research)
+- **Requires Python:** `>=3.10,<3.13`
+
+```bash
+pip install sensor-modeling
+```
+
+#### [cfad](/packages/cfad/)
+
+Characteristic-function anomaly detection for financial returns. Each rolling window's empirical characteristic function is compared with the Gaussian one fitted to that window's mean and variance, so the score reacts to tail and skewness changes rather than to level or volatility, and a two-sided Page-CUSUM turns scores into sequential alarms.
+
+- **Project page:** [cfad](/packages/cfad/)
+- **PyPI:** [cfad](https://pypi.org/project/cfad/)
+- **Source:** [github.com/DiogoRibeiro7/cfad](https://github.com/DiogoRibeiro7/cfad)
+- **Requires Python:** `>=3.10`
+
+```bash
+pip install cfad
+```
+
+### Machine Learning Diagnostics and Engineering
+
+#### [oversampleqa](/packages/oversampleqa/)
+
+A diagnostic toolkit for oversampling in imbalanced classification. It hides part of the majority class and scores each synthetic sample by its nearest-neighbour distance to the hidden majority and to the real minority, so the hidden-majority error rate says how often an oversampler manufactures majority-like points. Benchmarks, a CLI and a plugin system for custom metrics come with it.
+
+- **Project page:** [oversampleqa](/packages/oversampleqa/)
+- **PyPI:** [oversampleqa](https://pypi.org/project/oversampleqa/)
+- **Source:** [github.com/diogoribeiro7/OversampleQA](https://github.com/diogoribeiro7/OversampleQA)
+- **Requires Python:** `>=3.10`
+
+```bash
+pip install oversampleqa
+```
+
+#### [anomalybench](/packages/anomalybench/)
+
+A benchmarking suite for anomaly detection: detectors, loaders for tabular, image, time-series and graph benchmark datasets, and a command line that compares detectors under one protocol. Optional extras add deep-learning, streaming and Prophet-based detectors. Python 3.12 only for now.
+
+- **Project page:** [anomalybench](/packages/anomalybench/)
+- **PyPI:** [anomalybench](https://pypi.org/project/anomalybench/)
+- **Source:** [github.com/DiogoRibeiro7/anomalybench](https://github.com/DiogoRibeiro7/anomalybench)
+- **Requires Python:** `>=3.12,<3.13`
+
+```bash
+pip install anomalybench
+```
+
+#### [DataExcept](/packages/dataexcept/)
+
+Structured, hierarchical exception classes for data science, machine learning and data engineering pipelines: over a hundred specific, catchable failure types with context, JSON export against a versioned schema, pickling across process boundaries and logging helpers. The exception layer that `industrialstats` and other packages here standardise on.
+
+- **Project page:** [DataExcept](/packages/dataexcept/)
+- **PyPI:** [DataExcept](https://pypi.org/project/DataExcept/)
+- **Source:** [github.com/DiogoRibeiro7/DataExcept](https://github.com/DiogoRibeiro7/DataExcept)
+- **Requires Python:** `>=3.10,<3.15`
+
+```bash
+pip install DataExcept
 ```
 
 ## R Packages
