@@ -1679,6 +1679,166 @@ def distance_concentration():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("factorial_vs_ofat_optimum",
+        "Share of simulated experiments that end at the best of sixteen "
+        "factor settings, against the number of runs spent, for a process "
+        "with four two-level factors and one strong interaction. One factor "
+        "at a time from the baseline is trapped by the interaction and finds "
+        "the optimum in fewer than one experiment in ten at any budget; a "
+        "half fraction of eight runs finds it about two thirds of the time "
+        "and a full factorial of sixteen runs seven times in ten.")
+def factorial_vs_ofat_optimum():
+    import itertools
+    from matplotlib.ticker import PercentFormatter
+    r = np.random.default_rng(0)
+    sigma = 2.0
+    beta = {"A": 2.0, "B": 1.5, "C": 0.0, "D": 0.5, "AB": 2.5}
+    corners = np.array(list(itertools.product([-1, 1], repeat=4)), dtype=float)
+
+    def response(x):
+        A, B, C, D = x.T
+        mean = 10 + beta["A"] * A + beta["B"] * B + beta["C"] * C + beta["D"] * D + beta["AB"] * A * B
+        return mean + r.normal(0, sigma, len(x))
+
+    def ofat_best(per_setting):
+        base = -np.ones(4)
+        settings = [base.copy()]
+        for col in range(4):
+            x = base.copy(); x[col] = 1; settings.append(x)
+        y = np.array([response(np.repeat(s[None], per_setting, 0)).mean() for s in settings])
+        chosen = base.copy()
+        chosen[y[1:] - y[0] > 0] = 1
+        return chosen
+
+    def factorial_best(design):
+        pairs = [(0, 1), (0, 2), (0, 3)] if len(design) % 16 else list(itertools.combinations(range(4), 2))
+        cols = lambda d: np.column_stack([np.ones(len(d))] + [d[:, i] for i in range(4)] +
+                                         [d[:, i] * d[:, j] for i, j in pairs])
+        coef, *_ = np.linalg.lstsq(cols(design), response(design), rcond=None)
+        return corners[(cols(corners) @ coef).argmax()]
+
+    def share(fn, arg, reps=1500):
+        hits = 0
+        for _ in range(reps):
+            c = fn(arg)
+            hits += c[0] == 1 and c[1] == 1 and c[3] == 1
+        return hits / reps
+
+    half = corners[np.prod(corners, axis=1) == 1]
+    ofat_budgets = [10, 15, 25, 40, 60, 100]
+    ofat = [share(ofat_best, b // 5) for b in ofat_budgets]
+    fact_budgets = [8, 16, 32, 64]
+    fact = [share(factorial_best, half)] + [share(factorial_best, np.vstack([corners] * (b // 16))) for b in fact_budgets[1:]]
+
+    fig, ax = plt.subplots()
+    ax.plot(fact_budgets, fact, marker="o", color=P[0], label="Factorial design (8-run half fraction, then full 2⁴ replicated)")
+    ax.plot(ofat_budgets, ofat, marker="o", color=P[1], label="One factor at a time from the baseline")
+    ax.set_xscale("log")
+    ax.set_xticks(fact_budgets + [100])
+    ax.set_xticklabels([str(b) for b in fact_budgets + [100]])
+    ax.set_xlabel("experimental runs")
+    ax.set_ylabel("share of experiments ending at the best setting")
+    ax.set_ylim(0, 1.04)
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0))
+    ax.set_title("An interaction traps one-factor-at-a-time experiments")
+    ax.legend(loc="center right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("winners_curse_optimism",
+        "Average gap between the winning configuration's validation accuracy "
+        "and its true accuracy, in accuracy points, against the number of "
+        "configurations compared, for validation sets of 200, 1,000 and "
+        "5,000 items. With one configuration the gap is zero; picking the "
+        "best of a hundred on a thousand items overstates its accuracy by "
+        "about two and a half points, and on two hundred items by more than "
+        "six.")
+def winners_curse_optimism():
+    r = np.random.default_rng(0)
+    ks = [1, 2, 5, 10, 20, 50, 100, 200, 500]
+
+    def optimism(k, n, reps=3000):
+        tot = 0.0
+        for _ in range(reps):
+            true = np.clip(r.normal(0.80, 0.01, k), 0.5, 0.99)
+            val = r.binomial(n, true) / n
+            w = val.argmax()
+            tot += val[w] - true[w]
+        return 100 * tot / reps
+
+    fig, ax = plt.subplots()
+    for n, c in zip((200, 1000, 5000), (P[1], P[0], P[2])):
+        ax.plot(ks, [optimism(k, n) for k in ks], marker="o", color=c, label=f"validation set of {n:,} items")
+    ax.axhline(0, color=P[3], lw=1, ls="--", label="honest estimate (fresh test set)")
+    ax.set_xscale("log")
+    ax.set_xticks(ks)
+    ax.set_xticklabels([str(k) for k in ks])
+    ax.set_xlabel("configurations compared on the validation set")
+    ax.set_ylabel("winner's validation accuracy minus its true accuracy (points)")
+    ax.set_title("The best validation score is an overestimate")
+    ax.legend(loc="upper left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("survivorship_left_truncation",
+        "Survival curves against age in years for a fleet whose lifetimes "
+        "follow a Weibull distribution with a rising hazard. The reference "
+        "curve uses every unit ever installed. Following only the units in "
+        "service at a snapshot, and counting them from age zero, roughly "
+        "doubles the apparent median life; restricting each risk set to "
+        "units already under observation, the left-truncated estimate, "
+        "recovers the reference curve.")
+def survivorship_left_truncation():
+    r = np.random.default_rng(0)
+    shape, years, followup = 1.5, 12.0, 2.0
+    n = 20000
+    env = r.choice([6.0, 4.0], n, p=[0.6, 0.4])
+    install = r.uniform(0, years, n)
+    life = r.weibull(shape, n) * env
+    in_service = install + life > years
+    entry = (years - install)[in_service]
+    exit_ = np.minimum(life[in_service], entry + followup)
+    event = life[in_service] <= entry + followup
+
+    grid = np.linspace(0, 10, 201)
+
+    def km_on_grid(times, events, entry_times=None):
+        entry_times = np.zeros_like(times) if entry_times is None else entry_times
+        order = np.argsort(times)
+        t, e, en = times[order], events[order], entry_times[order]
+        ev_t = np.unique(t[e])
+        s = 1.0
+        surv_at = {}
+        for tt in ev_t:
+            at_risk = np.sum((en < tt) & (t >= tt))
+            d = np.sum((t == tt) & e)
+            if at_risk > 0:
+                s *= 1 - d / at_risk
+            surv_at[tt] = s
+        keys = np.array(list(surv_at.keys())); vals = np.array(list(surv_at.values()))
+        idx = np.searchsorted(keys, grid, side="right") - 1
+        return np.where(idx >= 0, vals[np.clip(idx, 0, None)], 1.0)
+
+    ref = np.array([np.mean(life > g) for g in grid])
+    naive = km_on_grid(exit_, event)
+    trunc = km_on_grid(exit_, event, entry)
+
+    fig, ax = plt.subplots()
+    ax.plot(grid, ref, color=P[0], lw=2.2, label="Reference: every unit ever installed")
+    ax.plot(grid, naive, color=P[1], lw=2, label="Survivors at the snapshot, counted from age zero")
+    ax.plot(grid, trunc, color=P[2], lw=2, ls="--", label="Survivors with left truncation (risk set by age)")
+    ax.axhline(0.5, color=P[3], lw=1, ls=":")
+    ax.set_xlabel("age (years)")
+    ax.set_ylabel("share still in service")
+    ax.set_ylim(0, 1.02)
+    ax.set_title("Counting survivors from age zero doubles the apparent lifetime")
+    ax.legend(loc="upper right")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
