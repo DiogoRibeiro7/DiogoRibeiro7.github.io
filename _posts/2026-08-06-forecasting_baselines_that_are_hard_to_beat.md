@@ -38,12 +38,12 @@ methodology: >-
   it is a decision-relevant result.
 reviewed_at: '2026-08-16'
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/lissajous.jpg
+  og_image: /assets/images/headers/lissajous.jpg
+  overlay_image: /assets/images/headers/lissajous.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/lissajous.jpg
+  twitter_image: /assets/images/headers/lissajous.jpg
 ---
 An RMSE of 4.2 tells you nothing. Not "a little", not "roughly how good the model is" — nothing at all, until you know what an unskilled forecast would have scored on the same data.
 

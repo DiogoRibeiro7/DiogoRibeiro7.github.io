@@ -52,12 +52,12 @@ methodology: >-
   variables scaled by the binomial standard error.
 reviewed_at: '2026-09-11'
 header:
-  image: /assets/images/data_science_14.jpg
-  og_image: /assets/images/data_science_14.jpg
-  overlay_image: /assets/images/data_science_14.jpg
+  image: /assets/images/headers/walks.jpg
+  og_image: /assets/images/headers/walks.jpg
+  overlay_image: /assets/images/headers/walks.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_14.jpg
-  twitter_image: /assets/images/data_science_14.jpg
+  teaser: /assets/images/headers/walks.jpg
+  twitter_image: /assets/images/headers/walks.jpg
 ---
 The search ran overnight: a hundred combinations of learning rate, depth, regularisation and feature set, each trained and scored on the same thousand-case validation split. The best configuration reached 82.4 percent accuracy, two and a half points above the incumbent, and the number went into the slide. In production the model ran at 80 percent, which is what the incumbent did.
 
