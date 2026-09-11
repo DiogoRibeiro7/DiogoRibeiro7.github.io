@@ -20,8 +20,10 @@ The project targets Python 3.12 only for now; 3.13 is blocked until the runtime 
 ## Project Links
 
 - **PyPI:** [anomalybench](https://pypi.org/project/anomalybench/)
+- **Documentation:** [diogoribeiro7.github.io/anomalybench](https://diogoribeiro7.github.io/anomalybench/)
 - **Source:** [github.com/DiogoRibeiro7/anomalybench](https://github.com/DiogoRibeiro7/anomalybench)
 - **Issues:** [github.com/DiogoRibeiro7/anomalybench/issues](https://github.com/DiogoRibeiro7/anomalybench/issues)
+- **Changelog:** [CHANGELOG.md](https://github.com/DiogoRibeiro7/anomalybench/blob/main/CHANGELOG.md)
 
 ## Package Metadata
 

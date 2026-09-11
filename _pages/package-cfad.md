@@ -20,7 +20,7 @@ pip install cfad
 ## Project Links
 
 - **PyPI:** [cfad](https://pypi.org/project/cfad/)
-- **Documentation:** [cfad.readthedocs.io](https://cfad.readthedocs.io)
+- **Documentation:** [diogoribeiro7.github.io/cfad](https://diogoribeiro7.github.io/cfad/)
 - **Source:** [github.com/DiogoRibeiro7/cfad](https://github.com/DiogoRibeiro7/cfad)
 - **Issues:** [github.com/DiogoRibeiro7/cfad/issues](https://github.com/DiogoRibeiro7/cfad/issues)
 - **Changelog:** [CHANGELOG.md](https://github.com/DiogoRibeiro7/cfad/blob/main/CHANGELOG.md)
