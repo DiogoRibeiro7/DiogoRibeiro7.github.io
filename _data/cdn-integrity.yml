@@ -1,0 +1,51 @@
+https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js:
+  crossorigin: anonymous
+  integrity: sha384-e6nUZLBkQ86NJ6TVVKAeSaK8jWa3NhkYWZFomE39AvDbQWeie9PlQqM3pmYW5d1g
+https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js:
+  crossorigin: anonymous
+  integrity: sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05
+https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css:
+  crossorigin: anonymous
+  integrity: sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV
+https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js:
+  crossorigin: anonymous
+  integrity: sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8
+https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js:
+  crossorigin: anonymous
+  integrity: sha384-AHAnt9ZhGeHIrydA1Kp1L7FN+2UosbF7RQg6C+9Is/a7kDpQ1684C2iH2VWil6r4
+https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js:
+  crossorigin: anonymous
+  integrity: sha384-D44bgYYKvaiDh4cOGlj1dbSDpSctn2FSUj118HZGmZEShZcO2v//Q5vvhNy206pp
+https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-julia.min.js:
+  crossorigin: anonymous
+  integrity: sha384-joWnGJCIIBw7UmQ231RAVzCNiATJS38xk7yfiIDHRBJeYiBPvacMLMvx9d49VnrH
+https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js:
+  crossorigin: anonymous
+  integrity: sha384-WJdEkJKrbsqw0evQ4GB6mlsKe5cGTxBOw4KAEIa52ZLB7DDpliGkwdme/HMa5n1m
+https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-r.min.js:
+  crossorigin: anonymous
+  integrity: sha384-a0dW6ZXBBtsBzzpPHKLx+AdpKmRJXfTGeCGNpzDA83/BoZoTUknyIAwMDuOTBfkS
+https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-sql.min.js:
+  crossorigin: anonymous
+  integrity: sha384-/MKWdycCDliku23mP5sYXbZNuXrzgmQO/jsVxwPFn99dVOaXRyKsqDjarqpueGAp
+https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css:
+  crossorigin: anonymous
+  integrity: sha384-nUkTNLI8COlMCRJ0FHIdX76If83145OTCLUx4gQyfnO0gGeO/sD9czGEUBxtkcUv
+https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js:
+  crossorigin: anonymous
+  integrity: sha384-1Q1Kn1ruXt6wc5JfXB25OWRaEVBJ5OQ0gfL/pneNkXoVmWmhkBacvG9Rls1+yB2h
+https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js:
+  crossorigin: anonymous
+  integrity: sha384-BGaNxfftg+9+TtC098wxawPFVEUpKYvaiCgbB0iqAMjK/4jDdmUY+oGxrPNvnXEf
+https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-coy.css:
+  crossorigin: anonymous
+  integrity: sha384-/HnXSmP1Tv+9YA13kJX5sL1eVi3XeI57BUEGl+PiVlv6pPcxsbVrHaiw+OepvnSd
+https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css:
+  crossorigin: anonymous
+  integrity: sha384-RCpAEDK2BSI4uVvV9kefzLdwlNUNZkCZJdOE2LkEa3jtLRcv2YrEVSbM4vwbCCW2
+https://giscus.app/client.js:
+  crossorigin: anonymous
+  integrity: sha384-UwLZGbJGvkTzz0719+xEzUm/idqwzs0yZN8aB9Se5vUXHbyRyDWw9yqZTIsOsJ7x
+https://utteranc.es/client.js:
+  crossorigin: anonymous
+  integrity: sha384-fu37qCdzTFjEWsnuik0ASdJij1SVwzCpeltZfuSulYExo7P5sTcD0aG6ECQHQR62

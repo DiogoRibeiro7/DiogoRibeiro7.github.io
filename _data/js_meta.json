@@ -1,0 +1,371 @@
+{
+  "inputs": {
+    "assets/js/core/dark-mode.js": {
+      "bytes": 2141,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/core/github-cards.js": {
+      "bytes": 3529,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/core/language-filter.js": {
+      "bytes": 544,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/core/navigation.js": {
+      "bytes": 4931,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/core/scroll-progress.js": {
+      "bytes": 1533,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/core/search-hotkeys.js": {
+      "bytes": 1697,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/core/skip-links.js": {
+      "bytes": 1541,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/main.js": {
+      "bytes": 769,
+      "imports": [
+        {
+          "path": "assets/js/core/dark-mode.js",
+          "kind": "import-statement",
+          "original": "./core/dark-mode.js"
+        },
+        {
+          "path": "assets/js/core/github-cards.js",
+          "kind": "import-statement",
+          "original": "./core/github-cards.js"
+        },
+        {
+          "path": "assets/js/core/language-filter.js",
+          "kind": "import-statement",
+          "original": "./core/language-filter.js"
+        },
+        {
+          "path": "assets/js/core/navigation.js",
+          "kind": "import-statement",
+          "original": "./core/navigation.js"
+        },
+        {
+          "path": "assets/js/core/scroll-progress.js",
+          "kind": "import-statement",
+          "original": "./core/scroll-progress.js"
+        },
+        {
+          "path": "assets/js/core/search-hotkeys.js",
+          "kind": "import-statement",
+          "original": "./core/search-hotkeys.js"
+        },
+        {
+          "path": "assets/js/core/skip-links.js",
+          "kind": "import-statement",
+          "original": "./core/skip-links.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "assets/js/loader.js": {
+      "bytes": 4855,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/search/analytics.js": {
+      "bytes": 2144,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/search/utils.js": {
+      "bytes": 2571,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/search/autocomplete.js": {
+      "bytes": 3285,
+      "imports": [
+        {
+          "path": "assets/js/search/utils.js",
+          "kind": "import-statement",
+          "original": "./utils.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "assets/js/search/engine.js": {
+      "bytes": 7382,
+      "imports": [
+        {
+          "path": "assets/js/search/utils.js",
+          "kind": "import-statement",
+          "original": "./utils.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "assets/js/search/filters.js": {
+      "bytes": 1089,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/search/render.js": {
+      "bytes": 7229,
+      "imports": [
+        {
+          "path": "assets/js/search/utils.js",
+          "kind": "import-statement",
+          "original": "./utils.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "assets/js/search/app.js": {
+      "bytes": 8173,
+      "imports": [
+        {
+          "path": "assets/js/search/analytics.js",
+          "kind": "import-statement",
+          "original": "./analytics.js"
+        },
+        {
+          "path": "assets/js/search/autocomplete.js",
+          "kind": "import-statement",
+          "original": "./autocomplete.js"
+        },
+        {
+          "path": "assets/js/search/engine.js",
+          "kind": "import-statement",
+          "original": "./engine.js"
+        },
+        {
+          "path": "assets/js/search/filters.js",
+          "kind": "import-statement",
+          "original": "./filters.js"
+        },
+        {
+          "path": "assets/js/search/render.js",
+          "kind": "import-statement",
+          "original": "./render.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "assets/js/search.js": {
+      "bytes": 10374,
+      "imports": [
+        {
+          "path": "assets/js/search/app.js",
+          "kind": "import-statement",
+          "original": "./search/app.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "assets/js/math.js": {
+      "bytes": 27298,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/visualizations.js": {
+      "bytes": 27138,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/notebook.js": {
+      "bytes": 5385,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/academic.js": {
+      "bytes": 8818,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/analytics-dashboard.js": {
+      "bytes": 12542,
+      "imports": [],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    "assets/js/dist/core.js": {
+      "imports": [],
+      "exports": [
+        "initializeCore"
+      ],
+      "entryPoint": "assets/js/main.js",
+      "inputs": {
+        "assets/js/core/dark-mode.js": {
+          "bytesInOutput": 630
+        },
+        "assets/js/core/github-cards.js": {
+          "bytesInOutput": 1333
+        },
+        "assets/js/core/language-filter.js": {
+          "bytesInOutput": 163
+        },
+        "assets/js/core/navigation.js": {
+          "bytesInOutput": 1851
+        },
+        "assets/js/core/scroll-progress.js": {
+          "bytesInOutput": 518
+        },
+        "assets/js/core/search-hotkeys.js": {
+          "bytesInOutput": 563
+        },
+        "assets/js/core/skip-links.js": {
+          "bytesInOutput": 537
+        },
+        "assets/js/main.js": {
+          "bytesInOutput": 125
+        }
+      },
+      "bytes": 5749
+    },
+    "assets/js/dist/loader.js": {
+      "imports": [],
+      "exports": [
+        "bootstrapFeatures"
+      ],
+      "entryPoint": "assets/js/loader.js",
+      "inputs": {
+        "assets/js/loader.js": {
+          "bytesInOutput": 1534
+        }
+      },
+      "bytes": 1566
+    },
+    "assets/js/dist/search.js": {
+      "imports": [],
+      "exports": [
+        "debounce",
+        "setupSearchEnhancements",
+        "updateLiveRegion"
+      ],
+      "entryPoint": "assets/js/search.js",
+      "inputs": {
+        "assets/js/search/analytics.js": {
+          "bytesInOutput": 955
+        },
+        "assets/js/search/utils.js": {
+          "bytesInOutput": 1374
+        },
+        "assets/js/search/autocomplete.js": {
+          "bytesInOutput": 1566
+        },
+        "assets/js/search/engine.js": {
+          "bytesInOutput": 2886
+        },
+        "assets/js/search/filters.js": {
+          "bytesInOutput": 603
+        },
+        "assets/js/search/render.js": {
+          "bytesInOutput": 3641
+        },
+        "assets/js/search/app.js": {
+          "bytesInOutput": 3441
+        },
+        "assets/js/search.js": {
+          "bytesInOutput": 4357
+        }
+      },
+      "bytes": 18899
+    },
+    "assets/js/dist/math.js": {
+      "imports": [],
+      "exports": [],
+      "entryPoint": "assets/js/math.js",
+      "inputs": {
+        "assets/js/math.js": {
+          "bytesInOutput": 14151
+        }
+      },
+      "bytes": 14152
+    },
+    "assets/js/dist/visualizations.js": {
+      "imports": [],
+      "exports": [],
+      "entryPoint": "assets/js/visualizations.js",
+      "inputs": {
+        "assets/js/visualizations.js": {
+          "bytesInOutput": 12621
+        }
+      },
+      "bytes": 12622
+    },
+    "assets/js/dist/notebook.js": {
+      "imports": [],
+      "exports": [
+        "annotateCells",
+        "handleScrollSpy",
+        "initNotebookFeatures",
+        "initPlotly",
+        "initVega",
+        "loadScript"
+      ],
+      "entryPoint": "assets/js/notebook.js",
+      "inputs": {
+        "assets/js/notebook.js": {
+          "bytesInOutput": 2548
+        }
+      },
+      "bytes": 2669
+    },
+    "assets/js/dist/academic.js": {
+      "imports": [],
+      "exports": [
+        "attachCopyHandler",
+        "initAcademicFeatures",
+        "initCalendarFilter",
+        "initCopyHandlers",
+        "initOpenScienceBadges",
+        "initSubmissionFilter",
+        "populateCitationMetrics",
+        "populateCitationTimeline",
+        "populatePublicationCitations"
+      ],
+      "entryPoint": "assets/js/academic.js",
+      "inputs": {
+        "assets/js/academic.js": {
+          "bytesInOutput": 3573
+        }
+      },
+      "bytes": 3823
+    },
+    "assets/js/dist/analytics-dashboard.js": {
+      "imports": [],
+      "exports": [
+        "ensurePlaceholder",
+        "formatDateLabel",
+        "formatNumber",
+        "onReady",
+        "parseRows",
+        "render",
+        "renderEngagementChart",
+        "renderKeyEvents",
+        "renderMonthlyReports",
+        "renderScholar",
+        "renderSearchTerms",
+        "renderTopPosts",
+        "renderVisitorChart"
+      ],
+      "entryPoint": "assets/js/analytics-dashboard.js",
+      "inputs": {
+        "assets/js/analytics-dashboard.js": {
+          "bytesInOutput": 6918
+        }
+      },
+      "bytes": 7189
+    }
+  }
+}

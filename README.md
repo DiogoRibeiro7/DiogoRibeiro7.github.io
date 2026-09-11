@@ -19,13 +19,37 @@ small set of Python utilities for validating Markdown front matter.
 - `code/` contains downloadable code examples linked from the site.
 - `tests/` covers the supported Python maintenance utilities.
 
-## Setup
+## Theme
 
-Install the three toolchains used by the project:
+The site is built on the [DataLog](https://github.com/DiogoRibeiro7/analytics-blog-jekyll)
+theme, checked out as the `vendor/datalog` git submodule. `_config.yml` points
+`layouts_dir`, `includes_dir`, `plugins_dir` and `sass_dir` at the submodule, so
+layouts, includes, plugins and styles are read from it directly. Jekyll cannot
+redirect `assets` or a second `_data` directory, so those files are copied in by
+`scripts/sync_theme_assets.py`; the theme's JS bundles are built with its own
+Node toolchain first.
+
+To update the theme:
 
 ```bash
+git submodule update --remote vendor/datalog
+(cd vendor/datalog && npm ci && npm run build:js)
+python scripts/sync_theme_assets.py
+```
+
+Changes to the theme itself are made inside `vendor/datalog` and go upstream
+through that repository; this repository only records which theme commit it
+builds against.
+
+## Setup
+
+Clone with the submodule and install the toolchains:
+
+```bash
+git clone --recurse-submodules https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io
 bundle install
-npm install
+(cd vendor/datalog && npm ci && npm run build:js)
+python scripts/sync_theme_assets.py
 python -m pip install -r requirements.txt
 ```
 
@@ -34,21 +58,26 @@ python -m pip install -r requirements.txt
 Run the site locally:
 
 ```bash
-bundle exec jekyll serve
+bundle exec rake serve
 ```
+
+This wraps `jekyll serve --livereload` on http://127.0.0.1:4000/ and restarts
+it when `_config.yml` or the theme under `vendor/datalog` changes, re-copying
+the theme's assets first. Plain `jekyll serve` never watches either of those:
+it ignores the config file and everything under `exclude`, so config and theme
+changes would only show up after a manual restart. Posts, pages and `_data`
+regenerate on their own; with almost 400 posts that takes about two minutes.
+`bundle exec rake stop` stops the server; `JEKYLL_PORT` and `JEKYLL_ARGS`
+override the port and the extra `jekyll serve` flags.
 
 Build the site without starting a server:
 
 ```bash
-bundle exec jekyll build
+bundle exec rake build
 ```
 
-JavaScript and stylesheet tasks:
-
-```bash
-npm run build:js
-npm run lint:css
-```
+The theme's JavaScript bundles are built inside the submodule (`npm run
+build:js` in `vendor/datalog`, see Setup); the site itself has no Node build.
 
 ## Validation
 

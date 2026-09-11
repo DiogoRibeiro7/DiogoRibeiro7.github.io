@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "Research Methods & Causal Inference"
 permalink: /research-methods/
 author_profile: true
@@ -18,12 +18,12 @@ This hub is for the part of analysis that sits before the model: research questi
 
 ## Causal inference and study design
 
-{% include hub-post-list.html tag="Causal Inference" limit=8 %}
+{% include_relative _partials/hub-post-list.html tag="Causal Inference" limit=8 %}
 
 ## Research practice
 
-{% include hub-post-list.html tag="Research Methodology" limit=10 %}
+{% include_relative _partials/hub-post-list.html tag="Research Methodology" limit=10 %}
 
 ## Ethics and policy
 
-{% include hub-post-list.html tag="Ethics" limit=8 %}
+{% include_relative _partials/hub-post-list.html tag="Ethics" limit=8 %}

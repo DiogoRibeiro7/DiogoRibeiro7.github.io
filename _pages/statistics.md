@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "Statistics & Probability"
 permalink: /statistics/
 author_profile: true
@@ -20,16 +20,16 @@ Statistics is the core of the site: how to reason from incomplete data without t
 
 Probability, distributions, estimation, hypothesis testing and common errors.
 
-{% include hub-post-list.html category="Statistics" limit=8 %}
+{% include_relative _partials/hub-post-list.html category="Statistics" limit=8 %}
 
 ## Modelling and diagnostics
 
 Regression, GLMs, Bayesian models, robust methods, survival analysis and model checking.
 
-{% include hub-post-list.html tag="Statistical Modeling" limit=8 %}
+{% include_relative _partials/hub-post-list.html tag="Statistical Modeling" limit=8 %}
 
 ## Uncertainty and decision-making
 
 Calibration, confidence intervals, prediction intervals, Bayesian decision theory and operational risk.
 
-{% include hub-post-list.html tag="Probability" limit=8 %}
+{% include_relative _partials/hub-post-list.html tag="Probability" limit=8 %}

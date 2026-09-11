@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "Data Engineering & Systems"
 permalink: /data-engineering/
 author_profile: true
@@ -18,12 +18,12 @@ Data science depends on systems that collect, move, validate and monitor data. T
 
 ## Pipelines and production workflows
 
-{% include hub-post-list.html tag="Data Engineering" limit=10 %}
+{% include_relative _partials/hub-post-list.html tag="Data Engineering" limit=10 %}
 
 ## MLOps and monitoring systems
 
-{% include hub-post-list.html tag="MLOps" limit=10 %}
+{% include_relative _partials/hub-post-list.html tag="MLOps" limit=10 %}
 
 ## Programming and open source
 
-{% include hub-post-list.html category="Programming" limit=8 %}
+{% include_relative _partials/hub-post-list.html category="Programming" limit=8 %}

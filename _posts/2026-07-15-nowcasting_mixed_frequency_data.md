@@ -29,12 +29,12 @@ keywords:
 classes: wide
 date: '2026-07-15'
 header:
-  image: /assets/images/data_science_9.jpg
-  og_image: /assets/images/data_science_9.jpg
-  overlay_image: /assets/images/data_science_9.jpg
+  image: /assets/images/data_science_9.webp
+  og_image: /assets/images/data_science_9.webp
+  overlay_image: /assets/images/data_science_9.webp
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.jpg
-  twitter_image: /assets/images/data_science_9.jpg
+  teaser: /assets/images/data_science_9.webp
+  twitter_image: /assets/images/data_science_9.webp
 ---
 GDP for the current quarter is published weeks after the quarter ends. Meanwhile, electricity consumption, card transactions, freight movements and job postings are all available daily. Nowcasting is the problem of estimating the low-frequency quantity you care about, now, from the high-frequency data that has already arrived.
 

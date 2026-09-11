@@ -7,4 +7,13 @@ _site
 node_modules/
 *.pyc
 __pycache__/
-vendor/
+vendor/*
+
+# The DataLog theme is a tracked submodule, not a bundler vendor dir
+!vendor/datalog
+
+# Built by the theme's Node toolchain (see scripts/sync_theme_assets.py)
+assets/js/dist/
+
+# Local serve logs and scratch output (also in Jekyll's exclude list)
+tmp/

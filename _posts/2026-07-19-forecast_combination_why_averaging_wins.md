@@ -29,12 +29,12 @@ keywords:
 classes: wide
 date: '2026-07-19'
 header:
-  image: /assets/images/data_science_2.jpg
-  og_image: /assets/images/data_science_2.jpg
-  overlay_image: /assets/images/data_science_2.jpg
+  image: /assets/images/data_science_2.avif
+  og_image: /assets/images/data_science_2.avif
+  overlay_image: /assets/images/data_science_2.avif
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.jpg
-  twitter_image: /assets/images/data_science_2.jpg
+  teaser: /assets/images/data_science_2.avif
+  twitter_image: /assets/images/data_science_2.avif
 ---
 You have five forecasts and have to ship one number. The obvious move is to identify the best model on validation data and use it. The better move, replicated across half a century of forecasting research, is usually to average them.
 

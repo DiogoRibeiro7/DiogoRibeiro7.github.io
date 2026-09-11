@@ -1,28 +1,45 @@
-# main links
-main:
-  - title: "Home"
-    url: /
-  - title: "About"
-    url: /about/
-  - title: "Explore"
-    url: /explore/
-  - title: "Statistics"
+# Site navigation in the DataLog theme's format (see vendor/datalog/_data/navigation.yml).
+header:
+  - title: Articles
+    description: Every article, newest first
+    url: /blog/
+    section: blog
+  - title: Statistics
+    description: Inference, modelling, diagnostics and uncertainty
     url: /statistics/
-  - title: "Machine Learning"
+    section: statistics
+  - title: Machine Learning
+    description: Evaluation, monitoring, calibration and drift
     url: /machine-learning/
-  - title: "Time Series"
+    section: machine-learning
+  - title: Time Series
+    description: Forecasting, seasonality and anomaly detection
     url: /time-series/
-  - title: "Papers"
+    section: time-series
+  - title: Explore
+    description: Topic hubs, tags, categories and years
+    url: /explore/
+    section: explore
+  - title: Papers
+    description: Research papers and preprints
     url: /papers/
-  # - title: "Quick-Start Guide"
-  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
-  - title: "Open Source"
+    section: papers
+  - title: Open Source
+    description: Python and R packages
     url: /packages/
+    section: packages
+  - title: About
+    description: Author and editorial standards
+    url: /about/
+    section: about
+footer:
+  - title: Articles
+    url: /blog/
+  - title: Explore
+    url: /explore/
+  - title: Papers
+    url: /papers/
+  - title: Open Source
+    url: /packages/
+  - title: About
+    url: /about/

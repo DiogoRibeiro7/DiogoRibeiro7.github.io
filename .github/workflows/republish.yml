@@ -23,12 +23,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          submodules: recursive # the DataLog theme lives in vendor/datalog
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: vendor/datalog/package-lock.json
+      - name: Build the theme's JS bundles
+        working-directory: vendor/datalog
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build:js
+      - name: Copy theme assets into the site
+        run: python3 scripts/sync_theme_assets.py
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6

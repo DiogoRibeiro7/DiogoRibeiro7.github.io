@@ -1,0 +1,438 @@
+---
+date:
+  formats:
+    long: "%d de %B de %Y"
+    datetime: "%d de %B de %Y %H:%M"
+  months:
+    1: Enero
+    2: Febrero
+    3: Marzo
+    4: Abril
+    5: Mayo
+    6: Junio
+    7: Julio
+    8: Agosto
+    9: Septiembre
+    10: Octubre
+    11: Noviembre
+    12: Diciembre
+  months_short:
+    1: Ene
+    2: Feb
+    3: Mar
+    4: Abr
+    5: May
+    6: Jun
+    7: Jul
+    8: Ago
+    9: Sep
+    10: Oct
+    11: Nov
+    12: Dic
+  weekdays:
+    0: Domingo
+    1: Lunes
+    2: Martes
+    3: Miércoles
+    4: Jueves
+    5: Viernes
+    6: Sábado
+  weekdays_short:
+    0: Dom
+    1: Lun
+    2: Mar
+    3: Mié
+    4: Jue
+    5: Vie
+    6: Sáb
+global:
+  skip_to_main: Ir al contenido principal
+  math_ready: El contenido matemático está disponible
+  math_loading: Cargando contenido matemático
+header:
+  reading_progress: "Progreso de lectura:"
+  reading_progress_suffix: "%"
+  brand_symbol: "∀ datos · Σ insights"
+  brand_home: "Inicio de {{site}}"
+  logo_title: Logotipo de DataLog
+  dark_mode_toggle: Cambiar a modo oscuro para mejorar la lectura
+  navigation_toggle: Abrir o cerrar la navegación
+  language_switcher_label: Cambiar idioma del sitio
+  search_label: Buscar notebooks, tutoriales y fragmentos de código
+  search_placeholder: Buscar código, ecuaciones e insights
+  search_button: Buscar
+  utilities_toggle_label: Mostrar filtros y enlaces académicos
+  utilities_toggle_text: Filtros y accesos directos
+  language_filter_label: Lenguaje y framework
+  language_filter_placeholder: Seleccionar enfoque
+  quick_links_aria: Tutoriales populares
+  quick_links_title: Recursos populares
+  quick_links:
+    defaults:
+      getting_started: Primeros pasos con el tema
+      notebooks: Flujo de trabajo de notebooks
+      research: Guía de investigación reproducible
+  academic_profiles_aria: Perfiles académicos
+  academic_profiles_title: Perfiles académicos
+  academic_affiliation: "Afiliación: {{affiliation}}"
+  languages_aria: Idiomas disponibles
+  languages_title: Idiomas del sitio
+navigation:
+  primary_label: Navegación principal
+  description_default: "Recursos de {{section}}"
+  header:
+    blog:
+      title: Blog
+      description: Tutoriales, walkthroughs y guías paso a paso
+    research:
+      title: Investigación
+      description: Artículos, estudios de replicación y documentación
+    projects:
+      title: Proyectos
+      description: Estudios de caso interactivos con integración de GitHub
+    datasets:
+      title: Conjuntos de datos
+      description: Fuentes de datos seleccionadas con metadatos de licencias
+    visualizations:
+      title: Visualizaciones
+      description: Plotly, D3 y notebooks de Observable
+    academic:
+      title: Operaciones académicas
+      description: Métricas de citación, envíos y colaboración
+    about:
+      title: Acerca de
+      description: Perfil de investigación, credenciales y contacto
+  quick_links:
+    getting_started: Primeros pasos con el flujo de trabajo DataLog
+    publish_notebook: Publicar un notebook de Jupyter como entrada
+    predictive_modeling: Explorar proyectos de modelado predictivo
+    research_checklist: Lista de comprobación de metodología de investigación
+    submission_tracker: Seguir envíos a conferencias
+  footer:
+    privacy: Privacidad
+    accessibility: Accesibilidad
+    tutorials: Índice de tutoriales
+    archive: Archivo por tema
+    contact: Contacto
+  content:
+    research_areas:
+      title: Áreas de investigación
+      machine_learning:
+        label: Aprendizaje automático
+        description: Casos de estudio supervisados, no supervisados y de deep learning
+      statistics:
+        label: Estadística
+        description: Diseño experimental, inferencia y pruebas de hipótesis
+      visualization:
+        label: Visualización de datos
+        description: Paneles narrativos y gráficos interpretativos
+      reproducibility:
+        label: Reproducibilidad
+        description: Flujos de trabajo de ciencia abierta y buenas prácticas metodológicas
+    methodologies:
+      title: Metodologías
+      experimental_design: Diseño experimental
+      bayesian: Modelado bayesiano
+      eda: Análisis exploratorio de datos
+      causal_inference: Inferencia causal
+  languages:
+    title: Lenguajes y frameworks
+    items:
+      python: Python
+      r: R
+      sql: SQL
+      julia: Julia
+      javascript: JavaScript
+home:
+  latest_research: Notas de investigación recientes
+  reading_time_one: Lectura de 1 min
+  reading_time_many: "Lectura de {{minutes}} min"
+  read_post: "Leer {{title}}"
+  read_more: Seguir leyendo
+  featured_projects: Proyectos destacados
+  view_project: Ver proyecto
+article:
+  meta:
+    published: Publicado
+    updated: Actualizado
+    author: Autor
+post:
+  provenance:
+    heading: Nota del autor y de edición
+    why: Por qué existe
+    evidence: Evidencia utilizada
+    method: Método
+    reviewed: Revisado
+  article_information: Información del artículo
+  meta:
+    published: Publicado
+    author: Autor
+    reading_time: Tiempo de lectura
+    difficulty: Dificultad
+    runtime: Duración
+    notebook: Notebook
+  reading_time:
+    one: Lectura de 1 min
+    many: "Lectura de {{minutes}} min"
+  difficulty_default: Intermedio
+  toc_heading: En esta página
+  notebook:
+    open_external: Abrir notebook de Jupyter
+    download: Descargar notebook de Jupyter
+  topics_heading: Temas
+  share:
+    label: Compartir este artículo
+    twitter: Compartir en X (Twitter)
+    linkedin: Compartir en LinkedIn
+    reddit: Debatir en Reddit
+  interactive:
+    label: Recursos interactivos
+    launch: Iniciar demostración
+    guidance: "Incorpora gráficos, widgets y demos dentro de <code>&lt;figure&gt;</code>, <code>&lt;iframe&gt;</code> o <code>&lt;div class=\"interactive-embed\"&gt;</code> y añade leyendas descriptivas para la accesibilidad."
+  slides:
+    label: Presentación
+  bibliography:
+    label: Referencias
+  comments:
+    label: Discusión
+    cta: Comparte tus comentarios o plantea una pregunta abajo.
+dataset:
+  last_updated: "Última actualización:"
+  license: "Licencia:"
+  download: Descargar conjunto de datos
+  schema_title: Esquema de datos
+  schema:
+    field: Campo
+    description: Descripción
+    type: Tipo
+notebook:
+  label: Notebook interactivo
+  meta:
+    published: "Publicado:"
+    updated: "Actualizado:"
+    executed: "Ejecutado:"
+    kernel: "Kernel:"
+    language: "Lenguaje:"
+    difficulty: "Dificultad:"
+    runtime: "Duración:"
+  actions:
+    download: Descargar .ipynb
+    launch_binder: Abrir en Binder
+    open_colab: Abrir en Colab
+academic_dashboard:
+  header:
+    title: Centro de integración académica
+    description: Supervise métricas de publicación, sincronice perfiles académicos y coordine envíos, financiación y mentorías.
+  profiles:
+    title: Perfiles académicos y sincronización
+    view_profile: Ver perfil
+    user_id: ID de usuario
+    total_citations: Total de citas
+    h_index: Índice h
+    i10_index: Índice i10
+    sync_scope: Alcance de sincronización
+    last_synced: Última sincronización
+    featured_projects: Proyectos destacados
+    collections: Colecciones
+    auto_update: Actualización automática
+  citations:
+    title: Métricas de citación
+    total: Total de citas
+    h_index: Índice h
+    i10_index: Índice i10
+    since_title: "Desde {{period}}"
+    total_label: "Total:"
+    h_index_label: "Índice h:"
+    i10_index_label: "Índice i10:"
+    per_publication: Instantánea por publicación
+    updated: "Actualizado {{date}}"
+    timeline: Citas por año
+  bibliography:
+    title: Bibliografía automática
+    description: Descargue o copie la bibliografía combinada generada a partir de archivos BibTeX sincronizados.
+    copy: Copiar bibliografía
+    download: "Descargar {{format}}"
+  submissions:
+    title: Envíos a conferencias y revistas
+    description: Siga el estado de los manuscritos, los colaboradores y los próximos plazos.
+    filter_label: Filtrar por estado
+    all_statuses: Todos los estados
+    deadline: Plazo
+    status: Estado
+    submitted: Enviado
+    collaborators: Colaboradores
+  workflow:
+    title: Flujo de revisión y colaboración
+    peer_review:
+      aria_label: Asignaciones de revisión
+      title: Asignaciones de revisión
+      status_label: "Estado:"
+      dates: "Asignado {{assigned}} · Entrega {{due}}"
+    collaborations:
+      aria_label: Iniciativas de colaboración
+      title: Iniciativas de colaboración
+      contact: "Contacto:"
+  calendar:
+    title: Calendario académico
+    filter_label: Mostrar eventos de
+    all_types: Todos los tipos de evento
+    starts: Inicio
+    ends: Fin
+    submission_deadline: Plazo de envío
+  funding:
+    title: Actividad de becas y financiación
+    amount: Importe
+    status: Estado
+    decision_deadline: Decisión / plazo
+  opportunities:
+    title: Oportunidades de colaboración
+  mentorship:
+    title: Programas de mentoría
+    offering: Oferta
+    cohorts: Cohortes
+    schedule: Calendario
+    application_deadline: Plazo de postulación
+  networking:
+    title: Canales de networking académico
+    communities: Comunidades
+    mentorship_channels: Canales de mentoría
+citation_tools:
+  heading: Cómo citar
+  summary: Utiliza los botones de exportación rápida para guardar citas en gestores de referencias o copia el texto formateado directamente.
+  copy: Copiar
+  formats:
+    bibtex: BibTeX
+    ris: RIS
+    endnote: EndNote
+  aria:
+    bibtex: Entrada BibTeX
+    ris: Entrada RIS
+    endnote: Entrada EndNote
+open_science_badges:
+  title: Insignias de ciencia abierta y reproducibilidad
+  description: Estas insignias destacan las prácticas de transparencia aplicadas a este trabajo. Pasa el cursor o enfoca cada insignia para conocer los criterios.
+visualization_card:
+  version: Versión
+  updated: Actualizado
+  source: Fuente
+  view_repository: Ver repositorio
+  open_demo: Abrir demostración
+  download_snapshot: Descargar captura
+project:
+  header:
+    eyebrow: Muestrario de proyectos
+    key_technologies: Tecnologías clave
+    github_repository: Repositorio GitHub
+  github:
+    stats:
+      stars: Estrellas
+      forks: Forks
+      open_issues: Incidencias abiertas
+      primary_language: Lenguaje principal
+    unavailable: N/D
+  demo:
+    title: Demostración y visualizaciones
+    launch: Abrir demostración interactiva
+  sections:
+    problem_statement: Planteamiento del problema
+    solution_approach: Enfoque de la solución
+    results_findings: Resultados y hallazgos
+    challenges: Desafíos y lecciones aprendidas
+    datasets_sources: Conjuntos de datos y fuentes
+    model_performance: Rendimiento del modelo
+    future_work: Trabajo futuro y mejoras
+    collaboration_contributions: Colaboración y contribuciones
+    read_guidelines: Leer directrices de contribución
+    related_projects: Proyectos relacionados
+    similar_work: Trabajos y referencias similares
+  metrics:
+    aria_label: Métricas del proyecto
+  footer:
+    last_updated: "Última actualización:"
+    view_source: Ver código en GitHub
+  tags_label: Etiquetas del notebook
+  sidebar_label: Detalles del notebook
+  sidebar:
+    overview: Resumen del notebook
+    code_cells: celdas de código
+    markdown_cells: celdas markdown
+    error_outputs: celdas con errores
+    execution: Metadatos de ejecución
+    kernel: Kernel
+    not_specified: No especificado
+    language: Lenguaje
+    na: N/D
+    file: Archivo
+    branch: Rama
+    runtime: Duración
+    run_online: Ejecutar en línea
+    launch_binder: Sesión interactiva en Binder
+    open_colab: Abrir notebook en Google Colab
+    version_history: Historial de versiones
+    last_commit: "Último commit {{commit}}."
+    view_latest: Ver revisión más reciente
+footer:
+  heading: Pie de página
+  about_title: "Acerca de {{site}}"
+  orcid_label: "ORCID: {{id}}"
+  citation_notice: "© {{year}} {{author}}. Cite adecuadamente al reutilizar análisis y materiales."
+  stay_connected: Mantente conectado
+  follow_default: Sigue en Twitter, LinkedIn, GitHub y Kaggle para conocer las novedades.
+  professional_profiles: Perfiles profesionales
+  explore_content: Explorar contenido
+  research_areas: Áreas de investigación
+  methodologies: Metodologías
+  languages_frameworks: Lenguajes y frameworks
+  subscribe_title: Suscribirse a las novedades
+  subscribe_description: Recibe avisos sobre tutoriales, resúmenes de investigación, datos y notebooks reproducibles.
+  newsletter_label: Correo electrónico
+  newsletter_placeholder: tu.email@ejemplo.com
+  newsletter_button: Suscribirse
+  newsletter_privacy: Respetamos tu bandeja de entrada. Cancela cuando quieras.
+  rss_feeds: Canales RSS
+  collaborate_title: Colaborar
+  collaborate_description: "¿Interesado en colaborar, revisar o compartir tutoriales invitados?"
+  professional_inquiries: "Consultas profesionales: {{email}}"
+  contribute_github: Contribuir en GitHub
+  open_source_title: Código abierto
+  open_source_description: Aceptamos issues, pull requests y debates sobre reproducibilidad y ética en ciencia de datos.
+  view_source: Ver código en GitHub
+  open_issues: Issues y debates
+  contribution_guidelines: Guía de contribución
+  request_guidelines: Solicitar guía de contribución
+  community_resources: Recursos de la comunidad
+  academic_integrity: Integridad académica
+  open_science_title: Compromiso con la ciencia abierta
+  open_science_default: Cada proyecto resalta datos, entornos computacionales y métricas para fomentar la transparencia y la reproducibilidad.
+  open_science_support: Siempre que es posible compartimos notebooks versionados y flujos de trabajo en contenedores para facilitar la replicación.
+analytics:
+  dashboard:
+    title: Resumen de analíticas
+    description: "Información con Google Analytics 4, actualizada cada 24 horas."
+    disabled: "Conecta Google Analytics 4 para completar este panel. Los resultados en caché se reutilizan durante 24 horas."
+    last_updated: Última actualización
+    last_updated_unknown: "Última actualización: pendiente"
+    cache_window: Datos en caché por 24 horas
+    top_posts: Entradas destacadas
+    search_terms: Consultas de búsqueda
+    visitor_trends: Tendencias de visitantes
+    engagement: Participación por entrada
+    events: Eventos de notebooks y demos
+    scholar: Google Scholar
+    scholar_total: Total de citas
+    scholar_trend: Citas por año
+    monthly_reports: Informes mensuales
+    loading: Cargando analíticas…
+    no_results: No hay datos disponibles
+    no_searches: No se registraron consultas
+    no_reports: No hay informes mensuales disponibles
+    table:
+      post: Entrada
+      views: Vistas
+      engagement: Participación (s)
+      query: Consulta
+      sessions: Sesiones
+      month: Mes
+      users: Usuarios
+      new_users: Usuarios nuevos
+      page_views: Vistas de página

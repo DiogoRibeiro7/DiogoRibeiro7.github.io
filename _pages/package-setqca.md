@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "setqca"
 permalink: /packages/setqca/
 author_profile: true

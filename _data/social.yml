@@ -1,0 +1,19 @@
+# Social profiles in the DataLog theme's format (see vendor/datalog/_data/social.yml).
+primary:
+  - id: github
+    label: GitHub
+    url: https://github.com/DiogoRibeiro7
+    rel: noopener
+  - id: linkedin
+    label: LinkedIn
+    url: https://www.linkedin.com/in/diogo-ribeiro-9094604a/
+    rel: noopener
+  - id: medium
+    label: Medium
+    url: https://medium.com/@diogo-ribeiro-1975
+    rel: noopener
+academic:
+  - id: orcid
+    label: ORCID
+    url: https://orcid.org/0009-0001-2022-7072
+    rel: me noopener

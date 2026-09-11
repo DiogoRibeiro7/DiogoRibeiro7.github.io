@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "Machine Learning"
 permalink: /machine-learning/
 author_profile: true
@@ -20,16 +20,16 @@ This hub focuses on machine learning as an operational discipline: evaluation, m
 
 Distribution shift, concept drift, model monitoring, base-rate drift and fairness under changing populations.
 
-{% include hub-post-list.html tag="Data Drift" limit=10 %}
+{% include_relative _partials/hub-post-list.html tag="Data Drift" limit=10 %}
 
 ## Evaluation and uncertainty
 
 Calibration, model evaluation, conformal prediction, abstention, slice-based evaluation and threshold decisions.
 
-{% include hub-post-list.html tag="Model Evaluation" limit=10 %}
+{% include_relative _partials/hub-post-list.html tag="Model Evaluation" limit=10 %}
 
 ## Feature and data quality
 
 Feature engineering, leakage, missing data, weak supervision, label noise and cost-sensitive learning.
 
-{% include hub-post-list.html tag="Feature Engineering" limit=8 %}
+{% include_relative _partials/hub-post-list.html tag="Feature Engineering" limit=8 %}

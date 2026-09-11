@@ -1,0 +1,4 @@
+[submodule "vendor/datalog"]
+	path = vendor/datalog
+	url = https://github.com/DiogoRibeiro7/analytics-blog-jekyll
+	branch = main

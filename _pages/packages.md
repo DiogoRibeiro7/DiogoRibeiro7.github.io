@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: Projects & Packages
 permalink: /packages/
 author_profile: true

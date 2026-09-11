@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "wifi-activity-recognition"
 permalink: /packages/wifi-activity-recognition/
 author_profile: true
