@@ -39,12 +39,12 @@ methodology: >-
   modeling separation between hidden state and observed measurement.
 reviewed_at: '2026-08-16'
 header:
-  image: /assets/images/headers/waves.jpg
-  og_image: /assets/images/headers/waves.jpg
-  overlay_image: /assets/images/headers/waves.jpg
+  image: /assets/images/headers/photo-terrain.jpg
+  og_image: /assets/images/headers/photo-terrain.jpg
+  overlay_image: /assets/images/headers/photo-terrain.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/waves.jpg
-  twitter_image: /assets/images/headers/waves.jpg
+  teaser: /assets/images/headers/photo-terrain.jpg
+  twitter_image: /assets/images/headers/photo-terrain.jpg
 ---
 The Kalman filter is usually introduced as the algorithm that guided Apollo spacecraft, which makes it sound like an aerospace curiosity. It is better understood as the general answer to a question that appears constantly: given noisy measurements of something you cannot observe directly, what is your best estimate of its current state?
 

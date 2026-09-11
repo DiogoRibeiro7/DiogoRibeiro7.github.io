@@ -52,12 +52,12 @@ methodology: >-
   noise it was trained with.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/headers/network.jpg
-  og_image: /assets/images/headers/network.jpg
-  overlay_image: /assets/images/headers/network.jpg
+  image: /assets/images/headers/waves.jpg
+  og_image: /assets/images/headers/waves.jpg
+  overlay_image: /assets/images/headers/waves.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/network.jpg
-  twitter_image: /assets/images/headers/network.jpg
+  teaser: /assets/images/headers/waves.jpg
+  twitter_image: /assets/images/headers/waves.jpg
 ---
 An engineer regresses failure rate on operating temperature and finds an effect half the size the physics predicts. A data scientist trains a model on measurements from a calibrated laboratory rig and watches its error triple when it is deployed on the plant's own sensors. Both have met the same fact: noise in a predictor does something that noise in the outcome never does. It biases the answer, in a direction and by an amount that can be worked out.
 

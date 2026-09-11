@@ -55,12 +55,12 @@ methodology: >-
   users behave differently.
 reviewed_at: '2026-09-11'
 header:
-  image: /assets/images/headers/network.jpg
-  og_image: /assets/images/headers/network.jpg
-  overlay_image: /assets/images/headers/network.jpg
+  image: /assets/images/headers/photo-lights.jpg
+  og_image: /assets/images/headers/photo-lights.jpg
+  overlay_image: /assets/images/headers/photo-lights.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/network.jpg
-  twitter_image: /assets/images/headers/network.jpg
+  teaser: /assets/images/headers/photo-lights.jpg
+  twitter_image: /assets/images/headers/photo-lights.jpg
 ---
 The experiment randomises users. The metric is conversion per session. The dashboard divides conversions by sessions in each arm, runs a two-proportion z-test on the two rates with the session counts as the sample sizes, and reports a p-value. It is the most common analysis in product experimentation, and when users have more than one session it is wrong in a specific, measurable way: the test believes it has as many independent observations as there are sessions, and it has as many as there are users.
 

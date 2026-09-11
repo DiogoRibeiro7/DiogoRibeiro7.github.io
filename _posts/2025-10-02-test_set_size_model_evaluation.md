@@ -52,12 +52,12 @@ methodology: >-
   comparison against simulation.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/headers/walks.jpg
-  og_image: /assets/images/headers/walks.jpg
-  overlay_image: /assets/images/headers/walks.jpg
+  image: /assets/images/headers/spiral.jpg
+  og_image: /assets/images/headers/spiral.jpg
+  overlay_image: /assets/images/headers/spiral.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/walks.jpg
-  twitter_image: /assets/images/headers/walks.jpg
+  teaser: /assets/images/headers/spiral.jpg
+  twitter_image: /assets/images/headers/spiral.jpg
 ---
 A team reports 91.3 percent accuracy on a 400-case test set. A challenger model reaches 92.1 percent on the same cases, is declared better, and is deployed. The difference is 0.8 points. The standard error of an accuracy measured on 400 cases is about 1.5 points. The comparison was decided by noise, and no amount of care in training either model could have changed that, because the test set was never large enough to tell them apart.
 

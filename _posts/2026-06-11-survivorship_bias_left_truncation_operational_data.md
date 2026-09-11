@@ -53,12 +53,12 @@ methodology: >-
   rates for survivors against new units.
 reviewed_at: '2026-09-11'
 header:
-  image: /assets/images/headers/blocks.jpg
-  og_image: /assets/images/headers/blocks.jpg
-  overlay_image: /assets/images/headers/blocks.jpg
+  image: /assets/images/headers/cells.jpg
+  og_image: /assets/images/headers/cells.jpg
+  overlay_image: /assets/images/headers/cells.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/blocks.jpg
-  twitter_image: /assets/images/headers/blocks.jpg
+  teaser: /assets/images/headers/cells.jpg
+  twitter_image: /assets/images/headers/cells.jpg
 ---
 The reliability team is asked how long the pumps last. They take the asset register as of this year, which lists every pump currently in service with its installation date, follow the fleet for two years, record the failures, and fit a survival curve. The median life comes out at 7.7 years. The manufacturer's figure was closer to four, and the team writes a note explaining that field conditions must be milder than the test bench.
 
