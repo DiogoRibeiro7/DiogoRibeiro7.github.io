@@ -4,7 +4,7 @@
 name: "Diogo Ribeiro"
 title: "Diogo Ribeiro"
 locale: en_US
-email: hansolo.dj@gmail.com
+email: diogo.debastos.ribeiro@gmail.com
 description: "Statistics, machine learning, applied mathematics and open-source software by Diogo Ribeiro."
 url: "https://diogoribeiro7.github.io"
 baseurl: ""
@@ -16,7 +16,7 @@ google_analytics: G-K7H5RM6S8Y
 
 author:
   name: "Diogo Ribeiro"
-  email: hansolo.dj@gmail.com
+  email: diogo.debastos.ribeiro@gmail.com
   affiliation: "Data Science & Research Lead"
   location: "Porto, Portugal and London, UK"
   github: DiogoRibeiro7
