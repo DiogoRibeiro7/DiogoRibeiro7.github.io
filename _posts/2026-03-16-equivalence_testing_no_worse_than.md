@@ -50,12 +50,12 @@ methodology: >-
   against simulated power.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/noise.jpg
+  og_image: /assets/images/headers/noise.jpg
+  overlay_image: /assets/images/headers/noise.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/noise.jpg
+  twitter_image: /assets/images/headers/noise.jpg
 ---
 The challenger is not supposed to be better. It is cheaper to run, or simpler to maintain, or uses three features instead of thirty, and the only thing it has to show is that it is not worse. The team scores both models on the same test set, runs a paired t-test on the per-item losses, gets a p-value of 0.4, and writes that there is no significant difference and the models are equivalent. The challenger ships.
 

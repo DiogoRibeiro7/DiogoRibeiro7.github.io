@@ -39,12 +39,12 @@ methodology: >-
   interpretability, and implementation burden.
 reviewed_at: '2026-08-16'
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/spiral.jpg
+  og_image: /assets/images/headers/spiral.jpg
+  overlay_image: /assets/images/headers/spiral.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/spiral.jpg
+  twitter_image: /assets/images/headers/spiral.jpg
 ---
 Ask for the seasonal period of a daily electricity series and the question is already wrong. Consumption cycles across the week — weekdays differ from weekends — and across the year, as heating and cooling demand rises and falls. Hourly data adds a third cycle within the day.
 

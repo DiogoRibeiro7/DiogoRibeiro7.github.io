@@ -49,12 +49,12 @@ methodology: >-
   traces the backlog after a temporary overload hour by hour.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/constellation.jpg
+  og_image: /assets/images/headers/constellation.jpg
+  overlay_image: /assets/images/headers/constellation.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/constellation.jpg
+  twitter_image: /assets/images/headers/constellation.jpg
 ---
 A maintenance crew is busy 85 percent of the time, and the planner wants 95, because idle technicians are waste. The ticket queue has other ideas. Every operation that serves arriving work meets the same fact eventually: waiting time is not proportional to load. It is nearly flat until utilisation reaches about 70 percent, bends sharply through 80, and goes vertical past 90. The formulas that describe this are a century old, short, and checked here by simulation, and the capacity decisions they imply are the opposite of the planner's instinct.
 

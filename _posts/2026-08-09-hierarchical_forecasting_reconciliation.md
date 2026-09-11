@@ -39,12 +39,12 @@ methodology: >-
   aggregation, and where forecast signal is strongest.
 reviewed_at: '2026-08-16'
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/network.jpg
+  og_image: /assets/images/headers/network.jpg
+  overlay_image: /assets/images/headers/network.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/network.jpg
+  twitter_image: /assets/images/headers/network.jpg
 ---
 Forecast each store separately, sum the results, and compare against the forecast you made for the company as a whole. The two numbers will not match. They almost never do.
 

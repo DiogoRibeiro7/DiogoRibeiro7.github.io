@@ -79,6 +79,28 @@ bundle exec rake build
 The theme's JavaScript bundles are built inside the submodule (`npm run
 build:js` in `vendor/datalog`, see Setup); the site itself has no Node build.
 
+## Header Images
+
+`assets/images/headers/` holds original 16:9 header graphics drawn by
+`assets/viz/generate_headers.py` in the site palette on a dark ground, so a
+white title stays readable in the post hero. Regenerate or extend the pool with:
+
+```bash
+cd assets/viz
+python generate_headers.py             # all headers
+python generate_headers.py walks cells # named headers only
+```
+
+`assets/viz/fetch_headers.py` adds photographs from Wikimedia Commons, keeping only
+CC0 and public-domain files and recording each one's author, licence and source
+page in `assets/images/headers/CREDITS.md`. Bright photographs need
+`overlay_filter: 0.4` in the post's `header` block so the title stays readable.
+
+Point a post at one through the `header` block (`image`, `overlay_image`,
+`teaser`, `og_image`, `twitter_image`), for example
+`/assets/images/headers/network.jpg`. The stock photographs under
+`assets/images/` remain available; prefer a header no recent post already uses.
+
 ## Validation
 
 Run the same checks used during routine maintenance:

@@ -51,12 +51,13 @@ methodology: >-
   under independent and autocorrelated noise.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-geometry.jpg
+  og_image: /assets/images/headers/photo-geometry.jpg
+  overlay_image: /assets/images/headers/photo-geometry.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-geometry.jpg
+  twitter_image: /assets/images/headers/photo-geometry.jpg
 ---
 Sequential change-point detection watches a stream and raises an alarm as soon as it is confident something has changed. It trades detection delay against false alarms, and it is the right tool for monitoring. The retrospective question is different. Two years of a sensor's history are on disk, the baseline appears to have stepped several times, and the questions are where and how many. A process yield shifted after each of a series of undocumented interventions, and the maintenance log needs reconstructing. That is offline change-point detection, and it is a partition problem: cut the series into segments so that each is homogeneous, paying a price for every cut.
 

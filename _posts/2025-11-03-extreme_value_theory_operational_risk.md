@@ -50,12 +50,12 @@ methodology: >-
   and declusters a dependent series to estimate the extremal index.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/data_science_14.jpg
-  og_image: /assets/images/data_science_14.jpg
-  overlay_image: /assets/images/data_science_14.jpg
+  image: /assets/images/headers/network.jpg
+  og_image: /assets/images/headers/network.jpg
+  overlay_image: /assets/images/headers/network.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_14.jpg
-  twitter_image: /assets/images/data_science_14.jpg
+  teaser: /assets/images/headers/network.jpg
+  twitter_image: /assets/images/headers/network.jpg
 ---
 An engineer has three years of hourly peak load on a piece of equipment and has to say what load it should be rated for over the next ten years. The worst hour on record was 265. Three answers are offered: rate it for 265 plus a margin; fit a normal distribution and read off a high quantile; or say that the data cannot answer a question about events rarer than the record. The first two are wrong in different directions, and the third is too pessimistic, because the shape of a tail can be estimated from the observations that are already in it.
 

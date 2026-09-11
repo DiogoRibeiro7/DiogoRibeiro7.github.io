@@ -58,12 +58,12 @@ methodology: >-
   trained on all tickets, overall and on the subgroups where they differ.
 reviewed_at: '2026-09-11'
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-earth.jpg
+  og_image: /assets/images/headers/photo-earth.jpg
+  overlay_image: /assets/images/headers/photo-earth.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-earth.jpg
+  twitter_image: /assets/images/headers/photo-earth.jpg
 ---
 The support analytics team looks at escalated tickets, because those are the ones that cost money. In that set, the severity of the problem and the value of the customer are strongly and negatively correlated: the high-value customers' escalations are mostly minor, and the severe escalations mostly come from small accounts. Someone proposes an explanation involving how account managers shield their large clients. Someone else builds a model on the escalated tickets and finds that customer value predicts faster resolution.
 

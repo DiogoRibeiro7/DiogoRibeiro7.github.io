@@ -53,12 +53,13 @@ methodology: >-
   bias, spread and pre-period fit across replications.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/data_science_11.avif
-  og_image: /assets/images/data_science_11.avif
-  overlay_image: /assets/images/data_science_11.avif
+  image: /assets/images/headers/photo-bridge.jpg
+  og_image: /assets/images/headers/photo-bridge.jpg
+  overlay_image: /assets/images/headers/photo-bridge.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_11.avif
-  twitter_image: /assets/images/data_science_11.avif
+  teaser: /assets/images/headers/photo-bridge.jpg
+  twitter_image: /assets/images/headers/photo-bridge.jpg
 ---
 One plant got the new maintenance regime. One region got the price change. One store got the new layout. In each case the intervention happened once, on one unit, and nothing was randomised. The question is what would have happened to that unit without it, and there are two common answers, both wrong. Before-after compares the unit with its own past, and fails whenever anything else changed over the same period. Difference-in-differences compares the unit's change with everyone else's, and fails whenever the unit was not on everyone else's trajectory to begin with, which is usually why it was chosen for the intervention.
 

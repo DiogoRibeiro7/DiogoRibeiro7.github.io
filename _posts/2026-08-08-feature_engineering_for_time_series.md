@@ -39,12 +39,12 @@ methodology: >-
   known at the time the forecast was made?
 reviewed_at: '2026-08-16'
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/constellation.jpg
+  og_image: /assets/images/headers/constellation.jpg
+  overlay_image: /assets/images/headers/constellation.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/constellation.jpg
+  twitter_image: /assets/images/headers/constellation.jpg
 ---
 Gradient boosting and neural networks are not time series models. They accept a table of rows and columns with no notion that one row came before another. Turning a series into that table is where most of the work — and most of the mistakes — happen.
 

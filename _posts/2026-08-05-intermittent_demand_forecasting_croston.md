@@ -39,12 +39,12 @@ methodology: >-
   sparse demand rather than listing forecasting methods generically.
 reviewed_at: '2026-08-16'
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/field.jpg
+  og_image: /assets/images/headers/field.jpg
+  overlay_image: /assets/images/headers/field.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/field.jpg
+  twitter_image: /assets/images/headers/field.jpg
 ---
 Most forecasting material assumes a series that moves smoothly: sales that rise and fall, temperatures that cycle, traffic that peaks predictably. Spare parts inventory looks nothing like that. A part might sell three units in March, nothing until August, then one unit, then nothing for four months.
 

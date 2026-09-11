@@ -40,12 +40,13 @@ methodology: >-
   detection and evaluation strategies.
 reviewed_at: '2026-08-16'
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_9.webp
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-library.jpg
+  og_image: /assets/images/headers/photo-library.jpg
+  overlay_image: /assets/images/headers/photo-library.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_9.webp
+  teaser: /assets/images/headers/photo-library.jpg
+  twitter_image: /assets/images/headers/photo-library.jpg
 ---
 A temperature of 28°C is unremarkable in July and alarming in January. A server handling 400 requests per second is normal at midday and suspicious at 4am. Generic outlier detection asks whether a value is unusual; time series anomaly detection asks whether it is unusual *given when it occurred*, which is a harder question.
 

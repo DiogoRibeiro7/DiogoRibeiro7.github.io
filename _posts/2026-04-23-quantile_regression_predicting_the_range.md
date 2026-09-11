@@ -52,12 +52,12 @@ methodology: >-
   asymmetric costs.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/data_science_18.jpg
-  og_image: /assets/images/data_science_18.jpg
-  overlay_image: /assets/images/data_science_18.jpg
+  image: /assets/images/headers/lissajous.jpg
+  og_image: /assets/images/headers/lissajous.jpg
+  overlay_image: /assets/images/headers/lissajous.jpg
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_18.jpg
-  twitter_image: /assets/images/data_science_18.jpg
+  teaser: /assets/images/headers/lissajous.jpg
+  twitter_image: /assets/images/headers/lissajous.jpg
 ---
 A delivery-time model predicts 36 minutes for an order. It is a good model, in the sense that its predictions are unbiased, and 40 percent of deliveries arrive later than predicted. The customer did not ask for the average. They asked when the parcel would arrive, and a promise that fails four times in ten is not a promise. The number they wanted was a quantile, and a model that predicts the mean does not contain it.
 

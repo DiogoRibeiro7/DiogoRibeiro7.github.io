@@ -53,12 +53,13 @@ methodology: >-
   with unit-specific weights, and measures the optimism of a selected winner.
 reviewed_at: '2026-09-10'
 header:
-  image: /assets/images/data_science_20.jpg
-  og_image: /assets/images/data_science_20.jpg
-  overlay_image: /assets/images/data_science_20.jpg
+  image: /assets/images/headers/photo-library.jpg
+  og_image: /assets/images/headers/photo-library.jpg
+  overlay_image: /assets/images/headers/photo-library.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_20.jpg
-  twitter_image: /assets/images/data_science_20.jpg
+  teaser: /assets/images/headers/photo-library.jpg
+  twitter_image: /assets/images/headers/photo-library.jpg
 ---
 A maintenance manager pulls the ten machines with the most failures last month and sends a technician to each. Next month they fail less. A contact centre picks its lowest-scoring agents for coaching, and their scores rise. A hospital targets the wards with the worst readmission rates, and the rates fall. In each case the intervention gets the credit, and in each case a large part of the improvement was going to happen anyway.
 
