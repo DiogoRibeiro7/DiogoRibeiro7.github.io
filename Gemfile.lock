@@ -1,14 +1,13 @@
 PATH
   remote: vendor/datalog
   specs:
-    datalog-theme (0.6.1)
+    datalog-theme (0.7.0)
       fastimage (>= 2.2)
       googleauth (>= 1.9)
       jekyll (~> 4.3)
       jekyll-archives (>= 2.2)
       jekyll-feed (>= 0.16)
       jekyll-include-cache (>= 0.2)
-      jekyll-jupyter-notebook (~> 0.0.6)
       jekyll-paginate (>= 1.1)
       jekyll-redirect-from (>= 0.16)
       jekyll-remote-theme (>= 0.4)
@@ -17,6 +16,7 @@ PATH
       jekyll-sitemap (>= 1.4)
       kramdown-parser-gfm (>= 1.1)
       logger (>= 1.6)
+      loofah (>= 2.19)
       mini_magick (>= 4.12)
       nokogiri (>= 1.15)
       sass-embedded (>= 1.71)
@@ -128,8 +128,6 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
-    jekyll-jupyter-notebook (0.0.6)
-      jekyll
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)

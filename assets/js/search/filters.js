@@ -7,8 +7,15 @@ export function renderTagFilters(container, documents, selectedTags) {
   documents.forEach((item) => {
     const source = item.tags || item.topics || [];
     source.forEach((tag) => {
-      if (tag) {
-        tagSet.add(String(tag).toLowerCase());
+      if (!tag) {
+        return;
+      }
+
+      // Trim as well: a whitespace-only tag is truthy and used to render a
+      // button with no accessible name at all.
+      const normalized = String(tag).trim().toLowerCase();
+      if (normalized) {
+        tagSet.add(normalized);
       }
     });
   });

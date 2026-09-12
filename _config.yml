@@ -154,7 +154,7 @@ theme_options:
     output: chtml
     equation_numbering: true
     accessibility: true
-    render_on_load: true
+    render_on_load: auto
     mathjax_cdn: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
   syntax_highlighting:
     engine: prism
