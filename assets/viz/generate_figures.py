@@ -2662,6 +2662,137 @@ def proxy_goodhart_selection():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("novelty_tenure_vs_calendar",
+        "Estimated treatment effect against day, for an experiment whose "
+        "effect starts at ten percent on a user's first exposed day and "
+        "decays to one percent, with new users entering every day. Grouping "
+        "by how long each user has been exposed recovers the true decay; "
+        "grouping by calendar day gives a curve that is flatter and later, "
+        "because every calendar day mixes users at different tenures and the "
+        "mix keeps shifting.")
+def novelty_tenure_vs_calendar():
+    from matplotlib.ticker import PercentFormatter
+    r = np.random.default_rng(0)
+    NEW, RET, BASE, SD, DAYS = 4000, 0.5, 20.0, 10.0, 28
+
+    def effect(k):
+        return 0.01 + 0.09 * np.exp(-k / 4.0)
+
+    def one_run():
+        dt = np.zeros(DAYS); dc = np.zeros(DAYS); dnt = np.zeros(DAYS); dnc = np.zeros(DAYS)
+        tt = np.zeros(DAYS); tc = np.zeros(DAYS); tnt = np.zeros(DAYS); tnc = np.zeros(DAYS)
+        for entry in range(DAYS):
+            z = r.integers(0, 2, NEW)
+            for d in range(entry, DAYS):
+                k = d - entry
+                act = np.ones(NEW, bool) if k == 0 else (r.random(NEW) < RET)
+                za = z[act]
+                y = BASE * (1 + effect(k) * za) + r.normal(0, SD, act.sum())
+                dt[d] += y[za == 1].sum(); dnt[d] += (za == 1).sum()
+                dc[d] += y[za == 0].sum(); dnc[d] += (za == 0).sum()
+                tt[k] += y[za == 1].sum(); tnt[k] += (za == 1).sum()
+                tc[k] += y[za == 0].sum(); tnc[k] += (za == 0).sum()
+        return ((dt / dnt) / (dc / dnc) - 1), ((tt / tnt) / (tc / tnc) - 1)
+
+    runs = [one_run() for _ in range(12)]
+    by_day = np.mean([a for a, _ in runs], axis=0)
+    by_ten = np.mean([b for _, b in runs], axis=0)
+    days = np.arange(1, DAYS + 1)
+
+    fig, ax = plt.subplots()
+    ax.plot(days, effect(np.arange(DAYS)), color=P[0], lw=2.4, label="True effect at that tenure")
+    ax.plot(days, by_ten, marker="o", ms=4, ls="--", color=P[2], label="Estimated, grouped by user tenure")
+    ax.plot(days, by_day, marker="o", ms=4, color=P[1], label="Estimated, grouped by calendar day")
+    ax.axhline(0.01, color=P[3], lw=1, ls=":", label="Long-run effect (1 percent)")
+    ax.set_xlabel("day")
+    ax.set_ylabel("estimated lift")
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_title("Calendar days mix tenures and hide the decay")
+    ax.legend(loc="upper right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("percentile_precision",
+        "Relative standard error of four summaries of a heavy-tailed latency "
+        "distribution against the number of requests measured: the mean, the "
+        "median, the 95th percentile and the 99th percentile. The median is "
+        "the most precise and the 99th percentile the least, by about an "
+        "order of magnitude, because the precision of a quantile depends on "
+        "how dense the data are at that point and the tail is sparse.")
+def percentile_precision():
+    from matplotlib.ticker import PercentFormatter
+    r = np.random.default_rng(0)
+
+    def latency(n):
+        body = r.lognormal(np.log(80) - 0.18, 0.6, n)
+        slow = r.random(n) < 0.03
+        return np.where(slow, r.lognormal(np.log(900), 0.7, n), body)
+
+    ns = [500, 1000, 5000, 10_000, 50_000, 100_000]
+    stats_ = {"Mean": [], "Median": [], "95th percentile": [], "99th percentile": []}
+    for n in ns:
+        acc = {k: [] for k in stats_}
+        for _ in range(200):
+            v = latency(n)
+            acc["Mean"].append(v.mean())
+            acc["Median"].append(np.quantile(v, 0.5))
+            acc["95th percentile"].append(np.quantile(v, 0.95))
+            acc["99th percentile"].append(np.quantile(v, 0.99))
+        for k in stats_:
+            stats_[k].append(np.std(acc[k]) / np.mean(acc[k]))
+
+    fig, ax = plt.subplots()
+    for (name, vals), col in zip(stats_.items(), (P[0], P[2], P[3], P[1])):
+        ax.plot(ns, vals, marker="o", color=col, lw=2, label=name)
+    ax.set_xscale("log"); ax.set_yscale("log")
+    ax.set_xticks(ns)
+    ax.set_xticklabels([f"{n:,}" for n in ns])
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=1))
+    ax.set_xlabel("requests measured")
+    ax.set_ylabel("relative standard error of the statistic")
+    ax.set_title("The tail is the hardest part of the distribution to measure")
+    ax.legend(loc="upper right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("annotator_noise_ceiling",
+        "The highest accuracy any model can appear to reach, against the "
+        "error rate of a single annotator, when the evaluation labels come "
+        "from one annotator or from the majority vote of three, five or "
+        "seven. With one annotator the ceiling is one minus the error rate; "
+        "majority voting raises it sharply, because independent errors have "
+        "to coincide to survive a vote.")
+def annotator_noise_ceiling():
+    from matplotlib.ticker import PercentFormatter
+    r = np.random.default_rng(0)
+    n = 200_000
+    truth = (r.random(n) < 0.5).astype(int)
+    errs = [0.02, 0.05, 0.10, 0.15, 0.20, 0.30]
+
+    fig, ax = plt.subplots()
+    for m, col in zip((1, 3, 5, 7), (P[1], P[3], P[2], P[0])):
+        ceil = []
+        for e in errs:
+            votes = np.zeros(n)
+            for _ in range(m):
+                votes += np.where(r.random(n) < e, 1 - truth, truth)
+            maj = (votes > m / 2).astype(int)
+            ceil.append(np.mean(maj == truth))
+        ax.plot(errs, ceil, marker="o", color=col, lw=2,
+                label=f"{m} annotator{'s, majority vote' if m > 1 else ''}")
+    ax.set_xlabel("error rate of a single annotator")
+    ax.set_ylabel("accuracy a perfect model appears to reach")
+    ax.xaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_ylim(0.65, 1.01)
+    ax.set_title("Label noise caps the score before the model does")
+    ax.legend(loc="lower left")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
