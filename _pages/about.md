@@ -7,7 +7,7 @@ seo_title: "About Diogo Ribeiro and Editorial Standards"
 seo_description: "Author background and editorial standards for a technical blog on statistics, machine learning, forecasting, and data engineering."
 ---
 
-I am Diogo Ribeiro, a Data Science and Research Lead writing about applied statistics, machine learning, forecasting, data engineering, and reproducible analytical workflows.
+I am Diogo Ribeiro, a data scientist and research lead, and a professor at the Faculty of Media Arts and Design of the Technical University of Porto, in Vila do Conde. I write about applied statistics, machine learning, forecasting, data engineering, and reproducible analytical workflows.
 
 This site is intended to be a working technical notebook, not a content farm. A post has a reason to exist when it does at least one of these things:
 

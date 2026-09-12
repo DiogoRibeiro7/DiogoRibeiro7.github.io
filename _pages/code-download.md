@@ -26,4 +26,4 @@ Or visit [the GitHub project page](https://github.com/DiogoRibeiro7/DiogoRibeiro
 
 ---
 
-Feel free to reach out at [dfr@esmad.ipp.pt](mailto:dfr@esmad.ipp.pt) for professional enquiries or [diogo.debastos.ribeiro@gmail.com](mailto:diogo.debastos.ribeiro@gmail.com) for personal matters. My ORCID is [0009-0001-2022-7072](https://orcid.org/0009-0001-2022-7072) and I’m affiliated with **Faculty of Media Arts and Design, Technical University of Porto**, Vila do Conde, Portugal.
+Feel free to reach out at [dfr@esmad.ipp.pt](mailto:dfr@esmad.ipp.pt) for professional enquiries or [diogo.debastos.ribeiro@gmail.com](mailto:diogo.debastos.ribeiro@gmail.com) for personal matters. My ORCID is [0009-0001-2022-7072](https://orcid.org/0009-0001-2022-7072) and I teach at the **Faculty of Media Arts and Design, Technical University of Porto**, in Vila do Conde, Portugal, alongside my work as a data scientist and research lead.
