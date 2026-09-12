@@ -4,7 +4,7 @@
 
 - **[Diogo Ribeiro](https://github.com/DiogoRibeiro7)**. Author,
   maintainer. [](https://orcid.org/0009-0001-2022-7072)  
-  ESMAD - Instituto Politécnico do Porto
+  Faculty of Media Arts and Design, Technical University of Porto
 
 ## Citation
 
