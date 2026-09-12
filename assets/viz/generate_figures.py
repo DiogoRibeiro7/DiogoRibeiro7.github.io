@@ -2993,6 +2993,137 @@ def switchback_period_length():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("capture_recapture_heterogeneity",
+        "Estimated population against the spread in how easy items are to "
+        "find, for the two-pass Chapman estimator and for Chao's lower bound "
+        "computed from three passes, against a true population of 500. The "
+        "two-pass estimate falls steeply once items differ in difficulty, "
+        "while Chao's bound stays much closer and errs low.")
+def capture_recapture_heterogeneity():
+    true_n = 500
+
+    def passes(ps, spread, rng):
+        ease = rng.lognormal(-spread ** 2 / 2, spread, true_n) if spread else np.ones(true_n)
+        return [rng.random(true_n) < np.clip(p * ease, 0, 1) for p in ps]
+
+    def chapman(a, b):
+        n1, n2, m = a.sum(), b.sum(), (a & b).sum()
+        return (n1 + 1) * (n2 + 1) / (m + 1) - 1
+
+    def chao(a, b, c):
+        times = a.astype(int) + b.astype(int) + c.astype(int)
+        f1, f2 = (times == 1).sum(), (times == 2).sum()
+        return (times > 0).sum() + (f1 ** 2 / (2 * f2) if f2 else np.nan)
+
+    spreads = np.linspace(0, 1.4, 15)
+    two, three, union = [], [], []
+    for s in spreads:
+        rng = np.random.default_rng(17)
+        t2, t3, u = [], [], []
+        for _ in range(200):
+            a, b, c = passes((0.5, 0.45, 0.4), s, rng)
+            t2.append(chapman(a, b))
+            t3.append(chao(a, b, c))
+            u.append((a | b | c).sum())
+        two.append(np.median(t2))
+        three.append(np.median(t3))
+        union.append(np.mean(u))
+
+    fig, ax = plt.subplots()
+    ax.axhline(true_n, color=hs.INK_MUTED, lw=1.5, ls=":")
+    ax.annotate("true population, 500", (spreads[-1], true_n), color=hs.INK_SECONDARY,
+                fontsize=9, ha="right", va="bottom", xytext=(0, 4),
+                textcoords="offset points")
+    ax.plot(spreads, two, marker="o", color=P[1], lw=2, label="Two passes, Chapman")
+    ax.plot(spreads, three, marker="s", color=P[0], lw=2, label="Three passes, Chao lower bound")
+    ax.plot(spreads, union, marker="^", color=P[2], lw=2, ls="--",
+            label="Found by at least one pass")
+    ax.set_xlabel("spread in how easy items are to find")
+    ax.set_ylabel("estimated number of items")
+    ax.set_ylim(200, 600)
+    ax.set_title("Uneven difficulty pulls the estimate below the truth")
+    ax.legend(loc="lower left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("aggregation_group_size",
+        "Correlation between group averages against the number of people per "
+        "group, on a log scale, for populations whose group components "
+        "correlate at 0.9 and whose individuals do not correlate at all. The "
+        "three curves differ only in how much of each variable is group, and "
+        "every one of them climbs from near the individual correlation "
+        "towards 0.9 as the groups get larger.")
+def aggregation_group_size():
+    def predicted(icc, rho_b, rho_w, m):
+        cov = rho_b * icc + rho_w * (1 - icc) / m
+        var = icc + (1 - icc) / m
+        return cov / var
+
+    ms = np.unique(np.round(np.geomspace(2, 2000, 22)).astype(int))
+    rho_b, rho_w = 0.90, 0.0
+    fig, ax = plt.subplots()
+    for icc, col in zip((0.05, 0.10, 0.25), (P[3], P[0], P[2])):
+        measured = []
+        for m in ms:
+            rng = np.random.default_rng(31)
+            gb = rng.multivariate_normal([0, 0], [[1, rho_b], [rho_b, 1]], 600)
+            wi = rng.multivariate_normal([0, 0], [[1, rho_w], [rho_w, 1]], (600, int(m)))
+            x = np.sqrt(icc) * gb[:, None, 0] + np.sqrt(1 - icc) * wi[:, :, 0]
+            y = np.sqrt(icc) * gb[:, None, 1] + np.sqrt(1 - icc) * wi[:, :, 1]
+            measured.append(np.corrcoef(x.mean(axis=1), y.mean(axis=1))[0, 1])
+        ax.plot(ms, measured, marker="o", ms=4, color=col, lw=2,
+                label=f"{icc:.0%} of each variable is group")
+        ax.plot(ms, [predicted(icc, rho_b, rho_w, m) for m in ms], color=col, lw=1, ls=":")
+    ax.axhline(rho_b, color=hs.INK_MUTED, lw=1.5, ls="--")
+    ax.annotate("correlation between the group parts, 0.90", (ms[-1], rho_b),
+                color=hs.INK_SECONDARY, fontsize=9, ha="right", va="bottom",
+                xytext=(0, 4), textcoords="offset points")
+    ax.set_xscale("log")
+    ax.set_xticks([2, 5, 10, 25, 100, 500, 2000])
+    ax.set_xticklabels(["2", "5", "10", "25", "100", "500", "2,000"])
+    ax.set_ylim(0, 1)
+    ax.set_xlabel("people averaged into each group")
+    ax.set_ylabel("correlation between group averages")
+    ax.set_title("Bigger buckets, stronger correlation, same people")
+    ax.legend(loc="lower right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("heaping_threshold_error",
+        "Share of records above a threshold, against the threshold in "
+        "minutes, comparing the truth with what is recorded when half the "
+        "entries are rounded to the nearest five minutes. The recorded curve "
+        "is a staircase whose steps fall on the multiples of five, so a "
+        "threshold on a round number sits exactly where the two curves are "
+        "furthest apart.")
+def heaping_threshold_error():
+    from matplotlib.ticker import PercentFormatter
+    rng = np.random.default_rng(23)
+    n = 400_000
+    true = rng.lognormal(np.log(18), 0.55, n)
+    heaped = rng.random(n) < 0.5
+    obs = np.where(heaped, np.round(true / 5) * 5, np.round(true))
+
+    grid = np.arange(15, 46, 0.5)
+    t = [np.mean(true > g) for g in grid]
+    o = [np.mean(obs > g) for g in grid]
+
+    fig, ax = plt.subplots()
+    ax.plot(grid, t, color=P[0], lw=2, label="True share above the threshold")
+    ax.plot(grid, o, color=P[1], lw=2, label="Recorded share, half the entries rounded")
+    for g in (20, 25, 30, 35, 40, 45):
+        ax.axvline(g, color=hs.GRID, lw=1, zorder=0)
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_xlabel("threshold, minutes")
+    ax.set_ylabel("share of records above it")
+    ax.set_title("The gap is widest exactly where thresholds are written")
+    ax.legend(loc="upper right")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
