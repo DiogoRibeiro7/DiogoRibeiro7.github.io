@@ -1,6 +1,7 @@
 # Getting Started with myrpackage
 
 ``` r
+
 library(myrpackage)
 ```
 
@@ -28,6 +29,7 @@ function generates a friendly greeting. By default, it says “Hello,
 world!”:
 
 ``` r
+
 hello()
 #> Hello, world!
 ```
@@ -35,6 +37,7 @@ hello()
 You can customize the greeting with a different name:
 
 ``` r
+
 hello("R Users")
 #> Hello, R Users!
 ```
@@ -54,6 +57,7 @@ are:
 Here are examples of greetings in different languages:
 
 ``` r
+
 hello("amigos", language = "spanish")
 #> Hola, amigos!
 hello("mes amis", language = "french")
@@ -71,6 +75,7 @@ hello("amici", language = "italian")
 You can also control whether the greeting ends with an exclamation mark:
 
 ``` r
+
 hello(exclamation = TRUE)  # Default
 #> Hello, world!
 hello(exclamation = FALSE)
@@ -82,6 +87,7 @@ hello(exclamation = FALSE)
 You can capitalize the first letter of the name:
 
 ``` r
+
 hello("r users", capitalize = TRUE)
 #> Hello, R users!
 ```
@@ -95,6 +101,7 @@ function works similarly to
 but provides farewell messages:
 
 ``` r
+
 goodbye()
 #> Goodbye, world!
 goodbye("R Users")
@@ -110,20 +117,25 @@ goodbye("mes amis", language = "french", exclamation = FALSE)
 Both functions include input validation and helpful error messages:
 
 ``` r
+
 # These will generate errors:
 hello(name = c("world", "everyone"))
-#> Error in hello(name = c("world", "everyone")): 'name' must be a single character string
+#> Error in `hello()`:
+#> ! 'name' must be a single character string
 ```
 
 ``` r
+
 hello(exclamation = "yes")
-#> Error in hello(exclamation = "yes"): 'exclamation' must be a single logical value
+#> Error in `hello()`:
+#> ! 'exclamation' must be a single logical value
 ```
 
 The functions also provide helpful warnings when unsupported languages
 are requested:
 
 ``` r
+
 hello("world", language = "klingon")
 #> Warning in hello("world", language = "klingon"): Language 'klingon' not
 #> supported. Using English instead. Supported languages: english, spanish,
@@ -137,6 +149,7 @@ For complete details about function arguments and behavior, refer to the
 function documentation:
 
 ``` r
+
 ?hello
 ?goodbye
 ```
@@ -144,6 +157,7 @@ function documentation:
 For more advanced usage patterns, see the “Advanced Usage” vignette:
 
 ``` r
+
 vignette("advanced", package = "myrpackage")
 ```
 

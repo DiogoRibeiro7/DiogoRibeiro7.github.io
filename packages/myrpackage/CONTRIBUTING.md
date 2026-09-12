@@ -53,6 +53,7 @@ For feature requests, please create an issue on GitHub with:
 3.  Install development dependencies:
 
 ``` r
+
 # Install development dependencies
 devtools::install_dev_deps()
 
@@ -63,6 +64,7 @@ devtools::load_all()
 ### Running Tests
 
 ``` r
+
 # Run all tests
 devtools::test()
 
@@ -76,6 +78,7 @@ covr::package_coverage()
 ### Documentation
 
 ``` r
+
 # Generate documentation
 devtools::document()
 
@@ -97,6 +100,7 @@ Please ensure your code adheres to this style.
 You can use the following tools to check and fix style issues:
 
 ``` r
+
 # Check code style
 lintr::lint_package()
 
@@ -123,6 +127,7 @@ specification:
 Before committing, please run:
 
 ``` r
+
 # Document the package
 devtools::document()
 
@@ -140,6 +145,7 @@ devtools::check()
 3.  Run full checks:
 
 ``` r
+
 devtools::check()
 rcmdcheck::rcmdcheck(args = c("--no-manual", "--as-cran"))
 ```
@@ -147,12 +153,14 @@ rcmdcheck::rcmdcheck(args = c("--no-manual", "--as-cran"))
 4.  Build the package:
 
 ``` r
+
 devtools::build()
 ```
 
 5.  Tag the release in Git:
 
 ``` r
+
 usethis::use_git_tag("v0.1.0")
 ```
 

@@ -9,6 +9,7 @@ You can install the development version of myrpackage from
 [GitHub](https://github.com/) with:
 
 ``` r
+
 # install.packages("devtools")
 devtools::install_github("DiogoRibeiro7/myrpackage")
 ```
@@ -18,6 +19,7 @@ devtools::install_github("DiogoRibeiro7/myrpackage")
 ### Basic Examples
 
 ``` r
+
 library(myrpackage)
 
 # Say hello with default parameters
@@ -114,6 +116,7 @@ support these parameters:
 ### Running Tests
 
 ``` r
+
 # Run tests
 devtools::test()
 
@@ -124,6 +127,7 @@ covr::package_coverage()
 ### Building Documentation
 
 ``` r
+
 # Generate documentation
 devtools::document()
 
@@ -137,6 +141,7 @@ pkgdown::build_site()
 ### Quality Checks
 
 ``` r
+
 # Run R CMD check
 devtools::check()
 
@@ -167,6 +172,7 @@ file for details.
 To cite this package, please use:
 
 ``` r
+
 citation("myrpackage")
 ```
 

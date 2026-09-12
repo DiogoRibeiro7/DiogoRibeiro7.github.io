@@ -1,6 +1,7 @@
 # Advanced Usage of myrpackage
 
 ``` r
+
 library(myrpackage)
 ```
 
@@ -18,6 +19,7 @@ and
 to maintain consistent greetings throughout your application:
 
 ``` r
+
 # Create a custom Spanish greeter
 spanish_hello <- function(name = "amigos", exclamation = TRUE, capitalize = FALSE) {
   hello(name = name, language = "spanish", exclamation = exclamation, capitalize = capitalize)
@@ -36,6 +38,7 @@ If your application needs to support multiple languages, you can create
 a wrapper function:
 
 ``` r
+
 multilingual_greeting <- function(name, languages = c("english", "spanish", "french")) {
   for (lang in languages) {
     hello(name = name, language = lang)
@@ -55,6 +58,7 @@ You can combine the greeting functions with other text to create more
 personalized messages:
 
 ``` r
+
 create_welcome_message <- function(name, language = "english") {
   greeting <- suppressMessages(hello(name, language, exclamation = TRUE))
 
@@ -91,6 +95,7 @@ When working with user input, it’s good practice to handle potential
 errors:
 
 ``` r
+
 safe_hello <- function(name, language) {
   tryCatch(
     {
@@ -131,6 +136,7 @@ You can easily integrate `myrpackage` functions with other packages,
 such as creating a shiny app:
 
 ``` r
+
 # This is an example, not run
 library(shiny)
 
@@ -183,6 +189,7 @@ For high-volume applications, you might want to avoid printing to the
 console:
 
 ``` r
+
 # Create a silent version of hello() that doesn't print to console
 silent_hello <- function(name = "world", language = "english", exclamation = TRUE, capitalize = FALSE) {
   # Input validation - simplified for brevity
@@ -232,6 +239,7 @@ greeting
 You can use the greeting functions in batch processing scenarios:
 
 ``` r
+
 # Create greetings for a list of names
 names <- c("Alice", "Bob", "Charlie", "David")
 languages <- c("english", "spanish", "french", "portuguese")
