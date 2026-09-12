@@ -2472,6 +2472,196 @@ def small_count_interval_coverage():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("srm_detection_and_bias",
+        "Two quantities against the share of treated users lost before "
+        "logging, in a one-million-user experiment with a true lift of one "
+        "percent whose dropped users convert at half the rate of the rest: "
+        "the relative error in the measured lift, and the share of "
+        "experiments whose sample ratio check fires at a threshold of one in "
+        "a thousand. The check is nearly silent while the error is a few "
+        "percent of the effect and fires reliably once the error approaches "
+        "the effect itself.")
+def srm_detection_and_bias():
+    from matplotlib.ticker import PercentFormatter
+    from scipy import stats
+    r = np.random.default_rng(0)
+    n, lift, slow_share, slow_ratio = 1_000_000, 0.01, 0.20, 0.5
+
+    def chi2_p(a, b):
+        tot = a + b
+        return stats.chi2.sf((a - tot / 2) ** 2 / (tot / 2) + (b - tot / 2) ** 2 / (tot / 2), 1)
+
+    def experiment(drop):
+        z = r.integers(0, 2, n)
+        slow = r.random(n) < slow_share
+        base = np.where(slow, 0.10 * slow_ratio,
+                        0.10 * (1 + slow_share * (1 - slow_ratio) / (1 - slow_share)))
+        y = r.random(n) < base * (1 + lift * z)
+        keep = np.ones(n, bool)
+        if drop > 0:
+            keep = ~((z == 1) & slow & (r.random(n) < min(1.0, drop / slow_share)))
+        za, ya = z[keep], y[keep]
+        measured = ya[za == 1].mean() / ya[za == 0].mean() - 1
+        return abs(measured - lift) / lift, chi2_p(np.sum(za == 0), np.sum(za == 1)) < 0.001
+
+    drops = [0.0, 0.001, 0.002, 0.005, 0.01, 0.02]
+    err, alarm = [], []
+    for d in drops:
+        rows = np.array([experiment(d) for _ in range(60)], dtype=float)
+        err.append(rows[:, 0].mean()); alarm.append(rows[:, 1].mean())
+
+    fig, ax = plt.subplots()
+    ax.plot(drops, err, marker="o", color=P[1], lw=2, label="Relative error in the measured lift")
+    ax.plot(drops, alarm, marker="o", color=P[0], lw=2, label="Experiments whose sample ratio check fires")
+    ax.set_xlabel("share of treated users lost before logging")
+    ax.set_ylabel("share")
+    ax.xaxis.set_major_formatter(PercentFormatter(1.0, decimals=1))
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_title("The alarm fires where the damage becomes serious")
+    ax.legend(loc="upper left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("propensity_estimator_bias",
+        "Absolute bias of five estimators of a treatment effect of two, "
+        "under four conditions: both models correct, an outcome model "
+        "missing nonlinear terms, a propensity model missing a confounder, "
+        "and strong confounding with poor overlap. The unadjusted difference "
+        "is off this scale in every condition, between 1.7 and 3.6; among the "
+        "adjusted estimators, regression adjustment fails when the outcome "
+        "model is wrong, matching and weighting fail when the propensity "
+        "model is wrong, and the doubly robust estimator sits at zero in "
+        "every condition.")
+def propensity_estimator_bias():
+    from scipy.spatial import cKDTree
+    r = np.random.default_rng(0)
+    TAU = 2.0
+
+    def draw(n=4000, strength=1.0, nonlinear=False):
+        x = r.normal(0, 1, (n, 3))
+        logit = strength * (0.9 * x[:, 0] + 0.6 * x[:, 1] - 0.5 * x[:, 2])
+        d = (r.random(n) < 1 / (1 + np.exp(-logit))).astype(int)
+        base = 2.0 * x[:, 0] + 1.0 * x[:, 1] + 0.5 * x[:, 2]
+        if nonlinear:
+            base = base + 1.0 * x[:, 0] ** 3 - 1.0 * x[:, 0] * x[:, 1]
+        return x, d, 10 + base + TAU * d + r.normal(0, 2, n)
+
+    def fit_logistic(X, d, iters=40):
+        A = np.column_stack([np.ones(len(X)), X])
+        b = np.zeros(A.shape[1])
+        for _ in range(iters):
+            p = 1 / (1 + np.exp(-A @ b))
+            W = p * (1 - p) + 1e-9
+            b += np.linalg.solve((A * W[:, None]).T @ A + 1e-8 * np.eye(A.shape[1]), A.T @ (d - p))
+        return 1 / (1 + np.exp(-A @ b))
+
+    def estimates(x, d, y, ps):
+        A = np.column_stack([np.ones(len(x)), d, x])
+        reg = np.linalg.lstsq(A, y, rcond=None)[0][1]
+        tr, co = np.where(d == 1)[0], np.where(d == 0)[0]
+        _, j = cKDTree(ps[co][:, None]).query(ps[tr][:, None])
+        mat = np.mean(y[tr] - y[co][j])
+        w1, w0 = d / ps, (1 - d) / (1 - ps)
+        w = np.sum(w1 * y) / np.sum(w1) - np.sum(w0 * y) / np.sum(w0)
+        B = np.column_stack([np.ones(len(x)), x])
+        m1 = B @ np.linalg.lstsq(B[d == 1], y[d == 1], rcond=None)[0]
+        m0 = B @ np.linalg.lstsq(B[d == 0], y[d == 0], rcond=None)[0]
+        dr = np.mean(m1 - m0 + d * (y - m1) / ps - (1 - d) * (y - m0) / (1 - ps))
+        return [y[d == 1].mean() - y[d == 0].mean(), reg, mat, w, dr]
+
+    conditions = [dict(), dict(nonlinear=True), dict(wrong_ps=True), dict(strength=2.5)]
+    names = ["Naive difference", "Regression adjustment", "Propensity matching",
+             "Inverse probability weighting", "Doubly robust (AIPW)"]
+    bias = np.zeros((len(names), len(conditions)))
+    for c, kw in enumerate(conditions):
+        kw = dict(kw); wrong = kw.pop("wrong_ps", False)
+        acc = []
+        for _ in range(400):
+            x, d, y = draw(**kw)
+            ps = np.clip(fit_logistic(x[:, :2] if wrong else x, d), 0.01, 0.99)
+            acc.append(estimates(x, d, y, ps))
+        bias[:, c] = np.abs(np.mean(acc, axis=0) - TAU)
+
+    labels = ["Both models\ncorrect", "Outcome model\nmisspecified",
+              "Propensity model\nmisspecified", "Strong confounding,\npoor overlap"]
+    x = np.arange(len(labels))
+    fig, ax = plt.subplots()
+    # The unadjusted difference is off this scale (1.7 to 3.6); the comparison that matters is
+    # among the four adjusted estimators, whose biases are an order of magnitude smaller.
+    for i, (name, col) in enumerate(zip(names[1:], (P[3], P[4], P[2], P[0]))):
+        off = (i - 1.5) * 0.13
+        ax.plot(x + off, bias[i + 1], marker="o", ms=9, ls="none", color=col, label=name)
+        for xi, v in zip(x + off, bias[i + 1]):
+            ax.plot([xi, xi], [0, v], color=col, lw=2, alpha=0.45)
+    ax.axhline(0, color="#8a8f98", lw=1)
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels)
+    ax.set_xlim(-0.5, len(labels) - 0.5)
+    ax.set_ylabel("absolute bias (true effect is 2.00)")
+    ax.set_ylim(-0.015, 0.36)
+    ax.set_title("Each method fails on its own assumption")
+    ax.legend(loc="upper left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("proxy_goodhart_selection",
+        "Change in the goal metric against how hard a proxy is optimised, "
+        "for four levels of the cost that the proxy's manipulable component "
+        "imposes on the goal, with the proxy's own reported gain for "
+        "comparison. When the manipulable part is harmless the goal rises at "
+        "half the rate the proxy reports; when its cost equals its benefit "
+        "the goal does not move at all; above that, harder optimisation "
+        "lowers the goal while the proxy climbs.")
+def proxy_goodhart_selection():
+    from matplotlib.ticker import PercentFormatter
+    r = np.random.default_rng(0)
+
+    def pool(n, cost):
+        q = r.normal(0, 1, n)
+        m = r.normal(0, 1, n)
+        return q + m, q - cost * m + r.normal(0, 0.5, n)
+
+    fracs = [0.5, 0.25, 0.1, 0.05, 0.01]
+    curves = {}
+    for cost in (0.0, 0.5, 1.0, 2.0):
+        vals = []
+        for f in fracs:
+            g = []
+            for _ in range(150):
+                p, y = pool(20000, cost)
+                sel = np.argsort(p)[-int(20000 * f):]
+                g.append(y[sel].mean() - y.mean())
+            vals.append(np.mean(g))
+        curves[cost] = vals
+    proxy_gain = []
+    for f in fracs:
+        g = []
+        for _ in range(150):
+            p, y = pool(20000, 0.0)
+            sel = np.argsort(p)[-int(20000 * f):]
+            g.append(p[sel].mean() - p.mean())
+        proxy_gain.append(np.mean(g))
+
+    fig, ax = plt.subplots()
+    ax.plot(fracs, proxy_gain, color=P[3], lw=1.6, ls=":", label="Proxy gain (what the dashboard shows)")
+    for (cost, vals), col in zip(curves.items(), (P[0], P[2], P[5], P[1])):
+        ax.plot(fracs, vals, marker="o", color=col, lw=2,
+                label=f"Goal gain, manipulation cost {cost:.1f}")
+    ax.axhline(0, color="#8a8f98", lw=1)
+    ax.set_xscale("log")
+    ax.invert_xaxis()
+    ax.set_xticks(fracs)
+    ax.xaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_xlabel("share of candidates kept (harder optimisation to the right)")
+    ax.set_ylabel("change in the metric, standard deviations")
+    ax.set_title("Harder optimisation of a proxy need not move the goal")
+    ax.legend(loc="upper left")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
