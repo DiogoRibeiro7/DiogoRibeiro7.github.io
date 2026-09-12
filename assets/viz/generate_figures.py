@@ -2148,6 +2148,157 @@ def recurrent_events_mcf():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("rdd_bandwidth_tradeoff",
+        "Bias, standard deviation and root mean squared error of the local "
+        "linear regression discontinuity estimate against the bandwidth on "
+        "each side of the cutoff, for a simulated outcome whose trend bends "
+        "differently on the two sides. Narrow bandwidths are unbiased and "
+        "noisy; wide ones are precise and biased; the error is smallest at "
+        "an intermediate width, which is the choice a bandwidth selector "
+        "makes.")
+def rdd_bandwidth_tradeoff():
+    r = np.random.default_rng(0)
+    tau, n = 2.0, 5000
+
+    def draw():
+        x = r.uniform(-50, 50, n)
+        d = (x >= 0).astype(float)
+        curve = np.where(x >= 0, 0.002, -0.001) * x ** 2
+        return x, 10 + 0.08 * x + curve + tau * d + r.normal(0, 4, n)
+
+    def local_linear(x, y, h):
+        est = []
+        for side in (x >= 0, x < 0):
+            m = side & (np.abs(x) <= h)
+            X = np.column_stack([np.ones(m.sum()), x[m]])
+            b, *_ = np.linalg.lstsq(X, y[m], rcond=None)
+            est.append(b[0])
+        return est[0] - est[1]
+
+    hs = [2, 3, 5, 7, 10, 15, 20, 30, 40, 50]
+    bias, sd, rmse = [], [], []
+    for h in hs:
+        e = np.array([local_linear(*draw(), h) for _ in range(600)])
+        bias.append(abs(e.mean() - tau)); sd.append(e.std()); rmse.append(np.sqrt(np.mean((e - tau) ** 2)))
+
+    fig, ax = plt.subplots()
+    ax.plot(hs, rmse, marker="o", color=P[0], lw=2.2, label="Root mean squared error")
+    ax.plot(hs, sd, marker="o", color=P[2], label="Standard deviation (noise)")
+    ax.plot(hs, bias, marker="o", color=P[1], label="Absolute bias (curvature)")
+    ax.set_xscale("log")
+    ax.set_xticks(hs)
+    ax.set_xticklabels([str(h) for h in hs])
+    ax.set_xlabel("bandwidth on each side of the cutoff (units of the running variable)")
+    ax.set_ylabel("error of the estimated effect")
+    ax.set_title("The bandwidth trades curvature bias against noise")
+    ax.legend(loc="upper center")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("noncompliance_estimators",
+        "Estimated effect of a feature against the share of users who use "
+        "it when assigned, for four estimators in a simulated experiment "
+        "with 10 percent always-takers and a true effect of 2. Intention to "
+        "treat falls in proportion to compliance; as-treated and per-protocol "
+        "estimates sit above the truth at every compliance rate because "
+        "users who take the feature differ from those who do not; the Wald "
+        "estimate recovers the effect on compliers throughout.")
+def noncompliance_estimators():
+    r = np.random.default_rng(0)
+    tau = 2.0
+
+    def draw(n, compliers, always=0.1):
+        z = r.integers(0, 2, n)
+        u = r.random(n)
+        kind = np.where(u < compliers, "c", np.where(u < compliers + always, "a", "n"))
+        d = np.where(kind == "c", z, np.where(kind == "a", 1, 0))
+        base = 10 + np.where(kind == "a", 3.0, np.where(kind == "n", -2.0, 0.0))
+        return z, d, base + tau * d + r.normal(0, 5, n)
+
+    def itt(z, d, y): return y[z == 1].mean() - y[z == 0].mean()
+    def as_treated(z, d, y): return y[d == 1].mean() - y[d == 0].mean()
+    def per_protocol(z, d, y): return y[(z == 1) & (d == 1)].mean() - y[(z == 0) & (d == 0)].mean()
+    def wald(z, d, y): return itt(z, d, y) / (d[z == 1].mean() - d[z == 0].mean())
+
+    cs = [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+    series = {"Intention to treat": [], "As treated": [], "Per protocol": [], "Wald (complier effect)": []}
+    for c in cs:
+        vals = {k: [] for k in series}
+        for _ in range(500):
+            z, d, y = draw(4000, c)
+            for k, fn in zip(series, (itt, as_treated, per_protocol, wald)):
+                vals[k].append(fn(z, d, y))
+        for k in series:
+            series[k].append(np.mean(vals[k]))
+
+    fig, ax = plt.subplots()
+    ax.axhline(tau, color=P[3], lw=1, ls=":", label="True effect of using the feature (2.0)")
+    for (k, v), col in zip(series.items(), (P[0], P[1], P[4], P[2])):
+        ax.plot(cs, v, marker="o", color=col, label=k)
+    ax.set_xlabel("share of users who use the feature when assigned to it")
+    ax.set_ylabel("estimated effect")
+    ax.set_title("Comparing users by what they did, not what they were assigned, invents effects")
+    ax.legend(loc="upper right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("cv_selection_leakage",
+        "Five-fold cross-validated accuracy on pure-noise data with 100 "
+        "samples and a balanced binary label, against the number of "
+        "candidate features, when the ten most label-correlated features are "
+        "chosen on all the data before cross-validation and when they are "
+        "chosen inside each training fold. With the selection outside the "
+        "folds, accuracy on noise climbs above 80 percent as the pool of "
+        "features grows; inside the folds it stays at chance.")
+def cv_selection_leakage():
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.model_selection import StratifiedKFold
+    r = np.random.default_rng(0)
+
+    def top_k(X, y, k):
+        yc = y - y.mean()
+        corr = np.abs((X - X.mean(0)).T @ yc) / (X.std(0) * yc.std() * len(y) + 1e-12)
+        return np.argsort(corr)[-k:]
+
+    def cv_acc(X, y, k, inside):
+        skf = StratifiedKFold(5, shuffle=True, random_state=int(r.integers(1e9)))
+        cols = None if inside else top_k(X, y, k)
+        correct = 0
+        for tr, te in skf.split(X, y):
+            c = top_k(X[tr], y[tr], k) if inside else cols
+            clf = LogisticRegression(max_iter=1000).fit(X[tr][:, c], y[tr])
+            correct += (clf.predict(X[te][:, c]) == y[te]).sum()
+        return correct / len(y)
+
+    ps = [20, 50, 100, 300, 1000, 3000, 10000]
+    outside, inside = [], []
+    for p in ps:
+        o, i = [], []
+        for _ in range(40):
+            X = r.normal(0, 1, (100, p)); y = np.repeat([0, 1], 50); r.shuffle(y)
+            o.append(cv_acc(X, y, 10, False)); i.append(cv_acc(X, y, 10, True))
+        outside.append(np.mean(o)); inside.append(np.mean(i))
+
+    from matplotlib.ticker import PercentFormatter
+    fig, ax = plt.subplots()
+    ax.plot(ps, outside, marker="o", color=P[1], lw=2, label="Ten features selected on all the data, then cross-validated")
+    ax.plot(ps, inside, marker="o", color=P[0], lw=2, label="Ten features selected inside each training fold")
+    ax.axhline(0.5, color=P[3], lw=1, ls="--", label="Chance")
+    ax.set_xscale("log")
+    ax.set_xticks(ps)
+    ax.set_xticklabels([f"{p:,}" for p in ps])
+    ax.set_xlabel("candidate features (all noise)")
+    ax.set_ylabel("cross-validated accuracy")
+    ax.set_ylim(0.4, 1.0)
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_title("Selecting features before cross-validation manufactures accuracy")
+    ax.legend(loc="upper left")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
