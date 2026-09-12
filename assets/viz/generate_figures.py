@@ -2299,6 +2299,179 @@ def cv_selection_leakage():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("cluster_randomisation_false_positives",
+        "False positive rate of A/A experiments in which 20 stores are "
+        "randomised with 200 customers each, against the share of outcome "
+        "variance that sits between stores, for a test that treats "
+        "customers as independent and for a test on store means. The "
+        "customer-level test passes 5 percent at any positive intraclass "
+        "correlation and exceeds 50 percent at 0.05; the store-level test "
+        "stays at its nominal level throughout.")
+def cluster_randomisation_false_positives():
+    from matplotlib.ticker import PercentFormatter
+    from scipy import stats
+    r = np.random.default_rng(0)
+
+    def draw(n_c, per, icc, sd=10.0):
+        sd_b, sd_w = sd * np.sqrt(icc), sd * np.sqrt(1 - icc)
+        z = np.repeat([0, 1], n_c // 2); r.shuffle(z)
+        store = r.normal(0, sd_b, n_c)
+        cl = np.repeat(np.arange(n_c), per)
+        return z, cl, 50 + store[cl] + r.normal(0, sd_w, len(cl))
+
+    def customer_p(z, cl, y):
+        t = z[cl]; a, b = y[t == 0], y[t == 1]
+        se = np.sqrt(a.var(ddof=1) / len(a) + b.var(ddof=1) / len(b))
+        return 2 * stats.norm.sf(abs((b.mean() - a.mean()) / se))
+
+    def store_p(z, cl, y):
+        m = np.array([y[cl == c].mean() for c in range(z.size)])
+        a, b = m[z == 0], m[z == 1]
+        se = np.sqrt(a.var(ddof=1) / len(a) + b.var(ddof=1) / len(b))
+        return 2 * stats.t.sf(abs((b.mean() - a.mean()) / se), z.size - 2)
+
+    iccs = [0.0, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2]
+    fp_c, fp_s = [], []
+    for icc in iccs:
+        hc = hs = 0
+        for _ in range(800):
+            z, cl, y = draw(20, 200, icc)
+            hc += customer_p(z, cl, y) < 0.05; hs += store_p(z, cl, y) < 0.05
+        fp_c.append(hc / 800); fp_s.append(hs / 800)
+
+    fig, ax = plt.subplots()
+    ax.plot(iccs, fp_c, marker="o", color=P[1], lw=2, label="Customers treated as independent")
+    ax.plot(iccs, fp_s, marker="o", color=P[0], lw=2, label="Test on store means (20 stores)")
+    ax.axhline(0.05, color=P[3], lw=1, ls="--", label="Nominal 5 percent")
+    ax.set_xlabel("intraclass correlation (share of variance between stores)")
+    ax.set_ylabel("A/A experiments declared significant")
+    ax.set_ylim(0, 1.0)
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_title("Randomise stores, analyse customers, and the test breaks")
+    ax.legend(loc="center right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("marketplace_interference_lift",
+        "Estimated lift from a treatment that raises buyers' purchase "
+        "intent from 10 to 12 percent, against the daily inventory of a "
+        "shared marketplace with 2,000 buyers a day, for a buyer-level "
+        "split and for randomisation of separate markets, alongside the "
+        "true lift from rolling the treatment out to everyone. When "
+        "inventory is ample all three agree at about 20 percent; as stock "
+        "binds, the true lift falls toward zero while the buyer-level "
+        "estimate stays near 20 percent, because treated buyers take units "
+        "the control buyers would have bought.")
+def marketplace_interference_lift():
+    from matplotlib.ticker import PercentFormatter
+    r = np.random.default_rng(0)
+    buyers, pc, pt = 2000, 0.10, 0.12
+
+    def sales(intents, inventory):
+        order = r.permutation(len(intents))
+        served = np.cumsum(intents[order]) <= inventory
+        sold = np.zeros(len(intents), bool); sold[order] = intents[order] & served
+        return sold
+
+    def experiment(inventory, design, days=20, n_markets=20):
+        tc = tt = ec = et = 0.0
+        for d in range(days):
+            ic = r.random(buyers) < pc; it = r.random(buyers) < pt
+            tc += min(ic.sum(), inventory); tt += min(it.sum(), inventory)
+            if design == "buyer":
+                z = r.integers(0, 2, buyers); s = sales(np.where(z == 1, it, ic), inventory)
+                et += s[z == 1].sum() / (z == 1).mean(); ec += s[z == 0].sum() / (z == 0).mean()
+            else:
+                zm = np.repeat([0, 1], n_markets // 2); r.shuffle(zm)
+                for m in range(n_markets):
+                    s = sales(r.random(buyers) < (pt if zm[m] else pc), inventory).sum()
+                    if zm[m]: et += s / zm.sum()
+                    else: ec += s / (n_markets - zm.sum())
+        return et / ec - 1, tt / tc - 1
+
+    invs = [320, 280, 250, 230, 215, 205, 200, 195]
+    buyer, market, truth = [], [], []
+    for inv in invs:
+        b = np.array([experiment(inv, "buyer") for _ in range(60)])
+        m = np.array([experiment(inv, "market") for _ in range(60)])
+        buyer.append(b[:, 0].mean()); market.append(m[:, 0].mean()); truth.append(b[:, 1].mean())
+
+    fig, ax = plt.subplots()
+    ax.plot(invs, buyer, marker="o", color=P[1], lw=2, label="Buyer-level split inside one shared market")
+    ax.plot(invs, market, marker="o", color=P[2], lw=2, label="Separate cities randomised (20 cities, 10 treated)")
+    ax.plot(invs, truth, color=P[0], lw=2.4, label="True lift from rolling out to everyone")
+    ax.invert_xaxis()
+    ax.set_xlabel("daily inventory (units); control demand is 200, treated demand 240")
+    ax.set_ylabel("estimated lift in sales")
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_title("Shared inventory makes the buyer-level test overstate the lift")
+    ax.legend(loc="center left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("small_count_interval_coverage",
+        "Actual coverage of nominal 95 percent confidence intervals for a "
+        "proportion against the expected number of events in the sample, "
+        "for the Wald, Wilson and exact Clopper-Pearson intervals, with "
+        "a true rate of half a percent. The Wald interval's coverage "
+        "collapses below two expected events, where it is often the empty "
+        "interval at zero; Wilson holds near the nominal level and the "
+        "exact interval stays above it.")
+def small_count_interval_coverage():
+    from matplotlib.ticker import PercentFormatter
+    from scipy import stats
+    r = np.random.default_rng(0)
+    z = stats.norm.ppf(0.975)
+
+    def wald(k, n):
+        p = k / n; h = z * np.sqrt(p * (1 - p) / n)
+        return max(0, p - h), min(1, p + h)
+
+    def wilson(k, n):
+        p = k / n; c = (p + z ** 2 / (2 * n)) / (1 + z ** 2 / n)
+        h = z * np.sqrt(p * (1 - p) / n + z ** 2 / (4 * n ** 2)) / (1 + z ** 2 / n)
+        return max(0, c - h), min(1, c + h)
+
+    def exact(k, n):
+        lo = 0.0 if k == 0 else stats.beta.ppf(0.025, k, n - k + 1)
+        hi = 1.0 if k == n else stats.beta.ppf(0.975, k + 1, n - k)
+        return lo, hi
+
+    p = 0.005
+    ns = [100, 200, 400, 800, 1600, 3200, 6400]
+    cov = {"Wald": [], "Wilson": [], "Exact": []}
+    for n in ns:
+        ks = r.binomial(n, p, 4000)
+        for name, fn in (("Wald", wald), ("Wilson", wilson), ("Exact", exact)):
+            cache = {}
+            hits = 0
+            for k in ks:
+                if k not in cache:
+                    cache[k] = fn(int(k), n)
+                lo, hi = cache[k]; hits += lo <= p <= hi
+            cov[name].append(hits / 4000)
+    expected = [n * p for n in ns]
+
+    fig, ax = plt.subplots()
+    ax.plot(expected, cov["Wald"], marker="o", color=P[1], lw=2, label="Wald (normal approximation)")
+    ax.plot(expected, cov["Wilson"], marker="o", color=P[0], lw=2, label="Wilson score")
+    ax.plot(expected, cov["Exact"], marker="o", color=P[2], lw=2, label="Exact (Clopper-Pearson)")
+    ax.axhline(0.95, color=P[3], lw=1, ls="--", label="Nominal 95 percent")
+    ax.set_xscale("log")
+    ax.set_xticks(expected)
+    ax.set_xticklabels([f"{e:g}" for e in expected])
+    ax.set_xlabel("expected number of events in the sample (true rate 0.5 percent)")
+    ax.set_ylabel("share of intervals containing the true rate")
+    ax.set_ylim(0, 1.02)
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_title("Below a handful of events, the textbook interval fails")
+    ax.legend(loc="lower right")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
