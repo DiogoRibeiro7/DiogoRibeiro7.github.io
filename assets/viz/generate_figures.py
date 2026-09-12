@@ -2793,6 +2793,206 @@ def annotator_noise_ceiling():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("sequential_boundaries",
+        "Critical z values across seven looks at an experiment: the naive "
+        "1.96 applied at every look, a Pocock boundary that spends 5 percent "
+        "at a flat 2.49, an O'Brien-Fleming boundary that starts above 5 and "
+        "descends to 2.06, and the boundary implied by a mixture sequential "
+        "rule evaluated on every one of the twenty-eight days, which starts "
+        "above five, falls steeply through the first week and then flattens "
+        "near three for the rest of the test.")
+def sequential_boundaries():
+    from scipy import stats as st
+    from scipy.signal import fftconvolve
+
+    def crossing_prob(bounds, step=0.01, span=16.0):
+        x = np.arange(-span, span + step, step)
+        kernel = np.exp(-x ** 2 / 2) / np.sqrt(2 * np.pi) * step
+        f = kernel.copy()
+        total = 0.0
+        for k, b in enumerate(bounds, start=1):
+            inside = np.abs(x) < b * np.sqrt(k)
+            total += f[~inside].sum()
+            f = f * inside
+            if k < len(bounds):
+                f = fftconvolve(f, kernel, mode="same")
+        return total
+
+    def calibrate(shape, target=0.05):
+        lo, hi = 1.0, 8.0
+        for _ in range(50):
+            mid = (lo + hi) / 2
+            if crossing_prob(mid * shape) > target:
+                lo = mid
+            else:
+                hi = mid
+        return (lo + hi) / 2 * shape
+
+    k = 7
+    looks = np.arange(1, k + 1)
+    pocock = calibrate(np.ones(k))
+    obf = calibrate(np.sqrt(k / looks))
+
+    # The mixture rule rejects when its likelihood ratio passes 1/alpha; solving
+    # that for the z score gives a boundary that moves with the sample size.
+    sigma, per_day, days, tau, alpha = 10.0, 225, 28, 0.5, 0.05
+    n = per_day * np.arange(1, days + 1)
+    v = 2 * sigma ** 2 / n
+    z_mix = np.sqrt(2 * (v + tau ** 2) / tau ** 2
+                    * (np.log(1 / alpha) + 0.5 * np.log((v + tau ** 2) / v)))
+    frac_mix = np.arange(1, days + 1) / days
+
+    fig, ax = plt.subplots()
+    ax.plot(looks / k, np.full(k, st.norm.ppf(0.975)), marker="o", color=P[3], lw=2,
+            label="Naive 0.05 at every look")
+    ax.plot(looks / k, pocock, marker="s", color=P[2], lw=2,
+            label=f"Pocock, flat {pocock[0]:.2f}")
+    ax.plot(looks / k, obf, marker="D", color=P[0], lw=2,
+            label="O'Brien-Fleming")
+    ax.plot(frac_mix, z_mix, color=P[1], lw=2, ls="--",
+            label="Mixture rule, every day")
+    ax.set_xlabel("fraction of the planned sample collected")
+    ax.set_ylabel("critical z value to stop")
+    ax.set_ylim(1.5, 7.0)
+    ax.set_title("What each rule demands before it lets you stop")
+    ax.legend(loc="upper right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("trigger_dilution_cost",
+        "Users needed per arm for 80 percent power against the trigger rate, "
+        "on log scales, for an analysis of all users and an analysis "
+        "restricted to triggered users. The all-user requirement grows as the "
+        "inverse square of the trigger rate and the triggered-only "
+        "requirement as the inverse, so the gap widens from under twofold at "
+        "a 50 percent trigger rate to more than twentyfold at 2 percent.")
+def trigger_dilution_cost():
+    from matplotlib.ticker import PercentFormatter
+    from scipy import stats as st
+
+    mu_non, sd_non = 18.0, 9.0
+    mu_trig, sd_trig = 30.0, 14.0
+    truth = mu_trig * 0.06
+    zs = (st.norm.ppf(0.975) + st.norm.ppf(0.8)) ** 2
+
+    p = np.geomspace(0.01, 0.6, 40)
+    mean_all = p * mu_trig + (1 - p) * mu_non
+    var_all = (p * (sd_trig ** 2 + mu_trig ** 2)
+               + (1 - p) * (sd_non ** 2 + mu_non ** 2) - mean_all ** 2)
+    n_all = 2 * var_all * zs / (p * truth) ** 2
+    n_trig = 2 * sd_trig ** 2 * zs / truth ** 2 / p
+
+    fig, ax = plt.subplots()
+    ax.plot(p, n_all, color=P[1], lw=2, label="All users, diluted effect")
+    ax.plot(p, n_trig, color=P[0], lw=2, label="Triggered users only")
+    for rate in (0.02, 0.08, 0.20):
+        i = np.argmin(np.abs(p - rate))
+        ax.plot([p[i], p[i]], [n_trig[i], n_all[i]], color=hs.INK_MUTED, lw=1, ls=":")
+        ax.annotate(f"{n_all[i] / n_trig[i]:.0f}x", (p[i], np.sqrt(n_all[i] * n_trig[i])),
+                    color=hs.INK_SECONDARY, fontsize=9, ha="left",
+                    xytext=(4, 0), textcoords="offset points")
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+    ax.set_xticks([0.01, 0.02, 0.05, 0.10, 0.20, 0.50])
+    ax.xaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_xlabel("share of users who reach the feature")
+    ax.set_ylabel("users per arm for 80% power")
+    ax.set_title("What it costs to measure a feature on everybody")
+    ax.legend(loc="upper right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("switchback_period_length",
+        "Carryover bias and the spread of the estimate against switchback "
+        "period length, in percentage points of a 3 percent true effect, on a "
+        "log scale. Lengthening the period from fifteen minutes to six hours "
+        "divides the bias by more than twenty and multiplies the spread by "
+        "four, "
+        "so the error that dominates is the one that short periods reduce.")
+def switchback_period_length():
+    from scipy.signal import lfilter
+
+    minutes = 14 * 1440
+    rate, value, sd_order = 3.0, 20.0, 8.0
+    rho, sd_state = 0.98, 0.05
+    carry_min, carry_frac, lift = 8, 0.6, 0.03
+    t = np.arange(minutes)
+    season = 1 + 0.35 * np.sin(2 * np.pi * t / 1440 - 1.2)
+    lam = season * rate
+
+    def effect(z, with_carry):
+        eff = np.where(z, lift, 0.0)
+        if with_carry:
+            for j in np.flatnonzero((~z) & np.roll(z, 1)):
+                eff[j:j + carry_min] = np.maximum(eff[j:j + carry_min], carry_frac * lift)
+        return eff
+
+    def period_estimate(period, z, mu, n, total, burn):
+        keep = (np.arange(minutes) % period) >= burn
+        pid = np.repeat(np.arange(minutes // period), period)
+        pn = np.bincount(pid[keep], weights=n[keep], minlength=minutes // period)
+        ps = np.bincount(pid[keep], weights=total[keep], minlength=minutes // period)
+        pm = ps / np.maximum(pn, 1e-9)
+        pz = z[::period]
+        return pm[pz].mean() / pm[~pz].mean() - 1
+
+    periods = [15, 30, 60, 120, 180, 360]
+    bias, spread, spread_burn = [], [], []
+    for period in periods:
+        rng = np.random.default_rng(11)
+        # Bias: the same assignments with and without carryover, no sampling noise.
+        paired = []
+        for _ in range(60):
+            z = np.repeat(rng.random(minutes // period) < 0.5, period)
+            out = []
+            for with_carry in (True, False):
+                mo = value * season * (1 + effect(z, with_carry))
+                w = lam
+                out.append(np.average(mo[z], weights=w[z])
+                           / np.average(mo[~z], weights=w[~z]) - 1)
+            paired.append(out[0] - out[1])
+        bias.append(np.mean(paired))
+        # Spread: full simulation, with and without a burn-in.
+        est, est_burn = [], []
+        for _ in range(120):
+            eps = rng.normal(0, sd_state * np.sqrt(1 - rho ** 2), minutes)
+            state = lfilter([1.0], [1.0, -rho], eps)
+            mu = value * season * (1 + state)
+            z = np.repeat(rng.random(minutes // period) < 0.5, period)
+            mu_obs = mu * (1 + effect(z, True))
+            n = rng.poisson(lam)
+            total = rng.normal(n * mu_obs, sd_order * np.sqrt(np.maximum(n, 1e-9)))
+            est.append(period_estimate(period, z, mu_obs, n, total, 0))
+            est_burn.append(period_estimate(period, z, mu_obs, n, total, carry_min))
+        spread.append(np.std(est))
+        spread_burn.append(np.std(est_burn))
+
+    bias = np.abs(np.array(bias)) * 100
+    spread = np.array(spread) * 100
+    spread_burn = np.array(spread_burn) * 100
+
+    fig, ax = plt.subplots()
+    ax.plot(periods, spread, marker="s", color=P[0], lw=2,
+            label="Spread of the estimate")
+    ax.plot(periods, spread_burn, marker="^", color=P[2], lw=2, ls="--",
+            label="Spread with an 8-minute burn-in")
+    ax.plot(periods, bias, marker="o", color=P[1], lw=2, label="Carryover bias")
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+    ax.set_xticks(periods)
+    ax.set_xticklabels([f"{p} m" if p < 60 else f"{p // 60} h" for p in periods])
+    ax.set_yticks([0.02, 0.05, 0.1, 0.25, 0.5, 1, 2.5, 5, 10])
+    ax.set_yticklabels(["0.02", "0.05", "0.1", "0.25", "0.5", "1", "2.5", "5", "10"])
+    ax.set_xlabel("length of each switchback period")
+    ax.set_ylabel("error in percentage points, true effect 3.0")
+    ax.set_title("Long periods buy a small bias with a large variance")
+    ax.legend(loc="center left")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
