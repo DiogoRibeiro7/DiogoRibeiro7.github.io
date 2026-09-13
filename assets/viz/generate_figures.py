@@ -3407,6 +3407,138 @@ def intermittent_forecast_bias():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("negative_control_tracking",
+        "Bias in the real outcome and signal on the negative control, against "
+        "how strongly the hidden variable affects the outcome. The control's "
+        "signal stays flat because its own exposure is fixed, so the two "
+        "agree only where the strengths coincide; to the left the control "
+        "overstates the bias and to the right it understates it.")
+def negative_control_tracking():
+    rng = np.random.default_rng(67)
+    n, effect, conf_n = 30000, 0.30, 0.60
+
+    def run(conf_y):
+        u = rng.normal(0, 1, n)
+        adopt = rng.random(n) < 1 / (1 + np.exp(-(u - 0.5)))
+        y = 5 + conf_y * u + effect * adopt + rng.normal(0, 1, n)
+        nc = 5 + conf_n * u + rng.normal(0, 1, n)
+        bias = (y[adopt].mean() - y[~adopt].mean()) - effect
+        signal = nc[adopt].mean() - nc[~adopt].mean()
+        return bias, signal
+
+    strengths = np.linspace(0.0, 1.6, 17)
+    biases, signals = [], []
+    for s in strengths:
+        b, g = np.mean([run(s) for _ in range(12)], axis=0)
+        biases.append(b)
+        signals.append(g)
+
+    fig, ax = plt.subplots()
+    ax.plot(strengths, biases, marker="o", color=P[1], lw=2,
+            label="Bias in the real outcome")
+    ax.plot(strengths, signals, marker="s", color=P[0], lw=2,
+            label="Signal on the negative control")
+    ax.axvline(conf_n, color=hs.INK_MUTED, lw=1.2, ls=":")
+    ax.annotate("the control's own exposure", (conf_n, max(biases) * 0.92),
+                color=hs.INK_SECONDARY, fontsize=9, ha="left", va="top",
+                xytext=(6, 0), textcoords="offset points")
+    ax.axhline(0, color=hs.BASELINE, lw=1)
+    ax.set_xlabel("how strongly the hidden variable affects the outcome")
+    ax.set_ylabel("difference between adopters and others")
+    ax.set_title("The control announces the bias without measuring it")
+    ax.legend(loc="upper left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("empirical_bayes_shrinkage",
+        "Raw and shrunk estimates against the true effect for the positive "
+        "significant results of one programme of two hundred experiments, "
+        "with the diagonal marking perfect agreement. The raw points sit well "
+        "above the line, most of them measured by the least precise tests, "
+        "and the shrunk points land close to it.")
+def empirical_bayes_shrinkage():
+    from matplotlib.ticker import PercentFormatter
+    rng = np.random.default_rng(71)
+    k, tau = 4000, 0.010
+    truth = rng.normal(0.0, tau, k)
+    se = rng.uniform(0.004, 0.020, k)
+    est = truth + rng.normal(0, se)
+    tau_hat = np.sqrt(max(est.var(ddof=1) - np.mean(se ** 2), 1e-12))
+    b = tau_hat ** 2 / (tau_hat ** 2 + se ** 2)
+    shrunk = b * est
+    win = est > 1.96 * se
+
+    fig, ax = plt.subplots()
+    lim = 0.05
+    ax.plot([-0.005, lim], [-0.005, lim], color=hs.INK_MUTED, lw=1.4, ls="--",
+            label="Perfect agreement")
+    ax.scatter(truth[win], est[win], s=14, alpha=0.45, color=P[1],
+               label="Raw estimate")
+    ax.scatter(truth[win], shrunk[win], s=14, alpha=0.45, color=P[0],
+               label="Shrunk estimate")
+    ax.xaxis.set_major_formatter(PercentFormatter(1.0, decimals=1))
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=1))
+    ax.set_xlim(-0.005, 0.045)
+    ax.set_ylim(-0.005, lim)
+    ax.set_xlabel("true effect")
+    ax.set_ylabel("reported effect")
+    ax.set_title("Winners reported raw, and the same winners shrunk")
+    ax.legend(loc="upper left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("weighting_effective_sample",
+        "Two shares against how unevenly the groups responded: the effective "
+        "sample size as a fraction of respondents, and the bias that survives "
+        "weighting as a fraction of the bias before it. Precision falls from "
+        "97 percent to under two thirds as the weights spread out, while the "
+        "surviving bias stays within a few percent of zero throughout.")
+def weighting_effective_sample():
+    from matplotlib.ticker import PercentFormatter
+    rng = np.random.default_rng(73)
+    pop = 120_000
+    ages = np.array([0.28, 0.27, 0.25, 0.20])
+    regions = np.array([0.50, 0.30, 0.20])
+    score = np.array([[6.0, 6.4, 6.8], [6.6, 7.0, 7.4],
+                      [7.2, 7.6, 8.0], [7.8, 8.2, 8.6]])
+    age = rng.choice(4, pop, p=ages)
+    region = rng.choice(3, pop, p=regions)
+    y = score[age, region] + rng.normal(0, 1.2, pop)
+    truth = y.mean()
+
+    slopes = np.linspace(0.05, 1.6, 16)
+    eff, left, ratio = [], [], []
+    for slope in slopes:
+        s = rng.random(pop) < 1 / (1 + np.exp(-(-1.6 + slope * age)))
+        a_s = age[s]
+        w = np.zeros(s.sum())
+        for c, share in enumerate(ages):
+            m = a_s == c
+            if m.sum():
+                w[m] = share / (m.sum() / m.size)
+        raw_bias = y[s].mean() - truth
+        eff.append(w.sum() ** 2 / np.sum(w ** 2) / s.sum())
+        left.append((np.average(y[s], weights=w) - truth) / raw_bias)
+        ratio.append(w.max() / w.min())
+
+    fig, ax = plt.subplots()
+    ax.plot(ratio, eff, marker="o", color=P[0], lw=2,
+            label="Effective sample, share of respondents")
+    ax.plot(ratio, left, marker="s", color=P[1], lw=2,
+            label="Bias surviving, share of the unweighted bias")
+    ax.axhline(0, color=hs.BASELINE, lw=1)
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_ylim(-0.1, 1.05)
+    ax.set_xlabel("largest weight divided by smallest")
+    ax.set_ylabel("share")
+    ax.set_title("Weighting removes the bias and spends precision doing it")
+    ax.legend(loc="center right")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
