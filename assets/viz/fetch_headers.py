@@ -10,10 +10,12 @@ Run from this directory:
     python fetch_headers.py            # every query below
     python fetch_headers.py circuit    # only queries whose slug contains "circuit"
 
-Each query yields at most one image: the first search hit that is a JPEG or
-PNG at least 1600 pixels wide, landscape, and free of the words that mark
-scans and documents. The image is downloaded at 1600 pixels wide,
-centre-cropped to 16:9 and written as photo-<slug>.jpg.
+Each query yields at most one image: the first search hit whose rendered
+thumbnail is at least 1600 pixels wide, landscape, and free of the words that
+mark scans and documents. Bitmap queries prefer JPEG/PNG originals; queries
+prefixed with `any:` can also use Commons-rendered SVG thumbnails. The image is
+downloaded at 1600 pixels wide, centre-cropped to 16:9 and written as
+photo-<slug>.jpg.
 """
 import io
 import json
@@ -63,23 +65,49 @@ QUERIES = {
     "punchcards":  "punched cards computer",
     "calculator":  "scientific calculator keys",
     "data-science-dashboard": "analytics dashboard data visualization",
+    "data-science-air-quality": "air quality sensor big data visualization",
+    "data-science-clustering": "Mapa skupień stacji monitorujących zanieczyszczenia powietrza w Polsce",
+    "data-science-heatmap": "heat map data visualization",
     "data-science-ml-pipeline": "machine learning pipeline production",
+    "data-science-nasa-land-motion": "NASA land motion data visualization",
     "data-science-network": "social network analysis visualization",
+    "data-science-neural-network": "neural network visualization",
     "data-science-openalex": "open data visualization",
+    "data-science-parallel-coordinates": "parallel coordinates data visualization",
     "data-science-street-trees": "data visualization street trees",
+    "data-science-svm-iris": "SVM Iris dataset visualization",
     "data-science-theater": "data visualization wall display",
     "statistics-bell-curve": "bell curve normal distribution",
     "statistics-boxplots": "skew quartiles box plots",
+    "statistics-chi-square": "any:chi square distribution statistics svg",
+    "statistics-clt-binomial": "any:central limit theorem statistics svg",
+    "statistics-confidence-intervals": "any:confidence interval statistics svg",
     "statistics-dice-coins": "probability distributions casting two dice or 10 coins",
+    "statistics-ecdf": "any:empirical distribution function statistics svg",
+    "statistics-f-test": "any:hypothesis testing statistics svg",
+    "statistics-kernel-smoothing": "any:kernel density estimation statistics svg",
+    "statistics-law-large-numbers": "any:law of large numbers statistics svg",
+    "statistics-logistic-pdf": "PDF of H1 Logistic and H2",
+    "statistics-mahalanobis": "covariance ellipse statistics svg",
     "statistics-normal-distribution": "incategory:\"Normal distribution\"",
+    "statistics-overlapping-cis": "Interpretation of overlapping CIs",
     "statistics-regression-errors": "independence errors assumption linear regressions",
     "statistics-sampling-election": "election samples sampling distribution",
+    "statistics-scatter-correlation": "any:scatter plot correlation statistics svg",
+    "statistics-student-t": "any:student t distribution statistics svg",
+    "statistics-time-series-debt": "time series statistical chart",
     "mathematics-cryptography-blackboard": "mathematics cryptography blackboard",
     "mathematics-fractal-grid": "3d fractal grid mathematics",
     "mathematics-geometry-symmetry": "geometry compass mathematics",
+    "mathematics-graph-theory": "any:graph theory mathematics svg",
     "mathematics-heesch-solid": "heesch number 3d solid geometry",
+    "mathematics-julia-set": "julia set fractal mathematics",
+    "mathematics-klein-quartic": "A Klein Quartic embedding in 3D",
     "mathematics-lecture-blackboard": "mathematics lecture blackboard",
+    "mathematics-mobius-strip": "mobius strip mathematics",
+    "mathematics-penrose-tiling": "any:penrose tiling mathematics svg",
     "mathematics-polyhedra": "geometric solids mathematics",
+    "mathematics-voronoi": "any:voronoi tessellation svg",
 }
 
 
@@ -90,8 +118,17 @@ def get(params):
         return json.load(r)
 
 
+def console_text(text):
+    encoding = sys.stdout.encoding or "utf-8"
+    return text.encode(encoding, errors="replace").decode(encoding)
+
+
 def candidates(query, limit=25):
-    d = get({"action": "query", "generator": "search", "gsrsearch": f"filetype:bitmap {query}",
+    if query.startswith("any:"):
+        search = query.removeprefix("any:").strip()
+    else:
+        search = f"filetype:bitmap {query}"
+    d = get({"action": "query", "generator": "search", "gsrsearch": search,
              "gsrnamespace": 6, "gsrlimit": limit, "prop": "imageinfo",
              "iiprop": "url|size|mime|extmetadata", "iiurlwidth": 1600})
     pages = d.get("query", {}).get("pages", {})
@@ -101,14 +138,19 @@ def candidates(query, limit=25):
         lic = (em.get("LicenseShortName", {}).get("value") or "").strip()
         yield {
             "title": p["title"], "width": ii["width"], "height": ii["height"], "mime": ii.get("mime", ""),
+            "thumbwidth": ii.get("thumbwidth") or ii["width"], "thumbheight": ii.get("thumbheight") or ii["height"],
             "licence": lic, "author": re.sub(r"<[^>]+>", "", em.get("Artist", {}).get("value") or "").strip(),
             "thumb": ii.get("thumburl"), "page": ii.get("descriptionurl"),
         }
 
 
 def acceptable(c):
-    ratio = c["width"] / max(c["height"], 1)
-    return (c["mime"] in ("image/jpeg", "image/png") and c["width"] >= 1600 and 1.3 <= ratio <= 2.4
+    if c["mime"] == "image/svg+xml":
+        width, height = c["thumbwidth"], c["thumbheight"]
+    else:
+        width, height = c["width"], c["height"]
+    ratio = width / max(height, 1)
+    return (c["mime"] in ("image/jpeg", "image/png", "image/svg+xml") and width >= 1600 and 1.3 <= ratio <= 2.5
             and (c["licence"] in FREE or c["licence"] in ATTRIBUTION)
             and not BAD_TITLE.search(c["title"]) and c["thumb"])
 
@@ -182,9 +224,9 @@ def main(filters):
         c = fetch(slug, query)
         if c:
             picks[c["file"]] = c
-            print(f"  {c['file']:24} {c['width']}x{c['height']}  {c['licence']:14} {c['title'][:50]}")
+            print(f"  {c['file']:24} {c['width']}x{c['height']}  {c['licence']:14} {console_text(c['title'][:50])}")
         else:
-            print(f"  {slug:24} no acceptable file for '{query}'")
+            print(f"  {slug:24} no acceptable file for '{console_text(query)}'")
     write_credits(sorted(picks.values(), key=lambda c: c["file"]))
     print(f"\n{len(picks)} images -> {OUTDIR}; credits in {CREDITS.name}")
 

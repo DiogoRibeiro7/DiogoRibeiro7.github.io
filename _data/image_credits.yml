@@ -24,31 +24,66 @@
   author: "Joël van der Loo"
   licence: "CC BY-SA 4.0"
   source: "https://commons.wikimedia.org/wiki/File:Duga-1_radar_data_center_inside_empty_server_racks_2018.jpg"
+- file: photo-data-science-air-quality.jpg
+  title: "Air Quality Sensor Provides Big Data for Visualization.jpg"
+  author: "Intel Free Press"
+  licence: "CC BY-SA 2.0"
+  source: "https://commons.wikimedia.org/wiki/File:Air_Quality_Sensor_Provides_Big_Data_for_Visualization.jpg"
+- file: photo-data-science-clustering.jpg
+  title: "Mapa skupień stacji monitorujących zanieczyszczenia powietrza w Polsce.jpg"
+  author: "unknown"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Mapa_skupie%C5%84_stacji_monitoruj%C4%85cych_zanieczyszczenia_powietrza_w_Polsce.jpg"
 - file: photo-data-science-dashboard.jpg
   title: "Oracle Analytics Cloud Dashboard by Benjamin Arnulf presented by Larry Ellison.jpg"
   author: "GeneralAB13"
   licence: "CC BY-SA 4.0"
   source: "https://commons.wikimedia.org/wiki/File:Oracle_Analytics_Cloud_Dashboard_by_Benjamin_Arnulf_presented_by_Larry_Ellison.jpg"
+- file: photo-data-science-heatmap.jpg
+  title: "ECOSTRESS Captures Paris During Europe Heat Wave (PIA26190).jpg"
+  author: "NASA/JPL-Caltech"
+  licence: "Public domain"
+  source: "https://commons.wikimedia.org/wiki/File:ECOSTRESS_Captures_Paris_During_Europe_Heat_Wave_(PIA26190).jpg"
 - file: photo-data-science-ml-pipeline.jpg
   title: "Machine Learning Pipeline in Production.png"
   author: "Dinohund"
   licence: "CC BY-SA 4.0"
   source: "https://commons.wikimedia.org/wiki/File:Machine_Learning_Pipeline_in_Production.png"
+- file: photo-data-science-nasa-land-motion.jpg
+  title: "NASA Portal Details Land Motion Across North America (PIA26494 figA).jpg"
+  author: "Alaska Satellite Facility"
+  licence: "Public domain"
+  source: "https://commons.wikimedia.org/wiki/File:NASA_Portal_Details_Land_Motion_Across_North_America_(PIA26494_figA).jpg"
 - file: photo-data-science-network.jpg
   title: "Social Network Visualization.png"
   author: "Martin Grandjean"
   licence: "CC BY-SA 4.0"
   source: "https://commons.wikimedia.org/wiki/File:Social_Network_Visualization.png"
+- file: photo-data-science-neural-network.jpg
+  title: "Visualizing Artificial Neural Networks (ANNs) with python library-ANN Visualizer.jpg"
+  author: "Serenechan3"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Visualizing_Artificial_Neural_Networks_(ANNs)_with_python_library-ANN_Visualizer.jpg"
 - file: photo-data-science-openalex.jpg
   title: "Academic works by discipline over time (visualization of studies data in OpenAlex).png"
   author: "Shubhanshu Mishra made the first version which I then modified and the latest version is made anew"
   licence: "CC BY 4.0"
   source: "https://commons.wikimedia.org/wiki/File:Academic_works_by_discipline_over_time_(visualization_of_studies_data_in_OpenAlex).png"
+- file: photo-data-science-parallel-coordinates.jpg
+  title: "Mtcars Parallel Coordinates & Categories.png"
+  author: "Kakomat"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Mtcars_Parallel_Coordinates_%26_Categories.png"
 - file: photo-data-science-street-trees.jpg
   title: "Data Visualization of Street Trees.jpg"
   author: "Intel Free Press"
   licence: "CC BY-SA 2.0"
   source: "https://commons.wikimedia.org/wiki/File:Data_Visualization_of_Street_Trees.jpg"
+- file: photo-data-science-svm-iris.jpg
+  title: "SVM - Iris dataset.png"
+  author: "Diego Mariano"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:SVM_-_Iris_dataset.png"
 - file: photo-data-science-theater.jpg
   title: "Data Exploration Theater 1 (4642523882).jpg"
   author: "NASA Goddard Space Flight Center from Greenbelt, MD, USA"
@@ -109,21 +144,51 @@
   author: "Sergio Fabris"
   licence: "CC BY-SA 4.0"
   source: "https://commons.wikimedia.org/wiki/File:Mathematik_vs_Geometry_Symmetry_d_Teilung_nach_fabris.jpg"
+- file: photo-mathematics-graph-theory.jpg
+  title: "Cover - Graph Theory Defined, v1.svg"
+  author: "Etamar Laron"
+  licence: "CC BY-SA 3.0"
+  source: "https://commons.wikimedia.org/wiki/File:Cover_-_Graph_Theory_Defined,_v1.svg"
 - file: photo-mathematics-heesch-solid.jpg
   title: "3D solid with Heesch number 3.png"
   author: "Jens G. Maier"
   licence: "CC BY-SA 4.0"
   source: "https://commons.wikimedia.org/wiki/File:3D_solid_with_Heesch_number_3.png"
+- file: photo-mathematics-julia-set.jpg
+  title: "Spiralarm Julia-Menge -0,5R 0I 01072019 16K.jpg"
+  author: "PantheraLeo1359531"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Spiralarm_Julia-Menge_-0,5R_0I_01072019_16K.jpg"
+- file: photo-mathematics-klein-quartic.jpg
+  title: "A Klein Quartic embedding in 3D.png"
+  author: "Ferkel"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:A_Klein_Quartic_embedding_in_3D.png"
 - file: photo-mathematics-lecture-blackboard.jpg
   title: "A.A.Karatsuba on lecture.jpg"
   author: "Steklov institute"
   licence: "CC BY-SA 3.0"
   source: "https://commons.wikimedia.org/wiki/File:A.A.Karatsuba_on_lecture.jpg"
+- file: photo-mathematics-mobius-strip.jpg
+  title: "Möbius Strip.jpg"
+  author: "David Benbennick"
+  licence: "CC BY-SA 2.0"
+  source: "https://commons.wikimedia.org/wiki/File:M%C3%B6bius_Strip.jpg"
+- file: photo-mathematics-penrose-tiling.jpg
+  title: "SSS Penrose tiling, 7iter, walls-loops.svg"
+  author: "Incnis Mrsi"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:SSS_Penrose_tiling,_7iter,_walls-loops.svg"
 - file: photo-mathematics-polyhedra.jpg
   title: "Revolução de poliedros 01.jpg"
   author: "Exhibit made by MockUp Company, video by Rodrigo Tetsuo Argenton"
   licence: "CC BY-SA 4.0"
   source: "https://commons.wikimedia.org/wiki/File:Revolu%C3%A7%C3%A3o_de_poliedros_01.jpg"
+- file: photo-mathematics-voronoi.jpg
+  title: "Poligonos Voronoi.svg"
+  author: "Emilio Gomez Fernandez"
+  licence: "CC BY-SA 3.0"
+  source: "https://commons.wikimedia.org/wiki/File:Poligonos_Voronoi.svg"
 - file: photo-microscope.jpg
   title: "Belgrad - Museum of Science and Technology - Electron microscope ARL.jpg"
   author: "Александр Сигачёв"
@@ -174,16 +239,66 @@
   author: "SGDWN"
   licence: "CC BY-SA 4.0"
   source: "https://commons.wikimedia.org/wiki/File:Skew_with_quartiles_and_box_plots.png"
+- file: photo-statistics-chi-square.jpg
+  title: "Cumulative chi-Square distribution validified.svg"
+  author: "Geek3"
+  licence: "CC BY 3.0"
+  source: "https://commons.wikimedia.org/wiki/File:Cumulative_chi-Square_distribution_validified.svg"
+- file: photo-statistics-clt-binomial.jpg
+  title: "CLTBinomConvergence.svg"
+  author: "Sinner1"
+  licence: "CC BY-SA 3.0"
+  source: "https://commons.wikimedia.org/wiki/File:CLTBinomConvergence.svg"
+- file: photo-statistics-confidence-intervals.jpg
+  title: "Confidence-interval.svg"
+  author: "ARAKI Satoru"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Confidence-interval.svg"
 - file: photo-statistics-dice-coins.jpg
   title: "Probability distributions casting two dice or 10 coins.png"
   author: "Nø"
   licence: "CC0"
   source: "https://commons.wikimedia.org/wiki/File:Probability_distributions_casting_two_dice_or_10_coins.png"
+- file: photo-statistics-ecdf.jpg
+  title: "Shapiro-Wilk Simulated CDF for n = 5, 10, 15, ..., 50.svg"
+  author: "Protonk"
+  licence: "CC BY-SA 3.0"
+  source: "https://commons.wikimedia.org/wiki/File:Shapiro-Wilk_Simulated_CDF_for_n_%3D_5,_10,_15,_...,_50.svg"
+- file: photo-statistics-f-test.jpg
+  title: "F-test plot.svg"
+  author: "Gase456"
+  licence: "CC BY 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:F-test_plot.svg"
+- file: photo-statistics-kernel-smoothing.jpg
+  title: "KernelSmoothing.svg"
+  author: "طاها"
+  licence: "CC BY-SA 3.0"
+  source: "https://commons.wikimedia.org/wiki/File:KernelSmoothing.svg"
+- file: photo-statistics-law-large-numbers.jpg
+  title: "LawOfLargeNumbersCauchy.svg"
+  author: "ARAKI Satoru"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:LawOfLargeNumbersCauchy.svg"
+- file: photo-statistics-logistic-pdf.jpg
+  title: "PDF of H1 Logistic and H2.png"
+  author: "Dwilus"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:PDF_of_H1_Logistic_and_H2.png"
+- file: photo-statistics-mahalanobis.jpg
+  title: "Mahalanobis-distance-location-and-scatter-methods.png"
+  author: "Tretherington"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Mahalanobis-distance-location-and-scatter-methods.png"
 - file: photo-statistics-normal-distribution.jpg
   title: "Normalverteilung.png"
   author: "self created by Marcus Glöder"
   licence: "CC BY-SA 3.0"
   source: "https://commons.wikimedia.org/wiki/File:Normalverteilung.png"
+- file: photo-statistics-overlapping-cis.jpg
+  title: "Interpretation of overlapping CIs.png"
+  author: "FRuDIxAFLG"
+  licence: "CC0"
+  source: "https://commons.wikimedia.org/wiki/File:Interpretation_of_overlapping_CIs.png"
 - file: photo-statistics-regression-errors.jpg
   title: "Independence of Errors Assumption for Linear Regressions.png"
   author: "Panne19"
@@ -194,6 +309,27 @@
   author: "Numbersinstitute"
   licence: "CC BY-SA 4.0"
   source: "https://commons.wikimedia.org/wiki/File:Election_Samples.png"
+- file: photo-statistics-scatter-correlation.jpg
+  title: "Correlation examples2.svg"
+  author: "DenisBoigelot, original uploader was Imagecreator"
+  licence: "CC0"
+  source: "https://commons.wikimedia.org/wiki/File:Correlation_examples2.svg"
+- file: photo-statistics-student-t.jpg
+  title: "Distribución T 09.svg"
+  author: "User:HiTe"
+  licence: "Public domain"
+  source: "https://commons.wikimedia.org/wiki/File:Distribuci%C3%B3n_T_09.svg"
+- file: photo-statistics-time-series-debt.jpg
+  title: "Total US household debt and its composition over time.png"
+  author: "The Center for Microeconomic Data. Federal Reserve Bank of New York. Can use freeware Adobe Acrobat Reader to copy chart: Edit menu &gt; More &gt; Take a snapshot. 
+Or use your browser to open the PDF, and then take a screenshot of the chart. Crop as necessary. 
+Can use freeware IrfanView to add a border: Image menu &gt; Add border/frame. And to insert text: Edit menu &gt; Insert text:
+
+USA.
+Total household debt. X quarter YEAR to Y quarter YEAR.
+HE Revolving = Home equity revolving line of credit."
+  licence: "Public domain"
+  source: "https://commons.wikimedia.org/wiki/File:Total_US_household_debt_and_its_composition_over_time.png"
 - file: photo-supercomputer.jpg
   title: "U.S. Department of Energy - Science - 394 007 004 (9578326194).jpg"
   author: "U.S. Department of Energy from United States"
