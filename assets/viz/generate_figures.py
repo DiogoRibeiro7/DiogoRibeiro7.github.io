@@ -3247,6 +3247,166 @@ def acceptance_sampling_oc():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("monitor_detection_delay",
+        "Mean days to detection against the size of the shift, for a "
+        "three-sigma rule, an exponentially weighted chart and a cumulative "
+        "sum chart, all tuned to roughly the same false alarm rate, on a log "
+        "scale. The two charts with memory catch small shifts four to five "
+        "times faster, and the three converge above two standard deviations "
+        "where a single day is already extreme.")
+def monitor_detection_delay():
+    rng = np.random.default_rng(23)
+    max_days, reps = 2000, 1500
+
+    def first_signal(sig):
+        idx = np.argmax(sig)
+        return idx + 1 if sig[idx] else max_days
+
+    def shewhart(x, limit):
+        return np.abs(x) > limit
+
+    def ewma(x, lam, limit):
+        acc, z = 0.0, np.zeros_like(x)
+        for i, v in enumerate(x):
+            acc = lam * v + (1 - lam) * acc
+            z[i] = acc
+        sd = np.sqrt(lam / (2 - lam) * (1 - (1 - lam) ** (2 * (np.arange(len(x)) + 1))))
+        return np.abs(z) > limit * sd
+
+    def cusum(x, k, h):
+        hi = lo = 0.0
+        out = np.zeros(len(x), bool)
+        for i, v in enumerate(x):
+            hi = max(0.0, hi + v - k)
+            lo = max(0.0, lo - v - k)
+            out[i] = (hi > h) or (lo > h)
+        return out
+
+    charts = {"Three-sigma rule": (lambda x: shewhart(x, 3.0), P[3]),
+              "Exponentially weighted": (lambda x: ewma(x, 0.2, 2.86), P[0]),
+              "Cumulative sum": (lambda x: cusum(x, 0.5, 4.72), P[2])}
+    shifts = [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0]
+
+    fig, ax = plt.subplots()
+    for name, (fn, col) in charts.items():
+        means = []
+        for s in shifts:
+            lengths = [first_signal(fn(rng.normal(s, 1.0, max_days))) for _ in range(reps)]
+            means.append(np.mean(lengths))
+        ax.plot(shifts, means, marker="o", color=col, lw=2, label=name)
+    ax.set_yscale("log")
+    ax.set_yticks([1, 2, 5, 10, 25, 50, 100, 250])
+    ax.set_yticklabels(["1", "2", "5", "10", "25", "50", "100", "250"])
+    ax.yaxis.set_minor_formatter(plt.NullFormatter())
+    ax.set_xlabel("size of the shift, in standard deviations")
+    ax.set_ylabel("mean days until the monitor signals")
+    ax.set_title("Memory buys speed on small shifts, not on large ones")
+    ax.legend(loc="upper right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("allocation_variance_cost",
+        "Variance of the estimated difference relative to an even split, "
+        "against the share of traffic sent to the treatment arm. The curve is "
+        "nearly flat between thirty and seventy percent and rises steeply at "
+        "the edges, reaching 2.8 at a ninety-ten split and 5.3 at "
+        "ninety-five-five.")
+def allocation_variance_cost():
+    from matplotlib.ticker import PercentFormatter
+    f = np.linspace(0.02, 0.98, 400)
+    factor = 0.25 / (f * (1 - f))
+
+    fig, ax = plt.subplots()
+    ax.plot(f, factor, color=P[0], lw=2, label="Variance, relative to an even split")
+    ax.axhspan(1.0, 1.1, color=P[2], alpha=0.18, label="Within 10% of the even split")
+    for share in (0.5, 0.3, 0.2, 0.1, 0.05):
+        v = 0.25 / (share * (1 - share))
+        ax.plot([share], [v], marker="o", color=P[1], ms=6)
+        ax.annotate(f"{share:.0%}: {v:.2f}x", (share, v), color=hs.INK_SECONDARY,
+                    fontsize=9, ha="left", va="bottom", xytext=(6, 3),
+                    textcoords="offset points")
+    ax.set_ylim(0.8, 7)
+    ax.set_xlim(0, 1)
+    ax.xaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_xlabel("share of traffic sent to the treatment arm")
+    ax.set_ylabel("variance, relative to an even split")
+    ax.set_title("Anything from thirty to seventy percent is nearly free")
+    ax.legend(loc="upper center")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("intermittent_forecast_bias",
+        "Average weekly forecast from five methods against the true demand "
+        "rate of 0.8 units a week, with the forecast of zero far below and "
+        "Croston slightly above before its debiasing correction. The three "
+        "usable methods sit within a few percent of the truth, which is why "
+        "the error table cannot separate them.")
+def intermittent_forecast_bias():
+    rng_base = 900
+    T, warmup = 1040, 104
+    p_demand, mean_size = 0.20, 4.0
+
+    def series(n, rng):
+        occurs = rng.random(n) < p_demand
+        size = 1 + rng.poisson(mean_size - 1, n)
+        return np.where(occurs, size, 0).astype(float)
+
+    def f_zero(y, t):
+        return 0.0
+
+    def f_mean(y, t):
+        return y[max(0, t - 52):t].mean()
+
+    def f_ses(y, t, alpha=0.1):
+        f = y[:warmup].mean()
+        for v in y[warmup:t]:
+            f = alpha * v + (1 - alpha) * f
+        return f
+
+    def f_croston(y, t, alpha=0.1, debias=False):
+        nz = np.flatnonzero(y[:t])
+        if nz.size < 2:
+            return y[:t].mean()
+        z, x, last = y[nz[0]], float(nz[0] + 1), nz[0]
+        for i in nz[1:]:
+            z = alpha * y[i] + (1 - alpha) * z
+            x = alpha * (i - last) + (1 - alpha) * x
+            last = i
+        rate = z / x
+        return rate * (1 - alpha / 2) if debias else rate
+
+    methods = [("Always zero", f_zero), ("52-week mean", f_mean),
+               ("Exponential smoothing", f_ses), ("Croston", f_croston),
+               ("Croston, debiased", lambda y, t: f_croston(y, t, debias=True))]
+    means, errs = [], []
+    for _, fn in methods:
+        per_series = []
+        for r in range(40):
+            y = series(T, np.random.default_rng(rng_base + r))
+            per_series.append(np.mean([fn(y, t) for t in range(warmup, T, 4)]))
+        means.append(np.mean(per_series))
+        errs.append(np.std(per_series) / np.sqrt(len(per_series)))
+
+    truth = p_demand * mean_size
+    fig, ax = plt.subplots()
+    ypos = np.arange(len(methods))
+    colors = [P[1]] + [P[0]] * 2 + [P[2]] * 2
+    ax.barh(ypos, means, xerr=np.array(errs) * 1.96, color=colors, height=0.6,
+            error_kw={"ecolor": hs.INK_SECONDARY, "lw": 1.2})
+    ax.axvline(truth, color=hs.INK_PRIMARY, lw=1.5, ls="--")
+    ax.text(truth, -0.75, f"true rate, {truth:.2f} a week", color=hs.INK_SECONDARY,
+            fontsize=9, ha="center", va="bottom")
+    ax.set_ylim(len(methods) - 0.4, -0.95)
+    ax.set_yticks(ypos)
+    ax.set_yticklabels([m[0] for m in methods])
+    ax.set_xlabel("average weekly forecast, units")
+    ax.set_title("Only one method is wrong about the rate, and it wins on error")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
