@@ -3539,6 +3539,129 @@ def weighting_effective_sample():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("null_monitor_detection",
+        "Share of days on which each monitor fires, against the null rate in "
+        "the incoming data, with both set at three standard deviations of "
+        "their own quiet history. The monitor on the null rate reaches "
+        "certainty as soon as the rate moves, while the monitor on the metric "
+        "stays blind until several percent of rows are missing.")
+def null_monitor_detection():
+    from matplotlib.ticker import PercentFormatter
+    rows = 20000
+    seg_mean = np.array([12.0, 18.0, 30.0])
+    seg_share = np.array([0.55, 0.30, 0.15])
+    seg_null = np.array([0.6, 1.0, 2.2])
+
+    def day(null_rate, rng):
+        segment = rng.choice(3, rows, p=seg_share)
+        value = seg_mean[segment] + rng.normal(0, 6, rows)
+        is_null = rng.random(rows) < np.clip(null_rate * seg_null[segment], 0, 1)
+        return value[~is_null].mean(), is_null.mean()
+
+    rng = np.random.default_rng(79)
+    base = [day(0.02, rng) for _ in range(60)]
+    b_metric = np.mean([b[0] for b in base])
+    b_rate = np.mean([b[1] for b in base])
+    sd_metric = np.std([b[0] for b in base])
+    sd_rate = np.std([b[1] for b in base])
+
+    rates = np.linspace(0.02, 0.16, 15)
+    flag_m, flag_n = [], []
+    for nr in rates:
+        runs = [day(nr, rng) for _ in range(300)]
+        flag_m.append(np.mean([abs(m - b_metric) > 3 * sd_metric for m, _ in runs]))
+        flag_n.append(np.mean([abs(r - b_rate) > 3 * sd_rate for _, r in runs]))
+
+    fig, ax = plt.subplots()
+    ax.plot(rates, flag_n, marker="o", color=P[0], lw=2, label="Monitor on the null rate")
+    ax.plot(rates, flag_m, marker="s", color=P[1], lw=2, label="Monitor on the metric")
+    ax.xaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_xlabel("share of rows arriving with a null value")
+    ax.set_ylabel("share of days the monitor fires")
+    ax.set_title("The input monitor knows before the output monitor")
+    ax.legend(loc="lower right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("wow_noise_distribution",
+        "Distribution of period comparisons on a metric where nothing has "
+        "changed, for a single day against the same weekday last week and for "
+        "seven-day averages, with the five percent line marked. Roughly a "
+        "third of the single-day comparisons fall outside five percent with "
+        "nothing behind them.")
+def wow_noise_distribution():
+    from matplotlib.ticker import PercentFormatter
+    days = 400
+    weekday = np.array([1.05, 1.08, 1.06, 1.04, 1.10, 0.82, 0.85])
+    rho, sd = 0.55, 0.035
+    rng = np.random.default_rng(83)
+
+    def series():
+        eps = rng.normal(0, sd * np.sqrt(1 - rho ** 2), days)
+        z = np.zeros(days)
+        for i in range(1, days):
+            z[i] = rho * z[i - 1] + eps[i]
+        return 1000.0 * weekday[np.arange(days) % 7] * (1 + z)
+
+    single, weekly = [], []
+    for _ in range(250):
+        y = series()
+        for t in range(60, days):
+            single.append(y[t] / y[t - 7] - 1)
+            weekly.append(y[t - 6:t + 1].mean() / y[t - 13:t - 6].mean() - 1)
+
+    bins = np.linspace(-0.20, 0.20, 81)
+    fig, ax = plt.subplots()
+    ax.hist(single, bins=bins, density=True, alpha=0.55, color=P[1],
+            label=f"Same weekday last week, spread {np.std(single):.1%}")
+    ax.hist(weekly, bins=bins, density=True, alpha=0.55, color=P[0],
+            label=f"Seven-day averages, spread {np.std(weekly):.1%}")
+    for x in (-0.05, 0.05):
+        ax.axvline(x, color=hs.INK_MUTED, lw=1.4, ls="--")
+    ax.annotate("the five percent that starts an investigation", (0.05, ax.get_ylim()[1] * 0.92),
+                color=hs.INK_SECONDARY, fontsize=9, ha="left", va="top",
+                xytext=(6, 0), textcoords="offset points")
+    ax.xaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_xlabel("measured change against the comparison period")
+    ax.set_ylabel("density")
+    ax.set_title("What the comparison does when nothing has happened")
+    ax.legend(loc="upper left")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("retraining_cost_curve",
+        "Weekly cost of a retraining schedule against its interval, split "
+        "into the quality foregone while the model ages and the amortised "
+        "cost of retraining. The total is flat between about six and thirteen "
+        "weeks and rises steeply on either side, with the minimum at nine.")
+def retraining_cost_curve():
+    decay, value, cost = 0.004, 100_000, 15_000
+    periods = np.arange(1, 41)
+    lost = value * decay * (periods - 1) / 2
+    amortised = cost / periods
+    total = lost + amortised
+    best = periods[np.argmin(total)]
+
+    fig, ax = plt.subplots()
+    ax.plot(periods, total, color=P[0], lw=2.4, label="Total weekly cost")
+    ax.plot(periods, lost, color=P[1], lw=2, ls="--", label="Quality foregone")
+    ax.plot(periods, amortised, color=P[2], lw=2, ls=":", label="Retraining, amortised")
+    ax.plot([best], [total.min()], marker="o", color=P[0], ms=8)
+    ax.annotate(f"cheapest at {best} weeks, {total.min():,.0f} a week",
+                (best, total.min()), color=hs.INK_SECONDARY, fontsize=9,
+                ha="left", va="top", xytext=(8, -6), textcoords="offset points")
+    ax.set_ylim(0, 9000)
+    ax.set_xlabel("weeks between retrains")
+    ax.set_ylabel("cost per week")
+    ax.set_title("Too often and too rarely cost about the same")
+    ax.legend(loc="upper center")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
