@@ -14,6 +14,46 @@
   author: "Markus Spiske markusspiske"
   licence: "CC0"
   source: "https://commons.wikimedia.org/wiki/File:Code_on_computer_monitor_(Unsplash).jpg"
+- file: photo-control-room.jpg
+  title: "Cobra Dane radar system operation status control console room.jpg"
+  author: "TSGT L. HERNANDEZ, USAF"
+  licence: "Public domain"
+  source: "https://commons.wikimedia.org/wiki/File:Cobra_Dane_radar_system_operation_status_control_console_room.jpg"
+- file: photo-data-center.jpg
+  title: "Duga-1 radar data center inside empty server racks 2018.jpg"
+  author: "Joël van der Loo"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Duga-1_radar_data_center_inside_empty_server_racks_2018.jpg"
+- file: photo-data-science-dashboard.jpg
+  title: "Oracle Analytics Cloud Dashboard by Benjamin Arnulf presented by Larry Ellison.jpg"
+  author: "GeneralAB13"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Oracle_Analytics_Cloud_Dashboard_by_Benjamin_Arnulf_presented_by_Larry_Ellison.jpg"
+- file: photo-data-science-ml-pipeline.jpg
+  title: "Machine Learning Pipeline in Production.png"
+  author: "Dinohund"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Machine_Learning_Pipeline_in_Production.png"
+- file: photo-data-science-network.jpg
+  title: "Social Network Visualization.png"
+  author: "Martin Grandjean"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Social_Network_Visualization.png"
+- file: photo-data-science-openalex.jpg
+  title: "Academic works by discipline over time (visualization of studies data in OpenAlex).png"
+  author: "Shubhanshu Mishra made the first version which I then modified and the latest version is made anew"
+  licence: "CC BY 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Academic_works_by_discipline_over_time_(visualization_of_studies_data_in_OpenAlex).png"
+- file: photo-data-science-street-trees.jpg
+  title: "Data Visualization of Street Trees.jpg"
+  author: "Intel Free Press"
+  licence: "CC BY-SA 2.0"
+  source: "https://commons.wikimedia.org/wiki/File:Data_Visualization_of_Street_Trees.jpg"
+- file: photo-data-science-theater.jpg
+  title: "Data Exploration Theater 1 (4642523882).jpg"
+  author: "NASA Goddard Space Flight Center from Greenbelt, MD, USA"
+  licence: "Public domain"
+  source: "https://commons.wikimedia.org/wiki/File:Data_Exploration_Theater_1_(4642523882).jpg"
 - file: photo-dice.jpg
   title: "Project 365 -123 030526 A Roll Of The Dice (55247157854).jpg"
   author: "Pete"
@@ -24,6 +64,11 @@
   author: "Data: Marc Imhoff/NASA GSFC, Christopher Elvidge/NOAA NGDC; Image: Craig Mayhew and Robert Simmon/NASA GSFC"
   licence: "Public domain"
   source: "https://commons.wikimedia.org/wiki/File:Earth%27s_City_Lights_by_DMSP,_1994-1995_(large).jpg"
+- file: photo-factory.jpg
+  title: "Staeubli Robots line.jpg"
+  author: "Clemenspool"
+  licence: "CC0"
+  source: "https://commons.wikimedia.org/wiki/File:Staeubli_Robots_line.jpg"
 - file: photo-formulas.jpg
   title: "Maths as a School Subject.jpg"
   author: "Preply.com Images"
@@ -49,21 +94,106 @@
   author: "Piviso"
   licence: "CC0"
   source: "https://commons.wikimedia.org/wiki/File:Krzeszowice_by_night_long_exposure_photo,_Poland.jpg"
+- file: photo-mathematics-cryptography-blackboard.jpg
+  title: "Mathematics (cryptography) on a blackboard.jpg"
+  author: "David Malone"
+  licence: "CC BY 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Mathematics_(cryptography)_on_a_blackboard.jpg"
+- file: photo-mathematics-fractal-grid.jpg
+  title: "3D-Gitternetz 20191201 8K.png"
+  author: "PantheraLeo1359531"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:3D-Gitternetz_20191201_8K.png"
+- file: photo-mathematics-geometry-symmetry.jpg
+  title: "Mathematik vs Geometry Symmetry d Teilung nach fabris.jpg"
+  author: "Sergio Fabris"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Mathematik_vs_Geometry_Symmetry_d_Teilung_nach_fabris.jpg"
+- file: photo-mathematics-heesch-solid.jpg
+  title: "3D solid with Heesch number 3.png"
+  author: "Jens G. Maier"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:3D_solid_with_Heesch_number_3.png"
+- file: photo-mathematics-lecture-blackboard.jpg
+  title: "A.A.Karatsuba on lecture.jpg"
+  author: "Steklov institute"
+  licence: "CC BY-SA 3.0"
+  source: "https://commons.wikimedia.org/wiki/File:A.A.Karatsuba_on_lecture.jpg"
+- file: photo-mathematics-polyhedra.jpg
+  title: "Revolução de poliedros 01.jpg"
+  author: "Exhibit made by MockUp Company, video by Rodrigo Tetsuo Argenton"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Revolu%C3%A7%C3%A3o_de_poliedros_01.jpg"
+- file: photo-microscope.jpg
+  title: "Belgrad - Museum of Science and Technology - Electron microscope ARL.jpg"
+  author: "Александр Сигачёв"
+  licence: "CC0"
+  source: "https://commons.wikimedia.org/wiki/File:Belgrad_-_Museum_of_Science_and_Technology_-_Electron_microscope_ARL.jpg"
 - file: photo-motherboard.jpg
   title: "Close-up view of a red-lit computer motherboard showcasing intricate circuitry and components.jpg"
   author: "Shixart1985"
   licence: "CC BY 2.0"
   source: "https://commons.wikimedia.org/wiki/File:Close-up_view_of_a_red-lit_computer_motherboard_showcasing_intricate_circuitry_and_components.jpg"
+- file: photo-network-cables.jpg
+  title: "Cable closet bh.jpg"
+  author: "unknown"
+  licence: "Public domain"
+  source: "https://commons.wikimedia.org/wiki/File:Cable_closet_bh.jpg"
 - file: photo-punchcards.jpg
   title: "Punched card program deck.agr.jpg"
   author: "ArnoldReinhold"
   licence: "CC BY-SA 3.0"
   source: "https://commons.wikimedia.org/wiki/File:Punched_card_program_deck.agr.jpg"
+- file: photo-radio-telescope.jpg
+  title: "WARK30M01.JPG"
+  author: "Sdweston"
+  licence: "CC BY-SA 3.0"
+  source: "https://commons.wikimedia.org/wiki/File:WARK30M01.JPG"
+- file: photo-satellite-dish.jpg
+  title: "Satellite Dish Antenna With Overclouded Sky - Nalban Waterbody - Kolkata 2018-05-02 0328.JPG"
+  author: "Biswarup Ganguly"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Satellite_Dish_Antenna_With_Overclouded_Sky_-_Nalban_Waterbody_-_Kolkata_2018-05-02_0328.JPG"
+- file: photo-solar-panels.jpg
+  title: "Cleaning solar panels (1053).jpg"
+  author: "Oliver Rudkin"
+  licence: "CC BY 2.0"
+  source: "https://commons.wikimedia.org/wiki/File:Cleaning_solar_panels_(1053).jpg"
 - file: photo-stars.jpg
   title: "Milky Way over Brod, Dragash – Long-Exposure Astrophotography.jpg"
   author: "Astroclubkosova"
   licence: "CC0"
   source: "https://commons.wikimedia.org/wiki/File:Milky_Way_over_Brod,_Dragash_%E2%80%93_Long-Exposure_Astrophotography.jpg"
+- file: photo-statistics-bell-curve.jpg
+  title: "Bell curve.jpg"
+  author: "Ajay Raavi MD JD"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Bell_curve.jpg"
+- file: photo-statistics-boxplots.jpg
+  title: "Skew with quartiles and box plots.png"
+  author: "SGDWN"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Skew_with_quartiles_and_box_plots.png"
+- file: photo-statistics-dice-coins.jpg
+  title: "Probability distributions casting two dice or 10 coins.png"
+  author: "Nø"
+  licence: "CC0"
+  source: "https://commons.wikimedia.org/wiki/File:Probability_distributions_casting_two_dice_or_10_coins.png"
+- file: photo-statistics-normal-distribution.jpg
+  title: "Normalverteilung.png"
+  author: "self created by Marcus Glöder"
+  licence: "CC BY-SA 3.0"
+  source: "https://commons.wikimedia.org/wiki/File:Normalverteilung.png"
+- file: photo-statistics-regression-errors.jpg
+  title: "Independence of Errors Assumption for Linear Regressions.png"
+  author: "Panne19"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Independence_of_Errors_Assumption_for_Linear_Regressions.png"
+- file: photo-statistics-sampling-election.jpg
+  title: "Election Samples.png"
+  author: "Numbersinstitute"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Election_Samples.png"
 - file: photo-supercomputer.jpg
   title: "U.S. Department of Energy - Science - 394 007 004 (9578326194).jpg"
   author: "U.S. Department of Energy from United States"
@@ -84,3 +214,8 @@
   author: "Lance Asper lance_asper"
   licence: "CC0"
   source: "https://commons.wikimedia.org/wiki/File:Ocean_waves_drone_view_of_Palm_Coast_beach.jpg"
+- file: photo-wind-turbines.jpg
+  title: "Harvest the Wind, IA 7-13 (13901366435).jpg"
+  author: "inkknife_2000 (7.5 million views +)"
+  licence: "CC BY-SA 2.0"
+  source: "https://commons.wikimedia.org/wiki/File:Harvest_the_Wind,_IA_7-13_(13901366435).jpg"

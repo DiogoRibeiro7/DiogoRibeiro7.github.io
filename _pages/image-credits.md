@@ -4,10 +4,10 @@ title: "Image Credits"
 permalink: /image-credits/
 author_profile: false
 seo_title: "Image Credits"
-seo_description: "Sources, authors and licences of the photographs used as article headers on this site."
+seo_description: "Sources, authors and licences of the images used as article headers on this site."
 ---
 
-The header photographs on this site come from Wikimedia Commons under licences that allow reuse. Each is listed here with its author, licence and source page; the remaining headers are generated compositions produced by the site's own scripts and carry no third-party rights.
+The header images on this site come from Wikimedia Commons under licences that allow reuse. Each is listed here with its author, licence and source page; the remaining headers are generated compositions produced by the site's own scripts and carry no third-party rights.
 
 <table>
   <thead>
