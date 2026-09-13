@@ -7,12 +7,13 @@ date: '2021-10-05'
 excerpt: Learn how to design robust data preprocessing pipelines that prepare raw
   data for modeling.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-data-science-network.jpg
+  og_image: /assets/images/headers/photo-data-science-network.jpg
+  overlay_image: /assets/images/headers/photo-data-science-network.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-data-science-network.jpg
+  twitter_image: /assets/images/headers/photo-data-science-network.jpg
 keywords:
 - Data preprocessing
 - Pipelines

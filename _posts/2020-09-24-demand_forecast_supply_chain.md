@@ -8,12 +8,13 @@ excerpt: Leveraging customer behavior through predictive modeling, the BG/NBD mo
   offers a more accurate approach to demand forecasting in the supply chain compared
   to traditional time-series models.
 header:
-  image: /assets/images/data_science_8.avif
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_8.avif
+  image: /assets/images/headers/photo-data-center.jpg
+  og_image: /assets/images/headers/photo-data-center.jpg
+  overlay_image: /assets/images/headers/photo-data-center.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.avif
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-data-center.jpg
+  twitter_image: /assets/images/headers/photo-data-center.jpg
 keywords:
 - Supply chain
 - Repurchase model

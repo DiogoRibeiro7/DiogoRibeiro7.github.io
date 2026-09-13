@@ -7,12 +7,13 @@ date: '2024-10-26'
 excerpt: Dynamic systems theory helps economists analyze the evolution of economic
   variables over time, focusing on stability and equilibrium.
 header:
-  image: /assets/images/data_science_14.jpg
-  og_image: /assets/images/data_science_14.jpg
-  overlay_image: /assets/images/data_science_14.jpg
+  image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  og_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  overlay_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_14.jpg
-  twitter_image: /assets/images/data_science_14.jpg
+  teaser: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  twitter_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
 keywords:
 - Dynamic systems theory
 - Macroeconomics

@@ -8,12 +8,13 @@ excerpt: Explore Type I and Type II errors in hypothesis testing. Learn how to b
   error rates, interpret significance levels, and understand the implications of statistical
   errors in real-world scenarios.
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/photo-statistics-dice-coins.jpg
+  og_image: /assets/images/headers/photo-statistics-dice-coins.jpg
+  overlay_image: /assets/images/headers/photo-statistics-dice-coins.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-statistics-dice-coins.jpg
+  twitter_image: /assets/images/headers/photo-statistics-dice-coins.jpg
 keywords:
 - Type ii error
 - False positive

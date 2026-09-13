@@ -6,12 +6,13 @@ classes: wide
 date: '2019-12-24'
 excerpt: Sophie Germain was a trailblazing mathematician who made groundbreaking contributions to number theory and elasticity. This article explores her life, her challenges, and her lasting impact on mathematics and science.
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  og_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
 keywords:
 - Sophie germain biography
 - Contributions to number theory

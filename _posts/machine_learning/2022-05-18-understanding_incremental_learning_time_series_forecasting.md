@@ -6,12 +6,13 @@ classes: wide
 date: '2022-05-18'
 excerpt: Discover incremental learning in time series forecasting, a technique that dynamically updates models with new data for better accuracy and efficiency.
 header:
-  image: /assets/images/data_science_10.avif
-  og_image: /assets/images/data_science_10.avif
-  overlay_image: /assets/images/data_science_10.avif
+  image: /assets/images/headers/photo-data-science-network.jpg
+  og_image: /assets/images/headers/photo-data-science-network.jpg
+  overlay_image: /assets/images/headers/photo-data-science-network.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_10.avif
-  twitter_image: /assets/images/data_science_10.avif
+  teaser: /assets/images/headers/photo-data-science-network.jpg
+  twitter_image: /assets/images/headers/photo-data-science-network.jpg
 keywords:
 - Incremental Learning
 - Online Learning

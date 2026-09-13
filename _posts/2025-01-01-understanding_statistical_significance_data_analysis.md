@@ -7,12 +7,13 @@ date: '2025-01-01'
 excerpt: Learn the essential concepts of statistical significance and how it applies
   to data analysis and business decision-making.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-data-science-dashboard.jpg
+  og_image: /assets/images/headers/photo-data-science-dashboard.jpg
+  overlay_image: /assets/images/headers/photo-data-science-dashboard.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-data-science-dashboard.jpg
+  twitter_image: /assets/images/headers/photo-data-science-dashboard.jpg
 keywords:
 - Statistical significance
 - Hypothesis testing

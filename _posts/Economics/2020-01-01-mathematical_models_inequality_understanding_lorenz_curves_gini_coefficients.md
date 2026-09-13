@@ -6,12 +6,13 @@ classes: wide
 date: '2020-01-01'
 excerpt: This article delves into mathematical models of inequality, focusing on the Lorenz curve and Gini coefficient to measure and interpret economic disparities.
 header:
-  image: /assets/images/data_science_18.jpg
-  og_image: /assets/images/data_science_18.jpg
-  overlay_image: /assets/images/data_science_18.jpg
+  image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  og_image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  overlay_image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_18.jpg
-  twitter_image: /assets/images/data_science_18.jpg
+  teaser: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  twitter_image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
 keywords:
 - Lorenz curve
 - Gini coefficient

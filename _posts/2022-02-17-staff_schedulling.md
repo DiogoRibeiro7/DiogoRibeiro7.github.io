@@ -6,12 +6,13 @@ classes: wide
 date: '2022-02-17'
 excerpt: Discover how linear programming and Python's PuLP library can efficiently solve staff scheduling challenges, minimizing costs while meeting operational demands.
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/photo-mathematics-heesch-solid.jpg
+  og_image: /assets/images/headers/photo-mathematics-heesch-solid.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-heesch-solid.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-mathematics-heesch-solid.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-heesch-solid.jpg
 keywords:
 - Staff scheduling optimization
 - Linear programming

@@ -6,12 +6,13 @@ classes: wide
 date: '2020-12-25'
 excerpt: Katherine Johnson was a trailblazing mathematician at NASA whose calculations for the Mercury and Apollo missions helped guide U.S. space exploration. Learn about her groundbreaking contributions to applied mathematics.
 header:
-  image: /assets/images/data_science_13.jpg
-  og_image: /assets/images/data_science_13.jpg
-  overlay_image: /assets/images/data_science_13.jpg
+  image: /assets/images/headers/photo-mathematics-lecture-blackboard.jpg
+  og_image: /assets/images/headers/photo-mathematics-lecture-blackboard.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-lecture-blackboard.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_13.jpg
-  twitter_image: /assets/images/data_science_13.jpg
+  teaser: /assets/images/headers/photo-mathematics-lecture-blackboard.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-lecture-blackboard.jpg
 keywords:
 - Katherine johnson biography
 - Nasa mathematicians

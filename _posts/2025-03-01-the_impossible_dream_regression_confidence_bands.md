@@ -25,12 +25,13 @@ keywords:
 classes: wide
 date: '2025-03-01'
 header:
-  image: /assets/images/data_science_10.avif
-  og_image: /assets/images/data_science_10.avif
-  overlay_image: /assets/images/data_science_10.avif
+  image: /assets/images/headers/photo-statistics-boxplots.jpg
+  og_image: /assets/images/headers/photo-statistics-boxplots.jpg
+  overlay_image: /assets/images/headers/photo-statistics-boxplots.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_10.avif
-  twitter_image: /assets/images/data_science_10.avif
+  teaser: /assets/images/headers/photo-statistics-boxplots.jpg
+  twitter_image: /assets/images/headers/photo-statistics-boxplots.jpg
 ---
 
 ## A fundamental limitation that every data scientist should understand

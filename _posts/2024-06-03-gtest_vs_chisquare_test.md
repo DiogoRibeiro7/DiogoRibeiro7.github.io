@@ -8,12 +8,13 @@ excerpt: Learn the key differences between the G-Test and Chi-Square Test for an
   categorical data, and discover their applications in fields like genetics, market
   research, and large datasets.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-statistics-boxplots.jpg
+  og_image: /assets/images/headers/photo-statistics-boxplots.jpg
+  overlay_image: /assets/images/headers/photo-statistics-boxplots.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-statistics-boxplots.jpg
+  twitter_image: /assets/images/headers/photo-statistics-boxplots.jpg
 keywords:
 - G-test
 - Chi-square test

@@ -8,12 +8,13 @@ excerpt: Discover the inner workings of clustering algorithms, from K-Means to S
   Clustering, and how they unveil patterns in machine learning, bioinformatics, and
   data analysis.
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-wind-turbines.jpg
+  og_image: /assets/images/headers/photo-wind-turbines.jpg
+  overlay_image: /assets/images/headers/photo-wind-turbines.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-wind-turbines.jpg
+  twitter_image: /assets/images/headers/photo-wind-turbines.jpg
 keywords:
 - Clustering algorithms
 - K-means clustering

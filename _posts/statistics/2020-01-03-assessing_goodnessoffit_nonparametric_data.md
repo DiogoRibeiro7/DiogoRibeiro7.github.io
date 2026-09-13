@@ -6,12 +6,13 @@ classes: wide
 date: '2020-01-03'
 excerpt: The Kolmogorov-Smirnov test is a powerful tool for assessing goodness-of-fit in non-parametric data. Learn how it works, how it compares to the Shapiro-Wilk test, and explore real-world applications.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  og_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  overlay_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  twitter_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
 keywords:
 - Kolmogorov-smirnov test
 - Goodness-of-fit tests

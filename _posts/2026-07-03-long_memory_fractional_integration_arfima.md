@@ -29,12 +29,13 @@ keywords:
 classes: wide
 date: '2026-07-03'
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  og_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  overlay_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  twitter_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
 ---
 Standard time series practice offers a binary choice. Either the series is stationary and you model it directly, or it has a unit root and you difference it. The Dickey-Fuller test decides which.
 

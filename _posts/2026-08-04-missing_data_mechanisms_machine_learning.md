@@ -22,12 +22,13 @@ keywords:
 classes: wide
 date: '2026-08-04'
 header:
-  image: /assets/images/data_science_14.jpg
-  og_image: /assets/images/data_science_14.jpg
-  overlay_image: /assets/images/data_science_14.jpg
+  image: /assets/images/headers/photo-data-science-air-quality.jpg
+  og_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  overlay_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_14.jpg
-  twitter_image: /assets/images/data_science_14.jpg
+  teaser: /assets/images/headers/photo-data-science-air-quality.jpg
+  twitter_image: /assets/images/headers/photo-data-science-air-quality.jpg
 ---
 
 Missing data is often treated as a preprocessing problem: fill the blanks, train the model, move on. That is too shallow. The reason a value is missing can carry information, introduce bias, or signal that the production process has changed.

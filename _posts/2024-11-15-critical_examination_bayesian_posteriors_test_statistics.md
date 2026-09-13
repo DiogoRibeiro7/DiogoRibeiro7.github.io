@@ -7,12 +7,13 @@ date: '2024-11-15'
 excerpt: This article critically examines the use of Bayesian posterior distributions
   as test statistics, highlighting the challenges and implications.
 header:
-  image: /assets/images/data_science_19.webp
-  og_image: /assets/images/data_science_19.webp
-  overlay_image: /assets/images/data_science_19.webp
+  image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  og_image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  overlay_image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_19.webp
-  twitter_image: /assets/images/data_science_19.webp
+  teaser: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  twitter_image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
 keywords:
 - Bayesian posteriors
 - Test statistics

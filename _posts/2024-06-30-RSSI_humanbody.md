@@ -7,12 +7,13 @@ date: '2024-06-30'
 excerpt: Explore the impact of human presence on RSSI and the challenges it introduces,
   along with effective mitigation strategies in wireless communication systems.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-wind-turbines.jpg
+  og_image: /assets/images/headers/photo-wind-turbines.jpg
+  overlay_image: /assets/images/headers/photo-wind-turbines.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-wind-turbines.jpg
+  twitter_image: /assets/images/headers/photo-wind-turbines.jpg
 keywords:
 - Rssi
 - Signal attenuation

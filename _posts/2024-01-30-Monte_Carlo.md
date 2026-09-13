@@ -8,12 +8,13 @@ draft: false
 excerpt: Discover how Bayesian inference and MCMC algorithms like Metropolis-Hastings
   can solve complex probability problems through real-world examples and Python implementation.
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-mathematics-voronoi.jpg
+  og_image: /assets/images/headers/photo-mathematics-voronoi.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-voronoi.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-mathematics-voronoi.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-voronoi.jpg
 keywords:
 - Bayesian statistics
 - Mcmc algorithms

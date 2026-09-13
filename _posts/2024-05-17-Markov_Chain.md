@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-05-17'
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  og_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
 keywords:
 - Markov systems
 - Stochastic processes

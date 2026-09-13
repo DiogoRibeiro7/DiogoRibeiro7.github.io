@@ -7,12 +7,13 @@ excerpt: Learn how to manage covariate shifts in machine learning models through
   model monitoring, feature engineering, and adaptation strategies to maintain model
   accuracy and performance.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-data-science-neural-network.jpg
+  og_image: /assets/images/headers/photo-data-science-neural-network.jpg
+  overlay_image: /assets/images/headers/photo-data-science-neural-network.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-data-science-neural-network.jpg
+  twitter_image: /assets/images/headers/photo-data-science-neural-network.jpg
 keywords:
 - Covariate shift management
 - Machine learning model monitoring

@@ -6,12 +6,13 @@ classes: wide
 date: '2024-12-01'
 excerpt: State Space Models (SSMs) offer a versatile framework for time series analysis, especially in dynamic systems. This article explores discretization, the Kalman filter, and Bayesian approaches, including their use in econometrics.
 header:
-  image: /assets/images/data_science_20.jpg
-  og_image: /assets/images/data_science_20.jpg
-  overlay_image: /assets/images/data_science_20.jpg
+  image: /assets/images/headers/photo-statistics-student-t.jpg
+  og_image: /assets/images/headers/photo-statistics-student-t.jpg
+  overlay_image: /assets/images/headers/photo-statistics-student-t.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_20.jpg
-  twitter_image: /assets/images/data_science_20.jpg
+  teaser: /assets/images/headers/photo-statistics-student-t.jpg
+  twitter_image: /assets/images/headers/photo-statistics-student-t.jpg
 keywords:
 - State space models
 - Time series analysis

@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-05-15'
 header:
-  image: /assets/images/data_science_8.avif
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_8.avif
+  image: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  og_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.avif
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
 redirect_from:
 - '/mathematics/statistics/data science/machine learning/ethics research/AI_fairness/'
 seo_description: 'AI fairness explained: how to measure it, where bias comes from, and the strategies used to mitigate unfairness in machine learning.'

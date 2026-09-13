@@ -8,12 +8,13 @@ excerpt: Monte Carlo simulations offer a powerful way to model uncertainty in ma
   systems. This article explores how they're applied to stress testing, forecasting,
   and policy analysis in complex economic models.
 header:
-  image: /assets/images/data_science_16.jpg
-  og_image: /assets/images/data_science_16.jpg
-  overlay_image: /assets/images/data_science_16.jpg
+  image: /assets/images/headers/photo-statistics-chi-square.jpg
+  og_image: /assets/images/headers/photo-statistics-chi-square.jpg
+  overlay_image: /assets/images/headers/photo-statistics-chi-square.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_16.jpg
-  twitter_image: /assets/images/data_science_16.jpg
+  teaser: /assets/images/headers/photo-statistics-chi-square.jpg
+  twitter_image: /assets/images/headers/photo-statistics-chi-square.jpg
 keywords:
 - Monte carlo simulation
 - Macroeconomics

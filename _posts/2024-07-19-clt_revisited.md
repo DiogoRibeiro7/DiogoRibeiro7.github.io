@@ -6,12 +6,13 @@ classes: wide
 date: '2024-07-19'
 excerpt: This article rigorously explores the Central Limit Theorem for m-dependent random variables under sub-linear expectations, presenting new inequalities, proof outlines, and implications in modeling dependent sequences.
 header:
-  image: /assets/images/data_science_8.avif
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_8.avif
+  image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  og_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  overlay_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.avif
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  twitter_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
 keywords:
 - Central limit theorem
 - M-dependence

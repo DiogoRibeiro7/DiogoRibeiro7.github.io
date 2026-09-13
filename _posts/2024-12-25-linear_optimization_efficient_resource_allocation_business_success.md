@@ -8,12 +8,13 @@ excerpt: Learn how decision-makers in industries like logistics, finance, and ma
   use linear optimization to allocate scarce resources effectively, maximizing profits
   and minimizing costs.
 header:
-  image: /assets/images/data_science_18.jpg
-  og_image: /assets/images/data_science_18.jpg
-  overlay_image: /assets/images/data_science_18.jpg
+  image: /assets/images/headers/photo-statistics-sampling-election.jpg
+  og_image: /assets/images/headers/photo-statistics-sampling-election.jpg
+  overlay_image: /assets/images/headers/photo-statistics-sampling-election.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_18.jpg
-  twitter_image: /assets/images/data_science_18.jpg
+  teaser: /assets/images/headers/photo-statistics-sampling-election.jpg
+  twitter_image: /assets/images/headers/photo-statistics-sampling-election.jpg
 keywords:
 - Linear optimization
 - Linear programming

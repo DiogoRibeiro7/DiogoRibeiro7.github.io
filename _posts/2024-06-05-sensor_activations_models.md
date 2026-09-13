@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-06-05'
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/photo-statistics-chi-square.jpg
+  og_image: /assets/images/headers/photo-statistics-chi-square.jpg
+  overlay_image: /assets/images/headers/photo-statistics-chi-square.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-statistics-chi-square.jpg
+  twitter_image: /assets/images/headers/photo-statistics-chi-square.jpg
 keywords:
 - Poisson distribution
 - Sensor activations

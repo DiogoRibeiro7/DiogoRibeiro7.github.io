@@ -6,12 +6,13 @@ classes: wide
 date: '2020-01-02'
 excerpt: Discover the fundamentals of Maximum Likelihood Estimation (MLE), its role in data science, and how it impacts businesses through predictive analytics and risk modeling.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  og_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  overlay_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  twitter_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
 keywords:
 - Machine learning
 - Predictive analytics

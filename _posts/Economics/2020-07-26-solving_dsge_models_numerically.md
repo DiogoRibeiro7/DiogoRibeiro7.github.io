@@ -6,12 +6,13 @@ classes: wide
 date: '2020-07-26'
 excerpt: A guide to solving DSGE models numerically, focusing on perturbation techniques and finite difference methods used in economic modeling.
 header:
-  image: /assets/images/data_science_18.jpg
-  og_image: /assets/images/data_science_18.jpg
-  overlay_image: /assets/images/data_science_18.jpg
+  image: /assets/images/headers/photo-statistics-regression-errors.jpg
+  og_image: /assets/images/headers/photo-statistics-regression-errors.jpg
+  overlay_image: /assets/images/headers/photo-statistics-regression-errors.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_18.jpg
-  twitter_image: /assets/images/data_science_18.jpg
+  teaser: /assets/images/headers/photo-statistics-regression-errors.jpg
+  twitter_image: /assets/images/headers/photo-statistics-regression-errors.jpg
 keywords:
 - Dsge models
 - Numerical methods

@@ -6,12 +6,13 @@ classes: wide
 date: '2024-12-01'
 excerpt: Explore how machine learning can be leveraged to forecast commodity prices, such as oil and gold, using advanced predictive models and economic indicators.
 header:
-  image: /assets/images/data_science_13.jpg
-  og_image: /assets/images/data_science_13.jpg
-  overlay_image: /assets/images/data_science_13.jpg
+  image: /assets/images/headers/photo-statistics-chi-square.jpg
+  og_image: /assets/images/headers/photo-statistics-chi-square.jpg
+  overlay_image: /assets/images/headers/photo-statistics-chi-square.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_13.jpg
-  twitter_image: /assets/images/data_science_13.jpg
+  teaser: /assets/images/headers/photo-statistics-chi-square.jpg
+  twitter_image: /assets/images/headers/photo-statistics-chi-square.jpg
 keywords:
 - Commodity prices
 - Oil price forecasting

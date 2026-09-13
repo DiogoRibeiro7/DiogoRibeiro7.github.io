@@ -9,11 +9,11 @@ excerpt: This article explores the often-overlooked importance of data quality i
   collection, and quality assurance.
 header:
   image: /assets/images/what-is-data-quality.jpg
-  og_image: /assets/images/data_science_9.webp
+  og_image: /assets/images/what-is-data-quality.jpg
   overlay_image: /assets/images/what-is-data-quality.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/what-is-data-quality.jpg
-  twitter_image: /assets/images/data_science_9.webp
+  twitter_image: /assets/images/what-is-data-quality.jpg
 keywords:
 - Data quality
 - Data design

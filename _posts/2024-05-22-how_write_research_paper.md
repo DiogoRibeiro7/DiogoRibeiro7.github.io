@@ -8,12 +8,13 @@ excerpt: Master the process of writing a research paper with tips on developing 
   thesis, structuring arguments, organizing literature reviews, and improving academic
   writing.
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-data-science-network.jpg
+  og_image: /assets/images/headers/photo-data-science-network.jpg
+  overlay_image: /assets/images/headers/photo-data-science-network.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-data-science-network.jpg
+  twitter_image: /assets/images/headers/photo-data-science-network.jpg
 keywords:
 - Research paper writing
 - How to write a research paper

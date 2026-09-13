@@ -6,12 +6,13 @@ classes: wide
 date: '2024-11-18'
 excerpt: Optimal control theory, employing Hamiltonian and Lagrangian methods, offers powerful tools in modeling and optimizing fiscal and monetary policy.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-statistics-bell-curve.jpg
+  og_image: /assets/images/headers/photo-statistics-bell-curve.jpg
+  overlay_image: /assets/images/headers/photo-statistics-bell-curve.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-statistics-bell-curve.jpg
+  twitter_image: /assets/images/headers/photo-statistics-bell-curve.jpg
 keywords:
 - Optimal control theory
 - Fiscal policy models

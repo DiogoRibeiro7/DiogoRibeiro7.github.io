@@ -6,12 +6,13 @@ classes: wide
 date: '2024-07-26'
 excerpt: An exploration of the Solow Growth Model's extensions, including the effects of technological advancement and human capital on economic growth.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-statistics-student-t.jpg
+  og_image: /assets/images/headers/photo-statistics-student-t.jpg
+  overlay_image: /assets/images/headers/photo-statistics-student-t.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-statistics-student-t.jpg
+  twitter_image: /assets/images/headers/photo-statistics-student-t.jpg
 keywords:
 - Solow growth model
 - Economic growth

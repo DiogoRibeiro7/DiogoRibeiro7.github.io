@@ -8,12 +8,13 @@ excerpt: The Friedman test is a non-parametric alternative to repeated measures 
   designed for use with ordinal data or non-normal distributions. Learn how and when
   to use it in your analyses.
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-data-science-openalex.jpg
+  og_image: /assets/images/headers/photo-data-science-openalex.jpg
+  overlay_image: /assets/images/headers/photo-data-science-openalex.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-data-science-openalex.jpg
+  twitter_image: /assets/images/headers/photo-data-science-openalex.jpg
 keywords:
 - Repeated measures anova
 - Non-parametric test

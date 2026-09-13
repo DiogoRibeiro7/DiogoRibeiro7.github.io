@@ -9,12 +9,13 @@ excerpt: Residual diagnostics often trigger debates, especially when tests like 
   deeper into residual analysis, focusing on its impact in GLS, mixed models, and
   robust alternatives.
 header:
-  image: /assets/images/data_science_13.jpg
-  og_image: /assets/images/data_science_13.jpg
-  overlay_image: /assets/images/data_science_13.jpg
+  image: /assets/images/headers/photo-data-science-heatmap.jpg
+  og_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  overlay_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_13.jpg
-  twitter_image: /assets/images/data_science_13.jpg
+  teaser: /assets/images/headers/photo-data-science-heatmap.jpg
+  twitter_image: /assets/images/headers/photo-data-science-heatmap.jpg
 keywords:
 - Residual diagnostics
 - Shapiro-wilk test

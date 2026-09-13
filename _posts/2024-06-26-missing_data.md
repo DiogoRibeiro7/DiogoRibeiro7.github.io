@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-06-26'
 header:
-  image: /assets/images/data_science_8.avif
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_8.avif
+  image: /assets/images/headers/photo-network-cables.jpg
+  og_image: /assets/images/headers/photo-network-cables.jpg
+  overlay_image: /assets/images/headers/photo-network-cables.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.avif
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-network-cables.jpg
+  twitter_image: /assets/images/headers/photo-network-cables.jpg
 permalink: '/data-science/missing_data/'
 redirect_from:
 - '/epidemiology/data science/medical research/statistics/clinical studies/missing_data/'

@@ -8,12 +8,13 @@ excerpt: Regression and path analysis are two statistical techniques used to mod
   relationships between variables. This article explains their differences, highlighting
   key features and use cases for each.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  og_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  overlay_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  twitter_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
 keywords:
 - Regression analysis
 - Path analysis

@@ -8,12 +8,13 @@ excerpt: Explore the complexity of real-world data distributions beyond the norm
   distribution. Learn about log-normal distributions, heavy-tailed phenomena, and
   how the Central Limit Theorem and Extreme Value Theory influence data analysis.
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_9.webp
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  og_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  overlay_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_9.webp
+  teaser: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  twitter_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
 keywords:
 - Real-world data distributions
 - Heavy-tailed distributions

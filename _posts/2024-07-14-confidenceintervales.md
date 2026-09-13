@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-07-14'
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  og_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  overlay_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  twitter_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
 redirect_from:
 - '/statistics/data science/confidenceintervales/'
 seo_description: The difference between confidence and prediction intervals, and what each tells you about uncertainty in an estimate.

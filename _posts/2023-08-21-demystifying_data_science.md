@@ -8,12 +8,13 @@ excerpt: Discover how data science, a multidisciplinary field combining statisti
   computer science, and domain expertise, can drive better business decisions and
   outcomes.
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-data-science-air-quality.jpg
+  og_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  overlay_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-data-science-air-quality.jpg
+  twitter_image: /assets/images/headers/photo-data-science-air-quality.jpg
 keywords:
 - Data science
 - Business intelligence

@@ -7,12 +7,13 @@ date: '2020-11-05'
 excerpt: An introduction to probability theory concepts every data scientist should
   know.
 header:
-  image: /assets/images/data_science_10.avif
-  og_image: /assets/images/data_science_10.avif
-  overlay_image: /assets/images/data_science_10.avif
+  image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  og_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  overlay_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_10.avif
-  twitter_image: /assets/images/data_science_10.avif
+  teaser: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  twitter_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
 keywords:
 - Probability theory
 - Random variables

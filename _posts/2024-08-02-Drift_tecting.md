@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-08-02'
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-factory.jpg
+  og_image: /assets/images/headers/photo-factory.jpg
+  overlay_image: /assets/images/headers/photo-factory.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-factory.jpg
+  twitter_image: /assets/images/headers/photo-factory.jpg
 permalink: '/machine-learning/Drift_tecting/'
 redirect_from:
 - '/machine learning/data science/artificial intelligence/Drift_tecting/'

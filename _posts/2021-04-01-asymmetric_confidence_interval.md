@@ -7,12 +7,13 @@ date: '2021-04-01'
 excerpt: Discover the reasons behind asymmetric confidence intervals in statistics
   and how they impact research interpretation.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-statistics-sampling-election.jpg
+  og_image: /assets/images/headers/photo-statistics-sampling-election.jpg
+  overlay_image: /assets/images/headers/photo-statistics-sampling-election.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-statistics-sampling-election.jpg
+  twitter_image: /assets/images/headers/photo-statistics-sampling-election.jpg
 keywords:
 - Asymmetric confidence interval
 - Wilson score interval

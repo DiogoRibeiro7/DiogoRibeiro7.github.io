@@ -6,12 +6,13 @@ classes: wide
 date: '2021-11-10'
 excerpt: Explore key metrics for evaluating classification and regression models.
 header:
-  image: /assets/images/data_science_8.avif
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_8.avif
+  image: /assets/images/headers/photo-data-science-openalex.jpg
+  og_image: /assets/images/headers/photo-data-science-openalex.jpg
+  overlay_image: /assets/images/headers/photo-data-science-openalex.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.avif
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-data-science-openalex.jpg
+  twitter_image: /assets/images/headers/photo-data-science-openalex.jpg
 keywords:
 - Model evaluation
 - Accuracy

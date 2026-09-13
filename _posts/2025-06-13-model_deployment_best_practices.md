@@ -7,12 +7,13 @@ date: '2025-06-13'
 excerpt: Deploying machine learning models to production requires planning and robust
   infrastructure. Here are key practices to ensure success.
 header:
-  image: /assets/images/data_science_16.jpg
-  og_image: /assets/images/data_science_16.jpg
-  overlay_image: /assets/images/data_science_16.jpg
+  image: /assets/images/headers/photo-microscope.jpg
+  og_image: /assets/images/headers/photo-microscope.jpg
+  overlay_image: /assets/images/headers/photo-microscope.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_16.jpg
-  twitter_image: /assets/images/data_science_16.jpg
+  teaser: /assets/images/headers/photo-microscope.jpg
+  twitter_image: /assets/images/headers/photo-microscope.jpg
 keywords:
 - Model deployment
 - Mlops

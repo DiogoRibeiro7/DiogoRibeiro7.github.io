@@ -8,12 +8,13 @@ excerpt: Discover the importance of feature engineering in enhancing machine lea
   models. Learn essential techniques for transforming raw data into valuable inputs
   that drive better predictive performance.
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-microscope.jpg
+  og_image: /assets/images/headers/photo-microscope.jpg
+  overlay_image: /assets/images/headers/photo-microscope.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-microscope.jpg
+  twitter_image: /assets/images/headers/photo-microscope.jpg
 keywords:
 - Feature engineering
 - Data transformation

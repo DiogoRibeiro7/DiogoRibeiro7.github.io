@@ -28,12 +28,13 @@ keywords:
 classes: wide
 date: '2026-07-09'
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-data-science-theater.jpg
+  og_image: /assets/images/headers/photo-data-science-theater.jpg
+  overlay_image: /assets/images/headers/photo-data-science-theater.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-data-science-theater.jpg
+  twitter_image: /assets/images/headers/photo-data-science-theater.jpg
 ---
 Hierarchical forecasting usually means a structure of products or regions. But aggregating a single series **over time** produces a hierarchy too: weekly totals sum to monthly, monthly to quarterly, quarterly to annual. Forecasts made at each granularity will not agree, and the same reconciliation machinery applies.
 

@@ -36,12 +36,13 @@ keywords:
 classes: wide
 date: '2025-08-31'
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-data-science-clustering.jpg
+  og_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-data-science-clustering.jpg
+  twitter_image: /assets/images/headers/photo-data-science-clustering.jpg
 ---
 
 

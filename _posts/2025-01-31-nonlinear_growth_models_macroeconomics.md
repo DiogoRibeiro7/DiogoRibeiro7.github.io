@@ -8,12 +8,13 @@ excerpt: Nonlinear growth models offer a richer and more realistic framework for
   macroeconomic development over time. This article explores the mathematical structures
   and real-world relevance of non-linear dynamics in economic growth theory.
 header:
-  image: /assets/images/data_science_8.avif
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_8.avif
+  image: /assets/images/headers/photo-statistics-bell-curve.jpg
+  og_image: /assets/images/headers/photo-statistics-bell-curve.jpg
+  overlay_image: /assets/images/headers/photo-statistics-bell-curve.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.avif
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-statistics-bell-curve.jpg
+  twitter_image: /assets/images/headers/photo-statistics-bell-curve.jpg
 keywords:
 - Nonlinear growth models
 - Macroeconomic dynamics

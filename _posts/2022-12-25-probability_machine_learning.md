@@ -7,12 +7,13 @@ date: '2022-12-25'
 excerpt: Understand key probability distributions in machine learning and their applications,
   including Bernoulli, Gaussian, and Beta distributions.
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-factory.jpg
+  og_image: /assets/images/headers/photo-factory.jpg
+  overlay_image: /assets/images/headers/photo-factory.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-factory.jpg
+  twitter_image: /assets/images/headers/photo-factory.jpg
 keywords:
 - Probability distributions
 - Machine learning distributions

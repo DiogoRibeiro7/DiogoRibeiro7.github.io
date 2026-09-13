@@ -8,12 +8,13 @@ excerpt: Discover how simulated annealing, inspired by metallurgy, offers a powe
   optimization method for machine learning models, especially when dealing with complex
   and non-convex loss functions.
 header:
-  image: /assets/images/machine_learning/machine_learning.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/machine_learning/machine_learning.jpg
+  image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  og_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  overlay_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/machine_learning/machine_learning.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  twitter_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
 keywords:
 - Simulated annealing
 - Machine learning optimization

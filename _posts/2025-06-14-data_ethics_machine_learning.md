@@ -7,12 +7,13 @@ date: '2025-06-14'
 excerpt: Ethical considerations are critical when deploying machine learning systems
   that affect real people.
 header:
-  image: /assets/images/data_science_17.jpg
-  og_image: /assets/images/data_science_17.jpg
-  overlay_image: /assets/images/data_science_17.jpg
+  image: /assets/images/headers/photo-network-cables.jpg
+  og_image: /assets/images/headers/photo-network-cables.jpg
+  overlay_image: /assets/images/headers/photo-network-cables.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_17.jpg
-  twitter_image: /assets/images/data_science_17.jpg
+  teaser: /assets/images/headers/photo-network-cables.jpg
+  twitter_image: /assets/images/headers/photo-network-cables.jpg
 keywords:
 - Data ethics
 - Bias mitigation

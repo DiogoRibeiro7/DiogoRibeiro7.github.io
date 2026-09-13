@@ -24,12 +24,13 @@ keywords:
 classes: wide
 date: '2026-04-09'
 header:
-  image: /assets/images/data_science_12.webp
-  og_image: /assets/images/data_science_12.webp
-  overlay_image: /assets/images/data_science_12.webp
+  image: /assets/images/headers/photo-data-science-neural-network.jpg
+  og_image: /assets/images/headers/photo-data-science-neural-network.jpg
+  overlay_image: /assets/images/headers/photo-data-science-neural-network.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_12.webp
-  twitter_image: /assets/images/data_science_12.webp
+  teaser: /assets/images/headers/photo-data-science-neural-network.jpg
+  twitter_image: /assets/images/headers/photo-data-science-neural-network.jpg
 ---
 
 Machine learning models are often judged by aggregate metrics. Accuracy, AUC, F1 score, mean absolute error, log loss, and calibration error compress model behavior into a small set of numbers. These summaries are useful, but they can also be dangerously incomplete.

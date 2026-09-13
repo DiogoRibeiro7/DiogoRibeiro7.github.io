@@ -8,12 +8,13 @@ excerpt: Discover how data science enhances supply chain optimization and indust
   network analysis, leveraging techniques like predictive analytics, machine learning,
   and graph theory to optimize operations.
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  og_image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
 keywords:
 - Real-time data analytics
 - Supply chain visibility

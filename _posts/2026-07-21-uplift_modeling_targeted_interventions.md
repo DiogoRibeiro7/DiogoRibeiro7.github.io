@@ -21,12 +21,13 @@ keywords:
 classes: wide
 date: '2026-07-21'
 header:
-  image: /assets/images/data_science_18.jpg
-  og_image: /assets/images/data_science_18.jpg
-  overlay_image: /assets/images/data_science_18.jpg
+  image: /assets/images/headers/photo-radio-telescope.jpg
+  og_image: /assets/images/headers/photo-radio-telescope.jpg
+  overlay_image: /assets/images/headers/photo-radio-telescope.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_18.jpg
-  twitter_image: /assets/images/data_science_18.jpg
+  teaser: /assets/images/headers/photo-radio-telescope.jpg
+  twitter_image: /assets/images/headers/photo-radio-telescope.jpg
 ---
 
 Predictive models estimate what is likely to happen. Uplift models estimate what is likely to change because of an intervention. That distinction matters when resources are limited.

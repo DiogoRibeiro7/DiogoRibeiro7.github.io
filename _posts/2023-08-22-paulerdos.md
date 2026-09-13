@@ -6,12 +6,13 @@ classes: wide
 date: '2023-08-22'
 excerpt: Delve into the fascinating life of Paul Erdős, a wandering mathematician whose love for numbers and collaboration reshaped the world of mathematics.
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-data-science-dashboard.jpg
+  og_image: /assets/images/headers/photo-data-science-dashboard.jpg
+  overlay_image: /assets/images/headers/photo-data-science-dashboard.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-data-science-dashboard.jpg
+  twitter_image: /assets/images/headers/photo-data-science-dashboard.jpg
 keywords:
 - Paul erdős biography
 - Number theory contributions

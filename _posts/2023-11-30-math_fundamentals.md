@@ -6,12 +6,13 @@ classes: wide
 date: '2023-11-30'
 excerpt: Beneath the headlines about AI sits a layer most discussions skip - the linear algebra, calculus, probability, and optimization that make it work.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_9.webp
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  og_image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  overlay_image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_9.webp
+  teaser: /assets/images/headers/photo-data-science-svm-iris.jpg
+  twitter_image: /assets/images/headers/photo-data-science-svm-iris.jpg
 keywords:
 - Mathematics for AI
 - Linear algebra

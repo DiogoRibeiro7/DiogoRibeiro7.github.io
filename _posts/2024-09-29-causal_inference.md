@@ -9,11 +9,11 @@ excerpt: Monotonic constraints are crucial for building reliable and interpretab
   decisions.
 header:
   image: /assets/images/Causal-Inference-Hero.png
-  og_image: /assets/images/data_science_2.avif
+  og_image: /assets/images/Causal-Inference-Hero.png
   overlay_image: /assets/images/Causal-Inference-Hero.png
   show_overlay_excerpt: false
   teaser: /assets/images/Causal-Inference-Hero.png
-  twitter_image: /assets/images/data_science_2.avif
+  twitter_image: /assets/images/Causal-Inference-Hero.png
 keywords:
 - Machine learning
 - Causal inference

@@ -7,12 +7,13 @@ date: '2020-02-02'
 excerpt: A detailed look at hypothesis testing, the misconceptions around the null
   hypothesis, and the diverse methods for detecting data deviations.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  og_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  overlay_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  twitter_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
 keywords:
 - Hypothesis testing
 - Null hypothesis

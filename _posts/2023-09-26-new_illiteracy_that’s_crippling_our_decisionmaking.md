@@ -6,12 +6,13 @@ classes: wide
 date: '2023-09-26'
 excerpt: Innumeracy is becoming the new illiteracy, with far-reaching implications for decision-making in various aspects of life. Discover how the inability to understand numbers affects our world and what can be done to address this growing issue.
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-mathematics-mobius-strip.jpg
+  og_image: /assets/images/headers/photo-mathematics-mobius-strip.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-mobius-strip.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-mathematics-mobius-strip.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-mobius-strip.jpg
 keywords:
 - Innumeracy
 - Data literacy

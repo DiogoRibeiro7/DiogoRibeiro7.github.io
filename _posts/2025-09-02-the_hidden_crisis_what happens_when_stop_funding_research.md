@@ -23,12 +23,13 @@ keywords:
 classes: wide
 date: '2025-09-02'
 header:
-  image: /assets/images/data_science_17.jpg
-  og_image: /assets/images/data_science_17.jpg
-  overlay_image: /assets/images/data_science_17.jpg
+  image: /assets/images/headers/photo-data-science-heatmap.jpg
+  og_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  overlay_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_17.jpg
-  twitter_image: /assets/images/data_science_17.jpg
+  teaser: /assets/images/headers/photo-data-science-heatmap.jpg
+  twitter_image: /assets/images/headers/photo-data-science-heatmap.jpg
 ---
 
 In the halls of power where budget decisions are made, fundamental research often appears as an easy target for cuts. Unlike applied research with clear commercial applications or infrastructure projects with visible outcomes, basic science can seem abstract, even indulgent. Politicians and administrators ask pointed questions: Why fund a physicist studying the behavior of exotic particles? What's the immediate value of mapping neural pathways in fruit flies? How does archaeological research contribute to economic growth?

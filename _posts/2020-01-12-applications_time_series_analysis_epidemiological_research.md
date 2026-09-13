@@ -8,12 +8,13 @@ excerpt: Time series analysis is a vital tool in epidemiology, allowing research
   to model the spread of diseases, detect outbreaks, and predict future trends in
   infection rates.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-data-science-clustering.jpg
+  og_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-data-science-clustering.jpg
+  twitter_image: /assets/images/headers/photo-data-science-clustering.jpg
 keywords:
 - Time series analysis
 - Epidemiology

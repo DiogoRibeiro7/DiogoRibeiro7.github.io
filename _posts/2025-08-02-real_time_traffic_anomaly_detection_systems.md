@@ -25,12 +25,13 @@ keywords:
 classes: wide
 date: '2025-08-02'
 header:
-  image: /assets/images/data_science/data_science_14.jpg
-  og_image: /assets/images/data_science/data_science_14.jpg
-  overlay_image: /assets/images/data_science/data_science_14.jpg
+  image: /assets/images/headers/photo-data-science-openalex.jpg
+  og_image: /assets/images/headers/photo-data-science-openalex.jpg
+  overlay_image: /assets/images/headers/photo-data-science-openalex.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science/data_science_14.jpg
-  twitter_image: /assets/images/data_science/data_science_14.jpg
+  teaser: /assets/images/headers/photo-data-science-openalex.jpg
+  twitter_image: /assets/images/headers/photo-data-science-openalex.jpg
 ---
 
 Traffic anomaly detection represents a critical component of modern intelligent transportation systems, serving as the first line of defense against incidents that can cascade into major disruptions. Unlike traditional traffic prediction that focuses on forecasting normal patterns, anomaly detection systems must identify deviations from expected behavior in real-time, often with incomplete information and under severe time constraints.

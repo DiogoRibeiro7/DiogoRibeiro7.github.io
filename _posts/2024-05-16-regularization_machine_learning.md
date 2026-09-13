@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-05-16'
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  og_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
 redirect_from:
 - '/mathematics/statistics/data science/machine learning/regularization_machine_learning/'
 seo_description: How regularization prevents overfitting in machine learning, why it works, and how the main techniques compare.

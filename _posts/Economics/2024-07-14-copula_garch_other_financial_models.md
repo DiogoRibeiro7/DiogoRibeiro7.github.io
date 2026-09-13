@@ -6,12 +6,13 @@ classes: wide
 date: '2024-07-14'
 excerpt: An in-depth look at financial models such as Copula and GARCH, their importance in quantitative analysis, and practical applications with Python.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  og_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  overlay_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  twitter_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
 keywords:
 - Copula models
 - Garch models

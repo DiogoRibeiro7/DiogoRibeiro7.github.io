@@ -10,11 +10,11 @@ excerpt: Explore the foundations, concepts, and mathematics behind Kernel Densit
 header:
   excerpt: false
   image: /assets/images/kernel_math.webp
-  og_image: /assets/images/data_science_1.jpg
+  og_image: /assets/images/kernel_math.webp
   overlay_image: /assets/images/kernel_math.webp
   show_overlay_excerpt: false
   teaser: /assets/images/kernel_math.webp
-  twitter_image: /assets/images/data_science_1.jpg
+  twitter_image: /assets/images/kernel_math.webp
 keywords:
 - Non-parametric statistics
 - Multivariate kde

@@ -8,12 +8,13 @@ excerpt: Explore how graph theory is applied to optimize production systems and 
   chains. Learn how network optimization and resource allocation techniques improve
   efficiency and streamline operations.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-statistics-student-t.jpg
+  og_image: /assets/images/headers/photo-statistics-student-t.jpg
+  overlay_image: /assets/images/headers/photo-statistics-student-t.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-statistics-student-t.jpg
+  twitter_image: /assets/images/headers/photo-statistics-student-t.jpg
 keywords:
 - Graph theory in supply chains
 - Network optimization

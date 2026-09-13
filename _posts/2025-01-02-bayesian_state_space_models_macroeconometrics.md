@@ -8,12 +8,13 @@ excerpt: Explore the critical role of Bayesian state space models in macroeconom
   analysis, with a focus on linear Gaussian models, dimension reduction, and non-linear
   or non-Gaussian extensions.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-data-science-heatmap.jpg
+  og_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  overlay_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-data-science-heatmap.jpg
+  twitter_image: /assets/images/headers/photo-data-science-heatmap.jpg
 keywords:
 - Bayesian methods
 - Macroeconometrics

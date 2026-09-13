@@ -6,12 +6,13 @@ classes: wide
 date: '2020-01-01'
 excerpt: Understand how causal reasoning helps us move beyond correlation, resolving paradoxes and leading to more accurate insights from data analysis.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  og_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  overlay_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  twitter_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
 keywords:
 - Simpson's paradox
 - Causality

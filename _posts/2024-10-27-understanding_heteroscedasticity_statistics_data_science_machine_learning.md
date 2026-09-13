@@ -7,12 +7,13 @@ date: '2024-10-27'
 excerpt: This in-depth guide explains heteroscedasticity in data analysis, highlighting
   its implications and techniques to manage non-constant variance.
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  og_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  overlay_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  twitter_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
 keywords:
 - Heteroscedasticity
 - Regression analysis

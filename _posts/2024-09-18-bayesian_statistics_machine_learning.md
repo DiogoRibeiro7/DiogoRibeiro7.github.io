@@ -9,11 +9,11 @@ excerpt: Unlock the power of Bayesian statistics in machine learning through pro
   real-world applications.
 header:
   image: /assets/images/bayes_stats_1.png
-  og_image: /assets/images/data_science_7.jpg
+  og_image: /assets/images/bayes_stats_1.png
   overlay_image: /assets/images/bayes_stats_1.png
   show_overlay_excerpt: false
   teaser: /assets/images/bayes_stats_1.png
-  twitter_image: /assets/images/data_science_7.jpg
+  twitter_image: /assets/images/bayes_stats_1.png
 keywords:
 - Bayesian statistics
 - Machine learning

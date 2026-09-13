@@ -8,12 +8,13 @@ excerpt: Agent-Based Models (ABM) offer a powerful framework for simulating macr
   systems by modeling interactions between heterogeneous agents. This article delves
   into the theory, structure, and use of ABMs in economic research.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-statistics-dice-coins.jpg
+  og_image: /assets/images/headers/photo-statistics-dice-coins.jpg
+  overlay_image: /assets/images/headers/photo-statistics-dice-coins.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-statistics-dice-coins.jpg
+  twitter_image: /assets/images/headers/photo-statistics-dice-coins.jpg
 keywords:
 - Agent-based modeling
 - Abm in economics

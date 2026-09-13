@@ -9,12 +9,13 @@ excerpt: Before applying the Box-Cox transformation, it is crucial to consider i
   article explores 12 critical questions you should ask yourself before using the
   transformation.
 header:
-  image: /assets/images/data_science_18.jpg
-  og_image: /assets/images/data_science_18.jpg
-  overlay_image: /assets/images/data_science_18.jpg
+  image: /assets/images/headers/photo-data-science-air-quality.jpg
+  og_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  overlay_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_18.jpg
-  twitter_image: /assets/images/data_science_18.jpg
+  teaser: /assets/images/headers/photo-data-science-air-quality.jpg
+  twitter_image: /assets/images/headers/photo-data-science-air-quality.jpg
 keywords:
 - Box-cox transformation
 - Hypothesis testing

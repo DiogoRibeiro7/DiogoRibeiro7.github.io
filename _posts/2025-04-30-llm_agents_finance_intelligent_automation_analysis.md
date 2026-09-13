@@ -8,12 +8,13 @@ excerpt: Large Language Model (LLM) agents are revolutionizing the finance indus
   by automating complex workflows, generating insightful analysis, and improving decision-making.
   This article explores their architecture, applications, and future potential.
 header:
-  image: /assets/images/data_science_13.jpg
-  og_image: /assets/images/data_science_13.jpg
-  overlay_image: /assets/images/data_science_13.jpg
+  image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  og_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  overlay_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_13.jpg
-  twitter_image: /assets/images/data_science_13.jpg
+  teaser: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  twitter_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
 keywords:
 - Llm agents
 - Ai in finance

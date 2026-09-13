@@ -7,12 +7,13 @@ date: '2021-04-30'
 excerpt: Big data is revolutionizing climate science, enabling more accurate predictions
   and helping formulate effective mitigation strategies.
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-data-science-air-quality.jpg
+  og_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  overlay_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-data-science-air-quality.jpg
+  twitter_image: /assets/images/headers/photo-data-science-air-quality.jpg
 keywords:
 - Big data
 - Climate change

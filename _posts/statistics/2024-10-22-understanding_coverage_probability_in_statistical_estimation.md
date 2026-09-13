@@ -6,12 +6,13 @@ classes: wide
 date: '2024-10-22'
 excerpt: Learn about coverage probability, a crucial concept in statistical estimation and prediction. Understand how confidence intervals are constructed and evaluated through nominal and actual coverage probability.
 header:
-  image: /assets/images/data_science_14.jpg
-  og_image: /assets/images/data_science_14.jpg
-  overlay_image: /assets/images/data_science_14.jpg
+  image: /assets/images/headers/photo-statistics-sampling-election.jpg
+  og_image: /assets/images/headers/photo-statistics-sampling-election.jpg
+  overlay_image: /assets/images/headers/photo-statistics-sampling-election.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_14.jpg
-  twitter_image: /assets/images/data_science_14.jpg
+  teaser: /assets/images/headers/photo-statistics-sampling-election.jpg
+  twitter_image: /assets/images/headers/photo-statistics-sampling-election.jpg
 keywords:
 - Coverage probability
 - Confidence intervals

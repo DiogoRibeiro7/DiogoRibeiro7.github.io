@@ -8,12 +8,13 @@ excerpt: A practical guide to mastering combinatorics with Python, featuring han
   examples using the itertools library and insights into scientific computing and
   probability theory.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  og_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
 keywords:
 - Combinatorics with python
 - Itertools library

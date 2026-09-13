@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-05-15'
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-mathematics-voronoi.jpg
+  og_image: /assets/images/headers/photo-mathematics-voronoi.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-voronoi.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-mathematics-voronoi.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-voronoi.jpg
 redirect_from:
 - '/mathematics/statistics/data science/machine learning/Feature_Engineering/'
 seo_description: How automated feature engineering creates and selects variables that improve model accuracy and reduce overfitting.

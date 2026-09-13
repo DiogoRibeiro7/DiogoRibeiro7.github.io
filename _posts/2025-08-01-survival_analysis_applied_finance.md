@@ -24,12 +24,13 @@ keywords:
 classes: wide
 date: '2025-08-01'
 header:
-  image: /assets/images/data_science_18.jpg
-  og_image: /assets/images/data_science_18.jpg
-  overlay_image: /assets/images/data_science_18.jpg
+  image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
+  og_image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
+  overlay_image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_18.jpg
-  twitter_image: /assets/images/data_science_18.jpg
+  teaser: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
+  twitter_image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
 ---
 
 ## Table of Contents

@@ -21,12 +21,13 @@ keywords:
 classes: wide
 date: '2025-05-26'
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-statistics-clt-binomial.jpg
+  og_image: /assets/images/headers/photo-statistics-clt-binomial.jpg
+  overlay_image: /assets/images/headers/photo-statistics-clt-binomial.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-statistics-clt-binomial.jpg
+  twitter_image: /assets/images/headers/photo-statistics-clt-binomial.jpg
 ---
 
 The intersection of an aging global population and advancing artificial intelligence technologies presents unprecedented opportunities to revolutionize mental healthcare for elderly individuals. As the world's population over 65 is projected to nearly double from 703 million in 2019 to 1.5 billion by 2050, the mental health challenges facing older adults have become a critical public health priority. Traditional approaches to elderly mental healthcare, while valuable, often struggle with early detection, continuous monitoring, and personalized intervention strategies that could significantly improve outcomes and quality of life.

@@ -7,12 +7,13 @@ date: '2025-06-10'
 excerpt: A practical introduction to building ARIMA models in Python for reliable
   time series forecasting.
 header:
-  image: /assets/images/data_science_13.jpg
-  og_image: /assets/images/data_science_13.jpg
-  overlay_image: /assets/images/data_science_13.jpg
+  image: /assets/images/headers/photo-statistics-f-test.jpg
+  og_image: /assets/images/headers/photo-statistics-f-test.jpg
+  overlay_image: /assets/images/headers/photo-statistics-f-test.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_13.jpg
-  twitter_image: /assets/images/data_science_13.jpg
+  teaser: /assets/images/headers/photo-statistics-f-test.jpg
+  twitter_image: /assets/images/headers/photo-statistics-f-test.jpg
 keywords:
 - Arima
 - Time series forecasting

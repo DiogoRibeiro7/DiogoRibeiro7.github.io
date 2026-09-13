@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-07-11'
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-data-science-heatmap.jpg
+  og_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  overlay_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-data-science-heatmap.jpg
+  twitter_image: /assets/images/headers/photo-data-science-heatmap.jpg
 redirect_from:
 - '/python/pre_commit/'
 seo_description: How pre-commit hooks enforce code quality in Python projects, and how to set them up in your Git workflow.

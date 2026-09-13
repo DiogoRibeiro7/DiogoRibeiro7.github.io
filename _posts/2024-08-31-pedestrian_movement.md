@@ -8,12 +8,13 @@ excerpt: Explore the simulation of pedestrian evacuation in environments impacte
   by smoke. This guide covers key models such as the Social Force Model and Advection-Diffusion
   Equation to assess evacuation efficiency under smoke propagation conditions.
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-data-science-air-quality.jpg
+  og_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  overlay_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-data-science-air-quality.jpg
+  twitter_image: /assets/images/headers/photo-data-science-air-quality.jpg
 keywords:
 - Pedestrian evacuation simulation
 - Smoke propagation modeling

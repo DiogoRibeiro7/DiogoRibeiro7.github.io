@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-05-22'
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-data-science-neural-network.jpg
+  og_image: /assets/images/headers/photo-data-science-neural-network.jpg
+  overlay_image: /assets/images/headers/photo-data-science-neural-network.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-data-science-neural-network.jpg
+  twitter_image: /assets/images/headers/photo-data-science-neural-network.jpg
 permalink: '/data-science/Peer_review/'
 redirect_from:
 - '/academic writing/research methodology/political communication/social media studies/digital democracy/social network analysis/political sociology/Peer_review/'

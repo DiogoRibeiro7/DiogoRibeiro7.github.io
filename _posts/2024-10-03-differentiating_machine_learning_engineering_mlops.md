@@ -8,12 +8,13 @@ excerpt: This article explores the fine line between Machine Learning Engineerin
   (MLE) and MLOps roles, delving into their shared responsibilities, unique contributions,
   and how these roles integrate in small to large teams.
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-data-science-clustering.jpg
+  og_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-data-science-clustering.jpg
+  twitter_image: /assets/images/headers/photo-data-science-clustering.jpg
 keywords:
 - Machine learning engineering
 - Mlops

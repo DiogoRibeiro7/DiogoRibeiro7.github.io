@@ -8,12 +8,13 @@ excerpt: Machine learning is revolutionizing medical diagnosis by providing fast
   more accurate tools for detecting diseases such as cancer, heart disease, and neurological
   disorders.
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_9.webp
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  og_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  overlay_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_9.webp
+  teaser: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  twitter_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
 keywords:
 - Machine learning
 - Medical diagnosis

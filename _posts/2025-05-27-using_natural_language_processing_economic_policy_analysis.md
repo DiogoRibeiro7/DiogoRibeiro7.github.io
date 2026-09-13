@@ -8,12 +8,13 @@ excerpt: Natural Language Processing offers powerful tools for interpreting econ
   intent behind political speeches and policy documents. This article explores NLP
   techniques used in economic policy forecasting and analysis.
 header:
-  image: /assets/images/data_science_11.avif
-  og_image: /assets/images/data_science_11.avif
-  overlay_image: /assets/images/data_science_11.avif
+  image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  og_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  overlay_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_11.avif
-  twitter_image: /assets/images/data_science_11.avif
+  teaser: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  twitter_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
 keywords:
 - Nlp in economics
 - Economic policy analysis

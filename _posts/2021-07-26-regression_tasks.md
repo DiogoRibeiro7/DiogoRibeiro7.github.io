@@ -9,11 +9,11 @@ excerpt: Regression tasks are at the heart of machine learning. This guide explo
   Regression, and Support Vector Regression, with insights on when to use each.
 header:
   image: /assets/images/regression-analysis-2.webp
-  og_image: /assets/images/data_science_8.avif
+  og_image: /assets/images/regression-analysis-2.webp
   overlay_image: /assets/images/regression-analysis-2.webp
   show_overlay_excerpt: false
   teaser: /assets/images/regression-analysis-2.webp
-  twitter_image: /assets/images/data_science_8.avif
+  twitter_image: /assets/images/regression-analysis-2.webp
 keywords:
 - Probabilistic models
 - Linear regression

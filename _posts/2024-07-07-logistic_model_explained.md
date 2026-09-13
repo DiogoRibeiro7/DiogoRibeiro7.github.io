@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-07-07'
 header:
-  image: /assets/images/data_science_8.avif
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_8.avif
+  image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
+  og_image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
+  overlay_image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.avif
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
+  twitter_image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
 keywords:
 - Logistic regression
 - Logit model

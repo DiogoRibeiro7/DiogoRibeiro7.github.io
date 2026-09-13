@@ -6,12 +6,13 @@ classes: wide
 date: '2024-09-27'
 excerpt: Explore the deep connection between entropy, data science, and machine learning. Understand how entropy drives decision trees, uncertainty measures, feature selection, and information theory in modern AI.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-radio-telescope.jpg
+  og_image: /assets/images/headers/photo-radio-telescope.jpg
+  overlay_image: /assets/images/headers/photo-radio-telescope.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-radio-telescope.jpg
+  twitter_image: /assets/images/headers/photo-radio-telescope.jpg
 keywords:
 - Entropy
 - Information gain

@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-07-05'
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-data-science-clustering.jpg
+  og_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-data-science-clustering.jpg
+  twitter_image: /assets/images/headers/photo-data-science-clustering.jpg
 keywords:
 - Time series smoothing
 - Moving averages

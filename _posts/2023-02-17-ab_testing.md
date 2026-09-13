@@ -8,12 +8,13 @@ excerpt: An in-depth exploration of sequential testing and its application in A/
   testing. Understand the statistical underpinnings, advantages, limitations, and
   practical implementations in R, JavaScript, and Python.
 header:
-  image: /assets/images/data_science_8.avif
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_8.avif
+  image: /assets/images/headers/photo-network-cables.jpg
+  og_image: /assets/images/headers/photo-network-cables.jpg
+  overlay_image: /assets/images/headers/photo-network-cables.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.avif
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-network-cables.jpg
+  twitter_image: /assets/images/headers/photo-network-cables.jpg
 keywords:
 - Sequential testing
 - A/b testing

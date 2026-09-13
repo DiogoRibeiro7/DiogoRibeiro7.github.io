@@ -6,12 +6,13 @@ classes: wide
 date: '2024-11-05'
 excerpt: Capture-Mark-Recapture (CMR) is a powerful statistical method for estimating wildlife populations, relying on six key assumptions for reliability.
 header:
-  image: /assets/images/data_science_19.webp
-  og_image: /assets/images/data_science_19.webp
-  overlay_image: /assets/images/data_science_19.webp
+  image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  og_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  overlay_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_19.webp
-  twitter_image: /assets/images/data_science_19.webp
+  teaser: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  twitter_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
 keywords:
 - Capture-mark-recapture
 - Statistical assumptions

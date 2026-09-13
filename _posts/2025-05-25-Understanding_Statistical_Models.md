@@ -8,12 +8,13 @@ excerpt: Statistical models lie at the heart of modern data science and quantita
   research, enabling analysts to infer, predict, and simulate outcomes from structured
   data.
 header:
-  image: /assets/images/data_science_16.jpg
-  og_image: /assets/images/data_science_16.jpg
-  overlay_image: /assets/images/data_science_16.jpg
+  image: /assets/images/headers/photo-statistics-ecdf.jpg
+  og_image: /assets/images/headers/photo-statistics-ecdf.jpg
+  overlay_image: /assets/images/headers/photo-statistics-ecdf.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_16.jpg
-  twitter_image: /assets/images/data_science_16.jpg
+  teaser: /assets/images/headers/photo-statistics-ecdf.jpg
+  twitter_image: /assets/images/headers/photo-statistics-ecdf.jpg
 keywords:
 - Statistical model
 - Data modeling

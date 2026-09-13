@@ -8,12 +8,13 @@ excerpt: Text preprocessing is a crucial step in NLP for transforming raw text i
   a structured format. Learn key techniques like tokenization, stemming, lemmatization,
   and text normalization for successful NLP tasks.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-radio-telescope.jpg
+  og_image: /assets/images/headers/photo-radio-telescope.jpg
+  overlay_image: /assets/images/headers/photo-radio-telescope.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-radio-telescope.jpg
+  twitter_image: /assets/images/headers/photo-radio-telescope.jpg
 keywords:
 - Text preprocessing
 - Nlp

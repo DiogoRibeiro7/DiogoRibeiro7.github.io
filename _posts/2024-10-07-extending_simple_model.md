@@ -8,12 +8,13 @@ excerpt: Explore how simple distributional models for time-series classification
   be extended with additional feature sets like catch22 to improve performance without
   sacrificing interpretability.
 header:
-  image: /assets/images/data_science_8.avif
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_8.avif
+  image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  og_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  overlay_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.avif
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  twitter_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
 keywords:
 - Time-series classification
 - Catch22

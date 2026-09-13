@@ -8,12 +8,13 @@ excerpt: This article delves into the Chi-Square test, a fundamental tool for an
   categorical data, with a focus on its applications in goodness-of-fit and tests
   of independence.
 header:
-  image: /assets/images/data_science_11.avif
-  og_image: /assets/images/data_science_11.avif
-  overlay_image: /assets/images/data_science_11.avif
+  image: /assets/images/headers/photo-statistics-boxplots.jpg
+  og_image: /assets/images/headers/photo-statistics-boxplots.jpg
+  overlay_image: /assets/images/headers/photo-statistics-boxplots.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_11.avif
-  twitter_image: /assets/images/data_science_11.avif
+  teaser: /assets/images/headers/photo-statistics-boxplots.jpg
+  twitter_image: /assets/images/headers/photo-statistics-boxplots.jpg
 keywords:
 - Chi-square test
 - Goodness-of-fit

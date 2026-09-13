@@ -8,12 +8,13 @@ excerpt: Learn the core concepts of binary classification, explore common algori
   like Decision Trees and SVMs, and discover how to evaluate performance using precision,
   recall, and F1-score.
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  og_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  overlay_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  twitter_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
 keywords:
 - Binary classification
 - Machine learning

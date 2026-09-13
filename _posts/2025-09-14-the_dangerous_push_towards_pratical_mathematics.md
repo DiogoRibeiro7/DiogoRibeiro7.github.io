@@ -28,12 +28,13 @@ keywords:
 classes: wide
 date: '2025-09-14'
 header:
-  image: /assets/images/data_science_16.jpg
-  og_image: /assets/images/data_science_16.jpg
-  overlay_image: /assets/images/data_science_16.jpg
+  image: /assets/images/headers/photo-mathematics-voronoi.jpg
+  og_image: /assets/images/headers/photo-mathematics-voronoi.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-voronoi.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_16.jpg
-  twitter_image: /assets/images/data_science_16.jpg
+  teaser: /assets/images/headers/photo-mathematics-voronoi.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-voronoi.jpg
 ---
 
 Mathematics is increasingly asked to justify itself in the language of immediate usefulness. Research proposals are expected to describe industrial impact. Departments are encouraged to form partnerships with companies. Public funding is evaluated through innovation pipelines, technology transfer, and measurable economic return. Students are told that mathematics matters because it serves artificial intelligence, finance, engineering, cybersecurity, and data science.

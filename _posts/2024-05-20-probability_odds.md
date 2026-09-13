@@ -8,12 +8,13 @@ excerpt: Discover the difference between probability and odds in biostatistics, 
   how these concepts apply to data science and machine learning. A clear explanation
   of event occurrence and likelihood.
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  og_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  overlay_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  twitter_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
 keywords:
 - Probability vs odds
 - Biostatistics probability

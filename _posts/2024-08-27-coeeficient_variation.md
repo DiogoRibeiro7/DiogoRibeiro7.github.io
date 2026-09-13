@@ -8,12 +8,13 @@ excerpt: Learn how to calculate and interpret the Coefficient of Variation (CV),
   crucial statistical measure of relative variability. This guide explores its applications
   and limitations in various data analysis contexts.
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  og_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  overlay_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  twitter_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
 keywords:
 - Coefficient of variation
 - Statistical variability

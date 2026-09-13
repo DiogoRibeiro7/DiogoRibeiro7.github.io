@@ -6,12 +6,13 @@ classes: wide
 date: '2015-07-26'
 excerpt: Learn the critical difference between correlation and causation in data analysis, how to interpret correlation coefficients, and why controlled experiments are essential for establishing causality.
 header:
-  image: /assets/images/data_science_13.jpg
-  og_image: /assets/images/data_science_13.jpg
-  overlay_image: /assets/images/data_science_13.jpg
+  image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  og_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  overlay_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_13.jpg
-  twitter_image: /assets/images/data_science_13.jpg
+  teaser: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  twitter_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
 keywords:
 - Correlation
 - Causation

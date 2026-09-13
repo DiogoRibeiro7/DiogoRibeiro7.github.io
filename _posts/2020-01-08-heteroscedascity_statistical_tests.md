@@ -7,12 +7,13 @@ date: '2020-01-08'
 excerpt: Heteroscedasticity can affect regression models, leading to biased or inefficient
   estimates. Here's how to detect it and what to do when it's present.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-statistics-bell-curve.jpg
+  og_image: /assets/images/headers/photo-statistics-bell-curve.jpg
+  overlay_image: /assets/images/headers/photo-statistics-bell-curve.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-statistics-bell-curve.jpg
+  twitter_image: /assets/images/headers/photo-statistics-bell-curve.jpg
 keywords:
 - Econometrics
 - Regression diagnostics

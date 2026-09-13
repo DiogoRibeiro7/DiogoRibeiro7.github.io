@@ -9,12 +9,13 @@ tags:
 - Climate and Environment
 - Forecasting
 header:
-  image: /assets/images/data_science_11.avif
-  og_image: /assets/images/data_science_11.avif
-  overlay_image: /assets/images/data_science_11.avif
+  image: /assets/images/headers/photo-data-science-street-trees.jpg
+  og_image: /assets/images/headers/photo-data-science-street-trees.jpg
+  overlay_image: /assets/images/headers/photo-data-science-street-trees.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_11.avif
-  twitter_image: /assets/images/data_science_11.avif
+  teaser: /assets/images/headers/photo-data-science-street-trees.jpg
+  twitter_image: /assets/images/headers/photo-data-science-street-trees.jpg
 author_profile: false
 seo_title: AI and ML in Renewable Energy Optimization
 seo_description: How AI and machine learning are transforming renewable energy, from forecasting and smart grids to storage.

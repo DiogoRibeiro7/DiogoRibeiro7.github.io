@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-07-06'
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-statistics-f-test.jpg
+  og_image: /assets/images/headers/photo-statistics-f-test.jpg
+  overlay_image: /assets/images/headers/photo-statistics-f-test.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-statistics-f-test.jpg
+  twitter_image: /assets/images/headers/photo-statistics-f-test.jpg
 redirect_from:
 - '/statistics/data science/regression analysis/stepwise_selection/'
 seo_description: Why stepwise selection biases coefficients upward, the consequences for your estimates, and the broader implications.

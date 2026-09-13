@@ -8,12 +8,13 @@ excerpt: This article delves into the fundamentals of Markov Chain Monte Carlo (
   its applications, and its significance in solving complex, high-dimensional probability
   distributions.
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  og_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
 keywords:
 - Markov chain monte carlo
 - Mcmc

@@ -7,12 +7,13 @@ date: '2021-09-24'
 excerpt: This article explores the use of K-means clustering in crime analysis, including
   practical implementation, case studies, and future directions.
 header:
-  image: /assets/images/machine_learning/machine_learning_3.jpeg
-  og_image: /assets/images/data_science_9.webp
-  overlay_image: /assets/images/machine_learning/machine_learning_3.jpeg
+  image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  og_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  overlay_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/machine_learning/machine_learning_3.jpeg
-  twitter_image: /assets/images/data_science_9.webp
+  teaser: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  twitter_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
 keywords:
 - Law enforcement
 - Crime analysis

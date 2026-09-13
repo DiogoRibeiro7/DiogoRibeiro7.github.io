@@ -6,12 +6,13 @@ classes: wide
 date: '2020-01-12'
 excerpt: Grace Hopper revolutionized computer science by developing the first compiler and contributing to COBOL. Discover her groundbreaking work and her legacy in the field of programming.
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-mathematics-klein-quartic.jpg
+  og_image: /assets/images/headers/photo-mathematics-klein-quartic.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-klein-quartic.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-mathematics-klein-quartic.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-klein-quartic.jpg
 keywords:
 - Grace hopper biography
 - First computer compiler

@@ -8,12 +8,13 @@ excerpt: Data drift is one of the primary threats to model reliability in produc
   This article walks through how to detect it using both statistical techniques and
   modern monitoring tools.
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-data-science-openalex.jpg
+  og_image: /assets/images/headers/photo-data-science-openalex.jpg
+  overlay_image: /assets/images/headers/photo-data-science-openalex.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-data-science-openalex.jpg
+  twitter_image: /assets/images/headers/photo-data-science-openalex.jpg
 keywords:
 - Data drift detection
 - Kullback-leibler divergence

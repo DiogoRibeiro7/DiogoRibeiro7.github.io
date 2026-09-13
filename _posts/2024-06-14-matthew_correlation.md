@@ -6,12 +6,13 @@ classes: wide
 date: '2024-06-14'
 excerpt: Dive deep into Matthew's Correlation Coefficient (MCC), a powerful metric for evaluating binary classification models, especially in imbalanced datasets.
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-factory.jpg
+  og_image: /assets/images/headers/photo-factory.jpg
+  overlay_image: /assets/images/headers/photo-factory.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-factory.jpg
+  twitter_image: /assets/images/headers/photo-factory.jpg
 keywords:
 - Mcc
 - Matthew’s correlation coefficient

@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-05-11'
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_9.webp
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-mathematics-lecture-blackboard.jpg
+  og_image: /assets/images/headers/photo-mathematics-lecture-blackboard.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-lecture-blackboard.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_9.webp
+  teaser: /assets/images/headers/photo-mathematics-lecture-blackboard.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-lecture-blackboard.jpg
 redirect_from:
 - '/mathematics/statistics/data science/Importance_Sampling/'
 seo_description: How importance sampling improves the efficiency and accuracy of simulations by focusing on the most significant probability regions.

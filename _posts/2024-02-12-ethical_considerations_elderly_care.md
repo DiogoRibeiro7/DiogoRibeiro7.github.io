@@ -8,12 +8,13 @@ excerpt: As AI revolutionizes elderly care, ethical concerns around privacy, aut
   and consent come into focus. This article explores how to balance technological
   advancements with the dignity and personal preferences of elderly individuals.
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_9.webp
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-data-science-clustering.jpg
+  og_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_9.webp
+  teaser: /assets/images/headers/photo-data-science-clustering.jpg
+  twitter_image: /assets/images/headers/photo-data-science-clustering.jpg
 keywords:
 - Ai in elderly care
 - Ethics in healthcare

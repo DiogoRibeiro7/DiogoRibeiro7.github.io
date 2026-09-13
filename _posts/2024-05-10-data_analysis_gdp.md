@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-05-10'
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-mathematics-julia-set.jpg
+  og_image: /assets/images/headers/photo-mathematics-julia-set.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-julia-set.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-mathematics-julia-set.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-julia-set.jpg
 redirect_from:
 - '/mathematics/statistics/data science/economy/data_analysis_gdp/'
 seo_description: Why aggregated GDP figures mislead data science analysis, from measurement and timeliness problems to the dimensions GDP never captures.

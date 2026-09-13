@@ -8,12 +8,13 @@ excerpt: Spatial epidemiology combines geospatial data with data science techniq
   to track and analyze disease outbreaks, offering public health agencies critical
   tools for intervention and planning.
 header:
-  image: /assets/images/data_science_19.webp
-  og_image: /assets/images/data_science_19.webp
-  overlay_image: /assets/images/data_science_19.webp
+  image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  og_image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  overlay_image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_19.webp
-  twitter_image: /assets/images/data_science_19.webp
+  teaser: /assets/images/headers/photo-data-science-svm-iris.jpg
+  twitter_image: /assets/images/headers/photo-data-science-svm-iris.jpg
 keywords:
 - Spatial epidemiology
 - Geospatial data

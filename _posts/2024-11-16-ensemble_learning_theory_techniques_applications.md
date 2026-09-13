@@ -8,12 +8,13 @@ excerpt: Ensemble methods combine multiple models to improve accuracy, robustnes
   and generalization. This guide breaks down core techniques like bagging, boosting,
   and stacking, and explores when and how to use them effectively.
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-solar-panels.jpg
+  og_image: /assets/images/headers/photo-solar-panels.jpg
+  overlay_image: /assets/images/headers/photo-solar-panels.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-solar-panels.jpg
+  twitter_image: /assets/images/headers/photo-solar-panels.jpg
 keywords:
 - Ensemble learning
 - Bagging

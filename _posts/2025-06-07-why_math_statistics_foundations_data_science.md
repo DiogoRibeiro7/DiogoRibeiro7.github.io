@@ -7,12 +7,13 @@ date: '2025-06-07'
 excerpt: Mastering mathematics and statistics is essential for understanding data
   science algorithms and avoiding common pitfalls when building models.
 header:
-  image: /assets/images/data_science_10.avif
-  og_image: /assets/images/data_science_10.avif
-  overlay_image: /assets/images/data_science_10.avif
+  image: /assets/images/headers/photo-data-science-theater.jpg
+  og_image: /assets/images/headers/photo-data-science-theater.jpg
+  overlay_image: /assets/images/headers/photo-data-science-theater.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_10.avif
-  twitter_image: /assets/images/data_science_10.avif
+  teaser: /assets/images/headers/photo-data-science-theater.jpg
+  twitter_image: /assets/images/headers/photo-data-science-theater.jpg
 keywords:
 - Mathematics for data science
 - Statistics fundamentals

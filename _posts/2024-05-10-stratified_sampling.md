@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-05-10'
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_9.webp
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-mathematics-klein-quartic.jpg
+  og_image: /assets/images/headers/photo-mathematics-klein-quartic.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-klein-quartic.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_9.webp
+  teaser: /assets/images/headers/photo-mathematics-klein-quartic.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-klein-quartic.jpg
 redirect_from:
 - '/mathematics/statistics/data science/stratified_sampling/'
 seo_description: How stratified sampling improves representativeness and accuracy by dividing a population into subgroups before sampling.

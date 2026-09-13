@@ -8,12 +8,13 @@ excerpt: Data drift can significantly affect the performance of machine learning
   over time. Learn about different types of drift and how they impact model predictions
   in dynamic environments.
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-data-science-neural-network.jpg
+  og_image: /assets/images/headers/photo-data-science-neural-network.jpg
+  overlay_image: /assets/images/headers/photo-data-science-neural-network.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-data-science-neural-network.jpg
+  twitter_image: /assets/images/headers/photo-data-science-neural-network.jpg
 keywords:
 - Data drift
 - Machine learning models

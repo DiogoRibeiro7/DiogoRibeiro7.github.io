@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-06-11'
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-mathematics-graph-theory.jpg
+  og_image: /assets/images/headers/photo-mathematics-graph-theory.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-graph-theory.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-mathematics-graph-theory.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-graph-theory.jpg
 redirect_from:
 - '/mathematics/statistics/data science/medical research/survival_analysis/'
 seo_description: Parametric and non-parametric approaches to estimating survival functions, their assumptions, and where each applies.

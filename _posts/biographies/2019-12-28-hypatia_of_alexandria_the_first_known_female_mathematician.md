@@ -6,12 +6,13 @@ classes: wide
 date: '2019-12-28'
 excerpt: Hypatia of Alexandria is recognized as the first known female mathematician. This article explores her contributions to geometry and astronomy, her philosophical influence, and her tragic death.
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-mathematics-julia-set.jpg
+  og_image: /assets/images/headers/photo-mathematics-julia-set.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-julia-set.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-mathematics-julia-set.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-julia-set.jpg
 keywords:
 - Hypatia biography
 - First female mathematician

@@ -7,12 +7,13 @@ date: '2020-05-26'
 excerpt: Learn what the False Positive Rate (FPR) is, how it impacts machine learning
   models, and when to use it for better evaluation.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-data-science-street-trees.jpg
+  og_image: /assets/images/headers/photo-data-science-street-trees.jpg
+  overlay_image: /assets/images/headers/photo-data-science-street-trees.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-data-science-street-trees.jpg
+  twitter_image: /assets/images/headers/photo-data-science-street-trees.jpg
 keywords:
 - R
 - False positive rate

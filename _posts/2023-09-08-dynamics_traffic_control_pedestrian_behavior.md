@@ -8,12 +8,13 @@ excerpt: This article explores the complex interplay between traffic control, pe
   movement, and the application of fluid dynamics to model and manage these phenomena
   in urban environments.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-data-science-network.jpg
+  og_image: /assets/images/headers/photo-data-science-network.jpg
+  overlay_image: /assets/images/headers/photo-data-science-network.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-data-science-network.jpg
+  twitter_image: /assets/images/headers/photo-data-science-network.jpg
 keywords:
 - Traffic control
 - Pedestrian dynamics

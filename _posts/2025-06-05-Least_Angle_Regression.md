@@ -9,12 +9,13 @@ excerpt: Least Angle Regression, or LARS, is an efficient regression algorithm d
   that is especially useful in the presence of multicollinearity or when feature selection
   is crucial.
 header:
-  image: /assets/images/data_science_18.jpg
-  og_image: /assets/images/data_science_18.jpg
-  overlay_image: /assets/images/data_science_18.jpg
+  image: /assets/images/headers/photo-data-science-street-trees.jpg
+  og_image: /assets/images/headers/photo-data-science-street-trees.jpg
+  overlay_image: /assets/images/headers/photo-data-science-street-trees.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_18.jpg
-  twitter_image: /assets/images/data_science_18.jpg
+  teaser: /assets/images/headers/photo-data-science-street-trees.jpg
+  twitter_image: /assets/images/headers/photo-data-science-street-trees.jpg
 keywords:
 - Least angle regression
 - Lars

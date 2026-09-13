@@ -7,12 +7,13 @@ date: '2020-11-30'
 excerpt: Discover best practices for creating clear and compelling data visualizations
   that communicate insights effectively.
 header:
-  image: /assets/images/data_science_14.jpg
-  og_image: /assets/images/data_science_14.jpg
-  overlay_image: /assets/images/data_science_14.jpg
+  image: /assets/images/headers/photo-network-cables.jpg
+  og_image: /assets/images/headers/photo-network-cables.jpg
+  overlay_image: /assets/images/headers/photo-network-cables.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_14.jpg
-  twitter_image: /assets/images/data_science_14.jpg
+  teaser: /assets/images/headers/photo-network-cables.jpg
+  twitter_image: /assets/images/headers/photo-network-cables.jpg
 keywords:
 - Data visualization
 - Charts

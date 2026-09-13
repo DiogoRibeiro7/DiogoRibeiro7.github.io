@@ -7,12 +7,13 @@ date: '2020-11-10'
 excerpt: Understand how simple linear regression models the relationship between two
   variables using a single predictor.
 header:
-  image: /assets/images/data_science_11.avif
-  og_image: /assets/images/data_science_11.avif
-  overlay_image: /assets/images/data_science_11.avif
+  image: /assets/images/headers/photo-microscope.jpg
+  og_image: /assets/images/headers/photo-microscope.jpg
+  overlay_image: /assets/images/headers/photo-microscope.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_11.avif
-  twitter_image: /assets/images/data_science_11.avif
+  teaser: /assets/images/headers/photo-microscope.jpg
+  twitter_image: /assets/images/headers/photo-microscope.jpg
 keywords:
 - Linear regression
 - Least squares

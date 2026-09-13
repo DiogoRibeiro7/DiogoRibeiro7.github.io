@@ -7,12 +7,13 @@ date: '2020-01-30'
 excerpt: The Cox Proportional Hazards Model is a vital tool for analyzing time-to-event
   data in medical studies. Learn how it works and its applications in survival analysis.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  og_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  overlay_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  twitter_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
 keywords:
 - Cox proportional hazards model
 - Survival analysis

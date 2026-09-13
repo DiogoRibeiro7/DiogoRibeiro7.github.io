@@ -8,12 +8,13 @@ excerpt: Learn the differences between multiple regression and stepwise regressi
   and discover when to use each method to build the best predictive models in business
   analytics and scientific research.
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  og_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  overlay_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  twitter_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
 keywords:
 - Multiple regression
 - Stepwise regression

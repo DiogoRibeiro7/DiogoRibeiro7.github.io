@@ -6,12 +6,13 @@ classes: wide
 date: '2024-12-07'
 excerpt: Dive into the Chi-Square Test, a statistical method for evaluating categorical data. Understand its applications in survey analysis, contingency tables, and genetics.
 header:
-  image: /assets/images/data_science_20.jpg
-  og_image: /assets/images/data_science_20.jpg
-  overlay_image: /assets/images/data_science_20.jpg
+  image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  og_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  overlay_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_20.jpg
-  twitter_image: /assets/images/data_science_20.jpg
+  teaser: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  twitter_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
 keywords:
 - Chi-square test
 - Goodness-of-fit test

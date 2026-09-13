@@ -8,12 +8,13 @@ excerpt: Learn how the Mann-Kendall Test is used for trend detection in time-ser
   data, particularly in fields like environmental studies, hydrology, and climate
   research.
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  og_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  overlay_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  twitter_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
 keywords:
 - Mann-kendall test
 - Trend detection

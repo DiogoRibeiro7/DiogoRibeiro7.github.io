@@ -6,12 +6,13 @@ classes: wide
 date: '2019-12-23'
 excerpt: John Nash revolutionized game theory with his Nash equilibrium concept and won the Nobel Prize in Economics. He also faced a lifelong struggle with schizophrenia, making his life a story of genius, triumph, and resilience.
 header:
-  image: /assets/images/data_science_16.jpg
-  og_image: /assets/images/data_science_16.jpg
-  overlay_image: /assets/images/data_science_16.jpg
+  image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  og_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_16.jpg
-  twitter_image: /assets/images/data_science_16.jpg
+  teaser: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
 keywords:
 - John nash biography
 - Game theory

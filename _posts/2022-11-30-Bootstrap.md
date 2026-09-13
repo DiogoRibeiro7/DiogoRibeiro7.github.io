@@ -8,12 +8,13 @@ excerpt: Delve into bootstrapping, a versatile statistical technique for estimat
   the sampling distribution of a statistic, offering insights into its applications
   and implementation.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  og_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  overlay_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  twitter_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
 keywords:
 - Bootstrapping
 - Resampling methods

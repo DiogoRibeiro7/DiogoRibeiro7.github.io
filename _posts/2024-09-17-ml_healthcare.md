@@ -8,12 +8,13 @@ excerpt: Discover how machine learning is revolutionizing healthcare analytics, 
   predictive patient outcomes to personalized medicine, and the challenges faced in
   integrating ML into healthcare.
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-factory.jpg
+  og_image: /assets/images/headers/photo-factory.jpg
+  overlay_image: /assets/images/headers/photo-factory.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-factory.jpg
+  twitter_image: /assets/images/headers/photo-factory.jpg
 keywords:
 - Healthcare analytics
 - Machine learning

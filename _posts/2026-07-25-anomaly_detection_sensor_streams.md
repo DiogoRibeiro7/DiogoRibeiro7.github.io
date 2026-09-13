@@ -21,12 +21,13 @@ keywords:
 classes: wide
 date: '2026-07-25'
 header:
-  image: /assets/images/data_science_17.jpg
-  og_image: /assets/images/data_science_17.jpg
-  overlay_image: /assets/images/data_science_17.jpg
+  image: /assets/images/headers/photo-satellite-dish.jpg
+  og_image: /assets/images/headers/photo-satellite-dish.jpg
+  overlay_image: /assets/images/headers/photo-satellite-dish.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_17.jpg
-  twitter_image: /assets/images/data_science_17.jpg
+  teaser: /assets/images/headers/photo-satellite-dish.jpg
+  twitter_image: /assets/images/headers/photo-satellite-dish.jpg
 ---
 
 Sensor anomaly detection is often sold as a model problem. In practice, it is a systems problem. The model must understand normal variation, handle missing data, adjust to operating regimes, and produce alerts that humans can act on.

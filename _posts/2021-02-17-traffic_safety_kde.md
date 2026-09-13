@@ -9,11 +9,11 @@ excerpt: A deep dive into using Kernel Density Estimation (KDE) for identifying 
   case studies from Japan.
 header:
   image: /assets/images/traffic_kde_2.png
-  og_image: /assets/images/data_science_1.jpg
+  og_image: /assets/images/traffic_kde_2.png
   overlay_image: /assets/images/traffic_kde_2.png
   show_overlay_excerpt: false
   teaser: /assets/images/traffic_kde_2.png
-  twitter_image: /assets/images/data_science_1.jpg
+  twitter_image: /assets/images/traffic_kde_2.png
 keywords:
 - Traffic safety
 - Kernel density estimation

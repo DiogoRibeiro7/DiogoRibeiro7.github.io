@@ -8,12 +8,13 @@ excerpt: Wearable devices generate real-time health data that, combined with big
   analytics, offer transformative insights for chronic disease monitoring, early diagnosis,
   and preventive healthcare.
 header:
-  image: /assets/images/data_science_17.jpg
-  og_image: /assets/images/data_science_17.jpg
-  overlay_image: /assets/images/data_science_17.jpg
+  image: /assets/images/headers/photo-control-room.jpg
+  og_image: /assets/images/headers/photo-control-room.jpg
+  overlay_image: /assets/images/headers/photo-control-room.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_17.jpg
-  twitter_image: /assets/images/data_science_17.jpg
+  teaser: /assets/images/headers/photo-control-room.jpg
+  twitter_image: /assets/images/headers/photo-control-room.jpg
 keywords:
 - Wearable technology
 - Big data

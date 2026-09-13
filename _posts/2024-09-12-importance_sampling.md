@@ -8,12 +8,13 @@ excerpt: Importance Sampling offers an efficient alternative to traditional Mont
   Carlo simulations for portfolio credit risk estimation by focusing on rare, significant
   loss events.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-statistics-clt-binomial.jpg
+  og_image: /assets/images/headers/photo-statistics-clt-binomial.jpg
+  overlay_image: /assets/images/headers/photo-statistics-clt-binomial.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-statistics-clt-binomial.jpg
+  twitter_image: /assets/images/headers/photo-statistics-clt-binomial.jpg
 keywords:
 - Importance sampling
 - Portfolio credit risk

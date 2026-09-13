@@ -30,12 +30,13 @@ keywords:
 classes: wide
 date: '2025-08-02'
 header:
-  image: /assets/images/data_science_13.jpg
-  og_image: /assets/images/data_science_13.jpg
-  overlay_image: /assets/images/data_science_13.jpg
+  image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  og_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  overlay_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_13.jpg
-  twitter_image: /assets/images/data_science_13.jpg
+  teaser: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  twitter_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
 ---
 
 ## Table of Contents

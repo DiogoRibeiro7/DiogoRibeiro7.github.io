@@ -6,12 +6,13 @@ classes: wide
 date: '2019-12-31'
 excerpt: Machine learning is often seen as a new frontier, but its roots lie firmly in traditional statistical methods. This article explores how statistical techniques underpin key machine learning algorithms, highlighting their interconnectedness.
 header:
-  image: /assets/images/data_science_19.webp
-  og_image: /assets/images/data_science_19.webp
-  overlay_image: /assets/images/data_science_19.webp
+  image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
+  og_image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
+  overlay_image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_19.webp
-  twitter_image: /assets/images/data_science_19.webp
+  teaser: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
+  twitter_image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
 keywords:
 - Machine learning and statistics
 - Statistical methods in machine learning

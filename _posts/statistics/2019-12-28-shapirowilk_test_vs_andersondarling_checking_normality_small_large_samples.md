@@ -6,12 +6,13 @@ classes: wide
 date: '2019-12-28'
 excerpt: Explore the differences between the Shapiro-Wilk and Anderson-Darling tests, two common methods for testing normality, and how sample size and distribution affect their performance.
 header:
-  image: /assets/images/data_science_20.jpg
-  og_image: /assets/images/data_science_20.jpg
-  overlay_image: /assets/images/data_science_20.jpg
+  image: /assets/images/headers/photo-statistics-ecdf.jpg
+  og_image: /assets/images/headers/photo-statistics-ecdf.jpg
+  overlay_image: /assets/images/headers/photo-statistics-ecdf.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_20.jpg
-  twitter_image: /assets/images/data_science_20.jpg
+  teaser: /assets/images/headers/photo-statistics-ecdf.jpg
+  twitter_image: /assets/images/headers/photo-statistics-ecdf.jpg
 keywords:
 - Shapiro-wilk test
 - Anderson-darling test

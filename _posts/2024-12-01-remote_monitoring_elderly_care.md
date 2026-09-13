@@ -8,12 +8,13 @@ excerpt: The integration of IoT and big data is revolutionizing elderly care by 
   remote monitoring systems that track vital signs, detect emergencies, and ensure
   quick responses to health risks.
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-wind-turbines.jpg
+  og_image: /assets/images/headers/photo-wind-turbines.jpg
+  overlay_image: /assets/images/headers/photo-wind-turbines.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-wind-turbines.jpg
+  twitter_image: /assets/images/headers/photo-wind-turbines.jpg
 keywords:
 - Remote monitoring
 - Iot in healthcare

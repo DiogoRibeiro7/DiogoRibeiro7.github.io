@@ -8,12 +8,13 @@ excerpt: Explore how Python and network analysis can be used to implement and op
   circular economy models. Learn how systems thinking and data science tools can drive
   sustainability and resource efficiency.
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-satellite-dish.jpg
+  og_image: /assets/images/headers/photo-satellite-dish.jpg
+  overlay_image: /assets/images/headers/photo-satellite-dish.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-satellite-dish.jpg
+  twitter_image: /assets/images/headers/photo-satellite-dish.jpg
 keywords:
 - Circular economy
 - Python for sustainability

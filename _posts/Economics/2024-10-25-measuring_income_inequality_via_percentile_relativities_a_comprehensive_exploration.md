@@ -6,12 +6,13 @@ classes: wide
 date: '2024-10-25'
 excerpt: This article delves deeply into percentile relativity indices, a novel approach to measuring income inequality, offering fresh insights into income distribution and its societal implications.
 header:
-  image: /assets/images/data_science_16.jpg
-  og_image: /assets/images/data_science_16.jpg
-  overlay_image: /assets/images/data_science_16.jpg
+  image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  og_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  overlay_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_16.jpg
-  twitter_image: /assets/images/data_science_16.jpg
+  teaser: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  twitter_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
 keywords:
 - Percentile relativities
 - Income inequality

@@ -6,12 +6,13 @@ classes: wide
 date: '2023-05-26'
 excerpt: The Fowlkes-Mallows Index is a statistical measure used for evaluating clustering and classification performance by comparing the similarity of data groupings.
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-data-science-neural-network.jpg
+  og_image: /assets/images/headers/photo-data-science-neural-network.jpg
+  overlay_image: /assets/images/headers/photo-data-science-neural-network.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-data-science-neural-network.jpg
+  twitter_image: /assets/images/headers/photo-data-science-neural-network.jpg
 keywords:
 - Fowlkes-mallows index
 - Clustering evaluation

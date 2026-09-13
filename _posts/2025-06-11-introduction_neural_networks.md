@@ -7,12 +7,13 @@ date: '2025-06-11'
 excerpt: Neural networks power many modern AI applications. This article introduces
   their basic structure and training process.
 header:
-  image: /assets/images/data_science_14.jpg
-  og_image: /assets/images/data_science_14.jpg
-  overlay_image: /assets/images/data_science_14.jpg
+  image: /assets/images/headers/photo-data-center.jpg
+  og_image: /assets/images/headers/photo-data-center.jpg
+  overlay_image: /assets/images/headers/photo-data-center.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_14.jpg
-  twitter_image: /assets/images/data_science_14.jpg
+  teaser: /assets/images/headers/photo-data-center.jpg
+  twitter_image: /assets/images/headers/photo-data-center.jpg
 keywords:
 - Neural networks
 - Deep learning

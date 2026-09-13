@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-05-09'
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-mathematics-heesch-solid.jpg
+  og_image: /assets/images/headers/photo-mathematics-heesch-solid.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-heesch-solid.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-mathematics-heesch-solid.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-heesch-solid.jpg
 redirect_from:
 - '/mathematics/statistics/machine learning/understanding_tsne/'
 seo_description: How t-SNE reduces high-dimensional data for visualization, covering parameter tuning and how to interpret the results.

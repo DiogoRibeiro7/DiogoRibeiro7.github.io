@@ -7,12 +7,13 @@ date: '2025-06-15'
 excerpt: SMOTE generates synthetic samples to rebalance datasets, but using it blindly
   can create unrealistic data and biased models.
 header:
-  image: /assets/images/data_science_18.jpg
-  og_image: /assets/images/data_science_18.jpg
-  overlay_image: /assets/images/data_science_18.jpg
+  image: /assets/images/headers/photo-radio-telescope.jpg
+  og_image: /assets/images/headers/photo-radio-telescope.jpg
+  overlay_image: /assets/images/headers/photo-radio-telescope.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_18.jpg
-  twitter_image: /assets/images/data_science_18.jpg
+  teaser: /assets/images/headers/photo-radio-telescope.jpg
+  twitter_image: /assets/images/headers/photo-radio-telescope.jpg
 keywords:
 - Smote
 - Oversampling

@@ -6,12 +6,13 @@ classes: wide
 date: '2019-12-27'
 excerpt: Dive into the world of calculus, where derivatives and integrals are used to analyze change and calculate areas under curves. Learn about these fundamental tools and their wide-ranging applications.
 header:
-  image: /assets/images/data_science_20.jpg
-  og_image: /assets/images/data_science_20.jpg
-  overlay_image: /assets/images/data_science_20.jpg
+  image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  og_image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_20.jpg
-  twitter_image: /assets/images/data_science_20.jpg
+  teaser: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
 keywords:
 - Calculus basics
 - Derivatives and integrals

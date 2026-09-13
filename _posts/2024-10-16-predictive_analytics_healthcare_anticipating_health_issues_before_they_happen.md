@@ -8,12 +8,13 @@ excerpt: Predictive analytics in healthcare is transforming how providers forese
   health problems using machine learning and patient data. This article discusses
   key use cases such as hospital readmissions and chronic disease management.
 header:
-  image: /assets/images/data_science_20.jpg
-  og_image: /assets/images/data_science_20.jpg
-  overlay_image: /assets/images/data_science_20.jpg
+  image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  og_image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  overlay_image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_20.jpg
-  twitter_image: /assets/images/data_science_20.jpg
+  teaser: /assets/images/headers/photo-data-science-svm-iris.jpg
+  twitter_image: /assets/images/headers/photo-data-science-svm-iris.jpg
 keywords:
 - Predictive analytics
 - Healthcare

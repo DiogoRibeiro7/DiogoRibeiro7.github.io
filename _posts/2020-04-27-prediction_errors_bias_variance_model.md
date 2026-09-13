@@ -8,12 +8,13 @@ excerpt: Learn about different methods for estimating prediction error, addressi
   the bias-variance tradeoff, and how cross-validation, bootstrap methods, and Efron
   & Tibshirani's .632 estimator help improve model evaluation.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  og_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  overlay_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  twitter_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
 keywords:
 - Python
 permalink: '/machine-learning/prediction_errors_bias_variance_model/'

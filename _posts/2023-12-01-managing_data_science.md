@@ -8,12 +8,13 @@ excerpt: While engineering projects have defined solutions and known processes, 
   science is all about experimentation and discovery. Managing them in the same way
   can be detrimental.
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/photo-data-science-theater.jpg
+  og_image: /assets/images/headers/photo-data-science-theater.jpg
+  overlay_image: /assets/images/headers/photo-data-science-theater.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-data-science-theater.jpg
+  twitter_image: /assets/images/headers/photo-data-science-theater.jpg
 keywords:
 - Data science
 - Engineering

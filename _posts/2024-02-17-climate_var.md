@@ -7,12 +7,13 @@ date: '2024-02-17'
 excerpt: Exploring Climate Value at Risk (VaR) from a data science perspective, detailing
   its role in assessing financial risks associated with climate change.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-data-science-heatmap.jpg
+  og_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  overlay_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-data-science-heatmap.jpg
+  twitter_image: /assets/images/headers/photo-data-science-heatmap.jpg
 keywords:
 - Climate var
 - Value at risk

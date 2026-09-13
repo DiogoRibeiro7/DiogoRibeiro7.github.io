@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-07-04'
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-statistics-ecdf.jpg
+  og_image: /assets/images/headers/photo-statistics-ecdf.jpg
+  overlay_image: /assets/images/headers/photo-statistics-ecdf.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-statistics-ecdf.jpg
+  twitter_image: /assets/images/headers/photo-statistics-ecdf.jpg
 redirect_from:
 - '/statistics/data science/survival analysis/hypothesis testing/Logram_test/'
 seo_description: How the logrank test compares survival distributions between two groups, and why it matters in survival analysis.

@@ -29,12 +29,13 @@ keywords:
 classes: wide
 date: '2026-07-13'
 header:
-  image: /assets/images/data_science_8.avif
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_8.avif
+  image: /assets/images/headers/photo-data-center.jpg
+  og_image: /assets/images/headers/photo-data-center.jpg
+  overlay_image: /assets/images/headers/photo-data-center.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.avif
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-data-center.jpg
+  twitter_image: /assets/images/headers/photo-data-center.jpg
 ---
 A speed limit changed on 1 March. A new triage protocol started in January. A feature shipped on a Tuesday. In each case you need the effect of the intervention, and randomisation was never possible — the change applied to everyone at once.
 

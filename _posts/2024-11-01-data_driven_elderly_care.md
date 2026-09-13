@@ -8,12 +8,13 @@ excerpt: Data science is revolutionizing chronic disease management among the el
   by leveraging predictive analytics to monitor disease progression, manage medications,
   and create personalized treatment plans.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-satellite-dish.jpg
+  og_image: /assets/images/headers/photo-satellite-dish.jpg
+  overlay_image: /assets/images/headers/photo-satellite-dish.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-satellite-dish.jpg
+  twitter_image: /assets/images/headers/photo-satellite-dish.jpg
 keywords:
 - Chronic disease
 - Predictive analytics

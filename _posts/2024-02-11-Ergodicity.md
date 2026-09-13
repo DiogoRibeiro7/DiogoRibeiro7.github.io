@@ -8,12 +8,13 @@ excerpt: An in-depth look into ergodicity and its applications in statistical an
   mathematical modeling, and computational physics, featuring real-world processes
   and Python simulations.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  og_image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
 keywords:
 - Ergodicity
 - Statistical analysis

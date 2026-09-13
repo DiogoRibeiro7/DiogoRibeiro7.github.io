@@ -30,12 +30,13 @@ keywords:
 classes: wide
 date: '2025-08-03'
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_9.webp
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-wind-turbines.jpg
+  og_image: /assets/images/headers/photo-wind-turbines.jpg
+  overlay_image: /assets/images/headers/photo-wind-turbines.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_9.webp
+  teaser: /assets/images/headers/photo-wind-turbines.jpg
+  twitter_image: /assets/images/headers/photo-wind-turbines.jpg
 ---
 
 ## Introduction

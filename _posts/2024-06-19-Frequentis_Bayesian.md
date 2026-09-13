@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-06-19'
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/photo-mathematics-julia-set.jpg
+  og_image: /assets/images/headers/photo-mathematics-julia-set.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-julia-set.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-mathematics-julia-set.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-julia-set.jpg
 redirect_from:
 - '/mathematics/statistics/data science/philosophy/probability/Frequentis_Bayesian/'
 seo_description: The Sunrise Problem compared through Bayesian and frequentist lenses, and what it reveals about inference from limited data.

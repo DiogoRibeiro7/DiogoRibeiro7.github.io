@@ -21,12 +21,13 @@ keywords:
 classes: wide
 date: '2026-07-27'
 header:
-  image: /assets/images/data_science_16.jpg
-  og_image: /assets/images/data_science_16.jpg
-  overlay_image: /assets/images/data_science_16.jpg
+  image: /assets/images/headers/photo-solar-panels.jpg
+  og_image: /assets/images/headers/photo-solar-panels.jpg
+  overlay_image: /assets/images/headers/photo-solar-panels.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_16.jpg
-  twitter_image: /assets/images/data_science_16.jpg
+  teaser: /assets/images/headers/photo-solar-panels.jpg
+  twitter_image: /assets/images/headers/photo-solar-panels.jpg
 ---
 
 Many machine learning systems recommend actions: who should receive a discount, which ticket should be escalated, which patient should be contacted, which machine should be inspected. Offline accuracy does not answer the most important question: what would happen if we used a different decision policy?

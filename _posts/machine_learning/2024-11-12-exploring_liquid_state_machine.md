@@ -6,12 +6,13 @@ classes: wide
 date: '2024-11-12'
 excerpt: The Liquid State Machine offers a unique framework for computations within biological neural networks and adaptive artificial intelligence. Explore its fundamentals, theoretical background, and practical applications.
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-data-science-openalex.jpg
+  og_image: /assets/images/headers/photo-data-science-openalex.jpg
+  overlay_image: /assets/images/headers/photo-data-science-openalex.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-data-science-openalex.jpg
+  twitter_image: /assets/images/headers/photo-data-science-openalex.jpg
 keywords:
 - Liquid state machine
 - Spiking neural networks

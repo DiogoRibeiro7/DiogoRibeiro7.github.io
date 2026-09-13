@@ -7,12 +7,13 @@ date: '2023-08-12'
 excerpt: Dive into Gaussian Processes for time-series analysis using Python, combining
   flexible modeling with Bayesian inference for trends, seasonality, and noise.
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-solar-panels.jpg
+  og_image: /assets/images/headers/photo-solar-panels.jpg
+  overlay_image: /assets/images/headers/photo-solar-panels.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-solar-panels.jpg
+  twitter_image: /assets/images/headers/photo-solar-panels.jpg
 keywords:
 - Python
 - Gaussian Processes

@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-07-02'
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-data-science-air-quality.jpg
+  og_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  overlay_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-data-science-air-quality.jpg
+  twitter_image: /assets/images/headers/photo-data-science-air-quality.jpg
 keywords:
 - Data drift detection
 - Direct loss estimation

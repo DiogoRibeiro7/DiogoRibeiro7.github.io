@@ -6,12 +6,13 @@ classes: wide
 date: '2020-01-06'
 excerpt: Explore the role of data science in predictive maintenance, from forecasting equipment failure to optimizing maintenance schedules using techniques like regression and anomaly detection.
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/photo-data-science-clustering.jpg
+  og_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-data-science-clustering.jpg
+  twitter_image: /assets/images/headers/photo-data-science-clustering.jpg
 keywords:
 - Predictive maintenance
 - Data science

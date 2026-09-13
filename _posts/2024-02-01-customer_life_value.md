@@ -8,12 +8,13 @@ excerpt: Discover the importance of Customer Lifetime Value (CLV) in shaping bus
   strategies, improving customer retention, and enhancing marketing efforts for sustainable
   growth.
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/photo-satellite-dish.jpg
+  og_image: /assets/images/headers/photo-satellite-dish.jpg
+  overlay_image: /assets/images/headers/photo-satellite-dish.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-satellite-dish.jpg
+  twitter_image: /assets/images/headers/photo-satellite-dish.jpg
 keywords:
 - Customer lifetime value
 - Clv

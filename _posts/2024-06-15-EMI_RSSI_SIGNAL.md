@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-06-15'
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-microscope.jpg
+  og_image: /assets/images/headers/photo-microscope.jpg
+  overlay_image: /assets/images/headers/photo-microscope.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-microscope.jpg
+  twitter_image: /assets/images/headers/photo-microscope.jpg
 permalink: '/predictive-maintenance/EMI_RSSI_SIGNAL/'
 redirect_from:
 - '/wireless communication/signal processing/data science/network engineering/EMI_RSSI_SIGNAL/'

@@ -8,12 +8,13 @@ excerpt: The Mann-Whitney U test and independent t-test are used for comparing t
   independent groups, but the choice between them depends on data distribution. Learn
   when to use each and explore real-world applications.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  og_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  overlay_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  twitter_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
 keywords:
 - Mann-whitney u test
 - Independent t-test

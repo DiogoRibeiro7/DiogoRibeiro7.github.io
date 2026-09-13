@@ -7,11 +7,11 @@ date: '2021-04-27'
 excerpt: A study using GIS-based techniques for forest fire hotspot identification and analysis, validated with contributory factors like population density, precipitation, elevation, and vegetation cover.
 header:
   image: /assets/images/forest_fire_kde_1.jpg
-  og_image: /assets/images/data_science_4.jpg
+  og_image: /assets/images/forest_fire_kde_1.jpg
   overlay_image: /assets/images/forest_fire_kde_1.jpg
   show_overlay_excerpt: false
   teaser: /assets/images/forest_fire_kde_1.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  twitter_image: /assets/images/forest_fire_kde_1.jpg
 keywords:
 - Forest fires
 - Gis

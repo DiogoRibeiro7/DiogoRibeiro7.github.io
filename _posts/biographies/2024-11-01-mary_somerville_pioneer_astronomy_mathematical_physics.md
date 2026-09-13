@@ -6,12 +6,13 @@ classes: wide
 date: '2024-11-01'
 excerpt: Mary Somerville's work in astronomy and mathematical physics earned her recognition as one of the first female scientists, making complex scientific concepts accessible.
 header:
-  image: /assets/images/data_science_17.jpg
-  og_image: /assets/images/data_science_17.jpg
-  overlay_image: /assets/images/data_science_17.jpg
+  image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  og_image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  overlay_image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_17.jpg
-  twitter_image: /assets/images/data_science_17.jpg
+  teaser: /assets/images/headers/photo-data-science-svm-iris.jpg
+  twitter_image: /assets/images/headers/photo-data-science-svm-iris.jpg
 keywords:
 - Mary somerville
 - Women scientists

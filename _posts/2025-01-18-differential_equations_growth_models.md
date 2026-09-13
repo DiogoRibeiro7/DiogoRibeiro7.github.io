@@ -6,12 +6,13 @@ classes: wide
 date: '2025-01-18'
 excerpt: Differential equations are essential in modeling economic growth, providing insight into long-term trends and the impact of policy changes on macroeconomic variables.
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  og_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  overlay_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-statistics-time-series-debt.jpg
+  twitter_image: /assets/images/headers/photo-statistics-time-series-debt.jpg
 keywords:
 - Economic Growth Models
 - Differential Equations

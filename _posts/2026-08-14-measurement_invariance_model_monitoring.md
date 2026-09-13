@@ -21,12 +21,13 @@ keywords:
 classes: wide
 date: '2026-08-14'
 header:
-  image: /assets/images/data_science_11.avif
-  og_image: /assets/images/data_science_11.avif
-  overlay_image: /assets/images/data_science_11.avif
+  image: /assets/images/headers/photo-data-science-clustering.jpg
+  og_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_11.avif
-  twitter_image: /assets/images/data_science_11.avif
+  teaser: /assets/images/headers/photo-data-science-clustering.jpg
+  twitter_image: /assets/images/headers/photo-data-science-clustering.jpg
 ---
 
 Machine learning monitoring often asks whether a distribution has changed. Measurement invariance asks a deeper question: does the measurement still mean the same thing? A model can appear stable while the interpretation of its inputs, labels, or scores changes underneath it. That is a dangerous form of silent failure.

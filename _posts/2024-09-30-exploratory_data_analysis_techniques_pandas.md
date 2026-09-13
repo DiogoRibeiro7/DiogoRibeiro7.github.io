@@ -8,12 +8,13 @@ excerpt: Explore how to perform effective Exploratory Data Analysis (EDA) using 
   a powerful Python library. Learn data loading, cleaning, visualization, and advanced
   EDA techniques.
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-wind-turbines.jpg
+  og_image: /assets/images/headers/photo-wind-turbines.jpg
+  overlay_image: /assets/images/headers/photo-wind-turbines.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-wind-turbines.jpg
+  twitter_image: /assets/images/headers/photo-wind-turbines.jpg
 keywords:
 - Pandas eda
 - Exploratory data analysis python

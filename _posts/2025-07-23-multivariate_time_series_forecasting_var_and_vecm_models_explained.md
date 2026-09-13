@@ -32,12 +32,13 @@ keywords:
 classes: wide
 date: '2025-07-23'
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-satellite-dish.jpg
+  og_image: /assets/images/headers/photo-satellite-dish.jpg
+  overlay_image: /assets/images/headers/photo-satellite-dish.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-satellite-dish.jpg
+  twitter_image: /assets/images/headers/photo-satellite-dish.jpg
 ---
 
 Multivariate time series forecasting is essential when dealing with multiple interrelated variables that evolve over time. Vector Autoregressive (VAR) and Vector Error Correction Models (VECM) are powerful frameworks for modeling these complex relationships. Let me explain these models, their applications, and provide Python implementations.

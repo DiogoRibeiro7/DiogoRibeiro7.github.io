@@ -6,12 +6,13 @@ classes: wide
 date: '2021-03-01'
 excerpt: Polynomial regression is a popular extension of linear regression that models nonlinear relationships between the response and explanatory variables. However, despite its name, polynomial regression remains a form of linear regression, as the response variable is still a linear combination of the regression coefficients.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-wind-turbines.jpg
+  og_image: /assets/images/headers/photo-wind-turbines.jpg
+  overlay_image: /assets/images/headers/photo-wind-turbines.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-wind-turbines.jpg
+  twitter_image: /assets/images/headers/photo-wind-turbines.jpg
 keywords:
 - Regression coefficients
 - Statistical modeling

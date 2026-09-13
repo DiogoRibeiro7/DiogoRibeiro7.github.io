@@ -8,12 +8,13 @@ excerpt: This article discusses Monte Carlo dropout and how it is used to estima
   uncertainty in multi-class neural network classification, covering methods such
   as entropy, variance, and predictive probabilities.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-data-science-dashboard.jpg
+  og_image: /assets/images/headers/photo-data-science-dashboard.jpg
+  overlay_image: /assets/images/headers/photo-data-science-dashboard.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-data-science-dashboard.jpg
+  twitter_image: /assets/images/headers/photo-data-science-dashboard.jpg
 keywords:
 - Monte carlo dropout
 - Uncertainty quantification

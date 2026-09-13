@@ -6,12 +6,13 @@ classes: wide
 date: '2019-12-25'
 excerpt: Ada Lovelace is celebrated as the first computer programmer for her visionary work on Charles Babbage's Analytical Engine. Discover her pioneering insights into computational theory, which laid the foundation for modern computing.
 header:
-  image: /assets/images/data_science_16.jpg
-  og_image: /assets/images/data_science_16.jpg
-  overlay_image: /assets/images/data_science_16.jpg
+  image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  og_image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_16.jpg
-  twitter_image: /assets/images/data_science_16.jpg
+  teaser: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-geometry-symmetry.jpg
 keywords:
 - Ada lovelace biography
 - First computer programmer

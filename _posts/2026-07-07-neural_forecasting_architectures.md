@@ -29,12 +29,13 @@ keywords:
 classes: wide
 date: '2026-07-07'
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  og_image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  overlay_image: /assets/images/headers/photo-data-science-svm-iris.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-data-science-svm-iris.jpg
+  twitter_image: /assets/images/headers/photo-data-science-svm-iris.jpg
 ---
 Neural forecasting arrived with large claims and a poor early record. The M4 competition in 2018 saw pure deep learning entries beaten by statistical methods; the winner was a hybrid. Since then the architectures have improved substantially, and the useful question is no longer whether they work but what each is actually built to do.
 

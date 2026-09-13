@@ -29,12 +29,13 @@ keywords:
 classes: wide
 date: '2026-07-11'
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/photo-control-room.jpg
+  og_image: /assets/images/headers/photo-control-room.jpg
+  overlay_image: /assets/images/headers/photo-control-room.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-control-room.jpg
+  twitter_image: /assets/images/headers/photo-control-room.jpg
 ---
 A demand planning process typically has several stages. A statistical model produces a baseline. A planner reviews and adjusts it. Sales adds market intelligence. A consensus meeting settles the final number. Each stage exists because someone believes it improves accuracy.
 

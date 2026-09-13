@@ -8,12 +8,13 @@ excerpt: Delve into the fears and complexities of artificial intelligence and au
   addressing concerns like job displacement, data privacy, ethical decision-making,
   and the true capabilities and limitations of AI.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  og_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  overlay_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  twitter_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
 keywords:
 - Artificial intelligence
 - Machine learning

@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-06-06'
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-data-science-theater.jpg
+  og_image: /assets/images/headers/photo-data-science-theater.jpg
+  overlay_image: /assets/images/headers/photo-data-science-theater.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-data-science-theater.jpg
+  twitter_image: /assets/images/headers/photo-data-science-theater.jpg
 permalink: '/data-science/wine_sensory_evaluation/'
 redirect_from:
 - '/wine science/sensory evaluation/data analysis/oenology/food science/consumer behavior/marketing/wine_sensory_evaluation/'

@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-05-09'
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-statistics-sampling-election.jpg
+  og_image: /assets/images/headers/photo-statistics-sampling-election.jpg
+  overlay_image: /assets/images/headers/photo-statistics-sampling-election.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-statistics-sampling-election.jpg
+  twitter_image: /assets/images/headers/photo-statistics-sampling-election.jpg
 seo_description: How kernel clustering works in R, covering kernel methods, their advantages over standard clustering, and practical implementation.
 seo_title: 'Kernel Clustering in R: A Practical Guide'
 seo_type: article

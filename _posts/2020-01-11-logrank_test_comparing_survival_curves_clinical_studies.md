@@ -8,12 +8,13 @@ excerpt: The Log-Rank test is a vital statistical method used to compare surviva
   curves in clinical studies. This article explores its significance in medical research,
   including applications in clinical trials and epidemiology.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-statistics-chi-square.jpg
+  og_image: /assets/images/headers/photo-statistics-chi-square.jpg
+  overlay_image: /assets/images/headers/photo-statistics-chi-square.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-statistics-chi-square.jpg
+  twitter_image: /assets/images/headers/photo-statistics-chi-square.jpg
 keywords:
 - Log-rank test
 - Survival curves

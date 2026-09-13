@@ -6,12 +6,13 @@ classes: wide
 date: '2019-12-26'
 excerpt: David Hilbert, one of the most influential mathematicians of the 20th century, is best known for his 'Hilbert Problems' and his pioneering contributions to algebra, geometry, and logic. This article examines his lasting impact on mathematics.
 header:
-  image: /assets/images/data_science_12.webp
-  og_image: /assets/images/data_science_12.webp
-  overlay_image: /assets/images/data_science_12.webp
+  image: /assets/images/headers/photo-mathematics-graph-theory.jpg
+  og_image: /assets/images/headers/photo-mathematics-graph-theory.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-graph-theory.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_12.webp
-  twitter_image: /assets/images/data_science_12.webp
+  teaser: /assets/images/headers/photo-mathematics-graph-theory.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-graph-theory.jpg
 keywords:
 - David hilbert biography
 - Hilbert problems

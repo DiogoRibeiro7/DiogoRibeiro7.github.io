@@ -6,12 +6,13 @@ classes: wide
 date: '2016-07-26'
 excerpt: Dive into the intricacies of describing distributions, understand the mathematics behind common distributions, and see their applications in parametric statistics across multiple disciplines.
 header:
-  image: /assets/images/data_science_16.jpg
-  og_image: /assets/images/data_science_16.jpg
-  overlay_image: /assets/images/data_science_16.jpg
+  image: /assets/images/headers/photo-statistics-dice-coins.jpg
+  og_image: /assets/images/headers/photo-statistics-dice-coins.jpg
+  overlay_image: /assets/images/headers/photo-statistics-dice-coins.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_16.jpg
-  twitter_image: /assets/images/data_science_16.jpg
+  teaser: /assets/images/headers/photo-statistics-dice-coins.jpg
+  twitter_image: /assets/images/headers/photo-statistics-dice-coins.jpg
 keywords:
 - Distribution
 - Statistics

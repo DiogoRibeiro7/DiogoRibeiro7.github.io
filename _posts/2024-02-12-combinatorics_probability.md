@@ -7,12 +7,13 @@ date: '2024-02-12'
 excerpt: Dive into the intersection of combinatorics and probability, exploring how
   these fields work together to solve problems in mathematics, data science, and beyond.
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-mathematics-graph-theory.jpg
+  og_image: /assets/images/headers/photo-mathematics-graph-theory.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-graph-theory.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-mathematics-graph-theory.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-graph-theory.jpg
 keywords:
 - Combinatorics
 - Probability theory

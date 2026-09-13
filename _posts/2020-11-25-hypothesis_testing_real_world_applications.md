@@ -7,12 +7,13 @@ date: '2020-11-25'
 excerpt: See how hypothesis testing helps draw meaningful conclusions from data in
   practical scenarios.
 header:
-  image: /assets/images/data_science_13.jpg
-  og_image: /assets/images/data_science_13.jpg
-  overlay_image: /assets/images/data_science_13.jpg
+  image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  og_image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  overlay_image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_13.jpg
-  twitter_image: /assets/images/data_science_13.jpg
+  teaser: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  twitter_image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
 keywords:
 - Hypothesis testing
 - P-values

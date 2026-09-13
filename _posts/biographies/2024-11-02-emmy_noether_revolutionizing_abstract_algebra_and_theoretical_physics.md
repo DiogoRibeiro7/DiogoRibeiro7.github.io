@@ -6,12 +6,13 @@ classes: wide
 date: '2024-11-02'
 excerpt: Emmy Noether’s work in algebra and physics established her as a pioneer, particularly through her groundbreaking theorem linking symmetries to conservation laws.
 header:
-  image: /assets/images/data_science_12.webp
-  og_image: /assets/images/data_science_12.webp
-  overlay_image: /assets/images/data_science_12.webp
+  image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  og_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_12.webp
-  twitter_image: /assets/images/data_science_12.webp
+  teaser: /assets/images/headers/photo-mathematics-fractal-grid.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
 keywords:
 - Emmy Noether
 - Noether's Theorem

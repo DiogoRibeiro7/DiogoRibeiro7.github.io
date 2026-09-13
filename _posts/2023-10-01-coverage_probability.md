@@ -7,12 +7,13 @@ date: '2023-10-01'
 excerpt: 'Understanding coverage probability in statistical estimation and prediction:
   its role in constructing confidence intervals and assessing their accuracy.'
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  og_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  overlay_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  twitter_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
 keywords:
 - Coverage probability
 - Confidence interval

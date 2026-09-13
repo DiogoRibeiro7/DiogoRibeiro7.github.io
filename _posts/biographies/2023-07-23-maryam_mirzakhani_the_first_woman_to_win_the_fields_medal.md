@@ -6,12 +6,13 @@ classes: wide
 date: '2023-07-23'
 excerpt: Maryam Mirzakhani made history as the first woman to win the Fields Medal for her groundbreaking work on the geometry of Riemann surfaces. Her contributions continue to inspire mathematicians today.
 header:
-  image: /assets/images/data_science_8.avif
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_8.avif
+  image: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  og_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.avif
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
 keywords:
 - Maryam mirzakhani biography
 - First woman fields medalist

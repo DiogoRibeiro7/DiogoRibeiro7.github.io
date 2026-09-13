@@ -8,12 +8,13 @@ excerpt: Machine learning is reshaping elderly mental health care. This article 
   how data-driven insights help detect depression, track mood changes, and identify
   early signs of cognitive decline.
 header:
-  image: /assets/images/data_science_10.avif
-  og_image: /assets/images/data_science_10.avif
-  overlay_image: /assets/images/data_science_10.avif
+  image: /assets/images/headers/photo-statistics-student-t.jpg
+  og_image: /assets/images/headers/photo-statistics-student-t.jpg
+  overlay_image: /assets/images/headers/photo-statistics-student-t.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_10.avif
-  twitter_image: /assets/images/data_science_10.avif
+  teaser: /assets/images/headers/photo-statistics-student-t.jpg
+  twitter_image: /assets/images/headers/photo-statistics-student-t.jpg
 keywords:
 - Elderly mental health
 - Ai in healthcare

@@ -7,12 +7,13 @@ date: '2024-05-21'
 excerpt: An in-depth guide to understanding and applying the Probability Integral
   Transform in various fields, from finance to statistics.
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-statistics-bell-curve.jpg
+  og_image: /assets/images/headers/photo-statistics-bell-curve.jpg
+  overlay_image: /assets/images/headers/photo-statistics-bell-curve.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-statistics-bell-curve.jpg
+  twitter_image: /assets/images/headers/photo-statistics-bell-curve.jpg
 keywords:
 - Probability integral transform
 - Cumulative distribution function

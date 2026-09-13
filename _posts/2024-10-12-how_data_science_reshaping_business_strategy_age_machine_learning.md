@@ -9,12 +9,13 @@ excerpt: Data-driven decision-making, powered by data science and machine learni
   science into strategic planning to improve outcomes in customer segmentation, churn
   prediction, and recommendation systems.
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_9.webp
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  og_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  overlay_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_9.webp
+  teaser: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
+  twitter_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
 keywords:
 - Data science
 - Machine learning

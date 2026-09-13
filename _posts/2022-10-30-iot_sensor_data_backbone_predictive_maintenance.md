@@ -8,12 +8,13 @@ excerpt: Learn how IoT-enabled sensors like vibration, temperature, and pressure
   gather crucial data for predictive maintenance, allowing for real-time monitoring
   and more effective maintenance strategies.
 header:
-  image: /assets/images/data_science_19.webp
-  og_image: /assets/images/data_science_19.webp
-  overlay_image: /assets/images/data_science_19.webp
+  image: /assets/images/headers/photo-data-center.jpg
+  og_image: /assets/images/headers/photo-data-center.jpg
+  overlay_image: /assets/images/headers/photo-data-center.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_19.webp
-  twitter_image: /assets/images/data_science_19.webp
+  teaser: /assets/images/headers/photo-data-center.jpg
+  twitter_image: /assets/images/headers/photo-data-center.jpg
 keywords:
 - Iot
 - Sensor data

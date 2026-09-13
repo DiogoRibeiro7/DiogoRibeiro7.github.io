@@ -6,12 +6,13 @@ classes: wide
 date: '2019-12-27'
 excerpt: Kurt Gödel revolutionized the world of mathematical logic with his incompleteness theorems, reshaping our understanding of the limits of formal systems. Learn about his life, work, and lasting legacy in the foundations of mathematics.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-mathematics-heesch-solid.jpg
+  og_image: /assets/images/headers/photo-mathematics-heesch-solid.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-heesch-solid.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-mathematics-heesch-solid.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-heesch-solid.jpg
 keywords:
 - Kurt Gödel biography
 - Incompleteness theorems

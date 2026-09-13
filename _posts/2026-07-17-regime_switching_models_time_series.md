@@ -29,12 +29,13 @@ keywords:
 classes: wide
 date: '2026-07-17'
 header:
-  image: /assets/images/data_science_10.avif
-  og_image: /assets/images/data_science_10.avif
-  overlay_image: /assets/images/data_science_10.avif
+  image: /assets/images/headers/photo-microscope.jpg
+  og_image: /assets/images/headers/photo-microscope.jpg
+  overlay_image: /assets/images/headers/photo-microscope.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_10.avif
-  twitter_image: /assets/images/data_science_10.avif
+  teaser: /assets/images/headers/photo-microscope.jpg
+  twitter_image: /assets/images/headers/photo-microscope.jpg
 ---
 Fit one model across a recession and an expansion and it describes neither. The mean growth rate, the volatility, and often the autocorrelation all differ between the two, and a single parameter set averages across regimes that behave differently.
 

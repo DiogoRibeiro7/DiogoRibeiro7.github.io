@@ -8,12 +8,13 @@ excerpt: A detailed exploration of Customer Lifetime Value (CLV) for data practi
   and marketers, including its calculation, prediction, and integration with other
   business data.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-satellite-dish.jpg
+  og_image: /assets/images/headers/photo-satellite-dish.jpg
+  overlay_image: /assets/images/headers/photo-satellite-dish.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-satellite-dish.jpg
+  twitter_image: /assets/images/headers/photo-satellite-dish.jpg
 keywords:
 - Customer lifetime value
 - Clv calculation

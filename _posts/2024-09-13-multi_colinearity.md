@@ -7,12 +7,13 @@ date: '2024-09-13'
 excerpt: Multicollinearity is a common issue in regression analysis. Learn about its
   implications, misconceptions, and techniques to manage it in statistical modeling.
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  og_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  overlay_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  twitter_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
 keywords:
 - Multicollinearity
 - Collinearity

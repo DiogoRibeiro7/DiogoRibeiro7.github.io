@@ -6,12 +6,13 @@ classes: wide
 date: '2021-01-27'
 excerpt: Julia Robinson was a trailblazing mathematician known for her work on decision problems and number theory. She played a crucial role in solving Hilbert's Tenth Problem and became the first woman elected to the National Academy of Sciences.
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/photo-mathematics-mobius-strip.jpg
+  og_image: /assets/images/headers/photo-mathematics-mobius-strip.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-mobius-strip.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-mathematics-mobius-strip.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-mobius-strip.jpg
 keywords:
 - Julia robinson biography
 - Hilbert's tenth problem

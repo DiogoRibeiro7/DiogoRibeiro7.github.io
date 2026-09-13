@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-07-13'
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  og_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  overlay_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  twitter_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
 permalink: '/predictive-maintenance/NILM_Algorithms/'
 redirect_from:
 - '/energy efficiency/smart technology/NILM_Algorithms/'

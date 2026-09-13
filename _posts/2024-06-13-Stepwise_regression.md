@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-06-13'
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_2.avif
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-data-center.jpg
+  og_image: /assets/images/headers/photo-data-center.jpg
+  overlay_image: /assets/images/headers/photo-data-center.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_2.avif
+  teaser: /assets/images/headers/photo-data-center.jpg
+  twitter_image: /assets/images/headers/photo-data-center.jpg
 permalink: '/machine-learning/Stepwise_regression/'
 redirect_from:
 - '/machine learning/Stepwise_regression/'

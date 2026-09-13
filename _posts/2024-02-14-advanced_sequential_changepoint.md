@@ -8,12 +8,13 @@ excerpt: Sequential change-point detection plays a crucial role in real-time mon
   across industries. Learn about advanced methods, their practical applications, and
   how they help detect changes in univariate models.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-data-science-dashboard.jpg
+  og_image: /assets/images/headers/photo-data-science-dashboard.jpg
+  overlay_image: /assets/images/headers/photo-data-science-dashboard.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-data-science-dashboard.jpg
+  twitter_image: /assets/images/headers/photo-data-science-dashboard.jpg
 keywords:
 - Change-point detection
 - Univariate models

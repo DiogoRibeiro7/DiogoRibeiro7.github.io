@@ -6,12 +6,13 @@ classes: wide
 date: '2024-10-21'
 excerpt: Mary Jackson was NASA's first Black female engineer and a trailblazer in aerospace engineering. Her dedication to diversity and inclusion made her an advocate for opportunities for women and minorities in STEM.
 header:
-  image: /assets/images/data_science_13.jpg
-  og_image: /assets/images/data_science_13.jpg
-  overlay_image: /assets/images/data_science_13.jpg
+  image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  og_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_13.jpg
-  twitter_image: /assets/images/data_science_13.jpg
+  teaser: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
 keywords:
 - Mary Jackson biography
 - NASA's first Black female engineer

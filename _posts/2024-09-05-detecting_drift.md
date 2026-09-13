@@ -8,12 +8,13 @@ excerpt: Explore the challenges of using traditional hypothesis testing for dete
   data drift in machine learning models and learn how Bayesian probability offers
   a more robust alternative for monitoring data shifts.
 header:
-  image: /assets/images/data_science_8.avif
-  og_image: /assets/images/data_science_9.webp
-  overlay_image: /assets/images/data_science_8.avif
+  image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  og_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  overlay_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.avif
-  twitter_image: /assets/images/data_science_9.webp
+  teaser: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  twitter_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
 keywords:
 - Data drift detection
 - Hypothesis testing limitations

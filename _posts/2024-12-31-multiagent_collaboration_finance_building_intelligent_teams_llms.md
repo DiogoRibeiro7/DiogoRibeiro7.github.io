@@ -6,12 +6,13 @@ classes: wide
 date: '2024-12-31'
 excerpt: Multi-agent systems are redefining how financial tasks like M&A analysis can be approached, using teams of collaborative LLMs with distinct responsibilities.
 header:
-  image: /assets/images/data_science_14.jpg
-  og_image: /assets/images/data_science_14.jpg
-  overlay_image: /assets/images/data_science_14.jpg
+  image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  og_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  overlay_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_14.jpg
-  twitter_image: /assets/images/data_science_14.jpg
+  teaser: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  twitter_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
 keywords:
 - Multi-agent LLMs
 - Finance automation

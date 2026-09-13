@@ -7,12 +7,13 @@ date: '2020-02-17'
 excerpt: The ARIMAX model extends ARIMA by integrating exogenous variables into time
   series forecasting, offering more accurate predictions for complex systems.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  og_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  overlay_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  twitter_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
 keywords:
 - R
 - Statistical modeling

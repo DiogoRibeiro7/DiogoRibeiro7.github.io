@@ -8,12 +8,13 @@ excerpt: Machine learning models are revolutionizing post-hospitalization care b
   predicting hospital readmissions in elderly patients, helping healthcare providers
   optimize treatment and reduce complications.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_9.webp
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-data-science-clustering.jpg
+  og_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_image: /assets/images/headers/photo-data-science-clustering.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_9.webp
+  teaser: /assets/images/headers/photo-data-science-clustering.jpg
+  twitter_image: /assets/images/headers/photo-data-science-clustering.jpg
 keywords:
 - Machine learning
 - Hospital readmissions

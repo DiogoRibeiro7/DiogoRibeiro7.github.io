@@ -7,12 +7,13 @@ date: '2024-09-29'
 excerpt: The fusion of Business Intelligence and Machine Learning offers a pathway
   from historical analysis to predictive and prescriptive decision-making.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-statistics-f-test.jpg
+  og_image: /assets/images/headers/photo-statistics-f-test.jpg
+  overlay_image: /assets/images/headers/photo-statistics-f-test.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-statistics-f-test.jpg
+  twitter_image: /assets/images/headers/photo-statistics-f-test.jpg
 keywords:
 - Business intelligence
 - Machine learning

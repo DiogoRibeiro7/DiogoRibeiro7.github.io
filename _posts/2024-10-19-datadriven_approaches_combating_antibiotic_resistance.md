@@ -8,12 +8,13 @@ excerpt: Data science is transforming our approach to antibiotic resistance by i
   patterns in antibiotic use, proposing interventions, and aiding in the fight against
   superbugs.
 header:
-  image: /assets/images/data_science_8.avif
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_8.avif
+  image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  og_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  overlay_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_8.avif
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  twitter_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
 keywords:
 - Antibiotic resistance
 - Predictive modeling

@@ -8,12 +8,13 @@ excerpt: Discover how mathematics influences electronic music creation through s
   synthesis, rhythm, and algorithmic composition. Explore the role of numbers in shaping
   digital signal processing and generative music.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  og_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
 keywords:
 - Mathematics in music
 - Sound synthesis

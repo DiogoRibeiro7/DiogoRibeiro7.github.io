@@ -21,12 +21,13 @@ keywords:
 classes: wide
 date: '2026-08-06'
 header:
-  image: /assets/images/data_science_13.jpg
-  og_image: /assets/images/data_science_13.jpg
-  overlay_image: /assets/images/data_science_13.jpg
+  image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  og_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  overlay_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_13.jpg
-  twitter_image: /assets/images/data_science_13.jpg
+  teaser: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  twitter_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
 ---
 
 Operational data is naturally hierarchical. Patients are nested in hospitals, machines in plants, tickets in support teams, shipments in lanes, and customers in regions. Treating all observations as independent loses structure. Estimating every group separately overreacts to small samples. Multilevel models provide a better compromise.

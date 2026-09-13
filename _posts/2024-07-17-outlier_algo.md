@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-07-17'
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-data-science-openalex.jpg
+  og_image: /assets/images/headers/photo-data-science-openalex.jpg
+  overlay_image: /assets/images/headers/photo-data-science-openalex.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-data-science-openalex.jpg
+  twitter_image: /assets/images/headers/photo-data-science-openalex.jpg
 permalink: '/data-science/outlier_algo/'
 redirect_from:
 - '/data science/machine learning/python/outlier_algo/'

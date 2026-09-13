@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-06-05'
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-data-science-street-trees.jpg
+  og_image: /assets/images/headers/photo-data-science-street-trees.jpg
+  overlay_image: /assets/images/headers/photo-data-science-street-trees.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-data-science-street-trees.jpg
+  twitter_image: /assets/images/headers/photo-data-science-street-trees.jpg
 keywords:
 - Data science in healthcare
 - Health tech innovations

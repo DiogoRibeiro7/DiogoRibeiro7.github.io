@@ -7,12 +7,13 @@ date: '2022-12-31'
 excerpt: Learn about Principal Component Analysis (PCA) and how it helps in feature
   extraction, dimensionality reduction, and identifying key patterns in data.
 header:
-  image: /assets/images/data_science_2.avif
-  og_image: /assets/images/data_science_4.jpg
-  overlay_image: /assets/images/data_science_2.avif
+  image: /assets/images/headers/photo-microscope.jpg
+  og_image: /assets/images/headers/photo-microscope.jpg
+  overlay_image: /assets/images/headers/photo-microscope.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_2.avif
-  twitter_image: /assets/images/data_science_4.jpg
+  teaser: /assets/images/headers/photo-microscope.jpg
+  twitter_image: /assets/images/headers/photo-microscope.jpg
 keywords:
 - Principal component analysis
 - Pca

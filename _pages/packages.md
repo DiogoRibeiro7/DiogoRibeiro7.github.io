@@ -4,12 +4,13 @@ title: Projects & Packages
 permalink: /packages/
 author_profile: true
 header:
-  image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_1.jpg
-  teaser: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  overlay_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  overlay_filter: 0.4
+  teaser: /assets/images/headers/photo-data-science-ml-pipeline.jpg
   show_overlay_excerpt: false
-  twitter_image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_1.jpg
+  twitter_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
+  og_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
 seo_type: article
 seo_title: "Open Source Projects and Packages"
 seo_description: "Open-source Python and R packages for survival simulation, heavy-tailed distributions, design of experiments, physics-informed neural networks, QCA, anomaly detection, imbalanced-learning diagnostics and time-series representations."

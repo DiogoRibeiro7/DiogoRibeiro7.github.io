@@ -7,12 +7,13 @@ date: '2022-08-14'
 excerpt: Explore the Wald test, a key tool in hypothesis testing for regression models,
   its applications, and its role in logistic regression, Poisson regression, and beyond.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-statistics-chi-square.jpg
+  og_image: /assets/images/headers/photo-statistics-chi-square.jpg
+  overlay_image: /assets/images/headers/photo-statistics-chi-square.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-statistics-chi-square.jpg
+  twitter_image: /assets/images/headers/photo-statistics-chi-square.jpg
 keywords:
 - Wald test
 - Hypothesis testing

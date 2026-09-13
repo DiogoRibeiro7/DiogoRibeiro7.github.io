@@ -8,12 +8,13 @@ excerpt: Discover the Kruskal-Wallis Test, a powerful non-parametric statistical
   used for comparing multiple groups. Learn when and how to apply it in data analysis
   where assumptions of normality don't hold.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-statistics-regression-errors.jpg
+  og_image: /assets/images/headers/photo-statistics-regression-errors.jpg
+  overlay_image: /assets/images/headers/photo-statistics-regression-errors.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-statistics-regression-errors.jpg
+  twitter_image: /assets/images/headers/photo-statistics-regression-errors.jpg
 keywords:
 - Kruskal-wallis test
 - Non-parametric statistics

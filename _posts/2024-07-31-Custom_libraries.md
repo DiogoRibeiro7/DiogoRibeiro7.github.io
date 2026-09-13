@@ -6,12 +6,13 @@ classes: wide
 date: '2024-07-31'
 excerpt: A guide on developing custom Python libraries to meet specific industry needs, focusing on software development and automation.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-control-room.jpg
+  og_image: /assets/images/headers/photo-control-room.jpg
+  overlay_image: /assets/images/headers/photo-control-room.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-control-room.jpg
+  twitter_image: /assets/images/headers/photo-control-room.jpg
 keywords:
 - Python libraries
 - Custom software development

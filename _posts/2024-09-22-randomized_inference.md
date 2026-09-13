@@ -8,12 +8,13 @@ excerpt: COPOD is a popular anomaly detection model, but how well does it perfor
   in practice? This article discusses critical validation issues in third-party models
   and lessons learned from COPOD.
 header:
-  image: /assets/images/data_science_4.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_4.jpg
+  image: /assets/images/headers/photo-microscope.jpg
+  og_image: /assets/images/headers/photo-microscope.jpg
+  overlay_image: /assets/images/headers/photo-microscope.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_4.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-microscope.jpg
+  twitter_image: /assets/images/headers/photo-microscope.jpg
 permalink: '/data-science/randomized_inference/'
 redirect_from:
 - '/data science/machine learning/randomized_inference/'

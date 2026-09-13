@@ -5,12 +5,13 @@ categories:
 classes: wide
 date: '2024-07-10'
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  og_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  overlay_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  twitter_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
 keywords:
 - Probability distributions
 - Clinical trials

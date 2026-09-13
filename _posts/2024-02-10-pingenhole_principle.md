@@ -8,12 +8,13 @@ excerpt: A journey into the Pigeonhole Principle, uncovering its profound simpli
   and exploring its applications in fields like combinatorics, number theory, and
   geometry.
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  og_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-cryptography-blackboard.jpg
 keywords:
 - Pigeonhole principle
 - Combinatorics

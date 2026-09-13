@@ -6,12 +6,13 @@ classes: wide
 date: '2022-05-26'
 excerpt: Dorothy Vaughan was a pioneering mathematician and computer scientist who led NASA's computing division and became a leader in FORTRAN programming. She overcame racial and gender barriers to contribute to the U.S. space program.
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-mathematics-penrose-tiling.jpg
+  og_image: /assets/images/headers/photo-mathematics-penrose-tiling.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-penrose-tiling.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-mathematics-penrose-tiling.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-penrose-tiling.jpg
 keywords:
 - Dorothy vaughan biography
 - Nasa mathematician

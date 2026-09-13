@@ -8,12 +8,13 @@ excerpt: This article provides an in-depth comparison between the t-test and z-t
   highlighting their differences, appropriate usage, and real-world applications,
   with examples of one-sample, two-sample, and paired t-tests.
 header:
-  image: /assets/images/data_science_5.jpg
-  og_image: /assets/images/data_science_5.jpg
-  overlay_image: /assets/images/data_science_5.jpg
+  image: /assets/images/headers/photo-data-science-street-trees.jpg
+  og_image: /assets/images/headers/photo-data-science-street-trees.jpg
+  overlay_image: /assets/images/headers/photo-data-science-street-trees.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_5.jpg
-  twitter_image: /assets/images/data_science_5.jpg
+  teaser: /assets/images/headers/photo-data-science-street-trees.jpg
+  twitter_image: /assets/images/headers/photo-data-science-street-trees.jpg
 keywords:
 - T-test
 - Z-test

@@ -7,12 +7,13 @@ date: '2023-12-30'
 excerpt: This article explores the fundamentals of data engineering, including the
   ETL/ELT processes, required skills, and the relationship with data science.
 header:
-  image: /assets/images/data_science_9.webp
-  og_image: /assets/images/data_science_6.jpg
-  overlay_image: /assets/images/data_science_9.webp
+  image: /assets/images/headers/photo-factory.jpg
+  og_image: /assets/images/headers/photo-factory.jpg
+  overlay_image: /assets/images/headers/photo-factory.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_9.webp
-  twitter_image: /assets/images/data_science_6.jpg
+  teaser: /assets/images/headers/photo-factory.jpg
+  twitter_image: /assets/images/headers/photo-factory.jpg
 keywords:
 - Data engineering
 - Etl

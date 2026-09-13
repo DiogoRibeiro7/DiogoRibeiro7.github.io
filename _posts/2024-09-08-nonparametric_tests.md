@@ -8,12 +8,13 @@ excerpt: Explore the full potential of nonparametric tests, going beyond the Man
   Test. Learn how techniques like quantile regression and other nonparametric methods
   offer robust alternatives in statistical analysis.
 header:
-  image: /assets/images/data_science_7.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_7.jpg
+  image: /assets/images/headers/photo-statistics-boxplots.jpg
+  og_image: /assets/images/headers/photo-statistics-boxplots.jpg
+  overlay_image: /assets/images/headers/photo-statistics-boxplots.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_7.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-statistics-boxplots.jpg
+  twitter_image: /assets/images/headers/photo-statistics-boxplots.jpg
 keywords:
 - Nonparametric statistical tests
 - Quantile regression

@@ -7,12 +7,13 @@ date: '2020-07-26'
 excerpt: Explore the different types of observational errors, their causes, and their
   impact on accuracy and precision in various fields, such as data science and engineering.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_8.avif
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  og_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  overlay_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_8.avif
+  teaser: /assets/images/headers/photo-statistics-logistic-pdf.jpg
+  twitter_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
 seo_description: The types of observational error, their causes, and how to estimate and reduce them for better accuracy and precision in data-driven work.
 seo_title: 'Observational Error: Accuracy and Precision'
 seo_type: article

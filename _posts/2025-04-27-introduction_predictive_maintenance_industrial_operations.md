@@ -26,12 +26,13 @@ classes: wide
 date: '2025-04-27
 '
 header:
-  image: /assets/images/data_science_1.jpg
-  og_image: /assets/images/data_science_1.jpg
-  overlay_image: /assets/images/data_science_1.jpg
+  image: /assets/images/headers/photo-data-science-network.jpg
+  og_image: /assets/images/headers/photo-data-science-network.jpg
+  overlay_image: /assets/images/headers/photo-data-science-network.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_1.jpg
-  twitter_image: /assets/images/data_science_1.jpg
+  teaser: /assets/images/headers/photo-data-science-network.jpg
+  twitter_image: /assets/images/headers/photo-data-science-network.jpg
 ---
 
 In the complex landscape of modern industrial operations, the management and maintenance of critical assets represents one of the most significant challenges facing organizations across virtually every sector. From manufacturing plants and power generation facilities to transportation systems and healthcare equipment, the reliable operation of machinery and infrastructure forms the backbone of economic activity worldwide. The traditional approaches to maintenance, while serving industries for decades, are increasingly inadequate for meeting the demands of modern operations that require maximum uptime, cost efficiency, and operational excellence.

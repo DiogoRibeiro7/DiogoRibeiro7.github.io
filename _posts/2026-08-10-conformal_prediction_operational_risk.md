@@ -21,12 +21,13 @@ keywords:
 classes: wide
 date: '2026-08-10'
 header:
-  image: /assets/images/data_science_12.webp
-  og_image: /assets/images/data_science_12.webp
-  overlay_image: /assets/images/data_science_12.webp
+  image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  og_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  overlay_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_12.webp
-  twitter_image: /assets/images/data_science_12.webp
+  teaser: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  twitter_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
 ---
 
 Operational models rarely fail because they produce a single wrong number. They fail because the organization treats uncertain predictions as if they were certain. Conformal prediction addresses this problem by wrapping a model with statistically calibrated uncertainty.

@@ -31,12 +31,13 @@ keywords:
 classes: wide
 date: '2025-09-05'
 header:
-  image: /assets/images/data_science/data_science_16.jpg
-  og_image: /assets/images/data_science/data_science_16.jpg
-  overlay_image: /assets/images/data_science/data_science_16.jpg
+  image: /assets/images/headers/photo-data-science-heatmap.jpg
+  og_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  overlay_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science/data_science_16.jpg
-  twitter_image: /assets/images/data_science/data_science_16.jpg
+  teaser: /assets/images/headers/photo-data-science-heatmap.jpg
+  twitter_image: /assets/images/headers/photo-data-science-heatmap.jpg
 ---
 
 ## Abstract

@@ -6,12 +6,13 @@ classes: wide
 date: '2024-11-20'
 excerpt: The rich are getting richer while the poor remain poor. This article dives into the physics-based models that explain the inherent inequality in wealth distribution.
 header:
-  image: /assets/images/data_science_3.jpg
-  og_image: /assets/images/data_science_3.jpg
-  overlay_image: /assets/images/data_science_3.jpg
+  image: /assets/images/headers/photo-statistics-boxplots.jpg
+  og_image: /assets/images/headers/photo-statistics-boxplots.jpg
+  overlay_image: /assets/images/headers/photo-statistics-boxplots.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_3.jpg
-  twitter_image: /assets/images/data_science_3.jpg
+  teaser: /assets/images/headers/photo-statistics-boxplots.jpg
+  twitter_image: /assets/images/headers/photo-statistics-boxplots.jpg
 keywords:
 - Wealth inequality
 - Pareto distribution

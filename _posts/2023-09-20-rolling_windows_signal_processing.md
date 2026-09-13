@@ -8,11 +8,11 @@ excerpt: Explore the diverse applications of rolling windows in signal processin
   covering both the underlying theory and practical implementations.
 header:
   image: /assets/images/download.png
-  og_image: /assets/images/data_science_8.avif
+  og_image: /assets/images/download.png
   overlay_image: /assets/images/download.png
   show_overlay_excerpt: false
   teaser: /assets/images/download.png
-  twitter_image: /assets/images/data_science_8.avif
+  twitter_image: /assets/images/download.png
 keywords:
 - Rolling windows
 - Signal processing

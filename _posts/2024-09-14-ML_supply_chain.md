@@ -8,12 +8,13 @@ excerpt: Learn how machine learning optimizes supply chain operations by enhanci
   demand forecasting, inventory management, logistics, and more, driving efficiency
   and business value.
 header:
-  image: /assets/images/data_science_6.jpg
-  og_image: /assets/images/data_science_7.jpg
-  overlay_image: /assets/images/data_science_6.jpg
+  image: /assets/images/headers/photo-statistics-dice-coins.jpg
+  og_image: /assets/images/headers/photo-statistics-dice-coins.jpg
+  overlay_image: /assets/images/headers/photo-statistics-dice-coins.jpg
+  overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/data_science_6.jpg
-  twitter_image: /assets/images/data_science_7.jpg
+  teaser: /assets/images/headers/photo-statistics-dice-coins.jpg
+  twitter_image: /assets/images/headers/photo-statistics-dice-coins.jpg
 keywords:
 - Machine learning in supply chain
 - Supply chain optimization
