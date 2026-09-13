@@ -3124,6 +3124,129 @@ def heaping_threshold_error():
     return fig
 
 
+# --------------------------------------------------------------------------
+@figure("benford_spread",
+        "Mean absolute deviation from Benford's law against how many orders "
+        "of magnitude the data spans, on log scales, for lognormal columns of "
+        "fifty thousand values. Conformity improves steadily with spread and "
+        "crosses the conventional close-conformity threshold somewhere past a "
+        "hundredfold range, so a column confined to one or two factors of ten "
+        "fails the test whatever its provenance.")
+def benford_spread():
+    benford = np.log10(1 + 1 / np.arange(1, 10))
+
+    def mad(v):
+        v = np.abs(v[v > 0])
+        d = (v / 10 ** np.floor(np.log10(v))).astype(int)
+        shares = np.array([(d == k).mean() for k in range(1, 10)])
+        return np.abs(shares - benford).mean()
+
+    sigmas = np.linspace(0.15, 2.6, 22)
+    spans, mads = [], []
+    for s in sigmas:
+        v = np.random.default_rng(3).lognormal(6, s, 50_000)
+        spans.append(np.exp(2 * 1.96 * s))
+        mads.append(mad(v))
+
+    fig, ax = plt.subplots()
+    ax.plot(spans, mads, marker="o", color=P[0], lw=2, label="Lognormal column, 50,000 values")
+    ax.axhline(0.006, color=P[1], lw=1.5, ls="--", label="Close conformity, 0.006")
+    ax.axhline(0.012, color=P[3], lw=1.5, ls=":", label="Acceptable conformity, 0.012")
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+    ax.set_xticks([2, 10, 100, 1000, 10000, 100000])
+    ax.set_xticklabels(["2x", "10x", "100x", "1,000x", "10,000x", "100,000x"])
+    ax.set_xlabel("range the data covers, 2.5th to 97.5th percentile")
+    ax.set_ylabel("mean absolute deviation from Benford")
+    ax.set_title("Whether a column follows the law is decided by its range")
+    ax.legend(loc="upper right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("design_analysis_type_sm",
+        "Exaggeration of a significant estimate against the power of the "
+        "study, for significance thresholds of 0.10, 0.05 and 0.01. All three "
+        "curves sit near one above sixty percent power and rise steeply below "
+        "thirty. At equal power the looser threshold exaggerates most, because "
+        "reaching that power against a lower bar takes a smaller true effect.")
+def design_analysis_type_sm():
+    from matplotlib.ticker import PercentFormatter
+    from scipy import stats as st, integrate
+
+    def curves(alpha):
+        zc = st.norm.ppf(1 - alpha / 2)
+
+        def power(z):
+            return st.norm.cdf(-zc - z) + st.norm.cdf(z - zc)
+
+        def type_m(z):
+            f = lambda x: abs(x) * st.norm.pdf(x, z, 1)
+            lo = integrate.quad(f, -np.inf, -zc)[0]
+            hi = integrate.quad(f, zc, np.inf)[0]
+            return (lo + hi) / power(z) / z
+
+        zs = np.linspace(0.3, 4.2, 70)
+        return np.array([power(z) for z in zs]), np.array([type_m(z) for z in zs])
+
+    fig, ax = plt.subplots()
+    for alpha, col in ((0.10, P[2]), (0.05, P[1]), (0.01, P[0])):
+        pw, tm = curves(alpha)
+        ax.plot(pw, tm, color=col, lw=2, label=f"Significance at {alpha:.2f}")
+        if alpha == 0.05:
+            for target in (0.10, 0.20, 0.50, 0.80):
+                i = np.argmin(np.abs(pw - target))
+                ax.plot([pw[i]], [tm[i]], marker="o", color=col, ms=6)
+                ax.annotate(f"{tm[i]:.2f}x", (pw[i], tm[i]), color=hs.INK_SECONDARY,
+                            fontsize=9, ha="left", va="bottom", xytext=(6, 4),
+                            textcoords="offset points")
+    ax.axhline(1, color=hs.INK_MUTED, lw=1.2, ls=":")
+    ax.set_yscale("log")
+    ax.set_yticks([1, 1.5, 2, 3, 5, 8])
+    ax.set_yticklabels(["1x", "1.5x", "2x", "3x", "5x", "8x"])
+    ax.yaxis.set_minor_formatter(plt.NullFormatter())
+    ax.set_ylim(0.95, 9)
+    ax.xaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_xlabel("power of the study")
+    ax.set_ylabel("size of a significant estimate, relative to the truth")
+    ax.set_title("A significant result from a small study is mostly filter")
+    ax.legend(loc="upper right")
+    return fig
+
+
+# --------------------------------------------------------------------------
+@figure("acceptance_sampling_oc",
+        "Operating characteristic curves for four acceptance sampling plans: "
+        "the probability a lot is accepted against its true defect rate. All "
+        "four pass near-perfect lots and stop bad ones; the larger plans "
+        "separate the two far more sharply, accepting lots at the agreed "
+        "quality level while rejecting those at five times it.")
+def acceptance_sampling_oc():
+    from matplotlib.ticker import PercentFormatter
+    from scipy import stats as st
+
+    rates = np.linspace(0.0001, 0.08, 250)
+    plans = [((50, 0), P[3]), ((100, 1), P[1]), ((200, 3), P[2]), ((500, 8), P[0])]
+
+    fig, ax = plt.subplots()
+    for (n, c), col in plans:
+        ax.plot(rates, st.binom.cdf(c, n, rates), color=col, lw=2,
+                label=f"Inspect {n}, allow {c}")
+    ax.axvline(0.01, color=hs.INK_MUTED, lw=1.2, ls=":")
+    ax.annotate("agreed quality, 1%", (0.01, 0.03), color=hs.INK_SECONDARY, fontsize=9,
+                ha="left", va="bottom", xytext=(4, 0), textcoords="offset points")
+    ax.axvline(0.05, color=hs.INK_MUTED, lw=1.2, ls=":")
+    ax.annotate("must be caught, 5%", (0.05, 0.03), color=hs.INK_SECONDARY, fontsize=9,
+                ha="left", va="bottom", xytext=(4, 0), textcoords="offset points")
+    ax.xaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.yaxis.set_major_formatter(PercentFormatter(1.0, decimals=0))
+    ax.set_xlabel("true defect rate of the lot")
+    ax.set_ylabel("chance the lot is accepted")
+    ax.set_title("Bigger samples separate good lots from bad, not just reject more")
+    ax.legend(loc="upper right")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)
