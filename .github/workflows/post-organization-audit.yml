@@ -1,0 +1,70 @@
+name: Audit post organization
+
+on:
+  push:
+    branches:
+      - audit/post-organization
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - name: Report post layout and primary categories
+        shell: python
+        run: |
+          from collections import Counter
+          from pathlib import Path
+          import frontmatter
+
+          root = Path('_posts')
+          posts = sorted(root.rglob('*.md'))
+          flat = [p for p in posts if p.parent == root]
+          dirs = Counter(str(p.parent.relative_to(root)) for p in posts if p.parent != root)
+          cats = Counter()
+          missing = []
+          permalink = 0
+          flat_permalink = 0
+          flat_categories = Counter()
+
+          for path in posts:
+              post = frontmatter.load(path)
+              categories = post.get('categories', [])
+              if isinstance(categories, str):
+                  categories = [categories]
+              if categories:
+                  cats[str(categories[0])] += 1
+                  if path.parent == root:
+                      flat_categories[str(categories[0])] += 1
+              else:
+                  missing.append(str(path))
+              if post.get('permalink'):
+                  permalink += 1
+                  if path.parent == root:
+                      flat_permalink += 1
+
+          print(f'TOTAL_POSTS={len(posts)}')
+          print(f'FLAT_POSTS={len(flat)}')
+          print(f'NESTED_POSTS={len(posts)-len(flat)}')
+          print(f'EXPLICIT_PERMALINKS={permalink}')
+          print(f'FLAT_EXPLICIT_PERMALINKS={flat_permalink}')
+          print(f'MISSING_CATEGORIES={len(missing)}')
+          print('\nEXISTING_DIRECTORIES')
+          for name, count in sorted(dirs.items()):
+              print(f'{count:4d}  {name}')
+          print('\nPRIMARY_CATEGORIES_ALL')
+          for name, count in cats.most_common():
+              print(f'{count:4d}  {name}')
+          print('\nPRIMARY_CATEGORIES_FLAT')
+          for name, count in flat_categories.most_common():
+              print(f'{count:4d}  {name}')
+          print('\nMISSING_CATEGORY_FILES')
+          for path in missing:
+              print(path)
