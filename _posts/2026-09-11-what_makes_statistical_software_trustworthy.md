@@ -32,7 +32,7 @@ keywords:
   - reproducibility
   - floating point
 classes: wide
-date: '2026-09-14'
+date: '2026-09-11'
 why_this_exists: >-
   Statistical packages can produce outputs that look reasonable even when a hidden
   numerical, inferential or state-management assumption has failed. The relevant

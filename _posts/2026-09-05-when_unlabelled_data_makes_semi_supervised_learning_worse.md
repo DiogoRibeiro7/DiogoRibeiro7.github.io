@@ -31,7 +31,7 @@ keywords:
   - unlabelled data
   - distribution shift
 classes: wide
-date: '2026-09-14'
+date: '2026-09-05'
 why_this_exists: >-
   Semi-supervised learning is often introduced with the intuition that additional
   unlabelled observations should improve a classifier when labels are scarce. That

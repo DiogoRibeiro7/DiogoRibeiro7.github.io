@@ -32,7 +32,7 @@ keywords:
   - statistical software
   - set.seed
 classes: wide
-date: '2026-09-14'
+date: '2026-09-07'
 why_this_exists: >-
   Statistical functions frequently expose a seed argument for reproducibility, but
   reproducibility is only half of the API contract. A seeded function that leaves
