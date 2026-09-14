@@ -32,7 +32,7 @@ keywords:
   - co-clustering stability
   - adjusted Rand index
 classes: wide
-date: '2026-09-14'
+date: '2026-09-03'
 why_this_exists: >-
   Clustering stability is often treated as one quantity, usually measured by a
   bootstrap. That misses a second source of instability: changing how each

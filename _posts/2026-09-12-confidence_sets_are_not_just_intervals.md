@@ -31,7 +31,7 @@ keywords:
   - moment inequalities
   - projection
 classes: wide
-date: '2026-09-14'
+date: '2026-09-12'
 why_this_exists: >-
   Statistical software often compresses set-valued inference into lower and upper
   endpoints, even when the actual inverted acceptance region is disconnected or

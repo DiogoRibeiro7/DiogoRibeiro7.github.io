@@ -33,7 +33,7 @@ keywords:
   - statistical diagnostics
   - estimator evaluation
 classes: wide
-date: '2026-09-14'
+date: '2026-09-01'
 why_this_exists: >-
   Simulation studies often compress estimator behaviour into one number.
   That is convenient, but it can turn a multidimensional numerical problem

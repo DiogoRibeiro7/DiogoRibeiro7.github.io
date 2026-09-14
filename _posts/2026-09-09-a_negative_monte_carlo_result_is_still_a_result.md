@@ -31,7 +31,7 @@ keywords:
   - statistical research
   - reproducibility
 classes: wide
-date: '2026-09-14'
+date: '2026-09-09'
 why_this_exists: >-
   Simulation studies are often written as if their purpose were to confirm a
   theoretical expectation. In real methodological work, a broader grid or a more
