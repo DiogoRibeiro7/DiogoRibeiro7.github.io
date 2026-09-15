@@ -35,7 +35,6 @@ SYNC_PATHS: tuple[tuple[str, str], ...] = (
     ("assets/img", "assets/img"),
     ("_data/i18n", "_data/i18n"),
     ("_data/js_manifest.json", "_data/js_manifest.json"),
-    ("_data/js_meta.json", "_data/js_meta.json"),
     ("_data/cdn-integrity.yml", "_data/cdn-integrity.yml"),
 )
 

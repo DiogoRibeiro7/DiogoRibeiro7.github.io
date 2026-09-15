@@ -72,11 +72,11 @@ The confusion matrix provides a comprehensive view of how a model performs, part
 
 To address the limitations of accuracy, especially in imbalanced datasets, additional metrics such as precision, recall, and the F1-score are often used:
 
-- **Precision**: The proportion of positive identifications that are actually correct, calculated as $ \text{Precision} = \frac{TP}{TP + FP} $. High precision indicates a low false positive rate.
+- **Precision**: The proportion of positive identifications that are actually correct, calculated as $\text{Precision} = \frac{TP}{TP + FP}$. High precision indicates a low false positive rate.
 
-- **Recall (Sensitivity or True Positive Rate)**: The proportion of actual positives that are correctly identified, calculated as $ \text{Recall} = \frac{TP}{TP + FN} $. High recall indicates a low false negative rate.
+- **Recall (Sensitivity or True Positive Rate)**: The proportion of actual positives that are correctly identified, calculated as $\text{Recall} = \frac{TP}{TP + FN}$. High recall indicates a low false negative rate.
 
-- **F1-Score**: The harmonic mean of precision and recall, providing a single metric that balances both concerns, calculated as $ \text{F1-Score} = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}} $.
+- **F1-Score**: The harmonic mean of precision and recall, providing a single metric that balances both concerns, calculated as $\text{F1-Score} = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$.
 
 These metrics allow for a more balanced assessment of a model's performance, especially in scenarios where the cost of false positives and false negatives is different.
 

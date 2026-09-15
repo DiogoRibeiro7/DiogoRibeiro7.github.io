@@ -1,0 +1,323 @@
+---
+---
+// Styles for the year archive at /year-archive/. They shipped in the DataLog
+// theme's _phase3-enhancements.scss next to its archive layout until 0.8.0
+// removed both. _pages/year-archive.html carries the layout's markup, and this
+// file its styles, as the theme's 0.7.0 release had them.
+
+@use 'mixins' as *;
+
+.archive-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+
+  &__header {
+    margin-bottom: 3rem;
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-text-primary, #1a202c);
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: var(--color-text-secondary, #4a5568);
+    }
+  }
+
+  &__stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  &__stat {
+    text-align: center;
+
+    &-value {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-accent, #3b82f6);
+    }
+
+    &-label {
+      display: block;
+      font-size: 0.875rem;
+      color: var(--color-text-secondary, #4a5568);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__filters {
+    background: var(--color-background-secondary, #f7fafc);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+
+    label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text-primary, #1a202c);
+      margin-right: 0.5rem;
+    }
+
+    select {
+      padding: 0.5rem 2rem 0.5rem 1rem;
+      border: 1px solid var(--color-border, #cbd5e0);
+      border-radius: 6px;
+      background-color: white;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: var(--color-accent, #3b82f6);
+      }
+
+      &:focus {
+        outline: none;
+        border-color: var(--color-accent, #3b82f6);
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+    }
+
+    button[data-reset-filters] {
+      margin-left: auto;
+      padding: 0.5rem 1rem;
+      background: transparent;
+      border: 1px solid var(--color-border, #cbd5e0);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: var(--color-background-secondary, #f7fafc);
+        border-color: var(--color-accent, #3b82f6);
+      }
+    }
+  }
+
+  &__results-count {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary, #4a5568);
+  }
+}
+
+.archive-year {
+  margin-bottom: 3rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--color-border, #cbd5e0);
+
+    h2 {
+      font-size: 1.75rem;
+      margin: 0;
+      color: var(--color-text-primary, #1a202c);
+    }
+
+    &-count {
+      font-size: 0.875rem;
+      color: var(--color-text-secondary, #4a5568);
+      padding: 0.25rem 0.75rem;
+      background: var(--color-background-secondary, #f7fafc);
+      border-radius: 12px;
+    }
+  }
+}
+
+.archive-month {
+  margin-bottom: 2rem;
+
+  &__header {
+    margin-bottom: 1rem;
+
+    h3 {
+      font-size: 1.25rem;
+      color: var(--color-text-primary, #1a202c);
+      margin: 0;
+    }
+  }
+
+  &__posts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.archive-post {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  align-items: flex-start;
+
+  &:hover {
+    background: var(--color-background-secondary, #f7fafc);
+  }
+
+  &__date {
+    flex-shrink: 0;
+    width: 60px;
+    text-align: center;
+    color: var(--color-text-secondary, #4a5568);
+    font-size: 0.875rem;
+    line-height: 1.4;
+
+    &-day {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-accent, #3b82f6);
+    }
+
+    &-month {
+      display: block;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.4;
+
+    a {
+      color: var(--color-text-primary, #1a202c);
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--color-accent, #3b82f6);
+      }
+    }
+  }
+
+  &__excerpt {
+    margin: 0 0 0.5rem;
+    color: var(--color-text-secondary, #4a5568);
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  &__meta {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary, #4a5568);
+  }
+
+  &__tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+
+  &__tag {
+    padding: 0.25rem 0.5rem;
+    background: var(--color-background-secondary, #f7fafc);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: var(--color-text-secondary, #4a5568);
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--color-accent, #3b82f6);
+      color: white;
+    }
+  }
+}
+
+@include respond-below(md) {
+  .archive-layout {
+    padding: 1rem 0.5rem;
+
+    &__header h1 {
+      font-size: 2rem;
+    }
+
+    &__filters {
+      flex-direction: column;
+      align-items: stretch;
+
+      select {
+        width: 100%;
+      }
+
+      button[data-reset-filters] {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .archive-post {
+    flex-direction: column;
+    gap: 0.75rem;
+
+    &__date {
+      width: auto;
+      text-align: left;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+
+      &-day {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+@media print {
+  .archive-layout__filters {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .archive-post {
+    transition: none !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .archive-post {
+    border-width: 2px;
+  }
+}
+
+.archive-post__title a:focus-visible {
+  outline: 3px solid var(--color-accent, #3b82f6);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

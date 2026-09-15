@@ -110,7 +110,7 @@ function evaluateDocument(doc, context) {
   }
 
   if (selectedTags && selectedTags.size > 0) {
-    const normalizedTags = normalizedArray(doc, "tags");
+    const normalizedTags = new Set(normalizedFields(doc).tags);
     for (const tag of selectedTags) {
       if (!normalizedTags.has(tag)) {
         return null;
@@ -122,13 +122,14 @@ function evaluateDocument(doc, context) {
     return null;
   }
 
-  const normalizedData = doc.normalized || {};
-  const normalizedContent = normalizedData.content || normalize(doc.content || "");
-  const normalizedSummary = normalizedData.summary || normalize(doc.summary || "");
-  const normalizedTitle = normalizedData.title || normalize(doc.title || "");
-  const normalizedTags = arrayFromNormalized(normalizedData.tags, doc.tags);
-  const normalizedLanguages = arrayFromNormalized(normalizedData.languages, doc.languages);
-  const normalizedDifficulty = normalizedData.difficulty || normalize(doc.difficulty || "");
+  const {
+    title: normalizedTitle,
+    summary: normalizedSummary,
+    content: normalizedContent,
+    tags: normalizedTags,
+    languages: normalizedLanguages,
+    difficulty: normalizedDifficulty
+  } = normalizedFields(doc);
   const codeBlocks = Array.isArray(doc.code) ? doc.code : [];
   const mathSegments = Array.isArray(doc.math) ? doc.math : [];
 
@@ -242,19 +243,33 @@ function evaluateDocument(doc, context) {
   };
 }
 
+// search.json carries each text field once. Its normalized form is worked out
+// the first time a document is searched and kept for the queries that follow,
+// with the same normalize() the query goes through. An index that still ships
+// a precomputed `normalized` object is used as it is.
+const normalizedCache = new WeakMap();
+
+function normalizedFields(doc) {
+  const cached = normalizedCache.get(doc);
+  if (cached) {
+    return cached;
+  }
+  const precomputed = doc.normalized || {};
+  const fields = {
+    title: precomputed.title || normalize(doc.title || ""),
+    summary: precomputed.summary || normalize(doc.summary || ""),
+    content: precomputed.content || normalize(doc.content || ""),
+    tags: arrayFromNormalized(precomputed.tags, doc.tags),
+    languages: arrayFromNormalized(precomputed.languages, doc.languages),
+    difficulty: precomputed.difficulty || normalize(doc.difficulty || "")
+  };
+  normalizedCache.set(doc, fields);
+  return fields;
+}
+
 function arrayFromNormalized(normalizedValues, fallback) {
   if (Array.isArray(normalizedValues) && normalizedValues.length > 0) {
     return normalizedValues;
   }
   return Array.isArray(fallback) ? fallback.map((value) => normalize(value)) : [];
-}
-
-function normalizedArray(doc, key) {
-  const normalized = doc.normalized || {};
-  const values = normalized[key];
-  if (Array.isArray(values) && values.length > 0) {
-    return new Set(values);
-  }
-  const fallback = Array.isArray(doc[key]) ? doc[key] : [];
-  return new Set(fallback.map((value) => normalize(value)));
 }

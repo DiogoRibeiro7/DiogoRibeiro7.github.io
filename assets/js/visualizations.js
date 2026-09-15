@@ -380,29 +380,67 @@
     }
   };
 
-  const ensurePlotly = () =>
-    (typeof window.Plotly !== 'undefined'
-      ? Promise.resolve()
-      : loadScript('https://cdn.plot.ly/plotly-2.27.0.min.js')).then(() => window.Plotly);
+  // Libraries load from jsDelivr, which the Content Security Policy allows;
+  // cdn.plot.ly and cdn.bokeh.org are not in it, so those charts never loaded.
+  // The widget manager needs require.js, which defines window.define with
+  // define.amd set. A UMD bundle such as Plotly, D3 or BokehJS that runs while it
+  // is set registers itself as an anonymous AMD module instead of setting its
+  // global, and require.js throws "Mismatched anonymous define()": on a page with
+  // a widget, whichever loaded last failed. A bundle requested before require.js
+  // loads by script tag, and require.js waits for it; a bundle requested after
+  // goes through require.js, which hands back the module.
+  let requireLoading = null;
+  const pendingUmdLoads = new Set();
 
-  const ensureD3 = () =>
-    (typeof window.d3 !== 'undefined'
-      ? Promise.resolve(window.d3)
-      : loadScript('https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js').then(() => window.d3));
-
-  const ensureBokeh = () => {
-    const script = 'https://cdn.bokeh.org/bokeh/release/bokeh-3.3.3.min.js';
-    const style = 'https://cdn.bokeh.org/bokeh/release/bokeh-3.3.3.min.css';
-    return Promise.all([loadScript(script), loadStyle(style)]).then(() => window.Bokeh);
+  const loadUmd = (src, globalName) => {
+    if (typeof window[globalName] !== 'undefined') {
+      return Promise.resolve(window[globalName]);
+    }
+    const loadByScriptTag = () => loadScript(src).then(() => window[globalName]);
+    if (requireLoading) {
+      return requireLoading.then(
+        (requirejs) =>
+          new Promise((resolve, reject) => {
+            requirejs([src], (library) => resolve(library || window[globalName]), reject);
+          }),
+        loadByScriptTag
+      );
+    }
+    const load = loadByScriptTag();
+    pendingUmdLoads.add(load);
+    const settle = () => pendingUmdLoads.delete(load);
+    load.then(settle, settle);
+    return load;
   };
 
+  const ensurePlotly = () =>
+    loadUmd('https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.27.0/plotly.min.js', 'Plotly');
+
+  const ensureD3 = () => loadUmd('https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js', 'd3');
+
+  // BokehJS 3 publishes no stylesheet: the request for one failed, and with it
+  // every Bokeh chart. Its core bundle also lacks Bokeh.Plotting, which the code
+  // in a data-bokeh-script block calls; that comes from the API bundle.
+  const ensureBokeh = () =>
+    loadUmd('https://cdn.jsdelivr.net/npm/@bokeh/bokehjs@3.3.3/build/js/bokeh.min.js', 'Bokeh').then((Bokeh) =>
+      Bokeh && Bokeh.Plotting
+        ? Bokeh
+        : loadScript('https://cdn.jsdelivr.net/npm/@bokeh/bokehjs@3.3.3/build/js/bokeh-api.min.js').then(
+            () => window.Bokeh
+          )
+    );
+
   const ensureRequire = () => {
-    if (typeof window.requirejs !== 'undefined') {
-      return Promise.resolve(window.requirejs);
+    if (!requireLoading) {
+      requireLoading = Promise.allSettled([...pendingUmdLoads]).then(() =>
+        typeof window.requirejs !== 'undefined'
+          ? window.requirejs
+          : loadScript('https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js', {
+              async: false
+            }).then(() => window.requirejs)
+      );
     }
-    return loadScript('https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js', {
-      async: false
-    }).then(() => window.requirejs);
+    return requireLoading;
   };
 
   const ensureWidgetManager = () =>
@@ -525,6 +563,35 @@
       });
   };
 
+  // Runs code an author wrote into the page (a D3 or Bokeh block) as a script
+  // element carrying the page's CSP nonce, taken from the block's own
+  // <script type="text/plain">. The policy has no 'unsafe-eval', so running
+  // that code with `new Function` was refused and those blocks never rendered.
+  // The arguments travel on the script element, which the code reaches as
+  // document.currentScript, so nothing is added to window.
+  const runInlineCode = (sourceNode, params, body, args) => {
+    const run = { args, done: false, error: null, result: undefined };
+    const script = document.createElement('script');
+    const nonce = sourceNode.nonce || sourceNode.getAttribute('nonce');
+    if (nonce) {
+      script.nonce = nonce;
+    }
+    script.datalogRun = run;
+    script.textContent = `(function (run) {\ntry {\nrun.result = (function (${params.join(', ')}) {\n${body}\n}).apply(null, run.args);\nrun.done = true;\n} catch (error) {\nrun.error = error;\n}\n})(document.currentScript.datalogRun);`;
+    try {
+      document.head.appendChild(script);
+    } finally {
+      script.remove();
+    }
+    if (run.error) {
+      throw run.error;
+    }
+    if (!run.done) {
+      throw new Error('The Content Security Policy did not allow the visualization script to run');
+    }
+    return run.result;
+  };
+
   const renderD3 = (element) => {
     const scriptNode = element.querySelector('[data-d3-script]');
     if (!scriptNode) {
@@ -544,8 +611,7 @@
         };
         try {
           const instrumented = `${code}\n;try { if (typeof data !== 'undefined') captureData(data); } catch (instrumentationError) {}`;
-          const runner = new Function('d3', 'element', 'captureData', instrumented);
-          const result = runner(d3, canvas, captureData);
+          const result = runInlineCode(scriptNode, ['d3', 'element', 'captureData'], instrumented, [d3, canvas, captureData]);
           if (typeof result !== 'undefined') {
             captureData(result);
           }
@@ -563,10 +629,35 @@
       .catch(() => setStatus(element, 'D3 assets failed to load', 'error'));
   };
 
+  // Observable embeds come from observablehq.com, the one host the Content
+  // Security Policy allows for them. Rebuilding the address behind that
+  // origin also keeps a javascript: or data: URL in the page's markup from
+  // ever becoming the frame's source.
+  const observableEmbedUrl = (value) => {
+    try {
+      const url = new URL(value, 'https://observablehq.com');
+      if (url.origin !== 'https://observablehq.com') {
+        return null;
+      }
+      // The query (cells=chart and the like) is rebuilt one encoded parameter
+      // at a time; an embed address has no use for a fragment.
+      const query = Array.from(url.searchParams, ([key, entry]) => `${encodeURIComponent(key)}=${encodeURIComponent(entry)}`).join('&');
+      return 'https://observablehq.com' + url.pathname + (query ? '?' + query : '');
+    } catch (error) {
+      return null;
+    }
+  };
+
   const renderObservable = (element) => {
-    const src = element.getAttribute('data-observable-src');
-    if (!src) {
+    // data-viz-src is the attribute the user guide documents for embeds.
+    const source = element.getAttribute('data-observable-src') || element.getAttribute('data-viz-src');
+    if (!source) {
       setStatus(element, 'Missing Observable notebook source', 'error');
+      return Promise.resolve();
+    }
+    const src = observableEmbedUrl(source);
+    if (!src) {
+      setStatus(element, 'Observable embeds must come from observablehq.com', 'error');
       return Promise.resolve();
     }
     const iframe = document.createElement('iframe');
@@ -621,8 +712,7 @@
           const code = scriptNode.textContent || '';
           canvas.replaceChildren();
           try {
-            const runner = new Function('Bokeh', 'element', code);
-            runner(Bokeh, canvas);
+            runInlineCode(scriptNode, ['Bokeh', 'element'], code, [Bokeh, canvas]);
             setStatus(element, 'Interactive');
           } catch (error) {
             console.error('Bokeh script error', error);
@@ -630,7 +720,8 @@
           }
         }
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error('Bokeh assets failed to load', error);
         setStatus(element, 'Bokeh assets failed to load', 'error');
       });
   };
@@ -677,21 +768,28 @@
     const canvas = element.querySelector('[data-viz-canvas]') || element;
     canvas.replaceChildren();
 
+    // @jupyter-widgets/html-manager exports HTMLManager, which loads widget
+    // modules through requireLoader and displays a view into an element. The
+    // WidgetManager this called does not exist, and the TypeError was caught
+    // below without a trace, after the canvas had been emptied.
     return ensureWidgetManager()
       .then((widgets) => {
-        const manager = new widgets.WidgetManager();
+        const manager = new widgets.HTMLManager({ loader: widgets.requireLoader });
         return manager
           .set_state(state)
           .then(() => manager.get_model(view.model_id))
           .then((model) => manager.create_view(model))
-          .then((widgetView) => manager.display_view(undefined, widgetView, { el: canvas }))
+          .then((widgetView) => manager.display_view(widgetView, canvas))
           .then(() => setStatus(element, 'Interactive'))
           .catch((error) => {
             console.error('Widget render error', error);
             setStatus(element, 'Widget rendering error', 'error');
           });
       })
-      .catch(() => setStatus(element, 'Widget assets failed to load', 'error'));
+      .catch((error) => {
+        console.error('Widget assets failed to load', error);
+        setStatus(element, 'Widget assets failed to load', 'error');
+      });
   };
 
   const renderVisualization = (element) => {
@@ -789,6 +887,13 @@
   const internals = {
     loadScript,
     loadStyle,
+    loadUmd,
+    ensureRequire,
+    // Tests share one copy of this module, so they reset the loader state.
+    resetRequireLoading: () => {
+      requireLoading = null;
+      pendingUmdLoads.clear();
+    },
     normalizeRecords,
     stringifyValue,
     buildDataTable,

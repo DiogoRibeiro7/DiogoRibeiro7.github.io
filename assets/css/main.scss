@@ -1,4 +1,18 @@
 ---
 # Only front matter so Jekyll processes this file
 ---
+{%- comment -%}
+Configures _sass/_features.scss before the theme loads it, so the stylesheet
+carries the styles of an optional feature only when this site uses it. A site
+that copies this file to add its own rules keeps these lines.
+{%- endcomment -%}
+{%- assign notebook_pages = site.pages | where: "layout", "notebook" -%}
+@use "features" with (
+  $search: {% if site.features.search %}true{% else %}false{% endif %},
+  $visualizations: {% if site.features.visualizations %}true{% else %}false{% endif %},
+  $notebooks: {% if notebook_pages.size > 0 %}true{% else %}false{% endif %},
+  $packages: {% if site.packages.size > 0 %}true{% else %}false{% endif %},
+  $academic-dashboard: {% if site.features.academic_dashboard %}true{% else %}false{% endif %},
+  $open-science-badges: {% if site.data.academic.badges.size > 0 %}true{% else %}false{% endif %}
+);
 @use "theme";
