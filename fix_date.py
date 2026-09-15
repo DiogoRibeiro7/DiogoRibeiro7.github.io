@@ -1,7 +1,10 @@
-import os
-import re
-import frontmatter
 import argparse
+import os
+from pathlib import Path
+import re
+
+import frontmatter
+
 
 def extract_date_from_filename(filename):
     # Assuming the filename format is 'YYYY-MM-DD-some-title.md'
@@ -10,11 +13,12 @@ def extract_date_from_filename(filename):
         return match.group(1)
     return None
 
+
 def process_markdown_file(filepath, dry_run=False):
     # Load the markdown file and parse its frontmatter
     with open(filepath, 'r', encoding='utf-8') as f:
         post = frontmatter.load(f)
-    
+
     # Extract the date from the filename
     filename = os.path.basename(filepath)
     file_date = extract_date_from_filename(filename)
@@ -22,7 +26,7 @@ def process_markdown_file(filepath, dry_run=False):
     if not file_date:
         print(f"Could not extract date from filename: {filename}")
         return False
-    
+
     # Check if the frontmatter already contains a date
     frontmatter_date = post.get('date')
 
@@ -42,17 +46,17 @@ def process_markdown_file(filepath, dry_run=False):
         print(f"Dry run: would update {filename}")
         return True
 
-    # Write the updated content back to the markdown file
+    # Write the updated content back to the file
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(frontmatter.dumps(post))
     return True
 
+
 def process_markdown_files_in_directory(directory, dry_run=False):
-    # Process all markdown files in the given directory
-    for filename in os.listdir(directory):
-        if filename.endswith('.md'):
-            filepath = os.path.join(directory, filename)
-            process_markdown_file(filepath, dry_run=dry_run)
+    # Subject folders under _posts are part of the supported repository layout.
+    for filepath in sorted(Path(directory).rglob('*.md')):
+        process_markdown_file(filepath, dry_run=dry_run)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Fix dates in markdown front matter")

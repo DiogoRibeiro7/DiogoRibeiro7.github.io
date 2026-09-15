@@ -1,65 +1,51 @@
-import os
-import yaml  # to parse YAML front matter
 import argparse
 import json
+from pathlib import Path
+
+import yaml
+
 
 def extract_front_matter(md_file_path: str) -> dict:
-    """
-    Extracts YAML front matter from a Markdown file.
-    
-    Args:
-        md_file_path (str): Path to the markdown file.
-
-    Returns:
-        dict: Parsed front matter as a dictionary, or None if not found.
-    """
+    """Extract YAML front matter from a Markdown file."""
     with open(md_file_path, 'r', encoding='utf-8') as file:
         content = file.read()
-        
-        # Check if file starts with YAML front matter
+
         if content.startswith('---'):
-            # Front matter ends with another '---'
             front_matter_end = content.find('---', 3)
             if front_matter_end != -1:
                 front_matter = content[3:front_matter_end].strip()
-                return yaml.safe_load(front_matter)  # Parse YAML front matter
-                
+                return yaml.safe_load(front_matter)
+
     return None
 
+
 def check_front_matter(folder_path: str, output_file: str, output_format: str = "text"):
-    """
-    Checks if 'summary' and 'keywords' keys are present in the front matter of Markdown files
-    and saves the output to a text file only if any of the keys are missing.
-
-    Args:
-        folder_path (str): Path to the folder containing markdown files.
-        output_file (str): Path to the output file where results will be saved.
-        output_format (str): Output format: "text" or "json".
-    """
+    """Report Markdown files missing ``summary`` or ``keywords`` recursively."""
+    root = Path(folder_path)
     results = []
-    for file_name in os.listdir(folder_path):
-        if file_name.endswith('.md'):  # Check only markdown files
-            file_path = os.path.join(folder_path, file_name)
-            front_matter = extract_front_matter(file_path)
 
-            if front_matter is None:
+    for file_path in sorted(root.rglob('*.md')):
+        relative_path = file_path.relative_to(root).as_posix()
+        front_matter = extract_front_matter(str(file_path))
+
+        if front_matter is None:
+            results.append({
+                "file": relative_path,
+                "valid_front_matter": False,
+                "summary_present": False,
+                "keywords_present": False,
+            })
+        else:
+            has_summary = 'summary' in front_matter
+            has_keywords = 'keywords' in front_matter
+
+            if not has_summary or not has_keywords:
                 results.append({
-                    "file": file_name,
-                    "valid_front_matter": False,
-                    "summary_present": False,
-                    "keywords_present": False,
+                    "file": relative_path,
+                    "valid_front_matter": True,
+                    "summary_present": has_summary,
+                    "keywords_present": has_keywords,
                 })
-            else:
-                has_summary = 'summary' in front_matter
-                has_keywords = 'keywords' in front_matter
-
-                if not has_summary or not has_keywords:
-                    results.append({
-                        "file": file_name,
-                        "valid_front_matter": True,
-                        "summary_present": has_summary,
-                        "keywords_present": has_keywords,
-                    })
 
     with open(output_file, 'w', encoding='utf-8') as out_file:
         if output_format == "json":
@@ -76,6 +62,7 @@ def check_front_matter(folder_path: str, output_file: str, output_format: str = 
                     out_file.write("\n")
 
     return results
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Check markdown files for summary and keywords")

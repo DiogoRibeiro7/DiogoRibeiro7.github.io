@@ -1,16 +1,18 @@
-import os
-import re
-import yaml
 import argparse
 import json
+from pathlib import Path
+import re
 from typing import List
 
+import yaml
+
+
 def read_markdown_files_from_folder(folder_path: str) -> List[str]:
-    # List all markdown files in the given folder
-    return [f for f in os.listdir(folder_path) if f.endswith('.md')]
+    root = Path(folder_path)
+    return [path.relative_to(root).as_posix() for path in sorted(root.rglob('*.md'))]
+
 
 def extract_frontmatter(file_content: str) -> dict:
-    # Extract the YAML frontmatter from the markdown file using regex
     frontmatter_match = re.match(r'---\n(.*?)\n---', file_content, re.DOTALL)
     if frontmatter_match:
         frontmatter_str = frontmatter_match.group(1)
@@ -20,18 +22,20 @@ def extract_frontmatter(file_content: str) -> dict:
             return {}
     return {}
 
+
 def check_categories(frontmatter: dict) -> bool:
-    # Check if 'categories' key exists and contains more than one element
     if 'categories' in frontmatter and isinstance(frontmatter['categories'], list):
         return len(frontmatter['categories']) > 1
     return False
 
+
 def process_markdown_files(folder_path: str, output_file: str, output_format: str = "text"):
+    root = Path(folder_path)
     markdown_files = read_markdown_files_from_folder(folder_path)
     files_with_multiple_categories = []
 
     for md_file in markdown_files:
-        with open(os.path.join(folder_path, md_file), 'r', encoding='utf-8') as file:
+        with open(root / md_file, 'r', encoding='utf-8') as file:
             content = file.read()
             frontmatter = extract_frontmatter(content)
             if check_categories(frontmatter):
