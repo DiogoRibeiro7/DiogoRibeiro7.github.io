@@ -1,10 +1,9 @@
 import argparse
 import json
 from pathlib import Path
-import re
 from typing import List
 
-import yaml
+import frontmatter
 
 
 def read_markdown_files_from_folder(folder_path: str) -> List[str]:
@@ -13,19 +12,13 @@ def read_markdown_files_from_folder(folder_path: str) -> List[str]:
 
 
 def extract_frontmatter(file_content: str) -> dict:
-    frontmatter_match = re.match(r'---\n(.*?)\n---', file_content, re.DOTALL)
-    if frontmatter_match:
-        frontmatter_str = frontmatter_match.group(1)
-        try:
-            return yaml.safe_load(frontmatter_str)
-        except yaml.YAMLError:
-            return {}
-    return {}
+    """Parse Markdown front matter with the repository's canonical parser."""
+    return dict(frontmatter.loads(file_content).metadata)
 
 
-def check_categories(frontmatter: dict) -> bool:
-    if 'categories' in frontmatter and isinstance(frontmatter['categories'], list):
-        return len(frontmatter['categories']) > 1
+def check_categories(frontmatter_data: dict) -> bool:
+    if 'categories' in frontmatter_data and isinstance(frontmatter_data['categories'], list):
+        return len(frontmatter_data['categories']) > 1
     return False
 
 
@@ -37,11 +30,11 @@ def process_markdown_files(folder_path: str, output_file: str, output_format: st
     for md_file in markdown_files:
         with open(root / md_file, 'r', encoding='utf-8') as file:
             content = file.read()
-            frontmatter = extract_frontmatter(content)
-            if check_categories(frontmatter):
+            frontmatter_data = extract_frontmatter(content)
+            if check_categories(frontmatter_data):
                 files_with_multiple_categories.append({
                     "file": md_file,
-                    "categories": frontmatter.get("categories", []),
+                    "categories": frontmatter_data.get("categories", []),
                 })
 
     with open(output_file, 'w', encoding='utf-8') as output:
