@@ -1,3 +1,1 @@
-python-frontmatter
-PyYAML
 pytest

@@ -5,19 +5,21 @@
 [![Made with GH Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue?logo=github-actions&logoColor=white)](https://github.com/features/actions)
 
 This repository contains the source for my personal website and technical blog.
-It is built with Jekyll, the
-[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme, and a
-small set of Python utilities for validating Markdown front matter.
+It is built with Jekyll and the DataLog theme.
 
 ## Repository Layout
 
-- `_posts/` contains blog posts.
+- `_posts/<subject>/` contains published blog posts grouped by primary subject.
+- `_drafts/ideas/` and `_drafts/phd/` contain unpublished planning notes.
 - `_pages/` contains standalone pages.
 - `_data/`, `_includes/`, `_layouts/`, and `_sass/` contain Jekyll theme and site structure.
 - `assets/images/` stores article images and generated figures.
 - `assets/viz/` contains Python scripts used to regenerate custom figures.
 - `code/` contains downloadable code examples linked from the site.
-- `tests/` covers the supported Python maintenance utilities.
+- `tests/` covers supported repository tooling and structural invariants.
+
+The post-folder convention is documented in `docs/POST_ORGANIZATION.md`. No
+Markdown post should live directly under `_posts/`.
 
 ## Theme
 
@@ -66,9 +68,8 @@ it when `_config.yml` or the theme under `vendor/datalog` changes, re-copying
 the theme's assets first. Plain `jekyll serve` never watches either of those:
 it ignores the config file and everything under `exclude`, so config and theme
 changes would only show up after a manual restart. Posts, pages and `_data`
-regenerate on their own; with almost 400 posts that takes about two minutes.
-`bundle exec rake stop` stops the server; `JEKYLL_PORT` and `JEKYLL_ARGS`
-override the port and the extra `jekyll serve` flags.
+regenerate on their own. `bundle exec rake stop` stops the server; `JEKYLL_PORT`
+and `JEKYLL_ARGS` override the port and extra `jekyll serve` flags.
 
 Build the site without starting a server:
 
@@ -94,14 +95,11 @@ python generate_headers.py walks cells # named headers only
 `assets/viz/fetch_headers.py` adds photographs from Wikimedia Commons under CC0,
 public-domain, CC BY or CC BY-SA licences and records each one's author, licence
 and source page in `assets/images/headers/CREDITS.md` and `_data/image_credits.yml`,
-which `_pages/image-credits.md` renders at `/image-credits/` (linked from the footer)
-to satisfy the attribution the CC BY licences require. Bright photographs need
-`overlay_filter: 0.4` in the post's `header` block so the title stays readable.
+which `_pages/image-credits.md` renders at `/image-credits/`.
 
 Point a post at one through the `header` block (`image`, `overlay_image`,
 `teaser`, `og_image`, `twitter_image`), for example
-`/assets/images/headers/network.jpg`. The stock photographs under
-`assets/images/` remain available; prefer a header no recent post already uses.
+`/assets/images/headers/network.jpg`.
 
 ## Validation
 
@@ -112,6 +110,10 @@ pytest -q
 npm test
 bundle exec jekyll build
 ```
+
+Python tests cover the supported theme-asset synchronisation tooling and the
+repository layout invariant that published Markdown files belong in subject
+folders rather than directly under `_posts/`.
 
 The Jekyll build may report existing theme deprecation warnings. Treat build
 failures as blockers; warnings should be reviewed when they point to content in
@@ -135,24 +137,17 @@ reviewed_at: 2026-08-16
 
 Those fields render in the article provenance note and make review easier.
 
-## Supported Python Utilities
+## Supported Python Tooling
 
 The Python surface is intentionally small. Keep scripts only when they are
 tested, linked from the site, or used to generate checked-in assets.
 
-Supported root utilities:
+Supported repository tooling includes:
 
-- `fix_date.py`: sync post front-matter dates with `YYYY-MM-DD` filenames.
-- `check_summary.py`: report posts missing `summary` or `keywords`.
-- `markdown_category_checker.py`: report posts with multiple categories.
-- `replace_latex.py`: convert legacy inline LaTeX delimiters where appropriate.
-
-Figure and example code:
-
+- `scripts/sync_theme_assets.py`: synchronise theme-owned assets into this site.
 - `assets/viz/generate_figures.py`: regenerate custom article figures.
 - `assets/viz/housestyle.py`: shared plotting style for generated figures.
 - `code/michelson_morley.py`: downloadable example linked from the site.
 
 Avoid adding broad one-off mutation scripts to the repository root. Prefer a
-tested utility with a narrow purpose, a dry-run mode when it writes files, and a
-short note in this README.
+small tested utility only when it supports an ongoing repository workflow.
