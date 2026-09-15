@@ -27,5 +27,6 @@ When adding a new article:
    forcing an article into an unrelated subject;
 5. preserve an established permalink when moving an existing article.
 
-Maintenance utilities that operate on `_posts` must recurse through subject
-folders.
+The repository test suite enforces one structural invariant: no Markdown post may
+live directly under `_posts/`. New articles must always be placed in a subject
+folder.
