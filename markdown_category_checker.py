@@ -11,10 +11,9 @@ def read_markdown_files_from_folder(folder_path: str) -> List[str]:
     return [path.relative_to(root).as_posix() for path in sorted(root.rglob('*.md'))]
 
 
-def check_categories(frontmatter_data: dict) -> bool:
-    if 'categories' in frontmatter_data and isinstance(frontmatter_data['categories'], list):
-        return len(frontmatter_data['categories']) > 1
-    return False
+def check_categories(frontmatter_data) -> bool:
+    categories = frontmatter_data.get('categories', [])
+    return isinstance(categories, list) and len(categories) > 1
 
 
 def process_markdown_files(folder_path: str, output_file: str, output_format: str = "text"):
@@ -24,11 +23,10 @@ def process_markdown_files(folder_path: str, output_file: str, output_format: st
 
     for md_file in markdown_files:
         post = frontmatter.load(root / md_file)
-        frontmatter_data = dict(post.metadata)
-        if check_categories(frontmatter_data):
+        if check_categories(post):
             files_with_multiple_categories.append({
                 "file": md_file,
-                "categories": frontmatter_data.get("categories", []),
+                "categories": post.get("categories", []),
             })
 
     with open(output_file, 'w', encoding='utf-8') as output:
