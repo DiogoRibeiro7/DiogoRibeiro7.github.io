@@ -11,11 +11,6 @@ def read_markdown_files_from_folder(folder_path: str) -> List[str]:
     return [path.relative_to(root).as_posix() for path in sorted(root.rglob('*.md'))]
 
 
-def extract_frontmatter(file_content: str) -> dict:
-    """Parse Markdown front matter with the repository's canonical parser."""
-    return dict(frontmatter.loads(file_content).metadata)
-
-
 def check_categories(frontmatter_data: dict) -> bool:
     if 'categories' in frontmatter_data and isinstance(frontmatter_data['categories'], list):
         return len(frontmatter_data['categories']) > 1
@@ -28,14 +23,13 @@ def process_markdown_files(folder_path: str, output_file: str, output_format: st
     files_with_multiple_categories = []
 
     for md_file in markdown_files:
-        with open(root / md_file, 'r', encoding='utf-8') as file:
-            content = file.read()
-            frontmatter_data = extract_frontmatter(content)
-            if check_categories(frontmatter_data):
-                files_with_multiple_categories.append({
-                    "file": md_file,
-                    "categories": frontmatter_data.get("categories", []),
-                })
+        post = frontmatter.load(root / md_file)
+        frontmatter_data = dict(post.metadata)
+        if check_categories(frontmatter_data):
+            files_with_multiple_categories.append({
+                "file": md_file,
+                "categories": frontmatter_data.get("categories", []),
+            })
 
     with open(output_file, 'w', encoding='utf-8') as output:
         if output_format == "json":
