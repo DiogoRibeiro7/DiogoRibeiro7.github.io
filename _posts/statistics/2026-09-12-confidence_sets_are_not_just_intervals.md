@@ -49,13 +49,13 @@ methodology: >-
   accepted, without interpolation or gap filling.
 reviewed_at: '2026-09-14'
 header:
-  image: /assets/images/headers/photo-statistics-confidence-interval.jpg
-  og_image: /assets/images/headers/photo-statistics-confidence-interval.jpg
-  overlay_image: /assets/images/headers/photo-statistics-confidence-interval.jpg
+  image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  og_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  overlay_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-statistics-confidence-interval.jpg
-  twitter_image: /assets/images/headers/photo-statistics-confidence-interval.jpg
+  teaser: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  twitter_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
 ---
 
 A confidence interval is one of the most familiar objects in statistics.
