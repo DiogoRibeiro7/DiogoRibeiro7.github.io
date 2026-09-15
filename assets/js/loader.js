@@ -61,7 +61,9 @@ async function importModule(url) {
 const FEATURE_CONFIG = [
   {
     name: "search",
-    test: () => document.querySelector("[data-search-app]") || document.querySelector(".site-search")
+    // Only the search page renders the app. The header's search form is a
+    // plain form on every page, and matching it loaded the bundle everywhere.
+    test: () => document.querySelector("[data-search-app]")
   },
   {
     name: "visualizations",

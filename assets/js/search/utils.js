@@ -11,9 +11,11 @@ export function normalizeCode(value = "") {
   return normalize(value).replace(/\s+/g, "");
 }
 
+// Letters and digits of any script, so a query in Portuguese, Greek or
+// Cyrillic keeps its words; the index is normalized the same way.
 export function tokenize(query = "") {
   return normalize(query)
-    .split(/[^a-z0-9\\._]+/)
+    .split(/[^\p{L}\p{N}\\._]+/u)
     .filter(Boolean);
 }
 
@@ -38,13 +40,14 @@ export function fuzzyIncludes(source, query) {
   return idx === query.length;
 }
 
+// Parsed in a separate, inert document: markup assigned to an element of the
+// page itself starts loading any images it contains.
 export function stripHtml(value) {
   if (!value) {
     return "";
   }
-  const temp = document.createElement("div");
-  temp.innerHTML = value;
-  return temp.textContent || temp.innerText || "";
+  const parsed = new DOMParser().parseFromString(String(value), "text/html");
+  return parsed.body.textContent || "";
 }
 
 export function buildSnippet(content, index, length) {
@@ -61,18 +64,39 @@ export function escapeRegex(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+const HTML_ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+
+export function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (character) => HTML_ESCAPES[character]);
+}
+
+/**
+ * Returns HTML for `text` with the words of `query` in <mark>. The text is
+ * escaped, so content from the search index shows as text instead of being
+ * parsed as markup, and all words are matched in a single pass, so one
+ * highlight never lands inside the tags of another.
+ * @param {string} text
+ * @param {string} query
+ * @returns {string}
+ */
 export function highlightText(text, query) {
-  if (!text || !query) {
-    return text;
+  if (!text) {
+    return "";
   }
-  const tokens = Array.from(new Set(tokenize(query))).sort((a, b) => b.length - a.length);
-  let highlighted = text;
-  tokens.forEach((token) => {
-    if (!token) return;
-    const regex = new RegExp(`(${escapeRegex(token)})`, "gi");
-    highlighted = highlighted.replace(regex, "<mark>$1</mark>");
-  });
-  return highlighted;
+  const source = String(text);
+  const tokens = Array.from(new Set(tokenize(query || ""))).sort((a, b) => b.length - a.length);
+  if (!tokens.length) {
+    return escapeHtml(source);
+  }
+  const pattern = new RegExp(tokens.map(escapeRegex).join("|"), "giu");
+  let html = "";
+  let last = 0;
+  let match;
+  while ((match = pattern.exec(source)) !== null) {
+    html += `${escapeHtml(source.slice(last, match.index))}<mark>${escapeHtml(match[0])}</mark>`;
+    last = match.index + match[0].length;
+  }
+  return html + escapeHtml(source.slice(last));
 }
 
 export function toTitleCase(value) {

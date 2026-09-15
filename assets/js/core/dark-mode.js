@@ -10,12 +10,43 @@ const STORAGE_KEY = "datalog-color-mode";
 const DARK_CLASS = "dark-mode";
 
 /**
+ * Reads the saved preference. Storage access throws where the browser blocks
+ * it (Safari with all cookies blocked, sandboxed iframes, some privacy
+ * extensions), and that exception used to stop the whole core bundle, so it
+ * counts as no saved preference.
+ * @returns {string|null} "dark", "light" or null
+ */
+function readStoredPreference() {
+  try {
+    return localStorage.getItem(STORAGE_KEY);
+  } catch (error) {
+    return null;
+  }
+}
+
+/**
+ * Saves the preference where storage is available. Where it is blocked the
+ * choice still applies to the page but is not remembered.
+ * @param {string} value - "dark" or "light"
+ * @returns {void}
+ */
+function storePreference(value) {
+  try {
+    localStorage.setItem(STORAGE_KEY, value);
+  } catch (error) {
+    // Storage is blocked: there is nowhere to remember the choice.
+  }
+}
+
+/**
  * Resolves the initial dark mode preference from storage or system settings.
+ * The inline script at the top of <body> in _layouts/default.html applies the
+ * same rule before the first paint, so the two have to stay in step.
  * @param {MediaQueryList} prefersDarkScheme - Media query for dark scheme preference
  * @returns {boolean} True if dark mode should be enabled
  */
 function resolveInitialPreference(prefersDarkScheme) {
-  const storedPreference = localStorage.getItem(STORAGE_KEY);
+  const storedPreference = readStoredPreference();
   if (storedPreference === "dark") {
     return true;
   }
@@ -60,13 +91,13 @@ export function initDarkModeToggle() {
     toggleButton.addEventListener("click", () => {
       const isDark = body.classList.toggle(DARK_CLASS);
       toggleButton.setAttribute("aria-pressed", String(isDark));
-      localStorage.setItem(STORAGE_KEY, isDark ? "dark" : "light");
+      storePreference(isDark ? "dark" : "light");
       syncThemeAttribute();
     });
   }
 
   prefersDarkScheme.addEventListener("change", (event) => {
-    if (localStorage.getItem(STORAGE_KEY)) {
+    if (readStoredPreference()) {
       return;
     }
     if (event.matches) {

@@ -86,7 +86,7 @@ export function renderResults(results, query, elements) {
               enhance: false
             });
           } else if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
-            mathPreviewEl.innerHTML = `\\(${result.mathSnippet}\\)`;
+            mathPreviewEl.textContent = `\\(${result.mathSnippet}\\)`;
             window.MathJax.typesetPromise([mathPreviewEl]).catch(() => {
               mathPreviewEl.textContent = result.mathSnippet;
             });
@@ -118,13 +118,7 @@ export function renderResults(results, query, elements) {
         codeEl.classList.remove("language-none");
         codeEl.classList.add(`language-${language}`);
         codeCodeEl.className = `language-${language}`;
-        const code = result.codeSnippet.code;
-        if (window.Prism && window.Prism.languages) {
-          const grammar = window.Prism.languages[language] || window.Prism.languages.markup;
-          codeCodeEl.innerHTML = window.Prism.highlight(code, grammar, language);
-        } else {
-          codeCodeEl.textContent = code;
-        }
+        codeCodeEl.textContent = result.codeSnippet.code;
         codeEl.hidden = false;
       } else {
         codeEl.hidden = true;

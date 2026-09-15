@@ -36,7 +36,7 @@ export const initPlotly = () => {
   const ensurePlotly = () =>
     typeof window.Plotly !== 'undefined'
       ? Promise.resolve(window.Plotly)
-      : loadScript('https://cdn.plot.ly/plotly-2.27.0.min.js').then(() => window.Plotly);
+      : loadScript('https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.27.0/plotly.min.js').then(() => window.Plotly);
 
   return ensurePlotly().then((Plotly) => {
     plotlyTargets.forEach((target) => {

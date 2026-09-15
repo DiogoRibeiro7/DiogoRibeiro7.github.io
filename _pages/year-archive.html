@@ -1,7 +1,291 @@
 ---
-layout: archive
+layout: default
 permalink: /year-archive/
 title: "Posts by Year"
 description: "Every article, filterable by year, category and tag."
 seo_title: "Posts by Year"
+show_title: false # the archive header below renders the page's <h1>
 ---
+{%- comment -%}
+The DataLog theme's `archive` layout rendered this page until the theme's 0.8.0
+release removed it. Its markup and filter script now live here, and its styles
+in assets/css/year-archive.scss.
+{%- endcomment -%}
+<link rel="stylesheet" href="{{ '/assets/css/year-archive.css' | relative_url }}">
+
+<div class="archive-layout">
+  <header class="archive-layout__header">
+    <h1 class="archive-layout__title">{{ page.title | default: "Archive" }}</h1>
+    {% if page.description %}
+      <p class="archive-layout__description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  {%- comment -%} Filter options {%- endcomment -%}
+  <div class="archive-layout__filters" data-archive-filters>
+    <div class="archive-filter">
+      <label for="filter-year" class="archive-filter__label">Year:</label>
+      <select id="filter-year" class="archive-filter__select" data-filter="year">
+        <option value="all">All Years</option>
+        {%- assign years = "" | split: "" -%}
+        {%- for post in site.posts -%}
+          {%- assign year = post.date | date: "%Y" -%}
+          {%- unless years contains year -%}
+            {%- assign years = years | push: year -%}
+          {%- endunless -%}
+        {%- endfor -%}
+        {%- assign sorted_years = years | sort | reverse -%}
+        {%- for year in sorted_years -%}
+          <option value="{{ year }}">{{ year }}</option>
+        {%- endfor -%}
+      </select>
+    </div>
+
+    <div class="archive-filter">
+      <label for="filter-category" class="archive-filter__label">Category:</label>
+      <select id="filter-category" class="archive-filter__select" data-filter="category">
+        <option value="all">All Categories</option>
+        {%- assign all_categories = "" | split: "" -%}
+        {%- for post in site.posts -%}
+          {%- if post.categories -%}
+            {%- assign all_categories = all_categories | concat: post.categories -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- assign unique_categories = all_categories | uniq | sort -%}
+        {%- for category in unique_categories -%}
+          <option value="{{ category | slugify }}">{{ category }}</option>
+        {%- endfor -%}
+      </select>
+    </div>
+
+    <div class="archive-filter">
+      <label for="filter-tag" class="archive-filter__label">Tag:</label>
+      <select id="filter-tag" class="archive-filter__select" data-filter="tag">
+        <option value="all">All Tags</option>
+        {%- assign all_tags = "" | split: "" -%}
+        {%- for post in site.posts -%}
+          {%- if post.tags -%}
+            {%- assign all_tags = all_tags | concat: post.tags -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- assign unique_tags = all_tags | uniq | sort -%}
+        {%- for tag in unique_tags limit: 50 -%}
+          <option value="{{ tag | slugify }}">{{ tag }}</option>
+        {%- endfor -%}
+      </select>
+    </div>
+
+    <button type="button" class="archive-filter__reset" data-reset-filters>
+      Reset Filters
+    </button>
+  </div>
+
+  {%- comment -%} Statistics {%- endcomment -%}
+  <div class="archive-layout__stats">
+    <div class="archive-stat">
+      <span class="archive-stat__number" data-total-posts>{{ site.posts.size }}</span>
+      <span class="archive-stat__label">Total Posts</span>
+    </div>
+    <div class="archive-stat">
+      <span class="archive-stat__number" data-visible-posts>{{ site.posts.size }}</span>
+      <span class="archive-stat__label">Showing</span>
+    </div>
+    <div class="archive-stat">
+      <span class="archive-stat__number">{{ sorted_years.size }}</span>
+      <span class="archive-stat__label">Years</span>
+    </div>
+    <div class="archive-stat">
+      <span class="archive-stat__number">{{ unique_categories.size }}</span>
+      <span class="archive-stat__label">Categories</span>
+    </div>
+  </div>
+
+  {%- comment -%} Posts organized by year and month {%- endcomment -%}
+  <div class="archive-layout__content">
+    {%- for year in sorted_years -%}
+      {%- assign year_posts = "" | split: "" -%}
+      {%- for post in site.posts -%}
+        {%- assign post_year = post.date | date: '%Y' -%}
+        {%- if post_year == year -%}{%- assign year_posts = year_posts | push: post -%}{%- endif -%}
+      {%- endfor -%}
+
+      <section class="archive-year" data-year="{{ year }}">
+        <h2 class="archive-year__heading">
+          <span class="archive-year__number">{{ year }}</span>
+          <span class="archive-year__count">({{ year_posts.size }} posts)</span>
+        </h2>
+
+        {%- comment -%} Group by month {%- endcomment -%}
+        {%- assign months = "01,02,03,04,05,06,07,08,09,10,11,12" | split: "," -%}
+        {%- for month_num in months -%}
+          {%- assign month_posts = "" | split: "" -%}
+          {%- for post in year_posts -%}
+            {%- assign post_month = post.date | date: '%m' -%}
+            {%- if post_month == month_num -%}{%- assign month_posts = month_posts | push: post -%}{%- endif -%}
+          {%- endfor -%}
+          {%- if month_posts.size > 0 -%}
+            {%- assign month_name = year | append: "-" | append: month_num | append: "-01" | date: "%B" -%}
+
+            <div class="archive-month">
+              <h3 class="archive-month__heading">{{ month_name }}</h3>
+
+              <ul class="archive-posts">
+                {%- for post in month_posts -%}
+                  <li class="archive-post"
+                      data-post
+                      data-year="{{ year }}"
+                      data-month="{{ month_num }}"
+                      data-categories="{{ post.categories | join: ',' | slugify }}"
+                      data-tags="{{ post.tags | join: ',' | slugify }}"
+                      data-difficulty="{% if post.difficulty %}{{ post.difficulty | slugify }}{% endif %}">
+
+                    <article class="archive-post__article">
+                      <time class="archive-post__date" datetime="{{ post.date | date_to_xmlschema }}">
+                        {{ post.date | date: "%b %d" }}
+                      </time>
+
+                      <div class="archive-post__content">
+                        <h4 class="archive-post__title">
+                          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                        </h4>
+
+                        {% if post.excerpt %}
+                          <p class="archive-post__excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                        {% endif %}
+
+                        <div class="archive-post__meta">
+                          {% if post.difficulty %}
+                            {% include components/difficulty-badge.html level=post.difficulty %}
+                          {% endif %}
+
+                          {% if post.categories %}
+                            <span class="archive-post__categories">
+                              {% for category in post.categories limit: 2 %}
+                                <span class="archive-post__category">{{ category }}</span>
+                              {% endfor %}
+                            </span>
+                          {% endif %}
+
+                          {% if post.tags %}
+                            <span class="archive-post__tags">
+                              {% for tag in post.tags limit: 3 %}
+                                <span class="archive-post__tag">{{ tag }}</span>
+                              {% endfor %}
+                            </span>
+                          {% endif %}
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </section>
+    {%- endfor -%}
+  </div>
+
+  {%- comment -%}
+  No results message. `hidden` rather than a style attribute, which a Content
+  Security Policy without 'unsafe-inline' for styles drops.
+  {%- endcomment -%}
+  <div class="archive-layout__empty" data-empty-state hidden>
+    <p>No posts found matching the selected filters.</p>
+    <button type="button" class="archive-filter__reset" data-reset-filters>
+      Reset Filters
+    </button>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const filters = document.querySelector('[data-archive-filters]');
+    if (!filters) return;
+
+    const yearFilter = filters.querySelector('[data-filter="year"]');
+    const categoryFilter = filters.querySelector('[data-filter="category"]');
+    const tagFilter = filters.querySelector('[data-filter="tag"]');
+    const resetButtons = document.querySelectorAll('[data-reset-filters]');
+    const posts = document.querySelectorAll('[data-post]');
+    const visibleCount = document.querySelector('[data-visible-posts]');
+    const emptyState = document.querySelector('[data-empty-state]');
+    const yearSections = document.querySelectorAll('.archive-year');
+
+    function applyFilters() {
+      const selectedYear = yearFilter.value;
+      const selectedCategory = categoryFilter.value;
+      const selectedTag = tagFilter.value;
+
+      let visible = 0;
+      const visibleYears = new Set();
+
+      posts.forEach(post => {
+        let isVisible = true;
+
+        // Year filter
+        if (selectedYear !== 'all' && post.dataset.year !== selectedYear) {
+          isVisible = false;
+        }
+
+        // Category filter
+        if (selectedCategory !== 'all') {
+          const categories = post.dataset.categories.split(',');
+          if (!categories.includes(selectedCategory)) {
+            isVisible = false;
+          }
+        }
+
+        // Tag filter
+        if (selectedTag !== 'all') {
+          const tags = post.dataset.tags.split(',');
+          if (!tags.includes(selectedTag)) {
+            isVisible = false;
+          }
+        }
+
+        post.style.display = isVisible ? '' : 'none';
+        if (isVisible) {
+          visible++;
+          visibleYears.add(post.dataset.year);
+        }
+      });
+
+      // Update count
+      if (visibleCount) {
+        visibleCount.textContent = visible;
+      }
+
+      // Show/hide year sections
+      yearSections.forEach(section => {
+        const year = section.dataset.year;
+        section.style.display = visibleYears.has(year) ? '' : 'none';
+      });
+
+      // Show/hide empty state
+      if (emptyState) {
+        emptyState.hidden = visible !== 0;
+      }
+    }
+
+    function resetFilters() {
+      yearFilter.value = 'all';
+      categoryFilter.value = 'all';
+      tagFilter.value = 'all';
+      applyFilters();
+    }
+
+    // Event listeners
+    yearFilter.addEventListener('change', applyFilters);
+    categoryFilter.addEventListener('change', applyFilters);
+    tagFilter.addEventListener('change', applyFilters);
+
+    resetButtons.forEach(button => {
+      button.addEventListener('click', resetFilters);
+    });
+  });
+})();
+</script>

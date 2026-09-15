@@ -134,40 +134,22 @@ notebooks:
   enabled: false
 features:
   mathjax: true
-  math_toolkit: true
-  math_search: false
   search: false
-  accessibility_skip_link: true
   dark_mode_toggle: true
-  notebook_support: false
   portfolio: false
   datasets: false
   visualizations: false
   academic_dashboard: false
   citation_tracking: false
-  academic_calendar: false
 critical_css:
   enabled: false
 theme_options:
   math:
     engine: mathjax
     output: chtml
-    equation_numbering: true
     accessibility: true
     render_on_load: auto
     mathjax_cdn: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
-  syntax_highlighting:
-    engine: prism
-    cdn: https://cdn.jsdelivr.net/npm/prismjs@1.29.0
-    themes:
-      light: prism-coy
-      dark: prism-tomorrow
-    components:
-      - core
-      - python
-      - r
-      - sql
-      - bash
   localization:
     default_locale: en
     locales:

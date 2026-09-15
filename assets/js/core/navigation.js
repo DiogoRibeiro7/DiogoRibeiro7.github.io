@@ -163,7 +163,10 @@ export function initNavigation() {
   }
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
+    // Escape closes an open menu and returns focus to its button. With the menu
+    // closed there is nothing to close, and moving focus would pull the reader
+    // out of whatever they were doing, such as typing in the search field.
+    if (event.key === "Escape" && siteNav.dataset.open === "true") {
       closeNav({ focusToggle: true });
     }
   });

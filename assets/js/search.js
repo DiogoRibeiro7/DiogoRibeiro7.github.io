@@ -58,8 +58,6 @@ function setupSearchEnhancements() {
   const liveCount = app.querySelector('[data-search-live="count"]');
   const liveSelection = app.querySelector('[data-search-live="selection"]');
   const liveStatus = app.querySelector('[data-search-live="status"]');
-  const filtersContainer = app.querySelector("[data-search-filters]");
-  const tagContainer = app.querySelector("[data-filter-tags]");
 
   if (!input || !resultsList) {
     return;
@@ -69,7 +67,6 @@ function setupSearchEnhancements() {
   let resultIdCounter = 0;
   let resultItems = [];
   let pendingSearch = false;
-  let filterControls = [];
   let loadingStartedAt = 0;
   let loadingHideTimer = null;
 
@@ -89,57 +86,16 @@ function setupSearchEnhancements() {
   observer.observe(resultsList, { childList: true });
 
   refreshResultItems();
-  refreshFilterControls();
-
-  if (tagContainer) {
-    const tagObserver = new MutationObserver(() => {
-      refreshFilterControls();
-    });
-    tagObserver.observe(tagContainer, { childList: true });
-  }
 
   input.addEventListener("input", () => {
     clearActiveResult(false);
     debouncedSubmit();
   });
 
-  input.addEventListener("keydown", (event) => {
-    if (handleInputNavigation(event)) {
-      return;
-    }
-    if (event.key === "Tab" && filterControls.length > 0) {
-      event.preventDefault();
-      const nextIndex = event.shiftKey ? filterControls.length - 1 : 0;
-      filterControls[nextIndex].focus();
-    }
-  });
-
-  function handleFilterKeydown(event) {
-    if (event.key !== "Tab" || filterControls.length === 0) {
-      return;
-    }
-    event.preventDefault();
-    const currentIndex = filterControls.indexOf(event.currentTarget);
-    if (currentIndex === -1) {
-      return;
-    }
-    const direction = event.shiftKey ? -1 : 1;
-    const nextIndex = (currentIndex + direction + filterControls.length) % filterControls.length;
-    filterControls[nextIndex].focus();
-  }
-
-  function refreshFilterControls() {
-    if (!filtersContainer) {
-      return;
-    }
-    const selects = Array.from(filtersContainer.querySelectorAll("select"));
-    const tags = tagContainer ? Array.from(tagContainer.querySelectorAll("[data-filter-tag]")) : [];
-    filterControls = [...selects, ...tags];
-    filterControls.forEach((control) => {
-      control.removeEventListener("keydown", handleFilterKeydown);
-      control.addEventListener("keydown", handleFilterKeydown);
-    });
-  }
+  // Tab is left to the browser: the page already runs from the input through
+  // the filters to the results, and handling it here trapped focus among the
+  // filters.
+  input.addEventListener("keydown", handleInputNavigation);
 
   function handleInputNavigation(event) {
     if (!resultItems.length && ["ArrowDown", "ArrowUp", "Enter"].includes(event.key)) {

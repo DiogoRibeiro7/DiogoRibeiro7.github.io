@@ -112,64 +112,6 @@ export function populateCitationTimeline() {
 }
 
 /**
- * Attaches copy-to-clipboard handlers to elements matching the selector.
- * @param {string} selector - CSS selector for trigger elements
- * @param {function(HTMLElement): string|string} getText - Function to get text or static text
- * @returns {void}
- */
-export function attachCopyHandler(selector, getText) {
-  document.querySelectorAll(selector).forEach((trigger) => {
-    trigger.addEventListener('click', () => {
-      const text = typeof getText === 'function' ? getText(trigger) : getText;
-      if (!text) {
-        return;
-      }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard
-          .writeText(text)
-          .then(() => {
-            trigger.dataset.copied = 'true';
-            trigger.textContent = 'Copied!';
-            setTimeout(() => {
-              trigger.dataset.copied = 'false';
-              trigger.textContent = trigger.dataset.originalText || 'Copy';
-            }, 2000);
-          })
-          .catch(() => {
-            trigger.dataset.copied = 'error';
-            trigger.textContent = 'Error';
-          });
-      }
-    });
-    trigger.dataset.originalText = trigger.textContent;
-  });
-}
-
-/**
- * Initializes copy handlers for citation and bibliography buttons.
- * @returns {void}
- */
-export function initCopyHandlers() {
-  attachCopyHandler('[data-copy-citation]', (trigger) => {
-    const targetId = trigger.getAttribute('data-target');
-    if (!targetId) {
-      return '';
-    }
-    const target = document.getElementById(targetId);
-    return target ? target.value : '';
-  });
-
-  attachCopyHandler('[data-copy-bibliography]', (trigger) => {
-    const targetId = trigger.getAttribute('data-target');
-    if (!targetId) {
-      return '';
-    }
-    const target = document.getElementById(targetId);
-    return target ? target.value : '';
-  });
-}
-
-/**
  * Initializes the submission status filter for paper tracking.
  * @returns {void}
  */
@@ -248,7 +190,6 @@ export function initAcademicFeatures() {
   populateCitationMetrics();
   populatePublicationCitations();
   populateCitationTimeline();
-  initCopyHandlers();
   initSubmissionFilter();
   initCalendarFilter();
   initOpenScienceBadges();
