@@ -80,6 +80,25 @@ $$
 
 So a genuine 51/49 split can look like the opposite regime in almost half of such experiments.
 
+The same exact calculation gives:
+
+| Independent replications $N$ | $P(\widehat p_N\le 0.5)$ when $p=0.51$ |
+| ---: | ---: |
+| 21 | 0.463 |
+| 101 | 0.420 |
+| 201 | 0.388 |
+| 1,001 | 0.263 |
+
+The decay is surprisingly slow because the population probability is only 0.01 away from the classification boundary.
+
+For this exact majority rule, the minimum odd number of independent replications required to push the wrong-side probability below 5% is
+
+$$
+N=6{,}763.
+$$
+
+That is not a universal recommendation. It is a demonstration of how demanding a categorical claim can become when the underlying quantity lies very close to the threshold used to define the category.
+
 The problem is not the random-number generator. The problem is the strength of the conclusion being extracted from weak separation.
 
 ## Monte Carlo error should be visible
@@ -132,6 +151,40 @@ $$
 \text{“Is the Monte Carlo uncertainty small relative to the claim I am making?”}
 }
 $$
+
+## Sampling uncertainty and Monte Carlo uncertainty are different
+
+Simulation studies contain at least two distinct uncertainty layers.
+
+The first comes from the synthetic dataset or stochastic process generated inside each replication. That is the uncertainty the statistical method is supposed to experience.
+
+The second comes from estimating the method's operating characteristics with only a finite number of replications.
+
+If $\widehat\theta_i$ is an estimate produced in replication $i$, then variation across the $\widehat\theta_i$ values reflects the simulated data-generating process. But the Monte Carlo error of a reported performance measure such as bias, coverage, RMSE, rejection probability, or regime frequency depends on how many replications were used to estimate that measure.
+
+Those should not be conflated.
+
+A simulation may correctly represent the sampling distribution and still estimate its own performance characteristics too imprecisely to support a sharp comparative claim.
+
+This is one reason simulation methodology treats Monte Carlo precision as part of the design rather than as an afterthought.
+
+## Independence is part of the calculation
+
+The binomial calculations above assume independent replications.
+
+That assumption is often natural, but it should not be taken for granted. If replications reuse common random numbers, overlapping bootstrap samples, shared stochastic states, or other dependent constructions, the simple formula
+
+$$
+\sqrt{\frac{p(1-p)}{N}}
+$$
+
+may no longer describe the Monte Carlo standard error correctly.
+
+Dependence can be useful. Common random numbers, for example, can reduce variance when comparing methods. But then the uncertainty calculation should reflect the paired or correlated design actually used.
+
+The general principle survives:
+
+> **The uncertainty analysis should match the simulation design.**
 
 ## Means can look stable while regimes are unstable
 
@@ -324,5 +377,5 @@ And when the claim is about topology, that can require substantially more eviden
 
 ## References
 
-- Koehler E, Brown E, Haneuse S. *On the Assessment of Monte Carlo Error in Simulation-Based Statistical Analyses*. The American Statistician. 2009;63(2):155–162.
-- Morris TP, White IR, Crowther MJ. *Using simulation studies to evaluate statistical methods*. Statistics in Medicine. 2019;38(11):2074–2102.
+- Koehler E, Brown E, Haneuse S. *On the Assessment of Monte Carlo Error in Simulation-Based Statistical Analyses*. The American Statistician. 2009;63(2):155–162. DOI: <https://doi.org/10.1198/tast.2009.0030>.
+- Morris TP, White IR, Crowther MJ. *Using simulation studies to evaluate statistical methods*. Statistics in Medicine. 2019;38(11):2074–2102. DOI: <https://doi.org/10.1002/sim.8086>.
