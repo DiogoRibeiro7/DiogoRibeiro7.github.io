@@ -27,7 +27,7 @@ pip install cfad
 
 ## Package Metadata
 
-- **Current release:** `0.2.2`
+- **Current release:** `0.2.3`
 - **Requires Python:** `>=3.10`
 - **Status:** alpha
 

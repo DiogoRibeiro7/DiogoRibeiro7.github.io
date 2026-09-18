@@ -25,7 +25,7 @@ pip install DataExcept
 
 ## Package Metadata
 
-- **Current release:** `1.6.0`
+- **Current release:** `1.7.0`
 - **Requires Python:** `>=3.10,<3.15`
 
 ## Where It Fits
