@@ -21,7 +21,7 @@ keywords:
 - Rubin's rules
 - Sensitivity analysis
 - Imputation model
-seo_description: A critical but balanced review of multiple imputation: what it estimates, when it is valid, how it can fail, and why sensitivity analysis matters.
+seo_description: 'A critical but balanced review of multiple imputation: what it estimates, when it is valid, how it can fail, and why sensitivity analysis matters.'
 seo_title: 'Multiple Imputation: What It Gets Right, What Can Go Wrong'
 seo_type: article
 summary: A revised guide to multiple imputation that separates valid criticisms from misconceptions and explains the assumptions, diagnostics, and sensitivity analyses needed for defensible missing-data inference.

@@ -21,7 +21,7 @@ keywords:
 - DAGs
 - Potential outcomes
 - Identification
-seo_description: A modern introduction to causal inference: estimands, DAGs, confounding, colliders, exchangeability, positivity, consistency, and why identification comes before estimation.
+seo_description: 'A modern introduction to causal inference: estimands, DAGs, confounding, colliders, exchangeability, positivity, consistency, and why identification comes before estimation.'
 seo_title: 'Causality Beyond Correlation: Identification, DAGs, and Bias'
 seo_type: article
 summary: A revised introduction to causal inference that separates association from causal identification and explains how design, assumptions, DAGs, and estimands fit together.

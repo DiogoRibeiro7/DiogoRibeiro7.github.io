@@ -6,7 +6,7 @@ Do not create a new topic-list file when an idea occurs. Add or refine a seed he
 
 ## Current full drafts
 
-These articles already exist as complete drafts and have passed a substantial technical-review pass. Publication is intentionally paused until a separate editorial decision is made.
+These articles exist as complete drafts. Their review status is recorded individually below. Publication is intentionally paused until a separate editorial decision is made.
 
 | Article | File | State | Next decision |
 | --- | --- | --- | --- |
@@ -16,18 +16,24 @@ These articles already exist as complete drafts and have passed a substantial te
 | MCP Is Not Just Tool Calling | `mcp-is-not-just-tool-calling.md` | technical review complete | final editorial pass / publish or hold |
 | Reproducibility Is Local | `reproducibility-is-local.md` | technical review complete | final editorial pass / publish or hold |
 | The Baseline Is Not a Straw Man | `the-baseline-is-not-a-straw-man.md` | technical review complete | final editorial pass / publish or hold |
+| Imputation Accuracy Is Not Inferential Validity | [imputation-accuracy-is-not-inferential-validity.md](imputation-accuracy-is-not-inferential-validity.md) | full draft | technical review / editorial pass |
+| Nonparametric Does Not Mean Assumption-Free | [nonparametric-does-not-mean-assumption-free.md](nonparametric-does-not-mean-assumption-free.md) | full draft | technical review / editorial pass |
+| Power Is a Surface, Not a Number | [power-is-a-surface-not-a-number.md](power-is-a-surface-not-a-number.md) | full draft; examples verified | technical review / editorial pass |
+| The Estimand Comes Before the Test Menu | [the-estimand-comes-before-the-test-menu.md](the-estimand-comes-before-the-test-menu.md) | full draft; examples verified | technical review / editorial pass |
+| Stability Is Not Truth | [stability-is-not-truth.md](stability-is-not-truth.md) | full draft; examples verified | technical review / editorial pass |
 
 ---
 
-# Priority A — ready to outline
+# Priority A — development queue
 
-These are the strongest next article candidates because they have a precise question, a clear argument, and a natural connection to existing research or software work.
+These topics have a precise question, a clear argument, and a natural connection to existing research or software work. Entries with full drafts retain their original development requirements for review; the remaining seeds are candidates to outline next.
 
 ## Statistics, inference, and experimental design
 
 ### A1. Imputation accuracy is not inferential validity
 
-**State:** seed  
+**State:** [full draft](imputation-accuracy-is-not-inferential-validity.md) — technical review pending
+
 **Core question:** When does reconstructing missing values accurately fail to preserve the downstream estimand or uncertainty?  
 **Thesis:** RMSE/MAE on artificially masked values evaluates reconstruction, not whether regression coefficients, uncertainty intervals, treatment effects, or other inferential targets remain valid.  
 **Development requirements:** distinguish prediction from inference; compare single imputation, multiple imputation, likelihood-based methods, and sensitivity analysis on at least one controlled example; connect to `imputation-methods`.  
@@ -35,7 +41,8 @@ These are the strongest next article candidates because they have a precise ques
 
 ### A2. Nonparametric does not mean assumption-free
 
-**State:** seed  
+**State:** [full draft](nonparametric-does-not-mean-assumption-free.md) — technical review pending
+
 **Core question:** What assumptions are hidden when analysts switch from a t-test or ANOVA to a rank-based alternative?  
 **Thesis:** changing the test often changes the estimand or null hypothesis as well as the distributional assumptions.  
 **Development requirements:** paired and independent examples; Wilcoxon/Mann–Whitney/Kruskal–Wallis interpretation; explicit estimands; simulation showing how conclusions change under unequal shapes or heteroskedasticity.  
@@ -43,7 +50,8 @@ These are the strongest next article candidates because they have a precise ques
 
 ### A3. Power is a surface, not a number
 
-**State:** seed  
+**State:** [full draft](power-is-a-surface-not-a-number.md) — examples verified; technical review pending
+
 **Core question:** Why is “80% power” incomplete without specifying an effect, variance, design, decision threshold, and analysis?  
 **Thesis:** power should be treated as a function
 
@@ -57,7 +65,8 @@ rather than a property of a study in isolation.
 
 ### A4. The estimand comes before the test menu
 
-**State:** seed  
+**State:** [full draft](the-estimand-comes-before-the-test-menu.md) — examples verified; technical review pending
+
 **Core question:** Why do many “which statistical test should I use?” guides start one step too late?  
 **Thesis:** the scientific quantity of interest, sampling design, dependence structure, and loss from error should determine the analysis before a named test is chosen.  
 **Development requirements:** examples where apparently interchangeable tests answer different questions; paired versus independent data; mean versus distributional effects; repeated measures.  
@@ -65,7 +74,8 @@ rather than a property of a study in isolation.
 
 ### A5. Stability is not truth
 
-**State:** seed  
+**State:** [full draft](stability-is-not-truth.md) — examples verified; technical review pending
+
 **Core question:** Can a clustering solution be highly reproducible even when there are no discrete latent classes?  
 **Thesis:** stability measures reproducibility of an algorithmic partition under perturbation; it does not by itself identify a discrete data-generating structure.  
 **Development requirements:** continuous-latent negative control; true discrete-class positive control; representation sensitivity; uncertainty over partitions.  
