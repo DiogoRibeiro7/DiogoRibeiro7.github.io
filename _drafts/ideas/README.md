@@ -50,7 +50,9 @@ These six articles were written and source-checked on 18 September 2026. Their e
 | 2026-02-12 | Natural Origin Does Not Establish Safety | [Article](../../_posts/science_communication/2026-02-12-natural_origin_does_not_establish_safety.md) |
 | 2026-06-18 | Read the Starting Risk Before the Percentage | [Article](../../_posts/science_communication/2026-06-18-read_the_starting_risk_before_the_percentage.md) |
 
-Each source contains a development contract. The original figures and calculations are reproduced by `assets/viz/generate_science_communication_figures.py`; numerical geometry, hemisphere symmetry, conditional probabilities, and selection behaviour have independent checks in `tests/test_science_communication_figures.py`.
+Each source contains a development contract. The original figures and core calculations are reproduced by `assets/viz/generate_science_communication_figures.py`; additional worked examples have executable snippets within the articles. Numerical geometry, hemisphere symmetry, conditional probabilities, selection behaviour, KL divergence, threshold information loss, overlapping runs, and heat-storage dynamics have independent checks in `tests/test_science_communication_figures.py`.
+
+The expanded articles develop the original explanations into longer worked arguments. The climate article introduces likelihood ratios and KL divergence, including evidence accumulation and information lost by thresholding. The other articles add latitude and thermal-lag calculations; bacterial regrowth, extinction, and surveillance composition; run searches and hidden dependence; exposure uncertainty and detection limits; and odds, sampling error, and risk standardisation.
 
 ---
 
