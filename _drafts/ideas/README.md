@@ -22,6 +22,21 @@ These articles exist as complete drafts. Their review status is recorded individ
 | The Estimand Comes Before the Test Menu | [the-estimand-comes-before-the-test-menu.md](the-estimand-comes-before-the-test-menu.md) | full draft; examples verified | technical review / editorial pass |
 | Stability Is Not Truth | [stability-is-not-truth.md](stability-is-not-truth.md) | full draft; examples verified | technical review / editorial pass |
 
+## Articles prepared for the 2026 publication queue
+
+These articles have dated source files under `_posts/`. Each becomes eligible for the normal site build when its date is reached; appearing on the live site also requires a build and deployment.
+
+| Date | Article | Source |
+| --- | --- | --- |
+| 2026-09-21 | More Subjects and Longer Trajectories Solve Different Problems | [Article](../../_posts/statistics/2026-09-21-more_subjects_and_longer_trajectories.md) |
+| 2026-09-23 | Monitoring Without Labels: What Is Actually Identifiable? | [Article](../../_posts/machine_learning/2026-09-23-monitoring_without_labels_identifiability.md) |
+| 2026-09-25 | Numerical Verification Comes Before Optimization | [Article](../../_posts/programming/2026-09-25-numerical_verification_before_optimization.md) |
+| 2026-09-28 | What a Wearable Heart Alert Can Actually Tell You | [Article](../../_posts/healthcare/2026-09-28-what_a_wearable_heart_alert_can_tell_you.md) |
+| 2026-09-30 | Microwaves Heat Food Without Making It Radioactive | [Article](../../_posts/science_communication/2026-09-30-microwaves_heat_food_without_making_it_radioactive.md) |
+| 2026-10-02 | Economic Data Have Two Dates | [Article](../../_posts/economics/2026-10-02-economic_data_have_two_dates.md) |
+
+The final three entries begin focused coverage of health technology, public science communication, and economic/financial data. Their seven-part development contracts are preserved in their source files. The wearable article examines denominators and confirmation timing; the science article addresses the claim that microwave cooking makes food radioactive; the economic-data article reconstructs historical information availability from archived GDP releases.
+
 ---
 
 # Priority A — development queue
@@ -109,7 +124,8 @@ rather than a property of a study in isolation.
 
 ### A9. More subjects and longer trajectories solve different problems
 
-**State:** seed  
+**State:** [dated article, 2026-09-21](../../_posts/statistics/2026-09-21-more_subjects_and_longer_trajectories.md) — calculations, simulation, and figure complete
+
 **Core question:** In longitudinal studies, what does increasing \(n\) solve that increasing \(T\) does not, and vice versa?  
 **Thesis:** subject count improves population/mixture estimation while trajectory length improves estimation of subject-level dynamics or features; neither is a substitute for the other.  
 **Development requirements:** hierarchical or feature-noise model; simulations; consequences for clustering and personalization.  
@@ -127,7 +143,8 @@ rather than a property of a study in isolation.
 
 ### A11. Monitoring without labels: what is actually identifiable?
 
-**State:** seed  
+**State:** [dated article, 2026-09-23](../../_posts/machine_learning/2026-09-23-monitoring_without_labels_identifiability.md) — exact examples and figure complete
+
 **Core question:** Which claims about production model quality can be supported before outcomes arrive?  
 **Thesis:** unlabeled monitoring can detect changes in observables and invariants, but it cannot generally identify performance degradation without additional assumptions or proxy signals.  
 **Development requirements:** formalize observables versus unobservables; delayed-label setting; proxy metrics; bounds or warning states rather than invented performance estimates.
@@ -143,7 +160,8 @@ rather than a property of a study in isolation.
 
 ### A13. Numerical verification comes before optimization
 
-**State:** seed  
+**State:** [dated article, 2026-09-25](../../_posts/programming/2026-09-25-numerical_verification_before_optimization.md) — convergence study and figure complete
+
 **Core question:** Why is a fast solver with no verification story not yet an engineering result?  
 **Thesis:** numerical software should be checked against analytic solutions, conservation laws, convergence rates, invariants, or trusted reference implementations before performance claims matter.  
 **Development requirements:** one ODE/PDE example; grid refinement or order-of-accuracy test; distinction between unit tests and numerical verification.  

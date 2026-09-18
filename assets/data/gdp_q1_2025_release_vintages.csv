@@ -1,0 +1,4 @@
+series,reference_period,release_name,released_at,value,units,source_url
+US real GDP growth,2025Q1,Advance,2025-04-30T12:30:00+00:00,-0.3,Percent change from previous quarter at seasonally adjusted annual rate,https://www.bea.gov/news/2025/gross-domestic-product-1st-quarter-2025-advance-estimate
+US real GDP growth,2025Q1,Second,2025-05-29T12:30:00+00:00,-0.2,Percent change from previous quarter at seasonally adjusted annual rate,https://www.bea.gov/news/2025/gross-domestic-product-second-estimate-corporate-profits-preliminary-estimate-1st-quarter
+US real GDP growth,2025Q1,Third,2025-06-26T12:30:00+00:00,-0.5,Percent change from previous quarter at seasonally adjusted annual rate,https://www.bea.gov/news/2025/gross-domestic-product-1st-quarter-2025-third-estimate-gdp-industry-and-corporate-profits

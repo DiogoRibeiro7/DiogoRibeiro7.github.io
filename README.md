@@ -146,6 +146,7 @@ Supported repository tooling includes:
 
 - `scripts/sync_theme_assets.py`: synchronise theme-owned assets into this site.
 - `assets/viz/generate_figures.py`: regenerate custom article figures.
+- `assets/viz/generate_2026_evidence_articles.py`: reproduce the autumn 2026 article tables and figures on longitudinal design, unlabelled monitoring, numerical verification, wearable alerts, microwave energy, and GDP release vintages. The GDP example reads a small, sourced CSV under `assets/data/`; the other examples use synthetic inputs or physical constants.
 - `assets/viz/housestyle.py`: shared plotting style for generated figures.
 - `code/michelson_morley.py`: downloadable example linked from the site.
 
