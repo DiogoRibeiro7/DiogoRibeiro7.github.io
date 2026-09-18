@@ -56,6 +56,24 @@ content over search-engine-first pages:
 - https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
 - https://developers.google.com/search/blog/2023/02/google-search-and-ai-content
 
+## Categories and tags
+
+Use existing categories for broad subjects. Use tags for languages, methods,
+software practices, and specialist topics. In particular, use `R`,
+`Statistical Computing`, `Software Engineering`, and `Science Policy` as tags;
+their broader categories are normally Statistics, Programming, or Research,
+depending on the article's main argument. An article may belong to more than
+one broad category when it makes a substantial contribution to each.
+
+A small category is not by itself a reason to write or reclassify articles.
+Develop coverage from a concrete reader question and the content quality
+standard above. Propose a new category only when an existing one cannot serve
+the subject and there is a coherent collection to browse.
+
+Keep an existing article's explicit `permalink` and `redirect_from` values when
+reclassifying it. When retiring a category, retain its archive anchor with a
+link to the corresponding tag so older bookmarks remain useful.
+
 ## Validation
 
 Run the project checks before opening a pull request:

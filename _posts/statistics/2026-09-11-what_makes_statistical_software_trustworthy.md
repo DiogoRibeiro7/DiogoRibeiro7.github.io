@@ -3,8 +3,9 @@ permalink: '/statistics/what_makes_statistical_software_trustworthy/'
 title: 'What Makes Statistical Software Trustworthy?'
 categories:
 - Statistics
-- Software Engineering
+- Programming
 tags:
+- Software Engineering
 - Statistical Software
 - Testing
 - Numerical Analysis

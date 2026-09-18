@@ -3,8 +3,8 @@ permalink: '/statistics/reproducible_randomness_is_more_than_calling_set_seed/'
 title: 'Reproducible Randomness Is More Than Calling set.seed()'
 categories:
 - Statistics
-- R
 tags:
+- R
 - Reproducibility
 - Random Number Generation
 - Statistical Computing

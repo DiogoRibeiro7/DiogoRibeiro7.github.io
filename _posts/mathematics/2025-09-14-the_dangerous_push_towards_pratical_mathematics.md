@@ -5,7 +5,7 @@ redirect_from:
 title: "The Dangerous Push Toward Practical Mathematics: Why Pure Research Must Remain Protected"
 categories:
 - Mathematics
-- Science Policy
+- Research
 tags:
 - Pure Mathematics
 - Mathematical Research

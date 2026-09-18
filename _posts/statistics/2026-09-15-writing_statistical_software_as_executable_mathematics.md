@@ -3,8 +3,9 @@ permalink: '/statistics/writing_statistical_software_as_executable_mathematics/'
 title: 'Writing Statistical Software as Executable Mathematics'
 categories:
 - Statistics
-- Software Engineering
+- Programming
 tags:
+- Software Engineering
 - Statistical Computing
 - Testing
 - Mathematical Invariants
