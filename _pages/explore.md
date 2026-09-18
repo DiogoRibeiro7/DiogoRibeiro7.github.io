@@ -30,6 +30,10 @@ Use this page when you do not already know the exact topic or article title. The
 
 <div class="card-grid">
   <article class="card">
+      <h3><a href="{{ '/categories/' | relative_url }}#science-communication">Science Communication</a></h3>
+      <p>Scientific claims, everyday misconceptions, evidence and uncertainty explained through worked examples.</p>
+    </article>
+  <article class="card">
       <h3><a href="/statistics/">Statistics &amp; Probability</a></h3>
       <p>Inference, modelling, diagnostics, uncertainty, probability and survival analysis.</p>
     </article>

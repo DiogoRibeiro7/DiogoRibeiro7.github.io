@@ -10,13 +10,52 @@ are illustrative assumptions, not measurements or fitted biological parameters.
 """
 
 import argparse
-from math import acos, cos, pi, radians, sin, tan
+from math import acos, atan, cos, log, pi, radians, sin, sqrt, tan
 from statistics import NormalDist
 
 
 def climate_tails(mean, sd=5):
     distribution = NormalDist(mean, sd)
     return distribution.cdf(0), 1 - distribution.cdf(15)
+
+
+def normal_kl(mean_p, sd_p, mean_q, sd_q):
+    """D(P || Q), in nats, for two univariate normal distributions."""
+    if sd_p <= 0 or sd_q <= 0:
+        raise ValueError("standard deviations must be positive")
+    return log(sd_q / sd_p) + (sd_p**2 + (mean_p - mean_q)**2) / (2 * sd_q**2) - 0.5
+
+
+def binary_kl(p, q):
+    """D(Bernoulli(p) || Bernoulli(q)); this example uses interior probabilities."""
+    if not 0 < p < 1 or not 0 < q < 1:
+        raise ValueError("probabilities must be strictly between zero and one")
+    return p * log(p / q) + (1 - p) * log((1 - p) / (1 - q))
+
+
+def climate_log_ratio(temperature):
+    """Log density ratio: N(7, 25) versus N(5, 25)."""
+    return ((temperature - 5)**2 - (temperature - 7)**2) / 50
+
+
+def run_probability(tosses, run_length, heads_probability=0.5):
+    """Probability of at least one all-heads run, allowing overlapping windows."""
+    if tosses < 0 or run_length < 1 or not 0 <= heads_probability <= 1:
+        raise ValueError("invalid toss count, run length, or probability")
+    # States retain the trailing head count only while the target run is absent.
+    states = [1.0] + [0.0] * (run_length - 1)
+    for _ in range(tosses):
+        states = [sum(states) * (1 - heads_probability)] + [
+            mass * heads_probability for mass in states[:-1]
+        ]
+    return max(0.0, min(1.0, 1 - sum(states)))
+
+
+def thermal_response(time_constant_days, period_days=365):
+    """Amplitude fraction and peak lag for a linear periodically forced reservoir."""
+    omega = 2 * pi / period_days
+    return (1 / sqrt(1 + (omega * time_constant_days)**2),
+            atan(omega * time_constant_days) / omega)
 
 
 def solar_geometry(latitude, declination):
@@ -70,15 +109,31 @@ def print_calculations():
     print("Climate: mean, P(below 0 C), P(above 15 C)")
     for mean in (5, 7):
         print(mean, *(f"{value:.6f}" for value in climate_tails(mean)))
+    print("Climate KL, warmer || cooler: full reading, freezing indicator (nats)")
+    print(normal_kl(7, 5, 5, 5), binary_kl(climate_tails(7)[0], climate_tails(5)[0]))
+    print("Climate evidence under warmer model: n, mean, sd, P(log ratio < 0)")
+    for n in (1, 10, 25, 100):
+        evidence = NormalDist(0.08 * n, 0.4 * sqrt(n))
+        print(n, evidence.mean, evidence.stdev, evidence.cdf(0))
     print("Seasons at 45 N: declination, noon altitude, daylight hours, daily mean/S0")
     for declination in (-23.44, 0, 23.44):
         print(declination, *(f"{value:.6f}" for value in solar_geometry(45, declination)))
+    print("Seasons: latitude, December daylight/overhead hours, June daylight/overhead hours")
+    for latitude in (0, 45, 70):
+        winter, summer = solar_geometry(latitude, -23.44), solar_geometry(latitude, 23.44)
+        print(latitude, winter[1], 24 * winter[2], summer[1], 24 * summer[2])
+    print("Thermal reservoir: time constant (days), amplitude fraction, lag (days)")
+    for tau in (10, 30, 90):
+        print(tau, *thermal_response(tau))
     print("Resistance: bottleneck, sensitive, resistant, resistant fraction")
     for row in selection_rows():
         print(*(f"{value:.6g}" for value in row))
     print("Streak: initial heads, fair coin, bag, unknown coin")
     for heads in range(5):
         print(heads, *(f"{value:.6f}" for value in next_head_probabilities(heads)))
+    print("Run search: tosses, probability of at least one four-head run")
+    for tosses in (4, 20, 50, 100):
+        print(tosses, run_probability(tosses, 4))
     print("Exposure: scenario, mg/mL, mL, mg")
     for row in exposure_rows():
         print(*row)
@@ -109,6 +164,27 @@ def plot_figures():
            title="A warmer distribution still includes freezing days")
     ax.legend()
     print(save(fig, "science_weather_climate_shift")["path"])
+
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4.5))
+    axes[0].plot(temperatures, [climate_log_ratio(x) for x in temperatures], color=PALETTE[1])
+    axes[0].axhline(0, color="#52514e", linewidth=1)
+    axes[0].axvline(6, color="#52514e", linestyle="--", linewidth=1)
+    axes[0].set(xlabel="Observed temperature (C)", ylabel="Log likelihood ratio (nats)",
+                title="One reading can favour either model", xlim=(-10, 20))
+    sample_sizes = list(range(1, 101))
+    z = NormalDist().inv_cdf(0.95)
+    for sign, name, color in ((1, "Warmer generates data", PALETTE[1]),
+                              (-1, "Cooler generates data", PALETTE[0])):
+        means = [sign * 0.08 * n for n in sample_sizes]
+        widths = [z * 0.4 * sqrt(n) for n in sample_sizes]
+        axes[1].plot(sample_sizes, means, color=color, label=name)
+        axes[1].fill_between(sample_sizes, [m - w for m, w in zip(means, widths)],
+                             [m + w for m, w in zip(means, widths)], color=color, alpha=0.15)
+    axes[1].axhline(0, color="#52514e", linewidth=1)
+    axes[1].set(xlabel="Independent observations", ylabel="Total log likelihood ratio (nats)",
+                title="Expected evidence and central 90% bands")
+    axes[1].legend(fontsize=8, loc="upper left")
+    print(save(fig, "science_climate_kl_evidence")["path"])
 
     fig, axes = plt.subplots(1, 2, figsize=(9, 4.2))
     labels = ["December\nsolstice", "Equinox", "June\nsolstice"]

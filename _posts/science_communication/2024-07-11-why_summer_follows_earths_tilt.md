@@ -19,8 +19,9 @@ excerpt: >-
   seasons. A calculation at 45 degrees latitude shows what Earth’s tilt changes.
 summary: >-
   An idealised Earth with a fixed distance from the Sun still has opposite
-  seasonal changes in daylight and incoming solar energy. Geometry explains
-  the pattern without pretending to predict the temperature of a real city.
+  seasonal changes in daylight and incoming solar energy. Latitude comparisons
+  and a worked heat-storage model connect this geometry to the delayed
+  temperature response, with clear limits on predictions for real locations.
 keywords:
 - cause of seasons
 - Earth axial tilt
@@ -32,11 +33,14 @@ why_this_exists: >-
   incoming energy: the Sun’s angle and the duration of daylight.
 evidence: >-
   Original spherical-geometry calculations at 45 degrees north and south,
-  an original figure, and NASA explanations of seasons and Earth’s orbit.
+  an original figure, a linear heat-storage calculation, and NASA explanations
+  of seasons and Earth's orbit.
 methodology: >-
   Hold orbital distance constant, calculate daylight and projected solar
   energy for three solar declinations, and test the result against direct
-  numerical integration and symmetry between the hemispheres.
+  numerical integration and symmetry between the hemispheres. Compare other
+  latitudes and solve a periodically forced reservoir to separate energy input
+  from temperature amplitude and lag.
 reviewed_at: '2026-09-18'
 header:
   image: /assets/images/headers/photo-stars.jpg
@@ -53,7 +57,7 @@ Development contract
 Question: How does Earth’s tilt produce opposite seasons even at a fixed distance from the Sun?
 Claim: Tilt changes both the projection of sunlight onto a surface and the duration of daylight.
 Counterclaim: Orbital distance does change incoming energy and contributes to seasonal asymmetry.
-Evidence object: A spherical-Earth calculation, hemisphere comparison, and original figure.
+Evidence object: A spherical-Earth calculation, latitude comparisons, a heat-storage model, and an original figure.
 Failure case: Incoming solar energy alone does not predict surface temperature; the atmosphere and heat storage matter.
 Reader payoff: Explain the mechanism of seasons and test the distance-only explanation against opposite hemispheres.
 Exclusions: A city weather forecast, full orbital mechanics, and long-term climate attribution.
@@ -66,6 +70,16 @@ Earth's distance does vary. But a change in the whole planet's orbital distance 
 The central mechanism is Earth's tilted rotation axis. It changes how sunlight reaches different latitudes through the year. NASA's explanation of orbital cycles distinguishes this tilt from the effects of changing distance. [NASA on tilt and orbit](https://science.nasa.gov/science-research/earth-science/milankovitch-orbital-cycles-and-their-role-in-earths-climate/).
 
 To see what tilt actually does, we can temporarily remove changing distance from the calculation.
+
+## The axis does not turn towards the Sun every morning
+
+Earth rotates around an axis that is tilted relative to the direction perpendicular to its orbital plane. Over a single year, that axis points approximately in the same direction relative to distant stars. As Earth moves to the opposite side of its orbit, the hemisphere tilted towards the Sun becomes the hemisphere tilted away from it.
+
+This geometry does not require the planet to rock back and forth each year. The annual change comes from moving a consistently tilted axis around the orbit. Daily rotation then carries each location through the illuminated and dark parts of the sphere.
+
+It helps to distinguish two angles. **Latitude** locates a place north or south of the equator. **Solar declination** describes the latitude where the noon Sun is directly overhead. In the ideal geometry used here, declination varies from about 23.44° south at the December solstice to 23.44° north at the June solstice, crossing the equator at the equinoxes.
+
+A place can keep exactly the same latitude while the Sun's declination changes. That combination determines the daily path of the Sun through its sky. Saying only that Earth is tilted skips this link between orbital geometry and what an observer actually experiences.
 
 ## Give the model a circular orbit
 
@@ -122,6 +136,26 @@ Repeat the calculation at 45 degrees south and the solstice values exchange plac
 
 This is the mechanism a distance-only account misses: the same orbital position can favour one hemisphere's sunlight geometry while disadvantaging the other's. NASA's satellite-based seasonal illustration shows the corresponding changes in how sunlight is distributed across Earth. [Equinoxes and solstices from space](https://science.nasa.gov/resource/seeing-equinoxes-and-solstices-from-space/).
 
+## Move the observer and the seasonal pattern changes
+
+The 45° calculation describes one pair of latitudes. It is useful to check what the same mechanism predicts elsewhere, rather than assuming every place experiences the same seasonal contrast.
+
+| Latitude | December daylight | June daylight | December energy, overhead hours | June energy, overhead hours |
+| --- | ---: | ---: | ---: | ---: |
+| Equator | 12.00 h | 12.00 h | 7.01 | 7.01 |
+| 45° north | 8.57 h | 15.43 h | 2.05 | 8.81 |
+| 70° north | 0.00 h | 24.00 h | 0.00 | 8.97 |
+
+These values use the same atmosphere-free sphere and fixed solar distance. At 70° north the ideal December Sun stays below the horizon, while the June Sun stays above it. The code handles those limiting cases by allowing zero or 24 hours of daylight instead of trying to calculate a sunrise that does not occur.
+
+The polar summer result can seem surprising: why is its daily energy slightly higher than at 45° north when the noon Sun is lower? The lower instantaneous intensity is compensated by receiving sunlight around the full rotation. A lower peak and a longer duration can produce a larger accumulated total.
+
+That result does not predict that the Arctic must be hotter than a temperate city in June. The surface does not receive the atmosphere-free energy in the table unchanged, and temperature depends on reflection, atmospheric processes, existing snow and ice, and stored heat. A geometric calculation of incoming energy cannot settle all of those processes.
+
+The equator provides a different check. Both solstices have equal daylight and equal energy in this symmetric model. At an equinox, however, the noon Sun is directly overhead, and the daily total rises to about 7.64 equivalent overhead hours. The geometric annual cycle therefore has two maxima there. A simple Northern Hemisphere summer-versus-winter story does not describe every latitude equally well.
+
+This is a useful property of a physical explanation: changing a clearly specified input, such as latitude, produces a testable change in the prediction. A diagram that merely labels one side of an ellipse “summer” does not supply that predictive structure.
+
 ## Distance still has an effect
 
 Removing distance changes from the model does not imply that distance is physically irrelevant. Solar intensity decreases with the square of distance from the Sun.
@@ -141,6 +175,51 @@ A simple analogy is filling a bath with the drain open. The moment when the tap 
 Likewise, a solar-energy maximum does not by itself identify the warmest day. Clouds, atmospheric conditions, oceans, land, and geography matter for the temperature response. Our bare-sphere calculation deliberately cannot predict a particular location's seasonal lag or weather.
 
 Its narrower achievement is enough to test the misconception. Opposite seasonal energy patterns emerge even with a fixed Earth-Sun distance, once the axis is tilted.
+
+## Put numbers on the delay caused by heat storage
+
+We can take the bath analogy one step further without pretending to simulate a real climate. Consider a single hypothetical reservoir whose temperature departure from its annual mean is $\theta(t)$. It absorbs a smooth annual forcing and loses additional energy in proportion to that temperature departure:
+
+$$
+C\frac{d\theta}{dt}+\lambda\theta=F\cos(\omega t).
+$$
+
+Here $C$ is heat capacity per unit area, $\lambda$ describes how strongly the restoring energy loss changes with temperature, and $F$ is the amplitude of the seasonal energy input per unit area. The angular frequency is $\omega=2\pi/365$ when time is measured in days and the other units are made consistent. We have centred the forcing so its maximum occurs at $t=0$.
+
+If heat storage were negligible, the temperature departure would follow the forcing immediately, with amplitude $F/\lambda$. With storage, the reservoir takes time to adjust. Its response time is $\tau=C/\lambda$.
+
+After the initial transient has decayed, the periodic solution is
+
+$$
+\theta(t)=\frac{F/\lambda}{\sqrt{1+(\omega\tau)^2}}
+\cos\left[\omega t-\arctan(\omega\tau)\right].
+$$
+
+The formula separates two consequences. The factor in front of the cosine reduces the temperature amplitude. The phase angle shifts the temperature maximum later than the forcing maximum.
+
+| Assumed response time $\tau$ | Amplitude relative to immediate equilibrium | Temperature maximum after forcing maximum |
+| --- | ---: | ---: |
+| 10 days | 98.6% | 9.9 days |
+| 30 days | 88.9% | 27.7 days |
+| 90 days | 54.2% | 58.0 days |
+
+For example, if the hypothetical immediate-equilibrium temperature amplitude were 10 degrees, the 90-day reservoir would vary with amplitude about 5.42 degrees and peak about 58 days later. Those are chosen model parameters, not measured values for an ocean or a city.
+
+The delay has a physical interpretation. After incoming energy begins declining from its maximum, the reservoir can still be gaining energy overall. Its temperature continues to rise until the incoming and outgoing terms balance at that moment. The date of maximum input and the date of maximum stored energy answer different questions.
+
+The calculation also explains why simply saying “the longest day should be the hottest” is incomplete. That statement silently assumes an immediate response and ignores the reservoir's existing state. Even this very small model breaks the assumed coincidence while keeping the energy accounting explicit.
+
+Real seasonal forcing is not a perfect sinusoid, and the restoring term need not be linear. A real location exchanges energy with its surroundings and can contain several reservoirs with different response times. Those omissions prevent us from assigning the table's lags to a particular city. They do not prevent the model from showing how a lag can arise.
+
+## Turn a demonstration into a testable explanation
+
+A globe and a fixed lamp can demonstrate the geometry if the rotation axis keeps its orientation while the globe travels around the lamp. Mark a latitude, rotate the globe at several orbital positions, and compare how much of the marked circle lies in light. The changing illuminated fraction represents changing daylight duration.
+
+To demonstrate projection separately, hold a flat card in a fixed beam and tilt it. The same bundle of light covers a larger area when it strikes obliquely. Keep the beam and distance unchanged during that comparison; otherwise changing several things at once makes it harder to identify the cause.
+
+Neither demonstration measures the temperature response. A lamp's nearby rays also diverge much more than sunlight across Earth, so the setup is an illustration with its own geometric limitations. The value comes from predicting what should change when the axis, latitude, or surface angle changes, then checking whether the demonstration behaves accordingly.
+
+When evaluating a social-media animation, make the same distinctions. Does it show the axis keeping its orientation? Are the hemispheres treated consistently? Is a claim about sunlight being turned into a temperature claim without explaining storage and energy loss? These questions expose a missing mechanism more effectively than memorising the word “tilt.”
 
 ## Try the explanation against a counterfactual
 
@@ -168,6 +247,18 @@ $$
 
 Multiplying this fraction by 24 gives the equivalent overhead hours. Angles inside the trigonometric functions are in radians. Polar day and night require the corresponding limiting cases, handled in the code.
 
-The [figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_science_communication_figures.py) reproduces both tables. Its geometry is checked against direct numerical integration of the changing solar angle through the day.
+The heat-storage table can be reproduced independently:
+
+```python
+from math import atan, pi, sqrt
+
+omega = 2 * pi / 365
+for tau in (10, 30, 90):
+    amplitude_fraction = 1 / sqrt(1 + (omega * tau)**2)
+    lag_days = atan(omega * tau) / omega
+    print(tau, f"amplitude={amplitude_fraction:.1%}; lag={lag_days:.1f} days")
+```
+
+The [figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_science_communication_figures.py) reproduces the geometry, latitude, and heat-storage tables. Its geometry is checked against direct numerical integration of the changing solar angle through the day, and the reservoir response against numerical integration of its energy-balance equation.
 
 *Archive note: dated 11 July 2024 for this collection; written and source-checked on 18 September 2026.*

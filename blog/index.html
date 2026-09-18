@@ -3,8 +3,21 @@ layout: page
 title: All articles
 subtitle: Newest first
 seo_title: "All Articles by Diogo Ribeiro"
-seo_description: "Every article on statistics, machine learning, time series, mathematics and data engineering, newest first."
+seo_description: "Browse every article by category, including science communication, statistics, machine learning, healthcare and economics, or read the newest posts."
 ---
+
+<nav class="blog-categories" aria-labelledby="blog-categories-heading">
+  <h2 id="blog-categories-heading">Browse by category</h2>
+  <p>Find articles on a topic across all years.</p>
+  {% assign categories = site.categories | sort %}
+  <ul class="blog-categories__list">
+    {% for category in categories %}
+    <li><a href="{{ '/categories/' | relative_url }}#{{ category[0] | slugify }}">{{ category[0] | escape }} <span>({{ category[1].size }})</span></a></li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<h2>Articles, newest first</h2>
 
 <div class="card-grid">
   {% for post in paginator.posts %}
@@ -12,7 +25,12 @@ seo_description: "Every article on statistics, machine learning, time series, ma
       {% if post.teaser %}
       <a class="card-media" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.teaser | relative_url }}" alt="" loading="lazy" decoding="async" /></a>
       {% endif %}
-      <p class="card-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time></p>
+      <p class="card-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>
+        {% for category in post.categories %}
+        &middot; <a href="{{ '/categories/' | relative_url }}#{{ category | slugify }}">{{ category | escape }}</a>
+        {% endfor %}
+      </p>
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
       <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
       <a class="card-link" href="{{ post.url | relative_url }}">Read article</a>

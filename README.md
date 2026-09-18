@@ -147,7 +147,7 @@ Supported repository tooling includes:
 - `scripts/sync_theme_assets.py`: synchronise theme-owned assets into this site.
 - `assets/viz/generate_figures.py`: regenerate custom article figures.
 - `assets/viz/generate_2026_evidence_articles.py`: reproduce the autumn 2026 article tables and figures on longitudinal design, unlabelled monitoring, numerical verification, wearable alerts, microwave energy, and GDP release vintages. The GDP example reads a small, sourced CSV under `assets/data/`; the other examples use synthetic inputs or physical constants.
-- `assets/viz/generate_science_communication_figures.py`: reproduce the six science-communication archive examples on climate, seasons, antibiotic resistance, random streaks, exposure, and risk headlines. Use `--dry-run` to print calculations without writing figures. The calculations use the standard library; plotting requires Matplotlib.
+- `assets/viz/generate_science_communication_figures.py`: reproduce the seven figures and core calculations for the six science-communication archive articles, including KL divergence and accumulated climate evidence, seasonal heat storage, and overlapping random runs. Additional examples have executable snippets in the articles. Use `--dry-run` to print calculations without writing figures. The calculations use the standard library; plotting requires Matplotlib.
 - `assets/viz/housestyle.py`: shared plotting style for generated figures.
 - `code/michelson_morley.py`: downloadable example linked from the site.
 

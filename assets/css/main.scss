@@ -69,3 +69,39 @@ aside {
   box-shadow: none;
   gap: 0.25rem;
 }
+
+// Keep every published category discoverable from each blog archive page.
+.blog-categories {
+  margin-block-end: 2rem;
+}
+
+.blog-categories__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    min-height: 2.75rem;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
+  }
+}
