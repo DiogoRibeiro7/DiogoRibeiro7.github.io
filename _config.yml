@@ -116,6 +116,10 @@ defaults:
       toc: true
       toc_label: On this page
       author: Diogo Ribeiro
+      # The theme's default, TechnicalArticle, is not a schema.org type
+      # (DiogoRibeiro7/analytics-blog-jekyll#302). This sets the JSON-LD; the
+      # microdata itemtype is written by the theme's post layout.
+      schema_type: TechArticle
   - scope:
       path: "_pages"
     values:

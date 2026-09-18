@@ -46,6 +46,21 @@ def test_sync_refreshes_changed_files(tmp_path):
     assert "changed" in (root / "assets" / "css" / "main.scss").read_text()
 
 
+def test_sync_keeps_site_styles_and_refreshes_the_theme_part(tmp_path):
+    theme, root = make_theme(tmp_path)
+    sync_module.sync(theme, root)
+    stylesheet = root / "assets" / "css" / "main.scss"
+    site_rules = f"{sync_module.SITE_STYLES_MARKER}\nimg {{ height: auto; }}\n"
+    stylesheet.write_text('@use "theme";\n\n' + site_rules)
+    assert sync_module.sync(theme, root) == []
+
+    (theme / "assets" / "css" / "main.scss").write_text('@use "features";\n@use "theme";\n')
+    pairs = sync_module.sync(theme, root)
+    assert [dst.name for _, dst in pairs] == ["main.scss"]
+    assert stylesheet.read_text() == '@use "features";\n@use "theme";\n\n' + site_rules
+    assert sync_module.sync(theme, root) == []
+
+
 def test_dry_run_writes_nothing(tmp_path):
     theme, root = make_theme(tmp_path)
     pairs = sync_module.sync(theme, root, dry_run=True)
