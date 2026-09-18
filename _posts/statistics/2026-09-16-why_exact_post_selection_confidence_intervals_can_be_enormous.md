@@ -12,16 +12,17 @@ tags:
 - Statistical Computing
 author_profile: false
 seo_title: 'Why Exact Post-Selection Confidence Intervals Can Be Enormous'
-seo_description: 'After selecting a signal because it looked unusually large, an exact confidence interval can become spectacularly wide. That is often the mathematically correct cost of conditioning on the search, not a software bug.'
+seo_description: 'An exact post-selection interval of [-71.7, 2.5] for a Gaussian mean is not a bug. The width grows as 3.69 over the distance above the threshold, its expectation is infinite, and randomised selection avoids it.'
 excerpt: >-
-  A very wide interval is not automatically evidence that an inferential procedure
-  is broken. After selection, weak evidence can force an exact conditional interval
-  to admit that the parameter is only poorly identified by the selected observation.
+  An exact 95% interval of [-71.7, 2.5] for a unit-variance Gaussian mean is not
+  a bug. It is what conditioning on a selection event costs when the selected value
+  barely cleared the bar, and the cost has a closed form.
 summary: >-
-  A simple Gaussian screening example showing how a naive interval can look precise
-  after selection while the exact conditional interval becomes enormous. The article
-  explains truncation, weak post-selection evidence, inversion of the selective pivot,
-  and why wide intervals are often the honest result.
+  A Gaussian screening example worked in full: the exact conditional interval, a
+  closed-form approximation showing that its width grows as 3.69 divided by the
+  distance above the threshold, why its expected width is infinite, how badly the
+  ordinary interval covers after selection, and what randomised selection and data
+  splitting buy instead.
 keywords:
 - selective inference
 - confidence intervals
@@ -37,14 +38,18 @@ why_this_exists: >-
   selection threshold. This article explains that geometry with a self-contained
   one-dimensional example.
 evidence: >-
-  Motivated by stress tests of exact selective procedures in which null-data
-  intervals were occasionally tens, hundreds, or thousands of standard deviations
-  wide despite numerically stable inversion and correct calibration.
+  Exact intervals and their tail approximation computed for a range of observed
+  values; conditional coverage of the ordinary interval computed in closed form;
+  a simulation of interval widths given selection for means from 0 to 4 under a
+  hard threshold, randomised selection and data splitting, with conditional
+  coverage checked for each. Motivated by stress tests of a selective-inference
+  implementation on null data.
 methodology: >-
-  Conditions a Gaussian observation on passing a fixed screening threshold, derives
-  the corresponding truncated-normal pivot, and numerically inverts it for several
-  observed values to compare naive and selection-adjusted confidence intervals.
-reviewed_at: '2026-09-14'
+  Conditions a Gaussian observation on passing a fixed threshold, inverts the
+  truncated-normal pivot through log survival functions, derives the limit for
+  marginal selections from the exponential tail of the truncated normal, and
+  compares three valid procedures on width and on which results they select.
+reviewed_at: '2026-09-19'
 header:
   image: /assets/images/headers/photo-statistics-normal-distribution.jpg
   og_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
@@ -55,699 +60,204 @@ header:
   twitter_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
 ---
 
-A confidence interval that runs from roughly \(-72\) to \(2.5\) for a unit-variance Gaussian mean looks ridiculous.
+A 95% confidence interval that runs from $-71.7$ to $2.53$, for the mean of a Gaussian with unit variance, looks like a bug. If I saw it come out of my own code I would check the root finder, the tail probabilities and the sign conventions before believing it. Yet it is the exact answer to a well-posed question, and the procedure that produced it covers the true mean 95% of the time, as it promises.
 
-If I saw such an interval unexpectedly, I would check the implementation too.
+The question is what a selected observation says about its mean once we admit that it was reported *because* it was large. Conditioning on the selection is what makes the interval honest, and it is also what can make it enormous. This article works one example all the way through: the exact interval, a closed form for how fast it widens, the reason its expected width is infinite, how badly the ordinary interval does in the same setting, and two ways of paying less.
 
-But sometimes that interval is exactly what the mathematics demands.
+## One Observation and a Reporting Rule
 
-The reason is selection.
+Let $X \sim N(\mu, 1)$, and suppose we report $X$ only when $X > 2$. This is the smallest possible model of a screening step. We look at many candidates, keep the ones that clear a bar, and then want an interval for what we kept. Suppose the observation is $x = 2.05$.
 
-Suppose we only report an estimate when it looks sufficiently interesting. We search, screen, rank, optimize, choose the largest signal, or keep only effects that clear a threshold. Then we construct an interval as though the reported estimate had been fixed in advance.
-
-That interval is usually too optimistic.
-
-Once we condition on the fact that the estimate was selected because it looked large, weak evidence can become almost uninformative.
-
-The basic lesson is:
+Ignoring the rule, the ordinary interval is $2.05 \pm 1.96$, or $[0.09, 4.01]$. It excludes zero, it is as narrow as any interval for this problem can be, and it is wrong in a specific way: it describes the behaviour of $X$ over all repetitions of the experiment, while we only ever see the repetitions in which $X$ exceeded 2. Over those, the relevant distribution is the normal truncated to $(2, \infty)$. Writing $\bar\Phi = 1 - \Phi$ for the Gaussian survival function, its distribution function is
 
 $$
-\boxed{
-\text{after selection, a huge interval can be evidence of honesty rather than failure.}
-}
+F_\mu(x) \;=\; P_\mu(X \le x \mid X > 2) \;=\; 1 - \frac{\bar\Phi(x - \mu)}{\bar\Phi(2 - \mu)}, \qquad x > 2.
+\label{eq:cdf}
 $$
 
-## A Minimal Example
-
-Let
+Under the true mean, $F_\mu(X)$ is uniform on $(0, 1)$ given selection, and $F_\mu(x)$ falls as $\mu$ rises, because a larger mean makes any fixed $x$ sit lower in its conditional distribution. Those two facts are all an exact interval needs. The equal-tailed 95% limits are the means at which the observed value sits at the two extreme quantiles,
 
 $$
-X\sim N(\mu,1).
+F_{\mu_L}(x) = 0.975, \qquad F_{\mu_U}(x) = 0.025 .
 $$
 
-Imagine a simple reporting rule:
+For $x = 2.05$ they are $\mu_L = -71.74$ and $\mu_U = 2.53$. The table repeats the calculation for observations further above the bar.
+
+| Observed $x$ | Distance above 2 | Ordinary interval | Exact selective interval | Width |
+| ---: | ---: | :---: | :---: | ---: |
+| 2.01 | 0.01 | [0.05, 3.97] | [-366.88, -0.17] | 366.7 |
+| 2.05 | 0.05 | [0.09, 4.01] | [-71.74, 2.53] | 74.3 |
+| 2.20 | 0.20 | [0.24, 4.16] | [-16.29, 3.66] | 19.9 |
+| 2.50 | 0.50 | [0.54, 4.46] | [-4.99, 4.31] | 9.3 |
+| 3.00 | 1.00 | [1.04, 4.96] | [-0.93, 4.93] | 5.9 |
+| 3.50 | 1.50 | [1.54, 5.46] | [0.66, 5.46] | 4.8 |
+| 5.00 | 3.00 | [3.04, 6.96] | [2.96, 6.96] | 4.0 |
+
+Two things stand out. The upper limits of the two intervals agree from about $x = 3$ onwards, and by $x = 5$ the intervals are nearly identical: far from the threshold, selection hardly matters, because the observation would have been reported under any plausible mean. All the damage is in the lower limit, and it is governed by the distance above the threshold, not by the size of the observation. At $x = 2.01$ the interval does not even contain the observation.
+
+## Why the Lower Limit Runs Away
+
+A very negative mean makes the event $X > 2$ absurdly unlikely. At $\mu = -71.74$ its probability is about $10^{-1183}$. But the interval is built from the distribution *given* that event, and given that event a very negative mean makes a sharp prediction: the observation will be found just above 2. The reason is the shape of the Gaussian tail. For large $t$, the ratio $\bar\Phi(t + d) / \bar\Phi(t)$ behaves like $e^{-td}$, so with $t = 2 - \mu$ and $d = x - 2$ the excess over the threshold is approximately exponential with rate $2 - \mu$:
 
 $$
-\text{report }X\quad\text{only if}\quad X>2.
+P_\mu(X - 2 \le d \mid X > 2) \;\approx\; 1 - e^{-(2 - \mu)\,d} .
 $$
 
-This is a toy version of a much broader pattern. We inspect many possibilities, keep something only after it looks sufficiently extreme, and then want uncertainty for the selected quantity.
+At $\mu = -20$ that is an exponential with mean $0.045$, and $x = 2.05$ sits at its 67th percentile: unremarkable. At $\mu = 1$ the same observation sits at the 7th percentile, which is also unremarkable. The left panel of the figure shows the three conditional densities. A value of 2.05 is compatible with all of them, so it cannot tell them apart, and that is precisely what the interval reports.
 
-Suppose we observe
+![Two panels. Left: the density of an observation given that it exceeded the threshold of 2, for means of 1, minus 5 and minus 20; the more negative the mean, the more the density piles up just above the threshold, so that an observation of 2.05 is typical under all three. Right: width of the exact 95% selective interval against the distance of the observation above the threshold, on logarithmic axes; it follows 3.69 divided by the distance for marginal selections and approaches the ordinary width of 3.92 for clear ones.](/assets/images/figures/selective_interval_runaway.png){: width="1536" height="672" loading="lazy"}
 
-$$
-X=2.05.
-$$
-
-If we ignore selection, the ordinary 95% Gaussian interval is
+Setting the approximation equal to $1 - \alpha/2$ and solving for the mean gives the lower limit for a threshold $c$ in closed form,
 
 $$
-2.05\pm1.96,
+\mu_L \;\approx\; c - \frac{\ln(2/\alpha)}{d}, \qquad d = x - c,
+\label{eq:limit}
 $$
 
-or approximately
+and $\ln(2/\alpha) = 3.69$ at the 95% level. For $x = 2.05$ this gives $-71.78$ against the exact $-71.74$; for $x = 2.01$, $-366.89$ against $-366.88$; for $x = 2.2$, $-16.44$ against $-16.29$. It degrades as the distance grows, as it should, since the exponential tail is a statement about means far below the threshold. The right panel of the figure shows the exact width following $3.69/d$ over two orders of magnitude before bending towards the ordinary width of $3.92$.
+
+This is the whole phenomenon in one line. The information that would have ruled out $\mu = -72$ is the improbability of crossing the threshold at all, and conditioning on the crossing removes exactly that information from the calculation. What remains is where the observation landed inside the selection region, and a landing $0.05$ above the edge is what almost every mean below the edge predicts.
+
+## The Expected Width Is Infinite
+
+The width is roughly $3.69/d$ when the distance $d$ is small. How often is it small? Given selection, the density of $X$ at the threshold is the Gaussian hazard $h(2 - \mu) = \phi(2 - \mu) / \bar\Phi(2 - \mu)$, which is strictly positive for every mean. So $d$ has a density that does not vanish at zero, and the width has a tail that decays only as the reciprocal of its argument:
 
 $$
-\boxed{[0.09,4.01]}.
+P_\mu(\text{width} > w \mid X > 2) \;\approx\; \frac{h(2 - \mu)\,\ln(2/\alpha)}{w} \qquad \text{for large } w .
 $$
 
-That looks reasonably informative.
+A tail of order $1/w$ has no mean. The expected width of the exact interval is infinite, for every value of $\mu$, even though every individual interval is finite. Kivaranovic and Leeb (2021) prove this in general for intervals built by conditioning on polyhedral selection events. Their Proposition 1 states that whenever the truncation region is bounded from above or from below the expected length is infinite, for the reason just given, and that the upper quantiles of the length grow like $1/(1 - \kappa)$ as the level $\kappa$ approaches 1. For the lasso they find the condition met in most of the problems they simulate, the exceptions being models that contain almost all or almost none of the regressors.
 
-It also treats \(2.05\) as though we would have reported it regardless of whether it had crossed the threshold.
+Under $\mu = 0$ the hazard at the threshold is $2.37$, so the approximation reads $8.75/w$. The exact quantiles of the width, given selection, bear it out.
 
-But we already know something else:
+| True mean | Probability of selection | Median width | 90th percentile | 99th percentile | Wider than 20 |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 0 | 0.023 | 14.96 | 84.1 | 865.9 | 38.8% |
+| 1 | 0.159 | 10.85 | 55.1 | 557.1 | 27.4% |
+| 2 | 0.500 | 7.51 | 30.6 | 292.7 | 15.8% |
+| 3 | 0.841 | 5.32 | 13.9 | 108.0 | 6.3% |
+| 4 | 0.977 | 4.31 | 6.6 | 25.1 | 1.3% |
 
-$$
-X>2.
-$$
+These are not simulation artefacts. Because the width is a decreasing function of the observation, its quantiles follow exactly from the quantiles of the truncated normal, and a simulation of 20,000 selected draws per row reproduces them while confirming coverage between 94.6% and 95.3%. The sample *mean* of the simulated widths, by contrast, never settles: it was 88 at $\mu = 0$ in one run, driven by a single interval more than 100,000 wide.
 
-The observation was selected because it landed in the upper tail.
+I first met this in a stress test of a selective-inference implementation, not in a toy model. On null data with 40 observations, 1,000 draws gave a median width of 4.7, a 90th percentile of 23.8 and a maximum of 5,817.9, with about one interval in eight wider than 20 standard deviations. The root finding was stable, the selection event was right and the calibration was correct. The widest intervals belonged, without exception, to the most marginal selections.
 
-That changes the sampling distribution relevant for inference.
+## What the Ordinary Interval Gets Wrong
 
-## Condition on the Selection Event
+It is tempting to look at $[-71.7, 2.53]$, call the exact method too conservative, and report $[0.09, 4.01]$ instead. The ordinary interval covers $\mu$ when $|X - \mu| \le 1.96$, and given selection the probability of that is easy to write down.
 
-Given the event
+| True mean | Coverage of $X \pm 1.96$, given $X > 2$ |
+| ---: | ---: |
+| 0 or below | 0% |
+| 0.5 | 62.6% |
+| 1 | 84.2% |
+| 1.5 | 91.9% |
+| 2 | 95.0% |
+| 3 | 97.0% |
 
-$$
-X>2,
-$$
+For any mean below $0.04$ the coverage is not low, it is zero. The interval contains $\mu$ only when $X < \mu + 1.96$, and a reported $X$ is always above 2, so when $\mu + 1.96 < 2$ the two conditions cannot both hold. Every interval reported under the null excludes the truth, and every one of them excludes zero. This is the winner's curse in its purest form (Zhong and Prentice, 2008). The same fluctuation is used twice: once to get the observation selected, and again as if it were fresh evidence about the mean.
 
-the conditional distribution is a lower-truncated Gaussian.
-
-For an observed value \(x>2\), the selective conditional CDF is
-
-$$
-F_\mu(x\mid X>2)
-=
-\frac{
-\Phi(x-\mu)-\Phi(2-\mu)
-}{
-1-\Phi(2-\mu)
-}.
-$$
-
-Equivalently, using Gaussian survival functions,
-
-$$
-F_\mu(x\mid X>2)
-=
-1-
-\frac{
-\overline\Phi(x-\mu)
-}{
-\overline\Phi(2-\mu)
-}.
-$$
-
-For the true \(\mu\), this conditional pivot is uniform on \([0,1]\).
-
-So an exact equal-tailed 95% conditional interval is obtained by solving
-
-$$
-F_{\mu_L}(x\mid X>2)=0.975
-$$
-
-and
-
-$$
-F_{\mu_U}(x\mid X>2)=0.025.
-$$
-
-For
-
-$$
-x=2.05,
-$$
-
-the solutions are approximately
-
-$$
-\boxed{
-\mu_L=-71.74,
-\qquad
-\mu_U=2.53.
-}
-$$
-
-So the exact conditional 95% interval is roughly
-
-$$
-\boxed{[-71.7,2.53]}.
-$$
-
-That is not a typo.
-
-## Why Does the Lower Limit Explode?
-
-The observation barely cleared the screening threshold.
-
-Under a very negative mean, observing a value above 2 is extremely rare.
-
-But conditional on the rare event already having happened, values just above 2 are exactly what we would expect to see.
-
-That distinction is the whole story.
-
-Unconditionally, \(X=2.05\) looks incompatible with a very negative mean.
-
-Conditionally on
-
-$$
-X>2,
-$$
-
-a value such as \(2.05\) can be quite ordinary even when the selection event itself was astronomically unlikely.
-
-Selective inference does not ask
-
-> How surprising was it that anything crossed the threshold?
-
-after we have conditioned on crossing it.
-
-It asks
-
-> Given that the threshold was crossed, how informative is the exact observed value about \(\mu\)?
-
-When the observation is only barely above the threshold, the answer can be: not very informative at all.
-
-## Conditioning Changes the Question
-
-This is where selective inference often feels counterintuitive.
-
-Before conditioning, the probability
-
-$$
-P_\mu(X>2)
-$$
-
-contains information about \(\mu\).
-
-After conditioning on
-
-$$
-X>2,
-$$
-
-that probability is removed from the likelihood relevant to the selective pivot.
-
-We deliberately pay that price in exchange for valid inference after the data-dependent selection rule.
-
-The interval therefore reflects a narrower source of information:
-
-$$
-\text{where did the selected observation land inside the selection region?}
-$$
-
-If it landed barely inside, there may be little left to learn.
-
-## The Naive Interval Uses Selection Twice
-
-The naive interval looks precise because the same extreme observation performs two jobs.
-
-First, it gets selected because it is large.
-
-Second, its largeness is treated as fresh evidence that \(\mu\) is large.
-
-Symbolically,
-
-$$
-\text{large }X
-\rightarrow
-\text{selection}
-$$
-
-and then again
-
-$$
-\text{large }X
-\rightarrow
-\text{tight positive interval}.
-$$
-
-That double use of the same fluctuation is the source of selection bias.
-
-The selective procedure conditions on the first use and asks what remains for the second.
-
-## The Cost Is Largest for Marginal Selections
-
-The effect is not equally severe for every selected value.
-
-Take several observations above the same threshold.
-
-For \(x=2.05\):
-
-$$
-\text{selective CI}\approx[-71.7,2.53].
-$$
-
-For \(x=2.5\):
-
-$$
-\text{selective CI}\approx[-4.99,4.31].
-$$
-
-For \(x=3\):
-
-$$
-\text{selective CI}\approx[-0.93,4.93].
-$$
-
-For \(x=3.5\):
-
-$$
-\text{selective CI}\approx[0.66,5.46].
-$$
-
-Now the lower limit becomes positive.
-
-Why?
-
-Because once the selected observation lies comfortably inside the selection region rather than just scraping past its boundary, the conditional position carries much more information.
-
-The problem is therefore not selection alone.
-
-It is **weak evidence after selection**.
-
-## A Useful Diagnostic Quantity
-
-Define the distance above the threshold
-
-$$
-d=x-2.
-$$
-
-When
-
-$$
-d\approx0,
-$$
-
-the observation is a marginal selection.
-
-The selective distribution is then highly skewed as a function of \(\mu\), and inversion can send one confidence limit very far away.
-
-As \(d\) grows, the observation becomes less compatible with being a mere threshold-crossing accident.
-
-The interval contracts accordingly.
+The over-coverage at $\mu = 3$ is the other side of the same coin and is harmless. The point of the table is that the ordinary interval's 95% is a statement about all repetitions, and nobody reads the ones that were not reported.
 
 ## Search Creates the Same Geometry
 
-The threshold example is deliberately simple, but the same logic appears after search.
+Nothing above depends on the threshold being fixed in advance. Lee, Sun, Sun and Taylor (2016) showed that for the lasso, and for many other procedures, the event "this model was selected, with these signs" is a set of linear inequalities $\{Ay \le b\}$ in the response. Conditional on that event, and on the part of the data orthogonal to the contrast of interest, a linear contrast $\eta^\top y$ is a Gaussian truncated to an interval $[\mathcal{V}^-, \mathcal{V}^+]$ whose ends are computed from $A$, $b$ and the data. Inference then inverts the same pivot as in equation $\eqref{eq:cdf}$, with a data-dependent truncation region in place of $(2, \infty)$.
 
-Suppose we inspect candidate statistics
+The distance $d$ becomes the gap between the observed contrast and the nearer end of its truncation interval. When the search picks the largest of $m$ statistics, that gap is essentially the margin by which the winner beat the runner-up. When a changepoint algorithm picks a break location, it is the margin by which that location beat its neighbours (Hyun, Lin, G'Sell and Tibshirani, 2021). A winner that barely won is the multidimensional version of observing 2.05 after requiring more than 2, and equation $\eqref{eq:limit}$ says what to expect: a limit that recedes as the reciprocal of the margin.
 
-$$
-T_1,\ldots,T_m
-$$
+This is why a narrow interval after a weak search result should make a reader more suspicious, not less. If a break is chosen as the most extreme of several hundred candidate locations, and the reported interval is as tight as if the location had been fixed beforehand, the likeliest explanation is that the search was ignored.
 
-and select
+## Paying Less: Randomisation and Splitting
 
-$$
-\widehat j
-=
-\arg\max_j |T_j|.
-$$
+The exact interval is wide because conditioning on $\{X > 2\}$ throws away all the information carried by the selection event, and for a marginal selection that was nearly all the information there was. Fithian, Sun and Taylor (2014) call what remains the leftover information, and they observe that how much remains is a design choice. Two designs leave more.
 
-Inference for the selected effect must acknowledge the event
+The first is **data splitting**: select with one independent half of the data and infer with the other. If $X$ is the mean of the whole sample, each half has variance 2, the selection event says nothing about the inference half, and the interval is an ordinary one of width $2 \times 1.96 \times \sqrt{2} = 5.54$, whatever happened at the selection stage. The second is **randomised selection** (Tian and Taylor, 2018): select on a noisy copy, $X + \omega > 2$ with $\omega \sim N(0, \gamma^2)$ drawn by the analyst, and infer from $X$ given that event. The conditional density of $X$ is then proportional to
 
 $$
-\widehat j=j
+\phi(x - \mu)\;\Phi\!\left(\frac{x - 2}{\gamma}\right),
 $$
 
-and often also the selected sign.
+a smooth reweighting in place of a hard cut. No value of $x$ sits on an edge, so no limit runs away. With $\gamma = 1$, which spends the same information on selection as an even split, the interval at $x = 2.05$ is $[-1.31, 3.60]$: width $4.92$ where the hard threshold gave $74.3$.
 
-Conditioning on that event truncates the distribution of the selected contrast.
+![Median width of three valid 95% intervals for a selected effect, against the true mean from 0 to 4, on a logarithmic axis, each with a band up to its 90th percentile. Conditioning on a hard threshold gives a median of about 15 and a 90th percentile of 84 at a mean of zero, falling to 4.3 at a mean of four. Randomised selection stays between 4.2 and 5.3 throughout, and data splitting is a constant 5.54. The ordinary width of 3.92 is drawn for reference.](/assets/images/figures/selective_width_by_procedure.png){: width="1152" height="672" loading="lazy"}
 
-If the winner is only marginally larger than its competitors, the allowed truncation region can begin very close to the observed contrast.
+| True mean | Selected, hard / randomised | Hard threshold: median, 90th | Randomised: median, 90th | Splitting |
+| ---: | :---: | :---: | :---: | ---: |
+| 0 | 2.3% / 7.9% | 14.96, 84.1 | 5.13, 5.31 | 5.54 |
+| 1 | 15.9% / 24.0% | 10.85, 55.1 | 4.96, 5.22 | 5.54 |
+| 2 | 50.0% / 50.0% | 7.51, 30.6 | 4.74, 5.08 | 5.54 |
+| 3 | 84.1% / 76.0% | 5.32, 13.9 | 4.47, 4.87 | 5.54 |
+| 4 | 97.7% / 92.1% | 4.31, 6.6 | 4.22, 4.60 | 5.54 |
 
-Inverting the corresponding conditional pivot can then produce a spectacularly wide interval.
+All three procedures cover 95% given selection; in the simulation behind the randomised column their coverage ranged from 94.4% to 95.5% across the fifteen cells. The randomised interval was never wider than $5.51$ over the whole range of observations, just under the splitting width, which is an instance of a general result: Kivaranovic and Leeb (2020) show that randomised selection and data carving give intervals of bounded length that are never longer than the corresponding split.
 
-That is the multidimensional analogue of observing \(X=2.05\) after requiring \(X>2\).
+None of this is free, and the second column shows where the bill goes. Randomising the selection changes *what gets selected*: under the null it reports more than three times as many false leads, and at $\mu = 4$ it misses 8% of real effects where the hard threshold misses 2%. Splitting pays the same price in a different coin. The choice is between a sharp selection with occasionally useless intervals and a blunter selection with uniformly usable ones, and which is better depends on whether the selection or the interval is the product. Rasines and Young (2023) compare the splitting strategies directly. A third route avoids conditioning altogether: simultaneous inference over every model the search could have chosen (Berk et al., 2013) is valid whatever the selection rule, at the price of intervals that are wider for every result, the clear winners included.
 
-## Why a Narrow Interval Can Be More Suspicious
+## What Software Should Do With This
 
-Suppose we search over many candidate breakpoints, choose the one with the strongest apparent change, and then report an ordinary interval centered at that selected effect.
+An implementation has to keep two things apart that look alike in the output. A numerical failure is a root finder that cannot bracket a solution, a probability that comes back as `NaN`, an interval that changes under a harmless rescaling, or two equivalent formulations that disagree. A statistically uninformative result is a correct interval of $[-3000, 3000]$. The first needs a fix; the second needs to be reported as it is, with its cause.
 
-If the evidence for the break is weak, a narrow interval is not reassuring.
-
-It may be evidence that we ignored the search.
-
-The data were allowed to optimize the estimate first and then the uncertainty calculation pretended the location had been fixed in advance.
-
-The exact selective interval does the opposite.
-
-When the selection was marginal, it becomes wide because it recognizes how little independent information remains after conditioning on the search.
-
-So in that setting:
-
-$$
-\boxed{
-\text{weak selection evidence}
-\Longrightarrow
-\text{wide exact conditional interval}
-}
-$$
-
-is not pathological.
-
-It is the expected behavior.
-
-## A Stress Test From Real Statistical Software Work
-
-In one selective-inference implementation I stress-tested, null data with only 40 observations and unit variance produced the following interval-width distribution over 1000 random draws:
-
-| Summary | Width |
-| --- | ---: |
-| Median | 4.7 |
-| 90th percentile | 23.8 |
-| Maximum | 5817.9 |
-
-Roughly one interval in eight exceeded 20 standard deviations in width.
-
-At first glance, that sounds like a numerical catastrophe.
-
-But the root-finding procedure was stable, the selection event was valid, and the exact conditional pivot was doing what it was supposed to do.
-
-The enormous intervals clustered around weak, marginal selections.
-
-The right software change was therefore not to "fix" the intervals.
-
-It was to document them.
-
-## Numerical Failure and Statistical Uninformativeness Are Different
-
-This distinction matters a lot in statistical software.
-
-A numerical failure might look like:
-
-- root finding does not bracket a solution;
-- probabilities become `NaN`;
-- monotonicity needed for inversion is violated numerically;
-- the interval changes materially under harmless rescaling;
-- equivalent formulations disagree.
-
-A statistically uninformative result can look like:
-
-$$
-[-3000,3000].
-$$
-
-Those are not the same class of event.
-
-A huge finite interval may be mathematically valid.
-
-Software should therefore distinguish
-
-$$
-\boxed{
-\text{computation failed}
-\neq
-\text{inference succeeded but learned almost nothing}.
-}
-$$
-
-## Exact Does Not Mean Informative
-
-The phrase "exact interval" is easy to overinterpret.
-
-Exactness is about calibration under the stated model and conditioning event.
-
-It does not mean the interval will be short.
-
-It does not mean the data contain much information.
-
-It does not mean the selected signal is scientifically convincing.
-
-It does not mean the selection rule was efficient.
-
-An exact method can return a uselessly wide interval because that is the correct representation of the available information.
-
-This is no different in spirit from an ordinary confidence interval becoming wide when the sample is tiny or the noise is large.
-
-Selection simply creates a more dramatic version of the same principle.
-
-## The Width Is Telling You Something
-
-A huge selective interval is not merely an inconvenience.
-
-It is a diagnostic.
-
-It says that the selected estimate owes a substantial part of its apparent extremeness to the selection mechanism itself.
-
-The data do not strongly distinguish
-
-$$
-\text{a genuinely large parameter}
-$$
-
-from
-
-$$
-\text{an ordinary parameter that happened to win the search}.
-$$
-
-That is scientifically meaningful information.
-
-## Do Not Cap the Interval for Presentation
-
-One tempting response is to clip extreme intervals to a visually convenient range.
-
-For example, report
-
-$$
-[-10,10]
-$$
-
-instead of
-
-$$
-[-71.7,2.53].
-$$
-
-That may make the plot readable, but it changes the inferential object.
-
-If visual clipping is unavoidable, it should be explicit:
-
-- preserve the actual interval numerically;
-- mark the plotted boundary as truncated;
-- state the true endpoint in text or a table.
-
-Never silently convert an uninformative interval into a prettier one.
-
-## Do Not Replace It With the Naive Interval Either
-
-Another reaction is to say that the exact method is "too conservative" and report the unadjusted interval instead.
-
-But in the screening example, the naive interval
-
-$$
-[0.09,4.01]
-$$
-
-looks persuasive largely because the reporting rule guaranteed that we would only examine observations above 2.
-
-If we repeatedly use that workflow under a null or weak-signal regime, the nominal 95% interpretation no longer applies to the selected intervals.
-
-The narrowness is purchased by ignoring the data-dependent selection step.
-
-## Selection-Adjusted Inference Has a Different Target
-
-This point is subtle but important.
-
-Conditional selective inference typically targets a parameter after conditioning on the selection event.
-
-The guarantee is therefore conditional:
-
-$$
-P_\mu\{
-\mu\in C(X)
-\mid
-\text{selection event}
-\}
-=1-\alpha
-$$
-
-under the model and exact conditioning scheme.
-
-That is not the same probability statement as an unconditional confidence interval constructed before any selection.
-
-The interval width reflects the information left after the conditioning.
-
-## Why Conditioning Can Feel Wasteful
-
-Conditioning throws away information by design.
-
-That may seem inefficient.
-
-It is.
-
-But the conditioning is also what makes the post-selection probability statement tractable and valid.
-
-There are other approaches to post-selection inference, including data splitting, randomized selection, simultaneous inference, debiasing, selective likelihood methods, and Bayesian formulations.
-
-They make different trade-offs.
-
-The lesson is not that one should always condition as aggressively as possible.
-
-The lesson is that when we **do** claim exact conditional validity, the resulting loss of information is real and should not be hidden.
-
-## A Comparison With Data Splitting
-
-Suppose instead we split the data into two independent parts.
-
-Use the first part for selection.
-
-Use the second part for inference.
-
-Then the inferential sample is independent of the selection event.
-
-The resulting interval may be easier to interpret, but it pays another price: only part of the data is used for estimation.
-
-So there is no free lunch.
-
-Selective conditioning spends information by conditioning.
-
-Data splitting spends information by withholding observations from estimation.
-
-Both are ways of avoiding the naive reuse of the same random fluctuation for selection and inference.
-
-## Report Selection Strength Alongside the Interval
-
-In applications, I like to accompany selective intervals with some measure of how strongly the observation cleared the selection rule.
-
-In the threshold example that could simply be
-
-$$
-x-2.
-$$
-
-In a search problem it might be the gap between the winning statistic and the runner-up, the global search-adjusted p-value, or another diagnostic tied to the selection mechanism.
-
-This helps explain why two selected effects of similar magnitude can have very different post-selection uncertainty.
-
-## Software Should Warn About Interpretation, Not About Correctness
-
-If huge intervals are expected under weak selection, emitting a warning such as
-
-> numerical inversion may have failed
-
-would be misleading.
-
-A better documentation message is conceptual:
-
-> Exact selective intervals can become extremely wide when the selected signal is marginal because conditioning on the selection event leaves little information about the target parameter.
-
-That tells the user what happened without implying a computational error.
-
-## Stress Tests Should Include Weak Selections
-
-If a selective-inference implementation is tested only on strong planted signals, it can look beautifully behaved.
-
-The difficult cases are weak signals and null data.
-
-That is where truncation boundaries approach the observation and confidence intervals become extreme.
-
-A useful stress-test suite should therefore include:
-
-- null data;
-- barely selected cases;
-- strong selected cases;
-- extreme truncation;
-- sign reversals;
-- equivalent parameterizations;
-- numerical tail stability.
-
-The goal is not to make every interval look reasonable.
-
-The goal is to verify that unreasonable-looking intervals are unreasonable for the right statistical reason.
-
-## A Tiny Reproducible Calculation
-
-Here is the core computation in Python.
+The numerical side is mostly one decision. The textbook form of the pivot, $(\Phi(x - \mu) - \Phi(2 - \mu)) / (1 - \Phi(2 - \mu))$, is unusable where the limits actually live: at $\mu = -71.74$ both distribution functions round to 1 and the expression evaluates to `0.0 / 0.0`. The ratio of survival functions in equation $\eqref{eq:cdf}$, computed from their logarithms, is exact there. The bracket for the root also has to be allowed to grow, since a fixed search range silently turns a limit of $-366$ into a failure.
 
 ```python
 import numpy as np
 from scipy.optimize import brentq
 from scipy.stats import norm
 
-
-def selective_cdf(mu, x, threshold=2.0):
-    log_den = norm.logsf(threshold - mu)
-    log_upper = norm.logsf(x - mu)
-    return 1.0 - np.exp(log_upper - log_den)
+THRESHOLD = 2.0
 
 
-def endpoint(target, x, threshold=2.0):
-    f = lambda mu: selective_cdf(mu, x, threshold) - target
-    grid = np.linspace(-100.0, 100.0, 40001)
-
-    left = grid[0]
-    f_left = f(left)
-
-    for right in grid[1:]:
-        f_right = f(right)
-        if f_left * f_right < 0:
-            return brentq(f, left, right)
-        left = right
-        f_left = f_right
-
-    return None
+def conditional_cdf(mu, x, c=THRESHOLD):
+    """P(X <= x | X > c) for X ~ N(mu, 1), from log survival functions."""
+    return -np.expm1(norm.logsf(x - mu) - norm.logsf(c - mu))
 
 
-x = 2.05
-lower = endpoint(0.975, x)
-upper = endpoint(0.025, x)
+def limit(target, x, c=THRESHOLD):
+    """The mean at which the conditional cdf of x equals `target`."""
+    f = lambda mu: conditional_cdf(mu, x, c) - target
+    low, high = x - 1.0, x + 1.0
+    while f(low) < 0:            # the cdf falls as the mean rises
+        low -= 2 * (x - low)
+    while f(high) > 0:
+        high += 2 * (high - x)
+    return brentq(f, low, high, xtol=1e-12)
 
-print(lower, upper)
+
+def selective_interval(x, alpha=0.05):
+    return limit(1 - alpha / 2, x), limit(alpha / 2, x)
+
+
+for x in (2.05, 2.5, 3.0, 3.5):
+    low, high = selective_interval(x)
+    approx = THRESHOLD - np.log(40) / (x - THRESHOLD)
+    print(f"x = {x:4.2f}   [{low:7.2f}, {high:5.2f}]   tail approximation {approx:7.2f}")
 ```
-
-The survival-function formulation matters numerically because direct subtraction of two Gaussian CDF values can lose precision deep in the tail.
-
-The resulting endpoints are approximately
 
 ```text
--71.7390  2.5305
+x = 2.05   [ -71.74,  2.53]   tail approximation  -71.78
+x = 2.50   [  -4.99,  4.31]   tail approximation   -5.38
+x = 3.00   [  -0.93,  4.93]   tail approximation   -1.69
+x = 3.50   [   0.66,  5.46]   tail approximation   -0.46
 ```
 
-The strange answer survives a numerically stable calculation.
+The statistical side is about what is shown to the user. Report the margin of selection next to every interval: the distance above the threshold here, the gap to the runner-up in a search. It explains at a glance why two selected effects of the same size carry such different uncertainty, and with equation $\eqref{eq:limit}$ it predicts the width before it is computed. Do not clip an interval to make a plot readable without marking the clipped end and giving the true limit in a table, because a clipped interval is a different inferential statement. And word the documentation so that it does not suggest an error: a message saying that numerical inversion may have failed is false, while one saying that the selection was marginal, so conditioning on it leaves little information about the parameter, is true and useful.
 
-That is the point.
+Tests should be aimed at the same place. A suite that uses only strong planted signals will pass an implementation whose tails are wrong, because the truncation never comes near the observation. Null data, barely selected cases, extreme truncation on both sides, sign flips and equivalent parameterisations are where the code is exercised, and the assertion to make is not that the intervals look reasonable. It is that coverage holds given selection, and that the unreasonable-looking intervals are the ones with the small margins.
 
-## What the Interval Does Not Mean
+## What the Interval Does and Does Not Say
 
-The interval
+The interval $[-71.7, 2.53]$ does not claim that a mean of $-71$ is a sensible explanation for an observation of 2.05. Unconditionally it is a preposterous one, and any analysis that uses the selection probability, a Bayesian one with a proper prior included, will say so. The interval says something narrower: among the repetitions in which the observation cleared the bar, its position $0.05$ above the bar does not distinguish a mean of $2.5$ from a mean of $-70$. The guarantee is conditional, $P_\mu(\mu \in C(X) \mid X > 2) = 0.95$ for every $\mu$, and the width is the price of holding it for every $\mu$ at once, the implausible ones included.
 
-$$
-[-71.7,2.53]
-$$
+So an exact interval is calibrated, not necessarily informative, and the two should never be confused. When the selected value clears its bar comfortably, conditioning costs almost nothing and the interval is the ordinary one. When it clears by a hair, the width is telling the reader that most of what made the result look interesting was the selection itself. That is uncomfortable, and it is the thing an uncertainty statement is for.
 
-does not mean that \(-71\) is a plausible unconditional explanation for observing \(X=2.05\).
+## References
 
-Unconditionally, it is fantastically implausible.
-
-The interval means that **conditional on already knowing that the observation exceeded 2**, the exact location \(2.05\) provides very little evidence against such negative means.
-
-That conditional statement is narrower and stranger than the unconditional intuition most of us bring to the problem.
-
-## The Broader Lesson
-
-Selection creates apparent evidence.
-
-Sometimes the selected estimate remains compelling after adjusting for that fact.
-
-Sometimes nearly all of the apparent evidence disappears.
-
-When that happens, the confidence interval can become enormous.
-
-The software has not necessarily failed.
-
-The inferential procedure may be telling us something uncomfortable but correct:
-
-$$
-\boxed{
-\text{we found an interesting-looking winner, but after accounting for how it was chosen, we do not know its effect very precisely.}
-}
-
-That is not a defect in uncertainty quantification.
-
-It is exactly what uncertainty quantification is for.
+- Berk, R., Brown, L., Buja, A., Zhang, K., & Zhao, L. (2013). Valid post-selection inference. *The Annals of Statistics*, 41(2), 802-837.
+- Fithian, W., Sun, D. L., & Taylor, J. (2014). Optimal inference after model selection. *arXiv:1410.2597*.
+- Hyun, S., Lin, K. Z., G'Sell, M., & Tibshirani, R. J. (2021). Post-selection inference for changepoint detection algorithms with application to copy number variation data. *Biometrics*, 77(3), 1037-1049.
+- Kivaranovic, D., & Leeb, H. (2020). A (tight) upper bound for the length of confidence intervals with conditional coverage. *arXiv:2007.12448*.
+- Kivaranovic, D., & Leeb, H. (2021). On the length of post-model-selection confidence intervals conditional on polyhedral constraints. *Journal of the American Statistical Association*, 116(534), 845-857.
+- Lee, J. D., Sun, D. L., Sun, Y., & Taylor, J. E. (2016). Exact post-selection inference, with application to the lasso. *The Annals of Statistics*, 44(3), 907-927.
+- Rasines, D. G., & Young, G. A. (2023). Splitting strategies for post-selection inference. *Biometrika*, 110(3), 597-614.
+- Tian, X., & Taylor, J. (2018). Selective inference with a randomized response. *The Annals of Statistics*, 46(2), 679-710.
+- Zhong, H., & Prentice, R. L. (2008). Bias-reduced estimators and confidence intervals for odds ratios in genome-wide association studies. *Biostatistics*, 9(4), 621-634.
