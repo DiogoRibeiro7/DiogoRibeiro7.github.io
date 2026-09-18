@@ -37,6 +37,21 @@ These articles have dated source files under `_posts/`. Each becomes eligible fo
 
 The final three entries begin focused coverage of health technology, public science communication, and economic/financial data. Their seven-part development contracts are preserved in their source files. The wearable article examines denominators and confirmation timing; the science article addresses the claim that microwave cooking makes food radioactive; the economic-data article reconstructs historical information availability from archived GDP releases.
 
+## Science communication archive additions
+
+These six articles were written and source-checked on 18 September 2026. Their earlier dates place two articles in each of the 2024, 2025, and 2026 archives; each article includes a visible note distinguishing its archive date from its preparation date. Because these dates are in the past, the articles are eligible for the normal build as soon as their source files are included in a deployment.
+
+| Archive date | Article | Source |
+| --- | --- | --- |
+| 2024-02-15 | Cold Days Still Belong in a Warming Climate | [Article](../../_posts/science_communication/2024-02-15-cold_days_in_a_warming_climate.md) |
+| 2024-07-11 | Why Summer Follows Earth’s Tilt | [Article](../../_posts/science_communication/2024-07-11-why_summer_follows_earths_tilt.md) |
+| 2025-03-20 | How Antibiotic Resistance Spreads Through Bacteria | [Article](../../_posts/science_communication/2025-03-20-how_antibiotic_resistance_spreads.md) |
+| 2025-10-09 | Randomness Does Not Owe Us a Reversal | [Article](../../_posts/science_communication/2025-10-09-randomness_does_not_owe_a_reversal.md) |
+| 2026-02-12 | Natural Origin Does Not Establish Safety | [Article](../../_posts/science_communication/2026-02-12-natural_origin_does_not_establish_safety.md) |
+| 2026-06-18 | Read the Starting Risk Before the Percentage | [Article](../../_posts/science_communication/2026-06-18-read_the_starting_risk_before_the_percentage.md) |
+
+Each source contains a development contract. The original figures and calculations are reproduced by `assets/viz/generate_science_communication_figures.py`; numerical geometry, hemisphere symmetry, conditional probabilities, and selection behaviour have independent checks in `tests/test_science_communication_figures.py`.
+
 ---
 
 # Priority A — development queue
