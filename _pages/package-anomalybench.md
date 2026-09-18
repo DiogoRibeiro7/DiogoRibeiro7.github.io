@@ -27,7 +27,7 @@ The project targets Python 3.12 only for now; 3.13 is blocked until the runtime 
 
 ## Package Metadata
 
-- **Current release:** `0.6.1`
+- **Current release:** `0.6.2`
 - **Requires Python:** `>=3.12,<3.13`
 - **Status:** alpha
 

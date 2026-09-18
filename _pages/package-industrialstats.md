@@ -27,7 +27,7 @@ pip install industrialstats
 
 ## Package Metadata
 
-- **Current release:** `0.2.0`
+- **Current release:** `0.3.0`
 - **Requires Python:** `>=3.11,<3.15`
 - **License:** MIT
 - **Status:** alpha

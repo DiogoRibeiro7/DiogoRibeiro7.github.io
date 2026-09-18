@@ -13,14 +13,14 @@ header:
   og_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
 seo_type: article
 seo_title: "Open Source Projects and Packages"
-seo_description: "Open-source Python and R packages for survival simulation, heavy-tailed distributions, design of experiments, physics-informed neural networks, QCA, anomaly detection, imbalanced-learning diagnostics and time-series representations."
+seo_description: "Open-source Python packages, Rust crates, R packages and a Ruby gem for survival simulation, heavy-tailed distributions, design of experiments, geostatistics, copulas, probabilistic numerics, physics-informed neural networks, QCA, anomaly detection, imputation and time-series representations."
 ---
 
 ## Open Source Projects & Packages
 
 This page collects software projects that are more useful as technical assets than as generic blog posts: installable packages, documentation, source repositories, examples and research tooling.
 
-The Python projects below are published on PyPI under [DiogoRibeiro7](https://pypi.org/user/DiogoRibeiro7/). They are grouped here by purpose so readers can see what each package is for before jumping into package documentation.
+The Python projects below are published on PyPI under [DiogoRibeiro7](https://pypi.org/user/DiogoRibeiro7/). They are grouped here by purpose so readers can see what each package is for before jumping into package documentation. The [Rust crates](#rust-crates) are on crates.io under [DiogoRibeiro7](https://crates.io/users/DiogoRibeiro7), and the [Ruby gem](#ruby-gems) is on RubyGems under [diogoribeiro7](https://rubygems.org/profiles/diogoribeiro7).
 
 ## PyPI Packages
 
@@ -33,12 +33,15 @@ The Python projects below are published on PyPI under [DiogoRibeiro7](https://py
 | [gen-surv](/packages/gensurvpy/) | 3.1.2 | `pip install gen-surv` | Survival-data simulation with a known truth: twelve models from proportional hazards to multi-state processes. |
 | [pinn-rk](/packages/pinn-rk/) | 0.6.0 | `pip install pinn-rk` | Runge-Kutta physics-informed neural networks with time-discrete losses in PyTorch. |
 | [heavytails](/packages/heavytails/) | 0.6.3 | `pip install heavytails` | Heavy-tailed distributions, tail index estimators and extreme value diagnostics, vectorised over NumPy. |
-| [industrialstats](/packages/industrialstats/) | 0.2.0 | `pip install industrialstats` | Industrial statistics and design of experiments: design generators, ANOVA, diagnostics, power and response surfaces. |
+| [industrialstats](/packages/industrialstats/) | 0.3.0 | `pip install industrialstats` | Industrial statistics and design of experiments: design generators, ANOVA, diagnostics, power and response surfaces. |
+| [pygeostats](/packages/pygeostats/) | 0.1.0a2 | `pip install pygeostats` | Geostatistics with a Rust-accelerated core: variograms, kriging, point patterns and spatial autocorrelation. |
 | [sensor-modeling](/packages/sensor-modeling/) | 0.2.0 | `pip install sensor-modeling` | Interpretable, probabilistic, privacy-preserving analysis of behavioural and ambient sensor data. |
-| [cfad](/packages/cfad/) | 0.2.2 | `pip install cfad` | Characteristic-function detection of distributional-shape changes in financial time series. |
+| [cfad](/packages/cfad/) | 0.2.3 | `pip install cfad` | Characteristic-function detection of distributional-shape changes in financial time series. |
 | [oversampleqa](/packages/oversampleqa/) | 0.8.0 | `pip install oversampleqa` | Validation, audit and benchmarking of oversampling methods for imbalanced classification. |
-| [anomalybench](/packages/anomalybench/) | 0.6.1 | `pip install anomalybench` | Benchmarking suite for anomaly detection algorithms with dataset loaders and a CLI. |
-| [DataExcept](/packages/dataexcept/) | 1.6.0 | `pip install DataExcept` | Structured, hierarchical exception classes for data science and machine learning pipelines. |
+| [anomalybench](/packages/anomalybench/) | 0.6.2 | `pip install anomalybench` | Benchmarking suite for anomaly detection algorithms with dataset loaders and a CLI. |
+| [imputation-methods](/packages/imputation-methods/) | 0.2.0 | `pip install imputation-methods` | A unified pandas API for more than forty missing-data imputation methods. |
+| [subspaceknn](/packages/subspaceknn/) | 0.2.0 | `pip install subspaceknn` | Interpretable k-nearest-neighbour classification by complementary selection of low-dimensional feature subspaces. |
+| [DataExcept](/packages/dataexcept/) | 1.7.0 | `pip install DataExcept` | Structured, hierarchical exception classes for data science and machine learning pipelines. |
 
 ### Scientific Machine Learning
 
@@ -123,6 +126,19 @@ Industrial statistics and design of experiments: reproducible design generators,
 pip install industrialstats
 ```
 
+#### [pygeostats](/packages/pygeostats/)
+
+Geostatistics with a Rust-accelerated core: empirical and directional variograms, model fitting with a fit report, ordinary, simple, universal and anisotropic kriging with prediction variance, point-pattern statistics, spatial autocorrelation and spatial cross-validation, behind a `fit` / `predict` API that accepts NumPy arrays, pandas DataFrames and GeoPandas GeoDataFrames. Alpha pre-release, with its known limitations documented.
+
+- **Project page:** [pygeostats](/packages/pygeostats/)
+- **PyPI:** [pygeostats](https://pypi.org/project/pygeostats/)
+- **Source:** [github.com/DiogoRibeiro7/pygeostats](https://github.com/DiogoRibeiro7/pygeostats)
+- **Requires Python:** `>=3.11`
+
+```bash
+pip install pygeostats
+```
+
 ### Time Series, Signals and Activity Recognition
 
 #### [tscv-vision](/packages/tscv-vision/)
@@ -205,6 +221,32 @@ A benchmarking suite for anomaly detection: detectors, loaders for tabular, imag
 pip install anomalybench
 ```
 
+#### [imputation-methods](/packages/imputation-methods/)
+
+Forty-two missing-data imputation methods behind one pandas API: statistical, donor-based, time-series, nearest-neighbour, regression, iterative, matrix-completion, neural and ensemble imputers. Every imputer takes a numeric `DataFrame` and returns a new one, so swapping mean imputation for KNN, MICE, a Kalman filter or SoftImpute is a one-line change and the evaluation code stays the same.
+
+- **Project page:** [imputation-methods](/packages/imputation-methods/)
+- **PyPI:** [imputation-methods](https://pypi.org/project/imputation-methods/)
+- **Source:** [github.com/DiogoRibeiro7/imputation-methods](https://github.com/DiogoRibeiro7/imputation-methods)
+- **Requires Python:** `>=3.10`
+
+```bash
+pip install imputation-methods
+```
+
+#### [subspaceknn](/packages/subspaceknn/)
+
+Interpretable k-nearest-neighbour classification. A kNN model is fitted on every small subset of features and a small voting ensemble is built by complementary selection, which adds the subspace that most improves the ensemble's out-of-fold predictions rather than the one that scores best alone. Every member lives in one, two or three dimensions, so a prediction is explained by a handful of pictures. A scikit-learn compatible estimator.
+
+- **Project page:** [subspaceknn](/packages/subspaceknn/)
+- **PyPI:** [subspaceknn](https://pypi.org/project/subspaceknn/)
+- **Source:** [github.com/DiogoRibeiro7/subspaceknn](https://github.com/DiogoRibeiro7/subspaceknn)
+- **Requires Python:** `>=3.10`
+
+```bash
+pip install subspaceknn
+```
+
 #### [DataExcept](/packages/dataexcept/)
 
 Structured, hierarchical exception classes for data science, machine learning and data engineering pipelines: over a hundred specific, catchable failure types with context, JSON export against a versioned schema, pickling across process boundaries and logging helpers. The exception layer that `industrialstats` and other packages here standardise on.
@@ -216,6 +258,57 @@ Structured, hierarchical exception classes for data science, machine learning an
 
 ```bash
 pip install DataExcept
+```
+
+## Rust Crates
+
+| Crate | Current release | Install | Purpose |
+| --- | --- | --- | --- |
+| [copula-core](/packages/copula-core/) | 0.2.0 | `cargo add copula-core` | Copula modelling, simulation and dependence analysis. |
+| [uncertain-numerics](/packages/uncertain-numerics/) | 0.1.0 | `cargo add uncertain-numerics` | Probabilistic numerical methods with explicit uncertainty over computational quantities. |
+
+### [copula-core](/packages/copula-core/)
+
+Copula modelling, simulation and dependence analysis: Gaussian, Student-t, Archimedean, Marshall-Olkin and empirical copulas with CDF and PDF evaluation, sampling, tail dependence, rank-based dependence measures, goodness-of-fit statistics and information criteria, checked by property-based tests of the copula axioms. Parameter estimation sits behind the `estimation` feature. Experimental and pre-1.0.
+
+- **Project page:** [copula-core](/packages/copula-core/)
+- **crates.io:** [copula-core](https://crates.io/crates/copula-core)
+- **Documentation:** [docs.rs/copula-core](https://docs.rs/copula-core)
+- **Source:** [github.com/DiogoRibeiro7/copula-core](https://github.com/DiogoRibeiro7/copula-core)
+- **Minimum supported Rust version:** `1.89`
+
+```sh
+cargo add copula-core
+```
+
+### [uncertain-numerics](/packages/uncertain-numerics/)
+
+Probabilistic numerics in Rust. Bayesian quadrature, active Bayesian quadrature and probabilistic linear solvers for dense symmetric positive-definite systems, each returning a validated Gaussian posterior whose variance states how much the computation still does not know. Calibration, misspecification and numerical stability are tested as part of correctness.
+
+- **Project page:** [uncertain-numerics](/packages/uncertain-numerics/)
+- **crates.io:** [uncertain-numerics](https://crates.io/crates/uncertain-numerics)
+- **Documentation:** [docs.rs/uncertain-numerics](https://docs.rs/uncertain-numerics)
+- **Source:** [github.com/DiogoRibeiro7/uncertain-numerics](https://github.com/DiogoRibeiro7/uncertain-numerics)
+- **Minimum supported Rust version:** `1.85`
+
+```sh
+cargo add uncertain-numerics
+```
+
+## Ruby Gems
+
+### [datalog-theme](/packages/datalog-theme/)
+
+The DataLog Jekyll theme for data science and research writing, and the theme this site runs on: research-ready layouts, notebook conversion, MathJax tooling, syntax highlighting for Python, R, SQL and Julia, lazy-loaded visualisations, citation exports and a WCAG 2.1 AA interface.
+
+- **Project page:** [datalog-theme](/packages/datalog-theme/)
+- **RubyGems:** [datalog-theme](https://rubygems.org/gems/datalog-theme)
+- **Source:** [github.com/DiogoRibeiro7/analytics-blog-jekyll](https://github.com/DiogoRibeiro7/analytics-blog-jekyll)
+- **Current release:** `0.9.0`
+- **Requires Ruby:** `>= 3.2`
+
+```ruby
+gem "datalog-theme", "~> 0.9.0"
 ```
 
 ## R Packages
