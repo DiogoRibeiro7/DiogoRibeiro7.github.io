@@ -68,10 +68,10 @@ The question is what a selected observation says about its mean once we admit th
 
 Let $X \sim N(\mu, 1)$, and suppose we report $X$ only when $X > 2$. This is the smallest possible model of a screening step. We look at many candidates, keep the ones that clear a bar, and then want an interval for what we kept. Suppose the observation is $x = 2.05$.
 
-Ignoring the rule, the ordinary interval is $2.05 \pm 1.96$, or $[0.09, 4.01]$. It excludes zero, it is as narrow as any interval for this problem can be, and it is wrong in a specific way: it describes the behaviour of $X$ over all repetitions of the experiment, while we only ever see the repetitions in which $X$ exceeded 2. Over those, the relevant distribution is the normal truncated to $(2, \infty)$. Writing $\bar\Phi = 1 - \Phi$ for the Gaussian survival function, its distribution function is
+Ignoring the rule, the ordinary interval is $2.05 \pm 1.96$, or $[0.09, 4.01]$. It excludes zero, it is as narrow as any interval for this problem can be, and it is wrong in a specific way: it describes the behaviour of $X$ over all repetitions of the experiment, while we only ever see the repetitions in which $X$ exceeded 2. Over those, the relevant distribution is the normal truncated to $(2, \infty)$. Writing $\bar\Phi = 1 - \Phi$ for the Gaussian survival function, its distribution function $F_\mu(x) = P_\mu(X \le x \mid X > 2)$ is, for $x > 2$,
 
 $$
-F_\mu(x) \;=\; P_\mu(X \le x \mid X > 2) \;=\; 1 - \frac{\bar\Phi(x - \mu)}{\bar\Phi(2 - \mu)}, \qquad x > 2.
+F_\mu(x) \;=\; 1 - \frac{\bar\Phi(x - \mu)}{\bar\Phi(2 - \mu)} .
 \label{eq:cdf}
 $$
 
@@ -83,7 +83,7 @@ $$
 
 For $x = 2.05$ they are $\mu_L = -71.74$ and $\mu_U = 2.53$. The table repeats the calculation for observations further above the bar.
 
-| Observed $x$ | Distance above 2 | Ordinary interval | Exact selective interval | Width |
+| Observed $x$ | Above 2 | Ordinary | Exact selective | Width |
 | ---: | ---: | :---: | :---: | ---: |
 | 2.01 | 0.01 | [0.05, 3.97] | [-366.88, -0.17] | 366.7 |
 | 2.05 | 0.05 | [0.09, 4.01] | [-71.74, 2.53] | 74.3 |
@@ -107,30 +107,30 @@ At $\mu = -20$ that is an exponential with mean $0.045$, and $x = 2.05$ sits at 
 
 ![Two panels. Left: the density of an observation given that it exceeded the threshold of 2, for means of 1, minus 5 and minus 20; the more negative the mean, the more the density piles up just above the threshold, so that an observation of 2.05 is typical under all three. Right: width of the exact 95% selective interval against the distance of the observation above the threshold, on logarithmic axes; it follows 3.69 divided by the distance for marginal selections and approaches the ordinary width of 3.92 for clear ones.](/assets/images/figures/selective_interval_runaway.png){: width="1536" height="672" loading="lazy"}
 
-Setting the approximation equal to $1 - \alpha/2$ and solving for the mean gives the lower limit for a threshold $c$ in closed form,
+Setting the approximation equal to $1 - \alpha/2$ and solving for the mean gives the lower limit in closed form, for a threshold $c$ and an observation at distance $d = x - c$ above it,
 
 $$
-\mu_L \;\approx\; c - \frac{\ln(2/\alpha)}{d}, \qquad d = x - c,
+\mu_L \;\approx\; c - \frac{\ln(2/\alpha)}{d},
 \label{eq:limit}
 $$
 
-and $\ln(2/\alpha) = 3.69$ at the 95% level. For $x = 2.05$ this gives $-71.78$ against the exact $-71.74$; for $x = 2.01$, $-366.89$ against $-366.88$; for $x = 2.2$, $-16.44$ against $-16.29$. It degrades as the distance grows, as it should, since the exponential tail is a statement about means far below the threshold. The right panel of the figure shows the exact width following $3.69/d$ over two orders of magnitude before bending towards the ordinary width of $3.92$.
+where $\ln(2/\alpha) = 3.69$ at the 95% level. For $x = 2.05$ this gives $-71.78$ against the exact $-71.74$; for $x = 2.01$, $-366.89$ against $-366.88$; for $x = 2.2$, $-16.44$ against $-16.29$. It degrades as the distance grows, as it should, since the exponential tail is a statement about means far below the threshold. The right panel of the figure shows the exact width following $3.69/d$ over two orders of magnitude before bending towards the ordinary width of $3.92$.
 
 This is the whole phenomenon in one line. The information that would have ruled out $\mu = -72$ is the improbability of crossing the threshold at all, and conditioning on the crossing removes exactly that information from the calculation. What remains is where the observation landed inside the selection region, and a landing $0.05$ above the edge is what almost every mean below the edge predicts.
 
 ## The Expected Width Is Infinite
 
-The width is roughly $3.69/d$ when the distance $d$ is small. How often is it small? Given selection, the density of $X$ at the threshold is the Gaussian hazard $h(2 - \mu) = \phi(2 - \mu) / \bar\Phi(2 - \mu)$, which is strictly positive for every mean. So $d$ has a density that does not vanish at zero, and the width has a tail that decays only as the reciprocal of its argument:
+The width is roughly $3.69/d$ when the distance $d$ is small. How often is it small? Given selection, the density of $X$ at the threshold is the Gaussian hazard $h(2 - \mu) = \phi(2 - \mu) / \bar\Phi(2 - \mu)$, which is strictly positive for every mean. So $d$ has a density that does not vanish at zero, and for large $w$ the width has a tail that decays only as the reciprocal of its argument:
 
 $$
-P_\mu(\text{width} > w \mid X > 2) \;\approx\; \frac{h(2 - \mu)\,\ln(2/\alpha)}{w} \qquad \text{for large } w .
+P_\mu(\text{width} > w \mid X > 2) \;\approx\; \frac{h(2 - \mu)\,\ln(2/\alpha)}{w} .
 $$
 
-A tail of order $1/w$ has no mean. The expected width of the exact interval is infinite, for every value of $\mu$, even though every individual interval is finite. Kivaranovic and Leeb (2021) prove this in general for intervals built by conditioning on polyhedral selection events. Their Proposition 1 states that whenever the truncation region is bounded from above or from below the expected length is infinite, for the reason just given, and that the upper quantiles of the length grow like $1/(1 - \kappa)$ as the level $\kappa$ approaches 1. For the lasso they find the condition met in most of the problems they simulate, the exceptions being models that contain almost all or almost none of the regressors.
+A tail of order $1/w$ has no mean. The expected width of the exact interval is infinite, for every value of $\mu$, even though every individual interval is finite. Kivaranovic and Leeb (2021) prove this in general for intervals built by conditioning on polyhedral selection events. Their Proposition 1 states that whenever the truncation region is bounded from above or from below the expected length is infinite, for the reason just given. They also show that the upper quantiles of the length grow like $1/(1 - \kappa)$ as the level $\kappa$ approaches 1, which is the same $1/w$ tail read the other way round. For the lasso they find the condition met in most of the problems they simulate, the exceptions being models that contain almost all or almost none of the regressors.
 
-Under $\mu = 0$ the hazard at the threshold is $2.37$, so the approximation reads $8.75/w$. The exact quantiles of the width, given selection, bear it out.
+Under $\mu = 0$ the hazard at the threshold is $2.37$, so the approximation reads $8.75/w$. The exact quantiles of the width, given selection, bear it out. The second column is the probability of selection and the last the share of intervals wider than 20.
 
-| True mean | Probability of selection | Median width | 90th percentile | 99th percentile | Wider than 20 |
+| Mean | Selected | Median | 90th | 99th | Over 20 |
 | ---: | ---: | ---: | ---: | ---: | ---: |
 | 0 | 0.023 | 14.96 | 84.1 | 865.9 | 38.8% |
 | 1 | 0.159 | 10.85 | 55.1 | 557.1 | 27.4% |
@@ -144,9 +144,9 @@ I first met this in a stress test of a selective-inference implementation, not i
 
 ## What the Ordinary Interval Gets Wrong
 
-It is tempting to look at $[-71.7, 2.53]$, call the exact method too conservative, and report $[0.09, 4.01]$ instead. The ordinary interval covers $\mu$ when $|X - \mu| \le 1.96$, and given selection the probability of that is easy to write down.
+It is tempting to look at $[-71.7, 2.53]$, call the exact method too conservative, and report $[0.09, 4.01]$ instead. The ordinary interval covers $\mu$ when $\lvert X - \mu \rvert \le 1.96$, and given selection the probability of that is easy to write down. The table gives the coverage of $X \pm 1.96$ among reported observations.
 
-| True mean | Coverage of $X \pm 1.96$, given $X > 2$ |
+| Mean | Coverage, given $X > 2$ |
 | ---: | ---: |
 | 0 or below | 0% |
 | 0.5 | 62.6% |
@@ -181,7 +181,9 @@ a smooth reweighting in place of a hard cut. No value of $x$ sits on an edge, so
 
 ![Median width of three valid 95% intervals for a selected effect, against the true mean from 0 to 4, on a logarithmic axis, each with a band up to its 90th percentile. Conditioning on a hard threshold gives a median of about 15 and a 90th percentile of 84 at a mean of zero, falling to 4.3 at a mean of four. Randomised selection stays between 4.2 and 5.3 throughout, and data splitting is a constant 5.54. The ordinary width of 3.92 is drawn for reference.](/assets/images/figures/selective_width_by_procedure.png){: width="1152" height="672" loading="lazy"}
 
-| True mean | Selected, hard / randomised | Hard threshold: median, 90th | Randomised: median, 90th | Splitting |
+The figure shows the median width of each procedure, given selection, with a band up to its 90th percentile. The table gives the same numbers, together with the share of experiments that each selection rule reports.
+
+| Mean | Selected: hard / rand. | Hard: median, 90th | Randomised: median, 90th | Split |
 | ---: | :---: | :---: | :---: | ---: |
 | 0 | 2.3% / 7.9% | 14.96, 84.1 | 5.13, 5.31 | 5.54 |
 | 1 | 15.9% / 24.0% | 10.85, 55.1 | 4.96, 5.22 | 5.54 |
