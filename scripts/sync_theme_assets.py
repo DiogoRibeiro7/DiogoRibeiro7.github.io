@@ -15,6 +15,11 @@ Use ``--dry-run`` to list what would be copied without writing anything.
 Only theme infrastructure is copied. Data that describes the site itself
 (navigation, social links, author) is owned by this repository and is not
 touched.
+
+The stylesheet entry point, ``assets/css/main.scss``, is the one synced file
+this site also writes in: the theme has no other place for a site's own
+rules. Everything from the ``SITE_STYLES_MARKER`` line to the end of the file
+is kept, and only what comes before it is replaced by the theme's file.
 """
 
 from __future__ import annotations
@@ -42,6 +47,10 @@ SYNC_PATHS: tuple[tuple[str, str], ...] = (
 # not to a published site.
 SKIP_NAMES = {"node_modules", ".DS_Store", "README.md"}
 
+# The site's own rules start at this line of the stylesheet and survive a sync.
+STYLESHEET = "assets/css/main.scss"
+SITE_STYLES_MARKER = "// === Site styles: kept by scripts/sync_theme_assets.py ==="
+
 
 def iter_files(source: Path):
     if source.is_file():
@@ -50,6 +59,18 @@ def iter_files(source: Path):
     for path in sorted(source.rglob("*")):
         if path.is_file() and not (SKIP_NAMES & set(path.relative_to(source).parts)):
             yield path
+
+
+def merged_stylesheet(src_file: Path, dst_file: Path) -> str:
+    """The theme's stylesheet, followed by the site's own rules when it has any."""
+    theme_text = src_file.read_text(encoding="utf-8")
+    if not dst_file.exists():
+        return theme_text
+    site_text = dst_file.read_text(encoding="utf-8")
+    start = site_text.find(SITE_STYLES_MARKER)
+    if start < 0:
+        return theme_text
+    return theme_text.rstrip("\n") + "\n\n" + site_text[start:]
 
 
 def plan(theme: Path = THEME, root: Path = ROOT) -> list[tuple[Path, Path]]:
@@ -62,7 +83,10 @@ def plan(theme: Path = THEME, root: Path = ROOT) -> list[tuple[Path, Path]]:
         destination = root / dst_rel
         for src_file in iter_files(source):
             dst_file = destination / src_file.relative_to(source) if source.is_dir() else destination
-            if dst_file.exists() and filecmp.cmp(src_file, dst_file, shallow=False):
+            if dst_rel == STYLESHEET:
+                if dst_file.exists() and dst_file.read_text(encoding="utf-8") == merged_stylesheet(src_file, dst_file):
+                    continue
+            elif dst_file.exists() and filecmp.cmp(src_file, dst_file, shallow=False):
                 continue
             pairs.append((src_file, dst_file))
     return pairs
@@ -74,7 +98,10 @@ def sync(theme: Path = THEME, root: Path = ROOT, dry_run: bool = False) -> list[
         if dry_run:
             continue
         dst_file.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(src_file, dst_file)
+        if dst_file == root / STYLESHEET:
+            dst_file.write_text(merged_stylesheet(src_file, dst_file), encoding="utf-8")
+        else:
+            shutil.copy2(src_file, dst_file)
     return pairs
 
 
