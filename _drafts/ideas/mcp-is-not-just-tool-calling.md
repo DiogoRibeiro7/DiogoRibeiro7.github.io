@@ -23,7 +23,7 @@ keywords:
 seo_description: A systems view of MCP as a standardized capability boundary for AI applications, with attention to tools, resources, prompts, authorization, observability, transports, and failure modes.
 seo_title: MCP Is Not Just Tool Calling
 seo_type: article
-summary: Why MCP is best understood as a standardized capability boundary: the protocol provides interoperability, while application design still owns authority, policy, observability, failure handling, and safe execution.
+summary: 'Why MCP is best understood as a standardized capability boundary: the protocol provides interoperability, while application design still owns authority, policy, observability, failure handling, and safe execution.'
 tags:
 - AI Engineering
 - MCP

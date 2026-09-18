@@ -23,7 +23,7 @@ keywords:
 - statistical assumptions
 - Python
 seo_description: A corrected guide to Shapiro-Wilk and Anderson-Darling tests, explaining why normality testing should not be reduced to sample-size cutoffs and how to assess whether departures from normality matter.
-seo_title: Shapiro-Wilk vs Anderson-Darling: What Normality Tests Can Tell You
+seo_title: 'Shapiro-Wilk vs Anderson-Darling: What Normality Tests Can Tell You'
 seo_type: article
 summary: Shapiro-Wilk and Anderson-Darling test different aspects of departure from normality, but neither should be selected by a simple small-sample versus large-sample rule. This revision explains what should actually be tested, how power changes with sample size, and why graphical and model-based diagnostics matter.
 tags:
