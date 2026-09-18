@@ -16,3 +16,24 @@ that copies this file to add its own rules keeps these lines.
   $open-science-badges: {% if site.data.academic.badges.size > 0 %}true{% else %}false{% endif %}
 );
 @use "theme";
+
+// === Site styles: kept by scripts/sync_theme_assets.py ===
+// From the line above to the end of the file the rules are this site's own.
+// The sync script replaces only what comes before it with the theme's file.
+
+// A sized image keeps its proportions in a column narrower than itself. The
+// theme caps the width and leaves the height at the attribute's value, so a
+// figure written with width="1152" height="672" came out 672px tall on a phone
+// (DiogoRibeiro7/analytics-blog-jekyll#301).
+.post-content img,
+.page-content img {
+  height: auto;
+}
+
+// The theme makes every <aside> sticky, which pinned the editorial note and
+// the author card over the article as it scrolled. The table of contents sets
+// its own position and is not affected
+// (DiogoRibeiro7/analytics-blog-jekyll#300).
+aside {
+  position: static;
+}
