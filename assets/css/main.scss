@@ -21,12 +21,13 @@ that copies this file to add its own rules keeps these lines.
 // From the line above to the end of the file the rules are this site's own.
 // The sync script replaces only what comes before it with the theme's file.
 
-// A sized image keeps its proportions in a column narrower than itself. The
-// theme caps the width and leaves the height at the attribute's value, so a
-// figure written with width="1152" height="672" came out 672px tall on a phone
-// (DiogoRibeiro7/analytics-blog-jekyll#301).
-.post-content img,
-.page-content img {
+// A sized image keeps its proportions in a box narrower than itself. The theme
+// caps the width and leaves the height at the attribute's value, so a figure
+// written with width="1152" height="672" came out 672px tall on a phone, and
+// the related-post teasers, declared 1600x900, came out 320x900
+// (DiogoRibeiro7/analytics-blog-jekyll#301). Images the theme sizes by class,
+// such as avatars and card media, keep their own height.
+img {
   height: auto;
 }
 
@@ -36,6 +37,37 @@ that copies this file to add its own rules keeps these lines.
 // (DiogoRibeiro7/analytics-blog-jekyll#300).
 aside {
   position: static;
+}
+
+// The author and editorial note closes the article: after the body, before
+// "How to cite". The theme's post layout writes it above the body, and this
+// site cannot replace a layout, so the grid items are reordered. Everything
+// that follows the body is named so that it stays after the note
+// (DiogoRibeiro7/analytics-blog-jekyll#317).
+.post-wrapper > .content-provenance {
+  order: 1;
+}
+
+.post-wrapper > .post-interactive,
+.post-wrapper > .citation-tools,
+.post-wrapper > .author-bio,
+.post-wrapper > .post-related,
+.post-wrapper > .post-pagination {
+  order: 2;
+}
+
+// A display equation is set as in a paper: no card around it. The theme's card
+// was 106px tall around a 16px formula, and an article with forty equations
+// spent a quarter of its height on boxes. The focus ring for keyboard readers
+// comes from the theme's :focus-within rule and is kept
+// (DiogoRibeiro7/analytics-blog-jekyll#318).
+.math-expression {
+  margin: 1.25rem auto;
+  padding: 0.35rem 0.75rem;
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  gap: 0.25rem;
 }
 
 // Keep every published category discoverable from each blog archive page.
