@@ -14,20 +14,27 @@ on:
 
 jobs:
   merge_schedule:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: gr2m/merge-schedule-action@v2
+      # Upstream v2.7.0 still declares node20. Run the same bundled entry point
+      # on Node 24 until upstream publishes an action with a supported runtime.
+      - name: Checkout merge scheduler
+        uses: actions/checkout@v7
         with:
-          # Merge method to use. Possible values are merge, squash or
-          # rebase. Default is merge.
-          merge_method: merge
-          # Time zone to use. Default is UTC.
-          time_zone: 'Europe/London'
-          # Require all pull request statuses to be successful before
-          # merging. Default is `false`.
-          require_statuses_success: 'true'
-          # Label to apply to the pull request if the merge fails. Default is
-          # `automerge-fail`.
-          automerge_fail_label: 'merge-schedule-failed'
+          repository: gr2m/merge-schedule-action
+          ref: a9b6ddcf1282dfd66907bda8e7941dff59f03bad # v2.7.0
+          path: .github/action-sources/merge-schedule
+          persist-credentials: false
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Run merge scheduler
+        run: node .github/action-sources/merge-schedule/dist/index.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_MERGE_METHOD: merge
+          INPUT_TIME_ZONE: Europe/London
+          INPUT_REQUIRE_STATUSES_SUCCESS: 'true'
+          INPUT_AUTOMERGE_FAIL_LABEL: merge-schedule-failed

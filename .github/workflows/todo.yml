@@ -40,7 +40,7 @@ concurrency:
 jobs:
   todos:
     name: Convert TODOs to issues
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     if: ${{ !github.event.repository.fork }}  # don't run on forks
 
@@ -61,16 +61,30 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
-      - name: Run Issue Bot
-        # Pin to the latest release tag instead of @main
-        uses: juulsn/todo-issue@v2.0.0
-        env:
-          # Use the built-in token; no PAT required.
-          # Either works; I prefer github.token so you don't need a secret entry.
-          GITHUB_TOKEN: ${{ github.token }}
+      # Upstream v2.0.0 wraps this .NET application with setup-dotnet@v4
+      # (node20). Keep its source pinned and set up .NET with the current action.
+      - name: Checkout TODO action source
+        uses: actions/checkout@v7
         with:
+          repository: juulsn/todo-issue
+          ref: c27fbdb0a33572f73dbdb683aa8b1382bea8289e # v2.0.0
+          path: .github/action-sources/todo-issue
+          persist-credentials: false
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '9.0.x'
+      - name: Run Issue Bot
+        run: dotnet run --project .github/action-sources/todo-issue/src/TodoIssue.Action/TodoIssue.Action.csproj --configuration Release --no-launch-profile
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          # Preserve the inputs passed by upstream's composite action.
+          INPUT_KEYWORDS: TODO
+          INPUT_LABEL: todo
+          INPUT_AUTOASSIGN: 'false'
+          INPUT_CASESENSITIVE: 'false'
           # Keep the regex tight; add common big folders/build artifacts to skip.
-          excludePattern: >-
+          INPUT_EXCLUDEPATTERN: >-
             ^(
               node_modules/|
               dist/|
@@ -83,9 +97,4 @@ jobs:
               target/|
               vendor/
             )
-          # Optional tweaks (uncomment if you want them)
-          keywords: "TODO"
-          label: "todo"
-          autoAssign: false
-          caseSensitive: false
 
