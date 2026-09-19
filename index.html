@@ -14,42 +14,42 @@ permalink: /
 
 <p>Research, technical articles and open-source software on statistical modelling, machine learning, time series, causal inference, applied AI, data systems and applied mathematics.</p>
 
-<script type="application/ld+json">
+<script type="application/ld+json" nonce="{{ page.csp_nonce }}">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "{{ site.url }}{{ site.baseurl }}/#website",
-      "url": "{{ site.url }}{{ site.baseurl }}/",
-      "name": "{{ site.name }}",
-      "alternateName": "{{ site.author.alternate_name }}"
+      "@id": {{ site.url | append: site.baseurl | append: "/#website" | jsonify }},
+      "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+      "name": {{ site.name | jsonify }},
+      "alternateName": {{ site.author.alternate_name | jsonify }}
     },
     {
       "@type": "Person",
-      "@id": "{{ site.url }}{{ site.baseurl }}/#person",
-      "name": "{{ site.author.name }}",
+      "@id": {{ site.url | append: site.baseurl | append: "/#person" | jsonify }},
+      "name": {{ site.author.name | jsonify }},
       "alternateName": "{{ site.author.alternate_name }}",
-      "url": "{{ site.url }}{{ site.baseurl }}/",
-      "image": "{{ site.author.avatar | absolute_url }}",
+      "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+      "image": {{ site.author.avatar | absolute_url | jsonify }},
       "jobTitle": {{ site.author.roles | jsonify }},
       "sameAs": {{ site.author.same_as | jsonify }},
       "affiliation": {
         "@type": "Organization",
-        "name": "{{ site.author.affiliation }}"
+        "name": {{ site.author.affiliation | jsonify }}
       }
     },
     {
       "@type": "ProfilePage",
-      "@id": "{{ site.url }}{{ site.baseurl }}/#profile",
+      "@id": {{ site.url | append: site.baseurl | append: "/#profile" | jsonify }},
       "url": "{{ site.url }}{{ site.baseurl }}/",
-      "name": "{{ page.seo_title }}",
-      "description": "{{ page.seo_description }}",
+      "name": {{ page.seo_title | jsonify }},
+      "description": {{ page.seo_description | jsonify }},
       "isPartOf": {
-        "@id": "{{ site.url }}{{ site.baseurl }}/#website"
+        "@id": {{ site.url | append: site.baseurl | append: "/#website" | jsonify }}
       },
       "mainEntity": {
-        "@id": "{{ site.url }}{{ site.baseurl }}/#person"
+        "@id": {{ site.url | append: site.baseurl | append: "/#person" | jsonify }}
       }
     }
   ]
