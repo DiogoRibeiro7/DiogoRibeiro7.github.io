@@ -1,14 +1,14 @@
 ---
 layout: page
-title: "Diogo Ribeiro — @DiogoRibeiro7"
-seo_title: "Diogo Ribeiro (DiogoRibeiro7) | Lead Data Scientist & Machine Learning Engineer"
-seo_description: "Diogo Ribeiro (@DiogoRibeiro7), Lead Data Scientist, Machine Learning Engineer and Professor working across statistical ML, time series, causal inference and applied AI."
+title: "Diogo Ribeiro"
+seo_title: "Diogo Ribeiro (DiogoRibeiro7) — Lead Data Scientist & Machine Learning Engineer"
+seo_description: "Diogo Ribeiro (@DiogoRibeiro7) is a Lead Data Scientist, Machine Learning Engineer and Professor working across statistical ML, time series, causal inference and applied AI."
 header:
   overlay_image: /assets/images/data_has_better_idea.jpg
 permalink: /
 ---
 
-<p><strong>Lead Data Scientist · Machine Learning Engineer · Statistical ML, Time Series, Causal Inference &amp; Applied AI · Professor</strong></p>
+<p><strong>Diogo Ribeiro (@DiogoRibeiro7)</strong><br />Lead Data Scientist · Machine Learning Engineer · Statistical ML, Time Series, Causal Inference &amp; Applied AI · Professor</p>
 
 <h2>Statistical ML, Time Series, Causal Inference &amp; Applied AI</h2>
 
@@ -17,23 +17,42 @@ permalink: /
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "mainEntity": {
-    "@type": "Person",
-    "name": "{{ site.author.name }}",
-    "alternateName": "{{ site.author.alternate_name }}",
-    "url": "{{ site.url }}{{ site.baseurl }}/",
-    "jobTitle": {{ site.author.roles | jsonify }},
-    "sameAs": [
-      "https://github.com/{{ site.author.github }}",
-      "https://www.linkedin.com/in/{{ site.author.linkedin }}/",
-      "{{ site.author.orcid }}"
-    ],
-    "affiliation": {
-      "@type": "Organization",
-      "name": "{{ site.author.affiliation }}"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#website",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "name": "{{ site.name }}",
+      "alternateName": "{{ site.author.alternate_name }}"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#person",
+      "name": "{{ site.author.name }}",
+      "alternateName": "{{ site.author.alternate_name }}",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "image": "{{ site.author.avatar | absolute_url }}",
+      "jobTitle": {{ site.author.roles | jsonify }},
+      "sameAs": {{ site.author.same_as | jsonify }},
+      "affiliation": {
+        "@type": "Organization",
+        "name": "{{ site.author.affiliation }}"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#profile",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "name": "{{ page.seo_title }}",
+      "description": "{{ page.seo_description }}",
+      "isPartOf": {
+        "@id": "{{ site.url }}{{ site.baseurl }}/#website"
+      },
+      "mainEntity": {
+        "@id": "{{ site.url }}{{ site.baseurl }}/#person"
+      }
     }
-  }
+  ]
 }
 </script>
 
