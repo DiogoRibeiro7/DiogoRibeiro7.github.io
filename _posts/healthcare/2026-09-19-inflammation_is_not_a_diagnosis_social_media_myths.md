@@ -1,55 +1,49 @@
 ---
 permalink: '/healthcare/inflammation_is_not_a_diagnosis_social_media_myths/'
-title: 'Inflammation Is Not a Diagnosis: What Social Media Gets Wrong About Inflammatory Processes'
-date: '2026-09-19'
+title: 'Inflammation Is Not a Diagnosis'
+date: '2026-09-02'
 categories:
 - Healthcare
 tags:
 - Inflammation
 - Immunology
 - Biomarkers
-- CRP
-- Exercise
 - Nutrition
+- Exercise
 - Science Communication
-- Social Media
 author_profile: false
 classes: wide
-seo_title: 'Inflammation Myths: What Social Media Gets Wrong'
-seo_description: 'A technical but accessible review of acute and chronic inflammation, CRP, cytokines, exercise, anti-inflammatory diets, supplements and the way social media turns a complex immune process into a universal diagnosis.'
+seo_title: 'Inflammation Is Not a Diagnosis: What Social Media Gets Wrong'
+seo_description: 'A critical essay on acute and chronic inflammation, CRP, cytokines, exercise, obesity, diet and the misuse of “inflammation” as a universal explanation online.'
 seo_type: article
 excerpt: >-
-  “Inflammation” has become a universal explanation on social media for fatigue,
-  bloating, obesity, ageing, anxiety, skin problems and chronic disease. The word
-  is biologically real. The way it is often used online is not.
+  “Inflammation” has become a universal explanation online. In biology, however,
+  inflammation is not one scalar quantity. It is a family of context-dependent
+  processes that differ by tissue, trigger, duration and function.
 summary: >-
-  This article explains why inflammation cannot be reduced to one scalar “level”,
-  separates acute from chronic and local from systemic responses, examines CRP
-  and cytokine interpretation, and reviews common online claims about exercise,
-  food, supplements and “anti-inflammatory” lifestyles.
+  This essay explains the difference between acute and chronic inflammation,
+  why biomarkers such as CRP and IL-6 require context, how exercise and adiposity
+  alter inflammatory signalling, and why “anti-inflammatory” foods and supplements
+  are often marketed with more certainty than the evidence allows.
 keywords:
-- inflammation myths
-- chronic inflammation
+- inflammation
 - CRP
-- hs-CRP
 - cytokines
-- IL-6
-- anti-inflammatory diet
-- inflammation supplements
-- health misinformation
+- chronic inflammation
+- exercise inflammation
+- anti inflammatory diet
+- social media health myths
 why_this_exists: >-
-  Social media increasingly treats inflammation as both diagnosis and mechanism
-  for almost every symptom. This article reconstructs the underlying biology and
-  shows where common online interpretations confuse adaptive responses, biomarkers,
-  disease mechanisms and commercial wellness claims.
+  Social media often treats inflammation as a hidden disease that can be inferred
+  from non-specific symptoms and “lowered” with a product. The scientific concept
+  is much more specific and dynamic.
 evidence: >-
-  Immunology reviews, systematic reviews and meta-analyses of exercise, diet and
-  supplements, clinical guidance on CRP, and recent studies of health and nutrition
-  misinformation on social media.
+  Reviews of acute and chronic inflammation, exercise immunology, obesity-related
+  inflammation, dietary patterns, curcumin and recovery interventions.
 methodology: >-
-  Separate biological process, biomarker and clinical outcome. Prefer systematic
-  reviews and randomized evidence for interventions, and distinguish transient
-  physiological inflammatory responses from persistent pathological inflammation.
+  Separate inflammatory mechanism from diagnosis, biomarker from disease, acute
+  adaptive signalling from chronic dysregulation, and short-term biomarker change
+  from meaningful clinical outcome.
 reviewed_at: '2026-09-19'
 header:
   image: /assets/images/headers/photo-microscope.jpg
@@ -61,895 +55,202 @@ header:
   twitter_image: /assets/images/headers/photo-microscope.jpg
 ---
 
-<!--
-Development contract
-Question: What does inflammation actually mean, and which popular social-media claims confuse biomarkers, symptoms, mechanisms and disease?
-Claim: Inflammation is a family of context-dependent biological responses, not a single scalar state or standalone diagnosis. Many social-media claims become misleading by collapsing distinct inflammatory processes into one variable.
-Counterclaim: Chronic low-grade inflammation is clinically important and contributes to many diseases; dismissing all public discussion of inflammation would be equally wrong.
-Evidence object: Immunology reviews on acute inflammation and resolution, chronic-inflammation reviews, CRP guidance, exercise meta-analyses, Mediterranean-diet meta-analyses, curcumin reviews and studies of health misinformation on social media.
-Failure case: Replacing “everything is inflammation” with “inflammation does not matter”.
-Reader payoff: Know what an inflammatory biomarker can and cannot tell you, why temporary inflammation can be beneficial, and how to evaluate “anti-inflammatory” claims online.
-Exclusions: Individual diagnosis, treatment decisions, autoimmune-disease management and medication advice.
--->
+Inflammation has become one of the most overextended words in online health communication. It is invoked to explain fatigue, weight gain, anxiety, acne, poor sleep, cardiovascular disease, gut symptoms, brain fog and ageing. Once the word appears, a corresponding intervention usually follows: an anti-inflammatory diet, a supplement, a fasting protocol, a cold plunge or a list of foods to avoid.
 
-Few words have become as useful to wellness marketing as **inflammation**.
+The appeal is obvious. Inflammation is real, and it is involved in a large number of diseases. But that fact does not make inflammation a universal diagnosis.
 
-On social media, it can explain almost anything:
+The central scientific problem is that *inflammation* does not refer to one scalar variable. It refers to a family of biological processes involving different tissues, immune cells, signalling molecules, triggers and timescales. An acute inflammatory response to infection, an increase in IL-6 during exercise and chronic low-grade inflammatory signalling associated with visceral adiposity are not the same state simply because some molecular mediators overlap.
 
-- fatigue;
-- bloating;
-- poor sleep;
-- abdominal fat;
-- acne;
-- brain fog;
-- anxiety;
-- joint pain;
-- insulin resistance;
-- ageing;
-- cardiovascular disease;
-- cancer.
+The word becomes misleading when those distinctions are removed.
 
-The story usually continues with a cause:
+## Acute inflammation is not inherently harmful
 
-- sugar;
-- seed oils;
-- gluten;
-- cortisol;
-- “toxins”;
-- dairy;
-- stress;
-- carbohydrates.
+Inflammation is part of normal host defence and tissue repair.
 
-And then, conveniently, a solution appears:
+After injury or infection, immune and vascular responses recruit cells and mediators to contain damage, remove pathogens or debris, and initiate repair. Redness, heat, swelling and pain are visible manifestations of this process in some tissues.
 
-- a fasting protocol;
-- a supplement;
-- a restrictive diet;
-- a detox;
-- a cold plunge;
-- a powder;
-- a coaching programme.
+The response is costly and potentially damaging if excessive, but the correct objective is not to suppress every inflammatory signal.
 
-The word is scientifically legitimate.
+This distinction is obvious in clinical medicine. A functioning inflammatory response is essential for wound healing and infection control. Anti-inflammatory drugs can be useful in specific settings precisely because the immune response sometimes becomes excessive or maladaptive, not because inflammation itself is biologically unnecessary.
 
-The model behind many of these claims is not.
+The language of “lowering inflammation” therefore starts with a conceptual error when it treats less signalling as automatically better.
 
-The internet often treats inflammation as if every person had one hidden scalar variable,
+The relevant question is whether the response is appropriate to the trigger, tissue and duration.
 
-$$
-I = \text{inflammation level},
-$$
+## Chronic inflammation is also not one thing
 
-and health improves whenever
+Chronic inflammatory states differ considerably from acute responses.
 
-$$
-I \downarrow.
-$$
+Persistent immune activation can accompany autoimmune disease, chronic infection, smoking, obesity, inflammatory bowel disease, atherosclerosis and many other conditions. The upstream causes and downstream consequences differ across these settings.
 
-That is not how inflammatory biology works.
+The phrase *chronic inflammation* is therefore useful only when the biological context is specified.
 
-A more realistic abstraction would be
+Online health content often replaces that specificity with a vague latent variable: the body is said to be “inflamed”. Non-specific symptoms such as tiredness, bloating or poor concentration are then treated as evidence.
 
-$$
-I
-=
-f(
-\text{tissue},
-\text{stimulus},
-\text{immune cells},
-\text{mediators},
-\text{magnitude},
-\text{duration},
-\text{metabolic state},
-\text{time}
-).
-$$
+That is not a validated diagnostic framework.
 
-The same cytokine can mean different things in different tissues and at different times.
+The same symptom can arise from sleep deprivation, infection, anaemia, endocrine disease, medication, depression, nutritional deficiency or many other causes. Without a defined clinical context, “inflammation” becomes an explanation that is difficult to falsify.
 
-A transient response after exercise is not the same biological state as persistent low-grade inflammation in obesity.
+## Biomarkers need context
 
-An elevated C-reactive protein during an infection is not the same thing as low-grade hs-CRP elevation in cardiovascular risk assessment.
+C-reactive protein is a good example.
 
-Inflammation is not one variable.
+CRP is an acute-phase protein produced largely by the liver in response to inflammatory signalling. It can rise substantially during infection and tissue injury. High-sensitivity CRP can also provide cardiovascular risk information at lower concentrations.
 
-That distinction eliminates much of the confusion.
+Those uses are real.
 
-## Inflammation is a response, not a diagnosis
+But a CRP value does not identify a single cause. It is a non-specific marker.
 
-Inflammation is part of the body's response to infection, injury and tissue stress.
+A high value may prompt investigation. It does not by itself tell us whether the source is infection, autoimmune disease, obesity, tissue injury or another process.
 
-In acute inflammation, immune cells and signalling molecules are recruited to contain damage, eliminate pathogens and initiate repair.
+Cytokines are even more context-dependent. IL-6, TNF-α and related mediators participate in many physiological and pathological pathways. Their meaning depends on source tissue, timing, receptor context and the broader signalling environment.
 
-The classic signs are familiar:
+This is why a social-media claim such as “food X raises IL-6, therefore food X is inflammatory” can be scientifically weak even when the biomarker change is real.
 
-- heat;
-- redness;
-- swelling;
-- pain;
-- loss of function.
+A biomarker is not the disease.
 
-Those signs are easiest to see in local surface inflammation.
+## Exercise exposes the weakness of the simple model
 
-Internal and systemic inflammatory responses can look very different.
+Exercise is one of the clearest counterexamples to the idea that every increase in an inflammatory mediator is harmful.
 
-Most importantly, inflammation is not inherently pathological.
+Skeletal muscle releases IL-6 during exercise, particularly prolonged or glycogen-depleting exercise. The resulting signalling differs from the chronic inflammatory milieu associated with obesity or infection and contributes to metabolic and immune regulation.
 
-A major review in *Nature Reviews Drug Discovery* describes inflammation as a beneficial host-protective process whose **magnitude or duration becomes harmful when dysregulated**.
+Acute strenuous exercise can also transiently increase markers associated with tissue stress and inflammation.
 
-The problem is therefore not
+Yet regular exercise is one of the most consistently beneficial interventions for cardiometabolic health.
 
-$$
-\text{inflammation} > 0.
-$$
+If the rule were simply “higher inflammatory marker equals worse”, exercise physiology would become difficult to interpret.
 
-The problem is closer to
+The better model is dynamic: an acute perturbation can be part of an adaptive process whose long-term effect is beneficial.
 
-$$
-\text{inappropriate stimulus}
-+
-\text{excessive response}
-+
-\text{failed resolution}
-+
-\text{time}.
-$$
+This same principle appears elsewhere in physiology. Heart rate rises during exercise. Glucose rises after food. Cortisol rises after waking. A change from baseline is not automatically pathology.
 
-Source:
+## Obesity and visceral adiposity are different again
 
-- Fullerton & Gilroy, 2016, *Nature Reviews Drug Discovery*: https://www.nature.com/articles/nrd.2016.39
+Adipose tissue is metabolically active and communicates with the immune system.
 
-## Acute and chronic inflammation are not interchangeable
+In obesity, particularly with visceral adiposity and adipose-tissue dysfunction, macrophage infiltration, altered adipokine signalling and increased production of inflammatory mediators can contribute to insulin resistance and cardiovascular risk.
 
-This is the first major error in social-media discussions.
+This is one reason chronic low-grade inflammation is relevant to metabolic disease.
 
-### Acute inflammation
+But even here the causal structure is not adequately described by “inflammation causes obesity” or “obesity is inflammation”.
 
-Acute inflammation can occur over minutes, hours or days.
+Energy balance, adipocyte expansion, genetics, ectopic fat, insulin sensitivity, sleep, physical activity and many other processes interact.
 
-It is often adaptive.
+Inflammation participates in the system. It is not a complete replacement for the system.
 
-Examples include:
+## Diet matters, but “anti-inflammatory food” is an imprecise category
 
-- response to an infection;
-- tissue repair after an injury;
-- immune activation after a vaccine;
-- the response to strenuous exercise.
+Dietary patterns can influence inflammatory biomarkers and long-term disease risk. Diets rich in vegetables, fruits, legumes, whole grains, nuts and unsaturated fats are often associated with more favourable inflammatory profiles than dietary patterns dominated by refined carbohydrates, processed meats and excess energy.
 
-### Chronic inflammation
+The problem begins when this evidence is translated into lists of foods that “cause inflammation” or “fight inflammation” independently of dose, substitution and dietary context.
 
-Chronic inflammation persists.
+A food does not carry one fixed inflammatory value.
 
-It can arise from chronic infection, autoimmune activity, persistent tissue stress, metabolic dysfunction, environmental exposure, ageing and other mechanisms.
+The effect of adding olive oil to a diet depends partly on what it replaces. The effect of reducing refined carbohydrate depends on what takes its place. Weight loss itself can change inflammatory markers, making it difficult to separate a direct food effect from the consequences of altered energy balance and adiposity.
 
-A widely cited *Nature Medicine* review describes systemic chronic inflammation as an important contributor to cardiovascular disease, diabetes, chronic kidney disease, fatty liver disease, some cancers and neurodegenerative disorders.
+This is why dietary-pattern evidence is often more informative than isolated ingredient rhetoric.
 
-That is scientifically meaningful.
+## Curcumin illustrates the supplement problem
 
-But it does **not** imply that all inflammatory activity is harmful.
+Curcumin is frequently marketed as a natural anti-inflammatory compound.
 
-Nor does it imply that every chronic disease is fundamentally the same inflammatory disease.
+There is biological plausibility and a substantial literature showing effects on inflammatory pathways in vitro and in animal models. Human meta-analyses have also reported modest reductions in CRP and some cytokines in selected populations.
 
-Source:
+That evidence is not meaningless.
 
-- Furman et al., 2019, *Nature Medicine*: https://www.nature.com/articles/s41591-019-0675-0
+The difficulty is translation.
 
-A simple classification already reveals why one-dimensional social-media language fails:
+Formulations vary in bioavailability, doses differ, populations are heterogeneous and biomarker changes do not automatically imply clinically meaningful disease modification.
 
-| Process | Typical timescale | Example trigger | Possible function |
-| --- | --- | --- | --- |
-| Acute local inflammation | Minutes to days | Injury | Contain damage and initiate repair |
-| Acute systemic inflammation | Hours to days | Infection | Coordinate host defence |
-| Resolution | Hours to weeks | Following acute response | Clear inflammatory cells and restore homeostasis |
-| Chronic local inflammation | Months to years | Persistent tissue stress | Can become pathological |
-| Chronic systemic low-grade inflammation | Months to years | Metabolic, environmental or age-related factors | Associated with long-term disease risk |
+An intervention can alter CRP without having demonstrated that it prevents myocardial infarction, treats autoimmune disease or reverses a poorly defined state called “systemic inflammation”.
 
-These are related states.
+The problem is therefore not that curcumin has no biological activity. It is that the phrase “anti-inflammatory” is often used as if one biomarker effect established a broad therapeutic claim.
 
-They are not identical states.
+## Cold exposure has the same problem
 
-## Myth 1: all inflammation is bad
+Cold-water immersion can reduce soreness and alter some inflammatory and stress-related responses after exercise. It can also affect adaptation to resistance training when used chronically in certain contexts.
 
-If this were true, the immune system would be badly designed.
+That makes it a legitimate recovery intervention to study.
 
-Acute inflammation helps control infection and initiate repair.
+It does not make “reducing inflammation” an unqualified goal.
 
-After the inflammatory phase, tissues do not simply “turn inflammation off”.
+Post-exercise inflammatory signalling participates in adaptation and tissue remodelling. Blunting parts of that response may reduce soreness while potentially affecting training adaptation.
 
-Resolution is itself an active biological programme.
+Again, the effect depends on the objective.
 
-Immune cells are cleared.
+The same intervention can be useful when rapid recovery between competitions is the priority and less desirable when maximising long-term hypertrophy is the priority.
 
-Pro-inflammatory mediators are metabolised.
+Biology is conditional.
 
-Macrophages change function.
+## The phrase “systemic inflammation” is often doing too much work
 
-Damaged material is removed.
+In research, systemic inflammation usually refers to measurable changes in circulating inflammatory markers within a defined population and clinical context.
 
-Tissue repair proceeds.
+Online, the phrase often functions as an invisible diagnosis.
 
-This matters because **anti-inflammatory** and **pro-resolution** are not the same concept.
+Someone may be told that fatigue, poor sleep, bloating and stubborn weight are signs that the whole body is inflamed.
 
-Suppressing one signalling pathway is not necessarily equivalent to restoring healthy tissue homeostasis.
+The claim sounds specific but is difficult to test because no diagnostic criterion is provided.
 
-The social-media model is
+This is a common pattern in wellness language: a broad biological concept is converted into a syndrome without validated case definition.
 
-$$
-\text{less inflammation}
-=
-\text{better}.
-$$
+The result is a diagnosis that can explain almost any symptom and therefore has very little discriminative value.
 
-The biological model is closer to
+## Mechanism is not diagnosis
 
-$$
-\text{appropriate initiation}
-\rightarrow
-\text{controlled response}
-\rightarrow
-\text{successful resolution}.
-$$
+Many online claims are built from genuine mechanistic observations.
 
-A response that is too weak can fail to control infection.
+A substance activates NF-κB in a cell model. A meal changes a cytokine. A supplement lowers CRP. A stressor changes immune signalling.
 
-A response that is too strong can damage tissue.
+Those findings can be scientifically interesting.
 
-A response that fails to resolve can become chronic.
+They do not automatically establish that a person has an inflammatory disease, that the mechanism dominates their symptoms, or that changing the marker will improve the clinical outcome that matters.
 
-Sources:
+The inferential chain becomes stronger at each step:
 
-- Serhan, Chiang & Van Dyke, 2008, *Nature Reviews Immunology*: https://www.nature.com/articles/nri2294
-- Gilroy, 2021, *Nature Reviews Immunology*: https://www.nature.com/articles/s41577-021-00597-w
+mechanism → biomarker → disease → treatment.
 
-## Myth 2: chronic inflammation is the root cause of every disease
+Evidence is required at every transition.
 
-This statement usually starts from a real observation.
+Skipping those transitions is one of the most common forms of scientific overstatement in online health communication.
 
-Inflammatory pathways participate in many diseases.
+## What the evidence supports
 
-Atherosclerosis involves inflammation.
+Inflammation is essential to normal immunity and repair. Chronic inflammatory signalling contributes to many diseases. Visceral adiposity can promote low-grade inflammatory states. Diet, exercise, sleep, smoking and other behaviours can influence inflammatory biology.
 
-Obesity is associated with low-grade inflammatory signalling.
+None of those facts validates “inflammation” as a universal diagnosis.
 
-Autoimmune diseases involve dysregulated immunity.
+CRP is useful in defined contexts but is non-specific. Cytokine changes require interpretation. Acute exercise can increase inflammatory mediators while improving long-term health. Supplements can modify biomarkers without having demonstrated broad clinical benefit.
 
-Ageing is associated with a phenomenon often called **inflammaging**.
+The scientific question is therefore not “how do I eliminate inflammation?”
 
-Tumours interact with inflammatory cells and cytokines.
+It is: **what process is occurring, in which tissue, in response to what trigger, for how long, and with what clinical consequence?**
 
-But “inflammation is involved” is not equivalent to
+That formulation is less marketable than a detox tea or an anti-inflammatory supplement.
 
-> inflammation is the single root cause.
-
-The direction of causality can vary.
-
-For disease $D$ and inflammation $I$, all of these are possible:
-
-$$
-I \rightarrow D,
-$$
-
-$$
-D \rightarrow I,
-$$
-
-$$
-X \rightarrow I \quad \text{and} \quad X \rightarrow D,
-$$
-
-or
-
-$$
-I \leftrightarrow D.
-$$
-
-For example, adipose-tissue dysfunction can promote inflammatory signalling.
-
-But inflammation can also alter metabolism.
-
-Smoking can independently cause tissue injury and inflammatory activation.
-
-Infection can initiate inflammation.
-
-Cancer can itself generate inflammatory responses.
-
-The causal graph differs by disease.
-
-That is why “inflammation causes everything” is less useful than it sounds.
-
-It replaces many testable mechanisms with one vague word.
-
-Sources:
-
-- Furman et al., 2019: https://www.nature.com/articles/s41591-019-0675-0
-- Franceschi et al., 2018, *Nature Reviews Endocrinology*: https://www.nature.com/articles/s41574-018-0059-4
-
-## Myth 3: fatigue, bloating and brain fog mean that you are inflamed
-
-These symptoms can occur in inflammatory diseases.
-
-They can also occur without them.
-
-Fatigue alone can be associated with:
-
-- sleep deprivation;
-- anaemia;
-- infection;
-- endocrine disorders;
-- medication;
-- psychological stress;
-- depression;
-- overtraining;
-- nutritional deficiencies;
-- many chronic diseases.
-
-Bloating has an equally broad differential.
-
-“Brain fog” is itself an imprecise symptom description rather than a single biological diagnosis.
-
-The inference
-
-$$
-\text{nonspecific symptom}
-\Rightarrow
-\text{systemic inflammation}
-$$
-
-therefore has very poor specificity.
-
-This is a basic diagnostic problem.
-
-If many conditions produce the same symptom, the symptom alone cannot identify one mechanism.
-
-Social media often solves this by creating a circular argument:
-
-> You feel tired because you are inflamed.  
-> How do we know you are inflamed?  
-> Because you feel tired.
-
-That is not a diagnostic test.
-
-## Myth 4: one CRP result tells you how inflamed you are
-
-C-reactive protein is one of the most useful examples of a biomarker being asked to do too much.
-
-CRP is an acute-phase protein produced mainly by the liver.
-
-Its concentration can rise substantially during infection, inflammation and tissue injury.
-
-That makes it clinically useful.
-
-It does not make it a universal inflammation meter.
-
-A high CRP does not tell you by itself:
-
-- where inflammation is occurring;
-- what caused it;
-- whether it is infectious, autoimmune, metabolic or traumatic;
-- whether one specific food produced it;
-- whether a supplement will improve the underlying process.
-
-The high-sensitivity CRP assay, **hs-CRP**, can detect smaller concentrations and has an established role in cardiovascular-risk assessment in selected settings.
-
-That is a specific use.
-
-It does not convert hs-CRP into a diagnostic scan of the immune system.
-
-The Mayo Clinic explicitly notes that hs-CRP does not identify the cause of inflammation and that intense exercise can affect CRP testing.
-
-Sources:
-
-- Mayo Clinic, C-reactive protein test: https://www.mayoclinic.org/tests-procedures/c-reactive-protein-test/about/pac-20385228
-- Pepys-style CRP biology review: https://pubmed.ncbi.nlm.nih.gov/20476927/
-
-## Biomarker does not mean disease
-
-Suppose an intervention changes CRP by
-
-$$
-\Delta \operatorname{CRP} = -0.8\ \text{mg/L}.
-$$
-
-That establishes a biomarker change under the conditions of the study.
-
-It does not automatically establish
-
-$$
-\Delta \text{heart attacks} < 0,
-$$
-
-or
-
-$$
-\Delta \text{mortality} < 0.
-$$
-
-Those are different endpoints.
-
-This distinction is often lost when supplement advertisements say something has been “scientifically proven to reduce inflammation”.
-
-What was actually measured may have been one circulating biomarker over eight weeks.
-
-That result can be scientifically valid and still be much narrower than the marketing sentence.
-
-## Myth 5: IL-6 is inflammatory, therefore an increase in IL-6 is harmful
-
-Cytokines are especially vulnerable to oversimplification.
-
-Interleukin-6, or IL-6, is often labelled a “pro-inflammatory cytokine”.
-
-That description can be useful.
-
-It is not complete.
-
-During exercise, contracting skeletal muscle releases IL-6.
-
-Acute endurance exercise can produce substantial temporary increases in circulating IL-6 and other myokines.
-
-Yet regular exercise is associated with improved cardiometabolic health and, in many populations, lower long-term inflammatory burden.
-
-A 2026 systematic review and meta-analysis of acute endurance exercise found increases in several myokines including IL-6, IL-10 and IL-1 receptor antagonist.
-
-A 2023 meta-analysis of randomized exercise trials in healthy people found modest long-term reductions in IL-6, CRP and TNF-alpha.
-
-Therefore:
-
-$$
-\text{IL-6} \uparrow
-$$
-
-does not have a fixed interpretation independent of
-
-$$
-\text{source}
-+
-\text{timing}
-+
-\text{duration}
-+
-\text{physiological context}.
-$$
-
-An acute exercise response and persistent cytokine elevation in chronic disease are not the same experiment.
-
-Sources:
-
-- Acute exercise myokine meta-analysis, 2026: https://pubmed.ncbi.nlm.nih.gov/41661185/
-- Long-term exercise meta-analysis, 2023: https://pubmed.ncbi.nlm.nih.gov/37720640/
-
-## Exercise is a useful counterexample to internet inflammation logic
-
-Exercise creates a particularly revealing paradox.
-
-A hard training session can temporarily increase:
-
-- cytokines;
-- muscle damage markers;
-- local immune activity;
-- oxidative stress.
-
-If every acute inflammatory signal were harmful, exercise should be pathological.
-
-Instead, repeated exercise produces adaptation.
-
-Recent evidence is not perfectly uniform across populations, but the overall direction in chronic disease is generally anti-inflammatory.
-
-A 2026 umbrella review incorporating 61 meta-analyses found that exercise affected many inflammatory markers, although the certainty of evidence was often low or very low and effects differed across populations.
-
-That qualification is important.
-
-The correct statement is not
-
-> exercise lowers every inflammatory marker in everyone.
-
-It is
-
-> transient inflammatory signalling can be part of a process that produces long-term beneficial adaptation.
-
-That is almost the opposite of the social-media rule that every biomarker spike should be suppressed.
-
-Source:
-
-- 2026 umbrella review of exercise and inflammatory biomarkers: https://pubmed.ncbi.nlm.nih.gov/42713168/
-
-## Myth 6: foods can be divided cleanly into inflammatory and anti-inflammatory categories
-
-This is one of the most commercially useful simplifications.
-
-Lists appear everywhere:
-
-**Inflammatory**
-- sugar;
-- dairy;
-- gluten;
-- seed oils;
-- red meat;
-- carbohydrates.
-
-**Anti-inflammatory**
-- berries;
-- turmeric;
-- olive oil;
-- green tea;
-- ginger.
-
-The problem is not that food has no effect on inflammatory biology.
-
-It does.
-
-The problem is the binary classification.
-
-Dietary effects depend on:
-
-- dose;
-- energy balance;
-- replacement food;
-- food matrix;
-- baseline health;
-- adiposity;
-- microbiome;
-- overall dietary pattern;
-- duration.
-
-A Mediterranean-style dietary pattern is one of the better studied examples.
-
-A 2026 systematic review and meta-analysis of 33 randomized trials found reductions in hs-CRP, IL-6 and IL-17 compared with control diets.
-
-But there were no significant effects for several other markers, including total CRP and TNF-alpha, and effects varied across subgroups.
-
-That is what real nutritional evidence often looks like:
-
-some markers change;
-
-others do not;
-
-heterogeneity is substantial;
-
-clinical meaning requires separate evaluation.
-
-Source:
-
-- Keshani et al., 2026, Mediterranean diet meta-analysis: https://pubmed.ncbi.nlm.nih.gov/41211687/
-
-An umbrella review of dietary patterns reached a similarly cautious conclusion: Mediterranean, vegetarian/vegan and energy-restricted diets showed potential reductions in CRP, but the overall quality of evidence was weak.
-
-Source:
-
-- Dietary-pattern umbrella review, 2024: https://pubmed.ncbi.nlm.nih.gov/39364652/
-
-“Anti-inflammatory food” is therefore not a useless phrase.
-
-It is simply much less precise than social media makes it sound.
-
-## Myth 7: if a supplement lowers an inflammatory biomarker, it prevents inflammatory disease
-
-Turmeric and curcumin are a good case study because the evidence is more interesting than either camp often admits.
-
-Meta-analyses of randomized trials suggest that curcumin supplementation can reduce CRP, hs-CRP, IL-6 and TNF-alpha in some populations.
-
-A large 2024 systematic review and meta-analysis of 103 randomized trials rated evidence for CRP reduction relatively highly compared with many other reported outcomes.
-
-So the claim
-
-> curcumin can influence some inflammatory biomarkers
-
-has evidence behind it.
-
-But that does not establish the much broader statement
-
-> curcumin prevents the chronic diseases associated with inflammation.
-
-The inferential chain would require evidence for each arrow:
-
-$$
-\text{curcumin}
-\rightarrow
-\text{biomarker change}
-\rightarrow
-\text{disease modification}
-\rightarrow
-\text{better clinical outcomes}.
-$$
-
-Evidence for the first arrow cannot be silently reused as evidence for the last.
-
-That is where supplement marketing often outruns the trial.
-
-Sources:
-
-- Curcumin meta-analysis, 2024: https://pubmed.ncbi.nlm.nih.gov/39478418/
-- Meta-analysis of inflammatory biomarkers, 2024: https://pubmed.ncbi.nlm.nih.gov/38945354/
-
-## Myth 8: the goal should be to suppress inflammation as much as possible
-
-This claim sounds reasonable only if inflammation is assumed to be a toxin.
-
-It is not.
-
-Inflammation is part of host defence, adaptation and tissue repair.
-
-The clinically meaningful goal is therefore not to minimise inflammatory signalling globally.
-
-It is to correct **pathological dysregulation**.
-
-That difference matters.
-
-Consider two optimization problems.
-
-The social-media objective is
-
-$$
-\min I.
-$$
-
-The biological problem is closer to
-
-$$
-\min
-\left(
-\text{host damage}
-+
-\text{pathogen burden}
-+
-\text{failed repair}
-+
-\text{chronic dysregulation}
-\right).
-$$
-
-Those are not the same objective function.
-
-Sometimes reducing a specific inflammatory pathway is therapeutically useful.
-
-Sometimes immune suppression creates risk.
-
-Sometimes promoting resolution rather than merely suppressing initiation may be biologically preferable.
-
-The correct target depends on the disease and mechanism.
-
-That is why “anti-inflammatory” is not automatically synonymous with “healthy”.
-
-## Low-grade chronic inflammation is real
-
-The fact that social media abuses the concept does not make the underlying phenomenon fictional.
-
-Persistent low-grade systemic inflammation is associated with:
-
-- ageing;
-- central adiposity;
-- smoking;
-- physical inactivity;
-- metabolic disease;
-- some chronic infections;
-- environmental exposures;
-- psychological stress.
-
-Age-related chronic low-grade inflammation is sufficiently well described to have generated the research term **inflammaging**.
-
-Metabolic inflammation is sometimes called **metaflammation**.
-
-These concepts refer to measurable biology.
-
-They are not consumer diagnoses.
-
-There is no accepted home test that compresses the entire immune state into one number called “your inflammation score”.
-
-That distinction is important because one review of low-grade inflammation and nutrition noted a central methodological problem: combinations of inflammatory biomarkers with clearly established clinical relevance remain difficult to define because inflammatory responses are nonspecific and overlap with normal physiology.
-
-Source:
-
-- Calder et al., low-grade inflammation and diet: https://pubmed.ncbi.nlm.nih.gov/26228057/
-
-## Why “inflammation” works so well on social media
-
-It has several properties that make it almost perfect for wellness content.
-
-### It is invisible
-
-Most chronic low-grade inflammation cannot be seen.
-
-That makes it difficult for the audience to falsify.
-
-### It is nonspecific
-
-Almost any symptom can be attributed to it.
-
-### It is scientifically real
-
-Terms such as CRP, cytokines, TNF-alpha, IL-6, NF-kappaB and oxidative stress give the explanation technical credibility.
-
-### It links easily to products
-
-Once the problem is invisible and universal, almost anything can be marketed as anti-inflammatory.
-
-### It allows circular explanations
-
-If the intervention helps, inflammation was reduced.
-
-If it does not help, the person is said to be too inflamed, exposed to another inflammatory trigger, or not following the protocol strictly enough.
-
-That structure makes the claim resistant to disconfirmation.
-
-## Social-media quality is not a theoretical concern
-
-Recent empirical research supports the concern.
-
-A study examining 676 nutrition-related Instagram posts from 47 influential Australian accounts found that only 6.1% were rated good quality and none were rated excellent. Almost 45% contained inaccuracies.
-
-Supplement-related posts performed particularly poorly.
-
-Follower counts and account verification did not predict accuracy.
-
-Source:
-
-- *#Fail: the quality and accuracy of nutrition-related information by influential Australian Instagram accounts*: https://pubmed.ncbi.nlm.nih.gov/38355567/
-
-A 2024 study of 105 supplements promoted by German Instagram influencers found frequent high-dose products, discount codes and broad efficacy claims, while information on adverse effects, contraindications and overdose risks was often missing.
-
-Source:
-
-- Supplement misinformation on Instagram: https://pubmed.ncbi.nlm.nih.gov/39585397/
-
-A 2025 systematic review of wellness misinformation concluded that influencer behaviour and algorithmic amplification help spread unverified health claims across social platforms.
-
-Source:
-
-- Wellness misinformation systematic review: https://pubmed.ncbi.nlm.nih.gov/40931776/
-
-The problem is therefore not merely that one can find silly posts online.
-
-The communication environment systematically rewards certainty, simplicity and engagement.
-
-Inflammation provides all three.
-
-## A better way to read an inflammation claim
-
-When a post says something “causes inflammation”, ask:
-
-### 1. What inflammatory process?
-
-Local or systemic?
-
-Acute or chronic?
-
-Infectious, metabolic, autoimmune or injury related?
-
-### 2. What was measured?
-
-CRP?
-
-hs-CRP?
-
-IL-6?
-
-TNF-alpha?
-
-Histology?
-
-Clinical symptoms?
-
-### 3. When was it measured?
-
-Thirty minutes after exercise and six months after an intervention are completely different questions.
-
-### 4. In whom?
-
-Healthy adults?
-
-People with obesity?
-
-Older adults?
-
-Patients with autoimmune disease?
-
-### 5. What is the effect size?
-
-A statistically significant biomarker change can be biologically small.
-
-### 6. Is there a clinical outcome?
-
-Did the intervention reduce disease events, symptoms or mortality, or only alter a laboratory measurement?
-
-### 7. What is being sold?
-
-A commercial relationship does not make a claim false.
-
-It does raise the value of transparent evidence and careful language.
-
-## The hierarchy matters
-
-A useful evidence hierarchy is:
-
-| Claim | Evidence needed |
-| --- | --- |
-| “This activates an inflammatory pathway in cells” | Mechanistic experiment |
-| “This raises CRP in humans” | Human intervention or strong observational evidence |
-| “This causes chronic systemic inflammation” | Repeated human evidence with appropriate controls |
-| “This increases disease risk through inflammation” | Causal evidence linking exposure, mediator and outcome |
-| “This supplement prevents inflammatory disease” | Randomized clinical outcomes, not biomarker change alone |
-
-Social-media arguments often begin at row one and announce row five.
-
-That is the central error.
-
-## Conclusion
-
-Inflammation is not a scam.
-
-It is also not a universal diagnosis.
-
-It is a family of tightly regulated biological responses whose meaning depends on location, stimulus, intensity and time.
-
-Acute inflammation can protect us.
-
-Resolution is an active part of healing.
-
-Chronic dysregulated inflammation can contribute to serious disease.
-
-CRP can be clinically useful without being a map of the immune system.
-
-IL-6 can be associated with chronic pathology and still rise transiently during beneficial exercise.
-
-A Mediterranean diet can alter some inflammatory biomarkers without every food needing to be classified as inflammatory or anti-inflammatory.
-
-Curcumin can reduce certain biomarkers without that proving prevention of every disease linked to inflammation.
-
-The recurring social-media mistake is to remove context:
-
-$$
-\text{biological process}
--
-\text{context}
-=
-\text{wellness slogan}.
-$$
-
-Once that happens, “inflammation” stops being an explanation.
-
-It becomes a word into which almost any explanation can be inserted.
+It is also much closer to how immunology actually works.
 
 ---
 
 ## References
 
-1. Fullerton JN, Gilroy DW. **Resolution of inflammation: a new therapeutic frontier.** *Nature Reviews Drug Discovery*. 2016;15:551–567. https://www.nature.com/articles/nrd.2016.39
+1. Furman D, Campisi J, Verdin E, et al. **Chronic inflammation in the etiology of disease across the life span.** *Nature Medicine*. 2019;25:1822–1832. https://doi.org/10.1038/s41591-019-0675-0
 
-2. Furman D, Campisi J, Verdin E, et al. **Chronic inflammation in the etiology of disease across the life span.** *Nature Medicine*. 2019;25:1822–1832. https://www.nature.com/articles/s41591-019-0675-0
+2. Medzhitov R. **Origin and physiological roles of inflammation.** *Nature*. 2008;454:428–435. https://doi.org/10.1038/nature07201
 
-3. Serhan CN, Chiang N, Van Dyke TE. **Resolving inflammation: dual anti-inflammatory and pro-resolution lipid mediators.** *Nature Reviews Immunology*. 2008;8:349–361. https://www.nature.com/articles/nri2294
+3. Pedersen BK, Febbraio MA. **Muscles, exercise and obesity: skeletal muscle as a secretory organ.** *Nature Reviews Endocrinology*. 2012;8:457–465. https://doi.org/10.1038/nrendo.2012.49
 
-4. Gilroy DW. **Resolving inflammation.** *Nature Reviews Immunology*. 2021;21:620–621. https://www.nature.com/articles/s41577-021-00597-w
+4. Gleeson M, Bishop NC, Stensel DJ, et al. **The anti-inflammatory effects of exercise: mechanisms and implications for the prevention and treatment of disease.** *Nature Reviews Immunology*. 2011;11:607–615. https://doi.org/10.1038/nri3041
 
-5. Franceschi C, Garagnani P, Parini P, Giuliani C, Santoro A. **Inflammaging: a new immune–metabolic viewpoint for age-related diseases.** *Nature Reviews Endocrinology*. 2018;14:576–590. https://www.nature.com/articles/s41574-018-0059-4
+5. Hotamisligil GS. **Inflammation and metabolic disorders.** *Nature*. 2006;444:860–867. https://doi.org/10.1038/nature05485
 
-6. Mayo Clinic. **C-reactive protein test.** https://www.mayoclinic.org/tests-procedures/c-reactive-protein-test/about/pac-20385228
+6. Calder PC, Ahluwalia N, Brouns F, et al. **Dietary factors and low-grade inflammation in relation to overweight and obesity.** *British Journal of Nutrition*. 2011;106(S3):S5–S78. https://doi.org/10.1017/S0007114511005460
 
-7. Du Clos TW. **C-reactive protein at the interface between innate immunity and inflammation.** 2010. https://pubmed.ncbi.nlm.nih.gov/20476927/
+7. Sahebkar A. **Are curcuminoids effective C-reactive protein-lowering agents in clinical practice? Evidence from a meta-analysis.** *Phytotherapy Research*. 2014;28:633–642. https://doi.org/10.1002/ptr.5045
 
-8. Pedersen BK. **The role of IL-6 in mediating the anti-inflammatory effects of exercise.** 2007. https://pubmed.ncbi.nlm.nih.gov/17242490/
-
-9. **Circulating Myokine Responses to Acute Endurance Exercise and Their Role in Immunoregulation: A Systematic Review and Meta-Analysis.** 2026. https://pubmed.ncbi.nlm.nih.gov/41661185/
-
-10. Zheng G, et al. **Long-term exercise training and inflammatory biomarkers in healthy subjects: a meta-analysis of randomized controlled trials.** 2023. https://pubmed.ncbi.nlm.nih.gov/37720640/
-
-11. **The impact of exercise on inflammatory biomarkers: an umbrella review of systematic reviews and meta-analyses.** 2026. https://pubmed.ncbi.nlm.nih.gov/42713168/
-
-12. Keshani M, et al. **Mediterranean Diet Reduces Inflammation in Adults: A Systematic Review and Meta-analysis of Randomized Controlled Trials.** *Nutrition Reviews*. 2026;84:1776–1790. https://pubmed.ncbi.nlm.nih.gov/41211687/
-
-13. **Evaluating the effects of dietary patterns on circulating C-reactive protein levels in the general adult population: an umbrella review.** 2024. https://pubmed.ncbi.nlm.nih.gov/39364652/
-
-14. Calder PC, et al. **Low-grade inflammation, diet composition and health: current research evidence and its translation.** 2015. https://pubmed.ncbi.nlm.nih.gov/26228057/
-
-15. **Curcumin on Human Health: A Comprehensive Systematic Review and Meta-Analysis of 103 Randomized Controlled Trials.** 2024. https://pubmed.ncbi.nlm.nih.gov/39478418/
-
-16. **The effects of curcumin supplementation on biomarkers of inflammation, oxidative stress, and endothelial function: a meta-analysis of meta-analyses.** 2024. https://pubmed.ncbi.nlm.nih.gov/38945354/
-
-17. **#Fail: the quality and accuracy of nutrition-related information by influential Australian Instagram accounts.** 2024. https://pubmed.ncbi.nlm.nih.gov/38355567/
-
-18. **Disinformation on dietary supplements by German influencers on Instagram.** 2024. https://pubmed.ncbi.nlm.nih.gov/39585397/
-
-19. **Wellness Misinformation on Social Media: A Systematic Review Using Social Cognitive Theory.** 2025. https://pubmed.ncbi.nlm.nih.gov/40931776/
+8. Roberts LA, Raastad T, Markworth JF, et al. **Post-exercise cold water immersion attenuates acute anabolic signalling and long-term adaptations in muscle to strength training.** *Journal of Physiology*. 2015;593:4285–4301. https://doi.org/10.1113/JP270570
 
 ---
 
-*This article discusses population-level biology and evidence interpretation. It is not intended to diagnose an inflammatory, autoimmune or infectious condition in an individual.*
+*This article discusses inflammatory biology and population-level evidence. It is not intended to diagnose inflammatory, autoimmune or infectious disease.*
