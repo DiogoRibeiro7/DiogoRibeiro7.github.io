@@ -80,6 +80,7 @@ timezone: Europe/Lisbon
 
 include:
   - _pages
+  - packages/gensurvpy/_sources
 exclude:
   - vendor
   - node_modules
