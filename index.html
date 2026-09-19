@@ -1,16 +1,41 @@
 ---
 layout: page
-title: "Diogo Ribeiro"
-seo_title: "Statistics, Machine Learning and Applied Mathematics"
-seo_description: "Research, technical articles and open-source software on statistical modelling, machine learning, time series, data systems and applied mathematics."
+title: "Diogo Ribeiro — @DiogoRibeiro7"
+seo_title: "Diogo Ribeiro (DiogoRibeiro7) | Mathematics, Data Science & AI Engineering"
+seo_description: "Diogo Ribeiro (@DiogoRibeiro7), mathematician, data scientist, AI engineer and researcher writing about statistics, machine learning, AI systems and applied mathematics."
 header:
   overlay_image: /assets/images/data_has_better_idea.jpg
 permalink: /
 ---
 
-<h2>Statistics, Machine Learning &amp; Applied Mathematics</h2>
+<p><strong>Mathematician · Data Scientist · AI Engineer · Researcher</strong></p>
 
-<p>Research, technical articles and open-source software on statistical modelling, machine learning, time series, data systems and applied mathematics.</p>
+<h2>Statistics, Machine Learning, AI Engineering &amp; Applied Mathematics</h2>
+
+<p>Research, technical articles and open-source software on statistical modelling, machine learning, AI engineering, time series, data systems and applied mathematics.</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "alternateName": "{{ site.author.alternate_name }}",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "jobTitle": {{ site.author.roles | jsonify }},
+    "sameAs": [
+      "https://github.com/{{ site.author.github }}",
+      "https://www.linkedin.com/in/{{ site.author.linkedin }}/",
+      "{{ site.author.orcid }}"
+    ],
+    "affiliation": {
+      "@type": "Organization",
+      "name": "{{ site.author.affiliation }}"
+    }
+  }
+}
+</script>
 
 <p>I write for practitioners who need more than a generic tutorial: assumptions, diagnostics, equations, code, failure modes, and the judgment required to use methods responsibly.</p>
 
