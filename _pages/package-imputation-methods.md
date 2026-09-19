@@ -22,7 +22,7 @@ The optional `viz` extra adds matplotlib and seaborn for the example notebooks a
 ## Project Links
 
 - **PyPI:** [imputation-methods](https://pypi.org/project/imputation-methods/)
-- **Documentation:** [diogoribeiro7.github.io/imputation-methods](https://diogoribeiro7.github.io/imputation-methods/)
+- **Documentation:** [repository documentation](https://github.com/DiogoRibeiro7/imputation-methods/tree/main/docs)
 - **Source:** [github.com/DiogoRibeiro7/imputation-methods](https://github.com/DiogoRibeiro7/imputation-methods)
 - **Issues:** [github.com/DiogoRibeiro7/imputation-methods/issues](https://github.com/DiogoRibeiro7/imputation-methods/issues)
 - **Changelog:** [CHANGELOG.md](https://github.com/DiogoRibeiro7/imputation-methods/blob/main/CHANGELOG.md)
