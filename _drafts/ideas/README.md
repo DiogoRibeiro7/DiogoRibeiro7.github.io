@@ -29,6 +29,11 @@ These articles exist as complete drafts. Their review status is recorded individ
 | Data Drift Is Not Model Drift | [data-drift-is-not-model-drift.md](data-drift-is-not-model-drift.md) | full draft | technical review / align with unlabeled-monitoring article |
 | Retraining Is a Decision Problem, Not a Cron Job | [retraining-is-a-decision-problem-not-a-cron-job.md](retraining-is-a-decision-problem-not-a-cron-job.md) | full draft | technical review / add decision-cost example |
 | Predictive Maintenance Is a Decision Problem, Not a Failure Classifier | [predictive-maintenance-is-a-decision-problem-not-a-failure-classifier.md](predictive-maintenance-is-a-decision-problem-not-a-failure-classifier.md) | full draft | technical review / add maintenance-cost figure |
+| State-Space Models Are a Language for Uncertainty, Not Just Forecasting | [state-space-models-are-a-language-for-uncertainty.md](state-space-models-are-a-language-for-uncertainty.md) | full draft | technical review / add filtering-smoothing figure |
+| Do Not Rewrite a Numerical Kernel Until You Understand the Boundary | [do-not-rewrite-a-numerical-kernel-until-you-understand-the-boundary.md](do-not-rewrite-a-numerical-kernel-until-you-understand-the-boundary.md) | full draft | technical review / add benchmark |
+| Passive Sensing Is a Measurement Model Before It Is a Prediction Model | [passive-sensing-is-a-measurement-model-before-it-is-a-prediction-model.md](passive-sensing-is-a-measurement-model-before-it-is-a-prediction-model.md) | full draft | technical review / add sensing geometry example |
+| Frailty Is Not a Label Waiting to Be Predicted | [frailty-is-not-a-label-waiting-to-be-predicted.md](frailty-is-not-a-label-waiting-to-be-predicted.md) | full draft | technical review / add definition-disagreement example |
+| Survival Analysis Belongs in More ML Systems Than We Admit | [survival-analysis-belongs-in-more-ml-systems-than-we-admit.md](survival-analysis-belongs-in-more-ml-systems-than-we-admit.md) | full draft | technical review / add censoring example |
 
 ## Category and coverage review — 19 September 2026
 
@@ -173,7 +178,7 @@ rather than a property of a study in isolation.
 
 ### A8. State-space models are a language for uncertainty, not just forecasting
 
-**State:** seed  
+**State:** [full draft](state-space-models-are-a-language-for-uncertainty.md) — technical review pending  
 **Core question:** Why are latent-state models useful even when the main goal is not prediction?  
 **Thesis:** state-space formulation separates latent dynamics, observation noise, missingness, and updating in a way that makes assumptions auditable.  
 **Development requirements:** simple local-level model; Kalman recursion; contrast with smoothing/interpolation and black-box sequence models.  
@@ -226,7 +231,7 @@ rather than a property of a study in isolation.
 
 ### A14. Do not rewrite a numerical kernel until you understand the boundary
 
-**State:** seed  
+**State:** [full draft](do-not-rewrite-a-numerical-kernel-until-you-understand-the-boundary.md) — technical review pending  
 **Core question:** When is Python–Fortran/C interoperability better than a rewrite?  
 **Thesis:** language boundaries should be chosen around stable computational kernels; performance is often dominated by algorithms, memory movement, and vectorized library calls rather than source-language identity.  
 **Development requirements:** small benchmark; FFI/f2py/ISO_C_BINDING concepts; maintenance and reproducibility trade-offs.
@@ -255,9 +260,13 @@ When should a health-monitoring system learn an individual’s normal state rath
 
 ### B2. Passive sensing is a measurement model before it is a prediction model
 
+**State:** [full draft](passive-sensing-is-a-measurement-model-before-it-is-a-prediction-model.md) — technical review pending
+
 Use RSSI, wearables, or smart-home sensing to show that sensor geometry, missingness, calibration, and observation noise determine what can be inferred before ML enters the picture.
 
 ### B3. Frailty is not a label waiting to be predicted
+
+**State:** [full draft](frailty-is-not-a-label-waiting-to-be-predicted.md) — technical review pending
 
 Examine competing operational definitions of frailty and the consequences of turning a multidimensional clinical construct into a binary ML target.
 
@@ -266,6 +275,8 @@ Examine competing operational definitions of frailty and the consequences of tur
 Frame privacy as an information-design problem: what minimum signals are sufficient for useful inference without reconstructing unnecessarily detailed behavior?
 
 ### B5. Survival analysis belongs in more ML systems than we admit
+
+**State:** [full draft](survival-analysis-belongs-in-more-ml-systems-than-we-admit.md) — technical review pending
 
 Show how censoring and time-to-event structure arise in failure prediction, churn, disease progression, and remaining useful life; contrast survival estimands with binary classification.
 
