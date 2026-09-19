@@ -14,17 +14,20 @@ tags:
 author_profile: false
 classes: wide
 seo_title: 'Inflammation Is Not a Diagnosis: What Social Media Gets Wrong'
-seo_description: 'A critical essay on acute and chronic inflammation, CRP, cytokines, exercise, obesity, diet and the misuse of “inflammation” as a universal explanation online.'
+seo_description: 'C-reactive protein ranges over four orders of magnitude, and two results from one person must differ by more than 150% before they mean a change. Genes that raise CRP do not raise heart disease, a drug that lowered it cut events by 15% at the price of fatal infections, and one that did not lower it did nothing.'
 seo_type: article
 excerpt: >-
-  “Inflammation” has become a universal explanation online. In biology, however,
-  inflammation is not one scalar quantity. It is a family of context-dependent
-  processes that differ by tissue, trigger, duration and function.
+  "Inflammation" has become a universal explanation online. In biology it is a
+  family of processes that differ by tissue, trigger and duration, and its most
+  used marker is so variable within one person that a single result says little.
+  The large trials that tested the idea show which parts of it hold.
 summary: >-
-  This essay explains the difference between acute and chronic inflammation,
-  why biomarkers such as CRP and IL-6 require context, how exercise and adiposity
-  alter inflammatory signalling, and why “anti-inflammatory” foods and supplements
-  are often marketed with more certainty than the evidence allows.
+  This essay separates the uses of the word inflammation with published numbers:
+  how far C-reactive protein ranges and how noisy it is within a person, what
+  raises it besides disease, what genetics says about whether it causes heart
+  disease, which anti-inflammatory drugs prevented cardiovascular events and at
+  what cost, and how large the effects of exercise, cold water, diet, curcumin
+  and omega-3 are on the marker.
 keywords:
 - inflammation
 - CRP
@@ -35,15 +38,24 @@ keywords:
 - social media health myths
 why_this_exists: >-
   Social media often treats inflammation as a hidden disease that can be inferred
-  from non-specific symptoms and “lowered” with a product. The scientific concept
-  is much more specific and dynamic.
+  from non-specific symptoms and "lowered" with a product. The scientific concept
+  is much more specific and dynamic, and the evidence on lowering a marker is
+  unusually direct.
 evidence: >-
-  Reviews of acute and chronic inflammation, exercise immunology, obesity-related
-  inflammation, dietary patterns, curcumin and recovery interventions.
+  A clinical review of C-reactive protein; biological variation data from the
+  EFLM database, a repeat-measurement study in NHANES and a cohort with serial
+  values; population studies of obesity, smoking and oral oestrogen; Mendelian
+  randomisation of CRP and of the interleukin-6 receptor; four cardiovascular
+  outcome trials of anti-inflammatory drugs; and meta-analyses of weight loss,
+  the Mediterranean diet, curcumin, cold-water immersion and omega-3.
 methodology: >-
   Separate inflammatory mechanism from diagnosis, biomarker from disease, acute
-  adaptive signalling from chronic dysregulation, and short-term biomarker change
-  from meaningful clinical outcome.
+  adaptive signalling from chronic dysregulation, and biomarker change from
+  clinical outcome. The reference change value and the range of single results
+  are computed from published within-person variation under a log-normal model.
+  A model of repeat testing was tried, found to disagree with observed data and
+  dropped; the text quotes the observations. The script and a test of every
+  quoted number are in the repository.
 reviewed_at: '2026-09-19'
 header:
   image: /assets/images/headers/photo-microscope.jpg
@@ -55,202 +67,101 @@ header:
   twitter_image: /assets/images/headers/photo-microscope.jpg
 ---
 
-Inflammation has become one of the most overextended words in online health communication. It is invoked to explain fatigue, weight gain, anxiety, acne, poor sleep, cardiovascular disease, gut symptoms, brain fog and ageing. Once the word appears, a corresponding intervention usually follows: an anti-inflammatory diet, a supplement, a fasting protocol, a cold plunge or a list of foods to avoid.
+Inflammation has become one of the most overextended words in online health communication. It is invoked to explain fatigue, weight gain, anxiety, acne, poor sleep, cardiovascular disease, gut symptoms, brain fog and ageing, and once the word appears a corresponding product usually follows: an anti-inflammatory diet, a supplement, a cold plunge. The appeal is understandable, because inflammation is real and is involved in a great many diseases. That does not make it a diagnosis.
 
-The appeal is obvious. Inflammation is real, and it is involved in a large number of diseases. But that fact does not make inflammation a universal diagnosis.
+The scientific problem is that inflammation is not one quantity. The word covers processes that differ in tissue, in the cells and signalling molecules involved, in trigger and in timescale. The response to a cut, the joint destruction of rheumatoid arthritis, the low-grade signalling of visceral fat and the rise in interleukin-6 during a run share a vocabulary and little else. This essay follows the one marker that online claims usually lean on, C-reactive protein, and then the unusually direct evidence on whether lowering inflammation improves anything.
 
-The central scientific problem is that *inflammation* does not refer to one scalar variable. It refers to a family of biological processes involving different tissues, immune cells, signalling molecules, triggers and timescales. An acute inflammatory response to infection, an increase in IL-6 during exercise and chronic low-grade inflammatory signalling associated with visceral adiposity are not the same state simply because some molecular mediators overlap.
+## Many Processes Under One Word
 
-The word becomes misleading when those distinctions are removed.
+Acute inflammation is part of normal defence and repair. After injury or infection, vascular and immune responses bring cells and mediators to contain damage, clear pathogens and debris, and start rebuilding (Medzhitov, 2008). The response is costly and can do harm when it is excessive, which is why anti-inflammatory drugs have specific uses. It does not follow that less signalling is better. Wound healing and the control of infection depend on it, and the right question is whether a response fits its trigger, tissue and duration.
 
-## Acute inflammation is not inherently harmful
+Chronic inflammatory states are different again, and different from each other. Persistent immune activation accompanies autoimmune disease, chronic infection, smoking, obesity, inflammatory bowel disease and atherosclerosis, with different causes upstream and different consequences downstream (Furman et al., 2019). In obesity, for example, immune cells infiltrate adipose tissue and alter its signalling in ways that contribute to insulin resistance (Hotamisligil, 2006; Calder et al., 2011). The phrase chronic inflammation is informative only when the context is named. Online it is usually replaced by a latent variable: the body is said to be inflamed, and tiredness, bloating or poor concentration are offered as the evidence. Those symptoms accompany sleep loss, infection, anaemia, endocrine disease, medication and depression, and a diagnosis that any of them can support is one that none of them can test.
 
-Inflammation is part of normal host defence and tissue repair.
+## A Marker Spanning Four Orders of Magnitude
 
-After injury or infection, immune and vascular responses recruit cells and mediators to contain damage, remove pathogens or debris, and initiate repair. Redness, heat, swelling and pain are visible manifestations of this process in some tissues.
+C-reactive protein is made by the liver under the control of interleukin-6, and it is the measurement behind most statements that someone is inflamed. In healthy blood donors the median is 0.8 mg/L, the 90th centile 3.0 mg/L and the 99th centile 10 mg/L. In an acute-phase response it can rise from under 0.05 mg/L to more than 500 mg/L, a factor of 10,000, passing 5 mg/L within about six hours and peaking at about 48, with a plasma half-life of 19 hours (Pepys & Hirschfield, 2003). The same review states that CRP values can never be diagnostic on their own. The marker reports that something is happening and cannot say what.
 
-The response is costly and potentially damaging if excessive, but the correct objective is not to suppress every inflammatory signal.
+![Dot chart of C-reactive protein on a logarithmic axis from 0.05 to 1,500 mg/L. Healthy blood donors have a median of 0.8, a 90th centile of 3.0 and a 99th centile of 10 mg/L; never-smokers average 1.35 and current smokers 2.53; acute infection or injury takes it above 500. A shaded band shows that single results from one person whose usual level is 3 mg/L range from 1.5 to 5.8 mg/L, across the cut-off of 3 used for cardiovascular risk.](/assets/images/figures/inflammation_crp_scale.png){: width="1152" height="704" loading="lazy"}
 
-This distinction is obvious in clinical medicine. A functioning inflammatory response is essential for wound healing and infection control. Anti-inflammatory drugs can be useful in specific settings precisely because the immune response sometimes becomes excessive or maladaptive, not because inflammation itself is biologically unnecessary.
+At the low end of that range, where wellness claims operate, the measurement is dominated by noise. The EFLM Biological Variation Database puts the within-person coefficient of variation of CRP at 34.7%, from six studies, against 87.1% between people. An early study found an analytical variation of 5.2% and a within-person variation of 42.2%, and reported that two successive results must differ by 118% to be unlikely to be chance; the standard formula returns 118% from those components (Macy et al., 1997). Because CRP is skewed, the threshold is better stated on a logarithmic scale. With the database figure, a second result has to be more than 155% higher or 61% lower than the first before it indicates a change, and single results from a person whose usual level is 3 mg/L will range from 1.5 to 5.8 mg/L.
 
-The language of “lowering inflammation” therefore starts with a conceptual error when it treats less signalling as automatically better.
+Repeat measurements in real populations show what that means. In 541 participants in a United States national survey tested twice, 18.9 days apart on average, the within-person variation was 46.2%, and 32% of those above 10 mg/L on the first test were below it on the second (Bower et al., 2012). In a cohort with serial measurements, the repeatability of CRP was lower than that of cholesterol, an intraclass correlation of 0.62 against 0.75, and 69% of participants whose first value exceeded 3 mg/L, the threshold used to mark higher cardiovascular risk, had later values in a lower category (DeGoma et al., 2012). A single raised result, followed by a product and a lower result, is the expected sequence whether or not the product does anything.
 
-The relevant question is whether the response is appropriate to the trigger, tissue and duration.
+## What Raises CRP Besides Disease
 
-## Chronic inflammation is also not one thing
+Ordinary characteristics move CRP by amounts as large as any food or supplement is claimed to. In a representative sample of 16,616 adults in the United States, 27.6% had a CRP of 2.2 mg/L or more, and obesity multiplied the odds of being in that group by 2.13 in men and 6.21 in women (Visser et al., 1999). Among 2,920 older British men, current smokers averaged 2.53 mg/L against 1.35 mg/L in those who had never smoked, and the difference took more than twenty years to disappear after stopping (Wannamethee et al., 2005). In a randomised trial of postmenopausal hormone therapy, CRP ended 85% higher on oral hormones than on placebo (Cushman et al., 1999).
 
-Chronic inflammatory states differ considerably from acute responses.
+Weight change is the most important of these for judging diets. Across 33 intervention studies, CRP fell by 0.13 mg/L for each kilogram of weight lost, with a correlation of 0.85 between the two changes (Selvin et al., 2007). Any diet that produces weight loss will therefore lower CRP, whatever it contains, and a trial that does not account for weight cannot attribute the fall to a food.
 
-Persistent immune activation can accompany autoimmune disease, chronic infection, smoking, obesity, inflammatory bowel disease, atherosclerosis and many other conditions. The upstream causes and downstream consequences differ across these settings.
+## A Marker Is Not a Cause
 
-The phrase *chronic inflammation* is therefore useful only when the biological context is specified.
+CRP does predict cardiovascular disease. In 160,309 people without vascular disease from 54 prospective studies, the risk of coronary heart disease was 1.37 times higher for each standard deviation of log CRP, after adjustment for conventional risk factors, and 1.23 after further adjustment for fibrinogen (Emerging Risk Factors Collaboration, 2010). Prediction raises the question of cause, and here the question has been answered by a natural experiment. Some people carry variants of the CRP gene that raise their CRP for life, independently of smoking, weight or anything else. If CRP caused heart disease, they would have more of it.
 
-Online health content often replaces that specificity with a vague latent variable: the body is said to be “inflamed”. Non-specific symptoms such as tiredness, bloating or poor concentration are then treated as evidence.
+They do not. In 194,418 people, among them 46,557 with coronary heart disease, the risk ratio per standard deviation of genetically raised log CRP was 1.00, with a 95% interval from 0.90 to 1.13, against 1.33 for the same difference in measured CRP (CRP CHD Genetics Collaboration, 2011). The same method applied one step upstream gives a different answer: a variant of the interleukin-6 receptor gene that dampens interleukin-6 signalling lowers CRP by 8.35% per copy and lowers the odds of coronary disease by about 5% (IL6R MR Consortium, 2012). Part of the inflammatory pathway is causal, and CRP is a downstream readout of it. Lowering the readout is not a goal in its own right, which is the assumption beneath every product sold to reduce it.
 
-That is not a validated diagnostic framework.
+## The Trials That Tested the Idea
 
-The same symptom can arise from sleep deprivation, infection, anaemia, endocrine disease, medication, depression, nutritional deficiency or many other causes. Without a defined clinical context, “inflammation” becomes an explanation that is difficult to falsify.
+Few hypotheses in medicine have been tested as directly as the claim that reducing inflammation prevents heart attacks. Four large randomised trials gave anti-inflammatory drugs with no effect on cholesterol to patients with coronary disease.
 
-## Biomarkers need context
+![Forest plot of five estimates of the effect on cardiovascular events, with 95% intervals. CRP raised by genes (Mendelian randomisation): 1.00, 0.90 to 1.13. Methotrexate, CIRT, n = 4,786: 0.96, 0.79 to 1.16. Canakinumab 150 mg, CANTOS, n = 10,061: 0.85, 0.74 to 0.98. Colchicine, COLCOT, n = 4,745: 0.77, 0.61 to 0.96. Colchicine, LoDoCo2, n = 5,522: 0.69, 0.57 to 0.83.](/assets/images/figures/inflammation_trials_forest.png){: width="1152" height="704" loading="lazy"}
 
-C-reactive protein is a good example.
+| Trial | Drug and patients | Effect on markers | Cardiovascular events |
+| :--- | :--- | :--- | :--- |
+| CANTOS | Canakinumab, 10,061 with a previous heart attack and CRP of 2 mg/L or more | CRP 37 points lower than placebo at 150 mg | 3.86 against 4.50 per 100 person-years; hazard ratio 0.85 |
+| CIRT | Low-dose methotrexate, 4,786 | No reduction in IL-1β, IL-6 or CRP | 201 against 207 events; hazard ratio 0.96 |
+| COLCOT | Colchicine, 4,745 after a recent heart attack | Not the primary question | 5.5% against 7.1%; hazard ratio 0.77 |
+| LoDoCo2 | Colchicine, 5,522 with chronic coronary disease | Not the primary question | 6.8% against 9.6%; hazard ratio 0.69 |
+{: .table-prose}
 
-CRP is an acute-phase protein produced largely by the liver in response to inflammatory signalling. It can rise substantially during infection and tissue injury. High-sensitivity CRP can also provide cardiovascular risk information at lower concentrations.
+The results support the hypothesis and mark its limits. Canakinumab, an antibody against interleukin-1β, reduced events by 15% at its effective dose (Ridker et al., 2017). Methotrexate, which did not lower the inflammatory markers in these patients, did nothing (Ridker et al., 2019). Colchicine reduced events in both of its trials (Tardif et al., 2019; Nidorf et al., 2020). The target matters, and "anti-inflammatory" is not one property that any agent carrying the label shares.
 
-Those uses are real.
+The costs were equally real. In CANTOS, the 150 mg dose prevented 6.4 cardiovascular events per 1,000 person-years, and across the canakinumab groups there were 1.3 additional deaths from infection, 0.31 against 0.18 per 100 person-years, or about one fatal infection for every five events prevented. In COLCOT pneumonia was reported as a serious adverse event in 0.9% of patients on colchicine against 0.4% on placebo, and in LoDoCo2 death from non-cardiovascular causes was more frequent on colchicine, with a hazard ratio of 1.51 and an interval from 0.99 to 2.31. These are patients with established disease, in whom the benefit is worth discussing. Suppressing a defence system has a price, and for a healthy person with a CRP of 3 mg/L there is no corresponding benefit to set against it.
 
-But a CRP value does not identify a single cause. It is a non-specific marker.
+## Exercise and Cold Water
 
-A high value may prompt investigation. It does not by itself tell us whether the source is infection, autoimmune disease, obesity, tissue injury or another process.
+Exercise is the clearest counterexample to the rule that a higher inflammatory marker is worse. Contracting muscle releases interleukin-6, and its concentration in blood rises up to 100-fold during exercise (Pedersen & Febbraio, 2008). That signal differs in source, duration and effect from the chronic signalling of obesity, and it is part of how exercise produces its metabolic and anti-inflammatory benefits over time (Gleeson et al., 2011). A change from baseline is not pathology. Heart rate rises during exercise and glucose rises after a meal, and nobody proposes to eliminate either.
 
-Cytokines are even more context-dependent. IL-6, TNF-α and related mediators participate in many physiological and pathological pathways. Their meaning depends on source tissue, timing, receptor context and the broader signalling environment.
+Cold-water immersion shows what happens when the response is blunted on purpose. A Cochrane review of 17 small trials found that it reduced muscle soreness, by a standardised 0.55 at 24 hours, and rated the quality of the studies as low (Bleakley et al., 2012). In a twelve-week strength-training study of 21 men, those who recovered actively increased the area of their type II muscle fibres by 17% and their isokinetic work by 19%, and those who used cold water after each session increased neither (Roberts et al., 2015). The same intervention is useful between competitions a day apart and counterproductive when the aim is to build muscle, because part of what it suppresses is the signal for adaptation.
 
-This is why a social-media claim such as “food X raises IL-6, therefore food X is inflammatory” can be scientifically weak even when the biomarker change is real.
+## Diets and Supplements
 
-A biomarker is not the disease.
+Dietary patterns rich in vegetables, fruit, legumes, whole grains, nuts and unsaturated fat are associated with lower inflammatory markers (Calder et al., 2011). In 17 randomised trials with 2,300 participants, a Mediterranean diet lowered high-sensitivity CRP by 0.98 mg/L, with an $I^2$ of 91%, which means the trials disagreed widely about the size of the effect (Schwingshackl & Hoffmann, 2014). An average fall of 1 mg/L is less than a quarter of the range of single results from one person, and it is what seven or eight kilograms of weight loss would produce by itself. None of this says that the diet is not worth following. Its case rests on outcomes such as heart attacks, not on a marker, and lists of foods that "cause" or "fight" inflammation, stripped of dose and of what the food replaces, go far beyond it.
 
-## Exercise exposes the weakness of the simple model
+Curcumin shows how unstable supplement evidence is. An early meta-analysis of six trials with 342 participants reported a fall in CRP of 6.44 mg/L, an effect larger than that of any drug in the trials above (Sahebkar, 2014). A later one with 66 trials found 0.58 mg/L (Dehzad et al., 2023). Small early trials in selected patients give large effects that shrink as evidence accumulates, which is the usual history of a supplement. Omega-3 has been tested at scale: in 1,561 participants of the VITAL trial, a year of marine omega-3 or vitamin D did not reduce interleukin-6, tumour necrosis factor receptor 2 or CRP, and vitamin D raised interleukin-6 by 8.2% (Costenbader et al., 2019). Even where a supplement moves a marker, the genetic evidence above says why that cannot be assumed to help.
 
-Exercise is one of the clearest counterexamples to the idea that every increase in an inflammatory mediator is harmful.
+## The Question to Ask
 
-Skeletal muscle releases IL-6 during exercise, particularly prolonged or glycogen-depleting exercise. The resulting signalling differs from the chronic inflammatory milieu associated with obesity or infection and contributes to metabolic and immune regulation.
+Inflammation is essential to immunity and repair, chronic inflammatory signalling contributes to disease, visceral fat promotes it, and specific anti-inflammatory drugs prevent heart attacks in people with coronary disease. None of those facts makes "inflammation" a diagnosis that symptoms can establish or a quantity that a product should minimise. The marker used to measure it ranges over four orders of magnitude, varies by a factor of two within a healthy person from one test to the next, rises with weight, smoking and oral oestrogen, and is not itself a cause of the disease it predicts.
 
-Acute strenuous exercise can also transiently increase markers associated with tissue stress and inflammation.
-
-Yet regular exercise is one of the most consistently beneficial interventions for cardiometabolic health.
-
-If the rule were simply “higher inflammatory marker equals worse”, exercise physiology would become difficult to interpret.
-
-The better model is dynamic: an acute perturbation can be part of an adaptive process whose long-term effect is beneficial.
-
-This same principle appears elsewhere in physiology. Heart rate rises during exercise. Glucose rises after food. Cortisol rises after waking. A change from baseline is not automatically pathology.
-
-## Obesity and visceral adiposity are different again
-
-Adipose tissue is metabolically active and communicates with the immune system.
-
-In obesity, particularly with visceral adiposity and adipose-tissue dysfunction, macrophage infiltration, altered adipokine signalling and increased production of inflammatory mediators can contribute to insulin resistance and cardiovascular risk.
-
-This is one reason chronic low-grade inflammation is relevant to metabolic disease.
-
-But even here the causal structure is not adequately described by “inflammation causes obesity” or “obesity is inflammation”.
-
-Energy balance, adipocyte expansion, genetics, ectopic fat, insulin sensitivity, sleep, physical activity and many other processes interact.
-
-Inflammation participates in the system. It is not a complete replacement for the system.
-
-## Diet matters, but “anti-inflammatory food” is an imprecise category
-
-Dietary patterns can influence inflammatory biomarkers and long-term disease risk. Diets rich in vegetables, fruits, legumes, whole grains, nuts and unsaturated fats are often associated with more favourable inflammatory profiles than dietary patterns dominated by refined carbohydrates, processed meats and excess energy.
-
-The problem begins when this evidence is translated into lists of foods that “cause inflammation” or “fight inflammation” independently of dose, substitution and dietary context.
-
-A food does not carry one fixed inflammatory value.
-
-The effect of adding olive oil to a diet depends partly on what it replaces. The effect of reducing refined carbohydrate depends on what takes its place. Weight loss itself can change inflammatory markers, making it difficult to separate a direct food effect from the consequences of altered energy balance and adiposity.
-
-This is why dietary-pattern evidence is often more informative than isolated ingredient rhetoric.
-
-## Curcumin illustrates the supplement problem
-
-Curcumin is frequently marketed as a natural anti-inflammatory compound.
-
-There is biological plausibility and a substantial literature showing effects on inflammatory pathways in vitro and in animal models. Human meta-analyses have also reported modest reductions in CRP and some cytokines in selected populations.
-
-That evidence is not meaningless.
-
-The difficulty is translation.
-
-Formulations vary in bioavailability, doses differ, populations are heterogeneous and biomarker changes do not automatically imply clinically meaningful disease modification.
-
-An intervention can alter CRP without having demonstrated that it prevents myocardial infarction, treats autoimmune disease or reverses a poorly defined state called “systemic inflammation”.
-
-The problem is therefore not that curcumin has no biological activity. It is that the phrase “anti-inflammatory” is often used as if one biomarker effect established a broad therapeutic claim.
-
-## Cold exposure has the same problem
-
-Cold-water immersion can reduce soreness and alter some inflammatory and stress-related responses after exercise. It can also affect adaptation to resistance training when used chronically in certain contexts.
-
-That makes it a legitimate recovery intervention to study.
-
-It does not make “reducing inflammation” an unqualified goal.
-
-Post-exercise inflammatory signalling participates in adaptation and tissue remodelling. Blunting parts of that response may reduce soreness while potentially affecting training adaptation.
-
-Again, the effect depends on the objective.
-
-The same intervention can be useful when rapid recovery between competitions is the priority and less desirable when maximising long-term hypertrophy is the priority.
-
-Biology is conditional.
-
-## The phrase “systemic inflammation” is often doing too much work
-
-In research, systemic inflammation usually refers to measurable changes in circulating inflammatory markers within a defined population and clinical context.
-
-Online, the phrase often functions as an invisible diagnosis.
-
-Someone may be told that fatigue, poor sleep, bloating and stubborn weight are signs that the whole body is inflamed.
-
-The claim sounds specific but is difficult to test because no diagnostic criterion is provided.
-
-This is a common pattern in wellness language: a broad biological concept is converted into a syndrome without validated case definition.
-
-The result is a diagnosis that can explain almost any symptom and therefore has very little discriminative value.
-
-## Mechanism is not diagnosis
-
-Many online claims are built from genuine mechanistic observations.
-
-A substance activates NF-κB in a cell model. A meal changes a cytokine. A supplement lowers CRP. A stressor changes immune signalling.
-
-Those findings can be scientifically interesting.
-
-They do not automatically establish that a person has an inflammatory disease, that the mechanism dominates their symptoms, or that changing the marker will improve the clinical outcome that matters.
-
-The inferential chain becomes stronger at each step:
-
-mechanism → biomarker → disease → treatment.
-
-Evidence is required at every transition.
-
-Skipping those transitions is one of the most common forms of scientific overstatement in online health communication.
-
-## What the evidence supports
-
-Inflammation is essential to normal immunity and repair. Chronic inflammatory signalling contributes to many diseases. Visceral adiposity can promote low-grade inflammatory states. Diet, exercise, sleep, smoking and other behaviours can influence inflammatory biology.
-
-None of those facts validates “inflammation” as a universal diagnosis.
-
-CRP is useful in defined contexts but is non-specific. Cytokine changes require interpretation. Acute exercise can increase inflammatory mediators while improving long-term health. Supplements can modify biomarkers without having demonstrated broad clinical benefit.
-
-The scientific question is therefore not “how do I eliminate inflammation?”
-
-It is: **what process is occurring, in which tissue, in response to what trigger, for how long, and with what clinical consequence?**
-
-That formulation is less marketable than a detox tea or an anti-inflammatory supplement.
-
-It is also much closer to how immunology actually works.
-
----
+Claims in this area usually run along a chain from mechanism to biomarker to disease to treatment, and evidence is needed at every link. A substance that activates a pathway in cultured cells, a meal that changes a cytokine and a supplement that lowers CRP are each one link. The useful question is never how to eliminate inflammation. It is what process is occurring, in which tissue, in response to what, for how long and with what clinical consequence, and that is the question immunology asks.
 
 ## References
 
-1. Furman D, Campisi J, Verdin E, et al. **Chronic inflammation in the etiology of disease across the life span.** *Nature Medicine*. 2019;25:1822–1832. https://doi.org/10.1038/s41591-019-0675-0
-
-2. Medzhitov R. **Origin and physiological roles of inflammation.** *Nature*. 2008;454:428–435. https://doi.org/10.1038/nature07201
-
-3. Pedersen BK, Febbraio MA. **Muscles, exercise and obesity: skeletal muscle as a secretory organ.** *Nature Reviews Endocrinology*. 2012;8:457–465. https://doi.org/10.1038/nrendo.2012.49
-
-4. Gleeson M, Bishop NC, Stensel DJ, et al. **The anti-inflammatory effects of exercise: mechanisms and implications for the prevention and treatment of disease.** *Nature Reviews Immunology*. 2011;11:607–615. https://doi.org/10.1038/nri3041
-
-5. Hotamisligil GS. **Inflammation and metabolic disorders.** *Nature*. 2006;444:860–867. https://doi.org/10.1038/nature05485
-
-6. Calder PC, Ahluwalia N, Brouns F, et al. **Dietary factors and low-grade inflammation in relation to overweight and obesity.** *British Journal of Nutrition*. 2011;106(S3):S5–S78. https://doi.org/10.1017/S0007114511005460
-
-7. Sahebkar A. **Are curcuminoids effective C-reactive protein-lowering agents in clinical practice? Evidence from a meta-analysis.** *Phytotherapy Research*. 2014;28:633–642. https://doi.org/10.1002/ptr.5045
-
-8. Roberts LA, Raastad T, Markworth JF, et al. **Post-exercise cold water immersion attenuates acute anabolic signalling and long-term adaptations in muscle to strength training.** *Journal of Physiology*. 2015;593:4285–4301. https://doi.org/10.1113/JP270570
-
----
-
-*This article discusses inflammatory biology and population-level evidence. It is not intended to diagnose inflammatory, autoimmune or infectious disease.*
+- Bleakley, C., McDonough, S., Gardner, E., Baxter, G. D., Hopkins, J. T., & Davison, G. W. (2012). Cold-water immersion (cryotherapy) for preventing and treating muscle soreness after exercise. *Cochrane Database of Systematic Reviews*, 2012(2), CD008262. <https://doi.org/10.1002/14651858.CD008262.pub2>
+- Bower, J. K., Lazo, M., Juraschek, S. P., & Selvin, E. (2012). Within-person variability in high-sensitivity C-reactive protein. *Archives of Internal Medicine*, 172(19), 1519-1521. <https://doi.org/10.1001/archinternmed.2012.3712>
+- Calder, P. C., Ahluwalia, N., Brouns, F., Buetler, T., Clement, K., Cunningham, K., ... Winklhofer-Roob, B. M. (2011). Dietary factors and low-grade inflammation in relation to overweight and obesity. *British Journal of Nutrition*, 106(S3), S5-S78. <https://doi.org/10.1017/S0007114511005460>
+- Costenbader, K. H., MacFarlane, L. A., Lee, I. M., Buring, J. E., Mora, S., Bubes, V., ... Cook, N. R. (2019). Effects of one year of vitamin D and marine omega-3 fatty acid supplementation on biomarkers of systemic inflammation in older US adults. *Clinical Chemistry*, 65(12), 1508-1521. <https://doi.org/10.1373/clinchem.2019.306902>
+- CRP CHD Genetics Collaboration (2011). Association between C reactive protein and coronary heart disease: mendelian randomisation analysis based on individual participant data. *BMJ*, 342, d548. <https://doi.org/10.1136/bmj.d548>
+- Cushman, M., Legault, C., Barrett-Connor, E., Stefanick, M. L., Kessler, C., Judd, H. L., Sakkinen, P. A., & Tracy, R. P. (1999). Effect of postmenopausal hormones on inflammation-sensitive proteins: the Postmenopausal Estrogen/Progestin Interventions (PEPI) study. *Circulation*, 100(7), 717-722. <https://doi.org/10.1161/01.cir.100.7.717>
+- DeGoma, E. M., French, B., Dunbar, R. L., Allison, M. A., Mohler, E. R., & Budoff, M. J. (2012). Intraindividual variability of C-reactive protein: the Multi-Ethnic Study of Atherosclerosis. *Atherosclerosis*, 224(1), 274-279. <https://doi.org/10.1016/j.atherosclerosis.2012.07.017>
+- Dehzad, M. J., Ghalandari, H., Nouri, M., & Askarpour, M. (2023). Antioxidant and anti-inflammatory effects of curcumin/turmeric supplementation in adults: a GRADE-assessed systematic review and dose-response meta-analysis of randomized controlled trials. *Cytokine*, 164, 156144. <https://doi.org/10.1016/j.cyto.2023.156144>
+- Emerging Risk Factors Collaboration (2010). C-reactive protein concentration and risk of coronary heart disease, stroke, and mortality: an individual participant meta-analysis. *The Lancet*, 375(9709), 132-140. <https://doi.org/10.1016/S0140-6736(09)61717-7>
+- European Federation of Clinical Chemistry and Laboratory Medicine. EFLM Biological Variation Database. <https://biologicalvariation.eu>
+- Furman, D., Campisi, J., Verdin, E., Carrera-Bastos, P., Targ, S., Franceschi, C., ... Slavich, G. M. (2019). Chronic inflammation in the etiology of disease across the life span. *Nature Medicine*, 25(12), 1822-1832. <https://doi.org/10.1038/s41591-019-0675-0>
+- Gleeson, M., Bishop, N. C., Stensel, D. J., Lindley, M. R., Mastana, S. S., & Nimmo, M. A. (2011). The anti-inflammatory effects of exercise: mechanisms and implications for the prevention and treatment of disease. *Nature Reviews Immunology*, 11(9), 607-615. <https://doi.org/10.1038/nri3041>
+- Hotamisligil, G. S. (2006). Inflammation and metabolic disorders. *Nature*, 444(7121), 860-867. <https://doi.org/10.1038/nature05485>
+- IL6R MR Consortium (2012). The interleukin-6 receptor as a target for prevention of coronary heart disease: a mendelian randomisation analysis. *The Lancet*, 379(9822), 1214-1224. <https://doi.org/10.1016/S0140-6736(12)60110-X>
+- Macy, E. M., Hayes, T. E., & Tracy, R. P. (1997). Variability in the measurement of C-reactive protein in healthy subjects: implications for reference intervals and epidemiological applications. *Clinical Chemistry*, 43(1), 52-58.
+- Medzhitov, R. (2008). Origin and physiological roles of inflammation. *Nature*, 454(7203), 428-435. <https://doi.org/10.1038/nature07201>
+- Nidorf, S. M., Fiolet, A. T. L., Mosterd, A., Eikelboom, J. W., Schut, A., Opstal, T. S. J., ... Thompson, P. L. (2020). Colchicine in patients with chronic coronary disease. *New England Journal of Medicine*, 383(19), 1838-1847. <https://doi.org/10.1056/NEJMoa2021372>
+- Pedersen, B. K., & Febbraio, M. A. (2008). Muscle as an endocrine organ: focus on muscle-derived interleukin-6. *Physiological Reviews*, 88(4), 1379-1406. <https://doi.org/10.1152/physrev.90100.2007>
+- Pepys, M. B., & Hirschfield, G. M. (2003). C-reactive protein: a critical update. *Journal of Clinical Investigation*, 111(12), 1805-1812. <https://doi.org/10.1172/JCI18921>
+- Ridker, P. M., Everett, B. M., Thuren, T., MacFadyen, J. G., Chang, W. H., Ballantyne, C., ... Glynn, R. J. (2017). Antiinflammatory therapy with canakinumab for atherosclerotic disease. *New England Journal of Medicine*, 377(12), 1119-1131. <https://doi.org/10.1056/NEJMoa1707914>
+- Ridker, P. M., Everett, B. M., Pradhan, A., MacFadyen, J. G., Solomon, D. H., Zaharris, E., ... Glynn, R. J. (2019). Low-dose methotrexate for the prevention of atherosclerotic events. *New England Journal of Medicine*, 380(8), 752-762. <https://doi.org/10.1056/NEJMoa1809798>
+- Roberts, L. A., Raastad, T., Markworth, J. F., Figueiredo, V. C., Egner, I. M., Shield, A., ... Peake, J. M. (2015). Post-exercise cold water immersion attenuates acute anabolic signalling and long-term adaptations in muscle to strength training. *Journal of Physiology*, 593(18), 4285-4301. <https://doi.org/10.1113/JP270570>
+- Sahebkar, A. (2014). Are curcuminoids effective C-reactive protein-lowering agents in clinical practice? Evidence from a meta-analysis. *Phytotherapy Research*, 28(5), 633-642. <https://doi.org/10.1002/ptr.5045>
+- Schwingshackl, L., & Hoffmann, G. (2014). Mediterranean dietary pattern, inflammation and endothelial function: a systematic review and meta-analysis of intervention trials. *Nutrition, Metabolism and Cardiovascular Diseases*, 24(9), 929-939. <https://doi.org/10.1016/j.numecd.2014.03.003>
+- Selvin, E., Paynter, N. P., & Erlinger, T. P. (2007). The effect of weight loss on C-reactive protein: a systematic review. *Archives of Internal Medicine*, 167(1), 31-39. <https://doi.org/10.1001/archinte.167.1.31>
+- Tardif, J. C., Kouz, S., Waters, D. D., Bertrand, O. F., Diaz, R., Maggioni, A. P., ... Roubille, F. (2019). Efficacy and safety of low-dose colchicine after myocardial infarction. *New England Journal of Medicine*, 381(26), 2497-2505. <https://doi.org/10.1056/NEJMoa1912388>
+- Visser, M., Bouter, L. M., McQuillan, G. M., Wener, M. H., & Harris, T. B. (1999). Elevated C-reactive protein levels in overweight and obese adults. *JAMA*, 282(22), 2131-2135. <https://doi.org/10.1001/jama.282.22.2131>
+- Wannamethee, S. G., Lowe, G. D., Shaper, A. G., Rumley, A., Lennon, L., & Whincup, P. H. (2005). Associations between cigarette smoking, pipe/cigar smoking, and smoking cessation, and haemostatic and inflammatory markers for cardiovascular disease. *European Heart Journal*, 26(17), 1765-1773. <https://doi.org/10.1093/eurheartj/ehi183>
