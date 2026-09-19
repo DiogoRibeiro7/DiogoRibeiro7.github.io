@@ -5,7 +5,7 @@ name: "Diogo Ribeiro"
 title: "Diogo Ribeiro"
 locale: en_US
 email: diogo.debastos.ribeiro@gmail.com
-description: "Statistical ML, time series, causal inference, applied AI and open-source software by Diogo Ribeiro (@DiogoRibeiro7)."
+description: "Diogo Ribeiro (@DiogoRibeiro7): Lead Data Scientist, Machine Learning Engineer and Professor working across statistical ML, time series, causal inference and applied AI."
 url: "https://diogoribeiro7.github.io"
 baseurl: ""
 repository: "https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io"
@@ -16,12 +16,21 @@ google_analytics: G-K7H5RM6S8Y
 
 author:
   name: "Diogo Ribeiro"
+  alternate_name: "DiogoRibeiro7"
+  roles:
+    - "Lead Data Scientist"
+    - "Machine Learning Engineer"
+    - "Professor"
   email: diogo.debastos.ribeiro@gmail.com
   affiliation: "Faculty of Media Arts and Design, Technical University of Porto"
   location: "Porto, Portugal and London, UK"
   github: DiogoRibeiro7
   linkedin: diogo-ribeiro-9094604a
   orcid: https://orcid.org/0009-0001-2022-7072
+  same_as:
+    - "https://github.com/DiogoRibeiro7"
+    - "https://www.linkedin.com/in/diogo-ribeiro-9094604a/"
+    - "https://orcid.org/0009-0001-2022-7072"
   avatar: "/assets/images/me_myself_and_i.jpg"
   bio: "Lead Data Scientist, Machine Learning Engineer and Professor working across statistical ML, time series, causal inference, applied AI, forecasting and data engineering."
 
