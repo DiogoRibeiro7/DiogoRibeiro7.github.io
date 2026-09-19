@@ -18,7 +18,7 @@ pip install pinn-rk
 ## Project Links
 
 - **PyPI:** [pinn-rk](https://pypi.org/project/pinn-rk/)
-- **Documentation:** [diogoribeiro7.github.io/pinn-rk](https://diogoribeiro7.github.io/pinn-rk)
+- **Documentation:** [repository documentation](https://github.com/DiogoRibeiro7/pinn-rk/tree/main/docs)
 - **Source:** [github.com/DiogoRibeiro7/pinn-rk](https://github.com/DiogoRibeiro7/pinn-rk)
 - **Issues:** [github.com/DiogoRibeiro7/pinn-rk/issues](https://github.com/DiogoRibeiro7/pinn-rk/issues)
 - **Discussions:** [github.com/DiogoRibeiro7/pinn-rk/discussions](https://github.com/DiogoRibeiro7/pinn-rk/discussions)
