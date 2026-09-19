@@ -79,7 +79,7 @@ Simulate survival data with a known truth. Version 3 generates time-to-event dat
 
 - **PyPI:** [gen-surv](https://pypi.org/project/gen-surv/)
 - **Documentation on this site:** [genSurvPy](/packages/gensurvpy/)
-- **External documentation:** [diogoribeiro7.github.io/genSurvPy](https://diogoribeiro7.github.io/genSurvPy/)
+- **Documentation:** [genSurvPy](/packages/gensurvpy/)
 - **Source:** [github.com/DiogoRibeiro7/genSurvPy](https://github.com/DiogoRibeiro7/genSurvPy)
 - **Requires Python:** `>=3.11,<3.14`
 
