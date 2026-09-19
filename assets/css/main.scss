@@ -86,6 +86,12 @@ aside {
     td {
       white-space: nowrap;
     }
+
+    // a table of sentences wraps instead: mark it with {: .table-prose}
+    &.table-prose th,
+    &.table-prose td {
+      white-space: normal;
+    }
   }
 
   .math-expression {
@@ -97,6 +103,19 @@ aside {
       min-width: max-content;
       margin-inline: auto;
     }
+  }
+}
+
+// A URL is one unbreakable word, whether it is a link or bare text. On a phone
+// a DOI in a reference list is wider than the column, and the whole page then
+// slides sideways, so running text may break a word where it must
+// (DiogoRibeiro7/analytics-blog-jekyll#319).
+.post-content,
+.page-content {
+  p,
+  li,
+  a {
+    overflow-wrap: anywhere;
   }
 }
 
