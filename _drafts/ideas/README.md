@@ -70,6 +70,16 @@ Each source contains a development contract. The original figures and core calcu
 
 The expanded articles develop the original explanations into longer worked arguments. The climate article introduces likelihood ratios and KL divergence, including evidence accumulation and information lost by thresholding. The other articles add latitude and thermal-lag calculations; bacterial regrowth, extinction, and surveillance composition; run searches and hidden dependence; exposure uncertainty and detection limits; and odds, sampling error, and risk standardisation.
 
+### Further additions to earlier archives
+
+The following article was prepared and source-checked on 19 September 2026. Its archive date places it earlier in the collection; a visible note in the article records both dates, and its cited methodological sources predate the archive date.
+
+| Archive date | Article | Source |
+| --- | --- | --- |
+| 2024-11-07 | Why a Small p-Value Does Not Settle a Scientific Claim | [Article](../../_posts/science_communication/2024-11-07-why_a_small_p_value_does_not_settle_a_claim.md) |
+
+The article derives false-positive rates, selected-study composition, likelihood comparisons, posterior model probabilities, and repeat-study rejection probabilities in an explicit Gaussian model. Two original figures and a comparison of nearly identical study estimates support its argument. Reproduce the calculations with `assets/viz/generate_pvalue_evidence_figures.py --dry-run`; independent mathematical and simulation checks are in `tests/test_pvalue_evidence_models.py`.
+
 ---
 
 # Priority A — development queue
