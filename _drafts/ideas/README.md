@@ -72,13 +72,16 @@ The expanded articles develop the original explanations into longer worked argum
 
 ### Further additions to earlier archives
 
-The following article was prepared and source-checked on 19 September 2026. Its archive date places it earlier in the collection; a visible note in the article records both dates, and its cited methodological sources predate the archive date.
+The following articles were prepared and source-checked on 19 September 2026. Their archive dates place them earlier in the collection; visible notes record both dates, and their cited sources predate the respective archive dates.
 
 | Archive date | Article | Source |
 | --- | --- | --- |
 | 2024-11-07 | Why a Small p-Value Does Not Settle a Scientific Claim | [Article](../../_posts/science_communication/2024-11-07-why_a_small_p_value_does_not_settle_a_claim.md) |
+| 2025-07-17 | Why Longer Survival After Diagnosis Can Mislead | [Article](../../_posts/science_communication/2025-07-17-why_longer_survival_after_diagnosis_can_mislead.md) |
 
-The article derives false-positive rates, selected-study composition, likelihood comparisons, posterior model probabilities, and repeat-study rejection probabilities in an explicit Gaussian model. Two original figures and a comparison of nearly identical study estimates support its argument. Reproduce the calculations with `assets/viz/generate_pvalue_evidence_figures.py --dry-run`; independent mathematical and simulation checks are in `tests/test_pvalue_evidence_models.py`.
+The p-value article derives false-positive rates, selected-study composition, likelihood comparisons, posterior model probabilities, and repeat-study rejection probabilities in an explicit Gaussian model. Two original figures and a comparison of nearly identical study estimates support its argument. Reproduce the calculations with `assets/viz/generate_pvalue_evidence_figures.py --dry-run`; independent mathematical and simulation checks are in `tests/test_pvalue_evidence_models.py`.
+
+The screening article follows the same 1,000 synthetic people across five scenarios to distinguish lead time, overdiagnosis, and actual postponement of death. A second model derives length-biased sampling and contrasts first-round with repeated screening. The NLST mortality result provides an empirical counterweight. Two original figures and all calculations are reproduced by `assets/viz/generate_screening_survival_figures.py`; `tests/test_screening_survival_models.py` checks individual histories, independent interval counting, entry phases, and limiting cases.
 
 ---
 
