@@ -24,6 +24,11 @@ These articles exist as complete drafts. Their review status is recorded individ
 | What Randomisation Promises About Baseline Balance | [randomisation-and-baseline-balance.md](randomisation-and-baseline-balance.md) | full draft; examples verified | technical review / editorial pass |
 | Storage Must Balance Power, Energy, and Losses | [storage-must-balance-power-energy-and-losses.md](storage-must-balance-power-energy-and-losses.md) | full draft; examples verified | technical review / editorial pass |
 | A Personal Baseline Can Learn the Change You Wanted to Detect | [a-personal-baseline-can-learn-the-change.md](a-personal-baseline-can-learn-the-change.md) | full draft; examples verified | technical review / editorial pass |
+| Missing Data in Time Series Is an Observation-Process Problem | [missing-data-in-time-series-is-an-observation-process-problem.md](missing-data-in-time-series-is-an-observation-process-problem.md) | full draft | technical review / add verified example |
+| Anomaly, Change Point, and Drift Are Different Hypotheses | [anomaly-change-point-and-drift-are-different-hypotheses.md](anomaly-change-point-and-drift-are-different-hypotheses.md) | full draft | technical review / add synthetic figure |
+| Data Drift Is Not Model Drift | [data-drift-is-not-model-drift.md](data-drift-is-not-model-drift.md) | full draft | technical review / align with unlabeled-monitoring article |
+| Retraining Is a Decision Problem, Not a Cron Job | [retraining-is-a-decision-problem-not-a-cron-job.md](retraining-is-a-decision-problem-not-a-cron-job.md) | full draft | technical review / add decision-cost example |
+| Predictive Maintenance Is a Decision Problem, Not a Failure Classifier | [predictive-maintenance-is-a-decision-problem-not-a-failure-classifier.md](predictive-maintenance-is-a-decision-problem-not-a-failure-classifier.md) | full draft | technical review / add maintenance-cost figure |
 
 ## Category and coverage review — 19 September 2026
 
@@ -152,7 +157,7 @@ rather than a property of a study in isolation.
 
 ### A6. Missing data in time series is an observation-process problem
 
-**State:** seed  
+**State:** [full draft](missing-data-in-time-series-is-an-observation-process-problem.md) — technical review pending  
 **Core question:** Why is temporal imputation often more than filling holes in a vector?  
 **Thesis:** missingness can depend on system state, sensor failure, sampling policy, or user behavior; the observation process can therefore be part of the model.  
 **Development requirements:** regular versus irregular sampling; informative missingness; interpolation versus state-space filtering; effect on downstream forecasting and inference.  
@@ -160,7 +165,7 @@ rather than a property of a study in isolation.
 
 ### A7. Anomaly, change point, and drift are different hypotheses
 
-**State:** seed  
+**State:** [full draft](anomaly-change-point-and-drift-are-different-hypotheses.md) — technical review pending  
 **Core question:** What exactly changed when a monitoring system raises an alert?  
 **Thesis:** a point anomaly, structural break, gradual distribution shift, and performance degradation are different objects and should not share one generic “drift” detector.  
 **Development requirements:** formal definitions; toy data with identical-looking alerts but different causes; consequences for retraining and intervention.  
@@ -187,7 +192,7 @@ rather than a property of a study in isolation.
 
 ### A10. Data drift is not model drift
 
-**State:** seed  
+**State:** [full draft](data-drift-is-not-model-drift.md) — technical review pending  
 **Core question:** What can distribution shift tell us when labels are delayed or absent?  
 **Thesis:** a changed input distribution does not imply degraded predictive performance, and unchanged marginal distributions do not guarantee stable conditional relationships.  
 **Development requirements:** covariate shift, label shift, concept/conditional shift; examples where drift detector and performance move in opposite directions; monitoring decision table.  
@@ -203,7 +208,7 @@ rather than a property of a study in isolation.
 
 ### A12. Retraining is a decision problem, not a cron job
 
-**State:** seed  
+**State:** [full draft](retraining-is-a-decision-problem-not-a-cron-job.md) — technical review pending  
 **Core question:** When should a model actually be retrained?  
 **Thesis:** retraining should compare expected benefit against data, validation, deployment, stability, and regression risk rather than trigger on elapsed time or any detected drift.  
 **Development requirements:** cost/loss formulation; challenger evaluation; rollback; minimum evidence gate; examples with false-positive drift alarms.
@@ -228,7 +233,7 @@ rather than a property of a study in isolation.
 
 ### A15. Predictive maintenance is a decision problem, not a failure classifier
 
-**State:** seed  
+**State:** [full draft](predictive-maintenance-is-a-decision-problem-not-a-failure-classifier.md) — technical review pending  
 **Core question:** Why can a model with better classification accuracy produce a worse maintenance policy?  
 **Thesis:** maintenance decisions depend on asymmetric failure costs, intervention cost, lead time, uncertainty, censoring, and asset state—not merely discrimination metrics.  
 **Development requirements:** expected-cost formulation; precision/recall counterexample; remaining-useful-life or hazard perspective; decision threshold.  
