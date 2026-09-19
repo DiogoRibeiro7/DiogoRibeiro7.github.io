@@ -8,6 +8,10 @@ header:
     description: Inference, modelling, diagnostics and uncertainty
     url: /statistics/
     section: statistics
+  - title: Data Science
+    description: Analysis in practice, decisions, production and applied work
+    url: /data-science/
+    section: data-science
   - title: Machine Learning
     description: Evaluation, monitoring, calibration and drift
     url: /machine-learning/
