@@ -1,6 +1,6 @@
 ---
 permalink: '/healthcare/cortisol_social_media_myths/'
-title: 'Cortisol Is Not the Villain: What Social Media Gets Wrong About Stress Hormones'
+title: 'Cortisol Is a Dynamic Signal, Not a Diagnosis'
 date: '2026-04-17'
 categories:
 - Healthcare
@@ -13,41 +13,34 @@ tags:
 - Science Communication
 author_profile: false
 classes: wide
-seo_title: 'Cortisol Myths: Stress, Belly Fat, Adrenal Fatigue and Social Media'
-seo_description: 'A critical review of cortisol culture: cortisol belly, adrenal fatigue, stress tests, supplements, weight gain and the difference between normal hormone rhythms and endocrine disease.'
+seo_title: 'Cortisol, Stress and Adrenal Fatigue: What the Evidence Supports'
+seo_description: 'A critical essay on cortisol rhythms, stress, abdominal fat, Cushing syndrome, adrenal fatigue, testing and the misuse of “high cortisol” as a universal diagnosis.'
 seo_type: article
 excerpt: >-
-  Cortisol is essential for normal physiology. Social media increasingly treats it
-  as a toxin that explains belly fat, poor sleep, anxiety, cravings and fatigue.
-  That confuses normal circadian hormone biology with pathological cortisol excess.
+  Cortisol is essential physiology. Pathological cortisol excess is real, but
+  social media often turns a dynamic hormone into a catch-all explanation for
+  belly fat, poor sleep, fatigue and anxiety.
 summary: >-
-  This article separates normal HPA-axis physiology from Cushing syndrome,
-  stress-related associations, obesity, adrenal fatigue, home cortisol testing and
-  “cortisol-lowering” supplements. It explains why one hormone measured at one time
-  cannot diagnose a complex chronic state.
+  This essay explains circadian and ultradian cortisol rhythms, the cortisol
+  awakening response, Cushing syndrome, stress-obesity research, adrenal fatigue,
+  testing and “cortisol-lowering” supplements.
 keywords:
 - cortisol
+- stress hormone
 - cortisol belly
 - adrenal fatigue
-- stress hormone
 - HPA axis
 - Cushing syndrome
-- cortisol supplements
-- social media health myths
+- cortisol testing
 why_this_exists: >-
-  Cortisol has become a universal explanation in online wellness culture. The
-  underlying hormone is real and clinically important, but the social-media model
-  often ignores circadian rhythm, pulsatility, tissue sensitivity, local metabolism
-  and the distinction between association and endocrine disease.
+  Cortisol is increasingly used online as a diagnosis inferred from non-specific
+  symptoms. The underlying endocrine system is much more dynamic and context-dependent.
 evidence: >-
-  Endocrine Society guidelines, systematic reviews of cortisol and obesity,
-  reviews of glucocorticoid rhythmicity, the systematic review of adrenal fatigue,
-  and studies of commercial adrenal-support supplements.
+  Endocrine Society guidelines, reviews of glucocorticoid rhythmicity, systematic
+  reviews of cortisol and obesity, adrenal-fatigue evidence and supplement studies.
 methodology: >-
-  Separate normal physiology from pathology, acute response from chronic exposure,
-  circulating cortisol from local tissue metabolism, and symptoms from validated
-  endocrine testing. Prefer clinical guidelines and systematic reviews over
-  single-time-point biomarker claims.
+  Separate normal hormone dynamics from endocrine disease, acute stress responses
+  from chronic dysregulation and symptoms from validated diagnostic testing.
 reviewed_at: '2026-09-19'
 header:
   image: /assets/images/headers/photo-microscope.jpg
@@ -59,904 +52,207 @@ header:
   twitter_image: /assets/images/headers/photo-microscope.jpg
 ---
 
-<!--
-Development contract
-Question: Does ordinary stress-related cortisol explain the wide range of symptoms and body changes attributed to it online?
-Claim: Cortisol is a dynamic, essential hormone. Pathological cortisol excess is real, but the broad social-media model of “high cortisol” as a universal explanation for belly fat, fatigue, anxiety and poor sleep is not supported by simple symptom lists or one-off measurements.
-Counterclaim: Chronic stress and HPA-axis dysregulation can contribute to obesity, sleep disturbance and metabolic disease, so dismissing cortisol entirely would also be wrong.
-Evidence object: Endocrine guidelines, HPA-axis reviews, obesity systematic reviews, adrenal-fatigue review and supplement-content studies.
-Failure case: Treating every elevated cortisol value as pathology, or treating every stress-related symptom as proof of normal endocrine function.
-Reader payoff: Know what cortisol actually does, when cortisol disorders are real, and why “lower your cortisol” is usually too vague to be a medical claim.
-Exclusions: Individual diagnosis, Cushing-syndrome management, adrenal insufficiency management and personalised supplement advice.
--->
+Cortisol has become one of the most overused explanatory variables in online health culture. It is blamed for abdominal fat, insomnia, fatigue, anxiety, cravings, inflammation and difficulty losing weight. A parallel market offers “cortisol resets”, adrenal-support supplements and symptom lists that supposedly identify hormonal imbalance without formal testing.
 
-Cortisol has become one of the internet's favourite villains.
+The underlying hormone is not fictional.
 
-If someone has abdominal fat, cortisol is blamed.
+Cortisol is essential to normal physiology. It participates in glucose regulation, vascular function, immune signalling, cognition, sleep-wake organisation and adaptation to stress. Pathological glucocorticoid excess can cause serious disease. Inadequate glucocorticoid activity can also be dangerous.
 
-If someone wakes tired, cortisol is blamed.
+That alone should make the simplistic model suspicious.
 
-If someone cannot sleep, cortisol is blamed.
+The goal of a healthy endocrine system is not the lowest possible cortisol concentration. It is appropriate regulation across time and tissue.
 
-If someone is anxious, cortisol is blamed.
+## Cortisol is rhythmic by design
 
-If someone craves food, cortisol is blamed.
+Healthy cortisol secretion is strongly circadian and also pulsatile.
 
-If weight loss is difficult, cortisol is blamed.
+In people with a conventional sleep-wake schedule, concentrations rise toward the active phase, are relatively high around awakening and decline across the day toward a night-time nadir. Superimposed on that daily rhythm are ultradian pulses.
 
-Then comes the solution:
+The cortisol awakening response adds another layer: cortisol typically rises rapidly after waking.
 
-lower cortisol,
+That rise is not evidence of pathology. It is part of normal endocrine organisation.
 
-reset cortisol,
+This is why interpreting cortisol without time is inherently problematic. The same numerical concentration can be expected in the morning and abnormal late at night.
 
-heal the adrenals,
+A random value therefore does not describe a person's entire HPA-axis state.
 
-take an adaptogen,
+The temporal structure is part of the biology.
 
-avoid morning coffee,
+## Stress does not mean cortisol is constantly high
 
-buy a saliva test,
+The phrase “stress raises cortisol” is directionally useful for acute physiology and misleading when extended into a universal chronic model.
 
-follow a cortisol diet.
+Chronic stress can alter HPA-axis regulation, but the pattern is not always a sustained upward shift. Studies report exaggerated responses in some contexts, blunted responses in others, flatter diurnal rhythms and altered awakening responses.
 
-The problem is not that cortisol is irrelevant.
+The system can become dysregulated without cortisol being uniformly high at every time point.
 
-The problem is almost the opposite.
+This matters because social-media diagnosis often assumes one scalar quantity called “stress cortisol”. Real HPA-axis biology is a dynamic process involving feedback, timing, receptor sensitivity and tissue-specific metabolism.
 
-Cortisol is so important that reducing it to a single “bad hormone” destroys the biology.
+A person can experience high subjective stress without persistently elevated cortisol. Another can show altered rhythmicity without describing extreme stress.
 
-## Cortisol is not a toxin
+Stress and cortisol overlap. They are not synonyms.
 
-Cortisol is the main glucocorticoid hormone in humans.
+## Cushing syndrome is real; “cortisol belly” is not a diagnosis
 
-It participates in:
+The association between glucocorticoids and body-fat distribution is one reason online cortisol narratives feel plausible.
 
-- glucose regulation;
-- cardiovascular function;
-- immune regulation;
-- inflammatory control;
-- cognition;
-- memory;
-- sleep-wake organisation;
-- adaptation to stress;
-- energy mobilisation.
+Cushing syndrome, which involves excessive glucocorticoid exposure, can cause central adiposity together with muscle weakness, hypertension, glucose intolerance, skin changes, bone disease and other characteristic features.
 
-Without adequate glucocorticoid signalling, humans become seriously ill.
+That is established endocrinology.
 
-With excessive glucocorticoid signalling, humans can also become seriously ill.
+It does not follow that ordinary abdominal fat is a visual marker of high cortisol.
 
-That already tells us the correct model is not
+Obesity is common. Cushing syndrome is not.
 
-$$
-\text{cortisol} = \text{bad}.
-$$
+The Endocrine Society therefore recommends targeted testing in people with features that raise clinical suspicion rather than indiscriminate screening of everyone with obesity, depression or fatigue.
 
-It is closer to
+This is an important base-rate issue. A symptom can occur in a rare endocrine disorder while being far more commonly caused by other conditions.
 
-$$
-\text{health}
-=
-f(
-\text{cortisol level},
-\text{timing},
-\text{pulsatility},
-\text{receptor sensitivity},
-\text{tissue},
-\text{duration}
-).
-$$
+Abdominal shape alone cannot identify the HPA axis.
 
-The same hormone can be adaptive in one context and harmful in another.
+## The obesity-cortisol relationship is heterogeneous
 
-Source:
+A systematic review of cortisol activity in obesity found inconsistent results across studies.
 
-- [Current Challenges and Future Directions in the Assessment of Glucocorticoid Status](https://academic.oup.com/edrv/article/45/6/795/7682328)
-- [Glucocorticoids, their uses, sexual dimorphisms, and diseases](https://doi.org/10.1152/physrev.00021.2023)
+Some reported increased HPA-axis reactivity, others reduced responses. Associations differed by sex, type of obesity, tissue, measurement method and stress context.
 
-## Cortisol should not be flat
+Local glucocorticoid metabolism also matters. Enzymes such as 11β-HSD1 can regenerate active cortisol within tissues, meaning adipose exposure can differ from what a single circulating measurement suggests.
 
-One of the strangest assumptions in wellness culture is that a healthy hormone should remain stable.
+This is one reason the phrase “high cortisol causes belly fat” is too simple.
 
-Cortisol does not.
+The relationship is bidirectional and context-dependent. Adiposity, sleep, stress, insulin sensitivity and local tissue metabolism can all interact with glucocorticoid signalling.
 
-Healthy cortisol secretion is strongly rhythmic.
+A photograph cannot resolve that system.
 
-It follows both:
+## Random cortisol testing is usually the wrong question
 
-- a circadian rhythm across the day;
-- ultradian pulses occurring roughly every one to two hours.
+Because cortisol varies strongly over time, endocrine testing for pathological excess uses methods designed around specific physiological properties.
 
-In people with a conventional sleep-wake schedule, cortisol begins rising in the early morning, reaches high concentrations around awakening, and then declines across the day toward a night-time nadir.
+The Endocrine Society recommends tests such as late-night salivary cortisol, 24-hour urinary free cortisol or dexamethasone suppression testing in appropriate clinical contexts. It recommends against random serum cortisol as a screening test for Cushing syndrome.
 
-There is also a **cortisol awakening response**, a rapid increase during the first 30 to 45 minutes after waking.
+This is not bureaucratic complexity.
 
-That rise is not evidence that the body is “stressed”.
+It reflects the fact that one sample may capture a normal pulse, a morning peak, acute stress or medication effects.
 
-It is part of normal physiology.
+A home test or isolated blood result becomes easy to overinterpret when the reference process itself is dynamic.
 
-The 2024 *Endocrine Reviews* review of the cortisol awakening response describes it as an adaptive process involved in preparing the organism for anticipated daily demands.
+Measurement without an appropriate model can create more certainty than information.
 
-So the objective
+## Adrenal fatigue is not established endocrinology
 
-$$
-\min_t C(t)
-$$
+The idea of *adrenal fatigue* proposes that prolonged stress exhausts the adrenal glands, eventually producing low cortisol and a characteristic collection of symptoms.
 
-makes no physiological sense.
+The symptoms are usually broad: tiredness, poor concentration, sleep disturbance, cravings and difficulty coping with stress.
 
-A healthy endocrine system is not one with the lowest possible cortisol.
+Those symptoms are real.
 
-It is one with appropriate regulation.
+The proposed syndrome is not well supported.
 
-Sources:
+A systematic review examining the adrenal-fatigue literature found inconsistent methods and no convincing evidence establishing it as a distinct medical condition. The Endocrine Society likewise states that adrenal fatigue is not a recognised diagnosis.
 
-- [The Cortisol Awakening Response, Endocrine Reviews, 2024](https://academic.oup.com/edrv/article/46/1/43/7739741)
-- [Functional and Clinical Significance of the 24-Hour Rhythm of Circulating Glucocorticoids](https://academic.oup.com/edrv/article/38/1/3/2959892)
+This distinction matters because adrenal insufficiency is real.
 
-## A single cortisol value has little meaning without time
+Primary or secondary adrenal insufficiency can be serious and has established diagnostic pathways. Vague wellness diagnoses risk confusing non-specific symptoms with a condition that requires proper endocrine assessment.
 
-Suppose two people have the same cortisol concentration:
+Rejecting adrenal fatigue is not rejecting patients' symptoms. It is rejecting an unvalidated causal explanation for them.
 
-$$
-C = 350\ \mathrm{nmol/L}.
-$$
+## “Lower cortisol” is not automatically a therapeutic objective
 
-For one person, the sample was taken shortly after waking.
+Once cortisol is framed as harmful, any intervention that lowers it can be marketed as beneficial.
 
-For the other, it was taken near midnight.
+That reasoning is incomplete.
 
-Those observations do not mean the same thing.
+A biomarker change is not automatically a health outcome.
 
-The reference process is time-dependent:
+An intervention that modestly lowers a cortisol measurement may alter subjective stress, or it may change only one assay under one condition. The clinical meaning depends on the population, timing and outcome of interest.
 
-$$
-C = C(t).
-$$
+This is especially important because normal cortisol is necessary. Suppressing it below appropriate levels would not represent improved health.
 
-The 2024 review of glucocorticoid assessment notes that healthy cortisol secretion has one of the largest circadian variations among circulating hormones.
+The target is regulated glucocorticoid signalling, not minimal glucocorticoid signalling.
 
-Morning values that are normal can overlap concentrations that would be abnormal later in the day.
-
-This is why endocrine testing cannot be interpreted like a static cholesterol measurement.
-
-Timing is part of the variable.
-
-Source:
-
-- [Current Challenges and Future Directions in the Assessment of Glucocorticoid Status](https://academic.oup.com/edrv/article/45/6/795/7682328)
-
-## Myth 1: if you have belly fat, your cortisol is high
-
-This is probably the most successful version of the cortisol story.
-
-There is a legitimate reason the idea exists.
-
-Pathological glucocorticoid excess can produce central adiposity.
-
-People with Cushing syndrome can develop characteristic fat distribution together with muscle weakness, hypertension, diabetes, skin changes, bone disease and other features.
-
-Chronic stress, sleep disturbance and HPA-axis biology are also associated with obesity in population research.
-
-So the statement
-
-> cortisol can influence adipose tissue
-
-is true.
-
-The stronger statement
-
-> abdominal fat means your cortisol is high
-
-is not.
-
-A systematic review of HPA-axis activity in obesity found inconsistent results.
-
-Some studies showed increased reactivity.
-
-Others showed reduced responses.
-
-Associations differed according to abdominal versus general obesity, sex, stress exposure, tissue and cortisol measure.
-
-Local cortisol metabolism inside adipose tissue may also differ from circulating cortisol.
-
-This is important because the social-media model assumes one scalar:
-
-$$
-C_{\text{blood}}.
-$$
-
-The biology contains several related variables:
-
-$$
-C_{\text{circulation}},
-C_{\text{adipose}},
-\text{11}\beta\text{-HSD1 activity},
-\text{receptor sensitivity},
-\text{rhythm},
-\text{reactivity}.
-$$
-
-A waist measurement cannot identify them.
-
-Sources:
-
-- [Rodriguez et al., 2015, systematic review](https://pubmed.ncbi.nlm.nih.gov/26356039/)
-- [Lengton et al., stress-obesity overview](https://pubmed.ncbi.nlm.nih.gov/39623561/)
-
-## Cushing syndrome is real, but common obesity is not mild Cushing syndrome
-
-This distinction matters.
-
-Cushing syndrome is a defined endocrine disorder involving excessive glucocorticoid exposure.
-
-Causes can include endogenous cortisol overproduction or exogenous glucocorticoid medication.
-
-The Endocrine Society recommends diagnostic testing in people with multiple and progressive features that raise clinical suspicion, not widespread screening of everyone with obesity, depression or fatigue.
-
-Why?
-
-Because those symptoms are common and non-specific.
-
-Obesity occurs without Cushing syndrome.
-
-Depression occurs without Cushing syndrome.
-
-Hypertension occurs without Cushing syndrome.
-
-Menstrual changes occur without Cushing syndrome.
-
-The guideline explicitly notes this overlap.
-
-The existence of one endocrine disease does not make its most common symptoms diagnostic.
-
-Source:
-
-- [Endocrine Society guideline: Diagnosis of Cushing's Syndrome](https://www.endocrine.org/clinical-practice-guidelines/diagnosis-of-cushing-syndrome)
-
-## Myth 2: a random cortisol blood test tells you whether stress is causing your symptoms
-
-It usually does not.
-
-The Endocrine Society specifically recommends **against random serum cortisol** as a screening test for Cushing syndrome.
-
-Validated initial testing uses context-specific methods such as:
-
-- late-night salivary cortisol;
-- 24-hour urinary free cortisol;
-- dexamethasone suppression testing.
-
-These tests ask more specific physiological questions.
-
-A random value is difficult to interpret because cortisol varies with:
-
-- clock time;
-- awakening;
-- sleep;
-- acute stress;
-- illness;
-- food;
-- exercise;
-- medication;
-- oestrogen status;
-- sampling conditions.
-
-The online logic
-
-$$
-\text{one cortisol value}
-\rightarrow
-\text{chronic stress diagnosis}
-$$
-
-throws away most of the relevant structure.
-
-Source:
-
-- [Endocrine Society guideline: Diagnosis of Cushing's Syndrome](https://www.endocrine.org/clinical-practice-guidelines/diagnosis-of-cushing-syndrome)
-
-## Myth 3: a high morning cortisol means something is wrong
-
-Morning cortisol is supposed to be relatively high.
-
-In healthy people, secretion increases toward the active phase.
-
-The cortisol awakening response can produce a marked rise soon after waking.
-
-A single morning value therefore cannot be interpreted as:
-
-> my stress hormone is too high.
-
-A useful analogy is heart rate during exercise.
-
-An elevated heart rate while running is not automatically pathology.
-
-Context defines meaning.
-
-Likewise,
-
-$$
-C(t_{\text{morning}})
->
-C(t_{\text{night}})
-$$
-
-is generally expected physiology.
-
-The pattern matters more than the fact that a peak exists.
-
-## Myth 4: chronic stress always means chronically high cortisol
-
-This sounds plausible but is too simple.
-
-Chronic stress can alter HPA-axis function.
-
-But that alteration is not always a sustained elevation.
-
-Research has reported:
-
-- exaggerated responses;
-- blunted responses;
-- altered awakening responses;
-- flattened rhythms;
-- altered feedback sensitivity.
-
-The 2024 review of the cortisol awakening response notes that early research linked chronic stress with larger awakening responses, while higher-quality later work has also reported blunted patterns under chronic stress.
-
-This means there is no universal equation
-
-$$
-\text{more stress}
-=
-\text{more cortisol at every time point}.
-$$
-
-A dysregulated dynamic system can change shape without simply shifting upward.
-
-Source:
-
-- [Stalder et al., 2024](https://academic.oup.com/edrv/article/46/1/43/7739741)
-
-## “High cortisol” is often an unmeasured story
-
-This is one reason the phrase spreads so easily.
-
-The diagnosis is frequently made without measuring cortisol at all.
-
-Symptoms are used as proof:
-
-- tired but wired;
-- weight around the abdomen;
-- poor sleep;
-- cravings;
-- irritability;
-- low energy;
-- anxiety.
-
-But every item on that list is non-specific.
-
-A symptom list with many common features has high sensitivity for being relatable.
-
-That is not the same as diagnostic specificity.
-
-If symptom $S$ occurs in many conditions,
-
-$$
-P(S\mid C)
-$$
-
-may be high while
-
-$$
-P(C\mid S)
-$$
-
-remains low.
-
-Confusing those probabilities is a base-rate error.
-
-## Myth 5: “adrenal fatigue” happens when stress exhausts the adrenal glands
-
-This is one of the most persistent wellness diagnoses.
-
-The model says prolonged stress forces the adrenal glands to produce cortisol until they become exhausted.
-
-Then cortisol falls.
-
-Symptoms follow.
-
-The problem is that **adrenal fatigue is not an established endocrine diagnosis**.
-
-A systematic review evaluated 58 studies involving cortisol measures and fatigue-related states.
-
-The findings were inconsistent and heavily dependent on method.
-
-The authors concluded that the evidence did not substantiate adrenal fatigue as a medical condition.
-
-The Endocrine Society likewise states that there is no scientific proof supporting adrenal fatigue.
-
-This does not mean fatigue is imaginary.
-
-It means fatigue should not be assigned to an unvalidated endocrine mechanism without evidence.
-
-Sources:
-
-- [Cadegiani & Kater, 2016, systematic review](https://pubmed.ncbi.nlm.nih.gov/27557747/)
-- [Endocrine Society: Adrenal Fatigue](https://www.endocrine.org/patient-engagement/endocrine-library/adrenal-fatigue)
-
-## Adrenal insufficiency is real
-
-Rejecting adrenal fatigue should not be confused with claiming that adrenal failure does not exist.
-
-**Adrenal insufficiency** is a real endocrine disorder.
-
-It can result from adrenal disease, pituitary or hypothalamic disease, or suppression of the HPA axis after glucocorticoid exposure.
-
-It has established diagnostic pathways and can become life-threatening.
-
-That is another reason vague adrenal-fatigue diagnoses are problematic.
-
-A non-specific wellness label can distract from conditions that require proper clinical evaluation.
-
-The correct distinction is
-
-$$
-\text{adrenal insufficiency}
-\neq
-\text{adrenal fatigue}.
-$$
-
-One is a recognised endocrine disorder.
-
-The other is an unvalidated explanatory construct.
-
-## Myth 6: if cortisol causes weight gain, lowering cortisol should make everyone lose weight
-
-This is an intervention fallacy.
-
-Suppose variable $C$ participates in outcome $W$.
-
-It does not follow that reducing $C$ below normal will improve $W$.
-
-The causal relationship may be:
-
-- non-linear;
-- tissue-specific;
-- dependent on timing;
-- modified by energy intake;
-- modified by sleep;
-- modified by insulin sensitivity;
-- modified by medication.
-
-Pathological cortisol excess should be treated because it is pathological.
-
-That does not imply that a person with ordinary physiology benefits from suppressing normal cortisol.
-
-The Endocrine Society guideline on Cushing syndrome explicitly recommends against treatments designed to reduce cortisol when Cushing syndrome has not been established.
-
-Source:
-
-- [Endocrine Society: Treatment of Cushing's Syndrome](https://www.endocrine.org/clinical-practice-guidelines/treatment-of-cushing-syndrome)
-
-## Myth 7: “cortisol-lowering” is automatically a health benefit
-
-This is another Goodhart-style problem.
-
-Cortisol is a biomarker and a hormone.
-
-If a supplement lowers a measured cortisol value, three questions remain:
-
-1. Was the measurement valid?
-2. Was the change physiologically meaningful?
-3. Did the person become healthier?
-
-A reduction in cortisol is not automatically an improvement.
-
-Consider a hypothetical intervention:
-
-$$
-\Delta C < 0.
-$$
-
-That tells us nothing directly about
-
-$$
-\Delta Y_{\text{health}}.
-$$
-
-The same mistake appears with glucose, inflammation and heart rate.
-
-A visible biomarker becomes the objective.
-
-The actual clinical outcome disappears.
-
-## What about ashwagandha?
+## Ashwagandha illustrates the difference between a signal and a cure
 
 Ashwagandha is frequently marketed as a cortisol-lowering adaptogen.
 
-There is some randomized evidence suggesting reductions in perceived stress and cortisol in selected populations.
+Recent meta-analyses have reported modest reductions in cortisol and some stress-related measures in selected populations. That is a legitimate research signal.
 
-A 2025 meta-analysis reported statistically significant reductions in cortisol and stress-related measures across included trials.
+It does not establish that ashwagandha “fixes high cortisol”, nor that people with vague symptoms have a cortisol disorder that should be treated with a supplement.
 
-Another 2025 review found reduced cortisol but less consistent effects on perceived stress.
+The studies vary in dose, formulation, duration and participant characteristics. Effects on perceived stress are not always consistent even when cortisol changes.
 
-So the accurate statement is not
+The scientifically appropriate conclusion is therefore conditional: some preparations may influence stress-related outcomes in some populations.
 
-> ashwagandha is fake.
+That is very different from a universal endocrine treatment.
 
-It is also not
+## Adrenal-support supplements raise a separate concern
 
-> ashwagandha fixes high cortisol.
+A small Mayo Clinic study purchased over-the-counter supplements marketed for adrenal support and chemically analysed their contents.
 
-The evidence suggests possible effects in selected stress-related contexts, with variation across studies.
+The researchers detected thyroid hormone in all products tested and one or more steroid-related hormones in most.
 
-That is very different from diagnosing a hormonal disorder from symptoms and prescribing a supplement to “reset the adrenals”.
+The study was limited to a small sample and does not imply that every adrenal-support product contains undeclared hormones.
 
-Sources:
+It does demonstrate why products marketed as “balancing” endocrine systems should not automatically be assumed benign.
 
-- [Bachour et al., 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12242034/)
-- [Systematic review and meta-analysis, 2025](https://pubmed.ncbi.nlm.nih.gov/40746175/)
+A supplement can alter the very hormonal environment it claims to normalise.
 
-## “Adrenal support” supplements create a more serious problem
+## Cortisol does not invalidate energy balance
 
-There is an awkward finding in the supplement literature.
+Another common claim is that cortisol prevents weight loss even when someone is “in a calorie deficit”.
 
-A Mayo Clinic study purchased 12 over-the-counter supplements marketed for adrenal support.
-
-Laboratory testing detected thyroid hormone in all products studied and one or more steroid-related hormones in most.
-
-Detected substances included pregnenolone, budesonide, androstenedione, cortisol and cortisone.
-
-That study was small and specific to the tested products.
-
-It does not justify claiming that every adrenal-support supplement contains hidden hormones.
-
-But it does show why vague endocrine treatment with poorly characterised products is not automatically benign.
-
-A supplement sold to “balance hormones” can itself alter hormonal exposure.
-
-Source:
-
-- [Akturk et al., 2018, Mayo Clinic Proceedings](https://pubmed.ncbi.nlm.nih.gov/29502560/)
-
-## Myth 8: cortisol explains why you cannot lose weight despite a calorie deficit
-
-This claim is often phrased as:
-
-> You are eating less but cortisol is preventing fat loss.
-
-Cortisol can influence:
-
-- appetite;
-- food preference;
-- sleep;
-- fluid balance;
-- insulin sensitivity;
-- energy mobilisation;
-- fat distribution.
-
-All of those can affect body weight and body composition.
+Stress can absolutely influence weight regulation. It can alter appetite, sleep, food preference, activity and adherence. Glucocorticoids also affect glucose and fat metabolism.
 
 But cortisol does not create energy from nothing.
 
-If stored body energy is decreasing over time,
+The practical issue is that intended energy intake and actual long-term energy balance can diverge under stress. Sleep deprivation can affect appetite. Stress can change snacking. Activity may fall. Fluid balance can shift.
 
-$$
-\Delta E_{\text{body}} < 0.
-$$
+The useful model is therefore behavioural and physiological, not magical: stress can change several components of energy balance and body composition.
 
-Hormones influence the components of that system.
+That is more complex than “cortisol blocks fat loss”, but it is also more defensible.
 
-They do not repeal conservation of energy.
+## Cortisol and inflammation are not a simple one-way relationship
 
-The practical complication is that stress can make an intended deficit differ from the actual long-term deficit by changing intake, activity, sleep and adherence.
+Another online simplification claims that cortisol itself “causes inflammation”.
 
-So the useful model is not
+Glucocorticoids are among the most important anti-inflammatory signalling molecules in human physiology, and synthetic glucocorticoids are used therapeutically to suppress immune responses.
 
-$$
-\text{cortisol blocks thermodynamics}.
-$$
+At the same time, chronic stress can alter immune regulation and glucocorticoid sensitivity. Tissue-specific effects and receptor adaptation complicate the relationship further.
 
-It is
+So the correct model is not “cortisol equals inflammation”.
 
-$$
-\text{stress}
-\rightarrow
-\{
-\text{appetite},
-\text{sleep},
-\text{behaviour},
-\text{activity},
-\text{metabolism}
-\}
-\rightarrow
-\text{weight trajectory}.
-$$
+It is a dynamic interaction between stress systems and immune systems.
 
-That is more complicated.
+Reducing that interaction to one arrow creates exactly the kind of explanatory confidence that social media rewards and endocrinology resists.
 
-It is also more plausible.
+## The common symptom list is not a diagnostic instrument
 
-## Myth 9: a “cortisol belly” has a distinct visual appearance
+The broad appeal of cortisol content comes from symptom lists that are highly relatable.
 
-Social media increasingly claims that abdominal shape can reveal a hormonal diagnosis.
+Poor sleep, fatigue, anxiety, cravings, irritability and abdominal fat are common.
 
-This is not a valid diagnostic method.
+That makes them poor discriminators for a specific endocrine disorder.
 
-Body-fat distribution depends on:
+If a symptom occurs in many conditions, seeing the symptom does not strongly identify one cause.
 
-- sex;
-- age;
-- genetics;
-- total adiposity;
-- menopause;
-- physical activity;
-- medication;
-- metabolic status;
-- endocrine disease.
+This is why diagnosis cannot proceed by matching oneself to a graphic containing common experiences.
 
-Pathological glucocorticoid excess can alter fat distribution.
-
-But ordinary abdominal adiposity cannot be reverse-engineered into a cortisol concentration from a photograph.
-
-The mapping
-
-$$
-\text{body shape}
-\rightarrow
-\text{cortisol disorder}
-$$
-
-is many-to-one and non-identifiable.
-
-Visual pattern recognition is not endocrine testing.
-
-## Myth 10: cortisol causes inflammation
-
-This is particularly ironic.
-
-Glucocorticoids are among the most important **anti-inflammatory** signalling molecules in human physiology.
-
-Synthetic glucocorticoids are used therapeutically because they suppress inflammatory and immune processes.
-
-At the same time, chronic glucocorticoid dysregulation can interact with immune function in complex ways.
-
-Long-term stress can also be associated with inflammatory phenotypes through multiple pathways.
-
-So the statement
-
-> cortisol causes inflammation
-
-is far too crude.
-
-Cortisol can suppress inflammatory signalling acutely.
-
-Chronic stress can alter glucocorticoid sensitivity and immune regulation.
-
-Different tissues can respond differently.
-
-The system is dynamic.
-
-There is no single arrow
-
-$$
-\text{cortisol}
-\rightarrow
-\text{inflammation}.
-$$
-
-## The body does not have one “stress level”
-
-Another conceptual error is treating stress as one scalar latent variable.
-
-A stress response can involve:
-
-- sympathetic activation;
-- parasympathetic withdrawal;
-- cortisol;
-- catecholamines;
-- immune signalling;
-- behavioural responses;
-- sleep changes;
-- cognition;
-- appetite.
-
-These systems interact without moving in perfect synchrony.
-
-A person can therefore have:
-
-- high subjective stress with ordinary cortisol;
-- altered cortisol rhythm without high perceived stress;
-- acute cortisol elevation during a normal adaptive challenge.
-
-The equation
-
-$$
-\text{stress} = \text{cortisol}
-$$
-
-is biologically incomplete.
-
-## One hormone can have different effects in different tissues
-
-Circulating cortisol is only part of glucocorticoid biology.
-
-Tissues can modify cortisol locally.
-
-One important enzyme is **11β-hydroxysteroid dehydrogenase type 1**, or 11β-HSD1.
-
-It can regenerate active cortisol from cortisone inside tissues.
-
-Adipose-tissue cortisol exposure can therefore differ from what a single blood sample suggests.
-
-Receptor expression and sensitivity also matter.
-
-So effective glucocorticoid action is closer to
-
-$$
-A_i
-=
-f(
-C_{\text{circulation}},
-M_i,
-R_i,
-t
-),
-$$
-
-where
-
-- $A_i$ is glucocorticoid action in tissue $i$;
-- $M_i$ represents local metabolism;
-- $R_i$ represents receptor sensitivity;
-- $t$ represents timing.
-
-This is why “my blood cortisol is X” is not a complete description of glucocorticoid biology.
-
-## Why cortisol content works so well online
-
-Cortisol has almost perfect marketing properties.
-
-It is real.
-
-It has a scientific name.
-
-It changes with stress.
-
-It affects many systems.
-
-Pathological excess causes visible disease.
-
-Normal concentrations vary.
-
-Most symptoms attributed to it are common.
-
-This produces a perfect explanatory framework.
-
-Whatever the complaint, cortisol can be inserted somewhere in the story.
-
-That makes the hypothesis emotionally satisfying.
-
-It also makes it difficult to falsify.
-
-## A useful diagnostic warning sign: the explanation is too universal
-
-If one mechanism explains:
-
-- weight gain;
-- weight-loss resistance;
-- fatigue;
-- insomnia;
-- waking early;
-- sleeping too much;
-- anxiety;
-- depression;
-- cravings;
-- inflammation;
-- poor immunity;
-- acne;
-- hair loss;
-- low libido;
-
-then the problem may not be that the mechanism is powerful.
-
-The problem may be that the model has become non-specific.
-
-A useful scientific explanation narrows possibilities.
-
-A bad universal explanation absorbs them.
-
-## What the evidence actually supports
-
-A more defensible summary is straightforward.
-
-**Cortisol is essential, not toxic.**
-
-**Healthy cortisol secretion is rhythmic and pulsatile.**
-
-**Morning cortisol rises are normal.**
-
-**Pathological cortisol excess exists and can cause serious disease.**
-
-**Chronic stress can affect HPA-axis biology, metabolism, sleep and obesity risk.**
-
-**The stress-cortisol-obesity relationship is real but heterogeneous and not reducible to “high cortisol causes belly fat”.**
-
-**Adrenal fatigue is not a validated endocrine diagnosis.**
-
-**Random cortisol measurements are poor screening tools for Cushing syndrome.**
-
-**Lowering cortisol is not automatically a health objective.**
-
-And perhaps most importantly:
-
-$$
-\text{symptoms compatible with cortisol disorder}
-\neq
-\text{cortisol disorder}.
-$$
-
-## A better framework for cortisol claims
-
-When someone says cortisol is causing a health problem, ask:
-
-| Question | Why it matters |
-| --- | --- |
-| Which cortisol measure? | Serum, saliva, urine and hair answer different questions |
-| What time was it measured? | Cortisol is strongly circadian |
-| Was it measured repeatedly? | One sample may capture a pulse or acute response |
-| Is there a recognised endocrine syndrome? | Symptoms alone are non-specific |
-| What medication is being used? | Glucocorticoids and other drugs can alter testing |
-| Is the claim about blood cortisol or tissue action? | They are not identical |
-| Is the outcome acute or chronic? | Stress reactivity differs from long-term exposure |
-| What would falsify the claim? | Universal explanations are often unfalsifiable |
-| Is a supplement being sold? | Commercial incentives raise the need for evidence |
-
-The aim is not to dismiss cortisol.
-
-It is to make the claim testable.
+The more universal the symptom list, the less specific the inference.
 
 ## Conclusion
 
-Cortisol is not the villain.
+Cortisol is not a toxin and not a diagnosis.
 
-It is a regulatory hormone.
+It is a dynamic hormone with circadian and ultradian organisation, tissue-specific effects and essential physiological functions. Pathological cortisol excess exists and can cause serious disease. Chronic stress can influence HPA-axis regulation and metabolic health.
 
-It rises.
+Those facts do not validate “high cortisol” as a universal explanation for belly fat, fatigue, insomnia and anxiety.
 
-It falls.
+Random cortisol values are difficult to interpret. Adrenal fatigue is not an established endocrine diagnosis. Lowering cortisol is not automatically beneficial.
 
-It pulses.
+The most accurate summary is simple: **cortisol is a regulated signal, and its meaning depends on timing, context and clinical state.**
 
-It responds to stress.
+That is less satisfying than a single villain.
 
-It changes across the day.
-
-It acts differently across tissues.
-
-Too little is dangerous.
-
-Too much can be dangerous.
-
-Normal physiology requires neither extreme.
-
-Social media turns that system into something much simpler:
-
-> stress raises cortisol, cortisol creates belly fat, therefore lower cortisol.
-
-That chain contains pieces of real biology.
-
-It is still an inadequate model.
-
-The most useful equation is probably this:
-
-$$
-\boxed{
-\text{cortisol is a dynamic signal, not a diagnosis}
-}
-$$
-
-Once that distinction is preserved, most of the internet mythology becomes much easier to recognise.
+It is also much closer to endocrine physiology.
 
 ---
 
@@ -966,28 +262,18 @@ Once that distinction is preserved, most of the internet mythology becomes much 
 
 2. Stalder T, Oster H, Abelson JL, et al. **Cortisol Awakening Response: Regulation and Functional Significance.** *Endocrine Reviews*. 2025;46:43–77. https://academic.oup.com/edrv/article/46/1/43/7739741
 
-3. Oster H, Challet E, Ott V, et al. **The Functional and Clinical Significance of the 24-Hour Rhythm of Circulating Glucocorticoids.** *Endocrine Reviews*. 2017;38:3–45. https://academic.oup.com/edrv/article/38/1/3/2959892
+3. Rodriguez ACI, Epel ES, White ML, Standen EC, Seckl JR, Tomiyama AJ. **Hypothalamic-pituitary-adrenal axis dysregulation and cortisol activity in obesity: A systematic review.** *Psychoneuroendocrinology*. 2015;62:301–318. https://pubmed.ncbi.nlm.nih.gov/26356039/
 
-4. Rodriguez ACI, Epel ES, White ML, Standen EC, Seckl JR, Tomiyama AJ. **Hypothalamic-pituitary-adrenal axis dysregulation and cortisol activity in obesity: A systematic review.** *Psychoneuroendocrinology*. 2015;62:301–318. https://pubmed.ncbi.nlm.nih.gov/26356039/
+4. Nieman LK, Biller BMK, Findling JW, et al. **The Diagnosis of Cushing's Syndrome: An Endocrine Society Clinical Practice Guideline.** https://www.endocrine.org/clinical-practice-guidelines/diagnosis-of-cushing-syndrome
 
-5. Lengton EFC, et al. **Glucocorticoids and HPA axis regulation in the stress-obesity connection: A comprehensive overview of biological, physiological and behavioural dimensions.** *Clinical Obesity*. 2025. https://pubmed.ncbi.nlm.nih.gov/39623561/
+5. Cadegiani FA, Kater CE. **Adrenal fatigue does not exist: a systematic review.** *BMC Endocrine Disorders*. 2016;16:48. https://pubmed.ncbi.nlm.nih.gov/27557747/
 
-6. Nieman LK, Biller BMK, Findling JW, et al. **The Diagnosis of Cushing's Syndrome: An Endocrine Society Clinical Practice Guideline.** *Journal of Clinical Endocrinology & Metabolism*. 2008;93:1526–1540. https://www.endocrine.org/clinical-practice-guidelines/diagnosis-of-cushing-syndrome
+6. Endocrine Society. **Adrenal Fatigue.** https://www.endocrine.org/patient-engagement/endocrine-library/adrenal-fatigue
 
-7. Nieman LK, Biller BMK, Findling JW, et al. **Treatment of Cushing's Syndrome: An Endocrine Society Clinical Practice Guideline.** *Journal of Clinical Endocrinology & Metabolism*. 2015. https://www.endocrine.org/clinical-practice-guidelines/treatment-of-cushing-syndrome
+7. Akturk HK, Chindris AM, Hines JM, Singh RJ, Bernet VJ. **Over-the-Counter “Adrenal Support” Supplements Contain Thyroid and Steroid-Based Adrenal Hormones.** *Mayo Clinic Proceedings*. 2018;93:284–290. https://pubmed.ncbi.nlm.nih.gov/29502560/
 
-8. Cadegiani FA, Kater CE. **Adrenal fatigue does not exist: a systematic review.** *BMC Endocrine Disorders*. 2016;16:48. https://pubmed.ncbi.nlm.nih.gov/27557747/
-
-9. Endocrine Society. **Adrenal Fatigue.** 2022. https://www.endocrine.org/patient-engagement/endocrine-library/adrenal-fatigue
-
-10. Akturk HK, Chindris AM, Hines JM, Singh RJ, Bernet VJ. **Over-the-Counter “Adrenal Support” Supplements Contain Thyroid and Steroid-Based Adrenal Hormones.** *Mayo Clinic Proceedings*. 2018;93:284–290. https://pubmed.ncbi.nlm.nih.gov/29502560/
-
-11. Bachour G, Samir A, Haddad S, et al. **Effects of Ashwagandha Supplements on Cortisol, Stress, and Anxiety Levels in Adults: A Systematic Review and Meta-Analysis.** *BJPsych Open*. 2025. https://pmc.ncbi.nlm.nih.gov/articles/PMC12242034/
-
-12. **Dual impact of Ashwagandha: Significant cortisol reduction but no effects on perceived stress — A systematic review and meta-analysis.** 2025. https://pubmed.ncbi.nlm.nih.gov/40746175/
-
-13. **Glucocorticoids, their uses, sexual dimorphisms, and diseases: new concepts, mechanisms, and discoveries.** *Physiological Reviews*. 2024. https://doi.org/10.1152/physrev.00021.2023
+8. Bachour G, et al. **Effects of Ashwagandha Supplements on Cortisol, Stress, and Anxiety Levels in Adults: A Systematic Review and Meta-Analysis.** 2025. https://pmc.ncbi.nlm.nih.gov/articles/PMC12242034/
 
 ---
 
-*This article discusses population-level endocrine physiology and evidence. Persistent symptoms, suspected Cushing syndrome, adrenal insufficiency or glucocorticoid-related complications require clinical evaluation rather than a commercial “cortisol reset”.*
+*This article discusses endocrine physiology and population-level evidence. Suspected Cushing syndrome or adrenal insufficiency requires clinical evaluation.*
