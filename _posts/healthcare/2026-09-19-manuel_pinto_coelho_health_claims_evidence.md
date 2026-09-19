@@ -1,7 +1,7 @@
 ---
 permalink: '/healthcare/manuel_pinto_coelho_health_claims_evidence/'
-title: 'Manuel Pinto Coelho, Health Myths, and What the Evidence Actually Says'
-date: '2026-09-19'
+title: 'Manuel Pinto Coelho: Preventive Medicine, Scientific Overreach and the Weight of Evidence'
+date: '2026-09-06'
 categories:
 - Healthcare
 tags:
@@ -14,40 +14,36 @@ tags:
 - Science Communication
 author_profile: false
 classes: wide
-seo_title: 'Manuel Pinto Coelho Health Claims: What the Evidence Says'
-seo_description: 'An evidence-based review of public health claims by Manuel Pinto Coelho on cholesterol, statins, sugar, inflammation, sun exposure, vitamin D, and intermittent fasting.'
+seo_title: 'Manuel Pinto Coelho Health Claims: What the Evidence Supports'
+seo_description: 'A critical evidence review of public claims by Manuel Pinto Coelho on cholesterol, statins, sugar, inflammation, sun exposure and intermittent fasting.'
 seo_type: article
 excerpt: >-
-  Some of Manuel Pinto Coelho's public health claims contain a kernel of truth.
-  The problem is what happens next: nuance disappears, uncertainty is compressed,
-  and a limited observation becomes a universal explanation.
+  Several public claims by Manuel Pinto Coelho begin with legitimate preventive
+  medicine concerns and real biological mechanisms. The problem is the recurrent
+  expansion from partial truth to conclusions stronger than the evidence supports.
 summary: >-
-  This article examines publicly documented claims by Manuel Pinto Coelho about
-  cholesterol, statins, sugar, inflammation, sun exposure, vitamin D, and fasting.
-  Each claim is separated into what is correct, what is unsupported or overstated,
-  and what higher-quality evidence actually establishes.
+  This essay examines documented claims about cholesterol, statins, sugar,
+  inflammation, sunlight, vitamin D and fasting. The focus is not personality or
+  motive, but the inferential step between a plausible mechanism and a clinical conclusion.
 keywords:
 - Manuel Pinto Coelho
-- cholesterol myths
-- statins evidence
+- cholesterol
+- statins
 - sugar inflammation
-- sun exposure cancer
+- sun exposure
 - vitamin D
 - intermittent fasting
 - evidence based medicine
 why_this_exists: >-
-  Public health misinformation is often built not from completely false statements
-  but from partially correct statements stretched beyond what the evidence supports.
-  This article uses documented examples to show how that process works.
+  Public health misinformation is often built from claims that are not wholly
+  false. A real mechanism is presented correctly, then extended into a universal
+  causal story or treatment recommendation.
 evidence: >-
-  Public interviews and podcast descriptions documenting the claims, together with
-  WHO, IARC, ESC/EAS consensus statements, systematic reviews, randomized trials,
-  and meta-analyses.
+  Public interviews documenting the claims, together with EAS and ESC guidance,
+  WHO and IARC material, systematic reviews and controlled trials.
 methodology: >-
-  Quote or paraphrase only publicly documented claims, then distinguish descriptive
-  fact, causal inference, treatment effect, and rhetorical extrapolation. Prefer
-  systematic reviews, randomized trials, consensus statements, and authoritative
-  public-health sources over isolated studies.
+  Separate the documented public statement from the biological premise, then
+  evaluate whether the stronger conclusion follows from the evidence.
 reviewed_at: '2026-09-19'
 header:
   image: /assets/images/headers/photo-microscope.jpg
@@ -59,548 +55,204 @@ header:
   twitter_image: /assets/images/headers/photo-microscope.jpg
 ---
 
-<!--
-Development contract
-Question: Which recurring public-health claims made by Manuel Pinto Coelho are supported by evidence, and where do they exceed it?
-Claim: Several of the claims contain a valid observation but are presented with a certainty or causal scope that the underlying evidence does not justify.
-Counterclaim: Preventive medicine, nutrition, exercise, sleep, vitamin D, and excessive sugar intake are legitimate health topics, and criticism should not dismiss those subjects merely because some claims about them are overstated.
-Evidence object: Publicly documented statements paired with consensus statements, systematic reviews, randomized evidence, and authoritative public-health guidance.
-Failure case: Criticising a person rather than a falsifiable claim, or replacing one simplistic slogan with another.
-Reader payoff: A reusable framework for distinguishing a useful health observation from an exaggerated causal story.
-Exclusions: Personal motives, private medical practice, political opinions, and claims for which a reliable public record could not be found.
--->
+The most persuasive medical overstatements are rarely invented from nothing. They usually begin with a fact that is genuinely important, then expand beyond what the evidence can support.
 
-A useful way to spread a health myth is not to invent something entirely false.
+That pattern appears repeatedly in public statements by the Portuguese physician Manuel Pinto Coelho. His communication emphasises prevention, lifestyle, nutrition and scepticism toward conventional medical practice. Those themes are legitimate areas of debate. The difficulty is not that inflammation, diet, vitamin D or fasting are irrelevant. It is that several public claims move from those valid observations to conclusions that are much stronger.
 
-Start with something true.
+The scientific question is therefore not whether every statement is simply “true” or “false”. It is where the evidential boundary lies.
 
-Then remove the denominator, the competing mechanisms, the boundary conditions, and the uncertainty.
+## Cholesterol and inflammation are not competing explanations
 
-What remains is much easier to remember.
+Pinto Coelho has publicly described cholesterol as a major distraction and framed inflammation as the more fundamental cardiovascular problem, with sugar presented as an important upstream driver.
 
-That pattern appears repeatedly in public statements by the Portuguese physician Manuel Pinto Coelho. He has argued that cholesterol has been turned into a distraction, described statins in highly negative terms, attributed inflammation largely to sugar, claimed that sunlight protects more against cancer than it causes, and described fasting as a kind of surgery without a scalpel.
+The argument begins with a real observation. Atherosclerosis is an inflammatory disease. Immune signalling participates in plaque initiation, progression and rupture. Contemporary cardiovascular medicine does not dispute that.
 
-These are not random internet rumours. They are publicly documented statements made in interviews and media appearances.
+But inflammation does not make LDL causally irrelevant.
 
-The interesting question is therefore not whether every sentence is "true" or "false".
+The evidence linking LDL to atherosclerotic cardiovascular disease is unusually strong because several independent methods converge. Genetic variants that increase lifelong LDL exposure increase cardiovascular risk. Variants that lower LDL reduce risk. Prospective cohorts show dose-dependent associations, and randomized lipid-lowering trials reduce vascular events in relation to the magnitude and duration of LDL reduction.
 
-The interesting question is:
+The European Atherosclerosis Society has summarised this convergence across genetics, epidemiology, Mendelian randomisation and clinical trials and concluded that LDL is causal in atherosclerotic cardiovascular disease.
 
-> **Which part of the statement is supported, and at what point does the claim become stronger than the evidence?**
+Inflammation and LDL therefore belong in the same causal system rather than in a contest for the title of “real cause”.
 
-That is a much more useful exercise.
+LDL retention in the arterial wall can initiate and sustain inflammatory processes. Inflammatory signalling can then influence plaque progression and instability. Describing cholesterol as a distraction because inflammation also matters removes one causal layer rather than improving the model.
 
-## The anatomy of a persuasive health myth
+Atherosclerosis is not made simpler by choosing one mechanism and deleting the others.
 
-Before looking at the individual claims, it helps to define the structure.
+## Criticism of statin prescribing is different from criticism of statins
 
-A common pattern is
+There is a legitimate debate about who should receive statins, at what intensity and under what risk threshold.
 
-$$
-\text{true observation}
-\rightarrow
-\text{plausible mechanism}
-\rightarrow
-\text{strong causal claim}
-\rightarrow
-\text{universal recommendation}.
-$$
+Not every person with an elevated cholesterol value should automatically receive medication. Absolute cardiovascular risk, age, prior disease, diabetes, LDL concentration, familial hypercholesterolaemia, drug interactions, adverse effects and patient preferences all matter.
 
-The first arrow may be justified.
+That is evidence-based prescribing.
 
-The second may be plausible.
+It is not evidence that statins as a class are a failed medical idea.
 
-The third often needs much stronger evidence.
+Statins lower LDL by inhibiting HMG-CoA reductase. Large randomized trials and meta-analyses have shown reductions in major vascular events, particularly in secondary prevention and higher-risk primary prevention.
 
-The fourth may be completely unsupported.
+Current ESC/EAS guidance continues to recommend statins as first-line pharmacological therapy when lipid lowering is indicated.
 
-For example:
+That does not imply zero harm. Muscle symptoms, a small increase in diabetes risk in susceptible people, interactions and rare serious adverse events are all part of the clinical calculation.
 
-- LDL particles participate in atherosclerosis.
-- Inflammation also participates in atherosclerosis.
-- Therefore inflammation matters.
-- Therefore cholesterol is merely a distraction.
+The correct comparison is expected benefit against expected harm in a defined patient.
 
-The first three statements can coexist.
+Replacing that calculation with “statins are overused, therefore statins are bad medicine” is an inferential leap.
 
-The fourth does not follow.
+## Sugar can contribute to poor metabolic health without explaining most inflammation
 
-That logical failure is the recurring theme of this article.
+The claim that sugar is a principal cause of inflammation and that inflammation then explains a very large share of chronic disease is another example of causal compression.
 
-## Claim 1: cholesterol is a distraction and inflammation is the real problem
+Excessive intake of sugar-sweetened beverages can contribute to obesity, type 2 diabetes, dental disease and cardiovascular risk. Diet affects inflammatory biology. Adipose dysfunction, insulin resistance and hepatic fat accumulation can also alter inflammatory signalling.
 
-In a March 2026 interview, Pinto Coelho described cholesterol as an "arma de distração massiva" and argued that the real problem is inflammation, much of it originating in sugar.
+Those are legitimate concerns.
 
-There is a small piece of truth inside this argument.
+But “inflammation” is not one disease and sugar is not its universal cause.
 
-Atherosclerosis is an inflammatory disease. Inflammatory signalling participates in plaque formation, progression, and rupture. Modern cardiovascular medicine does not deny this. Anti-inflammatory mechanisms are actively studied, and some anti-inflammatory interventions have reduced cardiovascular events in selected populations.
+Inflammatory processes can arise from infection, autoimmune disease, smoking, adiposity, tissue injury, ageing, sleep disturbance, chronic disease and many other exposures.
 
-But that does not make LDL irrelevant.
+Controlled feeding studies also complicate the simple story. A systematic review and meta-analysis of intervention studies did not find a consistent generalized inflammatory effect from fructose compared with glucose or sucrose. Later work showed that the food source and energy context matter: sugar-sweetened beverages are not equivalent to whole fruit merely because both contain sugars.
 
-The causal evidence for LDL in atherosclerotic cardiovascular disease is unusually strong because several independent lines of evidence converge.
+This distinction is essential.
 
-Genetic variants that raise lifelong LDL exposure increase cardiovascular risk. Variants that reduce LDL exposure lower risk. Prospective cohort studies show dose-dependent associations. Most importantly, randomized trials of LDL-lowering therapies reduce cardiovascular events in proportion to the absolute reduction in LDL burden.
+The scientifically defensible claim is that excessive added-sugar intake can contribute to adverse metabolic states and that those states can involve inflammation.
 
-The European Atherosclerosis Society reviewed evidence from genetic studies, epidemiology, Mendelian randomization, and randomized trials involving millions of participants and concluded that LDL is causally involved in atherosclerotic cardiovascular disease.
+The much stronger claim that sugar is the principal inflammatory cause of most disease is not established.
 
-The World Health Organization currently describes elevated LDL cholesterol as one of the principal modifiable cardiovascular risk factors and notes that lipid-lowering medicines, including statins when indicated, reduce the risk of myocardial infarction and stroke.
+## Sunlight, vitamin D and cancer require a dose-response model
 
-Inflammation and LDL are therefore not competing explanations in the sense implied by the claim.
+Pinto Coelho has also argued publicly that sunlight protects more against cancer than it causes, often connecting the argument to vitamin D.
 
-A simplified causal graph is closer to:
+Again, the starting point is real.
 
-$$
-\text{LDL retention}
-\rightarrow
-\text{arterial injury and immune activation}
-\rightarrow
-\text{plaque progression}
-\rightarrow
-\text{clinical events},
-$$
+Ultraviolet B radiation stimulates cutaneous vitamin D synthesis, and vitamin D has important physiological roles. Outdoor activity also has health benefits unrelated to ultraviolet exposure itself.
 
-with inflammation acting throughout the process.
+But solar ultraviolet radiation is a known human carcinogen.
 
-Calling LDL a distraction because inflammation also matters is like calling smoking a distraction because carcinogenesis involves DNA damage and inflammation.
+IARC has classified solar radiation as carcinogenic to humans, and WHO identifies ultraviolet radiation as the main environmental cause of skin cancers.
 
-Multiple causal layers can be true at the same time.
+The correct model is therefore not “sun good” or “sun bad”. It is dose dependent.
 
-**Verdict:** inflammation matters, but the claim that cholesterol is essentially a distraction is incompatible with a large body of genetic, mechanistic, epidemiological, and randomized evidence.
+Benefits and harms can coexist at different levels of exposure.
 
-Sources:
+That matters because the broad claim that sunlight prevents more cancer than it causes requires a population-level causal comparison across skin cancer, other cancers, latitude, skin type, behaviour, vitamin D status and competing confounders. It cannot be established by pointing out that sunlight makes vitamin D.
 
-- Manuel Pinto Coelho interview, NiT, 5 March 2026: https://www.nit.pt/fit/saude/manuel-pinto-coelho-o-jejum-e-uma-cirurgia-sem-bisturi
-- European Atherosclerosis Society consensus on LDL causality: https://academic.oup.com/eurheartj/article/38/32/2459/3745109
-- WHO, Dyslipidaemia, 15 September 2026: https://www.who.int/news-room/fact-sheets/detail/dyslipidaemia
+Vitamin D deficiency can also be addressed through diet or supplementation in appropriate circumstances without reproducing the same ultraviolet exposure.
 
-## Claim 2: statins are a medical mistake
+A true physiological benefit does not neutralise an established carcinogenic hazard.
 
-In an earlier interview, Pinto Coelho described the widespread use of statins in strongly negative terms and connected their use to what he considers a mistaken focus on cholesterol.
+## Fasting can be useful without being “surgery without a scalpel”
 
-Again, there is a legitimate issue hidden inside the rhetoric.
-
-Not everyone with an elevated cholesterol value should automatically receive a statin.
-
-Treatment depends on absolute cardiovascular risk, age, comorbidities, prior cardiovascular disease, LDL concentration, diabetes, familial hypercholesterolaemia, potential adverse effects, competing risks, and patient preferences.
-
-Over-treatment is a valid concern.
-
-So is under-treatment.
-
-But those questions are fundamentally different from claiming that statins as a class are based on a false premise.
-
-Statins inhibit HMG-CoA reductase and lower circulating LDL cholesterol. Large randomized trials and meta-analyses have repeatedly shown reductions in major vascular events. Their benefit is particularly clear in secondary prevention and in higher-risk primary-prevention populations.
-
-The 2025 focused update of the European Society of Cardiology and European Atherosclerosis Society dyslipidaemia guidelines continues to recommend statins as first-line lipid-lowering therapy when pharmacological treatment is indicated.
-
-This does not mean statins are harmless.
-
-They can produce adverse effects, including muscle symptoms in some patients, a small increase in diabetes risk in susceptible individuals, drug interactions, and rare serious complications.
-
-Evidence-based medicine is not the claim that a treatment has no harms.
-
-It is the comparison
-
-$$
-\text{expected benefit}
--
-\text{expected harm}
-$$
-
-for a particular patient or risk group.
-
-The internet version often replaces that calculation with one of two slogans:
-
-- statins save everyone;
-- statins are poison.
-
-Neither is medicine.
-
-**Verdict:** criticism of indiscriminate prescribing is reasonable. Treating statins themselves as a failed or shameful medical idea is not consistent with randomized evidence or current cardiovascular guidelines.
-
-Sources:
-
-- Manuel Pinto Coelho interview, Expresso: https://leitor.expresso.pt/semanario/semanario2324/html/revista-e/-e/manuel-pinto-coelho-o-sol-protege-mais-contra-o-cancro-do-que-o-provoca
-- ESC/EAS 2025 focused guideline update: https://www.escardio.org/communities/councils/cardiology-practice/education/cardiopractice/what-is-new-in-the-2025-focused-update-of-the-2019-esc-eas-guidelines-for-the-m/
-- WHO, Dyslipidaemia: https://www.who.int/news-room/fact-sheets/detail/dyslipidaemia
-
-## Claim 3: sugar is the principal cause of inflammation behind most diseases
-
-The podcast *Sem Remédio* has presented Pinto Coelho's position that sugar is the principal driver of inflammation and that this inflammation sits behind a very large proportion of disease.
-
-This is rhetorically effective because all three components sound plausible:
-
-1. excessive sugar intake can be unhealthy;
-2. chronic inflammation contributes to many diseases;
-3. diet influences inflammation.
-
-The difficulty is the causal compression between them.
-
-"Inflammation" is not one disease and not one pathway.
-
-It is a broad set of immune and tissue responses involving many mediators, tissues, triggers, and timescales.
-
-Inflammation can result from infection, autoimmunity, adipose dysfunction, smoking, tissue injury, environmental exposures, sleep disturbance, chronic disease, ageing, periodontal disease, and numerous other processes.
-
-Diet is one contributor.
-
-Sugar intake can also contribute indirectly through excess energy intake, weight gain, insulin resistance, hepatic fat accumulation, and adverse dietary substitution.
-
-But the proposition
-
-$$
-\text{sugar}
-\rightarrow
-\text{inflammation}
-\rightarrow
-\text{most disease}
-$$
-
-is not an adequate causal model.
-
-Controlled feeding studies are particularly revealing here. A systematic review and meta-analysis of intervention studies found no consistent evidence that fructose produced more systemic inflammation than glucose or sucrose, although the evidence base had limitations.
-
-A later meta-analysis of controlled trials found that the inflammatory effect depended strongly on the food source and energy context. Sugar-sweetened beverages behaved differently from fruit or other foods containing fructose.
-
-That distinction matters.
-
-The molecule, food matrix, dose, total energy intake, replacement food, baseline metabolic health, and duration of exposure all affect interpretation.
-
-A can of sugar-sweetened soda and a whole orange both contain sugars.
-
-They are not metabolically identical exposures.
-
-None of this is an argument for high added-sugar intake. Excess intake of sugar-sweetened beverages is associated with obesity, type 2 diabetes, dental disease, cardiovascular risk, and other adverse outcomes.
-
-The point is narrower:
-
-**"Too much added sugar is unhealthy" is well supported. "Sugar is the principal inflammatory cause of most disease" is not.**
-
-Sources:
-
-- *Sem Remédio*, NiTfm: https://www.nitfm.pt/programas/sem-remedio/
-- Systematic review and meta-analysis of dietary sugars and inflammatory biomarkers: https://pubmed.ncbi.nlm.nih.gov/29757229/
-- Controlled feeding meta-analysis of fructose-containing food sources and inflammation: https://pubmed.ncbi.nlm.nih.gov/36235639/
-
-## Claim 4: the sun protects more against cancer than it causes
-
-This is one of the claims where imprecise communication can become particularly consequential.
-
-Pinto Coelho has argued publicly that the sun protects against cancer more than it causes, linking the argument largely to vitamin D.
-
-There is a correct starting point.
-
-Ultraviolet B radiation stimulates cutaneous vitamin D synthesis.
-
-Vitamin D is physiologically important.
-
-Very low vitamin D status can be clinically relevant.
-
-Outdoor activity also has health benefits that have nothing to do with ultraviolet exposure itself.
-
-But solar ultraviolet radiation is also a known carcinogenic exposure.
-
-The International Agency for Research on Cancer concluded that solar radiation is carcinogenic to humans and causes cutaneous malignant melanoma and non-melanoma skin cancer.
-
-The World Health Organization states that skin cancers are caused primarily by ultraviolet radiation from the sun or artificial sources and recommends sun protection when the UV index is sufficiently high.
-
-This does not mean that every photon of sunlight is harmful or that humans should avoid going outdoors.
-
-The correct relationship is dose dependent.
-
-We can represent the problem abstractly as
-
-$$
-U(x)
-=
-B(x)-H(x),
-$$
-
-where $x$ is exposure, $B(x)$ represents benefits, and $H(x)$ represents harms.
-
-There is no reason for either function to be linear.
-
-A small or moderate exposure may provide benefits while excessive exposure sharply increases harm.
-
-That is fundamentally different from the statement that sunlight protects more against cancer than it causes.
-
-The latter requires a population-level causal comparison across multiple cancers, exposure patterns, skin types, latitudes, behaviours, confounders, and competing mechanisms. That is a much stronger proposition.
-
-Vitamin D also does not require uncontrolled UV exposure. Dietary sources and supplementation can address deficiency in appropriate circumstances without introducing the same UV dose.
-
-**Verdict:** sunlight contributes to vitamin D synthesis and outdoor activity has health benefits. Solar UV is nevertheless an established human carcinogen. The broad claim that the sun protects more against cancer than it causes is not supported as a general medical rule.
-
-Sources:
-
-- Manuel Pinto Coelho interview, Expresso: https://leitor.expresso.pt/semanario/semanario2324/html/revista-e/-e/manuel-pinto-coelho-o-sol-protege-mais-contra-o-cancro-do-que-o-provoca
-- IARC Monograph on solar and ultraviolet radiation: https://publications.iarc.who.int/73
-- WHO ultraviolet radiation fact sheet: https://www.who.int/news-room/fact-sheets/detail/ultraviolet-radiation
-- WHO guidance on known health effects of UV: https://www.who.int/news-room/questions-and-answers/item/radiation-the-known-health-effects-of-ultraviolet-radiation
-
-## Claim 5: intermittent fasting is "surgery without a scalpel"
-
-This phrase is memorable.
-
-It is also a good example of how metaphor can smuggle in a biological claim.
-
-Intermittent fasting can be a useful eating pattern for some people. Randomized trials and meta-analyses show that several forms of intermittent energy restriction can reduce body weight and improve some metabolic markers.
-
-But fasting does not literally perform surgery.
-
-The metaphor appears to imply something more specific: that fasting selectively removes harmful biological material while preserving what is beneficial.
+Describing fasting as a form of surgery without a scalpel is rhetorically powerful because it suggests selectivity: harmful material is removed while healthy tissue is preserved.
 
 Human metabolism is not that tidy.
 
-During fasting, insulin falls, glycogen use changes, lipolysis increases, fatty-acid oxidation changes, and longer fasting periods can increase ketone production. Cellular nutrient-sensing pathways also respond.
+Fasting changes insulin, glycogen use, lipolysis, fatty-acid oxidation and ketone production. Longer fasting can alter nutrient-sensing pathways associated with autophagy. Those are real physiological responses.
 
-Autophagy is frequently invoked in popular explanations.
+Intermittent fasting can also help some people reduce energy intake and body weight.
 
-Autophagy is a real cellular process.
+The problem is the metaphor.
 
-But the leap from
+Autophagy is intracellular turnover. It is not a general detoxification mechanism that selectively removes everything harmful from the body. Weight loss during fasting does not demonstrate that the body is performing an internal surgical procedure.
 
-> fasting influences pathways associated with autophagy
+When intermittent fasting is compared directly with continuous energy restriction, differences in long-term weight and metabolic outcomes are often smaller than the rhetoric implies.
 
-to
+This does not make fasting ineffective. It means fasting should be evaluated as one dietary structure among alternatives rather than as a uniquely cleansing biological intervention.
 
-> fasting cleans the body and removes what is bad
+## Preventive medicine does not require opposition to evidence-based medicine
 
-is not a clinically validated equivalence.
+One of the recurring strengths in Pinto Coelho's public communication is the emphasis on prevention.
 
-Even the magnitude and timing of fasting-induced autophagy in specific human tissues are difficult to quantify directly.
+That principle is not controversial.
 
-For weight loss, much of the practical effect of intermittent fasting can often be explained by reduced energy intake and adherence to a restricted eating window. When intermittent fasting is compared with continuous calorie restriction under controlled conditions, differences are usually much smaller than popular descriptions suggest.
-
-Intermittent fasting can therefore be useful without needing a detoxification narrative.
-
-That distinction is important because metaphors such as "cleaning", "detox", and "surgery without a scalpel" encourage people to infer selectivity that has not been demonstrated.
-
-**Verdict:** intermittent fasting can alter metabolism and can help some people reduce energy intake and body weight. Describing it as a process that selectively removes harmful material is a metaphor, not an established physiological result.
-
-Source documenting the claim:
-
-- Manuel Pinto Coelho interview, NiT, 5 March 2026: https://www.nit.pt/fit/saude/manuel-pinto-coelho-o-jejum-e-uma-cirurgia-sem-bisturi
-- *Sem Remédio*, NiTfm: https://www.nitfm.pt/programas/sem-remedio/
-
-## The recurring method: replace a multivariable system with one villain
-
-There is a common structure behind these claims.
-
-Cardiovascular disease becomes inflammation.
-
-Inflammation becomes sugar.
-
-Obesity becomes insulin.
-
-Cancer prevention becomes vitamin D.
-
-Ageing becomes autophagy.
-
-Once a complex system has one dominant variable, a corresponding solution becomes obvious.
-
-Remove sugar.
-
-Ignore cholesterol.
-
-Avoid statins.
-
-Fast.
-
-Seek more sun.
-
-The problem is not that these variables are irrelevant.
-
-The problem is that biological systems rarely have the form
-
-$$
-Y = \beta X.
-$$
-
-They look more like
-
-$$
-Y
-=
-f(X_1,X_2,\ldots,X_p,t,G,E,M,\varepsilon),
-$$
-
-where genetics, environment, behaviour, medication, age, time, interactions, baseline risk, and unobserved variables all contribute.
-
-Medicine is difficult precisely because the function $f$ is complicated.
-
-A persuasive health communicator can make the world feel simpler by deleting most of the variables.
-
-The resulting model becomes easier to explain.
-
-It also becomes less true.
-
-## Partial truth is more persuasive than nonsense
-
-This is why these claims deserve more careful analysis than obviously absurd medical misinformation.
-
-Consider the following statements:
-
-- chronic inflammation matters;
-- excess added sugar can be harmful;
-- sunlight contributes to vitamin D synthesis;
-- fasting changes metabolism;
-- prevention is important;
-- lifestyle matters enormously for long-term health.
-
-All are defensible.
-
-If every public claim were obviously false, misinformation would be easy to recognize.
-
-The persuasive move is to place an unsupported conclusion immediately after a supported premise.
-
-For example:
-
-> Inflammation causes disease. Sugar can promote adverse metabolic states. Therefore sugar is the cause of most inflammation.
-
-Or:
-
-> Vitamin D is important. Sunlight produces vitamin D. Therefore sunlight prevents more cancer than it causes.
-
-Or:
-
-> LDL is not the only cardiovascular risk factor. Therefore LDL is a distraction.
-
-The word *therefore* is doing almost all the work.
-
-## How to test a strong health claim
-
-A useful checklist is to ask five questions.
-
-### 1. What exactly is the exposure?
-
-"Cholesterol", "sugar", "sun", "fasting", and "inflammation" are broad categories.
-
-A claim becomes testable only after defining dose, duration, biological compartment, and population.
-
-### 2. What is the outcome?
-
-A biomarker is not automatically a clinical outcome.
-
-Lower insulin is not the same as lower mortality.
-
-Higher vitamin D is not the same as fewer cancers.
-
-Lower CRP is not automatically fewer myocardial infarctions.
-
-### 3. Is the evidence observational or interventional?
-
-Associations can suggest hypotheses.
-
-Randomized interventions are often needed to establish whether modifying the exposure changes the outcome.
-
-### 4. What is the comparator?
-
-"Fasting works" is incomplete.
-
-Compared with what?
-
-Usual diet?
-
-Continuous energy restriction?
-
-Another eating pattern with the same calories?
-
-No intervention?
-
-The comparator determines the question being answered.
-
-### 5. What population was studied?
-
-A treatment that helps someone with established cardiovascular disease cannot automatically be generalized to a healthy 25-year-old.
-
-A vitamin D trial in deficient adults cannot automatically be generalized to people with adequate status.
-
-Transportability is part of the evidence.
-
-## Prevention does not require mythology
-
-One theme in Pinto Coelho's public communication deserves to be retained: prevention matters.
-
-Modern medicine does not dispute that.
-
-Smoking cessation, vaccination, blood-pressure control, physical activity, healthy dietary patterns, sleep, appropriate cancer screening, lipid management, and diabetes prevention are all forms of preventive medicine.
+Smoking cessation, vaccination, exercise, healthy dietary patterns, blood-pressure control, diabetes prevention, lipid management and appropriate screening are all core preventive medicine.
 
 The disagreement is not between prevention and conventional medicine.
 
-It is between **prevention grounded in evidence** and prevention grounded in oversimplified causal stories.
+It is between prevention grounded in evidence and prevention grounded in simplified causal stories.
 
-There is no need to claim that cholesterol is a distraction to encourage exercise.
+There is no need to deny the causal role of LDL to promote exercise. There is no need to dismiss statins as a class to argue against indiscriminate prescribing. There is no need to deny the carcinogenicity of ultraviolet radiation to discuss vitamin D. There is no need to describe fasting as internal surgery to study its metabolic effects.
 
-There is no need to call statins a disgrace to promote better nutrition.
+Preventive medicine becomes stronger when those rhetorical additions are removed.
 
-There is no need to deny the carcinogenicity of ultraviolet radiation to recognize the importance of vitamin D.
+## The recurring pattern is reduction of a multivariable system to one dominant cause
 
-There is no need to describe fasting as surgery to study whether it is a useful dietary strategy.
+The claims discussed here share a structure.
 
-Good preventive medicine becomes stronger, not weaker, when the dramatic claims are removed.
+Atherosclerosis becomes inflammation.
+
+Inflammation becomes sugar.
+
+Cancer prevention becomes vitamin D.
+
+Metabolic health becomes fasting.
+
+Once one variable is made dominant, the corresponding intervention becomes obvious.
+
+The appeal is understandable. Complex systems are difficult to communicate.
+
+But human disease is rarely organised around one explanatory axis. Genetics, environment, behaviour, medication, age, tissue-specific mechanisms and time interact.
+
+A useful scientific model often becomes less memorable as it becomes more accurate.
+
+That is not a defect.
+
+It is the cost of describing biology honestly.
+
+## Partial truth is more persuasive than obvious nonsense
+
+This is why these claims deserve serious analysis.
+
+Chronic inflammation matters.
+
+Excess added sugar can be harmful.
+
+Vitamin D matters.
+
+Fasting changes metabolism.
+
+Lifestyle matters enormously for long-term health.
+
+All of those statements are defensible.
+
+The problem appears when an unsupported conclusion is placed immediately after a supported premise.
+
+A plausible mechanism becomes a universal explanation. A real risk factor becomes a distraction because another risk factor exists. A short-term metabolic response becomes a claim about long-term disease.
+
+The scientific task is to identify the point at which the inference becomes stronger than the evidence.
 
 ## Conclusion
 
-The most interesting public-health myths are rarely pure inventions.
+The strongest criticism of overstated health communication is not that every claim is false.
 
-They are often built from accurate fragments.
+It is that legitimate biological observations are repeatedly asked to carry more explanatory weight than they can support.
 
-Manuel Pinto Coelho's statements provide several clear examples.
+Inflammation is important, but LDL is not a distraction. Excess sugar can contribute to poor metabolic health, but it is not a universal explanation for chronic inflammation. Sunlight contributes to vitamin D synthesis, but ultraviolet radiation remains carcinogenic. Intermittent fasting can be useful without functioning as selective internal surgery. Statins can be prescribed badly while still having strong randomized evidence in appropriate patients.
 
-Inflammation is important, but LDL is not a distraction.
+That pattern is worth recognising because it extends far beyond one communicator.
 
-Excess sugar can be harmful, but it is not a universal explanation for inflammation and disease.
-
-Sunlight contributes to vitamin D synthesis, but solar UV is an established carcinogen.
-
-Intermittent fasting can be useful, but "surgery without a scalpel" is metaphor rather than demonstrated physiology.
-
-Statins can be overprescribed in poorly selected patients, but their cardiovascular benefit in appropriate risk groups is supported by randomized evidence.
-
-The scientific problem is therefore not simply that these claims are wrong.
-
-It is that they repeatedly make the same inferential move:
-
-$$
-\text{partly true}
-+
-\text{missing context}
-=
-\text{confident universal claim}.
-$$
-
-That equation is worth remembering.
-
-It appears everywhere.
+Scientific misinformation often works best when the first half of the sentence is true.
 
 ---
 
 ## References
 
-1. NiT. *Manuel Pinto Coelho: “O jejum é uma cirurgia sem bisturi”*. 5 March 2026. https://www.nit.pt/fit/saude/manuel-pinto-coelho-o-jejum-e-uma-cirurgia-sem-bisturi
+1. NiT. **Manuel Pinto Coelho: “O jejum é uma cirurgia sem bisturi”.** 5 March 2026. https://www.nit.pt/fit/saude/manuel-pinto-coelho-o-jejum-e-uma-cirurgia-sem-bisturi
 
-2. NiTfm. *Sem Remédio*. 2026. https://www.nitfm.pt/programas/sem-remedio/
+2. Expresso. **Manuel Pinto Coelho: “O sol protege mais contra o cancro do que o provoca”.** https://leitor.expresso.pt/semanario/semanario2324/html/revista-e/-e/manuel-pinto-coelho-o-sol-protege-mais-contra-o-cancro-do-que-o-provoca
 
-3. Expresso. *Manuel Pinto Coelho: “O sol protege mais contra o cancro do que o provoca”*. https://leitor.expresso.pt/semanario/semanario2324/html/revista-e/-e/manuel-pinto-coelho-o-sol-protege-mais-contra-o-cancro-do-que-o-provoca
+3. Ference BA, Ginsberg HN, Graham I, et al. **Low-density lipoproteins cause atherosclerotic cardiovascular disease. 1. Evidence from genetic, epidemiologic, and clinical studies.** *European Heart Journal*. 2017;38:2459–2472. https://academic.oup.com/eurheartj/article/38/32/2459/3745109
 
-4. Ference BA, Ginsberg HN, Graham I, et al. *Low-density lipoproteins cause atherosclerotic cardiovascular disease. 1. Evidence from genetic, epidemiologic, and clinical studies.* European Heart Journal. 2017;38:2459–2472. https://academic.oup.com/eurheartj/article/38/32/2459/3745109
+4. European Society of Cardiology. **2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias.** https://www.escardio.org/communities/councils/cardiology-practice/education/cardiopractice/what-is-new-in-the-2025-focused-update-of-the-2019-esc-eas-guidelines-for-the-m/
 
-5. Borén J, Chapman MJ, Krauss RM, et al. *Low-density lipoproteins cause atherosclerotic cardiovascular disease: pathophysiological, genetic, and therapeutic insights.* European Heart Journal. 2020;41:2313–2330.
+5. Della Corte K, et al. **Effect of Dietary Sugar Intake on Biomarkers of Subclinical Inflammation: A Systematic Review and Meta-Analysis of Intervention Studies.** *Nutrients*. 2018;10:606. https://pubmed.ncbi.nlm.nih.gov/29757229/
 
-6. World Health Organization. *Dyslipidaemia*. 15 September 2026. https://www.who.int/news-room/fact-sheets/detail/dyslipidaemia
+6. Qi X, et al. **Effect of Important Food Sources of Fructose-Containing Sugars on Inflammatory Biomarkers: A Systematic Review and Meta-Analysis of Controlled Feeding Trials.** 2022. https://pubmed.ncbi.nlm.nih.gov/36235639/
 
-7. European Society of Cardiology. *2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias*. 2025. https://www.escardio.org/communities/councils/cardiology-practice/education/cardiopractice/what-is-new-in-the-2025-focused-update-of-the-2019-esc-eas-guidelines-for-the-m/
+7. International Agency for Research on Cancer. **Solar and Ultraviolet Radiation.** IARC Monographs, Volume 55. https://publications.iarc.who.int/73
 
-8. Della Corte K, Perrar I, Penczynski KJ, et al. *Effect of Dietary Sugar Intake on Biomarkers of Subclinical Inflammation: A Systematic Review and Meta-Analysis of Intervention Studies.* Nutrients. 2018;10:606. https://pubmed.ncbi.nlm.nih.gov/29757229/
-
-9. Qi X, et al. *Effect of Important Food Sources of Fructose-Containing Sugars on Inflammatory Biomarkers: A Systematic Review and Meta-Analysis of Controlled Feeding Trials.* American Journal of Clinical Nutrition. 2022. https://pubmed.ncbi.nlm.nih.gov/36235639/
-
-10. International Agency for Research on Cancer. *Solar and Ultraviolet Radiation*. IARC Monographs, Volume 55. https://publications.iarc.who.int/73
-
-11. World Health Organization. *Ultraviolet radiation*. 21 June 2022. https://www.who.int/news-room/fact-sheets/detail/ultraviolet-radiation
-
-12. World Health Organization. *The known health effects of ultraviolet radiation*. https://www.who.int/news-room/questions-and-answers/item/radiation-the-known-health-effects-of-ultraviolet-radiation
+8. World Health Organization. **Ultraviolet radiation.** https://www.who.int/news-room/fact-sheets/detail/ultraviolet-radiation
 
 ---
 
-*This article evaluates publicly documented health claims and the evidence supporting or contradicting them. It does not assess Manuel Pinto Coelho's motives, character, or private clinical practice, and it is not individual medical advice.*
+*This article evaluates publicly documented health claims and the evidence supporting or contradicting them. It does not assess motives, character or private clinical practice.*
