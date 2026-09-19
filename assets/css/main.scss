@@ -135,3 +135,17 @@ aside {
     }
   }
 }
+
+// Line numbers in a code block stand apart from the code. The theme sets the
+// gutter's padding on ".highlight .rouge-gutter", and its own
+// ".highlight .rouge-table td { padding: 0 }" is more specific, so the numbers
+// were flush against the code: "1import numpy"
+// (DiogoRibeiro7/analytics-blog-jekyll#321).
+.highlight .rouge-table td.rouge-gutter {
+  padding-right: 1rem;
+  border-right: 1px solid rgba(128, 128, 128, 0.28); // visible on light and dark surfaces
+}
+
+.highlight .rouge-table td.rouge-code {
+  padding-left: 1rem;
+}
