@@ -20,7 +20,7 @@ pip install industrialstats
 ## Project Links
 
 - **PyPI:** [industrialstats](https://pypi.org/project/industrialstats/)
-- **Documentation:** [diogoribeiro7.github.io/industrialstats](https://diogoribeiro7.github.io/industrialstats/)
+- **Documentation:** [repository documentation](https://github.com/DiogoRibeiro7/industrialstats/tree/main/docs)
 - **Source:** [github.com/DiogoRibeiro7/industrialstats](https://github.com/DiogoRibeiro7/industrialstats)
 - **Issues:** [github.com/DiogoRibeiro7/industrialstats/issues](https://github.com/DiogoRibeiro7/industrialstats/issues)
 - **Changelog:** [CHANGELOG.md](https://github.com/DiogoRibeiro7/industrialstats/blob/main/CHANGELOG.md)
