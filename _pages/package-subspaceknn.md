@@ -24,9 +24,9 @@ The `plot` extra adds matplotlib for `plot_subspaces`. The package needs scikit-
 ## Project Links
 
 - **PyPI:** [subspaceknn](https://pypi.org/project/subspaceknn/)
-- **Documentation:** [diogoribeiro7.github.io/subspaceknn](https://diogoribeiro7.github.io/subspaceknn/)
-- **Method:** [diogoribeiro7.github.io/subspaceknn/method](https://diogoribeiro7.github.io/subspaceknn/method/)
-- **Benchmark:** [diogoribeiro7.github.io/subspaceknn/benchmark](https://diogoribeiro7.github.io/subspaceknn/benchmark/)
+- **Documentation:** [repository documentation](https://github.com/DiogoRibeiro7/subspaceknn/tree/main/docs)
+- **Method:** [method documentation](https://github.com/DiogoRibeiro7/subspaceknn/blob/main/docs/method.md)
+- **Benchmark:** [benchmark documentation](https://github.com/DiogoRibeiro7/subspaceknn/blob/main/docs/benchmark.md)
 - **Source:** [github.com/DiogoRibeiro7/subspaceknn](https://github.com/DiogoRibeiro7/subspaceknn)
 - **Issues:** [github.com/DiogoRibeiro7/subspaceknn/issues](https://github.com/DiogoRibeiro7/subspaceknn/issues)
 - **Changelog:** [CHANGELOG.md](https://github.com/DiogoRibeiro7/subspaceknn/blob/main/CHANGELOG.md)
