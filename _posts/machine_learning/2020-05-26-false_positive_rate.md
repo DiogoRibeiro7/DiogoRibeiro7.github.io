@@ -205,7 +205,7 @@ $$
 
 ### FPR in the Context of Statistical Tests
 
-In statistical hypothesis testing, an FPR of 0.05 corresponds to an alpha level ($$\alpha$%) of 0.05. This means that there is a 5% probability of falsely rejecting the null hypothesis, or equivalently, a 5% chance of a false positive. In binary classification, this would mean that 5% of all negative instances (i.e., instances that should be classified as negative) are incorrectly classified as positive.
+In statistical hypothesis testing, an FPR of 0.05 corresponds to an alpha level ($$\alpha$$) of 0.05. This means that there is a 5% probability of falsely rejecting the null hypothesis, or equivalently, a 5% chance of a false positive. In binary classification, this would mean that 5% of all negative instances (i.e., instances that should be classified as negative) are incorrectly classified as positive.
 
 ### Why This Matters in Practice
 

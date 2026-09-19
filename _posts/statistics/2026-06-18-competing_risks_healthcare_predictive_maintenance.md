@@ -67,7 +67,7 @@ $$
 J = \text{type of first event}
 $$
 
-The pair \( (T, J) \) tells us both when something happened and what happened.
+The pair $(T, J)$ tells us both when something happened and what happened.
 
 ## Censoring Is Not the Same as Competing
 
@@ -109,15 +109,15 @@ That question is answered by cumulative incidence.
 
 ## Cumulative Incidence
 
-The cumulative incidence function for event type \( k \) is:
+The cumulative incidence function for event type $k$ is:
 
 $$
 F_k(t) = P(T \leq t, J = k)
 $$
 
-It is the probability that event type \( k \) has occurred by time \( t \) before any competing event.
+It is the probability that event type $k$ has occurred by time $t$ before any competing event.
 
-If the event is disease recurrence, cumulative incidence estimates the probability of recurrence by time \( t \) in the presence of death and other events. If the event is bearing failure, it estimates the probability of bearing failure by time \( t \) in the presence of replacement, other failure modes, and decommissioning.
+If the event is disease recurrence, cumulative incidence estimates the probability of recurrence by time $t$ in the presence of death and other events. If the event is bearing failure, it estimates the probability of bearing failure by time $t$ in the presence of replacement, other failure modes, and decommissioning.
 
 The cumulative incidence functions across event types add up to the probability that any event has occurred:
 
@@ -129,7 +129,7 @@ This is a major advantage. It keeps the probabilities grounded in the real event
 
 ## Cause-Specific Hazards
 
-The cause-specific hazard for event type \( k \) is the instantaneous rate of event \( k \) among subjects who have not yet experienced any event:
+The cause-specific hazard for event type $k$ is the instantaneous rate of event $k$ among subjects who have not yet experienced any event:
 
 $$
 \lambda_k(t) =
@@ -137,7 +137,7 @@ $$
 \frac{P(t \leq T < t+\Delta t, J=k \mid T \geq t)}{\Delta t}
 $$
 
-This asks: among those still event-free at time \( t \), how quickly are they experiencing event \( k \)?
+This asks: among those still event-free at time $t$, how quickly are they experiencing event $k$?
 
 Cause-specific hazard models are useful when the scientific or engineering question is about mechanisms. In healthcare, we may ask which covariates increase the instantaneous rate of recurrence among patients who are still alive and recurrence-free. In maintenance, we may ask which operating conditions increase the instantaneous rate of overheating failure among machines that have not yet failed or been replaced.
 

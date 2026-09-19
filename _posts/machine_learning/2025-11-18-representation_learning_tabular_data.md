@@ -56,7 +56,7 @@ $$
 z = f(x)
 $$
 
-The new vector \( z \) may contain scaled numerical values, one-hot encoded categories, target-encoded variables, embeddings, learned interaction features, aggregated behavioral summaries, or outputs from another model.
+The new vector $z$ may contain scaled numerical values, one-hot encoded categories, target-encoded variables, embeddings, learned interaction features, aggregated behavioral summaries, or outputs from another model.
 
 Representation learning means that part of this transformation is learned from data rather than fully specified by hand.
 

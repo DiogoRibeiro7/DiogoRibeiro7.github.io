@@ -91,7 +91,7 @@ The Probability Integral Transform works due to the inherent properties of cumul
 
 #### Explanation of the Mathematical Basis
 
-To understand why the Probability Integral Transform works, let's start with the definition of a cumulative distribution function (CDF). For a continuous random variable %%X$$ with CDF $$F_X(x)$$, the CDF is defined as:
+To understand why the Probability Integral Transform works, let's start with the definition of a cumulative distribution function (CDF). For a continuous random variable $$X$$ with CDF $$F_X(x)$$, the CDF is defined as:
 
 $$F_X(x) = P(X \leq x)$$
 

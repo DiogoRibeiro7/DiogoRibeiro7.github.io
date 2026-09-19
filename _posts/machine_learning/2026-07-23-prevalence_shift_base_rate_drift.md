@@ -67,7 +67,7 @@ $$
 \pi = P(Y = 1)
 $$
 
-In healthcare, \( \pi \) might be the share of patients with sepsis, readmission, disease recurrence, or treatment failure. In maintenance, it might be the share of assets that fail in the next 30 days. In fraud detection, it is the share of transactions that are fraudulent. In churn modeling, it is the share of customers who cancel.
+In healthcare, $\pi$ might be the share of patients with sepsis, readmission, disease recurrence, or treatment failure. In maintenance, it might be the share of assets that fail in the next 30 days. In fraud detection, it is the share of transactions that are fraudulent. In churn modeling, it is the share of customers who cancel.
 
 Prevalence is not the same as model accuracy. It describes the environment in which the model operates.
 
@@ -125,7 +125,7 @@ P(Y=1 \mid X) =
 {P(X)}
 $$
 
-The term \( P(Y=1) \) is the prevalence. If it changes, the posterior probability changes, even if the evidence \( X \) has the same meaning within each class.
+The term $P(Y=1)$ is the prevalence. If it changes, the posterior probability changes, even if the evidence $X$ has the same meaning within each class.
 
 This is why a diagnostic test cannot be interpreted without disease prevalence. A positive test result has different positive predictive value in a high-prevalence clinic than in a low-prevalence general screening population.
 

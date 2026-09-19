@@ -56,7 +56,7 @@ $$
 \alpha_j \sim Normal(\mu_{\alpha}, \sigma_{\alpha})
 $$
 
-Here, each group \(j\) has its own intercept \(\alpha_j\), but those intercepts are drawn from a shared distribution. The parameter \(\sigma_{\alpha}\) measures how much groups differ.
+Here, each group $j$ has its own intercept $\alpha_j$, but those intercepts are drawn from a shared distribution. The parameter $\sigma_{\alpha}$ measures how much groups differ.
 
 ## Where Multilevel Models Help
 

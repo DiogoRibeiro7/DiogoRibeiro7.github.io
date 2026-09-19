@@ -98,7 +98,7 @@ $$
 H_0:\theta=\theta_0
 $$
 
-for every candidate value \(\theta_0\).
+for every candidate value $\theta_0$.
 
 Let
 
@@ -106,7 +106,7 @@ $$
 \varphi(\theta_0)\in\{0,1\}
 $$
 
-be the rejection decision, where \(1\) means reject.
+be the rejection decision, where $1$ means reject.
 
 The inverted confidence set is
 
@@ -119,7 +119,7 @@ $$
 \right\}.
 $$
 
-Equivalently, if the pointwise test reports a p-value \(p(\theta)\),
+Equivalently, if the pointwise test reports a p-value $p(\theta)$,
 
 $$
 \mathcal C_{1-\alpha}
@@ -132,7 +132,7 @@ $$
 
 up to whatever tie convention the procedure defines.
 
-There is nothing in that definition requiring \(\mathcal C_{1-\alpha}\) to be connected.
+There is nothing in that definition requiring $\mathcal C_{1-\alpha}$ to be connected.
 
 The interval shape appears only in special problems where the test statistic has suitable monotonicity or convexity properties.
 
@@ -142,7 +142,7 @@ They are not universal.
 
 ## A Toy Example With Two Components
 
-Consider a scalar parameter \(\theta\) and an estimator
+Consider a scalar parameter $\theta$ and an estimator
 
 $$
 Y
@@ -164,7 +164,7 @@ y_{obs}=0.04,
 \sigma=0.08.
 $$
 
-For a candidate \(\theta_0\), define the pointwise z-statistic
+For a candidate $\theta_0$, define the pointwise z-statistic
 
 $$
 Z(\theta_0)
@@ -206,7 +206,7 @@ $$
 \theta=0.
 $$
 
-So values near both \(-1\) and \(+1\) can be compatible with the observation even though values in between are rejected.
+So values near both $-1$ and $+1$ can be compatible with the observation even though values in between are rejected.
 
 A short computation makes this visible.
 
@@ -278,13 +278,13 @@ That looks tidy.
 
 It also includes values around zero.
 
-But at \(\theta=0\), the model mean is
+But at $\theta=0$, the model mean is
 
 $$
 (0^2-1)^2=1,
 $$
 
-which is far from the observed \(0.04\).
+which is far from the observed $0.04$.
 
 The pointwise test strongly rejects it.
 
@@ -334,7 +334,7 @@ $$
 g(\theta)
 $$
 
-well, but \(g\) is not injective.
+well, but $g$ is not injective.
 
 Then several separated parameter values can imply similar observable behaviour.
 
@@ -346,7 +346,7 @@ g(\theta_1)
 g(\theta_2)
 $$
 
-for distant \(\theta_1\) and \(\theta_2\), pointwise inversion can preserve both regions.
+for distant $\theta_1$ and $\theta_2$, pointwise inversion can preserve both regions.
 
 This is not a numerical pathology.
 
@@ -447,7 +447,7 @@ $$
 0,0,1,1,1,0,0,1,1,
 $$
 
-where \(1\) means accepted.
+where $1$ means accepted.
 
 Then there are two accepted runs.
 
@@ -485,7 +485,7 @@ p(a)>\alpha,
 p(b)\le\alpha.
 $$
 
-Then there is an observed decision transition between \(a\) and \(b\) on the coarse grid.
+Then there is an observed decision transition between $a$ and $b$ on the coarse grid.
 
 A natural numerical refinement repeatedly evaluates midpoints and narrows the bracket.
 
@@ -569,7 +569,7 @@ Bisection sounds infinitely refinable in real arithmetic.
 
 Computers do not use real arithmetic.
 
-Eventually, for adjacent representable floating-point numbers \(a<b\), the computed midpoint can equal one endpoint:
+Eventually, for adjacent representable floating-point numbers $a<b$, the computed midpoint can equal one endpoint:
 
 $$
 \operatorname{fl}\left(\frac{a+b}{2}\right)
@@ -616,7 +616,7 @@ $$
 \theta=(\psi,\lambda),
 $$
 
-where \(\psi\) is the target and \(\lambda\) is nuisance.
+where $\psi$ is the target and $\lambda$ is nuisance.
 
 Suppose we can compute a pointwise p-value
 
@@ -637,7 +637,7 @@ p(\psi,\lambda)>\alpha
 \right\}.
 $$
 
-The projected confidence set for \(\psi\) is conceptually
+The projected confidence set for $\psi$ is conceptually
 
 $$
 \operatorname{proj}_{\psi}(\mathcal C)
@@ -680,7 +680,7 @@ $$
 \right\}_{r=1}^R.
 $$
 
-Then for a represented target value \(\psi\), the computable profile quantity is
+Then for a represented target value $\psi$, the computable profile quantity is
 
 $$
 \widehat p_{prof}(\psi)
@@ -709,7 +709,7 @@ So calling a finite-grid maximum a continuous profile supremum is not merely imp
 
 Consider this finite joint grid:
 
-| \(\psi\) | \(\lambda\) | p-value |
+| $\psi$ | $\lambda$ | p-value |
 | ---: | ---: | ---: |
 | -1.0 | 0.0 | 0.18 |
 | -1.0 | 1.0 | 0.42 |
@@ -722,7 +722,7 @@ Consider this finite joint grid:
 | 1.0 | 0.0 | 0.37 |
 | 1.0 | 1.0 | 0.21 |
 
-At level \(\alpha=0.05\), the finite-grid profile p-values are
+At level $\alpha=0.05$, the finite-grid profile p-values are
 
 $$
 \widehat p_{prof}(-1)=0.42,
@@ -776,7 +776,7 @@ A joint accepted set can have complicated geometry.
 
 Projecting it onto one coordinate can simplify that geometry, but it need not make it connected.
 
-Imagine two separated accepted islands in \((\psi,\lambda)\)-space:
+Imagine two separated accepted islands in $(\psi,\lambda)$-space:
 
 $$
 \mathcal C_1
@@ -784,7 +784,7 @@ $$
 \mathcal C_2.
 $$
 
-If their \(\psi\)-ranges are separated, the projection remains disconnected:
+If their $\psi$-ranges are separated, the projection remains disconnected:
 
 $$
 \operatorname{proj}_{\psi}(\mathcal C)
@@ -800,7 +800,7 @@ It says that no accepted nuisance configuration on the represented grid rescued 
 
 ## Witnesses Are Useful
 
-For each projected target value \(\psi\), it is often useful to retain one nuisance configuration attaining the finite-grid maximum:
+For each projected target value $\psi$, it is often useful to retain one nuisance configuration attaining the finite-grid maximum:
 
 $$
 r^*(\psi)
@@ -851,7 +851,7 @@ Permuting table rows should not change
 - connected components,
 - projected accepted values.
 
-Formally, if \(\pi\) is any permutation of the source rows,
+Formally, if $\pi$ is any permutation of the source rows,
 
 $$
 \operatorname{Projection}(\mathcal G)
@@ -1000,7 +1000,7 @@ The set can contain zero, one or many components without requiring special conce
 
 ## Coverage Claims Must Match the Computed Object
 
-Suppose a joint finite-grid confidence set has the property that, if the true parameter vector is represented, it is included with probability at least \(1-\alpha\):
+Suppose a joint finite-grid confidence set has the property that, if the true parameter vector is represented, it is included with probability at least $1-\alpha$:
 
 $$
 P_{\theta_0}
@@ -1023,7 +1023,7 @@ P_{\theta_0}
 \ge1-\alpha.
 $$
 
-But this does not establish coverage for an off-grid \(\psi_0\) or for arbitrary nuisance values absent from the grid.
+But this does not establish coverage for an off-grid $\psi_0$ or for arbitrary nuisance values absent from the grid.
 
 The difference between
 
@@ -1209,7 +1209,7 @@ $$
 p(\theta)
 $$
 
-against \(\theta\) with a horizontal line at \(\alpha\).
+against $\theta$ with a horizontal line at $\alpha$.
 
 The confidence set is the region where the p-value lies above the line.
 
@@ -1269,3 +1269,4 @@ $$
 \boxed{
 \text{uncertainty has geometry, and the geometry should survive the software.}
 }
+$$

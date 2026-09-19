@@ -55,7 +55,7 @@ $$
 \hat{p}(x) \geq p_t \Rightarrow \text{intervene}
 $$
 
-where \( p_t \) is the threshold probability.
+where $p_t$ is the threshold probability.
 
 The threshold reflects a trade-off. A low threshold means we are willing to intervene even when risk is modest. This catches more true cases but creates more false positives. A high threshold means we intervene only when risk is substantial. This avoids unnecessary intervention but misses more true cases.
 
@@ -74,7 +74,7 @@ Decision curve analysis makes this trade-off explicit.
 
 The threshold probability is the risk level at which a decision maker is indifferent between acting and not acting.
 
-If a clinician would order a test when disease risk exceeds 10 percent, then \( p_t = 0.10 \). If a maintenance planner would inspect a machine when failure risk exceeds 20 percent, then \( p_t = 0.20 \). If a fraud team reviews a transaction when fraud probability exceeds 2 percent, then \( p_t = 0.02 \).
+If a clinician would order a test when disease risk exceeds 10 percent, then $p_t = 0.10$. If a maintenance planner would inspect a machine when failure risk exceeds 20 percent, then $p_t = 0.20$. If a fraud team reviews a transaction when fraud probability exceeds 2 percent, then $p_t = 0.02$.
 
 The threshold can be translated into a cost-benefit ratio:
 
@@ -86,7 +86,7 @@ $$
 
 This formula is one reason threshold probabilities are useful. They connect probability cutoffs to decision consequences.
 
-For example, if \( p_t = 0.10 \), then:
+For example, if $p_t = 0.10$, then:
 
 $$
 \frac{p_t}{1-p_t} = \frac{0.10}{0.90} \approx 0.11
@@ -100,7 +100,7 @@ Different domains imply different thresholds. A low-cost blood test may justify 
 
 Decision curve analysis uses net benefit as its main quantity.
 
-For binary classification, net benefit at threshold \( p_t \) is:
+For binary classification, net benefit at threshold $p_t$ is:
 
 $$
 \text{Net Benefit}
@@ -114,10 +114,10 @@ $$
 
 Here:
 
-- \( TP \) is the number of true positives.
-- \( FP \) is the number of false positives.
-- \( n \) is the total number of cases.
-- \( p_t/(1-p_t) \) is the penalty weight for false positives.
+- $TP$ is the number of true positives.
+- $FP$ is the number of false positives.
+- $n$ is the total number of cases.
+- $p_t/(1-p_t)$ is the penalty weight for false positives.
 
 The first term rewards true positives. The second term penalizes false positives according to the threshold probability.
 

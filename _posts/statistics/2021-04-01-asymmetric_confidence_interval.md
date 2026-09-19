@@ -142,7 +142,7 @@ We calculate the symmetric confidence interval based on the normal approximation
 
 $$ \text{Margin of Error} = z \times \sqrt{\frac{p(1 - p)}{n}} $$
 
-where $$p$$ is the sample proportion and $$z = 1.96$% for a 95% confidence level. This interval assumes that the distribution of the proportion is approximately normal.
+where $$p$$ is the sample proportion and $$z = 1.96$$ for a 95% confidence level. This interval assumes that the distribution of the proportion is approximately normal.
 
 #### Wilson Score Interval Calculation
 

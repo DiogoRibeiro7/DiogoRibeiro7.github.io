@@ -94,7 +94,7 @@ $$
 A_{SSL}(\delta)
 $$
 
-be the accuracy of a semi-supervised method when the unlabelled covariates have been shifted by a vector \(\delta\).
+be the accuracy of a semi-supervised method when the unlabelled covariates have been shifted by a vector $\delta$.
 
 Define the semi-supervised gain
 
@@ -162,7 +162,7 @@ Within each simulated dataset I keep fixed:
 
 Only the covariates of observations whose labels are hidden are translated.
 
-If \(L\) is the set of labelled training points and \(U\) the unlabelled set, then
+If $L$ is the set of labelled training points and $U$ the unlabelled set, then
 
 $$
 x_i(\delta)
@@ -173,7 +173,7 @@ x_i+\delta, & i\in U.
 \end{cases}
 $$
 
-The supervised logistic regression therefore sees exactly the same labelled data for every \(\delta\).
+The supervised logistic regression therefore sees exactly the same labelled data for every $\delta$.
 
 Its accuracy cannot change because of the intervention.
 
@@ -313,7 +313,7 @@ That is not an incidental property. It is the control that makes the comparison 
 
 Across the 50 repeated datasets, the average results are:
 
-| Unlabelled shift | Supervised accuracy | Self-training accuracy | Mean SSL gain | Mean shift response | \(P(R<0)\) | \(P(G<0)\) |
+| Unlabelled shift | Supervised accuracy | Self-training accuracy | Mean SSL gain | Mean shift response | $P(R<0)$ | $P(G<0)$ |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | 0.0 | 0.9735 | 0.9755 | +0.0020 | 0.0000 | 0% | 22% |
 | 0.5 | 0.9735 | 0.9720 | -0.0015 | -0.0035 | 62% | 56% |
@@ -436,7 +436,7 @@ $$
 
 so there is no negative transfer.
 
-Conversely, a method can already be poor before the shift. In that case negative transfer may be common even if \(R(\delta)\) is close to zero.
+Conversely, a method can already be poor before the shift. In that case negative transfer may be common even if $R(\delta)$ is close to zero.
 
 The probabilities should therefore be reported separately.
 
@@ -502,7 +502,7 @@ $$
 
 have the same norm but may interact with the classifier in completely different ways.
 
-For that reason, I would keep the full vector \(\delta\) in the experimental record and only compare magnitudes within a fixed direction.
+For that reason, I would keep the full vector $\delta$ in the experimental record and only compare magnitudes within a fixed direction.
 
 ## A Better Evaluation Contract
 

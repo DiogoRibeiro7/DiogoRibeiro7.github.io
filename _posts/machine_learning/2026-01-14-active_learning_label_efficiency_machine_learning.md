@@ -57,13 +57,13 @@ Fourth, send selected examples to the labeling process.
 
 Fifth, retrain the model with the expanded labeled set and repeat.
 
-In compact notation, the model has labeled data \( L \), unlabeled data \( U \), and a query strategy \( q(x) \). At each round, the system selects:
+In compact notation, the model has labeled data $L$, unlabeled data $U$, and a query strategy $q(x)$. At each round, the system selects:
 
 $$
 x^* = \arg\max_{x \in U} q(x)
 $$
 
-The definition of \( q(x) \) is the heart of active learning.
+The definition of $q(x)$ is the heart of active learning.
 
 ## Why Random Labeling Is Often Wasteful
 
@@ -106,7 +106,7 @@ $$
 q(x) = -\left(P(Y = k_1 \mid x) - P(Y = k_2 \mid x)\right)
 $$
 
-where \( k_1 \) and \( k_2 \) are the two most likely classes. A small margin means the model is unsure between two labels.
+where $k_1$ and $k_2$ are the two most likely classes. A small margin means the model is unsure between two labels.
 
 Entropy sampling uses the whole predictive distribution:
 
@@ -132,7 +132,7 @@ $$
 q(x) = -\sum_k \frac{v_k}{C} \log \frac{v_k}{C}
 $$
 
-where \( v_k \) is the number of committee members voting for class \( k \), and \( C \) is the committee size.
+where $v_k$ is the number of committee members voting for class $k$, and $C$ is the committee size.
 
 Query by committee is useful because it captures model uncertainty more directly than a single confidence score. But it is more expensive, and the committee must be diverse enough to disagree for meaningful reasons.
 
