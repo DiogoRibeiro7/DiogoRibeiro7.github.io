@@ -21,6 +21,14 @@ author:
     - "Lead Data Scientist"
     - "Machine Learning Engineer"
     - "Professor"
+  expertise:
+    - "Statistical machine learning"
+    - "Time series"
+    - "Causal inference"
+    - "Applied AI"
+    - "Forecasting"
+    - "Applied statistics"
+    - "Research software"
   email: diogo.debastos.ribeiro@gmail.com
   affiliation: "Faculty of Media Arts and Design, Technical University of Porto"
   location: "Porto, Portugal and London, UK"

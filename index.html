@@ -29,10 +29,12 @@ permalink: /
       "@type": "Person",
       "@id": {{ site.url | append: site.baseurl | append: "/#person" | jsonify }},
       "name": {{ site.author.name | jsonify }},
-      "alternateName": "{{ site.author.alternate_name }}",
+      "alternateName": {{ site.author.alternate_name | jsonify }},
       "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
       "image": {{ site.author.avatar | absolute_url | jsonify }},
       "jobTitle": {{ site.author.roles | jsonify }},
+      "description": {{ site.author.bio | jsonify }},
+      "knowsAbout": {{ site.author.expertise | jsonify }},
       "sameAs": {{ site.author.same_as | jsonify }},
       "affiliation": {
         "@type": "Organization",
@@ -42,7 +44,7 @@ permalink: /
     {
       "@type": "ProfilePage",
       "@id": {{ site.url | append: site.baseurl | append: "/#profile" | jsonify }},
-      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
       "name": {{ page.seo_title | jsonify }},
       "description": {{ page.seo_description | jsonify }},
       "isPartOf": {
