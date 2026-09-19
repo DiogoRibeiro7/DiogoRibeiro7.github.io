@@ -18,7 +18,7 @@ pip install setqca
 ## Project Links
 
 - **PyPI:** [setqca](https://pypi.org/project/setqca/)
-- **Documentation:** [diogoribeiro7.github.io/setqca-python](https://diogoribeiro7.github.io/setqca-python/)
+- **Documentation:** [repository documentation](https://github.com/DiogoRibeiro7/setqca-python/tree/main/docs)
 - **Source:** [github.com/DiogoRibeiro7/setqca-python](https://github.com/DiogoRibeiro7/setqca-python)
 - **Issues:** [github.com/DiogoRibeiro7/setqca-python/issues](https://github.com/DiogoRibeiro7/setqca-python/issues)
 - **Changelog:** [CHANGELOG.md](https://github.com/DiogoRibeiro7/setqca-python/blob/main/CHANGELOG.md)
