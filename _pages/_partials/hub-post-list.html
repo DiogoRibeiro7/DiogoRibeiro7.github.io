@@ -4,14 +4,26 @@ Used by the topic hub pages through include_relative:
 
   {% include_relative _partials/hub-post-list.html category="Statistics" limit=8 %}
   {% include_relative _partials/hub-post-list.html tag="Forecasting" limit=8 %}
+
+Given both, a post has to match both, which keeps a hub's sections inside its
+own category:
+
+  {% include_relative _partials/hub-post-list.html category="Data Science" tag="Python" limit=8 %}
 {%- endcomment -%}
 {%- assign limit = include.limit | default: 8 -%}
 {%- assign shown = 0 -%}
 <div class="card-grid hub-post-list">
 {%- for post in site.posts -%}
+  {%- assign in_category = false -%}
+  {%- assign has_tag = false -%}
+  {%- if include.category and post.categories contains include.category -%}{%- assign in_category = true -%}{%- endif -%}
+  {%- if include.tag and post.tags contains include.tag -%}{%- assign has_tag = true -%}{%- endif -%}
   {%- assign matches = false -%}
-  {%- if include.category and post.categories contains include.category -%}{%- assign matches = true -%}{%- endif -%}
-  {%- if include.tag and post.tags contains include.tag -%}{%- assign matches = true -%}{%- endif -%}
+  {%- if include.category and include.tag -%}
+    {%- if in_category and has_tag -%}{%- assign matches = true -%}{%- endif -%}
+  {%- elsif in_category or has_tag -%}
+    {%- assign matches = true -%}
+  {%- endif -%}
   {%- if matches and shown < limit -%}
   <article class="card">
     {%- if post.teaser -%}
