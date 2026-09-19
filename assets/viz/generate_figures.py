@@ -3662,6 +3662,153 @@ def retraining_cost_curve():
     return fig
 
 
+# --------------------------------------------------------------------------
+# Exact post-selection intervals for X ~ N(mu, 1), reported only when X > 2.
+PSI_C = 2.0
+PSI_ALPHA = 0.05
+
+
+def _psi_cond_cdf(mu, x, c=PSI_C):
+    """P(X <= x | X > c), through log survival functions so the tail is exact."""
+    from scipy.stats import norm
+    return -np.expm1(norm.logsf(x - mu) - norm.logsf(c - mu))
+
+
+def _psi_selective_ci(x, c=PSI_C, alpha=PSI_ALPHA):
+    from scipy.optimize import brentq
+
+    def limit(target):
+        f = lambda mu: _psi_cond_cdf(mu, x, c) - target
+        lo, hi = x - 1.0, x + 1.0
+        while f(lo) < 0:          # the conditional cdf falls as mu rises
+            lo -= 2 * (x - lo)
+        while f(hi) > 0:
+            hi += 2 * (hi - x)
+        return brentq(f, lo, hi, xtol=1e-12)
+
+    return limit(1 - alpha / 2), limit(alpha / 2)
+
+
+def _psi_randomised_table(gamma=1.0, c=PSI_C, alpha=PSI_ALPHA):
+    """Interval limits after selecting on X + omega > c, tabulated over x."""
+    from scipy.optimize import brentq
+    from scipy.stats import norm
+    t = np.linspace(-45.0, 25.0, 14001)
+
+    def cdf(mu, x):
+        logw = norm.logpdf(t - mu) + norm.logcdf((t - c) / gamma)
+        w = np.exp(logw - logw.max())
+        return w[t <= x].sum() / w.sum()
+
+    xs = np.linspace(-4.0, 10.0, 113)
+    lims = np.array([[brentq(lambda m: cdf(m, x) - target, -40.0, x + 8.0, xtol=1e-7)
+                      for target in (1 - alpha / 2, alpha / 2)] for x in xs])
+    return xs, lims
+
+
+@figure("selective_interval_runaway",
+        "Two panels. Left: the density of an observation given that it exceeded "
+        "the threshold of 2, for means of 1, minus 5 and minus 20; the more "
+        "negative the mean, the more the density piles up just above the "
+        "threshold, so that an observation of 2.05 is typical under all three. "
+        "Right: width of the exact 95% selective interval against the distance "
+        "of the observation above the threshold, on logarithmic axes; it follows "
+        "3.69 divided by the distance for marginal selections and approaches the "
+        "ordinary width of 3.92 for clear ones.")
+def selective_interval_runaway():
+    from scipy.stats import norm
+    fig, (ax, bx) = plt.subplots(1, 2, figsize=(9.6, 4.2))
+
+    # Same quantity at three parameter values: one hue, light to dark.
+    grid = np.linspace(PSI_C, 2.6, 600)
+    shades = (hs.SEQUENTIAL[2], hs.SEQUENTIAL[4], hs.SEQUENTIAL[6])
+    for mu, shade in zip((1.0, -5.0, -20.0), shades):
+        dens = np.exp(norm.logpdf(grid - mu) - norm.logsf(PSI_C - mu))
+        ax.plot(grid, dens, color=shade, lw=2.2, label=f"mean {mu:g}")
+    ax.axvline(2.05, color=hs.INK_MUTED, lw=1, ls=":")
+    ax.annotate("observed 2.05", (2.05, 19.5), xytext=(6, 0),
+                textcoords="offset points", fontsize=9, color=hs.INK_SECONDARY,
+                va="center")
+    ax.set_xlim(PSI_C, 2.6)
+    ax.set_ylim(0, 23)
+    ax.set_xlabel("observation, given that it exceeded 2")
+    ax.set_ylabel("conditional density")
+    ax.set_title("A very negative mean predicts a value just above 2")
+    ax.legend(loc="upper right")
+
+    d = np.geomspace(0.01, 4.0, 60)
+    width = np.array([np.diff(_psi_selective_ci(PSI_C + v))[0] for v in d])
+    k = np.log(2 / PSI_ALPHA)
+    bx.plot(d, width, color=P[0], lw=2.4, label="Exact selective interval")
+    bx.plot(d, k / d, color=P[1], lw=2, ls="--", label="3.69 / distance")
+    bx.axhline(2 * 1.96, color=hs.INK_MUTED, lw=1.4, ls=":",
+               label="Ordinary interval, 3.92")
+    bx.plot([0.05], [width[np.argmin(np.abs(d - 0.05))]], marker="o", ms=7,
+            color=P[0], markeredgecolor=hs.SURFACE, markeredgewidth=2, zorder=5)
+    bx.annotate("observed 2.05: width 74", (0.05, 74.3), xytext=(8, 6),
+                textcoords="offset points", fontsize=9, color=hs.INK_SECONDARY)
+    bx.set_xscale("log")
+    bx.set_yscale("log")
+    bx.set_xlabel("distance of the observation above the threshold")
+    bx.set_ylabel("width of the 95% interval")
+    bx.set_title("Width grows as one over the distance")
+    bx.legend(loc="upper right")
+    fig.tight_layout()
+    return fig
+
+
+@figure("selective_width_by_procedure",
+        "Median width of three valid 95% intervals for a selected effect, against "
+        "the true mean from 0 to 4, on a logarithmic axis, each with a band up to "
+        "its 90th percentile. Conditioning on a hard threshold gives a median of "
+        "about 15 and a 90th percentile of 84 at a mean of zero, falling to 4.3 "
+        "at a mean of four. Randomised selection stays between 4.2 and 5.3 "
+        "throughout, and data splitting is a constant 5.54. The ordinary width "
+        "of 3.92 is drawn for reference.")
+def selective_width_by_procedure():
+    from scipy.stats import norm
+    rng = np.random.default_rng(20260918)
+    mus = np.linspace(0.0, 4.0, 17)
+
+    # The randomised interval depends on the observation alone: tabulate, interpolate.
+    xs, lims = _psi_randomised_table()
+    rand_width = lims[:, 1] - lims[:, 0]
+
+    hard, soft = [], []
+    for mu in mus:
+        # The hard-threshold width falls as the observation rises, so its
+        # q-quantile is the width at the point where P(X <= x | X > c) = 1 - q.
+        hard.append([np.diff(_psi_selective_ci(mu + norm.isf(q * norm.sf(PSI_C - mu))))[0]
+                     for q in (0.5, 0.9)])
+        x = mu + rng.standard_normal(400000)
+        keep = x + rng.standard_normal(x.size) > PSI_C           # X + omega > c
+        soft.append(np.quantile(np.interp(x[keep], xs, rand_width), [0.5, 0.9]))
+    hard, soft = np.array(hard), np.array(soft)
+    split = 2 * 1.96 * np.sqrt(2.0)
+
+    fig, ax = plt.subplots()
+    ax.fill_between(mus, hard[:, 0], hard[:, 1], color=P[0], alpha=0.16, lw=0)
+    ax.fill_between(mus, soft[:, 0], soft[:, 1], color=P[1], alpha=0.2, lw=0)
+    ax.plot(mus, hard[:, 0], color=P[0], lw=2.4, label="Hard threshold, conditional")
+    ax.plot(mus, soft[:, 0], color=P[1], lw=2.2, label="Randomised selection")
+    ax.plot(mus, np.full_like(mus, split), color=P[2], lw=2, ls="--",
+            label="Data splitting")
+    ax.axhline(2 * 1.96, color=hs.INK_MUTED, lw=1.4, ls=":",
+               label="Ordinary interval, not valid here")
+    ax.annotate("band: median to 90th percentile", (0.08, hard[0, 1]),
+                xytext=(6, -2), textcoords="offset points", fontsize=9,
+                color=hs.INK_SECONDARY, va="top")
+    ax.set_yscale("log")
+    ax.set_ylim(3, 130)
+    ax.set_yticks([4, 5, 10, 20, 50, 100])
+    ax.set_yticklabels(["4", "5", "10", "20", "50", "100"])
+    ax.set_xlabel("true mean")
+    ax.set_ylabel("width of the 95% interval, given selection")
+    ax.set_title("What conditioning on a hard threshold costs, and what avoids it")
+    ax.legend(loc="upper right")
+    return fig
+
+
 def main(names):
     hs.FIGDIR.mkdir(parents=True, exist_ok=True)
     chosen = names or sorted(FIGURES)

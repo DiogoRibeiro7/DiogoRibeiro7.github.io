@@ -3,8 +3,8 @@ permalink: '/statistics/reproducible_randomness_is_more_than_calling_set_seed/'
 title: 'Reproducible Randomness Is More Than Calling set.seed()'
 categories:
 - Statistics
-- R
 tags:
+- R
 - Reproducibility
 - Random Number Generation
 - Statistical Computing
@@ -135,7 +135,7 @@ S_t
 (X_t,S_{t+1}),
 $$
 
-where \(S_t\) is the generator state and \(X_t\) the generated value.
+where $S_t$ is the generator state and $X_t$ the generated value.
 
 `set.seed(42)` does something different. It replaces the current state with the state associated with seed 42:
 
@@ -681,7 +681,7 @@ $$
 \frac{1+K}{B+1},
 $$
 
-where \(K\) is the number of simulated statistics at least as extreme as the observed statistic.
+where $K$ is the number of simulated statistics at least as extreme as the observed statistic.
 
 Then both
 
@@ -697,7 +697,7 @@ $$
 
 are part of the computational experiment.
 
-Changing \(B\) changes the set of possible p-values:
+Changing $B$ changes the set of possible p-values:
 
 $$
 \left\{

@@ -58,15 +58,15 @@ Examples include:
 - Inputs with high model uncertainty
 - Cases from a new acquisition channel
 
-Formally, if the evaluation dataset is \( D \), a slice is:
+Formally, if the evaluation dataset is $D$, a slice is:
 
 $$
 D_s = \{(x_i, y_i) \in D : c(x_i) = 1\}
 $$
 
-where \( c(x_i) \) is a condition that decides whether an example belongs to the slice.
+where $c(x_i)$ is a condition that decides whether an example belongs to the slice.
 
-Slice-based evaluation computes metrics on \( D_s \), not only on \( D \). The goal is to see whether model performance changes across meaningful contexts.
+Slice-based evaluation computes metrics on $D_s$, not only on $D$. The goal is to see whether model performance changes across meaningful contexts.
 
 ## Why Aggregate Metrics Hide Problems
 
@@ -244,7 +244,7 @@ Useful ranking slices include:
 - High-intent versus exploratory sessions
 - Regions with different inventory
 
-Metrics may include NDCG, recall at \( k \), precision at \( k \), mean reciprocal rank, conversion rate, diversity, novelty, and downstream satisfaction. The correct metric depends on the user experience and business objective.
+Metrics may include NDCG, recall at $k$, precision at $k$, mean reciprocal rank, conversion rate, diversity, novelty, and downstream satisfaction. The correct metric depends on the user experience and business objective.
 
 Ranking failures are often concentrated in the long tail. Slice evaluation is how those failures become visible.
 

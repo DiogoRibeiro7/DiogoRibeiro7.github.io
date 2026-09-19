@@ -21,6 +21,19 @@ These articles exist as complete drafts. Their review status is recorded individ
 | Power Is a Surface, Not a Number | [power-is-a-surface-not-a-number.md](power-is-a-surface-not-a-number.md) | full draft; examples verified | technical review / editorial pass |
 | The Estimand Comes Before the Test Menu | [the-estimand-comes-before-the-test-menu.md](the-estimand-comes-before-the-test-menu.md) | full draft; examples verified | technical review / editorial pass |
 | Stability Is Not Truth | [stability-is-not-truth.md](stability-is-not-truth.md) | full draft; examples verified | technical review / editorial pass |
+| What Randomisation Promises About Baseline Balance | [randomisation-and-baseline-balance.md](randomisation-and-baseline-balance.md) | full draft; examples verified | technical review / editorial pass |
+| Storage Must Balance Power, Energy, and Losses | [storage-must-balance-power-energy-and-losses.md](storage-must-balance-power-energy-and-losses.md) | full draft; examples verified | technical review / editorial pass |
+| A Personal Baseline Can Learn the Change You Wanted to Detect | [a-personal-baseline-can-learn-the-change.md](a-personal-baseline-can-learn-the-change.md) | full draft; examples verified | technical review / editorial pass |
+
+## Category and coverage review — 19 September 2026
+
+The category audit found inconsistent use of narrow subjects: 28 published articles carried the R tag without the R category, and seven carried the Statistical Computing tag without that category. The corresponding categories each contained only one article. Those category counts did not describe the available topic coverage.
+
+R and Statistical Computing now use tags within the broader Statistics category. The two Software Engineering articles also belong to Programming and retain Software Engineering as a tag. The Science Policy article also belongs to Research and retains its Science Policy tag. All existing article permalinks are preserved, and the retired category anchors link to their tag collections.
+
+After those changes, Research and Environment each have six currently dated articles, and Healthcare has eight (with another scheduled for 28 September). The three full drafts above develop specific questions in those subjects; they remain unpublished and do not increase the live article counts. The science communication category also has six currently dated articles, all recently expanded, plus its scheduled microwave article.
+
+Each new draft includes its seven-part development contract, an original figure, reproducible calculations, sources, and explicit limitations. Run `python assets/viz/generate_coverage_draft_figures.py --dry-run` to inspect the synthetic calculations without writing figures. The associated tests check exact allocation probabilities, randomisation variance, energy conservation and power constraints, geometric adaptation, and missing-observation handling.
 
 ## Articles prepared for the 2026 publication queue
 
@@ -209,6 +222,8 @@ These are worth keeping but need either data, a sharper theorem/experiment, or l
 
 ### B1. Personal baseline versus population model in passive health monitoring
 
+**Developed component:** [A Personal Baseline Can Learn the Change You Wanted to Detect](a-personal-baseline-can-learn-the-change.md) — full draft with an exact adaptation counterexample, calibration uncertainty, and missingness analysis. A broader comparison of hierarchical population and individual models remains a separate seed.
+
 When should a health-monitoring system learn an individual’s normal state rather than compare them with a population distribution? Develop around hierarchical models, calibration, adaptation, and false alarms.
 
 ### B2. Passive sensing is a measurement model before it is a prediction model
@@ -260,6 +275,8 @@ Article seed on behavioral response, pass-through, elasticities, general-equilib
 Separate parameter uncertainty, scenario uncertainty, model discrepancy, and forecast error. Challenge the vague claim that ML “reduces climate uncertainty.”
 
 ### B13. Energy transition as an intertemporal control problem
+
+**Developed prerequisite:** [Storage Must Balance Power, Energy, and Losses](storage-must-balance-power-energy-and-losses.md) — full draft with a verified dispatch ledger. Investment, emissions, and optimal control remain outside this narrower article's scope.
 
 Develop generation mix, storage, capital turnover, emissions stock, reliability constraints, and discounting in a transparent optimal-control model.
 

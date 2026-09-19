@@ -110,7 +110,7 @@ E\{L(\widehat\theta_A,\theta_A)\}
 E\{L(\widehat\theta_B,\theta_B)\},
 $$
 
-for some loss function \(L\).
+for some loss function $L$.
 
 Then the simulation may return
 
@@ -157,7 +157,7 @@ That may be true.
 
 But "Monte Carlo noise" should itself be quantified rather than used as a rhetorical escape hatch.
 
-If \(D_r=L_{A,r}-L_{B,r}\) is the paired loss difference in replication \(r\), then the Monte Carlo standard error of the mean difference is
+If $D_r=L_{A,r}-L_{B,r}$ is the paired loss difference in replication $r$, then the Monte Carlo standard error of the mean difference is
 
 $$
 \operatorname{MCSE}(\overline D)
@@ -226,7 +226,7 @@ for R in (20, 100, 1_000, 10_000):
     )
 ```
 
-As \(R\) grows, Monte Carlo error shrinks like
+As $R$ grows, Monte Carlo error shrinks like
 
 $$
 R^{-1/2}.
@@ -264,7 +264,7 @@ $$
 \widetilde T_r=T_r+b+\varepsilon_r,
 $$
 
-where \(b\) is numerical bias, then
+where $b$ is numerical bias, then
 
 $$
 \overline{\widetilde T}
@@ -292,7 +292,7 @@ A numerical dip, peak or boundary can be an approximation artefact.
 
 If the scientific interpretation depends on a local feature of a curve, I want to see convergence under refinement.
 
-For a numerical approximation \(I_h(\theta)\) with resolution parameter \(h\), the basic question is
+For a numerical approximation $I_h(\theta)$ with resolution parameter $h$, the basic question is
 
 $$
 I_h(\theta)
@@ -300,7 +300,7 @@ I_h(\theta)
 I(\theta)
 $$
 
-as \(h\to0\).
+as $h\to0$.
 
 A plot at one resolution is not enough.
 
@@ -314,7 +314,7 @@ I(\theta)
 \int f(z;\theta)\,dz.
 $$
 
-Suppose we approximate it using \(m\) midpoint evaluations:
+Suppose we approximate it using $m$ midpoint evaluations:
 
 $$
 I_m(\theta)
@@ -324,7 +324,7 @@ I_m(\theta)
 f(z_j;\theta).
 $$
 
-If the integrand changes rapidly in some parameter region, a coarse grid can underestimate or overestimate the integral non-uniformly in \(\theta\).
+If the integrand changes rapidly in some parameter region, a coarse grid can underestimate or overestimate the integral non-uniformly in $\theta$.
 
 That can manufacture apparent curvature:
 
@@ -374,23 +374,23 @@ $$
 
 A numerical claim should stop moving before a scientific claim is built on top of it.
 
-If the ordering changes when moving from \(m=100\) to \(m=1{,}000\), then the problem is not ready for Monte Carlo storytelling.
+If the ordering changes when moving from $m=100$ to $m=1{,}000$, then the problem is not ready for Monte Carlo storytelling.
 
 ## Local Theory and Finite-Sample Recovery Are Not the Same Object
 
 Even when the numerical calculation is correct, a theoretical diagnostic may not imply the finite-sample ranking we first attach to it.
 
-Suppose a parameter \(\theta\) appears weakly in one analytical feature of a model because
+Suppose a parameter $\theta$ appears weakly in one analytical feature of a model because
 
 $$
 \frac{\partial g(\theta)}{\partial\theta}=0
 $$
 
-at some \(\theta_0\).
+at some $\theta_0$.
 
-It is tempting to call \(\theta_0\) a weak-identification point.
+It is tempting to call $\theta_0$ a weak-identification point.
 
-But the estimator may use much more than the single feature \(g\).
+But the estimator may use much more than the single feature $g$.
 
 The full Fisher information is
 
@@ -514,7 +514,7 @@ It is usually poor evidence for statements like
 
 Uniform statements are expensive.
 
-If the grid has \(K\) cells and each cell has noisy estimates, then the chance that at least one cell produces an apparently contradictory ordering grows with \(K\).
+If the grid has $K$ cells and each cell has noisy estimates, then the chance that at least one cell produces an apparently contradictory ordering grows with $K$.
 
 A broad claim therefore needs enough replication to distinguish genuine heterogeneity from the expected scatter of many noisy comparisons.
 
@@ -552,7 +552,7 @@ $$
 
 is not an inconvenience.
 
-It directly narrows \(H\).
+It directly narrows $H$.
 
 ## Freeze the Raw Evidence
 

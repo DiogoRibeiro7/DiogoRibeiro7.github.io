@@ -52,7 +52,7 @@ Those are different objects.
 
 ## 1. Start with the causal estimand
 
-Suppose \(A\in\{0,1\}\) denotes a treatment and \(Y\) an outcome.
+Suppose $A\in\{0,1\}$ denotes a treatment and $Y$ an outcome.
 
 Let
 
@@ -147,13 +147,13 @@ So randomized treatment assignment is a powerful design feature, not a universal
 
 When treatment is not randomized, treated and untreated units may differ systematically.
 
-Suppose \(L\) is a sufficient set of observed pre-treatment covariates. A conditional exchangeability assumption is
+Suppose $L$ is a sufficient set of observed pre-treatment covariates. A conditional exchangeability assumption is
 
 $$
 (Y(1),Y(0))\perp A\mid L.
 $$
 
-This says that after conditioning on \(L\), treatment assignment is as good as random with respect to the potential outcomes.
+This says that after conditioning on $L$, treatment assignment is as good as random with respect to the potential outcomes.
 
 It is not something we can generally prove from the observed data.
 
@@ -181,7 +181,7 @@ If some subgroup never receives one treatment, the corresponding causal contrast
 
 ### Consistency
 
-If a unit actually receives treatment \(A=a\), then the observed outcome equals the potential outcome under that treatment:
+If a unit actually receives treatment $A=a$, then the observed outcome equals the potential outcome under that treatment:
 
 $$
 Y=Y(a)\quad\text{when }A=a.
@@ -202,7 +202,7 @@ L → A → Y
 L → Y
 ```
 
-Here \(L\) is a common cause of treatment and outcome.
+Here $L$ is a common cause of treatment and outcome.
 
 The path
 
@@ -210,9 +210,9 @@ $$
 A\leftarrow L\rightarrow Y
 $$
 
-creates non-causal association between \(A\) and \(Y\).
+creates non-causal association between $A$ and $Y$.
 
-Conditioning on \(L\) can block that back-door path.
+Conditioning on $L$ can block that back-door path.
 
 But a DAG does not become causal merely because it was drawn, and a causal graph is not generally identified from observational correlations alone.
 
@@ -228,9 +228,9 @@ The canonical example is a collider:
 A → C ← Y
 ```
 
-The variable \(C\) is caused by both \(A\) and \(Y\).
+The variable $C$ is caused by both $A$ and $Y$.
 
-Without conditioning on \(C\), the path
+Without conditioning on $C$, the path
 
 $$
 A\rightarrow C\leftarrow Y
@@ -238,7 +238,7 @@ $$
 
 is blocked.
 
-Conditioning on \(C\) can open that path and induce an association between \(A\) and \(Y\) even when none existed before.
+Conditioning on $C$ can open that path and induce an association between $A$ and $Y$ even when none existed before.
 
 This is why variable selection for causal inference cannot be reduced to:
 
@@ -257,13 +257,13 @@ L → Y
 
 Here:
 
-- \(L\) may be a confounder;
-- \(M\) may be a mediator;
+- $L$ may be a confounder;
+- $M$ may be a mediator;
 - another variable might be a collider.
 
 Conditioning on each has a different consequence.
 
-If the estimand is the **total effect** of \(A\) on \(Y\), adjusting for the mediator \(M\) can remove part of the very effect we are trying to estimate.
+If the estimand is the **total effect** of $A$ on $Y$, adjusting for the mediator $M$ can remove part of the very effect we are trying to estimate.
 
 If the estimand is a **direct effect**, mediator handling requires a different identification argument.
 
@@ -281,9 +281,9 @@ For example:
 A → S ← Y
 ```
 
-where \(S\) indicates selection into the observed sample.
+where $S$ indicates selection into the observed sample.
 
-If analysis is restricted to \(S=1\), then treatment and outcome can become associated through the opened collider path even if they were independent in the source population.
+If analysis is restricted to $S=1$, then treatment and outcome can become associated through the opened collider path even if they were independent in the source population.
 
 This matters in:
 
@@ -322,9 +322,9 @@ The original version of this article included Granger-causality code in a genera
 
 That was misleading.
 
-Granger causality asks whether past values of \(X\) improve prediction of \(Y\) beyond past values already in the model.
+Granger causality asks whether past values of $X$ improve prediction of $Y$ beyond past values already in the model.
 
-That is useful for time-series dependence and forecasting, but it does not by itself establish that intervening on \(X\) would change \(Y\).
+That is useful for time-series dependence and forecasting, but it does not by itself establish that intervening on $X$ would change $Y$.
 
 A better label is often **Granger predictability** or **predictive causality**, while keeping it conceptually separate from intervention-based causal effects.
 
@@ -378,7 +378,7 @@ $$
 \hat\tau.
 $$
 
-The relevant question is not only whether \(\hat\tau\) is statistically significant.
+The relevant question is not only whether $\hat\tau$ is statistically significant.
 
 We should also ask:
 
@@ -443,7 +443,7 @@ $$
 
 Do not ask only:
 
-> Are \(X\) and \(Y\) correlated?
+> Are $X$ and $Y$ correlated?
 
 And do not jump immediately to:
 

@@ -70,6 +70,36 @@ aside {
   gap: 0.25rem;
 }
 
+// On a narrow screen a wide table or a long display equation scrolls inside its
+// own box. The theme lets them overflow, and the whole page then slides
+// sideways. The equation is centred while it fits and starts at the left edge
+// when it does not, so that no part of it is out of reach
+// (DiogoRibeiro7/analytics-blog-jekyll#319).
+@media (max-width: 48rem) {
+  .post-content table:not(.rouge-table),
+  .page-content table:not(.rouge-table) {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+
+    th,
+    td {
+      white-space: nowrap;
+    }
+  }
+
+  .math-expression {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    mjx-container[display='true'] {
+      justify-self: start;
+      min-width: max-content;
+      margin-inline: auto;
+    }
+  }
+}
+
 // Keep every published category discoverable from each blog archive page.
 .blog-categories {
   margin-block-end: 2rem;
@@ -104,4 +134,18 @@ aside {
       text-underline-offset: 0.15em;
     }
   }
+}
+
+// Line numbers in a code block stand apart from the code. The theme sets the
+// gutter's padding on ".highlight .rouge-gutter", and its own
+// ".highlight .rouge-table td { padding: 0 }" is more specific, so the numbers
+// were flush against the code: "1import numpy"
+// (DiogoRibeiro7/analytics-blog-jekyll#321).
+.highlight .rouge-table td.rouge-gutter {
+  padding-right: 1rem;
+  border-right: 1px solid rgba(128, 128, 128, 0.28); // visible on light and dark surfaces
+}
+
+.highlight .rouge-table td.rouge-code {
+  padding-left: 1rem;
 }

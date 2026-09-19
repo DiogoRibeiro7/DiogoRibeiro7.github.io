@@ -3,8 +3,9 @@ permalink: '/statistics/writing_statistical_software_as_executable_mathematics/'
 title: 'Writing Statistical Software as Executable Mathematics'
 categories:
 - Statistics
-- Software Engineering
+- Programming
 tags:
+- Software Engineering
 - Statistical Computing
 - Testing
 - Mathematical Invariants
@@ -100,7 +101,7 @@ It becomes executable mathematics.
 
 ## An Example Output Is Weaker Than an Identity
 
-Suppose a test statistic is \(T\), a Monte Carlo p-value is \(p\), and the test rejects at level \(\alpha\).
+Suppose a test statistic is $T$, a Monte Carlo p-value is $p$, and the test rejects at level $\alpha$.
 
 A conventional test might use one fixture and require
 
@@ -143,7 +144,7 @@ A relational test checks whether the pieces still fit together mathematically.
 
 Suppose a confidence set is obtained by inverting pointwise tests.
 
-At parameter value \(\theta\), define
+At parameter value $\theta$, define
 
 $$
 C_{1-\alpha}
@@ -225,7 +226,7 @@ $$
 \frac{1+K}{B+1},
 $$
 
-where \(K\) is the number of simulated statistics at least as extreme as the observed statistic and \(B\) is the number of simulated replicates.
+where $K$ is the number of simulated statistics at least as extreme as the observed statistic and $B$ is the number of simulated replicates.
 
 Then the attainable p-values lie on the grid
 
@@ -244,7 +245,7 @@ $$
 \widehat p\le\alpha
 $$
 
-may also be represented by a simulated critical value \(c_\alpha\).
+may also be represented by a simulated critical value $c_\alpha$.
 
 If the software reports both quantities, they should satisfy
 
@@ -258,7 +259,7 @@ $$
 
 The exact convention around ties matters.
 
-A generic empirical quantile does not automatically produce a critical value decision-equivalent to the plus-one p-value for every \((B,\alpha)\).
+A generic empirical quantile does not automatically produce a critical value decision-equivalent to the plus-one p-value for every $(B,\alpha)$.
 
 This is a perfect candidate for executable mathematics because the identity defines what the two outputs mean together.
 
@@ -347,7 +348,7 @@ $$
 \theta=(\psi,\lambda),
 $$
 
-where \(\psi\) is the target and \(\lambda\) is nuisance.
+where $\psi$ is the target and $\lambda$ is nuisance.
 
 On a represented finite grid, define a profile p-value
 
@@ -424,7 +425,7 @@ $$
 g(\theta)=\theta_j,
 $$
 
-the arbitrary scalar projection should reduce to coordinate projection onto parameter \(j\).
+the arbitrary scalar projection should reduce to coordinate projection onto parameter $j$.
 
 So we obtain another contract:
 
@@ -485,7 +486,7 @@ Suppose the rows of a finite parameter grid are merely a representation of a set
 
 Then permuting those rows should not change the inferential object.
 
-If \(\pi\) is a row permutation,
+If $\pi$ is a row permutation,
 
 $$
 \mathcal G
@@ -629,7 +630,7 @@ Now consider adjacent representable floating-point numbers.
 
 There may be no machine number strictly between them.
 
-Then the mathematical midpoint exists in \(\mathbb R\), but the numerical midpoint satisfies
+Then the mathematical midpoint exists in $\mathbb R$, but the numerical midpoint satisfies
 
 $$
 \operatorname{fl}\left(\frac{a+b}{2}\right)
@@ -658,7 +659,7 @@ This is another example where precise vocabulary becomes executable behaviour.
 
 Optimized statistical code is often much harder to inspect than the formula it implements.
 
-Suppose a direct method computes a quantity in \(O(n^2)\) memory while an optimized derivation computes it in \(O(n)\).
+Suppose a direct method computes a quantity in $O(n^2)$ memory while an optimized derivation computes it in $O(n)$.
 
 The direct version may be too slow for production but excellent as a reference.
 
@@ -701,7 +702,7 @@ $$
 \tau.
 $$
 
-The tolerance \(\tau\) should come from numerical reasoning, not convenience.
+The tolerance $\tau$ should come from numerical reasoning, not convenience.
 
 A test that uses `all.equal()` everywhere can hide meaningful errors.
 
@@ -849,7 +850,7 @@ Ordinary application software can often be specified by examples and business ru
 
 Statistical software makes claims about mathematical objects.
 
-A function may claim to return a level-\(1-\alpha\) inverted set. Another may claim to project it. Another may report the p-value supporting the projected decision.
+A function may claim to return a level-$1-\alpha$ inverted set. Another may claim to project it. Another may report the p-value supporting the projected decision.
 
 If those objects do not satisfy their defining relations, the problem is not merely an implementation bug.
 
@@ -967,7 +968,7 @@ F\{\pi(\mathcal G)\}
 }
 $$
 
-for every permutation \(\pi\) when row order is irrelevant.
+for every permutation $\pi$ when row order is irrelevant.
 
 These equations are concise because the mathematics has already done most of the specification work.
 
@@ -999,3 +1000,4 @@ $$
 \boxed{
 \text{the implementation should not merely run the mathematics; the test suite should enforce it.}
 }
+$$

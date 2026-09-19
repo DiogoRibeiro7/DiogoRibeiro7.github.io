@@ -435,7 +435,7 @@ The Beta distribution is a continuous probability distribution defined on the in
 
 3. **Flexibility**: The Beta distribution is highly flexible and can model a wide range of data patterns within the [0, 1] interval.
 
-4. **Symmetry and Skewness**: If $$\alpha = \beta$$, the distribution is symmetric around 0.5. If $$\alpha \neq \beta$$, the distribution is skewed; it leans towards 0 if $$\alpha < \beta$$ and towards 1 if $$\alpha > $$\beta$$.
+4. **Symmetry and Skewness**: If $$\alpha = \beta$$, the distribution is symmetric around 0.5. If $$\alpha \neq \beta$$, the distribution is skewed; it leans towards 0 if $$\alpha < \beta$$ and towards 1 if $$\alpha > \beta$$.
 
 ### Mathematical Formulation
 
