@@ -20,7 +20,7 @@ pip install heavytails
 ## Project Links
 
 - **PyPI:** [heavytails](https://pypi.org/project/heavytails/)
-- **Documentation:** [diogoribeiro7.github.io/heavytails](https://diogoribeiro7.github.io/heavytails)
+- **Documentation:** [repository documentation](https://github.com/DiogoRibeiro7/heavytails/tree/main/docs)
 - **Source:** [github.com/DiogoRibeiro7/heavytails](https://github.com/DiogoRibeiro7/heavytails)
 - **Issues:** [github.com/DiogoRibeiro7/heavytails/issues](https://github.com/DiogoRibeiro7/heavytails/issues)
 - **Discussions:** [github.com/DiogoRibeiro7/heavytails/discussions](https://github.com/DiogoRibeiro7/heavytails/discussions)

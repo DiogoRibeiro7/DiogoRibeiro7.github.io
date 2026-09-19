@@ -20,7 +20,7 @@ The optional performance helpers come with `pip install "oversampleqa[performanc
 ## Project Links
 
 - **PyPI:** [oversampleqa](https://pypi.org/project/oversampleqa/)
-- **Documentation:** [diogoribeiro7.github.io/OversampleQA](https://diogoribeiro7.github.io/OversampleQA/)
+- **Documentation:** [repository documentation](https://github.com/DiogoRibeiro7/OversampleQA/tree/main/docs)
 - **Source:** [github.com/diogoribeiro7/OversampleQA](https://github.com/diogoribeiro7/OversampleQA)
 - **Issues:** [github.com/diogoribeiro7/OversampleQA/issues](https://github.com/diogoribeiro7/OversampleQA/issues)
 - **Changelog:** [CHANGELOG.md](https://github.com/diogoribeiro7/OversampleQA/blob/main/CHANGELOG.md)

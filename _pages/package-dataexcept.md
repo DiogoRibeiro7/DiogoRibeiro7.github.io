@@ -18,7 +18,7 @@ pip install DataExcept
 ## Project Links
 
 - **PyPI:** [DataExcept](https://pypi.org/project/DataExcept/)
-- **Documentation:** [diogoribeiro7.github.io/DataExcept](https://diogoribeiro7.github.io/DataExcept/)
+- **Documentation:** [repository documentation](https://github.com/DiogoRibeiro7/DataExcept/tree/main/docs)
 - **Source:** [github.com/DiogoRibeiro7/DataExcept](https://github.com/DiogoRibeiro7/DataExcept)
 - **Issues:** [github.com/DiogoRibeiro7/DataExcept/issues](https://github.com/DiogoRibeiro7/DataExcept/issues)
 - **Changelog:** [GitHub releases](https://github.com/DiogoRibeiro7/DataExcept/releases)

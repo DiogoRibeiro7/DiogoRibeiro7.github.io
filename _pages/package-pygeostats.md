@@ -22,8 +22,8 @@ While no stable release exists, pip installs the pre-release. Extras: `plotting`
 ## Project Links
 
 - **PyPI:** [pygeostats](https://pypi.org/project/pygeostats/)
-- **Documentation:** [diogoribeiro7.github.io/pygeostats](https://diogoribeiro7.github.io/pygeostats/)
-- **Known limitations:** [diogoribeiro7.github.io/pygeostats/known-limitations](https://diogoribeiro7.github.io/pygeostats/known-limitations/)
+- **Documentation:** [repository documentation](https://github.com/DiogoRibeiro7/pygeostats/tree/main/docs)
+- **Known limitations:** [project documentation](https://github.com/DiogoRibeiro7/pygeostats/blob/main/docs/index.md)
 - **Source:** [github.com/DiogoRibeiro7/pygeostats](https://github.com/DiogoRibeiro7/pygeostats)
 - **Issues:** [github.com/DiogoRibeiro7/pygeostats/issues](https://github.com/DiogoRibeiro7/pygeostats/issues)
 - **Changelog:** [CHANGELOG.md](https://github.com/DiogoRibeiro7/pygeostats/blob/main/CHANGELOG.md)

@@ -11,7 +11,6 @@ This page provides convenient links to code examples referenced throughout the b
 
 You can download specific files directly from the repository:
 
-- [Michelson–Morley experiment visualization]({{ '/code/michelson_morley.py' | relative_url }})
 - [Example notebook]({{ '/code/Untitled.ipynb' | relative_url }})
 
 ## Repository download
