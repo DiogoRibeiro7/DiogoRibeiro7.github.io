@@ -3,8 +3,8 @@ permalink: '/statistics/confidence_sets_are_not_just_intervals/'
 title: 'Confidence Sets Are Not Just Intervals'
 categories:
 - Statistics
-- Statistical Computing
 tags:
+- Statistical Computing
 - Confidence Sets
 - Partial Identification
 - Moment Inequalities
