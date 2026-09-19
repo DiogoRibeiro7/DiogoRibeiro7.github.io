@@ -1,13 +1,15 @@
 ---
 layout: page
 permalink: /about/
-title: "About"
+title: "About Diogo Ribeiro (@DiogoRibeiro7)"
 author_profile: true
-seo_title: "About Diogo Ribeiro and Editorial Standards"
-seo_description: "Author background and editorial standards for a technical blog on statistics, machine learning, forecasting, and data engineering."
+seo_title: "About Diogo Ribeiro (DiogoRibeiro7)"
+seo_description: "Diogo Ribeiro (@DiogoRibeiro7) is a Lead Data Scientist, Machine Learning Engineer and Professor working across statistical ML, time series, causal inference and applied AI."
 ---
 
-I am Diogo Ribeiro, a data scientist and research lead, and a professor at the Faculty of Media Arts and Design of the Technical University of Porto, in Vila do Conde. I write about applied statistics, machine learning, forecasting, data engineering, and reproducible analytical workflows.
+I am **Diogo Ribeiro (@DiogoRibeiro7)**, a **Lead Data Scientist, Machine Learning Engineer and Professor** at the Faculty of Media Arts and Design of the Technical University of Porto. My work spans statistical ML, time series, causal inference, applied AI, forecasting, data systems, research software, and reproducible analytical workflows.
+
+My professional and research identity is also available through [GitHub](https://github.com/DiogoRibeiro7), [LinkedIn](https://www.linkedin.com/in/diogo-ribeiro-9094604a/), and [ORCID](https://orcid.org/0009-0001-2022-7072). Open-source packages, research projects, and longer technical notes are linked throughout this site.
 
 This site is intended to be a working technical notebook, not a content farm. A post has a reason to exist when it does at least one of these things:
 
