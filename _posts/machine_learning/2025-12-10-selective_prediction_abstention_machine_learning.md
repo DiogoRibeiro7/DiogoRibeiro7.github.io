@@ -55,7 +55,7 @@ $$
 g(x) \in \{0, 1\}
 $$
 
-If \( g(x) = 1 \), the model predicts. If \( g(x) = 0 \), the model abstains.
+If $g(x) = 1$, the model predicts. If $g(x) = 0$, the model abstains.
 
 The deployed system is therefore:
 
@@ -93,7 +93,7 @@ $$
 \max_k P(Y = k \mid x) \geq \tau
 $$
 
-If the highest predicted class probability exceeds threshold \( \tau \), the model predicts. Otherwise it abstains.
+If the highest predicted class probability exceeds threshold $\tau$, the model predicts. Otherwise it abstains.
 
 This rule is easy to implement, but it depends on probability calibration. If the model is overconfident, it will predict on cases it should defer. If it is underconfident, it will abstain too often.
 
@@ -147,7 +147,7 @@ $$
 p = P(Y = 1 \mid x)
 $$
 
-With equal error costs, a standard classifier predicts class 1 when \( p > 0.5 \). With a reject option, the model may abstain when \( p \) is close to 0.5:
+With equal error costs, a standard classifier predicts class 1 when $p > 0.5$. With a reject option, the model may abstain when $p$ is close to 0.5:
 
 $$
 p < a \Rightarrow \text{class 0}
@@ -161,7 +161,7 @@ $$
 p > b \Rightarrow \text{class 1}
 $$
 
-The interval between \( a \) and \( b \) represents uncertainty or insufficient value in automatic classification.
+The interval between $a$ and $b$ represents uncertainty or insufficient value in automatic classification.
 
 When error costs are asymmetric, the reject region may not be centered around 0.5. If false negatives are much worse than false positives, the system may be willing to predict the positive class at lower probabilities, while still abstaining on cases where the expected cost is unclear.
 

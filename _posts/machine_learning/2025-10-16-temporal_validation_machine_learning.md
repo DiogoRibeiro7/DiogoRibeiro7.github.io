@@ -101,7 +101,7 @@ Examples include:
 - Using a "days since last event" feature that accidentally looks into the future
 - Joining a slowly changing dimension table without point-in-time correctness
 
-The fix is point-in-time feature construction. Every feature for row \( i \) should be computed using only data available at prediction time \( t_i \).
+The fix is point-in-time feature construction. Every feature for row $i$ should be computed using only data available at prediction time $t_i$.
 
 This is stricter than saying the feature was available somewhere in the historical database. Many production databases store the current state of an entity, not the historical state that was visible at the time.
 
@@ -163,7 +163,7 @@ A demand model may forecast one day ahead, one week ahead, or one month ahead. A
 
 The horizon changes the label definition, feature cutoff, and operational value.
 
-For a horizon \( h \), the model uses information up to time \( t \) and predicts an outcome over:
+For a horizon $h$, the model uses information up to time $t$ and predicts an outcome over:
 
 $$
 (t, t+h]

@@ -51,13 +51,13 @@ Understanding label noise is therefore central to trustworthy supervised learnin
 
 ## What Is Label Noise?
 
-Label noise occurs when the observed target \( \tilde{y} \) differs from the true target \( y \):
+Label noise occurs when the observed target $\tilde{y}$ differs from the true target $y$:
 
 $$
 \tilde{y} \neq y
 $$
 
-The true target may be unobserved, expensive to measure, subjective, delayed, or defined only through a proxy. The model trains on \( \tilde{y} \), not on \( y \). If the observed labels are wrong in a systematic way, the model learns that systematic error.
+The true target may be unobserved, expensive to measure, subjective, delayed, or defined only through a proxy. The model trains on $\tilde{y}$, not on $y$. If the observed labels are wrong in a systematic way, the model learns that systematic error.
 
 In classification, label noise may mean a positive case is labeled negative or a negative case is labeled positive. In regression, it may mean the numeric outcome is measured with error. In event prediction, it may mean the event time is wrong, the event type is miscoded, or the event was not observed.
 
@@ -67,7 +67,7 @@ $$
 P(\tilde{Y} \neq Y) = \eta
 $$
 
-where \( \eta \) is the label error rate.
+where $\eta$ is the label error rate.
 
 This is useful as a starting point, but real label noise is rarely uniform. Some classes, groups, annotators, sites, devices, time periods, and edge cases usually have more label error than others.
 
@@ -153,7 +153,7 @@ Ambiguity should be modeled when it is part of the domain. Treating every disagr
 
 Label noise changes what the model learns.
 
-With clean labels, empirical risk minimization tries to find a model \( f \) that minimizes:
+With clean labels, empirical risk minimization tries to find a model $f$ that minimizes:
 
 $$
 \frac{1}{n}\sum_{i=1}^n L(f(x_i), y_i)

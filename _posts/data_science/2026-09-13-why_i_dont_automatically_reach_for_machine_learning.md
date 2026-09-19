@@ -116,7 +116,7 @@ A researcher may want to know how an intervention changes an outcome. An enginee
 
 Those objectives are different.
 
-Suppose I observe an outcome \(Y\) and predictors \(X\). A prediction problem asks for a function
+Suppose I observe an outcome $Y$ and predictors $X$. A prediction problem asks for a function
 
 $$
 \widehat f(X)
@@ -132,7 +132,7 @@ $$
 
 That is already a complete and legitimate problem.
 
-But an inferential problem may instead ask for a parameter \(\beta_j\), a hazard ratio, a changepoint, a latent trend, a variance component, a posterior probability or a scientifically interpretable functional of the distribution.
+But an inferential problem may instead ask for a parameter $\beta_j$, a hazard ratio, a changepoint, a latent trend, a variance component, a posterior probability or a scientifically interpretable functional of the distribution.
 
 Optimizing prediction error does not automatically answer those questions.
 
@@ -207,7 +207,7 @@ y_t
 +\varepsilon_t,
 $$
 
-where \(\mu_t\) is a slowly varying level, \(s_t\) is seasonality and \(x_t\) contains known covariates.
+where $\mu_t$ is a slowly varying level, $s_t$ is seasonality and $x_t$ contains known covariates.
 
 A generic machine-learning model can attempt to learn the entire mapping from lagged inputs to future values.
 
@@ -249,7 +249,7 @@ There may be only 40 independent patients, 20 stores, 15 years, 30 industrial ba
 
 Repeated measurements do not magically create independent information.
 
-If subject \(i\) contributes \(T_i\) observations, the nominal sample size
+If subject $i$ contributes $T_i$ observations, the nominal sample size
 
 $$
 N=\sum_i T_i
@@ -281,7 +281,7 @@ $$
 y=\beta_0+\beta_1 x+\varepsilon.
 $$
 
-Extrapolating beyond the observed \(x\)-range means asserting that the linear relationship continues.
+Extrapolating beyond the observed $x$-range means asserting that the linear relationship continues.
 
 That may be wrong, but at least the assumption is legible.
 
@@ -403,7 +403,7 @@ Not whether its training curve looks impressive.
 
 Not whether it has more parameters.
 
-The question is whether \(\Delta\) is materially positive and stable enough to justify the additional complexity.
+The question is whether $\Delta$ is materially positive and stable enough to justify the additional complexity.
 
 ## Measure the Incremental Value of Complexity
 
@@ -413,7 +413,7 @@ $$
 L_{0,r},\qquad L_{1,r},
 $$
 
-for folds, time windows or repeated samples \(r=1,\ldots,R\).
+for folds, time windows or repeated samples $r=1,\ldots,R$.
 
 Then examine
 

@@ -213,7 +213,7 @@ $$
 \tau(n-\tau)
 $$
 
-is largest near \(n^2/4\).
+is largest near $n^2/4$.
 
 Once that exceeds `.Machine$integer.max`, the result can become `NA` with a warning.
 
@@ -327,7 +327,7 @@ State behaviour belongs in the test suite because random state is part of the so
 
 Optimization is one of the easiest ways to break statistical code while making it look better.
 
-Suppose a straightforward implementation builds a large matrix \(A\) and computes
+Suppose a straightforward implementation builds a large matrix $A$ and computes
 
 $$
 Av.
@@ -392,7 +392,7 @@ Each function may individually look reasonable while the package as a mathematic
 
 Suppose a method claims an exact or calibrated p-value under a null model.
 
-Testing a few p-values for membership in \([0,1]\) says almost nothing.
+Testing a few p-values for membership in $[0,1]$ says almost nothing.
 
 If under the null
 
@@ -408,11 +408,11 @@ $$
 \widehat{P}(P\le\alpha)
 $$
 
-for several \(\alpha\), and distribution-level checks such as a Kolmogorov-Smirnov diagnostic when computationally affordable.
+for several $\alpha$, and distribution-level checks such as a Kolmogorov-Smirnov diagnostic when computationally affordable.
 
 The tolerance must reflect Monte Carlo uncertainty.
 
-At level \(\alpha\) with \(R\) independent simulation replications,
+At level $\alpha$ with $R$ independent simulation replications,
 
 $$
 SE\{\widehat p\}
@@ -432,7 +432,7 @@ A calibrated p-value does not imply a separately implemented confidence-interval
 
 If the interval inverts a pivot through a different numerical path, that path needs direct coverage testing.
 
-For a 95% confidence interval with true parameter \(\theta_0\), simulate many datasets and estimate
+For a 95% confidence interval with true parameter $\theta_0$, simulate many datasets and estimate
 
 $$
 \widehat C
@@ -441,7 +441,7 @@ $$
 \mathbf 1\{\theta_0\in CI_r\}.
 $$
 
-Then assess whether \(\widehat C\) is consistent with 0.95 at the Monte Carlo precision of the experiment.
+Then assess whether $\widehat C$ is consistent with 0.95 at the Monte Carlo precision of the experiment.
 
 This is a good example of a test that sits between ordinary unit testing and a full research simulation study.
 
@@ -483,15 +483,15 @@ A statistically correct method that requires quadratic memory can still be unusa
 
 Complexity should therefore be treated as part of the method's practical contract.
 
-Suppose an algorithm materializes an \(n\times n\) matrix:
+Suppose an algorithm materializes an $n\times n$ matrix:
 
 $$
 M(n)=O(n^2).
 $$
 
-At small \(n\), ordinary tests pass.
+At small $n$, ordinary tests pass.
 
-At large \(n\), the procedure cannot even reach the arithmetic regimes where other bugs may live.
+At large $n$, the procedure cannot even reach the arithmetic regimes where other bugs may live.
 
 This can hide correctness problems.
 
@@ -507,11 +507,11 @@ If a procedure appears slow, benchmark the actual shipped function over a contro
 
 Do not infer complexity from one timing.
 
-For example, if the work is proportional to candidate count times bootstrap count, and candidate count itself grows with \(n\), a method can naturally approach quadratic runtime.
+For example, if the work is proportional to candidate count times bootstrap count, and candidate count itself grows with $n$, a method can naturally approach quadratic runtime.
 
 A useful benchmark table may be more informative than another micro-optimization:
 
-| \(n\) | candidates | rescans | measured time |
+| $n$ | candidates | rescans | measured time |
 | ---: | ---: | ---: | ---: |
 | 60 | 51 | 50,949 | 1.2 s |
 | 120 | 111 | 110,889 | 3.5 s |
@@ -546,7 +546,7 @@ $$
 T(x+c)=T(x)
 $$
 
-than freeze a giant output object produced from one arbitrary \(x\).
+than freeze a giant output object produced from one arbitrary $x$.
 
 I would rather test row-order invariance than snapshot the order of internal bookkeeping rows.
 
@@ -588,9 +588,9 @@ $$
 m=\frac{a+b}{2}
 $$
 
-lies strictly between \(a\) and \(b\).
+lies strictly between $a$ and $b$.
 
-In floating-point arithmetic, if \(a\) and \(b\) are adjacent representable numbers, there may be no representable number strictly between them.
+In floating-point arithmetic, if $a$ and $b$ are adjacent representable numbers, there may be no representable number strictly between them.
 
 Then the algorithm has stalled even though the mathematical interval width is positive.
 
@@ -617,7 +617,7 @@ $$
 C(G)=C(\pi G)
 $$
 
-for a random permutation \(\pi\), while allowing purely representational metadata such as witness row numbers to change.
+for a random permutation $\pi$, while allowing purely representational metadata such as witness row numbers to change.
 
 That distinction matters.
 

@@ -87,9 +87,9 @@ Z_{ij}^{(m,b)}
 \mathbf 1\{i\text{ and }j\text{ are assigned to the same cluster}\},
 $$
 
-where \(m\) indexes the trajectory representation and \(b\) indexes a bootstrap sample.
+where $m$ indexes the trajectory representation and $b$ indexes a bootstrap sample.
 
-For representation \(m\), define the bootstrap co-clustering probability
+For representation $m$, define the bootstrap co-clustering probability
 
 $$
 C_{ij}^{(m)}
@@ -97,7 +97,7 @@ C_{ij}^{(m)}
 E_b\left[Z_{ij}^{(m,b)}\mid m\right].
 $$
 
-If a pair of subjects is always placed together under one representation, then \(C_{ij}^{(m)}\) is close to one. If it is always separated, the probability is close to zero. Values near one half indicate sampling instability.
+If a pair of subjects is always placed together under one representation, then $C_{ij}^{(m)}$ is close to one. If it is always separated, the probability is close to zero. Values near one half indicate sampling instability.
 
 Now average over representations. The law of total variance gives
 
@@ -503,7 +503,7 @@ A useful analysis should make those cases distinguishable.
 
 The averages in this article are convenient for comparing simulation cells, but the decomposition is fundamentally pairwise.
 
-For every pair \((i,j)\), we have
+For every pair $(i,j)$, we have
 
 $$
 V_{ij}^{\text{total}}

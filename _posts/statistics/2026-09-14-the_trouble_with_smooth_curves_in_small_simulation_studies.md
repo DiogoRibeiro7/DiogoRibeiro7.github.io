@@ -101,7 +101,7 @@ Sometimes it manufactures the result.
 
 ## A Response Curve Is Still an Estimator
 
-Suppose a method is evaluated under a perturbation magnitude \(r\). For replication \(s\), define a response
+Suppose a method is evaluated under a perturbation magnitude $r$. For replication $s$, define a response
 
 $$
 R_s(r)
@@ -109,11 +109,11 @@ R_s(r)
 G_s(r)-G_s(0),
 $$
 
-where \(G_s(r)\) is the method's gain relative to some baseline under perturbation \(r\).
+where $G_s(r)$ is the method's gain relative to some baseline under perturbation $r$.
 
 A negative value means the perturbation made the method worse than its own no-perturbation version.
 
-Across \(S\) repeated datasets we might report
+Across $S$ repeated datasets we might report
 
 $$
 \widehat\mu_R(r)
@@ -134,7 +134,7 @@ $$
 
 Those quantities are Monte Carlo estimators.
 
-At every sampled value of \(r\), they contain finite-replication noise.
+At every sampled value of $r$, they contain finite-replication noise.
 
 So when we fit a smooth function
 
@@ -328,7 +328,7 @@ No response values are invented between sampled points.
 
 If possible, use the same simulation seeds when adding design points.
 
-Suppose replication \(s\) corresponds to one generated dataset. Then compare
+Suppose replication $s$ corresponds to one generated dataset. Then compare
 
 $$
 R_s(r_1),
@@ -342,7 +342,7 @@ on the same underlying random problem.
 
 This paired design removes a large amount of irrelevant Monte Carlo variation.
 
-The experiment asks what happens to the same simulated problem as the perturbation changes, rather than comparing unrelated datasets at neighboring values of \(r\).
+The experiment asks what happens to the same simulated problem as the perturbation changes, rather than comparing unrelated datasets at neighboring values of $r$.
 
 That makes local response differences more interpretable.
 
@@ -420,7 +420,7 @@ The nearby negative-transfer probabilities then fluctuate around 0.5 rather than
 
 Only at a substantially larger perturbation does negative transfer become clearly common.
 
-The refined \(r\approx0.44\) crossing did not survive the structural change.
+The refined $r\approx0.44$ crossing did not survive the structural change.
 
 That is not a problem with the original refinement.
 
@@ -442,7 +442,7 @@ $$
 r^*(\mathcal S),
 $$
 
-where \(\mathcal S\) denotes the structural design cell: sample size, signal geometry, noise level, label fraction, algorithm settings and any other fixed features of the experiment.
+where $\mathcal S$ denotes the structural design cell: sample size, signal geometry, noise level, label fraction, algorithm settings and any other fixed features of the experiment.
 
 Then the empirical result is
 
@@ -450,7 +450,7 @@ $$
 \widehat r^*(\mathcal S_1)\approx0.44,
 $$
 
-while another cell \(\mathcal S_2\) may have no comparable crossing at all.
+while another cell $\mathcal S_2$ may have no comparable crossing at all.
 
 This notation makes the scientific question visible:
 
@@ -464,7 +464,7 @@ That is more interesting than forcing a universal threshold where one does not e
 
 Suppose we had fitted a smooth response curve only in the first structural cell.
 
-The final figure might show a beautiful sigmoid with a vertical line at \(0.44\).
+The final figure might show a beautiful sigmoid with a vertical line at $0.44$.
 
 Nothing in that graph would tell the reader that changing one aspect of the geometry eliminates the phenomenon the line appears to summarize.
 
@@ -502,7 +502,7 @@ $$
 \sqrt{\frac{q(r)(1-q(r))}{S}}.
 $$
 
-At the worst case \(q=0.5\) and \(S=100\),
+At the worst case $q=0.5$ and $S=100$,
 
 $$
 \operatorname{SE}\approx0.05.
@@ -532,7 +532,7 @@ $$
 \widetilde q(r)=0.5
 $$
 
-for the fitted model \(\widetilde q\), not necessarily
+for the fitted model $\widetilde q$, not necessarily
 
 $$
 q(r)=0.5
@@ -616,7 +616,7 @@ Only then would I add a monotone fit, explicitly labelled as conditional on the 
 
 ## What Convergence Means in an Empirical Refinement
 
-Suppose iterative refinement stops once the observed crossing bracket has width below \(\varepsilon\):
+Suppose iterative refinement stops once the observed crossing bracket has width below $\varepsilon$:
 
 $$
 r_U-r_L\le\varepsilon.
@@ -700,7 +700,7 @@ $$
 q(r;\gamma)
 $$
 
-and estimate \(\gamma\) with uncertainty.
+and estimate $\gamma$ with uncertainty.
 
 Then the smoothing model is part of the analysis rather than hidden inside the plotting library.
 
@@ -712,6 +712,7 @@ $$
 \boxed{
 \text{do not smuggle a continuous response model into the analysis merely by drawing a line.}
 }
+$$
 
 ## What I Would Report
 
@@ -760,3 +761,4 @@ $$
 \boxed{
 \text{sample the boundary before you model the curve.}
 }
+$$

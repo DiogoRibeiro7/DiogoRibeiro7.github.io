@@ -76,7 +76,7 @@ The mistake would have been to force them into one story.
 
 ## One Parameter, Four Questions
 
-Suppose a model contains a positive parameter \(\theta\), and a simulation produces estimates
+Suppose a model contains a positive parameter $\theta$, and a simulation produces estimates
 
 $$
 \widehat\theta_1,\ldots,\widehat\theta_R.
@@ -143,7 +143,7 @@ $$
 
 is not an estimation error measure at all. It is a warning that the numerical safeguard may be influencing the fit.
 
-So a simulation that reports \(M\), \(P_{20}\), \(D\), and \(B\) is not reporting four versions of the same statistic. It is asking four different questions:
+So a simulation that reports $M$, $P_{20}$, $D$, and $B$ is not reporting four versions of the same statistic. It is asking four different questions:
 
 1. How large is the typical multiplicative error?
 2. How often is the estimate practically close to the truth?
@@ -223,7 +223,7 @@ results = pd.DataFrame(
 print(results.to_string(index=False))
 ```
 
-| Regime | \(n\) | Region | Median log error | Within 20% | Start disagreement | Boundary rate |
+| Regime | $n$ | Region | Median log error | Within 20% | Start disagreement | Boundary rate |
 | --- | ---: | --- | ---: | ---: | ---: | ---: |
 | Low information | 501 | A | 0.282 | 22.5% | 20.0% | 0.0% |
 | Low information | 501 | B | 0.207 | 47.5% | 47.5% | 5.0% |
@@ -234,7 +234,7 @@ print(results.to_string(index=False))
 
 The first pair is the interesting one.
 
-At \(n=501\), region B looks better if I report only parameter recovery. Its median log error is smaller, \(0.207\) instead of \(0.282\), and almost half of its estimates fall within 20 percent of the truth compared with only 22.5 percent for region A.
+At $n=501$, region B looks better if I report only parameter recovery. Its median log error is smaller, $0.207$ instead of $0.282$, and almost half of its estimates fall within 20 percent of the truth compared with only 22.5 percent for region A.
 
 A paper with one recovery metric could easily stop there.
 
@@ -246,7 +246,7 @@ That question is underspecified.
 
 B gives better point recovery in this finite sample experiment. A gives more stable numerical optimisation. Those statements can both be true.
 
-At \(n=1001\), the ambiguity becomes even clearer. The median errors are almost tied, with A slightly smaller, while the 20 percent success rate still slightly favours B. Start disagreement remains much larger for B.
+At $n=1001$, the ambiguity becomes even clearer. The median errors are almost tied, with A slightly smaller, while the 20 percent success rate still slightly favours B. Start disagreement remains much larger for B.
 
 If I insist that every diagnostic must identify the same winner, I have to ignore part of the evidence.
 
@@ -338,7 +338,7 @@ If fitted values repeatedly land near it, the boundary has become part of the an
 
 That is why I like to record a boundary indicator separately rather than silently accepting every converged optimisation run.
 
-For a parameter vector \(\phi\) with lower and upper bounds \(L_j\) and \(U_j\), one simple diagnostic is to flag a fit when a coordinate falls within a small fraction of its allowed interval:
+For a parameter vector $\phi$ with lower and upper bounds $L_j$ and $U_j$, one simple diagnostic is to flag a fit when a coordinate falls within a small fraction of its allowed interval:
 
 $$
 \min\left(
@@ -358,7 +358,7 @@ Multiple metrics do not mean that every conclusion becomes ambiguous.
 
 Look at the higher information regime in the table.
 
-At \(n=1001\), region A has median log error \(0.068\) against \(0.230\) for B. Its within 20 percent recovery rate is 87.5 percent against 47.5 percent. There is no start disagreement and no boundary hit, while B still shows both.
+At $n=1001$, region A has median log error $0.068$ against $0.230$ for B. Its within 20 percent recovery rate is 87.5 percent against 47.5 percent. There is no start disagreement and no boundary hit, while B still shows both.
 
 Here the evidence points in the same direction.
 
@@ -418,7 +418,7 @@ $$
 \sqrt{\frac{p(1-p)}{40}},
 $$
 
-which is at most about \(0.079\). A difference of two or three percentage points should therefore not be narrated like a discovery. A difference of forty percentage points is another matter.
+which is at most about $0.079$. A difference of two or three percentage points should therefore not be narrated like a discovery. A difference of forty percentage points is another matter.
 
 The simulation needs uncertainty quantification too.
 
@@ -442,7 +442,7 @@ P(\text{boundary})
 }
 $$
 
-with \(\delta\) chosen for a substantive reason.
+with $\delta$ chosen for a substantive reason.
 
 None of these is universally best. That is the point.
 

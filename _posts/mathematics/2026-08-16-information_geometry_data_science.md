@@ -51,7 +51,7 @@ $$
 p(x \mid \theta)
 $$
 
-The parameter \( \theta \) may be a single number, a vector, a matrix, or millions of neural network weights. For each value of \( \theta \), the model defines a probability distribution over data \( x \). The set of all such distributions forms a statistical manifold.
+The parameter $\theta$ may be a single number, a vector, a matrix, or millions of neural network weights. For each value of $\theta$, the model defines a probability distribution over data $x$. The set of all such distributions forms a statistical manifold.
 
 The word "manifold" can sound abstract, but the intuition is practical. A manifold is a space that may be curved globally but looks locally like ordinary Euclidean space. The surface of Earth is a familiar example. Locally it feels flat, but globally it is curved.
 
@@ -61,13 +61,13 @@ Information geometry asks how to measure movement on that space in a way that re
 
 ## Why Parameter Distance Is Not Enough
 
-Consider a normal distribution with mean \( \mu \) and standard deviation \( \sigma \):
+Consider a normal distribution with mean $\mu$ and standard deviation $\sigma$:
 
 $$
 X \sim \mathcal{N}(\mu, \sigma^2)
 $$
 
-Changing \( \mu \) by one unit does not always have the same meaning. If \( \sigma \) is very small, a one-unit shift in the mean is a dramatic change. If \( \sigma \) is very large, the same shift may barely matter.
+Changing $\mu$ by one unit does not always have the same meaning. If $\sigma$ is very small, a one-unit shift in the mean is a dramatic change. If $\sigma$ is very large, the same shift may barely matter.
 
 Euclidean parameter distance treats both changes as equal:
 
@@ -89,14 +89,14 @@ $$
 
 KL divergence is not a true metric because it is not symmetric and does not satisfy all metric axioms. Still, it is central in information geometry because it describes how distributions separate.
 
-For two nearby parameter values, \( \theta \) and \( \theta + d\theta \), the KL divergence has a local quadratic approximation:
+For two nearby parameter values, $\theta$ and $\theta + d\theta$, the KL divergence has a local quadratic approximation:
 
 $$
 D_{KL}(p(x \mid \theta) \parallel p(x \mid \theta + d\theta))
 \approx \frac{1}{2} d\theta^T I(\theta) d\theta
 $$
 
-The matrix \( I(\theta) \) is the Fisher information matrix. It acts like a local metric tensor. In ordinary terms, it tells us how sensitive the probability distribution is to movement in each parameter direction.
+The matrix $I(\theta)$ is the Fisher information matrix. It acts like a local metric tensor. In ordinary terms, it tells us how sensitive the probability distribution is to movement in each parameter direction.
 
 This is the geometric core of the subject. Fisher information defines the local shape of statistical distance.
 
@@ -123,7 +123,7 @@ $$
 
 Both expressions reveal something useful.
 
-The first says Fisher information measures the variability of the score function. The score tells us how strongly an observation pushes the parameter estimate. If small changes in \( \theta \) strongly change the likelihood, Fisher information is large.
+The first says Fisher information measures the variability of the score function. The score tells us how strongly an observation pushes the parameter estimate. If small changes in $\theta$ strongly change the likelihood, Fisher information is large.
 
 The second says Fisher information is related to curvature. If the log likelihood bends sharply around the optimum, the parameter is well identified. If the surface is flat, the data provide little information about that direction.
 
@@ -189,7 +189,7 @@ p(x \mid \theta) =
 h(x) \exp(\theta^T T(x) - A(\theta))
 $$
 
-Here, \( \theta \) is the natural parameter, \( T(x) \) is a sufficient statistic, and \( A(\theta) \) is the log partition function.
+Here, $\theta$ is the natural parameter, $T(x)$ is a sufficient statistic, and $A(\theta)$ is the log partition function.
 
 The log partition function is more than a normalizing constant. Its derivatives encode moments:
 
@@ -203,13 +203,13 @@ $$
 \nabla^2 A(\theta) = \mathrm{Var}_\theta(T(X))
 $$
 
-This means the Hessian of \( A(\theta) \) is the Fisher information matrix for the natural parameters.
+This means the Hessian of $A(\theta)$ is the Fisher information matrix for the natural parameters.
 
 In exponential families, geometry, moments, and convex analysis meet in a particularly elegant way. The natural parameters and expectation parameters provide two coordinate systems for the same model. This duality is one reason information geometry is so useful in variational inference, maximum entropy modeling, and generalized linear models.
 
 ## Information Geometry and Inference
 
-Inference often means finding a distribution that approximates another distribution. Variational inference is a clear example. We choose a simpler family \( q(z \mid \lambda) \) and try to make it close to a target posterior \( p(z \mid y) \).
+Inference often means finding a distribution that approximates another distribution. Variational inference is a clear example. We choose a simpler family $q(z \mid \lambda)$ and try to make it close to a target posterior $p(z \mid y)$.
 
 The word "close" hides a geometric decision. A common objective minimizes:
 
@@ -254,11 +254,11 @@ $$
 P(Y = 1 \mid x) = \sigma(x^T \beta)
 $$
 
-where \( \sigma \) is the logistic function.
+where $\sigma$ is the logistic function.
 
-The parameter vector \( \beta \) controls a probability distribution for each input \( x \). But the same change in \( \beta \) does not have the same effect everywhere.
+The parameter vector $\beta$ controls a probability distribution for each input $x$. But the same change in $\beta$ does not have the same effect everywhere.
 
-When \( x^T \beta \) is near zero, the predicted probability is near 0.5 and the model is sensitive to changes in \( \beta \). When \( x^T \beta \) is very large or very negative, the predicted probability is close to 1 or 0 and the model is less sensitive. The sigmoid curve is flat in the tails.
+When $x^T \beta$ is near zero, the predicted probability is near 0.5 and the model is sensitive to changes in $\beta$. When $x^T \beta$ is very large or very negative, the predicted probability is close to 1 or 0 and the model is less sensitive. The sigmoid curve is flat in the tails.
 
 This means information is not uniformly distributed across the feature space. Observations near the decision boundary often carry more information about the parameters than observations that are already predicted with high confidence.
 

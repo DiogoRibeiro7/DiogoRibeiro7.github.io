@@ -69,7 +69,7 @@ $$
 p(\theta \mid y)
 $$
 
-Here, \( \theta \) represents unknown quantities and \( y \) represents observed data. The posterior distribution describes what we believe about \( \theta \) after seeing the data.
+Here, $\theta$ represents unknown quantities and $y$ represents observed data. The posterior distribution describes what we believe about $\theta$ after seeing the data.
 
 This matters because decisions usually depend on uncertainty, not just on the best estimate. Two projects may have the same expected return but very different downside risks. Two models may have the same average accuracy but different uncertainty around subgroup performance. Two experiments may show the same observed lift but different sample sizes and credibility.
 
@@ -124,7 +124,7 @@ A loss table makes the asymmetry visible:
 
 These numbers are simplified, but the logic is realistic. Inspection has a cost even when the machine is healthy. Inspection may not eliminate all loss when the machine is failing. Keeping a failing machine running is much more expensive than inspecting unnecessarily.
 
-If the posterior probability of failure is \( p \), the expected loss of keeping the machine running is:
+If the posterior probability of failure is $p$, the expected loss of keeping the machine running is:
 
 $$
 100p
@@ -168,13 +168,13 @@ Bayesian decision theory does not ask whether a probability is above a conventio
 
 The expected loss of an action, averaged over the posterior distribution, is called posterior expected loss. A decision rule maps data to actions. The risk of a decision rule is its expected loss under uncertainty.
 
-In a Bayesian setting, we often choose the action \( a \) that minimizes:
+In a Bayesian setting, we often choose the action $a$ that minimizes:
 
 $$
 \mathbb{E}[L(a, \theta) \mid y]
 $$
 
-Here, \( L(a, \theta) \) is the loss from taking action \( a \) when the true state is \( \theta \). The expectation is taken with respect to the posterior distribution.
+Here, $L(a, \theta)$ is the loss from taking action $a$ when the true state is $\theta$. The expectation is taken with respect to the posterior distribution.
 
 This is the central formula of Bayesian decision theory. It says that we should not optimize for the most likely parameter value alone. We should integrate over uncertainty.
 
