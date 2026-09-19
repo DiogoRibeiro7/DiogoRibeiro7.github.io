@@ -5,7 +5,7 @@ name: "Diogo Ribeiro"
 title: "Diogo Ribeiro"
 locale: en_US
 email: diogo.debastos.ribeiro@gmail.com
-description: "Mathematics, data science, AI engineering, statistics, machine learning and open-source software by Diogo Ribeiro (@DiogoRibeiro7)."
+description: "Statistical ML, time series, causal inference, applied AI and open-source software by Diogo Ribeiro (@DiogoRibeiro7)."
 url: "https://diogoribeiro7.github.io"
 baseurl: ""
 repository: "https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io"
@@ -23,10 +23,10 @@ author:
   linkedin: diogo-ribeiro-9094604a
   orcid: https://orcid.org/0009-0001-2022-7072
   avatar: "/assets/images/me_myself_and_i.jpg"
-  bio: "Mathematician, data scientist, AI engineer and researcher writing practical notes on statistics, machine learning, AI systems, forecasting and data engineering."
+  bio: "Lead Data Scientist, Machine Learning Engineer and Professor working across statistical ML, time series, causal inference, applied AI, forecasting and data engineering."
 
 brand:
-  tagline: "Mathematics, data science and AI engineering for practitioners."
+  tagline: "Statistical ML, time series, causal inference and applied AI for practitioners."
   accent_symbol: "∀ data · Σ insights"
 
 # =============================================================================
@@ -175,7 +175,7 @@ datalog_plugins:
 seo:
   type: "Person"
   name: "Diogo Ribeiro"
-  description: "Mathematics, data science, AI engineering, statistics, machine learning and open-source software."
+  description: "Statistical ML, time series, causal inference, applied AI and open-source software."
 social:
   github: DiogoRibeiro7
   linkedin: diogo-ribeiro-9094604a
