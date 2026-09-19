@@ -28,6 +28,7 @@ These articles have dated source files under `_posts/`. Each becomes eligible fo
 
 | Date | Article | Source |
 | --- | --- | --- |
+| 2026-09-19 | What a Before-and-After Testimonial Can Establish | [Article](../../_posts/science_communication/2026-09-19-what_before_and_after_testimonials_can_establish.md) |
 | 2026-09-21 | More Subjects and Longer Trajectories Solve Different Problems | [Article](../../_posts/statistics/2026-09-21-more_subjects_and_longer_trajectories.md) |
 | 2026-09-23 | Monitoring Without Labels: What Is Actually Identifiable? | [Article](../../_posts/machine_learning/2026-09-23-monitoring_without_labels_identifiability.md) |
 | 2026-09-25 | Numerical Verification Comes Before Optimization | [Article](../../_posts/programming/2026-09-25-numerical_verification_before_optimization.md) |
@@ -36,6 +37,8 @@ These articles have dated source files under `_posts/`. Each becomes eligible fo
 | 2026-10-02 | Economic Data Have Two Dates | [Article](../../_posts/economics/2026-10-02-economic_data_have_two_dates.md) |
 
 The final three entries begin focused coverage of health technology, public science communication, and economic/financial data. Their seven-part development contracts are preserved in their source files. The wearable article examines denominators and confirmation timing; the science article addresses the claim that microwave cooking makes food radioactive; the economic-data article reconstructs historical information availability from archived GDP releases.
+
+The 19 September science communication article examines causal claims attached to before-and-after testimonials. Its sustained mathematical argument derives the consequences of baseline selection, distinguishes improvement from benefit using three intervention scenarios, and examines selective reporting and repeated baselines. Exact calculations and two original figures are reproduced by `assets/viz/generate_testimonial_figures.py`; independent integration, simulation, effect-contrast, and limiting-case checks are in `tests/test_testimonial_models.py`.
 
 ## Science communication archive additions
 
