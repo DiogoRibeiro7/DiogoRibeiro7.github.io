@@ -1,7 +1,7 @@
 ---
 permalink: '/science-communication/detection_is_not_evidence_of_danger/'
 title: 'Detection Is Not Evidence of Danger'
-date: '2026-09-19'
+date: '2025-08-14'
 categories:
 - Science Communication
 tags:
@@ -52,7 +52,7 @@ methodology: >-
   Convert a synthetic environmental concentration into an external dose using
   intake and body mass, then show how different dose-response models map the
   same dose to different risk conclusions.
-reviewed_at: '2026-09-19'
+reviewed_at: '2025-08-14'
 header:
   image: /assets/images/headers/photo-microscope.jpg
   og_image: /assets/images/headers/photo-microscope.jpg

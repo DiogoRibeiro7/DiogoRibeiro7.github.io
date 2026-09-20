@@ -1,7 +1,7 @@
 ---
 permalink: '/science-communication/a_population_average_is_not_an_individual_prediction/'
 title: 'A Population Average Is Not an Individual Prediction'
-date: '2026-09-20'
+date: '2026-01-29'
 categories:
 - Science Communication
 tags:
@@ -51,7 +51,7 @@ methodology: >-
   outcomes with identical treatment and control marginals. Derive bounds on the
   fraction who benefit and are harmed, then examine how baseline risk and
   effect modifiers alter absolute treatment effects.
-reviewed_at: '2026-09-20'
+reviewed_at: '2026-01-29'
 header:
   image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
   og_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg

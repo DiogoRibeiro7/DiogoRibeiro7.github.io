@@ -1,7 +1,7 @@
 ---
 permalink: '/science-communication/absence_of_evidence_is_not_always_evidence_of_absence/'
 title: 'Absence of Evidence Is Not Always Evidence of Absence'
-date: '2026-09-20'
+date: '2024-05-23'
 categories:
 - Science Communication
 tags:
@@ -53,7 +53,7 @@ methodology: >-
   testing under a pre-specified smallest effect of interest. Derive design
   power for a two-sample comparison and distinguish prospective power from
   retrospective calculations based on the observed effect.
-reviewed_at: '2026-09-20'
+reviewed_at: '2024-05-23'
 header:
   image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
   og_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg

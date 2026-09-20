@@ -1,7 +1,7 @@
 ---
 permalink: '/science-communication/a_mechanism_is_not_an_effect/'
 title: 'A Mechanism Is Not an Effect'
-date: '2026-09-19'
+date: '2025-04-03'
 categories:
 - Science Communication
 tags:
@@ -50,7 +50,7 @@ methodology: >-
   mechanism coexists with a null or harmful total effect. Compare this with
   empirical evidence from a randomised trial in which suppression of an
   intermediate cardiac outcome failed to predict mortality.
-reviewed_at: '2026-09-19'
+reviewed_at: '2025-04-03'
 header:
   image: /assets/images/headers/photo-microscope.jpg
   og_image: /assets/images/headers/photo-microscope.jpg

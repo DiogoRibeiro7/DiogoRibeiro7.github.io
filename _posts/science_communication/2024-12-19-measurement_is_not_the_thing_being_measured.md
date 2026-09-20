@@ -1,7 +1,7 @@
 ---
 permalink: '/science-communication/measurement_is_not_the_thing_being_measured/'
 title: 'Measurement Is Not the Thing Being Measured'
-date: '2026-09-19'
+date: '2024-12-19'
 categories:
 - Science Communication
 tags:
@@ -47,7 +47,7 @@ methodology: >-
   noise. Derive test-retest reliability and target correlation analytically.
   Extend the model to interventions, multiple indicators, and changing
   measurement functions across time or groups.
-reviewed_at: '2026-09-19'
+reviewed_at: '2024-12-19'
 header:
   image: /assets/images/headers/photo-statistics-regression-errors.jpg
   og_image: /assets/images/headers/photo-statistics-regression-errors.jpg

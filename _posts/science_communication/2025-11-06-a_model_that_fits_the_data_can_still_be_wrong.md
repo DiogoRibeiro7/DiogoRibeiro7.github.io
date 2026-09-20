@@ -1,7 +1,7 @@
 ---
 permalink: '/science-communication/a_model_that_fits_the_data_can_still_be_wrong/'
 title: 'A Model That Fits the Data Can Still Be Wrong'
-date: '2026-09-20'
+date: '2025-11-06'
 categories:
 - Science Communication
 tags:
@@ -55,7 +55,7 @@ methodology: >-
   structural equation models with the same observational covariance matrix
   but different intervention distributions. Use these examples to distinguish
   fit, prediction, identifiability, and causal interpretation.
-reviewed_at: '2026-09-20'
+reviewed_at: '2025-11-06'
 header:
   image: /assets/images/headers/photo-formulas.jpg
   og_image: /assets/images/headers/photo-formulas.jpg
