@@ -301,4 +301,4 @@ Keep the distinction visible in the report. State the number of independent peop
 
 The strongest alternative to this argument is that a sufficiently good hierarchical model can share information across both dimensions. It can, and that is a reason to use such models. It is still necessary to distinguish which parameters are learned from additional people and which require observing the same person more closely.
 
-The figure and numerical tables can be regenerated with `python assets/viz/generate_2026_evidence_articles.py` from the repository root. The [reproduction script](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_2026_evidence_articles.py) uses NumPy and Matplotlib and generates only synthetic data.
+The figure and numerical tables can be regenerated with `poetry run python scripts/figures/statistics/longitudinal_design.py` from the reproducibility repository. The [reproduction script](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/longitudinal_design.py) uses NumPy and Matplotlib and generates only synthetic data.

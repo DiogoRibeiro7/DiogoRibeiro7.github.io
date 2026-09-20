@@ -342,6 +342,6 @@ record = [-3, 1, 4, 6, 8, 9, 10, 11, 12, 12]
 print(f"Record likelihood ratio: {exp(sum(0.08 * (x - 6) for x in record)):.3f}")
 ```
 
-The [shared figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_science_communication_figures.py) reproduces both figures and the numerical comparisons. Its `--dry-run` option prints the calculations without writing images. Independent checks integrate the normal-density log ratio and verify the loss of information after thresholding.
+The [shared figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/climate_evidence.py) reproduces both figures and the numerical comparisons. Its `--dry-run` option prints the calculations without writing images. Independent checks integrate the normal-density log ratio and verify the loss of information after thresholding.
 
 *Archive note: dated 15 February 2024 for this collection; written and source-checked on 18 September 2026.*

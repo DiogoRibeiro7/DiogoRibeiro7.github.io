@@ -256,6 +256,6 @@ for tested_a, tested_b in [(900, 100), (100, 900)]:
     print(tested_a, tested_b, f"pooled resistance={pooled:.0%}")
 ```
 
-The [figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_science_communication_figures.py) reproduces the original two panels. The accompanying checks verify that the resistant share increases while both model counts decrease.
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/health/antibiotic_resistance.py) reproduces the original two panels. The accompanying checks verify that the resistant share increases while both model counts decrease.
 
 *Archive note: dated 20 March 2025 for this collection; written and source-checked on 18 September 2026.*

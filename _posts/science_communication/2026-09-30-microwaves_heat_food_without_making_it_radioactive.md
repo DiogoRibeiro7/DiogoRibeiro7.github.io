@@ -176,4 +176,4 @@ print(f"Energy ratio: {green_j / microwave_j:,.0f}")
 print(f"Photons per second at 500 W absorbed: {500 / microwave_j:.3e}")
 ```
 
-The [figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_2026_evidence_articles.py) reproduces both panels using the chosen frequencies and physical constants.
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/physics/microwave_energy.py) reproduces both panels using the chosen frequencies and physical constants.

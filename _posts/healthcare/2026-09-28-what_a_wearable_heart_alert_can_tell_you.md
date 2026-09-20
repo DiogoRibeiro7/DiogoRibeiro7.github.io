@@ -198,4 +198,4 @@ for prevalence in (0.01, 0.05, 0.20):
           f"FP={false_alerts:.0f}, FN={missed:.0f}, PPV={ppv:.1%}")
 ```
 
-The [figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_2026_evidence_articles.py) reproduces the table and chart. For the general model-monitoring version of the prevalence question, see [Prevalence Shift and Base-Rate Drift](/machine-learning/prevalence_shift_base_rate_drift/).
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/health/wearable_alerts.py) reproduces the table and chart. For the general model-monitoring version of the prevalence question, see [Prevalence Shift and Base-Rate Drift](/machine-learning/prevalence_shift_base_rate_drift/).
