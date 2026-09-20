@@ -210,7 +210,7 @@ Before enlarging a storage proposal, inspect the time steps where it fails. Was 
 
 ## Reproduce the ledger
 
-The [calculation and figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_coverage_draft_figures.py) prints every interval with `--dry-run` and exports the figure without that flag. Its `storage_ledger` function accepts the generation and demand arrays, efficiencies, interval length, initial state, and capacity limits.
+The [calculation and figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/engineering/storage_ledger.py) prints every interval with `--dry-run` and exports the figure without that flag. Its `storage_ledger` function accepts the generation and demand arrays, efficiencies, interval length, initial state, and capacity limits.
 
 Independent tests verify both instantaneous balance and total energy conservation, including non-hourly intervals, zero capacity, zero power, and nonempty initial states. Another test reproduces the evening example where energy remains unused because discharge power is too low.
 

@@ -270,6 +270,6 @@ for tosses in (4, 20, 50, 100):
     print(tosses, f"{probability_of_four_heads(tosses):.2%}")
 ```
 
-The [figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_science_communication_figures.py) reproduces the chart and run probabilities. Its unknown-coin probabilities and short-record run probabilities are checked independently by enumerating the possible sequences.
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/coin_streaks.py) reproduces the chart and run probabilities. Its unknown-coin probabilities and short-record run probabilities are checked independently by enumerating the possible sequences.
 
 *Archive note: dated 9 October 2025 for this collection; written and source-checked on 18 September 2026.*

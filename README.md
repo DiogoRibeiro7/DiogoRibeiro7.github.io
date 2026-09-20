@@ -14,8 +14,8 @@ It is built with Jekyll and the DataLog theme.
 - `_pages/` contains standalone pages.
 - `_data/`, `_includes/`, `_layouts/`, and `_sass/` contain Jekyll theme and site structure.
 - `assets/images/` stores article images and generated figures.
-- `assets/viz/` contains Python scripts used to regenerate custom figures.
-- `code/` contains downloadable code examples linked from the site.
+- `assets/viz/` contains the scripts that generate site imagery: the article
+  figure set and the header images.
 - `tests/` covers supported repository tooling and structural invariants.
 
 The post-folder convention is documented in `docs/POST_ORGANIZATION.md`. No
@@ -145,11 +145,30 @@ tested, linked from the site, or used to generate checked-in assets.
 Supported repository tooling includes:
 
 - `scripts/sync_theme_assets.py`: synchronise theme-owned assets into this site.
+- `scripts/check_internal_links.py`: check internal links in the generated site.
+- `scripts/validate_front_matter.rb`: check post front matter.
 - `assets/viz/generate_figures.py`: regenerate custom article figures.
-- `assets/viz/generate_2026_evidence_articles.py`: reproduce the autumn 2026 article tables and figures on longitudinal design, unlabelled monitoring, numerical verification, wearable alerts, microwave energy, and GDP release vintages. The GDP example reads a small, sourced CSV under `assets/data/`; the other examples use synthetic inputs or physical constants.
-- `assets/viz/generate_science_communication_figures.py`: reproduce the seven figures and core calculations for the six science-communication archive articles, including KL divergence and accumulated climate evidence, seasonal heat storage, and overlapping random runs. Additional examples have executable snippets in the articles. Use `--dry-run` to print calculations without writing figures. The calculations use the standard library; plotting requires Matplotlib.
-- `assets/viz/housestyle.py`: shared plotting style for generated figures.
-- `code/michelson_morley.py`: downloadable example linked from the site.
+- `assets/viz/generate_headers.py`: regenerate the header image pool.
+- `assets/viz/fetch_headers.py`: fetch freely licensed header photographs and
+  record their attribution.
+- `assets/viz/housestyle.py` and `assets/viz/house.mplstyle`: the shared chart
+  style the two generators above use.
+
+## Where the article calculations live
+
+The numerical models, simulations, benchmarks and figure scripts behind the
+articles are in
+[blog-reproducibility](https://github.com/DiogoRibeiro7/blog-reproducibility).
+Each article that has computations behind it links to its own script there, and
+`articles/manifest.yml` in that repository maps every article to its model, its
+figures and its tests.
+
+This repository keeps the rendered images the articles embed, so every image URL
+on the site is unchanged. It no longer keeps the code that produced them.
+
+One migration is still outstanding: `assets/viz/generate_figures.py` holds the
+remaining 78 figure generators and has not moved yet. `housestyle.py` stays here
+for as long as it and the header generators need it.
 
 Avoid adding broad one-off mutation scripts to the repository root. Prefer a
 small tested utility only when it supports an ongoing repository workflow.

@@ -244,4 +244,4 @@ Retraining is one possible response after diagnosis, not a logical consequence o
 
 The distinction to keep on the dashboard is between a measured observable, a performance estimate conditional on assumptions, and an unresolved performance question. That vocabulary helps teams act on early warnings without pretending that the missing labels have already arrived.
 
-Run `python assets/viz/generate_2026_evidence_articles.py` to regenerate the exact table and figure. The [reproduction script](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_2026_evidence_articles.py) also generates the companion articles' evidence.
+Run `poetry run python scripts/figures/engineering/unlabelled_monitoring.py` in the reproducibility repository to regenerate the exact table and figure. The [reproduction script](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/engineering/unlabelled_monitoring.py) also generates the companion articles' evidence.

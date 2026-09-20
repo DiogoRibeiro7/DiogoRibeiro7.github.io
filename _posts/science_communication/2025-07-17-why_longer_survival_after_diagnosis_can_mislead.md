@@ -227,13 +227,13 @@ The synthetic examples support a precise conclusion: longer survival after diagn
 
 ## Reproducing the calculations
 
-The [figure generator and synthetic histories](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_screening_survival_figures.py) create the same 1,000 identities for each scenario, retaining each person's diagnosis time, death time, and cause. Its dry run prints the complete scenario summaries and the duration-selection calculations without writing figures. No patient dataset, fitted parameter, or random seed is needed: the first model is deterministic, and the second uses exact stationary expectations. From the repository root, run
+The [figure generator and synthetic histories](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/health/screening_survival.py) create the same 1,000 identities for each scenario, retaining each person's diagnosis time, death time, and cause. Its dry run prints the complete scenario summaries and the duration-selection calculations without writing figures. No patient dataset, fitted parameter, or random seed is needed: the first model is deterministic, and the second uses exact stationary expectations. From the reproducibility repository, run
 
 ```bash
-python assets/viz/generate_screening_survival_figures.py --dry-run
+poetry run python scripts/figures/health/screening_survival.py --dry-run
 ```
 
-Omitting the flag regenerates the two figures. The [model checks](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/tests/test_screening_survival_models.py) verify that the first four scenarios preserve every death history and that the beneficial scenario changes exactly 18 histories. Separate interval counting checks the snapshot calculation, a grid of entry phases checks repeated-screen detection, and equal-duration and time-unit transformations check the formulas' limits. These checks establish that the published calculations follow the stated assumptions. They cannot establish that an actual disease satisfies those assumptions; that boundary is part of the article's argument.
+Omitting the flag regenerates the two figures. The [model checks](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/tests/health/test_screening_survival.py) verify that the first four scenarios preserve every death history and that the beneficial scenario changes exactly 18 histories. Separate interval counting checks the snapshot calculation, a grid of entry phases checks repeated-screen detection, and equal-duration and time-unit transformations check the formulas' limits. These checks establish that the published calculations follow the stated assumptions. They cannot establish that an actual disease satisfies those assumptions; that boundary is part of the article's argument.
 
 ## References
 

@@ -212,7 +212,7 @@ Retain the state needed to explain decisions: the incoming observation, its qual
 
 ## Reproduce the counterexample
 
-The [calculation and figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_coverage_draft_figures.py) prints all thirty steps for each learning rate with `--dry-run`. Tests compare the recursive implementation with the exact geometric solution and verify that missing observations neither generate scores nor update the reference.
+The [calculation and figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/health/adaptive_baseline.py) prints all thirty steps for each learning rate with `--dry-run`. Tests compare the recursive implementation with the exact geometric solution and verify that missing observations neither generate scores nor update the reference.
 
 The essential calculation is short enough to inspect directly:
 

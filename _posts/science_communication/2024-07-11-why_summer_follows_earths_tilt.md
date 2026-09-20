@@ -259,6 +259,6 @@ for tau in (10, 30, 90):
     print(tau, f"amplitude={amplitude_fraction:.1%}; lag={lag_days:.1f} days")
 ```
 
-The [figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_science_communication_figures.py) reproduces the geometry, latitude, and heat-storage tables. Its geometry is checked against direct numerical integration of the changing solar angle through the day, and the reservoir response against numerical integration of its energy-balance equation.
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/physics/seasons.py) reproduces the geometry, latitude, and heat-storage tables. Its geometry is checked against direct numerical integration of the changing solar angle through the day, and the reservoir response against numerical integration of its energy-balance equation.
 
 *Archive note: dated 11 July 2024 for this collection; written and source-checked on 18 September 2026.*

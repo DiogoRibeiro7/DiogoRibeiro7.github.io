@@ -258,10 +258,10 @@ The most informative description of a study is consequently an argument about wh
 
 ## Reproducing the calculations
 
-The [calculation and figure script](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_pvalue_evidence_figures.py) prints the rejection probabilities, expected counts, posterior updates, repeat-study probabilities, and study comparisons using the Python standard library. Run the following command from the repository root to reproduce the numerical results without writing files; omit the option to regenerate both figures with Matplotlib and the site's chart style. Independent checks compare the tail calculation with numerical integration, compare selected-study composition with simulated data, reconstruct posterior probabilities from weighted densities, and verify probability conservation and the repeated-study calculation. These checks establish consistency of the examples, while the article's explicit modelling assumptions determine the scope of their interpretation.
+The [calculation and figure script](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/pvalue_evidence.py) prints the rejection probabilities, expected counts, posterior updates, repeat-study probabilities, and study comparisons using the Python standard library. Run the following command from the reproducibility repository to reproduce the numerical results without writing files; omit the option to regenerate both figures with Matplotlib and the site's chart style. Independent checks compare the tail calculation with numerical integration, compare selected-study composition with simulated data, reconstruct posterior probabilities from weighted densities, and verify probability conservation and the repeated-study calculation. These checks establish consistency of the examples, while the article's explicit modelling assumptions determine the scope of their interpretation.
 
 ```bash
-python assets/viz/generate_pvalue_evidence_figures.py --dry-run
+poetry run python scripts/figures/statistics/pvalue_evidence.py --dry-run
 ```
 
 ## References

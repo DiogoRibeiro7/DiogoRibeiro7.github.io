@@ -237,10 +237,10 @@ The appropriate standard of science communication is therefore to preserve the d
 
 ## Reproducing the calculations
 
-The [calculation and figure script](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_testimonial_figures.py) prints the exact cohort moments, prediction interval, testimonial-selection probabilities, and repeated-baseline results. Running the command below from the repository root performs those calculations using the Python standard library without writing files. Running it without that option also regenerates the two figures using Matplotlib and the site's chart style. The first figure uses 2,000 simulated people; its empirical averages need not equal the population expectations reported in the tables. Separate tests check the threshold calculations against numerical integration, compare the change moments with a latent-variable simulation, and verify the effect contrasts and limiting cases. None of these computational checks establishes that the synthetic model fits a particular product, person, or dataset.
+The [calculation and figure script](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/testimonial_selection.py) prints the exact cohort moments, prediction interval, testimonial-selection probabilities, and repeated-baseline results. Running the command below from the reproducibility repository performs those calculations using the Python standard library without writing files. Running it without that option also regenerates the two figures using Matplotlib and the site's chart style. The first figure uses 2,000 simulated people; its empirical averages need not equal the population expectations reported in the tables. Separate tests check the threshold calculations against numerical integration, compare the change moments with a latent-variable simulation, and verify the effect contrasts and limiting cases. None of these computational checks establishes that the synthetic model fits a particular product, person, or dataset.
 
 ```bash
-python assets/viz/generate_testimonial_figures.py --dry-run
+poetry run python scripts/figures/statistics/testimonial_selection.py --dry-run
 ```
 
 ## References
