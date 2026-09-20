@@ -223,3 +223,10 @@ A solver is not finished merely because the objective stops moving. The returned
 Benchmark candidate solvers on representative instances using the same tolerances. Record wall time, memory, feasibility residuals, objective gap, and solution reproducibility.
 
 Problem structure matters more than solver marketing.
+
+
+## References
+
+- Dantzig, G. B. (1963). *Linear Programming and Extensions*. Princeton University Press.
+- Karmarkar, N. (1984). A new polynomial-time algorithm for linear programming. *Combinatorica*, 4, 373–395.
+- Applegate, D., Díaz, M., Hinder, O., Lu, H., Lubin, M., O'Donoghue, B., & Schudy, W. (2021). Practical large-scale linear programming using primal-dual hybrid gradient. *Advances in Neural Information Processing Systems*, 34.
