@@ -62,13 +62,13 @@ methodology: >-
   dishonesty. No individual or business is assessed.
 reviewed_at: '2026-09-19'
 header:
-  image: /assets/images/headers/photo-microscope.jpg
-  og_image: /assets/images/headers/photo-microscope.jpg
-  overlay_image: /assets/images/headers/photo-microscope.jpg
+  image: /assets/images/headers/results-rhetoric.jpg
+  og_image: /assets/images/headers/results-rhetoric.jpg
+  overlay_image: /assets/images/headers/results-rhetoric.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-microscope.jpg
-  twitter_image: /assets/images/headers/photo-microscope.jpg
+  teaser: /assets/images/headers/results-rhetoric.jpg
+  twitter_image: /assets/images/headers/results-rhetoric.jpg
 ---
 
 <!--
