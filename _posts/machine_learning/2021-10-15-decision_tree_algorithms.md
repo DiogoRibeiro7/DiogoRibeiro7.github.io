@@ -60,7 +60,7 @@ $$
 \Delta I = I(\text{parent}) - \sum_{j} \frac{n_j}{n} I(\text{child}_j) .
 $$
 
-In practice the two criteria almost always choose the same splits. Gini is marginally cheaper because it avoids logarithms, which is why it is the common default. Entropy comes from information theory, where $\Delta I$ is the information gain, and it penalises impurity slightly more aggressively at the extremes.
+In many ordinary classification problems Gini and entropy produce similar trees, but they need not choose the same split and there is no guarantee of equivalence. Gini is marginally cheaper because it avoids logarithms, which is why it is the common default. Entropy comes from information theory, where $\Delta I$ is the information gain, and it penalises impurity slightly more aggressively at the extremes.
 
 For regression trees the same scheme applies with variance in place of impurity: each split minimises the sum of squared deviations from the mean within the resulting nodes.
 
@@ -107,9 +107,9 @@ Their instability also undercuts naive interpretation. Because splits are chosen
 
 ## When to Use Decision Trees
 
-Decision trees handle both numeric and categorical features and require minimal data preparation. They also serve as the building blocks for powerful ensemble methods like random forests and gradient boosting.
+Decision-tree methodology can accommodate numeric and categorical predictors, but software support differs. Scikit-learn's standard tree estimators require numeric arrays, so nominal categories must be encoded or handled by a library with native categorical splits. They also serve as the building blocks for powerful ensemble methods like random forests and gradient boosting.
 
-Their practical advantages are concrete. No scaling or normalisation is required, since splits depend only on ordering. Non-linear relationships and interactions are captured without being specified in advance. Missing values can be handled through surrogate splits in some implementations. And the decision logic can be exported as rules that a non-technical audience can audit.
+Their practical advantages are concrete. No scaling or normalisation is required, since splits depend only on ordering. Non-linear relationships and interactions are captured without being specified in advance. Some tree implementations use surrogate splits or native missing-value routing; others require explicit missing-value handling. This is an implementation property, not a universal feature of decision trees. And the decision logic can be exported as rules that a non-technical audience can audit.
 
 The limitations are equally concrete. A single tree is a high-variance estimator, and its accuracy rarely competes with ensembles. Decision boundaries are axis-aligned, so a diagonal relationship must be approximated by a staircase of many splits. Extrapolation is impossible: predictions outside the training range are flat, because every input eventually lands in a leaf whose value was fixed at training time. That last point rules trees out for genuine extrapolation problems such as trending time series.
 
