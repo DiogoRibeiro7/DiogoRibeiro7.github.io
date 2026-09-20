@@ -70,9 +70,9 @@ Setting $\beta = 2$ weights recall higher, appropriate for screening where a mis
 
 Most classifiers output a score, and the threshold turning that score into a label is a separate decision. Metrics that integrate over all thresholds evaluate the ranking rather than one operating point.
 
-**ROC AUC** plots true positive rate against false positive rate and reports the area beneath. It equals the probability that a randomly chosen positive is ranked above a randomly chosen negative. Its weakness under heavy imbalance is that the false positive rate has a huge denominator, so a large absolute number of false positives barely moves the curve.
+**ROC AUC** plots true positive rate against false positive rate and reports the area beneath. It equals the probability that a randomly chosen positive is ranked above a randomly chosen negative. ROC coordinates are conditional on the true class and are therefore largely prevalence-invariant; that is useful for ranking evaluation but means ROC AUC does not show the positive predictive value or absolute false-alert burden in a rare-event deployment.
 
-**PR AUC**, the area under the precision-recall curve, uses precision instead and therefore stays sensitive when positives are rare. For imbalanced problems it is the more informative summary, and its baseline is the positive class prevalence rather than 0.5.
+**PR AUC**, the area under the precision-recall curve, uses precision and therefore reflects prevalence directly. It is often more operationally informative for rare-event detection, but PR AUC values from datasets with different prevalences are not automatically comparable. Its random-classifier baseline equals the positive-class prevalence.
 
 **Log loss** evaluates the probabilities themselves rather than any thresholded decision:
 
@@ -106,7 +106,7 @@ The metric is only as trustworthy as the split it is computed on. Random k-fold 
 
 Use forward-chaining splits for temporal data and grouped splits when records cluster. And keep a genuinely held-out test set that is consulted once, at the end, because a validation set used repeatedly for tuning gradually becomes part of training.
 
-Report variability alongside the point estimate. A mean cross-validation score without its standard deviation hides whether a 0.02 improvement is real or noise.
+Report uncertainty or resampling sensitivity alongside the point estimate. The standard deviation of fold scores is descriptive, but because folds share training data it is not automatically a standard error for the generalization metric or for a model difference.
 
 ## Connecting Back to the Decision
 
