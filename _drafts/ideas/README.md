@@ -468,3 +468,25 @@ The legacy topic-list files were useful scratchpads, but they mixed duplicate, g
 | Biography + female-mathematician lists | Priority C biography series |
 
 The goal of consolidation is not to preserve every old title. It is to preserve the **best questions** and discard topic-list noise.
+
+
+---
+
+## Mathematical and statistical methods queue — 20 September 2026
+
+These structured drafts open a new methods queue outside the current influencer, inverse-problem, and semi-supervised-learning threads. Each file contains front matter, a development contract, mathematical spine, worked-example plan, reproducibility plan, and initial sources.
+
+| Draft | Focus | State |
+| --- | --- | --- |
+| [Extreme Values Do Not Behave Like Ordinary Averages](extreme-values-do-not-behave-like-ordinary-averages.md) | Extreme-value theory, GEV/GPD, thresholds, return levels | structured draft |
+| [Monte Carlo Accuracy Is About Variance, Not Just Samples](monte-carlo-accuracy-is-about-variance-not-just-samples.md) | Variance reduction, control variates, importance sampling, rare events | structured draft |
+| [Competing Risks, Recurrent Events, and Multi-State Models Are Not the Same Problem](competing-risks-recurrent-events-and-multistate-models-are-not-the-same-problem.md) | Advanced survival and event-history modelling | structured draft |
+| [A Forecast Distribution Should Be Calibrated and Sharp](a-forecast-distribution-should-be-calibrated-and-sharp.md) | Probabilistic forecasting, PIT, CRPS, proper scores | structured draft |
+| [MNAR Is a Sensitivity Problem, Not an Imputation Contest](mnar-is-a-sensitivity-problem-not-an-imputation-contest.md) | MNAR, selection models, pattern mixtures, tipping points | structured draft |
+| [Robust and Stochastic Optimization Answer Different Uncertainty Questions](robust-and-stochastic-optimization-answer-different-uncertainty-questions.md) | Stochastic, robust and distributionally robust optimization | structured draft |
+| [Network Structure Changes Dynamics Before Any Model Is Fit](network-structure-changes-dynamics-before-any-model-is-fit.md) | Network topology, contagion, percolation, temporal networks | structured draft |
+| [Preconditioning Changes the Problem Your Iterative Solver Sees](preconditioning-changes-the-problem-your-iterative-solver-sees.md) | Conditioning, Krylov methods, sparse systems, preconditioning | structured draft |
+| [Queueing Systems Fail Before Average Load Reaches Capacity](queueing-systems-fail-before-average-load-reaches-capacity.md) | Little's law, M/M/1, variability, heavy traffic | structured draft |
+| [Measurement Error Changes the Regression Problem](measurement-error-changes-the-regression-problem.md) | Errors in variables, attenuation, SIMEX, latent predictors | structured draft |
+
+The queue is intentionally broad. It is meant to provide technically serious next subjects rather than force publication order. The strongest first candidates for full development are probabilistic forecasting, extreme-value theory, and Monte Carlo variance reduction because each supports an exact worked example, reproducible figures, and a substantial mathematical argument without overlapping the current inverse-problems series.
