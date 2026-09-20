@@ -35,19 +35,19 @@ title: 'ANOVA, Welch ANOVA, and Kruskal-Wallis: They Are Not Interchangeable'
 
 The usual decision tree is familiar:
 
-\[
+$$
 \text{normal data} \Rightarrow \text{ANOVA},
 \qquad
 \text{non-normal data} \Rightarrow \text{Kruskal-Wallis}.
-\]
+$$
 
 A second version says:
 
-\[
+$$
 \text{equal variances} \Rightarrow \text{ANOVA},
 \qquad
 \text{unequal variances} \Rightarrow \text{Kruskal-Wallis}.
-\]
+$$
 
 Both rules are too crude.
 
@@ -55,7 +55,7 @@ ANOVA and Kruskal-Wallis do not generally test the same estimand under different
 
 The useful sequence is
 
-\[
+$$
 \boxed{
 \text{estimand}
 \rightarrow
@@ -65,7 +65,7 @@ The useful sequence is
 \rightarrow
 \text{test}
 }
-\]
+$$
 
 not the other way around.
 
@@ -73,41 +73,41 @@ not the other way around.
 
 Suppose there are \(g\) independent groups,
 
-\[
+$$
 Y_{ij}=\mu_i+\varepsilon_{ij},
-\]
+$$
 
 where \(i=1,\ldots,g\) indexes groups and \(j=1,\ldots,n_i\) indexes observations.
 
 The classical one-way ANOVA null hypothesis is
 
-\[
+$$
 H_0:
 \mu_1=\mu_2=\cdots=\mu_g.
-\]
+$$
 
 The total variation is decomposed into between-group and within-group components. With
 
-\[
+$$
 N=\sum_{i=1}^{g}n_i,
-\]
+$$
 
 the test statistic is
 
-\[
+$$
 F
 =
 \frac{MS_{\mathrm{between}}}
 {MS_{\mathrm{within}}}.
-\]
+$$
 
 Under the classical Gaussian homoscedastic model,
 
-\[
+$$
 \varepsilon_{ij}
 \overset{\mathrm{iid}}{\sim}
 \mathcal N(0,\sigma^2),
-\]
+$$
 
 the null distribution is an \(F\) distribution with \(g-1\) and \(N-g\) degrees of freedom.
 
@@ -131,9 +131,9 @@ When the scientific target is a difference in means, robustness checks should pr
 
 If the group means remain the target but the variances differ,
 
-\[
+$$
 \operatorname{Var}(Y_{ij})=\sigma_i^2,
-\]
+$$
 
 the natural alternative is **Welch's ANOVA**, not automatically Kruskal-Wallis.
 
@@ -141,13 +141,13 @@ Welch's procedure modifies the weighting and degrees of freedom so that inferenc
 
 Conceptually, this is important:
 
-\[
+$$
 \boxed{
 \text{heteroscedastic means problem}
 \Rightarrow
 \text{use a method for heteroscedastic means}
 }
-\]
+$$
 
 rather than changing to a rank estimand without noticing.
 
@@ -157,7 +157,7 @@ The Kruskal-Wallis statistic is based on pooled ranks.
 
 Let \(R_{ij}\) denote the rank of observation \(Y_{ij}\) among all \(N\) observations and let \(\bar R_i\) be the mean rank in group \(i\). Ignoring the tie correction for notation, the statistic is
 
-\[
+$$
 H
 =
 \frac{12}{N(N+1)}
@@ -166,16 +166,16 @@ n_i
 \left(
 \bar R_i-\frac{N+1}{2}
 \right)^2.
-\]
+$$
 
 Under the null hypothesis that the group distributions are the same, and under the usual regularity conditions, \(H\) is approximately chi-square with \(g-1\) degrees of freedom.
 
 The general null is therefore about equality of distributions,
 
-\[
+$$
 H_0:
 F_1=F_2=\cdots=F_g.
-\]
+$$
 
 If all group distributions have the same shape and differ only by a location shift, the procedure can be interpreted as a test of location. Under stronger symmetry assumptions, that is sometimes summarized informally as a comparison of medians.
 
@@ -247,9 +247,9 @@ The global and follow-up analyses should answer the same kind of question.
 
 Suppose three treatment groups have sample means
 
-\[
+$$
 10.2,\quad 11.1,\quad 13.8,
-\]
+$$
 
 but the third group has much larger variance.
 
@@ -275,11 +275,11 @@ Classical ANOVA is a model-based test of group means under homoscedastic assumpt
 
 The right choice therefore begins with the scientific target:
 
-\[
+$$
 \boxed{
 \text{Do I care about means, locations, ranks, or the full distributions?}
 }
-\]
+$$
 
 Once that is clear, the statistical method becomes much easier to defend.
 
