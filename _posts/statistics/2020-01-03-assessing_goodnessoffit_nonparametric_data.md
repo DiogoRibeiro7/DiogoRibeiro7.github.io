@@ -1,156 +1,316 @@
 ---
+permalink: '/statistics/assessing_goodnessoffit_nonparametric_data/'
 author_profile: false
 categories:
 - Statistics
 classes: wide
 date: '2020-01-03'
-excerpt: The Kolmogorov-Smirnov test is a powerful tool for assessing goodness-of-fit in non-parametric data. Learn how it works, how it compares to the Shapiro-Wilk test, and explore real-world applications.
+excerpt: The Kolmogorov-Smirnov statistic measures the largest gap between cumulative distributions, but its null distribution changes when model parameters are estimated from the same data.
 header:
-  image: /assets/images/headers/photo-statistics-mahalanobis.jpg
-  og_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
-  overlay_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  image: /assets/images/headers/photo-statistics-ecdf.jpg
+  og_image: /assets/images/headers/photo-statistics-ecdf.jpg
+  overlay_image: /assets/images/headers/photo-statistics-ecdf.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-statistics-mahalanobis.jpg
-  twitter_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
+  teaser: /assets/images/headers/photo-statistics-ecdf.jpg
+  twitter_image: /assets/images/headers/photo-statistics-ecdf.jpg
 keywords:
-- Kolmogorov-smirnov test
-- Goodness-of-fit tests
-- Non-parametric statistics
-- Distribution fitting
-- Shapiro-wilk test
-seo_description: The Kolmogorov-Smirnov test for non-parametric goodness-of-fit, how it compares with Shapiro-Wilk, and where it applies.
-seo_title: Kolmogorov-Smirnov Test for Goodness-of-Fit
+- Kolmogorov-Smirnov test
+- goodness of fit
+- empirical distribution function
+- Lilliefors test
+- distribution testing
+seo_description: A rigorous guide to one-sample and two-sample Kolmogorov-Smirnov tests, parameter estimation, Lilliefors corrections, and when other goodness-of-fit tests are preferable.
+seo_title: 'Kolmogorov-Smirnov Goodness-of-Fit: What the Test Actually Assumes'
 seo_type: article
-summary: This article explains the Kolmogorov-Smirnov (K-S) test for assessing the goodness-of-fit of non-parametric data. We compare the K-S test to other goodness-of-fit tests, such as Shapiro-Wilk, and provide real-world use cases, including testing whether a dataset follows a specific distribution.
+summary: A precise treatment of the Kolmogorov-Smirnov statistic, including the difference between fully specified null distributions and distributions fitted from the same sample.
 tags:
 - Hypothesis Testing
-- Nonparametric Methods
-- Probability
-title: 'Kolmogorov-Smirnov Test: Assessing Goodness-of-Fit in Non-Parametric Data'
+- Goodness of Fit
+- Statistics
+title: 'Kolmogorov-Smirnov Goodness-of-Fit: What the Test Actually Assumes'
 ---
 
-## Introduction to the Kolmogorov-Smirnov Test
+The Kolmogorov-Smirnov test is often introduced as a distribution-free way to ask whether data follow a named distribution.
 
-The **Kolmogorov-Smirnov (K-S) test** is a widely used statistical method for assessing whether a sample of data follows a specific distribution. As a **non-parametric** test, the K-S test does not assume any specific underlying data distribution, making it particularly valuable for situations where we cannot confidently assume a parametric form like the normal distribution. Instead, the K-S test compares the cumulative distribution function (CDF) of the observed data with the CDF of a reference distribution, assessing how well they align.
+That description is incomplete.
 
-The K-S test is especially useful for:
+The statistic is simple. The null distribution is simple only in the classical case where the reference distribution is fully specified before seeing the data.
 
-- **Goodness-of-fit testing**: Evaluating whether an observed dataset conforms to a known distribution, such as normal, uniform, or exponential.
-- **Comparing two distributions**: Testing whether two independent samples come from the same distribution.
+The distinction matters most in the common workflow of estimating a normal mean and variance from the sample and then running an ordinary one-sample K-S test against that fitted normal distribution.
 
-In this article, we will explore how the Kolmogorov-Smirnov test works, how it compares to other goodness-of-fit tests like **Shapiro-Wilk**, and some real-world applications where the K-S test is particularly useful.
+The usual K-S p-value is not valid for that procedure.
 
-## How the Kolmogorov-Smirnov Test Works
+## The empirical distribution function
 
-The K-S test compares the **empirical cumulative distribution function (ECDF)** of a dataset to the CDF of a specified reference distribution. The goal is to determine if the two distributions differ significantly, which would indicate that the observed data does not follow the hypothesized distribution.
+Given observations
 
-### 1.1 Steps of the K-S Test
+$$
+X_1,\ldots,X_n,
+$$
 
-1. **Define the hypothesis**: 
-   - **Null hypothesis ($H_0$):** The sample data follows the specified distribution (e.g., normal, uniform, etc.).
-   - **Alternative hypothesis ($H_A$):** The sample data does not follow the specified distribution.
+the empirical cumulative distribution function is
 
-2. **Compute the empirical cumulative distribution function (ECDF)**: The ECDF represents the proportion of observed data points less than or equal to each value in the dataset. This is the observed distribution.
+$$
+F_n(x)
+=
+\frac{1}{n}
+\sum_{i=1}^{n}
+\mathbf 1(X_i\le x).
+$$
 
-3. **Compare the ECDF to the reference distribution's CDF**: The test calculates the **maximum difference** between the ECDF and the CDF of the specified reference distribution. This difference is denoted by **D**.
+For a fully specified continuous reference distribution with CDF $F_0$, the one-sample K-S statistic is
 
-4. **Calculate the test statistic (D)**: The test statistic for the K-S test is the maximum absolute difference between the ECDF and the reference CDF:
+$$
+D_n
+=
+\sup_x
+|F_n(x)-F_0(x)|.
+$$
 
-   $$
-   D = \max |F_n(x) - F(x)|
-   $$
+It measures the largest vertical separation between the empirical and theoretical CDFs.
 
-   Where:
-   - $F_n(x)$ is the ECDF of the sample data.
-   - $F(x)$ is the CDF of the reference distribution.
+The null hypothesis is
 
-5. **Interpret the results**: The calculated **D-statistic** is compared to a critical value from the **Kolmogorov distribution**. A p-value is derived from this comparison. If the p-value is lower than a chosen significance level (usually 0.05), the null hypothesis is rejected, meaning that the data does not follow the specified distribution.
+$$
+H_0:
+X_i\overset{\mathrm{iid}}{\sim}F_0.
+$$
 
-### 1.2 One-Sample and Two-Sample K-S Tests
+The word **specified** is doing important work.
 
-There are two main variations of the K-S test:
+## Why the classical one-sample test is distribution-free
 
-- **One-sample K-S test**: Used to compare an observed sample to a specific theoretical distribution (e.g., testing if data is normally distributed).
-  
-- **Two-sample K-S test**: Used to compare two independent samples to see if they are drawn from the same distribution.
+If $F_0$ is continuous and completely specified, the probability integral transform gives
 
-### 1.3 P-Value Interpretation
+$$
+U_i=F_0(X_i)
+\sim
+\mathrm{Uniform}(0,1)
+$$
 
-The **p-value** from the K-S test tells us the probability of observing a test statistic as extreme as the one computed, assuming the null hypothesis is true. A small p-value (typically less than 0.05) suggests that the observed data does not come from the specified distribution.
+under $H_0$.
 
-## K-S Test vs. Other Goodness-of-Fit Tests
+Therefore the null distribution of $D_n$ does not depend on the particular continuous $F_0$.
 
-There are several other goodness-of-fit tests that serve similar purposes to the Kolmogorov-Smirnov test. The key difference between these tests often lies in their assumptions, sensitivity to different types of deviations, and specific use cases.
+That is the classical distribution-free property.
 
-### 2.1 Shapiro-Wilk Test
+It does not mean that every workflow involving a fitted distribution has the same null law.
 
-The **Shapiro-Wilk test** is one of the most commonly used goodness-of-fit tests for assessing **normality**. Unlike the K-S test, the Shapiro-Wilk test is **parametric**, meaning it specifically tests whether a sample comes from a normal distribution. 
+## Estimating parameters changes the null distribution
 
-#### Comparison to K-S Test:
+Suppose the null model is normal but the parameters are unknown:
 
-- **Assumptions**: The Shapiro-Wilk test is strictly used for testing normality, while the K-S test can be applied to any reference distribution, making it more versatile.
-- **Sensitivity**: The Shapiro-Wilk test is more powerful (i.e., it has higher sensitivity) when it comes to detecting deviations from normality, especially in small samples. The K-S test may be less sensitive in detecting small differences between the empirical and reference distributions.
-- **Use cases**: Shapiro-Wilk is preferred for small datasets and when specifically testing for normality. The K-S test is ideal for larger datasets or when testing goodness-of-fit to any distribution (normal, uniform, exponential, etc.).
+$$
+X_i
+\sim
+\mathcal N(\mu,\sigma^2).
+$$
 
-### 2.2 Anderson-Darling Test
+If $\mu$ and $\sigma$ are estimated from the same sample and the empirical CDF is then compared with
 
-The **Anderson-Darling test** is another goodness-of-fit test that is an extension of the K-S test but gives more weight to the tails of the distribution. It is particularly useful when the focus is on the fit in the tails of the distribution, as might be the case in risk modeling or financial applications.
+$$
+\Phi
+\left(
+\frac{x-\hat\mu}{\hat\sigma}
+\right),
+$$
 
-#### Comparison to K-S Test:
+the fitted CDF has been pulled toward the observations.
 
-- **Tail sensitivity**: The Anderson-Darling test is more sensitive to differences in the tails of the distribution compared to the K-S test, which treats all parts of the distribution equally.
-- **Use cases**: Anderson-Darling is favored when deviations in the tails of the distribution are critical, such as in stress testing for financial risk or extreme event modeling.
+The discrepancy is therefore systematically smaller than it would be against a fixed distribution.
 
-### 2.3 Chi-Squared Test
+The standard Kolmogorov critical values no longer apply.
 
-The **Chi-squared goodness-of-fit test** compares the frequency distribution of observed data to a theoretically expected frequency distribution. It is widely used in categorical data but can also be applied to continuous data if binned into categories.
+For the normal case, Lilliefors derived the corresponding corrected null distribution.
 
-#### Comparison to K-S Test:
+So these are different tests:
 
-- **Assumptions**: The chi-squared test requires the data to be grouped into categories, which may involve loss of information when applied to continuous data. The K-S test, by contrast, works directly with continuous data without binning.
-- **Data Type**: Chi-squared is often used for categorical data, while the K-S test is better suited for continuous data.
-- **Sensitivity**: The chi-squared test can be less sensitive to small sample sizes or when the expected frequencies in some categories are very low.
+$$
+\text{K-S against } \mathcal N(0,1)
+$$
 
-## Real-World Use Cases of the Kolmogorov-Smirnov Test
+and
 
-The Kolmogorov-Smirnov test is applicable across various fields, including finance, biology, engineering, and data science. Below, we explore some real-world use cases where the K-S test is particularly valuable.
+$$
+\text{normality test after estimating } \mu,\sigma.
+$$
 
-### 3.1 Testing for Normality in Finance
+They should not share the same p-value calibration.
 
-In financial markets, it is often necessary to test whether the returns on stocks, bonds, or other financial instruments follow a **normal distribution**. Many financial models, such as those used for portfolio optimization or risk management, assume that returns are normally distributed. 
+## The two-sample K-S test
 
-The one-sample K-S test can be used to assess whether historical returns data conform to a normal distribution. If the p-value is low, analysts might conclude that the returns deviate significantly from normality, which would affect the assumptions of the models they are using.
+For independent samples with empirical CDFs $F_n$ and $G_m$, the two-sample statistic is
 
-#### Example:
+$$
+D_{n,m}
+=
+\sup_x
+|F_n(x)-G_m(x)|.
+$$
 
-An investment firm wants to test whether the daily returns of a stock over the past year follow a normal distribution. By applying the K-S test, they compare the ECDF of the daily returns to the CDF of a normal distribution with the same mean and standard deviation. A significant p-value would suggest that the returns are not normally distributed, and the firm may need to revise its risk models.
+The null hypothesis is
 
-### 3.2 Quality Control in Manufacturing
+$$
+H_0:F=G.
+$$
 
-In manufacturing, the K-S test can be used to determine whether a batch of products conforms to a specific tolerance level for a continuous variable, such as weight or size. Ensuring that products follow the expected distribution can be critical for maintaining quality and consistency in production.
+This is stronger than equality of means or medians.
 
-#### Example:
+The test can react to differences in location, scale, skewness, tail behavior, or any other feature that changes the CDF.
 
-A company that manufactures precision-engineered components wants to ensure that the diameter of their parts follows a uniform distribution within a specific tolerance range. By applying the K-S test, they compare the observed distribution of part diameters to a uniform distribution. If the p-value from the K-S test is below the threshold, the company may need to investigate potential issues in the manufacturing process.
+A rejection therefore does not tell us how the distributions differ.
 
-### 3.3 Ecological Studies: Comparing Species Distributions
+That requires plots, effect summaries, or a more targeted model.
 
-In ecology, researchers often compare the distribution of species in different habitats or regions to understand environmental influences on biodiversity. The two-sample K-S test is useful for comparing the distribution of species abundances between different ecosystems or time periods.
+## K-S is not a general test for “non-parametric data”
 
-#### Example:
+The phrase “non-parametric data” is not useful here.
 
-An ecologist is studying the distribution of bird species in two different regions to determine if the environmental conditions result in significant differences in species diversity. The two-sample K-S test can be used to compare the distributions of bird counts in the two regions. A significant result would indicate that the distributions differ, suggesting that the regions have different environmental characteristics affecting biodiversity.
+Data are not parametric or non-parametric.
+
+Models and procedures are.
+
+The K-S statistic can compare an empirical distribution with a parametric model, or compare two empirical samples without specifying a parametric family.
+
+The procedure is called nonparametric in the two-sample setting because the null does not impose a finite-dimensional parametric family.
+
+That terminology should not be confused with a property of the observations themselves.
+
+## Normality testing is a special case
+
+If the sole question is exact normality with estimated mean and variance, Shapiro-Wilk is usually a stronger general-purpose choice than plugging fitted parameters into an uncorrected K-S test.
+
+Anderson-Darling places additional weight in the tails.
+
+A Lilliefors-type test modifies the K-S calibration to account for parameter estimation.
+
+The useful question is not which test is universally best.
+
+It is
+
+$$
+\boxed{
+\text{Which deviations from the model matter for the analysis?}
+}
+$$
+
+A tail-sensitive problem may call for a tail-sensitive diagnostic. A location-scale modeling problem may be better assessed through residual structure rather than a generic omnibus test.
+
+## P-values do not identify the model
+
+A large p-value does not establish that the proposed distribution is true.
+
+It says that the observed discrepancy is not unusually large under the null calibration of the test.
+
+A small sample may have little power against important alternatives.
+
+A very large sample may reject a model because of a tiny discrepancy that has no practical consequence.
+
+Graphical diagnostics remain valuable because they reveal where the model fails.
+
+## Q-Q plots and ECDF differences
+
+A Q-Q plot compares empirical order statistics with theoretical quantiles.
+
+The shape of the departure can distinguish skewness, heavy tails, light tails, isolated outliers, mixtures, or central fit with tail failure.
+
+Similarly, plotting
+
+$$
+F_n(x)-F_0(x)
+$$
+
+shows where the K-S maximum occurs.
+
+The scalar $D_n$ records only the largest discrepancy.
+
+The plot contains more information.
+
+## Discrete distributions need separate care
+
+The classical continuous K-S null distribution assumes a continuous reference CDF.
+
+For discrete distributions, ties occur with positive probability and the null distribution of the statistic changes.
+
+Using continuous critical values can be conservative or otherwise miscalibrated depending on the setting.
+
+Exact, Monte Carlo, or discrete-specific goodness-of-fit procedures are preferable when the null distribution is discrete.
+
+## A reproducible example
+
+Suppose we genuinely want to test
+
+$$
+H_0:X\sim\mathcal N(0,1).
+$$
+
+Then the reference distribution is fully specified.
+
+~~~python
+from __future__ import annotations
+
+import numpy as np
+from scipy import stats
+
+rng = np.random.default_rng(2026)
+
+sample: np.ndarray = rng.normal(
+    loc=0.0,
+    scale=1.0,
+    size=200,
+)
+
+result = stats.kstest(
+    sample,
+    "norm",
+    args=(0.0, 1.0),
+)
+
+print(result.statistic)
+print(result.pvalue)
+~~~
+
+That is a classical one-sample K-S test.
+
+If we instead estimate the mean and standard deviation from the same sample, the ordinary K-S p-value is no longer the correct normality-test calibration.
+
+## Simulation can calibrate fitted-model tests
+
+When parameters are estimated and no convenient analytic correction is available, a parametric bootstrap gives a direct solution.
+
+The logic is:
+
+1. fit the model to the observed data;
+2. compute the observed goodness-of-fit statistic;
+3. simulate many samples from the fitted model;
+4. refit the model separately in each simulated sample;
+5. recompute the statistic;
+6. compare the observed statistic with that simulated null distribution.
+
+The crucial step is refitting on every bootstrap sample.
+
+That reproduces the same parameter-estimation effect that occurred in the original analysis.
 
 ## Conclusion
 
-The **Kolmogorov-Smirnov test** is a powerful, versatile tool for assessing the goodness-of-fit in non-parametric data and comparing two distributions. Its ability to test data against any theoretical distribution—without the need for strong parametric assumptions—makes it particularly useful in many fields, from finance to ecology.
+The K-S statistic is easy to compute:
 
-While the K-S test has some limitations, such as lower sensitivity compared to tests like Shapiro-Wilk for detecting deviations from normality, its flexibility and simplicity make it a popular choice for distributional comparisons. By understanding how to use the K-S test and interpreting its results, data scientists and researchers can draw meaningful conclusions about the underlying patterns in their data.
+$$
+D=\sup_x|F_n(x)-F(x)|.
+$$
+
+The hard part is knowing which null distribution belongs to the way $F$ was obtained.
+
+If the reference CDF is fully specified in advance, the classical continuous one-sample K-S distribution applies.
+
+If parameters are estimated from the same observations, it generally does not.
+
+That distinction is more important than labeling the method “non-parametric.”
 
 ## References
 
-- Massey, F. J. (1951). The Kolmogorov-Smirnov test for goodness of fit. *Journal of the American Statistical Association*, 46(253), 68-78.
-- Shapiro, S. S., & Wilk, M. B. (1965). An analysis of variance test for normality (complete samples). *Biometrika*, 52(3-4), 591-611.
-- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
-- Anderson, T. W., & Darling, D. A. (1954). A test of goodness of fit. *Journal of the American Statistical Association*, 49(268), 765-769.
+- Kolmogorov, A. N. (1933). Sulla determinazione empirica di una legge di distribuzione. *Giornale dell'Istituto Italiano degli Attuari*, 4, 83–91.
+- Smirnov, N. (1948). Table for estimating the goodness of fit of empirical distributions. *Annals of Mathematical Statistics*, 19(2), 279–281.
+- Lilliefors, H. W. (1967). On the Kolmogorov-Smirnov test for normality with mean and variance unknown. *Journal of the American Statistical Association*, 62(318), 399–402.
+- Stephens, M. A. (1974). EDF statistics for goodness of fit and some comparisons. *Journal of the American Statistical Association*, 69(347), 730–737.
