@@ -284,11 +284,13 @@ Classical confidence intervals, Bayesian posterior distributions, and asymptotic
 
 Near a well-behaved maximum likelihood estimate, the log likelihood can be approximated by a quadratic function. The curvature of that quadratic determines uncertainty. Sharp curvature means the estimate is tightly constrained. Flat curvature means many parameter values remain plausible.
 
-This is the intuition behind using the inverse Fisher information as an approximate covariance matrix:
+This is the intuition behind using inverse Fisher information as an approximate covariance matrix. If $I(\theta)$ denotes Fisher information for one observation and the sample contains $n$ independent observations, then
 
-$$
-\mathrm{Cov}(\hat{\theta}) \approx I(\hat{\theta})^{-1}
-$$
+$
+\mathrm{Cov}(\hat{\theta}) \approx \left[n I(\hat{\theta})\right]^{-1}.
+$
+
+If $I_n(\theta)$ denotes the Fisher information for the full sample instead, the same statement is written $\mathrm{Cov}(\hat{\theta}) \approx I_n(\hat{\theta})^{-1}$.
 
 The approximation can fail when samples are small, models are weakly identified, likelihoods are asymmetric, parameters are near boundaries, or posterior distributions are multimodal. But the geometric idea remains useful: uncertainty is connected to the local shape of the model around the estimate.
 
@@ -351,8 +353,6 @@ Good modeling is not only about fitting data. It is about understanding the shap
 ## References
 
 - Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
-- Kullback, S., & Leibler, R. A. (1951). On information and sufficiency. *Annals of Mathematical Statistics*, 22(1), 79-86.
-- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.
-- McCullagh, P., & Nelder, J. A. (1989). *Generalized Linear Models* (2nd ed.). Chapman & Hall.
+- Kullback, S., & Leibler, R. A. (1951). On information and sufficiency. *Annals of Mathematical Statistics*, 22(1), 79-86.- McCullagh, P., & Nelder, J. A. (1989). *Generalized Linear Models* (2nd ed.). Chapman & Hall.
 - Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
 - Niculescu-Mizil, A., & Caruana, R. (2005). Predicting good probabilities with supervised learning. *Proceedings of ICML*, 625-632.
