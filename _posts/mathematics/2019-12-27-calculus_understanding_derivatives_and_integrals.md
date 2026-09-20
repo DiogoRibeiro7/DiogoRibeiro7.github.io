@@ -115,7 +115,7 @@ $$
 \mathbb{E}[X] = \int_{-\infty}^{\infty} x f(x)\,dx .
 $$
 
-This is why Bayesian inference is computationally demanding. The posterior requires the marginal likelihood $\int p(y \mid \theta)p(\theta)\,d\theta$, an integral over the whole parameter space with no closed form in realistic models. Markov Chain Monte Carlo exists precisely because that integral cannot be done analytically — it estimates the integral by sampling instead.
+This is why Bayesian inference is often computationally demanding. The posterior contains a normalizing constant, the marginal likelihood $\int p(y \mid \theta)p(\theta)\,d\theta$, which is frequently unavailable in closed form. Many Markov Chain Monte Carlo methods avoid evaluating that constant directly: in algorithms such as Metropolis–Hastings, it cancels from the acceptance ratio, allowing samples to be drawn from a posterior known only up to proportionality.
 
 Areas under curves recur in evaluation as well: ROC AUC and PR AUC are exactly what their names say.
 
