@@ -5,7 +5,7 @@ categories:
 - Economics
 classes: wide
 date: '2020-07-26'
-excerpt: A guide to solving DSGE models numerically, focusing on perturbation techniques and finite difference methods used in economic modeling.
+excerpt: DSGE models are solved by approximating policy functions or value functions, not by applying finite differences to arbitrary equations. This article separates local perturbation from global numerical methods.
 header:
   image: /assets/images/headers/photo-statistics-regression-errors.jpg
   og_image: /assets/images/headers/photo-statistics-regression-errors.jpg
@@ -15,320 +15,650 @@ header:
   teaser: /assets/images/headers/photo-statistics-regression-errors.jpg
   twitter_image: /assets/images/headers/photo-statistics-regression-errors.jpg
 keywords:
-- Dsge models
+- DSGE models
+- Perturbation methods
+- Value function iteration
 - Numerical methods
-- Perturbation techniques
-- Finite difference methods
-- Economic modeling
+- Dynamic programming
 - Economics
-- Quantitative analysis
-- Computational methods
 - Python
-- Fortran
-- C
 redirect_from:
 - '/mathematical economics/solving_dsge_models_numerically/'
-seo_description: Explore numerical methods for solving DSGE models, including perturbation techniques and finite difference methods, essential tools in quantitative economics.
+seo_description: A rigorous guide to numerical DSGE solution methods, distinguishing local perturbation from global dynamic-programming and projection approaches.
 seo_title: Solving DSGE Models Numerically
 seo_type: article
-summary: This article covers numerical techniques for solving DSGE models, particularly perturbation and finite difference methods, essential in analyzing economic dynamics.
+summary: A mathematical guide to DSGE solution methods with a reproducible stochastic growth-model example and a clear distinction between perturbation, projection, and finite-difference approximations.
 tags:
 - Economics
 - Numerical Methods
 - Mathematical Modeling
 - Python
-- Programming
-title: 'Solving DSGE Models Numerically: Perturbation Techniques and Finite Difference Methods'
+title: 'Solving DSGE Models Numerically: Perturbation and Global Methods'
 ---
 
-Dynamic Stochastic General Equilibrium (DSGE) models are powerful tools for analyzing the effects of economic shocks and policy changes over time. Because DSGE models are inherently nonlinear and involve complex dynamic relationships, analytical solutions are often not feasible. Instead, numerical methods are used to approximate solutions to these models. Among the most popular techniques are **perturbation methods** and **finite difference methods**, each offering unique approaches to handling DSGE models' nonlinearity and time dependency.
+A dynamic stochastic general equilibrium model is not "solved" by evaluating its equations at a few future values.
 
-This article explores these numerical methods in-depth, examining how perturbation and finite difference techniques work and how they apply to solving DSGE models.
+The numerical task is to recover functions that map the state of the economy into decisions.
 
-## Perturbation Techniques for Solving DSGE Models
-
-### Linearization and Higher-Order Approximations
-
-**Perturbation methods** are among the most popular numerical techniques for solving DSGE models. These methods approximate the solution by expanding it around a known steady state, providing a series expansion that represents the model’s behavior. Perturbation methods start with a **first-order linearization** around the steady state and can be extended to **second-order or higher-order** terms to capture nonlinear effects.
-
-1. **First-Order Approximation**: The model is linearized around its steady state, capturing the immediate effects of shocks but not the nonlinearities of the model.
-2. **Second-Order Approximation**: Adds a quadratic term to the expansion, allowing the model to capture some nonlinear effects such as risk premia and the effect of uncertainty on decision-making.
-3. **Higher-Order Approximations**: Higher-order terms can further refine the approximation, capturing more complex dynamic interactions and stochastic volatility.
-
-The general approach for perturbation techniques is:
-
-1. **Identify the Steady State**: Determine the values of variables where the system is in equilibrium.
-2. **Expand the System Around the Steady State**: Use Taylor expansions to approximate the equations of the model.
-3. **Solve the System of Approximated Equations**: The resulting equations provide an approximate solution near the steady state.
-
-#### Example: First-Order Perturbation
-
-Consider a simple DSGE model with a representative agent optimizing utility, where the Euler equation in the steady state is:
+If the state is
 
 $$
-E_t \left[ u'(c_t) = \beta u'(c_{t+1}) \right]
+s_t,
 $$
 
-A first-order perturbation would linearize this equation around the steady state values of $$ c_t $$ and $$ c_{t+1} $$, resulting in a system of linear equations that approximate the dynamics of the economy in response to small shocks.
+a solution typically consists of policy functions such as
 
-### Advantages and Limitations of Perturbation Methods
+$$
+c_t=g_c(s_t),
+\qquad
+k_{t+1}=g_k(s_t),
+$$
 
-Perturbation techniques have several advantages:
+together with laws of motion for the exogenous states.
 
-- **Computational Efficiency**: First-order approximations are computationally inexpensive, making them suitable for large models or policy simulations.
-- **Flexibility in Extensions**: Higher-order approximations allow for a more accurate representation of nonlinear effects, albeit with increased computational costs.
+That distinction matters because a piece of code can satisfy one Euler equation at one pair of points without solving the dynamic model.
 
-However, perturbation methods also have limitations:
+The earlier version of this article made exactly that mistake. It called a root finder on a static expression "first-order perturbation" and called a forward numerical derivative "finite-difference solution." Neither operation computes the policy functions of a DSGE model.
 
-- **Local Accuracy**: These methods are only accurate near the steady state and may perform poorly for large shocks or highly nonlinear models.
-- **Complexity in High-Order Terms**: Higher-order perturbations add complexity and can become difficult to interpret or implement.
+This revision starts from the actual numerical problem.
 
-## Comparing Perturbation and Finite Difference Approaches
+## A benchmark stochastic growth model
 
-Perturbation and finite difference methods each have unique advantages and are suitable for different types of DSGE models:
+Consider a planner with preferences
 
-| Feature                     | Perturbation Methods                       | Finite Difference Methods                 |
-|-----------------------------|--------------------------------------------|-------------------------------------------|
-| **Model Suitability**       | Best for models near steady state         | Useful for models with strong nonlinearity|
-| **Computational Efficiency**| Generally faster, especially at first-order| Can be computationally intensive          |
-| **Handling of Nonlinearity**| Captures local nonlinearity at higher order| Suitable for global nonlinear dynamics    |
-| **Ease of Implementation**  | Straightforward for low-order expansions   | Requires careful grid setup and stability |
+$$
+E_0
+\sum_{t=0}^{\infty}
+\beta^t\log c_t
+$$
 
-The choice between these methods depends on the model's characteristics, the desired level of approximation, and computational resources.
+subject to
 
-## Conclusion: Choosing the Right Method for DSGE Models
+$$
+c_t+k_{t+1}
+=
+z_t k_t^\alpha
++
+(1-\delta)k_t,
+$$
 
-Both perturbation techniques and finite difference methods offer valuable approaches to solving DSGE models. Perturbation methods are ideal for scenarios where a model operates near its steady state, providing computational efficiency with moderate accuracy. In contrast, finite difference methods provide a more global perspective, capturing non-linear dynamics and making them suitable for highly complex or constrained models. 
+with productivity following a Markov process
 
-The selection of a numerical method depends on the model’s complexity, the type of economic analysis, and the computational resources available, allowing economists to adapt their approach to best understand dynamic economic relationships.
+$$
+P(z_{t+1}=z_j\mid z_t=z_i)
+=
+\Pi_{ij}.
+$$
 
-## Appendix: Python Code Examples for Solving DSGE Models Using Perturbation and Finite Difference Methods
+The state is
 
-```python
+$$
+s_t=(k_t,z_t).
+$$
+
+The control can be written as next-period capital \(k_{t+1}\), because consumption is determined by the resource constraint:
+
+$$
+c_t
+=
+z_t k_t^\alpha
++
+(1-\delta)k_t
+-
+k_{t+1}.
+$$
+
+A solution is a policy
+
+$$
+k_{t+1}=g(k_t,z_t)
+$$
+
+that satisfies optimality for every relevant state, not merely along one simulated path.
+
+## The Bellman equation
+
+The recursive problem is
+
+$$
+V(k,z)
+=
+\max_{k'>0}
+\left\{
+\log c
++
+\beta
+E\left[
+V(k',z')
+\mid z
+\right]
+\right\},
+$$
+
+where
+
+$$
+c
+=
+zk^\alpha
++
+(1-\delta)k
+-k'.
+$$
+
+The expectation is
+
+$$
+E[V(k',z')\mid z_i]
+=
+\sum_j
+\Pi_{ij}
+V(k',z_j).
+$$
+
+This equation gives us one route to a global numerical solution: value-function iteration.
+
+## The Euler equation
+
+For an interior optimum, the policy also satisfies
+
+$$
+\frac{1}{c_t}
+=
+\beta
+E_t
+\left[
+\frac{1}{c_{t+1}}
+\left(
+\alpha z_{t+1}k_{t+1}^{\alpha-1}
++
+1-\delta
+\right)
+\right].
+$$
+
+A correct numerical solution should make the Euler-equation residual small over the region where the policy will be used.
+
+That residual is a diagnostic.
+
+It is not, by itself, a solution algorithm.
+
+## Deterministic steady state
+
+At
+
+$$
+z=1
+$$
+
+and a non-stochastic steady state,
+
+$$
+k_{t+1}=k_t=k^\ast,
+$$
+
+so the Euler equation becomes
+
+$$
+1
+=
+\beta
+\left[
+\alpha(k^\ast)^{\alpha-1}
++
+1-\delta
+\right].
+$$
+
+Therefore,
+
+$$
+k^\ast
+=
+\left[
+\frac{\alpha}
+{\beta^{-1}-1+\delta}
+\right]^{1/(1-\alpha)}.
+$$
+
+Consumption is
+
+$$
+c^\ast
+=
+(k^\ast)^\alpha
+-
+\delta k^\ast.
+$$
+
+The steady state is important for both local and global algorithms.
+
+Perturbation expands the solution around it.
+
+A global method often uses it to define a sensible computational domain.
+
+## What perturbation actually means
+
+Let
+
+$$
+F(s_t,s_{t+1},\varepsilon_{t+1};\sigma)=0
+$$
+
+collect the equilibrium conditions, where \(\sigma\) scales shock size.
+
+A perturbation method treats the equilibrium policy function as an unknown smooth function of the state and shock scale and computes derivatives of that function around the deterministic steady state,
+
+$$
+(s^\ast,\sigma=0).
+$$
+
+A first-order approximation has the form
+
+$$
+\hat s_{t+1}
+=
+A\hat s_t
++
+B\varepsilon_{t+1},
+$$
+
+where hats denote deviations from steady state, often in logs.
+
+The matrices \(A\) and \(B\) are not obtained by calling a generic scalar root finder on the Euler equation. They come from differentiating the complete equilibrium system and solving the resulting linear rational-expectations problem.
+
+At first order, certainty equivalence commonly appears: shock variances do not change the mean policy rule.
+
+At second order, curvature introduces terms involving variances and interactions, allowing uncertainty to affect expected decisions and welfare.
+
+That is one reason second-order perturbation is used for risk premia and welfare calculations.
+
+## Local accuracy is the main trade-off
+
+Perturbation is attractive because it is fast.
+
+For large macroeconomic models with many state and control variables, a first- or second-order local solution can be dramatically cheaper than constructing a high-dimensional global grid.
+
+But the approximation is local.
+
+If the economy moves far from the expansion point, or if occasionally binding constraints matter, the truncated Taylor expansion can become inaccurate or even imply impossible decisions.
+
+This is not a defect in Taylor series.
+
+It is the consequence of asking a local approximation to describe a global nonlinear problem.
+
+## Finite differences are not a competing DSGE solution method by themselves
+
+A finite difference such as
+
+$$
+f'(x)
+\approx
+\frac{f(x+h)-f(x)}{h}
+$$
+
+approximates a derivative.
+
+That tool can appear inside many numerical algorithms.
+
+For example, finite differences can approximate derivatives in a Hamilton-Jacobi-Bellman equation, compute Jacobians for Newton methods, or discretize a continuous-state problem.
+
+But evaluating finite differences of the production function does not solve the DSGE model.
+
+The numerical method is defined by the equation being discretized and the policy or value function being recovered.
+
+So the meaningful comparison is not
+
+$$
+\text{perturbation versus finite differences}.
+$$
+
+It is closer to
+
+$$
+\boxed{
+\text{local perturbation}
+\quad\text{versus}\quad
+\text{global approximation methods}
+}
+$$
+
+with finite differences being one possible numerical ingredient.
+
+## A global alternative: value-function iteration
+
+For the growth model above, discretize capital on a grid
+
+$$
+k_1,\ldots,k_M
+$$
+
+and productivity on states
+
+$$
+z_1,\ldots,z_S.
+$$
+
+For each current state \((k_i,z_s)\) and each candidate \(k_j'\), compute feasible consumption
+
+$$
+c_{isj}
+=
+z_s k_i^\alpha
++
+(1-\delta)k_i
+-
+k_j'.
+$$
+
+The Bellman update is
+
+$$
+V^{new}(k_i,z_s)
+=
+\max_j
+\left[
+\log c_{isj}
++
+\beta
+\sum_{r=1}^{S}
+\Pi_{sr}
+V(k_j',z_r)
+\right].
+$$
+
+Repeat until
+
+$$
+\|V^{new}-V\|_\infty
+<
+\varepsilon.
+$$
+
+The maximizing index at each state is the discrete policy function.
+
+## Reproducible Python implementation
+
+The following code solves a two-state stochastic growth model by value-function iteration.
+
+~~~python
+from __future__ import annotations
+
 import numpy as np
-from scipy.optimize import fsolve
+from numpy.typing import NDArray
 
-# Example DSGE model parameters
-beta = 0.96
-alpha = 0.36
-delta = 0.08
-rho = 0.9
-sigma = 0.02
+FloatArray = NDArray[np.float64]
+IntArray = NDArray[np.int64]
 
-# Steady State Calculation for a Simple DSGE Model
-def steady_state():
-    k_ss = ((1 / beta - (1 - delta)) / alpha) ** (1 / (alpha - 1))
-    c_ss = k_ss ** alpha - delta * k_ss
-    return k_ss, c_ss
+beta: float = 0.96
+alpha: float = 0.36
+delta: float = 0.08
 
-k_ss, c_ss = steady_state()
+productivity: FloatArray = np.exp(
+    np.array([-0.02, 0.02], dtype=float)
+)
 
-# Perturbation Method: First-Order Linearization
-def first_order_perturbation(k, k_next):
-    c = k ** alpha - delta * k
-    c_next = k_next ** alpha - delta * k_next
-    return beta * (c_next / c) * (alpha * k_next ** (alpha - 1) + 1 - delta) - 1
+transition: FloatArray = np.array(
+    [
+        [0.95, 0.05],
+        [0.05, 0.95],
+    ],
+    dtype=float,
+)
 
-# Solve DSGE Model Using First-Order Perturbation
-def solve_dsge_perturbation(k0, num_periods=50):
-    k_path = [k0]
-    for t in range(num_periods):
-        k_next = fsolve(first_order_perturbation, k_path[-1], args=(k_path[-1]))[0]
-        k_path.append(k_next)
-    return np.array(k_path)
+if transition.shape != (2, 2):
+    raise ValueError("Transition matrix must be 2 x 2.")
 
-# Initial capital and compute path
-k0 = k_ss * 0.9
-k_path = solve_dsge_perturbation(k0)
-print("Capital Path (Perturbation):", k_path)
+if not np.allclose(
+    transition.sum(axis=1),
+    1.0,
+):
+    raise ValueError(
+        "Each transition row must sum to one."
+    )
 
-# Finite Difference Method: Discrete Derivatives for a Simple DSGE Model
-def finite_difference_method(k_values, h=1e-4):
-    derivs = []
-    for k in k_values:
-        fwd_diff = (k ** alpha - (k + h) ** alpha) / h
-        derivs.append(fwd_diff)
-    return np.array(derivs)
+k_ss: float = (
+    alpha
+    / (1.0 / beta - 1.0 + delta)
+) ** (1.0 / (1.0 - alpha))
 
-# Compute finite difference approximation
-k_values = np.linspace(k0, k_ss, 100)
-finite_diffs = finite_difference_method(k_values)
-print("Finite Differences:", finite_diffs)
-```
+capital_grid: FloatArray = np.linspace(
+    0.5 * k_ss,
+    1.5 * k_ss,
+    250,
+)
 
-## Appendix: Fortran Code Examples for Solving DSGE Models Using Perturbation and Finite Difference Methods
+value: FloatArray = np.zeros(
+    (
+        productivity.size,
+        capital_grid.size,
+    ),
+    dtype=float,
+)
 
-```fortran
-program DSGE_Model
-    implicit none
-    integer, parameter :: num_periods = 50
-    real(8) :: beta, alpha, delta, rho, sigma
-    real(8) :: k_ss, c_ss, k0, h
-    real(8), dimension(num_periods + 1) :: k_path
-    integer :: i
+policy_index: IntArray = np.zeros(
+    value.shape,
+    dtype=np.int64,
+)
 
-    ! Model parameters
-    beta = 0.96
-    alpha = 0.36
-    delta = 0.08
-    rho = 0.9
-    sigma = 0.02
-    h = 1.0e-4
+tolerance: float = 1e-8
+max_iterations: int = 1_000
 
-    ! Steady-state calculation
-    call steady_state(k_ss, c_ss)
-    print *, "Steady State Capital:", k_ss
-    print *, "Steady State Consumption:", c_ss
+for iteration in range(max_iterations):
+    value_new = np.empty_like(value)
+    policy_new = np.empty_like(policy_index)
 
-    ! Perturbation method: Initial condition and solving for capital path
-    k0 = 0.9 * k_ss
-    k_path(1) = k0
-    do i = 1, num_periods
-        k_path(i + 1) = solve_dsge_perturbation(k_path(i))
-    end do
-    print *, "Capital Path (Perturbation):", k_path
+    for z_index, z_value in enumerate(
+        productivity
+    ):
+        expected_value: FloatArray = (
+            transition[z_index] @ value
+        )
 
-    ! Finite difference approximation
-    call finite_difference_method(k_path, h)
+        for k_index, capital in enumerate(
+            capital_grid
+        ):
+            resources: float = (
+                z_value * capital**alpha
+                + (1.0 - delta) * capital
+            )
 
-contains
+            consumption: FloatArray = (
+                resources - capital_grid
+            )
 
-    subroutine steady_state(k_ss, c_ss)
-        real(8), intent(out) :: k_ss, c_ss
-        k_ss = ((1.0 / beta - (1.0 - delta)) / alpha) ** (1.0 / (alpha - 1.0))
-        c_ss = k_ss ** alpha - delta * k_ss
-    end subroutine steady_state
+            objective: FloatArray = np.full(
+                capital_grid.shape,
+                -np.inf,
+                dtype=float,
+            )
 
-    function solve_dsge_perturbation(k) result(k_next)
-        real(8), intent(in) :: k
-        real(8) :: k_next, f, f_prime
-        integer :: iter
-        real(8), parameter :: tol = 1.0e-6
-        k_next = k
-        iter = 0
+            feasible: NDArray[np.bool_] = (
+                consumption > 0.0
+            )
 
-        do while (abs(f) > tol .and. iter < 100)
-            f = first_order_perturbation(k, k_next)
-            f_prime = derivative_first_order_perturbation(k, k_next)
-            k_next = k_next - f / f_prime
-            iter = iter + 1
-        end do
-    end function solve_dsge_perturbation
+            objective[feasible] = (
+                np.log(consumption[feasible])
+                + beta
+                * expected_value[feasible]
+            )
 
-    function first_order_perturbation(k, k_next) result(f)
-        real(8), intent(in) :: k, k_next
-        real(8) :: f, c, c_next
-        c = k ** alpha - delta * k
-        c_next = k_next ** alpha - delta * k_next
-        f = beta * (c_next / c) * (alpha * k_next ** (alpha - 1) + 1 - delta) - 1.0
-    end function first_order_perturbation
+            best_index: int = int(
+                np.argmax(objective)
+            )
 
-    function derivative_first_order_perturbation(k, k_next) result(f_prime)
-        real(8), intent(in) :: k, k_next
-        real(8) :: f_prime, epsilon
-        epsilon = 1.0e-6
-        f_prime = (first_order_perturbation(k, k_next + epsilon) - &
-                   first_order_perturbation(k, k_next)) / epsilon
-    end function derivative_first_order_perturbation
+            value_new[
+                z_index,
+                k_index,
+            ] = objective[best_index]
 
-    subroutine finite_difference_method(k_values, h)
-        real(8), intent(in) :: k_values(:)
-        real(8), intent(in) :: h
-        real(8) :: fwd_diff
-        integer :: i, n
-        n = size(k_values)
+            policy_new[
+                z_index,
+                k_index,
+            ] = best_index
 
-        print *, "Finite Differences:"
-        do i = 1, n - 1
-            fwd_diff = (k_values(i + 1) ** alpha - k_values(i) ** alpha) / h
-            print *, fwd_diff
-        end do
-    end subroutine finite_difference_method
+    sup_norm: float = float(
+        np.max(np.abs(value_new - value))
+    )
 
-end program DSGE_Model
-```
+    value = value_new
+    policy_index = policy_new
 
-## Appendix: C Code Examples for Solving DSGE Models Using Perturbation and Finite Difference Methods
+    if sup_norm < tolerance:
+        break
+else:
+    raise RuntimeError(
+        "Value iteration did not converge."
+    )
 
-```c
-#include <stdio.h>
-#include <math.h>
+policy_capital: FloatArray = (
+    capital_grid[policy_index]
+)
 
-#define NUM_PERIODS 50
-#define TOL 1e-6
-#define H 1e-4
+print(
+    "iterations:",
+    iteration + 1,
+)
 
-/* Parameters for the DSGE model */
-const double beta = 0.96;
-const double alpha = 0.36;
-const double delta = 0.08;
+print(
+    "sup-norm:",
+    f"{sup_norm:.3e}",
+)
 
-/* Steady-state calculation */
-void steady_state(double *k_ss, double *c_ss) {
-    *k_ss = pow((1.0 / beta - (1.0 - delta)) / alpha, 1.0 / (alpha - 1.0));
-    *c_ss = pow(*k_ss, alpha) - delta * (*k_ss);
-}
+print(
+    "steady-state capital:",
+    f"{k_ss:.6f}",
+)
+~~~
 
-/* Perturbation Method: First-Order Linearization */
-double first_order_perturbation(double k, double k_next) {
-    double c = pow(k, alpha) - delta * k;
-    double c_next = pow(k_next, alpha) - delta * k_next;
-    return beta * (c_next / c) * (alpha * pow(k_next, alpha - 1) + 1 - delta) - 1.0;
-}
+With the parameters above, the code converges on the specified grid.
 
-/* Derivative for Newton-Raphson Method */
-double derivative_first_order_perturbation(double k, double k_next) {
-    double epsilon = 1e-6;
-    return (first_order_perturbation(k, k_next + epsilon) - first_order_perturbation(k, k_next)) / epsilon;
-}
+The policy moves next-period capital upward in the high-productivity state and downward in the low-productivity state around the deterministic steady state, which is the direction economic intuition predicts.
 
-/* Solve DSGE Model Using Perturbation */
-double solve_dsge_perturbation(double k) {
-    double k_next = k, f, f_prime;
-    int iter = 0;
+## Grid error is different from model error
 
-    do {
-        f = first_order_perturbation(k, k_next);
-        f_prime = derivative_first_order_perturbation(k, k_next);
-        k_next -= f / f_prime;
-        iter++;
-    } while (fabs(f) > TOL && iter < 100);
+A value-function solution on a finite grid contains discretization error.
 
-    return k_next;
-}
+If the true optimum lies between \(k_j\) and \(k_{j+1}\), a discrete policy must choose one grid point.
 
-/* Finite Difference Method */
-void finite_difference_method(double k_values[], int n) {
-    printf("Finite Differences:\n");
-    for (int i = 0; i < n - 1; i++) {
-        double fwd_diff = (pow(k_values[i + 1], alpha) - pow(k_values[i], alpha)) / H;
-        printf("%f\n", fwd_diff);
-    }
-}
+Increasing the grid density reduces this source of error but increases computational cost.
 
-int main() {
-    double k_ss, c_ss, k0;
-    double k_path[NUM_PERIODS + 1];
+Interpolation can improve the approximation without making the grid prohibitively dense.
 
-    /* Calculate steady state */
-    steady_state(&k_ss, &c_ss);
-    printf("Steady State Capital: %f\n", k_ss);
-    printf("Steady State Consumption: %f\n", c_ss);
+The distinction is worth making explicit:
 
-    /* Perturbation method: Initial condition and solving for capital path */
-    k0 = 0.9 * k_ss;
-    k_path[0] = k0;
-    for (int i = 0; i < NUM_PERIODS; i++) {
-        k_path[i + 1] = solve_dsge_perturbation(k_path[i]);
-    }
-    printf("Capital Path (Perturbation):\n");
-    for (int i = 0; i <= NUM_PERIODS; i++) {
-        printf("%f\n", k_path[i]);
-    }
+$$
+\text{economic approximation error}
+\neq
+\text{numerical discretization error}.
+$$
 
-    /* Finite difference approximation */
-    finite_difference_method(k_path, NUM_PERIODS + 1);
+Perturbation mainly introduces truncation error from a local Taylor expansion.
 
-    return 0;
-}
-```
+Grid methods introduce discretization and interpolation error.
+
+Both need diagnostics.
+
+## Euler-equation errors are a useful common diagnostic
+
+After obtaining a policy \(g(k,z)\), compute consumption from the resource constraint and evaluate the Euler residual,
+
+$$
+\mathcal E(k,z)
+=
+1
+-
+\beta
+E
+\left[
+\frac{u'(c')}
+{u'(c)}
+\left(
+\alpha z' (k')^{\alpha-1}
++
+1-\delta
+\right)
+\right].
+$$
+
+A small residual over the relevant state space indicates that the approximate policy nearly satisfies the first-order condition.
+
+This allows different numerical methods to be compared on a common economic equation rather than on implementation-specific convergence criteria alone.
+
+## Projection and collocation methods
+
+Value-function iteration is not the only global method.
+
+Projection methods approximate an unknown policy or value function by basis functions,
+
+$$
+g(s)
+\approx
+\sum_{m=1}^{M}
+a_m\phi_m(s),
+$$
+
+then choose the coefficients \(a_m\) so that equilibrium residuals are small at selected collocation points or in a weighted integral sense.
+
+Chebyshev polynomials are a common basis because they have good approximation properties over bounded intervals.
+
+Projection can be much faster than dense grids in smooth low-dimensional problems.
+
+The curse of dimensionality remains important.
+
+## Occasionally binding constraints change the method choice
+
+Consider a borrowing constraint,
+
+$$
+b_{t+1}\ge\underline b,
+$$
+
+or a policy rate constrained by
+
+$$
+i_t\ge0.
+$$
+
+Near a point where the constraint never binds, a local perturbation can completely miss the kink created when it becomes active.
+
+Piecewise-linear methods, occasionally binding constraint algorithms, endogenous-grid methods, projection, or other global approaches can be more appropriate.
+
+The numerical method should follow the economic structure.
+
+## Choosing a method
+
+A useful summary is:
+
+| Feature | Perturbation | Global grid / projection |
+|---|---|---|
+| Approximation | Local | Broader state region |
+| Speed | Usually high | Usually lower |
+| Large models | Often feasible | Curse of dimensionality |
+| Strong nonlinearities | Higher orders help locally | Can represent them globally |
+| Occasionally binding constraints | Difficult for plain perturbation | Often better suited |
+| Main error | Taylor truncation | Grid / basis approximation |
+| Diagnostics | Euler errors, simulation moments | Euler errors, Bellman residuals |
+
+There is no universally best solver.
+
+There is a model, a region of the state space that matters, and an accuracy requirement.
+
+## Conclusion
+
+A DSGE solution is a set of decision rules satisfying equilibrium conditions over the relevant states.
+
+Perturbation obtains local derivatives of those rules around a steady state.
+
+Global methods approximate the functions over a larger region.
+
+Finite differences can help approximate derivatives inside such methods, but a finite-difference formula is not itself a DSGE solution.
+
+That distinction is the difference between numerical analysis and code that merely produces numbers.
+
+## References
+
+- Schmitt-Grohé, S., & Uribe, M. (2004). Solving dynamic general equilibrium models using a second-order approximation to the policy function. *Journal of Economic Dynamics and Control*, 28(4), 755–775.
+- Judd, K. L. (1998). *Numerical Methods in Economics*. MIT Press.
+- Miranda, M. J., & Fackler, P. L. (2002). *Applied Computational Economics and Finance*. MIT Press.
+- Heer, B., & Maussner, A. (2009). *Dynamic General Equilibrium Modeling* (2nd ed.). Springer.
