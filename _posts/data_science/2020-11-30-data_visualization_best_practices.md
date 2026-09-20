@@ -65,7 +65,7 @@ A slightly more complete mapping:
 - **Distribution of one variable:** histogram to show shape, box plot to compare many groups compactly, and a strip or beeswarm plot when the sample is small enough to show every point.
 - **Part-to-whole:** stacked bar if there are few parts and the total matters; otherwise separate bars, since only the bottom segment of a stack shares a baseline.
 
-Two structural rules matter more than the chart type. Bar charts must start at zero, because their length encodes the value and truncating the axis distorts the ratio being shown. Line charts need not, because they encode change rather than magnitude, and forcing zero can flatten a meaningful trend into a straight line.
+Two structural rules matter more than the chart type. Bar charts should normally start at zero when bar length is intended to encode magnitude, because truncation changes perceived ratios. There are specialized exceptions, but a truncated bar requires explicit justification and labeling because readers naturally compare bar lengths from the baseline. Line charts need not, because they encode change rather than magnitude, and forcing zero can flatten a meaningful trend into a straight line.
 
 ## Keep It Simple
 
@@ -73,7 +73,7 @@ Cluttered visuals can obscure the message. Limit the number of colors and remove
 
 Tufte's framing is to maximise the share of ink that carries information. In practice this means removing chart borders, heavy gridlines, redundant legends when direct labels would do, decorative backgrounds, and three-dimensional effects on two-dimensional data. The last is the most damaging: perspective makes bars at the front look larger than equal bars at the back, so 3D introduces error rather than depth.
 
-Restraint applies to colour especially. Categorical palettes become unreadable past roughly seven or eight hues, and if you need more categories the answer is usually to group the tail into "other" or switch to small multiples rather than to find more colours.
+Restraint applies to colour especially. Categorical palettes become difficult to distinguish as the number of hues grows. There is no universal seven- or eight-category cutoff, but beyond a modest number of groups it is usually better to use direct labels, faceting, interaction, grouping, or another encoding rather than rely on hue alone.
 
 ## Colour With Intent
 
@@ -85,7 +85,7 @@ Choose a palette type that matches the data:
 
 Never use a rainbow scale for continuous data. It is not perceptually uniform, so equal steps in value produce unequal perceived steps, and it creates false boundaries at the yellow and cyan transitions that readers interpret as features in the data.
 
-Around 8% of men of northern European descent have some form of red-green colour vision deficiency, so red-green as your only contrast fails a substantial slice of any audience. Encode redundantly: pair colour with shape, line style, or direct labels, and check that the chart still works when converted to greyscale.
+Red-green colour-vision deficiency is common enough that red-green should not be the only contrast carrying meaning. Prevalence varies across populations, so accessible design should rely on redundant encoding rather than one demographic percentage. Encode redundantly: pair colour with shape, line style, or direct labels, and check that the chart still works when converted to greyscale.
 
 ## Scales That Do Not Mislead
 
