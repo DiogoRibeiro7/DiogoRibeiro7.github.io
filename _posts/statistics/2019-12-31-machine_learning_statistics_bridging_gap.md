@@ -40,11 +40,11 @@ Statisticians build predictive models. Machine-learning researchers study uncert
 
 The useful distinction is therefore not a list of algorithms. It is the structure of the problem being solved:
 
-\[
+$$
 \boxed{
 \text{data} + \text{target} + \text{assumptions} + \text{loss} + \text{validation}
 }
-\]
+$$
 
 The same mathematical model can behave very differently depending on those choices.
 
@@ -52,34 +52,34 @@ The same mathematical model can behave very differently depending on those choic
 
 Suppose
 
-\[
+$$
 Y = f(X) + \varepsilon.
-\]
+$$
 
 A predictive problem asks for a function \(\hat f\) that performs well on future observations. A common target is expected prediction loss,
 
-\[
+$$
 R(f)
 =
 \mathbb E\left[L\{Y,f(X)\}\right].
-\]
+$$
 
 Because the population risk \(R(f)\) is unknown, machine-learning procedures usually minimize an empirical or regularized approximation,
 
-\[
+$$
 \hat R(f)
 =
 \frac{1}{n}\sum_{i=1}^{n}
 L\{y_i,f(x_i)\}
 +
 \lambda J(f).
-\]
+$$
 
 An inferential problem can use the same data but ask something different. In the linear model
 
-\[
+$$
 Y_i = \beta_0 + X_i^\top\beta + \varepsilon_i,
-\]
+$$
 
 we might want a confidence interval for one component of \(\beta\), a test of a scientific hypothesis, or an estimate of a causal effect under additional identification assumptions.
 
@@ -91,20 +91,20 @@ This difference in target is more important than the label attached to the metho
 
 Ordinary least squares minimizes
 
-\[
+$$
 \sum_{i=1}^{n}
 \left(y_i-\beta_0-x_i^\top\beta\right)^2.
-\]
+$$
 
 That is an optimization problem and therefore fits naturally into supervised learning.
 
 Under a Gaussian error model,
 
-\[
+$$
 \varepsilon_i
 \overset{\mathrm{iid}}{\sim}
 \mathcal N(0,\sigma^2),
-\]
+$$
 
 the same coefficient estimates are also maximum-likelihood estimates. The probabilistic model then supplies more structure: likelihood-based uncertainty, model diagnostics and a precise statement of the assumptions under which finite-sample inference is derived.
 
@@ -118,7 +118,7 @@ The algorithm is the same. The claim being made is not.
 
 Ridge regression solves
 
-\[
+$$
 \hat\beta_{\mathrm{ridge}}
 =
 \arg\min_{\beta}
@@ -128,11 +128,11 @@ Ridge regression solves
 +
 \lambda\sum_{j=1}^{p}\beta_j^2
 \right].
-\]
+$$
 
 Lasso replaces the quadratic penalty with an \(L_1\) penalty,
 
-\[
+$$
 \hat\beta_{\mathrm{lasso}}
 =
 \arg\min_{\beta}
@@ -142,7 +142,7 @@ Lasso replaces the quadratic penalty with an \(L_1\) penalty,
 +
 \lambda\sum_{j=1}^{p}|\beta_j|
 \right].
-\]
+$$
 
 The important point is not that these are "machine-learning versions" of regression. Both are statistical estimators. Their behavior follows from a deliberate bias-variance trade-off.
 
@@ -156,17 +156,17 @@ Decision trees are sometimes described as statistical methods because split crit
 
 For a binary node with class proportion \(p\), Gini impurity is
 
-\[
+$$
 G(p)=2p(1-p),
-\]
+$$
 
 and entropy is
 
-\[
+$$
 H(p)
 =
 -p\log p-(1-p)\log(1-p).
-\]
+$$
 
 A tree searches candidate partitions and chooses splits that reduce an impurity or loss criterion. The difficult statistical question is what happens after repeatedly searching the data for those splits.
 
@@ -182,7 +182,7 @@ A support vector machine is another useful counterexample to loose terminology.
 
 For binary labels \(y_i\in\{-1,+1\}\), a soft-margin linear SVM can be written as
 
-\[
+$$
 \min_{w,b}
 \left[
 \frac{1}{2}\|w\|^2
@@ -190,7 +190,7 @@ For binary labels \(y_i\in\{-1,+1\}\), a soft-margin linear SVM can be written a
 C\sum_{i=1}^{n}
 \max\{0,1-y_i(w^\top x_i+b)\}
 \right].
-\]
+$$
 
 The second term is the hinge loss. The first controls the size of \(w\), which determines the geometric margin.
 
@@ -198,11 +198,11 @@ This is a convex optimization problem arising from statistical learning theory. 
 
 The kernel construction changes the representation by replacing inner products with
 
-\[
+$$
 K(x_i,x_j)
 =
 \langle \phi(x_i),\phi(x_j)\rangle,
-\]
+$$
 
 so that a linear separator in the feature space can represent nonlinear boundaries in the original variables.
 
@@ -214,12 +214,12 @@ Other methods start explicitly from probability distributions.
 
 Logistic regression models
 
-\[
+$$
 P(Y=1\mid X=x)
 =
 \operatorname{logit}^{-1}
 (\beta_0+x^\top\beta).
-\]
+$$
 
 A Gaussian process places a prior distribution over functions. Hidden Markov models specify a latent-state stochastic process and an observation model. Bayesian neural networks place probability distributions over parameters or functions.
 
