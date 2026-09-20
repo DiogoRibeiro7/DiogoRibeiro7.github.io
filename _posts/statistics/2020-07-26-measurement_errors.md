@@ -28,9 +28,9 @@ title: 'Measurement Error: Bias, Precision, and Uncertainty'
 
 Measurement error is often introduced as a simple decomposition,
 
-\[
+$$
 X^{obs}=X^{true}+\text{error}.
-\]
+$$
 
 That notation is useful, but it hides most of the statistical difficulty.
 
@@ -44,11 +44,11 @@ The useful question is not merely
 
 but
 
-\[
+$$
 \boxed{
 \text{How does the measurement process alter the quantity I am trying to estimate?}
 }
-\]
+$$
 
 ## A simple measurement model
 
@@ -56,23 +56,23 @@ Let \(X^\ast\) denote the latent quantity of interest and let \(X\) denote the r
 
 A basic additive model is
 
-\[
+$$
 X = X^\ast + U.
-\]
+$$
 
 If
 
-\[
+$$
 E(U\mid X^\ast)=0,
-\]
+$$
 
 the measurement is conditionally unbiased under this model.
 
 If instead
 
-\[
+$$
 E(U\mid X^\ast)=b(X^\ast),
-\]
+$$
 
 then the measurement process contains systematic bias.
 
@@ -84,39 +84,39 @@ A measurement system can be precise but biased.
 
 Suppose repeated measurements satisfy
 
-\[
+$$
 X_j = X^\ast + b + U_j,
 \qquad
 E(U_j)=0,
 \qquad
 \operatorname{Var}(U_j)=\sigma_U^2.
-\]
+$$
 
 The systematic component \(b\) shifts the center of the measurements away from the target. The random component \(\sigma_U^2\) determines repeatability.
 
 Averaging repeated measurements,
 
-\[
+$$
 \bar X_m
 =
 \frac{1}{m}\sum_{j=1}^{m}X_j,
-\]
+$$
 
 reduces the random variance to
 
-\[
+$$
 \operatorname{Var}(\bar X_m)
 =
 \frac{\sigma_U^2}{m},
-\]
+$$
 
 if the random errors are independent.
 
 But the bias remains:
 
-\[
+$$
 E(\bar X_m-X^\ast)=b.
-\]
+$$
 
 Repeated measurements improve precision.
 
@@ -126,25 +126,25 @@ They do not average away a systematic calibration error.
 
 Consider the linear model
 
-\[
+$$
 Y^\ast=\beta_0+\beta_1X^\ast+\varepsilon.
-\]
+$$
 
 If the response is measured with additive mean-zero error,
 
-\[
+$$
 Y=Y^\ast+V,
 \qquad
 E(V\mid X^\ast)=0,
-\]
+$$
 
 ordinary least squares can remain unbiased for the slope under the usual exogeneity assumptions, although the residual variance increases.
 
 Now suppose the predictor is measured with classical error,
 
-\[
+$$
 X=X^\ast+U,
-\]
+$$
 
 with \(U\) independent of \(X^\ast\) and \(\varepsilon\).
 
@@ -152,22 +152,22 @@ Regressing \(Y\) on the noisy \(X\) produces attenuation.
 
 In the simple one-predictor case,
 
-\[
+$$
 \operatorname{plim}\hat\beta_1
 =
 \beta_1
 \frac{\operatorname{Var}(X^\ast)}
 {\operatorname{Var}(X^\ast)+\operatorname{Var}(U)}.
-\]
+$$
 
 The multiplicative factor
 
-\[
+$$
 \lambda
 =
 \frac{\operatorname{Var}(X^\ast)}
 {\operatorname{Var}(X^\ast)+\operatorname{Var}(U)}
-\]
+$$
 
 lies between 0 and 1.
 
@@ -195,9 +195,9 @@ An instrument may have:
 
 A more realistic calibration model might be
 
-\[
+$$
 X = a + bX^\ast + U.
-\]
+$$
 
 If \(a\neq 0\) or \(b\neq 1\), the instrument is systematically distorted even if \(U\) has mean zero.
 
@@ -207,9 +207,9 @@ This is why calibration data are valuable: they provide observations where the r
 
 Statements such as
 
-\[
+$$
 32.3\pm0.5\text{ cm}
-\]
+$$
 
 are incomplete unless the meaning of \(0.5\) is specified.
 
@@ -226,9 +226,9 @@ Those objects are not interchangeable.
 
 The Guide to the Expression of Uncertainty in Measurement distinguishes **standard uncertainty** from **expanded uncertainty**. If \(u_c\) is a combined standard uncertainty, an expanded uncertainty may be written
 
-\[
+$$
 U=ku_c,
-\]
+$$
 
 where \(k\) is a coverage factor chosen for a stated coverage objective.
 
@@ -246,25 +246,25 @@ cannot be justified from the notation \(32.3\pm0.5\) alone.
 
 Suppose a reported quantity is
 
-\[
+$$
 Y=f(X_1,\ldots,X_p).
-\]
+$$
 
 For small uncertainties and a sufficiently smooth function, first-order propagation gives
 
-\[
+$$
 u_Y^2
 \approx
 \nabla f^\top
 \Sigma
 \nabla f,
-\]
+$$
 
 where \(\Sigma\) is the covariance matrix of the input uncertainties.
 
 Written componentwise,
 
-\[
+$$
 u_Y^2
 \approx
 \sum_i
@@ -276,7 +276,7 @@ u_Y^2
 \frac{\partial f}{\partial x_i}
 \frac{\partial f}{\partial x_j}
 \operatorname{Cov}(X_i,X_j).
-\]
+$$
 
 The covariance terms matter.
 
@@ -349,7 +349,7 @@ Random error reduces precision. Systematic error can create bias. Repeated measu
 
 The central lesson is
 
-\[
+$$
 \boxed{
 \text{measurement process}
 \rightarrow
@@ -357,7 +357,7 @@ The central lesson is
 \rightarrow
 \text{inferential consequence}
 }
-\]
+$$
 
 A useful uncertainty statement must specify what uncertainty means and which sources of error it includes.
 
