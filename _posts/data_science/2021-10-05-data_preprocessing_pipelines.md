@@ -49,11 +49,11 @@ Start by assessing the extent of missing data. Common strategies include droppin
 
 Before choosing, it is worth asking why the values are missing, because the mechanism determines what is safe:
 
-- **Missing completely at random (MCAR).** Missingness is unrelated to anything. Dropping rows is unbiased, merely wasteful.
+- **Missing completely at random (MCAR).** Missingness is independent of the variables relevant to the analysis under the stated model. Complete-case analysis can then be unbiased for many targets, but it is inefficient and still depends on the sampling/design assumptions.
 - **Missing at random (MAR).** Missingness depends on observed variables, for example income being unreported more often in certain regions. Conditional imputation can recover the structure.
 - **Missing not at random (MNAR).** Missingness depends on the unobserved value itself, such as high earners declining to state income. No imputation fixes this; the missingness is informative and should be modelled explicitly.
 
-The practical compromise is to impute with the median for skewed numeric columns and the mode for categoricals, while adding a binary indicator recording that the value was missing. If the missingness carries signal, the model can use it; if not, the indicator costs almost nothing.
+Median/mode imputation with missingness indicators is a useful predictive baseline, not a universally valid inferential treatment of missing data. For statistical inference, the imputation model and uncertainty propagation need more care. If the missingness carries signal, the model can use it; if not, the indicator costs almost nothing.
 
 ## Encoding Categorical Variables
 
@@ -65,7 +65,7 @@ Two details cause production failures. Unseen categories at prediction time will
 
 ## Scaling and Normalization
 
-Scaling features to a common range prevents variables with large magnitudes from dominating a model. Standardization (mean of zero, unit variance) is typical for linear models, while min-max scaling keeps values between 0 and 1.
+Scaling matters when the algorithm or penalty depends on feature magnitude. Unregularized ordinary least squares predictions, for example, are invariant to linear rescaling of columns even though the coefficient units change. Standardization (mean of zero, unit variance) is typical for linear models, while min-max scaling keeps values between 0 and 1.
 
 $$
 z = \frac{x - \mu}{\sigma}, \qquad
@@ -74,7 +74,7 @@ $$
 
 Which models actually need it is worth knowing precisely. Distance-based methods such as k-nearest neighbours, k-means, and SVMs with RBF kernels require scaling, because the distance metric is otherwise dominated by whichever feature has the largest units. Gradient descent converges faster on scaled features, which matters for neural networks and for linear models fitted iteratively. Regularised regression needs it because the penalty applies equally to all coefficients, so unscaled features are penalised inconsistently.
 
-Decision trees, random forests, and gradient boosting do not need scaling at all, since they split on thresholds and are invariant to monotone transformations. Scaling them wastes effort without causing harm.
+Standard axis-aligned decision trees and their common ensembles generally do not need scaling because threshold splits depend on feature ordering. This does not imply every tree implementation is invariant to every transformation, especially when preprocessing or oblique splits are involved. Scaling them wastes effort without causing harm.
 
 When outliers are present, `RobustScaler` centres on the median and scales by the interquartile range, so extreme values do not distort the parameters used for everything else.
 
