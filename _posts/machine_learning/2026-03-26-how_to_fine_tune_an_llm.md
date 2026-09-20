@@ -465,7 +465,15 @@ But quantization is a resource strategy, not a modelling argument. If the datase
 
 The following is an implementation skeleton rather than a universal recipe.
 
-It assumes:
+Install the relevant libraries in a clean environment first:
+
+```bash
+python -m pip install -U transformers datasets accelerate peft trl bitsandbytes
+```
+
+Pin the resolved versions in the project once the experiment is reproducible. Library APIs move quickly enough that an unpinned fine-tuning notebook is not a durable experiment.
+
+The example assumes:
 
 - a causal chat model,
 - a conversational dataset with a `messages` column,
@@ -477,11 +485,7 @@ import torch
 
 from datasets import load_dataset
 from peft import LoraConfig
-from transformers import (
-    AutoModelForCausalLM,
-    AutoTokenizer,
-    BitsAndBytesConfig,
-)
+from transformers import AutoTokenizer, BitsAndBytesConfig
 from trl import SFTConfig, SFTTrainer
 
 
@@ -498,13 +502,6 @@ quantization_config = BitsAndBytesConfig(
     bnb_4bit_quant_type="nf4",
     bnb_4bit_use_double_quant=True,
     bnb_4bit_compute_dtype=torch.bfloat16,
-)
-
-
-model = AutoModelForCausalLM.from_pretrained(
-    model_id,
-    quantization_config=quantization_config,
-    device_map="auto",
 )
 
 
@@ -554,13 +551,16 @@ training_args = SFTConfig(
 
 
 trainer = SFTTrainer(
-    model=model,
+    model=model_id,
     args=training_args,
     train_dataset=dataset["train"],
     eval_dataset=dataset["validation"],
     processing_class=tokenizer,
     peft_config=peft_config,
+    quantization_config=quantization_config,
 )
+
+trainer.model.print_trainable_parameters()
 
 
 trainer.train()
@@ -610,13 +610,13 @@ That convenience increases adapter capacity and trainable parameter count relati
 
 Again, it is an experimental choice.
 
-After constructing the model, inspect the number of trainable parameters rather than assuming the configuration is small:
+After constructing the trainer, inspect the number of trainable parameters rather than assuming the configuration is small:
 
 ```python
-model.print_trainable_parameters()
+trainer.model.print_trainable_parameters()
 ```
 
-or use the corresponding PEFT model method once adapters are attached.
+At that point TRL has wrapped the quantized base model with the PEFT adapter, so the reported count corresponds to the parameters that will actually be optimized.
 
 The ratio
 
