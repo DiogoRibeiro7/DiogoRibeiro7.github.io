@@ -68,7 +68,7 @@ $$
 \theta \mid k \sim \mathrm{Beta}(\alpha + k,\; \beta + n - k) .
 $$
 
-The update rule is simply to add successes to the first parameter and failures to the second. This makes the role of the prior concrete: $\mathrm{Beta}(1,1)$ is uniform and contributes nothing, while $\mathrm{Beta}(30,70)$ carries about as much weight as having already seen 100 observations at a 30% rate.
+The update rule is simply to add successes to the first parameter and failures to the second. This makes the role of the prior concrete: $\mathrm{Beta}(1,1)$ is uniform on $[0,1]$, but it does not literally contribute nothing—the posterior becomes $\mathrm{Beta}(k+1,n-k+1)$. A prior such as $\mathrm{Beta}(30,70)$ is much more concentrated and behaves roughly like substantial prior information centered near a 30% rate, though “equivalent sample size” is only a heuristic interpretation.
 
 ```python
 import numpy as np
@@ -110,7 +110,7 @@ The honest response to prior sensitivity is to test it. Refit under several defe
 
 Conjugate pairs like Beta-Binomial and Normal-Normal are convenient but rare. For realistic models the posterior has no closed form, and the integral in the denominator is intractable.
 
-Markov Chain Monte Carlo solves this by constructing a Markov chain whose stationary distribution is the posterior, then drawing correlated samples from it. Modern samplers such as the No-U-Turn Sampler use gradient information to explore high-dimensional posteriors efficiently, and tools like PyMC, Stan, and NumPyro handle the machinery.
+Markov Chain Monte Carlo avoids the need to evaluate the marginal likelihood when sampling from many posteriors. It constructs a Markov chain whose stationary distribution is proportional to the posterior density and then uses correlated draws to approximate posterior expectations. MCMC does not, by itself, compute the marginal likelihood. Modern samplers such as the No-U-Turn Sampler use gradient information to explore high-dimensional posteriors efficiently, and tools like PyMC, Stan, and NumPyro handle the machinery.
 
 Sampling introduces its own diagnostics. The $\hat{R}$ statistic compares variance within and between chains and should sit very close to 1; effective sample size measures how much independent information the correlated draws carry; divergent transitions in Hamiltonian samplers signal geometry the sampler could not traverse and must not be ignored. A posterior summary from an unconverged chain is not an approximation of the right answer, it is an arbitrary one.
 
@@ -118,7 +118,7 @@ Sampling introduces its own diagnostics. The $\hat{R}$ statistic compares varian
 
 Bayesian techniques are particularly useful when data is scarce or when incorporating domain knowledge is essential. They provide a coherent approach to uncertainty that can complement or outperform classical methods in many situations.
 
-The strengths worth naming are these. Uncertainty propagates automatically: any function of the parameters gets a full distribution rather than a point estimate plus a delta-method approximation. Hierarchical models handle grouped data naturally, letting groups with little data borrow strength from the population. Sequential updating is built in, since today's posterior is tomorrow's prior. And there is no reliance on asymptotic approximations, which matters when samples are small.
+The strengths worth naming are these. Uncertainty propagates automatically: any function of the parameters gets a full distribution rather than a point estimate plus a delta-method approximation. Hierarchical models handle grouped data naturally, letting groups with little data borrow strength from the population. Sequential updating is built in, since today's posterior is tomorrow's prior. Bayesian inference does not require frequentist large-sample approximations in order to define the posterior, although practical computation and approximate inference may still rely on asymptotic, variational, Laplace, or Monte Carlo approximations.
 
 The costs are equally real. Computation is orders of magnitude more expensive than fitting a closed-form estimator. Results depend on modelling choices that must be defended rather than assumed away. And the diagnostics require genuine attention, because a sampler can fail quietly.
 
