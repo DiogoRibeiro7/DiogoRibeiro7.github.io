@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 610" role="img" aria-labelledby="title desc">
+  <title id="title">Direct Preference Optimization compares policy and reference log-odds for chosen and rejected responses</title>
+  <desc id="desc">A prompt branches into chosen and rejected responses. The policy and frozen reference model score both responses. DPO increases the policy's chosen-versus-rejected log-odds relative to the reference model.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="50" y="245" width="180" height="90" rx="12"/>
+    <rect x="335" y="95" width="240" height="90" rx="12"/>
+    <rect x="335" y="395" width="240" height="90" rx="12"/>
+    <path d="M230 290 C280 290 280 140 330 140" marker-end="url(#arrow)"/>
+    <path d="M230 290 C280 290 280 440 330 440" marker-end="url(#arrow)"/>
+
+    <rect x="690" y="80" width="250" height="120" rx="12"/>
+    <rect x="690" y="365" width="250" height="120" rx="12"/>
+    <path d="M575 140 H685" marker-end="url(#arrow)"/>
+    <path d="M575 440 H685" marker-end="url(#arrow)"/>
+
+    <rect x="1065" y="120" width="360" height="310" rx="12"/>
+    <path d="M940 140 C1000 140 1000 205 1060 205" marker-end="url(#arrow)"/>
+    <path d="M940 425 C1000 425 1000 345 1060 345" marker-end="url(#arrow)"/>
+  </g>
+
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="currentColor" text-anchor="middle">
+    <text x="140" y="282" font-size="24" font-weight="700">Prompt x</text>
+    <text x="140" y="311" font-size="16">same context for both</text>
+
+    <text x="455" y="132" font-size="23" font-weight="700">Chosen response</text>
+    <text x="455" y="161" font-size="18">y⁺</text>
+
+    <text x="455" y="432" font-size="23" font-weight="700">Rejected response</text>
+    <text x="455" y="461" font-size="18">y⁻</text>
+
+    <text x="815" y="119" font-size="22" font-weight="700">Policy πθ</text>
+    <text x="815" y="151" font-size="17">log πθ(y⁺|x)</text>
+    <text x="815" y="178" font-size="17">log πθ(y⁻|x)</text>
+
+    <text x="815" y="404" font-size="22" font-weight="700">Reference πref</text>
+    <text x="815" y="436" font-size="17">log πref(y⁺|x)</text>
+    <text x="815" y="463" font-size="17">log πref(y⁻|x)</text>
+
+    <text x="1245" y="165" font-size="22" font-weight="700">Preference margin</text>
+    <text x="1245" y="215" font-size="18">Δθ = log πθ(y⁺|x) − log πθ(y⁻|x)</text>
+    <text x="1245" y="255" font-size="18">Δref = log πref(y⁺|x) − log πref(y⁻|x)</text>
+    <text x="1245" y="310" font-size="21" font-weight="700">DPO increases β(Δθ − Δref)</text>
+    <text x="1245" y="355" font-size="17">without fitting a separate reward model</text>
+    <text x="1245" y="392" font-size="17">and without PPO-style online RL</text>
+
+    <text x="750" y="565" font-size="19" font-weight="700">Preference data specify which response is preferred, not which response is objectively true.</text>
+  </g>
+</svg>
