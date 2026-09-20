@@ -127,21 +127,21 @@ where $$X_i$$ and $$Y_i$$ represent cumulative percentages of the population and
 
 Using the earlier cumulative shares, include the origin $(0,0)$ and apply the trapezoidal form of the Lorenz-area formula:
 
-$
+$$
 G = 1 - \sum_{i=1}^{5}(X_i-X_{i-1})(Y_i+Y_{i-1}).
-$
+$$
 
 Here the five terms are
 
-$
+$$
 0.2(0+0.05)+0.2(0.05+0.15)+0.2(0.15+0.30)+0.2(0.30+0.50)+0.2(0.50+1.00)=0.58.
-$
+$$
 
 Therefore,
 
-$
+$$
 G = 1 - 0.58 = 0.42.
-$
+$$
 
 For this five-person example the Gini coefficient is 0.42. With a finite empirical sample, the maximum attainable uncorrected Gini is $1-1/n$ rather than exactly 1; the population-level 0-to-1 interpretation is the limiting idealization.
 
