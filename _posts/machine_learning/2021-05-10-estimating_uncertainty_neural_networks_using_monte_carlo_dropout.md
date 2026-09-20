@@ -62,9 +62,9 @@ In light of these motivations, the need for a reliable way to estimate uncertain
 
 Dropout is a regularization technique commonly used to prevent overfitting in neural networks. During training, dropout randomly sets a fraction of the network's weights to zero on each forward pass, effectively making the network behave as an ensemble of smaller networks. At test time, however, dropout is typically turned off, and the full network is used for predictions.
 
-Monte Carlo dropout, introduced by Yarin Gal and his colleagues, builds on this technique by keeping dropout enabled during inference. This seemingly simple modification allows the model to behave like a Bayesian approximation, enabling it to produce a distribution of outputs for a given input. By running the neural network multiple times on the same input (with different dropout masks applied each time), we can approximate the posterior predictive distribution of the model’s outputs.
+Monte Carlo dropout, introduced by Yarin Gal and his colleagues, builds on this technique by keeping dropout enabled during inference. Under the variational interpretation developed by Gal and Ghahramani, dropout training can be related to an approximate Bayesian inference scheme for particular model and prior choices. Repeated dropout masks therefore provide one approximate predictive distribution, not a generally calibrated Bayesian posterior. By running the neural network multiple times on the same input (with different dropout masks applied each time), we can approximate the posterior predictive distribution of the model’s outputs.
 
-Mathematically, if $$f(y|x)$$ denotes the output of the neural network for class $$y$$ on input $$x$$, then the Monte Carlo dropout approach involves drawing multiple samples from $$f(y|x)$$ by running the model several times with dropout enabled. These samples can be used to compute the mean and variance of the model's predictions, which serve as estimates of the predictive mean $$\mathbb{E}[f(y|x)]$$ and predictive variance $$\text{Var}[f(y|x)]$$.
+Mathematically, if $$f(y|x)$$ denotes the output of the neural network for class $$y$$ on input $$x$$, then the Monte Carlo dropout approach involves drawing multiple samples from $$f(y|x)$$ by running the model several times with dropout enabled. These samples estimate variation induced by the dropout approximation. In classification, variance of softmax probabilities is not a complete uncertainty decomposition and should not be interpreted as the variance of the true class probability without additional assumptions.
 
 This technique provides a straightforward way to quantify the uncertainty of a model's predictions. In practice, Monte Carlo dropout is used to estimate uncertainty in both classification and regression tasks, although our focus here will be on multi-class classification.
 
@@ -142,31 +142,28 @@ $$
 
 This score reflects the overall uncertainty in the model's predictions. High variance indicates that the model's predictions are inconsistent across different dropout configurations, suggesting that the model is unsure about its prediction.
 
-Variance-based methods are particularly useful when the goal is to detect out-of-distribution inputs or cases where the model is unsure due to lack of training data. However, these methods can be sensitive to the choice of dropout rate and the number of Monte Carlo samples, which may require tuning.
+Large variation across dropout draws can indicate model instability, but MC-dropout variance is not a guaranteed out-of-distribution detector. Distribution shift must be evaluated directly on representative shifted data. However, these methods can be sensitive to the choice of dropout rate and the number of Monte Carlo samples, which may require tuning.
 
-### 4. Error Function and Normal Approximation
+### 4. Mutual Information for Epistemic Variation
 
-In some cases, particularly when dealing with binary or reduced two-class problems, it may be useful to approximate the predictive distribution using a normal distribution. Specifically, we can model the output probabilities for class $$y$$ as a Gaussian distribution:
-
-$$
-p(y|x) \sim \mathcal{N}(\mu_y, \sigma_y^2)
-$$
-where $$\mu_y = \mathbb{E}[f(y|x)]$$ is the predictive mean and $$\sigma_y^2 = \text{Var}[f(y|x)]$$ is the predictive variance.
-
-For a two-class classifier, let $$y$$ be the predicted class (i.e., $$y = \arg\max_y \mathbb{E}[f(y|x)]$$) and $$\neg y$$ be the other class. The probability that a future evaluation of the classifier will also output $$y$$ is given by:
+For classification, predictive entropy mixes irreducible class ambiguity with variation across model draws. A common MC-dropout summary for epistemic uncertainty is mutual information:
 
 $$
-u = \Pr[X \geq 0]
+I[y,w\mid x,D]
+=
+H\left[
+E_w p(y\mid x,w)
+\right]
+-
+E_w
+H\left[
+p(y\mid x,w)
+\right].
 $$
-where $$X \sim \mathcal{N}(\mu_y - \mu_{\neg y}, \sigma_y^2 + \sigma_{\neg y}^2)$$.
 
-This probability can be estimated using the error function:
+The first term is entropy of the averaged predictive probabilities. The second is the average entropy within individual dropout draws. Their difference is large when different sampled subnetworks disagree.
 
-$$
-u = \frac{1}{2} \left[1 + \text{erf}\left(\frac{\mu_y - \mu_{\neg y}}{\sqrt{2 (\sigma_y^2 + \sigma_{\neg y}^2)}}\right)\right]
-$$
-
-This approach is particularly useful for binary classification problems or situations where multi-class problems can be reduced to a binary decision (e.g., when comparing the predicted class to all other classes). It provides a probabilistic estimate of the model’s confidence that a future evaluation will yield the same prediction.
+This decomposition is still only as meaningful as the dropout approximation itself.
 
 ## Choosing the Best Method for Uncertainty Estimation
 
@@ -194,14 +191,29 @@ While Monte Carlo dropout is a powerful technique for estimating uncertainty, it
 
 ## Conclusion
 
-Monte Carlo dropout offers a practical and scalable way to estimate uncertainty in neural network predictions, making it particularly useful for multi-class classification tasks. By keeping dropout enabled during inference and performing multiple forward passes, we can approximate the posterior predictive distribution of the model’s outputs. From this distribution, various methods—such as maximum class probability, entropy, variance, and normal approximation—can be used to compute uncertainty scores.
+Monte Carlo dropout offers a practical and scalable way to estimate uncertainty in neural network predictions, making it particularly useful for multi-class classification tasks. By keeping dropout enabled during inference and performing multiple forward passes, we can approximate the posterior predictive distribution of the model’s outputs. From these stochastic predictions, summaries such as maximum class probability, predictive entropy, variance, and mutual information can be used as uncertainty diagnostics.
 
-Each method has its strengths and is suited to different types of problems. For simple tasks, maximum class probability and entropy offer computationally efficient ways to estimate uncertainty. For more complex or high-stakes applications, variance-based methods and normal approximation provide deeper insights into the model's confidence.
+Each method has its strengths and is suited to different types of problems. For simple tasks, maximum class probability and entropy offer computationally efficient ways to estimate uncertainty. For more complex or high-stakes applications, no single scalar uncertainty score is sufficient; calibration, distribution shift, and task-specific decision thresholds must be evaluated directly.
 
 As uncertainty estimation becomes increasingly important in machine learning applications, Monte Carlo dropout stands out as a powerful tool that can be easily integrated into existing models. However, it is important to be mindful of the method’s limitations, particularly with respect to computational cost and the choice of dropout rate. With proper tuning and calibration, Monte Carlo dropout can significantly enhance the robustness and reliability of neural network predictions, making it an essential technique in the machine learning toolbox.
 
 ## References
 
-- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
-- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.
-- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+- Gal, Y., & Ghahramani, Z. (2016). Dropout as a Bayesian approximation: Representing model uncertainty in deep learning. *Proceedings of ICML*, 1050–1059.
+
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+
+
+## Calibration is a separate requirement
+
+Uncertainty scores are not automatically probabilities with correct coverage or frequency calibration.
+
+For classification, evaluate calibration with reliability diagrams, proper scoring rules such as log loss or Brier score, and calibration error measures. For regression, evaluate predictive interval coverage and sharpness.
+
+Temperature scaling can improve calibration of the mean predictive probabilities, but it does not turn MC dropout into an exact posterior.
+
+## Aleatoric and epistemic uncertainty
+
+MC dropout primarily targets uncertainty associated with model parameters under its approximate Bayesian interpretation. Data noise should be modeled separately when it matters.
+
+For heteroskedastic regression, for example, a network can predict both a conditional mean and an observation variance. Repeated dropout passes then combine parameter uncertainty with an explicit noise model rather than treating all variation as one quantity.

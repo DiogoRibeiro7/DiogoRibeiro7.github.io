@@ -114,8 +114,21 @@ In polynomial regression, the regression coefficients $$\beta_0, \beta_1, \dots,
 ### Interpreting the Coefficients
 
 - **$$\beta_0$$ (Intercept):** This coefficient represents the value of the response variable when all explanatory variables are zero (i.e., the vertical intercept of the curve).
-- **$$\beta_1$$ (Linear Term):** The first-order term $$\beta_1 X$$ determines the slope of the line at lower values of $$X$$. It represents the linear relationship between $$Y$$ and $$X$$.
-- **Higher-Order Coefficients ($$\beta_2, \beta_3, \dots$$):** These coefficients capture the curvature of the model. For example, $$\beta_2$$ determines the extent of the quadratic curvature, and higher-order terms contribute additional flexibility to the model.
+- **$\beta_1$ and higher-order coefficients:** individual raw-power coefficients are basis-dependent and should not usually be interpreted as isolated scientific effects. For a polynomial $m(x)=\sum_j\beta_jx^j$, the local slope is
+
+$$
+m'(x)
+=
+\beta_1
++
+2\beta_2x
++
+3\beta_3x^2
++
+\cdots,
+$$
+
+so the effect of changing $x$ depends on the evaluation point and on several coefficients together.
 
 As the degree of the polynomial increases, the model becomes more flexible, allowing it to fit increasingly complex relationships between $$Y$$ and $$X$$. However, this flexibility comes with the risk of overfitting, which we will discuss in later sections.
 
@@ -141,11 +154,15 @@ By minimizing this sum, we obtain the optimal values of the regression coefficie
 
 ### Computing the Coefficients
 
-The coefficients in polynomial regression are typically computed using linear algebra techniques, such as solving the normal equations:
+The coefficient estimate satisfies the normal equations
 
 $$
-\mathbf{\hat{\beta}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathbf{Y}
+\mathbf{X}^T\mathbf{X}\,\hat\beta
+=
+\mathbf{X}^T\mathbf{Y}.
 $$
+
+The closed-form expression involving $(\mathbf{X}^T\mathbf{X})^{-1}$ is useful algebraically, but production code should not form the inverse explicitly. QR or SVD-based least-squares solvers are numerically safer, especially because polynomial feature matrices can be badly conditioned.
 
 Where:
 
@@ -193,7 +210,7 @@ While polynomial regression is a powerful tool, it comes with certain limitation
 
 While polynomial regression is a common approach for modeling nonlinear relationships, other methods may be more appropriate for certain types of data. Some alternatives include:
 
-- **Spline Regression:** Spline regression uses piecewise polynomials to model nonlinear relationships, providing flexibility without the risk of overfitting that comes with high-degree polynomials. Spline models are often more interpretable and stable than high-degree polynomial models.
+- **Spline Regression:** splines use piecewise low-degree polynomials joined at knots. They localize flexibility and are often numerically more stable than one high-degree global polynomial, but they can still overfit when knot placement or smoothing is poorly controlled.
 
 - **Generalized Additive Models (GAMs):** GAMs allow for nonlinear relationships between the response variable and each explanatory variable by using smooth functions rather than polynomials. This provides greater flexibility while maintaining interpretability.
 
@@ -206,3 +223,18 @@ Polynomial regression is a powerful extension of linear regression that allows u
 While polynomial regression offers flexibility and versatility, it is important to be mindful of the risks of overfitting and numerical instability, particularly when using high-degree polynomials. In practice, selecting the appropriate model degree and using regularization techniques can help mitigate these challenges and improve the model's performance on new data.
 
 As with any modeling technique, the key to success with polynomial regression lies in understanding the underlying data, choosing the right model complexity, and carefully validating the model to ensure it generalizes well to unseen data.
+
+
+## Centering and orthogonal polynomial bases
+
+Raw powers $1,x,x^2,\ldots$ can become highly collinear as degree increases. Centering and scaling $x$ improves conditioning. Orthogonal polynomial bases go further by representing the same polynomial space with nearly orthogonal columns.
+
+The fitted curve can be identical while coefficient values change substantially because coefficients belong to the chosen basis.
+
+For this reason, model interpretation should focus on the fitted response, derivatives, contrasts, or predictions rather than treating each raw-power coefficient as an invariant effect.
+
+## Extrapolation is the main danger
+
+A polynomial can interpolate a bounded region well and behave wildly outside it. High-degree terms dominate as $|x|$ grows, so apparently modest training-range curvature can explode under extrapolation.
+
+Validation should therefore respect the range in which predictions will be used. If deployment requires extrapolation, mechanistic models, monotone constraints, splines with controlled tails, or other structured approaches may be safer.

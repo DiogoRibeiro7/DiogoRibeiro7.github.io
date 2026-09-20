@@ -47,7 +47,7 @@ Forest fires pose a significant threat to ecosystems, infrastructure, and human 
 
 To better manage forest fires, spatial analysis tools like Geographic Information Systems (GIS) have become crucial. These systems help identify high-risk areas, or hotspots, where forest fires are more likely to occur. This allows decision-makers to prioritize resources, implement early-warning systems, and deploy preventive measures.
 
-While many GIS hotspot analysis techniques have been applied in various fields, from crime prediction to public health, their application in forest fire management has gained momentum. The focus of this article is to explore three widely used GIS-based hotspot analysis methods—Kernel Density Estimation (KDE), Getis-Ord Gi*, and Anselin Local Moran’s I—and validate their effectiveness in identifying forest fire hotspots in Belait District, Brunei Darussalam. By validating the results using forest fire contributory factors, we aim to ascertain the most accurate method for forest fire hotspot identification.
+While many GIS hotspot analysis techniques have been applied in various fields, from crime prediction to public health, their application in forest fire management has gained momentum. The focus of this article is to explore three widely used GIS-based hotspot analysis methods—Kernel Density Estimation (KDE), Getis-Ord Gi*, and Anselin Local Moran’s I—and validate their effectiveness in identifying forest fire hotspots in Belait District, Brunei Darussalam. The methods answer different spatial questions and should not be ranked by overlap with presumed contributory factors. A defensible comparison must define the target first: event intensity, statistically unusual clustering, or predictive fire risk.
 
 ### The Threat of Forest Fires in Southeast Asia
 
@@ -63,19 +63,19 @@ Hotspot analysis enables researchers and policymakers to detect geographic clust
 
 #### Kernel Density Estimation (KDE)
 
-KDE is a non-parametric technique that transforms discrete event data points into a continuous surface, representing the intensity of event occurrences across an area. By smoothing point data over a geographic area, KDE provides a visual heat map that shows high- and low-density regions of forest fires. This technique is advantageous for its simplicity and ability to handle small datasets .
+KDE smooths observed event locations into an estimated spatial intensity surface. It describes where recorded calls are concentrated; it does not by itself estimate fire probability or causal fire risk. By smoothing point data over a geographic area, KDE provides a visual heat map that shows high- and low-density regions of forest fires. This technique is advantageous for its simplicity and ability to handle small datasets .
 
 KDE has been used widely in various studies, from crime prediction to environmental monitoring. However, its main limitation is that it does not provide statistical significance testing, which means it may overestimate or underestimate hotspot areas. In the context of forest fires, KDE is often employed to assess the intensity of fire events and guide the deployment of firefighting resources.
 
 #### Getis-Ord Gi*
 
-The Getis-Ord Gi statistic* is a spatial autocorrelation measure used to identify clusters of high or low values in a dataset. This method evaluates whether the spatial distribution of events is random or clustered by calculating z-scores and p-values. A high z-score and low p-value indicate statistically significant clustering, marking an area as a hotspot. Getis-Ord Gi* is particularly useful in determining the spatial extent of hotspots and their statistical significance .
+The Getis-Ord Gi statistic* is a spatial autocorrelation measure used to identify clusters of high or low values in a dataset. This method evaluates whether the spatial distribution of events is random or clustered by calculating z-scores and p-values. A high positive Gi* z-score can indicate a local concentration of high values relative to the spatial-weighting model. The result depends on how spatial units and neighbors are defined, and local multiple-testing issues should be considered when many locations are scanned. Getis-Ord Gi* is particularly useful in determining the spatial extent of hotspots and their statistical significance .
 
 However, Getis-Ord Gi* has limitations when it comes to the extent of clustering. The size of the study area and the chosen distance threshold significantly influence the results. In larger study areas, Getis-Ord Gi* may fail to identify small but significant clusters. For forest fire management, this means that crucial fire-prone areas may be missed due to the method’s sensitivity to scale.
 
 #### Anselin Local Moran’s I
 
-Anselin Local Moran’s I is another spatial autocorrelation measure used to identify local clusters and spatial outliers. Unlike Getis-Ord Gi*, which considers both the target location and its neighbors, Local Moran’s I only focuses on the neighboring points to determine if a cluster exists. A high positive Moran’s I value indicates spatial clusters of similar values, while a negative value identifies outliers .
+Anselin Local Moran’s I is another spatial autocorrelation measure used to identify local clusters and spatial outliers. Local Moran's I compares each location's value with a weighted combination of neighboring values and can identify high-high, low-low, and spatial-outlier patterns. It does not ignore the target value. A high positive Moran’s I value indicates spatial clusters of similar values, while a negative value identifies outliers .
 
 Local Moran’s I is useful for detecting smaller clusters that might be overlooked by broader measures like Getis-Ord Gi*. However, it can be too localized for large-scale studies, and its results can sometimes conflict with those of other hotspot analysis techniques.
 
@@ -116,7 +116,7 @@ Surprisingly, Anselin Local Moran’s I did not identify any statistically signi
 
 #### Hotspot Validation Using Contributory Factors
 
-Given the discrepancies between the hotspot analysis methods, it was essential to validate the predicted hotspots against the four forest fire contributory factors. The results showed varying levels of agreement between the methods.
+Given the discrepancies between the hotspot analysis methods, it was essential to validate the predicted hotspots against the four forest fire contributory factors. Overlap with population, vegetation, elevation, or rainfall is descriptive association, not validation of hotspot accuracy. Those variables may themselves be spatially correlated with call density and should be modeled explicitly if fire risk is the target.
 
 ##### Vegetation Cover
 
@@ -142,7 +142,7 @@ While Getis-Ord Gi* provides statistically significant results, its sensitivity 
 
 ### Conclusion and Recommendations
 
-This study demonstrates that Kernel Density Estimation (KDE) is a reliable method for identifying forest fire hotspots, particularly when validated against contributory factors such as population density, precipitation, elevation, and vegetation cover. KDE’s ability to provide a continuous density surface makes it a valuable tool for visualizing and managing forest fire risk in large and diverse geographic areas like Belait.
+This comparison shows that KDE is useful for visualizing fire-call concentration, but it does not establish that KDE is the most accurate fire-risk method, particularly when validated against contributory factors such as population density, precipitation, elevation, and vegetation cover. KDE’s ability to provide a continuous density surface makes it a valuable tool for visualizing and managing forest fire risk in large and diverse geographic areas like Belait.
 
 The validation process also highlighted the importance of using multiple contributory factors to assess hotspot accuracy. By incorporating additional factors such as air temperature and wind speed, future studies could further improve hotspot identification accuracy and support more effective forest fire prevention strategies.
 
@@ -352,3 +352,12 @@ This code provides a starting point for performing GIS-based forest fire hotspot
 - Diggle, P.J. (2013). *Statistical Analysis of Spatial and Spatio-Temporal Point Patterns*. CRC Press.  
 - Bivand, R.S., Pebesma, E., & Gómez-Rubio, V. (2013). *Applied Spatial Data Analysis with R*. Springer Science & Business Media.
 - Brunsdon, C., & Comber, L. (2015). *An Introduction to R for Spatial Analysis and Mapping*. Sage Publications.
+
+
+### What should be validated instead?
+
+If the objective is prediction, fit hotspot models using an earlier period and evaluate them on later fire events. If the objective is inference, specify the spatial null model and control the local testing problem. If the objective is operational allocation, define a loss function for missed fires and false deployments.
+
+Exposure also matters. More calls may occur near populated areas because fires are more likely to be observed and reported there. A call-density surface therefore combines fire occurrence with detection and reporting processes.
+
+For planar KDE, coordinates must be projected into a metric coordinate system before choosing a bandwidth in metres. For road, river, or other constrained networks, network distance may be more appropriate than Euclidean distance.

@@ -49,7 +49,7 @@ title: The Math Behind Kernel Density Estimation
 
 ## Introduction
 
-Kernel Density Estimation (KDE) is a fundamental tool in non-parametric statistics, widely used for estimating the probability density function (PDF) of a dataset. Unlike parametric methods, which assume the data follows a known distribution (such as Gaussian), KDE makes no assumptions about the underlying distribution. Instead, it uses kernel functions to construct a smooth estimate of the density from the data, making it extremely versatile in various domains like data science, machine learning, and statistics.
+Kernel Density Estimation (KDE) is a fundamental tool in non-parametric statistics, widely used for estimating the probability density function (PDF) of a dataset. KDE avoids choosing a finite-dimensional parametric family such as Gaussian or Gamma, but it is not assumption-free. Standard KDE theory assumes a sampling process, a smooth enough target density, a kernel, and a bandwidth sequence; boundary behavior and dependence can also matter. Instead, it uses kernel functions to construct a smooth estimate of the density from the data, making it extremely versatile in various domains like data science, machine learning, and statistics.
 
 This article examines the mathematical foundations of KDE, covering its key components, such as kernel functions and bandwidth selection. By exploring the underlying math, we aim to demystify how KDE works, how it compares to other density estimation methods, and how it can be applied effectively in real-world scenarios.
 
@@ -97,7 +97,7 @@ Common kernel functions include:
   $$
   K(x) = \frac{3}{4}(1 - x^2) \quad \text{for} \quad |x| \leq 1
   $$
-  The Epanechnikov kernel is optimal in the sense of minimizing the mean integrated squared error, but its compact support makes it less smooth than the Gaussian kernel.
+  Among common second-order kernels, the Epanechnikov kernel is asymptotically optimal for a particular leading-order MISE criterion. In practice, bandwidth choice usually matters much more than the kernel shape.
 
 - **Uniform Kernel**:
   $$
@@ -124,7 +124,7 @@ Several **efficient algorithms** have been developed to speed up KDE computation
 
 One way to accelerate KDE computation is by using the **Fast Fourier Transform (FFT)**. The idea behind FFT-based KDE is that convolution in the time domain (or spatial domain) corresponds to multiplication in the frequency domain. This means that KDE can be performed much faster by transforming the data into the frequency domain, applying the kernel, and then transforming back.
 
-For one-dimensional data, FFT can reduce the complexity of KDE from $$ O(nm) $$ to $$ O(n \log n) $$, making it feasible to apply KDE to much larger datasets.
+For gridded one-dimensional KDE, binning plus FFT convolution can reduce repeated evaluation substantially. Complexity depends on the grid size and binning implementation, so a universal $O(n\log n)$ statement is too coarse, making it feasible to apply KDE to much larger datasets.
 
 #### 2. **Tree-based Methods (KD-Trees and Ball Trees)**
 
@@ -150,9 +150,9 @@ KDE has a wide range of applications across many fields, particularly in data sc
   
 - **Anomaly Detection**: In machine learning, KDE is used to detect anomalies by identifying regions in the data space where the estimated density is low. Anomalies, or outliers, are points that fall in these low-density regions.
 
-- **Density-Based Clustering**: KDE is central to density-based clustering algorithms, such as DBSCAN. These methods rely on estimating the density of points in a region to form clusters, rather than relying solely on distance metrics.
+- **Density-based analysis**: KDE can support mode finding and level-set clustering. DBSCAN is related conceptually through local density, but it does not compute a KDE; it uses neighborhood counts defined by $\varepsilon$ and a minimum-points threshold.
 
-- **Non-parametric Regression**: KDE can be extended to perform **non-parametric regression**, where the goal is to estimate the relationship between input variables and the output without assuming a fixed functional form. This approach is particularly useful when the relationship between variables is complex and unknown.
+- **Kernel regression**: density-estimation ideas lead to estimators such as Nadaraya-Watson regression, but kernel regression is a separate estimator rather than simply “KDE extended to regression.” This approach is particularly useful when the relationship between variables is complex and unknown.
 
 ### 2. **Statistical Applications**
 
@@ -164,7 +164,7 @@ KDE has a wide range of applications across many fields, particularly in data sc
 
 #### **Financial Modeling**
 
-In finance, KDE is used to estimate the distribution of asset returns, helping analysts assess risk and uncertainty. KDE can smooth the often volatile returns data and provide more accurate estimates of **value-at-risk (VaR)** and other financial metrics.
+In finance, KDE is used to estimate the distribution of asset returns, helping analysts assess risk and uncertainty. KDE can estimate a smooth return distribution, but tail-risk quantities such as VaR are highly sensitive to bandwidth, boundary/tail behavior, dependence, and the scarcity of extreme observations; KDE is not automatically more accurate for tail risk. and other financial metrics.
 
 #### **Healthcare and Epidemiology**
 
@@ -239,3 +239,32 @@ Despite its advantages, KDE has limitations, particularly in high-dimensional se
 
 10. **Bowman, A. W., & Azzalini, A. (1997)**. *Applied Smoothing Techniques for Data Analysis: The Kernel Approach with S-Plus Illustrations*. Oxford University Press.
     - This book focuses on practical applications of kernel smoothing methods, including KDE, with numerous examples and illustrations using real data. It is a helpful resource for applied statisticians and data scientists.
+
+
+## Bias, variance, and bandwidth
+
+For a sufficiently smooth one-dimensional density and symmetric second-order kernel, the leading pointwise bias is typically of order
+
+$$
+O(h^2),
+$$
+
+while variance is of order
+
+$$
+O\left(\frac{1}{nh}\right).
+$$
+
+Consistency therefore requires a bandwidth sequence satisfying roughly
+
+$$
+h\to0
+\quad\text{and}\quad
+nh\to\infty.
+$$
+
+This makes the bandwidth the central regularization parameter. Too small a bandwidth produces high variance; too large a bandwidth erases real structure.
+
+## Boundary bias
+
+If the support is constrained, for example $X\ge0$, a symmetric kernel places mass outside the legal support near zero. Boundary correction, transformed KDE, reflection, or a model designed for the support may be required.

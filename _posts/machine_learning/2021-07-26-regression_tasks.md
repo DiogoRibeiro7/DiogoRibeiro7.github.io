@@ -65,21 +65,7 @@ Ready to dive in? Let’s explore the world of regression.
 
 ## 1. A Taxonomy of Regression Methods
 
-To guide us through this, we can use a simple “rule of thumb” taxonomy to choose a suitable regression approach:
-
-### Key Questions
-
-1. **Is the relationship between $$X$$ and $$y$$ linear or polynomial?**
-   - **Yes**:
-     - Is the number of features $$k$$ small?
-       - **Yes**: Use Linear or Polynomial Regression.
-       - **No**: Use Principal Component Regression.
-   - **No**:
-     - Is a probabilistic output needed?
-       - **Yes**: Use Gaussian Process Regression (GPR).
-       - **No**: Use Support Vector Regression (SVR).
-
-This taxonomy provides a foundation for navigating regression tasks. In the following sections, we’ll explore each of these methods in detail—both theoretically and with code examples.
+A regression method should not be selected from a four-branch flowchart. Start with the target, deployment regime, loss function, sample size, feature structure, extrapolation requirements, and whether uncertainty must be calibrated. Then compare plausible models under the same validation design. In the following sections, we’ll explore each of these methods in detail—both theoretically and with code examples.
 
 ---
 
@@ -102,7 +88,7 @@ Where:
 Linear regression assumes that the output is a weighted sum of the input features. When we perform **Ordinary Least Squares (OLS)** regression, the weights are calculated by minimizing the sum of squared errors between the predicted and actual values:
 
 $$
-W = (X^TX)^{-1} X^T y
+X^TX\,W = X^Ty
 $$
 
 In polynomial regression, the principle is the same, but we transform the input matrix $$X$$ into a new matrix of polynomial features. For example, for a second-degree polynomial, the transformed matrix $$X_\text{poly}$$ contains columns for each feature raised to the powers of 1, 2, and possibly higher.
@@ -194,15 +180,15 @@ y_pcr_pred = model_pcr.predict(X_pca)
 
 ### 3.3 When to Use
 
-Principal Component Regression is ideal when you have many features, especially if they are highly correlated. By reducing the dimensionality, you simplify the model and avoid overfitting, while still capturing the essential patterns in the data.
+PCR can help when predictors are highly collinear or dimension reduction is useful, but PCA is unsupervised: components explaining the most predictor variance need not be the components most predictive of $y$. The number of components must be selected inside cross-validation, and alternatives such as ridge, lasso, or partial least squares should be compared.
 
 ## 4. Gaussian Process Regression (GPR)
 
 ### 4.1 Explanation
 
-Gaussian Process Regression (GPR) is a powerful tool when you need not only a prediction but also an estimate of uncertainty in that prediction. GPR models the target as a random variable following a Gaussian distribution. Given a new data point $x$, GPR provides not just a single prediction but a distribution of possible outcomes, which can be extremely useful when dealing with uncertain or noisy data.
+Gaussian Process Regression (GPR) is a powerful tool when you need not only a prediction but also an estimate of uncertainty in that prediction. A Gaussian process places a joint Gaussian prior over latent function values; the observed target need not be marginally Gaussian in every GP model. Given a new data point $x$, GPR provides not just a single prediction but a distribution of possible outcomes, which can be extremely useful when dealing with uncertain or noisy data.
 
-The beauty of GPR lies in its ability to offer both mean predictions and confidence intervals, allowing for uncertainty quantification. This makes it a robust choice for applications like geospatial modeling, stock price prediction, or any domain where data uncertainty is high.
+GPR can provide posterior or predictive uncertainty intervals under the chosen kernel, likelihood, and hyperparameter treatment, allowing for uncertainty quantification. This makes it a robust choice for applications like geospatial modeling, stock price prediction, or any domain where data uncertainty is high.
 
 ### 4.2 Code Example
 
@@ -244,7 +230,7 @@ GPR is well-suited for small datasets where uncertainty is critical. It works be
 
 ### 5.1 Explanation
 
-Support Vector Regression (SVR) is a versatile and powerful regression technique, especially when dealing with nonlinear relationships. Unlike traditional regression methods that minimize the error directly, SVR tries to fit the best margin around the target values. It uses a concept known as a "kernel trick" to map input features into higher-dimensional spaces, making it easier to find a linear separation in complex datasets.
+Support Vector Regression (SVR) is a versatile and powerful regression technique, especially when dealing with nonlinear relationships. Unlike traditional regression methods that minimize the error directly, SVR fits a function with an $\varepsilon$-insensitive loss and regularization. Kernel functions allow nonlinear regression without explicitly constructing the feature map; unlike classification SVMs, the problem is not one of class separation.
 
 ### 5.2 Code Example
 
@@ -306,3 +292,21 @@ Remember, the key to effective regression modeling lies in understanding your da
 - Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of KDD*, 785-794.
 - Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.
 - Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+
+
+## Compare models on the same target
+
+Use pipelines so preprocessing is learned inside each training fold. Evaluate every candidate with the same split and loss.
+
+For ordinary regression, useful questions include:
+
+- Will deployment require extrapolation?
+- Are prediction intervals or only point predictions needed?
+- Is the loss symmetric?
+- Are groups or time dependence present?
+- Is coefficient interpretation a scientific requirement?
+- How much data is available relative to model flexibility?
+
+No algorithm name answers those questions.
+
+A strong default benchmark set is often smaller than a catalogue: linear/ridge regression, one smooth nonlinear model such as splines or GAMs, and one flexible tree or kernel model. Add complexity only when held-out performance or scientific structure justifies it.

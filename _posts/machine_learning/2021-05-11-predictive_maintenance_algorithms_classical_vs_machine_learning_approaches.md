@@ -45,7 +45,7 @@ title: 'A Comparison of Predictive Maintenance Algorithms: Classical vs. Machine
 
 Predictive maintenance (PdM) is an essential strategy in industries reliant on machinery and equipment. It aims to predict equipment failures before they occur by analyzing historical data and current conditions, allowing for maintenance to be scheduled proactively rather than reactively. At the core of this approach are various predictive algorithms, ranging from classical statistical models to modern machine learning techniques.
 
-Traditionally, industries have relied on time series analysis and regression-based models for failure prediction. However, the rise of machine learning and artificial intelligence has introduced new algorithms capable of learning from complex, high-dimensional data and uncovering patterns that classical methods might miss. This has led to a debate on the relative merits of classical predictive maintenance algorithms versus machine learning approaches.
+The useful distinction is not “classical” versus “machine learning.” Predictive maintenance contains several targets—condition monitoring, anomaly detection, failure-within-horizon classification, time-to-event modeling, and remaining-useful-life estimation—and different methods solve different targets.
 
 This article explores the strengths and limitations of both approaches by comparing their performance, accuracy, and scalability in real-world applications.
 
@@ -182,7 +182,7 @@ To compare classical predictive maintenance models with machine learning algorit
 
 ### 4.1 Predictive Performance and Accuracy
 
-Machine learning models, especially deep learning techniques like neural networks, tend to outperform classical models in terms of predictive accuracy, particularly when dealing with complex, nonlinear systems. While ARIMA and regression-based models work well for simple, linear relationships, they often struggle with the intricate patterns that emerge in multivariate or nonlinear systems.
+There is no general accuracy ordering in which machine-learning models outperform statistical or reliability models. Performance depends on the target, sample size, failure-label quality, sensor structure, validation split, and deployment regime. While ARIMA and regression-based models work well for simple, linear relationships, they often struggle with the intricate patterns that emerge in multivariate or nonlinear systems.
 
 For example, a recurrent neural network (RNN) may capture the temporal dependencies in time-series data more effectively than ARIMA when the system exhibits complex, nonlinear behaviors. Similarly, random forests can model interactions between multiple variables more accurately than traditional regression techniques.
 
@@ -192,7 +192,7 @@ However, the performance of machine learning models depends heavily on the quali
 
 Scalability is another crucial factor when comparing classical and machine learning models. In modern industrial environments, vast amounts of data are generated from IoT sensors, machinery, and operational systems. Machine learning algorithms, particularly deep learning models, are designed to handle large datasets and can scale to meet the needs of big data applications.
 
-Classical models like ARIMA, on the other hand, often struggle to scale effectively. They are computationally less expensive but may lack the flexibility to process large-scale data or handle real-time predictions.
+Computational scalability and model flexibility are separate issues. ARIMA-like models can be inexpensive and straightforward to update in real time for low-dimensional signals, while some tree ensembles or neural networks can become expensive when retraining, feature generation, and calibration are included.
 
 Machine learning models, such as random forests and neural networks, are more suited for big data environments, as they can process vast amounts of historical and real-time data simultaneously. Additionally, the rise of edge computing and distributed systems has enabled machine learning algorithms to be deployed in real-time predictive maintenance systems, further enhancing their scalability.
 
@@ -208,13 +208,11 @@ However, recent advancements in explainable AI (XAI) are addressing this challen
 
 Both classical and machine learning approaches have been successfully applied to predictive maintenance across various industries. The choice of algorithm depends on the specific requirements of the application, including the complexity of the equipment, the availability of data, and the need for interpretability.
 
-### Case Study 1: ARIMA in Manufacturing
+### Evidence should be reproducible
 
-In a manufacturing plant, ARIMA models were used to predict the failure of CNC machines based on time-series data of vibration and temperature. The simplicity and interpretability of ARIMA made it a suitable choice, as the plant's equipment followed a clear, linear degradation pattern. The model successfully predicted when maintenance was needed, reducing unexpected downtime by 20%.
+The previous version gave specific claims such as a 20% downtime reduction from ARIMA and 90% neural-network accuracy with a 30% maintenance-cost reduction without citing reproducible sources. Those numbers should not be treated as evidence.
 
-### Case Study 2: Neural Networks in Energy
-
-A major energy company implemented deep learning models, including LSTM networks, to predict failures in wind turbines. The turbines generated massive amounts of sensor data, including wind speed, temperature, and rotational speed. By training the LSTM models on this data, the company was able to predict failures with 90% accuracy, leading to a 30% reduction in maintenance costs and improved turbine uptime.
+A defensible comparison should use the same assets, forecast horizon, feature availability, and loss function, and should include transparent baselines.
 
 ## 6. Future Directions in Predictive Maintenance Algorithms
 
@@ -243,3 +241,16 @@ The choice between classical and machine learning approaches depends on various 
 - Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
 - Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+
+
+## Match the method to the target
+
+A useful mapping is:
+
+- **signal forecasting:** ARIMA, state-space models, Gaussian processes, sequence models;
+- **time to failure:** survival and reliability models, accelerated-failure-time models, survival forests;
+- **failure within a horizon:** calibrated classifiers;
+- **latent degradation state:** state-space or stochastic degradation models;
+- **high-dimensional raw signals:** spectral methods, convolutional or representation-learning models when data justify them.
+
+The strongest benchmark is not “old versus new.” It is the simplest defensible model versus more flexible alternatives under asset-level and time-respecting validation.
