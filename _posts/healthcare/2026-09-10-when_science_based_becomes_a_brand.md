@@ -48,13 +48,13 @@ methodology: >-
   and communication style.
 reviewed_at: '2026-09-19'
 header:
-  image: /assets/images/headers/photo-microscope.jpg
-  og_image: /assets/images/headers/photo-microscope.jpg
-  overlay_image: /assets/images/headers/photo-microscope.jpg
+  image: /assets/images/headers/science-based-brand.jpg
+  og_image: /assets/images/headers/science-based-brand.jpg
+  overlay_image: /assets/images/headers/science-based-brand.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-microscope.jpg
-  twitter_image: /assets/images/headers/photo-microscope.jpg
+  teaser: /assets/images/headers/science-based-brand.jpg
+  twitter_image: /assets/images/headers/science-based-brand.jpg
 ---
 
 The phrase *science-based* has become one of the most valuable labels in online health and fitness. It appears in coaching programmes, supplement advertising, nutrition advice, exercise content and wellness brands. Sometimes it describes a serious commitment to evidence. Sometimes it functions mainly as a rhetorical credential.

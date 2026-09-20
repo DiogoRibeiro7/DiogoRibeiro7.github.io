@@ -57,13 +57,13 @@ methodology: >-
   a test of every quoted number are in the repository.
 reviewed_at: '2026-09-19'
 header:
-  image: /assets/images/headers/photo-microscope.jpg
-  og_image: /assets/images/headers/photo-microscope.jpg
-  overlay_image: /assets/images/headers/photo-microscope.jpg
+  image: /assets/images/headers/aspartame-fruit-dose.jpg
+  og_image: /assets/images/headers/aspartame-fruit-dose.jpg
+  overlay_image: /assets/images/headers/aspartame-fruit-dose.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-microscope.jpg
-  twitter_image: /assets/images/headers/photo-microscope.jpg
+  teaser: /assets/images/headers/aspartame-fruit-dose.jpg
+  twitter_image: /assets/images/headers/aspartame-fruit-dose.jpg
 ---
 
 A recurring argument in discussions of aspartame is that its breakdown products also occur in ordinary foods. It is meant to reassure: if the body meets the same molecules after eating fruit, concern about the sweetener must be misplaced. The premise is true and useful. After ingestion aspartame is hydrolysed in the gut into phenylalanine, aspartic acid and methanol, none of which is unique to a sweetener. Phenylalanine and aspartic acid are amino acids present in every protein, and methanol is released from the pectin in fruit and produced by the body's own metabolism.

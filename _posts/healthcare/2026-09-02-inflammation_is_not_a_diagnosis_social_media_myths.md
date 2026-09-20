@@ -58,13 +58,13 @@ methodology: >-
   quoted number are in the repository.
 reviewed_at: '2026-09-19'
 header:
-  image: /assets/images/headers/photo-microscope.jpg
-  og_image: /assets/images/headers/photo-microscope.jpg
-  overlay_image: /assets/images/headers/photo-microscope.jpg
+  image: /assets/images/headers/inflammation-marker.jpg
+  og_image: /assets/images/headers/inflammation-marker.jpg
+  overlay_image: /assets/images/headers/inflammation-marker.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-microscope.jpg
-  twitter_image: /assets/images/headers/photo-microscope.jpg
+  teaser: /assets/images/headers/inflammation-marker.jpg
+  twitter_image: /assets/images/headers/inflammation-marker.jpg
 ---
 
 Inflammation has become one of the most overextended words in online health communication. It is invoked to explain fatigue, weight gain, anxiety, acne, poor sleep, cardiovascular disease, gut symptoms, brain fog and ageing, and once the word appears a corresponding product usually follows: an anti-inflammatory diet, a supplement, a cold plunge. The appeal is understandable, because inflammation is real and is involved in a great many diseases. That does not make it a diagnosis.

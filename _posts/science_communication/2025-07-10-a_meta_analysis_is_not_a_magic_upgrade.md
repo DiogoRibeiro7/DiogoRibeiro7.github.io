@@ -56,13 +56,13 @@ methodology: >-
   and from bias in the evidence base.
 reviewed_at: '2026-09-20'
 header:
-  image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
-  og_image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
-  overlay_image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  image: /assets/images/headers/meta-analysis-pooling.jpg
+  og_image: /assets/images/headers/meta-analysis-pooling.jpg
+  overlay_image: /assets/images/headers/meta-analysis-pooling.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-statistics-overlapping-cis.jpg
-  twitter_image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
+  teaser: /assets/images/headers/meta-analysis-pooling.jpg
+  twitter_image: /assets/images/headers/meta-analysis-pooling.jpg
 ---
 
 <!--

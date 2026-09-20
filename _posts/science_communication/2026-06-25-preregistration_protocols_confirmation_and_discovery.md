@@ -51,13 +51,13 @@ methodology: >-
   as an audit mechanism rather than a guarantee of correctness.
 reviewed_at: '2026-09-20'
 header:
-  image: /assets/images/headers/photo-library.jpg
-  og_image: /assets/images/headers/photo-library.jpg
-  overlay_image: /assets/images/headers/photo-library.jpg
+  image: /assets/images/headers/preregistration-protocol.jpg
+  og_image: /assets/images/headers/preregistration-protocol.jpg
+  overlay_image: /assets/images/headers/preregistration-protocol.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-library.jpg
-  twitter_image: /assets/images/headers/photo-library.jpg
+  teaser: /assets/images/headers/preregistration-protocol.jpg
+  twitter_image: /assets/images/headers/preregistration-protocol.jpg
 ---
 
 <!--

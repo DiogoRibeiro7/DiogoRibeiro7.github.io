@@ -56,13 +56,13 @@ methodology: >-
   between-study heterogeneity.
 reviewed_at: '2026-09-20'
 header:
-  image: /assets/images/headers/photo-library.jpg
-  og_image: /assets/images/headers/photo-library.jpg
-  overlay_image: /assets/images/headers/photo-library.jpg
+  image: /assets/images/headers/study-design-question.jpg
+  og_image: /assets/images/headers/study-design-question.jpg
+  overlay_image: /assets/images/headers/study-design-question.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-library.jpg
-  twitter_image: /assets/images/headers/photo-library.jpg
+  teaser: /assets/images/headers/study-design-question.jpg
+  twitter_image: /assets/images/headers/study-design-question.jpg
 ---
 
 <!--

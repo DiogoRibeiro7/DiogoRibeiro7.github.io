@@ -53,13 +53,13 @@ methodology: >-
   testing, generalisation and evidence synthesis.
 reviewed_at: '2026-09-20'
 header:
-  image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
-  og_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
-  overlay_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  image: /assets/images/headers/one-study-not-enough.jpg
+  og_image: /assets/images/headers/one-study-not-enough.jpg
+  overlay_image: /assets/images/headers/one-study-not-enough.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-statistics-confidence-intervals.jpg
-  twitter_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
+  teaser: /assets/images/headers/one-study-not-enough.jpg
+  twitter_image: /assets/images/headers/one-study-not-enough.jpg
 ---
 
 <!--
