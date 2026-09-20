@@ -36,7 +36,7 @@ Ordinary least squares is simple enough to be taught in a first statistics cours
 
 The estimator itself is only an optimization rule.
 
-Given a response vector \(y\) and design matrix \(X\), OLS chooses
+Given a response vector $y$ and design matrix $X$, OLS chooses
 
 $$
 \hat\beta
@@ -45,7 +45,7 @@ $$
 (y-Xb)^\top(y-Xb).
 $$
 
-If \(X^\top X\) is invertible,
+If $X^\top X$ is invertible,
 
 $$
 \hat\beta
@@ -89,7 +89,7 @@ $$
 (I-H)y.
 $$
 
-Geometrically, OLS projects the observed response onto the column space of \(X\).
+Geometrically, OLS projects the observed response onto the column space of $X$.
 
 That geometric statement is exact and does not require normal errors.
 
@@ -173,7 +173,7 @@ $$
 
 The word **linear** matters.
 
-The theorem says that among estimators that are linear in \(y\) and unbiased, OLS has the smallest covariance matrix in the positive-semidefinite ordering.
+The theorem says that among estimators that are linear in $y$ and unbiased, OLS has the smallest covariance matrix in the positive-semidefinite ordering.
 
 It does **not** say that OLS has minimum variance among all possible unbiased estimators.
 
@@ -195,7 +195,7 @@ $$
 E(\varepsilon\mid X)=0
 $$
 
-still holds, OLS coefficients remain unbiased under the classical fixed-\(X\) argument and consistent under standard asymptotic conditions.
+still holds, OLS coefficients remain unbiased under the classical fixed-$X$ argument and consistent under standard asymptotic conditions.
 
 What fails is the homoskedastic variance formula.
 
@@ -257,9 +257,9 @@ $$
 \mathcal N(0,\sigma^2I),
 $$
 
-then maximizing the Gaussian likelihood with respect to \(\beta\) is equivalent to minimizing the residual sum of squares.
+then maximizing the Gaussian likelihood with respect to $\beta$ is equivalent to minimizing the residual sum of squares.
 
-So under the Gaussian model, OLS is also the maximum-likelihood estimator for \(\beta\).
+So under the Gaussian model, OLS is also the maximum-likelihood estimator for $\beta$.
 
 Normality is not required for the algebraic OLS solution, finite-sample unbiasedness under conditional mean zero, or large-sample consistency.
 
@@ -273,17 +273,17 @@ $$
 Y=\beta_0+\beta_1X+\varepsilon.
 $$
 
-The coefficient \(\beta_1\) is causal only if the design and assumptions support that interpretation.
+The coefficient $\beta_1$ is causal only if the design and assumptions support that interpretation.
 
-If an omitted variable \(Z\) affects both \(X\) and \(Y\), then
+If an omitted variable $Z$ affects both $X$ and $Y$, then
 
 $$
 E(\varepsilon\mid X)\neq 0
 $$
 
-after \(Z\) is omitted.
+after $Z$ is omitted.
 
-The regression coefficient can then mix the effect of \(X\) with systematic differences in \(Z\).
+The regression coefficient can then mix the effect of $X$ with systematic differences in $Z$.
 
 Adding more observations does not remove omitted-variable bias.
 
@@ -299,7 +299,7 @@ Conversely, a coefficient can have a clear scientific interpretation while the l
 
 For prediction, the relevant target is out-of-sample loss.
 
-For parameter inference, the relevant target is uncertainty about \(\beta\) under a model.
+For parameter inference, the relevant target is uncertainty about $\beta$ under a model.
 
 For causal inference, the target is a causal estimand under an identification strategy.
 
@@ -309,7 +309,7 @@ They should not be conflated.
 
 ## What multicollinearity actually does
 
-When predictors are nearly linearly dependent, \(X^\top X\) becomes ill-conditioned.
+When predictors are nearly linearly dependent, $X^\top X$ becomes ill-conditioned.
 
 The variance of the OLS estimator can become large because
 
