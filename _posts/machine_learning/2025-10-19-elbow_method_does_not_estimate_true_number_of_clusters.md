@@ -408,7 +408,7 @@ No latent groups are needed.
 
 For the uniform population,
 
-| \(k\) | \(D_k = 1/(12k^2)\) |
+| $k$ | $D_k = 1/(12k^2)$ |
 | ---: | ---: |
 | 1 | 0.08333 |
 | 2 | 0.02083 |
