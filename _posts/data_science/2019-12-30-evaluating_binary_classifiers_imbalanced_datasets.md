@@ -43,57 +43,57 @@ That distinction is the reason precision-recall curves can be much more informat
 
 The correct conclusion is therefore not
 
-\[
+$$
 \boxed{\text{imbalanced data} \Rightarrow \text{ignore ROC AUC}}
-\]
+$$
 
 but
 
-\[
+$$
 \boxed{
 \text{choose a metric whose conditioning matches the decision problem}
 }
-\]
+$$
 
 ## Start from the confusion matrix
 
 For a fixed threshold, define
 
-\[
+$$
 \mathrm{TPR}
 =
 \frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FN}}
 =
 P(\hat Y=1\mid Y=1)
-\]
+$$
 
 and
 
-\[
+$$
 \mathrm{FPR}
 =
 \frac{\mathrm{FP}}{\mathrm{FP}+\mathrm{TN}}
 =
 P(\hat Y=1\mid Y=0).
-\]
+$$
 
 The ROC curve plots \(\mathrm{TPR}\) against \(\mathrm{FPR}\) while the classification threshold varies.
 
 Precision is
 
-\[
+$$
 \mathrm{Precision}
 =
 \frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FP}}
 =
 P(Y=1\mid \hat Y=1),
-\]
+$$
 
 while recall is simply the true-positive rate,
 
-\[
+$$
 \mathrm{Recall}=\mathrm{TPR}.
-\]
+$$
 
 The change in conditioning is the entire story.
 
@@ -107,15 +107,15 @@ Those are not interchangeable questions.
 
 Let
 
-\[
+$$
 \pi=P(Y=1)
-\]
+$$
 
 be the prevalence of the positive class.
 
 Bayes' rule gives
 
-\[
+$$
 P(Y=1\mid \hat Y=1)
 =
 \frac{
@@ -123,11 +123,11 @@ P(\hat Y=1\mid Y=1)P(Y=1)
 }{
 P(\hat Y=1)
 }.
-\]
+$$
 
 Substituting \(\mathrm{TPR}\), \(\mathrm{FPR}\) and \(\pi\),
 
-\[
+$$
 \boxed{
 \mathrm{Precision}
 =
@@ -139,43 +139,43 @@ Substituting \(\mathrm{TPR}\), \(\mathrm{FPR}\) and \(\pi\),
 (1-\pi)\,\mathrm{FPR}
 }
 }
-\]
+$$
 
 This equation explains why a classifier can have an attractive ROC operating point and still create an unacceptable number of false alerts in a rare-event problem.
 
 Suppose fraud prevalence is
 
-\[
+$$
 \pi=0.005,
-\]
+$$
 
 the classifier achieves
 
-\[
+$$
 \mathrm{TPR}=0.80
-\]
+$$
 
 and
 
-\[
+$$
 \mathrm{FPR}=0.01.
-\]
+$$
 
 A 1% false-positive rate may sound excellent. But precision is
 
-\[
+$$
 \frac{0.005(0.80)}
 {0.005(0.80)+0.995(0.01)}
 \approx 0.287.
-\]
+$$
 
 Only about 29% of the alerts are fraud.
 
 The ROC point
 
-\[
+$$
 (0.01,0.80)
-\]
+$$
 
 has not changed. The operational interpretation has.
 
@@ -185,13 +185,13 @@ ROC AUC summarizes ranking performance across thresholds.
 
 For continuous scores, it has the probabilistic interpretation
 
-\[
+$$
 \mathrm{AUC}_{ROC}
 =
 P(S^+>S^-)
 +
 \frac{1}{2}P(S^+=S^-),
-\]
+$$
 
 where \(S^+\) is the score assigned to a randomly selected positive observation and \(S^-\) is the score assigned to a randomly selected negative observation.
 
@@ -213,17 +213,17 @@ It does not.
 
 For binary ranking, the commonly used model Gini coefficient is
 
-\[
+$$
 G=2\,\mathrm{AUC}_{ROC}-1.
-\]
+$$
 
 Therefore,
 
-\[
+$$
 \mathrm{AUC}_{ROC}=0.80
 \quad\Longleftrightarrow\quad
 G=0.60.
-\]
+$$
 
 Gini does not solve or worsen the class-imbalance problem. It is a linear rescaling of the same ranking statistic.
 
@@ -237,9 +237,9 @@ Because precision contains prevalence explicitly, the curve exposes the cost of 
 
 For a random classifier whose predictions are independent of the outcome, expected precision is the prevalence,
 
-\[
+$$
 \mathrm{Precision}_{\mathrm{baseline}}=\pi.
-\]
+$$
 
 If prevalence is 0.5%, a precision of 5% is ten times the random baseline even though 95% of alerts are false positives.
 
@@ -257,11 +257,11 @@ Suppose the same conditional score model is evaluated once in a case-control sam
 
 Therefore,
 
-\[
+$$
 \boxed{
 \text{AUPRC values from different prevalences are not automatically comparable}
 }
-\]
+$$
 
 If deployment prevalence matters, evaluation should use a test set representative of that population or adjust predictive values to the target prevalence.
 
@@ -277,27 +277,27 @@ Production systems operate at one threshold, or under a policy that changes thre
 
 At a candidate threshold, the decision may depend on quantities such as
 
-\[
+$$
 \mathrm{TP},\quad
 \mathrm{FP},\quad
 \mathrm{FN},
-\]
+$$
 
 expected cost,
 
-\[
+$$
 C(t)
 =
 c_{\mathrm{FP}}P(\mathrm{FP}\mid t)
 +
 c_{\mathrm{FN}}P(\mathrm{FN}\mid t),
-\]
+$$
 
 or constraints such as
 
-\[
+$$
 \mathrm{Recall}(t)\ge 0.95
-\]
+$$
 
 with precision maximized subject to that requirement.
 
@@ -309,15 +309,15 @@ No single AUC number contains those decisions.
 
 If 0.5% of transactions are fraudulent, the classifier
 
-\[
+$$
 \hat Y=0
-\]
+$$
 
 for every transaction has
 
-\[
+$$
 99.5\%
-\]
+$$
 
 accuracy.
 
@@ -365,7 +365,7 @@ So the useful rule is not "AUPRC beats ROC AUC."
 
 It is:
 
-\[
+$$
 \boxed{
 \begin{aligned}
 \text{ROC} &\rightarrow \text{ranking across classes},\\
@@ -373,7 +373,7 @@ It is:
 \text{decision metric} &\rightarrow \text{what the system is actually built to optimize}.
 \end{aligned}
 }
-\]
+$$
 
 That distinction is more accurate, and it survives changes in class balance.
 
