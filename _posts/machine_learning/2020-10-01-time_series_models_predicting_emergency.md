@@ -96,15 +96,15 @@ For point forecasts, MAE and RMSE answer different loss questions. For staffing 
 
 A strong baseline set includes:
 
-$
+$$
 \hat y_{t+h}=y_t
-$
+$$
 
 for persistence where meaningful, seasonal naive forecasts such as
 
-$
+$$
 \hat y_{t+h}=y_{t+h-s},
-$
+$$
 
 and a well-tuned exponential-smoothing or regression-with-ARIMA-errors model.
 
