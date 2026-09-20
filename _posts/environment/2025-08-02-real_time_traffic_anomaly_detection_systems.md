@@ -155,7 +155,9 @@ class TrafficSPCDetector:
         """
         cusum_high = 0
         cusum_low = 0
-        detection_threshold = 5 * std_dev
+        # CUSUM is accumulated in standardized units, so the decision
+        # threshold must also be dimensionless.
+        detection_threshold = 5.0
         
         anomalies = []
         
@@ -256,7 +258,9 @@ class TrafficSPCDetector:
         t2_stats = []
         for i in range(n_samples):
             diff = data_matrix[i] - sample_mean
-            t2 = n_samples * np.dot(np.dot(diff.T, np.linalg.inv(sample_cov)), diff)
+            # Per-observation squared Mahalanobis distance. The factor n_samples
+            # belongs to a test of a sample mean, not to point monitoring.
+            t2 = np.dot(np.dot(diff.T, np.linalg.inv(sample_cov)), diff)
             t2_stats.append(t2)
         
         # Calculate control limit
@@ -323,7 +327,14 @@ class TrafficSPCDetector:
         """
         Evaluate the performance of anomaly detection
         """
-        detected_binary = np.array([det['is_anomaly'] for det in detected_anomalies])
+        detected_binary = np.array([det['is_anomaly'] for det in detected_anomalies], dtype=bool)
+        true_labels = np.asarray(true_labels, dtype=bool)
+
+        if detected_binary.shape != true_labels.shape:
+            raise ValueError(
+                f"Prediction and label lengths differ: {detected_binary.shape[0]} "
+                f"vs {true_labels.shape[0]}"
+            )
         
         # Calculate performance metrics
         true_positives = np.sum(detected_binary & true_labels)
@@ -399,7 +410,8 @@ def demonstrate_spc_detection():
     print("\n3. Testing EWMA Detection...")
     ewma_results = detector.ewma_detection(traffic_data)
     
-    ewma_performance = detector.evaluate_detection_performance(ewma_results, true_labels)
+    # EWMA starts reporting at index 1, so align the labels to the returned results.
+    ewma_performance = detector.evaluate_detection_performance(ewma_results, true_labels[1:])
     print(f"EWMA Performance:")
     print(f"Precision: {ewma_performance['precision']:.3f}")
     print(f"Recall: {ewma_performance['recall']:.3f}")

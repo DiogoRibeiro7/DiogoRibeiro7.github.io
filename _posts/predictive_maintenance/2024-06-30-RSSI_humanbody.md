@@ -68,7 +68,7 @@ Secondly, employing diversity techniques can significantly enhance wireless comm
 
 Thirdly, adaptive power control can be a valuable tool in maintaining signal strength. By dynamically adjusting the transmitter power based on real-time RSSI values, the system can compensate for any signal loss due to human presence. This adaptive approach ensures that the signal remains strong enough to overcome attenuation caused by the human body.
 
-The use of higher frequency bands, such as the 5 GHz band in Wi-Fi, can be advantageous. Higher frequency bands are less prone to penetration through the human body, reducing attenuation effects. However, these frequencies may reflect more, so balancing the use of different frequency bands can help mitigate the overall impact of the human body on signal quality.
+Using a higher Wi-Fi band such as 5 GHz does not make body blockage less important. Higher frequencies generally penetrate biological tissue less deeply and can therefore experience stronger body shadowing and attenuation than lower frequencies. Band selection should be treated as a propagation trade-off: 5 GHz can offer more spectrum and less congestion, while 2.4 GHz often propagates through and around obstacles more effectively.
 
 Lastly, beamforming technology can be central to improving signal strength and stability. By directing signals towards the receiver and avoiding obstacles like the human body, beamforming enhances the focus and efficiency of signal transmission. This targeted approach can significantly reduce the negative effects of human-induced signal degradation.
 

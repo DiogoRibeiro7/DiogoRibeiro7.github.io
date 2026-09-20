@@ -35,7 +35,7 @@ title: 'ARIMA Modeling in Python: A Quick Start Guide'
 
 ## Forecasting with ARIMA: Context and Rationale
 
-Time series forecasting underpins decision-making in domains from finance to supply-chain management. Although modern machine learning methods often make headlines, classical approaches such as ARIMA remain indispensable baselines. An ARIMA model—AutoRegressive Integrated Moving Average—captures three core behaviors: dependence on past observations, differencing to enforce stationarity, and smoothing of past forecast errors. When implemented carefully, ARIMA delivers interpretable forecasts, rigorous confidence intervals, and an established toolkit for diagnostic evaluation.
+Time series forecasting underpins decision-making in domains from finance to supply-chain management. Although modern machine learning methods often make headlines, classical approaches such as ARIMA remain indispensable baselines. An ARIMA model—AutoRegressive Integrated Moving Average—captures three core behaviors: dependence on past observations, differencing to enforce stationarity, and smoothing of past forecast errors. When implemented carefully, ARIMA delivers interpretable forecasts, principled prediction intervals, and an established toolkit for diagnostic evaluation.
 
 ## The ARIMA(p, d, q) Model Formulation
 
@@ -72,7 +72,7 @@ These heuristics guide the initial grid of candidate $$(p,d,q)$$ combinations to
 
 Non-stationary behavior—trends or unit roots—violates ARIMA assumptions. The Augmented Dickey-Fuller (ADF) test offers a statistical check for a unit root and informs the choice of $$d$$. When seasonal patterns recur every $$s$$ observations (for example, $$s=12$$ for monthly data), applying a seasonal difference $$(1 - L^s)$$ yields the SARIMA(p, d, q)(P, D, Q)$$_s$$ model. Seasonal terms capture long-period dependencies that nonseasonal differencing cannot.  
 
-Proper differencing preserves the underlying information while stabilizing variance and autocorrelation structure. Over-differencing should be avoided, as it can inflate model variance and distort forecasts.
+Proper differencing is used to stabilize the mean by removing trends or unit-root behavior and to reduce persistent autocorrelation. It does not, by itself, stabilize a changing variance; transformations such as a logarithm or Box–Cox transform are used for that purpose. Over-differencing should be avoided, as it can inflate model variance and distort forecasts.
 
 ## Fitting ARIMA Models in Python with statsmodels
 
@@ -154,4 +154,3 @@ Successful ARIMA modeling hinges on judicious preprocessing, thorough diagnostic
 
 - Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
 - Dickey, D. A., & Fuller, W. A. (1979). Distribution of the estimators for autoregressive time series with a unit root. *Journal of the American Statistical Association*, 74(366), 427-431.
-- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.

@@ -115,7 +115,7 @@ class StatsUtils:
         return StatsUtils.variance(data) ** 0.5
 ```
 
-n this class, `default_precision` is a class attribute that affects the behavior of the `rounded_mean` method. The class also includes several statistical functions, grouped logically under the `StatsUtils` namespace, which enhances code clarity.
+In this class, `default_precision` is a class attribute that affects the behavior of the `rounded_mean` method. The class also includes several statistical functions, grouped logically under the `StatsUtils` namespace, which enhances code clarity.
 
 ## Utility Classes vs. Modules
 
@@ -132,7 +132,6 @@ Utility classes shine in situations where you need to group a few closely relate
 
 - **Organizing Related Functions**: When you have several related functions that logically belong together, utility classes provide a way to structure them under a common class.
 - **Reducing Module Bloat**: Instead of creating numerous small modules, utility classes can help organize functions within a single, more manageable module.
-- **Avoiding Circular Imports**: Utility classes can sometimes reduce the risk of circular dependencies by grouping functions into one class, eliminating the need for multiple module imports.
 
 ## Designing Effective Utility Classes
 

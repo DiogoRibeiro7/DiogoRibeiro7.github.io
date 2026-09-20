@@ -112,9 +112,9 @@ The key to OPRO’s success is the **meta-prompt**. This includes:
 
 By analyzing the optimization trajectory, the LLM learns from its past successes and failures, allowing it to refine its prompt generation process effectively.
 
-## Hands-On: Implementing APE from Scratch
+## Hands-On: Reproducing an OPRO Walkthrough
 
-To fully understand APE, it’s essential to dive into the code. In this section, we’ll implement an APE system using the **OPRO** strategy from scratch. We’ll use Python and an LLM service, such as Google’s Gemini 1.5 models.
+The concrete walkthrough below is adapted from Heiko Hotz's 2024 tutorial, *Automated Prompt Engineering: The Definitive Hands-On Guide*, together with its companion repository. The BBH task, data split, Gemini setup, evaluator structure, and reported accuracies come from that worked example rather than from an independent experiment conducted for this post. The purpose here is to explain the mechanics and make the provenance explicit.
 
 ### The Dataset
 
@@ -161,7 +161,7 @@ if __name__ == "__main__":
     asyncio.run(evaluator.main(prompt))
 ```
 
-By running this evaluation, we establish a baseline for performance, which in our case was 36% accuracy. Adding the simple phrase “Think step by step” increased accuracy to 52%, serving as our starting point for APE.
+In Hotz's training split, the plain prompt produced 36% accuracy and adding “Think step by step” raised the training result to 52%. Those are training-set measurements used to start the optimization loop; they should not be compared directly with the final test-set result.
 
 ## Implementing the OPRO Algorithm
 
@@ -177,6 +177,7 @@ for i in range(num_iterations):
 
     accuracy = evaluate_prompt(new_prompt)
     prompt_accuracies.append((new_prompt, accuracy))
+    prompt_history.append((new_prompt, accuracy))
 
     if accuracy > best_accuracy:
         best_prompt = new_prompt
@@ -187,22 +188,20 @@ In this loop, the optimizer generates new prompts, evaluates them, and stores th
 
 ## Results and Analysis
 
-By running the APE workflow, we achieved significant improvements over the baseline. Starting with an accuracy of 52%, our optimized prompt reached 85% accuracy on the test set.
+The source reports a 54% chain-of-thought baseline on the held-out test set and 85% for the optimized prompt on that same test set. That is the like-for-like comparison: 54% to 85%, a gain of 31 percentage points. The 52% figure belongs to the training split and should not be used as the test baseline.
 
-## Final Prompt
-
-The final prompt suggested by OPRO was:
-
-```python
-"Count the number of 'L' commands in the SVG path to determine the shape."
-```
-
-This creative prompt unlocked a previously untapped aspect of the model's reasoning, resulting in better performance.
+The exact final prompt should not be presented here as a verbatim result unless it is available in the cited source or reproduced independently. The important methodological point is the optimization procedure, not an undocumented prompt string.
 
 ## Conclusion
 
 Automated Prompt Engineering (APE) offers a powerful way to improve the performance of Large Language Models by automating the otherwise labor-intensive task of prompt crafting. Through techniques like OPRO, APE can generate, evaluate, and refine prompts efficiently, leading to optimized model behavior.
 
-In this tutorial, we explored the APE workflow, implemented the OPRO strategy from scratch, and achieved substantial improvements in task performance. As APE continues to evolve, it holds immense potential for making LLMs more adaptable and effective across a broad range of applications.
+In this tutorial, we explored the APE workflow and reproduced the structure of a published OPRO walkthrough. The reported performance improvements belong to that source example and should be treated as such rather than as results independently generated for this post. As APE continues to evolve, it holds immense potential for making LLMs more adaptable and effective across a broad range of applications.
 
 For further exploration, consider incorporating techniques like few-shot prompting or using existing APE frameworks such as DSPy to streamline the process. By leveraging APE, you can unlock the full potential of Large Language Models and enhance their capabilities for a variety of tasks.
+
+
+## Sources
+
+- Hotz, H. (2024). *Automated Prompt Engineering: The Definitive Hands-On Guide*. Towards Data Science. https://towardsdatascience.com/automated-prompt-engineering-the-definitive-hands-on-guide-1476c8cd3c50
+- Hotz, H. Companion implementation: https://github.com/marshmellow77/automated-prompt-engineering-from-scratch

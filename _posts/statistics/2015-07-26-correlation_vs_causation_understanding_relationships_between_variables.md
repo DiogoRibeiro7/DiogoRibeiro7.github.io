@@ -102,7 +102,13 @@ In data analysis, understanding the difference between correlation and causation
 
 Getting this right builds stronger analyses and helps ensure that decisions across fields—whether health, policy, or business—are based on solid evidence.
 
-## Appendix: Rust Code Examples for Correlation and Causation Analysis
+## Interpreting Correlation Coefficients
+
+A correlation coefficient describes the direction and strength of an association on a scale from -1 to 1. Values near 1 indicate a strong positive association, values near -1 a strong negative association, and values near 0 little association of the type measured by that coefficient. Pearson correlation measures linear association. Spearman correlation measures monotonic association through ranks. Kendall's tau is based on concordant and discordant pairs and is often easier to interpret probabilistically.
+
+The magnitude alone is not a causal statement. A large correlation can arise from confounding, common trends, selection effects, measurement design, or direct causal influence. The coefficient does not distinguish these mechanisms.
+
+## Appendix: Rust Code Examples for Correlation Analysis
 
 ```rust
 // Pearson Correlation Coefficient in Rust
@@ -152,58 +158,51 @@ fn rank(data: &[f64]) -> Vec<f64> {
     ranks
 }
 
-// Kendall’s Tau in Rust
-fn kendalls_tau(x: &[f64], y: &[f64]) -> f64 {
-    let mut concordant = 0;
-    let mut discordant = 0;
-    let n = x.len();
-    
-    for i in 0..n {
-        for j in i + 1..n {
-            let sign_x = (x[i] - x[j]).signum();
-            let sign_y = (y[i] - y[j]).signum();
-            if sign_x == sign_y {
-                concordant += 1;
-            } else {
-                discordant += 1;
+// Kendall's tau-b in Rust.
+// Tied pairs are excluded from concordant/discordant counts and
+// included in the denominator correction.
+fn kendalls_tau_b(x: &[f64], y: &[f64]) -> f64 {
+    assert_eq!(x.len(), y.len());
+
+    let mut concordant = 0.0;
+    let mut discordant = 0.0;
+    let mut ties_x = 0.0;
+    let mut ties_y = 0.0;
+
+    for i in 0..x.len() {
+        for j in (i + 1)..x.len() {
+            let dx = (x[i] - x[j]).signum();
+            let dy = (y[i] - y[j]).signum();
+
+            match (dx == 0.0, dy == 0.0) {
+                (true, true) => {}
+                (true, false) => ties_x += 1.0,
+                (false, true) => ties_y += 1.0,
+                (false, false) if dx == dy => concordant += 1.0,
+                (false, false) => discordant += 1.0,
             }
         }
     }
-    (concordant - discordant) as f64 / ((n * (n - 1) / 2) as f64)
-}
 
-// Example of Granger Causality Calculation
-use nalgebra::{DMatrix, DVector};
+    let denominator =
+        ((concordant + discordant + ties_x) * (concordant + discordant + ties_y)).sqrt();
 
-fn granger_causality(x: &[f64], y: &[f64], max_lag: usize) -> f64 {
-    let n = x.len() - max_lag;
-    let mut x_matrix = DMatrix::zeros(n, max_lag);
-    let mut y_matrix = DMatrix::zeros(n, max_lag);
-    let mut combined_matrix = DMatrix::zeros(n, 2 * max_lag);
-    
-    for i in 0..n {
-        for j in 0..max_lag {
-            x_matrix[(i, j)] = x[i + j] as f64;
-            y_matrix[(i, j)] = y[i + j] as f64;
-            combined_matrix[(i, j)] = x[i + j] as f64;
-            combined_matrix[(i, j + max_lag)] = y[i + j] as f64;
-        }
+    if denominator == 0.0 {
+        0.0
+    } else {
+        (concordant - discordant) / denominator
     }
-    
-    let x_model = x_matrix.transpose() * x_matrix;
-    let y_model = y_matrix.transpose() * y_matrix;
-    let combined_model = combined_matrix.transpose() * combined_matrix;
-    
-    let residual_x = DVector::from_element(n, x_model.determinant());
-    let residual_y = DVector::from_element(n, y_model.determinant());
-    let residual_combined = DVector::from_element(n, combined_model.determinant());
-    
-    let f_statistic = ((residual_x - residual_y) / residual_combined).abs();
-    f_statistic.sum()
 }
+
+// Granger causality is a predictive test based on two fitted regressions:
+// a restricted model using lags of y, and an unrestricted model adding
+// lags of x. It is not equivalent to causal identification. In Rust,
+// use a regression crate and compare the restricted and unrestricted
+// residual sums of squares with the appropriate F test rather than
+// treating matrix determinants as residuals.
 ```
 
-## Appendix: R Code Examples for Correlation and Causation Analysis
+## Appendix: R Code Examples for Correlation and Predictive Granger Testing
 
 ```r
 # Pearson Correlation Coefficient in R
@@ -229,26 +228,9 @@ spearman_rank_correlation <- function(x, y) {
     return(pearson_correlation(rank_x, rank_y))
 }
 
-# Kendall’s Tau in R
+# Kendall's tau-b in R
 kendalls_tau <- function(x, y) {
-    n <- length(x)
-    concordant <- 0
-    discordant <- 0
-    
-    for (i in 1:(n-1)) {
-        for (j in (i+1):n) {
-            sign_x <- sign(x[i] - x[j])
-            sign_y <- sign(y[i] - y[j])
-            
-            if (sign_x == sign_y) {
-                concordant <- concordant + 1
-            } else {
-                discordant <- discordant + 1
-            }
-        }
-    }
-    tau <- (concordant - discordant) / (0.5 * n * (n - 1))
-    return(tau)
+    cor(x, y, method = "kendall", use = "complete.obs")
 }
 
 # Granger Causality Example in R

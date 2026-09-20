@@ -45,7 +45,7 @@ This article explores the ARIMAX model, its underlying mechanics, and how it dif
 
 ## What Is ARIMAX?
 
-ARIMAX stands for AutoRegressive Integrated Moving Average with eXogenous variables. Like ARIMA, ARIMAX is a linear model designed for time series forecasting, but it incorporates external, or exogenous, variables ($X_t$). These exogenous variables are independent inputs that are believed to affect the time series being modeled, allowing the ARIMAX model to account for their influence when making forecasts.
+ARIMAX stands for AutoRegressive Integrated Moving Average with eXogenous variables. Like ARIMA, ARIMAX is a linear model designed for time series forecasting, but it incorporates external, or exogenous, variables ($X_t$). These exogenous variables are external predictors used to explain part of the time series. “Exogenous” does not mean statistically independent of the response; if a predictor were independent of the response in the relevant sense, its regression coefficient would contain no useful signal. The important assumption is that the predictor is not contemporaneously determined by the model error and is available, or can itself be forecast, over the prediction horizon.
 
 The ARIMAX model consists of the following components:
 
@@ -92,7 +92,7 @@ Like any statistical model, ARIMAX comes with certain assumptions that must be m
 1. **Stationarity**: The time series must be stationary, meaning that its statistical properties such as mean and variance remain constant over time. Differencing is often applied to achieve stationarity.
 2. **Linearity**: ARIMAX is a linear model, meaning it assumes a linear relationship between the time series and the exogenous variables.
 3. **Independence of Errors**: The errors (residuals) should be independently and normally distributed with a mean of zero.
-4. **Exogeneity**: The exogenous variables are assumed to be independent of the current value of the time series. This means that the exogenous variables are not influenced by the time series itself.
+4. **Exogeneity**: The regressors should be external to the model disturbance. In practice this means specifying a defensible causal or temporal relationship and avoiding predictors that are contemporaneously determined by the same unexplained shock as the response.
 
 ## Steps to Implement ARIMAX
 
@@ -126,7 +126,7 @@ Once the model is fitted, it must be validated. This is done by:
 
 ### 5. **Forecasting**
 
-With the validated model, you can generate forecasts. For ARIMAX, both the time series and the exogenous variables must be provided for the future time periods to generate accurate predictions.
+With the validated model, forecasts require future values of the exogenous regressors. Future values of the response are, of course, what the model is trying to predict and are not supplied to the forecast.
 
 ## Applications of ARIMAX
 
@@ -148,7 +148,7 @@ The ARIMAX model is applied in a variety of fields where external variables are 
 ### Limitations
 
 - **Complexity**: ARIMAX requires the selection and preprocessing of exogenous variables, which can complicate model building.
-- **Assumptions**: The model assumes that exogenous variables are truly independent and linearly related to the time series, which might not always be the case.
+- **Assumptions**: The regression effect is linear in the specified regressors and the regressors must satisfy the exogeneity assumptions required for the intended interpretation. They need not be independent of the response.
 - **Stationarity**: Like ARIMA, ARIMAX requires the time series to be stationary, which sometimes necessitates multiple transformations of the data.
 
 ## Conclusion
@@ -249,7 +249,7 @@ print(adf_test_diff)
 
 #### Step 4: Fitting the ARIMAX Model
 
-Next, we'll fit the ARIMAX model using the `auto.arima()` function, which automatically selects the best values for the ARIMA parameters $$(p, d, q)$$. We pass the exogenous variable (`X`) as an additional argument.
+The `forecast::auto.arima()` call below is often described informally as ARIMAX, but it fits a **regression with ARIMA errors**: the response is first modeled as a regression on `X`, and the remaining errors follow an ARIMA process. This differs from a dynamic-regression equation in which lagged response terms and the regressors appear together in the same structural equation. The distinction matters because the regression coefficients have the interpretation of regression effects after accounting for ARIMA error dependence.
 
 ```r
 # Fit ARIMAX model
@@ -295,7 +295,7 @@ To evaluate the model's performance, we can use metrics such as the Mean Absolut
 
 ```r
 # Actual future values (for demonstration purposes, let's assume we know them)
-actual_future_values <- ts(120 + rnorm(10, sd=10), frequency=12)
+actual_future_values <- 120 + rnorm(10, sd=10)
 
 # Compute MAE and RMSE
 mae <- mean(abs(actual_future_values - forecast_arimax$mean))
@@ -347,7 +347,7 @@ forecast_arimax <- forecast(arimax_model, xreg=X_future, h=10)
 plot(forecast_arimax)
 
 # Actual future values (for demonstration purposes)
-actual_future_values <- ts(120 + rnorm(10, sd=10), frequency=12)
+actual_future_values <- 120 + rnorm(10, sd=10)
 
 # Compute MAE and RMSE
 mae <- mean(abs(actual_future_values - forecast_arimax$mean))

@@ -95,7 +95,7 @@ Handling MAR data requires more sophisticated techniques than those used for MCA
 
 - **Maximum Likelihood (ML) Methods**: These methods estimate the parameters of interest by maximizing the likelihood function based on the observed data. ML methods make use of all available data and are particularly useful in the context of structural equation modeling and mixed-effects models.
 
-- **Inverse Probability Weighting (IPW)**: This method involves weighting the observed cases by the inverse of their probability of being missing. It aims to create a pseudo-population in which the missing data mechanism is ignorable, allowing for unbiased estimation of parameters.
+- **Inverse Probability Weighting (IPW)**: This method weights observed cases by the inverse of their estimated probability of being observed. Under the required modeling assumptions, this reweights the observed sample toward the target population.
 
 - **Full Information Maximum Likelihood (FIML)**: Similar to ML, FIML uses all available data to estimate model parameters directly, without imputing the missing values. It is particularly effective in the context of regression models and longitudinal data analysis.
 
@@ -183,7 +183,7 @@ Little's MCAR test, also known as Little's Test for Missing Completely at Random
 - **Null Hypothesis (H0)**: The missing data are MCAR.
 - **Alternative Hypothesis (H1)**: The missing data are not MCAR.
 
-The test generates a chi-square statistic by comparing the expected and observed distributions of missing data patterns. If the p-value associated with the chi-square statistic is high (typically above 0.05), the null hypothesis cannot be rejected, indicating that the data are likely MCAR. Conversely, a low p-value suggests that the data are not MCAR.
+The test generates a chi-square statistic by comparing the expected and observed distributions of missing data patterns. If the p-value associated with the chi-square statistic is high (typically above 0.05), the null hypothesis is not rejected. That is not evidence that MCAR has been established; it only means the test did not detect a departure from MCAR at the chosen significance level. A low p-value provides evidence against MCAR.
 
 #### Application
 
@@ -214,8 +214,8 @@ To apply Little’s MCAR test, researchers typically use statistical software su
 
 3. **Interpreting Results**:
    - Review the chi-square statistic and associated p-value from the output.
-   - If the p-value > 0.05, the data are likely MCAR.
-   - If the p-value ≤ 0.05, the data are not MCAR, indicating that another missing data mechanism (MAR or MNAR) might be present.
+   - If the p-value > 0.05, fail to reject MCAR; do not treat this as proof that MCAR holds.
+   - If the p-value ≤ 0.05, there is evidence against MCAR, so MAR or MNAR should be considered alongside the study design and missingness process.
 
 #### Example
 
@@ -223,7 +223,7 @@ Consider a clinical trial dataset with variables such as age, gender, treatment 
 
 - They input the dataset into SPSS and run Little’s MCAR test via the Missing Value Analysis menu.
 - The output shows a chi-square value of 12.34 with a p-value of 0.08.
-- Since the p-value is greater than 0.05, the researchers fail to reject the null hypothesis, suggesting that the missing follow-up measurements are likely MCAR.
+- Since the p-value is greater than 0.05, the researchers fail to reject the MCAR null hypothesis. The result is compatible with MCAR, but it does not establish MCAR.
 
 Little’s MCAR test provides a robust and comprehensive method for evaluating the randomness of missing data. When the test indicates that data are MCAR, researchers can proceed with simpler analysis methods, confident that the missingness is non-informative. However, if the test suggests that data are not MCAR, researchers must consider more advanced techniques, such as Multiple Imputation (MI), to address the missingness appropriately.
 
@@ -430,7 +430,7 @@ When dealing with datasets that have a high percentage of missing data, special 
 - **Multiple Imputation (MI)**: Use Multiple Imputation, which creates several imputed datasets to reflect the uncertainty about the missing values. This method is particularly effective for handling high percentages of missing data as it provides a range of plausible values.
 - **Model Complexity**: For datasets with high missingness, consider using more complex imputation models, such as Fully Conditional Specification (FCS) or Bayesian methods, which can better capture the relationships between variables.
 - **Sensitivity Analysis**: Perform sensitivity analyses to evaluate the robustness of the results under different assumptions about the missing data mechanism. This helps to understand the impact of high missingness on the study conclusions.
-- **Reducing Dimensionality**: In cases where a large number of variables have missing data, consider dimension reduction techniques such as principal component analysis (PCA) before imputation to simplify the data structure.
+- **Reducing Dimensionality**: With many predictors, dimension reduction can sometimes simplify the imputation model, but ordinary PCA requires a complete matrix. Impute first, or use a method designed to estimate latent structure with missing values rather than applying standard PCA directly to an incomplete matrix.
 
 ### Example
 
@@ -446,7 +446,7 @@ Consider a longitudinal study with 60% missing data for follow-up cholesterol me
 3. **Handling High Missingness**:
    - Use Multiple Imputation to create 20 imputed datasets, reflecting the uncertainty about the missing values.
    - Perform sensitivity analyses to assess how different assumptions about the missing data mechanism affect the study conclusions.
-   - Consider using PCA to reduce the dimensionality if there are many predictors with missing data.
+   - If dimension reduction is useful, apply it after a defensible treatment of missing values or use a method that explicitly supports incomplete data.
 
 Researchers can improve the accuracy and reliability of their imputation process, ensuring that their analyses remain valid and unbiased, even in the presence of significant missing data.
 
@@ -610,7 +610,7 @@ By following these recommendations, researchers can effectively manage missing d
 
 3. Héraud-Bousquet V, Larsen C, Carpenter J, Desenclos JC, Le Strat Y. Practical considerations for sensitivity analysis after multiple imputation applied to epidemiological studies with incomplete data. BMC Med Res Methodol. 2012;12:73. doi:10.1186/1471-2288-12-73
 
-4. Hsu CH, He Y, Hu C, Zhou W. A multiple imputation-based sensitivity analysis approach for data subject to missing not at random. Stat Med. 2020;39:3756-3771. doi:10.1002/sim.8693
+4. Hsu CH, He Y, Hu C, Zhou W. A multiple imputation-based sensitivity analysis approach for data subject to missing not at random. Stat Med. 2020;39:3756-3771. doi:10.1002/sim.8691
 
 5. Enders CK. Applied Missing Data Analysis. New York, NY: The Guilford Press; 2010.
 
