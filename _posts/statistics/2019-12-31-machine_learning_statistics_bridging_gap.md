@@ -4,6 +4,11 @@ categories:
 - Statistics
 classes: wide
 date: '2019-12-31'
+last_modified_at: '2026-09-20'
+permalink: '/statistics/machine_learning_statistics_bridging_gap/'
+redirect_from:
+- '/2019-12-31-machine_learning_statistics_bridging_gap/'
+reviewed_at: '2026-09-20'
 excerpt: Statistics and machine learning overlap heavily, but neither is simply a subset of the other. The useful distinction is in the questions, loss functions, assumptions, and validation criteria.
 header:
   image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
@@ -20,7 +25,7 @@ keywords:
 - Regularization
 - Support vector machines
 seo_description: Statistics and machine learning share models and mathematics, but differ in emphasis, assumptions, validation, and the questions they are designed to answer.
-seo_title: Statistics and Machine Learning: Where the Boundary Actually Lies
+seo_title: 'Statistics and Machine Learning: Where the Boundary Actually Lies'
 seo_type: article
 summary: A mathematical comparison of statistics and machine learning through estimation, prediction, loss functions, regularization, trees, support vector machines, and probabilistic models.
 tags:
@@ -150,6 +155,8 @@ Ridge shrinks unstable coefficients and can improve prediction when predictors a
 
 But a selected lasso model does not automatically inherit ordinary least-squares inference as if the selected variables had been fixed in advance. Prediction, selection and post-selection inference are distinct problems.
 
+![Lasso coefficient paths against the regularisation strength. As the penalty increases, coefficients shrink toward zero and some become exactly zero, illustrating how regularisation changes the fitted model rather than merely changing its label.](/assets/images/figures/regularization_paths.png){: width="1177" height="697" loading="lazy"}
+
 ## Trees are not statistical because they use Gini impurity
 
 Decision trees are sometimes described as statistical methods because split criteria use quantities such as entropy or Gini impurity. That is not a useful distinction.
@@ -232,6 +239,8 @@ But it is important not to reverse the statement. Hidden Markov models are not i
 One of the clearest historical differences is the role assigned to prediction on unseen data.
 
 For a predictive system, the relevant quantity is usually generalization error. A training metric is optimistic because the same observations influenced the fitted model. Validation therefore uses held-out data, cross-validation, time-respecting backtests or an external test set.
+
+![Training and test error against model complexity. Training error keeps falling as flexibility increases, while test error eventually rises, showing why fitting the observed sample and generalising to new data are different objectives.](/assets/images/figures/bias_variance.png){: width="1177" height="697" loading="lazy"}
 
 For a statistical model used primarily for inference, validation also includes model checking: residual structure, calibration, specification, sensitivity to assumptions and whether the sampling design supports the intended interpretation.
 
