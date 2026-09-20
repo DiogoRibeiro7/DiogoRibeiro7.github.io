@@ -77,7 +77,7 @@ $$
 P(\hat Y=1\mid Y=0).
 $$
 
-The ROC curve plots \(\mathrm{TPR}\) against \(\mathrm{FPR}\) while the classification threshold varies.
+The ROC curve plots $\mathrm{TPR}$ against $\mathrm{FPR}$ while the classification threshold varies.
 
 Precision is
 
@@ -125,7 +125,7 @@ P(\hat Y=1)
 }.
 $$
 
-Substituting \(\mathrm{TPR}\), \(\mathrm{FPR}\) and \(\pi\),
+Substituting $\mathrm{TPR}$, $\mathrm{FPR}$ and $\pi$,
 
 $$
 \boxed{
@@ -193,7 +193,7 @@ P(S^+>S^-)
 \frac{1}{2}P(S^+=S^-),
 $$
 
-where \(S^+\) is the score assigned to a randomly selected positive observation and \(S^-\) is the score assigned to a randomly selected negative observation.
+where $S^+$ is the score assigned to a randomly selected positive observation and $S^-$ is the score assigned to a randomly selected negative observation.
 
 This is why ROC AUC is largely insensitive to class prevalence: the comparison is made between conditional score distributions.
 
@@ -249,7 +249,7 @@ The baseline moves with prevalence, which is both a strength and a limitation.
 
 ## AUPRC is not prevalence-invariant
 
-The fact that precision depends on \(\pi\) means that the area under a precision-recall curve also depends on prevalence.
+The fact that precision depends on $\pi$ means that the area under a precision-recall curve also depends on prevalence.
 
 This matters when comparing experiments.
 
