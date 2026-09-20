@@ -129,13 +129,13 @@ The log-rank test would then determine if the difference between these two curve
 The **p-value** obtained from the log-rank test tells us whether the observed differences in survival between the groups are likely to have occurred by chance. A smaller p-value indicates stronger evidence that the survival curves are different.
 
 - **P-value < 0.05:** This suggests that the survival distributions are significantly different, and we reject the null hypothesis. In medical research, this often implies that one treatment is more effective than the other in prolonging survival.
-- **P-value ≥ 0.05:** This indicates that there is no statistically significant difference in survival between the groups. Researchers would fail to reject the null hypothesis, meaning that any differences observed are likely due to random variation.
+- **P-value ≥ 0.05:** fail to reject equality under the log-rank statistic. This does not establish that the survival curves are equal; low event counts, heavy censoring, crossing hazards, or a small effect can all produce non-rejection.
 
 ### 4.3 Limitations of the Log-Rank Test
 
 While the log-rank test is a powerful tool for comparing survival curves, it has some limitations. For instance:
 
-- **Assumes proportional hazards:** The test assumes that the ratio of hazard rates (the risk of the event occurring) is constant over time between the groups. If this assumption is violated, the log-rank test may not be appropriate.
+- **Proportional hazards is the alternative the ordinary log-rank test is especially well matched to, not a simple validity switch.** Crossing or strongly time-varying hazards can reduce power and make one-number summaries misleading. Independent censoring and valid risk sets are more fundamental assumptions for the comparison.
 - **Insensitive to early differences:** The log-rank test is more sensitive to differences in survival that occur later in the study. If there are large differences early on, the test may not detect them effectively.
 
 ## Conclusion
@@ -149,3 +149,36 @@ Understanding Kaplan-Meier survival curves and how to interpret p-values from th
 - Mantel, N. (1966). Evaluation of survival data and two new rank order statistics arising in its consideration. *Cancer Chemotherapy Reports*, 50(3), 163-170.
 - Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
 - Kaplan, E. L., & Meier, P. (1958). Nonparametric estimation from incomplete observations. *Journal of the American Statistical Association*, 53(282), 457-481.
+
+
+## Effect size should accompany the test
+
+The log-rank statistic is an omnibus comparison. It does not estimate the magnitude of the difference.
+
+Useful companion estimands include:
+
+- survival probability difference at a prespecified time;
+- hazard ratio when proportional hazards is defensible;
+- restricted mean survival time difference.
+
+For horizon $\tau$,
+
+$$
+\operatorname{RMST}(\tau)
+=
+\int_0^\tau S(t)\,dt.
+$$
+
+RMST remains interpretable when hazards cross and gives the effect in units of time.
+
+## Cox regression is not a generic remedy
+
+A standard Cox model imposes proportional hazards for time-fixed coefficients:
+
+$$
+h(t\mid X)
+=
+h_0(t)\exp(X^\top\beta).
+$$
+
+Therefore replacing a log-rank test with ordinary Cox regression does not solve non-proportional hazards. Consider time-varying effects, stratification, flexible parametric models, weighted log-rank procedures, or RMST according to the scientific question.
