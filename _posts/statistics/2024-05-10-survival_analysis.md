@@ -9,13 +9,13 @@ excerpt: Explore the role of survival analysis in management, focusing on time-t
   data and techniques like the Kaplan-Meier estimator and Cox proportional hazards
   model for business decision-making.
 header:
-  image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
-  og_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
-  overlay_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  image: /assets/images/headers/photo-statistics-survival-analysis.jpg
+  og_image: /assets/images/headers/photo-statistics-survival-analysis.jpg
+  overlay_image: /assets/images/headers/photo-statistics-survival-analysis.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-statistics-scatter-correlation.jpg
-  twitter_image: /assets/images/headers/photo-statistics-scatter-correlation.jpg
+  teaser: /assets/images/headers/photo-statistics-survival-analysis.jpg
+  twitter_image: /assets/images/headers/photo-statistics-survival-analysis.jpg
 keywords:
 - Survival analysis
 - Time-to-event data
