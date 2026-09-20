@@ -56,7 +56,7 @@ P_\theta\{\theta\in C(X)\}
 \approx 1-\alpha.
 $$
 
-Nothing in that definition requires the lower and upper endpoints to be equally distant from \(\hat\theta\).
+Nothing in that definition requires the lower and upper endpoints to be equally distant from $\hat\theta$.
 
 Asymmetry is therefore not an anomaly. It usually tells us something about the parameter space, the sampling distribution, the transformation used, or the way the interval was constructed.
 
@@ -82,7 +82,7 @@ $$
 
 This is a **Wald interval**.
 
-Its symmetry is inherited from the normal approximation on the \(\theta\) scale.
+Its symmetry is inherited from the normal approximation on the $\theta$ scale.
 
 If that approximation is poor, the symmetry can be misleading.
 
@@ -173,11 +173,11 @@ Near 0 or 1, this interval can extend outside the legal parameter space.
 
 It can also have poor coverage.
 
-The Wilson score interval avoids both problems by inverting the score test rather than placing a symmetric normal interval directly around \(\hat p\).
+The Wilson score interval avoids both problems by inverting the score test rather than placing a symmetric normal interval directly around $\hat p$.
 
 ## Deriving the Wilson interval
 
-The score-test inequality for a candidate value \(p\) is
+The score-test inequality for a candidate value $p$ is
 
 $$
 \frac{(\hat p-p)^2}
@@ -185,7 +185,7 @@ $$
 \le z^2.
 $$
 
-Solving this quadratic inequality for \(p\) gives
+Solving this quadratic inequality for $p$ gives
 
 $$
 \frac{
@@ -202,7 +202,7 @@ z
 }.
 $$
 
-The midpoint is not generally \(\hat p\), so the endpoints are not generally symmetric around the observed proportion.
+The midpoint is not generally $\hat p$, so the endpoints are not generally symmetric around the observed proportion.
 
 That asymmetry comes from test inversion and the bounded binomial parameter space, not from a vague statement that the data are "non-normal."
 
@@ -301,7 +301,7 @@ $$
 \ell(\theta)
 $$
 
-be the log likelihood and let \(\hat\theta\) maximize it.
+be the log likelihood and let $\hat\theta$ maximize it.
 
 A likelihood-ratio interval can be obtained by retaining values satisfying
 
