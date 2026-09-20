@@ -48,7 +48,7 @@ $$
 Y\in\{1,\ldots,J\}
 $$
 
-be an ordered response. For each threshold \(j=1,\ldots,J-1\), define
+be an ordered response. For each threshold $j=1,\ldots,J-1$, define
 
 $$
 P(Y\le j\mid x).
@@ -62,7 +62,7 @@ $$
 \alpha_j-x^\top\beta.
 $$
 
-Each threshold has its own intercept \(\alpha_j\), but the coefficient vector \(\beta\) is shared across all thresholds. That shared slope is the proportional-odds assumption.
+Each threshold has its own intercept $\alpha_j$, but the coefficient vector $\beta$ is shared across all thresholds. That shared slope is the proportional-odds assumption.
 
 Equivalently,
 
@@ -72,7 +72,7 @@ $$
 x^\top\beta-\alpha_j.
 $$
 
-A one-unit increase in predictor \(x_k\) therefore multiplies the odds of being above any threshold by
+A one-unit increase in predictor $x_k$ therefore multiplies the odds of being above any threshold by
 
 $$
 \exp(\beta_k),
@@ -82,7 +82,7 @@ provided the model is correctly specified.
 
 ## Thresholds are not ordinary intercepts
 
-With \(J\) categories there are \(J-1\) ordered thresholds,
+With $J$ categories there are $J-1$ ordered thresholds,
 
 $$
 \alpha_1<\alpha_2<\cdots<\alpha_{J-1}.
@@ -204,7 +204,7 @@ A positive coefficient does not imply that every category probability increases.
 
 If age shifts probability toward higher categories, lower-category probabilities decrease while upper-category probabilities increase.
 
-For category \(j\), the relevant derivative is
+For category $j$, the relevant derivative is
 
 $$
 \frac{\partial P(Y=j\mid x)}
