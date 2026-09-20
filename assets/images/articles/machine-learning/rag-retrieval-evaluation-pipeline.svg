@@ -1,65 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 520" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1620 500" role="img" aria-labelledby="title desc">
   <title id="title">RAG retrieval and evaluation pipeline</title>
   <desc id="desc">A RAG pipeline from corpus ingestion through chunking, indexing, candidate retrieval, reranking and context construction to generation, with evaluation metrics attached to retrieval and generation stages.</desc>
+  <style>
+    /* This diagram is embedded with an &lt;img&gt; tag, which makes the file an
+       isolated document: currentColor cannot inherit the page's text colour and
+       falls back to black, which disappears on the dark theme's near-black
+       surface. Carry the surface and the ink the site's other figures use
+       (assets/viz/house.mplstyle), so the diagram reads in either theme. */
+    svg { color: #0b0b0b; }
+    .diagram-surface { fill: #f7f9fa; }
+    .box { fill: none; stroke: currentColor; stroke-width: 2; }
+    .flow { fill: none; stroke: currentColor; stroke-width: 2; }
+    .label { fill: currentColor; text-anchor: middle;
+             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .step { font-size: 18px; font-weight: 600; }
+    .gloss { font-size: 14px; }
+    .note { font-size: 17px; font-weight: 600; }
+  </style>
+  <rect class="diagram-surface" x="0" y="0" width="100%" height="100%"/>
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
     </marker>
   </defs>
-  <g fill="none" stroke="currentColor" stroke-width="2">
-    <rect x="35" y="95" width="175" height="80" rx="12"/>
-    <rect x="250" y="95" width="175" height="80" rx="12"/>
-    <rect x="465" y="95" width="175" height="80" rx="12"/>
-    <rect x="680" y="95" width="175" height="80" rx="12"/>
-    <rect x="895" y="95" width="175" height="80" rx="12"/>
-    <rect x="1110" y="95" width="175" height="80" rx="12"/>
-    <rect x="1325" y="95" width="140" height="80" rx="12"/>
-    <path d="M210 135 H245" marker-end="url(#arrow)"/>
-    <path d="M425 135 H460" marker-end="url(#arrow)"/>
-    <path d="M640 135 H675" marker-end="url(#arrow)"/>
-    <path d="M855 135 H890" marker-end="url(#arrow)"/>
-    <path d="M1070 135 H1105" marker-end="url(#arrow)"/>
-    <path d="M1285 135 H1320" marker-end="url(#arrow)"/>
 
-    <rect x="670" y="285" width="195" height="95" rx="12"/>
-    <rect x="890" y="285" width="195" height="95" rx="12"/>
-    <rect x="1110" y="285" width="195" height="95" rx="12"/>
-    <path d="M767 285 V180"/>
-    <path d="M987 285 V180"/>
-    <path d="M1207 285 V180"/>
+  <g class="box">
+    <rect x="30" y="90" width="200" height="82" rx="12"/>
+    <rect x="265" y="90" width="200" height="82" rx="12"/>
+    <rect x="500" y="90" width="200" height="82" rx="12"/>
+    <rect x="735" y="90" width="200" height="82" rx="12"/>
+    <rect x="970" y="90" width="200" height="82" rx="12"/>
+    <rect x="1205" y="90" width="200" height="82" rx="12"/>
+    <rect x="1440" y="90" width="150" height="82" rx="12"/>
+
+    <rect x="725" y="290" width="220" height="100" rx="12"/>
+    <rect x="960" y="290" width="220" height="100" rx="12"/>
+    <rect x="1195" y="290" width="220" height="100" rx="12"/>
   </g>
 
-  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="currentColor" text-anchor="middle">
-    <text x="122" y="128" font-size="21" font-weight="600">Documents</text>
-    <text x="122" y="153" font-size="16">source corpus</text>
+  <g class="flow">
+    <path d="M230 131 H259" marker-end="url(#arrow)"/>
+    <path d="M465 131 H494" marker-end="url(#arrow)"/>
+    <path d="M700 131 H729" marker-end="url(#arrow)"/>
+    <path d="M935 131 H964" marker-end="url(#arrow)"/>
+    <path d="M1170 131 H1199" marker-end="url(#arrow)"/>
+    <path d="M1405 131 H1434" marker-end="url(#arrow)"/>
+    <path d="M835 290 V172"/>
+    <path d="M1070 290 V172"/>
+    <path d="M1305 290 V172"/>
+  </g>
 
-    <text x="337" y="128" font-size="21" font-weight="600">Chunking</text>
-    <text x="337" y="153" font-size="16">units of retrieval</text>
+  <g class="label">
+    <text class="step" x="130" y="126">Documents</text>
+    <text class="gloss" x="130" y="150">source corpus</text>
 
-    <text x="552" y="128" font-size="21" font-weight="600">Indexing</text>
-    <text x="552" y="153" font-size="16">sparse / dense / hybrid</text>
+    <text class="step" x="365" y="126">Chunking</text>
+    <text class="gloss" x="365" y="150">units of retrieval</text>
 
-    <text x="767" y="128" font-size="21" font-weight="600">Candidate retrieval</text>
-    <text x="767" y="153" font-size="16">high recall</text>
+    <text class="step" x="600" y="126">Indexing</text>
+    <text class="gloss" x="600" y="150">sparse / dense / hybrid</text>
 
-    <text x="982" y="128" font-size="21" font-weight="600">Reranking</text>
-    <text x="982" y="153" font-size="16">higher precision</text>
+    <text class="step" x="835" y="126">Candidate retrieval</text>
+    <text class="gloss" x="835" y="150">high recall</text>
 
-    <text x="1197" y="128" font-size="21" font-weight="600">Context building</text>
-    <text x="1197" y="153" font-size="16">ordering + budget</text>
+    <text class="step" x="1070" y="126">Reranking</text>
+    <text class="gloss" x="1070" y="150">higher precision</text>
 
-    <text x="1395" y="128" font-size="21" font-weight="600">LLM</text>
-    <text x="1395" y="153" font-size="16">answer</text>
+    <text class="step" x="1305" y="126">Context building</text>
+    <text class="gloss" x="1305" y="150">ordering + budget</text>
 
-    <text x="767" y="320" font-size="19" font-weight="600">Retrieval metrics</text>
-    <text x="767" y="347" font-size="15">Recall@k · MRR · nDCG</text>
+    <text class="step" x="1515" y="126">LLM</text>
+    <text class="gloss" x="1515" y="150">answer</text>
 
-    <text x="987" y="320" font-size="19" font-weight="600">Context metrics</text>
-    <text x="987" y="347" font-size="15">precision · redundancy · coverage</text>
+    <text class="step" x="835" y="325">Retrieval metrics</text>
+    <text class="gloss" x="835" y="352">Recall@k · MRR</text>
+    <text class="gloss" x="835" y="372">nDCG</text>
 
-    <text x="1207" y="320" font-size="19" font-weight="600">Generation metrics</text>
-    <text x="1207" y="347" font-size="15">faithfulness · correctness · citation support</text>
+    <text class="step" x="1070" y="325">Context metrics</text>
+    <text class="gloss" x="1070" y="352">precision · redundancy</text>
+    <text class="gloss" x="1070" y="372">coverage</text>
 
-    <text x="750" y="455" font-size="19" font-weight="600">A final-answer score cannot tell you which stage failed.</text>
+    <text class="step" x="1305" y="325">Generation metrics</text>
+    <text class="gloss" x="1305" y="352">faithfulness · correctness</text>
+    <text class="gloss" x="1305" y="372">citation support</text>
+
+    <text class="note" x="810" y="450">A final-answer score cannot tell you which stage failed.</text>
   </g>
 </svg>
