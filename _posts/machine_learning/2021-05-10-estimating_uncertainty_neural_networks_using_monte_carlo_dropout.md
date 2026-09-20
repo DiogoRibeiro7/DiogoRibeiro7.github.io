@@ -148,7 +148,7 @@ Large variation across dropout draws can indicate model instability, but MC-drop
 
 For classification, predictive entropy mixes irreducible class ambiguity with variation across model draws. A common MC-dropout summary for epistemic uncertainty is mutual information:
 
-$
+$$
 I[y,w\mid x,D]
 =
 H\left[
@@ -159,7 +159,7 @@ E_w
 H\left[
 p(y\mid x,w)
 \right].
-$
+$$
 
 The first term is entropy of the averaged predictive probabilities. The second is the average entropy within individual dropout draws. Their difference is large when different sampled subnetworks disagree.
 
@@ -191,17 +191,17 @@ While Monte Carlo dropout is a powerful technique for estimating uncertainty, it
 
 ## Conclusion
 
-Monte Carlo dropout offers a practical and scalable way to estimate uncertainty in neural network predictions, making it particularly useful for multi-class classification tasks. By keeping dropout enabled during inference and performing multiple forward passes, we can approximate the posterior predictive distribution of the model’s outputs. From this distribution, various methods—such as maximum class probability, entropy, variance, and normal approximation—can be used to compute uncertainty scores.
+Monte Carlo dropout offers a practical and scalable way to estimate uncertainty in neural network predictions, making it particularly useful for multi-class classification tasks. By keeping dropout enabled during inference and performing multiple forward passes, we can approximate the posterior predictive distribution of the model’s outputs. From these stochastic predictions, summaries such as maximum class probability, predictive entropy, variance, and mutual information can be used as uncertainty diagnostics.
 
-Each method has its strengths and is suited to different types of problems. For simple tasks, maximum class probability and entropy offer computationally efficient ways to estimate uncertainty. For more complex or high-stakes applications, variance-based methods and normal approximation provide deeper insights into the model's confidence.
+Each method has its strengths and is suited to different types of problems. For simple tasks, maximum class probability and entropy offer computationally efficient ways to estimate uncertainty. For more complex or high-stakes applications, no single scalar uncertainty score is sufficient; calibration, distribution shift, and task-specific decision thresholds must be evaluated directly.
 
 As uncertainty estimation becomes increasingly important in machine learning applications, Monte Carlo dropout stands out as a powerful tool that can be easily integrated into existing models. However, it is important to be mindful of the method’s limitations, particularly with respect to computational cost and the choice of dropout rate. With proper tuning and calibration, Monte Carlo dropout can significantly enhance the robustness and reliability of neural network predictions, making it an essential technique in the machine learning toolbox.
 
 ## References
 
-- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
-- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.
-- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+- Gal, Y., & Ghahramani, Z. (2016). Dropout as a Bayesian approximation: Representing model uncertainty in deep learning. *Proceedings of ICML*, 1050–1059.
+
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
 
 
 ## Calibration is a separate requirement
