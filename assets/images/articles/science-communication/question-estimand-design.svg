@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 330" role="img" aria-labelledby="title desc">
+  <title id="title">From scientific question to defensible inference</title>
+  <desc id="desc">A sequence from scientific question through estimand, target population, design, measurement and analysis to interpretation, followed by replication and revision.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="30" y="80" width="155" height="90" rx="12"/>
+    <rect x="215" y="80" width="155" height="90" rx="12"/>
+    <rect x="400" y="80" width="165" height="90" rx="12"/>
+    <rect x="595" y="80" width="155" height="90" rx="12"/>
+    <rect x="780" y="80" width="155" height="90" rx="12"/>
+    <rect x="965" y="80" width="155" height="90" rx="12"/>
+    <rect x="1150" y="80" width="210" height="90" rx="12"/>
+    <path d="M185 125 H210" marker-end="url(#arrow)"/>
+    <path d="M370 125 H395" marker-end="url(#arrow)"/>
+    <path d="M565 125 H590" marker-end="url(#arrow)"/>
+    <path d="M750 125 H775" marker-end="url(#arrow)"/>
+    <path d="M935 125 H960" marker-end="url(#arrow)"/>
+    <path d="M1120 125 H1145" marker-end="url(#arrow)"/>
+    <path d="M1255 170 C1255 255 760 265 690 210" marker-end="url(#arrow)"/>
+  </g>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="currentColor" text-anchor="middle">
+    <text x="107" y="116" font-size="21" font-weight="600">Question</text>
+    <text x="107" y="144" font-size="16">What do we want to know?</text>
+
+    <text x="292" y="116" font-size="21" font-weight="600">Estimand</text>
+    <text x="292" y="144" font-size="16">What quantity answers it?</text>
+
+    <text x="482" y="108" font-size="21" font-weight="600">Target population</text>
+    <text x="482" y="138" font-size="16">For whom or what?</text>
+
+    <text x="672" y="116" font-size="21" font-weight="600">Design</text>
+    <text x="672" y="144" font-size="16">What comparison identifies it?</text>
+
+    <text x="857" y="116" font-size="21" font-weight="600">Measurement</text>
+    <text x="857" y="144" font-size="16">What is actually observed?</text>
+
+    <text x="1042" y="116" font-size="21" font-weight="600">Analysis</text>
+    <text x="1042" y="144" font-size="16">How is uncertainty quantified?</text>
+
+    <text x="1255" y="108" font-size="21" font-weight="600">Interpretation</text>
+    <text x="1255" y="136" font-size="16">What does the design support?</text>
+    <text x="1255" y="158" font-size="16">What remains uncertain?</text>
+
+    <text x="930" y="286" font-size="18" font-weight="600">Replication, criticism and revision feed back into design and interpretation</text>
+  </g>
+</svg>
