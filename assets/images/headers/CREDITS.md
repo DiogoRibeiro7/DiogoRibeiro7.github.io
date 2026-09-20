@@ -74,7 +74,6 @@ CC0, public-domain, CC BY or CC BY-SA licences; the same list is published at
 | photo-statistics-law-large-numbers.jpg | LawOfLargeNumbersCauchy.svg | ARAKI Satoru | CC BY-SA 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:LawOfLargeNumbersCauchy.svg) |
 | photo-statistics-logistic-pdf.jpg | PDF of H1 Logistic and H2.png | Dwilus | CC BY-SA 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:PDF_of_H1_Logistic_and_H2.png) |
 | photo-statistics-mahalanobis.jpg | Mahalanobis-distance-location-and-scatter-methods.png | Tretherington | CC BY-SA 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Mahalanobis-distance-location-and-scatter-methods.png) |
-| photo-statistics-missing-data.jpg | Number of uses of charts by year of latest chart data in English Wikipedia articles.svg | Prototyperspective | CC BY 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Number_of_uses_of_charts_by_year_of_latest_chart_data_in_English_Wikipedia_articles.svg) |
 | photo-statistics-monte-carlo.jpg | Hamiltonian Monte Carlo.svg | Justinkunimune | CC0 | [Commons](https://commons.wikimedia.org/wiki/File:Hamiltonian_Monte_Carlo.svg) |
 | photo-statistics-normal-distribution.jpg | Normalverteilung.png | self created by Marcus Glöder | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Normalverteilung.png) |
 | photo-statistics-overlapping-cis.jpg | Interpretation of overlapping CIs.png | FRuDIxAFLG | CC0 | [Commons](https://commons.wikimedia.org/wiki/File:Interpretation_of_overlapping_CIs.png) |
