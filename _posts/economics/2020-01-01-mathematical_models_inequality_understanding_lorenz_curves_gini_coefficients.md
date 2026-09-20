@@ -94,7 +94,7 @@ These points form the Lorenz Curve for this population, which can then be graphe
 A Lorenz Curve that is closer to the line of equality represents a more equal income distribution. As the Lorenz Curve bows further from the line, inequality increases. The shape and position of the Lorenz Curve can reveal:
 
 - **Degree of Inequality**: A larger area between the Lorenz Curve and the line of equality indicates higher inequality.
-- **Poverty Concentration**: When the Lorenz Curve bows steeply near the origin, it suggests that a small percentage of the population controls a large portion of the income or wealth.
+- **Concentration at the Top**: When the Lorenz Curve is relatively flat near the origin and then rises sharply near the right-hand edge, the lower cumulative population shares hold little income while a small upper share holds a large fraction of the total.
 
 Lorenz Curves provide a visual way to assess income distribution; however, for precise quantification, the Gini Coefficient is often used.
 
@@ -125,11 +125,25 @@ where $$X_i$$ and $$Y_i$$ represent cumulative percentages of the population and
 
 #### Example Calculation of the Gini Coefficient
 
-Using the Lorenz Curve data from our earlier example:
+Using the earlier cumulative shares, include the origin $(0,0)$ and apply the trapezoidal form of the Lorenz-area formula:
 
-1. Compute the area between the Lorenz Curve and the line of equality (Area **A**).
-2. Sum the area beneath the Lorenz Curve (Area **B**).
-3. Calculate **G** using the formula.
+$
+G = 1 - \sum_{i=1}^{5}(X_i-X_{i-1})(Y_i+Y_{i-1}).
+$
+
+Here the five terms are
+
+$
+0.2(0+0.05)+0.2(0.05+0.15)+0.2(0.15+0.30)+0.2(0.30+0.50)+0.2(0.50+1.00)=0.58.
+$
+
+Therefore,
+
+$
+G = 1 - 0.58 = 0.42.
+$
+
+For this five-person example the Gini coefficient is 0.42. With a finite empirical sample, the maximum attainable uncorrected Gini is $1-1/n$ rather than exactly 1; the population-level 0-to-1 interpretation is the limiting idealization.
 
 A lower Gini Coefficient indicates a more equal distribution, while a higher coefficient suggests greater inequality.
 
