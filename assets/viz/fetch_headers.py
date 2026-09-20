@@ -108,6 +108,25 @@ QUERIES = {
     "mathematics-penrose-tiling": "any:penrose tiling mathematics svg",
     "mathematics-polyhedra": "geometric solids mathematics",
     "mathematics-voronoi": "any:voronoi tessellation svg",
+    "research-study-design": "any:research design evidence hierarchy study types svg",
+    "research-randomisation": "clinical trial randomization research participants",
+    "research-causal-dag": "any:Comparison confounder mediator.svg",
+    "research-measurement-error": "any:measurement error regression dilution statistics svg",
+    "research-meta-analysis": "Forest plot of studies comparing differences in maximal strength in combined endurance and resistance exercise (RE) vs RE only.png",
+    "research-longitudinal": "any:Trajectories of repeated cognitive test scores over time for Alzheimer's disease subtypes.webp",
+    "research-open-science": "Lab Notebook.jpg",
+    "research-reproducibility": "any:Workflow of computational notebooks.svg",
+    "statistics-monte-carlo": "any:Hamiltonian Monte Carlo.svg",
+    "statistics-survival-analysis": "any:Kaplan-Meier plot of AML survival.svg",
+    "statistics-missing-data": "any:ASCII grid example.svg",
+    "statistics-propensity-score": "any:propensity score matching balance plot statistics",
+    "time-series-sensor-data": "any:Sample Biosignals (ECG, PPG, RIP).svg",
+    "time-series-signal": "Systrip in context visualization of time-series data.png",
+    "logistics-container-port": "Container terminal from above (Unsplash).jpg",
+    "logistics-warehouse": "warehouse logistics distribution center",
+    "logistics-freight-rail": "Intermodal Containers on Freight Train, August 29 2025.jpg",
+    "logistics-shipping": "Aerial image of the Eurogate and Burchardkai container terminals (view from the southeast).jpg",
+    "industry-assembly-line": "001 Car factory assembly line - Opel factory in Gliwice, Poland.jpg",
 }
 
 
@@ -150,7 +169,7 @@ def acceptable(c):
     else:
         width, height = c["width"], c["height"]
     ratio = width / max(height, 1)
-    return (c["mime"] in ("image/jpeg", "image/png", "image/svg+xml") and width >= 1600 and 1.3 <= ratio <= 2.5
+    return (c["mime"] in ("image/jpeg", "image/png", "image/webp", "image/svg+xml") and width >= 1600 and 1.3 <= ratio <= 2.5
             and (c["licence"] in FREE or c["licence"] in ATTRIBUTION)
             and not BAD_TITLE.search(c["title"]) and c["thumb"])
 

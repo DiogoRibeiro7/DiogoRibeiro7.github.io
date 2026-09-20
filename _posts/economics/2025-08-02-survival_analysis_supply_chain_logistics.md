@@ -31,13 +31,13 @@ keywords:
 classes: wide
 date: '2025-08-02'
 header:
-  image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
-  og_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
-  overlay_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  image: /assets/images/headers/photo-logistics-shipping.jpg
+  og_image: /assets/images/headers/photo-logistics-shipping.jpg
+  overlay_image: /assets/images/headers/photo-logistics-shipping.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-statistics-law-large-numbers.jpg
-  twitter_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
+  teaser: /assets/images/headers/photo-logistics-shipping.jpg
+  twitter_image: /assets/images/headers/photo-logistics-shipping.jpg
 ---
 
 ## Table of Contents
