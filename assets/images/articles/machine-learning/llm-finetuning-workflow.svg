@@ -1,66 +1,96 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 560" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1620 520" role="img" aria-labelledby="title desc">
   <title id="title">A defensible LLM fine-tuning workflow</title>
   <desc id="desc">A workflow from deployment objective through data, split, chat formatting, LoRA or QLoRA training, validation, behavioral evaluation and deployment.</desc>
+  <style>
+    /* This diagram is embedded with an &lt;img&gt; tag, which makes the file an
+       isolated document: currentColor cannot inherit the page's text colour and
+       falls back to black, which disappears on the dark theme's near-black
+       surface. Carry the surface and the ink the site's other figures use
+       (assets/viz/house.mplstyle), so the diagram reads in either theme. */
+    svg { color: #0b0b0b; }
+    .diagram-surface { fill: #f7f9fa; }
+    .box { fill: none; stroke: currentColor; stroke-width: 2; }
+    .flow { fill: none; stroke: currentColor; stroke-width: 2; }
+    .label { fill: currentColor; text-anchor: middle;
+             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .step { font-size: 18px; font-weight: 600; }
+    .gloss { font-size: 14px; }
+    .note { font-size: 17px; font-weight: 600; }
+  </style>
+  <rect class="diagram-surface" x="0" y="0" width="100%" height="100%"/>
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
     </marker>
   </defs>
-  <g fill="none" stroke="currentColor" stroke-width="2">
-    <rect x="35" y="85" width="180" height="88" rx="12"/>
-    <rect x="255" y="85" width="180" height="88" rx="12"/>
-    <rect x="475" y="85" width="180" height="88" rx="12"/>
-    <rect x="695" y="85" width="180" height="88" rx="12"/>
-    <rect x="915" y="85" width="180" height="88" rx="12"/>
-    <rect x="1135" y="85" width="180" height="88" rx="12"/>
-    <rect x="1355" y="85" width="110" height="88" rx="12"/>
 
-    <path d="M215 129 H250" marker-end="url(#arrow)"/>
-    <path d="M435 129 H470" marker-end="url(#arrow)"/>
-    <path d="M655 129 H690" marker-end="url(#arrow)"/>
-    <path d="M875 129 H910" marker-end="url(#arrow)"/>
-    <path d="M1095 129 H1130" marker-end="url(#arrow)"/>
-    <path d="M1315 129 H1350" marker-end="url(#arrow)"/>
+  <g class="box">
+    <rect x="30" y="80" width="200" height="100" rx="12"/>
+    <rect x="265" y="80" width="200" height="100" rx="12"/>
+    <rect x="500" y="80" width="200" height="100" rx="12"/>
+    <rect x="735" y="80" width="200" height="100" rx="12"/>
+    <rect x="970" y="80" width="200" height="100" rx="12"/>
+    <rect x="1205" y="80" width="200" height="100" rx="12"/>
+    <rect x="1440" y="80" width="150" height="100" rx="12"/>
 
-    <rect x="255" y="300" width="180" height="90" rx="12"/>
-    <rect x="695" y="300" width="180" height="90" rx="12"/>
-    <rect x="1135" y="300" width="180" height="90" rx="12"/>
-    <path d="M345 300 V178"/>
-    <path d="M785 300 V178"/>
-    <path d="M1225 300 V178"/>
+    <rect x="255" y="300" width="220" height="100" rx="12"/>
+    <rect x="725" y="300" width="220" height="100" rx="12"/>
+    <rect x="1195" y="300" width="220" height="100" rx="12"/>
   </g>
 
-  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="currentColor" text-anchor="middle">
-    <text x="125" y="118" font-size="21" font-weight="600">Objective</text>
-    <text x="125" y="146" font-size="15">behaviour to change</text>
+  <g class="flow">
+    <path d="M230 130 H259" marker-end="url(#arrow)"/>
+    <path d="M465 130 H494" marker-end="url(#arrow)"/>
+    <path d="M700 130 H729" marker-end="url(#arrow)"/>
+    <path d="M935 130 H964" marker-end="url(#arrow)"/>
+    <path d="M1170 130 H1199" marker-end="url(#arrow)"/>
+    <path d="M1405 130 H1434" marker-end="url(#arrow)"/>
+    <path d="M365 300 V182"/>
+    <path d="M835 300 V182"/>
+    <path d="M1305 300 V182"/>
+  </g>
 
-    <text x="345" y="118" font-size="21" font-weight="600">Dataset</text>
-    <text x="345" y="146" font-size="15">examples that represent use</text>
+  <g class="label">
+    <text class="step" x="130" y="116">Objective</text>
+    <text class="gloss" x="130" y="142">behaviour</text>
+    <text class="gloss" x="130" y="162">to change</text>
 
-    <text x="565" y="118" font-size="21" font-weight="600">Split</text>
-    <text x="565" y="146" font-size="15">no semantic leakage</text>
+    <text class="step" x="365" y="116">Dataset</text>
+    <text class="gloss" x="365" y="142">examples that</text>
+    <text class="gloss" x="365" y="162">represent use</text>
 
-    <text x="785" y="118" font-size="21" font-weight="600">Formatting</text>
-    <text x="785" y="146" font-size="15">chat template + loss mask</text>
+    <text class="step" x="600" y="116">Split</text>
+    <text class="gloss" x="600" y="142">no semantic</text>
+    <text class="gloss" x="600" y="162">leakage</text>
 
-    <text x="1005" y="118" font-size="21" font-weight="600">Train</text>
-    <text x="1005" y="146" font-size="15">LoRA / QLoRA / full FT</text>
+    <text class="step" x="835" y="116">Formatting</text>
+    <text class="gloss" x="835" y="142">chat template</text>
+    <text class="gloss" x="835" y="162">+ loss mask</text>
 
-    <text x="1225" y="118" font-size="21" font-weight="600">Evaluate</text>
-    <text x="1225" y="146" font-size="15">target + regressions</text>
+    <text class="step" x="1070" y="116">Train</text>
+    <text class="gloss" x="1070" y="142">LoRA / QLoRA</text>
+    <text class="gloss" x="1070" y="162">or full FT</text>
 
-    <text x="1410" y="118" font-size="21" font-weight="600">Deploy</text>
-    <text x="1410" y="146" font-size="15">adapter or merge</text>
+    <text class="step" x="1305" y="116">Evaluate</text>
+    <text class="gloss" x="1305" y="142">target +</text>
+    <text class="gloss" x="1305" y="162">regressions</text>
 
-    <text x="345" y="333" font-size="18" font-weight="600">Audit the data</text>
-    <text x="345" y="359" font-size="14">duplicates · contradictions · lengths</text>
+    <text class="step" x="1515" y="116">Deploy</text>
+    <text class="gloss" x="1515" y="142">adapter</text>
+    <text class="gloss" x="1515" y="162">or merge</text>
 
-    <text x="785" y="333" font-size="18" font-weight="600">Audit the tokens</text>
-    <text x="785" y="359" font-size="14">special tokens · truncation · labels</text>
+    <text class="step" x="365" y="335">Audit the data</text>
+    <text class="gloss" x="365" y="362">duplicates · contradictions</text>
+    <text class="gloss" x="365" y="382">lengths</text>
 
-    <text x="1225" y="333" font-size="18" font-weight="600">Audit behaviour</text>
-    <text x="1225" y="359" font-size="14">held-out tasks · schemas · safety · style</text>
+    <text class="step" x="835" y="335">Audit the tokens</text>
+    <text class="gloss" x="835" y="362">special tokens · truncation</text>
+    <text class="gloss" x="835" y="382">labels</text>
 
-    <text x="750" y="485" font-size="19" font-weight="600">A lower training loss is not evidence that the deployed model improved.</text>
+    <text class="step" x="1305" y="335">Audit behaviour</text>
+    <text class="gloss" x="1305" y="362">held-out tasks · schemas</text>
+    <text class="gloss" x="1305" y="382">safety · style</text>
+
+    <text class="note" x="810" y="470">A lower training loss is not evidence that the deployed model improved.</text>
   </g>
 </svg>
