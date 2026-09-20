@@ -46,7 +46,7 @@ Zero-inflated time series data, characterized by a high frequency of zero values
 
 ### Stationarity in Time Series Data
 
-A stationary time series is one where the statistical properties, such as mean and variance, are constant over time. Stationarity is a crucial concept in time series analysis because it simplifies modeling and ensures that the time series behaves predictably. A stationary process allows us to describe the data with a time-invariant distribution, which can be exploited to define thresholds for classification.
+Weak stationarity requires a constant mean and an autocovariance depending only on lag, not merely constant mean and variance. More importantly, a stationary marginal distribution does not by itself justify useful alert thresholds when zeros and positive values arise from different mechanisms.
 
 However, zero-inflated data complicates traditional analysis due to an overabundance of zeros. Many time series, like precipitation or traffic flow data, have long stretches of zeros interrupted by bursts of non-zero values. If the series is stationary, the excess zeros and the non-zero observations can still be described using a suitable time series model that captures both components.
 
@@ -60,7 +60,7 @@ This paper aims to integrate the concept of stationarity into the threshold clas
 
 In zero-inflated time series data, zeros dominate the distribution, making it difficult to apply traditional thresholding techniques like percentiles or standard deviation-based intervals. This is especially problematic for classification tasks, where a meaningful distinction between event intensities (such as low, moderate, or severe precipitation) is needed.
 
-Traditional methods like percentile-based thresholds or standard deviation intervals fail in zero-inflated contexts because they do not account for the high frequency of zero values. These methods typically assume the data follows a normal distribution, which is rarely the case in zero-inflated datasets.
+A percentile threshold does not inherently assume normality. The real difficulty is that a zero-inflated series often represents a mixture of two processes: whether an event occurs at all and, conditional on occurrence, how large it is.
 
 ### Limitations of Existing Methods
 
@@ -82,13 +82,29 @@ The first step involves fitting a time series model that accounts for the zero-i
 
 The model fitting process yields parameters that describe the time series, such as autoregressive coefficients, moving average terms, and noise variance.
 
-### Step 2: Obtain the Stationary Distribution
+### Step 2: Model occurrence and positive magnitude separately
 
-Once the model is fitted, the next step is to derive the stationary distribution. The stationary distribution represents the long-term probabilistic behavior of the time series and includes both zero and non-zero components.
+Let
 
-For a stationary ARMA or ARIMA model, the stationary distribution can often be described by a normal or Gaussian distribution, parameterized by the model’s mean and variance. In the case of zero-inflated models, the stationary distribution may combine a point mass at zero with a continuous distribution for non-zero values.
+$
+Z_t=I(Y_t>0).
+$
 
-### Step 3: Define Thresholds Based on Quantiles
+A two-part model can write
+
+$
+P(Y_t=0)=1-p_t,
+$
+
+and model
+
+$
+Y_t\mid Y_t>0
+$
+
+with a positive-valued distribution. The occurrence probability $p_t$ and positive magnitude can each depend on seasonality, covariates, and past values.
+
+### Step 3: Define thresholds from the operational loss
 
 With the stationary distribution in hand, thresholds for classification can be defined using its quantiles. This ensures that the thresholds are meaningful and reflect the underlying distribution of the time series, including the effect of zeros.
 
@@ -170,3 +186,24 @@ The use of stationary distributions for threshold classification offers several 
 This paper presents a novel approach to threshold classification in zero-inflated time series data by fitting time series models and using the resulting stationary distributions to define thresholds. This method improves upon traditional classification techniques by incorporating the time series structure, providing more accurate and meaningful event intensity classifications. Applications to domains such as meteorology, wind speed, and finance demonstrate the versatility of the methodology.
 
 ---
+
+
+## Zero-inflated and hurdle models
+
+A zero-inflated model assumes some zeros arise from a structural-zero process while the count process can also generate zeros. A hurdle model separates zero versus positive occurrence and then uses a zero-truncated positive distribution.
+
+Those assumptions are different. The choice should follow the mechanism.
+
+For time series, dependence can enter both components:
+
+$$
+\operatorname{logit}(p_t)
+=
+x_t^\top\beta
++
+\phi Z_{t-1},
+$$
+
+while the positive magnitude model can have its own temporal structure.
+
+Differencing the raw series is not a generic solution to zero inflation.
