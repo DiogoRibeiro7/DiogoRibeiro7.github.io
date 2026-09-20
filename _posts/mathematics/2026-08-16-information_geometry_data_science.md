@@ -286,9 +286,9 @@ Near a well-behaved maximum likelihood estimate, the log likelihood can be appro
 
 This is the intuition behind using inverse Fisher information as an approximate covariance matrix. If $I(\theta)$ denotes Fisher information for one observation and the sample contains $n$ independent observations, then
 
-$
+$$
 \mathrm{Cov}(\hat{\theta}) \approx \left[n I(\hat{\theta})\right]^{-1}.
-$
+$$
 
 If $I_n(\theta)$ denotes the Fisher information for the full sample instead, the same statement is written $\mathrm{Cov}(\hat{\theta}) \approx I_n(\hat{\theta})^{-1}$.
 
