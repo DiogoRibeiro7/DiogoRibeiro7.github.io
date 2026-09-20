@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 520" role="img" aria-labelledby="title desc">
+  <title id="title">RAG retrieval and evaluation pipeline</title>
+  <desc id="desc">A RAG pipeline from corpus ingestion through chunking, indexing, candidate retrieval, reranking and context construction to generation, with evaluation metrics attached to retrieval and generation stages.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="35" y="95" width="175" height="80" rx="12"/>
+    <rect x="250" y="95" width="175" height="80" rx="12"/>
+    <rect x="465" y="95" width="175" height="80" rx="12"/>
+    <rect x="680" y="95" width="175" height="80" rx="12"/>
+    <rect x="895" y="95" width="175" height="80" rx="12"/>
+    <rect x="1110" y="95" width="175" height="80" rx="12"/>
+    <rect x="1325" y="95" width="140" height="80" rx="12"/>
+    <path d="M210 135 H245" marker-end="url(#arrow)"/>
+    <path d="M425 135 H460" marker-end="url(#arrow)"/>
+    <path d="M640 135 H675" marker-end="url(#arrow)"/>
+    <path d="M855 135 H890" marker-end="url(#arrow)"/>
+    <path d="M1070 135 H1105" marker-end="url(#arrow)"/>
+    <path d="M1285 135 H1320" marker-end="url(#arrow)"/>
+
+    <rect x="670" y="285" width="195" height="95" rx="12"/>
+    <rect x="890" y="285" width="195" height="95" rx="12"/>
+    <rect x="1110" y="285" width="195" height="95" rx="12"/>
+    <path d="M767 285 V180"/>
+    <path d="M987 285 V180"/>
+    <path d="M1207 285 V180"/>
+  </g>
+
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="currentColor" text-anchor="middle">
+    <text x="122" y="128" font-size="21" font-weight="600">Documents</text>
+    <text x="122" y="153" font-size="16">source corpus</text>
+
+    <text x="337" y="128" font-size="21" font-weight="600">Chunking</text>
+    <text x="337" y="153" font-size="16">units of retrieval</text>
+
+    <text x="552" y="128" font-size="21" font-weight="600">Indexing</text>
+    <text x="552" y="153" font-size="16">sparse / dense / hybrid</text>
+
+    <text x="767" y="128" font-size="21" font-weight="600">Candidate retrieval</text>
+    <text x="767" y="153" font-size="16">high recall</text>
+
+    <text x="982" y="128" font-size="21" font-weight="600">Reranking</text>
+    <text x="982" y="153" font-size="16">higher precision</text>
+
+    <text x="1197" y="128" font-size="21" font-weight="600">Context building</text>
+    <text x="1197" y="153" font-size="16">ordering + budget</text>
+
+    <text x="1395" y="128" font-size="21" font-weight="600">LLM</text>
+    <text x="1395" y="153" font-size="16">answer</text>
+
+    <text x="767" y="320" font-size="19" font-weight="600">Retrieval metrics</text>
+    <text x="767" y="347" font-size="15">Recall@k · MRR · nDCG</text>
+
+    <text x="987" y="320" font-size="19" font-weight="600">Context metrics</text>
+    <text x="987" y="347" font-size="15">precision · redundancy · coverage</text>
+
+    <text x="1207" y="320" font-size="19" font-weight="600">Generation metrics</text>
+    <text x="1207" y="347" font-size="15">faithfulness · correctness · citation support</text>
+
+    <text x="750" y="455" font-size="19" font-weight="600">A final-answer score cannot tell you which stage failed.</text>
+  </g>
+</svg>
