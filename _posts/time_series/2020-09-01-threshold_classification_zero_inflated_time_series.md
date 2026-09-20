@@ -86,21 +86,21 @@ The model fitting process yields parameters that describe the time series, such 
 
 Let
 
-$
+$$
 Z_t=I(Y_t>0).
-$
+$$
 
 A two-part model can write
 
-$
+$$
 P(Y_t=0)=1-p_t,
-$
+$$
 
 and model
 
-$
+$$
 Y_t\mid Y_t>0
-$
+$$
 
 with a positive-valued distribution. The occurrence probability $p_t$ and positive magnitude can each depend on seasonality, covariates, and past values.
 
