@@ -51,7 +51,7 @@ title: 'Exploring Classic Linear Programming (LP) Problems and Scalable Solution
 
 Since the 1940s, LP techniques have been refined and adapted to fit the ever-increasing complexity and size of the optimization problems faced by modern industries. The most prominent and traditional LP solvers are built around **Dantzig's Simplex Method** and **interior-point methods**. Despite their efficacy, these solvers face substantial challenges when scaling to large, complex instances due to memory and computational constraints. In response, **first-order methods (FOMs)** have emerged as an alternative approach, providing a scalable solution to large-scale LP problems by reducing the reliance on resource-heavy matrix factorization techniques.
 
-This article examines the traditional methods of solving LP, the challenges they face in scaling, and introduces **PDLP (Primal-Dual Hybrid Gradient Enhanced for LP)**, a modern solver that offers a scalable alternative to traditional methods by leveraging advancements in FOMs. PDLP was co-awarded the **Beale-Orchard Hays Prize** in 2024 for its innovative approach to computational optimization, marking a significant step forward in the field.
+This article compares simplex, interior-point, and first-order approaches to LP, with PDLP as an example of a modern primal-dual first-order solver. The useful question is not which family is universally faster, but which algorithm matches the problem size, sparsity, conditioning, accuracy requirement, and hardware.
 
 ## A Brief Overview of Linear Programming (LP)
 
@@ -112,7 +112,7 @@ Developed in the 1980s, **interior-point methods** revolutionized the field of o
 However, interior-point methods also have limitations:
 
 - **Cholesky Factorization**: Like the Simplex Method, interior-point methods rely on matrix factorizations (specifically **Cholesky decomposition**) to solve linear systems, which also requires significant memory.
-- **Sequential Processing**: Interior-point methods are difficult to parallelize due to the inherently sequential nature of their matrix factorizations, limiting their compatibility with modern parallel computing architectures such as GPUs.
+- **Linear-system cost**: interior-point methods require repeated sparse linear solves. These can be parallelized to some extent, but factorization and communication can become the dominant cost on very large sparse problems.
 
 ## Challenges in Scaling Traditional LP Methods
 
@@ -136,7 +136,7 @@ Given these challenges, alternative methods that can efficiently handle large-sc
   
 - **Parallel Computation**: FOMs are well-suited to modern computational platforms, such as **GPUs** and **distributed systems**, as matrix-vector multiplications can be easily parallelized.
   
-- **Scalability**: FOMs have been adapted for large-scale machine learning and deep learning tasks, making them highly efficient for optimization problems that involve large datasets or complex models.
+- **Scalability**: first-order methods can exploit sparse matrix-vector products and have low memory overhead per iteration, but they often need many more iterations and can converge slowly to high-accuracy solutions.
 
 Recent advancements in FOMs for LP have led to the development of new solvers capable of addressing the limitations of traditional methods. One such solver is **PDLP**.
 
@@ -150,13 +150,15 @@ At its core, PDLP uses a **primal-dual hybrid gradient method**, which is a firs
 
 #### Key Features of PDLP:
 
-- **Memory Efficiency**: PDLP requires significantly less memory than traditional LP solvers, as it avoids matrix factorizations.
+- **Memory Efficiency**: PDLP can require substantially less auxiliary memory than factorization-based methods on large sparse instances, as it avoids matrix factorizations.
 - **Scalability**: PDLP is designed to scale up efficiently to large LP instances, making it suitable for real-world applications in fields like logistics, networking, and machine learning.
 - **Modern Computing Compatibility**: By using matrix-vector multiplications, PDLP is optimized for parallel processing on **GPUs** and distributed systems, enabling faster computation times for large problems.
 
-### Development and Recognition
+### Accuracy and stopping criteria
 
-PDLP has been in development since 2018 and was open-sourced as part of **Google’s OR-Tools**. Over the past few years, it has undergone extensive testing and refinement, culminating in its co-awarding of the prestigious **Beale-Orchard Hays Prize** at the International Symposium of Mathematical Programming in 2024. This award is one of the highest honors in the field of computational optimization, recognizing groundbreaking contributions to the development of optimization algorithms.
+LP solvers should be compared at the same feasibility and optimality tolerances. First-order methods can reach useful moderate-accuracy solutions quickly while taking much longer to obtain the high precision that simplex or interior-point methods may deliver efficiently on other instances.
+
+Conditioning and scaling matter strongly. Presolve, row/column scaling, restart strategies, and termination tests are part of the solver, not implementation details to ignore.
 
 ## LP and First-Order Methods for LP: A Comparison
 
@@ -164,14 +166,14 @@ PDLP has been in development since 2018 and was open-sourced as part of **Google
 
 | Method             | Memory Usage      | Computation Speed | Parallelization | Scalability |
 |--------------------|-------------------|-------------------|-----------------|-------------|
-| Simplex Method     | High (due to LU factorization) | Moderate (exponential in worst-case) | Low (sequential operations) | Moderate |
-| Interior-Point Method | High (due to Cholesky factorization) | Fast (polynomial time) | Low (sequential operations) | Moderate |
+| Simplex Method     | Basis-factorization dependent | Often excellent in practice; exponential worst cases exist | Some parallelism, but basis updates are structured | Strong general-purpose method |
+| Interior-Point Method | Sparse factorization dependent | Polynomial theory; often strong on large sparse LPs | Parallel sparse linear algebra is possible | Strong general-purpose method |
 
 ### PDLP and First-Order Methods
 
 | Method             | Memory Usage       | Computation Speed | Parallelization | Scalability |
 |--------------------|--------------------|-------------------|-----------------|-------------|
-| PDLP               | Low (no matrix factorization) | Fast (matrix-vector multiplications) | High (parallelizable) | High (scalable for large problems) |
+| PDLP               | Low auxiliary memory relative to factorization methods | Many inexpensive first-order iterations | Matrix-vector products parallelize well | Attractive for very large sparse, moderate-accuracy LPs |
 
 ## Applications of PDLP in Industry
 
@@ -200,3 +202,24 @@ While PDLP offers significant advantages over traditional LP solvers, there are 
 Linear programming continues to be a vital tool in solving complex optimization problems across various industries. While traditional methods like the Simplex and interior-point methods have served the field well, they face significant challenges in scaling to large, modern problems. **First-order methods (FOMs)**, and specifically **PDLP**, offer a scalable and efficient alternative for solving large-scale LP problems. By leveraging matrix-vector multiplications and modern computational architectures such as **GPUs** and distributed systems, PDLP represents the future of linear programming solvers.
 
 As the demands on computational optimization grow, solvers like PDLP will play an increasingly important role in tackling the challenges of **big data**, **real-time decision-making**, and **global optimization**.
+
+
+## Duality is the real organizing principle
+
+For the primal LP
+
+$$
+min_x c^Tx
+quad	ext{subject to}quad
+Axge b,
+$$
+
+the dual introduces variables associated with the constraints. Primal feasibility, dual feasibility, and the duality gap provide the natural stopping diagnostics.
+
+A solver is not finished merely because the objective stops moving. The returned point must satisfy the constraints to the requested tolerance and have a sufficiently small primal-dual gap.
+
+## Solver choice is empirical
+
+Benchmark candidate solvers on representative instances using the same tolerances. Record wall time, memory, feasibility residuals, objective gap, and solution reproducibility.
+
+Problem structure matters more than solver marketing.
