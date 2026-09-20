@@ -119,6 +119,11 @@
   author: "Samuel Zeller samuelzeller"
   licence: "CC0"
   source: "https://commons.wikimedia.org/wiki/File:Triangles_in_a_white_facade_(Unsplash).jpg"
+- file: photo-industry-assembly-line.jpg
+  title: "001 Car factory assembly line - Opel factory in Gliwice, Poland.jpg"
+  author: "Marek Ślusarczyk (Tupungato) Photo portfolio"
+  licence: "CC BY 3.0"
+  source: "https://commons.wikimedia.org/wiki/File:001_Car_factory_assembly_line_-_Opel_factory_in_Gliwice,_Poland.jpg"
 - file: photo-library.jpg
   title: "LOC Main Reading Room Highsmith.jpg"
   author: "Carol M. Highsmith"
@@ -129,16 +134,21 @@
   author: "Piviso"
   licence: "CC0"
   source: "https://commons.wikimedia.org/wiki/File:Krzeszowice_by_night_long_exposure_photo,_Poland.jpg"
+- file: photo-logistics-container-port.jpg
+  title: "Container terminal from above (Unsplash).jpg"
+  author: "chuttersnap chuttersnap"
+  licence: "CC0"
+  source: "https://commons.wikimedia.org/wiki/File:Container_terminal_from_above_(Unsplash).jpg"
 - file: photo-logistics-freight-rail.jpg
-  title: "Benching Freight Train Graffiti in SoCal (July 24th 2021) (51335949488).jpg"
-  author: "siamesepuppy"
-  licence: "CC BY 2.0"
-  source: "https://commons.wikimedia.org/wiki/File:Benching_Freight_Train_Graffiti_in_SoCal_(July_24th_2021)_(51335949488).jpg"
+  title: "Intermodal Containers on Freight Train, August 29 2025.jpg"
+  author: "Dillan Payne"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Intermodal_Containers_on_Freight_Train,_August_29_2025.jpg"
 - file: photo-logistics-shipping.jpg
-  title: "Navy Elevated Causeway System 2.jpg"
-  author: "soldiersmediacenter"
-  licence: "Public domain"
-  source: "https://commons.wikimedia.org/wiki/File:Navy_Elevated_Causeway_System_2.jpg"
+  title: "Aerial image of the Eurogate and Burchardkai container terminals (view from the southeast).jpg"
+  author: "Carsten Steger"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Aerial_image_of_the_Eurogate_and_Burchardkai_container_terminals_(view_from_the_southeast).jpg"
 - file: photo-logistics-warehouse.jpg
   title: "Daiwa Logistics Tosu Logistics Center.jpg"
   author: "Peka"
@@ -229,6 +239,26 @@
   author: "Sdweston"
   licence: "CC BY-SA 3.0"
   source: "https://commons.wikimedia.org/wiki/File:WARK30M01.JPG"
+- file: photo-research-causal-dag.jpg
+  title: "Comparison confounder mediator.svg"
+  author: "Cmglee"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Comparison_confounder_mediator.svg"
+- file: photo-research-longitudinal.jpg
+  title: "Trajectories of repeated cognitive test scores over time for Alzheimer's disease subtypes.webp"
+  author: "Authors of the study: Betty M. Tijms, Ellen M. Vromen, Olav Mjaavatten, Henne Holstege, Lianne M. Reus, Sven van der Lee, Kirsten E. J. Wesenhagen, Luigi Lorenzini, Lisa Vermunt, Vikram Venkatraghavan, Niccoló Tesi, Jori Tomassen, Anouk den Braber, Julie Goossens, Eugeen Vanmechelen, Frederik Barkhof, Yolande A. L. Pijnenburg, Wiesje M. van der Flier, Charlotte E. Teunissen, Frode S. Berven &amp; Pieter Jelle Visser"
+  licence: "CC BY 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Trajectories_of_repeated_cognitive_test_scores_over_time_for_Alzheimer%27s_disease_subtypes.webp"
+- file: photo-research-meta-analysis.jpg
+  title: "Forest plot of studies comparing differences in maximal strength in combined endurance and resistance exercise (RE) vs RE only.png"
+  author: "Authors of the study: Moritz Schumann, Joshua F. Feuerbacher, Marvin Sünkeler, Nils Freitag, Bent R. Rønnestad, Kenji Doma &amp; Tommy R. Lundberg"
+  licence: "CC BY 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Forest_plot_of_studies_comparing_differences_in_maximal_strength_in_combined_endurance_and_resistance_exercise_(RE)_vs_RE_only.png"
+- file: photo-research-open-science.jpg
+  title: "Misc Lab Apparatus 01.jpg"
+  author: "Milton Wend"
+  licence: "Public domain"
+  source: "https://commons.wikimedia.org/wiki/File:Misc_Lab_Apparatus_01.jpg"
 - file: photo-satellite-dish.jpg
   title: "Satellite Dish Antenna With Overclouded Sky - Nalban Waterbody - Kolkata 2018-05-02 0328.JPG"
   author: "Biswarup Ganguly"
@@ -309,6 +339,11 @@
   author: "Prototyperspective"
   licence: "CC BY 4.0"
   source: "https://commons.wikimedia.org/wiki/File:Number_of_uses_of_charts_by_year_of_latest_chart_data_in_English_Wikipedia_articles.svg"
+- file: photo-statistics-monte-carlo.jpg
+  title: "Hamiltonian Monte Carlo.svg"
+  author: "Justinkunimune"
+  licence: "CC0"
+  source: "https://commons.wikimedia.org/wiki/File:Hamiltonian_Monte_Carlo.svg"
 - file: photo-statistics-normal-distribution.jpg
   title: "Normalverteilung.png"
   author: "self created by Marcus Glöder"
@@ -339,6 +374,11 @@
   author: "User:HiTe"
   licence: "Public domain"
   source: "https://commons.wikimedia.org/wiki/File:Distribuci%C3%B3n_T_09.svg"
+- file: photo-statistics-survival-analysis.jpg
+  title: "Kaplan-Meier plot of AML survival.svg"
+  author: "Michaelg2015"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Kaplan-Meier_plot_of_AML_survival.svg"
 - file: photo-statistics-time-series-debt.jpg
   title: "Total US household debt and its composition over time.png"
   author: "The Center for Microeconomic Data. Federal Reserve Bank of New York. Can use freeware Adobe Acrobat Reader to copy chart: Edit menu &gt; More &gt; Take a snapshot. 
@@ -361,10 +401,15 @@ HE Revolving = Home equity revolving line of credit."
   licence: "Public domain"
   source: "https://commons.wikimedia.org/wiki/File:River_delta_swamp_aerial_view.jpg"
 - file: photo-time-series-sensor-data.jpg
-  title: "Kazakhstan's thunderous apocalypse.jpg"
-  author: "Astrobond"
-  licence: "CC BY-SA 4.0"
-  source: "https://commons.wikimedia.org/wiki/File:Kazakhstan%27s_thunderous_apocalypse.jpg"
+  title: "Sample Biosignals (ECG, PPG, RIP).svg"
+  author: "Floogan"
+  licence: "CC0"
+  source: "https://commons.wikimedia.org/wiki/File:Sample_Biosignals_(ECG,_PPG,_RIP).svg"
+- file: photo-time-series-signal.jpg
+  title: "Systrip in context visualization of time-series data.png"
+  author: "Jonathan Dubois"
+  licence: "CC BY-SA 3.0"
+  source: "https://commons.wikimedia.org/wiki/File:Systrip_in_context_visualization_of_time-series_data.png"
 - file: photo-wafer.jpg
   title: "Multicrystalline silicon wafer with thin film iridescence.jpg"
   author: "Radiotrefoil"
