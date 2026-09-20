@@ -41,7 +41,7 @@ title: 'Crime Analysis Using K-Means Clustering: Enhancing Security through Data
 
 ![Crime analysis - Crime Analysis Using K-Means Clustering: Enhancing Security through Data Mining](/assets/images/crime_analysis.png){: width="825" height="654" loading="lazy"}
 
-Crime is an ever-present challenge in every part of the world, requiring the full attention of governments, law enforcement agencies, and policy-makers. The ability to analyze crime data to discover trends, detect hotspots, and predict future occurrences can significantly contribute to reducing crime rates. In the era of big data, new analytical techniques have emerged to handle the vast datasets that characterize modern crime records. Among these techniques, data mining has gained traction as an effective way to extract meaningful insights from large datasets, aiding law enforcement agencies in combatting criminal activities.
+Crime is an ever-present challenge in every part of the world, requiring the full attention of governments, law enforcement agencies, and policy-makers. Crime data can support descriptive analysis of reported incidents, temporal trends, and spatial concentration. Predicting future crime or claiming that an analytical system reduces crime requires much stronger evidence than unsupervised clustering. In the era of big data, new analytical techniques have emerged to handle the vast datasets that characterize modern crime records. Among these techniques, data mining has gained traction as an effective way to extract meaningful insights from large datasets, aiding law enforcement agencies in combatting criminal activities.
 
 This article explores K-means clustering, a popular data mining algorithm, and its application in crime analysis. The article will dive into the methodology, discuss related work, explain the practical implementation using the RapidMiner tool, and present a case study using crime datasets from England and Wales. The findings demonstrate how data mining techniques can assist law enforcement agencies in analyzing crime patterns and trends, ultimately enhancing crime prevention efforts.
 
@@ -53,10 +53,10 @@ Crime analysis is essential for the following reasons:
 
 - **Understanding Crime Trends**: By identifying patterns, law enforcement agencies can gain insights into crime trends, such as which types of crimes are increasing and which regions are more prone to certain criminal activities.
 - **Resource Allocation**: Law enforcement resources, such as police patrols and surveillance, can be allocated more efficiently based on the findings of crime analysis.
-- **Prediction and Prevention**: Data mining techniques can help predict future crimes, enabling agencies to implement preventive measures to reduce crime rates.
+- **Exploratory pattern analysis**: descriptive and clustering methods can summarize recorded incidents, but they do not by themselves identify future offenses or the causal effect of policing decisions.
 - **Law Enforcement Support**: Crime analysis provides law enforcement officers with timely, relevant information, enabling them to take swift and appropriate actions.
 
-In this context, K-means clustering, one of the most widely used unsupervised learning algorithms, is central to analyzing crime datasets to group similar crime incidents and detect patterns.
+K-means is one possible exploratory tool when the features are continuous, meaningfully scaled, and approximately compatible with Euclidean geometry. It is not a default crime-analysis method.
 
 ## Data Mining and Crime Analysis
 
@@ -110,7 +110,7 @@ The article under review proposes a system architecture for crime analysis using
    - **Replacing Missing Values**: Incomplete or missing data points are either removed or replaced with appropriate values, such as the mean or median of the relevant attribute.
    - **Normalization**: The dataset is normalized to ensure that all attributes are on the same scale, which is essential for accurate clustering results.
 
-3. **K-means Clustering**: The K-means clustering algorithm is applied to the dataset after preprocessing. The algorithm partitions the data into k clusters, with each cluster representing a group of crime records with similar characteristics. The crime records are clustered based on attributes such as the year the crime occurred, the type of crime, and the police force area.
+3. **Clustering design**: do not feed arbitrary codes for crime type, year, and police area into Euclidean K-means. Categorical identifiers require appropriate encoding or a different dissimilarity/model. Geographic coordinates also require a metric spatial representation; longitude/latitude should not be treated as ordinary Euclidean columns without projection.
 
 4. **Results and Visualization**: Once the clusters are formed, the results are visualized using graphs and plots. These visualizations help analysts identify crime patterns over time and across different regions. The clusters can reveal trends such as an increase or decrease in certain types of crime over specific periods.
 
@@ -153,9 +153,9 @@ To address these challenges, other clustering techniques such as DBSCAN or Hiera
 
 K-means clustering has several practical applications in crime analysis:
 
-- **Identifying Crime Hotspots**: By clustering crime incidents based on geographic and temporal data, law enforcement agencies can identify crime hotspots and allocate resources more effectively.
+- **Describing spatial concentration**: hotspot estimation should use a spatial point-process, KDE, count model, or network-aware method rather than assuming K-means clusters are hotspots.
 - **Understanding Crime Trends**: Clustering crime data by year or region allows analysts to detect trends, such as seasonal patterns or increases in specific types of crime.
-- **Predicting Future Crimes**: Clustering can be used in conjunction with other predictive models to forecast future crime rates and anticipate areas at high risk of criminal activity.
+- **Forecasting reported incidents**: predictive models can be evaluated for future reported incident counts, but the target is affected by exposure, reporting, recording practices, and policing intensity.
 - **Resource Allocation**: Law enforcement agencies can use clustering results to optimize resource allocation, such as assigning more patrols to high-crime areas or deploying surveillance in areas prone to specific crimes.
 
 ### Future Directions
@@ -198,14 +198,26 @@ import matplotlib.pyplot as plt
 crime_data = pd.read_csv('crime_data.csv')
 
 # Preprocess the data: handle missing values and normalize if necessary
-crime_data.fillna(crime_data.mean(), inplace=True)
+# Imputation must be feature-specific and fitted on training data.
+# Do not replace categorical or geographic fields with global means.
 
 # Select the relevant features for clustering
-X = crime_data[['Year', 'Homicide', 'Attempted murder', 'Careless driving']]
+X = crime_data[
+    ['Homicide', 'Attempted murder', 'Careless driving']
+]
+
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
 
 # Perform K-means clustering
-kmeans = KMeans(n_clusters=5)
-kmeans.fit(X)
+kmeans = KMeans(
+    n_clusters=5,
+    n_init="auto",
+    random_state=2026,
+)
+kmeans.fit(X_scaled)
 
 # Add the cluster labels to the original data
 crime_data['Cluster'] = kmeans.labels_
@@ -229,3 +241,37 @@ This Python code performs K-means clustering on a crime dataset, groups the data
 - Ester, M., Kriegel, H.-P., Sander, J., & Xu, X. (1996). A density-based algorithm for discovering clusters in large spatial databases with noise. *Proceedings of KDD*, 226-231.
 - van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
 - Tufte, E. R. (2001). *The Visual Display of Quantitative Information* (2nd ed.). Graphics Press.
+
+
+## Recorded crime is not the latent crime process
+
+Police records are observations generated through several mechanisms:
+
+$$
+	ext{offense}
+ightarrow
+	ext{reporting}
+ightarrow
+	ext{police recording}
+ightarrow
+	ext{geocoding/classification}.
+$$
+
+Changes in enforcement, reporting propensity, recording standards, or patrol intensity can change the observed dataset even if the underlying offense process does not change.
+
+This is especially important when models are used to allocate patrol resources, because policing intensity can itself affect future recorded incidents and create a feedback loop.
+
+## Fairness and feedback
+
+A model trained on historical police records can reproduce historical surveillance patterns. If one neighborhood has been policed more heavily, more incidents may be detected there, which can then be interpreted as evidence for still more policing.
+
+Any operational use should therefore distinguish:
+
+- reported crime;
+- police-detected crime;
+- calls for service;
+- victimization estimates;
+- population and exposure;
+- enforcement intensity.
+
+Unsupervised clusters do not solve these measurement problems.
