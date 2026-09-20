@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 620" role="img" aria-labelledby="title desc">
+  <title id="title">LoRA constrains a full weight update to a low-rank factorization</title>
+  <desc id="desc">A full d by k update matrix is replaced by the product of a d by r matrix and an r by k matrix, where r is much smaller than d and k. The diagram also shows the original and rank-stabilized scaling choices.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="55" y="90" width="260" height="310" rx="12"/>
+    <rect x="475" y="90" width="150" height="310" rx="12"/>
+    <rect x="665" y="180" width="310" height="130" rx="12"/>
+    <path d="M315 245 H445" marker-end="url(#arrow)"/>
+    <rect x="1090" y="95" width="320" height="120" rx="12"/>
+    <rect x="1090" y="270" width="320" height="120" rx="12"/>
+  </g>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="currentColor" text-anchor="middle">
+    <text x="380" y="225" font-size="18">replace</text>
+    <text x="185" y="135" font-size="25" font-weight="700">Full update</text>
+    <text x="185" y="175" font-size="24">ΔW</text>
+    <text x="185" y="212" font-size="18">d × k</text>
+    <text x="185" y="260" font-size="18">up to dk free parameters</text>
+    <text x="185" y="305" font-size="17">unrestricted matrix</text>
+    <text x="550" y="135" font-size="25" font-weight="700">B</text>
+    <text x="550" y="176" font-size="21">d × r</text>
+    <text x="550" y="220" font-size="17">trainable</text>
+    <text x="550" y="355" font-size="17">r ≪ min(d,k)</text>
+    <text x="820" y="220" font-size="25" font-weight="700">A</text>
+    <text x="820" y="260" font-size="21">r × k</text>
+    <text x="820" y="292" font-size="17">trainable</text>
+    <text x="710" y="465" font-size="24" font-weight="700">ΔW = s BA</text>
+    <text x="710" y="505" font-size="18">trainable parameters ≈ r(d + k)</text>
+    <text x="710" y="545" font-size="18">rank(ΔW) ≤ r</text>
+    <text x="1250" y="135" font-size="23" font-weight="700">Original LoRA</text>
+    <text x="1250" y="175" font-size="21">s = α / r</text>
+    <text x="1250" y="310" font-size="23" font-weight="700">rsLoRA</text>
+    <text x="1250" y="350" font-size="21">s = α / √r</text>
+    <text x="1250" y="455" font-size="18">Rank is both a capacity choice</text>
+    <text x="1250" y="484" font-size="18">and a resource choice.</text>
+  </g>
+</svg>
