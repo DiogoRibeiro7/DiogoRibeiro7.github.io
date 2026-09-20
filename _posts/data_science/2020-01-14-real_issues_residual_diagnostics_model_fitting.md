@@ -4,131 +4,375 @@ categories:
 - Data Science
 classes: wide
 date: '2020-01-14'
-excerpt: Residual diagnostics often trigger debates, especially when tests like Shapiro-Wilk
-  suggest non-normality. But should it be the final verdict on your model? Let's dive
-  deeper into residual analysis, focusing on its impact in GLS, mixed models, and
-  robust alternatives.
+excerpt: Residual diagnostics should target specific model assumptions: conditional mean, variance, dependence, tail behavior, leverage, and influence. A normality test alone cannot validate or invalidate a regression model.
 header:
-  image: /assets/images/headers/photo-data-science-heatmap.jpg
-  og_image: /assets/images/headers/photo-data-science-heatmap.jpg
-  overlay_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  image: /assets/images/headers/photo-statistics-residuals.jpg
+  og_image: /assets/images/headers/photo-statistics-residuals.jpg
+  overlay_image: /assets/images/headers/photo-statistics-residuals.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-data-science-heatmap.jpg
-  twitter_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  teaser: /assets/images/headers/photo-statistics-residuals.jpg
+  twitter_image: /assets/images/headers/photo-statistics-residuals.jpg
 keywords:
-- Residual diagnostics
-- Shapiro-wilk test
-- Generalized least squares
-- Mixed models
-- Statistical modeling
-permalink: '/data-science/real_issues_residual_diagnostics_model_fitting/'
-redirect_from:
-- '/data science/statistics/real_issues_residual_diagnostics_model_fitting/'
-- '/data science/real_issues_residual_diagnostics_model_fitting/'
-seo_description: Why Shapiro-Wilk falls short in residual diagnostics, and what to check instead when fitting models to longitudinal data with GLS and robust alternatives.
-seo_title: Residual Diagnostics Beyond Shapiro-Wilk
+- residual diagnostics
+- regression diagnostics
+- heteroskedasticity
+- influence
+- normality
+seo_description: Residual diagnostics explained through model assumptions, heteroskedasticity, dependence, leverage, influence, tail behavior, and predictive checks rather than a single normality test.
+seo_title: 'Residual Diagnostics: Diagnose the Assumption That Matters'
 seo_type: article
-summary: In this article, we examine why the Shapiro-Wilk test should not be the final
-  say in assessing model fit, particularly in complex models like Generalized Least
-  Squares for longitudinal data. Instead, we explore alternative diagnostics, the
-  role of kurtosis, skewness, and the practical impact of non-normality on parameter
-  estimates.
+summary: A rigorous guide to residual diagnostics that separates mean-model misspecification, variance errors, dependence, non-normality, leverage, and influence.
 tags:
 - Regression
-- Survival Analysis
-title: 'Don''t Get MAD About Shapiro-Wilk: Real Issues in Residual Diagnostics and
-  Model Fitting'
+- Statistical Modeling
+- Diagnostics
+title: 'Residual Diagnostics: Diagnose the Assumption That Matters'
 ---
 
-When fitting models, especially in longitudinal studies, residual diagnostics often become a contentious part of the statistical review process. It's not uncommon for a reviewer to wave the **Shapiro-Wilk test** in your face, claiming that the residuals' departure from normality invalidates your entire parametric model. But is this rigid adherence to normality testing warranted? 
+A residual is
 
-Today, I'm going to walk you through a discussion I had with a statistical reviewer while analyzing data from a longitudinal study using a **Mixed-Model Repeated Measures** (MMRM) approach. We’ll examine why over-reliance on the **Shapiro-Wilk test** is misguided and how real-world data almost never meets theoretical assumptions perfectly. And more importantly, I’ll explain why **other diagnostic tools** and practical considerations should play a bigger role in determining whether your model is valid.
+$$
+e_i
+=
+y_i-\hat y_i.
+$$
 
-## The Problem with Over-Reliance on the Shapiro-Wilk Test
+That simple difference is used to diagnose several different things.
 
-First, let’s talk about **Shapiro-Wilk**. It’s a test that measures the goodness-of-fit between your residuals and a normal distribution. When the p-value is below a certain threshold (usually 0.05), many take it as definitive evidence that the residuals are not normally distributed and, therefore, the model assumptions are violated. But here's the catch: this test becomes overly sensitive when sample sizes are large.
+The mistake is to compress them into one question:
 
-For instance, with **N ~ 360 observations**, the Shapiro-Wilk test will pick up **even the smallest deviations** from normality. This means that, although your data might not be perfectly normal (and in practice, it never is), it may still be **close enough** that the deviation has no practical effect on the validity of your model. Let’s not forget that **statistical models** are tools for approximation—not exact replicas of reality.
+> Are the residuals normal?
 
-In my experience, using the Shapiro-Wilk test as a **litmus test for model validity** can be overly rigid and misguided. When my reviewer argued that the p-value for the Shapiro-Wilk test was less than 0.001, they essentially viewed this as grounds to dismiss the entire parametric model. However, I knew that other aspects of residual diagnostics—like **skewness**, **kurtosis**, and visual inspections (like **QQ plots**)—were far more indicative of the model’s practical robustness.
+Normality is only one possible assumption, and often not the most important one.
 
-### Sample Size Sensitivity
+A useful diagnostic asks
 
-Shapiro-Wilk is notorious for being **oversensitive** with large datasets. The irony is that, as your data size grows, this test is likely to reject normality due to minuscule deviations from the theoretical distribution. So, if you’re analyzing hundreds of data points, should you really be worried about a slight p-value drop below 0.05? Most likely not.
+$$
+\boxed{
+\text{Which property of the model would this pattern contradict?}
+}
+$$
 
-In my case, with **N = 360** residuals, the histogram of residuals overlapped almost perfectly with the normal curve. The **skewness** was practically zero, and while there was some **kurtosis** (~5.5 vs. the ideal of 3), it wasn’t extreme. A simple QQ plot showed only minor deviations in the tails, but the theoretical and empirical quantiles largely matched. Despite this, my reviewer was adamant that these results violated formal assumptions.
+## Residuals are not the true errors
 
-## Understanding Residual Diagnostics: More than Just Normality
+In a regression model,
 
-The point I emphasized during this discussion was that **Shapiro-Wilk should not be the be-all and end-all** of model diagnostics. Residual analysis is about understanding the **behavior** of your data in relation to the assumptions of the model and ensuring that any deviations are not **practically significant**. Here are some of the diagnostic tools and metrics that can provide a clearer picture of what’s happening under the hood of your model:
+$$
+Y_i
+=
+m(X_i)+\varepsilon_i,
+$$
 
-### 1. **Skewness**: A Measure of Symmetry
+the unobserved error is $\varepsilon_i$.
 
-One of the first checks I perform after running a model is to look at the **skewness** of the residuals. Skewness measures the asymmetry of the distribution of residuals. In an ideal world, residuals should have a skewness of zero, indicating a perfectly symmetrical distribution.
+The fitted residual is
 
-In the case of my longitudinal data, the skewness was around **0.05**, which is essentially **perfectly symmetrical** for practical purposes. A skewness value close to zero means there’s no need to worry about large asymmetries that could bias the results.
+$$
+e_i
+=
+Y_i-\hat m(X_i).
+$$
 
-### 2. **Kurtosis**: Understanding Fat Tails
+Residuals depend on the estimated model and are not independent copies of the errors.
 
-**Kurtosis** is another essential metric that often gets overlooked in favor of the Shapiro-Wilk test. Kurtosis tells you about the **heaviness of the tails** in the residuals' distribution. The normal distribution has a kurtosis of 3. If your residuals have a kurtosis higher than this, it indicates that the tails are fatter than those of a normal distribution, potentially signaling **outliers** or **extreme values**.
+In linear regression,
 
-In my case, the kurtosis was around **5.5**—slightly above the ideal 3, but nowhere near the threshold where it would be a red flag (usually a kurtosis of **10+**). The small excess kurtosis here was not indicative of any serious issue.
+$$
+e=(I-H)y,
+$$
 
-### 3. **QQ Plots**: Visualizing Deviations from Normality
+where $H$ is the hat matrix.
 
-**QQ plots** (Quantile-Quantile plots) are another indispensable tool for diagnosing residuals. They plot the **empirical quantiles** of the residuals against the **theoretical quantiles** of a normal distribution. If the points fall along a straight line, the residuals are normally distributed.
+This creates different residual variances according to leverage.
 
-In the conversation with my reviewer, the QQ plot showed minor deviations in the tails, but the **axes** made the deviations look far more dramatic than they actually were. In fact, apart from a few outliers, the theoretical and empirical quantiles were almost identical.
+Raw residuals should therefore not always be treated as identically distributed observations.
 
-This is where the **practical significance** comes into play. Yes, there was a slight deviation from normality, but it was minor enough that it didn’t have a substantial impact on the **parameter estimates** of the model.
+## Conditional mean misspecification
 
-## Robustness Checks: Going Beyond Normality Assumptions
+The most fundamental regression requirement is often
 
-When fitting models—especially complex ones like **Mixed-Model Repeated Measures** (MMRM)—it’s often helpful to run **robustness checks** to see how much the residual distribution impacts your final results. In my case, I re-fitted the model using a **robust mixed-effects model** with **Huberized errors** (a method for reducing the influence of outliers by down-weighting them). This robust model essentially smooths out the impact of deviations in the residuals.
+$$
+E[\varepsilon\mid X]=0.
+$$
 
-The result? The **parameter estimates** were nearly identical to those from the original parametric model, indicating that any deviation from normality had **little to no impact** on the overall conclusions of the model.
+A residual-versus-fitted plot can reveal curvature or structure suggesting
 
-### Sensitivity Analysis: Non-Parametric Approaches
+$$
+E[e\mid\hat y]\ne0.
+$$
 
-Another key part of the discussion involved conducting a **sensitivity analysis** using non-parametric methods to validate the parametric model’s results. I ran a **permutation paired t-test** (a non-parametric approach) and used **Generalized Estimating Equations** (GEE), which makes no assumptions about the normality of the residuals. Once again, the estimates were consistent across both parametric and non-parametric models, confirming that the original parametric approach was robust.
+Examples include:
 
-The **Shapiro-Wilk p-value** did not alter the **practical conclusions** of the study. In fact, the model produced **accurate and reliable results**, despite minor deviations from normality. 
+- missing nonlinear terms;
+- omitted interactions;
+- wrong link function;
+- missing time trend;
+- unmodeled group structure.
 
-## The Real Issue: Are the Estimates Reliable?
+A perfect normality test cannot repair a wrong conditional mean.
 
-Here’s the heart of the matter: the **real issue** with residual diagnostics isn’t whether the p-value from Shapiro-Wilk is below 0.05 or if the QQ plot deviates slightly from a straight line. The real issue is whether these deviations have a **practical impact** on your parameter estimates and conclusions. 
+## Heteroskedasticity
 
-In many cases, small deviations from normality will have **no meaningful effect** on your estimates. However, overly relying on strict statistical rules without understanding the **underlying behavior** of your model can lead to **overcorrection** and the use of inappropriate methods.
+If
 
-### Random Slopes and Residual Diagnostics
+$$
+\operatorname{Var}(\varepsilon_i\mid X_i)
+$$
 
-Another important issue that came up in the discussion was the use of **random slopes** in mixed models. In longitudinal studies, it’s common to include **random intercepts** and **random slopes** to account for the variation across individual subjects over time. However, in this particular study, I had difficulty getting the model to converge when adding random slopes.
+changes with predictors, residual spread may form a funnel pattern.
 
-Rather than forcing a **random slopes model** and risking **model convergence issues**, I opted for a **random intercept model**. Even though my reviewer initially criticized this choice, I showed that the estimates were practically identical to those from the more complex model (when it did converge). This brings us back to the main point: **practical validity** trumps the pursuit of perfect assumptions.
+This primarily affects the usual covariance estimate, not necessarily the OLS coefficient itself when the conditional mean is correct.
 
-## Why the Shapiro-Wilk Test Alone Is Not Enough
+Responses include:
 
-The takeaway is this: **Shapiro-Wilk** is just one of many tools in the diagnostic toolbox. It’s not sufficient to look at a p-value below 0.05 and conclude that the model is flawed. Real data rarely conforms to perfect normality, and in most cases, **slight deviations from normality are inconsequential**. What’s more important is to assess the overall **robustness** of the model through **multiple diagnostic methods**:
+- heteroskedasticity-consistent covariance estimators;
+- explicit variance models;
+- weighted least squares;
+- alternative response distributions.
 
-- **Skewness** and **kurtosis** provide more nuanced insights into the distribution of residuals.
-- **QQ plots** visually depict the nature of any deviations from normality.
-- **Robust models** (such as Huberized models or GEE) allow you to test whether any deviation has a substantial impact on your estimates.
-- **Sensitivity analyses** using non-parametric methods can confirm the stability of your results.
+The response should match the source of the variance change.
 
-### When Normality Really Matters
+## Dependence
 
-That said, there are cases where normality really does matter—especially in small-sample studies or when extreme outliers are present. In these cases, deviations from normality can bias the results and lead to **misleading conclusions**. But in studies with larger samples or only slight deviations from normality, the impact on estimates is often minimal.
+Residual autocorrelation can indicate missing temporal dynamics.
 
-## The Role of Practicality in Statistical Modeling
+Clustered residual patterns can reveal within-group dependence.
 
-Statistical models are ultimately **practical tools**—they’re designed to help us **approximate reality** and make informed decisions. They’re not meant to perfectly fit every theoretical assumption. When working with real-world data, the key is to strike a balance between meeting model assumptions and producing valid, interpretable results.
+For a time series, inspect quantities such as
 
-**Don’t get MAD** (Mean Absolute Deviation, for the pun-inclined) about Shapiro-Wilk when it flags deviations from normality. Look at the **broader picture**: how do your residuals behave? Are there any **outliers** or **heavy tails** that could distort your results? Is your model robust to minor deviations from assumptions?
+$$
+\operatorname{Corr}(e_t,e_{t-k}).
+$$
 
-By understanding these nuances, you can make informed decisions that go beyond mechanistic rules and focus on what really matters: the **interpretation** and **practical significance** of your findings.
+For repeated measures, model subject-level dependence.
+
+Normal residual histograms say nothing about whether observations are serially correlated.
+
+## Normality and exact small-sample inference
+
+In the classical Gaussian linear model,
+
+$$
+\varepsilon\mid X
+\sim
+\mathcal N(0,\sigma^2I),
+$$
+
+normality supports exact finite-sample t and F distributions.
+
+For large samples, many coefficient estimators have approximately normal sampling distributions under much broader error distributions.
+
+That does not mean normality never matters.
+
+It means the consequence of non-normality depends on:
+
+- sample size;
+- leverage;
+- tail behavior;
+- target statistic;
+- inferential method.
+
+## Why Shapiro-Wilk is a poor gatekeeper
+
+The Shapiro-Wilk test examines exact normality.
+
+In small samples it may have little power against relevant departures.
+
+In large samples it can reject tiny departures that have negligible effect on the estimator.
+
+So this workflow is weak:
+
+$$
+\text{Shapiro p}<0.05
+\Rightarrow
+\text{model invalid}.
+$$
+
+The test answers a narrower question than model validity.
+
+## Q-Q plots
+
+A Q-Q plot is useful because the **shape** of the departure is visible.
+
+Common patterns include:
+
+- S-shaped tails: heavier or lighter tails;
+- one curved tail: skewness;
+- isolated points: potential outliers;
+- broad departures: mixture or wrong error family.
+
+The visual pattern should lead to a specific statistical question.
+
+## Skewness and kurtosis
+
+Sample skewness and kurtosis summarize aspects of residual shape.
+
+They are descriptive statistics, not model diagnoses by themselves.
+
+High kurtosis can arise from heavy tails or isolated extreme observations.
+
+The normal distribution has ordinary kurtosis 3 and excess kurtosis 0.
+
+Software differs in which convention it reports.
+
+That convention should be stated before comparing a value with “3” or “0.”
+
+## Leverage
+
+Leverage is determined by the design matrix.
+
+For linear regression,
+
+$$
+H
+=
+X(X^\top X)^{-1}X^\top.
+$$
+
+The diagonal element
+
+$$
+h_{ii}
+$$
+
+measures how unusual observation $i$ is in predictor space.
+
+A high-leverage observation can strongly affect the fitted model even when its residual is not large.
+
+Outlier diagnostics based only on $y$ miss this.
+
+## Influence
+
+Influence combines residual size and leverage.
+
+Cook's distance is one common summary.
+
+The purpose is not to delete every influential point.
+
+The useful sequence is:
+
+1. verify the data;
+2. understand why the point is influential;
+3. refit with and without it;
+4. report sensitivity if conclusions change.
+
+Automatic deletion creates its own selection bias.
+
+## Standardized and studentized residuals
+
+Because residual variance depends on leverage, standardized forms are easier to compare.
+
+A common internally studentized residual is roughly
+
+$$
+r_i
+=
+\frac{
+e_i
+}{
+\hat\sigma\sqrt{1-h_{ii}}
+}.
+$$
+
+Externally studentized residuals estimate $\sigma$ with the observation omitted.
+
+These are more appropriate than raw residuals for identifying unusually large conditional errors.
+
+## Mixed models need conditional diagnostics
+
+For a mixed model such as
+
+$$
+Y_{ij}
+=
+X_{ij}^\top\beta
++
+Z_{ij}^\top b_i
++
+\varepsilon_{ij},
+$$
+
+there are at least two stochastic components:
+
+- random effects $b_i$;
+- residual errors $\varepsilon_{ij}$.
+
+A single Shapiro-Wilk test on one residual vector cannot diagnose both.
+
+Useful diagnostics include:
+
+- conditional residuals;
+- random-effect distributions;
+- residual variance by time or group;
+- within-subject correlation;
+- influence at the subject level.
+
+The design unit matters.
+
+## Predictive diagnostics
+
+If prediction is the goal, residual fit on the training sample is not enough.
+
+Out-of-sample residuals
+
+$$
+e_i^{test}
+=
+y_i-\hat y_i^{train}
+$$
+
+reveal generalization error.
+
+Calibration, coverage of prediction intervals, and performance across subgroups may be more important than whether training residuals look Gaussian.
+
+## Simulation-based diagnostics
+
+For complex models, simulate replicated data from the fitted model.
+
+If the model is adequate, simulated data should reproduce features that matter scientifically:
+
+- variance;
+- zeros;
+- extreme values;
+- autocorrelation;
+- cluster patterns;
+- event rates.
+
+This idea appears in posterior predictive checking, parametric bootstrap diagnostics, and simulation-based residual methods.
+
+It scales better than forcing every model into a normal-residual template.
+
+## Conclusion
+
+Residual diagnostics are not one test.
+
+They are a collection of checks linked to specific assumptions:
+
+$$
+\boxed{
+\text{mean}
++
+\text{variance}
++
+\text{dependence}
++
+\text{tails}
++
+\text{leverage}
++
+\text{influence}
++
+\text{prediction}.
+}
+$$
+
+The right question is not whether residuals pass a normality threshold.
+
+It is whether the fitted model is adequate for the inferential or predictive claim being made.
 
 ## References
 
-- Shapiro, S. S., & Wilk, M. B. (1965). An analysis of variance test for normality (complete samples). *Biometrika*, 52(3-4), 591-611.
-- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Cook, R. D., & Weisberg, S. (1982). *Residuals and Influence in Regression*. Chapman & Hall.
+- Fox, J. (2015). *Applied Regression Analysis and Generalized Linear Models* (3rd ed.). SAGE.
+- Shapiro, S. S., & Wilk, M. B. (1965). An analysis of variance test for normality. *Biometrika*, 52(3/4), 591–611.
