@@ -59,7 +59,6 @@ The Gini coefficient is a statistical measure of a model's performance in rank-o
 - Very powerful characteristics might have a Gini coefficient around 25%.
 - Random selection yields a Gini coefficient of 0%.
 - Perfect rank-ordering results in a Gini coefficient of 100%.
-- A Gini coefficient of 50% indicates a model that performs no better than random selection.
 - The higher the Gini coefficient, the better the model's ability to rank-order risk.
 - The Gini coefficient is often used in binary classification tasks.
 
@@ -68,8 +67,8 @@ The Gini coefficient is a statistical measure of a model's performance in rank-o
 To calculate the Gini coefficient:
 
 - Rank-order good and bad accounts by score, ensuring unique scores for each case.
-- The concept of a “flip” refers to transposing consecutive good and bad accounts.
-- The Gini coefficient represents the percentage of flips needed to reach perfect rank-ordering from a random arrangement.
+- For binary ranking, interpret the coefficient through its exact relationship with AUC: random ranking gives Gini = 0 and perfect ranking gives Gini = 1.
+- Gini should not be interpreted as the percentage of adjacent swaps required to reach a perfect ordering.
 
 ### Relation to AUC
 
