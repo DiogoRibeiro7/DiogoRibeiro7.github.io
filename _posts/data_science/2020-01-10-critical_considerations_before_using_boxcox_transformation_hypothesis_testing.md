@@ -4,154 +4,450 @@ categories:
 - Data Science
 classes: wide
 date: '2020-01-10'
-excerpt: Before applying the Box-Cox transformation, it is crucial to consider its
-  implications on model assumptions, interpretation, and hypothesis testing. This
-  article explores 12 critical questions you should ask yourself before using the
-  transformation.
+excerpt: Box-Cox is a transformation family inside a statistical model. It should not be used as a ritual for making raw data look normal, and changing the response scale changes the estimand and interpretation.
 header:
-  image: /assets/images/headers/photo-data-science-air-quality.jpg
-  og_image: /assets/images/headers/photo-data-science-air-quality.jpg
-  overlay_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  image: /assets/images/headers/photo-statistics-transformations.jpg
+  og_image: /assets/images/headers/photo-statistics-transformations.jpg
+  overlay_image: /assets/images/headers/photo-statistics-transformations.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-data-science-air-quality.jpg
-  twitter_image: /assets/images/headers/photo-data-science-air-quality.jpg
+  teaser: /assets/images/headers/photo-statistics-transformations.jpg
+  twitter_image: /assets/images/headers/photo-statistics-transformations.jpg
 keywords:
-- Box-cox transformation
-- Hypothesis testing
-- Data transformation
-- Statistical modeling
-- Model assumptions
-permalink: '/data-science/critical_considerations_before_using_boxcox_transformation_hypothesis_testing/'
-redirect_from:
-- '/data science/critical_considerations_before_using_boxcox_transformation_hypothesis_testing/'
-seo_description: 'A guide to evaluating the Box-Cox transformation in hypothesis testing: what it is for, how to interpret it, and when to use alternatives.'
-seo_title: 'Box-Cox Transformation: What to Check First'
+- Box-Cox transformation
+- transformations
+- regression
+- variance stabilization
+- retransformation bias
+seo_description: Box-Cox transformations explained as part of a statistical model, including positivity, likelihood-based lambda selection, interpretation, hypothesis changes, and retransformation.
+seo_title: 'Box-Cox Transformations: Model First, Transformation Second'
 seo_type: article
-summary: This article outlines key considerations when using the Box-Cox transformation,
-  including its purpose, effects on hypothesis testing, interpretation challenges,
-  alternatives, and how to handle missing data, outliers, and model assumptions.
+summary: A rigorous guide to Box-Cox transformations that explains what the transformation is optimizing, why positivity matters, how interpretation changes, and when a GLM or explicit variance model is preferable.
 tags:
 - Regression
-- Hypothesis Testing
 - Statistical Modeling
-- Feature Engineering
-title: Critical Considerations Before Using the Box-Cox Transformation for Hypothesis
-  Testing
+- Transformations
+title: 'Box-Cox Transformations: Model First, Transformation Second'
 ---
 
-## Critical Considerations Before Using the Box-Cox Transformation for Hypothesis Testing
+The Box-Cox transformation is often used as a preprocessing ritual:
 
-The **Box-Cox transformation** is a popular tool for transforming non-normal dependent variables into a normal shape, stabilizing variance, and improving the fit of a regression model. However, before applying this transformation, researchers and data analysts should carefully evaluate the purpose, implications, and interpretation challenges associated with it. Blindly applying the transformation without considering its effects on the data can lead to unintended consequences, including incorrect hypothesis tests, confusing model interpretations, and misguided decision-making.
+1. inspect a skewed response;
+2. choose a transformation;
+3. make the histogram look more normal;
+4. run the original analysis.
 
-This article addresses twelve critical questions you should ask yourself before deciding to use the Box-Cox transformation in your analysis. By reflecting on these questions, you'll be better equipped to determine whether the Box-Cox transformation is the most suitable tool for your dataset and hypothesis testing needs.
+That sequence misses the point of the method.
 
+Box and Cox introduced a **family of transformed regression models** and a likelihood-based way to compare them.
 
-## 2. How Will the Transformation Affect My Hypothesis?
+The transformation is part of the model.
 
-Once you've decided to apply the Box-Cox transformation, it’s critical to ask: **How does this transformation affect my original hypothesis? Will it answer my question, or will it lead to something new?**
+It changes the scale on which the conditional mean is specified and therefore changes the interpretation of coefficients and hypotheses.
 
-The transformation will change the scale of your dependent variable, which could lead to changes in how your hypothesis is framed. For example, if you were testing a hypothesis about the mean or variance of a response variable, transforming the variable changes the underlying distribution. This alteration can result in your null hypothesis no longer reflecting the original research question.
+## The Box-Cox family
 
-### Example:
+For a positive response $y>0$, a common Box-Cox transformation is
 
-- Suppose you’re testing the relationship between income and years of education, with income as the response variable. If you apply the Box-Cox transformation to income, your null hypothesis will no longer address the relationship between **raw income** and education, but rather between the **transformed income** and education. This raises the question: does the transformed variable still answer your original question?
+$$
+T_\lambda(y)
+=
+\begin{cases}
+\dfrac{y^\lambda-1}{\lambda},
+&
+\lambda\ne0,
+\\[6pt]
+\log y,
+&
+\lambda=0.
+\end{cases}
+$$
 
-### Key Points:
+The limit as $\lambda\to0$ is
 
-- Be aware that transforming your response variable changes the null hypothesis.
-- Ensure the transformed variable still answers the research question.
-- If the hypothesis changes, consider whether the new hypothesis could contradict the original.
+$$
+\log y.
+$$
 
+Special cases include approximately:
 
-## 4. Is There a Better Method Than Box-Cox?
+$$
+\lambda=1
+\rightarrow
+\text{original scale},
+$$
 
-Another crucial question to ask: **Is there a better method than Box-Cox?**
+$$
+\lambda=\frac12
+\rightarrow
+\text{square-root-like scale},
+$$
 
-While Box-Cox is popular for transforming data to approximate normality, it’s not the only solution. In fact, many non-parametric and semi-parametric methods, such as **permutation tests**, **GEE**, or **robust regression** methods, do not require transformations and can handle non-normality or heteroscedasticity without altering the null hypothesis.
+$$
+\lambda=0
+\rightarrow
+\log y.
+$$
 
-These methods offer the advantage of retaining the original scale of the data, which can make interpretation easier. They also avoid the potential distortions that Box-Cox can introduce, particularly when dealing with categorical variables or non-linear relationships.
+The original method includes scaling conventions so likelihoods for different $\lambda$ values are comparable.
 
-### Alternatives to Consider:
+That detail matters.
 
-- **Generalized Linear Models (GLM)**: For handling non-normal residuals.
-- **Generalized Estimating Equations (GEE)**: For correlated data and repeated measures.
-- **Permutation Tests**: For hypothesis testing without the assumption of normality.
-- **Robust Regression**: For models less sensitive to outliers or non-normality.
+## What model is being assumed?
 
-### Key Points:
+The classical Box-Cox regression assumes that, for some transformation parameter $\lambda$,
 
-- Always consider alternative methods that may address your data issues more effectively than Box-Cox.
-- Many alternative approaches allow you to retain the original hypothesis and avoid transformations.
+$$
+T_\lambda(Y_i)
+=
+x_i^\top\beta
++
+\varepsilon_i,
+$$
 
+with
 
-## 6. What About Outliers?
+$$
+\varepsilon_i
+\overset{\mathrm{iid}}{\sim}
+\mathcal N(0,\sigma^2)
+$$
 
-Outliers can greatly influence the decision to transform data, so it’s essential to ask: **What about outliers? How will they affect the Box-Cox transformation?**
+under the model.
 
-Outliers are typically extreme values in your dataset that may distort the results of your regression model. When using the Box-Cox transformation, you might inadvertently transform what you consider to be an outlier into a more normal value, leading to different conclusions. 
+So the target is not
 
-But not all outliers are “errors” in the data; some may be legitimate, meaningful observations that carry significant insights. Transforming these values could lead to a loss of important information.
+> find a transformation that makes $Y$ normal.
 
-### Example:
+The target is closer to
 
-If you’re analyzing real estate prices, a few extremely high-priced properties may appear as outliers. These might not represent errors but are instead indicative of the nature of the market (luxury homes). Transforming the prices may mask the reality of this market segment.
+> find a response scale on which the conditional mean is adequately modeled by the chosen linear predictor and the residual variance is approximately homogeneous and Gaussian enough for the intended likelihood analysis.
 
-### Key Points:
+The residual structure is the object of interest.
 
-- Be cautious when transforming data with outliers.
-- Determine whether the outliers represent valuable information or distortions.
-- Consider whether robust methods (e.g., robust regression) might handle outliers better than transformations.
+## Raw-response normality is usually irrelevant
 
+Suppose
 
-## 8. What About Interpreting the Transformed Variable?
+$$
+Y
+=
+\exp(
+\beta_0+\beta_1X+\varepsilon
+).
+$$
 
-Interpretation is critical, so ask: **How do I interpret the transformed variable, and is the transformation invertible?**
+The marginal distribution of $Y$ can be strongly skewed even if
 
-Interpreting a transformed variable, especially one that is not easily invertible, can complicate the communication of your results. If you transform a variable with the Box-Cox transformation and the transformation is not easily reversible, how will you explain the transformed values in practical terms?
+$$
+\log Y
+=
+\beta_0+\beta_1X+\varepsilon
+$$
 
-For example, if $$ Y^{0.77} $$ is the transformed variable, what does this mean for your original hypothesis? How do you translate predictions or inferential results back to the original scale of the response variable?
+has well-behaved Gaussian errors.
 
-### Key Points:
+Testing the raw outcome for normality before fitting the regression answers the wrong question.
 
-- Consider how to interpret and explain transformed variables.
-- Be prepared to invert the transformation if necessary and ensure the transformation is invertible.
-- Understand how transformation affects your ability to communicate results.
+Conditional modeling matters.
 
+## Positivity is not optional
 
-## 10. How Do I Compare Models with Different Transformations?
+The standard Box-Cox family requires
 
-Model comparison becomes complicated when different transformations are applied, so ask: **How do I compare models with different transformations?**
+$$
+Y>0.
+$$
 
-If you apply different transformations to the same response variable (e.g., a logarithmic transformation versus Box-Cox), comparing the resulting models becomes difficult because they operate on different scales. Comparing these models requires careful consideration of which scale provides better interpretability, better fits the data, and aligns with your hypothesis testing objectives.
+A common workaround is to add a constant:
 
-### Key Points:
+$$
+Y^\ast=Y+c.
+$$
 
-- Be cautious when comparing models with different transformations.
-- Ensure that you understand the implications of different scales when comparing models.
-- Choose the transformation that best aligns with your hypothesis and provides clear interpretations.
+That is not innocuous.
 
+Different choices of $c$ can produce different fitted transformations, especially when values are close to zero.
 
-## 12. How Does the Transformation Affect Model Assumptions?
+If zero or negative values are scientifically meaningful, a shifted Box-Cox transformation should be justified explicitly or another model family should be used.
 
-Lastly, you must consider the assumptions underlying your model: **How does the Box-Cox transformation affect the model assumptions?**
+A transformation should not erase the meaning of zero.
 
-The Box-Cox transformation aims to address issues with non-normal residuals, heteroscedasticity, and non-linear relationships. However, transforming the data can introduce other problems. For instance, if your residuals were non-normally distributed before the transformation, applying the transformation might not completely resolve the issue or could introduce heteroscedasticity.
+## Choosing lambda by likelihood
 
-### Key Points:
+For each candidate $\lambda$, fit the transformed model and compute the corresponding profile likelihood.
 
-- Always check model assumptions after applying the Box-Cox transformation.
-- Be aware that transforming the data might introduce new assumption violations.
+Then choose
 
----
+$$
+\hat\lambda
+=
+\arg\max_\lambda
+\ell_p(\lambda).
+$$
+
+A likelihood interval for $\lambda$ is often more informative than the single optimum.
+
+If values near
+
+$$
+\lambda=0
+$$
+
+and
+
+$$
+\lambda=0.1
+$$
+
+fit almost equally well, reporting three decimal places for $\hat\lambda$ is false precision.
+
+Interpretability can justify choosing a nearby simple value such as 0, 1/2, or 1 when the likelihood supports it.
+
+## The Jacobian matters
+
+A transformation changes the density scale.
+
+If
+
+$$
+Z=T_\lambda(Y),
+$$
+
+then
+
+$$
+f_Y(y)
+=
+f_Z(T_\lambda(y))
+\left|
+\frac{dT_\lambda(y)}
+{dy}
+\right|.
+$$
+
+Likelihood comparison across transformation parameters must include this change-of-variable term, or use an equivalent scaled formulation.
+
+Simply fitting ordinary least squares after many arbitrary transforms and comparing residual sums of squares can give the wrong comparison.
+
+## Transformations change hypotheses
+
+Suppose the original scientific question concerns the arithmetic mean difference
+
+$$
+E[Y\mid X=1]
+-
+E[Y\mid X=0].
+$$
+
+After a log transformation, a linear model targets
+
+$$
+E[\log Y\mid X]
+$$
+
+on the transformed scale.
+
+A coefficient difference there is naturally multiplicative after exponentiation.
+
+For a simple log-linear model,
+
+$$
+\log Y
+=
+\beta_0+\beta_1X+\varepsilon,
+$$
+
+the quantity
+
+$$
+\exp(\beta_1)
+$$
+
+is associated with a ratio on a geometric-mean or median-like scale under the model, not automatically a ratio of arithmetic means.
+
+The scientific estimand has changed.
+
+## Back-transformation is not as simple as exponentiating the fitted mean
+
+If
+
+$$
+Z=\log Y,
+$$
+
+then
+
+$$
+E[Y\mid X]
+=
+E[\exp(Z)\mid X].
+$$
+
+In general,
+
+$$
+E[\exp(Z)\mid X]
+\ne
+\exp(E[Z\mid X]).
+$$
+
+Under a homoskedastic Gaussian log model,
+
+$$
+Z\mid X
+\sim
+\mathcal N(\mu_X,\sigma^2),
+$$
+
+we have
+
+$$
+E[Y\mid X]
+=
+\exp
+\left(
+\mu_X+\frac{\sigma^2}{2}
+\right).
+$$
+
+That extra term is retransformation bias correction.
+
+For other transformations or heteroskedastic errors, the correction is more complicated.
+
+## Outliers are not a reason to transform automatically
+
+A monotone transformation can reduce the numerical leverage of large observations.
+
+That does not tell us whether those observations are errors, valid extremes, or evidence that the model is wrong.
+
+The sequence should be:
+
+1. verify the observation;
+2. understand the mechanism;
+3. assess influence;
+4. choose a model appropriate to the data-generating process.
+
+Transformation is not data cleaning.
+
+## Variance stabilization
+
+Box-Cox can be useful when variance scales systematically with the mean.
+
+Suppose approximately
+
+$$
+\operatorname{SD}(Y\mid X)
+\propto
+E[Y\mid X]^q.
+$$
+
+A power transformation can sometimes make residual variability more nearly constant.
+
+But if the mean-variance relationship has a known stochastic origin, a generalized linear model may be more natural.
+
+For counts, for example, a Poisson or negative-binomial model uses the count distribution directly rather than trying to make counts Gaussian.
+
+## GLMs are not merely “methods for non-normal residuals”
+
+A generalized linear model specifies:
+
+1. a response distribution from the exponential family;
+2. a mean $\mu_i$;
+3. a link function
+
+$$
+g(\mu_i)
+=
+x_i^\top\beta.
+$$
+
+The link transforms the **mean**, not the observed response.
+
+That is conceptually different from transforming $Y$ and fitting Gaussian least squares.
+
+Choosing between Box-Cox and a GLM is therefore a modeling decision, not two interchangeable normalization tricks.
+
+## Comparing transformed models
+
+Prediction error on the transformed scale is not directly comparable with prediction error on the original scale.
+
+If the operational loss is measured in euros, kilograms, or minutes, validation should return predictions to that scale and evaluate the relevant loss there.
+
+Likewise, $R^2$ values from different response transformations do not answer the same variance-explained question.
+
+Model comparison must match the scientific and operational scale.
+
+## A reproducible example
+
+~~~python
+from __future__ import annotations
+
+import numpy as np
+from scipy import stats
+
+rng = np.random.default_rng(2026)
+
+x: np.ndarray = rng.uniform(
+    0.0,
+    2.0,
+    size=500,
+)
+
+noise: np.ndarray = rng.normal(
+    loc=0.0,
+    scale=0.35,
+    size=x.size,
+)
+
+y: np.ndarray = np.exp(
+    1.0 + 0.8 * x + noise
+)
+
+transformed, lambda_hat = stats.boxcox(y)
+
+print(f"lambda = {lambda_hat:.3f}")
+print(
+    "corr(log(y), x) =",
+    np.corrcoef(
+        np.log(y),
+        x,
+    )[0, 1],
+)
+~~~
+
+Because the data-generating process is log-linear, the estimated Box-Cox parameter should typically be near zero.
+
+The example works because we know the generating mechanism.
+
+With real data, diagnostics and subject-matter interpretation remain necessary.
 
 ## Conclusion
 
-The Box-Cox transformation is a powerful tool, but like any statistical method, it should be applied thoughtfully and with a clear understanding of its purpose, limitations, and impact on the model and hypothesis testing process. By asking the right questions before applying the transformation, you can avoid many of the pitfalls associated with its use, ensure accurate hypothesis testing, and maintain the interpretability of your results.
+Box-Cox is not a test for whether data are normal.
 
-The key takeaway is to always evaluate the purpose of the transformation, how it affects your hypothesis, and whether there are alternative methods that might be more suitable for your data. Careful consideration of the context and implications of the transformation will lead to more reliable and meaningful insights from your analysis.
+It is a family of transformed statistical models.
+
+The sequence should be
+
+$$
+\boxed{
+\text{scientific estimand}
+\rightarrow
+\text{conditional model}
+\rightarrow
+\text{candidate transformation}
+\rightarrow
+\text{likelihood and diagnostics}
+\rightarrow
+\text{interpretation on the required scale}.
+}
+$$
+
+A transformation is justified only if the transformed model answers a question we actually want answered.
 
 ## References
 
-- Box, G. E. P., & Cox, D. R. (1964). An analysis of transformations. *Journal of the Royal Statistical Society: Series B*, 26(2), 211-252.
+- Box, G. E. P., & Cox, D. R. (1964). An analysis of transformations. *Journal of the Royal Statistical Society: Series B*, 26(2), 211–243. https://doi.org/10.1111/j.2517-6161.1964.tb00553.x
 - McCullagh, P., & Nelder, J. A. (1989). *Generalized Linear Models* (2nd ed.). Chapman & Hall.
+- Carroll, R. J., & Ruppert, D. (1988). *Transformation and Weighting in Regression*. Chapman & Hall.
