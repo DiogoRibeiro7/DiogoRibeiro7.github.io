@@ -277,7 +277,7 @@ The index lag is four. The detector has consumed five changed observations, at i
 
 *Original synthetic example. The first alarm and the known simulated change are marked separately. The threshold is not calibrated to a claimed false-alarm rate.*
 
-The [figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_sequential_changepoint_figure.py) reproduces this sequence in the site's chart style. Run it with `--dry-run` to print the observations, scores, and alarm index without writing an image.
+The numerical model, reproducibility tests, and figure renderer are maintained in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility). The [CUSUM figure script](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/time_series/sequential_cusum.py) reproduces this example; run it with `--dry-run` to print the observations, scores, and alarm index without writing an image.
 
 ### Check the Implementation Against the Definition
 
