@@ -88,10 +88,9 @@ df['trans_date'] = pd.to_datetime(df['trans_date'])
 df.dropna(subset=['Customer ID', 'Quantity'], inplace=True)
 df = df[df['Quantity'] > 0]
 
-# Outlier removal using IQR method
-Q1, Q3 = df['Quantity'].quantile([0.25, 0.75])
-IQR = Q3 - Q1
-df = df[(df['Quantity'] >= Q1 - 1.5 * IQR) & (df['Quantity'] <= Q3 + 1.5 * IQR)]
+# Do not remove large orders mechanically as "outliers".
+# Large quantities can be genuine demand and may be exactly
+# what inventory planning needs to forecast.
 
 # Split data into training and validation sets
 cutoff_date = pd.to_datetime('2011-11-30')
@@ -133,9 +132,11 @@ summary['expected_sales'] = summary['predicted_purchases'] * summary['expected_a
 # Merge predictions with customer-product data
 customer_product = train_df.groupby(['Customer ID', 'Description'])['Quantity'].sum().reset_index()
 
-# Proportionally distribute predicted sales for each product
-customer_product['product_proportion'] = customer_product['Quantity'] / customer_product.groupby('Customer ID')['Quantity'].transform('sum')
-customer_product['expected_product_sales'] = customer_product['product_proportion'] * summary['expected_sales']
+# A customer-level purchase forecast cannot be converted into
+# a product-level forecast merely by multiplying historical
+# product shares unless those shares are assumed stable.
+# Estimate product choice explicitly or forecast product demand
+# directly at the product level.
 ```
 
 This step calculates expected sales per customer, then aggregates those predictions at the product level.
@@ -152,8 +153,14 @@ for product in daily_sales_pivot.columns:
     model_type = 'multiplicative' if (product_series > 0).all() else 'additive'
     
     if len(product_series.dropna()) >= 90:
-        decomposition = seasonal_decompose(product_series, model=model_type, period=30)
-        seasonal_indices[product] = decomposition.seasonal.mean()
+        decomposition = seasonal_decompose(
+            product_series,
+            model=model_type,
+            period=30,
+        )
+        # The mean of an additive seasonal component is approximately
+        # zero, so it is not a usable seasonal adjustment factor.
+        seasonal_indices[product] = decomposition.seasonal
 ```
 
 By adjusting sales forecasts based on seasonal patterns, we ensure that periodic trends are factored into the predictions.
@@ -175,8 +182,66 @@ The model is validated by comparing the predicted sales with actual sales data f
 
 ### Final Thoughts
 
-Using a customer-centric approach to predict sales demand in the supply chain offers a more accurate forecasting model than traditional time-series methods. The BG/NBD model provides valuable insights into customer behavior, enabling businesses to forecast demand and optimize inventory more effectively.
+A customer-level repurchase model and a product-level demand forecast answer different questions. Neither is inherently more accurate than a time-series model; the comparison must be made on the same forecast target, horizon, information set, and validation period. The BG/NBD model provides valuable insights into customer behavior, enabling businesses to forecast demand and optimize inventory more effectively.
 
 The combination of repurchase models, seasonality adjustments, and product-level forecasts enhances the precision of predictions, offering a robust framework for supply chain management.
 
 For further refinement, future models could incorporate external factors like promotions, holidays, or inventory levels to capture even more variability in demand. With ongoing exploration and refinement, this approach can lead to better business decisions and more efficient supply chain operations.
+
+
+## The forecast target must be explicit
+
+Supply-chain forecasting may target
+
+$$
+Y_{s,t+h},
+$$
+
+demand for SKU $s$ at horizon $h$, or a hierarchy such as SKU-store, category-store, region, and total demand.
+
+A customer repurchase model estimates a different object:
+
+$$
+E[N_i(t,t+h)\mid\mathcal F_t],
+$$
+
+the expected number of future transactions for customer $i$.
+
+Turning one into the other requires a product-choice model or an assumption that future product mix follows historical proportions. That assumption should be tested rather than hidden inside a groupby.
+
+## BG/NBD assumptions
+
+BG/NBD models repeat purchasing under assumptions about transaction rates and dropout. They are useful for non-contractual customer behavior, but they are not generic demand models.
+
+The Gamma-Gamma model is designed for positive monetary value under assumptions about independence between transaction frequency and monetary value. Passing item quantity as if it were monetary value changes the model meaning.
+
+If the target is unit demand, model units directly.
+
+## Inventory decisions need distributions
+
+Point forecasts are not enough for safety-stock decisions.
+
+For lead time $L$, inventory policy depends on the distribution
+
+$$
+P(
+D_{t+1:t+L}
+\mid
+\mathcal F_t
+).
+$$
+
+Quantiles, prediction intervals, and service-level loss matter more than RMSE alone.
+
+## Validation must be time ordered
+
+The training period must precede the validation period, and every feature must be available at the forecast origin.
+
+Compare against simple baselines:
+
+- seasonal naive;
+- moving average;
+- exponential smoothing;
+- direct SKU-level models.
+
+A complex customer model should earn its complexity by beating those baselines on the same horizon and loss function.
