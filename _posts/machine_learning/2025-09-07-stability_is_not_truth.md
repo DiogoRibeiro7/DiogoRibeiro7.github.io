@@ -1,10 +1,52 @@
 ---
-author_profile: false
-categories:
-- Statistics
-classes: wide
+permalink: '/machine-learning/stability_is_not_truth/'
 title: 'Stability Is Not Truth'
-excerpt: A continuous Gaussian population can produce highly stable clusters. A negative control shows what bootstrap agreement establishes and what it leaves unanswered.
+date: '2025-09-07'
+categories:
+- Machine Learning
+- Statistics
+tags:
+- Unsupervised Learning
+- Clustering
+- Clustering Stability
+- Bootstrap
+- Statistical Inference
+- Reproducibility
+author_profile: false
+seo_title: 'Stable Clusters Are Not Necessarily Real Clusters'
+seo_description: 'A continuous Gaussian population can produce highly stable K-means partitions. Bootstrap agreement establishes repeatability under a perturbation scheme, not the existence of discrete latent classes.'
+excerpt: >-
+  A continuous Gaussian population can produce highly stable clusters. A negative
+  control, positive control and representation perturbation show what bootstrap
+  agreement establishes and what it leaves unanswered.
+summary: >-
+  An analytic Gaussian example and controlled bootstrap experiment distinguish
+  reproducible cluster assignments from evidence for discrete latent groups. The
+  article compares a continuous negative control with a separated mixture,
+  quantifies assignment ambiguity, and shows that two internally stable
+  representations can still produce almost unrelated partitions.
+keywords:
+- clustering stability
+- bootstrap clustering
+- latent classes
+- negative controls
+- adjusted Rand index
+- representation sensitivity
+- unsupervised learning
+classes: wide
+why_this_exists: >-
+  Stable clustering is often treated as evidence for natural classes. A
+  reproducible negative control shows that stability can instead reflect a
+  repeatable geometric partition of a continuous population.
+evidence: >-
+  An analytic Gaussian quantization calculation and three 100-bootstrap
+  experiments on 1,000 synthetic observations, including a separated mixture
+  positive control and an invertible representation perturbation.
+methodology: >-
+  Fix k at two, compare bootstrap assignments with a reference fit using adjusted
+  Rand index, retain point-level assignment frequencies, and compare stability
+  within each representation with agreement across representations.
+reviewed_at: '2026-09-20'
 header:
   image: /assets/images/headers/constellation.jpg
   og_image: /assets/images/headers/constellation.jpg
@@ -13,38 +55,7 @@ header:
   show_overlay_excerpt: false
   teaser: /assets/images/headers/constellation.jpg
   twitter_image: /assets/images/headers/constellation.jpg
-keywords:
-- clustering stability
-- negative controls
-- bootstrap
-- latent classes
-- representation sensitivity
-- longitudinal clustering
-seo_title: 'Stability Is Not Truth'
-seo_description: 'Reproduce stable k-means partitions in a continuous population, compare a discrete-class control, and examine how representation changes the answer.'
-seo_type: article
-summary: 'An analytic Gaussian example and a controlled bootstrap experiment distinguish reproducible partitions from evidence for discrete latent groups.'
-tags:
-- Clustering
-- Statistical Inference
-- Simulation
-- Reproducibility
-why_this_exists: 'Stable clustering is often treated as evidence for natural classes. A reproducible negative control tests that inference directly.'
-evidence: 'Original Gaussian quantization calculation and three 100-bootstrap experiments on 1,000 synthetic observations, including a separated mixture control.'
-methodology: 'Fix k at two, compare bootstrap assignments with a reference fit, reweight the same continuous data, and distinguish global agreement from assignment uncertainty.'
-reviewed_at: 2026-09-18
 ---
-
-<!--
-Development contract
-Question: Can a highly reproducible partition arise without discrete latent classes?
-Claim: Stability establishes repeatability under specified perturbations, not the existence of the proposed classes.
-Counterclaim: Stable segmentation may still be useful, and stability can help distinguish candidates under an explicit cluster model.
-Evidence object: Gaussian distortion calculation, continuous negative control, discrete mixture positive control, and representation perturbation.
-Failure case: A single Gaussian control does not characterize all continuous populations or all clustering algorithms.
-Reader payoff: Add controls and assignment diagnostics before interpreting clusters as substantive types.
-Exclusions: Selecting the best clustering algorithm, proving universal consistency, and claiming that latent classes never exist.
--->
 
 A clustering pipeline returns two groups. Refit it on bootstrap samples and most observations remain with the same neighbors. The adjusted Rand index is usually above 0.9.
 
@@ -289,3 +300,10 @@ Before giving clusters substantive names, I would want to see the following:
 Even external associations need interpretation: cutting a continuous severity variable into groups can produce different outcomes without revealing distinct subtypes. Compare that explanation with the proposed categorical one.
 
 The supported statement from a stability analysis is specific: this algorithm, representation, number of clusters, and perturbation scheme repeatedly produced similar assignments. Turning that result into a claim about what kinds of entities exist in the population requires a separate argument.
+
+
+## References
+
+- Hennig, C. (2015). What are the true clusters? *Pattern Recognition Letters*, 64, 53–62. https://doi.org/10.1016/j.patrec.2015.04.009
+- Hubert, L., & Arabie, P. (1985). Comparing partitions. *Journal of Classification*, 2, 193–218. https://doi.org/10.1007/BF01908075
+- von Luxburg, U. (2010). Clustering stability: An overview. *Foundations and Trends in Machine Learning*, 2(3), 235–274. https://doi.org/10.1561/2200000008
