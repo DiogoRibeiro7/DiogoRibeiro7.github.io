@@ -41,13 +41,13 @@ methodology: >-
   recruitment costs, temporal dependence, and the length of the observation window.
 reviewed_at: '2026-09-18'
 header:
-  image: /assets/images/headers/photo-statistics-normal-distribution.jpg
-  og_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
-  overlay_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  image: /assets/images/headers/photo-research-longitudinal.jpg
+  og_image: /assets/images/headers/photo-research-longitudinal.jpg
+  overlay_image: /assets/images/headers/photo-research-longitudinal.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-statistics-normal-distribution.jpg
-  twitter_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
+  teaser: /assets/images/headers/photo-research-longitudinal.jpg
+  twitter_image: /assets/images/headers/photo-research-longitudinal.jpg
 ---
 
 <!--
