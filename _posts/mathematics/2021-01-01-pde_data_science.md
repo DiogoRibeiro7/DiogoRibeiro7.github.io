@@ -5,10 +5,7 @@ categories:
 - Mathematics
 classes: wide
 date: '2021-01-01'
-excerpt: PDEs offer a powerful framework for understanding complex systems in fields
-  like physics, finance, and environmental science. Discover how data scientists can
-  integrate PDEs with modern machine learning techniques to create robust predictive
-  models.
+excerpt: Partial differential equations matter in data science when data are observations of a spatial-temporal physical system. The key problems are forward simulation, inverse problems, parameter estimation, data assimilation, and surrogate modeling.
 header:
   image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
   og_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
@@ -19,182 +16,515 @@ header:
   twitter_image: /assets/images/headers/photo-mathematics-fractal-grid.jpg
 keywords:
 - Partial differential equations
-- Pdes
-- Data science
-- Numerical solutions
-- Physics-informed neural networks
-seo_description: The role of Partial Differential Equations in data science, including machine learning, physics-informed models, and numerical methods.
-seo_title: Partial Differential Equations for Data Scientists
+- inverse problems
+- data assimilation
+- numerical PDEs
+- physics-informed machine learning
+seo_description: PDEs for data scientists through forward models, inverse problems, parameter estimation, data assimilation, finite differences, finite elements, and physics-informed machine learning.
+seo_title: 'PDEs for Data Scientists: Forward Models, Inverse Problems, and Physics'
 seo_type: article
-summary: This article explores the role of Partial Differential Equations (PDEs) in
-  data science, including their applications in machine learning, finance, image processing,
-  and environmental modeling. It covers basic classifications of PDEs, solution methods,
-  and why data scientists should care about them.
+summary: A mathematically grounded introduction to PDEs from a data-science perspective, focusing on how physical field equations connect to observations, inverse problems, numerical solvers, and hybrid models.
 tags:
-- Machine Learning
 - Numerical Methods
-title: Introduction to Partial Differential Equations (PDEs) from a Data Science Perspective
+- Inverse Problems
+- Scientific Computing
+title: 'PDEs for Data Scientists: Forward Models, Inverse Problems, and Physics'
 ---
 
-![Pde - Introduction to Partial Differential Equations (PDEs) from a Data Science Perspective](/assets/images/pde.webp){: width="1024" height="768" loading="lazy"}
+![PDE illustration](/assets/images/pde.webp){: width="1024" height="768" loading="lazy"}
 
-Partial Differential Equations (PDEs) are fundamental in the modeling of various natural phenomena, ranging from fluid dynamics and heat transfer to quantum mechanics and finance. As a data scientist or data analyst, you may wonder why PDEs should be of interest, given that your field often focuses on data-driven methods such as machine learning and statistical analysis. The answer lies in the fact that PDEs provide a powerful framework for understanding the underlying processes governing many real-world systems. This is critical in areas such as physics-informed machine learning, time-series forecasting, and high-dimensional data analysis.
+Partial differential equations become relevant to data science when the data are observations of a field evolving in space and time.
 
-Understanding PDEs gives data scientists an edge in addressing problems where traditional data-driven models might struggle. PDEs describe systems where changes in space and time are intertwined, offering insights into the dynamics of physical processes. By integrating PDEs with data science techniques, such as machine learning, you can develop hybrid models that incorporate both data and physics, leading to more robust predictions.
+Examples include:
 
-In this article, we will explore the basics of PDEs, their applications, and their importance in data science. We will also examine specific areas where PDEs and data-driven methods intersect. By the end, you should have a foundational understanding of PDEs and an appreciation of how they can enhance your capabilities as a data scientist.
+- temperature in a material;
+- pollutant concentration in a river;
+- pressure and velocity in a fluid;
+- electrical potential;
+- seismic waves;
+- image intensity under diffusion;
+- option values under a pricing model.
 
-## 1. What are Partial Differential Equations?
+The central connection is not that PDEs are another machine-learning feature.
 
-At their core, Partial Differential Equations (PDEs) describe the relationships between the various partial derivatives of a multivariable function. These equations are used to model systems in which the state of the system depends on more than one variable. A classic example of a PDE is the heat equation, which describes how heat diffuses through a given region over time:
+It is that a PDE can define the **data-generating mechanism**.
+
+## A forward model
+
+Consider the heat equation
 
 $$
-\frac{\partial u}{\partial t} = \alpha \nabla^2 u
+\frac{\partial u}{\partial t}
+=
+\alpha
+\nabla^2u,
 $$
 
-Here, $$ u = u(x, t) $$ is the temperature at a point $$ x $$ and time $$ t $$, and $$ \nabla^2 $$ represents the Laplacian operator, which accounts for spatial variations in temperature. The constant $$ \alpha $$ is the thermal diffusivity, which governs the rate at which heat spreads through the medium.
+where $u(x,t)$ is temperature and $\alpha$ is thermal diffusivity.
 
-PDEs are ubiquitous in science and engineering. They are used to model physical processes that vary in space and time, such as:
+Given:
 
-- Fluid flow (Navier-Stokes equations)
-- Electromagnetic fields (Maxwell’s equations)
-- Wave propagation (wave equation)
-- Population dynamics (Fisher’s equation)
+- an initial condition;
+- boundary conditions;
+- parameter $\alpha$;
+- geometry;
 
-### Types of PDEs
+the PDE defines a forward map
 
-PDEs can be broadly classified into three types:
+$$
+\mathcal F:
+(\alpha,u_0,\text{boundary})
+\mapsto
+u(x,t).
+$$
 
-- **Elliptic**: No time-dependence, such as the Laplace equation $$ \nabla^2 u = 0 $$. These often describe equilibrium states.
-- **Parabolic**: Time-dependent but typically describe processes that diffuse over time, like the heat equation.
-- **Hyperbolic**: Time-dependent and describe wave-like phenomena, such as the wave equation.
+A numerical solver approximates this map.
 
-Each class of PDE exhibits different mathematical properties and requires different methods for solving.
+That is a simulation problem.
 
-## 2. Classification of PDEs
+## Data usually create an inverse problem
 
-PDEs are typically classified based on their linearity and the nature of their solutions. Here are two key classifications:
+In data science we often observe noisy measurements
 
-### 2.1 Linear vs. Nonlinear PDEs
+$$
+Y_i
+=
+u(x_i,t_i)
++
+\varepsilon_i
+$$
 
-- **Linear PDEs**: The unknown function and its derivatives appear linearly. The heat equation and wave equation are examples of linear PDEs.
-- **Nonlinear PDEs**: The unknown function appears in a nonlinear fashion, making these equations much harder to solve. The Navier-Stokes equations governing fluid dynamics are a famous example of nonlinear PDEs.
+and want to infer an unknown quantity:
 
-### 2.2 Order of a PDE
+- $\alpha$;
+- a source term;
+- a boundary condition;
+- an initial field;
+- an unknown coefficient;
+- the latent state itself.
 
-The order of a PDE is determined by the highest derivative present in the equation. For instance, if the highest derivative is a second-order derivative, then it’s called a second-order PDE.
+Then the problem is inverse:
 
-- **First-Order PDEs**: Often describe propagation of signals, such as in traffic flow.
-- **Second-Order PDEs**: These are the most common in physics, such as the heat and wave equations.
+$$
+Y
+\rightarrow
+\theta.
+$$
 
-## 3. Analytical vs. Numerical Solutions
+The PDE connects $\theta$ to the observations through
 
-Analytical solutions to PDEs provide exact formulas for the unknown function, but obtaining such solutions is often difficult or impossible for complex systems. Analytical techniques are typically limited to simple geometries and boundary conditions.
+$$
+Y
+=
+H\mathcal F(\theta)
++
+\varepsilon,
+$$
 
-### 3.1 Analytical Solutions
+where $H$ is the observation operator.
 
-Examples of methods for solving PDEs analytically include:
+This equation is one of the most useful ways to connect scientific computing and statistics.
 
-- **Separation of Variables**: This method works when the PDE can be broken into simpler, single-variable ordinary differential equations (ODEs).
-- **Fourier and Laplace Transforms**: These are powerful tools that transform a PDE into an algebraic equation, which is easier to solve.
+## Inverse problems can be ill-posed
 
-### 3.2 Numerical Solutions
+A forward PDE can be well posed while the inverse problem is not.
 
-Numerical methods approximate the solutions of PDEs and are indispensable in handling real-world problems where analytical solutions are intractable. Common numerical methods include:
+Different parameter values may produce almost indistinguishable observations.
 
-- **Finite Difference Method (FDM)**: Approximates derivatives by finite differences.
-- **Finite Element Method (FEM)**: Breaks the domain into small elements and solves the PDE in a piecewise manner.
-- **Finite Volume Method (FVM)**: Similar to FEM but focuses on conserving quantities within each volume element.
+Noise can then create large changes in the inferred parameter.
 
-Numerical approaches, while approximate, can handle complex geometries and boundary conditions, making them highly applicable in data science.
+Suppose
 
-## 4. Methods for Solving PDEs
+$$
+Y=A\theta+\varepsilon
+$$
 
-There are several methods to solve PDEs, each with its strengths and limitations depending on the problem at hand. Below, we outline the most commonly used methods.
+after linearization.
 
-### 4.1 Separation of Variables
+If $A$ has very small singular values, then naive inversion amplifies noise.
 
-This technique is used for linear PDEs and works by assuming that the solution can be written as the product of single-variable functions. For example, solving the heat equation by separation of variables involves breaking it into time-dependent and space-dependent parts.
+Regularization becomes necessary.
 
-### 4.2 Fourier and Laplace Transforms
+A standard form is
 
-These transform-based methods convert PDEs into algebraic equations, which are easier to solve. The Fourier transform is especially useful in problems involving periodic boundary conditions.
+$$
+\hat\theta
+=
+\arg\min_\theta
+\left[
+\|Y-\mathcal F(\theta)\|^2
++
+\lambda R(\theta)
+\right].
+$$
 
-### 4.3 Finite Difference Method
+The regularizer $R$ encodes smoothness, sparsity, or another prior structural assumption.
 
-In the finite difference method, the continuous derivatives in the PDE are approximated using discrete differences. This method is relatively simple to implement but may struggle with complex geometries or irregular domains.
+## Bayesian inverse problems
 
-### 4.4 Finite Element Method
+The same structure can be written probabilistically.
 
-The finite element method is a more flexible approach for solving PDEs, particularly in complex geometries. It works by breaking the domain into small subregions (elements) and solving the equation piece by piece. This method is widely used in engineering and computational physics.
+Choose a prior
 
-### 4.5 Machine Learning Approaches
+$$
+p(\theta)
+$$
 
-In recent years, machine learning has emerged as a powerful tool for solving PDEs. **Physics-Informed Neural Networks (PINNs)** are one example where neural networks are trained to approximate the solution of a PDE while enforcing the physical constraints described by the PDE.
+and an observation model
 
-## 5. Applications of PDEs in Data Science
+$$
+p(Y\mid\theta).
+$$
 
-While PDEs are traditionally associated with physics and engineering, they have increasingly found applications in data science, where they help model complex, dynamic systems.
+Then
 
-### 5.1 Physics-Informed Neural Networks (PINNs)
+$$
+p(\theta\mid Y)
+\propto
+p(Y\mid\theta)p(\theta).
+$$
 
-PINNs are a novel machine learning approach where the laws of physics, often expressed as PDEs, are embedded directly into the learning process. This ensures that the neural network respects the underlying physics of the problem while learning from data. PINNs have been used to model fluid flow, heat transfer, and other phenomena where traditional data-driven models would fail to capture the complex dynamics.
+The expensive part is often repeated evaluation of the PDE solver inside likelihood or posterior computation.
 
-### 5.2 Stochastic Differential Equations in Finance
+This motivates surrogate models and reduced-order methods.
 
-In quantitative finance, stochastic differential equations (SDEs) are used to model the dynamics of financial markets. The Black-Scholes equation, which is a PDE, forms the basis for option pricing models. Understanding SDEs and their relation to PDEs is essential for data scientists working in financial modeling and risk analysis.
+## Classification of PDEs is about the principal part
 
-### 5.3 Image Processing and Computer Vision
+For a second-order linear PDE in two spatial variables,
 
-PDEs play a critical role in image processing and computer vision. For example, the diffusion equation is used in image smoothing, where noise is removed from an image while preserving important features like edges. The level set method, which relies on PDEs, is used for image segmentation, an important task in computer vision.
+$$
+A u_{xx}
++
+2B u_{xy}
++
+C u_{yy}
++
+\text{lower-order terms}
+=
+0,
+$$
 
-### 5.4 Fluid Dynamics and Environmental Data
+the discriminant
 
-PDEs like the Navier-Stokes equations describe fluid flow and are used extensively in environmental modeling, where they help simulate ocean currents, atmospheric dynamics, and pollutant dispersion. For data scientists working in environmental analytics, understanding these equations is critical for building models that predict environmental changes.
+$$
+B^2-AC
+$$
 
-## 6. Why Data Scientists Should Care About PDEs
+gives the local classification:
 
-In an era where machine learning dominates data science, you may wonder why learning about PDEs is necessary. The reason is that many real-world problems involve systems that are governed by underlying physical laws. PDEs provide a framework to understand these laws and offer the following benefits:
+- elliptic if $B^2-AC<0$;
+- parabolic if $B^2-AC=0$;
+- hyperbolic if $B^2-AC>0$.
 
-### 6.1 Enhancing Predictive Models
+The labels are not simply synonyms for equilibrium, diffusion, and waves.
 
-By incorporating knowledge of PDEs into your data science models, you can improve the accuracy and robustness of your predictions. For example, in climate modeling, integrating PDEs with machine learning techniques leads to more reliable forecasts.
+They describe mathematical structure that influences boundary conditions, propagation, regularity, and numerical methods.
 
-### 6.2 Bridging Data and Physics
+Laplace, heat, and wave equations are canonical examples.
 
-Data science is increasingly moving towards hybrid models that combine data-driven methods with physics-based models. PDEs form the backbone of many physics-based models, and understanding them allows you to build more sophisticated hybrid models that blend data and theory.
+## Boundary and initial conditions are part of the model
 
-### 6.3 Interpreting Complex Systems
+A PDE alone rarely specifies a unique solution.
 
-Complex systems, such as weather patterns, stock markets, and traffic flows, often exhibit behaviors that can be captured by PDEs. For data scientists working with high-dimensional and time-dependent data, PDEs offer a powerful tool for interpreting and modeling such systems.
+For a heat problem, we may require
 
-## 7. Conclusion and Future Directions
+$$
+u(x,0)=u_0(x)
+$$
 
-Partial Differential Equations are a cornerstone of modern science and engineering. As a data scientist or data analyst, understanding PDEs can provide you with a deeper understanding of the systems you're modeling, especially in fields where data alone is insufficient to capture the complexity of the phenomena at hand. By combining PDEs with machine learning, data science can evolve towards more interpretable and physics-informed models.
+and boundary conditions such as
 
-Future research in this area is likely to explore deeper integrations of PDEs with machine learning, particularly in the form of hybrid models like Physics-Informed Neural Networks (PINNs). Data science applications in finance, environmental science, and image processing will increasingly rely on such methods.
+$$
+u=0
+$$
 
-## 8. References and Further Reading
+on the boundary, or a flux condition
 
-- Strauss, W. A. (2007). *Partial Differential Equations: An Introduction*. Wiley.
-- Evans, L. C. (2010). *Partial Differential Equations*. American Mathematical Society.
-- Logan, J. D. (2015). *Applied Partial Differential Equations*. Springer.
-- Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2019). "Physics-Informed Neural Networks: A Deep Learning Framework for Solving Forward and Inverse Problems Involving Nonlinear PDEs." *Journal of Computational Physics*, 378, 686–707.
-- Sirignano, J., & Spiliopoulos, K. (2018). "DGM: A Deep Learning Algorithm for Solving Partial Differential Equations." *Journal of Computational Physics*, 375, 1339–1364.
-- Smoller, J. (1983). *Shock Waves and Reaction-Diffusion Equations*. Springer.
-- LeVeque, R. J. (2002). *Finite Volume Methods for Hyperbolic Problems*. Cambridge University Press.
-- Zachmanoglou, E. C., & Thoe, D. W. (1986). *Introduction to Partial Differential Equations with Applications*. Dover Publications.
-- Renardy, M., & Rogers, R. C. (2004). *An Introduction to Partial Differential Equations*. Springer.
-- Farlow, S. J. (1993). *Partial Differential Equations for Scientists and Engineers*. Dover Publications.
-- Morton, K. W., & Mayers, D. F. (2005). *Numerical Solution of Partial Differential Equations: An Introduction*. Cambridge University Press.
-- Ames, W. F. (1992). *Numerical Methods for Partial Differential Equations*. Academic Press.
-- Berg, J., & Nyström, K. (2018). "A Unified Deep Artificial Neural Network Approach to Partial Differential Equations in Complex Geometries." *Neurocomputing*, 317, 28-41.
-- Han, J., Jentzen, A., & E, W. (2018). "Solving High-Dimensional Partial Differential Equations Using Deep Learning." *Proceedings of the National Academy of Sciences*, 115(34), 8505-8510.
-- Hsieh, S. T., & Pretorius, F. (2019). "Numerical Relativity Using Machine Learning." *Physical Review D*, 100(8), 084024.
-- Li, Z., Kovachki, N., Azizzadenesheli, K., Liu, B., Bhattacharya, K., Stuart, A., & Anandkumar, A. (2020). "Fourier Neural Operator for Parametric Partial Differential Equations." *arXiv preprint arXiv:2010.08895*.
-- Karniadakis, G. E., Kevrekidis, I. G., Lu, L., Perdikaris, P., Wang, S., & Yang, L. (2021). "Physics-Informed Machine Learning." *Nature Reviews Physics*, 3(6), 422-440.
-- Tveito, A., & Winther, R. (1998). *Introduction to Partial Differential Equations: A Computational Approach*. Springer.
-- Quarteroni, A., Sacco, R., & Saleri, F. (2007). *Numerical Mathematics*. Springer.
-- Langtangen, H. P., & Logg, A. (Eds.). (2016). *Solving PDEs in Python: The FEniCS Tutorial I*. Springer.
-- Collatz, L. (2013). *The Numerical Treatment of Differential Equations*. Springer.
-- Gustafsson, B., Kreiss, H. O., & Oliger, J. (1995). *Time-Dependent Problems and Difference Methods*. Wiley.
+$$
+\nabla u\cdot n=q.
+$$
+
+Dirichlet, Neumann, and Robin conditions encode different physical statements.
+
+A data-driven solver that satisfies the differential equation but violates the boundary conditions is not solving the intended physical problem.
+
+## Finite differences
+
+For a one-dimensional grid with spacing $\Delta x$,
+
+$$
+u_{xx}(x_i)
+\approx
+\frac{
+u_{i+1}-2u_i+u_{i-1}
+}{
+(\Delta x)^2
+}.
+$$
+
+For the heat equation, a forward-Euler scheme gives
+
+$$
+u_i^{n+1}
+=
+u_i^n
++
+r
+(
+u_{i+1}^n
+-
+2u_i^n
++
+u_{i-1}^n
+),
+$$
+
+where
+
+$$
+r
+=
+\frac{
+\alpha\Delta t
+}{
+(\Delta x)^2
+}.
+$$
+
+In one spatial dimension, this explicit scheme is stable only when
+
+$$
+r\le\frac12.
+$$
+
+Numerical stability is therefore part of the model implementation.
+
+A solver can produce numbers and still be mathematically invalid.
+
+## Finite elements
+
+Finite-element methods start from a weak formulation.
+
+For a Poisson equation
+
+$$
+-\nabla^2u=f,
+$$
+
+multiply by test function $v$ and integrate:
+
+$$
+\int_\Omega
+\nabla u\cdot\nabla v
+\,dx
+=
+\int_\Omega
+fv
+\,dx,
+$$
+
+after integration by parts and suitable boundary conditions.
+
+The solution is approximated in a finite-dimensional basis.
+
+This is especially useful on irregular geometries.
+
+The method is not simply “breaking the domain into pieces”; the weak formulation is what makes finite elements mathematically distinctive.
+
+## Data assimilation
+
+Data assimilation combines a dynamical model with sequential observations.
+
+A state-space representation is
+
+$$
+x_{t+1}
+=
+M(x_t)
++
+\eta_t,
+$$
+
+$$
+y_t
+=
+H(x_t)
++
+\varepsilon_t.
+$$
+
+Here $M$ may contain a discretized PDE solver.
+
+Kalman filters, ensemble Kalman filters, and variational assimilation methods estimate latent states while respecting both model dynamics and observations.
+
+Weather prediction is a major example.
+
+## Surrogate models
+
+If a PDE solver costs minutes or hours per evaluation, inference requiring thousands of evaluations becomes expensive.
+
+A surrogate approximates
+
+$$
+\mathcal F(\theta)
+$$
+
+with a cheaper model
+
+$$
+\widehat{\mathcal F}(\theta).
+$$
+
+Options include:
+
+- Gaussian processes;
+- polynomial chaos;
+- reduced-order bases;
+- neural operators;
+- conventional neural networks.
+
+The surrogate error must be propagated into the final inference when it is not negligible.
+
+## Physics-informed neural networks
+
+A PINN represents a solution $u_\phi(x,t)$ with a neural network and penalizes violations of the PDE.
+
+For
+
+$$
+u_t-\alpha u_{xx}=0,
+$$
+
+a residual is
+
+$$
+r_\phi(x,t)
+=
+\frac{\partial u_\phi}{\partial t}
+-
+\alpha
+\frac{\partial^2u_\phi}{\partial x^2}.
+$$
+
+A training loss might combine
+
+$$
+L
+=
+L_{\mathrm{data}}
++
+\lambda_r L_{\mathrm{PDE}}
++
+\lambda_b L_{\mathrm{boundary}}.
+$$
+
+This is elegant.
+
+It is not automatically superior to finite differences or finite elements.
+
+PINNs can struggle with stiffness, multiscale structure, sharp fronts, optimization pathology, and badly balanced loss terms.
+
+The benchmark should always include a conventional numerical solver when one is available.
+
+## Neural operators
+
+A standard neural network learns a finite-dimensional function.
+
+A neural operator aims to learn a map between functions, for example
+
+$$
+a(x)
+\mapsto
+u(x),
+$$
+
+where $a$ is a PDE coefficient field and $u$ the corresponding solution field.
+
+This can be useful when many related PDE solves are required.
+
+Again, the key use case is amortization:
+
+$$
+\text{expensive training}
+\rightarrow
+\text{many cheap evaluations}.
+$$
+
+## PDEs versus stochastic differential equations
+
+An SDE such as
+
+$$
+dX_t
+=
+\mu(X_t,t)\,dt
++
+\sigma(X_t,t)\,dW_t
+$$
+
+is not a PDE.
+
+But the probability density or expected-value function associated with an SDE often satisfies a PDE such as the Fokker-Planck or backward Kolmogorov equation.
+
+In finance, the Black-Scholes PDE can be derived from a stochastic asset model under assumptions.
+
+The connection is mathematical, not terminological equivalence.
+
+## Image processing
+
+Diffusion PDEs have long been used in image processing.
+
+Linear diffusion smooths noise but also blurs edges.
+
+Anisotropic diffusion modifies the diffusion coefficient to reduce smoothing across strong gradients.
+
+This is an example of model structure encoding a desired property.
+
+It predates modern deep learning and remains conceptually useful.
+
+## What data scientists should learn
+
+The most transferable concepts are not a catalogue of PDE names.
+
+They are:
+
+1. state versus observation;
+2. forward versus inverse problem;
+3. well-posedness and identifiability;
+4. discretization error;
+5. stability and convergence;
+6. regularization;
+7. uncertainty propagation.
+
+These ideas recur in statistical learning even when no PDE appears explicitly.
+
+## Conclusion
+
+PDEs matter to data science when data are partial observations of a structured dynamical system.
+
+The central chain is
+
+$$
+\boxed{
+\text{physical law}
+\rightarrow
+\text{PDE}
+\rightarrow
+\text{numerical forward model}
+\rightarrow
+\text{observations}
+\rightarrow
+\text{inverse inference}.
+}
+$$
+
+Machine learning becomes useful when it accelerates, regularizes, or augments this chain.
+
+It should not replace the mathematical structure without evidence that the replacement works.
+
+## References
+
+- Evans, L. C. (2010). *Partial Differential Equations* (2nd ed.). American Mathematical Society.
+- LeVeque, R. J. (2007). *Finite Difference Methods for Ordinary and Partial Differential Equations*. SIAM.
+- Stuart, A. M. (2010). Inverse problems: A Bayesian perspective. *Acta Numerica*, 19, 451–559.
+- Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2019). Physics-informed neural networks. *Journal of Computational Physics*, 378, 686–707.

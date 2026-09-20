@@ -5,9 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2021-03-01'
-excerpt: Learn how to avoid false positives and false negatives in hypothesis testing
-  by understanding Type I and Type II errors, their causes, and how to balance statistical
-  power and sample size.
+excerpt: Type I and Type II errors are properties of a decision rule, but applied work also needs effect size, multiplicity control, selective inference, and the costs of the decisions that follow.
 header:
   image: /assets/images/headers/photo-statistics-regression-errors.jpg
   og_image: /assets/images/headers/photo-statistics-regression-errors.jpg
@@ -17,223 +15,495 @@ header:
   teaser: /assets/images/headers/photo-statistics-regression-errors.jpg
   twitter_image: /assets/images/headers/photo-statistics-regression-errors.jpg
 keywords:
-- Statistical testing
-- Type ii error
-- Type i error
-- Data science
-- Hypothesis testing
-seo_description: The differences between Type I and Type II errors, how to minimize them, and their impact on data science, clinical trials, and model evaluation.
-seo_title: 'Type I vs. Type II Errors: Avoiding False Results'
+- Type I error
+- Type II error
+- statistical power
+- multiple testing
+- decision theory
+seo_description: A practical extension of Type I and Type II error theory covering power functions, minimum relevant effects, multiplicity, selective inference, decision costs, and why model-classification errors are not the same thing.
+seo_title: 'Beyond Type I and Type II Errors: Decisions, Power, and Multiplicity'
 seo_type: article
-summary: This article explains the fundamental concepts behind Type I and Type II
-  errors in statistical testing, covering their causes, how to minimize them, and
-  the critical role of statistical power and sample size in data science.
+summary: A companion to the introductory Type I/II article, focusing on how error rates behave in real research workflows with multiple tests, effect-size thresholds, sequential analysis, and operational decisions.
 tags:
 - Hypothesis Testing
-- Data Science
-title: 'Understanding Type I and Type II Errors in Statistical Testing: How to Minimize
-  False Conclusions'
+- Statistical Inference
+- Decision Theory
+title: 'Beyond Type I and Type II Errors: Decisions, Power, and Multiplicity'
 ---
 
-## Introduction: The Importance of Understanding Type I and Type II Errors
+The basic Type I and Type II error table is useful.
 
-Statistical testing plays a critical role in data science, research, and decision-making processes across many domains, from medical trials to AI development. When conducting hypothesis tests, there’s always a risk of making mistakes due to misinterpretation of data. These mistakes are classified as **Type I errors** (false positives) and **Type II errors** (false negatives). Understanding these two types of errors is essential to ensure that your conclusions are valid and that you don’t mislead yourself or others.
+It is not enough for real analysis.
 
-A **Type I error** occurs when you falsely identify an effect or difference that doesn’t actually exist—rejecting a true null hypothesis. In contrast, a **Type II error** occurs when you fail to detect an actual effect, mistakenly accepting a false null hypothesis. Both errors can have significant implications, potentially leading to incorrect decisions in data science projects, clinical trials, AI model evaluations, and many other fields.
-
-In this article, we’ll dive deep into the definitions of Type I and Type II errors, how they occur, and why they matter. We'll explore how to reduce these errors through a balance of **test power** and **sample size**, and we’ll examine their role in real-world applications such as AI models and medical research. By the end of this guide, you’ll have a strong grasp of how to minimize these errors and make more accurate conclusions from your data.
-
-## What are Type I and Type II Errors?
-
-Before we dive into how to avoid them, it’s important to fully understand what Type I and Type II errors are. Both of these errors arise in the context of **hypothesis testing**, where the objective is to determine whether there is enough evidence to reject a null hypothesis $$ H_0 $$ in favor of an alternative hypothesis $$ H_1 $$.
-
-### Hypothesis Testing Basics
-
-In hypothesis testing, you begin with a **null hypothesis** ($$ H_0 $$), which typically represents a default or "no effect" situation, and an **alternative hypothesis** ($$ H_1 $$) that suggests some effect or difference. Statistical tests are then used to evaluate whether the evidence (data) is strong enough to reject $$ H_0 $$ and support $$ H_1 $$. 
-
-#### Key Terms
-
-- **Null Hypothesis ($$ H_0 $$)**: Assumes no effect or no difference.
-- **Alternative Hypothesis ($$ H_1 $$)**: Suggests that there is an effect or difference.
-- **Significance Level ($$ \alpha $$)**: The probability threshold used to determine whether to reject $$ H_0 $$. Common values are $$ \alpha = 0.05 $$ or $$ \alpha = 0.01 $$, meaning there’s a 5% or 1% chance of rejecting $$ H_0 $$ when it’s actually true.
-- **P-value**: A measure of the evidence against $$ H_0 $$. A smaller p-value indicates stronger evidence against $$ H_0 $$.
-- **Power**: The probability that a test will correctly reject a false $$ H_0 $$ (i.e., detect a true effect).
-
-### Type I Error: False Positive
-
-A **Type I error**, also known as a **false positive**, occurs when the null hypothesis $$ H_0 $$ is **incorrectly rejected** when it is actually true. In simpler terms, you detect a difference or effect when none exists.
-
-#### Example
-
-Imagine you are conducting a clinical trial to test a new drug. Your null hypothesis ($$ H_0 $$) might be that the drug has no effect on the disease, while the alternative hypothesis ($$ H_1 $$) is that the drug does have an effect. A Type I error would occur if your statistical test leads you to conclude that the drug works (rejecting $$ H_0 $$) when, in reality, it doesn’t—meaning the observed effect was due to chance, not the drug.
-
-In terms of everyday language, this is like sounding the alarm when there is no fire. You are declaring a significant result when it’s actually just noise.
-
-#### Consequences of Type I Error
-
-- **False breakthroughs**: If you claim a new scientific discovery when there’s none, it can lead to wasted resources and further research based on a faulty premise.
-- **Misleading medical studies**: False positives in clinical trials can lead to the approval of ineffective or harmful treatments, with real consequences for patient health.
-- **Overfitting in AI**: In the context of AI model development, a Type I error can cause overfitting, where the model detects patterns in the training data that don’t generalize to new data.
-
-### Type II Error: False Negative
-
-A **Type II error**, also known as a **false negative**, occurs when the null hypothesis $$ H_0 $$ is **incorrectly accepted** (or failed to be rejected) when it is false. This means that you miss an actual effect or difference—failing to detect something meaningful that is really there.
-
-#### Example
-
-Continuing with the clinical trial example, a Type II error would occur if your statistical test fails to reject the null hypothesis ($$ H_0 $$)—leading you to conclude that the drug has no effect—when in reality, the drug does work. You’ve missed the fire entirely.
-
-#### Consequences of Type II Error
-
-- **Missed discoveries**: In scientific research, this means you might overlook valuable findings, delaying progress in fields such as medicine, physics, or psychology.
-- **Undervalued treatments**: In medical trials, a Type II error could prevent the discovery of a life-saving treatment, leaving patients without potentially effective options.
-- **Underfitting in AI**: In AI, a Type II error might occur if the model fails to capture important patterns in the data, leading to poor performance when predicting new outcomes.
-
-### The Trade-off Between Type I and Type II Errors
-
-Reducing Type I errors comes at the risk of increasing Type II errors, and vice versa. This trade-off is intrinsic to hypothesis testing, as lowering the significance level $$ \alpha $$ (to reduce the risk of Type I errors) typically requires more stringent evidence to reject the null hypothesis, which increases the risk of failing to detect a real effect (Type II error).
-
-Conversely, if you try to reduce Type II errors by increasing your test’s sensitivity (or power), you might inadvertently increase the likelihood of making a Type I error.
-
-The key to minimizing both errors lies in **balancing the significance level $$ \alpha $$** and the **statistical power** of the test. Let’s explore these concepts in more depth.
-
-## Statistical Power and Its Role in Reducing Errors
-
-### What is Test Power?
-
-In statistical testing, **power** refers to the probability that a test will correctly reject a false null hypothesis $$ H_0 $$. In other words, power is the ability of a test to detect an effect when there actually is one.
-
-Mathematically, power is defined as:
+A hypothesis test is embedded in a larger workflow:
 
 $$
-\text{Power} = 1 - \beta
+\boxed{
+\text{scientific question}
+\rightarrow
+\text{estimand}
+\rightarrow
+\text{test}
+\rightarrow
+\text{selection}
+\rightarrow
+\text{decision}.
+}
 $$
 
-Where $$ \beta $$ is the probability of making a Type II error. A higher power means a lower probability of missing a real effect (i.e., avoiding Type II errors).
+Error rates defined for one prespecified test can change when we search across outcomes, models, subgroups, and stopping times.
 
-### Why is Power Important?
+This article focuses on those practical extensions.
 
-A well-powered test increases your confidence that, when you reject $$ H_0 $$, you’re detecting a true effect rather than noise. On the other hand, a test with low power might miss real effects, leading to a higher likelihood of Type II errors.
+## Error probabilities belong to a procedure
 
-#### Factors Affecting Test Power
+Let $R(X)$ be the rule that decides whether to reject a null hypothesis.
 
-1. **Effect Size**: Larger effects are easier to detect. If the difference between groups is substantial, it’s easier to reject the null hypothesis.
-2. **Sample Size**: Larger sample sizes increase the power of the test, making it more likely to detect a true effect.
-3. **Significance Level ($$ \alpha $$)**: A higher $$ \alpha $$ increases power because it lowers the bar for rejecting $$ H_0 $$. However, this comes at the cost of increasing Type I errors.
-4. **Variance**: Tests are more powerful when the data is less variable. High variability makes it harder to detect true effects.
+For parameter value $\theta$, define
 
-### Increasing Power to Minimize Type II Errors
+$$
+\pi(\theta)
+=
+P_\theta(
+R(X)=1
+).
+$$
 
-To minimize the risk of Type II errors (false negatives), you can take the following steps to increase the power of your test:
+This is the power function.
 
-1. **Increase Sample Size**: Collecting more data reduces variability and makes it easier to detect true effects. A larger sample size decreases the likelihood of failing to reject a false null hypothesis.
+When $\theta$ lies in the null parameter space,
 
-2. **Choose a Higher Significance Level**: By increasing $$ \alpha $$, you make it easier to reject the null hypothesis. However, this also increases the risk of a Type I error.
+$$
+\pi(\theta)
+$$
 
-3. **Optimize Experimental Design**: Reduce variability in the data by controlling extraneous variables or using more precise measurements.
+is a Type I rejection probability.
 
-### Balancing Power and Type I Errors
+When $\theta$ lies in the alternative,
 
-While increasing power reduces the risk of Type II errors, you must balance it against the risk of Type I errors. By setting a very high power and increasing the sample size excessively, you might detect small, insignificant effects that could lead to false positives. The key is finding an appropriate balance where you minimize both errors, which is often accomplished by choosing the right sample size and significance level for your study.
+$$
+1-\pi(\theta)
+$$
 
-## Sample Size and Its Impact on Statistical Testing
+is the Type II error probability.
 
-The size of your dataset is one of the most critical factors in determining the success of your statistical test. Both Type I and Type II errors are influenced by the sample size, and choosing the right sample size can minimize the likelihood of making errors.
+There is usually no single Type II error rate without specifying the alternative value.
 
-### Sample Size and Type I Errors
+## Nominal alpha and actual size
 
-A **very large sample size** can increase the risk of detecting spurious results, leading to Type I errors. As the sample size grows, the test becomes more sensitive to small effects. This may cause the test to detect minor differences that have no practical significance but still lead to the rejection of the null hypothesis.
+A test advertised at
 
-### Sample Size and Type II Errors
+$$
+\alpha=0.05
+$$
 
-On the other hand, a **small sample size** increases the likelihood of Type II errors. With insufficient data, there is a higher chance that the test will fail to detect true effects, leading to false negatives. This is because small sample sizes increase the variability of the test statistics, making it harder to reject $$ H_0 $$ when you should.
+is designed so that
 
-### Finding the Optimal Sample Size
+$$
+\sup_{\theta\in\Theta_0}
+P_\theta(
+\text{reject}
+)
+\le
+0.05
+$$
 
-Statisticians often use **power analysis** to calculate the optimal sample size for a given study. This calculation balances the likelihood of detecting a true effect (power) against the risk of making a Type I error.
+or approximately so under the intended assumptions.
 
-#### Factors Considered in Power Analysis
+The actual rejection probability can be lower for conservative discrete tests or vary across a composite null.
 
-1. **Desired Power**: Typically, researchers aim for a power of 80% or 90%, meaning that they want an 80% or 90% chance of detecting a true effect.
-2. **Effect Size**: The magnitude of the difference you expect to find. Larger effects require smaller sample sizes to detect.
-3. **Significance Level ($$ \alpha $$)**: The chosen probability of making a Type I error.
-4. **Variance**: The amount of variability in the data.
+Therefore nominal $\alpha$ is a design level, not a universal empirical false-positive fraction.
 
-By balancing these factors, you can calculate a sample size that minimizes both Type I and Type II errors, providing more reliable conclusions.
+## Power depends on effect size
 
-## Real-World Examples of Type I and Type II Errors
+Suppose a two-sided test concerns
 
-### Type I Errors in Medical Research
+$$
+H_0:\theta=0.
+$$
 
-In the field of medical research, a **Type I error** could lead to the approval of a new drug that is actually ineffective. For instance, a clinical trial may reject the null hypothesis (that the drug has no effect) based on spurious statistical significance, only for the drug to later prove ineffective in larger studies or real-world applications.
+Power is not one number.
 
-#### Example
+It is a function
 
-A pharmaceutical company tests a new cancer treatment drug. The null hypothesis states that the drug has no effect on tumor growth. However, due to random fluctuations in the data, the statistical test concludes that the drug significantly reduces tumor size, leading to approval by regulatory bodies. When more data is gathered from widespread use, it turns out the drug doesn’t work—this is a Type I error, a false positive with potentially dangerous consequences.
+$$
+\pi(\theta).
+$$
 
-### Type II Errors in Medical Research
+A study can have:
 
-Conversely, a **Type II error** in medical research could delay the discovery of a beneficial treatment. This error occurs when a trial fails to reject the null hypothesis when the treatment actually works, missing the opportunity to bring a life-saving treatment to market.
+- low power for $\theta=0.1$;
+- moderate power for $\theta=0.5$;
+- high power for $\theta=1.0$.
 
-#### Example
+Writing only
 
-A small clinical trial tests a new drug to reduce heart disease. Due to a small sample size and high variability in patient responses, the test fails to reject the null hypothesis, leading researchers to conclude that the drug is ineffective. In reality, the drug is effective, but the trial lacked the power to detect the effect. This is a Type II error that could delay a valuable treatment reaching patients.
+> power = 80%
 
-### Type I and II Errors in AI Model Development
+is incomplete unless the alternative effect is specified.
 
-In the world of AI and machine learning, both Type I and Type II errors can have significant impacts on model performance.
+## Minimum effect of interest
 
-- A **Type I error** occurs when a model identifies a pattern in the training data that does not generalize to new data. This is typically a result of **overfitting**, where the model becomes too complex and starts learning noise instead of the true signal. For instance, in fraud detection, a Type I error might result in flagging legitimate transactions as fraudulent, leading to customer dissatisfaction.
+Study design should be tied to an effect that matters scientifically.
 
-- A **Type II error** occurs when the model **underfits**, failing to capture important patterns in the data. This might lead to missed opportunities for predicting outcomes accurately, such as failing to detect fraud in a suspicious transaction because the model isn’t sensitive enough to the relevant patterns.
+Let
 
-### Type I and Type II Errors in Policy Decision-Making
+$$
+\Delta
+$$
 
-In policy and economic decision-making, Type I and Type II errors can lead to flawed conclusions that influence national policies, resource allocation, or social programs.
+be the smallest effect worth detecting.
 
-- A **Type I error** could occur when policymakers believe a particular intervention (e.g., a new job training program) is effective based on misleading data. This could lead to the misallocation of funds and resources toward an ineffective program.
+Then a sensible power target is
 
-- A **Type II error** could result in the dismissal of a beneficial policy, such as failing to recognize the positive impact of an education reform initiative. This might delay or prevent the widespread implementation of a program that could improve educational outcomes for millions of students.
+$$
+P_{\theta=\Delta}
+(
+\text{reject }H_0
+)
+\ge
+0.80
+$$
 
-## Strategies to Minimize Type I and Type II Errors
+or another prespecified level.
 
-Minimizing both Type I and Type II errors is critical to drawing accurate conclusions from statistical tests. Here are some strategies to achieve this:
+Choosing $\Delta$ after the sample-size calculation reverses the logic.
 
-### 1. Choose an Appropriate Significance Level ($$ \alpha $$)
+The effect should come from the scientific or operational problem.
 
-Selecting the right significance level can help balance the risk of Type I errors. While $$ \alpha = 0.05 $$ is commonly used, lowering it to $$ \alpha = 0.01 $$ can reduce false positives in high-stakes research. However, this also increases the chance of Type II errors, so the choice of $$ \alpha $$ should be informed by the context of the study.
+## Statistical significance is not decision significance
 
-### 2. Conduct Power Analysis
+With enough observations, an arbitrarily small nonzero effect can become statistically detectable.
 
-Before conducting a study, use power analysis to determine the optimal sample size. By ensuring the test has sufficient power, you reduce the likelihood of missing true effects (Type II errors). A well-powered study is more likely to detect meaningful differences and avoid false negatives.
+That does not increase the Type I error rate.
 
-### 3. Use Cross-Validation in Machine Learning
+It increases the ability to reject a false null.
 
-In machine learning, cross-validation is an effective technique to reduce both underfitting (Type II errors) and overfitting (Type I errors). By training the model on multiple subsets of the data and testing it on the remaining subsets, you ensure the model generalizes better to new data.
+The problem is interpretation, not false-positive calibration.
 
-### 4. Improve Experimental Design
+A large sample can produce
 
-Better experimental design can reduce variability and improve the accuracy of your results. For example, controlling confounding variables, randomizing participants, and blinding the study can reduce both Type I and Type II errors by eliminating sources of bias and noise.
+$$
+p<10^{-6}
+$$
 
-### 5. Adjust Sample Size for Balance
+for an effect too small to matter.
 
-Larger sample sizes generally improve the power of your test, reducing the risk of Type II errors. However, be careful not to make the sample size so large that you increase the likelihood of Type I errors by detecting small, irrelevant effects. Striking the right balance is key to making meaningful conclusions.
+This is why the previous version's statement that large samples “increase Type I error by detecting irrelevant effects” was wrong.
 
-## Conclusion: Mastering Type I and Type II Errors in Data Science
+## Multiplicity changes the error target
 
-Type I and Type II errors are an inevitable part of statistical testing, but by understanding the trade-offs and learning how to manage them, you can draw more accurate and reliable conclusions from your data. Whether you're working in data science, healthcare, AI model development, or research, mastering these concepts will help you minimize false conclusions, optimize experimental design, and enhance the validity of your findings.
+Suppose $m$ true null hypotheses are tested independently at level $\alpha$.
 
-### Final Takeaways
+The probability of at least one false rejection is
 
-- **Type I Error** (false positive): Rejecting a true null hypothesis—mistakenly concluding that an effect exists.
-- **Type II Error** (false negative): Failing to reject a false null hypothesis—overlooking a real effect.
-- **Power**: The probability of correctly rejecting a false null hypothesis. Increase power by optimizing sample size and experimental design.
-- **Sample Size**: A critical factor that influences both Type I and Type II errors. The right sample size balances the need to detect true effects without detecting irrelevant ones.
+$$
+1-(1-\alpha)^m.
+$$
 
-By maintaining an awareness of these errors and employing strategies such as power analysis, optimal experimental design, and cross-validation, you can improve the rigor of your work and avoid costly mistakes in decision-making.
+At
+
+$$
+m=20,
+\qquad
+\alpha=0.05,
+$$
+
+this is about 0.64.
+
+The individual tests remain level 0.05.
+
+The family-level procedure does not.
+
+This is why multiple testing requires its own error criterion.
+
+## Family-wise error rate
+
+Let $V$ be the number of false rejections.
+
+Family-wise error is
+
+$$
+FWER
+=
+P(V\ge1).
+$$
+
+Bonferroni and Holm procedures control this criterion.
+
+This can be appropriate when even one false claim in the family is costly.
+
+## False discovery rate
+
+When many exploratory hypotheses are tested, a less stringent target may be the expected false-discovery proportion:
+
+$$
+FDR
+=
+E
+\left[
+\frac{
+V
+}{
+\max(R,1)
+}
+\right],
+$$
+
+where $R$ is the total number of rejections.
+
+Benjamini-Hochberg controls FDR under its dependence conditions.
+
+FWER and FDR solve different problems.
+
+## Optional stopping
+
+Suppose a researcher checks a conventional p-value after every new group of observations and stops the first time
+
+$$
+p<0.05.
+$$
+
+The overall probability of eventually crossing 0.05 under the null can exceed 5%.
+
+The problem is not that p-values “stop working.”
+
+The procedure has changed.
+
+Valid sequential analysis requires a design built for repeated looks, such as:
+
+- group-sequential boundaries;
+- alpha-spending functions;
+- always-valid p-values or confidence sequences.
+
+The stopping rule is part of the inferential procedure.
+
+## Model and subgroup search
+
+If ten regression specifications and twenty subgroups are examined and only the most significant result is reported, the selected coefficient no longer has the same sampling behavior as a coefficient from one prespecified model.
+
+This creates selection bias.
+
+The reported effect tends to be exaggerated because the analysis selected an extreme estimate.
+
+This is one form of the winner's curse.
+
+Preregistration, held-out confirmation, selective-inference methods, or explicit multiplicity adjustments address different versions of this problem.
+
+## Type S and Type M errors
+
+When power is low, conditional on achieving significance, the estimated effect can be badly distorted.
+
+Gelman and Carlin distinguish:
+
+- **Type S error:** the estimated effect has the wrong sign;
+- **Type M error:** the magnitude is strongly exaggerated.
+
+These are not replacements for Type I and Type II errors.
+
+They describe another practical consequence of noisy, selected estimates.
+
+## Equivalence and non-inferiority
+
+A failed superiority test does not demonstrate no meaningful effect.
+
+Suppose effects with absolute magnitude below
+
+$$
+\Delta
+$$
+
+are negligible.
+
+An equivalence analysis can test
+
+$$
+H_0:
+|\theta|
+\ge
+\Delta
+$$
+
+against
+
+$$
+H_1:
+|\theta|
+<
+\Delta.
+$$
+
+The hypothesis is deliberately reversed.
+
+To support absence of a practically important difference, design the study around equivalence from the beginning.
+
+## Error rates and decision costs
+
+Statistical error rates do not tell us the cost of an error.
+
+Suppose a false positive costs
+
+$$
+c_I
+$$
+
+and a false negative costs
+
+$$
+c_{II}.
+$$
+
+A simplified expected loss is
+
+$$
+L
+=
+c_I
+P(\text{Type I})
++
+c_{II}
+P(\text{Type II}).
+$$
+
+Different domains imply different costs.
+
+A screening stage may tolerate more false positives.
+
+A confirmatory licensing decision may not.
+
+The conventional 0.05 threshold is not a universal solution to those costs.
+
+## Classification errors are related but not identical
+
+In binary classification,
+
+$$
+FPR
+=
+P(
+\hat Y=1
+\mid
+Y=0
+)
+$$
+
+and
+
+$$
+FNR
+=
+P(
+\hat Y=0
+\mid
+Y=1
+).
+$$
+
+These resemble Type I and Type II errors structurally.
+
+But overfitting is **not** itself a Type I error, and underfitting is **not** itself a Type II error.
+
+Overfitting describes a failure of generalization.
+
+A false positive is a case-level classification error.
+
+The earlier version of this article incorrectly equated those concepts.
+
+## Cross-validation does not control hypothesis-test alpha
+
+Cross-validation estimates predictive performance when used correctly.
+
+It does not automatically reduce Type I and Type II error probabilities of a scientific hypothesis test.
+
+If model selection and inference use the same resampling results without accounting for selection, inferential calibration can still fail.
+
+Prediction error and hypothesis-test error are different targets.
+
+## Randomization addresses bias, not every test error directly
+
+Randomization can create exchangeability between treatment groups and protect against confounding in expectation.
+
+Blinding can reduce measurement and behavioral biases.
+
+These design improvements can increase validity and sometimes power.
+
+But saying they “reduce Type I and Type II errors” without specifying the test is too broad.
+
+Design affects the data-generating structure.
+
+Test error rates are then derived under that design.
+
+## Sample size
+
+Increasing sample size generally increases power for a fixed nonzero alternative while keeping the nominal Type I error level fixed when the test is correctly calibrated.
+
+It does **not** inherently increase Type I error.
+
+What changes is the ability to detect smaller departures from the null.
+
+Therefore:
+
+$$
+\boxed{
+\text{large }n
+\rightarrow
+\text{high sensitivity},
+}
+$$
+
+not
+
+$$
+\text{large }n
+\rightarrow
+\text{more false positives}.
+$$
+
+Practical significance must be handled with effect-size criteria, not by deliberately keeping the study small.
+
+## Reporting
+
+A useful confirmatory report states:
+
+- primary estimand;
+- null and alternative hypotheses;
+- significance criterion;
+- multiplicity strategy;
+- effect estimate;
+- uncertainty interval;
+- prespecified minimum relevant effect;
+- power assumptions;
+- whether analyses were selected after seeing the data.
+
+The decision threshold should be visible rather than implicit.
+
+## Conclusion
+
+Type I and Type II errors are only the first layer of statistical decision-making.
+
+Applied inference also has to manage
+
+$$
+\boxed{
+\text{effect size}
++
+\text{power}
++
+\text{multiplicity}
++
+\text{stopping}
++
+\text{selection}
++
+\text{decision cost}.
+}
+$$
+
+A single $\alpha=0.05$ threshold cannot solve all six.
 
 ## References
 
-- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
-- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
-- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
+- Neyman, J., & Pearson, E. S. (1933). On the problem of the most efficient tests of statistical hypotheses. *Philosophical Transactions of the Royal Society A*, 231, 289–337.
+- Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate. *Journal of the Royal Statistical Society: Series B*, 57(1), 289–300.
+- Gelman, A., & Carlin, J. (2014). Beyond power calculations: Assessing Type S and Type M errors. *Perspectives on Psychological Science*, 9(6), 641–651.
+- Lakens, D. (2017). Equivalence tests: A practical primer for t tests, correlations, and meta-analyses. *Social Psychological and Personality Science*, 8(4), 355–362.
