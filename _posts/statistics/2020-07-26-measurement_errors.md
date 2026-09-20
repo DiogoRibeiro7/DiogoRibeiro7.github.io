@@ -52,7 +52,7 @@ $$
 
 ## A simple measurement model
 
-Let \(X^\ast\) denote the latent quantity of interest and let \(X\) denote the recorded measurement.
+Let $X^\ast$ denote the latent quantity of interest and let $X$ denote the recorded measurement.
 
 A basic additive model is
 
@@ -92,7 +92,7 @@ E(U_j)=0,
 \operatorname{Var}(U_j)=\sigma_U^2.
 $$
 
-The systematic component \(b\) shifts the center of the measurements away from the target. The random component \(\sigma_U^2\) determines repeatability.
+The systematic component $b$ shifts the center of the measurements away from the target. The random component $\sigma_U^2$ determines repeatability.
 
 Averaging repeated measurements,
 
@@ -146,9 +146,9 @@ $$
 X=X^\ast+U,
 $$
 
-with \(U\) independent of \(X^\ast\) and \(\varepsilon\).
+with $U$ independent of $X^\ast$ and $\varepsilon$.
 
-Regressing \(Y\) on the noisy \(X\) produces attenuation.
+Regressing $Y$ on the noisy $X$ produces attenuation.
 
 In the simple one-predictor case,
 
@@ -199,7 +199,7 @@ $$
 X = a + bX^\ast + U.
 $$
 
-If \(a\neq 0\) or \(b\neq 1\), the instrument is systematically distorted even if \(U\) has mean zero.
+If $a\neq 0$ or $b\neq 1$, the instrument is systematically distorted even if $U$ has mean zero.
 
 This is why calibration data are valuable: they provide observations where the reference value is independently known with substantially smaller uncertainty.
 
@@ -211,7 +211,7 @@ $$
 32.3\pm0.5\text{ cm}
 $$
 
-are incomplete unless the meaning of \(0.5\) is specified.
+are incomplete unless the meaning of $0.5$ is specified.
 
 It might denote:
 
@@ -224,13 +224,13 @@ It might denote:
 
 Those objects are not interchangeable.
 
-The Guide to the Expression of Uncertainty in Measurement distinguishes **standard uncertainty** from **expanded uncertainty**. If \(u_c\) is a combined standard uncertainty, an expanded uncertainty may be written
+The Guide to the Expression of Uncertainty in Measurement distinguishes **standard uncertainty** from **expanded uncertainty**. If $u_c$ is a combined standard uncertainty, an expanded uncertainty may be written
 
 $$
 U=ku_c,
 $$
 
-where \(k\) is a coverage factor chosen for a stated coverage objective.
+where $k$ is a coverage factor chosen for a stated coverage objective.
 
 That is a measurement-uncertainty statement.
 
@@ -240,7 +240,7 @@ So the sentence
 
 > the true value is likely between 31.8 and 32.8
 
-cannot be justified from the notation \(32.3\pm0.5\) alone.
+cannot be justified from the notation $32.3\pm0.5$ alone.
 
 ## Combining uncertainty components
 
@@ -260,7 +260,7 @@ u_Y^2
 \nabla f,
 $$
 
-where \(\Sigma\) is the covariance matrix of the input uncertainties.
+where $\Sigma$ is the covariance matrix of the input uncertainties.
 
 Written componentwise,
 
