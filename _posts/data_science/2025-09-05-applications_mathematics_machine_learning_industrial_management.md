@@ -31,13 +31,13 @@ keywords:
 classes: wide
 date: '2025-09-05'
 header:
-  image: /assets/images/headers/photo-data-science-heatmap.jpg
-  og_image: /assets/images/headers/photo-data-science-heatmap.jpg
-  overlay_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  image: /assets/images/headers/photo-industry-assembly-line.jpg
+  og_image: /assets/images/headers/photo-industry-assembly-line.jpg
+  overlay_image: /assets/images/headers/photo-industry-assembly-line.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-data-science-heatmap.jpg
-  twitter_image: /assets/images/headers/photo-data-science-heatmap.jpg
+  teaser: /assets/images/headers/photo-industry-assembly-line.jpg
+  twitter_image: /assets/images/headers/photo-industry-assembly-line.jpg
 ---
 
 ## Abstract
