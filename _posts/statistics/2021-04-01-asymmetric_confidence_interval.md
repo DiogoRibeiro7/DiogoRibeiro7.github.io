@@ -5,8 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2021-04-01'
-excerpt: Discover the reasons behind asymmetric confidence intervals in statistics
-  and how they impact research interpretation.
+excerpt: Confidence intervals need not be symmetric around an estimate. Their shape follows the parameter space, sampling distribution, transformation, and interval construction method.
 header:
   image: /assets/images/headers/photo-statistics-sampling-election.jpg
   og_image: /assets/images/headers/photo-statistics-sampling-election.jpg
@@ -18,155 +17,406 @@ header:
 keywords:
 - Asymmetric confidence interval
 - Wilson score interval
+- Binomial proportion
+- Profile likelihood
+- Transformations
 - Python
-- Bash
-- Data distribution
-- Statistical methods
-seo_description: Learn why confidence intervals can be asymmetric, the factors that
-  contribute to this phenomenon, and how to interpret them in statistical analysis.
-seo_title: 'Asymmetric Confidence Intervals: Causes and Understanding'
+seo_description: Why confidence intervals can be asymmetric, how interval construction creates the asymmetry, and why Wilson, transformed, bootstrap, and profile-likelihood intervals differ.
+seo_title: 'Why Confidence Intervals Can Be Asymmetric'
 seo_type: article
-summary: Asymmetric confidence intervals can result from the nature of your data or
-  the statistical method used. This article explores the causes and implications of
-  these intervals for interpreting research results.
+summary: A precise guide to asymmetric confidence intervals that separates data skewness from estimator uncertainty and derives the Wilson interval for a binomial proportion.
 tags:
 - Confidence Intervals
-- Programming
 - Probability
-- Hypothesis Testing
+- Statistical Inference
 - Python
-title: 'Understanding Asymmetric Confidence Intervals: Causes and Implications'
+title: 'Why Confidence Intervals Can Be Asymmetric'
 ---
 
-When performing statistical analyses, confidence intervals (CIs) are central to summarizing uncertainty around a point estimate. Typically, confidence intervals are symmetric, with the margin of error added to and subtracted from the point estimate, resulting in a range that is equidistant on both sides. However, there are situations where confidence intervals can become asymmetric, with one limit closer to the point estimate than the other. This raises an important question: what causes this asymmetry?
+Confidence intervals are often introduced in the form
 
-In this article, we will explore the reasons behind asymmetric confidence intervals, their relationship to data distribution and statistical methods, and why they aren't necessarily a problem. Understanding these factors is essential for proper interpretation of research results.
+$$
+\hat\theta \pm z_{\alpha/2}\,\widehat{\mathrm{SE}}(\hat\theta).
+$$
 
-## Symmetry in Confidence Intervals
+That construction is symmetric around the point estimate.
 
-In many cases, confidence intervals are symmetrical around a point estimate, such as the difference between two means or a proportion. A symmetrical confidence interval suggests that the uncertainty or error surrounding the estimate is evenly distributed. This is often seen when the data follows a normal distribution and the sample size is sufficiently large, allowing for the use of simple methods like the t-distribution or normal approximation.
+It is not the definition of a confidence interval.
 
-For example, if we are estimating the difference between two means with a margin of error $E$, the confidence interval (CI) would look like:
+A confidence interval is a procedure that maps data to a set
 
-$$ \text{CI} = \left[ \text{Point Estimate} - E, \text{Point Estimate} + E \right] $$
+$$
+C(X)
+$$
 
-This results in a confidence interval that is perfectly balanced on both sides of the point estimate.
+with a specified repeated-sampling coverage property, ideally
 
-However, not all data or statistical methods result in this neat symmetry.
+$$
+P_\theta\{\theta\in C(X)\}
+\approx 1-\alpha.
+$$
 
-## Causes of Asymmetric Confidence Intervals
+Nothing in that definition requires the lower and upper endpoints to be equally distant from \(\hat\theta\).
 
-Asymmetric confidence intervals can arise due to a variety of factors, primarily related to either the underlying data or the statistical methods used to compute the interval. Understanding these causes helps clarify why the interval may appear unbalanced.
+Asymmetry is therefore not an anomaly. It usually tells us something about the parameter space, the sampling distribution, the transformation used, or the way the interval was constructed.
 
-### 1. Data Distribution
+## Symmetric Wald intervals
 
-One major cause of asymmetric confidence intervals is the distribution of the data being analyzed. If the parameter being estimated does not follow a normal distribution, the confidence interval may not be symmetrical. In particular, the following conditions can lead to an asymmetric CI:
+The familiar symmetric interval arises from an approximation such as
 
-- **Non-normal distribution**: When the data being analyzed follows a skewed or non-normal distribution, the uncertainty around the point estimate may not be evenly distributed. This results in an asymmetric confidence interval, where one limit is closer to the estimate than the other.
-  
-  For instance, in distributions that are heavily right-skewed, the upper limit of the CI may extend further from the point estimate than the lower limit.
+$$
+\frac{\hat\theta-\theta}
+{\widehat{\mathrm{SE}}(\hat\theta)}
+\approx
+\mathcal N(0,1).
+$$
 
-- **Data transformations**: If your data has been transformed (e.g., using a logarithmic or square root transformation), the original symmetry of the data can be distorted. This transformation can affect how confidence intervals are constructed, leading to asymmetry.
+Inverting this approximation gives
 
-- **Small sample sizes**: In cases where the sample size is small, the distribution of the estimate may not be well approximated by the normal distribution. This is especially true for proportions or rare events, where the true distribution of the parameter may be more complex. As a result, the confidence interval can become asymmetric.
+$$
+\hat\theta
+\pm
+z_{1-\alpha/2}
+\widehat{\mathrm{SE}}(\hat\theta).
+$$
 
-- **Bounded parameters**: When the parameter being estimated has a natural bound (such as being limited to values between 0 and 1, as with probabilities), the confidence interval can become asymmetric, particularly if the point estimate is near the bound. For example, in estimating proportions, if the estimate is close to 0 or 1, the confidence interval cannot extend beyond these limits, leading to asymmetry.
+This is a **Wald interval**.
 
-### 2. Statistical Methods
+Its symmetry is inherited from the normal approximation on the \(\theta\) scale.
 
-Beyond the characteristics of the data itself, the method used to compute the confidence interval can also result in asymmetry. Some statistical techniques adjust the confidence limits in ways that produce intervals that are not equidistant from the point estimate.
+If that approximation is poor, the symmetry can be misleading.
 
-- **Wilson Score Confidence Interval**: The Wilson score interval is a method used to estimate proportions and is a well-known example of a technique that can produce asymmetric confidence intervals. Instead of simply adding and subtracting a margin of error from the point estimate, the Wilson method adjusts the limits based on the precision of the estimate and the sample size. This adjustment leads to an interval where the limits may not be symmetric.
+## The distribution of the raw data is not the whole explanation
 
-  In the Wilson score method, the confidence limits are calculated using a more complex formula, which accounts for both the estimate and the uncertainty in a way that can lead to different distances from the point estimate to each limit.
+A common statement is:
 
-- **Adjusted point estimates**: Some confidence interval derivation techniques involve adjusting the point estimate itself—either through division, logarithmic transformation, or other methods. When these adjustments are made, the confidence limits may move independently of the point estimate, resulting in an asymmetric interval. This is particularly common in maximum likelihood estimation (MLE) or when using Bayesian methods.
+> skewed data produce asymmetric confidence intervals.
 
-## Are Asymmetric Confidence Intervals a Problem?
+Sometimes they do, but the mechanism is indirect.
 
-At first glance, an asymmetric confidence interval might seem undesirable or confusing. However, it's important to note that asymmetric confidence intervals are not inherently problematic. They can provide a more accurate reflection of the uncertainty surrounding an estimate, particularly in cases where the data or parameter being estimated do not conform to the assumptions required for a symmetric interval.
+Confidence intervals concern the sampling distribution of an **estimator**, not the marginal shape of the raw observations by itself.
 
-For instance, in the case of bounded parameters, an asymmetric confidence interval may provide a more realistic range of plausible values, especially when the point estimate is near the boundary. Similarly, for small sample sizes or skewed data, an asymmetric confidence interval can better capture the true distribution of the parameter.
+A highly skewed population can still yield an approximately normal sampling distribution for a mean when the sample is sufficiently large.
 
-### Interpreting Asymmetric Confidence Intervals
+Conversely, even with a simple binomial model, an interval for a probability near 0 or 1 should respect the parameter bounds
 
-When interpreting an asymmetric confidence interval, it's essential to consider both the nature of the data and the statistical method used to construct the interval. If the data is skewed or the parameter is bounded, the asymmetry likely reflects the underlying uncertainty in a more accurate way than a symmetric interval would. Likewise, if an advanced method like the Wilson score interval is used, the asymmetry is a feature of the method's precision adjustments, not an indication of error or bias.
+$$
+0\le p\le1.
+$$
 
-## Conclusion: Understanding the Fundamentals
+So the key object is the estimator and interval construction, not merely whether the histogram of the observed data is skewed.
 
-Asymmetric confidence intervals, while less common than their symmetrical counterparts, are a natural outcome in certain statistical contexts. Whether due to non-normal data, small sample sizes, or specialized statistical methods, these intervals provide valuable information about the uncertainty surrounding an estimate.
+## Transformations create asymmetry when transformed back
 
-By understanding the causes of asymmetric confidence intervals, researchers can better interpret their results and avoid making incorrect assumptions about the data or statistical methods. In the end, recognizing that asymmetry in a confidence interval is not inherently "bad" is crucial for a nuanced understanding of statistical analysis, particularly in fields like clinical research, where precise interpretation of uncertainty can significantly impact decision-making.
+Suppose a positive parameter satisfies
 
-## Appendix: Example of Asymmetric Confidence Interval in Python
+$$
+\theta>0
+$$
 
-In this section, we will walk through an example of how to compute an asymmetric confidence interval using the **Wilson Score Interval** for a binomial proportion. We will use Python's `statsmodels` library, which includes a built-in function to compute this type of confidence interval.
+and the log parameter
 
-### Problem Scenario
+$$
+\eta=\log\theta
+$$
 
-Let's assume we are conducting a survey to determine the proportion of people in a population who favor a certain policy. Out of a sample of 100 people, 30 people expressed support for the policy. We want to compute the 95% confidence interval for this proportion using the Wilson Score Interval, which can produce asymmetric limits when the proportion is near 0 or 1, or when the sample size is small.
+is approximately normal.
 
-### Python Code
+A symmetric interval on the log scale is
 
-Below is a Python script that calculates both the symmetric and Wilson Score confidence intervals for comparison.
+$$
+\hat\eta\pm z\,\mathrm{SE}(\hat\eta).
+$$
 
-```python
-import statsmodels.api as sm
-import numpy as np
+Transforming back gives
 
-# Number of successes and sample size
-n = 100  # Total sample size
-x = 30   # Number of people in favor of the policy
+$$
+\left[
+\exp\{\hat\eta-z\,\mathrm{SE}(\hat\eta)\},
+\;
+\exp\{\hat\eta+z\,\mathrm{SE}(\hat\eta)\}
+\right].
+$$
 
-# Calculate the proportion
-p_hat = x / n
+This interval is multiplicatively symmetric but additively asymmetric around
 
-# Symmetric (Normal Approximation) Confidence Interval
-z = 1.96  # For a 95% confidence level
-margin_of_error = z * np.sqrt((p_hat * (1 - p_hat)) / n)
-ci_symmetric = (p_hat - margin_of_error, p_hat + margin_of_error)
+$$
+\hat\theta=\exp(\hat\eta).
+$$
 
-print(f"Symmetric Confidence Interval: {ci_symmetric}")
+Hazard ratios, odds ratios and rate ratios are commonly reported this way.
 
-# Wilson Score Confidence Interval
-ci_wilson = sm.stats.proportion_confint(x, n, alpha=0.05, method='wilson')
+The asymmetry is a consequence of the nonlinear transformation.
 
-print(f"Wilson Score Confidence Interval: {ci_wilson}")
-```
+## Bounded parameters need bounded intervals
 
-### Explanation of the Code
+For a binomial proportion,
 
-#### Symmetric Confidence Interval Calculation
+$$
+X\sim\mathrm{Binomial}(n,p),
+\qquad
+\hat p=\frac{X}{n}.
+$$
 
-We calculate the symmetric confidence interval based on the normal approximation formula. The margin of error is computed using the formula:
+The naive Wald interval is
 
-$$ \text{Margin of Error} = z \times \sqrt{\frac{p(1 - p)}{n}} $$
+$$
+\hat p
+\pm
+z
+\sqrt{
+\frac{\hat p(1-\hat p)}{n}
+}.
+$$
 
-where $$p$$ is the sample proportion and $$z = 1.96$$ for a 95% confidence level. This interval assumes that the distribution of the proportion is approximately normal.
+Near 0 or 1, this interval can extend outside the legal parameter space.
 
-#### Wilson Score Interval Calculation
+It can also have poor coverage.
 
-The Wilson score interval is computed using the `proportion_confint` function from the `statsmodels` library. This function adjusts the confidence limits based on the precision of the estimate, potentially resulting in an asymmetric confidence interval.
+The Wilson score interval avoids both problems by inverting the score test rather than placing a symmetric normal interval directly around \(\hat p\).
 
-### Output
+## Deriving the Wilson interval
 
-```bash
-Symmetric Confidence Interval: (0.20746807682794385, 0.3925319231720562)
-Wilson Score Confidence Interval: (0.23349352049585143, 0.38343825602769957)
-```
+The score-test inequality for a candidate value \(p\) is
 
-### Interpretation
+$$
+\frac{(\hat p-p)^2}
+{p(1-p)/n}
+\le z^2.
+$$
 
-#### Symmetric Confidence Interval
+Solving this quadratic inequality for \(p\) gives
 
-The symmetric confidence interval around the sample proportion $p = 0.3$ is approximately [0.207, 0.393]. This interval is equidistant around the point estimate, assuming the proportion follows a normal distribution.
+$$
+\frac{
+\hat p+\frac{z^2}{2n}
+\pm
+z
+\sqrt{
+\frac{\hat p(1-\hat p)}{n}
++
+\frac{z^2}{4n^2}
+}
+}{
+1+\frac{z^2}{n}
+}.
+$$
 
-#### Wilson Score Confidence Interval
+The midpoint is not generally \(\hat p\), so the endpoints are not generally symmetric around the observed proportion.
 
-The Wilson score confidence interval is approximately [0.233, 0.383], which is narrower and asymmetric compared to the symmetric interval. This reflects the more precise handling of uncertainty in small samples and when the proportion is not close to 0.5.
+That asymmetry comes from test inversion and the bounded binomial parameter space, not from a vague statement that the data are "non-normal."
 
-### Why is the Wilson Score Interval Asymmetric?
+## Worked example
 
-In this example, the asymmetry of the Wilson score interval arises because the sample proportion is far from 0.5 and the sample size is relatively small ($n = 100$). The Wilson method adjusts the confidence limits differently than the normal approximation, resulting in an interval that is not equally spaced around the point estimate.
+Take
 
-This example demonstrates how different methods can yield different confidence intervals, and why it is important to choose the appropriate method based on your data and research context.
+$$
+x=30,
+\qquad
+n=100,
+\qquad
+\hat p=0.30.
+$$
+
+The 95% Wald interval is
+
+$$
+0.30
+\pm
+1.96
+\sqrt{
+\frac{0.30(0.70)}{100}
+},
+$$
+
+which gives approximately
+
+$$
+[0.2075,0.3925].
+$$
+
+The Wilson interval is approximately
+
+$$
+[0.2189,0.3959].
+$$
+
+The two intervals differ modestly here because the sample is not extremely small and the estimate is not close to a boundary.
+
+The reason to prefer Wilson is not that it is always narrower. It is that its coverage behavior is generally much better than the simple Wald interval for binomial proportions.
+
+## Reproducible Python
+
+~~~python
+from __future__ import annotations
+
+import math
+
+from statsmodels.stats.proportion import proportion_confint
+
+x: int = 30
+n: int = 100
+alpha: float = 0.05
+z: float = 1.959963984540054
+
+p_hat: float = x / n
+standard_error: float = math.sqrt(
+    p_hat * (1.0 - p_hat) / n
+)
+
+wald: tuple[float, float] = (
+    p_hat - z * standard_error,
+    p_hat + z * standard_error,
+)
+
+wilson_low, wilson_high = proportion_confint(
+    count=x,
+    nobs=n,
+    alpha=alpha,
+    method="wilson",
+)
+
+print(f"Wald   : {wald}")
+print(
+    "Wilson : "
+    f"({wilson_low:.6f}, {wilson_high:.6f})"
+)
+~~~
+
+For these values, current statsmodels returns a Wilson interval close to
+
+$$
+[0.2189,0.3959].
+$$
+
+The previous version of this article reported different Wilson endpoints.
+
+## Profile-likelihood intervals
+
+Maximum-likelihood problems provide another natural source of asymmetry.
+
+Let
+
+$$
+\ell(\theta)
+$$
+
+be the log likelihood and let \(\hat\theta\) maximize it.
+
+A likelihood-ratio interval can be obtained by retaining values satisfying
+
+$$
+2\{\ell(\hat\theta)-\ell(\theta)\}
+\le
+\chi^2_{1,1-\alpha}.
+$$
+
+If the likelihood surface is steeper on one side of the maximum than the other, the resulting confidence interval is asymmetric.
+
+That shape can be informative because it reflects the local geometry of the likelihood rather than forcing a quadratic approximation to be symmetric on the original parameter scale.
+
+## Bootstrap percentile intervals
+
+Bootstrap intervals can also be asymmetric.
+
+If
+
+$$
+\hat\theta^{*(1)},\ldots,\hat\theta^{*(B)}
+$$
+
+are bootstrap estimates, a percentile interval uses empirical quantiles such as
+
+$$
+[
+q_{0.025}^\ast,
+q_{0.975}^\ast
+].
+$$
+
+If the bootstrap distribution is skewed, the endpoints need not be equidistant from the original estimate.
+
+More refined methods such as BCa intervals also correct for bias and skewness in the bootstrap distribution.
+
+Again, the asymmetry belongs to the estimator's uncertainty distribution.
+
+## Bayesian credible intervals are a different object
+
+Bayesian posterior intervals are often asymmetric too.
+
+If the posterior density is
+
+$$
+p(\theta\mid y),
+$$
+
+an equal-tail 95% credible interval uses the 2.5% and 97.5% posterior quantiles.
+
+A highest-density interval may have different endpoints because it is constructed from posterior density rather than equal tails.
+
+Those intervals answer Bayesian probability questions.
+
+They should not be called confidence intervals merely because both are reported with two endpoints.
+
+## Asymmetry is not evidence of bias
+
+An asymmetric interval does not imply that the point estimator is biased.
+
+It can arise from:
+
+- a nonlinear parameter transformation;
+- a bounded parameter space;
+- a skewed sampling distribution;
+- inversion of a non-symmetric test;
+- a non-quadratic likelihood;
+- a bootstrap distribution;
+- a Bayesian posterior.
+
+Bias and interval asymmetry are separate concepts.
+
+## What to report
+
+When an interval is asymmetric, report the point estimate and the two endpoints directly:
+
+$$
+\hat\theta=1.7,
+\qquad
+95\%\ \mathrm{CI}=[1.2,2.8].
+$$
+
+Do not compress it to
+
+$$
+1.7\pm0.8
+$$
+
+because no single margin of error represents the interval.
+
+More importantly, state the method used:
+
+- Wald,
+- Wilson score,
+- exact binomial,
+- likelihood ratio,
+- bootstrap percentile,
+- BCa,
+- transformed-scale interval,
+- or another procedure.
+
+The method determines the coverage properties and interpretation.
+
+## Conclusion
+
+Confidence intervals are not required to be symmetric.
+
+Symmetric intervals arise naturally when uncertainty is approximated by a normal distribution on the reporting scale. Asymmetry appears when the parameter is bounded, the relevant scale is nonlinear, the likelihood is non-quadratic, or the interval is constructed by test inversion, resampling or another non-Wald method.
+
+The important question is not whether the interval looks balanced.
+
+It is whether the procedure has defensible coverage for the parameter and data-generating process being studied.
+
+## References
+
+- Wilson, E. B. (1927). Probable inference, the law of succession, and statistical inference. *Journal of the American Statistical Association*, 22(158), 209–212.
+- Brown, L. D., Cai, T. T., & DasGupta, A. (2001). Interval estimation for a binomial proportion. *Statistical Science*, 16(2), 101–133. https://doi.org/10.1214/ss/1009213286
+- Efron, B., & Tibshirani, R. J. (1993). *An Introduction to the Bootstrap*. Chapman & Hall.
