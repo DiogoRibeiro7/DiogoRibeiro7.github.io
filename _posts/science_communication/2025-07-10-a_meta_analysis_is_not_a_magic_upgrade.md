@@ -21,15 +21,14 @@ excerpt: >-
   they actually share, the heterogeneity between them and the assumptions used
   to combine their results.
 summary: >-
-  This article develops meta-analysis as a statistical synthesis rather than a
-  universal top layer of evidence. A worked five-study example produces a
-  fixed-effect pooled estimate of 0.43 with a narrow 95% interval, while severe
-  heterogeneity gives I-squared above 93%, a much wider random-effects interval
-  and a prediction interval spanning negative to strongly positive effects. The
-  article then examines systematic review methods, risk of bias, effect
-  harmonisation, publication bias, small-study effects, random-effects models,
-  prediction intervals, meta-regression, sensitivity analysis and current PRISMA
-  and Cochrane guidance.
+  This article treats meta-analysis as a statistical model for evidence synthesis,
+  not as a label that automatically upgrades a literature. A worked five-study
+  example shows how a narrow common-effect confidence interval can coexist with
+  severe heterogeneity, a much wider random-effects interval and a prediction
+  interval that spans effects in both directions. The discussion then turns to
+  estimand compatibility, risk of bias, publication bias, small-study effects,
+  meta-regression, individual-participant-data meta-analysis, sensitivity
+  analysis, certainty assessment and the interpretation of forest plots.
 keywords:
 - meta analysis
 - systematic review
@@ -50,11 +49,11 @@ evidence: >-
   small-study effects.
 methodology: >-
   Construct a synthetic meta-analysis with five equal-precision studies and
-  deliberately heterogeneous effects. Compute the fixed-effect estimator,
+  deliberately heterogeneous effects. Compute the common-effect estimator,
   Cochran's Q, I-squared, DerSimonian-Laird between-study variance, the
   random-effects estimator and a t-based prediction interval. Use the example to
-  distinguish precision of the pooled mean from heterogeneity of underlying
-  effects and from bias in the evidence base.
+  separate precision of the pooled mean from heterogeneity of underlying effects
+  and from bias in the evidence base.
 reviewed_at: '2026-09-20'
 header:
   image: /assets/images/headers/photo-statistics-overlapping-cis.jpg
@@ -70,82 +69,34 @@ header:
 Development contract
 Question: What does a meta-analysis establish beyond the individual studies it combines?
 Claim: Meta-analysis can improve precision and organise quantitative evidence, but it cannot repair bias, incompatible estimands, selective publication or scientifically important heterogeneity. A pooled mean is only one feature of the evidence distribution.
-Counterclaim: Meta-analysis is one of the most powerful tools in quantitative evidence synthesis when eligibility criteria, risk-of-bias assessment, effect measures and modelling assumptions are appropriate. The problem is not pooling; it is treating pooling as automatic validation.
-Evidence object: Five synthetic studies with effects 0.10, 0.15, 0.20, 0.80 and 0.90, common standard error 0.10, fixed-effect estimate 0.43, Q=59.8, I-squared about 93.3%, DerSimonian-Laird tau-squared 0.1395, random-effects interval about [0.09, 0.77], and prediction interval about [-0.88, 1.74].
+Counterclaim: Meta-analysis is one of the most powerful tools in quantitative evidence synthesis when eligibility criteria, risk-of-bias assessment, effect measures and modelling assumptions are appropriate. The problem is not pooling, but treating pooling as automatic validation.
+Evidence object: Five synthetic studies with effects 0.10, 0.15, 0.20, 0.80 and 0.90, common standard error 0.10, pooled common-effect estimate 0.43, Q=59.8, I-squared about 93.3%, DerSimonian-Laird tau-squared 0.1395, random-effects interval about [0.09, 0.77], and prediction interval about [-0.88, 1.74].
 Failure case: Interpreting I-squared mechanically, treating random effects as a cure for incompatible studies, using funnel-plot asymmetry as proof of publication bias, or assuming a systematic review is weak because it declines to pool.
 Reader payoff: Read a meta-analysis as a structured argument about comparability, bias and uncertainty rather than as one pooled number.
 Exclusions: Ranking named journals or review groups, claiming one estimator is universally best, and treating meta-analysis as appropriate when the primary studies do not share a meaningful estimand.
 -->
 
-A meta-analysis can produce one of the most persuasive objects in scientific communication: a pooled estimate with a narrow confidence interval.
+A meta-analysis can produce one of the most persuasive objects in scientific communication: a pooled estimate with a narrow confidence interval. Several studies are assembled, each estimate is assigned a weight, and a single number appears at the bottom of a forest plot. The presentation suggests that uncertainty has been reduced and that several imperfect studies have converged on one answer. In well designed evidence synthesis that interpretation can be justified, but the pooled estimate is only the final stage of a much longer argument about what was searched, which studies were eligible, whether they measured sufficiently comparable quantities, how biased they may be, and what statistical model is appropriate for the differences among them.
 
-Several studies point in roughly the same direction. Their results are combined. The uncertainty appears to shrink. A diamond at the bottom of a forest plot summarises the evidence. The visual impression is that many imperfect studies have been converted into one strong answer.
+This distinction matters because meta-analysis is often discussed as if it were a study design that automatically sits above the studies it combines. It is not. A systematic review is the research process used to identify, select, appraise and synthesise a body of literature using explicit methods. A meta-analysis is the statistical combination of quantitative results from separate studies. A systematic review may contain one or several meta-analyses, or it may conclude that statistical pooling would be misleading. The scientific strength of the synthesis therefore depends first on the review process and the compatibility of the underlying evidence, not on the presence of a pooled diamond.
 
-Sometimes that impression is justified.
+## What the pooled estimate actually estimates
 
-Sometimes the pooled estimate is precise because the studies genuinely estimate a common or coherently distributed effect and the synthesis has been designed carefully.
-
-Sometimes the precision is the least interesting feature of the evidence.
-
-A meta-analysis is a statistical operation. It does not automatically repair weak design, poor measurement, incompatible outcomes, confounding, selective publication or heterogeneous interventions.
-
-The pooled result inherits the scientific structure of the studies that entered it.
-
-## A systematic review and a meta-analysis are different objects
-
-A systematic review is a research process for identifying, selecting, appraising and synthesising a body of literature using explicit methods.
-
-A meta-analysis is the statistical combination of quantitative results from separate studies.
-
-A systematic review can contain a meta-analysis.
-
-It does not have to.
-
-If the included studies are too different to support a coherent quantitative comparison, declining to pool can be the correct methodological decision.
-
-The distinction matters because public discussion often treats the terms as interchangeable:
-
-> A meta-analysis reviewed twenty studies.
-
-More precisely, a systematic review identified and evaluated the studies, and the authors may then have meta-analysed some subset of sufficiently comparable results.
-
-The search and selection process determines which evidence enters the statistical model.
-
-The meta-analysis begins after that decision.
-
-## The pooled estimate answers a specific mathematical question
-
-Suppose study $i$ estimates an effect
+Suppose study $i$ reports an effect estimate $\hat\theta_i$ with standard error $s_i$. Under a simple common-effect model, each study is assumed to estimate the same underlying effect $\theta$, with differences among observed estimates attributed to sampling variation. Inverse-variance weighting assigns
 
 $$
-\hat\theta_i
+w_i=\frac{1}{s_i^2},
 $$
 
-with standard error
-
-$$
-s_i.
-$$
-
-Under a simple common-effect model, inverse-variance weights are
-
-$$
-w_i
-=
-\frac{1}{s_i^2}.
-$$
-
-The pooled estimator is
+and the pooled estimator is
 
 $$
 \hat\theta_{\mathrm{FE}}
 =
 \frac{
-\sum_{i=1}^{k}
-w_i\hat\theta_i
+\sum_{i=1}^{k}w_i\hat\theta_i
 }{
-\sum_{i=1}^{k}
-w_i
+\sum_{i=1}^{k}w_i
 }.
 $$
 
@@ -161,39 +112,9 @@ SE(\hat\theta_{\mathrm{FE}})
 }.
 $$
 
-This estimator is sometimes called fixed-effect, although terminology varies and the underlying scientific assumption should be stated explicitly.
+The calculation is straightforward, but its interpretation depends on the common-effect assumption. If the studies really are estimating the same underlying quantity, and if their standard errors adequately describe their sampling uncertainty, then pooling can improve precision substantially. The mathematical operation reduces uncertainty because several independent estimates contribute information about the same parameter. The operation does not test whether the parameter should have been common in the first place. That is a scientific and statistical judgement about the studies.
 
-If all studies are estimating the same underlying effect and differ only through sampling error, inverse-variance weighting is natural.
-
-More precise studies receive more weight.
-
-Pooling can then estimate the common effect much more precisely than any individual study.
-
-The difficulty begins when the phrase "same underlying effect" is not credible.
-
-## Five studies can produce a precise pooled mean and an incoherent story
-
-Consider five synthetic studies.
-
-Each reports the same standard error,
-
-$$
-s_i=0.10.
-$$
-
-Their effect estimates are:
-
-| Study | Effect estimate | Standard error |
-| --- | ---: | ---: |
-| 1 | 0.10 | 0.10 |
-| 2 | 0.15 | 0.10 |
-| 3 | 0.20 | 0.10 |
-| 4 | 0.80 | 0.10 |
-| 5 | 0.90 | 0.10 |
-
-Because all standard errors are equal, all fixed-effect weights are equal.
-
-The pooled estimate is simply the mean:
+Consider five synthetic studies, all with standard error $0.10$, but with effect estimates equal to $0.10$, $0.15$, $0.20$, $0.80$ and $0.90$. Equal standard errors imply equal inverse-variance weights, so the pooled common-effect estimate is simply the arithmetic mean,
 
 $$
 \hat\theta_{\mathrm{FE}}
@@ -205,69 +126,32 @@ $$
 0.43.
 $$
 
-Each inverse-variance weight is
-
-$$
-w_i
-=
-\frac{1}{0.10^2}
-=
-100.
-$$
-
-Total weight is
-
-$$
-500.
-$$
-
-Therefore,
+Each study has weight $100$, so the total weight is $500$ and
 
 $$
 SE(\hat\theta_{\mathrm{FE}})
 =
-\sqrt{
-\frac{1}{500}
-}
-\approx
-0.0447.
+\sqrt{\frac{1}{500}}
+\approx0.0447.
 $$
 
-A conventional 95% confidence interval is approximately
+A conventional 95% confidence interval is therefore approximately
 
 $$
-0.43
-\pm
-1.96(0.0447),
+0.43\pm1.96(0.0447),
 $$
 
-or
+which gives
 
 $$
 [0.34,\ 0.52].
 $$
 
-That interval looks impressively precise.
+If only the pooled estimate and its confidence interval were reported, the evidence would appear remarkably precise. Yet the individual studies tell a visibly different story. Three estimates lie between $0.10$ and $0.20$, while two lie near $0.85$. The pooled value of $0.43$ sits between two clusters and is not especially representative of either one. Precision around an arithmetic centre is not the same thing as scientific agreement.
 
-The problem is visible before any heterogeneity statistic is calculated.
+## Heterogeneity is part of the result
 
-Three studies estimate effects near 0.15.
-
-Two estimate effects near 0.85.
-
-The pooled value
-
-$$
-0.43
-$$
-
-is not close to either cluster.
-
-It may describe the arithmetic centre of the studies while describing no study particularly well.
-
-## Cochran's Q asks whether dispersion exceeds sampling variation
-
-One classical heterogeneity statistic is
+Cochran's $Q$ statistic measures the weighted dispersion of study estimates around the pooled common-effect estimate,
 
 $$
 Q
@@ -277,78 +161,40 @@ w_i
 (\hat\theta_i-\hat\theta_{\mathrm{FE}})^2.
 $$
 
-For the synthetic example,
+For the five-study example,
 
 $$
 Q=59.8.
 $$
 
-Under a common-effect model and regularity conditions, $Q$ is compared with a chi-squared distribution with
+Under a common-effect model, $Q$ is compared with a chi-squared distribution with $k-1=4$ degrees of freedom. A value close to $60$ is far larger than would be expected from sampling error alone when every study has standard error $0.10$. The numerical disagreement among the studies therefore contains much more structure than the common-effect model allows.
 
-$$
-k-1=4
-$$
-
-degrees of freedom.
-
-A value near 60 is far larger than would be expected from sampling error alone when each study has standard error 0.10.
-
-The studies are not merely noisy versions of one common effect under this model.
-
-Their differences contain additional structure.
-
-## I-squared describes relative inconsistency
-
-A common transformation of $Q$ is
+A frequently reported transformation of $Q$ is
 
 $$
 I^2
 =
-\max
-\left(
+\max\left(
 0,
 \frac{
 Q-(k-1)
 }{
 Q
 }
-\right)
-\times100\%.
+\right)\times100\%.
 $$
 
-For the example,
+For this example,
 
 $$
-I^2
-\approx
-93.3\%.
+I^2\approx93.3\%.
 $$
 
-This indicates that, under the assumptions behind the statistic, a large fraction of the observed dispersion is inconsistent with ordinary within-study sampling variation alone.
+That value is evidence of substantial inconsistency relative to the within-study precision, but it should not be read mechanically. $I^2$ is not the percentage of studies that are wrong, nor the probability that the effects differ, nor a direct measure of clinical importance. It depends on the size of between-study differences relative to within-study uncertainty. Extremely precise studies can produce a high $I^2$ for differences that are scientifically modest, while imprecise studies can hide meaningful heterogeneity inside wide sampling error.
 
-The number is useful.
+The most important object is therefore not the heterogeneity statistic in isolation, but the pattern of estimates and the scientific reasons that might generate it. Differences in population, dose, implementation, follow-up, outcome definition, measurement reliability, study quality or true effect modification can all produce heterogeneity. A serious synthesis should ask whether those explanations are plausible before treating heterogeneity as a nuisance term that can simply be absorbed by a different estimator.
 
-It is also frequently overinterpreted.
-
-$I^2$ is not the percentage of studies that are wrong.
-
-It is not the probability that the effects differ.
-
-It is not a direct measure of clinical importance.
-
-It depends on both between-study variation and within-study precision.
-
-With extremely precise studies, even modest differences can produce a large $I^2$.
-
-With imprecise studies, meaningful heterogeneity can produce a smaller $I^2$.
-
-The effect estimates and their scientific context remain necessary.
-
-## Random effects changes the model, not the history
-
-A random-effects model allows underlying study effects to differ.
-
-One common formulation is
+A random-effects model makes this distinction explicit by allowing the underlying study effects to vary,
 
 $$
 \theta_i
@@ -356,9 +202,7 @@ $$
 \mathcal N(\mu,\tau^2),
 $$
 
-where $\mu$ is the mean of the study-effect distribution and $\tau^2$ is between-study variance.
-
-Observed estimates satisfy
+with observed estimates satisfying
 
 $$
 \hat\theta_i
@@ -366,83 +210,35 @@ $$
 \mathcal N(\theta_i,s_i^2).
 $$
 
-A common random-effects weight is
+Here $\mu$ is the mean of the distribution of study-specific effects and $\tau^2$ is the between-study variance. A common random-effects weighting rule is
 
 $$
 w_i^\ast
 =
-\frac{
-1
-}{
+\frac{1}{
 s_i^2+\hat\tau^2
 }.
 $$
 
-The model therefore recognises two sources of variation:
+The model now acknowledges two sources of uncertainty, the sampling uncertainty within studies and the variation in true effects across studies. That is scientifically different from the common-effect model. It changes the target from one universal effect to a distribution of effects with a mean.
+
+Using the DerSimonian-Laird estimator for the synthetic example gives
 
 $$
-\text{within-study uncertainty}
-+
-\text{between-study heterogeneity}.
+\hat\tau^2\approx0.1395.
 $$
 
-That is scientifically different from assuming one identical effect.
-
-It does not make heterogeneous studies automatically comparable.
-
-The intervention, population and outcome still need to justify a meaningful common synthesis.
-
-## Estimating between-study variance changes the uncertainty substantially
-
-For the synthetic example, the DerSimonian-Laird estimate of between-study variance is approximately
-
-$$
-\hat\tau^2
-=
-0.1395.
-$$
-
-Because the individual standard errors are all equal, the random-effects pooled mean remains
-
-$$
-\hat\mu
-=
-0.43.
-$$
-
-The standard error of the pooled mean becomes approximately
-
-$$
-0.173.
-$$
-
-A conventional normal-based 95% interval is therefore about
+Because all five studies have the same within-study standard error, the random-effects mean remains $0.43$. Its uncertainty changes dramatically. The standard error rises to approximately $0.173$, producing a 95% interval of about
 
 $$
 [0.09,\ 0.77].
 $$
 
-The same five point estimates that generated the narrow fixed-effect interval
+The data have not changed. The question posed by the model has changed. The common-effect analysis asks about one effect assumed to be shared by all studies, while the random-effects analysis asks about the mean of a heterogeneous effect distribution. A much wider interval is therefore not a statistical failure. It is the price of acknowledging variation that the first model treated as impossible.
 
-$$
-[0.34,\ 0.52]
-$$
+## The pooled mean is not the effect in a new setting
 
-now produce a much wider interval when between-study variation enters the model.
-
-The point estimate did not change.
-
-The scientific uncertainty did.
-
-## The confidence interval around the mean is still not the range of future effects
-
-The random-effects confidence interval estimates uncertainty about the mean of the distribution of true study effects.
-
-It does not directly answer:
-
-> What effect might we see in another comparable setting?
-
-For that question, a prediction interval is more informative.
+Even the random-effects confidence interval answers only part of the problem. It describes uncertainty about the mean effect $\mu$ under the specified model. It does not directly answer what effect might occur in another comparable setting. For that purpose, a prediction interval is more informative because it incorporates both uncertainty about the mean and the estimated between-study variance.
 
 A simple prediction interval has the form
 
@@ -451,75 +247,27 @@ $$
 \pm
 t
 \sqrt{
-\hat\tau^2
-+
-SE(\hat\mu)^2
+\hat\tau^2+SE(\hat\mu)^2
 }.
 $$
 
-Using a t critical value with three degrees of freedom in this small synthetic example gives a prediction interval of approximately
+Using a $t$ critical value with three degrees of freedom in the five-study example gives approximately
 
 $$
 [-0.88,\ 1.74].
 $$
 
-That interval is extremely wide.
+This interval is enormously wider than either confidence interval around the pooled mean. The mean effect is positive, but the model still allows an effect in a new comparable setting to be negative or strongly positive. That contrast is exactly why prediction intervals deserve more attention in evidence synthesis. The confidence interval around the mean answers how precisely the average effect distribution is estimated. The prediction interval addresses how variable the underlying effects themselves may be.
 
-The pooled mean is positive.
+The distinction is particularly important when a meta-analysis is used to justify recommendations. A positive pooled mean can coexist with settings in which the effect is negligible or reversed. Conversely, a pooled mean near zero can conceal systematic benefit in one class of populations and harm in another. In either case, the question is no longer whether the average differs from zero, but why effects vary and whether the variables causing that variation can be identified.
 
-The predicted effect in another comparable setting can plausibly range from negative to strongly positive under the model.
+Prediction intervals are not infallible. With few studies, $\tau^2$ itself is estimated imprecisely, so the prediction interval can be unstable. The correct response is not to ignore it and return to the pooled mean. It is to report that the evidence contains limited information about between-study variability.
 
-This is the distinction that a forest plot can hide when attention moves immediately to the pooled diamond.
+## Pooling does not repair incompatible estimands or biased studies
 
-A mean effect can be estimated while the effect in a new setting remains highly uncertain.
+The arithmetic of meta-analysis can be applied whenever numerical estimates and standard errors exist. Scientific comparability is harder. Suppose the first three studies in the example evaluate a low dose while the last two evaluate a much larger dose. A pooled estimate across all five may still be mathematically well defined, but its meaning depends on the question. If the estimand is the effect of the low dose, the high-dose studies do not estimate that quantity. If the estimand is an average effect across a specified distribution of doses, then pooling may be appropriate, but the weighting scheme and the composition of the evidence set become part of the estimand.
 
-Current Cochrane guidance explicitly recommends considering prediction intervals in random-effects meta-analysis because they express heterogeneity on the same scale as the effect measure and can be more interpretable than $I^2$ or $\tau^2$ alone.
-
-## A pooled average can answer the wrong scientific question
-
-Suppose the first three studies involve low-dose intervention $A$ and the final two involve a substantially larger dose.
-
-Pooling all five may estimate an average across doses.
-
-That can be mathematically valid.
-
-It may not answer any useful causal question.
-
-If the real question is:
-
-> What is the effect of the low dose?
-
-then the two high-dose studies belong to a different estimand.
-
-If the question is:
-
-> What is the average effect across this mixture of dose regimes?
-
-then the pooled estimate may be appropriate, although the weighting scheme still determines what "average" means.
-
-The decision to combine studies is therefore partly statistical and partly scientific.
-
-Software cannot determine estimand compatibility from the numbers alone.
-
-## Harmonising effect measures can hide incompatible outcomes
-
-Suppose several studies report depression outcomes.
-
-One uses a validated clinical scale.
-
-Another uses a three-item questionnaire.
-
-Another reports diagnosis.
-
-Another reports symptom-free days.
-
-Researchers may convert continuous outcomes to standardized mean differences or transform different effect measures onto a common scale.
-
-That can enable synthesis.
-
-It does not make the outcomes scientifically identical.
-
-A standardized mean difference,
+The same problem arises when outcomes are nominally related but scientifically different. A set of studies may all use the label "depression" while one measures diagnosis, another uses a validated symptom scale, another measures days without symptoms and another reports a short unvalidated questionnaire. Converting the results to a standardized mean difference can put them on a common numerical scale,
 
 $$
 d
@@ -531,715 +279,135 @@ s_{\mathrm{pooled}}
 },
 $$
 
-removes the original measurement units.
+but it does not make the constructs identical. Statistical harmonisation cannot remove differences in measurement validity, clinical meaning or timing.
 
-It does not remove differences in construct validity, measurement reliability or clinical meaning.
+This is why random effects should not be used as permission to pool anything. A random-effects model allows effect sizes to vary around a distribution. It does not establish that the studies belong to one scientifically meaningful distribution. If studies estimate fundamentally different interventions or outcomes, adding $\tau^2$ does not create comparability. Heterogeneity models describe variation after the synthesis question has been justified. They do not justify the synthesis question.
 
-Effect harmonisation is a modelling decision.
-
-## Random effects is not permission to pool anything
-
-A common mistake is:
-
-> The studies are heterogeneous, so use random effects.
-
-Random effects models variation.
-
-They do not explain it.
-
-If studies estimate genuinely different constructs, interventions or populations with no coherent target distribution, adding $\tau^2$ does not create one.
-
-Suppose one study estimates short-term biomarker change in healthy adults and another estimates ten-year mortality in patients with severe disease.
-
-The statistical model can produce a number if the effects are transformed onto some common scale.
-
-The scientific interpretation may remain meaningless.
-
-Heterogeneity models cannot repair incompatible estimands.
-
-## Risk of bias survives pooling
-
-Consider ten randomised trials that all have substantial differential loss to follow-up favouring treatment.
-
-If each estimate is biased upward, pooling reduces the sampling variance around the biased centre.
-
-Symbolically, suppose
+Bias creates a related problem because pooling generally reduces random error, not systematic error. If each study estimate can be written as
 
 $$
 \hat\theta_i
 =
-\theta
-+
-b
-+
-\varepsilon_i,
+\theta+b+\varepsilon_i,
 $$
 
-where $b$ is a common bias.
-
-Averaging gives
+where $b$ is a shared bias and $\varepsilon_i$ is sampling error, then averaging across studies reduces the contribution of $\varepsilon_i$ but leaves $b$ untouched. As the number of studies grows,
 
 $$
-\bar{\hat\theta}
-=
-\theta+b+\bar\varepsilon.
+\bar\varepsilon\rightarrow0,
 $$
 
-As the number of studies increases,
+while the pooled estimate approaches
 
 $$
-\bar\varepsilon
-\rightarrow0,
+\theta+b.
 $$
 
-but
+The result can become increasingly precise around the wrong value. This is one reason risk-of-bias assessment is part of evidence synthesis rather than an optional appendix to it.
 
-$$
-b
-$$
+Inverse-variance weighting should also not be confused with weighting by scientific validity. A large study with a tiny standard error can dominate a meta-analysis even if its measurement or causal design is weak. A smaller rigorous study can receive less statistical weight because it is less precise. Statistical precision and methodological credibility are different dimensions. A review can address this through eligibility restrictions, stratified analyses, sensitivity analyses or other modelling choices, but there is no universal formula that converts "study quality" into a correct inverse-variance weight.
 
-does not disappear.
+## The review process determines which evidence can be pooled
 
-Meta-analysis can therefore make a shared bias look more certain.
+The strongest part of a systematic review is often not the final pooled estimator, but the discipline imposed on source selection. A review protocol defines the question, eligibility criteria, search strategy, outcomes and planned synthesis before the results are fully known. That procedure constrains selective citation and makes omissions easier to detect. PRISMA 2020 is valuable for this reason. It makes the flow from search to inclusion auditable, but it does not guarantee that the search was scientifically appropriate or that the included studies are unbiased.
 
-This is why risk-of-bias assessment belongs inside evidence synthesis rather than after it.
+Search strategy itself can change the evidence base. A review that searches one bibliographic database, restricts to English-language journal articles and ignores trial registries may retrieve a different set of studies from a review that searches several databases, reference lists, conference proceedings, preprints and regulatory records. The pooled effect is conditional on that evidence set. A precise meta-analysis can therefore be sensitive to decisions made before any effect estimate is combined.
 
-## Weighting by precision does not weight by validity
-
-Inverse-variance meta-analysis gives more weight to studies with smaller standard errors.
-
-That usually means larger or more precise studies contribute more.
-
-The weight is not a direct measure of methodological quality.
-
-A very large biased study can dominate a meta-analysis because its standard error is tiny.
-
-A smaller rigorous study can receive less statistical weight even when its causal design is stronger.
-
-Some review methods incorporate risk-of-bias judgements through exclusion, sensitivity analysis or other modelling choices.
-
-There is no universal transformation from "quality" to an inverse-variance weight.
-
-Statistical precision and scientific validity are different dimensions.
-
-## A systematic review constrains selective citation
-
-One major strength of systematic review is not the pooled estimator.
-
-It is the search process.
-
-If a communicator selects three favourable studies from a literature containing thirty, the conclusion depends on source selection.
-
-A systematic review specifies eligibility criteria before or independently of the study outcomes, searches multiple information sources and documents why studies were included or excluded.
-
-PRISMA 2020 focuses strongly on transparent reporting of this process.
-
-The review can still miss evidence.
-
-Its selection procedure is at least auditable.
-
-## Search strategy is part of the result
-
-Suppose Review A searches:
-
-- one database
-- English-language papers
-- published journal articles
-
-Review B searches:
-
-- several bibliographic databases
-- trial registries
-- preprints
-- reference lists
-- conference proceedings
-- regulatory records
-
-The evidence sets can differ even when eligibility criteria are nominally similar.
-
-Search decisions can therefore change the meta-analysis.
-
-A pooled result should not be read independently of how the literature was located.
-
-## Publication bias creates a selected literature
-
-Suppose studies with significant results are more likely to be published.
-
-Then the observed literature satisfies
+Publication bias is one important example. If the probability that a study becomes visible depends on its result,
 
 $$
 P(\text{observed}\mid p<0.05)
 >
-P(\text{observed}\mid p\ge0.05).
+P(\text{observed}\mid p\ge0.05),
 $$
 
-Even a perfectly executed meta-analysis of the available published studies is then analysing a selected sample.
+then the published literature is a selected sample of completed research. A meta-analysis can combine the visible studies perfectly and still estimate a distorted effect. Trial registration, prospective protocols and regulatory records help reveal missing studies and unreported outcomes, but none of those mechanisms eliminates selective reporting automatically.
 
-This is not a failure of the pooling formula.
+Funnel plots and formal asymmetry tests are useful diagnostics in this context, but they should not be treated as detectors with one interpretation. Smaller studies may show larger effects because of publication bias, but also because they use stronger interventions, more selected populations, different outcome definitions or weaker methods. The observed pattern is better described as a small-study effect until the mechanism has been investigated. Publication bias is one possible cause rather than the definition of the pattern.
 
-It is a failure of the evidence set to represent all completed research.
+Selective outcome reporting can enter the literature even when every trial itself is published. A study may measure several outcomes but report only those that are favourable. A later systematic review cannot reconstruct the missing results from the paper alone. Comparing publications with protocols, registrations and statistical analysis plans therefore improves evidence synthesis by revealing which outcomes were planned and which appeared only after the data were known.
 
-Trial registration and prospective protocols make missing results more visible.
+## Sensitivity analyses are part of the substantive result
 
-## Funnel plots do not prove publication bias
+A meta-analysis contains many analytic decisions, including eligibility rules, effect measure, fixed or random effects, estimator of $\tau^2$, treatment of zero-event studies, handling of multiple outcomes, selection of follow-up time, exclusion of studies at high risk of bias and methods for dealing with dependent estimates. These choices are not merely technical settings. When plausible alternatives produce materially different conclusions, that instability is part of the evidence.
 
-A funnel plot displays study effect estimates against a measure of study size or precision.
-
-Under a simple model, smaller studies should scatter more widely.
-
-Asymmetry can be consistent with publication bias.
-
-It can also arise from:
-
-- true effect heterogeneity
-- different methods in small studies
-- poorer quality among small studies
-- chance
-- outcome-dependent standard errors
-
-The plot is a diagnostic.
-
-It is not a causal detector of publication bias.
-
-Statistical tests of funnel asymmetry have similar limitations, especially with few studies.
-
-## Small-study effects are a broader concept
-
-Suppose smaller studies tend to report larger effects.
-
-This pattern is called a small-study effect.
-
-Publication bias is one possible explanation.
-
-Others include:
-
-- stronger interventions in small trials
-- selected populations
-- lower methodological quality
-- different outcome measurement
-- genuine effect modification
-
-The descriptive pattern should therefore be separated from its explanation.
-
-## Leave-one-out analysis asks whether one study controls the conclusion
-
-Suppose pooled effect is
-
-$$
-\hat\theta.
-$$
-
-For each study $j$, recompute the synthesis without that study:
+Leave-one-out analysis provides a simple example. If $\hat\theta$ is the pooled estimate, one can recompute the synthesis after omitting study $j$,
 
 $$
 \hat\theta_{(-j)}.
 $$
 
-If omitting one study changes the conclusion dramatically, the meta-analysis is sensitive to that study.
+A large change after removing one study does not mean that the study should automatically be discarded. It shows that the conclusion depends heavily on that observation and should therefore be interpreted with that dependence visible.
 
-This does not mean the influential study should be removed.
+Sensitivity analysis extends the same logic to model choices. If the pooled effect remains similar after excluding high-risk-of-bias studies, changing the between-study variance estimator and using alternative outcome definitions, confidence in the broad conclusion increases. If the sign or practical magnitude changes under reasonable choices, the review should report that fragility rather than selecting one preferred specification.
 
-It means the result depends heavily on it.
-
-Influence is information.
-
-## Sensitivity analysis should vary plausible decisions
-
-A meta-analysis contains many decisions:
-
-- eligibility criteria
-- effect measure
-- fixed versus random effects
-- estimator of $\tau^2$
-- treatment of zero-event studies
-- inclusion of high-risk-of-bias studies
-- handling of multiple outcomes
-- choice of follow-up time
-- duplicate populations
-
-A robust conclusion should survive reasonable alternatives that do not change the scientific question.
-
-Cochrane explicitly recommends sensitivity analysis for potentially influential decisions.
-
-The goal is not to search until a preferred answer appears.
-
-It is to show which conclusions depend on uncertain methodological choices.
-
-## Meta-regression can explore heterogeneity
-
-Suppose study effect depends on study-level characteristic $Z_i$:
+Meta-regression can be useful when heterogeneity has plausible study-level explanations. A model such as
 
 $$
 \theta_i
 =
-\beta_0+\beta_1Z_i+u_i.
+\beta_0+\beta_1Z_i+u_i
 $$
 
-A meta-regression can estimate whether effect sizes vary systematically with $Z_i$.
+can examine whether effect size varies with dose, average age, intervention intensity, follow-up duration or another study characteristic. Interpretation requires caution because the unit of analysis is the study. If studies with older average participants show larger effects, that does not imply that older individuals benefit more. Study-level relationships are vulnerable to ecological bias, and meta-regression is often unstable when only a small number of studies are available.
 
-Possible moderators include:
+Individual participant data meta-analysis can address some of these limitations by obtaining participant-level data from the original studies. This can allow common outcome definitions, consistent covariate adjustment, participant-level interaction analyses and more flexible handling of missing data. It is a richer form of synthesis, but it remains conditional on which trials provide data and on the quality of the original studies. Additional data access expands what can be estimated. It does not remove design bias from the source studies.
 
-- dose
-- mean age
-- follow-up duration
-- intervention intensity
-- risk of bias
-- baseline severity
+## How to read a meta-analysis
 
-This is useful for hypothesis generation and sometimes explanation.
+A forest plot should be read from the individual studies toward the pooled estimate rather than from the pooled diamond backward. The first questions are whether populations, interventions, comparators, outcomes and follow-up times are sufficiently similar to justify synthesis. The next questions concern risk of bias and the precision of each study. Only after that does the pooled estimate acquire a stable interpretation.
 
-It has important limitations.
+A useful reading sequence is to inspect the direction and magnitude of each study estimate, compare their uncertainty intervals, look for clusters or outliers, examine whether differences align with known design features, and then consider the pooled model. If a random-effects model is used, $\tau^2$ and a prediction interval are often more informative about generalisability than $I^2$ alone. If the review contains major clinical or methodological heterogeneity, the pooled mean should be interpreted as a summary of a heterogeneous distribution rather than a universal treatment effect.
 
-The unit of analysis is the study.
-
-A study-level association can differ from an individual-level association.
-
-With few studies, meta-regression is unstable.
-
-Multiple moderator searches can generate spurious patterns.
-
-## Ecological bias exists inside meta-regression too
-
-Suppose studies with older average participants show larger effects.
-
-It does not follow that older individuals benefit more.
-
-The meta-regression uses study averages.
-
-The relationship can be produced by another study-level difference correlated with average age.
-
-This is an ecological inference problem.
-
-Individual participant data meta-analysis can sometimes address such questions more directly.
-
-## Individual participant data meta-analysis changes what can be estimated
-
-In an individual participant data meta-analysis, researchers obtain participant-level data from the original studies rather than relying only on published aggregate estimates.
-
-This can allow:
-
-- consistent outcome definitions
-- common covariate adjustment
-- participant-level interactions
-- improved missing-data analysis
-- more flexible time-to-event models
-
-It is often considered a particularly rich form of synthesis.
-
-It is also expensive, time-consuming and still dependent on which studies provide data.
-
-Unavailable studies can create another selection problem.
-
-## Prediction intervals deserve more attention
-
-A random-effects pooled confidence interval answers uncertainty about the mean effect.
-
-A prediction interval answers a different question:
-
-> What range of true effects is plausible in another setting drawn from the same effect distribution?
-
-When heterogeneity is substantial, the difference can be dramatic.
-
-In the synthetic example:
-
-$$
-\hat\mu=0.43.
-$$
-
-The random-effects confidence interval is about
-
-$$
-[0.09,\ 0.77].
-$$
-
-The prediction interval is about
-
-$$
-[-0.88,\ 1.74].
-$$
-
-Reporting only the pooled confidence interval can make the evidence look much more homogeneous than the model itself implies.
-
-IntHout and colleagues argued for routine use of prediction intervals for exactly this reason.
-
-## Prediction intervals are themselves uncertain
-
-With only a few studies, $\tau^2$ is estimated imprecisely.
-
-A prediction interval based on $\hat\tau^2$ can therefore also be unstable.
-
-A very wide interval is not automatically a perfect summary of future effects.
-
-It is a reminder that the review contains limited information about heterogeneity.
-
-Small meta-analyses should not create false confidence merely because several estimates have been placed into one model.
-
-## A forest plot should be read from top to bottom
-
-Many readers look immediately at the pooled diamond.
-
-A better sequence is:
-
-1. What populations were studied?
-2. What interventions and comparators were used?
-3. What outcomes were measured?
-4. How precise is each study?
-5. Do the point estimates agree?
-6. Are confidence intervals broadly compatible?
-7. Is there a pattern by design, dose or population?
-8. What is the risk of bias?
-9. What does the pooled estimate represent?
-10. What does the prediction interval say?
-
-The individual studies are not clutter surrounding the pooled result.
-
-They are the evidence from which the pooled result was constructed.
-
-## Non-overlapping confidence intervals are not the definition of heterogeneity
-
-Two studies can have overlapping confidence intervals and still differ statistically.
-
-Two studies can have non-overlapping intervals because they are both extremely precise even when the difference is not practically important.
-
-Formal heterogeneity analysis uses the estimates and variances jointly.
-
-Visual inspection is useful.
-
-It should not substitute for the statistical and scientific comparison.
-
-## Statistical heterogeneity and clinical heterogeneity are different
-
-Statistical heterogeneity concerns variation in numerical effects beyond sampling error.
-
-Clinical heterogeneity concerns differences in populations, interventions, outcomes or settings that may matter scientifically.
-
-Methodological heterogeneity concerns differences in design and risk of bias.
-
-A meta-analysis can show low statistical heterogeneity while containing important clinical differences if the studies are imprecise.
-
-It can show high statistical heterogeneity around effects that are all clinically beneficial if studies are extremely precise.
-
-The type of heterogeneity should be named.
-
-## Zero heterogeneity estimates do not prove identical effects
-
-Suppose a random-effects model estimates
-
-$$
-\hat\tau^2=0.
-$$
-
-With few or imprecise studies, that may reflect lack of information rather than true equality of effects.
-
-Between-study variance is difficult to estimate accurately from small meta-analyses.
-
-A zero estimate is not logical proof that all settings share one identical effect.
-
-## Fixed-effect and random-effects models answer different questions
-
-A common-effect analysis asks about one effect assumed to be shared by the included studies.
-
-A random-effects analysis asks about a distribution of effects and often targets its mean.
-
-Neither model is selected solely because a heterogeneity test crosses a p-value threshold.
-
-The model should follow the scientific understanding of the studies.
-
-If effects could reasonably vary by setting, a distributional model may be appropriate even when a heterogeneity test has low power.
-
-If the studies are genuinely designed to estimate one common parameter, a common-effect model may be coherent.
-
-Model choice should not be delegated to one preliminary test.
-
-## A significant pooled effect is not the same as consistent benefit
-
-Suppose a random-effects meta-analysis gives
-
-$$
-\hat\mu>0
-$$
-
-with a confidence interval excluding zero.
-
-This supports a positive mean effect under the model.
-
-It does not imply
-
-$$
-\theta_i>0
-$$
-
-for every setting.
-
-If the prediction interval crosses zero, some comparable settings may plausibly have negligible or negative effects.
-
-This distinction matters for policy and clinical recommendations.
-
-A positive average can coexist with real effect heterogeneity.
-
-## A non-significant pooled effect can still hide important subgroup effects
-
-The reverse can occur.
-
-Suppose half the studies show meaningful benefit and half show meaningful harm in systematically different populations.
-
-The pooled mean may be near zero.
-
-Concluding "no effect" would erase the heterogeneity.
-
-The scientific question becomes:
-
-> Which settings generate which effects?
-
-A zero pooled mean can be an average of strong opposing effects.
-
-The average is not automatically the conclusion.
-
-## Combining p-values is not the same as combining effects
-
-Some evidence-synthesis methods combine significance information across studies.
-
-That can answer whether there is evidence against a global null under specific assumptions.
-
-It does not estimate effect magnitude.
-
-A meta-analysis intended to inform decisions usually needs an effect scale.
-
-Knowing that several studies collectively reject zero does not tell us whether the effect is large enough to matter.
-
-## Relative and absolute effects can tell different stories
-
-Suppose several trials report a common relative risk near
+Effect scale matters as well. A relative risk can be stable across studies while absolute benefit differs greatly because baseline risk differs. Suppose several studies estimate
 
 $$
 RR=0.8.
 $$
 
-Baseline risk differs across studies.
+If control risk is $0.05$, treated risk is approximately $0.04$, giving an absolute reduction of $0.01$. If control risk is $0.50$, treated risk is approximately $0.40$, giving an absolute reduction of $0.10$. A meta-analysis of relative effects can therefore be statistically coherent while the practical consequences differ by a factor of ten.
 
-If one population has control risk
+Time should also remain part of the estimand. Pooling effects measured at six weeks, six months and five years can erase important treatment dynamics. An intervention may produce short-term benefit followed by attenuation or long-term harm. A synthesis should therefore specify the time horizon rather than treating every follow-up as another estimate of the same quantity.
 
-$$
-0.05,
-$$
+The unit of evidence also requires care. Several publications can analyse the same cohort or trial. If they are treated as independent studies, participants are counted more than once and the apparent evidence base becomes larger than it really is. Systematic reviews therefore need to identify overlapping populations, trial registrations and duplicate analyses before deciding which estimates enter a meta-analysis.
 
-the treated risk is approximately
+## Precision, consistency and certainty are different quantities
 
-$$
-0.04,
-$$
+A pooled confidence interval describes uncertainty in a statistical parameter under a specified model. It does not by itself describe the overall certainty of the evidence. Frameworks such as GRADE consider additional dimensions including risk of bias, inconsistency, indirectness, imprecision and publication bias. A narrow pooled interval can coexist with low certainty if the studies are biased or if the evidence is indirect relative to the target question.
 
-an absolute reduction of
+This distinction becomes especially important when evidence is used in public communication. A statement such as "a meta-analysis of twenty studies found" can sound definitive even when the twenty studies are small, heterogeneous, indirect or at high risk of bias. The number of studies and the narrowness of the pooled interval are not sufficient summaries. The relevant scientific question is whether the evidence base collectively identifies the claim being communicated.
 
-$$
-0.01.
-$$
+Systematic review protocols help by making review-level decisions auditable. Search sources, eligibility criteria, outcome definitions and synthesis methods can all be influenced by knowledge of the emerging literature. Prospective registration through platforms such as PROSPERO creates a record of what the review intended to do before the final results were known. Registration is not a guarantee of quality, but it makes unreported changes easier to detect.
 
-If another has control risk
-
-$$
-0.50,
-$$
-
-treated risk is approximately
-
-$$
-0.40,
-$$
-
-an absolute reduction of
-
-$$
-0.10.
-$$
-
-A meta-analysis of relative effects can be stable while the practical benefit differs substantially across settings.
-
-The effect measure chosen for synthesis matters.
-
-## Time points should not be pooled casually
-
-An intervention can have:
-
-- short-term benefit
-- medium-term attenuation
-- long-term harm
-
-Combining outcomes measured at six weeks, six months and five years into one pooled effect can obscure the time structure.
-
-Follow-up time is part of the estimand.
-
-A meta-analysis should define whether it is estimating an effect at a particular time or across a meaningful time window.
-
-## Duplicate populations can double-count evidence
-
-Several papers can analyse the same underlying cohort.
-
-If all are included as independent studies, participants can be counted multiple times.
-
-The meta-analysis then appears to contain more independent evidence than it does.
-
-Systematic reviews should therefore track study cohorts, trial registrations and overlapping datasets.
-
-The unit of evidence is not always the publication.
-
-## Outcome switching can enter the meta-analysis downstream
-
-Suppose a trial measures ten outcomes but publishes only the favourable ones.
-
-A systematic reviewer sees the published subset.
-
-The bias occurred before the meta-analysis.
-
-Comparing publications with protocols and trial registrations can reveal selective outcome reporting.
-
-This is one reason prospective registration improves evidence synthesis even for researchers who never conduct the original trials.
-
-## Risk-of-bias tools should change interpretation, not decorate a table
-
-A review may include a coloured risk-of-bias figure.
-
-If the pooled conclusion is then discussed as though all studies were equally credible, the assessment has not influenced inference.
-
-Risk of bias should inform:
-
-- sensitivity analyses
-- certainty assessments
-- interpretation
-- sometimes eligibility
-
-The correct approach depends on the review question and framework.
-
-The important point is that bias assessment should have consequences.
-
-## GRADE asks a different question from meta-analysis
-
-GRADE is a framework for rating certainty in a body of evidence.
-
-It considers domains such as:
-
-- risk of bias
-- inconsistency
-- indirectness
-- imprecision
-- publication bias
-
-A meta-analysis can produce a precise pooled estimate while certainty remains low because the evidence is indirect or biased.
-
-The pooled standard error and the certainty of the evidence are different quantities.
-
-## Protocols reduce review-level flexibility
-
-Systematic reviews also face researcher degrees of freedom.
-
-Authors choose:
-
-- databases
-- search dates
-- eligibility rules
-- outcomes
-- effect measures
-- subgroup definitions
-- synthesis models
-
-A prespecified review protocol makes those decisions visible before the results are known.
-
-PROSPERO and other registries provide mechanisms for registering many systematic reviews prospectively.
-
-Registration is not proof of quality.
-
-It creates an audit trail.
-
-## Updating a review can change the conclusion without invalidating the original review
-
-Scientific evidence accumulates.
-
-Suppose an early meta-analysis contains four small studies and estimates a large effect.
-
-Several later, larger studies produce smaller effects.
-
-An updated review may shrink the pooled estimate.
-
-That does not mean the first review was fraudulent or useless.
-
-It means the available evidence changed.
-
-Evidence synthesis is a time-indexed statement:
+The time at which a review was conducted also matters. An early meta-analysis of four small studies can legitimately produce a different conclusion from an updated synthesis that includes several later, larger studies. The first review was a statement about the evidence available at that time. Scientific synthesis is therefore conditional on the information set,
 
 $$
 P(\text{conclusion}\mid\text{evidence available at time }t).
 $$
 
-A review should be interpreted relative to its search date.
+Living systematic reviews make this dependence explicit by updating the synthesis as new evidence appears. Their advantage is not that they remove uncertainty, but that they reduce the lag between the evolving literature and the formal summary.
 
-## Living systematic reviews make that time dependence explicit
+## The five-study example in context
 
-For rapidly changing fields, a living systematic review is updated as new evidence becomes available.
-
-The method is especially useful when:
-
-- evidence is emerging quickly
-- decisions are time-sensitive
-- new studies are likely to change conclusions
-
-The review becomes an evolving evidence object rather than a static publication.
-
-The methodology must still control repeated screening, analysis and versioning transparently.
-
-## A meta-analysis should make disagreement harder to hide
-
-The best meta-analysis is not the one that produces the narrowest pooled interval.
-
-It is the one that makes the structure of the evidence visible.
-
-That includes:
-
-- which studies were found
-- which were excluded
-- which populations differ
-- which outcomes differ
-- which studies are biased
-- how effects vary
-- which assumptions determine the pooled result
-- what happens under reasonable alternative analyses
-
-Pooling is useful because it forces quantitative comparison.
-
-It becomes misleading when the pooled number hides the comparison it was meant to organise.
-
-## The synthetic example contains the central warning
-
-The five studies were:
+The synthetic example is useful because every calculation is transparent. Five equally precise studies reported effects of
 
 $$
-0.10,\quad
-0.15,\quad
-0.20,\quad
-0.80,\quad
-0.90
+0.10,\quad0.15,\quad0.20,\quad0.80,\quad0.90.
 $$
 
-with common standard error
-
-$$
-0.10.
-$$
-
-A common-effect analysis produced
+A common-effect model produced
 
 $$
 \hat\theta_{\mathrm{FE}}=0.43
 $$
 
-with 95% confidence interval approximately
+with a narrow 95% interval of approximately
 
 $$
 [0.34,\ 0.52].
 $$
 
-That appears precise.
-
-Yet
+The same data produced
 
 $$
 Q=59.8
@@ -1251,87 +419,31 @@ $$
 I^2\approx93.3\%.
 $$
 
-A random-effects analysis estimated
+Allowing a distribution of underlying effects yielded
 
 $$
 \hat\tau^2\approx0.1395,
 $$
 
-giving a much wider confidence interval around the mean of roughly
+with a random-effects confidence interval around the mean of approximately
 
 $$
 [0.09,\ 0.77].
 $$
 
-The prediction interval was approximately
+The prediction interval widened further to approximately
 
 $$
 [-0.88,\ 1.74].
 $$
 
-One dataset therefore supports three very different statements:
+These summaries do not contradict one another. They answer different questions. The narrow common-effect interval describes the arithmetic centre under a model that assumes one shared effect. The random-effects interval describes uncertainty about the mean of a heterogeneous effect distribution. The prediction interval describes the range in which a true effect from another comparable setting might plausibly fall under that model.
 
-> The arithmetic centre of the studies is estimated precisely under a common-effect model.
+The scientific conclusion should therefore not be reduced to the sentence "the pooled effect is 0.43". The evidence is better described as strongly heterogeneous, with a positive average under the random-effects model but substantial uncertainty about how effects vary across settings. If the heterogeneity reflects identifiable differences in population, dose or intervention implementation, those differences may be more important than the pooled mean itself.
 
-> The mean of a heterogeneous effect distribution is positive but uncertain.
+A good meta-analysis is valuable precisely because it can make this structure visible. Its purpose is not to turn disagreement into one authoritative number. It is to organise evidence in a way that clarifies where studies agree, where they differ, how much uncertainty remains and which assumptions are required to combine them.
 
-> The effect in a new comparable setting could plausibly differ enormously and may even have the opposite sign.
-
-The numbers did not contradict one another.
-
-They answered different questions.
-
-## Meta-analysis should be read as an argument, not a badge
-
-A good meta-analysis is powerful because it makes evidence accumulation explicit.
-
-It can improve precision.
-
-It can reveal heterogeneity.
-
-It can identify gaps.
-
-It can test whether findings are robust across studies.
-
-It can expose small-study patterns.
-
-It can estimate effects that no individual study estimates well.
-
-None of that makes the pooled result independent of the evidence that produced it.
-
-The right questions are therefore not:
-
-> Is this a meta-analysis?
-
-or
-
-> How many studies were pooled?
-
-The better questions are:
-
-What studies were eligible?
-
-What was missed?
-
-What estimand did they share?
-
-How were outcomes harmonised?
-
-What was the risk of bias?
-
-How heterogeneous were the effects?
-
-What does the prediction interval show?
-
-Do sensitivity analyses change the conclusion?
-
-Is the pooled mean actually the quantity needed for the decision?
-
-Meta-analysis is not a magic upgrade.
-
-It is a model for combining evidence.
-
-Its strength comes from how well the evidence and the model fit the scientific question.
+Meta-analysis is therefore not a magic upgrade. It is a statistical model embedded inside a systematic argument about evidence. Its strength depends on the quality of the studies, the transparency of the review, the coherence of the estimand and the adequacy of the model used to synthesise the results.
 
 ## References
 
