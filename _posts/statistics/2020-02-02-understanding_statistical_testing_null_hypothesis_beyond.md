@@ -1,12 +1,10 @@
 ---
-permalink: '/statistics/understanding_statistical_testing_null_hypothesis_beyond/'
 author_profile: false
 categories:
 - Statistics
 classes: wide
 date: '2020-02-02'
-excerpt: A detailed look at hypothesis testing, the misconceptions around the null
-  hypothesis, and the diverse methods for detecting data deviations.
+excerpt: A null hypothesis is a model restriction, not a statement to be accepted when a p-value is large. Statistical tests measure compatibility through a chosen statistic whose sensitivity depends on the alternative.
 header:
   image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
   og_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
@@ -16,105 +14,355 @@ header:
   teaser: /assets/images/headers/photo-statistics-confidence-intervals.jpg
   twitter_image: /assets/images/headers/photo-statistics-confidence-intervals.jpg
 keywords:
-- Hypothesis testing
-- Null hypothesis
-- Data non-normality
-- Statistical methods
-- Hypothesis rejection
-seo_description: An exploration of hypothesis testing, the null hypothesis, and the multiple testing methods that detect deviations from theoretical patterns.
-seo_title: Statistical Testing and the Null Hypothesis
+- null hypothesis
+- p-values
+- test statistics
+- compatibility
+- statistical power
+seo_description: A rigorous explanation of null hypotheses, p-values, test statistics, power, omnibus versus directional alternatives, and why non-rejection is not evidence of equivalence.
+seo_title: 'The Null Hypothesis: Compatibility, Power, and Test Sensitivity'
 seo_type: article
-summary: This article delves into the core principles of hypothesis testing, the nuances
-  of the null hypothesis, and the various statistical tools used to test data compatibility
-  with theoretical distributions.
+summary: Statistical testing explained through model restrictions and test statistics, with emphasis on what p-values measure, why tests detect different departures, and why equivalence requires its own hypothesis.
 tags:
 - Hypothesis Testing
-- Statistical Modeling
-title: 'Understanding Statistical Testing: The Null Hypothesis and Beyond'
+- Statistical Inference
+- Statistics
+title: 'The Null Hypothesis: Compatibility, Power, and Test Sensitivity'
 ---
 
-## Introduction
+A null hypothesis is not “nothing is happening.”
 
-Statistical hypothesis testing is an essential tool in scientific research, forming the backbone of most empirical data analysis. Despite its ubiquity, there are subtle complexities that, if misunderstood, can lead to flawed interpretations. The crux of hypothesis testing is the relationship between the null hypothesis (often denoted as $H_0$) and the observed data. However, statistical tests are more intricate than simply accepting or rejecting the null hypothesis, and this article explores the nuances of hypothesis testing, focusing on the diversity of statistical methods for detecting deviations from expected distributions. 
+It is a mathematical restriction on the data-generating model.
 
-While the core idea of hypothesis testing is grounded in checking whether observed data align with a theoretical pattern, such as normality, there are multiple layers of complexity when considering how data may deviate. We'll dive into these complexities, highlight some common misconceptions, and explore the wealth of statistical tests that exist to detect data deviations from theoretical expectations.
+Examples include
 
-## The Null Hypothesis: A Misunderstood Concept
+$$
+H_0:\mu_1-\mu_0=0,
+$$
 
-In statistical terms, the null hypothesis is a proposition that assumes no significant effect or difference in the data under study. For instance, in a simple scenario like comparing means between two groups, the null hypothesis would state that the means of the groups are equal. However, a significant misconception that permeates statistical discussions is the belief that non-rejection of the null hypothesis means that it is true. This could not be farther from the truth.
+$$
+H_0:\beta=0,
+$$
 
-### Compatibility vs. Certainty
+or
 
-When data are compatible with the null hypothesis, it only means that the data are consistent with the assumption underlying the null hypothesis—within the framework of a particular statistical test. This does not mean that the data were produced solely by the process described in the null hypothesis. There could be numerous processes that might yield a similar set of observations. 
+$$
+H_0:F=F_0.
+$$
 
-**Key Distinction**: It is critical to differentiate between "obtainable by chance" and "obtained by chance." A dataset that is "obtainable by chance" suggests that it is possible to get data that looks like this purely by random chance, but whether the data was actually *obtained* through this random process is a matter of inference, not proof.
+A statistical test asks whether the observed data are sufficiently incompatible with that restriction according to a chosen test statistic.
 
-In frequentist statistics, where we work predominantly with probabilities associated with data rather than hypotheses, it is impossible to “prove” the null hypothesis. Non-rejection only tells us that the data do not provide sufficient evidence to reject it, but this is far from confirming its truth. The misunderstanding of this core concept has led to widespread misuse and misinterpretation of statistical test results.
+The phrase **chosen test statistic** matters.
 
-## The Role of Test Sensitivity: A Complex Landscape
+Different statistics detect different kinds of departure.
 
-The world of statistical testing is much more nuanced than it might appear at first glance. When evaluating data for deviations from an expected distribution, such as testing for normality, there are a multitude of different tests, each designed to pick up specific kinds of deviations. The existence of more than 25 different tests for non-normality alone is a testament to the complexity of detecting deviations from theoretical distributions. These tests can—and often do—contradict one another, depending on the data characteristics they are most sensitive to.
+## A p-value is conditional on the null model
 
-### Diverse Paths to Deviation from the Null Hypothesis
+Let $T(X)$ be a statistic where larger values are more incompatible with $H_0$.
 
-Deviating from a theoretical pattern can happen in numerous ways. For instance, when testing whether data follow a normal distribution, there are multiple aspects that can vary—such as differences in the shape of the cumulative distribution function (CDF), skewness, kurtosis, or even the existence of outliers. Each of these deviations requires different tools for detection.
+The p-value is
 
-#### 1. **Cumulative Distribution Function (CDF) Differences**
-   Tests like the Kolmogorov-Smirnov (K-S) test focus on the maximum difference between the empirical and theoretical CDFs. This test is particularly useful for detecting overall shifts in distribution but may miss subtler differences, especially in the tails of the distribution. To address these limitations, tests like Cramér-von Mises and Anderson-Darling integrate over the entire range of the CDF, providing a more sensitive measure of the differences.
+$$
+p
+=
+P_{H_0}
+\left[
+T(X^\ast)
+\ge
+T(x_{\mathrm{obs}})
+\right],
+$$
 
-#### 2. **Higher Moments: Skewness and Kurtosis**
-   Some tests focus on specific aspects of a distribution, such as its skewness (the asymmetry of the data) or kurtosis (the sharpness of the peak). The Jarque-Bera test, for example, combines measures of both skewness and kurtosis to test whether data significantly deviate from normality in these respects. However, it is possible for data to appear "normal" under this test while still exhibiting non-normal characteristics from other perspectives.
+with modifications for two-sided or discrete tests.
 
-#### 3. **Complex Interactions**
-   Other tests, like the Shapiro-Wilk test, use more complex calculations—such as correlations with theoretical normal scores—to detect deviations from normality. These tests are often more sensitive to subtle departures from normality that may not be captured by simpler methods.
+The probability is computed under the null model.
 
-### Why So Many Tests? The Diversity of Perspectives
+It is not
 
-The plethora of tests for non-normality reflects the fact that data can deviate from the null hypothesis in a variety of ways. Each test is optimized to detect specific types of deviation, and as a result, they can sometimes yield conflicting results. For example, a dataset might be flagged as non-normal by the Shapiro-Wilk test but pass the Jarque-Bera test with flying colors. This is not an indication that one test is "better" than the other but rather that each test is viewing the data from a different perspective.
+$$
+P(H_0\mid X).
+$$
 
-## The Problem with "Tests of Normality"
+Frequentist testing does not assign a posterior probability to the null hypothesis without adding a prior and a Bayesian model.
 
-One common source of confusion in statistics arises from the misnaming of certain tests. For example, tests labeled as "tests of normality" should more accurately be described as "tests of deviation from normality," or even more specifically, "tests of differences in CDFs" or "tests of higher moments." Just as we do not label a t-test as a "test of no difference" but rather as a "test of means," we should be precise in naming these tests according to what they actually measure.
+## Non-rejection is not acceptance
 
-This misnomer leads to misunderstandings in how these tests are applied and interpreted. Importantly, one must recognize that rejecting the null hypothesis in a normality test does not imply that the data are wildly non-normal—it simply means that the data deviate in some measurable way, which may or may not be practically significant.
+If
 
-### A Cautionary Tale: Misinterpreting Test Results
+$$
+p>0.05,
+$$
 
-Imagine running a battery of normality tests on a dataset. The Shapiro-Wilk test indicates significant non-normality, while the Jarque-Bera test suggests that the data are perfectly normal. Should you conclude that your data are normal? Absolutely not. Instead, this scenario highlights the importance of understanding what each test is measuring. The Jarque-Bera test, for example, is sensitive to higher moments like skewness and kurtosis, but it might miss more complex deviations captured by the Shapiro-Wilk test, which examines correlations with normal scores.
+the data did not cross the chosen rejection threshold.
 
-This example illustrates why it is crucial to think carefully about the tools you use and the perspectives they offer. Data analysis should never rely on a single test or perspective, especially when the data's underlying assumptions are complex or when deviations from theoretical models can take on many forms.
+That can occur because:
 
-## A Broader View: Beyond Frequentist Testing
+- the null is approximately true;
+- the alternative effect is small;
+- the sample is too small;
+- the measurement is noisy;
+- the test is insensitive to the actual departure;
+- the design contains little information.
 
-Hypothesis testing is often framed in the frequentist context, which does not assign probabilities to hypotheses themselves but rather to the data. However, different schools of thought, such as Bayesian statistics, bring different perspectives to hypothesis testing. Bayesian methods, for example, allow for the incorporation of prior beliefs and the assignment of probabilities to hypotheses. This adds another layer of complexity and highlights the importance of choosing the right framework and tools depending on the problem at hand.
+Therefore
 
-### The Bayesian Perspective
+$$
+\text{fail to reject }H_0
+\not\Rightarrow
+\text{prove }H_0.
+$$
 
-In Bayesian statistics, the null hypothesis is not treated as a binary proposition to be accepted or rejected. Instead, Bayesian methods allow for the updating of beliefs based on observed data. Priors—representing pre-existing beliefs—are combined with data to produce a posterior distribution, which reflects updated beliefs about the hypothesis. Unlike frequentist methods, Bayesian analysis offers a more flexible and intuitive approach to decision-making, particularly in complex situations where prior knowledge or expert opinion plays a role.
+## Equivalence is a different hypothesis
 
-### Frequentist vs. Bayesian: Which to Use?
+Suppose effects smaller than $\Delta$ are practically negligible.
 
-While the frequentist approach remains dominant in many fields, especially in the natural sciences, the Bayesian approach offers a robust alternative in cases where the assignment of probabilities to hypotheses is essential. Both frameworks have their strengths and limitations, and the choice between them often depends on the context of the analysis and the nature of the data.
+An equivalence question is not
 
-## Practical Considerations: Tools and Thought Processes
+$$
+H_0:\theta=0.
+$$
 
-Before diving into any kind of statistical analysis, it is essential to think critically about the diversity of potential deviations from theoretical patterns. Consider the following:
+A common equivalence formulation is
 
-1. **Understand the nature of your data**: What kind of deviations might you expect from the theoretical distribution? Are you dealing with skewed data, outliers, or multimodal distributions? The answers to these questions should guide your choice of statistical tests.
-   
-2. **Choose your tools wisely**: Just as no single test can cover all potential deviations from the null hypothesis, no single perspective can capture the full complexity of your data. Consider running multiple tests to gain a comprehensive view of how your data compare to the theoretical model.
-   
-3. **Interpret results in context**: A significant result from a single test does not mean your data are fundamentally flawed, just as a non-significant result does not guarantee that your data are perfectly aligned with the null hypothesis. Context matters.
+$$
+H_0:
+|\theta|
+\ge
+\Delta
+$$
 
-4. **Frequentist vs. Bayesian**: Consider whether your analysis would benefit from the flexibility of Bayesian methods, particularly in cases where prior knowledge or expert opinion can inform the analysis. 
+against
+
+$$
+H_1:
+|\theta|
+<
+\Delta.
+$$
+
+Now rejection supports the claim that the effect lies within the equivalence margin.
+
+This reverses the usual logic.
+
+A non-significant ordinary superiority test is not an equivalence test.
+
+## Test statistics encode sensitivity
+
+Consider testing whether a distribution equals a reference $F_0$.
+
+The Kolmogorov-Smirnov statistic uses
+
+$$
+D
+=
+\sup_x
+|F_n(x)-F_0(x)|.
+$$
+
+It is especially sensitive to the largest CDF discrepancy.
+
+Anderson-Darling applies greater tail weight.
+
+Shapiro-Wilk uses ordered observations and is designed specifically for normality.
+
+These procedures can produce different p-values from the same sample because they weight departures differently.
+
+That is not a contradiction.
+
+They are asking different discrepancy questions.
+
+## Omnibus tests trade specificity for breadth
+
+An omnibus test can detect many kinds of departure.
+
+The price is that rejection often does not identify the mechanism.
+
+For example, a chi-square test of independence can reject because several cells differ from expectation.
+
+The scalar statistic does not say which association pattern matters.
+
+A residual analysis or targeted contrast is needed afterward.
+
+Targeted tests can have greater power when the alternative is specified in advance.
+
+## Power depends on the alternative
+
+For parameter value $\theta$, define
+
+$$
+\pi(\theta)
+=
+P_\theta(\text{reject }H_0).
+$$
+
+This is the power function.
+
+There is no single number called “the power” unless a particular alternative or distribution over alternatives is specified.
+
+A normality test can have high power against heavy tails and lower power against a mild mixture.
+
+A mean test can have almost no power against a pure variance change.
+
+Sensitivity follows the statistic.
+
+## Large samples detect small departures
+
+Suppose the null is not exactly true but differs only slightly from reality.
+
+As $n$ increases, many consistent tests will eventually reject.
+
+This can produce
+
+$$
+p\ll0.001
+$$
+
+for a discrepancy too small to matter scientifically.
+
+Statistical significance therefore does not measure practical importance.
+
+Effect size and uncertainty remain necessary.
+
+## Small samples hide meaningful departures
+
+The reverse problem occurs in small samples.
+
+A large clinically relevant effect can remain non-significant because the estimate is imprecise.
+
+This is why interpretation should include the confidence interval.
+
+An interval such as
+
+$$
+[-0.2,1.8]
+$$
+
+contains zero but also contains effects that may be scientifically important.
+
+The p-value alone hides that.
+
+## Model assumptions sit underneath the test
+
+A p-value is valid only under the assumptions used to derive its null distribution.
+
+Those may include:
+
+- independence;
+- randomization;
+- distributional form;
+- variance assumptions;
+- censoring assumptions;
+- asymptotic approximation;
+- correct model specification.
+
+A precisely computed p-value from the wrong null distribution is still wrong.
+
+## Multiple testing changes the reference problem
+
+If a researcher tries many analyses and reports only the smallest p-value, the nominal null calibration no longer describes the selection procedure.
+
+The relevant probability becomes conditional on the entire search process.
+
+Multiplicity corrections, selective-inference methods, preregistration, or held-out confirmation can address different parts of this problem.
+
+The unit of inference is the procedure, not one number extracted after the fact.
+
+## Bayesian inference answers another question
+
+Bayesian inference assigns a prior
+
+$$
+p(\theta)
+$$
+
+and updates it through the likelihood:
+
+$$
+p(\theta\mid y)
+\propto
+p(y\mid\theta)p(\theta).
+$$
+
+Now posterior probabilities such as
+
+$$
+P(\theta>0\mid y)
+$$
+
+are meaningful inside the Bayesian model.
+
+That is not a repaired p-value.
+
+It is a different inferential framework with different assumptions.
+
+## Confidence intervals and tests are linked
+
+For many standard procedures, a two-sided level-$\alpha$ test rejects
+
+$$
+H_0:\theta=\theta_0
+$$
+
+exactly when the corresponding
+
+$$
+100(1-\alpha)\%
+$$
+
+confidence interval excludes $\theta_0$.
+
+The interval is usually more informative because it displays a range of parameter values compatible with the procedure.
+
+It still should not be interpreted as a posterior probability interval.
+
+## A practical reporting standard
+
+Instead of writing only
+
+> $p=0.03$, statistically significant,
+
+report:
+
+1. the estimand;
+2. the effect estimate;
+3. the uncertainty interval;
+4. the test and statistic;
+5. the p-value if relevant;
+6. assumptions and design;
+7. practical or scientific scale.
+
+This makes it much harder for the threshold to replace the scientific argument.
 
 ## Conclusion
 
-Statistical hypothesis testing is a powerful but nuanced tool. Understanding the limitations of the null hypothesis and the diversity of statistical tests available is essential for making accurate inferences from data. While it is impossible to prove the null hypothesis, careful consideration of the different ways in which data can deviate from theoretical patterns—along with thoughtful selection of appropriate statistical tests—can provide deeper insights into the underlying processes generating the data. By recognizing that no single test or framework can capture the full complexity of real-world data, analysts can approach hypothesis testing with greater precision and understanding.
+A null hypothesis is a restriction on a model.
+
+A test measures discrepancy from that restriction through a chosen statistic.
+
+The correct chain is
+
+$$
+\boxed{
+\text{null model}
+\rightarrow
+\text{test statistic}
+\rightarrow
+\text{null distribution}
+\rightarrow
+\text{p-value}
+\rightarrow
+\text{effect and uncertainty}.
+}
+$$
+
+Non-rejection is not proof of the null.
+
+Rejection is not proof of importance.
+
+The value of a test comes from knowing what departure it is capable of detecting and what scientific claim that departure represents.
 
 ## References
 
-- Massey, F. J. (1951). The Kolmogorov-Smirnov test for goodness of fit. *Journal of the American Statistical Association*, 46(253), 68-78.
-- Anderson, T. W., & Darling, D. A. (1954). A test of goodness of fit. *Journal of the American Statistical Association*, 49(268), 765-769.
-- Shapiro, S. S., & Wilk, M. B. (1965). An analysis of variance test for normality (complete samples). *Biometrika*, 52(3-4), 591-611.
-- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+- Neyman, J., & Pearson, E. S. (1933). On the problem of the most efficient tests of statistical hypotheses. *Philosophical Transactions of the Royal Society A*, 231, 289–337.
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129–133.
+- Greenland, S., Senn, S. J., Rothman, K. J., et al. (2016). Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. *European Journal of Epidemiology*, 31, 337–350.
