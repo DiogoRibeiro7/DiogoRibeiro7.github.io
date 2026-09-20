@@ -96,7 +96,7 @@ $$
 s_t=(k_t,z_t).
 $$
 
-The control can be written as next-period capital \(k_{t+1}\), because consumption is determined by the resource constraint:
+The control can be written as next-period capital $k_{t+1}$, because consumption is determined by the resource constraint:
 
 $$
 c_t
@@ -245,7 +245,7 @@ $$
 F(s_t,s_{t+1},\varepsilon_{t+1};\sigma)=0
 $$
 
-collect the equilibrium conditions, where \(\sigma\) scales shock size.
+collect the equilibrium conditions, where $\sigma$ scales shock size.
 
 A perturbation method treats the equilibrium policy function as an unknown smooth function of the state and shock scale and computes derivatives of that function around the deterministic steady state,
 
@@ -265,7 +265,7 @@ $$
 
 where hats denote deviations from steady state, often in logs.
 
-The matrices \(A\) and \(B\) are not obtained by calling a generic scalar root finder on the Euler equation. They come from differentiating the complete equilibrium system and solving the resulting linear rational-expectations problem.
+The matrices $A$ and $B$ are not obtained by calling a generic scalar root finder on the Euler equation. They come from differentiating the complete equilibrium system and solving the resulting linear rational-expectations problem.
 
 At first order, certainty equivalence commonly appears: shock variances do not change the mean policy rule.
 
@@ -339,7 +339,7 @@ $$
 z_1,\ldots,z_S.
 $$
 
-For each current state \((k_i,z_s)\) and each candidate \(k_j'\), compute feasible consumption
+For each current state $(k_i,z_s)$ and each candidate $k_j'$, compute feasible consumption
 
 $$
 c_{isj}
@@ -539,7 +539,7 @@ The policy moves next-period capital upward in the high-productivity state and d
 
 A value-function solution on a finite grid contains discretization error.
 
-If the true optimum lies between \(k_j\) and \(k_{j+1}\), a discrete policy must choose one grid point.
+If the true optimum lies between $k_j$ and $k_{j+1}$, a discrete policy must choose one grid point.
 
 Increasing the grid density reduces this source of error but increases computational cost.
 
@@ -561,7 +561,7 @@ Both need diagnostics.
 
 ## Euler-equation errors are a useful common diagnostic
 
-After obtaining a policy \(g(k,z)\), compute consumption from the resource constraint and evaluate the Euler residual,
+After obtaining a policy $g(k,z)$, compute consumption from the resource constraint and evaluate the Euler residual,
 
 $$
 \mathcal E(k,z)
@@ -598,7 +598,7 @@ g(s)
 a_m\phi_m(s),
 $$
 
-then choose the coefficients \(a_m\) so that equilibrium residuals are small at selected collocation points or in a weighted integral sense.
+then choose the coefficients $a_m$ so that equilibrium residuals are small at selected collocation points or in a weighted integral sense.
 
 Chebyshev polynomials are a common basis because they have good approximation properties over bounded intervals.
 
