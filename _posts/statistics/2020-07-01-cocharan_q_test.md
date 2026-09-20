@@ -89,18 +89,18 @@ Cochran’s Q test is based on the analysis of a **binary contingency table**. T
 The test statistic for Cochran’s Q is calculated as follows:
 
 $$
-Q = \frac{(k-1)\left[k \sum_{i=1}^{n} T_i^2 - T^2 \right]}{k \cdot \sum_{j=1}^{k} C_j - T^2}
+Q = \frac{(k-1)\left[k \sum_{j=1}^{k} C_j^2 - T^2 \right]}{kT - \sum_{i=1}^{n} R_i^2}
 $$
 
 Where:
 
 - **k** is the number of related groups.
 - **n** is the number of subjects or units.
-- $$ T_i $$ is the sum of successes for subject $$ i $$ across all groups.
-- $$ C_j $$ is the sum of successes for group $$ j $$.
-- $$ T $$ is the total number of successes across all groups and subjects.
+- $C_j$ is the number of successes in condition $j$.
+- $R_i$ is the number of successes for subject $i$ across all conditions.
+- $T=\sum_j C_j=\sum_i R_i$ is the total number of successes.
 
-The test statistic **Q** follows a **chi-square distribution** with **k – 1 degrees of freedom**. The **p-value** is obtained from this distribution and used to decide whether to reject the null hypothesis.
+For moderate samples, $Q$ is compared with a chi-square distribution with $k-1$ degrees of freedom. This is an asymptotic approximation; small or sparse matched samples can require exact or permutation calibration.
 
 ### Interpretation
 
@@ -151,7 +151,7 @@ While Cochran’s Q test is useful for comparing proportions in related groups, 
 
 ### Example of Logistic Regression and Cochran's Q Test
 
-Suppose a marketing team wants to analyze customer responses (yes/no) to three different promotional strategies (A, B, and C). Cochran's Q test would be suitable for determining if there is a significant difference in customer responses across the three strategies. If, however, the team also wanted to control for other variables like **age** or **income**, logistic regression would be more appropriate because it can handle multiple explanatory variables and estimate their effects on customer responses.
+Suppose a marketing team wants to analyze customer responses (yes/no) to three different promotional strategies (A, B, and C). Cochran's Q test would be suitable for determining if there is a significant difference in customer responses across the three strategies. If additional covariates are needed, ordinary independent-observation logistic regression is still inappropriate because repeated binary responses from the same subject are correlated. Use GEE, conditional logistic regression, or a mixed-effects logistic model depending on the design and estimand.
 
 ---
 

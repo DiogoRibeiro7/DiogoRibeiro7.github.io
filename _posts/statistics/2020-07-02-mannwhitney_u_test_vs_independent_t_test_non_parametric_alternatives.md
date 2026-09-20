@@ -37,15 +37,13 @@ title: 'Mann-Whitney U Test vs. Independent T-Test: Non-Parametric Alternatives'
 
 ## Introduction to Comparing Two Groups
 
-When analyzing data, it is often necessary to compare two independent groups to determine if there is a statistically significant difference between them. Two common tests used for this purpose are the **independent t-test** and the **Mann-Whitney U test**. While both tests serve the same goal—comparing the central tendencies of two groups—they differ in their underlying assumptions and suitability based on the type of data.
-
-The **independent t-test** is a **parametric** test, relying on assumptions of normality and equal variances between the two groups. On the other hand, the **Mann-Whitney U test** is a **non-parametric** alternative that does not require the assumption of normality, making it useful when the data is not normally distributed or when the sample sizes are small.
+When analyzing data, it is often necessary to compare two independent groups to determine if there is a statistically significant difference between them. Two common tests used for this purpose are the **independent t-test** and the **Mann-Whitney U test**. The two tests do not generally answer the same question. A two-sample t procedure targets a difference in means. Mann-Whitney is rank-based and is naturally interpreted through relative ordering or distributional shift. It becomes a median/location comparison only under additional shape assumptions.
 
 This article compares the independent t-test and the Mann-Whitney U test, discussing when to use each, with real-world examples and practical applications.
 
 ## Independent T-Test: A Parametric Approach
 
-The **independent t-test** (also known as the **two-sample t-test**) is used to compare the means of two independent groups. It assumes that the data in both groups are normally distributed and that the variances of the two groups are equal (homogeneity of variances).
+The two-sample t-test targets the mean difference between independent groups. The classical pooled-variance version assumes equal variances; Welch's t-test does not and is usually the safer default when the mean is the estimand.
 
 ### 1.1 How the Independent T-Test Works
 
@@ -67,8 +65,9 @@ The null hypothesis ($$H_0$$) of the t-test is that the means of the two groups 
 
 The independent t-test relies on several key assumptions:
 
-- **Normality**: The data in both groups should follow a normal distribution.
-- **Equal variances**: The variances in both groups should be equal, which can be checked using tests like **Levene’s Test**.
+- **Sampling structure**: observations must be independent across units.
+- **Mean-based estimand**: the scientific target must be a difference in means.
+- **Distributional regularity**: exact small-sample t theory uses normality; large-sample robustness depends on tail behavior, imbalance, and sample size. Equal variances are not required for Welch's test.
 - **Independence**: The observations in the two groups should be independent of each other.
 
 ### 1.3 When to Use the Independent T-Test
@@ -76,8 +75,8 @@ The independent t-test relies on several key assumptions:
 The independent t-test is appropriate when:
 
 - The data is **normally distributed** in both groups.
-- The sample sizes are reasonably large (typically $$n > 30$$ for each group) to satisfy the normality assumption due to the **Central Limit Theorem**.
-- The variances in the two groups are equal.
+- The sample size and tail behavior are adequate for the intended t approximation or a robust alternative is used.
+- Use Welch's formulation unless a pooled-variance model is substantively justified.
 
 ### 1.4 Example of the Independent T-Test
 
@@ -120,11 +119,7 @@ The Mann-Whitney U test makes fewer assumptions than the independent t-test:
 
 ### 2.3 When to Use the Mann-Whitney U Test
 
-The Mann-Whitney U test is suitable when:
-
-- The data is **not normally distributed** in one or both groups.
-- The sample size is small, and the normality assumption cannot be satisfied.
-- The data is ordinal, or when comparing medians rather than means.
+The Mann-Whitney U test is suitable when a rank-based comparison is the intended estimand, especially for ordinal outcomes or when relative ordering is scientifically meaningful. It should not be selected merely because a normality test rejects, and it does not generally test equality of medians.
 
 ### 2.4 Example of the Mann-Whitney U Test
 
@@ -145,7 +140,7 @@ The choice between the independent t-test and the Mann-Whitney U test depends on
 | **What is compared**        | Means of the two groups                  | Ranks of the two groups                     |
 | **Sensitive to outliers**   | Yes                                      | Less sensitive                             |
 | **Use case**                | Normally distributed data, equal variances| Non-normal data, small sample sizes         |
-| **Interpretation**          | Compares means                          | Compares medians and distributions          |
+| **Interpretation**          | Difference in means                      | Relative ranks / ordering; location only under stronger assumptions |
 
 ### 3.1 Practical Applications
 

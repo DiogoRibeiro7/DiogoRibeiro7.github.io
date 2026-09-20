@@ -43,22 +43,13 @@ Accurately predicting emergency department (ED) visit volumes is crucial for eff
 
 Historically, predictions of ED visits have relied on univariate time series models that use past visit data to forecast future values. These methods include ARIMA (AutoRegressive Integrated Moving Average), Exponential Smoothing (ETS), and Facebook's Prophet algorithm. However, these models are limited in that they only take into account past visit data and do not include other variables that may influence visit patterns, such as weather conditions, holidays, or the day of the week.
 
-In recent years, machine learning has emerged as a promising alternative to traditional time series models. By incorporating multiple variables and learning complex patterns in the data, machine learning models have the potential to improve predictive accuracy. This study seeks to compare machine learning models, specifically random forests and gradient boosted machines (GBM), with traditional univariate time series models to predict daily ED visits at St. Joseph Mercy Ann Arbor. We hypothesize that machine learning models will outperform univariate time series models by leveraging additional features and capturing more complex relationships in the data.
+In recent years, machine learning has emerged as a promising alternative to traditional time series models. By incorporating multiple variables and learning complex patterns in the data, machine learning models have the potential to improve predictive accuracy. A fair comparison between machine-learning and time-series models must hold the forecast target, horizon, training window, and information set fixed. A model with weather and calendar covariates is not directly comparable with a deliberately univariate baseline unless the purpose is explicitly to measure the value of those additional predictors.
 
 ## 2. Methods
 
 ### 2.1. Data Collection
 
-The dataset used for this study consists of daily ED visit records from St. Joseph Mercy Ann Arbor for the years 2017 and 2018. These records capture the number of patients who visited the emergency department each day, along with information such as the day of the week and whether the day was a holiday.
-
-To enhance the predictive power of machine learning models, additional external variables were collected, including weather data such as:
-
-- **Maximum Temperature**: Daily high temperatures, which may influence patient volumes due to weather-related health conditions like heat stroke or hypothermia.
-- **Surface (SFC) Pressure**: Atmospheric pressure, which has been associated with health conditions such as headaches or respiratory issues.
-- **Humidity**: The amount of moisture in the air, which can exacerbate conditions like asthma or other respiratory problems.
-- **Precipitation**: Rain or snow, which may lead to accidents or falls, resulting in increased ED visits.
-
-These weather variables were obtained from the National Weather Service for the same time period. This allowed for the creation of a richer dataset, combining both hospital ED data and external environmental factors that could influence visit patterns.
+This article does not include the underlying hospital dataset or a reproducible data source for the claimed 2017–2019 experiment. The previous version nevertheless presented institution-specific results as though they had been reproduced here. Those claims should not be treated as evidence. The defensible content is the design of a forecasting comparison.
 
 ### 2.2. Time Series Models
 
@@ -90,41 +81,48 @@ To assess model performance, the **root mean squared error (RMSE)** was used as 
 
 One advantage of machine learning models over traditional time series models is the ability to assess the importance of different features in making predictions. By analyzing the trained random forest and GBM models, we can determine which variables had the greatest influence on ED visit predictions. This feature importance analysis provides insights into which factors, beyond past ED visits, are most predictive of patient volume patterns.
 
-## 3. Results
+## 3. What a Reproducible Comparison Should Report
 
-### 3.1. Predictive Performance
+A valid benchmark should publish, for every model and forecast horizon:
 
-The performance of each model was assessed based on its ability to predict daily ED visit volumes in the 2019 test dataset. The results, measured using RMSE, are summarized below:
+- the exact training and test dates;
+- all features available at each forecast origin;
+- hyperparameter-tuning procedure;
+- rolling-origin or blocked evaluation design;
+- point and probabilistic forecast metrics;
+- uncertainty in score differences.
 
-- **Random Forest**: The random forest model produced the lowest RMSE, indicating that it was the most accurate at predicting ED visit volumes in the test set. By incorporating both past visit data and external variables, the random forest was able to capture complex patterns in the data that the univariate time series models missed.
-  
-- **Gradient Boosted Machines (GBM)**: The GBM model also performed well, achieving a slightly higher RMSE than random forest but still outperforming the time series models. GBM's ability to iteratively correct prediction errors made it particularly effective at capturing non-linear relationships in the data.
-  
-- **Exponential Smoothing (ETS)**: Among the time series models, ETS performed the best. Although it did not include external features, its ability to model seasonality and trends allowed it to produce reasonably accurate predictions.
-  
-- **Prophet**: The Prophet model performed moderately well, capturing some seasonal patterns but not to the same extent as the machine learning models.
-  
-- **ARIMA**: The ARIMA model had the highest RMSE, indicating that it struggled to capture the underlying patterns in ED visit volumes. This result suggests that ARIMA's reliance solely on past visit data limited its predictive power in this context.
+For point forecasts, MAE and RMSE answer different loss questions. For staffing decisions, quantile loss can be more useful because underforecasting and overforecasting may have asymmetric costs.
 
-### 3.2. Feature Importance in Machine Learning Models
+A strong baseline set includes:
 
-An analysis of feature importance in the random forest model revealed several key insights:
+$$
+\hat y_{t+h}=y_t
+$$
 
-- **Day of the Week**: The day of the week was the most important predictor of ED visit volumes, with significantly higher patient loads on weekdays compared to weekends. This finding is consistent with known patterns in hospital operations, where non-emergency visits tend to increase during weekdays when primary care facilities are open.
+for persistence where meaningful, seasonal naive forecasts such as
 
-- **Maximum Temperature**: Weather-related variables, particularly maximum daily temperature, were also important predictors. Extreme heat or cold can lead to health issues that result in higher ED visits, such as heatstroke in the summer or respiratory issues in the winter.
+$$
+\hat y_{t+h}=y_{t+h-s},
+$$
 
-- **Surface Pressure**: Surface atmospheric pressure emerged as another important feature, possibly due to its association with certain health conditions like migraines and respiratory issues.
+and a well-tuned exponential-smoothing or regression-with-ARIMA-errors model.
 
-This feature importance analysis highlights the ability of machine learning models to incorporate and learn from multiple factors, leading to more accurate predictions than time series models that rely solely on past ED visits.
+Machine-learning models should use lagged demand features and external covariates only when those covariates are genuinely known at the forecast origin.
+
+### Feature importance is not causal explanation
+
+Random-forest or boosting feature importance measures predictive contribution inside a fitted model. They do not establish that temperature, pressure, or weekday **causes** ED volume changes.
+
+Correlated predictors can split importance unpredictably, and impurity-based importance can be biased toward high-cardinality or noisy continuous variables.
+
+Permutation importance or SHAP values can describe model dependence, but causal interpretation still requires a causal design.
 
 ## 4. Discussion
 
 ### 4.1. Comparison of Model Performance
 
-The results of this study support the hypothesis that machine learning models can outperform traditional univariate time series models in predicting ED visit volumes. By incorporating additional features such as weather variables and day of the week, the random forest and GBM models were able to capture patterns that the time series models missed. However, the improvement in predictive accuracy was modest, suggesting that time series models still have value, particularly in settings where external data is not available or where simpler models are preferred.
-
-The random forest model was the most accurate overall, likely due to its ability to handle large datasets and capture non-linear relationships between features. The GBM model performed slightly worse but still outperformed the time series models. Surprisingly, ETS performed well relative to the machine learning models, suggesting that time series models with well-defined seasonal patterns can still provide accurate forecasts.
+Without the original data, fitted models, and numerical results, this article cannot support a claim that random forest or GBM outperformed ARIMA, ETS, or Prophet. The appropriate conclusion is methodological: flexible models can exploit external predictors and nonlinear interactions, while statistical time-series models provide strong structured baselines. Which performs better is an empirical question for a reproducible rolling-origin benchmark.
 
 ### 4.2. Practical Implications
 
@@ -138,9 +136,7 @@ Future research should explore the use of more advanced machine learning techniq
 
 ## 5. Conclusions
 
-This study compared machine learning models (random forest and GBM) with traditional univariate time series models (ARIMA, ETS, and Prophet) for predicting daily ED visit volumes at St. Joseph Mercy Ann Arbor. The results show that machine learning models, particularly random forest, outperformed time series models in terms of predictive accuracy, though the improvement was modest. The day of the week and weather-related variables were found to be important predictors of ED visits, highlighting the advantages of incorporating external factors into predictive models.
-
-While machine learning models provide a slight edge in accuracy, time series models like ETS still performed well and may be sufficient in some cases. Further research is needed to refine these models and explore additional features that could improve predictions. In practice, accurate ED visit forecasts can help hospitals allocate resources more effectively, ultimately improving patient care and operational efficiency.
+Emergency-department forecasting should be evaluated as an operational forecasting problem, not as a contest between “machine learning” and “time series.” The strongest model is the one that produces calibrated, reproducible forecasts at the horizons that staffing and capacity decisions actually use. Claims of superiority require the data and results to be published or reproducible.
 
 ## References
 

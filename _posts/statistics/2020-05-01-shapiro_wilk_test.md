@@ -31,7 +31,7 @@ tags:
 title: 'Shapiro-Wilk Test vs. Anderson-Darling Test: Checking Normality in Data'
 ---
 
-In statistics, the assumption of **normality** is critical for many parametric tests, such as t-tests and ANOVA. When this assumption is violated, the results of these tests can become unreliable, leading to incorrect conclusions. As such, it is important to test whether the data follows a normal distribution before applying parametric methods.
+Normality matters differently across statistical procedures. In regression and ANOVA the relevant assumption concerns model errors conditional on predictors or groups, not whether the pooled raw outcome has a bell-shaped histogram. A normality test should therefore not be used as a mechanical gatekeeper before choosing a statistical procedure.
 
 Two of the most commonly used tests for checking normality are the **Shapiro-Wilk test** and the **Anderson-Darling test**. Both tests assess whether a dataset is consistent with a normal distribution, but they differ in their methodologies and sensitivity to different aspects of the data.
 
@@ -41,7 +41,7 @@ This article provides a detailed comparison of the Shapiro-Wilk and Anderson-Dar
 
 ## Why Check for Normality?
 
-Many statistical methods, especially **parametric tests** (e.g., t-tests, ANOVA, regression), rely on the assumption that the data is normally distributed. A **normal distribution** is symmetrical, with most data points clustering around the mean and fewer data points appearing at the extremes (forming the characteristic bell curve).
+Many normal-theory methods make assumptions about errors, residuals, or sampling distributions rather than about the marginal distribution of every observed response. The object to diagnose depends on the model.
 
 If the data is not normally distributed, applying parametric tests could lead to:
 
@@ -88,8 +88,8 @@ Where:
 
 ### Interpretation of Shapiro-Wilk Test Results
 
-- **p > 0.05**: Fail to reject the null hypothesis, meaning there is insufficient evidence to suggest the data is not normally distributed.
-- **p < 0.05**: Reject the null hypothesis, suggesting that the data significantly deviates from a normal distribution.
+- **p > 0.05**: fail to reject exact normality; this does not establish that the population is normal.
+- **p < 0.05**: the sample provides evidence against exact normality under the test assumptions.
 
 ---
 
@@ -176,11 +176,7 @@ Choosing between the Shapiro-Wilk and Anderson-Darling tests depends on several 
 
 The results of normality tests guide the choice between **parametric** and **non-parametric** statistical methods:
 
-1. **If the data is normally distributed (p > 0.05)**:
-   - You can proceed with **parametric tests** such as t-tests, ANOVA, and Pearson correlation. These tests are more powerful and provide more precise estimates when the normality assumption holds.
-
-2. **If the data is not normally distributed (p < 0.05)**:
-   - You should consider using **non-parametric tests** such as the Wilcoxon signed-rank test, Mann-Whitney U test, or Kruskal-Wallis test. These tests do not assume normality and are better suited for skewed or ordinal data.
+Do not switch procedures solely because a normality test crosses 0.05. Start from the estimand and design. If the target is a mean, preserve a mean-based method where possible; if the target is a median or rank contrast, use a method built for that quantity. Residual plots and sensitivity analyses are usually more informative than a normality threshold alone.
 
 ---
 

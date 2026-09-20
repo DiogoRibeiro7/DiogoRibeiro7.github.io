@@ -56,7 +56,7 @@ In this formula:
 - **False Positives (FP):** The number of times the model incorrectly classifies a negative instance as positive.
 - **True Negatives (TN):** The number of times the model correctly classifies a negative instance as negative.
 
-FPR ranges from 0 to 1. A score of 0 means there are no false alarms (i.e., the model never falsely predicts a positive), while a score of 1 indicates that all negative instances were incorrectly classified as positive. An FPR close to 0 is ideal in many situations, especially where false positives can incur significant costs or risks.
+FPR ranges from 0 to 1 and conditions on the actually negative cases. An FPR of 0 means none of the observed negatives were classified positive at that threshold; an FPR of 1 means all negatives were. A small FPR can still create a large false-alert burden when the negative population is large.
 
 ## Importance of the FPR in Model Evaluation
 
@@ -152,7 +152,7 @@ Specificity can be thought of as the inverse of FPR, as it quantifies the model'
 
 ## Visualizing FPR: ROC and Precision-Recall Curves
 
-One of the most common ways to visualize the trade-offs between FPR and other metrics is through the **Receiver Operating Characteristic (ROC) curve**. This plot charts the TPR against the FPR at various classification thresholds. Each point on the curve corresponds to a specific threshold, and the closer the curve is to the top-left corner, the better the model performs. The **Area Under the ROC Curve (AUC-ROC)** provides a summary statistic of how well the model distinguishes between classes.
+The ROC curve plots TPR against FPR as the threshold varies. Each point is a different operating policy. ROC AUC summarizes ranking across thresholds, but it does not select a threshold and can hide weak performance in the low-FPR region that may matter operationally.
 
 A related visualization is the **Precision-Recall (PR) curve**, which plots precision against recall (TPR). While the ROC curve is informative for balanced datasets, the PR curve is more useful for imbalanced datasets where the number of negative instances far outweighs positive ones.
 
@@ -377,3 +377,25 @@ This R code provides a practical approach for calculating and visualizing the Fa
 5. **"ROC Analysis in the Evaluation of Machine Learning Algorithms" by Andrew P. Bradley**  
    This article thoroughly examines the use of ROC analysis, with a strong focus on FPR and its trade-offs with other metrics like TPR, discussing how ROC curves are used to evaluate and compare machine learning algorithms.
    - *Bradley, A. P. (1997). The use of the area under the ROC curve in the evaluation of machine learning algorithms. Pattern Recognition, 30(7), 1145-1159. doi:10.1016/S0031-3203(96)00142-2*
+
+
+## FPR is not the fraction of alerts that are false
+
+False positive rate is
+
+$$
+P(\hat Y=1\mid Y=0).
+$$
+
+The fraction of positive predictions that are false is instead $FP/(TP+FP)=1-\mathrm{Precision}$.
+
+With prevalence $\pi$, true-positive rate $\mathrm{TPR}$, and false-positive rate $\mathrm{FPR}$,
+
+$$
+\mathrm{Precision}
+=
+\frac{\pi\,\mathrm{TPR}}
+{\pi\,\mathrm{TPR}+(1-\pi)\,\mathrm{FPR}}.
+$$
+
+Threshold choice should therefore be tied to prevalence, capacity, and the relative cost of false positives and false negatives.

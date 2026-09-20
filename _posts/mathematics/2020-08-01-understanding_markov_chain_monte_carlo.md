@@ -63,13 +63,13 @@ This property simplifies the modeling of the chain, as only the current state in
 
 **Monte Carlo methods** are a class of algorithms that rely on random sampling to estimate numerical quantities, typically integrals. In problems involving high-dimensional spaces, directly calculating integrals or probabilities is often impossible. Monte Carlo methods allow for numerical approximations through repeated random sampling.
 
-In essence, Monte Carlo techniques generate independent random samples from the probability distribution of interest. However, as the dimensionality of the space grows, these methods suffer from efficiency issues, making them impractical for very large-scale problems.
+Monte Carlo estimation often uses independent draws when direct sampling is available, but Monte Carlo is broader than independent sampling. High dimensionality does not make ordinary Monte Carlo automatically infeasible in the same exponential way as tensor-product quadrature; the difficulty depends on the target distribution and proposal mechanism.
 
 ### Combining the Two: MCMC
 
 Markov Chain Monte Carlo methods combine the principles of Markov chains and Monte Carlo techniques to produce correlated samples from a target distribution. Unlike traditional Monte Carlo methods where samples are independent, the samples in MCMC are autocorrelated, meaning each sample is dependent on the previous one.
 
-The key idea behind MCMC is to construct a Markov chain such that its stationary distribution (also called the equilibrium distribution) is the target distribution. Over time, the chain will "mix" and approximate the desired distribution, producing samples that represent the probability distribution accurately.
+The key idea behind MCMC is to construct a Markov chain such that its stationary distribution (also called the equilibrium distribution) is the target distribution. If the transition kernel has the target distribution as stationary and the chain is irreducible, aperiodic, and sufficiently well behaved, ergodic averages converge to target expectations. Stationarity alone is not enough to guarantee useful sampling from an arbitrary starting point.
 
 ### The Curse of Dimensionality
 
@@ -147,11 +147,11 @@ Gibbs sampling is particularly well-suited for models where the conditional dist
 
 The **random walk Monte Carlo** method is another form of MCMC, in which the steps taken in the chain are based on a random walk. The new position is proposed as a small perturbation of the current position, and this process is repeated to explore the space.
 
-Unlike independent random samples in traditional Monte Carlo integration, random walk samples are autocorrelated, meaning that each sample is dependent on the previous one. This autocorrelation can slow down the convergence of the chain, but it allows the algorithm to explore the probability space more efficiently than independent samples would in high-dimensional problems.
+Unlike independent random samples in traditional Monte Carlo integration, random walk samples are autocorrelated, meaning that each sample is dependent on the previous one. Autocorrelation reduces effective sample size. It is not an efficiency advantage over independent target draws; independent target samples would usually be preferable if they were available. MCMC is useful precisely because such direct sampling is often unavailable.
 
 ## Convergence and Mixing
 
-A key aspect of any MCMC method is how quickly the Markov chain converges to the target distribution. Once the chain reaches its **stationary distribution**, samples from the chain can be considered representative of the target distribution. However, this does not happen immediately, and a poorly constructed Markov chain may take a long time to converge.
+A key aspect of any MCMC method is how quickly the Markov chain converges to the target distribution. There is no observable moment at which a finite chain can be certified as having “reached” stationarity. Diagnostics assess mixing and between-chain consistency, but they cannot prove convergence from finite output. However, this does not happen immediately, and a poorly constructed Markov chain may take a long time to converge.
 
 The concept of **mixing** describes how well the chain explores the target distribution. A well-mixing chain quickly visits all regions of the probability space, whereas a poorly mixing chain may get stuck in certain regions and fail to represent the distribution accurately. The rate of convergence and mixing depends on factors such as the proposal mechanism, step size, and dimensionality of the problem.
 
@@ -161,7 +161,7 @@ To ensure the accuracy of MCMC methods, it is important to diagnose whether the 
 
 - **Trace plots**: A plot of the values of the chain over time can indicate whether the chain has stabilized around a particular region.
 - **Autocorrelation**: High autocorrelation between successive samples can indicate poor mixing.
-- **Gelman-Rubin diagnostic**: This diagnostic compares the variability within a single chain to the variability across multiple chains. If the chains are consistent with each other, this suggests that they have converged to the target distribution.
+- **Rank-normalized split-$\hat R$**: compares within- and between-chain variation across multiple chains. Values close to 1 are necessary but not sufficient evidence of good mixing. Effective sample size and trace behavior should be examined as well.
 
 ## Challenges and Improvements
 
@@ -251,7 +251,11 @@ def metropolis_hastings(target_dist, proposal_dist, initial_state, num_samples, 
         proposed_state = proposal_dist(current_state, step_size)
         
         # Compute the acceptance probability
-        acceptance_ratio = target_dist(proposed_state) / target_dist(current_state)
+        acceptance_ratio = min(
+            1.0,
+            target_dist(proposed_state)
+            / target_dist(current_state),
+        )
         
         # Accept or reject the proposed state
         if np.random.rand() < acceptance_ratio:
@@ -443,3 +447,21 @@ Here are some books, articles, and online resources for learning about Markov Ch
 2. **"A Visual Guide to Markov Chain Monte Carlo"** by Chi Feng  
    - **URL**: [https://chi-feng.github.io/mcmc-demo/](https://chi-feng.github.io/mcmc-demo/)  
    - **Description**: This interactive, visual tutorial explains MCMC methods with a focus on helping users intuitively understand the behavior of the algorithms.
+
+
+## Monte Carlo error and effective sample size
+
+Posterior uncertainty and Monte Carlo uncertainty are different. Even after the target distribution is correctly specified, finite MCMC output introduces simulation error.
+
+For a scalar estimand $E_\pi[g(X)]$, the Monte Carlo standard error depends on the autocorrelation of $g(X_t)$. A convenient summary is the effective sample size,
+
+$$
+ESS
+\approx
+\frac{N}
+{1+2\sum_{k\ge1}\rho_k}.
+$$
+
+Two chains with the same number of draws can therefore contain very different amounts of information.
+
+Warmup or burn-in should not be treated as a ritual number of iterations. Modern samplers use warmup to adapt tuning parameters, and diagnostics should be based on multiple chains, effective sample sizes, and convergence measures rather than “discard the first 10%.”
