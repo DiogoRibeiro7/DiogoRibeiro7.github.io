@@ -106,7 +106,7 @@ The simplest type of spline is the **linear spline**, where the data is fitted w
 
 **B-splines** (Basis splines) are a generalization of splines that provide even more control over the smoothness and flexibility of the curve. B-splines are defined by a set of basis functions, and the curve is formed as a linear combination of these basis functions.
 
-B-splines allow the user to control the **degree of smoothness** by adjusting the **order** of the spline and the **number of knots**. Unlike cubic splines, B-splines do not necessarily pass through all the data points, making them useful for **smoothing noisy data**.
+B-splines provide a basis for representing piecewise-polynomial curves. The degree and knot sequence control the flexibility of that basis, but the basis alone does not determine how much a fitted curve is smoothed. In regression, smoothing depends on how the basis coefficients are estimated, for example through a roughness penalty or regularization. B-spline regression therefore need not interpolate the observed data.
 
 **Use case**: B-splines are used in applications where you need more control over the degree of smoothing, such as in signal processing, computer graphics, and **curve fitting** when there is noise in the data.
 
@@ -211,8 +211,8 @@ plt.show()
 
 ### B-Spline Fitting with `scipy`
   
-  ```python
-  from scipy.interpolate import splrep, splev
+```python
+from scipy.interpolate import splrep, splev
 
 # Example data
 x = np.linspace(0, 10, 10)
@@ -235,8 +235,8 @@ plt.show()
 
 ### Spline Regression with `statsmodels`
   
-  ```python
-  import statsmodels.api as sm
+```python
+import statsmodels.api as sm
 from patsy import dmatrix
 
 # Generate synthetic data for regression
@@ -302,79 +302,25 @@ package main
 
 import (
     "fmt"
-    "gonum.org/v1/gonum/floats"
+
     "gonum.org/v1/gonum/interp"
-    "gonum.org/v1/plot"
-    "gonum.org/v1/plot/plotter"
-    "gonum.org/v1/plot/vg"
-    "math"
 )
 
 func main() {
-    // Example data points
     x := []float64{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-    y := make([]float64, len(x))
-    for i, v := range x {
-        y[i] = math.Sin(v) + 0.1*randFloat64() // Adding noise
+    y := []float64{0, 0.84, 0.91, 0.14, -0.75, -1, -0.75, 0.14, 0.91, 0.84, 0}
+
+    var spline interp.NaturalCubic
+    if err := spline.Fit(x, y); err != nil {
+        panic(err)
     }
 
-    // Fit cubic spline
-    spline := interp.Cubic{}
-    spline.Fit(x, y)
-
-    // Generate smoother points
-    xFine := linspace(0, 10, 100)
-    yFine := make([]float64, len(xFine))
-    for i, v := range xFine {
-        yFine[i] = spline.Predict(v)
-    }
-
-    // Plot the result
-    plotCubicSpline(x, y, xFine, yFine)
-}
-
-// Function to generate random noise
-func randFloat64() float64 {
-    return (2*math.RandFloat64() - 1) * 0.1
-}
-
-// linspace generates 'n' evenly spaced points between 'start' and 'end'
-func linspace(start, end float64, n int) []float64 {
-    result := make([]float64, n)
-    floats.Span(result, start, end)
-    return result
-}
-
-// plotCubicSpline plots the original data and the fitted cubic spline
-func plotCubicSpline(x, y, xFine, yFine []float64) {
-    p, _ := plot.New()
-    p.Title.Text = "Cubic Spline Interpolation"
-    p.X.Label.Text = "X"
-    p.Y.Label.Text = "Y"
-
-    // Plot original data
-    dataPoints := make(plotter.XYs, len(x))
-    for i := range x {
-        dataPoints[i].X = x[i]
-        dataPoints[i].Y = y[i]
-    }
-    scatter, _ := plotter.NewScatter(dataPoints)
-    scatter.GlyphStyle.Shape = draw.CircleGlyph{}
-    scatter.GlyphStyle.Radius = vg.Points(3)
-
-    // Plot cubic spline interpolation
-    splineLine := make(plotter.XYs, len(xFine))
-    for i := range xFine {
-        splineLine[i].X = xFine[i]
-        splineLine[i].Y = yFine[i]
-    }
-    line, _ := plotter.NewLine(splineLine)
-
-    // Add plots to plot
-    p.Add(scatter, line)
-    p.Save(6*vg.Inch, 6*vg.Inch, "cubic_spline.png")
+    xEval := 6.5
+    fmt.Printf("Spline evaluation at x = %.1f: y = %.4f\n", xEval, spline.Predict(xEval))
 }
 ```
+
+`NaturalCubic` is an interpolator: it passes through the supplied points. That is different from spline regression, where a spline basis is combined with an estimation criterion and, often, a smoothing penalty.
 
 ### B-Spline Fitting in Go (Manual Implementation)
 
@@ -393,7 +339,7 @@ func main() {
     y := []float64{0, 0.84, 0.91, 0.14, -0.75, -1, -0.75, 0.14, 0.91, 0.84, 0}
 
     // Create a cubic spline interpolator
-    spline := interp.Cubic{}
+    spline := interp.NaturalCubic{}
     spline.Fit(x, y)
 
     // Evaluate the spline at a new point
