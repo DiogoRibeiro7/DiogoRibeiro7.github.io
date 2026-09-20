@@ -46,7 +46,7 @@ That event was real.
 
 It was not the whole career.
 
-Johnson worked for NACA and NASA for 33 years, contributed to trajectory analysis, orbital mechanics, rendezvous calculations, navigation backup procedures, and research reports, and continued into the Space Shuttle and Earth-resources programs. NASA's own historical material documents that broader record. citeturn507390search0turn507390search1turn507390search2
+Johnson worked for NACA and NASA for 33 years, contributed to trajectory analysis, orbital mechanics, rendezvous calculations, navigation backup procedures, and research reports, and continued into the Space Shuttle and Earth-resources programs. NASA's own historical material documents that broader record.
 
 ## Early education
 
@@ -126,7 +126,7 @@ The output had operational consequences.
 
 Johnson performed trajectory analysis for Alan Shepard's 1961 Freedom 7 flight, the first American human spaceflight.
 
-NASA describes her role in determining the trajectory and working backward from desired landing conditions to launch requirements. citeturn507390search0turn507390search1
+NASA describes her role in determining the trajectory and working backward from desired landing conditions to launch requirements.
 
 For a suborbital mission, a simplified trajectory problem still requires linking:
 
@@ -146,7 +146,7 @@ Atmospheric drag, Earth rotation, launch geometry, and mission constraints compl
 
 Johnson and engineer Ted Skopinski coauthored the 1960 report *Determination of Azimuth Angle at Burnout for Placing a Satellite Over a Selected Earth Position*.
 
-NASA notes that this was the first time a woman in the Flight Research Division received credit as an author of a research report. citeturn507390search1turn507390search2
+NASA notes that this was the first time a woman in the Flight Research Division received credit as an author of a research report.
 
 The problem concerns orbital insertion geometry.
 
@@ -164,7 +164,7 @@ By 1962, NASA used electronic computers for orbital calculations.
 
 John Glenn's Friendship 7 mission would make him the first American to orbit Earth.
 
-NASA records that Glenn asked for Johnson to check the electronic-computer trajectory calculations manually before the flight. citeturn507390search0turn507390search1turn507390search4
+NASA records that Glenn asked for Johnson to check the electronic-computer trajectory calculations manually before the flight.
 
 The importance of this episode is often misdescribed.
 
@@ -186,7 +186,7 @@ Independent calculation is still a standard technique in safety-critical numeric
 
 Johnson later worked on Apollo mission calculations.
 
-When NASA asked her to identify her greatest contribution, she pointed to calculations used to synchronize the lunar module with the command and service module in lunar orbit. citeturn507390search1turn507390search2
+When NASA asked her to identify her greatest contribution, she pointed to calculations used to synchronize the lunar module with the command and service module in lunar orbit.
 
 Rendezvous is a relative-motion problem.
 
@@ -212,7 +212,7 @@ A trajectory that crosses the same point at the wrong time is useless.
 
 ## Apollo 11 and backup navigation
 
-NASA states that Johnson calculated the trajectory for Apollo 11 and developed backup navigational charts for astronauts in case of electronic failures. citeturn507390search2turn507390search5
+NASA states that Johnson calculated the trajectory for Apollo 11 and developed backup navigational charts for astronauts in case of electronic failures.
 
 The distinction between primary and backup navigation matters.
 
@@ -224,7 +224,7 @@ That is reliability engineering expressed through mathematics.
 
 ## Apollo 13
 
-NASA also notes that work on backup parameters and charts contributed to procedures available during the Apollo 13 emergency. citeturn507390search2
+NASA also notes that work on backup parameters and charts contributed to procedures available during the Apollo 13 emergency.
 
 It is too strong to say Johnson personally “saved Apollo 13.”
 
@@ -238,7 +238,7 @@ That is both historically defensible and sufficiently important.
 
 Johnson later worked on the Space Shuttle program, the Earth Resources Technology Satellite program, and other guidance and control problems.
 
-NASA credits her with authoring or coauthoring 26 research reports over her career. citeturn507390search1turn507390search6
+NASA credits her with authoring or coauthoring 26 research reports over her career.
 
 This broader record matters because public retellings can reduce her to one calculation checked for John Glenn.
 
@@ -310,8 +310,8 @@ Her career does not need to be turned into a generic story about “genius” or
 
 ## References
 
-- NASA. *Katherine Johnson Biography*. Langley Research Center. citeturn507390search1
-- NASA Science. *Katherine Johnson (1918–2020)*. citeturn507390search0
-- NASA. *Katherine G. Johnson*. citeturn507390search2
+- NASA. *Katherine Johnson Biography*. Langley Research Center.
+- NASA Science. *Katherine Johnson (1918–2020)*.
+- NASA. *Katherine G. Johnson*.
 - Johnson, K. G., & Skopinski, T. H. (1960). *Determination of Azimuth Angle at Burnout for Placing a Satellite Over a Selected Earth Position*. NASA/NACA technical report.
 - Shetterly, M. L. (2016). *Hidden Figures*. William Morrow.
