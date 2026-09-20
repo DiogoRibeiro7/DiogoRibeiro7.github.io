@@ -51,7 +51,7 @@ In business datasets, it’s common to encounter categorical variables with a fe
 
 Rare labels in categorical variables can cause several issues:
 
-1. **Overfitting**: Tree-based models like decision trees or random forests tend to overfit to rare labels. Since rare categories appear infrequently, the model may split on them to perfectly predict the few observations in the training set, but this introduces noise and reduces generalization to unseen data.
+1. **High-variance category effects**: estimates associated with rare categories are based on few observations and can therefore be unstable. Some tree models may isolate them, but the problem is not unique to trees. Since rare categories appear infrequently, the model may split on them to perfectly predict the few observations in the training set, but this introduces noise and reduces generalization to unseen data.
 
 2. **Noisy Information**: A large number of infrequent labels can add noise to the model without providing useful information. Instead of contributing meaningful signals, these labels make the model more complex and prone to overfitting.
 
@@ -126,9 +126,9 @@ data[categorical_var] = data[categorical_var].map(freq_map)
 For regression problems, target encoding replaces each category with the mean of the target variable (e.g., `y`) for that category. This provides a smoother representation of rare categories.
 
 ```python
-# Target encoding
-mean_target = data.groupby(categorical_var)['y'].mean()
-data[categorical_var] = data[categorical_var].map(mean_target)
+# Naive target encoding on the full dataset leaks the target.
+# Fit encodings inside each training fold, preferably with smoothing
+# or out-of-fold estimates. Do not compute them once before validation.
 ```
 
 4. **One-Hot Encoding with Threshold**
@@ -147,8 +147,14 @@ data[categorical_var] = np.where(data[categorical_var].isin(top_categories),
                                  'Other')
 
 # Apply one-hot encoding
-encoder = OneHotEncoder(sparse=False)
-encoded_vars = encoder.fit_transform(data[[categorical_var]])
+encoder = OneHotEncoder(
+    handle_unknown="infrequent_if_exist",
+    min_frequency=0.01,
+    sparse_output=False,
+)
+encoded_vars = encoder.fit_transform(
+    data[[categorical_var]]
+)
 ```
 
 ## Conclusion
@@ -162,3 +168,14 @@ In the Mercedes-Benz Greener Manufacturing Challenge, for example, properly hand
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
 - Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
 - Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+
+
+## Frequency thresholds belong inside the training pipeline
+
+The set of categories considered rare must be learned from the training data only. Computing frequencies on the full dataset leaks information about the validation or test distribution.
+
+The same rule applies to target encoding, grouping into "Other", and selecting top categories.
+
+For high-cardinality features, consider regularized target encoders, hashing, learned embeddings, or hierarchical models. The right choice depends on whether category identity has stable meaning at deployment.
+
+Rare does not mean unimportant. A rare category can carry strong signal, so grouping should be validated out of sample rather than applied by rule.
