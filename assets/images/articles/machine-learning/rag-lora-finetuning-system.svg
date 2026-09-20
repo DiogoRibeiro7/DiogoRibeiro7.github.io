@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 620" role="img" aria-labelledby="title desc">
+  <title id="title">Where RAG, fine-tuning, LoRA and QLoRA intervene in an LLM system</title>
+  <desc id="desc">RAG changes inference-time context through retrieval. Fine-tuning changes model parameters. LoRA and QLoRA are parameter-efficient fine-tuning methods that modify low-rank adapters while keeping most base weights frozen.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="55" y="80" width="210" height="90" rx="12"/>
+    <rect x="350" y="80" width="240" height="90" rx="12"/>
+    <rect x="675" y="80" width="260" height="90" rx="12"/>
+    <rect x="1020" y="80" width="250" height="90" rx="12"/>
+    <path d="M265 125 H345" marker-end="url(#arrow)"/>
+    <path d="M590 125 H670" marker-end="url(#arrow)"/>
+    <path d="M935 125 H1015" marker-end="url(#arrow)"/>
+
+    <rect x="350" y="245" width="240" height="90" rx="12"/>
+    <path d="M470 245 V175" marker-end="url(#arrow)"/>
+
+    <rect x="675" y="250" width="260" height="90" rx="12"/>
+    <path d="M805 250 V175" marker-end="url(#arrow)"/>
+
+    <rect x="675" y="405" width="260" height="105" rx="12"/>
+    <path d="M805 405 V345" marker-end="url(#arrow)"/>
+  </g>
+
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="currentColor" text-anchor="middle">
+    <text x="160" y="118" font-size="24" font-weight="600">User query</text>
+    <text x="160" y="148" font-size="17">x</text>
+
+    <text x="470" y="112" font-size="24" font-weight="600">Prompt context</text>
+    <text x="470" y="143" font-size="17">instructions + retrieved evidence</text>
+
+    <text x="805" y="112" font-size="24" font-weight="600">LLM</text>
+    <text x="805" y="143" font-size="17">parameters θ</text>
+
+    <text x="1145" y="118" font-size="24" font-weight="600">Response</text>
+    <text x="1145" y="148" font-size="17">y</text>
+
+    <text x="470" y="280" font-size="24" font-weight="600">RAG</text>
+    <text x="470" y="311" font-size="17">retriever + external knowledge store</text>
+
+    <text x="805" y="285" font-size="24" font-weight="600">Fine-tuning</text>
+    <text x="805" y="316" font-size="17">updates model behaviour or knowledge</text>
+
+    <text x="805" y="440" font-size="24" font-weight="600">LoRA / QLoRA</text>
+    <text x="805" y="472" font-size="17">low-rank trainable adapters</text>
+    <text x="805" y="497" font-size="17">base weights mostly frozen</text>
+
+    <text x="1125" y="285" font-size="18" text-anchor="start">RAG changes <tspan font-weight="600">what the model sees</tspan>.</text>
+    <text x="1125" y="320" font-size="18" text-anchor="start">Fine-tuning changes <tspan font-weight="600">the model itself</tspan>.</text>
+    <text x="1125" y="355" font-size="18" text-anchor="start">LoRA changes <tspan font-weight="600">how the update is represented</tspan>.</text>
+  </g>
+</svg>
