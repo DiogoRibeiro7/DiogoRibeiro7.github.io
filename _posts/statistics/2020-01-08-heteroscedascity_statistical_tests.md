@@ -5,144 +5,350 @@ categories:
 - Statistics
 classes: wide
 date: '2020-01-08'
-excerpt: Heteroscedasticity can affect regression models, leading to biased or inefficient
-  estimates. Here's how to detect it and what to do when it's present.
+excerpt: Heteroskedasticity changes the conditional variance of regression errors. It does not by itself bias OLS coefficients when the conditional mean is correctly specified, but it changes efficiency and invalidates naive standard errors.
 header:
-  image: /assets/images/headers/photo-statistics-bell-curve.jpg
-  og_image: /assets/images/headers/photo-statistics-bell-curve.jpg
-  overlay_image: /assets/images/headers/photo-statistics-bell-curve.jpg
+  image: /assets/images/headers/photo-statistics-regression-errors.jpg
+  og_image: /assets/images/headers/photo-statistics-regression-errors.jpg
+  overlay_image: /assets/images/headers/photo-statistics-regression-errors.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-statistics-bell-curve.jpg
-  twitter_image: /assets/images/headers/photo-statistics-bell-curve.jpg
-keywords:
-- Econometrics
-- Regression diagnostics
-- White test
-- Heteroscedasticity
-- Breusch-pagan test
-seo_description: Learn about heteroscedasticity, the statistical tests to detect it,
-  and steps to take when it is present in regression analysis.
-seo_title: 'Heteroscedasticity: Tests and How to Fix It'
+  teaser: /assets/images/headers/photo-statistics-regression-errors.jpg
+  twitter_image: /assets/images/headers/photo-statistics-regression-errors.jpg
+seo_description: Heteroskedasticity explained through conditional variance, Breusch-Pagan and White tests, robust covariance estimators, weighted least squares, and model misspecification.
+seo_title: 'Heteroskedasticity: What Changes and What Does Not'
 seo_type: article
-summary: Explore heteroscedasticity in regression analysis, its consequences, how
-  to test for it, and practical solutions for correcting it when detected.
+summary: A precise guide to heteroskedastic regression errors, diagnostics, robust inference, and the distinction between variance misspecification and conditional-mean misspecification.
 tags:
 - Regression
 - Economics
-title: 'Heteroscedasticity: Statistical Tests and Solutions'
+- Statistical Inference
+title: 'Heteroskedasticity: What Changes and What Does Not'
 ---
 
-Regression analysis is one of the most widely used tools in statistics and econometrics for examining relationships between variables. However, one critical assumption underlying regression models is homoscedasticity—meaning that the variance of errors or residuals remains constant across all levels of an independent variable. When this assumption is violated, we encounter *heteroscedasticity*, a condition where the variance of residuals changes, potentially affecting the accuracy of the model. In this article, we will explore what heteroscedasticity is, the statistical tests used to detect it, and methods for dealing with it once it is found.
+Consider the linear conditional-mean model
 
-## Understanding Heteroscedasticity
+$$
+Y_i=X_i^\top\beta+\varepsilon_i,
+$$
 
-Heteroscedasticity occurs when the variability of the dependent variable differs across values of an independent variable. This can distort the results of regression analysis by leading to inefficient estimates and incorrect conclusions. In practical terms, this means that the spread or dispersion of residuals from a regression line is not constant but changes, often as a function of one or more independent variables.
+with
 
-In the context of Ordinary Least Squares (OLS) regression, homoscedasticity is assumed for the estimator to be the **Best Linear Unbiased Estimator (BLUE)**, which means the estimates are both efficient and unbiased. When heteroscedasticity is present, the efficiency of the OLS estimator declines, meaning that standard errors are miscalculated, and consequently, hypothesis tests (e.g., t-tests, F-tests) become unreliable.
+$$
+E(\varepsilon_i\mid X_i)=0.
+$$
 
-### Causes of Heteroscedasticity
+Homoskedasticity adds the assumption
 
-Heteroscedasticity can arise due to several factors:
+$$
+\operatorname{Var}(\varepsilon_i\mid X_i)
+=
+\sigma^2.
+$$
 
-- **Skewness in Variables:** A skewed distribution of one or more independent variables often results in non-constant variance.
-- **Omitted Variables:** Failing to include relevant variables in the model can lead to residual variance that increases or decreases with certain predictors.
-- **Measurement Errors:** Errors in measuring independent variables can propagate into the residuals, causing varying residual spread.
-- **Changing Relationships:** In some cases, the relationship between independent and dependent variables may shift across different subpopulations or over time, leading to changes in residual variance.
+Heteroskedasticity means instead that
 
-Understanding the source of heteroscedasticity is essential for interpreting and correcting it.
+$$
+\operatorname{Var}(\varepsilon_i\mid X_i)
+=
+\sigma_i^2
+$$
 
-## Statistical Tests for Heteroscedasticity
+depends on the observation or on predictors.
 
-Several statistical tests are available to detect heteroscedasticity in regression models. Below are some of the most commonly used tests:
+The distinction matters because heteroskedasticity is primarily a **variance-model problem**.
 
-### 1. **Breusch-Pagan Test**
+If the conditional mean is otherwise correctly specified, ordinary least squares does not suddenly become biased merely because the error variance changes.
 
-The **Breusch-Pagan Test** checks for heteroscedasticity by examining whether the squared residuals of a regression model are related to the independent variables. The null hypothesis of this test is that the error variance is constant (homoscedasticity). If the p-value is low, the null hypothesis is rejected, indicating the presence of heteroscedasticity.
+## What happens to OLS
 
-Mathematically, the Breusch-Pagan test can be derived from the following steps:
+The OLS estimator is
 
-1. Fit an OLS regression and compute the residuals.
-2. Regress the squared residuals on the independent variables.
-3. The test statistic follows a chi-square distribution with degrees of freedom equal to the number of independent variables.
+$$
+\hat\beta
+=
+(X^\top X)^{-1}X^\top Y.
+$$
 
-The test statistic is given by:
+Under conditional mean zero,
 
-$$ BP = \frac{n}{2} R^2 $$
+$$
+E(\hat\beta\mid X)=\beta
+$$
 
-Where:
+regardless of whether the covariance matrix is $\sigma^2I$.
 
-- $$ n $$ is the sample size.
-- $$ R^2 $$ is the coefficient of determination from the auxiliary regression.
+But the actual covariance is
 
-### 2. **White Test**
+$$
+\operatorname{Var}(\hat\beta\mid X)
+=
+(X^\top X)^{-1}
+X^\top\Omega X
+(X^\top X)^{-1},
+$$
 
-The **White Test** is a more general test for heteroscedasticity that also accounts for non-linearities and interactions among the independent variables. This test does not assume any particular functional form for the relationship between the errors and the predictors. Like the Breusch-Pagan test, the null hypothesis is that there is no heteroscedasticity.
+where
 
-The steps for conducting the White Test are as follows:
+$$
+\Omega
+=
+\operatorname{Var}(\varepsilon\mid X).
+$$
 
-1. Fit the original OLS regression and compute the residuals.
-2. Run an auxiliary regression of the squared residuals on all independent variables, their squared terms, and their cross-products.
-3. The test statistic follows a chi-square distribution.
+The usual homoskedastic formula
 
-White’s test is especially useful because it detects both heteroscedasticity and model specification errors simultaneously.
+$$
+\sigma^2(X^\top X)^{-1}
+$$
 
-### 3. **Goldfeld-Quandt Test**
+is therefore wrong when $\Omega$ is not proportional to the identity matrix.
 
-The **Goldfeld-Quandt Test** involves splitting the data into two parts and checking for differences in variance across the two groups. Typically, the data is ordered by the size of one independent variable, and the test checks whether the variance of residuals is larger in one segment compared to the other.
+That is why naive t-tests and confidence intervals can be miscalibrated.
 
-The procedure includes:
+## Gauss-Markov efficiency is also lost
 
-- Sorting data based on an independent variable.
-- Dropping a few middle observations to create two separate groups.
-- Comparing the variance of residuals in each group using an F-test.
+Under homoskedastic uncorrelated errors, OLS is BLUE: best among linear unbiased estimators.
 
-This test is more suited when heteroscedasticity is suspected in relation to a specific independent variable.
+With known heteroskedastic variances, generalized or weighted least squares can use that variance structure more efficiently.
 
-## What to Do When Heteroscedasticity Is Detected
+So two consequences should be separated:
 
-If heteroscedasticity is present, it can lead to inefficient estimates, biased standard errors, and incorrect statistical inferences. Fortunately, several corrective measures can be applied to mitigate the effects of heteroscedasticity:
+1. the ordinary homoskedastic variance estimator is wrong;
+2. OLS is no longer generally the most efficient linear unbiased estimator.
 
-### 1. **Transform the Dependent Variable**
+Neither statement implies automatic coefficient bias.
 
-One simple solution is to apply a transformation to the dependent variable to stabilize the variance. Common transformations include:
+## Residual plots are the first diagnostic
 
-- **Logarithmic Transformation**: Apply the natural logarithm to the dependent variable, which reduces the variability for larger values.
-  
-  $$ y' = \ln(y) $$
+Formal tests are useful, but a residual-versus-fitted plot often reveals more.
 
-- **Square Root Transformation**: Taking the square root of the dependent variable can similarly reduce heteroscedasticity.
+Patterns to look for include a funnel shape, variance increasing with the fitted mean, separate variance bands by group, curvature indicating mean-model misspecification, or isolated high-leverage observations.
 
-  $$ y' = \sqrt{y} $$
+A changing residual spread may arise because the variance truly changes.
 
-These transformations often help in reducing the spread of residuals.
+It may also be a symptom of a missing nonlinear term or omitted group structure.
 
-### 2. **Weighted Least Squares (WLS)**
+Diagnosing the mean and variance together is therefore important.
 
-**Weighted Least Squares (WLS)** is an alternative to OLS that assigns different weights to observations based on the variance of the residuals. If the variance of the residuals is larger for certain observations, smaller weights are applied to those observations. This method provides more accurate estimates in the presence of heteroscedasticity.
+## Breusch-Pagan test
 
-In WLS, the weight assigned to each observation is inversely proportional to the variance of the errors:
+The Breusch-Pagan idea is to model whether squared OLS residuals vary systematically with predictors.
 
-$$ w_i = \frac{1}{\hat{\sigma_i^2}} $$
+After fitting the original regression, an auxiliary regression is constructed for
 
-Where $$ w_i $$ is the weight for observation $$ i $$, and $$ \hat{\sigma_i^2} $$ is the estimated variance of the residuals.
+$$
+\hat\varepsilon_i^2.
+$$
 
-### 3. **Robust Standard Errors**
+A common LM form uses
 
-Another widely used approach is to adjust for heteroscedasticity by using **robust standard errors**, also known as **heteroscedasticity-consistent standard errors** (e.g., the **White’s robust standard errors**). These corrected standard errors allow for valid hypothesis testing and confidence interval estimation, even when heteroscedasticity is present.
+$$
+nR^2
+$$
 
-In software packages like R, Python, or Stata, robust standard errors can be easily computed, ensuring that the p-values and confidence intervals are adjusted appropriately.
+from that auxiliary regression and compares it asymptotically with a chi-square distribution whose degrees of freedom equal the number of variance regressors excluding the intercept.
 
-### 4. **Revisiting the Model Specification**
+The important point is that the test targets a specified form of variance dependence.
 
-In some cases, heteroscedasticity may be a sign that the model is misspecified. For example, relevant variables may have been omitted, or the functional form of the model might be incorrect. Revisiting the model specification and adding missing variables or adjusting the relationship between variables can sometimes resolve heteroscedasticity.
+A non-rejection does not establish homoskedasticity.
+
+A rejection does not identify the correct variance model.
+
+## White's test
+
+White's test uses a richer auxiliary regression containing original regressors, squares, and cross-products.
+
+This makes it sensitive to broader forms of heteroskedasticity.
+
+The flexibility also means that the auxiliary regression can absorb symptoms of mean-model misspecification.
+
+A rejection should therefore prompt inspection of the whole model, not merely replacement of the standard-error formula.
+
+## Why skewed predictors do not imply heteroskedasticity
+
+A predictor can be highly skewed while the conditional error variance remains constant.
+
+Likewise, a normally distributed predictor can have strongly heteroskedastic errors.
+
+Heteroskedasticity is a property of
+
+$$
+\operatorname{Var}(Y\mid X),
+$$
+
+not of the marginal shape of $X$ alone.
+
+The same warning applies to measurement error: predictor measurement error can bias coefficients through an errors-in-variables mechanism, but it does not mechanically imply heteroskedasticity.
+
+## Robust covariance estimators
+
+If the conditional mean model is the target and heteroskedasticity is the main concern, heteroskedasticity-consistent covariance estimators are often the simplest response.
+
+The sandwich form is
+
+$$
+\widehat{\operatorname{Var}}(\hat\beta)
+=
+(X^\top X)^{-1}
+X^\top\hat\Omega X
+(X^\top X)^{-1}.
+$$
+
+Different HC estimators differ in how $\hat\Omega$ corrects for leverage and finite-sample behavior.
+
+HC0 is the original large-sample form.
+
+HC1 applies a degrees-of-freedom adjustment.
+
+HC2 and HC3 increase the correction for high-leverage observations, with HC3 often preferred in smaller samples.
+
+The coefficient estimates remain the OLS coefficients.
+
+Only the estimated covariance changes.
+
+## Weighted least squares
+
+If the conditional variance is known up to a useful model,
+
+$$
+\operatorname{Var}(\varepsilon_i\mid X_i)
+=
+\sigma^2 v_i,
+$$
+
+then weighted least squares uses
+
+$$
+w_i\propto\frac{1}{v_i}.
+$$
+
+The estimator is
+
+$$
+\hat\beta_{WLS}
+=
+(X^\top W X)^{-1}
+X^\top W Y.
+$$
+
+This can improve efficiency substantially.
+
+But estimated weights can be wrong.
+
+A poorly specified variance model can make WLS less attractive than OLS with robust inference.
+
+## Transformations change the estimand
+
+Taking
+
+$$
+\log Y
+$$
+
+can sometimes stabilize variance, particularly when variability grows approximately in proportion to the mean.
+
+But this is not a free repair.
+
+A regression for
+
+$$
+E[\log Y\mid X]
+$$
+
+is not the same model as a regression for
+
+$$
+E[Y\mid X].
+$$
+
+Back-transforming fitted values also requires care because
+
+$$
+E[\exp(Z)]
+\neq
+\exp(E[Z])
+$$
+
+in general.
+
+Transformations should therefore be chosen because the transformed model is scientifically and statistically sensible, not merely because a residual plot looks cleaner.
+
+## Heteroskedasticity can be the model
+
+For positive outcomes, counts, durations, and other non-Gaussian responses, changing conditional variance may be expected.
+
+In a Poisson model,
+
+$$
+\operatorname{Var}(Y\mid X)
+=
+E(Y\mid X)
+$$
+
+under the basic specification.
+
+In a Gamma model, variance often scales with the square of the mean.
+
+Trying to remove heteroskedasticity from data generated by such mechanisms can miss the point.
+
+A generalized linear model may express the mean-variance relationship directly.
+
+## Reproducible Python example
+
+~~~python
+from __future__ import annotations
+
+import numpy as np
+import statsmodels.api as sm
+from statsmodels.stats.diagnostic import het_breuschpagan
+
+rng = np.random.default_rng(2026)
+
+n: int = 1_000
+x: np.ndarray = rng.uniform(0.0, 4.0, size=n)
+
+error_sd: np.ndarray = 0.5 + 0.8 * x
+epsilon: np.ndarray = rng.normal(
+    loc=0.0,
+    scale=error_sd,
+)
+
+y: np.ndarray = 1.0 + 2.0 * x + epsilon
+
+design = sm.add_constant(x)
+model = sm.OLS(y, design).fit()
+
+bp = het_breuschpagan(
+    model.resid,
+    model.model.exog,
+)
+
+robust = model.get_robustcov_results(
+    cov_type="HC3"
+)
+
+print("OLS parameters:", model.params)
+print("naive SE:", model.bse)
+print("HC3 SE:", robust.bse)
+print("Breusch-Pagan p-value:", bp[1])
+~~~
+
+The point estimates remain OLS estimates.
+
+The uncertainty calculation changes.
 
 ## Conclusion
 
-Heteroscedasticity is a common issue in regression analysis that can lead to inefficient estimates and unreliable hypothesis tests. Detecting it is essential to ensure the robustness of a model. Various tests, such as the Breusch-Pagan, White, and Goldfeld-Quandt tests, help in identifying heteroscedasticity. Once detected, corrective actions—such as transforming the dependent variable, applying Weighted Least Squares, or using robust standard errors—can be applied to mitigate its effects. Addressing heteroscedasticity is a critical step in ensuring that regression models remain accurate and reliable.
+Heteroskedasticity means that the conditional variance of the regression error is not constant.
+
+Its direct consequences are that the classical homoskedastic covariance formula is wrong, OLS loses Gauss-Markov efficiency, and naive significance tests may be miscalibrated.
+
+It does not, by itself, prove that the OLS coefficients are biased.
+
+The correct response depends on the objective: robust covariance estimation for inference, weighted least squares for a credible variance model, or a different mean-variance model when heteroskedasticity is part of the data-generating mechanism.
 
 ## References
 
-- Breusch, T. S., & Pagan, A. R. (1979). A simple test for heteroscedasticity and random coefficient variation. *Econometrica*, 47(5), 1287-1294.
-- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
-- White, H. (1980). A heteroskedasticity-consistent covariance matrix estimator and a direct test for heteroskedasticity. *Econometrica*, 48(4), 817-838.
+- Breusch, T. S., & Pagan, A. R. (1979). A simple test for heteroscedasticity and random coefficient variation. *Econometrica*, 47(5), 1287–1294.
+- White, H. (1980). A heteroskedasticity-consistent covariance matrix estimator and a direct test for heteroskedasticity. *Econometrica*, 48(4), 817–838.
+- MacKinnon, J. G., & White, H. (1985). Some heteroskedasticity-consistent covariance matrix estimators with improved finite sample properties. *Journal of Econometrics*, 29(3), 305–325.

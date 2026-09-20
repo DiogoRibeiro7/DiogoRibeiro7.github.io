@@ -69,10 +69,10 @@ A density is not a probability. It can exceed 1, and $P(X = x) = 0$ for every si
 Three distributions cover a surprising amount of applied work:
 
 - **Binomial.** The number of successes in $n$ independent trials each with success probability $p$: $P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}$. Conversion counts in an A/B test are binomial.
-- **Poisson.** The number of events in a fixed interval when events occur independently at constant average rate $\lambda$: $P(X = k) = e^{-\lambda}\lambda^k / k!$. Arrivals at a queue, defects per batch, and alerts per hour are all naturally Poisson.
+- **Poisson.** The number of events in a fixed interval under a Poisson-process model with independent increments and constant rate $\lambda$: $P(X = k) = e^{-\lambda}\lambda^k / k!$. Queue arrivals, defects per batch, or alerts per hour may be modeled this way when those assumptions are substantively plausible; they are not automatically Poisson merely because they are counts.
 - **Normal.** The bell curve, with density $f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-(x-\mu)^2/(2\sigma^2)}$. It earns its ubiquity from the Central Limit Theorem rather than from any claim that real data is normal.
 
-Knowing these distributions helps in selecting appropriate models and estimating parameters, but the choice should be driven by the mechanism generating the data. A Poisson model is appropriate because events are independent and rare, not because the histogram happens to look skewed.
+Knowing these distributions helps in selecting appropriate models and estimating parameters, but the choice should be driven by the mechanism generating the data. A Poisson model is appropriate when the event-count assumptions are defensible, not because a histogram happens to look skewed or because events are merely “rare.”
 
 ## Expectation and Variance
 
@@ -135,7 +135,7 @@ The sample means cluster tightly around the population mean with a spread close 
 
 Probability is notorious for producing answers that feel wrong. Two failures are worth internalising because they recur constantly in applied work.
 
-The first is ignoring base rates. A test that is 99% accurate for a condition affecting 1 in 10,000 people still produces mostly false positives, because the 1% error rate applies to a vastly larger healthy population than the 0.01% who are ill. Bayes' theorem makes this precise:
+The first is ignoring base rates. A diagnostic test described only as “99% accurate” is underspecified because sensitivity and specificity can differ. For example, a test with 99% sensitivity and 99% specificity applied to a condition affecting 1 in 10,000 people will still produce far more false positives than true positives. Bayes' theorem makes this precise:
 
 $$
 P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)} .

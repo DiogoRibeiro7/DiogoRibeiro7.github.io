@@ -4,7 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2020-01-04'
-excerpt: The multiple comparisons problem arises in hypothesis testing when performing multiple tests increases the likelihood of false positives. Learn about the Bonferroni correction and other solutions to control error rates.
+excerpt: Multiple testing is not one problem with one correction. Bonferroni and Holm control family-wise error, while Benjamini-Hochberg controls false discovery rate under different assumptions.
 header:
   image: /assets/images/headers/photo-statistics-normal-distribution.jpg
   og_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
@@ -14,318 +14,481 @@ header:
   teaser: /assets/images/headers/photo-statistics-normal-distribution.jpg
   twitter_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
 keywords:
-- Multiple comparisons problem
-- Bonferroni correction
-- Holm-bonferroni
-- False discovery rate
-- Hypothesis testing
-- Python
-seo_description: The multiple comparisons problem and its solutions, including Bonferroni, Holm-Bonferroni, and FDR, with applications in genetics.
-seo_title: The Multiple Comparisons Problem and Bonferroni
+- multiple testing
+- Bonferroni
+- Holm
+- false discovery rate
+- Benjamini-Hochberg
+permalink: '/statistics/multiple_comparisons_problem_bonferroni_correction_other_solutions/'
+seo_description: A rigorous guide to family-wise error, Bonferroni, Holm, false discovery rate, and the Benjamini-Hochberg procedure, including dependence assumptions and reproducible Python.
+seo_title: 'Multiple Testing: Bonferroni, Holm, and FDR'
 seo_type: article
-summary: This article explores the multiple comparisons problem in hypothesis testing, discussing solutions like the Bonferroni correction, Holm-Bonferroni method, and False Discovery Rate (FDR). It includes practical examples from experiments involving multiple testing, such as medical studies and genetics.
+summary: Multiple testing methods target different error criteria. This article derives family-wise error and false discovery rate, explains when Bonferroni, Holm, and Benjamini-Hochberg apply, and fixes common implementation mistakes.
 tags:
-- Python
-title: 'Multiple Comparisons Problem: Bonferroni Correction and Other Solutions'
+- Hypothesis Testing
+- Multiple Testing
+- Statistical Inference
+title: 'Multiple Testing: Bonferroni, Holm, and False Discovery Rate'
 ---
 
-## Introduction to the Multiple Comparisons Problem
+The phrase “multiple comparisons problem” hides several different inferential problems.
 
-In hypothesis testing, researchers often face the challenge of drawing conclusions from multiple tests. However, when conducting several tests simultaneously, the likelihood of making at least one false positive error (rejecting a true null hypothesis) increases. This is known as the **multiple comparisons problem** or **multiple testing problem**. Without addressing this issue, researchers risk reporting statistically significant findings that are actually due to chance rather than any meaningful effect.
+If we test many hypotheses, we need to decide what kind of error we want to control.
 
-The multiple comparisons problem is particularly prevalent in fields like medical research, psychology, and genetics, where multiple hypotheses are tested at once. For instance, in a clinical trial evaluating the effects of a drug on several different health outcomes, performing separate tests on each outcome inflates the chance of obtaining spurious results.
+Possible targets include:
 
-In this article, we will explain the multiple comparisons problem, discuss solutions like the **Bonferroni correction**, **Holm-Bonferroni method**, and **False Discovery Rate (FDR)**, and explore real-world applications of these methods in multiple testing scenarios.
+- the probability of at least one false rejection;
+- the expected proportion of false rejections among all rejections;
+- the average false-positive rate per test;
+- or a decision-theoretic loss that weighs different mistakes differently.
 
-## The Multiple Comparisons Problem Explained
+Bonferroni, Holm, and Benjamini-Hochberg do not solve the same problem with different levels of aggressiveness.
 
-The **multiple comparisons problem** arises when multiple statistical tests are conducted on the same dataset. Each hypothesis test has a certain probability of a **Type I error**—incorrectly rejecting the null hypothesis when it is actually true. The more tests conducted, the higher the cumulative probability of making at least one false positive.
+They control different error criteria.
 
-### 1.1 Type I Error and Family-Wise Error Rate (FWER)
+## Family-wise error rate
 
-In hypothesis testing, the **Type I error rate** is denoted by $\alpha$, typically set at 0.05. This means there is a 5% chance of rejecting the null hypothesis when it is actually true. If only one test is performed, the Type I error rate is controlled. However, when multiple tests are conducted, the likelihood of making at least one Type I error increases dramatically.
+Suppose we test $m$ null hypotheses.
 
-The **family-wise error rate (FWER)** refers to the probability of making one or more Type I errors across all the hypothesis tests in a family of comparisons. For example, if 20 independent hypothesis tests are performed, the chance of making at least one false positive could be as high as:
+Let $V$ be the number of false rejections.
 
-$$
-\text{FWER} = 1 - (1 - \alpha)^m
-$$
-
-Where:
-
-- $\alpha$ is the significance level (e.g., 0.05).
-- $m$ is the number of comparisons.
-
-For $m = 20$ and $\alpha = 0.05$, the probability of at least one false positive is approximately 64%. Thus, the more comparisons made, the more likely it becomes to falsely reject a null hypothesis.
-
-## Bonferroni Correction: A Simple Solution
-
-The **Bonferroni correction** is one of the most widely used methods to address the multiple comparisons problem. It adjusts the significance level by dividing it by the number of comparisons made, ensuring that the overall family-wise error rate is controlled at a desired level (e.g., 0.05).
-
-### 2.1 How the Bonferroni Correction Works
-
-The Bonferroni correction adjusts the significance level for each individual test as follows:
+The family-wise error rate is
 
 $$
-\alpha_{adjusted} = \frac{\alpha}{m}
+\operatorname{FWER}
+=
+P(V\ge1).
 $$
 
-Where:
-
-- $\alpha$ is the desired family-wise error rate (e.g., 0.05).
-- $m$ is the number of comparisons.
-
-For example, if you are performing 10 hypothesis tests and want to maintain an overall significance level of 0.05, the Bonferroni correction adjusts the threshold for each individual test to:
+If all $m$ null hypotheses are true and the tests are independent with per-test Type I error $\alpha$, then
 
 $$
-\alpha_{adjusted} = \frac{0.05}{10} = 0.005
+\operatorname{FWER}
+=
+1-(1-\alpha)^m.
 $$
 
-Any p-value below this adjusted threshold is considered statistically significant.
+For
 
-### 2.2 Strengths and Limitations of the Bonferroni Correction
+$$
+m=20,
+\qquad
+\alpha=0.05,
+$$
 
-The main strength of the Bonferroni correction is its simplicity and robustness. It effectively controls the family-wise error rate, ensuring that the chance of making a Type I error remains low across multiple comparisons.
+this is
 
-However, the Bonferroni correction is **conservative**, especially when a large number of tests are involved. It can increase the likelihood of **Type II errors** (failing to reject the null hypothesis when it is false), as the stringent adjusted significance threshold may lead to rejecting true effects.
+$$
+1-0.95^{20}
+\approx
+0.642.
+$$
 
-## Holm-Bonferroni Method: A Stepwise Improvement
+That 64% calculation requires independence.
 
-The **Holm-Bonferroni method** is a stepwise procedure that improves on the Bonferroni correction by providing more power while still controlling the family-wise error rate.
+Without independence, the exact FWER is different.
 
-### 3.1 How the Holm-Bonferroni Method Works
+The multiple-testing problem remains, but the simple formula is no longer exact.
 
-In the Holm-Bonferroni method, the p-values from all hypothesis tests are sorted in ascending order. The significance level for each test is adjusted iteratively as follows:
+## Bonferroni control
 
-1. **Rank the p-values** from smallest to largest: $p_1, p_2, \dots, p_m$.
-2. **Compare each p-value** to its adjusted significance level:
-   - For the first test, use $\alpha / m$.
-   - For the second test, use $\alpha / (m - 1)$.
-   - Continue adjusting the threshold until all tests are compared.
+Bonferroni uses the union bound:
 
-If the first p-value is significant (i.e., $p_1 < \alpha / m$), reject the null hypothesis for that test and proceed to the next one, comparing $p_2$ with $\alpha / (m - 1)$, and so on. The procedure stops when a test is found to be non-significant, and no further rejections are made.
+$$
+P\left(
+\bigcup_{i=1}^{m}
+\{\text{false rejection of }H_i\}
+\right)
+\le
+\sum_{i=1}^{m}
+P(\text{false rejection of }H_i).
+$$
 
-### 3.2 Advantages of the Holm-Bonferroni Method
+If each test is performed at level
 
-The Holm-Bonferroni method is **less conservative** than the standard Bonferroni correction, giving it more statistical power while still controlling the family-wise error rate. This makes it a better choice in many cases where multiple tests are conducted, especially when the number of comparisons is large.
+$$
+\frac{\alpha}{m},
+$$
 
-## False Discovery Rate (FDR): Controlling False Positives
+then
 
-The **False Discovery Rate (FDR)** is another approach to addressing the multiple comparisons problem, particularly in fields like genetics and bioinformatics, where thousands of hypotheses may be tested simultaneously. Unlike the Bonferroni correction, which controls the probability of making **any** false positive, the FDR focuses on controlling the proportion of false positives among all the rejected hypotheses.
+$$
+\operatorname{FWER}
+\le
+\alpha.
+$$
 
-### 4.1 Benjamini-Hochberg Procedure
+No independence assumption is required for this bound.
 
-The most common method for controlling the FDR is the **Benjamini-Hochberg procedure**. This method ranks the p-values from multiple tests and applies a less stringent correction than Bonferroni, allowing for a greater number of true positives to be identified while controlling the expected proportion of false positives.
+That robustness is the main strength of Bonferroni.
 
-The steps for the Benjamini-Hochberg procedure are:
+Its price is conservatism when the number of tests is large or when the dependence structure could be exploited more efficiently.
 
-1. **Rank the p-values** from smallest to largest: $p_1, p_2, \dots, p_m$.
-2. For each p-value, calculate the adjusted significance level using the formula:
-   $$
-   \alpha_{adjusted} = \frac{i}{m} \alpha
-   $$
-   Where $i$ is the rank of the p-value and $m$ is the total number of comparisons.
-3. Compare each p-value to its corresponding adjusted significance level. Reject the null hypothesis for all tests where the p-value is smaller than the adjusted threshold.
+## Adjusted p-values
 
-### 4.2 FDR vs. FWER
+Instead of comparing raw p-values with
 
-The FDR is less stringent than methods that control the family-wise error rate, such as the Bonferroni and Holm-Bonferroni corrections. This makes it more powerful when dealing with large numbers of comparisons, as it allows researchers to discover more true effects at the cost of allowing some false positives.
+$$
+\alpha/m,
+$$
 
-However, the FDR method is often more appropriate in exploratory research, where researchers expect to deal with large datasets and are willing to tolerate a controlled proportion of false discoveries.
+Bonferroni-adjusted p-values can be written as
 
-## Real-World Applications of Multiple Testing Corrections
+$$
+p_i^{adj}
+=
+\min(1,mp_i).
+$$
 
-### 5.1 Medical Research and Clinical Trials
+Reject when
 
-In medical research, multiple testing often occurs when researchers evaluate the effectiveness of a new drug across multiple outcomes, such as different health conditions, biomarkers, or patient subgroups. For instance, a clinical trial might test a new treatment's effect on blood pressure, cholesterol, and heart rate simultaneously. In this scenario, applying corrections like the Bonferroni method is crucial to avoid false positives.
+$$
+p_i^{adj}\le\alpha.
+$$
 
-#### Example
+The threshold and adjusted-p-value views are equivalent.
 
-A study might involve 10 different biomarkers tested for significance in response to a new drug. If each test is conducted at the $\alpha = 0.05$ level without correction, there is a significant risk of false positives. By applying the Bonferroni correction, researchers adjust the significance threshold to $\alpha / 10 = 0.005$, reducing the likelihood of incorrectly claiming effectiveness for biomarkers where no true effect exists.
+Adjusted p-values are often easier to report because they preserve a common significance threshold.
 
-### 5.2 Genetics and Genomics
+## Holm's sequential procedure
 
-The field of **genetics** frequently deals with massive datasets, where thousands of hypotheses are tested simultaneously. For example, a genome-wide association study (GWAS) might test for associations between genetic variants and a particular disease across the entire genome. In such cases, using a correction method like the False Discovery Rate (FDR) allows researchers to control the proportion of false positives while maximizing the number of true discoveries.
+Holm improves on ordinary Bonferroni while retaining strong FWER control.
 
-#### Example
+Sort the p-values:
 
-A GWAS study investigates associations between 500,000 genetic variants and the risk of developing diabetes. Given the large number of comparisons, the Bonferroni correction would be too conservative, and many true associations might be missed. Instead, researchers can apply the FDR to control the expected proportion of false positives, allowing for more discoveries while still limiting erroneous findings.
+$$
+p_{(1)}
+\le
+p_{(2)}
+\le
+\cdots
+\le
+p_{(m)}.
+$$
 
-### 5.3 Psychological Studies
+Compare sequentially:
 
-Psychological experiments often involve multiple dependent variables or conditions. For instance, a researcher might examine how a treatment affects different behavioral outcomes (e.g., mood, cognitive performance, and stress levels) in a single study. Applying multiple testing corrections ensures that findings are not merely the result of chance due to the large number of comparisons.
+$$
+p_{(1)}
+\le
+\frac{\alpha}{m},
+$$
+
+then
+
+$$
+p_{(2)}
+\le
+\frac{\alpha}{m-1},
+$$
+
+and so on.
+
+Stop at the first non-rejection.
+
+All later hypotheses remain unrejected.
+
+Holm is uniformly at least as powerful as single-step Bonferroni while making no stronger dependence assumption for FWER control.
+
+So when strong FWER control is required, Holm is often a better default than plain Bonferroni.
+
+## False discovery rate
+
+FWER asks whether **any** false discovery occurs.
+
+In high-dimensional exploratory problems, that can be too stringent.
+
+Let
+
+$$
+R
+$$
+
+be the total number of rejected hypotheses and
+
+$$
+V
+$$
+
+the number of false rejections.
+
+The false discovery proportion is
+
+$$
+\operatorname{FDP}
+=
+\frac{V}{\max(R,1)}.
+$$
+
+The false discovery rate is
+
+$$
+\operatorname{FDR}
+=
+E[\operatorname{FDP}].
+$$
+
+This is not the same as the probability that an individual rejected hypothesis is false.
+
+It is an expectation over the random set of rejections produced by the whole procedure.
+
+## Benjamini-Hochberg
+
+Let the ordered p-values be
+
+$$
+p_{(1)}
+\le
+\cdots
+\le
+p_{(m)}.
+$$
+
+For target FDR level $q$, find the largest index
+
+$$
+k
+=
+\max
+\left\{
+i:
+p_{(i)}
+\le
+\frac{i}{m}q
+\right\}.
+$$
+
+If such a $k$ exists, reject
+
+$$
+H_{(1)},\ldots,H_{(k)}.
+$$
+
+The phrase **largest index** is important.
+
+A common incorrect implementation tests each ordered p-value separately against its threshold and rejects only the positions satisfying the inequality.
+
+The correct step-up rule rejects every hypothesis up to the largest qualifying index.
+
+## Dependence assumptions for BH
+
+Under independent p-values for the true nulls, Benjamini-Hochberg controls FDR at the target level, with the familiar bound involving the proportion of true nulls.
+
+The procedure also has control under certain forms of positive dependence.
+
+Under arbitrary dependence, the original BH guarantee does not generally hold unchanged.
+
+The Benjamini-Yekutieli procedure modifies the thresholds using
+
+$$
+c_m
+=
+\sum_{i=1}^{m}\frac{1}{i}
+$$
+
+to obtain broader dependence robustness, at the cost of power.
+
+So “FDR correction works under any dependence” is too strong.
+
+## FWER and FDR answer different scientific questions
+
+Suppose a confirmatory clinical trial has one primary endpoint and several prespecified key secondary endpoints.
+
+A false positive anywhere in that confirmatory family may be costly.
+
+Strong FWER control can be appropriate.
+
+Now suppose a genomics experiment screens 20,000 genes to generate candidates for later validation.
+
+Allowing some false discoveries may be acceptable if the expected fraction is controlled.
+
+FDR can be much more useful.
+
+The choice is not
+
+> conservative method versus powerful method.
+
+It is
+
+> Which error criterion matches the inferential role of this family of hypotheses?
+
+## The family must be defined
+
+Multiplicity corrections apply to a **family** of hypotheses.
+
+That family is not determined automatically by software.
+
+If ten outcomes, four subgroups, three models, and several time points are all examined, which tests belong to the same inferential family depends on the scientific claims being made.
+
+Defining the family after seeing the p-values defeats much of the purpose of multiplicity control.
+
+Confirmatory analyses should define it in advance when possible.
+
+## Exploratory and confirmatory analyses should not be blurred
+
+Exploratory analyses can tolerate a different error structure from confirmatory claims.
+
+The problem arises when a broad exploratory search is conducted and only the smallest p-value is presented as though it came from one prespecified test.
+
+Multiplicity is then hidden rather than controlled.
+
+A transparent analysis reports the search space, the correction strategy, and which claims are confirmatory versus exploratory.
+
+## Reproducible Python
+
+Use a tested implementation rather than rewriting these procedures casually.
+
+~~~python
+from __future__ import annotations
+
+import numpy as np
+from statsmodels.stats.multitest import multipletests
+
+p_values: np.ndarray = np.array(
+    [0.001, 0.008, 0.012, 0.030, 0.20]
+)
+
+reject_bonf, p_bonf, _, _ = multipletests(
+    p_values,
+    alpha=0.05,
+    method="bonferroni",
+)
+
+reject_holm, p_holm, _, _ = multipletests(
+    p_values,
+    alpha=0.05,
+    method="holm",
+)
+
+reject_bh, p_bh, _, _ = multipletests(
+    p_values,
+    alpha=0.05,
+    method="fdr_bh",
+)
+
+print("Bonferroni:", reject_bonf, p_bonf)
+print("Holm:", reject_holm, p_holm)
+print("BH:", reject_bh, p_bh)
+~~~
+
+The returned adjusted p-values and rejection decisions preserve the original hypothesis order.
+
+That detail is easy to get wrong in hand-written implementations after sorting.
+
+## A transparent BH implementation
+
+For teaching, the step-up logic can be implemented explicitly.
+
+~~~python
+from __future__ import annotations
+
+import numpy as np
+from numpy.typing import NDArray
+
+BoolArray = NDArray[np.bool_]
+FloatArray = NDArray[np.float64]
+
+def benjamini_hochberg(
+    p_values: FloatArray,
+    q: float = 0.05,
+) -> BoolArray:
+    if p_values.ndim != 1:
+        raise ValueError(
+            "p_values must be one-dimensional."
+        )
+
+    if np.any(
+        (p_values < 0.0)
+        | (p_values > 1.0)
+    ):
+        raise ValueError(
+            "p-values must lie in [0, 1]."
+        )
+
+    if not 0.0 < q < 1.0:
+        raise ValueError(
+            "q must lie strictly between 0 and 1."
+        )
+
+    m: int = p_values.size
+
+    if m == 0:
+        return np.zeros(0, dtype=bool)
+
+    order = np.argsort(p_values)
+    sorted_p = p_values[order]
+
+    thresholds = (
+        np.arange(1, m + 1)
+        / m
+        * q
+    )
+
+    qualifying = np.flatnonzero(
+        sorted_p <= thresholds
+    )
+
+    reject_sorted = np.zeros(
+        m,
+        dtype=bool,
+    )
+
+    if qualifying.size > 0:
+        k: int = int(qualifying[-1])
+        reject_sorted[: k + 1] = True
+
+    reject = np.zeros(
+        m,
+        dtype=bool,
+    )
+
+    reject[order] = reject_sorted
+    return reject
+~~~
+
+The implementation deliberately rejects all ordered hypotheses up to the last qualifying index.
+
+## Power is not the only reason to prefer one correction
+
+Multiplicity procedures can encode structure.
+
+Gatekeeping procedures test secondary hypotheses only after primary success.
+
+Hierarchical procedures exploit ordered families.
+
+Closed testing can provide strong FWER control with logical relationships among hypotheses.
+
+Weighted procedures can allocate more Type I error to more important hypotheses when weights are prespecified.
+
+The number of tests alone does not determine the best correction.
 
 ## Conclusion
 
-The **multiple comparisons problem** presents a significant challenge in hypothesis testing, as performing multiple statistical tests increases the risk of false positives. To address this issue, researchers can apply various methods, such as the **Bonferroni correction**, **Holm-Bonferroni method**, or **False Discovery Rate (FDR)**, to control the family-wise error rate or the proportion of false discoveries.
+Multiple testing is a problem of defining an error criterion across a family of hypotheses.
 
-While the Bonferroni correction is simple and robust, it can be overly conservative, leading to missed true effects. Alternatives like Holm-Bonferroni and FDR offer more powerful solutions, particularly when dealing with a large number of comparisons. Each method has its strengths and is suited to different research contexts, from clinical trials to large-scale genetic studies.
+Bonferroni controls FWER through a union bound and requires no independence assumption for that guarantee.
 
-Understanding and applying the appropriate correction method is essential to ensure that research findings are both statistically valid and reliable, preventing spurious conclusions while allowing for meaningful discoveries.
+Holm improves power while retaining strong FWER control.
 
-## Appendix: Python Code Implementations Using Numpy
+Benjamini-Hochberg controls the expected false discovery proportion under its dependence conditions and is aimed at a different inferential objective.
 
-This appendix provides Python code implementations of the methods discussed in the article for addressing the multiple comparisons problem. The implementations use only **base Python** and **NumPy**, avoiding external libraries like `scipy` or `statsmodels` for simplicity.
+The central sequence is
 
-### 1. Bonferroni Correction
+$$
+\boxed{
+\text{define the family}
+\rightarrow
+\text{choose the error criterion}
+\rightarrow
+\text{choose the procedure}
+}
+$$
 
-The Bonferroni correction adjusts the significance level for each hypothesis test by dividing the desired family-wise error rate by the number of comparisons.
-
-```python
-import numpy as np
-
-def bonferroni_correction(p_values, alpha=0.05):
-    """
-    Applies Bonferroni correction to a list of p-values.
-    
-    Parameters:
-    p_values (list or np.array): Array of p-values from multiple tests.
-    alpha (float): Desired family-wise error rate (default is 0.05).
-    
-    Returns:
-    np.array: Array of booleans indicating whether each hypothesis is rejected (True) or not (False).
-    """
-    # Number of comparisons
-    m = len(p_values)
-    
-    # Adjusted alpha for each individual test
-    alpha_adjusted = alpha / m
-    
-    # Reject the null hypothesis if the p-value is less than the adjusted alpha
-    return p_values < alpha_adjusted
-
-# Example usage:
-p_values = np.array([0.01, 0.04, 0.03, 0.20, 0.002])
-print(bonferroni_correction(p_values))  # Output: [ True False False False  True ]
-```
-
-### 2. Holm-Bonferroni Method
-
-The Holm-Bonferroni method adjusts the significance level in a stepwise manner, providing more power than the Bonferroni correction.
-
-```python
-def holm_bonferroni(p_values, alpha=0.05):
-    """
-    Applies Holm-Bonferroni correction to a list of p-values.
-    
-    Parameters:
-    p_values (list or np.array): Array of p-values from multiple tests.
-    alpha (float): Desired family-wise error rate (default is 0.05).
-    
-    Returns:
-    np.array: Array of booleans indicating whether each hypothesis is rejected (True) or not (False).
-    """
-    # Number of comparisons
-    m = len(p_values)
-    
-    # Sort p-values and track their original order
-    sorted_indices = np.argsort(p_values)
-    sorted_p_values = p_values[sorted_indices]
-    
-    # Apply Holm-Bonferroni procedure
-    rejections = np.zeros(m, dtype=bool)
-    for i in range(m):
-        alpha_adjusted = alpha / (m - i)
-        if sorted_p_values[i] < alpha_adjusted:
-            rejections[sorted_indices[i]] = True
-        else:
-            break
-    
-    return rejections
-
-# Example usage:
-p_values = np.array([0.01, 0.04, 0.03, 0.20, 0.002])
-print(holm_bonferroni(p_values))  # Output: [ True False False False  True ]
-```
-
-### 3. Benjamini-Hochberg Procedure (FDR)
-
-The Benjamini-Hochberg procedure controls the False Discovery Rate (FDR) and is more lenient than methods controlling the family-wise error rate.
-
-```python
-def benjamini_hochberg(p_values, alpha=0.05):
-    """
-    Applies the Benjamini-Hochberg procedure to control the false discovery rate.
-    
-    Parameters:
-    p_values (list or np.array): Array of p-values from multiple tests.
-    alpha (float): Desired false discovery rate (default is 0.05).
-    
-    Returns:
-    np.array: Array of booleans indicating whether each hypothesis is rejected (True) or not (False).
-    """
-    # Number of comparisons
-    m = len(p_values)
-    
-    # Sort p-values and track their original order
-    sorted_indices = np.argsort(p_values)
-    sorted_p_values = p_values[sorted_indices]
-    
-    # Compute the threshold for each p-value
-    thresholds = np.arange(1, m + 1) / m * alpha
-    
-    # Find the largest p-value that is smaller than its threshold
-    rejections = np.zeros(m, dtype=bool)
-    for i in range(m - 1, -1, -1):
-        if sorted_p_values[i] <= thresholds[i]:
-            rejections[sorted_indices[:i + 1]] = True
-            break
-    
-    return rejections
-
-# Example usage:
-p_values = np.array([0.01, 0.04, 0.03, 0.20, 0.002])
-print(benjamini_hochberg(p_values))  # Output: [ True  True  True False  True ]
-```
-
-### 4. Family-Wise Error Rate (FWER) Calculation
-
-You can also calculate the family-wise error rate based on the number of tests and a desired significance level.
-
-```python
-def family_wise_error_rate(m, alpha=0.05):
-    """
-    Calculates the family-wise error rate (FWER) for m independent tests.
-    
-    Parameters:
-    m (int): Number of hypothesis tests.
-    alpha (float): Significance level for each test (default is 0.05).
-    
-    Returns:
-    float: The family-wise error rate.
-    """
-    return 1 - (1 - alpha) ** m
-
-# Example usage:
-m = 10  # Number of tests
-alpha = 0.05
-print(family_wise_error_rate(m, alpha))  # Output: 0.40126306076162115
-```
-
-### 5. Example: Applying Multiple Corrections to a Dataset
-
-Here is an example of applying all three methods (Bonferroni, Holm-Bonferroni, and Benjamini-Hochberg) to the same set of p-values:
-
-```python
-p_values = np.array([0.01, 0.04, 0.03, 0.20, 0.002])
-
-# Bonferroni correction
-bonferroni_results = bonferroni_correction(p_values)
-print("Bonferroni Correction:", bonferroni_results)
-
-# Holm-Bonferroni method
-holm_bonferroni_results = holm_bonferroni(p_values)
-print("Holm-Bonferroni Correction:", holm_bonferroni_results)
-
-# Benjamini-Hochberg procedure (FDR)
-benjamini_hochberg_results = benjamini_hochberg(p_values)
-print("Benjamini-Hochberg (FDR):", benjamini_hochberg_results)
-```
-
-This appendix provides base Python implementations of multiple testing corrections using `NumPy`. These corrections (Bonferroni, Holm-Bonferroni, and Benjamini-Hochberg) are essential for controlling Type I error rates and ensuring the validity of results when conducting multiple hypothesis tests in experiments.
+Applying a correction without defining those first two pieces is only mechanical p-value processing.
 
 ## References
 
-- Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. *Journal of the Royal Statistical Society: Series B*, 57(1), 289-300.
-- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
-- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
+- Bonferroni, C. E. (1936). Teoria statistica delle classi e calcolo delle probabilità. *Pubblicazioni del R Istituto Superiore di Scienze Economiche e Commerciali di Firenze*, 8, 3–62.
+- Holm, S. (1979). A simple sequentially rejective multiple test procedure. *Scandinavian Journal of Statistics*, 6(2), 65–70.
+- Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. *Journal of the Royal Statistical Society: Series B*, 57(1), 289–300.
+- Benjamini, Y., & Yekutieli, D. (2001). The control of the false discovery rate in multiple testing under dependency. *Annals of Statistics*, 29(4), 1165–1188.

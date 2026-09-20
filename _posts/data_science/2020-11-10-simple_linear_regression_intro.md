@@ -46,7 +46,7 @@ $$
 
 Here $\beta_0$ is the intercept, $\beta_1$ is the slope, and $\varepsilon_i$ captures everything the line does not explain. The quantities $\beta_0$ and $\beta_1$ are unknown population parameters; what we compute from data are estimates $\hat{\beta}_0$ and $\hat{\beta}_1$.
 
-It is worth being precise about what is assumed random. The predictor $x_i$ is treated as fixed; the randomness lives entirely in $\varepsilon_i$. This is why regression of $y$ on $x$ and regression of $x$ on $y$ give different lines rather than algebraic rearrangements of each other.
+It is worth being precise about the conditioning convention. Classical derivations often condition on the observed predictor values and treat $x_i$ as fixed, but regression can also be formulated with random predictors. What matters for the standard slope interpretation is the conditional mean model $E(Y\mid X=x)=\beta_0+\beta_1x$. Regressing $y$ on $x$ and regressing $x$ on $y$ still give different lines because least squares minimizes vertical residuals in the chosen response variable.
 
 ## The Least Squares Method
 
@@ -85,11 +85,11 @@ The cost is sensitivity to outliers. A residual twice as large contributes four 
 Four conditions underpin the standard inferential results:
 
 - **Linearity.** The relationship between $x$ and $E[y]$ is genuinely a straight line. If it curves, the fitted slope is a weighted average of local slopes and may describe no part of the data well.
-- **Independence.** Observations do not influence each other. Time-ordered or clustered data usually violates this, which deflates standard errors and produces spuriously narrow confidence intervals.
+- **Dependence structure.** Standard textbook standard errors assume independent errors. Time-ordered or clustered data can violate this; depending on the correlation structure, naive standard errors may be too small or too large. The coefficient estimates can still be useful under suitable exogeneity conditions, but inference must account for the dependence.
 - **Constant variance.** The spread of residuals does not depend on $x$. When it does, the coefficient estimates stay unbiased but their standard errors are wrong.
 - **Normal errors.** Needed for exact $t$ and $F$ inference in small samples. In large samples the Central Limit Theorem makes this the least critical of the four.
 
-Notice that only the first two threaten the coefficient estimates themselves. Failures of the last two corrupt the uncertainty around them, which is often the part people actually rely on.
+These failures do not separate cleanly into “coefficient problems” and “standard-error problems.” Nonlinearity changes the estimand represented by the fitted slope; dependence can affect consistency when it is tied to omitted dynamics or endogeneity; heteroscedasticity primarily breaks the usual variance formula when the conditional mean is otherwise correct; and non-normality mainly matters for exact small-sample inference. Each assumption should be tied to the conclusion it supports.
 
 Residual plots are the fastest diagnostic. Plotting residuals against fitted values should produce a structureless band; a curve indicates a linearity problem, and a funnel shape indicates non-constant variance.
 
@@ -129,7 +129,7 @@ $$
 R^2 = 1 - \frac{\sum_i (y_i - \hat{y}_i)^2}{\sum_i (y_i - \bar{y})^2}
 $$
 
-reports the share of variance in $y$ the model accounts for. It is easy to over-read. A high $R^2$ is compatible with a badly misspecified model, a low $R^2$ is normal and acceptable in fields with intrinsically noisy outcomes, and $R^2$ never decreases when predictors are added, which makes it useless for model comparison.
+reports the share of variance in $y$ the model accounts for. It is easy to over-read. A high $R^2$ is compatible with a badly misspecified model, a low $R^2$ is normal and acceptable in fields with intrinsically noisy outcomes, and in ordinary least squares with an intercept $R^2$ never decreases when predictors are added. That makes raw $R^2$ a poor standalone criterion for comparing nested models because additional predictors are never penalized.
 
 The intercept deserves particular care. It is the expected response when $x = 0$, which is meaningless if zero lies far outside the observed range. Centring the predictor at its mean makes the intercept the expected response at average $x$, which is usually the more interpretable quantity.
 
