@@ -101,6 +101,22 @@ The screening article follows the same 1,000 synthetic people across five scenar
 
 ---
 
+## Modern unsupervised and semi-supervised paper queue — 20 September 2026
+
+These paper-driven drafts extend the current unsupervised and semi-supervised series into recent 2025–2026 work. They are article seeds with a development contract, mathematical angle, critical questions, source paper and reproducibility plan.
+
+| Draft | Source focus | State |
+| --- | --- | --- |
+| [Confidence Thresholds Should Control Pseudo-Label Error, Not Just Confidence](confidence-thresholds-should-control-pseudolabel-error.md) | Vishwakarma et al., ICML 2025 | structured draft |
+| [Does Classical Semi-Supervised Learning Still Help Once You Have a Foundation Model?](does-classical-ssl-still-help-with-foundation-models.md) | Zhang et al., 2025 | structured draft |
+| [Self-Supervised Representations Can Cluster Before We Ask Them To](self-supervised-representations-can-cluster-before-we-ask-them-to.md) | Weng et al., ICML 2025 / ReSA | structured draft |
+| [Diffusion Models Can Be Clusterers Too](diffusion-models-can-be-clusterers-too.md) | Uziel et al., ICML 2025 / CLUDI | structured draft |
+| [Token-Aware FixMatch Asks the Model to Find New Evidence](token-aware-fixmatch-asks-the-model-to-find-new-evidence.md) | He et al., 2026 / TA-FixMatch | structured draft |
+| [Long-Tailed Semi-Supervised Learning Is a Prior-Mismatch Problem Too](long-tailed-ssl-is-a-prior-mismatch-problem-too.md) | Hou & Jia, ICML 2025 / Meta-Expert | structured draft |
+| [Non-Stationary Pseudo-Labels May Carry More Boundary Information Than Stable Ones](non-stationary-pseudo-labels-may-carry-boundary-information.md) | Pei et al., ICML 2025 | structured draft |
+
+The UAI 2026 generalized risk-rewrite paper is already being developed as a dated article rather than remaining in this draft queue.
+
 # Priority A — development queue
 
 These topics have a precise question, a clear argument, and a natural connection to existing research or software work. Entries with full drafts retain their original development requirements for review; the remaining seeds are candidates to outline next.
