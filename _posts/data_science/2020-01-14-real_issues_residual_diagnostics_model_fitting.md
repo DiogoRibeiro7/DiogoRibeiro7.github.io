@@ -4,21 +4,25 @@ categories:
 - Data Science
 classes: wide
 date: '2020-01-14'
-excerpt: Residual diagnostics should target specific model assumptions: conditional mean, variance, dependence, tail behavior, leverage, and influence. A normality test alone cannot validate or invalidate a regression model.
+excerpt: >-
+  Residual diagnostics should target specific model assumptions: conditional
+  mean, variance, dependence, tail behavior, leverage, and influence. A
+  normality test alone cannot validate or invalidate a regression model.
 header:
-  image: /assets/images/headers/photo-statistics-residuals.jpg
-  og_image: /assets/images/headers/photo-statistics-residuals.jpg
-  overlay_image: /assets/images/headers/photo-statistics-residuals.jpg
+  image: /assets/images/headers/photo-statistics-regression-errors.jpg
+  og_image: /assets/images/headers/photo-statistics-regression-errors.jpg
+  overlay_image: /assets/images/headers/photo-statistics-regression-errors.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-statistics-residuals.jpg
-  twitter_image: /assets/images/headers/photo-statistics-residuals.jpg
+  teaser: /assets/images/headers/photo-statistics-regression-errors.jpg
+  twitter_image: /assets/images/headers/photo-statistics-regression-errors.jpg
 keywords:
 - residual diagnostics
 - regression diagnostics
 - heteroskedasticity
 - influence
 - normality
+permalink: '/data-science/real_issues_residual_diagnostics_model_fitting/'
 seo_description: Residual diagnostics explained through model assumptions, heteroskedasticity, dependence, leverage, influence, tail behavior, and predictive checks rather than a single normality test.
 seo_title: 'Residual Diagnostics: Diagnose the Assumption That Matters'
 seo_type: article
