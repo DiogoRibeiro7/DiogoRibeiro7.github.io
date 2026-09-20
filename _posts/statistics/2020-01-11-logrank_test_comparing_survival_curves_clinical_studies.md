@@ -5,123 +5,360 @@ categories:
 - Statistics
 classes: wide
 date: '2020-01-11'
-excerpt: The Log-Rank test is a vital statistical method used to compare survival
-  curves in clinical studies. This article explores its significance in medical research,
-  including applications in clinical trials and epidemiology.
+excerpt: The log-rank test compares event incidence over risk sets through time. Proportional hazards makes it especially powerful, but it is not the validity assumption usually claimed in textbook summaries.
 header:
-  image: /assets/images/headers/photo-statistics-chi-square.jpg
-  og_image: /assets/images/headers/photo-statistics-chi-square.jpg
-  overlay_image: /assets/images/headers/photo-statistics-chi-square.jpg
+  image: /assets/images/headers/photo-statistics-survival.jpg
+  og_image: /assets/images/headers/photo-statistics-survival.jpg
+  overlay_image: /assets/images/headers/photo-statistics-survival.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-statistics-chi-square.jpg
-  twitter_image: /assets/images/headers/photo-statistics-chi-square.jpg
+  teaser: /assets/images/headers/photo-statistics-survival.jpg
+  twitter_image: /assets/images/headers/photo-statistics-survival.jpg
 keywords:
-- Log-rank test
-- Survival curves
-- Clinical trials
-- Survival analysis
-- Medical statistics
-- Epidemiology
-redirect_from:
-- '/statistics/medical research/logrank_test_comparing_survival_curves_clinical_studies/'
-seo_description: A comprehensive guide to the Log-Rank test, a statistical tool for
-  comparing survival distributions in clinical trials and medical research.
-seo_title: 'Log-Rank Test: Comparing Survival Curves'
+- log-rank test
+- survival analysis
+- censoring
+- Kaplan-Meier
+- proportional hazards
+seo_description: A rigorous explanation of the log-rank test, its risk-set construction, censoring assumptions, proportional-hazards interpretation, and alternatives for crossing survival curves.
+seo_title: 'Log-Rank Test: What It Tests and When It Loses Power'
 seo_type: article
-summary: Discover how the Log-Rank test is used to compare survival curves in clinical
-  studies, with detailed insights into its applications in clinical trials, epidemiology,
-  and medical research.
+summary: A mathematical guide to the log-rank test that distinguishes validity assumptions from the proportional-hazards condition under which the test is especially efficient.
 tags:
 - Survival Analysis
-- Experimental Design
-- Healthcare
-- Epidemiology
-title: 'Log-Rank Test: Comparing Survival Curves in Clinical Studies'
+- Hypothesis Testing
+- Clinical Statistics
+title: 'Log-Rank Test: What It Tests and When It Loses Power'
 ---
 
-## Log-Rank Test: Comparing Survival Curves in Clinical Studies
+The log-rank test is often described as a nonparametric test of whether two survival curves are equal.
 
-Survival analysis is a critical component of medical and clinical research, especially in the context of evaluating treatments and interventions over time. In such studies, researchers are often interested in comparing the time until a specific event occurs (such as death, recurrence of disease, or recovery) between two or more groups. One of the most widely used statistical tools for this purpose is the **Log-Rank test**.
+That is broadly correct.
 
-The Log-Rank test is a non-parametric test used to compare the survival distributions of two or more groups. It is particularly important in clinical trials and epidemiological research, where it provides a way to determine whether there is a statistically significant difference in survival outcomes across different treatment groups.
+The usual explanation then adds that the log-rank test assumes proportional hazards.
 
-This article will provide an overview of the Log-Rank test, its methodology, assumptions, and applications in clinical and medical research, as well as its use in fields like epidemiology and cancer studies.
+That statement needs qualification.
 
+Proportional hazards is the setting in which the ordinary log-rank weighting is especially natural and powerful. Non-proportional hazards, such as crossing survival curves, can severely reduce power and make a single hazard-ratio summary misleading.
 
-## 2. The Basics of Survival Analysis
+But proportional hazards is not the same kind of validity condition as independent censoring.
 
-To understand the Log-Rank test, it is essential to have a basic grasp of **survival analysis**, a branch of statistics that deals with time-to-event data. Survival analysis is not only concerned with whether an event occurs, but also with when it occurs. 
+## Survival and hazard functions
 
-### Key Concepts in Survival Analysis:
+Let $T$ be an event time.
 
-- **Survival Time:** The time until the event of interest occurs. In clinical studies, this often refers to the time until death, disease recurrence, or recovery.
-- **Censoring:** Censoring occurs when the event of interest has not happened for some individuals by the end of the study period. These individuals are considered right-censored, meaning we know they have survived up to a certain point, but the exact time of the event is unknown.
-- **Survival Function (S(t)):** The survival function represents the probability that an individual will survive beyond a certain time $$ t $$. It is denoted as $$ S(t) = P(T > t) $$, where $$ T $$ is the random variable representing the survival time.
-- **Hazard Function (h(t)):** The hazard function represents the instantaneous rate of occurrence of the event at time $$ t $$, given that the individual has survived up to time $$ t $$.
+The survival function is
 
-Survival analysis typically involves the estimation of **survival curves**, which graphically depict the probability of survival over time for different groups. The Log-Rank test is a method to statistically compare these survival curves.
+$$
+S(t)
+=
+P(T>t).
+$$
 
+For a continuous event-time distribution, the hazard is
 
-## 4. Assumptions of the Log-Rank Test
+$$
+h(t)
+=
+\lim_{\Delta t\downarrow0}
+\frac{
+P(t\le T<t+\Delta t\mid T\ge t)
+}{
+\Delta t
+}.
+$$
 
-The Log-Rank test is a widely used method in survival analysis, but it is based on several important assumptions:
+The log-rank test compares groups by repeatedly contrasting the observed number of events with the number expected under a common event-rate structure among individuals currently at risk.
 
-### Assumptions:
+## Risk sets and expected events
 
-1. **Proportional Hazards Assumption:** The Log-Rank test assumes that the **hazard ratios** between the groups being compared are constant over time. This means that the relative risk of experiencing the event is the same at all points during the study period.
-   
-2. **Independent Censoring:** The censoring must be independent of the survival times. This implies that the reasons for censoring (e.g., individuals dropping out of the study or the study ending before they experience the event) are unrelated to their likelihood of experiencing the event.
-   
-3. **Non-informative Censoring:** Censoring should not provide any information about the likelihood of the event occurring. The censored individuals should have the same survival prospects as those who remain in the study.
+Consider two groups.
 
-4. **Random Sampling:** The test assumes that the groups being compared are randomly sampled from the population.
+At ordered event time $t_j$, let
 
-### Violations of Assumptions:
+$$
+Y_{1j},\quad Y_{0j}
+$$
 
-- **Non-proportional Hazards:** If the hazards are not proportional (e.g., if one group experiences higher event rates initially but lower rates later), the Log-Rank test may not be appropriate. In such cases, alternative tests like the **Wilcoxon (Breslow) test** or **Cox proportional hazards regression** might be more suitable.
-- **Dependent Censoring:** If censoring is related to the likelihood of experiencing the event, the test results may be biased.
+be the numbers at risk, and let
 
+$$
+d_{1j},\quad d_{0j}
+$$
 
-## 6. Interpreting Log-Rank Test Results
+be the numbers of observed events.
 
-Interpreting the results of a Log-Rank test involves examining the test statistic and the associated **p-value**. If the p-value is below a predefined significance level (commonly 0.05), the null hypothesis of equal survival distributions is rejected.
+Define
 
-### Example Interpretation:
+$$
+Y_j=Y_{1j}+Y_{0j},
+\qquad
+d_j=d_{1j}+d_{0j}.
+$$
 
-- **p-value < 0.05:** This suggests a significant difference in survival times between the groups, indicating that the treatment or exposure may have a statistically significant effect on survival.
-- **p-value > 0.05:** This indicates that there is no significant difference in survival distributions, and the null hypothesis cannot be rejected.
+Under the null of equal event hazards at that event time, the expected number of group-1 events is
 
-It is also important to consider **Kaplan-Meier survival curves** alongside the Log-Rank test results, as they provide a visual representation of the survival experience for each group.
+$$
+E_{1j}
+=
+d_j\frac{Y_{1j}}{Y_j}.
+$$
 
-### Caveats:
+The log-rank numerator accumulates
 
-- A significant result indicates a difference in survival distributions, but it does not provide information about the magnitude or clinical relevance of that difference.
-- Always report confidence intervals for survival estimates to provide context for the statistical significance.
+$$
+U
+=
+\sum_j
+(d_{1j}-E_{1j}).
+$$
 
+A variance estimate $V$ is constructed from the same risk sets, giving
 
-## 8. Alternatives to the Log-Rank Test
+$$
+Z
+=
+\frac{U}{\sqrt V},
+$$
 
-In cases where the Log-Rank test is not appropriate (e.g., when the proportional hazards assumption is violated), alternative methods include:
+which is asymptotically standard normal under the null.
 
-- **Cox Proportional Hazards Model:** A regression-based approach that can adjust for covariates and does not require the assumption of proportional hazards.
-- **Wilcoxon (Breslow) Test:** A variation of the Log-Rank test that gives more weight to early events.
-- **Aalen’s Additive Model:** A flexible alternative for modeling time-to-event data without assuming proportional hazards.
+For more than two groups, the vector form leads to a chi-square statistic.
 
----
+## What the null hypothesis means
 
-## 9. Conclusion and Future Directions
+A common formulation is equality of survival distributions:
 
-The Log-Rank test remains a cornerstone of survival analysis, especially in clinical trials and epidemiological research. Its ability to compare survival distributions across different groups makes it an invaluable tool for assessing the effectiveness of medical treatments, interventions, and public health measures. 
+$$
+H_0:
+S_1(t)=S_0(t)
+\quad
+\text{for all }t.
+$$
 
-However, as with any statistical method, the Log-Rank test has limitations that must be carefully considered, particularly regarding its assumptions about proportional hazards and independent censoring. In situations where these assumptions are violated, alternative methods such as Cox regression or Wilcoxon tests should be employed.
+For continuous distributions, equality of survival functions is equivalent to equality of hazard functions over the relevant time range.
 
-Future developments in survival analysis will likely focus on addressing these limitations, providing researchers with more flexible tools for analyzing complex, time-to-event data in clinical and epidemiological settings.
+The test is omnibus in the sense that systematic differences in event incidence can accumulate over time.
+
+But its weighting is not equally sensitive to every possible alternative.
+
+## Why proportional hazards matters
+
+Suppose
+
+$$
+h_1(t)
+=
+h_0(t)\exp(\beta).
+$$
+
+The hazard ratio
+
+$$
+\exp(\beta)
+$$
+
+is then constant over time.
+
+Against alternatives close to this proportional-hazards form, the standard log-rank test has strong efficiency properties.
+
+This is why proportional hazards appears so often in discussions of the test.
+
+Now consider crossing hazards:
+
+- treatment is beneficial early;
+- harmful later;
+- the two effects partly cancel in the accumulated log-rank score.
+
+The log-rank test can then have low power even when the survival curves differ substantially.
+
+That is a sensitivity problem, not proof that the p-value is automatically invalid.
+
+## Independent censoring is more fundamental
+
+Right censoring removes an individual from future risk sets.
+
+For standard survival inference, censoring must be independent of the future event process in the appropriate conditional sense.
+
+Informally, among individuals with the same relevant history, those censored at a given time should not have systematically different future event prospects from those remaining under observation.
+
+If high-risk patients preferentially drop out for reasons not captured in the analysis, the observed risk sets can become unrepresentative.
+
+That can bias both Kaplan-Meier estimates and group comparisons.
+
+This is a deeper problem than non-proportional hazards.
+
+## Administrative censoring is usually benign
+
+If a trial stops on a fixed calendar date, some participants are censored simply because they entered later.
+
+That is administrative censoring.
+
+When study entry and the administrative end date are appropriately handled, this mechanism is often plausibly non-informative.
+
+Loss to follow-up is more difficult because the reason for leaving may be related to health status.
+
+The censoring mechanism should therefore be described, not merely labeled.
+
+## A significant test does not estimate the size of the effect
+
+A log-rank p-value answers a global comparison question.
+
+It does not tell us the absolute survival difference at 1 year, the restricted mean survival time difference, the median survival difference, the hazard ratio, or whether the difference is clinically important.
+
+Kaplan-Meier curves and effect estimates should accompany the test.
+
+A survival-analysis report that gives only a p-value throws away most of the information.
+
+## Cox regression is not a remedy for non-proportional hazards
+
+A common recommendation is to use Cox regression when proportional hazards fails.
+
+That is backwards.
+
+The standard Cox proportional-hazards model assumes
+
+$$
+h(t\mid X)
+=
+h_0(t)\exp(X^\top\beta),
+$$
+
+which imposes time-constant hazard ratios for time-fixed coefficients.
+
+If hazards are non-proportional, an ordinary Cox model with a single coefficient can be misleading.
+
+Possible responses include time-varying coefficients, stratified Cox models for nuisance factors, piecewise effects, flexible parametric survival models, restricted mean survival time comparisons, or weighted log-rank tests chosen for the scientific alternative.
+
+The method should reflect the time pattern of the effect.
+
+## Weighted log-rank tests
+
+A general weighted statistic has the form
+
+$$
+U_w
+=
+\sum_j
+w(t_j)
+(d_{1j}-E_{1j}).
+$$
+
+The ordinary log-rank test uses approximately equal weight across event times in its score construction.
+
+Other choices emphasize early or late events.
+
+Fleming-Harrington weights can be written using the pooled Kaplan-Meier estimate $\hat S(t)$:
+
+$$
+w(t)
+=
+\hat S(t)^p
+\{1-\hat S(t)\}^q.
+$$
+
+Different $(p,q)$ values target different time regions.
+
+Choosing a weight after inspecting the curves, however, creates a multiplicity and selection problem.
+
+The weighting strategy should ideally be prespecified when confirmatory inference is intended.
+
+## Restricted mean survival time
+
+When hazards are non-proportional, a direct time-scale estimand can be more interpretable.
+
+For horizon $\tau$, the restricted mean survival time is
+
+$$
+\operatorname{RMST}(\tau)
+=
+\int_0^\tau S(t)\,dt.
+$$
+
+The difference
+
+$$
+\Delta_{\mathrm{RMST}}(\tau)
+=
+\operatorname{RMST}_1(\tau)
+-
+\operatorname{RMST}_0(\tau)
+$$
+
+has units of time.
+
+It answers how much additional event-free time is associated with one group compared with the other by time $\tau$.
+
+This remains meaningful when survival curves cross, provided the horizon is scientifically justified.
+
+## Interpreting a non-significant log-rank test
+
+If
+
+$$
+p>0.05,
+$$
+
+the conclusion is not that the survival curves are equal.
+
+It is that the observed log-rank statistic did not provide sufficient evidence against the null at that threshold.
+
+Low event counts, heavy censoring, crossing hazards, or a genuinely small difference can all produce a non-significant result.
+
+Effect estimates and confidence intervals are necessary to distinguish these possibilities.
+
+## Reproducible Python example
+
+~~~python
+from __future__ import annotations
+
+from lifelines import KaplanMeierFitter
+from lifelines.statistics import logrank_test
+
+time_a = [3, 5, 6, 8, 10, 12, 14, 16]
+event_a = [1, 1, 0, 1, 1, 0, 1, 0]
+
+time_b = [2, 4, 7, 7, 9, 11, 13, 15]
+event_b = [1, 1, 1, 0, 1, 1, 0, 1]
+
+test = logrank_test(
+    time_a,
+    time_b,
+    event_observed_A=event_a,
+    event_observed_B=event_b,
+)
+
+print(test.test_statistic)
+print(test.p_value)
+
+km_a = KaplanMeierFitter().fit(
+    time_a,
+    event_observed=event_a,
+    label="A",
+)
+
+km_b = KaplanMeierFitter().fit(
+    time_b,
+    event_observed=event_b,
+    label="B",
+)
+~~~
+
+The test should be interpreted together with the fitted survival curves and a relevant effect estimate.
+
+## Conclusion
+
+The log-rank test compares groups through observed-minus-expected event counts over successive risk sets.
+
+Its essential requirements concern valid group comparison and censoring.
+
+Proportional hazards is the alternative under which the standard test is particularly well matched and powerful, not a simplistic switch that makes the test valid or invalid.
+
+When hazards cross or effects change over time, the analysis should move beyond a single log-rank p-value and report time-specific or time-integrated effects that match the scientific question.
 
 ## References
 
-- Mantel, N. (1966). Evaluation of survival data and two new rank order statistics arising in its consideration. *Cancer Chemotherapy Reports*, 50(3), 163-170.
-- Wilcoxon, F. (1945). Individual comparisons by ranking methods. *Biometrics Bulletin*, 1(6), 80-83.
-- Cox, D. R. (1972). Regression models and life-tables. *Journal of the Royal Statistical Society: Series B*, 34(2), 187-220.
-- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
-- Kaplan, E. L., & Meier, P. (1958). Nonparametric estimation from incomplete observations. *Journal of the American Statistical Association*, 53(282), 457-481.
+- Mantel, N. (1966). Evaluation of survival data and two new rank order statistics arising in its consideration. *Cancer Chemotherapy Reports*, 50(3), 163–170.
+- Cox, D. R. (1972). Regression models and life-tables. *Journal of the Royal Statistical Society: Series B*, 34(2), 187–220.
+- Fleming, T. R., & Harrington, D. P. (1991). *Counting Processes and Survival Analysis*. Wiley.
+- Royston, P., & Parmar, M. K. B. (2011). The use of restricted mean survival time to estimate the treatment effect in randomized clinical trials when the proportional hazards assumption is in doubt. *Statistics in Medicine*, 30(19), 2409–2421.
