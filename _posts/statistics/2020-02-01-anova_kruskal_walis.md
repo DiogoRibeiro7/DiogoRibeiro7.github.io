@@ -71,13 +71,13 @@ not the other way around.
 
 ## Classical one-way ANOVA
 
-Suppose there are \(g\) independent groups,
+Suppose there are $g$ independent groups,
 
 $$
 Y_{ij}=\mu_i+\varepsilon_{ij},
 $$
 
-where \(i=1,\ldots,g\) indexes groups and \(j=1,\ldots,n_i\) indexes observations.
+where $i=1,\ldots,g$ indexes groups and $j=1,\ldots,n_i$ indexes observations.
 
 The classical one-way ANOVA null hypothesis is
 
@@ -109,7 +109,7 @@ $$
 \mathcal N(0,\sigma^2),
 $$
 
-the null distribution is an \(F\) distribution with \(g-1\) and \(N-g\) degrees of freedom.
+the null distribution is an $F$ distribution with $g-1$ and $N-g$ degrees of freedom.
 
 The null hypothesis is about means.
 
@@ -155,7 +155,7 @@ rather than changing to a rank estimand without noticing.
 
 The Kruskal-Wallis statistic is based on pooled ranks.
 
-Let \(R_{ij}\) denote the rank of observation \(Y_{ij}\) among all \(N\) observations and let \(\bar R_i\) be the mean rank in group \(i\). Ignoring the tie correction for notation, the statistic is
+Let $R_{ij}$ denote the rank of observation $Y_{ij}$ among all $N$ observations and let $\bar R_i$ be the mean rank in group $i$. Ignoring the tie correction for notation, the statistic is
 
 $$
 H
@@ -168,7 +168,7 @@ n_i
 \right)^2.
 $$
 
-Under the null hypothesis that the group distributions are the same, and under the usual regularity conditions, \(H\) is approximately chi-square with \(g-1\) degrees of freedom.
+Under the null hypothesis that the group distributions are the same, and under the usual regularity conditions, $H$ is approximately chi-square with $g-1$ degrees of freedom.
 
 The general null is therefore about equality of distributions,
 
