@@ -1,275 +1,404 @@
 ---
-permalink: '/statistics/chisquare_test_exploring_categorical_data_goodnessoffit/'
 author_profile: false
 categories:
 - Statistics
 classes: wide
 date: '2020-01-09'
-excerpt: This article delves into the Chi-Square test, a fundamental tool for analyzing
-  categorical data, with a focus on its applications in goodness-of-fit and tests
-  of independence.
+excerpt: Pearson's chi-square statistic compares observed counts with counts expected under a null model. The approximation depends on the sampling design and expected counts, and a significant result does not identify which cells drive the association.
 header:
-  image: /assets/images/headers/photo-statistics-boxplots.jpg
-  og_image: /assets/images/headers/photo-statistics-boxplots.jpg
-  overlay_image: /assets/images/headers/photo-statistics-boxplots.jpg
+  image: /assets/images/headers/photo-statistics-categorical.jpg
+  og_image: /assets/images/headers/photo-statistics-categorical.jpg
+  overlay_image: /assets/images/headers/photo-statistics-categorical.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-statistics-boxplots.jpg
-  twitter_image: /assets/images/headers/photo-statistics-boxplots.jpg
+  teaser: /assets/images/headers/photo-statistics-categorical.jpg
+  twitter_image: /assets/images/headers/photo-statistics-categorical.jpg
 keywords:
-- Chi-square test
-- Goodness-of-fit
-- Statistical testing
-- Categorical data analysis
-- Contingency tables
-- Independence testing
-- Python
-seo_description: A detailed exploration of the Chi-Square test, focusing on its application
-  in categorical data analysis, including goodness-of-fit and independence tests.
-seo_title: 'Chi-Square Test: Categorical Data & Goodness-of-Fit'
+- chi-square test
+- contingency tables
+- categorical data
+- goodness of fit
+- Cramer's V
+seo_description: Pearson chi-square goodness-of-fit and independence tests explained through expected counts, sampling models, residuals, effect sizes, and exact alternatives.
+seo_title: 'Chi-Square Tests: Expected Counts, Association, and Effect Size'
 seo_type: article
-summary: Learn about the Chi-Square test for categorical data analysis, including
-  its use in goodness-of-fit and independence tests, and how it's applied in fields
-  such as survey data analysis and genetics.
+summary: A rigorous guide to Pearson chi-square tests that derives the statistic, distinguishes goodness-of-fit from independence, and explains expected-count conditions, residual diagnostics, effect size, and exact tests.
 tags:
+- Categorical Data
 - Hypothesis Testing
-- Data Analysis
-- Python
-title: 'Chi-Square Test: Exploring Categorical Data and Goodness-of-Fit'
+- Statistics
+title: 'Chi-Square Tests: Expected Counts, Association, and Effect Size'
 ---
 
-## Chi-Square Test: Exploring Categorical Data and Goodness-of-Fit
+Pearson's chi-square statistic is one formula used in several related categorical-data tests.
 
-Statistical analysis is central to modern research across disciplines. A fundamental aspect of statistics is hypothesis testing, and one of the most widely used tools in this area is the **Chi-Square test**. The test is particularly useful when dealing with **categorical data**, allowing researchers to assess how well observed data fits a particular distribution or to evaluate relationships between categorical variables. 
-
-This article examines the workings of the Chi-Square test, covering its basic principles, various forms like the **goodness-of-fit test** and the **test of independence**, and its applications in fields such as survey data analysis, contingency tables, and genetics. The goal is to provide a thorough understanding of how this test operates and why it is so valuable for statisticians and researchers alike.
-
-## 1. What is the Chi-Square Test?
-
-The **Chi-Square test** (often denoted as χ² test) is a non-parametric statistical test used to examine the relationship between categorical variables. Unlike many statistical tests that assume a normal distribution or involve continuous data, the Chi-Square test is specifically designed for discrete, categorical data. It is useful in determining whether the distribution of observed data aligns with an expected distribution or whether two categorical variables are independent of each other.
-
-At its core, the Chi-Square test compares the **observed frequencies** in the data to the **expected frequencies** that would occur under a specific hypothesis. The basic logic behind the test is to measure how much deviation exists between what is actually observed in a dataset and what was expected under a null hypothesis, which usually assumes no effect or no relationship.
-
-The formula for the Chi-Square statistic is:
+The common structure is
 
 $$
-\chi^2 = \sum \frac{(O_i - E_i)^2}{E_i}
+X^2
+=
+\sum
+\frac{
+(O-E)^2
+}{
+E
+},
 $$
 
-Where:
+where $O$ is an observed count and $E$ is the count expected under a specified null model.
 
-- $$O_i$$ represents the observed frequency for the $$i$$-th category.
-- $$E_i$$ represents the expected frequency for the $$i$$-th category under the null hypothesis.
+The important part is not the formula.
 
-The calculated Chi-Square value is then compared to a critical value from the **Chi-Square distribution table** (based on the desired level of significance, usually 0.05, and the degrees of freedom), allowing us to either reject or fail to reject the null hypothesis.
+It is how the expected counts were obtained.
 
-### Key Concepts:
+## Goodness-of-fit
 
-- **Categorical Data**: Data that can be classified into categories, like "yes/no," "red/green/blue," or "high/medium/low."
-- **Observed Frequencies**: The actual number of occurrences recorded in each category of the data.
-- **Expected Frequencies**: The theoretical number of occurrences that should be observed under the null hypothesis.
+Suppose one categorical variable has $k$ categories.
 
-## 2. Types of Chi-Square Tests
-
-The Chi-Square test comes in different forms, depending on the type of hypothesis being tested. The two main types are:
-
-### Goodness-of-Fit Test
-
-The **Goodness-of-Fit test** is used when you want to see how well a sample fits a distribution from a population. It is used to compare the observed data to the expected data based on a particular hypothesis. The null hypothesis in this case usually assumes that the sample distribution matches the hypothesized distribution.
-
-#### Example:
-
-Suppose you have a die and want to test if it's fair. You roll it 60 times and observe the frequency of each face (1, 2, 3, 4, 5, 6). You can use a goodness-of-fit test to see if the observed frequencies align with the expected frequencies (which, for a fair die, should be 10 rolls per face, or 60 rolls equally divided by 6 faces).
-
-### Test of Independence
-
-The **Test of Independence** is applied when we want to assess whether two categorical variables are independent of each other. For example, you might want to know whether political affiliation is independent of gender, or whether smoking habits are independent of age groups.
-
-In this case, the test looks at the joint distribution of the two variables in a **contingency table**, comparing the observed counts with the counts we would expect if the variables were indeed independent.
-
-#### Example:
-
-You could survey 200 individuals to see if there's a relationship between gender (male/female) and preference for a particular product (Product A/Product B). The test of independence will help determine if gender influences product preference.
-
-### Relationship Between Goodness-of-Fit and Independence Tests
-
-Although they serve different purposes, both the goodness-of-fit test and the test of independence are based on the same principle—comparing observed data with expected data. The key difference lies in the nature of the data: the goodness-of-fit test focuses on one variable, while the test of independence involves two variables.
-
-## 3. Mathematical Foundation of the Chi-Square Test
-
-The Chi-Square test is fundamentally based on the **Chi-Square distribution**, which is a continuous probability distribution with values always greater than or equal to zero. It is skewed to the right, especially for smaller degrees of freedom, but as the degrees of freedom increase, the distribution approaches normality.
-
-### Chi-Square Formula
-
-As mentioned earlier, the formula for the Chi-Square statistic is:
+Let
 
 $$
-\chi^2 = \sum \frac{(O_i - E_i)^2}{E_i}
+O_1,\ldots,O_k
 $$
 
-This formula essentially measures the difference between observed values $$O_i$$ and expected values $$E_i$$, scaled by the expected values. Large differences between observed and expected values result in a larger Chi-Square statistic, which indicates that the null hypothesis is less likely to be true.
+be the observed counts and let the null model specify category probabilities
 
-### Degrees of Freedom
+$$
+p_1,\ldots,p_k,
+\qquad
+\sum_i p_i=1.
+$$
 
-The **degrees of freedom** (df) for a Chi-Square test depend on the number of categories or variables involved. In general:
+For total sample size $n$, the expected counts are
 
-- For a goodness-of-fit test, the degrees of freedom are calculated as:
-  
-  $$df = k - 1$$
-  
-  Where $$k$$ is the number of categories.
-  
-- For a test of independence, the degrees of freedom are calculated as:
-  
-  $$df = (r - 1) \times (c - 1)$$
-  
-  Where $$r$$ is the number of rows and $$c$$ is the number of columns in the contingency table.
+$$
+E_i=np_i.
+$$
 
-### Chi-Square Distribution
+Pearson's statistic is
 
-The Chi-Square distribution forms the basis for determining the **critical value** against which the calculated Chi-Square statistic is compared. This critical value is determined by the **degrees of freedom** and the **significance level** (often set at 0.05 or 5%).
+$$
+X^2
+=
+\sum_{i=1}^{k}
+\frac{
+(O_i-E_i)^2
+}{
+E_i
+}.
+$$
 
-For instance, if your calculated Chi-Square statistic exceeds the critical value for a given degrees of freedom and significance level, you reject the null hypothesis, suggesting that there is significant evidence to support the alternative hypothesis.
+If the null probabilities are fully specified and the usual asymptotic conditions hold,
 
-## 4. Assumptions and Conditions for Validity
+$$
+X^2
+\xrightarrow{d}
+\chi^2_{k-1}.
+$$
 
-Like any statistical test, the Chi-Square test has certain assumptions and conditions that must be met for the test results to be valid.
+If parameters used to compute $p_i$ are estimated from the same data, the degrees of freedom must be reduced accordingly and the ordinary reference distribution may require more care.
 
-### 1. Independence of Observations
+## Independence in a contingency table
 
-One of the most critical assumptions is that the observations in the dataset must be independent of each other. This means that each subject or unit in the data must only contribute to one category, and the presence of one unit in a category should not influence the presence of another.
+Now suppose two categorical variables form an $r\times c$ table.
 
-### 2. Expected Frequency Size
+Let
 
-The test works best when the expected frequencies in each category are sufficiently large. A common rule of thumb is that each expected frequency should be at least 5. If any expected frequency is smaller than 5, the Chi-Square test may not be appropriate, and alternative tests (such as Fisher's Exact Test) may be more suitable.
+$$
+O_{ij}
+$$
 
-### 3. Categorical Data
+be the observed count in row $i$, column $j$.
 
-The Chi-Square test is designed for categorical data—data that can be sorted into distinct categories or groups. This test does not apply to continuous data unless the continuous data has been converted into categories.
+Under independence,
 
-### 4. Sample Size
+$$
+P(A=i,B=j)
+=
+P(A=i)P(B=j).
+$$
 
-While the Chi-Square test is relatively robust to sample size, it can perform poorly with very small samples. Larger sample sizes generally provide more reliable results.
+The fitted expected count is
 
-## 5. Applications of the Chi-Square Test
+$$
+E_{ij}
+=
+\frac{
+(\text{row }i\text{ total})
+(\text{column }j\text{ total})
+}{
+n
+}.
+$$
 
-The Chi-Square test is applied in various fields, ranging from biology to social sciences. Its ability to test relationships between categorical variables makes it a powerful tool in many research domains.
+The statistic is
 
-### Survey Data Analysis
+$$
+X^2
+=
+\sum_{i=1}^{r}
+\sum_{j=1}^{c}
+\frac{
+(O_{ij}-E_{ij})^2
+}{
+E_{ij}
+}.
+$$
 
-In survey data, categorical questions are often used to gauge opinions, preferences, and demographics. The Chi-Square test helps determine if certain responses are significantly more or less common than expected or if there is an association between demographic factors and opinions.
+Under the usual asymptotic conditions,
 
-#### Example:
+$$
+X^2
+\xrightarrow{d}
+\chi^2_{(r-1)(c-1)}.
+$$
 
-Imagine a marketing survey that asks people which of three brands (Brand A, Brand B, Brand C) they prefer, with categories based on age (under 30, 30-50, over 50). A test of independence can be used to check whether age affects brand preference.
+This tests association.
 
-### Contingency Tables
+It does not estimate a causal effect.
 
-A **contingency table** (also known as a cross-tabulation table) is used to summarize the relationship between two categorical variables. It shows the frequency distribution of variables and is a vital tool for analyzing relationships in the Chi-Square test of independence.
+## Why the same formula appears twice
 
-#### Example:
+The goodness-of-fit and independence tests are both comparisons between observed counts and counts implied by a null model.
 
-Consider the relationship between smoking status (smoker/non-smoker) and the presence of a disease (yes/no). By organizing the data into a 2x2 contingency table, the Chi-Square test can determine if there is an association between smoking and the disease.
+In the goodness-of-fit problem, the expected probabilities are specified externally or by a fitted model.
 
-|             | Disease Yes | Disease No | Total |
-|-------------|-------------|------------|-------|
-| Smoker      | 50          | 30         | 80    |
-| Non-Smoker  | 20          | 100        | 120   |
-| **Total**   | 70          | 130        | 200   |
+In the independence problem, expected counts are fitted under the factorization constraint
 
-Here, the Chi-Square test would compare the observed counts in each cell with the expected counts to see if smoking is related to the disease.
+$$
+p_{ij}=p_{i+}p_{+j}.
+$$
 
-### Genetics
+The chi-square statistic measures discrepancy from the corresponding constrained model.
 
-The Chi-Square test has wide applications in genetics, especially in **Mendelian inheritance**, where it is used to test the fit between observed and expected genetic ratios. For example, if you expect a 3:1 ratio of dominant to recessive traits in offspring according to Mendelian laws, the Chi-Square goodness-of-fit test can assess whether your observed data follows this distribution.
+## The sampling design matters
 
-#### Example:
+The same numerical contingency table can arise from different designs.
 
-If you observe a certain number of pea plants with yellow seeds and green seeds and expect a 3:1 ratio, the goodness-of-fit test helps determine if the observed distribution fits the expected genetic model.
+For example:
 
----
+- multinomial sampling with fixed total $n$;
+- independent multinomial samples with fixed row totals;
+- product-binomial sampling in a case-control or cohort design;
+- Poisson sampling of cell counts.
 
-## 6. Interpreting Chi-Square Results
+The large-sample Pearson statistic can look similar across these formulations.
 
-After calculating the Chi-Square statistic, the next step is to interpret the result by comparing it against the **critical value** from the Chi-Square distribution table. This value depends on the number of **degrees of freedom** and the **significance level** (typically 0.05 or 5%).
+But the meaning of parameters and appropriate effect measures can differ.
 
-### p-value
+A two-by-two table from a cohort naturally supports risk ratios and risk differences.
 
-The **p-value** is central to interpreting Chi-Square test results. It represents the probability of observing a Chi-Square statistic as extreme as, or more extreme than, the one calculated from the data, assuming the null hypothesis is true.
+A case-control sample generally does not estimate population risks directly from the sampled row totals.
 
-If the **p-value** is less than the significance level (usually 0.05), you reject the null hypothesis, which suggests that the observed data is significantly different from what was expected under the null hypothesis.
+The table alone does not encode the design.
 
-#### Example:
+## Expected counts and the chi-square approximation
 
-If the calculated Chi-Square statistic is 8.5, and the critical value for 4 degrees of freedom at a 0.05 significance level is 9.49, then we would fail to reject the null hypothesis since 8.5 is less than 9.49. This implies that there isn't sufficient evidence to say the observed and expected distributions differ significantly.
+The chi-square reference distribution is asymptotic.
 
-### Practical Interpretation
+Small expected counts can make it inaccurate.
 
-In practical terms, rejecting the null hypothesis in a Chi-Square test means that there is a significant difference between observed and expected frequencies (in the goodness-of-fit test) or that two variables are not independent (in the test of independence).
+The common rule
 
-Failing to reject the null hypothesis, on the other hand, means that the data does not provide sufficient evidence to conclude that the observed and expected frequencies differ, or that the variables are dependent.
+> every expected cell count must be at least 5
 
-## 7. Limitations and Considerations
+is a heuristic, not a theorem.
 
-While the Chi-Square test is a powerful and widely-used tool, it has limitations that should be considered:
+What matters is the entire table structure, sparsity, dimension, and how extreme the expected counts are.
 
-### 1. Sample Size Sensitivity
+When counts are sparse, options include:
 
-The Chi-Square test can be overly sensitive to large sample sizes. In very large datasets, even small deviations from the expected frequencies can result in significant Chi-Square statistics, which may not be practically meaningful.
+- exact conditional tests;
+- Monte Carlo calibration;
+- likelihood-based models;
+- category aggregation when scientifically defensible.
 
-### 2. Expected Frequency Rule
+Combining categories solely to satisfy a rule can change the estimand and discard meaningful information.
 
-The test assumes that the expected frequencies in each category are reasonably large. If any expected frequency is smaller than 5, the Chi-Square test's reliability decreases, and alternative methods like **Fisher's Exact Test** should be used instead.
+## Fisher's exact test
 
-### 3. Categorical Nature of Data
+For a two-by-two table with fixed margins, Fisher's exact test conditions on the row and column totals.
 
-The test is designed for categorical data. Applying it to continuous data or data with ordinal relationships can lead to misleading conclusions. If ordinal data is involved, other tests like the **Mann-Whitney U test** or **Kruskal-Wallis test** may be more appropriate.
+Under the null, the cell count follows a hypergeometric distribution.
 
-### 4. Direction of Relationship
+This gives exact finite-sample calibration under that conditional sampling model.
 
-The Chi-Square test of independence tells you whether two variables are related but does not provide information about the direction or strength of the relationship. Other methods like **Cramér's V** can help measure the association's strength.
+“Exact” does not mean universally superior.
 
-## 8. Computational Tools for Chi-Square Testing
+The test conditions on margins and can be conservative depending on the inferential target.
 
-With modern statistical software, conducting a Chi-Square test is straightforward. Many popular software packages can easily compute Chi-Square statistics, such as:
+It is one tool for sparse two-by-two data, not a generic replacement for every chi-square test.
 
-- **R**: R provides the `chisq.test()` function, which can be used for both goodness-of-fit and independence tests.
-- **Python**: The `scipy.stats` library includes a `chi2_contingency()` function for conducting Chi-Square tests on contingency tables.
-- **SPSS**: SPSS includes built-in options for conducting Chi-Square tests, particularly useful in survey data analysis.
-- **Excel**: While more limited, Excel also supports Chi-Square testing through its statistical functions and tools for analyzing contingency tables.
+## A significant chi-square statistic says only that the model does not fit
 
-### Example in Python
+If an independence test rejects, we know that the observed table is incompatible with independence at the chosen level.
 
-Here is a simple example of how to conduct a Chi-Square test using Python:
+We do not yet know:
 
-```python
+- which cells drive the discrepancy;
+- the direction of association;
+- the magnitude of association;
+- whether the difference is practically important.
+
+The omnibus p-value should therefore be followed by residuals and effect sizes.
+
+## Pearson residuals
+
+A simple residual is
+
+$$
+r_{ij}
+=
+\frac{
+O_{ij}-E_{ij}
+}{
+\sqrt{E_{ij}}
+}.
+$$
+
+Large absolute residuals identify cells contributing strongly to the Pearson statistic.
+
+Because cell residuals are not independent and their variance is affected by fitted margins, adjusted standardized residuals are often more useful for diagnostic interpretation.
+
+The point is to move from
+
+$$
+X^2
+$$
+
+to the structure of the departure.
+
+## Effect size
+
+For an $r\times c$ table, Cramér's $V$ is
+
+$$
+V
+=
+\sqrt{
+\frac{
+X^2
+}{
+n\min(r-1,c-1)
+}
+}.
+$$
+
+It ranges from 0 to 1.
+
+It summarizes association strength but does not reveal direction.
+
+For a two-by-two table, odds ratios, risk ratios, and risk differences can be more interpretable depending on the sampling design and scientific question.
+
+A p-value and an effect size answer different questions.
+
+## The chi-square test is not “non-parametric” in the sense of assumption-free
+
+The statistic does not require normally distributed observations.
+
+That does not make it assumption-free.
+
+The analysis still depends on:
+
+- independent sampling units or an appropriate dependence model;
+- a correctly specified null structure;
+- adequate asymptotic approximation or an exact alternative;
+- correct classification of observations into categories.
+
+Clustered survey data, repeated measures, or matched pairs violate the ordinary independence formulation.
+
+For those designs, a standard Pearson chi-square test can have the wrong variance.
+
+## Paired binary data need McNemar's test
+
+Suppose the same subjects are measured before and after an intervention.
+
+The two responses are paired.
+
+A standard two-by-two independence test treats the counts as if the observations came from independent groups.
+
+That is incorrect.
+
+McNemar's test focuses on discordant pairs and is designed for paired binary data.
+
+Study design comes before table format.
+
+## Reproducible Python example
+
+~~~python
+from __future__ import annotations
+
 import numpy as np
 from scipy.stats import chi2_contingency
 
-# Example contingency table
-data = np.array([[50, 30], [20, 100]])
+table: np.ndarray = np.array(
+    [
+        [42, 18, 10],
+        [26, 24, 20],
+    ],
+    dtype=int,
+)
 
-# Perform Chi-Square test
-chi2, p, dof, expected = chi2_contingency(data)
+result = chi2_contingency(
+    table,
+    correction=False,
+)
 
-print(f"Chi2 statistic: {chi2}")
-print(f"p-value: {p}")
-print(f"Degrees of Freedom: {dof}")
-print(f"Expected Frequencies: {expected}")
-```
+chi2: float = float(result.statistic)
+p_value: float = float(result.pvalue)
+expected: np.ndarray = result.expected_freq
 
-This script calculates the Chi-Square statistic, p-value, degrees of freedom, and expected frequencies based on the input contingency table.
+n: int = int(table.sum())
+rows, cols = table.shape
 
-## 9. Conclusion and Future Directions
+cramers_v: float = float(
+    np.sqrt(
+        chi2
+        / (
+            n
+            * min(rows - 1, cols - 1)
+        )
+    )
+)
 
-The Chi-Square test is an essential tool for analyzing categorical data, offering insight into the relationships between variables and helping researchers assess the fit of observed data to expected distributions. Its applications range from genetics to market research, with tests for goodness-of-fit and independence offering powerful ways to make sense of categorical data.
+pearson_residuals: np.ndarray = (
+    table - expected
+) / np.sqrt(expected)
 
-However, like any statistical tool, the Chi-Square test must be applied carefully, considering its assumptions and limitations. With increasing access to computational tools and larger datasets, the test continues to be a foundational method in data analysis, though researchers must be mindful of sample size effects and the applicability of the test to their data type.
+print(f"X^2 = {chi2:.3f}")
+print(f"p = {p_value:.4f}")
+print(f"Cramer's V = {cramers_v:.3f}")
+print(pearson_residuals)
+~~~
 
-As data collection becomes more sophisticated, future developments in the field may include improved tests for small samples or more refined methods to measure relationships in larger contingency tables. Researchers will continue to rely on the Chi-Square test as a robust method for making data-driven decisions in an array of fields.
+The omnibus statistic, effect size, and cell diagnostics should be interpreted together.
+
+## Conclusion
+
+A chi-square test is a model-discrepancy test for counts.
+
+The core logic is
+
+$$
+\boxed{
+\text{sampling design}
+\rightarrow
+\text{null model}
+\rightarrow
+\text{expected counts}
+\rightarrow
+X^2
+\rightarrow
+\text{effect size and diagnostics}.
+}
+$$
+
+The formula is easy.
+
+The statistical work lies in defining the correct expected counts and the correct sampling model.
 
 ## References
 
-- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
-- Mann, H. B., & Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger than the other. *Annals of Mathematical Statistics*, 18(1), 50-60.
-- Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. *Journal of the American Statistical Association*, 47(260), 583-621.
+- Pearson, K. (1900). On the criterion that a given system of deviations from the probable in the case of a correlated system of variables is such that it can be reasonably supposed to have arisen from random sampling. *Philosophical Magazine*, 50, 157–175.
+- Agresti, A. (2013). *Categorical Data Analysis* (3rd ed.). Wiley.
+- Bishop, Y. M. M., Fienberg, S. E., & Holland, P. W. (1975). *Discrete Multivariate Analysis*. MIT Press.

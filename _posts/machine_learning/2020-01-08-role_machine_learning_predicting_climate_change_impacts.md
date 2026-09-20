@@ -4,83 +4,406 @@ categories:
 - Machine Learning
 classes: wide
 date: '2020-01-08'
-excerpt: Machine learning is transforming climate science, offering powerful predictive tools for forecasting extreme weather, rising sea levels, and biodiversity shifts.
+excerpt: Machine learning can emulate expensive climate-model components, extract structure from observations, and improve some forecasts, but it does not replace physical climate models or eliminate extrapolation and uncertainty problems.
 header:
-  image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
-  og_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
-  overlay_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  image: /assets/images/headers/photo-climate-satellite.jpg
+  og_image: /assets/images/headers/photo-climate-satellite.jpg
+  overlay_image: /assets/images/headers/photo-climate-satellite.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
-  twitter_image: /assets/images/headers/photo-data-science-nasa-land-motion.jpg
+  teaser: /assets/images/headers/photo-climate-satellite.jpg
+  twitter_image: /assets/images/headers/photo-climate-satellite.jpg
 keywords:
-- Machine learning
-- Climate change
-- Ai predictions
-- Extreme weather
-- Sea level rise
-- Biodiversity
-permalink: '/machine-learning/role_machine_learning_predicting_climate_change_impacts/'
-redirect_from:
-- '/machine learning/role_machine_learning_predicting_climate_change_impacts/'
-seo_description: Exploring how machine learning is used to predict extreme weather, sea-level rise, and biodiversity loss due to climate change.
-seo_title: Machine Learning and Climate Change
+- climate machine learning
+- Earth system science
+- hybrid modeling
+- climate emulation
+- weather forecasting
+seo_description: A rigorous look at where machine learning helps climate and Earth-system science, where physics remains essential, and why distribution shift and uncertainty dominate long-horizon prediction.
+seo_title: 'Machine Learning in Climate Science: Where It Helps and Where It Fails'
 seo_type: article
-summary: This article examines the role of machine learning in predicting climate change impacts, focusing on extreme weather events, sea-level rise, and biodiversity loss.
+summary: Machine learning is useful in climate science as an emulator, downscaler, pattern detector, and hybrid-model component. This article separates those roles from the stronger claim that data-driven models can replace physical climate models.
 tags:
+- Climate Science
 - Machine Learning
-- Climate and Environment
-title: The Role of Machine Learning in Predicting Climate Change Impacts
+- Scientific Computing
+title: 'Machine Learning in Climate Science: Where It Helps and Where It Fails'
 ---
 
-## Understanding Machine Learning in Climate Science
+Machine learning is useful in climate science, but the useful claim is narrower than the popular one.
 
-Machine learning (ML) has become an essential tool in climate science, enabling researchers to analyze vast datasets, identify patterns, and generate predictive models. Traditional climate modeling relies on physics-based simulations, but ML enhances this approach by incorporating historical data to refine predictions. This capability is crucial for forecasting climate change impacts with greater accuracy.
+Climate is governed by physical processes: fluid dynamics, radiation, thermodynamics, phase changes, ocean circulation, land-surface exchange, chemistry, and biology. General circulation models encode these processes numerically.
 
-The predictive power of ML is particularly valuable in areas such as extreme weather forecasting, sea-level rise modeling, and biodiversity conservation. By leveraging neural networks, deep learning, and reinforcement learning techniques, scientists can improve climate predictions and support policy decisions aimed at mitigating environmental risks.
+Machine learning does not make those equations obsolete.
 
-## Predicting Extreme Weather Events
+Its strongest role is often to approximate expensive components, infer unresolved structure from observations, or combine physical constraints with flexible statistical models.
 
-Extreme weather events, including hurricanes, heatwaves, droughts, and wildfires, are becoming more frequent and intense due to climate change. Machine learning algorithms analyze climate data, such as atmospheric pressure, ocean temperatures, and historical storm patterns, to enhance forecasting models.
+The distinction is
 
-Deep learning techniques, such as convolutional neural networks (CNNs), have been used to process satellite imagery and detect early signs of hurricanes. Recurrent neural networks (RNNs) and Long Short-Term Memory (LSTM) networks are also effective in time-series forecasting, allowing meteorologists to predict storm trajectories and intensity with higher precision.
+$$
+\boxed{
+\text{physics model}
+\neq
+\text{machine-learning replacement}
+}
+$$
 
-For wildfires, ML models use environmental variables like vegetation dryness, wind speed, and temperature to assess fire risks. Google's AI-powered wildfire detection system, for example, leverages satellite imagery and ML to provide early warnings, reducing damage and saving lives.
+and, increasingly,
 
-## Modeling Sea-Level Rise with Machine Learning
+$$
+\boxed{
+\text{physics}
++
+\text{data-driven approximation}
+=
+\text{hybrid model}.
+}
+$$
 
-Rising sea levels pose a major threat to coastal communities worldwide. Machine learning is improving our understanding of this phenomenon by analyzing satellite data, ocean temperature variations, and ice sheet dynamics.
+## Weather and climate are different prediction problems
 
-Deep learning algorithms process data from NASA’s ICESat-2 and GRACE satellites to track polar ice melt and its contribution to sea-level rise. ML models can integrate multiple data sources, including tidal gauge readings and climate simulations, to provide long-term sea-level projections. These insights help policymakers implement adaptive strategies to protect vulnerable regions.
+Weather forecasting asks for the future atmospheric state from the current state over days to weeks.
 
-Recent studies have demonstrated how generative adversarial networks (GANs) can simulate potential coastal flooding scenarios, providing urban planners with valuable data for disaster preparedness. AI-driven models also inform climate resilience strategies, such as the development of seawalls and managed retreat policies.
+Climate projection asks about distributions of future states under forcing scenarios over decades or longer.
 
-## Assessing Biodiversity Loss Through AI
+The two tasks share equations but differ statistically.
 
-Climate change is accelerating biodiversity loss, affecting species distribution and ecosystem stability. Machine learning techniques are central to monitoring and predicting these changes.
+A weather model is evaluated on trajectory accuracy over forecast lead time.
 
-Species distribution models (SDMs) utilize ML to analyze ecological datasets and forecast how species' habitats may shift due to temperature and precipitation changes. Tools like MaxEnt (Maximum Entropy Model) apply statistical and ML methods to predict where species might migrate as their environments become unsuitable.
+A climate model is often evaluated on quantities such as:
 
-Computer vision and deep learning also contribute to biodiversity research by automating species identification through camera trap images and acoustic data. This technology assists conservationists in tracking endangered species and assessing population health.
+- climatological means;
+- variability;
+- extremes;
+- teleconnections;
+- energy balance;
+- regional distributions;
+- response to external forcing.
 
-AI-powered models are instrumental in designing conservation strategies, such as identifying climate refugia—areas where species are likely to survive despite changing conditions. By integrating ML with ecological research, scientists can better understand the long-term impacts of climate change on biodiversity and implement targeted conservation efforts.
+A model that predicts tomorrow's temperature well is not automatically a valid climate model.
 
-## Challenges and Ethical Considerations
+## Emulation
 
-Despite its potential, machine learning in climate science faces several challenges. One major issue is data quality and availability. Climate datasets are often incomplete or biased, leading to inaccuracies in predictions. Addressing this requires improved data collection methods and greater collaboration between AI researchers and climate scientists.
+One direct use of machine learning is **emulation**.
 
-Model interpretability is another challenge. Many ML models function as "black boxes," making it difficult for researchers to understand how predictions are generated. Ensuring transparency in AI-driven climate research is essential for building trust in these technologies.
+Suppose an expensive simulator maps inputs $x$ to output
 
-There are also ethical considerations in using AI for climate predictions. ML models influence policy decisions that affect communities worldwide, particularly in vulnerable regions. Ensuring that AI-driven insights are used responsibly, without exacerbating social inequalities, is crucial in the fight against climate change.
+$$
+y=f(x).
+$$
 
-## Future Directions in Climate-AI Integration
+An emulator learns
 
-The future of machine learning in climate science is promising, with emerging technologies such as quantum computing poised to enhance climate modeling capabilities. Quantum ML algorithms could process complex climate simulations at unprecedented speeds, enabling more accurate long-term predictions.
+$$
+\hat f(x)
+\approx
+f(x)
+$$
 
-Collaborative AI frameworks are also gaining traction, with international efforts to share climate data and ML models. Projects like Climate Change AI (CCAI) aim to bridge the gap between AI researchers and climate scientists, fostering interdisciplinary collaboration.
+at much lower computational cost.
 
-As machine learning continues to evolve, its role in climate change mitigation and adaptation will become even more significant. By integrating AI with environmental science, policymakers and researchers can develop more effective strategies to address the growing challenges posed by a changing climate.
+This can be useful for:
 
----
+- parameter sweeps;
+- uncertainty propagation;
+- sensitivity analysis;
+- ensemble generation;
+- inverse problems.
 
-Machine learning is revolutionizing climate science, offering powerful tools to predict extreme weather, sea-level rise, and biodiversity shifts. While challenges remain, the potential for AI-driven insights to inform climate action is immense. Continued advancements in ML and interdisciplinary collaboration will be key to building a more resilient and sustainable future.
+The emulator approximates the simulator.
+
+It does not add physical validity that the simulator lacks.
+
+And it is reliable only over the input region represented in its training data or supported by strong structural assumptions.
+
+## Parameterization of unresolved processes
+
+Climate models cannot resolve every spatial and temporal scale.
+
+Cloud microphysics, convection, turbulence, and land-surface processes may occur below the grid scale.
+
+Traditional models use parameterizations:
+
+$$
+\text{resolved state}
+\rightarrow
+\text{subgrid tendency}.
+$$
+
+Machine learning can estimate such mappings from:
+
+- high-resolution simulations;
+- observations;
+- process models.
+
+This can improve computational efficiency or local fidelity.
+
+But a learned parameterization must remain stable when coupled back into the dynamical model.
+
+A small one-step prediction error can create a large long-term climate bias after repeated feedback.
+
+Offline accuracy is therefore not enough.
+
+## Conservation laws and physical constraints
+
+A generic neural network can violate basic physical constraints.
+
+For example, a model may predict tendencies that do not conserve mass or energy.
+
+Hybrid approaches can constrain outputs so that
+
+$$
+\sum_i \Delta E_i = 0
+$$
+
+for an energy-conserving subsystem, or incorporate conservation directly into the architecture or loss.
+
+Physical constraints reduce the hypothesis space.
+
+That can improve extrapolation and make failures easier to diagnose.
+
+The goal is not to make the network look more “scientific.”
+
+It is to encode information already known to be true.
+
+## Downscaling
+
+Global climate models operate on spatial grids that are often coarser than the scale required for local impact studies.
+
+Statistical downscaling learns a relationship such as
+
+$$
+Y_{\mathrm{local}}
+=
+g(
+X_{\mathrm{large\ scale}}
+)
++
+\varepsilon.
+$$
+
+Machine learning can make $g$ highly flexible.
+
+The central difficulty is stationarity.
+
+A relationship learned under historical climate conditions may not remain valid under a substantially warmer climate.
+
+This is a distribution-shift problem.
+
+Training and deployment distributions differ:
+
+$$
+P_{\mathrm{train}}(X,Y)
+\neq
+P_{\mathrm{future}}(X,Y).
+$$
+
+Cross-validation within the historical period cannot prove future-climate validity.
+
+## Extreme events
+
+Extremes are statistically difficult because the events of greatest interest are rare.
+
+A model trained to minimize ordinary mean-squared error can perform well overall while smoothing the tails.
+
+For an extreme threshold $u$, the relevant quantity may be
+
+$$
+P(Y>u\mid X),
+$$
+
+not the conditional mean.
+
+Evaluation should therefore include:
+
+- tail calibration;
+- threshold exceedance rates;
+- return-level behavior;
+- spatial extent;
+- event duration;
+- compound extremes.
+
+A high average forecast score can coexist with poor extreme-event performance.
+
+## Sea-level rise
+
+Machine learning can help with components of sea-level analysis such as:
+
+- altimetry gap filling;
+- regional pattern extraction;
+- ice-sheet emulation;
+- surrogate models for expensive simulations;
+- bias correction.
+
+But long-term sea-level projection remains a physical inference problem involving thermal expansion, glaciers, ice sheets, land-water storage, and vertical land motion.
+
+A purely historical regression cannot reliably learn responses to forcing states it has never observed.
+
+This is a general lesson:
+
+$$
+\boxed{
+\text{interpolation}
+\neq
+\text{climate extrapolation}.
+}
+$$
+
+## Biodiversity and ecological impacts
+
+Remote sensing and machine learning can map land cover, vegetation traits, habitat fragmentation, species distributions, and disturbance.
+
+These tasks are valuable for climate-impact science.
+
+But ecological response is not identified by image classification alone.
+
+Species distributions depend on:
+
+- climate;
+- land use;
+- dispersal;
+- competition;
+- observation bias;
+- adaptation;
+- human intervention.
+
+A model predicting current species presence from current climate does not automatically estimate the causal effect of future climate change.
+
+## Distribution shift is central
+
+Climate applications routinely violate the standard machine-learning assumption that future data resemble training data.
+
+The system changes because:
+
+- greenhouse-gas concentrations change;
+- land use changes;
+- observation networks change;
+- climate regimes shift;
+- extreme-event frequency changes;
+- feedbacks enter regions not represented historically.
+
+This makes out-of-distribution behavior a first-order problem.
+
+A random historical train-test split mostly measures interpolation.
+
+It does not test the scenario the model is built for.
+
+## Validation should follow the deployment question
+
+Useful validation designs include:
+
+- training on earlier decades and testing on later decades;
+- holding out geographic regions;
+- training on some climate-model simulations and testing on others;
+- testing across forcing scenarios;
+- evaluating coupled long-run stability rather than one-step error.
+
+The split must be scientifically adversarial enough to expose the extrapolation problem.
+
+## Uncertainty has several sources
+
+A climate prediction contains more than ordinary statistical uncertainty.
+
+One useful decomposition is
+
+$$
+\text{uncertainty}
+=
+\text{internal variability}
++
+\text{model uncertainty}
++
+\text{scenario uncertainty}
++
+\text{statistical approximation error}.
+$$
+
+Machine learning can reduce one component while leaving the others untouched.
+
+An emulator with very small prediction error does not remove scenario uncertainty.
+
+A calibrated weather model does not remove structural uncertainty in long-run feedbacks.
+
+The uncertainty statement must match the model's role.
+
+## Interpretability is not the main issue
+
+Climate ML discussions often focus on whether neural networks are interpretable.
+
+Interpretability matters, but physical validity matters more.
+
+A model can be easy to visualize and still violate conservation.
+
+A complex model can be scientifically useful if it is:
+
+- stable;
+- calibrated;
+- physically constrained;
+- validated across regimes;
+- accompanied by uncertainty;
+- reproducible.
+
+The key question is not whether every neuron has a human-readable meaning.
+
+It is whether the model supports the scientific claim being made.
+
+## Hybrid Earth-system modeling
+
+Reichstein and colleagues argued for combining deep learning with process understanding rather than treating the two as competing paradigms.
+
+That direction is still the most convincing framing.
+
+A hybrid model may use:
+
+$$
+\frac{dx}{dt}
+=
+f_{\mathrm{physics}}(x)
++
+f_{\mathrm{ML}}(x;\theta),
+$$
+
+where the data-driven term represents unresolved or poorly known processes.
+
+The decomposition makes assumptions explicit.
+
+It also allows the known physics to control behavior outside the densest regions of training data.
+
+## Conclusion
+
+Machine learning can make climate science faster and, in some tasks, more accurate.
+
+Its strongest uses are not magical prediction of the future.
+
+They are:
+
+- emulation;
+- parameterization;
+- downscaling;
+- data assimilation support;
+- remote-sensing inference;
+- hybrid modeling.
+
+The hard problems remain physical and statistical:
+
+$$
+\boxed{
+\text{distribution shift}
++
+\text{rare extremes}
++
+\text{feedback}
++
+\text{uncertainty}
++
+\text{physical constraints}.
+}
+$$
+
+A climate ML model should be judged by how well it handles those problems, not by whether it beats a baseline on an in-distribution test set.
+
+## References
+
+- Reichstein, M., Camps-Valls, G., Stevens, B., et al. (2019). Deep learning and process understanding for data-driven Earth system science. *Nature*, 566, 195–204. https://doi.org/10.1038/s41586-019-0912-1
+- Rolnick, D., Donti, P. L., Kaack, L. H., et al. (2022). Tackling climate change with machine learning. *ACM Computing Surveys*, 55(2), Article 42.
+- Rasp, S., Dueben, P. D., Scher, S., Weyn, J. A., Mouatadid, S., & Thuerey, N. (2020). WeatherBench: A benchmark data set for data-driven weather forecasting. *Journal of Advances in Modeling Earth Systems*, 12(11), e2020MS002203.

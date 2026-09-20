@@ -4,9 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2020-04-01'
-excerpt: The Friedman test is a non-parametric alternative to repeated measures ANOVA,
-  designed for use with ordinal data or non-normal distributions. Learn how and when
-  to use it in your analyses.
+excerpt: The Friedman test compares within-block ranks across repeated conditions. It is useful for blocked or repeated-measures designs when a rank-based estimand is appropriate, not simply whenever normality fails.
 header:
   image: /assets/images/headers/photo-data-science-openalex.jpg
   og_image: /assets/images/headers/photo-data-science-openalex.jpg
@@ -16,124 +14,322 @@ header:
   teaser: /assets/images/headers/photo-data-science-openalex.jpg
   twitter_image: /assets/images/headers/photo-data-science-openalex.jpg
 keywords:
-- Repeated measures anova
-- Non-parametric test
 - Friedman test
-- Ordinal data
+- repeated measures
+- blocked designs
+- rank tests
+- Kendall's W
 permalink: '/data-science/friedman_test/'
 redirect_from:
 - '/data analysis/friedman_test/'
 - '/data science/friedman_test/'
-seo_description: The Friedman test as a non-parametric alternative to repeated measures ANOVA, and its use with ordinal data or non-normal distributions.
-seo_title: 'Friedman Test: Non-Parametric Repeated Measures'
+seo_description: The Friedman test explained as a blocked rank test, including its null hypothesis, tie correction, effect size, exact alternatives, and appropriate post-hoc comparisons.
+seo_title: 'Friedman Test: A Rank Test for Blocked Repeated Measures'
 seo_type: article
-summary: This article provides an in-depth explanation of the Friedman test, including
-  its use as a non-parametric alternative to repeated measures ANOVA, when to use
-  it, and practical examples in ranking data and repeated measurements.
+summary: A rigorous guide to the Friedman test that explains within-block ranking, what the null means, when the chi-square approximation is valid, and how to perform follow-up comparisons.
 tags:
 - Nonparametric Methods
 - Hypothesis Testing
-- Regression
-title: 'The Friedman Test: Non-Parametric Alternative to Repeated Measures ANOVA'
+- Repeated Measures
+title: 'Friedman Test: A Rank Test for Blocked Repeated Measures'
 ---
 
-In data analysis, we often encounter situations where we need to compare three or more related groups. When the assumptions of normality or homogeneity of variances are not met, using parametric methods such as repeated measures ANOVA may not be appropriate. In such cases, the **Friedman test** offers a robust **non-parametric alternative**.
+The Friedman test is commonly called the nonparametric alternative to repeated-measures ANOVA.
 
-The Friedman test is particularly useful for analyzing **ordinal data** or **non-normal distributions** in repeated measures designs, where the same subjects are measured under different conditions or across different time points. This article explains the test, how it works, and when to use it.
+That description is useful but incomplete.
 
-## When and How to Use the Friedman Test
+The procedures do not estimate exactly the same object.
 
-The Friedman test is ideal for scenarios where:
+Repeated-measures ANOVA is mean-based.
 
-1. **Data is ordinal**: The values can be ranked, but the distance between the ranks is not necessarily equal.
-2. **Data is not normally distributed**: The test is robust to violations of normality, making it suitable for skewed or non-normal data.
-3. **Repeated measurements on the same subjects**: When the same subjects are exposed to multiple conditions or measured at different time points.
-4. **Small sample sizes**: Because it is non-parametric, the Friedman test can handle smaller sample sizes better than parametric alternatives.
+Friedman discards the within-block numerical distances and analyzes ranks.
 
-### Assumptions of the Friedman Test
+The correct question is therefore not
 
-Despite being non-parametric, the Friedman test has its own set of assumptions:
+> Did the normality test fail?
 
-- **Repeated measures**: The data must be from the same subjects, measured under different conditions.
-- **Ordinal or continuous data**: The test can handle both ordinal and continuous data as long as ranks can be assigned.
-- **Independence within groups**: While the measurements are related within subjects, the observations should be independent across subjects.
+It is
 
-Two clarifications are worth making, because both are commonly misstated. "Non-parametric" does not mean assumption-free — it means no assumption about the *shape* of the distribution. The design assumptions above still bind, and a violated independence assumption invalidates the test just as thoroughly as it would a parametric one.
+> Is a within-block rank comparison a scientifically appropriate summary of these repeated conditions?
 
-The test also does not require equal variances or symmetry, but it does assume that the blocks (subjects) are exchangeable and that there is no subject-by-treatment interaction. If a treatment helps some subjects and harms others in roughly equal measure, the rank sums can come out even and the test will report nothing while a real, heterogeneous effect exists.
+## Design
 
-## How the Friedman Test Works
+Suppose $n$ blocks or subjects are each observed under $k$ conditions.
 
-The test ranks the data **within each subject** across the treatments, then compares the rank sums. This within-subject ranking is the crucial design feature: it removes any between-subject differences in overall level, so a consistently high-scoring participant contributes no more to the result than a consistently low-scoring one.
-
-If treatments are equivalent, each should collect roughly the same total rank. Systematic differences produce systematically different rank sums.
-
-With $n$ subjects and $k$ treatments, let $R_j$ be the sum of ranks for treatment $j$. The statistic is
+Let
 
 $$
-\chi_F^2 = \frac{12}{n k (k+1)} \sum_{j=1}^{k} R_j^2 - 3n(k+1),
+Y_{ij}
 $$
 
-which under the null follows approximately a chi-square distribution with $k-1$ degrees of freedom. The approximation is reasonable when $n$ is moderate; for small $n$ and $k$, exact distributions or a permutation test are preferable, since the asymptotic version is conservative there.
+be the response for subject $i$ under condition $j$.
 
-Ties within a subject receive average ranks, and a tie correction should be applied when they are common — otherwise the statistic is deflated and the test loses power.
+The blocks must be independent of one another.
 
-## A Worked Example
+Within a block, observations are deliberately related because the same subject or matched unit receives every condition.
 
-Suppose eight assessors each rate three algorithms on a 1-10 usability scale. The same assessor rates all three, so the measurements are related.
+A complete-block design requires all $k$ conditions within each analyzed block.
 
-```python
+## Within-block ranks
+
+For each block $i$, replace
+
+$$
+Y_{i1},\ldots,Y_{ik}
+$$
+
+with ranks
+
+$$
+R_{i1},\ldots,R_{ik}.
+$$
+
+The smallest value receives rank 1, the largest rank $k$, with average ranks for ties.
+
+Let
+
+$$
+R_{\cdot j}
+=
+\sum_{i=1}^{n}
+R_{ij}
+$$
+
+be the rank sum for condition $j$.
+
+If conditions are exchangeable under the null, the expected rank sum is the same for every condition.
+
+## Test statistic
+
+Without ties, the Friedman statistic is
+
+$$
+Q
+=
+\frac{12}
+{nk(k+1)}
+\sum_{j=1}^{k}
+R_{\cdot j}^2
+-
+3n(k+1).
+$$
+
+For sufficiently large $n$,
+
+$$
+Q
+\approx
+\chi^2_{k-1}
+$$
+
+under the null.
+
+For small samples, exact or permutation calibration is preferable.
+
+Ties require a correction because they reduce rank variability.
+
+Software should handle that explicitly.
+
+## What the null hypothesis means
+
+The Friedman test is often described as testing equal medians.
+
+That is too narrow.
+
+The randomization-style null is that condition labels are exchangeable within blocks.
+
+Under stronger location-shift assumptions, a median or location interpretation may be reasonable.
+
+In general, Friedman detects systematic within-block rank differences.
+
+It does not isolate which distributional feature changed.
+
+## What blocking accomplishes
+
+Subjects can have very different overall response levels.
+
+Ranking within each subject removes those baseline level differences.
+
+Suppose one assessor scores every algorithm high and another scores every algorithm low.
+
+Friedman is interested in their **relative ordering** of algorithms, not the absolute scale difference between assessors.
+
+This is the reason the blocking structure matters.
+
+## Missing cells are a design problem
+
+If a subject is missing one condition, the simple Friedman design is incomplete.
+
+Deleting only the missing cell is not valid because ranking requires the full within-block set.
+
+Options include:
+
+- complete-case blocks;
+- models for incomplete repeated measures;
+- mixed-effects approaches;
+- multiple imputation under a defensible missing-data model.
+
+The right response depends on why the value is missing.
+
+## Worked example
+
+~~~python
+from __future__ import annotations
+
 import numpy as np
 from scipy import stats
 
-# rows = assessors, columns = algorithms A, B, C
-scores = np.array([
-    [7, 8, 5], [6, 9, 6], [8, 8, 4], [5, 7, 5],
-    [7, 9, 6], [6, 8, 3], [8, 9, 5], [7, 7, 4],
-])
+scores: np.ndarray = np.array(
+    [
+        [7, 8, 5],
+        [6, 9, 6],
+        [8, 8, 4],
+        [5, 7, 5],
+        [7, 9, 6],
+        [6, 8, 3],
+        [8, 9, 5],
+        [7, 7, 4],
+    ],
+    dtype=float,
+)
 
-stat, p = stats.friedmanchisquare(*scores.T)
-print(f"Friedman chi-square = {stat:.3f}, p = {p:.5f}")
+result = stats.friedmanchisquare(
+    *scores.T
+)
 
-# rank within each assessor, then sum per algorithm
-ranks = np.apply_along_axis(stats.rankdata, 1, scores)
-print("mean rank per algorithm:", ranks.mean(axis=0).round(2))
+ranks = np.apply_along_axis(
+    stats.rankdata,
+    1,
+    scores,
+)
 
-# Kendall's W: the same information expressed as agreement, 0 to 1
+mean_ranks = ranks.mean(axis=0)
+
 n, k = scores.shape
-W = stat / (n * (k - 1))
-print(f"Kendall's W = {W:.3f}")
-```
 
-A significant result says only that the algorithms are not interchangeable. It does not say which differ, and reporting the omnibus p-value alone is the most common way this test is under-used.
+kendalls_w: float = float(
+    result.statistic
+    / (n * (k - 1))
+)
 
-Kendall's $W$ is worth computing alongside it. It rescales the same statistic onto $[0, 1]$ as a measure of agreement among the assessors, giving an effect size where the p-value gives only a decision.
+print(result)
+print(mean_ranks)
+print(f"Kendall's W = {kendalls_w:.3f}")
+~~~
 
-## Following Up a Significant Result
+The omnibus test says whether systematic rank differences exist.
 
-Once the omnibus test rejects, pairwise comparisons identify where the differences lie — and those comparisons need adjusting for multiplicity, since three treatments give three pairs and five give ten.
+The mean ranks show direction.
 
-The Nemenyi test is the standard post-hoc for Friedman, comparing mean rank differences against a critical distance derived from the studentised range. It requires no distributional assumption beyond those already made. The Conover test is more powerful but should be used only after a significant omnibus result, since it borrows the overall rank variance.
+## Kendall's W
 
-A simpler and often adequate route is pairwise Wilcoxon signed-rank tests with a Holm or Benjamini-Hochberg correction. Whichever you choose, decide before looking at the data, because selecting the post-hoc that yields significance is exactly the practice these corrections exist to prevent.
+For complete rankings without complications, a common effect-size form is
 
-## How It Compares to the Alternatives
+$$
+W
+=
+\frac{Q}
+{n(k-1)}.
+$$
 
-Repeated measures ANOVA is the parametric counterpart. When its assumptions hold it is more powerful, so the Friedman test costs you something — the asymptotic relative efficiency is about 0.95 for three treatments under normality, rising as $k$ grows. That is a modest price for robustness.
+Values range from 0 to 1.
 
-The choice is therefore not automatic. If the data are genuinely continuous and roughly normal, and sphericity holds or can be corrected for, repeated measures ANOVA is the better tool. If the data are ordinal, badly skewed, or contain outliers that would dominate a mean, the Friedman test is more trustworthy.
+In a rating-by-assessor setting, it can be interpreted as concordance in the rank structure.
 
-For two related samples the Friedman test reduces to a form equivalent to the sign test, and the Wilcoxon signed-rank test is the more powerful choice there. For independent rather than related groups, the Kruskal-Wallis test is the correct analogue — applying Friedman to unrelated groups is a design error, not a robustness choice.
+In a repeated-treatment experiment, it is better described cautiously as a standardized Friedman effect-size measure rather than automatically as “agreement among raters.”
+
+Context determines the interpretation.
+
+## Post-hoc comparisons
+
+A significant Friedman test does not identify which conditions differ.
+
+Possible follow-ups include:
+
+- pairwise Wilcoxon signed-rank tests;
+- Nemenyi-type rank comparisons;
+- model-based repeated-measures contrasts.
+
+Multiplicity must be controlled across the chosen family of pairwise tests.
+
+Holm adjustment is a common FWER-controlling choice.
+
+The post-hoc method should match the estimand and data structure.
+
+There is no requirement that one particular named post-hoc test must follow Friedman.
+
+## Wilcoxon signed-rank caveat
+
+The paired Wilcoxon signed-rank test assumes more structure than a simple sign comparison.
+
+Its usual location-shift interpretation relies on symmetry of paired differences.
+
+If that assumption is not plausible, a sign test or permutation procedure may better match the target.
+
+Calling every pairwise rank method assumption-free recreates the problem that led to misuse of Friedman in the first place.
+
+## Repeated-measures ANOVA versus Friedman
+
+Repeated-measures ANOVA uses numerical distances and models means.
+
+Friedman uses ranks within blocks.
+
+If the scientific target is a mean difference, a linear mixed model or repeated-measures mean model may remain preferable even with some non-normality.
+
+If the response is genuinely ordinal or the rank estimand is primary, Friedman can be natural.
+
+The decision should follow the estimand, not a Shapiro-Wilk p-value.
+
+## More complex repeated designs
+
+Friedman handles one repeated factor in a complete-block structure.
+
+It does not naturally handle:
+
+- multiple repeated factors;
+- interactions;
+- time-varying covariates;
+- unequal observation schedules;
+- incomplete blocks.
+
+Mixed models, generalized estimating equations, ordinal mixed models, or rank-based factorial methods may be more appropriate depending on the target.
+
+The limitation is structural, not evidence that the Friedman test is obsolete.
 
 ## Reporting
 
-A complete report gives the statistic, degrees of freedom, sample size and p-value, together with mean ranks per condition, an effect size such as Kendall's $W$, and the post-hoc procedure with its adjusted p-values. Mean ranks matter because they show the direction of the effect, which the chi-square statistic alone conceals.
+A useful report includes:
 
-Stating the design explicitly is equally important: readers need to know the measurements were repeated on the same subjects to judge whether the test was appropriate at all.
+- number of blocks $n$;
+- number of conditions $k$;
+- Friedman statistic;
+- degrees of freedom;
+- p-value;
+- mean or median ranks as appropriate;
+- effect size such as $W$;
+- tie handling;
+- post-hoc method and multiplicity adjustment.
+
+The block structure should be explicit.
+
+## Conclusion
+
+The Friedman test is a rank-based procedure for complete blocked or repeated-measures designs.
+
+Its strength is that it removes between-block level differences and compares relative ordering within each block.
+
+Its limitation is the same feature:
+
+$$
+\boxed{
+\text{rank information replaces metric information}.
+}
+$$
+
+Use it when that is the quantity you want to analyze, not merely because raw observations are non-normal.
 
 ## References
 
-- Friedman, M. (1937). The use of ranks to avoid the assumption of normality implicit in the analysis of variance. *Journal of the American Statistical Association*, 32(200), 675-701.
+- Friedman, M. (1937). The use of ranks to avoid the assumption of normality implicit in the analysis of variance. *Journal of the American Statistical Association*, 32(200), 675–701.
 - Conover, W. J. (1999). *Practical Nonparametric Statistics* (3rd ed.). Wiley.
-- Demšar, J. (2006). Statistical comparisons of classifiers over multiple data sets. *Journal of Machine Learning Research*, 7, 1-30.
-- Siegel, S., & Castellan, N. J. (1988). *Nonparametric Statistics for the Behavioral Sciences* (2nd ed.). McGraw-Hill.
+- Demšar, J. (2006). Statistical comparisons of classifiers over multiple data sets. *Journal of Machine Learning Research*, 7, 1–30.
