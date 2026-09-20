@@ -98,7 +98,7 @@ I
 R,
 $$
 
-where \(Q\) is the scientific question, \(E\) the estimand, \(D\) the design, \(M\) the measurement process, \(A\) the analysis, \(I\) the interpretation, and \(R\) replication, criticism and revision.
+where $Q$ is the scientific question, $E$ the estimand, $D$ the design, $M$ the measurement process, $A$ the analysis, $I$ the interpretation, and $R$ replication, criticism and revision.
 
 The order matters.
 
@@ -146,7 +146,7 @@ A study design that is excellent for one may be inappropriate for another. This 
 
 Suppose the question is:
 
-> How common is condition \(Y\) in population \(P\)?
+> How common is condition $Y$ in population $P$?
 
 A well-designed cross-sectional survey can estimate prevalence directly.
 
@@ -184,7 +184,7 @@ $$
 U\rightarrow\{\text{activity},\text{depression}\},
 $$
 
-where \(U\) represents common causes.
+where $U$ represents common causes.
 
 The study can document the association without identifying its direction.
 
@@ -273,7 +273,7 @@ $$
 X\leftarrow U\rightarrow Y,
 $$
 
-then an association between \(X\) and \(Y\) can exist even without a causal effect of \(X\).
+then an association between $X$ and $Y$ can exist even without a causal effect of $X$.
 
 Adjustment can help when the relevant confounders are measured appropriately. It cannot adjust for important confounders that were never observed or were measured badly.
 
@@ -345,11 +345,11 @@ It is:
 
 ## Quasi-experiments use structure in treatment assignment
 
-Suppose programme eligibility changes sharply at threshold \(c\).
+Suppose programme eligibility changes sharply at threshold $c$.
 
 A regression discontinuity design compares units immediately around that threshold.
 
-If potential outcomes vary smoothly around \(c\), the discontinuity can identify a local causal effect:
+If potential outcomes vary smoothly around $c$, the discontinuity can identify a local causal effect:
 
 $$
 \tau_{RD}
@@ -365,7 +365,7 @@ Internal identification and broad external validity are separate properties.
 
 ## Diagnostic studies answer a classification question
 
-Suppose diagnostic test \(T\) is compared with a reference standard for disease \(D\).
+Suppose diagnostic test $T$ is compared with a reference standard for disease $D$.
 
 Sensitivity is
 
@@ -397,7 +397,7 @@ The design follows the question.
 
 A prognostic model asks:
 
-> Given information available now, what is the probability of outcome \(Y\) later?
+> Given information available now, what is the probability of outcome $Y$ later?
 
 The target may be
 
@@ -522,7 +522,7 @@ It may be the most scientifically defensible synthesis.
 
 Meta-analysis is the statistical combination of results from two or more separate studies.
 
-Suppose study \(i\) estimates effect
+Suppose study $i$ estimates effect
 
 $$
 \hat\theta_i
@@ -660,9 +660,9 @@ They do not eliminate it automatically.
 
 ## Network meta-analysis adds indirect comparisons
 
-Suppose treatments \(A\) and \(B\) have never been directly compared, but both have been compared with \(C\).
+Suppose treatments $A$ and $B$ have never been directly compared, but both have been compared with $C$.
 
-A network meta-analysis can use the \(A\) versus \(C\) and \(B\) versus \(C\) evidence to infer an indirect comparison between \(A\) and \(B\).
+A network meta-analysis can use the $A$ versus $C$ and $B$ versus $C$ evidence to infer an indirect comparison between $A$ and $B$.
 
 This requires assumptions such as transitivity: the study sets must be sufficiently comparable for the indirect path to represent the target comparison.
 
@@ -770,17 +770,17 @@ A single p-value cannot answer that question.
 
 ## Measurement validity belongs in the design
 
-Suppose target construct \(T\) is observed through
+Suppose target construct $T$ is observed through
 
 $$
 X=T+B+\varepsilon,
 $$
 
-where \(B\) is nuisance variation.
+where $B$ is nuisance variation.
 
-A huge RCT can estimate the intervention effect on \(X\) very precisely.
+A huge RCT can estimate the intervention effect on $X$ very precisely.
 
-If \(X\) poorly represents \(T\), the scientific claim about \(T\) remains weak.
+If $X$ poorly represents $T$, the scientific claim about $T$ remains weak.
 
 Measurement validity, calibration and invariance are therefore part of design quality, not optional decorations.
 
