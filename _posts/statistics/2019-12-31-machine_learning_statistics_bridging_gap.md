@@ -56,7 +56,7 @@ $$
 Y = f(X) + \varepsilon.
 $$
 
-A predictive problem asks for a function \(\hat f\) that performs well on future observations. A common target is expected prediction loss,
+A predictive problem asks for a function $\hat f$ that performs well on future observations. A common target is expected prediction loss,
 
 $$
 R(f)
@@ -64,7 +64,7 @@ R(f)
 \mathbb E\left[L\{Y,f(X)\}\right].
 $$
 
-Because the population risk \(R(f)\) is unknown, machine-learning procedures usually minimize an empirical or regularized approximation,
+Because the population risk $R(f)$ is unknown, machine-learning procedures usually minimize an empirical or regularized approximation,
 
 $$
 \hat R(f)
@@ -81,7 +81,7 @@ $$
 Y_i = \beta_0 + X_i^\top\beta + \varepsilon_i,
 $$
 
-we might want a confidence interval for one component of \(\beta\), a test of a scientific hypothesis, or an estimate of a causal effect under additional identification assumptions.
+we might want a confidence interval for one component of $\beta$, a test of a scientific hypothesis, or an estimate of a causal effect under additional identification assumptions.
 
 Good prediction does not make those quantities identified. Conversely, a model can estimate a scientifically meaningful parameter well without being the best predictive model available.
 
@@ -130,7 +130,7 @@ $$
 \right].
 $$
 
-Lasso replaces the quadratic penalty with an \(L_1\) penalty,
+Lasso replaces the quadratic penalty with an $L_1$ penalty,
 
 $$
 \hat\beta_{\mathrm{lasso}}
@@ -146,7 +146,7 @@ $$
 
 The important point is not that these are "machine-learning versions" of regression. Both are statistical estimators. Their behavior follows from a deliberate bias-variance trade-off.
 
-Ridge shrinks unstable coefficients and can improve prediction when predictors are correlated or \(p\) is large. Lasso can set coefficients exactly to zero and therefore combines shrinkage with variable selection.
+Ridge shrinks unstable coefficients and can improve prediction when predictors are correlated or $p$ is large. Lasso can set coefficients exactly to zero and therefore combines shrinkage with variable selection.
 
 But a selected lasso model does not automatically inherit ordinary least-squares inference as if the selected variables had been fixed in advance. Prediction, selection and post-selection inference are distinct problems.
 
@@ -154,7 +154,7 @@ But a selected lasso model does not automatically inherit ordinary least-squares
 
 Decision trees are sometimes described as statistical methods because split criteria use quantities such as entropy or Gini impurity. That is not a useful distinction.
 
-For a binary node with class proportion \(p\), Gini impurity is
+For a binary node with class proportion $p$, Gini impurity is
 
 $$
 G(p)=2p(1-p),
@@ -180,7 +180,7 @@ None of this depends on drawing a boundary between "statistics" and "machine lea
 
 A support vector machine is another useful counterexample to loose terminology.
 
-For binary labels \(y_i\in\{-1,+1\}\), a soft-margin linear SVM can be written as
+For binary labels $y_i\in\{-1,+1\}$, a soft-margin linear SVM can be written as
 
 $$
 \min_{w,b}
@@ -192,9 +192,9 @@ C\sum_{i=1}^{n}
 \right].
 $$
 
-The second term is the hinge loss. The first controls the size of \(w\), which determines the geometric margin.
+The second term is the hinge loss. The first controls the size of $w$, which determines the geometric margin.
 
-This is a convex optimization problem arising from statistical learning theory. It is not, in its standard form, a probability model for \(P(Y=1\mid X=x)\).
+This is a convex optimization problem arising from statistical learning theory. It is not, in its standard form, a probability model for $P(Y=1\mid X=x)$.
 
 The kernel construction changes the representation by replacing inner products with
 
