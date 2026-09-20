@@ -129,6 +129,21 @@
   author: "Piviso"
   licence: "CC0"
   source: "https://commons.wikimedia.org/wiki/File:Krzeszowice_by_night_long_exposure_photo,_Poland.jpg"
+- file: photo-logistics-freight-rail.jpg
+  title: "Benching Freight Train Graffiti in SoCal (July 24th 2021) (51335949488).jpg"
+  author: "siamesepuppy"
+  licence: "CC BY 2.0"
+  source: "https://commons.wikimedia.org/wiki/File:Benching_Freight_Train_Graffiti_in_SoCal_(July_24th_2021)_(51335949488).jpg"
+- file: photo-logistics-shipping.jpg
+  title: "Navy Elevated Causeway System 2.jpg"
+  author: "soldiersmediacenter"
+  licence: "Public domain"
+  source: "https://commons.wikimedia.org/wiki/File:Navy_Elevated_Causeway_System_2.jpg"
+- file: photo-logistics-warehouse.jpg
+  title: "Daiwa Logistics Tosu Logistics Center.jpg"
+  author: "Peka"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Daiwa_Logistics_Tosu_Logistics_Center.jpg"
 - file: photo-mathematics-cryptography-blackboard.jpg
   title: "Mathematics (cryptography) on a blackboard.jpg"
   author: "David Malone"
@@ -289,6 +304,11 @@
   author: "Tretherington"
   licence: "CC BY-SA 4.0"
   source: "https://commons.wikimedia.org/wiki/File:Mahalanobis-distance-location-and-scatter-methods.png"
+- file: photo-statistics-missing-data.jpg
+  title: "Number of uses of charts by year of latest chart data in English Wikipedia articles.svg"
+  author: "Prototyperspective"
+  licence: "CC BY 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Number_of_uses_of_charts_by_year_of_latest_chart_data_in_English_Wikipedia_articles.svg"
 - file: photo-statistics-normal-distribution.jpg
   title: "Normalverteilung.png"
   author: "self created by Marcus Glöder"
@@ -340,6 +360,11 @@ HE Revolving = Home equity revolving line of credit."
   author: "U.S. Fish and Wildlife Service"
   licence: "Public domain"
   source: "https://commons.wikimedia.org/wiki/File:River_delta_swamp_aerial_view.jpg"
+- file: photo-time-series-sensor-data.jpg
+  title: "Kazakhstan's thunderous apocalypse.jpg"
+  author: "Astrobond"
+  licence: "CC BY-SA 4.0"
+  source: "https://commons.wikimedia.org/wiki/File:Kazakhstan%27s_thunderous_apocalypse.jpg"
 - file: photo-wafer.jpg
   title: "Multicrystalline silicon wafer with thin film iridescence.jpg"
   author: "Radiotrefoil"
