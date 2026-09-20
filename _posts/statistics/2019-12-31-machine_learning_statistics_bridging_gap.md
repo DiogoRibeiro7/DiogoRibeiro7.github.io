@@ -4,7 +4,7 @@ categories:
 - Statistics
 classes: wide
 date: '2019-12-31'
-excerpt: Machine learning is often seen as a new frontier, but its roots lie firmly in traditional statistical methods. This article explores how statistical techniques underpin key machine learning algorithms, highlighting their interconnectedness.
+excerpt: Statistics and machine learning overlap heavily, but neither is simply a subset of the other. The useful distinction is in the questions, loss functions, assumptions, and validation criteria.
 header:
   image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
   og_image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
@@ -15,153 +15,254 @@ header:
   twitter_image: /assets/images/headers/photo-statistics-kernel-smoothing.jpg
 keywords:
 - Machine learning and statistics
-- Statistical methods in machine learning
-- Algorithms in machine learning
-- Linear regression
+- Statistical learning
+- Empirical risk minimization
+- Regularization
 - Support vector machines
-seo_description: How statistical techniques underpin machine learning algorithms, from linear regression to decision trees and support vector machines.
-seo_title: How Statistical Methods Power Machine Learning
+seo_description: Statistics and machine learning share models and mathematics, but differ in emphasis, assumptions, validation, and the questions they are designed to answer.
+seo_title: Statistics and Machine Learning: Where the Boundary Actually Lies
 seo_type: article
-summary: Machine learning and statistics share deep connections. This article examines the ways statistical methods form the backbone of machine learning algorithms, exploring key techniques like regression, decision trees, and support vector machines.
+summary: A mathematical comparison of statistics and machine learning through estimation, prediction, loss functions, regularization, trees, support vector machines, and probabilistic models.
 tags:
 - Machine Learning
 - Statistics
 - Data Science
-title: 'Machine Learning and Statistics: Bridging the Gap'
+title: 'Statistics and Machine Learning: Where the Boundary Actually Lies'
 ---
 
-## Machine Learning and Statistics: Bridging the Gap
+The distinction between statistics and machine learning is often explained badly.
 
-In the age of big data and artificial intelligence, **machine learning** has emerged as one of the most powerful tools for analyzing vast datasets and making predictions. However, many of the techniques that are central to machine learning have deep roots in **statistics**, a field that has long focused on the analysis of data and the development of models to understand patterns and relationships. Machine learning and statistics share fundamental principles, and the boundary between the two fields is often blurred.
+One version says that statistics is about inference while machine learning is about prediction. Another says that machine learning is simply statistics performed on larger data sets. A third treats anything with a probability distribution as statistics and anything implemented with an optimizer as machine learning.
 
-This article explores how statistical methods underpin some of the most widely used machine learning algorithms, such as **linear regression**, **decision trees**, and **support vector machines**. By understanding the connections between traditional statistical approaches and modern machine learning techniques, we can better appreciate the evolution of these fields and their continued interdependence.
+None of those boundaries survives contact with actual practice.
 
-### Statistical Foundations of Machine Learning
+Statisticians build predictive models. Machine-learning researchers study uncertainty, identifiability, generalization and causal questions. Linear regression can be taught as a statistical model, an optimization problem or a supervised-learning algorithm without changing the fitted coefficients.
 
-Machine learning, at its core, is about making data-driven predictions or decisions based on patterns found in data. This objective is closely aligned with the goals of statistics, which also focuses on modeling relationships within data. Many machine learning algorithms build directly upon classical statistical methods, though with some key differences in focus and application.
-
-**Key similarities** between machine learning and statistics include:
-
-- **Modeling uncertainty**: Both fields rely on models that quantify uncertainty, whether through confidence intervals in statistics or probabilistic predictions in machine learning.
-- **Prediction**: Both fields aim to create models that can predict future outcomes based on observed data.
-- **Data-driven insights**: Statistical and machine learning methods are fundamentally driven by data, aiming to uncover hidden patterns and structures.
-
-However, there are also differences:
-
-- **Focus on inference versus prediction**: Traditional statistics often emphasizes inference—understanding relationships between variables and drawing conclusions about a population. Machine learning, in contrast, focuses more on **prediction accuracy**, even if interpretability is sometimes sacrificed.
-- **Model complexity**: Machine learning models, such as neural networks, are often more complex than traditional statistical models. They can capture more intricate patterns in the data, especially in high-dimensional datasets.
-
-### Linear Regression: The Basis of Many Algorithms
-
-One of the most widely recognized connections between statistics and machine learning is **linear regression**, a technique used to model the relationship between a dependent variable and one or more independent variables. Linear regression, a foundational tool in statistics, forms the backbone of many machine learning algorithms.
-
-#### Simple and Multiple Linear Regression
-
-In **simple linear regression**, the goal is to model the relationship between two variables by fitting a linear equation to the observed data. The model assumes the relationship between the dependent variable $$Y$$ and the independent variable $$X$$ is linear:
+The useful distinction is therefore not a list of algorithms. It is the structure of the problem being solved:
 
 $$
-Y = \beta_0 + \beta_1 X + \epsilon
+\boxed{
+\text{data} + \text{target} + \text{assumptions} + \text{loss} + \text{validation}
+}
 $$
 
-where:
+The same mathematical model can behave very differently depending on those choices.
 
-- $$Y$$ is the dependent variable (what we're trying to predict),
-- $$X$$ is the independent variable (the input feature),
-- $$\beta_0$$ is the intercept,
-- $$\beta_1$$ is the slope, and
-- $$\epsilon$$ represents the error term.
+## Prediction and inference are different targets
 
-In **multiple linear regression**, the model is extended to handle multiple independent variables:
+Suppose
 
 $$
-Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_n X_n + \epsilon
+Y = f(X) + \varepsilon.
 $$
 
-Linear regression models, whether simple or multiple, are foundational for many machine learning algorithms, providing a simple yet effective method for predicting outcomes based on input features.
-
-#### Regularization: Ridge and Lasso Regression
-
-In machine learning, more advanced forms of linear regression are often used, particularly when working with **high-dimensional data** (data with many features). Two important techniques—**ridge regression** and **lasso regression**—help to manage overfitting, which occurs when a model is too closely tailored to the training data and fails to generalize to new data.
-
-- **Ridge regression** (or **L2 regularization**) adds a penalty for large coefficients to the cost function, helping to prevent overfitting by shrinking the coefficients of less important features.
-  
-$$
-\text{Ridge Cost Function} = \sum (Y_i - \hat{Y}_i)^2 + \lambda \sum \beta_j^2
-$$
-
-- **Lasso regression** (or **L1 regularization**) adds a penalty based on the absolute values of the coefficients, which can shrink some coefficients to zero, effectively performing feature selection.
+A predictive problem asks for a function $\hat f$ that performs well on future observations. A common target is expected prediction loss,
 
 $$
-\text{Lasso Cost Function} = \sum (Y_i - \hat{Y}_i)^2 + \lambda \sum |\beta_j|
+R(f)
+=
+\mathbb E\left[L\{Y,f(X)\}\right].
 $$
 
-Both ridge and lasso regression are examples of **regularization techniques**, which are critical in machine learning for improving model performance, particularly when the dataset contains many features or is prone to noise.
-
-### Decision Trees and Random Forests: Statistics Meets Complexity
-
-**Decision trees** are another machine learning algorithm with strong ties to statistics. A decision tree is a flowchart-like model that recursively splits the data into subsets based on the value of input features, eventually arriving at a prediction. Each decision point, or "node," represents a test on a feature, and each branch represents the outcome of that test.
-
-In a statistical sense, decision trees are built upon concepts like **information gain** or **Gini impurity**, which are measures used to assess the quality of a split. These metrics are grounded in statistics and probability theory, as they quantify the reduction in uncertainty or entropy as the tree grows.
-
-Decision trees are a powerful tool for both **classification** and **regression** tasks, but they can easily overfit the training data if not properly constrained. To address this issue, machine learning uses techniques like **pruning** (removing branches that add little predictive power) and **ensemble methods** like **random forests**.
-
-#### Random Forests: An Ensemble Learning Approach
-
-A **random forest** is an ensemble learning method that combines multiple decision trees to improve predictive accuracy and control overfitting. Instead of relying on a single tree, the random forest algorithm constructs a collection of trees (a "forest") and aggregates their predictions.
-
-The random forest algorithm introduces two sources of randomness:
-
-1. **Bagging** (Bootstrap Aggregating): Each tree is trained on a random subset of the data.
-2. **Random feature selection**: At each node, the algorithm selects a random subset of features to consider for splitting.
-
-This approach reduces the variance of the model and makes random forests highly effective for tasks involving complex datasets with noisy or high-dimensional data.
-
-### Support Vector Machines: A Statistical Approach to Classification
-
-**Support vector machines (SVMs)** are a powerful supervised learning algorithm primarily used for **classification** tasks. SVMs operate by finding a hyperplane that best separates the data into different classes. The goal of the algorithm is to maximize the **margin**—the distance between the hyperplane and the nearest data points from each class, known as **support vectors**.
-
-The theoretical foundation of SVMs is rooted in optimization and probability theory. The algorithm seeks to minimize a cost function that balances maximizing the margin with minimizing classification error:
+Because the population risk $R(f)$ is unknown, machine-learning procedures usually minimize an empirical or regularized approximation,
 
 $$
-\text{Cost Function} = \frac{1}{2} ||w||^2 + C \sum \xi_i
+\hat R(f)
+=
+\frac{1}{n}\sum_{i=1}^{n}
+L\{y_i,f(x_i)\}
++
+\lambda J(f).
 $$
 
-where $$w$$ is the weight vector (which defines the hyperplane), $$C$$ is a regularization parameter, and $$\xi_i$$ are slack variables that allow some misclassification in the data. This formulation represents a **convex optimization problem**, a key concept in statistics and mathematical programming.
-
-SVMs also make use of the **kernel trick**, a statistical technique that allows the algorithm to operate in a higher-dimensional feature space without explicitly computing the coordinates of the data in that space. This makes SVMs highly effective for datasets that are not linearly separable.
-
-### Bayesian Methods: Probability in Action
-
-**Bayesian statistics** forms the basis of many machine learning algorithms that involve probabilistic reasoning. In Bayesian methods, probabilities are used to quantify uncertainty, and **Bayes' Theorem** provides a mechanism for updating beliefs based on new data.
-
-Bayesian approaches are particularly useful in machine learning tasks that require probabilistic models, such as **Bayesian networks** and **Gaussian processes**. These models are capable of making predictions while explicitly accounting for uncertainty in the data, which is a key strength of Bayesian inference.
-
-The principle behind **Bayes’ Theorem** is:
+An inferential problem can use the same data but ask something different. In the linear model
 
 $$
-P(A \mid B) = \frac{P(B \mid A) P(A)}{P(B)}
+Y_i = \beta_0 + X_i^\top\beta + \varepsilon_i,
 $$
 
-where:
+we might want a confidence interval for one component of $\beta$, a test of a scientific hypothesis, or an estimate of a causal effect under additional identification assumptions.
 
-- $$P(A \mid B)$$ is the **posterior probability** (the probability of event A given event B),
-- $$P(B \mid A)$$ is the **likelihood**,
-- $$P(A)$$ is the **prior probability**, and
-- $$P(B)$$ is the **marginal likelihood**.
+Good prediction does not make those quantities identified. Conversely, a model can estimate a scientifically meaningful parameter well without being the best predictive model available.
 
-Bayesian methods are essential in machine learning applications like **Naive Bayes classifiers**, **hidden Markov models**, and **Bayesian neural networks**, which all rely on probabilistic reasoning to make decisions under uncertainty.
+This difference in target is more important than the label attached to the method.
 
-### Conclusion: A Symbiotic Relationship
+## Linear regression shows how the two traditions overlap
 
-The relationship between **machine learning** and **statistics** is deeply intertwined. Statistical methods form the foundation of many machine learning algorithms, from the simplest linear models to the most complex ensemble methods and deep learning architectures. Machine learning has, in many ways, expanded on statistical concepts, applying them to large-scale data analysis and real-world applications with a focus on prediction and automation.
+Ordinary least squares minimizes
 
-By understanding the statistical principles that underlie machine learning algorithms, we can build better models, interpret their results more effectively, and continue to push the boundaries of what both fields can achieve. The gap between statistics and machine learning is narrowing, as both fields evolve and influence each other, driving advancements in data science, artificial intelligence, and decision-making systems.
+$$
+\sum_{i=1}^{n}
+\left(y_i-\beta_0-x_i^\top\beta\right)^2.
+$$
+
+That is an optimization problem and therefore fits naturally into supervised learning.
+
+Under a Gaussian error model,
+
+$$
+\varepsilon_i
+\overset{\mathrm{iid}}{\sim}
+\mathcal N(0,\sigma^2),
+$$
+
+the same coefficient estimates are also maximum-likelihood estimates. The probabilistic model then supplies more structure: likelihood-based uncertainty, model diagnostics and a precise statement of the assumptions under which finite-sample inference is derived.
+
+The prediction problem does not require every one of those assumptions. If the only goal is out-of-sample squared-error performance, cross-validation can compare predictive procedures without asserting that the errors are exactly Gaussian.
+
+The inferential problem is different. Standard errors, confidence intervals and coefficient interpretations depend on the sampling model and on which assumptions are being used.
+
+The algorithm is the same. The claim being made is not.
+
+## Regularization makes the loss function explicit
+
+Ridge regression solves
+
+$$
+\hat\beta_{\mathrm{ridge}}
+=
+\arg\min_{\beta}
+\left[
+\sum_{i=1}^{n}
+(y_i-x_i^\top\beta)^2
++
+\lambda\sum_{j=1}^{p}\beta_j^2
+\right].
+$$
+
+Lasso replaces the quadratic penalty with an $L_1$ penalty,
+
+$$
+\hat\beta_{\mathrm{lasso}}
+=
+\arg\min_{\beta}
+\left[
+\sum_{i=1}^{n}
+(y_i-x_i^\top\beta)^2
++
+\lambda\sum_{j=1}^{p}|\beta_j|
+\right].
+$$
+
+The important point is not that these are "machine-learning versions" of regression. Both are statistical estimators. Their behavior follows from a deliberate bias-variance trade-off.
+
+Ridge shrinks unstable coefficients and can improve prediction when predictors are correlated or $p$ is large. Lasso can set coefficients exactly to zero and therefore combines shrinkage with variable selection.
+
+But a selected lasso model does not automatically inherit ordinary least-squares inference as if the selected variables had been fixed in advance. Prediction, selection and post-selection inference are distinct problems.
+
+## Trees are not statistical because they use Gini impurity
+
+Decision trees are sometimes described as statistical methods because split criteria use quantities such as entropy or Gini impurity. That is not a useful distinction.
+
+For a binary node with class proportion $p$, Gini impurity is
+
+$$
+G(p)=2p(1-p),
+$$
+
+and entropy is
+
+$$
+H(p)
+=
+-p\log p-(1-p)\log(1-p).
+$$
+
+A tree searches candidate partitions and chooses splits that reduce an impurity or loss criterion. The difficult statistical question is what happens after repeatedly searching the data for those splits.
+
+A deep tree has low training error but high variance. Pruning, minimum leaf sizes and other constraints regularize the search.
+
+Random forests attack the variance problem differently. Each tree is fit to a bootstrap sample and each split considers only a random subset of predictors. Averaging many decorrelated trees can reduce prediction variance substantially.
+
+None of this depends on drawing a boundary between "statistics" and "machine learning." It is an estimation problem involving adaptive search, regularization and out-of-sample validation.
+
+## Support vector machines are not probabilistic models by default
+
+A support vector machine is another useful counterexample to loose terminology.
+
+For binary labels $y_i\in\{-1,+1\}$, a soft-margin linear SVM can be written as
+
+$$
+\min_{w,b}
+\left[
+\frac{1}{2}\|w\|^2
++
+C\sum_{i=1}^{n}
+\max\{0,1-y_i(w^\top x_i+b)\}
+\right].
+$$
+
+The second term is the hinge loss. The first controls the size of $w$, which determines the geometric margin.
+
+This is a convex optimization problem arising from statistical learning theory. It is not, in its standard form, a probability model for $P(Y=1\mid X=x)$.
+
+The kernel construction changes the representation by replacing inner products with
+
+$$
+K(x_i,x_j)
+=
+\langle \phi(x_i),\phi(x_j)\rangle,
+$$
+
+so that a linear separator in the feature space can represent nonlinear boundaries in the original variables.
+
+Calling the kernel trick a "statistical technique" adds little. It is a mathematical device that becomes part of a statistical learning procedure when used to estimate a decision function from data.
+
+## Probability models are only one part of machine learning
+
+Other methods start explicitly from probability distributions.
+
+Logistic regression models
+
+$$
+P(Y=1\mid X=x)
+=
+\operatorname{logit}^{-1}
+(\beta_0+x^\top\beta).
+$$
+
+A Gaussian process places a prior distribution over functions. Hidden Markov models specify a latent-state stochastic process and an observation model. Bayesian neural networks place probability distributions over parameters or functions.
+
+These methods live comfortably in both statistical and machine-learning literatures.
+
+But it is important not to reverse the statement. Hidden Markov models are not inherently Bayesian, and an algorithm does not become Bayesian merely because it uses probabilities. Bayesian inference requires a prior together with a likelihood and a posterior update.
+
+## Validation exposes a genuine difference in emphasis
+
+One of the clearest historical differences is the role assigned to prediction on unseen data.
+
+For a predictive system, the relevant quantity is usually generalization error. A training metric is optimistic because the same observations influenced the fitted model. Validation therefore uses held-out data, cross-validation, time-respecting backtests or an external test set.
+
+For a statistical model used primarily for inference, validation also includes model checking: residual structure, calibration, specification, sensitivity to assumptions and whether the sampling design supports the intended interpretation.
+
+These are not competing philosophies. A serious analysis often needs both.
+
+A clinical risk model can require good calibration and discrimination on new patients while also needing uncertainty estimates. A causal model may need predictive components internally while the final target is a treatment effect. A forecasting system can have an excellent likelihood fit and still fail operationally out of sample.
+
+## Breiman's "two cultures" is a useful historical description, not a law
+
+Leo Breiman described a tension between a **data-modeling culture**, which starts from an explicit stochastic model, and an **algorithmic-modeling culture**, which treats the mechanism as largely unknown and emphasizes prediction.
+
+That distinction remains useful because it describes different habits of thought.
+
+It should not be turned into a rigid taxonomy.
+
+Modern statistical learning contains both cultures. Generalized additive models, boosting, Bayesian hierarchical models, random forests, Gaussian processes and neural networks can all be studied with statistical questions about risk, uncertainty and generalization.
+
+The better question is therefore not
+
+> Is this statistics or machine learning?
+
+It is
+
+> What quantity is being estimated, what assumptions connect the data to that quantity, what loss is being optimized, and how will the claim be validated?
+
+That question survives changes in software, terminology and fashion.
 
 ## References
 
-- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
-- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.
+- Breiman, L. (2001). Statistical modeling: The two cultures. *Statistical Science*, 16(3), 199–231. https://doi.org/10.1214/ss/1009213726
+- Breiman, L. (2001). Random forests. *Machine Learning*, 45, 5–32. https://doi.org/10.1023/A:1010933404324
+- Cortes, C., & Vapnik, V. (1995). Support-vector networks. *Machine Learning*, 20, 273–297. https://doi.org/10.1007/BF00994018
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
-- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
-- Breiman, L. (1996). Bagging predictors. *Machine Learning*, 24(2), 123-140.
-- Efron, B. (1979). Bootstrap methods: another look at the jackknife. *Annals of Statistics*, 7(1), 1-26.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267–288. https://doi.org/10.1111/j.2517-6161.1996.tb02080.x

@@ -4,7 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2019-12-30'
-excerpt: AUC-ROC and Gini are popular metrics for evaluating binary classifiers, but they can be misleading on imbalanced datasets. Discover why AUC-PR, with its focus on Precision and Recall, offers a better evaluation for handling rare events.
+excerpt: ROC and precision-recall curves answer different questions under class imbalance. ROC AUC does not become invalid when prevalence is low, but precision exposes the operational burden of false positives.
 header:
   image: /assets/images/headers/photo-data-science-air-quality.jpg
   og_image: /assets/images/headers/photo-data-science-air-quality.jpg
@@ -14,109 +14,370 @@ header:
   teaser: /assets/images/headers/photo-data-science-air-quality.jpg
   twitter_image: /assets/images/headers/photo-data-science-air-quality.jpg
 keywords:
-- Auc-pr
 - Precision-recall
+- ROC AUC
 - Binary classifiers
 - Imbalanced data
-- Machine learning metrics
+- Prevalence
+- Model evaluation
 permalink: '/data-science/evaluating_binary_classifiers_imbalanced_datasets/'
 redirect_from:
 - '/data science/evaluating_binary_classifiers_imbalanced_datasets/'
-seo_description: Why AUC-PR is more informative than AUC-ROC or Gini when evaluating binary classifiers on imbalanced data.
-seo_title: AUC-PR vs. AUC-ROC on Imbalanced Data
+seo_description: ROC AUC and precision-recall curves behave differently under class imbalance. This article derives the role of prevalence and explains when each metric is informative.
+seo_title: ROC and Precision-Recall Under Class Imbalance
 seo_type: article
-summary: In this article, we explore why AUC-PR (Area Under Precision-Recall Curve) is a superior metric for evaluating binary classifiers on imbalanced datasets compared to AUC-ROC and Gini. We discuss how class imbalance distorts performance metrics and provide real-world examples of why Precision-Recall curves give a clearer understanding of model performance on rare events.
+summary: A mathematical comparison of ROC AUC, Gini, precision-recall curves and threshold-specific decision metrics for rare-event classification.
 tags:
 - Classification
 - Model Evaluation
-title: 'Evaluating Binary Classifiers on Imbalanced Datasets: Why AUC-PR Beats AUC-ROC and Gini'
+title: 'ROC and Precision-Recall Under Class Imbalance'
 ---
 
-When working with binary classifiers, metrics like **AUC-ROC** and **Gini** have long been the default for evaluating model performance. These metrics offer a quick way to assess how well a model discriminates between two classes, typically a **positive class** (e.g., detecting fraud or predicting defaults) and a **negative class** (e.g., non-fraudulent or non-default cases). 
+Class imbalance creates real evaluation problems, but not for the reason usually given.
 
-However, when dealing with **imbalanced datasets**, where one class is much more prevalent than the other, these metrics can **mislead** us into believing a model is better than it truly is. In such cases, **AUC-PR**—which focuses on **Precision** and **Recall**—offers a more meaningful evaluation of a model’s ability to handle rare events, providing a clearer picture of how the model performs on the **minority class**.
+A common explanation says that ROC AUC is "dominated by true negatives" and therefore becomes invalid when the positive class is rare. That statement is too crude. ROC AUC is built from the **true-positive rate** and **false-positive rate**, both of which are conditional rates. If the conditional score distributions remain unchanged, changing the number of positives relative to negatives does not by itself change the population ROC curve.
 
-In this article, we'll explore why **AUC-PR** (Area Under the Precision-Recall Curve) is more informative than **AUC-ROC** and **Gini** when evaluating models on imbalanced datasets. We’ll examine why AUC-ROC often **overstates model performance**, and how AUC-PR shifts the focus to the model’s performance on the **positive class**, giving a more reliable assessment of how well it handles **imbalanced classes**.
+Precision behaves differently. It depends directly on class prevalence.
 
-## The Challenges of Imbalanced Data
+That distinction is the reason precision-recall curves can be much more informative in rare-event applications.
 
-Before diving into metrics, it’s important to understand the **challenges of imbalanced data**. In many real-world applications, the class distribution is highly skewed. For instance, in **fraud detection**, **medical diagnosis**, or **default prediction**, the positive class (e.g., fraudulent transactions, patients with a disease, or customers defaulting on loans) represents only a **tiny fraction** of the total cases.
+The correct conclusion is therefore not
 
-In these scenarios, models tend to **focus heavily on the majority class**, often leading to deceptive results. A model might show high accuracy by correctly identifying many **True Negatives** but fail to adequately detect the **True Positives**—the rare but critical cases. This is where traditional metrics like AUC-ROC and Gini can fall short.
+$$
+\boxed{\text{imbalanced data} \Rightarrow \text{ignore ROC AUC}}
+$$
 
-### Imbalanced Data Example: Fraud Detection
+but
 
-Imagine you’re building a model to detect fraudulent transactions. Out of 100,000 transactions, only 500 are fraudulent. That’s a **0.5% positive class** and a **99.5% negative class**. A model that predicts **all transactions as non-fraudulent** would still achieve **99.5% accuracy**, despite **failing completely** to detect any fraud.
+$$
+\boxed{
+\text{choose a metric whose conditioning matches the decision problem}
+}
+$$
 
-While accuracy alone is clearly misleading, even metrics like **AUC-ROC** and **Gini**, which aim to balance True Positives and False Positives, can still provide an **inflated sense of performance**. This is because they take **True Negatives** into account, which, in imbalanced datasets, dominate the metric and obscure the model’s struggles with the positive class.
+## Start from the confusion matrix
 
-## Why AUC-ROC and Gini Can Be Misleading
+For a fixed threshold, define
 
-The **AUC-ROC curve** (Area Under the Receiver Operating Characteristic Curve) is widely used to evaluate binary classifiers. It plots the **True Positive Rate** (TPR) against the **False Positive Rate** (FPR) at various classification thresholds. The **Gini coefficient** is closely related to AUC-ROC, as it is simply **2 * AUC-ROC - 1**.
+$$
+\mathrm{TPR}
+=
+\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FN}}
+=
+P(\hat Y=1\mid Y=1)
+$$
 
-While AUC-ROC is effective for **balanced datasets**, it becomes problematic when applied to **imbalanced data**. Here’s why:
+and
 
-### 1. **Over-Emphasis on True Negatives**
+$$
+\mathrm{FPR}
+=
+\frac{\mathrm{FP}}{\mathrm{FP}+\mathrm{TN}}
+=
+P(\hat Y=1\mid Y=0).
+$$
 
-The ROC curve incorporates the **True Negative Rate** (TNR), which means that a model can appear to perform well by simply classifying the majority of non-events (True Negatives) correctly. In imbalanced datasets, where the negative class is abundant, even a model with **poor performance on the positive class** can still achieve a high AUC-ROC score, giving a **false sense of effectiveness**.
+The ROC curve plots $\mathrm{TPR}$ against $\mathrm{FPR}$ while the classification threshold varies.
 
-For example, a model that classifies all non-fraudulent transactions correctly while missing most fraudulent transactions will still show a **high AUC-ROC**. This is because the **False Positive Rate** (FPR) will remain low, and the **True Positive Rate** (TPR) can look decent even if many fraud cases are missed.
+Precision is
 
-### 2. **Sensitivity to Class Imbalance**
+$$
+\mathrm{Precision}
+=
+\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FP}}
+=
+P(Y=1\mid \hat Y=1),
+$$
 
-In imbalanced datasets, the **majority class** dominates the calculation of the ROC curve. As a result, the metric often emphasizes performance on the negative class rather than the positive class. For highly skewed datasets, this can result in a **high AUC-ROC score**, even if the model is **failing** to correctly classify the minority class.
+while recall is simply the true-positive rate,
 
-For instance, if 95% of your dataset consists of **True Negatives**, a model that excels at classifying the negative class but performs poorly on the positive class can still produce a high **AUC-ROC** score. In this way, AUC-ROC can **overstate** how well your model is really doing when you care most about the positive class.
+$$
+\mathrm{Recall}=\mathrm{TPR}.
+$$
 
-## Why AUC-PR Is Better for Imbalanced Data
+The change in conditioning is the entire story.
 
-When evaluating binary classifiers on imbalanced datasets, a better approach is to use the **AUC-PR curve** (Area Under the Precision-Recall Curve). The **Precision-Recall curve** plots **Precision** (the proportion of correctly predicted positive cases out of all predicted positive cases) against **Recall** (the proportion of actual positive cases that are correctly identified).
+ROC asks how the classifier behaves **within the positive and negative classes**.
 
-### 1. **Focus on the Positive Class**
+Precision asks what fraction of the cases **flagged by the classifier** are actually positive.
 
-The key advantage of **AUC-PR** is that it **focuses on the positive class**, without being distracted by the abundance of True Negatives. This is particularly important when dealing with **rare events**, where identifying the minority class (e.g., fraud, defaults, or disease) is the primary goal. 
+Those are not interchangeable questions.
 
-**Precision** measures how many of the predicted positive cases are correct, and **Recall** measures how well the model identifies actual positive cases. Together, they provide a clearer picture of the model's performance when dealing with **imbalanced classes**.
+## Why prevalence enters precision but not the ROC coordinates
 
-For example, in fraud detection, the **Precision-Recall curve** will give a more accurate sense of how well the model balances **finding fraud cases** (high Recall) with ensuring that **predicted fraud cases are actually fraudulent** (high Precision).
+Let
 
-### 2. **Ignoring True Negatives**
+$$
+\pi=P(Y=1)
+$$
 
-One of the strengths of **AUC-PR** is that it **ignores True Negatives**—which are often overwhelmingly present in imbalanced datasets. This means that the model’s performance is evaluated **solely** on its ability to handle the positive class (the class of interest in most real-world applications). 
+be the prevalence of the positive class.
 
-By ignoring True Negatives, the **Precision-Recall curve** gives a more direct view of the model’s performance on **rare events**, making it **far more suitable** for tasks like **fraud detection**, **default prediction**, or **medical diagnoses** where false positives and false negatives carry different risks and costs.
+Bayes' rule gives
 
-## A Real-World Example: Comparing AUC-ROC and AUC-PR
+$$
+P(Y=1\mid \hat Y=1)
+=
+\frac{
+P(\hat Y=1\mid Y=1)P(Y=1)
+}{
+P(\hat Y=1)
+}.
+$$
 
-Let’s look at a real-world example to illustrate how AUC-PR offers a better assessment of model performance on imbalanced data. Imagine you’re building a classifier to predict loan defaults.
+Substituting $\mathrm{TPR}$, $\mathrm{FPR}$ and $\pi$,
 
-### Step 1: Evaluating with AUC-ROC
+$$
+\boxed{
+\mathrm{Precision}
+=
+\frac{
+\pi\,\mathrm{TPR}
+}{
+\pi\,\mathrm{TPR}
++
+(1-\pi)\,\mathrm{FPR}
+}
+}
+$$
 
-When you plot the **ROC curve**, you see that the model achieves a **high AUC-ROC score** of 0.92. Based on this, it might seem that the model is excellent at distinguishing between default and non-default cases. The **Gini coefficient**, calculated as **2 * AUC-ROC - 1**, is similarly high, suggesting strong model performance.
+This equation explains why a classifier can have an attractive ROC operating point and still create an unacceptable number of false alerts in a rare-event problem.
 
-### Step 2: Evaluating with AUC-PR
+Suppose fraud prevalence is
 
-Now, you turn to the **Precision-Recall curve** and find a different story. Although Recall is high (the model identifies most default cases), **Precision is much lower**, suggesting that many of the predicted defaults are actually **false positives**. This means that while the model is good at detecting defaults, it’s not as confident in its predictions. As a result, the **AUC-PR** score is significantly lower than the AUC-ROC score, reflecting the model’s **struggle with class imbalance**.
+$$
+\pi=0.005,
+$$
 
-### Step 3: What This Tells Us
+the classifier achieves
 
-This discrepancy between AUC-ROC and AUC-PR tells us that while the model might appear to perform well overall (high AUC-ROC), its **actual performance** in identifying and confidently predicting defaults is **suboptimal** (low AUC-PR). In practice, this could lead to **incorrect predictions**, where too many non-default cases are classified as defaults, resulting in unnecessary interventions or loss of trust in the model.
+$$
+\mathrm{TPR}=0.80
+$$
 
-## Conclusion: Why AUC-PR Should Be Your Go-To for Imbalanced Data
+and
 
-For **imbalanced datasets**, AUC-ROC and Gini can **mislead** you into thinking your model performs well when, in fact, it struggles with the **minority class**. Metrics like **AUC-PR** offer a more focused evaluation by prioritizing **Precision** and **Recall**—two critical metrics for rare events where misclassification can be costly.
+$$
+\mathrm{FPR}=0.01.
+$$
 
-In practice, when evaluating models on tasks like **fraud detection**, **default prediction**, or **disease diagnosis**, where the positive class is rare but crucial, the **Precision-Recall curve** and **AUC-PR** give a more honest reflection of the model’s performance. While AUC-ROC might inflate the model's effectiveness by focusing on the majority class, AUC-PR shows how well the model **balances** Precision and Recall—two metrics that matter most in real-world applications where **rare events** have significant consequences.
+A 1% false-positive rate may sound excellent. But precision is
 
-### Key Takeaways:
+$$
+\frac{0.005(0.80)}
+{0.005(0.80)+0.995(0.01)}
+\approx 0.287.
+$$
 
-- **AUC-ROC** and **Gini** are suitable for balanced datasets but can **overstate** model performance on imbalanced data.
-- **AUC-PR** focuses on the **positive class**, providing a clearer view of how well the model handles **rare events**.
-- When evaluating binary classifiers on **imbalanced datasets**, always consider using **AUC-PR** as it offers a more honest assessment of your model's strengths and weaknesses.
+Only about 29% of the alerts are fraud.
 
-In your next machine learning project, especially when handling imbalanced datasets, prioritize **AUC-PR** over AUC-ROC and Gini for a clearer, more accurate evaluation of your model’s ability to manage rare but critical events.
+The ROC point
+
+$$
+(0.01,0.80)
+$$
+
+has not changed. The operational interpretation has.
+
+## What ROC AUC actually measures
+
+ROC AUC summarizes ranking performance across thresholds.
+
+For continuous scores, it has the probabilistic interpretation
+
+$$
+\mathrm{AUC}_{ROC}
+=
+P(S^+>S^-)
++
+\frac{1}{2}P(S^+=S^-),
+$$
+
+where $S^+$ is the score assigned to a randomly selected positive observation and $S^-$ is the score assigned to a randomly selected negative observation.
+
+This is why ROC AUC is largely insensitive to class prevalence: the comparison is made between conditional score distributions.
+
+That property is not a defect.
+
+If the scientific question is
+
+> How well does the score rank positives above negatives?
+
+ROC AUC is a coherent answer.
+
+The problem begins when that ranking statistic is interpreted as though it described the expected burden of positive predictions in a population where positives are extremely rare.
+
+It does not.
+
+## Gini adds no new information to ROC AUC
+
+For binary ranking, the commonly used model Gini coefficient is
+
+$$
+G=2\,\mathrm{AUC}_{ROC}-1.
+$$
+
+Therefore,
+
+$$
+\mathrm{AUC}_{ROC}=0.80
+\quad\Longleftrightarrow\quad
+G=0.60.
+$$
+
+Gini does not solve or worsen the class-imbalance problem. It is a linear rescaling of the same ranking statistic.
+
+Reporting both as though they were independent evidence of model quality is redundant.
+
+## Why precision-recall plots are useful for rare events
+
+A precision-recall curve plots precision against recall while the threshold varies.
+
+Because precision contains prevalence explicitly, the curve exposes the cost of false positives in the population being evaluated.
+
+For a random classifier whose predictions are independent of the outcome, expected precision is the prevalence,
+
+$$
+\mathrm{Precision}_{\mathrm{baseline}}=\pi.
+$$
+
+If prevalence is 0.5%, a precision of 5% is ten times the random baseline even though 95% of alerts are false positives.
+
+That is a much more useful statement than calling 5% precision simply "low."
+
+The baseline moves with prevalence, which is both a strength and a limitation.
+
+## AUPRC is not prevalence-invariant
+
+The fact that precision depends on $\pi$ means that the area under a precision-recall curve also depends on prevalence.
+
+This matters when comparing experiments.
+
+Suppose the same conditional score model is evaluated once in a case-control sample containing 50% positives and once in the real deployment population containing 1% positives. The ROC curve can remain essentially unchanged while the precision-recall curve changes dramatically.
+
+Therefore,
+
+$$
+\boxed{
+\text{AUPRC values from different prevalences are not automatically comparable}
+}
+$$
+
+If deployment prevalence matters, evaluation should use a test set representative of that population or adjust predictive values to the target prevalence.
+
+Saito and Rehmsmeier's central point is precisely that precision-recall plots make the consequences of imbalance visible in a way ROC plots do not.
+
+That does not imply that ROC AUC is mathematically corrupted by imbalance.
+
+## Neither area metric chooses an operating threshold
+
+AUC metrics average over many thresholds, including thresholds that may never be used.
+
+Production systems operate at one threshold, or under a policy that changes thresholds according to capacity or cost.
+
+At a candidate threshold, the decision may depend on quantities such as
+
+$$
+\mathrm{TP},\quad
+\mathrm{FP},\quad
+\mathrm{FN},
+$$
+
+expected cost,
+
+$$
+C(t)
+=
+c_{\mathrm{FP}}P(\mathrm{FP}\mid t)
++
+c_{\mathrm{FN}}P(\mathrm{FN}\mid t),
+$$
+
+or constraints such as
+
+$$
+\mathrm{Recall}(t)\ge 0.95
+$$
+
+with precision maximized subject to that requirement.
+
+A fraud team that can investigate 500 transactions per day has a capacity constraint. A screening program may care about sensitivity at a prespecified false-positive rate. A credit model may be evaluated by expected loss or profit.
+
+No single AUC number contains those decisions.
+
+## Accuracy is the genuinely obvious failure under severe imbalance
+
+If 0.5% of transactions are fraudulent, the classifier
+
+$$
+\hat Y=0
+$$
+
+for every transaction has
+
+$$
+99.5\%
+$$
+
+accuracy.
+
+Its recall is zero.
+
+This is a direct consequence of class prevalence because ordinary accuracy weights every observation equally and the negative class dominates the sample count.
+
+That argument should not be transferred mechanically to ROC AUC. The two metrics have different denominators and different meanings.
+
+## A better evaluation stack
+
+For rare-event classification, I would normally keep several layers separate.
+
+### Ranking
+
+Use ROC AUC when the question is whether the score ranks positives above negatives.
+
+### Positive-prediction quality
+
+Use precision-recall curves when the fraction of useful alerts matters and evaluate them at the target prevalence.
+
+### Calibration
+
+Check whether predicted probabilities correspond to observed event frequencies. A perfectly ranked model can still be badly calibrated.
+
+### Threshold performance
+
+Report precision, recall, specificity and the confusion matrix at thresholds that could actually be deployed.
+
+### Decision performance
+
+When costs or benefits can be stated, evaluate expected utility, expected cost, net benefit or another domain-specific objective directly.
+
+The best metric depends on what the classifier is for.
+
+## Conclusion
+
+Class imbalance does not make ROC AUC meaningless.
+
+It makes **some interpretations of ROC performance incomplete**.
+
+ROC coordinates condition on the true class and are therefore insensitive to prevalence in a way that precision is not. Precision asks the operationally different question of how many positive predictions are correct. When positives are rare, even a small false-positive rate can produce many more false alerts than true alerts, and a precision-recall curve makes that visible.
+
+So the useful rule is not "AUPRC beats ROC AUC."
+
+It is:
+
+$$
+\boxed{
+\begin{aligned}
+\text{ROC} &\rightarrow \text{ranking across classes},\\
+\text{PR} &\rightarrow \text{quality of positive predictions at a prevalence},\\
+\text{decision metric} &\rightarrow \text{what the system is actually built to optimize}.
+\end{aligned}
+}
+$$
+
+That distinction is more accurate, and it survives changes in class balance.
 
 ## References
 
-- Saito, T., & Rehmsmeier, M. (2015). The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets. *PLOS ONE*, 10(3), e0118432.
-- Lorenz, M. O. (1905). Methods of measuring the concentration of wealth. *Publications of the American Statistical Association*, 9(70), 209-219.
+- Fawcett, T. (2006). An introduction to ROC analysis. *Pattern Recognition Letters*, 27(8), 861–874. https://doi.org/10.1016/j.patrec.2005.10.010
+- Saito, T., & Rehmsmeier, M. (2015). The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets. *PLOS ONE*, 10(3), e0118432. https://doi.org/10.1371/journal.pone.0118432

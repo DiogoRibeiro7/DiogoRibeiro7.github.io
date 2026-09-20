@@ -5,9 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2020-06-01'
-excerpt: Discover the foundations of Ordinary Least Squares (OLS) regression, its
-  key properties such as consistency, efficiency, and maximum likelihood estimation,
-  and its applications in linear modeling.
+excerpt: OLS is a projection estimator with precise properties under specific assumptions. This article separates unbiasedness, consistency, Gauss-Markov efficiency, normal-theory inference, and causal interpretation.
 header:
   image: /assets/images/headers/photo-statistics-f-test.jpg
   og_image: /assets/images/headers/photo-statistics-f-test.jpg
@@ -17,103 +15,351 @@ header:
   teaser: /assets/images/headers/photo-statistics-f-test.jpg
   twitter_image: /assets/images/headers/photo-statistics-f-test.jpg
 keywords:
-- Consistency
+- Ordinary least squares
 - Linear regression
-- Data science
-- Gauss-markov
-- Ols
-- Maximum likelihood estimator
-seo_description: 'Ordinary Least Squares regression explained: consistency, efficiency, and minimum variance, plus applications across statistics and machine learning.'
-seo_title: 'OLS Regression: Properties and Applications'
+- Gauss-Markov
+- Consistency
+- Heteroskedasticity
+- Causal inference
+seo_description: OLS regression explained through projection, exogeneity, consistency, Gauss-Markov efficiency, robust standard errors, and the distinction between association and causation.
+seo_title: 'OLS Regression: What Its Properties Actually Require'
 seo_type: article
-summary: This article covers Ordinary Least Squares (OLS) regression, one of the most
-  commonly used techniques in statistics, data science, and machine learning. Learn
-  about its key properties, how it works, and its wide range of applications in modeling
-  linear relationships between variables.
+summary: A precise guide to ordinary least squares that separates estimation from inference and causal interpretation.
 tags:
 - Regression
-- Stochastic Processes
+- Statistical Modeling
 - Probability
-title: 'Ordinary Least Squares (OLS) Regression: Properties and Applications'
+title: 'Ordinary Least Squares: What Its Properties Actually Require'
 ---
 
-**Ordinary Least Squares (OLS) regression** is one of the most fundamental techniques in **statistics**, **machine learning**, and **data science** for estimating the parameters of linear regression models. By using OLS, we can model the relationship between one or more independent (explanatory) variables and a dependent (response) variable by fitting a line through the data points that minimizes the sum of the squared residuals (the differences between observed and predicted values).
+Ordinary least squares is simple enough to be taught in a first statistics course and subtle enough to be misused for an entire career.
 
-This method is critical in many disciplines—including **economics**, **social sciences**, and **engineering**—for **predicting outcomes**, **understanding relationships** between variables, and **making data-driven decisions**. This article examines how OLS works, its properties, and the conditions under which OLS estimators are optimal.
+The estimator itself is only an optimization rule.
 
+Given a response vector $y$ and design matrix $X$, OLS chooses
 
-## Key Properties of the OLS Estimator
+$$
+\hat\beta
+=
+\arg\min_b
+(y-Xb)^\top(y-Xb).
+$$
 
-The **OLS estimator** is valued for several important properties that make it a go-to method in regression analysis. These properties include **consistency**, **efficiency**, **minimum-variance**, and **maximum likelihood** estimation under specific assumptions.
+If $X^\top X$ is invertible,
 
-### 1. Consistency
+$$
+\hat\beta
+=
+(X^\top X)^{-1}X^\top y.
+$$
 
-**Consistency** means that as the sample size increases, the OLS estimates converge to the true population parameters. This is crucial in statistical estimation, as it ensures that with enough data, the OLS estimates will approximate the real values of the regression coefficients.
+Everything else — unbiasedness, consistency, standard errors, optimality, likelihood interpretation, or causal meaning — requires assumptions.
 
-**Key Condition**:
+Those properties should not be bundled together.
 
-- **Exogeneity**: The regressors (independent variables) must be exogenous, meaning they are uncorrelated with the error term $$ \epsilon $$. When this condition holds, the OLS estimator will produce unbiased and consistent estimates.
+## OLS as a projection
 
-In real-world applications, exogeneity is often assumed, but if this assumption is violated (e.g., when there is omitted variable bias or endogeneity), the OLS estimates may become inconsistent.
+Write the population model as
 
-### 2. Efficiency (Best Linear Unbiased Estimator)
+$$
+Y=X^\top\beta+\varepsilon.
+$$
 
-According to the **Gauss–Markov theorem**, under certain conditions, OLS provides the **best linear unbiased estimator (BLUE)**. In other words, OLS estimates are efficient among all linear and unbiased estimators, meaning they have the smallest possible variance.
+At the sample level, the fitted values are
 
-**Key Conditions**:
+$$
+\hat y = Hy,
+$$
 
-- **Homoscedasticity**: The error term must have constant variance across all values of the independent variables (i.e., the spread of the errors does not increase or decrease as a function of the explanatory variables).
-- **No autocorrelation**: The errors must be serially uncorrelated (no correlation between errors for different observations).
+where
 
-When these conditions are met, OLS is optimal in terms of providing the most **efficient** and **unbiased** estimates of the regression coefficients.
+$$
+H
+=
+X(X^\top X)^{-1}X^\top
+$$
 
-### 3. Minimum-Variance
+is the projection matrix.
 
-When the conditions of homoscedasticity and no autocorrelation hold, OLS offers **minimum-variance**, **mean-unbiased** estimation. This means that the variance of the OLS estimators is smaller than that of any other unbiased estimator, leading to more precise estimates.
+The residual vector is
 
-Why is this important?
+$$
+\hat\varepsilon
+=
+(I-H)y.
+$$
 
-- Lower variance in estimates increases their reliability, making it easier to make accurate predictions and inferences based on the regression model.
+Geometrically, OLS projects the observed response onto the column space of $X$.
 
-### 4. Maximum Likelihood Estimator
+That geometric statement is exact and does not require normal errors.
 
-When the additional assumption is made that the error terms follow a **normal distribution**, OLS becomes the **maximum likelihood estimator (MLE)**. In this context, OLS maximizes the likelihood function, making it possible to use probabilistic inferences for the coefficients and error terms.
+## Unbiasedness requires conditional mean zero
 
-- Maximum likelihood estimation provides a solid framework for making statistical inferences about the model, such as hypothesis testing and constructing confidence intervals.
-- OLS being the maximum likelihood estimator under normality is particularly useful in cases where the errors are assumed to follow a normal distribution, allowing us to fully leverage statistical inference tools.
+A central condition is
 
+$$
+E(\varepsilon\mid X)=0.
+$$
 
-## Applications of OLS Regression
+Under this assumption,
 
-OLS regression is used across a wide variety of fields due to its simplicity and interpretability. It forms the foundation for more complex modeling techniques in machine learning, econometrics, and data science.
+$$
+E(\hat\beta\mid X)=\beta.
+$$
 
-### 1. **Economics**
+This is the finite-sample unbiasedness result.
 
-In economics, OLS regression is frequently used to model relationships between variables like consumption and income, inflation and unemployment, or housing prices and interest rates. It helps economists estimate causal effects and make predictions based on economic data.
+It is stronger than saying that the regressors are merely uncorrelated with the residuals in the observed sample. Sample residual orthogonality,
 
-### 2. **Social Sciences**
+$$
+X^\top\hat\varepsilon=0,
+$$
 
-In the social sciences, OLS is often applied to survey data and observational studies to examine relationships between variables like education, income, and job satisfaction. Researchers use OLS to quantify the effects of independent variables on dependent outcomes.
+is created mechanically by OLS and therefore cannot verify population exogeneity.
 
-### 3. **Engineering**
+The assumption concerns the data-generating process.
 
-Engineers use OLS to model linear relationships between variables such as material stress and strain or temperature and system performance. These models assist in optimizing processes and predicting system behavior under various conditions.
+## Consistency is not identical to unbiasedness
 
-### 4. **Machine Learning**
+Consistency means
 
-In machine learning, OLS forms the basis for **linear regression**, which is often the first method learned for regression problems. It serves as a benchmark model and is used to develop more advanced techniques like **regularized regression** (Ridge, Lasso) and **generalized linear models**.
+$$
+\hat\beta
+\xrightarrow{p}
+\beta
+$$
 
+as the sample size increases.
+
+Under standard regularity conditions, one route to consistency is
+
+$$
+\frac{1}{n}X^\top\varepsilon
+\xrightarrow{p}
+0
+$$
+
+together with a well-behaved limiting design matrix.
+
+An estimator can be biased in finite samples and still be consistent.
+
+Conversely, an estimator can be approximately unbiased in one finite sample setting without satisfying the conditions needed for consistency under repeated sampling.
+
+The two concepts should be kept separate.
+
+## What Gauss-Markov actually says
+
+Suppose
+
+$$
+E(\varepsilon\mid X)=0
+$$
+
+and
+
+$$
+\operatorname{Var}(\varepsilon\mid X)
+=
+\sigma^2 I.
+$$
+
+Then OLS is BLUE:
+
+$$
+\boxed{
+\text{Best Linear Unbiased Estimator}
+}
+$$
+
+The word **linear** matters.
+
+The theorem says that among estimators that are linear in $y$ and unbiased, OLS has the smallest covariance matrix in the positive-semidefinite ordering.
+
+It does **not** say that OLS has minimum variance among all possible unbiased estimators.
+
+That stronger claim is false in general.
+
+## Heteroskedasticity does not bias OLS by itself
+
+Suppose instead
+
+$$
+\operatorname{Var}(\varepsilon_i\mid X)
+=
+\sigma_i^2.
+$$
+
+If
+
+$$
+E(\varepsilon\mid X)=0
+$$
+
+still holds, OLS coefficients remain unbiased under the classical fixed-$X$ argument and consistent under standard asymptotic conditions.
+
+What fails is the homoskedastic variance formula.
+
+The conventional estimator
+
+$$
+\widehat{\operatorname{Var}}(\hat\beta)
+=
+\hat\sigma^2(X^\top X)^{-1}
+$$
+
+is then generally wrong.
+
+Heteroskedasticity-robust covariance estimators address the inference problem without changing the OLS point estimate.
+
+This distinction is important:
+
+$$
+\boxed{
+\text{heteroskedasticity}
+\not\Rightarrow
+\text{biased OLS coefficients}
+}
+$$
+
+unless it is accompanied by a failure of the conditional-mean assumption or another source of misspecification.
+
+## Correlated errors change efficiency and inference
+
+In time series, panel data or clustered samples,
+
+$$
+\operatorname{Cov}(\varepsilon_i,\varepsilon_j\mid X)
+\neq 0
+$$
+
+may be expected.
+
+Again, OLS coefficients can remain consistent under suitable exogeneity conditions, while naive standard errors fail.
+
+Depending on the design, alternatives include:
+
+- heteroskedasticity-and-autocorrelation-consistent covariance estimators;
+- cluster-robust covariance estimators;
+- generalized least squares;
+- explicit time-series or hierarchical models.
+
+The covariance structure is an inferential assumption, not a decorative detail.
+
+## Normality is not required for OLS estimation
+
+Normality enters a different part of the theory.
+
+If
+
+$$
+\varepsilon\mid X
+\sim
+\mathcal N(0,\sigma^2I),
+$$
+
+then maximizing the Gaussian likelihood with respect to $\beta$ is equivalent to minimizing the residual sum of squares.
+
+So under the Gaussian model, OLS is also the maximum-likelihood estimator for $\beta$.
+
+Normality is not required for the algebraic OLS solution, finite-sample unbiasedness under conditional mean zero, or large-sample consistency.
+
+It is primarily relevant to exact finite-sample distribution theory and likelihood-based interpretation.
+
+## OLS coefficients are not automatically causal effects
+
+Suppose
+
+$$
+Y=\beta_0+\beta_1X+\varepsilon.
+$$
+
+The coefficient $\beta_1$ is causal only if the design and assumptions support that interpretation.
+
+If an omitted variable $Z$ affects both $X$ and $Y$, then
+
+$$
+E(\varepsilon\mid X)\neq 0
+$$
+
+after $Z$ is omitted.
+
+The regression coefficient can then mix the effect of $X$ with systematic differences in $Z$.
+
+Adding more observations does not remove omitted-variable bias.
+
+OLS is an estimator.
+
+Causal identification comes from research design and assumptions such as randomization, conditional exchangeability, instrumental variables, discontinuities, panel structure, or another defensible identification strategy.
+
+## Prediction and coefficient interpretation are different objectives
+
+A linear model can predict well even when individual coefficients are unstable because predictors are highly correlated.
+
+Conversely, a coefficient can have a clear scientific interpretation while the linear model is not the best predictive system.
+
+For prediction, the relevant target is out-of-sample loss.
+
+For parameter inference, the relevant target is uncertainty about $\beta$ under a model.
+
+For causal inference, the target is a causal estimand under an identification strategy.
+
+Those goals can overlap.
+
+They should not be conflated.
+
+## What multicollinearity actually does
+
+When predictors are nearly linearly dependent, $X^\top X$ becomes ill-conditioned.
+
+The variance of the OLS estimator can become large because
+
+$$
+\operatorname{Var}(\hat\beta\mid X)
+=
+\sigma^2(X^\top X)^{-1}
+$$
+
+under homoskedastic errors.
+
+This does not create bias by itself.
+
+It creates unstable coefficient estimates and makes it difficult to separate the contributions of correlated predictors.
+
+Regularization can improve prediction by trading some bias for lower variance, but it changes the estimator and therefore the inferential problem.
+
+## Residual diagnostics should target assumptions
+
+A useful diagnostic workflow asks which assumption each plot or test addresses.
+
+- Residuals versus fitted values can reveal nonlinearity or changing variance.
+- Q-Q plots can expose tail behavior relevant to finite-sample normal theory.
+- Residuals over time can reveal dependence.
+- Leverage and influence diagnostics identify observations with unusual impact on the fitted coefficients.
+- Out-of-sample validation addresses predictive generalization.
+
+No single residual plot can establish exogeneity.
+
+The most consequential assumption often cannot be verified from residuals alone.
 
 ## Conclusion
 
-**Ordinary Least Squares (OLS) regression** is a foundational technique in **statistics**, **data science**, and **machine learning** for estimating the relationships between variables. With its key properties of **consistency**, **efficiency**, **minimum-variance**, and **maximum likelihood estimation** (under normality), OLS provides a powerful and flexible framework for linear modeling.
+OLS has several different properties under several different assumption sets.
 
-While OLS has its limitations—such as sensitivity to outliers and assumptions of linearity—it remains widely used due to its simplicity, interpretability, and solid theoretical underpinnings. OLS regression is not only an essential tool for basic linear modeling but also a stepping stone for more advanced methods used in predictive modeling and inference.
+The clean summary is:
 
-### Further Reading
+- the estimator minimizes squared residuals by definition;
+- conditional mean zero gives unbiasedness;
+- regularity conditions plus exogeneity give consistency;
+- homoskedastic uncorrelated errors give Gauss-Markov efficiency among linear unbiased estimators;
+- Gaussian errors give the familiar likelihood interpretation and exact normal-theory results;
+- none of those conditions, by themselves, identify a causal effect.
 
-- **"Introduction to Econometrics"** by James H. Stock and Mark W. Watson – A comprehensive guide to OLS and its applications in econometrics.
-- **"The Elements of Statistical Learning"** by Trevor Hastie, Robert Tibshirani, and Jerome Friedman – An essential resource for understanding linear regression and its role in machine learning.
-- **"Applied Regression Analysis"** by Norman Draper and Harry Smith – A practical guide to OLS regression with examples in various fields.
+That separation makes OLS easier to reason about because each conclusion is attached to the assumption that actually supports it.
 
----
+## References
+
+- Gauss, C. F. (1809). *Theoria Motus Corporum Coelestium*.
+- Markov, A. A. (1912). *Wahrscheinlichkeitsrechnung*.
+- White, H. (1980). A heteroskedasticity-consistent covariance matrix estimator and a direct test for heteroskedasticity. *Econometrica*, 48(4), 817–838.
+- Wooldridge, J. M. (2020). *Introductory Econometrics: A Modern Approach* (7th ed.). Cengage.
+- Angrist, J. D., & Pischke, J.-S. (2009). *Mostly Harmless Econometrics*. Princeton University Press.

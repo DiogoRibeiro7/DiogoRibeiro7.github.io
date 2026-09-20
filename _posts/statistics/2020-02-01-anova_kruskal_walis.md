@@ -5,8 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2020-02-01'
-excerpt: Learn the key differences between ANOVA and Kruskal-Wallis tests, and understand
-  when to use each method based on your data's assumptions and characteristics.
+excerpt: ANOVA and Kruskal-Wallis do not answer the same question under different assumptions. The choice should follow the estimand, design, variance structure, and shape of the group distributions.
 header:
   image: /assets/images/headers/photo-statistics-clt-binomial.jpg
   og_image: /assets/images/headers/photo-statistics-clt-binomial.jpg
@@ -16,102 +15,276 @@ header:
   teaser: /assets/images/headers/photo-statistics-clt-binomial.jpg
   twitter_image: /assets/images/headers/photo-statistics-clt-binomial.jpg
 keywords:
-- Kruskal-wallis
-- Parametric test
-- Anova
-- Non-parametric test
-- Hypothesis testing
+- Kruskal-Wallis
+- ANOVA
+- Welch ANOVA
+- rank tests
+- hypothesis testing
 redirect_from:
 - '/statistics/data analysis/hypothesis testing/anova_kruskal_walis/'
-seo_description: The differences between ANOVA and Kruskal-Wallis, and when to choose parametric or non-parametric methods for comparing multiple groups.
-seo_title: 'ANOVA vs Kruskal-Wallis: When to Use Each'
+seo_description: ANOVA, Welch ANOVA, and Kruskal-Wallis answer different questions. This article explains the estimands, assumptions, and consequences of choosing among them.
+seo_title: 'ANOVA, Welch ANOVA, and Kruskal-Wallis'
 seo_type: article
-summary: This article explores the fundamental differences between ANOVA and Kruskal-Wallis
-  tests, with a focus on their assumptions, applications, and when to use each method
-  in data analysis.
+summary: A rigorous comparison of mean-based ANOVA, Welch ANOVA, and the rank-based Kruskal-Wallis procedure, with emphasis on what each null hypothesis means.
 tags:
 - Hypothesis Testing
 - Nonparametric Methods
 - Statistics
-title: 'ANOVA vs Kruskal-Wallis: Understanding the Differences and Applications'
+title: 'ANOVA, Welch ANOVA, and Kruskal-Wallis: They Are Not Interchangeable'
 ---
 
-In statistical analysis, comparing multiple groups to determine if they have significantly different means is a common objective. Two of the most widely used methods for this task are the **ANOVA** (Analysis of Variance) test and the **Kruskal-Wallis** test. While both tests are designed to compare more than two groups, they differ fundamentally in their assumptions, methodologies, and applications. Understanding these differences is essential for choosing the correct test for your data.
-
-This article provides an in-depth comparison between ANOVA and Kruskal-Wallis, explaining their key differences, assumptions, advantages, and when to use each method.
-
-
-## ANOVA: Parametric Test for Comparing Means
-
-### What is ANOVA?
-
-**ANOVA (Analysis of Variance)** is a parametric statistical test used to compare the means of three or more groups to determine whether at least one group mean is significantly different from the others. ANOVA works by analyzing the variance within each group compared to the variance between groups. If the between-group variance is significantly greater than the within-group variance, this suggests that the group means are not all the same.
-
-### Assumptions of ANOVA
-
-To use ANOVA correctly, your data needs to meet the following assumptions:
-
-1. **Normality**: The data within each group should follow a normal distribution.
-2. **Homogeneity of variance**: The variances of the groups should be approximately equal. This is also known as homoscedasticity.
-3. **Independence**: The observations must be independent of each other (i.e., no group is related to another).
-
-When these assumptions hold, ANOVA is a powerful test because it uses all available information in the data (means, variances, and sample sizes).
-
-### Types of ANOVA
-
-There are different types of ANOVA tests, depending on the study design:
-
-- **One-Way ANOVA**: Used when comparing the means of three or more groups for a single independent variable (factor).
-- **Two-Way ANOVA**: Used when you have two independent variables and want to study their interaction effects on the dependent variable.
-- **Repeated Measures ANOVA**: Used when the same subjects are measured multiple times under different conditions (i.e., within-subject designs).
-
-### How ANOVA Works
-
-ANOVA works by partitioning the total variance into two components:
-
-1. **Between-Group Variance**: Variability due to differences between group means.
-2. **Within-Group Variance**: Variability within each group.
-
-The test statistic, known as the **F-ratio**, is calculated by dividing the between-group variance by the within-group variance. If the F-ratio is significantly larger than 1, it suggests that at least one group mean is different.
+The usual decision tree is familiar:
 
 $$
-F = \frac{\text{Between-group variance}}{\text{Within-group variance}}
+\text{normal data} \Rightarrow \text{ANOVA},
+\qquad
+\text{non-normal data} \Rightarrow \text{Kruskal-Wallis}.
 $$
 
-A **p-value** is then computed from the F-ratio. If the p-value is less than the chosen significance level (typically 0.05), the null hypothesis is rejected, meaning that not all group means are the same.
+A second version says:
 
-### When to Use ANOVA
+$$
+\text{equal variances} \Rightarrow \text{ANOVA},
+\qquad
+\text{unequal variances} \Rightarrow \text{Kruskal-Wallis}.
+$$
 
-ANOVA is appropriate when:
+Both rules are too crude.
 
-- You have three or more groups to compare.
-- The data meets the assumptions of normality and homogeneity of variance.
-- You are interested in comparing group **means** rather than medians or ranks.
+ANOVA and Kruskal-Wallis do not generally test the same estimand under different assumptions. If the scientific question is about **means**, replacing ANOVA by a rank test because a normality test rejected can change the question being asked.
 
-However, if your data violates the assumptions of ANOVA—particularly normality—an alternative non-parametric test like the Kruskal-Wallis may be more appropriate.
+The useful sequence is
 
+$$
+\boxed{
+\text{estimand}
+\rightarrow
+\text{study design}
+\rightarrow
+\text{sampling assumptions}
+\rightarrow
+\text{test}
+}
+$$
 
-## Key Differences Between ANOVA and Kruskal-Wallis
+not the other way around.
 
-The choice between ANOVA and Kruskal-Wallis largely depends on the characteristics of your data. Below are the key differences:
+## Classical one-way ANOVA
 
-| **Aspect**              | **ANOVA**                                           | **Kruskal-Wallis**                                  |
-|-------------------------|----------------------------------------------------|-----------------------------------------------------|
-| **Test Type**            | Parametric                                         | Non-parametric                                      |
-| **Data Assumptions**     | Assumes normal distribution and homogeneity of variance | No assumption of normality or equal variances       |
-| **Measurement Scale**    | Compares group **means**                           | Compares **ranks** (distributions)                  |
-| **Robustness to Outliers**| Sensitive to outliers                             | More robust to outliers and non-normal data         |
-| **Post-hoc Tests**       | Tukey’s HSD (for pairwise comparisons)             | Dunn’s test (for pairwise comparisons)              |
-| **When to Use**          | Use when data is normally distributed and groups have equal variances | Use when data is not normally distributed or has unequal variances |
+Suppose there are $g$ independent groups,
 
+$$
+Y_{ij}=\mu_i+\varepsilon_{ij},
+$$
 
-## Conclusion: Choosing Between ANOVA and Kruskal-Wallis
+where $i=1,\ldots,g$ indexes groups and $j=1,\ldots,n_i$ indexes observations.
 
-When analyzing data, choosing the right statistical test is critical to drawing accurate conclusions. If your data meets the assumptions of normality and homogeneity of variance, **ANOVA** is a powerful tool for comparing group means. However, if your data violates these assumptions—whether due to non-normal distributions, unequal variances, or outliers—**Kruskal-Wallis** offers a more robust alternative by comparing ranks rather than means.
+The classical one-way ANOVA null hypothesis is
 
-The key takeaway is that both tests serve similar purposes but are designed for different types of data. By understanding the assumptions and mechanics of each, you can ensure that you are using the correct test for your analysis, leading to more reliable and valid results.
+$$
+H_0:
+\mu_1=\mu_2=\cdots=\mu_g.
+$$
+
+The total variation is decomposed into between-group and within-group components. With
+
+$$
+N=\sum_{i=1}^{g}n_i,
+$$
+
+the test statistic is
+
+$$
+F
+=
+\frac{MS_{\mathrm{between}}}
+{MS_{\mathrm{within}}}.
+$$
+
+Under the classical Gaussian homoscedastic model,
+
+$$
+\varepsilon_{ij}
+\overset{\mathrm{iid}}{\sim}
+\mathcal N(0,\sigma^2),
+$$
+
+the null distribution is an $F$ distribution with $g-1$ and $N-g$ degrees of freedom.
+
+The null hypothesis is about means.
+
+That point should remain visible throughout the analysis.
+
+## Normality is not a binary gatekeeper
+
+The classical finite-sample derivation uses normal errors, but practical robustness depends on sample size, imbalance, tail behavior and outliers.
+
+A rejection from Shapiro-Wilk does not imply that the mean is no longer the target or that ANOVA must be abandoned.
+
+Likewise, failure to reject normality does not prove that the Gaussian model is correct.
+
+The relevant diagnostic object is the within-group error structure or model residuals, not a pooled histogram of all observations.
+
+When the scientific target is a difference in means, robustness checks should preserve that estimand.
+
+## Unequal variances point to Welch ANOVA
+
+If the group means remain the target but the variances differ,
+
+$$
+\operatorname{Var}(Y_{ij})=\sigma_i^2,
+$$
+
+the natural alternative is **Welch's ANOVA**, not automatically Kruskal-Wallis.
+
+Welch's procedure modifies the weighting and degrees of freedom so that inference on group means remains useful under heteroscedasticity.
+
+Conceptually, this is important:
+
+$$
+\boxed{
+\text{heteroscedastic means problem}
+\Rightarrow
+\text{use a method for heteroscedastic means}
+}
+$$
+
+rather than changing to a rank estimand without noticing.
+
+## What Kruskal-Wallis actually tests
+
+The Kruskal-Wallis statistic is based on pooled ranks.
+
+Let $R_{ij}$ denote the rank of observation $Y_{ij}$ among all $N$ observations and let $\bar R_i$ be the mean rank in group $i$. Ignoring the tie correction for notation, the statistic is
+
+$$
+H
+=
+\frac{12}{N(N+1)}
+\sum_{i=1}^{g}
+n_i
+\left(
+\bar R_i-\frac{N+1}{2}
+\right)^2.
+$$
+
+Under the null hypothesis that the group distributions are the same, and under the usual regularity conditions, $H$ is approximately chi-square with $g-1$ degrees of freedom.
+
+The general null is therefore about equality of distributions,
+
+$$
+H_0:
+F_1=F_2=\cdots=F_g.
+$$
+
+If all group distributions have the same shape and differ only by a location shift, the procedure can be interpreted as a test of location. Under stronger symmetry assumptions, that is sometimes summarized informally as a comparison of medians.
+
+Without those assumptions, "Kruskal-Wallis compares medians" is not generally correct.
+
+## Unequal spreads can make Kruskal-Wallis reject
+
+Suppose two groups have the same center but very different spread.
+
+Their rank distributions can differ even though their means or medians are equal.
+
+Kruskal-Wallis can therefore reject because the distributions differ in scale or shape.
+
+This is why the statement
+
+> Use Kruskal-Wallis when variances are unequal
+
+is particularly dangerous.
+
+Unequal variances are not a nuisance that the rank test simply ignores. They can be part of what drives the rank differences.
+
+## Outliers do not automatically define the estimand
+
+Rank procedures are less sensitive to the numerical magnitude of extreme values because only order is retained.
+
+That can be useful.
+
+But the correct response to outliers depends on why they exist.
+
+An outlier caused by a recording error should be corrected or removed for a documented reason. A genuine extreme observation may be scientifically important. A heavy-tailed population may call for a robust location estimator, transformed model, generalized linear model, bootstrap procedure or explicit heavy-tailed likelihood.
+
+Switching to ranks solely because an observation looks inconvenient is not a statistical principle.
+
+## A practical decision framework
+
+### If the target is the group mean
+
+Use a mean-based method.
+
+- Classical ANOVA is appropriate under the standard homoscedastic model.
+- Welch ANOVA is preferable when variances differ materially.
+- With difficult tails or small samples, consider bootstrap or permutation procedures designed around the mean, or a model whose error distribution better reflects the data.
+
+### If the target is a location shift or stochastic ordering
+
+A rank-based procedure may be appropriate.
+
+Kruskal-Wallis is useful when the scientific question is naturally expressed through relative ranks and when its interpretation matches the shapes of the group distributions.
+
+### If distributions differ in several ways
+
+Then a single location test may be inadequate.
+
+Plot the distributions and consider models that allow differences in scale, shape or other features explicitly.
+
+## Post-hoc comparisons must match the global test
+
+A significant omnibus result does not identify which groups differ.
+
+After classical ANOVA, Tukey's HSD is a common familywise-error-controlled method when its assumptions fit.
+
+After Welch ANOVA, a heteroscedastic post-hoc procedure such as Games-Howell is more coherent than ordinary Tukey HSD.
+
+After Kruskal-Wallis, pairwise rank-based comparisons can be used with multiplicity correction, but their interpretation remains rank-based.
+
+The global and follow-up analyses should answer the same kind of question.
+
+## Example
+
+Suppose three treatment groups have sample means
+
+$$
+10.2,\quad 11.1,\quad 13.8,
+$$
+
+but the third group has much larger variance.
+
+If the research question is
+
+> Are the population means equal?
+
+then unequal variance does not make the question disappear.
+
+Welch ANOVA preserves the mean comparison.
+
+Replacing the analysis with Kruskal-Wallis changes the object from equality of means to equality of rank distributions. If the third group has the same center but a much wider distribution, the rank test may still react.
+
+That may be scientifically interesting.
+
+It is simply a different claim.
+
+## Conclusion
+
+ANOVA and Kruskal-Wallis are not parametric and nonparametric versions of one identical question.
+
+Classical ANOVA is a model-based test of group means under homoscedastic assumptions. Welch ANOVA keeps the mean estimand while relaxing equality of variances. Kruskal-Wallis is a rank-based test whose general null concerns the equality of group distributions.
+
+The right choice therefore begins with the scientific target:
+
+$$
+\boxed{
+\text{Do I care about means, locations, ranks, or the full distributions?}
+}
+$$
+
+Once that is clear, the statistical method becomes much easier to defend.
 
 ## References
 
-- Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. *Journal of the American Statistical Association*, 47(260), 583-621.
-- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
+- Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. *Journal of the American Statistical Association*, 47(260), 583–621. https://doi.org/10.1080/01621459.1952.10483441
+- Welch, B. L. (1951). On the comparison of several mean values: An alternative approach. *Biometrika*, 38(3/4), 330–336.
+- Conover, W. J. (1999). *Practical Nonparametric Statistics* (3rd ed.). Wiley.
