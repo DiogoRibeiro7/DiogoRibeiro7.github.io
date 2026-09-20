@@ -61,7 +61,7 @@ RFM segmentation is a method used to categorize customers based on their purchas
 
 Using these metrics, customers are divided into different segments, which can be broadly categorized into three main groups:
 
-1. **Low-Value Customers**: Customers who have low recency (haven’t engaged recently), low frequency (rarely make purchases), and low monetary value (contribute little revenue).
+1. **Low-Value or inactive customers**: in the usual RFM definition, a **high recency value** means many days since the last purchase. Low frequency and low monetary value may indicate limited historical engagement, but churn is not established by RFM alone.
 2. **Mid-Value Customers**: Customers who exhibit moderate behavior in all three areas.
 3. **High-Value Customers**: Customers who are highly engaged, purchase frequently, and generate high revenue.
 
@@ -115,7 +115,7 @@ data = pd.read_csv('transactions.csv')
 data['InvoiceDate'] = pd.to_datetime(data['InvoiceDate'])
 
 # Define a reference date (typically the last transaction date in the dataset)
-reference_date = data['InvoiceDate'].max()
+reference_date = data['InvoiceDate'].max() + pd.Timedelta(days=1)
 
 # Group by CustomerID to calculate RFM metrics
 rfm = data.groupby('CustomerID').agg({
@@ -130,7 +130,7 @@ rfm.columns = ['CustomerID', 'Recency', 'Frequency', 'MonetaryValue']
 
 ### Step 2: Create RFM Scores
 
-Next, we assign scores to each RFM metric to normalize the data and simplify segmentation. We divide customers into quintiles (or percentiles) based on their Recency, Frequency, and Monetary Value. Higher scores indicate more desirable behavior (e.g., recent purchases, frequent purchases, high spending).
+Next, we convert each metric to ordinal quantile scores. This is discretization/ranking, not statistical normalization, and it discards within-bin distances. We divide customers into quintiles (or percentiles) based on their Recency, Frequency, and Monetary Value. Higher scores indicate more desirable behavior (e.g., recent purchases, frequent purchases, high spending).
 
 ```python
 # Assign quintiles for each RFM metric
@@ -165,7 +165,11 @@ scaler = StandardScaler()
 rfm_scaled = scaler.fit_transform(rfm_features)
 
 # Apply K-Means clustering
-kmeans = KMeans(n_clusters=3, random_state=42)
+kmeans = KMeans(
+    n_clusters=3,
+    random_state=42,
+    n_init="auto",
+)
 rfm['Cluster'] = kmeans.fit_predict(rfm_scaled)
 
 # Visualize the clusters
@@ -182,7 +186,7 @@ After applying K-Means, we can interpret the clusters by examining the character
 
 - **Cluster 0**: Customers with high frequency and monetary value but lower recency. These could be customers who recently stopped engaging but have historically been valuable.
 - **Cluster 1**: Customers with high recency and high monetary value, representing your most active and valuable customers.
-- **Cluster 2**: Customers with low frequency and low monetary value, likely to churn.
+- **Cluster 2**: Customers with low frequency and low monetary value. Whether they are likely to churn requires an outcome definition and validation; cluster geometry alone cannot establish churn risk.
 
 ### Step 5: Actionable Insights
 
@@ -197,3 +201,28 @@ With these clusters in hand, you can tailor your marketing and retention strateg
 RFM segmentation is a powerful and actionable technique that helps businesses categorize their customers based on their behavior. By analyzing **Recency**, **Frequency**, and **Monetary Value**, businesses can segment customers into meaningful groups and develop targeted marketing strategies that increase customer retention, engagement, and lifetime value. Applying clustering algorithms such as **K-Means** can further enhance the segmentation process, allowing businesses to discover hidden patterns in customer behavior.
 
 When implemented effectively, RFM segmentation can lead to more personalized marketing, improved customer retention, and a higher return on investment (ROI). Whether you're a marketer, data analyst, or business owner, understanding and applying RFM segmentation can significantly enhance your customer analytics efforts.
+
+
+## K-means is a modeling choice, not a discovery machine
+
+K-means minimizes within-cluster squared Euclidean distance. After standardization, it implicitly favors roughly spherical clusters of comparable scale.
+
+RFM variables are usually skewed and often heavy-tailed, so log transforms, robust scaling, or explicit mixture models may be more appropriate.
+
+The number of clusters $k$ should not be fixed at three by convention. Compare stability, silhouette-like diagnostics, business interpretability, and—most importantly—whether segments support decisions that improve outcomes.
+
+## Avoid leakage in campaign evaluation
+
+If segmentation is evaluated by future purchasing behavior, build RFM features only from transactions available before the segmentation date.
+
+Then measure subsequent outcomes in a separate period:
+
+$$
+\text{history window}
+<
+\text{segment date}
+<
+\text{evaluation window}.
+$$
+
+Using future transactions to define both the segment and its “value” makes the validation circular.
