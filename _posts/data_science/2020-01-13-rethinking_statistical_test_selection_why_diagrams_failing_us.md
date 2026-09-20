@@ -4,7 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2020-01-13'
-excerpt: Most diagrams for choosing statistical tests miss the bigger picture. Here's a bold, practical approach that emphasizes interpretation over mechanistic rules, and cuts through statistical misconceptions like the N>30 rule.
+excerpt: Statistical test selection should begin with the estimand, study design, sampling structure, and error criterion. Flowcharts fail when they reduce those decisions to data type and normality.
 header:
   image: /assets/images/headers/photo-data-science-dashboard.jpg
   og_image: /assets/images/headers/photo-data-science-dashboard.jpg
@@ -14,146 +14,330 @@ header:
   teaser: /assets/images/headers/photo-data-science-dashboard.jpg
   twitter_image: /assets/images/headers/photo-data-science-dashboard.jpg
 keywords:
-- Statistical Tests
-- Welch t-test
-- Data Science
-- Hypothesis Testing
-- Nonparametric Tests
+- statistical test selection
+- estimands
+- study design
+- hypothesis testing
+- robust inference
 permalink: '/data-science/rethinking_statistical_test_selection_why_diagrams_failing_us/'
 redirect_from:
 - '/data science/statistics/rethinking_statistical_test_selection_why_diagrams_failing_us/'
 - '/data science/rethinking_statistical_test_selection_why_diagrams_failing_us/'
-seo_description: 'A critical take on statistical test selection: move past decision diagrams and N>30 pseudorules toward meaningful interpretation and robust testing.'
-seo_title: Rethinking How We Choose Statistical Tests
+seo_description: A principled approach to statistical test selection based on estimands, design, dependence, sampling, and error control rather than mechanical normality flowcharts.
+seo_title: 'Choosing Statistical Tests: Start with the Estimand'
 seo_type: article
-summary: This article critiques popular frameworks for selecting statistical tests, offering a robust, more flexible alternative that emphasizes interpretation and realistic outcomes over pseudorules and data transformations. Learn why techniques like Welch’s t-test and permutation tests are better than many 'classics'.
+summary: A replacement for statistical-test flowcharts that organizes test choice around the scientific quantity being estimated, the study design, and the assumptions required for valid inference.
 tags:
 - Statistical Modeling
 - Data Science
 - Hypothesis Testing
-title: 'Rethinking Statistical Test Selection: Why the Diagrams Are Failing Us'
+title: 'Choosing Statistical Tests: Start with the Estimand'
 ---
 
-There are over **850** recognized statistical tests, and that number continues to grow. Yet, most diagrams and frameworks on how to choose a statistical test only scratch the surface, covering a narrow subset of options. Worse, many promote dangerous practices, like arbitrary data transformations or shallow rules like “N > 30” as if they are the ultimate truth.
+Statistical test-selection diagrams fail for a simple reason.
 
-This article is a **bold rethinking** of how we approach statistical test selection. I don’t follow the conventional flowcharts, and neither should you. We’ll dive into real-world approaches for comparing means, medians, and other data characteristics while respecting the integrity of the data. We’ll also explore why some traditional tests like the **t-test**, **Kruskal-Wallis**, and **Friedman test** are either obsolete or too limited for most modern applications. Instead, we’ll consider better alternatives like the **Welch t-test**, **ART-ANOVA**, and **permutation testing**, among others.
+They usually begin with questions such as:
 
-If you’re tired of the typical diagrams, pseudorules, and one-size-fits-all approaches, this article is for you. Let’s focus on practical methods that get to the core of understanding and interpreting data, not just blindly following the steps dictated by a formulaic chart.
+- Is the outcome continuous?
+- Is the sample normal?
+- Is $n>30$?
+- Are there two groups or three?
 
-## Why Most Statistical Diagrams Miss the Point
+Those questions can matter.
 
-In every LinkedIn post, blog, or webinar about statistics, you’ll likely come across a diagram telling you which statistical test to use based on a few factors: **data type** (e.g., categorical vs. continuous), sample size, and whether your data is normally distributed. These flowcharts are popular, and they do serve as a useful starting point for newcomers to data science. But there’s a significant flaw: **they stop at the mechanics**, treating statistical tests as mechanistic processes that ignore the broader context of **interpretation**.
+They are not the first questions.
 
-### Pseudorules Like “N > 30”
+A defensible analysis starts with
 
-Take, for example, the rule “N > 30,” which claims that sample sizes greater than 30 allow for the use of parametric tests under the Central Limit Theorem. This is a **gross oversimplification**. Whether you have 25 or 100 data points, **assumptions about variance**, **normality**, and **independence** still need to be considered carefully. It’s not just about the number of data points; it’s about whether those data points are **representative** and **well-behaved** in the context of your study.
+$$
+\boxed{
+\text{scientific question}
+\rightarrow
+\text{estimand}
+\rightarrow
+\text{design}
+\rightarrow
+\text{sampling structure}
+\rightarrow
+\text{estimator/test}.
+}
+$$
 
-### Dangerous Data Transformations
+The named test comes last.
 
-Another common recommendation in these diagrams is to **transform the data** to meet the assumptions of parametric tests (e.g., log-transforming skewed data). But transforming data to fit a model often **distorts the interpretation** of results. If you have to twist your data into unnatural shapes to use a particular test, **maybe you’re using the wrong test** in the first place. Why not use a test that respects the data’s original structure?
+## Start with the estimand
 
-I’m a firm believer that **tests should fit the data**, not the other way around. Instead of transforming the raw data, we can use methods that are more **robust** and **adaptive**, while still providing interpretable results.
+Suppose there are two groups.
 
-## My Approach: Focus on Meaningful Comparisons
+Possible targets include:
 
-Here’s a breakdown of how I approach statistical test selection. Instead of relying on generic rules, I focus on these core tasks:
+- mean difference;
+- median difference;
+- risk difference;
+- risk ratio;
+- odds ratio;
+- hazard ratio;
+- stochastic ordering;
+- quantile difference;
+- full-distribution equality.
 
-1. **Comparison of Conditional Means**: Either raw or link-transformed (logistic or Poisson link functions), but never transforming raw data.
-2. **Comparison of Medians**: Particularly when the mean isn’t representative due to skewed distributions.
-3. **Comparison of Other Aspects**: Like stochastic ordering, which is typically assessed through **rank-based tests** like **Mann-Whitney** and **Kruskal-Wallis**.
-4. **Tests of Binary Data and Rates**: This includes binary outcome data (e.g., logistic regression) and counts or rates (e.g., Poisson models, survival analysis).
+These are different estimands.
 
-Let’s explore these categories in more detail and discuss which tests to use and why.
+No normality test can decide which one the scientific question requires.
 
-### 1. Comparison of Conditional Means: Raw or Link-Transformed (But Not the Data)
+## Means
 
-One of the most frequent tasks in data analysis is comparing means. This is where many fall into the trap of overusing the **t-test**. While the **t-test** is widely known, it’s limited by its assumption of equal variances across groups, which is almost never the case in real-world data.
+If the target is
 
-#### Why the Welch t-test Should Be Your Default
+$$
+\Delta_\mu
+=
+E[Y\mid G=1]
+-
+E[Y\mid G=0],
+$$
 
-When comparing the means of two groups, I recommend using the **Welch t-test** instead of the traditional t-test. The Welch t-test does not assume equal variances between groups, making it far more flexible. It should be your default whenever you’re comparing two means because, unlike the t-test, it’s robust to **heteroscedasticity** (unequal variances).
+use a method for means.
 
-For example, let’s say you’re comparing the average customer satisfaction scores from two different user groups (e.g., users who received a new feature vs. those who did not). If these two groups have different variances (which is often the case in behavioral data), the Welch t-test will provide a more accurate picture of the differences between group means.
+For independent groups, Welch's t procedure is often a sensible default for an unadjusted mean contrast because it does not require equal variances.
 
-#### When to Use Link-Transformed Means
+That does not make it universally optimal.
 
-In cases where you’re dealing with **non-normal** data, or when your outcome is a rate or binary variable, you can apply **link functions** to the mean. For example, use the **log link** for count data (Poisson regression) or the **logit link** for binary data (logistic regression). These methods preserve the raw structure of the data while allowing you to model the relationship in a way that fits the data’s characteristics.
+Clustered observations, repeated measures, extreme tails, small samples, survey weights, or covariate adjustment can require another approach.
 
-But note: this **doesn’t involve transforming the raw data** itself. Instead, the model applies a transformation to the mean or outcome, ensuring that interpretation remains clear.
+The right method preserves the mean estimand.
 
-### 2. Comparisons of Medians: When the Mean Won’t Do
+## Medians and quantiles
 
-There are many situations where the **mean** is not a reliable measure of central tendency—especially when the data is heavily skewed. In such cases, you’ll want to compare **medians** instead. For example, income data is typically skewed, with a few individuals earning much higher than the rest. The **median** provides a more accurate reflection of central tendency.
+If the target is a median difference,
 
-#### What About the Mann-Whitney Test?
+$$
+Q_{0.5}(Y\mid G=1)
+-
+Q_{0.5}(Y\mid G=0),
+$$
 
-The **Mann-Whitney test** (often called the **Wilcoxon rank-sum test**) is commonly used to compare the medians of two independent groups. But here's the catch—Mann-Whitney doesn't **strictly** compare medians. It tests whether one group tends to have larger values than the other, which can be interpreted as a form of **stochastic dominance**.
+quantile regression gives a direct model for that quantity.
 
-If you want a pure comparison of medians and are not interested in the entire distribution, there are alternatives like **quantile regression** that allow for more direct interpretation of median differences across groups.
+The Mann-Whitney test does not generally test equality of medians.
 
-### 3. Comparisons of Other Aspects: Beyond Means and Medians
+Its null is more naturally expressed through equality of rank distributions or pairwise ordering probabilities.
 
-In some cases, you’ll want to compare aspects of the distribution beyond the central tendency, such as the **ordering of values** across groups. For these tasks, rank-based tests like **Mann-Whitney** and **Kruskal-Wallis** are useful, but they have limitations that are often glossed over in flowcharts.
+Under additional equal-shape assumptions, it can acquire a location interpretation.
 
-#### Kruskal-Wallis and Its Limits
+Those assumptions should be stated rather than silently imported.
 
-The **Kruskal-Wallis test** is a nonparametric method for comparing medians across multiple groups, but its weakness is that it’s limited to **one categorical predictor**. In modern applications, where we often need to account for **multiple predictors**, **interactions**, or **repeated measures**, Kruskal-Wallis is simply too limited.
+## Binary outcomes
 
-For more complex designs, you can use **ART-ANOVA** (Aligned Rank Transform ANOVA), **ATS** (Analysis of Treatments), or **WTS** (Wald-Type Statistics), all of which allow for greater flexibility in handling interactions and repeated measures. These techniques enhance the traditional Kruskal-Wallis framework by extending it to real-world data complexities.
+For binary outcomes, meaningful targets include
 
-### 4. Tests for Binary Data and Rates
+$$
+p_1-p_0,
+$$
 
-When you’re dealing with **binary outcomes** (e.g., success/failure, alive/dead), traditional parametric tests like the **z-test** often show up in diagrams. But in real-world applications, these tests are limited in scope and are rarely the best choice.
+$$
+\frac{p_1}{p_0},
+$$
 
-#### Logistic Regression for Binary Data
+or
 
-For binary data, **logistic regression** is a far more robust option than the **z-test**. It allows you to model the probability of a binary outcome based on one or more predictors, giving you insights into how each variable affects the likelihood of success.
+$$
+\frac{
+p_1/(1-p_1)
+}{
+p_0/(1-p_0)
+}.
+$$
 
-#### Count Data and Rates: Poisson and Beyond
+These are the risk difference, risk ratio, and odds ratio.
 
-For **count data** or **rate data** (e.g., number of occurrences per unit time), you can use **Poisson regression**. But be cautious—Poisson regression assumes that the mean and variance are equal, which is often not the case in real-world data. For overdispersed count data, you might want to use **Negative Binomial Regression**, which relaxes the equal-variance assumption and provides more accurate estimates.
+Logistic regression targets log odds.
 
-### Survival Analysis and Binary Data Over Time
+A log-binomial or modified Poisson approach can target risk ratios.
 
-For time-to-event (survival) data, traditional approaches like the **Kaplan-Meier estimator** and the **log-rank test** are common but limited. A more powerful approach is to use **Cox proportional hazards regression**, which models the time to an event while accounting for various predictors, giving you a nuanced view of factors affecting survival times.
+A linear probability model targets risk differences directly, with suitable robust inference.
 
-## Why I Avoid Some Popular Tests
+Choosing logistic regression simply because the outcome is binary does not decide which effect measure is scientifically preferred.
 
-I’ve covered some of the methods I frequently use, but it’s also important to explain why I avoid certain tests that are widely recommended in statistical diagrams.
+## Counts and rates
 
-### 1. The t-test
+A count $Y$ observed over exposure time $T$ may be modeled through
 
-Let’s be honest—the **t-test** is overhyped. It’s limited to situations where variances are equal across groups, and as we’ve discussed, that’s rarely the case in real-world data. If you’re still using the t-test, it’s time to upgrade to **Welch’s t-test**, which is more robust and doesn’t make such restrictive assumptions about variance equality.
+$$
+Y
+\sim
+\operatorname{Poisson}(\mu),
+$$
 
-### 2. Kruskal-Wallis Test
+with
 
-As mentioned, the **Kruskal-Wallis test** is too limited for modern data analysis, especially when dealing with multiple groups or interactions. In most cases, it’s better to use alternatives like **ART-ANOVA** or **WTS**.
+$$
+\log\mu
+=
+X^\top\beta
++
+\log T.
+$$
 
-### 3. Friedman Test
+The term
 
-The **Friedman test** is another nonparametric test often used for repeated measures. However, it’s limited in its ability to handle complex designs, such as interactions or multiple predictors. A more flexible approach is to use **ART-ANOVA**, which can handle these complexities with ease.
+$$
+\log T
+$$
 
-### 4. The z-test
+acts as an offset for exposure.
 
-The **z-test** is outdated and rarely useful in real-world data scenarios. Logistic regression or permutation testing are far better alternatives for binary data.
+Overdispersion may motivate negative-binomial or quasi-likelihood methods.
 
-## A Word on Resampling Methods: Permutation vs. Bootstrap
+Again, the model follows the data-generating structure.
 
-Finally, I want to touch on **resampling methods**, which are often used when data doesn’t meet traditional parametric assumptions. You’ll often see **bootstrap tests** recommended in diagrams, but I prefer **permutation tests**.
+## Dependence comes before distribution shape
 
-Here’s why: **Permutation testing** naturally performs under the true null hypothesis by repeatedly shuffling data labels and recalculating the test statistic. This preserves the structure of the data and avoids some of the pitfalls of bootstrap testing, which requires assumptions about the null distribution. If you’re running an experiment and want a robust, nonparametric test, go with permutation testing.
+Ten thousand observations from ten subjects are not equivalent to ten thousand independent subjects.
 
-## Break Free from the Diagrams
+Dependence can arise from:
 
-If you’ve been relying on the same diagrams and pseudorules for choosing statistical tests, it’s time to rethink your approach. These flowcharts may be a decent introduction, but they often ignore the complexities of real-world data. By focusing on meaningful interpretations, using robust methods like **Welch’s t-test**, and avoiding unnecessary data transformations, you can make better decisions and gain deeper insights from your data.
+- repeated measures;
+- families;
+- hospitals;
+- schools;
+- spatial neighborhoods;
+- time series;
+- matched designs.
 
-Remember, statistical tests are tools—not laws to be followed blindly. The real power lies in understanding what your data is telling you and choosing methods that respect its structure without distorting the interpretation.
+Ignoring dependence can make standard errors badly wrong.
+
+No amount of marginal normality checking repairs that.
+
+## Transformations are modeling choices
+
+A log transformation is not inherently bad.
+
+Neither is it automatically good.
+
+If
+
+$$
+\log Y
+=
+X^\top\beta+\varepsilon
+$$
+
+is scientifically meaningful, then the transformation defines the scale of the estimand.
+
+The problem is not “transforming data.”
+
+The problem is transforming without asking what quantity the transformed model estimates.
+
+A transformation should be justified through the model and interpretation.
+
+## There is no universal $n>30$ rule
+
+The Central Limit Theorem is asymptotic.
+
+Approximation quality depends on:
+
+- skewness;
+- tail weight;
+- dependence;
+- statistic;
+- sample balance;
+- leverage.
+
+For some distributions, $n=20$ is enough for a useful approximation.
+
+For others, $n=10{,}000$ may still leave problematic tail behavior.
+
+Sample-size rules cannot replace diagnostics.
+
+## Parametric and nonparametric are not quality rankings
+
+“Nonparametric” does not mean robust, modern, or assumption-free.
+
+“Parametric” does not mean fragile or obsolete.
+
+A parametric model can be highly robust for one target.
+
+A rank test can answer the wrong question perfectly.
+
+The meaningful distinction is what assumptions connect the data to the estimand.
+
+## Permutation tests
+
+A permutation test is valid when the permutation scheme represents the null exchangeability structure.
+
+For a two-group randomized experiment, labels may be permutable under the randomization design.
+
+For paired data, unrestricted permutation across all observations is wrong.
+
+The design determines the allowed permutations.
+
+Permutation is not a magic assumption-free wrapper around any statistic.
+
+## Bootstrap
+
+Bootstrap methods approximate the sampling distribution by resampling from an empirical estimate of the data-generating process.
+
+The resampling unit must match the dependence structure.
+
+Examples include:
+
+- ordinary bootstrap for independent observations;
+- cluster bootstrap for clustered data;
+- block bootstrap for time series.
+
+Resampling individual rows from a dependent dataset can destroy the very structure the inference depends on.
+
+## Multiple predictors and interactions
+
+A named two-sample test becomes insufficient when the scientific question includes:
+
+- confounding adjustment;
+- interactions;
+- nonlinear predictors;
+- multiple groups;
+- repeated measures.
+
+Regression modeling is often useful because it makes the estimand conditional on explicit covariates.
+
+But adding a regression formula does not automatically create causal interpretation.
+
+Design and identification remain separate.
+
+## A practical framework
+
+Before choosing a test, write down:
+
+1. **Population:** Who or what is the target?
+2. **Outcome:** What random quantity is observed?
+3. **Exposure or groups:** How were they assigned?
+4. **Estimand:** Mean, median, risk, odds, rate, quantile, survival?
+5. **Dependence:** Independent, paired, clustered, longitudinal?
+6. **Censoring or missingness:** How can observations disappear?
+7. **Model:** What conditional structure is plausible?
+8. **Error criterion:** Confidence interval, FWER, FDR, prediction loss?
+9. **Sensitivity:** Which assumptions are not empirically testable?
+
+Only then choose the named procedure.
+
+## Conclusion
+
+The problem with test-selection diagrams is not that the tests listed in them are old.
+
+It is that the diagrams usually hide the estimand and design.
+
+A better rule is:
+
+$$
+\boxed{
+\text{Do not choose a test from the shape of the spreadsheet.}
+}
+$$
+
+Choose an estimand from the scientific question, then choose a method whose assumptions identify and estimate that quantity under the actual study design.
 
 ## References
 
-- Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. *Journal of the American Statistical Association*, 47(260), 583-621.
-- Friedman, M. (1937). The use of ranks to avoid the assumption of normality implicit in the analysis of variance. *Journal of the American Statistical Association*, 32(200), 675-701.
-- Mann, H. B., & Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger than the other. *Annals of Mathematical Statistics*, 18(1), 50-60.
-- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
-- Wilcoxon, F. (1945). Individual comparisons by ranking methods. *Biometrics Bulletin*, 1(6), 80-83.
-- Kaplan, E. L., & Meier, P. (1958). Nonparametric estimation from incomplete observations. *Journal of the American Statistical Association*, 53(282), 457-481.
+- Lehmann, E. L., & Romano, J. P. (2005). *Testing Statistical Hypotheses* (3rd ed.). Springer.
+- Greenland, S., Senn, S. J., Rothman, K. J., et al. (2016). Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. *European Journal of Epidemiology*, 31, 337–350.
+- Lumley, T., Diehr, P., Emerson, S., & Chen, L. (2002). The importance of the normality assumption in large public health data sets. *Annual Review of Public Health*, 23, 151–169.
