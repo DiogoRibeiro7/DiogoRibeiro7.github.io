@@ -59,7 +59,7 @@ Every decision rule trades off two errors:
 | **Reject $H_0$** | Type I error (rate $\alpha$) | Correct (power $= 1-\beta$) |
 | **Fail to reject** | Correct | Type II error (rate $\beta$) |
 
-Setting $\alpha = 0.05$ means accepting a 5% false-positive rate when the null is true. Lowering $\alpha$ reduces false positives but costs power. The only way to improve both at once is to collect more data or reduce measurement noise.
+Setting a nominal level $\alpha=0.05$ means designing the procedure so that its Type I error is controlled at, or approximately at, 5% under the null assumptions. In discrete or composite-null problems, the actual rejection probability need not equal 5% at every null parameter value. For a fixed design and test statistic, lowering $\alpha$ reduces Type I error and generally reduces power. More information—through larger samples, better measurement, stronger design, or more efficient modeling—can improve power without increasing the nominal Type I error level.
 
 Power deserves more attention than it usually receives. An underpowered study is not merely inconclusive; it is actively misleading, because the effects that do reach significance in a small sample must be large, and are therefore systematically overestimated. This inflation is sometimes called the winner's curse, and it is a major driver of results that fail to replicate.
 
@@ -67,13 +67,13 @@ Power deserves more attention than it usually receives. An underpowered study is
 
 The test follows from the structure of the question and the data:
 
-- **Comparing two independent group means:** two-sample $t$-test, or Mann-Whitney U if the data is badly skewed or ordinal.
-- **Comparing paired measurements:** paired $t$-test, or Wilcoxon signed-rank as the non-parametric counterpart.
-- **Comparing three or more group means:** ANOVA, or Kruskal-Wallis without the normality assumption.
+- **Comparing two independent group means:** use a mean-based procedure such as Welch's t-test or a regression model. Mann-Whitney answers a rank/distribution question and is not simply the same mean test without normality.
+- **Comparing paired measurements:** use a paired mean model if the estimand is a mean difference; Wilcoxon signed-rank targets the distribution of paired differences under stronger symmetry assumptions.
+- **Comparing three or more group means:** use ANOVA/Welch-type or regression approaches for means. Kruskal-Wallis is rank-based and does not preserve the same estimand automatically.
 - **Testing association between categorical variables:** chi-square test of independence, or Fisher's exact test when expected counts are small.
 - **Testing a regression coefficient:** $t$-test on the coefficient, with an $F$-test for groups of coefficients.
 
-Each carries assumptions. The $t$-test assumes independent observations and approximate normality of the sampling distribution of the mean, and Welch's version should be the default because it does not additionally assume equal variances. The chi-square test relies on expected cell counts being large enough, conventionally at least 5.
+Each carries assumptions. The $t$-test assumes independent observations and approximate normality of the sampling distribution of the mean, and Welch's version should be the default because it does not additionally assume equal variances. The chi-square reference distribution is asymptotic and can be inaccurate in sparse tables. The familiar “expected count at least 5” rule is only a heuristic; exact or simulation-based calibration may be preferable for small or sparse tables.
 
 ## A Concrete Example
 
