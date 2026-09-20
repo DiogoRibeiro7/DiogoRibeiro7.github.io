@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 560" role="img" aria-labelledby="title desc">
+  <title id="title">A defensible LLM fine-tuning workflow</title>
+  <desc id="desc">A workflow from deployment objective through data, split, chat formatting, LoRA or QLoRA training, validation, behavioral evaluation and deployment.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="35" y="85" width="180" height="88" rx="12"/>
+    <rect x="255" y="85" width="180" height="88" rx="12"/>
+    <rect x="475" y="85" width="180" height="88" rx="12"/>
+    <rect x="695" y="85" width="180" height="88" rx="12"/>
+    <rect x="915" y="85" width="180" height="88" rx="12"/>
+    <rect x="1135" y="85" width="180" height="88" rx="12"/>
+    <rect x="1355" y="85" width="110" height="88" rx="12"/>
+
+    <path d="M215 129 H250" marker-end="url(#arrow)"/>
+    <path d="M435 129 H470" marker-end="url(#arrow)"/>
+    <path d="M655 129 H690" marker-end="url(#arrow)"/>
+    <path d="M875 129 H910" marker-end="url(#arrow)"/>
+    <path d="M1095 129 H1130" marker-end="url(#arrow)"/>
+    <path d="M1315 129 H1350" marker-end="url(#arrow)"/>
+
+    <rect x="255" y="300" width="180" height="90" rx="12"/>
+    <rect x="695" y="300" width="180" height="90" rx="12"/>
+    <rect x="1135" y="300" width="180" height="90" rx="12"/>
+    <path d="M345 300 V178"/>
+    <path d="M785 300 V178"/>
+    <path d="M1225 300 V178"/>
+  </g>
+
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="currentColor" text-anchor="middle">
+    <text x="125" y="118" font-size="21" font-weight="600">Objective</text>
+    <text x="125" y="146" font-size="15">behaviour to change</text>
+
+    <text x="345" y="118" font-size="21" font-weight="600">Dataset</text>
+    <text x="345" y="146" font-size="15">examples that represent use</text>
+
+    <text x="565" y="118" font-size="21" font-weight="600">Split</text>
+    <text x="565" y="146" font-size="15">no semantic leakage</text>
+
+    <text x="785" y="118" font-size="21" font-weight="600">Formatting</text>
+    <text x="785" y="146" font-size="15">chat template + loss mask</text>
+
+    <text x="1005" y="118" font-size="21" font-weight="600">Train</text>
+    <text x="1005" y="146" font-size="15">LoRA / QLoRA / full FT</text>
+
+    <text x="1225" y="118" font-size="21" font-weight="600">Evaluate</text>
+    <text x="1225" y="146" font-size="15">target + regressions</text>
+
+    <text x="1410" y="118" font-size="21" font-weight="600">Deploy</text>
+    <text x="1410" y="146" font-size="15">adapter or merge</text>
+
+    <text x="345" y="333" font-size="18" font-weight="600">Audit the data</text>
+    <text x="345" y="359" font-size="14">duplicates · contradictions · lengths</text>
+
+    <text x="785" y="333" font-size="18" font-weight="600">Audit the tokens</text>
+    <text x="785" y="359" font-size="14">special tokens · truncation · labels</text>
+
+    <text x="1225" y="333" font-size="18" font-weight="600">Audit behaviour</text>
+    <text x="1225" y="359" font-size="14">held-out tasks · schemas · safety · style</text>
+
+    <text x="750" y="485" font-size="19" font-weight="600">A lower training loss is not evidence that the deployed model improved.</text>
+  </g>
+</svg>
