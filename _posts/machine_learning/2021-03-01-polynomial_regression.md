@@ -116,7 +116,7 @@ In polynomial regression, the regression coefficients $$\beta_0, \beta_1, \dots,
 - **$$\beta_0$$ (Intercept):** This coefficient represents the value of the response variable when all explanatory variables are zero (i.e., the vertical intercept of the curve).
 - **$\beta_1$ and higher-order coefficients:** individual raw-power coefficients are basis-dependent and should not usually be interpreted as isolated scientific effects. For a polynomial $m(x)=\sum_j\beta_jx^j$, the local slope is
 
-$
+$$
 m'(x)
 =
 \beta_1
@@ -126,7 +126,7 @@ m'(x)
 3\beta_3x^2
 +
 \cdots,
-$
+$$
 
 so the effect of changing $x$ depends on the evaluation point and on several coefficients together.
 
@@ -156,11 +156,11 @@ By minimizing this sum, we obtain the optimal values of the regression coefficie
 
 The coefficient estimate satisfies the normal equations
 
-$
+$$
 \mathbf{X}^T\mathbf{X}\,\hat\beta
 =
 \mathbf{X}^T\mathbf{Y}.
-$
+$$
 
 The closed-form expression involving $(\mathbf{X}^T\mathbf{X})^{-1}$ is useful algebraically, but production code should not form the inverse explicitly. QR or SVD-based least-squares solvers are numerically safer, especially because polynomial feature matrices can be badly conditioned.
 
@@ -227,7 +227,7 @@ As with any modeling technique, the key to success with polynomial regression li
 
 ## Centering and orthogonal polynomial bases
 
-Raw powers $1,x,x^2,ldots$ can become highly collinear as degree increases. Centering and scaling $x$ improves conditioning. Orthogonal polynomial bases go further by representing the same polynomial space with nearly orthogonal columns.
+Raw powers $1,x,x^2,\ldots$ can become highly collinear as degree increases. Centering and scaling $x$ improves conditioning. Orthogonal polynomial bases go further by representing the same polynomial space with nearly orthogonal columns.
 
 The fitted curve can be identical while coefficient values change substantially because coefficients belong to the chosen basis.
 
