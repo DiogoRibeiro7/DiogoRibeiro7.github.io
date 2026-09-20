@@ -165,11 +165,11 @@ $$
 
 Then OLS is BLUE:
 
-\[
+$$
 \boxed{
 \text{Best Linear Unbiased Estimator}
 }
-\]
+$$
 
 The word **linear** matters.
 
@@ -213,13 +213,13 @@ Heteroskedasticity-robust covariance estimators address the inference problem wi
 
 This distinction is important:
 
-\[
+$$
 \boxed{
 \text{heteroskedasticity}
 \not\Rightarrow
 \text{biased OLS coefficients}
 }
-\]
+$$
 
 unless it is accompanied by a failure of the conditional-mean assumption or another source of misspecification.
 
