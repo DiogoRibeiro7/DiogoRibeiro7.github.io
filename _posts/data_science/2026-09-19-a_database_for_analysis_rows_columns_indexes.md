@@ -159,7 +159,7 @@ The measurements turn into a short set of decisions. Data that an application re
 
 Within either engine the working method is the one used here. Look at the plan before adding an index. Add covering indexes for the few queries that matter, and count what they cost on write. Distrust an index on a filter that keeps more than a few percent of the rows. Wrap loads in transactions, and drop indexes before bulk loads. None of it requires a database administrator, and all of it can be checked with a stopwatch.
 
-The benchmark behind every number above is [`assets/viz/database_benchmarks.py`](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/database_benchmarks.py) in this site's repository, with its results beside it. It runs in about five minutes on a laptop. The absolute times will differ on another machine and the ratios will not differ much, which is the reason to trust them.
+The benchmark behind every number above is [`scripts/benchmarks/database_benchmarks.py`](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/benchmarks/database_benchmarks.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility), with its recorded results beside it under `data/engineering/`. It runs in about five minutes on a laptop. The absolute times will differ on another machine and the ratios will not differ much, which is the reason to trust them.
 
 ## References
 

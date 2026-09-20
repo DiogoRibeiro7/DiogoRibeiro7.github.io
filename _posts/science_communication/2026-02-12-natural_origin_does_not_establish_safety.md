@@ -252,6 +252,6 @@ for label, mg_per_kg_food, kg_food_per_day, kg_body in scenarios:
     print(label, f"{intake:.4f} mg/(kg body mass * day)")
 ```
 
-The [figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_science_communication_figures.py) reproduces the original concentration and amount panels. For another example of a correct percentage leaving out essential context, see [Read the Starting Risk Before the Percentage](/science-communication/read_the_starting_risk_before_the_percentage/).
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/health/risk_communication.py) reproduces the original concentration and amount panels. For another example of a correct percentage leaving out essential context, see [Read the Starting Risk Before the Percentage](/science-communication/read_the_starting_risk_before_the_percentage/).
 
 *Archive note: dated 12 February 2026 for this collection; written and source-checked on 18 September 2026.*

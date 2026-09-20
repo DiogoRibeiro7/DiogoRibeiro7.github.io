@@ -5,23 +5,40 @@ permalink: /code/
 author_profile: true
 ---
 
-This page provides convenient links to code examples referenced throughout the blog. The full source for this website, including these examples, is available on [GitHub](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io).
+The code behind the articles lives in two places, and which one you want depends on what you are after.
 
-## Individual files
+## Calculations, models and figures
 
-You can download specific files directly from the repository:
+Anything an article computes — the numerical models, the simulations, the benchmarks, and the scripts that draw the figures — is in [blog-reproducibility](https://github.com/DiogoRibeiro7/blog-reproducibility). That repository exists so the evidence behind an article can be run, read and checked on its own, without the website around it.
 
-- [Example notebook]({{ '/code/Untitled.ipynb' | relative_url }})
+Every article with computations behind it links to its own script, and the scripts are grouped by subject:
 
-## Repository download
+```text
+scripts/figures/statistics/     confidence sets, p-values, polling, streaks
+scripts/figures/health/         dose, testing, screening, risk
+scripts/figures/physics/        quantum measurement, seasons, photon energy
+scripts/figures/engineering/    database and data-lake benchmarks
+scripts/figures/time_series/    change points, release vintages
+```
 
-If you would like to obtain the entire collection of examples, clone the repository using Git or grab the automatic ZIP archive:
+Most of them take a `--dry-run` flag that prints the calculations without writing any images, which is usually the quickest way to see what an article's numbers are made of.
+
+```bash
+git clone https://github.com/DiogoRibeiro7/blog-reproducibility.git
+cd blog-reproducibility
+poetry install
+poetry run python scripts/figures/statistics/pvalue_evidence.py --dry-run
+```
+
+`articles/manifest.yml` there maps each article to its model, its figures and its tests, so you can go from a published claim to the code that produced it without guessing.
+
+## The website itself
+
+This repository, [DiogoRibeiro7.github.io](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io), holds the site: the article Markdown, the layouts and includes, the styles, the navigation, the rendered images, and the scripts that build and check the site. Clone it if you want to run the site locally or see how a page is put together.
 
 ```bash
 git clone https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io.git
 ```
-
-Or visit [the GitHub project page](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io) and use **Download ZIP**.
 
 ---
 

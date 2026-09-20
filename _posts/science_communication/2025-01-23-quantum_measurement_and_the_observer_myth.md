@@ -312,13 +312,13 @@ A careful reading of an “observer effect” claim therefore begins with the op
 
 ## Reproducing the calculations
 
-The [calculation and figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_quantum_observer_figures.py) represents the joint state as four complex amplitudes. It computes probabilities by projecting those amplitudes onto path and marker measurement bases, traces over the marker for local predictions, and reproduces the tables and two figures. The core arithmetic uses the Python standard library; Matplotlib is required only to regenerate figures. Print the model values without writing images with
+The [calculation and figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/physics/quantum_observer.py) represents the joint state as four complex amplitudes. It computes probabilities by projecting those amplitudes onto path and marker measurement bases, traces over the marker for local predictions, and reproduces the tables and two figures. The core arithmetic uses the Python standard library; Matplotlib is required only to regenerate figures. Print the model values without writing images with
 
 ```bash
-python assets/viz/generate_quantum_observer_figures.py --dry-run
+poetry run python scripts/figures/physics/quantum_observer.py --dry-run
 ```
 
-The [independent model checks](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/tests/test_quantum_observer_models.py) compare amplitude projections with the analytic interference formula, search measurement orientations to verify optimal discrimination, and check that arbitrary marker bases leave the path marginal unchanged. They also compare explicit local projectors in both orders, reconstruct the phase-averaged counterexample, and expand small environment tensor products. These checks establish consistency within the ideal model; they do not replace calibration, noise modelling, and empirical controls in an actual experiment.
+The [independent model checks](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/tests/physics/test_quantum_observer.py) compare amplitude projections with the analytic interference formula, search measurement orientations to verify optimal discrimination, and check that arbitrary marker bases leave the path marginal unchanged. They also compare explicit local projectors in both orders, reconstruct the phase-averaged counterexample, and expand small environment tensor products. These checks establish consistency within the ideal model; they do not replace calibration, noise modelling, and empirical controls in an actual experiment.
 
 ## References
 

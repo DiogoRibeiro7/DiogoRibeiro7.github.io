@@ -230,7 +230,7 @@ The useful separation is between assignment, estimation, and observation. Specif
 
 ## Reproduce and adapt the example
 
-The accompanying [calculation and figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_coverage_draft_figures.py) prints the probabilities and variance comparisons with `--dry-run`. The probability function supports unequal group sizes and different covariate prevalences. Numerical tests compare its results with explicit enumeration in smaller populations, and compare the variance formula with the variance across every assignment.
+The accompanying [calculation and figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/randomisation_balance.py) prints the probabilities and variance comparisons with `--dry-run`. The probability function supports unequal group sizes and different covariate prevalences. Numerical tests compare its results with explicit enumeration in smaller populations, and compare the variance formula with the variance across every assignment.
 
 The core probability needs only Python's standard library:
 

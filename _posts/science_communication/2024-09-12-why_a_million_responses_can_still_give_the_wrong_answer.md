@@ -271,13 +271,13 @@ Large collections can still document what participants reported, reveal differen
 
 ## Reproducing the examples
 
-The [calculation and figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_poll_selection_figures.py) uses exact integer counts for the finite populations and ordinary arithmetic for the formulas. It does not download survey records or simulate opinions. Six recording levels retain the same population while preserving the four-to-one recording ratio; separate tables reproduce both weighting scenarios and the three observationally equivalent worlds. The dry run prints all values without creating figures:
+The [calculation and figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/poll_selection.py) uses exact integer counts for the finite populations and ordinary arithmetic for the formulas. It does not download survey records or simulate opinions. Six recording levels retain the same population while preserving the four-to-one recording ratio; separate tables reproduce both weighting scenarios and the three observationally equivalent worlds. The dry run prints all values without creating figures, from the reproducibility repository:
 
 ```bash
-python assets/viz/generate_poll_selection_figures.py --dry-run
+poetry run python scripts/figures/statistics/poll_selection.py --dry-run
 ```
 
-Omitting the flag regenerates the two figures. The [independent model checks](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/tests/test_poll_selection_models.py) reconstruct covariance from individual records, enumerate every simple random sample in a small population, expand weighted responses, and examine every completion of a small set of missing answers. Equal-recording and census cases check the boundaries of the argument. These checks verify that the numerical claims follow from the stipulated populations and mechanisms; empirical claims about a real poll require evidence about its own recruitment and response processes.
+Omitting the flag regenerates the two figures. The [independent model checks](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/tests/statistics/test_poll_selection.py) reconstruct covariance from individual records, enumerate every simple random sample in a small population, expand weighted responses, and examine every completion of a small set of missing answers. Equal-recording and census cases check the boundaries of the argument. These checks verify that the numerical claims follow from the stipulated populations and mechanisms; empirical claims about a real poll require evidence about its own recruitment and response processes.
 
 ## References
 

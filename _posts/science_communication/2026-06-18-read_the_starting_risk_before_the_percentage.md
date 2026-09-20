@@ -298,6 +298,6 @@ print("Crude expected counts:", comparison, intervention)
 print("Equal-mixture risks:", (0.02 + 0.20) / 2, (0.01 + 0.10) / 2)
 ```
 
-The [figure generator](https://github.com/DiogoRibeiro7/DiogoRibeiro7.github.io/blob/master/assets/viz/generate_science_communication_figures.py) reproduces the original comparison table and shared-scale plot. For the related problem of concentration without quantity, see [Natural Origin Does Not Establish Safety](/science-communication/natural_origin_does_not_establish_safety/).
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/health/risk_communication.py) reproduces the original comparison table and shared-scale plot. For the related problem of concentration without quantity, see [Natural Origin Does Not Establish Safety](/science-communication/natural_origin_does_not_establish_safety/).
 
 *Archive note: dated 18 June 2026 for this collection; written and source-checked on 18 September 2026.*
