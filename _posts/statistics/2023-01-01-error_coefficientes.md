@@ -44,7 +44,7 @@ title: The Role of Error Terms in Multiple Linear Regression and Binary Logistic
 
 At first glance, multiple linear regression and binary logistic regression appear similar—they both model relationships between one or more predictor variables and an outcome variable. However, a closer examination reveals fundamental differences, particularly in how these models handle errors. This distinction arises from the nature of the models, their assumptions, and their objectives.
 
-In multiple linear regression, an explicit error term is included to account for the difference between the observed and predicted values. Conversely, in binary logistic regression, the concept of error is implicit, embedded within the likelihood function, as logistic regression models probabilities rather than direct outcomes.
+Linear and logistic regression differ because they specify different conditional distributions. Linear regression often writes an additive disturbance explicitly; logistic regression specifies a Bernoulli conditional distribution whose random variation is already determined by the conditional probability.
 
 This article explores the role of error terms in both models, highlighting why this distinction exists and what it reveals about the models' underlying mechanics.
 
@@ -72,7 +72,7 @@ In linear regression, the error term $$ \epsilon $$ represents the difference be
 2. **Unmeasured Variables**: There may be variables influencing the outcome that aren't included in the model.
 3. **Randomness**: Inherent noise or randomness in the data that can't be perfectly predicted.
 
-The error term accounts for these uncertainties and reflects the residuals (the deviations between observed and predicted values). The goal of linear regression is to minimize these residuals, which is achieved through Ordinary Least Squares (OLS). OLS minimizes the sum of squared residuals:
+The disturbance term represents variation not captured by the specified conditional mean. It can include omitted stochastic influences and measurement noise, but omitted confounding or systematic misspecification need not behave like harmless mean-zero noise (the deviations between observed and predicted values). The goal of linear regression is to minimize these residuals, which is achieved through Ordinary Least Squares (OLS). OLS minimizes the sum of squared residuals:
 
 $$
 RSS = \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2
@@ -88,7 +88,15 @@ Where:
 
 The explicit error term arises from the model's goal: to predict a continuous outcome accurately. Since predictions are continuous, the model must quantify how far off its predictions are. Without an explicit error term, it would be impossible to gauge the model's accuracy or make improvements.
 
-In practice, the error term is often assumed to follow a normal distribution with a mean of zero and constant variance $$ \sigma^2 $$ (homoscedasticity). This assumption simplifies the OLS estimators and ensures they are unbiased and efficient.
+Finite-sample Gaussian linear-model inference often assumes
+
+$
+\epsilon\mid X
+\sim
+N(0,\sigma^2I).
+$
+
+But normality is not what makes OLS unbiased or Gauss-Markov efficient. Conditional mean zero gives unbiasedness, while homoskedastic uncorrelated errors give BLUE efficiency among linear unbiased estimators.
 
 ### Applications of Multiple Linear Regression
 
@@ -134,7 +142,31 @@ Since logistic regression predicts probabilities rather than direct outcomes, th
 
 ### Why There's No Explicit Error Term in Logistic Regression
 
-The absence of an explicit error term in logistic regression is a consequence of its probabilistic framework. Logistic regression does not predict a continuous value that could have residual error; instead, it predicts a probability. Therefore, error is evaluated based on how well the predicted probabilities correspond to the actual binary outcomes, using metrics like log-likelihood, accuracy, and AUC.
+For logistic regression,
+
+$
+Y_i\mid X_i
+\sim
+\operatorname{Bernoulli}(p_i),
+$
+
+with
+
+$
+\operatorname{logit}(p_i)
+=
+X_i^T\beta.
+$
+
+The conditional variance is therefore
+
+$
+\operatorname{Var}(Y_i\mid X_i)
+=
+p_i(1-p_i),
+$
+
+so the stochastic part is explicit in the Bernoulli sampling model even though we do not add an independent Gaussian error to the linear predictor. Therefore, error is evaluated based on how well the predicted probabilities correspond to the actual binary outcomes, using likelihood/deviance, calibration, residual diagnostics, and predictive metrics appropriate to the task. Accuracy and AUC do not replace model diagnostics.
 
 ### Applications of Binary Logistic Regression
 
@@ -163,9 +195,85 @@ In these cases, logistic regression excels at modeling binary outcomes, with err
 
 ### 4. Error Assumptions
 
-- **Linear Regression**: Assumes errors are normally distributed with constant variance.
-- **Logistic Regression**: Assumes the probability of observing the outcome follows a binomial distribution.
+- **Linear Regression**: different conclusions require different assumptions; exact Gaussian inference is stronger than the assumptions needed for unbiasedness or consistency.
+- **Logistic Regression**: specifies a Bernoulli/binomial conditional distribution and a link function; observations also require an appropriate independence or dependence model.
 
 ## Final Thoughts
 
 The role of error terms in multiple linear regression and binary logistic regression reflects the distinct goals and assumptions of each model. Multiple linear regression includes an explicit error term to minimize the difference between predicted and observed values for continuous outcomes. Meanwhile, binary logistic regression handles error implicitly through the likelihood function, focusing on predicting probabilities for binary outcomes. Understanding these differences is essential for applying and interpreting these models effectively.
+
+
+## Residuals still exist in logistic regression
+
+Several residual definitions are useful.
+
+The raw response residual is
+
+$$
+e_i
+=
+y_i-hat p_i.
+$$
+
+Pearson residuals scale by the Bernoulli variance:
+
+$$
+r_i^P
+=
+rac{
+y_i-hat p_i
+}{
+sqrt{
+hat p_i(1-hat p_i)
+}
+}.
+$$
+
+Deviance residuals measure each observation's contribution to model deviance.
+
+So it is wrong to say logistic regression “has no residuals.” It lacks an additive Gaussian disturbance in the standard formulation, but residual diagnostics are still central.
+
+## Latent-variable representation
+
+Logistic regression can also be motivated through a latent variable:
+
+$$
+Y_i
+=
+I(Y_i^ast>0),
+$$
+
+$$
+Y_i^ast
+=
+X_i^T\beta
++
+\epsilon_i,
+$$
+
+where $\epsilon_i$ follows a logistic distribution.
+
+This representation makes an explicit error term possible, but the scale of the latent variable is not identified separately from the error distribution.
+
+That is another reason the coefficient interpretation belongs to the log-odds scale.
+
+## Quasi-likelihood and misspecification
+
+In binary data, the variance function
+
+$$
+p(1-p)
+$$
+
+follows from the Bernoulli model.
+
+For clustered binary outcomes, conditional independence can fail even if the mean model is correct.
+
+GEE, mixed-effects logistic regression, or cluster-robust methods address different dependence structures.
+
+The likelihood is not “the error term”; it is the probability model used to estimate parameters.
+
+## References
+
+- McCullagh, P., & Nelder, J. A. (1989). *Generalized Linear Models* (2nd ed.). Chapman & Hall.
+- White, H. (1980). A heteroskedasticity-consistent covariance matrix estimator and a direct test for heteroskedasticity. *Econometrica*, 48(4), 817–838.
