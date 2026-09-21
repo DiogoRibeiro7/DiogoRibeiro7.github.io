@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 620" role="img" aria-labelledby="title desc">
+  <title id="title">Quantization separates real-valued weights into discrete levels</title>
+  <desc id="desc">A floating-point weight distribution is mapped to a finite set of quantization levels. The diagram distinguishes the stored low-bit representation from higher-precision accumulation used during computation.</desc>
+  <style>
+    svg { color: #0b0b0b; }
+    .diagram-surface { fill: #f7f9fa; }
+  </style>
+  <rect class="diagram-surface" x="0" y="0" width="100%" height="100%"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="55" y="100" width="330" height="330" rx="12"/>
+    <rect x="585" y="100" width="330" height="330" rx="12"/>
+    <rect x="1110" y="100" width="330" height="330" rx="12"/>
+    <path d="M385 265 H575" marker-end="url(#arrow)"/>
+    <path d="M915 265 H1100" marker-end="url(#arrow)"/>
+
+    <line x1="105" y1="360" x2="335" y2="360"/>
+    <line x1="105" y1="360" x2="105" y2="165"/>
+    <path d="M115 340 C145 330 165 285 205 275 C245 265 250 205 290 195 C310 190 325 185 330 180"/>
+
+    <line x1="635" y1="360" x2="865" y2="360"/>
+    <line x1="635" y1="360" x2="635" y2="165"/>
+    <line x1="655" y1="325" x2="845" y2="325"/>
+    <line x1="655" y1="285" x2="845" y2="285"/>
+    <line x1="655" y1="245" x2="845" y2="245"/>
+    <line x1="655" y1="205" x2="845" y2="205"/>
+    <circle cx="680" cy="325" r="5" fill="currentColor"/>
+    <circle cx="715" cy="285" r="5" fill="currentColor"/>
+    <circle cx="760" cy="285" r="5" fill="currentColor"/>
+    <circle cx="805" cy="245" r="5" fill="currentColor"/>
+    <circle cx="835" cy="205" r="5" fill="currentColor"/>
+
+    <rect x="1170" y="190" width="210" height="65" rx="10"/>
+    <rect x="1170" y="300" width="210" height="65" rx="10"/>
+    <path d="M1275 255 V292" marker-end="url(#arrow)"/>
+  </g>
+
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="currentColor" text-anchor="middle">
+    <text x="220" y="140" font-size="25" font-weight="700">Floating-point weights</text>
+    <text x="220" y="395" font-size="17">continuous representation</text>
+
+    <text x="750" y="140" font-size="25" font-weight="700">Quantized weights</text>
+    <text x="750" y="395" font-size="17">finite levels + scale / zero-point</text>
+
+    <text x="1275" y="140" font-size="25" font-weight="700">Computation</text>
+    <text x="1275" y="222" font-size="19" font-weight="700">Stored at low precision</text>
+    <text x="1275" y="332" font-size="19" font-weight="700">Accumulate / compute</text>
+    <text x="1275" y="355" font-size="16">often at higher precision</text>
+
+    <text x="480" y="235" font-size="18">quantize</text>
+    <text x="1008" y="235" font-size="18">dequantize or use</text>
+    <text x="1008" y="258" font-size="18">specialized kernels</text>
+
+    <text x="750" y="520" font-size="21" font-weight="700">Fewer stored bits reduce memory. Speed depends on the hardware kernels, not the bit count alone.</text>
+  </g>
+</svg>
