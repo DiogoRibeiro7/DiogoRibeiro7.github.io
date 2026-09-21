@@ -4,7 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2023-11-15'
-excerpt: A binary variable and a continuous variable can be related through mean differences, point-biserial correlation, regression, or latent-threshold models. The method should follow the estimand.
+excerpt: "A binary variable and a continuous variable can be related through mean differences, point-biserial correlation, regression, or latent-threshold models. The method should follow the estimand."
 header:
   image: /assets/images/headers/photo-data-science-street-trees.jpg
   og_image: /assets/images/headers/photo-data-science-street-trees.jpg
@@ -24,13 +24,13 @@ permalink: '/data-science/analyzing_relationship_between_continuous_binary_varia
 redirect_from:
 - '/data analysis/analyzing_relationship_between_continuous_binary_variables/'
 - '/data science/analyzing_relationship_between_continuous_binary_variables/'
-seo_description: How to analyze relationships between continuous and binary variables using mean differences, point-biserial correlation, regression, and latent-threshold models.
-seo_title: Continuous and Binary Variables: Correlation and Regression
+seo_description: "How to analyze relationships between continuous and binary variables using mean differences, point-biserial correlation, regression, and latent-threshold models."
+seo_title: "Continuous and Binary Variables: Correlation and Regression"
 seo_type: article
 tags:
 - Correlation
 - Statistics
-title: Continuous and Binary Variables: Correlation and Regression
+title: "Continuous and Binary Variables: Correlation and Regression"
 ---
 
 When one variable is continuous and the other is binary, there is no single privileged measure of association. The appropriate method depends on the question.
@@ -54,9 +54,9 @@ $$
 
 where p and q are the sample proportions in the two groups.
 
-The factor \(\sqrt{pq}\) means that the correlation depends not only on the standardized mean difference but also on group balance.
+The factor $\sqrt{pq}$ means that the correlation depends not only on the standardized mean difference but also on group balance.
 
-Contrary to a common formula error, there is no extra division by \(\sqrt n\). Adding n to the denominator would make the coefficient shrink mechanically with sample size and would no longer equal Pearson correlation.
+Contrary to a common formula error, there is no extra division by $\sqrt n$. Adding n to the denominator would make the coefficient shrink mechanically with sample size and would no longer equal Pearson correlation.
 
 ## Relation to the two-sample t statistic
 
