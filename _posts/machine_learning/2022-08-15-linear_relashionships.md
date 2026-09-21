@@ -37,7 +37,7 @@ tags:
 title: 'Linear Relationships in Machine Learning Models: Why They Matter'
 ---
 
-In machine learning, many models assume a **linear relationship** between predictors (independent variables) and the target (dependent variable). A model assumes linearity when it predicts that the output changes in a constant proportion relative to changes in the input features. Several key algorithms rely on this assumption, such as **Linear Regression**, **Logistic Regression**, and **Linear Discriminant Analysis (LDA)**.
+Several common models are linear in a particular mathematical sense, but not always on the raw outcome scale. Ordinary linear regression models the conditional mean as linear in the chosen features. Logistic regression models the **log-odds** linearly. LDA obtains linear decision boundaries from Gaussian class models with a common covariance matrix.
 
 Understanding this linear assumption is critical for ensuring model performance, as fitting a model that assumes linearity to non-linear data can lead to poor predictions. This article will explore models that assume linear relationships, discuss why it’s important to recognize these assumptions, and examine what to do when the assumption is not valid.
 
@@ -55,7 +55,7 @@ $$
 y = w_1 x_1 + w_2 x_2 + ... + w_n x_n + b
 $$
 
-Where $$y$$ is the predicted outcome, $$x_1, x_2, ..., x_n$$ are the predictors, and $$w_1, w_2, ..., w_n$$ are the coefficients representing the influence of each predictor on the outcome.
+Here the coefficients describe the fitted linear predictor conditional on the model and included covariates. Calling them the “influence” of a predictor is too strong unless the design supports a causal interpretation.
 
 ### 2. **Logistic Regression**
 
@@ -67,7 +67,7 @@ LDA assumes that the data from each class is drawn from a Gaussian distribution 
 
 ### 4. **Principal Component Regression (PCR)**
 
-PCR is a combination of Principal Component Analysis (PCA) and linear regression. It assumes linearity in the reduced dimensional space created by PCA.
+PCR first forms unsupervised linear combinations of the predictors with PCA and then regresses the outcome on selected components. The regression is linear in those components, but the leading PCA directions are chosen to explain predictor variance rather than outcome relevance.
 
 ## Importance of Understanding Linear Assumptions
 
@@ -140,7 +140,7 @@ Using scatter plots, we can visualize how different predictors relate to the tar
 
 ### Performance of Linear Models
 
-For features showing a linear relationship with Sale Price, a **linear regression model** can perform reasonably well. When we fit the model, we can assess its performance by calculating the **mean squared error (MSE)** on the test set. A low MSE suggests that the linear model is well-suited for predicting Sale Price for those variables.
+A linear model can be a strong baseline for house prices, especially after appropriate transformations and interactions. Whether an individual raw feature is “linear” should be diagnosed conditionally rather than from one marginal scatter plot. When we fit the model, we can assess its performance by calculating the **mean squared error (MSE)** on the test set. A low MSE suggests that the linear model is well-suited for predicting Sale Price for those variables.
 
 ### Example of Linear vs Non-Linear Performance
 
