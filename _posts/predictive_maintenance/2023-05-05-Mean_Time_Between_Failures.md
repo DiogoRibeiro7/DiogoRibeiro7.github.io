@@ -84,13 +84,9 @@ Despite its utility, MTBF has some inherent limitations:
 
 - **Exponential interpretation is optional**: only under a constant-rate exponential model does $R(\mathrm{MTBF})=e^{-1}\approx0.368$. A Weibull or renewal model with the same mean can have a very different survival probability at the mean.
 
-## Related Metrics: MTTF and MTTR
+## Related reliability quantities
 
-While MTBF is essential for **repairable systems**, other related metrics provide further insights into system performance and reliability:
-
-- **Mean Time To Failure (MTTF)**: MTTF is used for **non-repairable systems**. It measures the average time a system operates before a failure that cannot be repaired. For instance, in electronics, MTTF is often used to predict when a component will need to be replaced.
-
-- **Mean Time To Repair (MTTR)**: MTTR measures the average time taken to **repair** a system after failure. It helps businesses understand how long their systems will be unavailable during repair activities and assists in improving repair processes.
+For a non-repairable component, **Mean Time To Failure** refers to the expected lifetime rather than a recurring interval between repairs. **Mean Time To Repair** concerns restoration time after a failure and therefore belongs to the maintainability side of the problem. Together, failure frequency and repair duration contribute to long-run availability, but they describe different stochastic mechanisms and should not be collapsed into one generic reliability score.
 
 ## Visualizing MTBF
 
@@ -132,13 +128,9 @@ Below is a simple Python script that calculates the **Mean Time Between Failures
 
 def calculate_mtbf(total_operational_time, number_of_failures):
     """
-    Calculate Mean Time Between Failures (MTBF).
-
-Parameters:
+    Calculate Mean Time Between Failures (MTBF). Parameters:
     total_operational_time (float): Total time the system was operational (in hours, days, etc.).
-    number_of_failures (int): The total number of failures during that time.
-
-Returns:
+    number_of_failures (int): The total number of failures during that time. Returns:
     float: The MTBF value.
     """
     if number_of_failures == 0:
@@ -160,11 +152,7 @@ print(f"Mean Time Between Failures (MTBF): {mtbf} hours")
 
 - **Function `calculate_mtbf`**: This function takes two inputs: the total operational time and the number of failures. It calculates the MTBF by dividing the total time by the number of failures.
 
-- If no failures occur, the function returns infinity (`float('inf')`), indicating that the system is highly reliable.
-
-- The example provided calculates MTBF for 600 hours of operation with 3 failures, resulting in an MTBF of 200 hours.
-
-- You can modify the input values to suit your particular system's operational data and number of failures.
+The example calculates 600 operating hours with three observed failures, producing a point estimate of 200 hours per failure under the simple exposure-rate definition. When no failures are observed, however, the data do not justify an infinite MTBF. They are censored evidence from which one can derive a bound or interval only after specifying a failure model. The function therefore raises an error rather than returning infinity.
 
 ## Appendix: Advanced Python Code for MTBF, MTTR, and System Availability
 
@@ -181,44 +169,24 @@ repair_durations = [5, 7, 3, 10, 8]  # Time taken to repair the system after eac
 
 def calculate_mtbf(failure_times):
     """
-    Calculate Mean Time Between Failures (MTBF).
-
-Parameters:
-    failure_times (list): List of times at which system failures occurred.
-
-Returns:
+    Calculate Mean Time Between Failures (MTBF). Parameters:
+    failure_times (list): List of times at which system failures occurred. Returns:
     float: MTBF value in hours.
     """
     intervals = np.diff(
         np.concatenate(([0.0], np.asarray(failure_times, dtype=float)))
     )
     total_uptime = float(intervals.sum())
-    number_of_failures = len(failure_times)
-
-if number_of_failures == 0:
-        return float('inf')  # No failures occurred, MTBF is infinite
-
-return total_uptime / number_of_failures
-
-def calculate_mttr(repair_durations):
+    number_of_failures = len(failure_times) if number_of_failures == 0:
+        return float('inf')  # No failures occurred, MTBF is infinite return total_uptime / number_of_failures def calculate_mttr(repair_durations):
     """
-    Calculate Mean Time To Repair (MTTR).
-
-Parameters:
-    repair_durations (list): List of repair durations following each failure.
-
-Returns:
+    Calculate Mean Time To Repair (MTTR). Parameters:
+    repair_durations (list): List of repair durations following each failure. Returns:
     float: MTTR value in hours.
     """
-    return np.mean(repair_durations)  # Average repair time
-
-def calculate_availability(mtbf, mttr):
+    return np.mean(repair_durations)  # Average repair time def calculate_availability(mtbf, mttr):
     """
-    Calculate system availability.
-
-Availability is the proportion of time the system is operational.
-
-Parameters:
+    Calculate system availability. Availability is the proportion of time the system is operational. Parameters:
     mtbf (float): Mean Time Between Failures.
     mttr (float): Mean Time To Repair.
 
