@@ -36,9 +36,7 @@ That notation is useful, but it hides most of the statistical difficulty.
 
 Errors can be random or systematic. They can occur in the response, in the predictors, or in both. They may depend on the true value being measured, on the instrument, on the observer, on environmental conditions, or on previous measurements.
 
-Those distinctions matter because measurement error changes both uncertainty and bias.
-
-The useful question is not merely
+Those distinctions matter because measurement error changes both uncertainty and bias. The useful question is not merely
 
 > How large is the measurement error?
 
@@ -52,9 +50,7 @@ $$
 
 ## A simple measurement model
 
-Let $X^\ast$ denote the latent quantity of interest and let $X$ denote the recorded measurement.
-
-A basic additive model is
+Let $X^\ast$ denote the latent quantity of interest and let $X$ denote the recorded measurement. A basic additive model is
 
 $$
 X = X^\ast + U.
@@ -66,23 +62,17 @@ $$
 E(U\mid X^\ast)=0,
 $$
 
-the measurement is conditionally unbiased under this model.
-
-If instead
+the measurement is conditionally unbiased under this model. If instead
 
 $$
 E(U\mid X^\ast)=b(X^\ast),
 $$
 
-then the measurement process contains systematic bias.
-
-The terms "random" and "systematic" should therefore be understood relative to a model and a measurement procedure. A calibration offset that is fixed within one instrument may vary randomly across a fleet of instruments.
+then the measurement process contains systematic bias. The terms "random" and "systematic" should therefore be understood relative to a model and a measurement procedure. A calibration offset that is fixed within one instrument may vary randomly across a fleet of instruments.
 
 ## Accuracy and precision are different properties
 
-A measurement system can be precise but biased.
-
-Suppose repeated measurements satisfy
+A measurement system can be precise but biased. Suppose repeated measurements satisfy
 
 $$
 X_j = X^\ast + b + U_j,
@@ -92,9 +82,7 @@ E(U_j)=0,
 \operatorname{Var}(U_j)=\sigma_U^2.
 $$
 
-The systematic component $b$ shifts the center of the measurements away from the target. The random component $\sigma_U^2$ determines repeatability.
-
-Averaging repeated measurements,
+The systematic component $b$ shifts the center of the measurements away from the target. The random component $\sigma_U^2$ determines repeatability. Averaging repeated measurements,
 
 $$
 \bar X_m
@@ -110,17 +98,13 @@ $$
 \frac{\sigma_U^2}{m},
 $$
 
-if the random errors are independent.
-
-But the bias remains:
+if the random errors are independent. But the bias remains:
 
 $$
 E(\bar X_m-X^\ast)=b.
 $$
 
-Repeated measurements improve precision.
-
-They do not average away a systematic calibration error.
+Repeated measurements improve precision. They do not average away a systematic calibration error.
 
 ## Error in the response and error in a predictor behave differently
 
@@ -138,19 +122,13 @@ Y=Y^\ast+V,
 E(V\mid X^\ast)=0,
 $$
 
-ordinary least squares can remain unbiased for the slope under the usual exogeneity assumptions, although the residual variance increases.
-
-Now suppose the predictor is measured with classical error,
+ordinary least squares can remain unbiased for the slope under the usual exogeneity assumptions, although the residual variance increases. Now suppose the predictor is measured with classical error,
 
 $$
 X=X^\ast+U,
 $$
 
-with $U$ independent of $X^\ast$ and $\varepsilon$.
-
-Regressing $Y$ on the noisy $X$ produces attenuation.
-
-In the simple one-predictor case,
+with $U$ independent of $X^\ast$ and $\varepsilon$. Regressing $Y$ on the noisy $X$ produces attenuation. In the simple one-predictor case,
 
 $$
 \operatorname{plim}\hat\beta_1
@@ -169,19 +147,11 @@ $$
 {\operatorname{Var}(X^\ast)+\operatorname{Var}(U)}
 $$
 
-lies between 0 and 1.
-
-So classical predictor error pulls the estimated slope toward zero.
-
-This is a statistical bias caused by measurement error, not merely a loss of precision.
+lies between 0 and 1. So classical predictor error pulls the estimated slope toward zero. This is a statistical bias caused by measurement error, not merely a loss of precision.
 
 ## Systematic error is not always a constant offset
 
-A scale that always adds 0.2 kg is a simple example.
-
-Real systems are often more complicated.
-
-An instrument may have:
+A scale that always adds 0.2 kg is a simple example. Real systems are often more complicated. An instrument may have:
 
 - a zero-point offset,
 - a multiplicative calibration error,
@@ -199,9 +169,7 @@ $$
 X = a + bX^\ast + U.
 $$
 
-If $a\neq 0$ or $b\neq 1$, the instrument is systematically distorted even if $U$ has mean zero.
-
-This is why calibration data are valuable: they provide observations where the reference value is independently known with substantially smaller uncertainty.
+If $a\neq 0$ or $b\neq 1$, the instrument is systematically distorted even if $U$ has mean zero. This is why calibration data are valuable: they provide observations where the reference value is independently known with substantially smaller uncertainty.
 
 ## Measurement uncertainty is not automatically a confidence interval
 
@@ -211,9 +179,7 @@ $$
 32.3\pm0.5\text{ cm}
 $$
 
-are incomplete unless the meaning of $0.5$ is specified.
-
-It might denote:
+are incomplete unless the meaning of $0.5$ is specified. It might denote:
 
 - one standard uncertainty,
 - an expanded uncertainty,
@@ -222,21 +188,13 @@ It might denote:
 - a tolerance,
 - or a confidence interval half-width.
 
-Those objects are not interchangeable.
-
-The Guide to the Expression of Uncertainty in Measurement distinguishes **standard uncertainty** from **expanded uncertainty**. If $u_c$ is a combined standard uncertainty, an expanded uncertainty may be written
+Those objects are not interchangeable. The Guide to the Expression of Uncertainty in Measurement distinguishes **standard uncertainty** from **expanded uncertainty**. If $u_c$ is a combined standard uncertainty, an expanded uncertainty may be written
 
 $$
 U=ku_c,
 $$
 
-where $k$ is a coverage factor chosen for a stated coverage objective.
-
-That is a measurement-uncertainty statement.
-
-A statistical confidence interval has a different repeated-sampling interpretation and requires a specified statistical procedure.
-
-So the sentence
+where $k$ is a coverage factor chosen for a stated coverage objective. That is a measurement-uncertainty statement. A statistical confidence interval has a different repeated-sampling interpretation and requires a specified statistical procedure. So the sentence
 
 > the true value is likely between 31.8 and 32.8
 
@@ -260,9 +218,7 @@ u_Y^2
 \nabla f,
 $$
 
-where $\Sigma$ is the covariance matrix of the input uncertainties.
-
-Written componentwise,
+where $\Sigma$ is the covariance matrix of the input uncertainties. Written componentwise,
 
 $$
 u_Y^2
@@ -278,19 +234,11 @@ u_Y^2
 \operatorname{Cov}(X_i,X_j).
 $$
 
-The covariance terms matter.
-
-Treating all uncertainty sources as independent can understate or overstate total uncertainty.
-
-When the transformation is strongly nonlinear or the uncertainties are large, Monte Carlo propagation can be more appropriate than a first-order approximation.
+The covariance terms matter. Treating all uncertainty sources as independent can understate or overstate total uncertainty. When the transformation is strongly nonlinear or the uncertainties are large, Monte Carlo propagation can be more appropriate than a first-order approximation.
 
 ## Repeated measurements estimate only some uncertainty sources
 
-Suppose a device is used repeatedly under the same conditions.
-
-The empirical standard deviation estimates repeatability under those conditions.
-
-It does not automatically capture:
+Suppose a device is used repeatedly under the same conditions. The empirical standard deviation estimates repeatability under those conditions. It does not automatically capture:
 
 - calibration uncertainty,
 - drift over months,
@@ -299,31 +247,19 @@ It does not automatically capture:
 - reference-standard uncertainty,
 - environmental variation outside the experiment.
 
-A precise laboratory repeatability estimate can therefore coexist with substantial real-world measurement uncertainty.
-
-The measurement protocol determines what uncertainty is being learned.
+A precise laboratory repeatability estimate can therefore coexist with substantial real-world measurement uncertainty. The measurement protocol determines what uncertainty is being learned.
 
 ## Calibration and validation are different jobs
 
-Calibration uses reference information to estimate the relationship between instrument readings and the target quantity.
-
-Validation asks whether the calibrated system performs adequately on new reference measurements or under new conditions.
-
-If the calibration equation is estimated on the same data used to judge its performance, the assessment can be optimistic.
+Calibration uses reference information to estimate the relationship between instrument readings and the target quantity. Validation asks whether the calibrated system performs adequately on new reference measurements or under new conditions. If the calibration equation is estimated on the same data used to judge its performance, the assessment can be optimistic.
 
 The same train/test logic familiar from predictive modeling appears here too.
 
 ## Measurement error in data science
 
-Measurement quality matters before any machine-learning algorithm sees the table.
+Measurement quality matters before any machine-learning algorithm sees the table. If predictors are measured inconsistently across sites, a model may learn site-specific instrumentation rather than the intended phenomenon. If the target label is noisy, apparent model error contains both prediction error and outcome-measurement error. Cross-validation cannot repair a biased measurement process when the same bias exists in every fold.
 
-If predictors are measured inconsistently across sites, a model may learn site-specific instrumentation rather than the intended phenomenon. If the target label is noisy, apparent model error contains both prediction error and outcome-measurement error.
-
-Cross-validation cannot repair a biased measurement process when the same bias exists in every fold.
-
-Data cleaning cannot reconstruct a latent true value unless there is information supporting that reconstruction.
-
-The measurement model is part of the statistical model.
+Data cleaning cannot reconstruct a latent true value unless there is information supporting that reconstruction. The measurement model is part of the statistical model.
 
 ## What to report
 
