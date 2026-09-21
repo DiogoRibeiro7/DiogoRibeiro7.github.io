@@ -4,9 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2023-09-03'
-excerpt: Learn the core concepts of binary classification, explore common algorithms
-  like Decision Trees and SVMs, and discover how to evaluate performance using precision,
-  recall, and F1-score.
+excerpt: Binary classification is not just choosing an algorithm. It requires a clear target, calibrated probabilities, realistic validation, and thresholds tied to decision costs.
 header:
   image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
   og_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
@@ -17,116 +15,221 @@ header:
   twitter_image: /assets/images/headers/photo-data-science-ml-pipeline.jpg
 keywords:
 - Binary classification
-- Machine learning
-- Decision trees
-- Support vector machines
-- Precision and recall
-- F1-score
-- Supervised learning algorithms
-- Model evaluation metrics
-- Classification problems
-- Machine learning applications
+- Logistic regression
+- ROC AUC
+- Precision recall
+- Calibration
+- Classification thresholds
+- Class imbalance
+- Cost-sensitive classification
 permalink: '/machine-learning/binary_classification/'
 redirect_from:
 - '/machine learning/binary_classification/'
-seo_description: 'The fundamentals of binary classification: key algorithms, evaluation metrics such as precision and recall, and real-world applications.'
-seo_title: 'Binary Classification: Methods and Metrics'
+seo_description: A rigorous introduction to binary classification, including probabilistic prediction, thresholds, calibration, class imbalance, validation, and decision costs.
+seo_title: 'Binary Classification: Probabilities, Thresholds, and Decisions'
 seo_type: article
 tags:
 - Classification
 - Supervised Learning
 - Machine Learning
-title: 'Binary Classification: Explained'
+title: 'Binary Classification: Probabilities Before Labels'
 ---
 
-## Understanding Binary Classification
+Binary classification is often described as the task of assigning observations to one of two classes. That description hides an important layer. Most useful classifiers do not begin with a hard label. They estimate a score or probability and only then convert that quantity into an action using a threshold.
 
-Binary classification is a foundational task in machine learning and statistical analysis, where the objective is to classify elements of a dataset into one of two distinct classes. These classes are often referred to as the "positive" and "negative" classes. For instance, in a medical diagnosis scenario, the two classes might represent "disease" and "no disease," while in a spam detection system, they might represent "spam" and "not spam."
+The statistical problem and the decision problem are therefore separate. A model may rank observations well but be poorly calibrated. A model may produce accurate probabilities but still be used with an inappropriate threshold. A classifier should be evaluated at all three levels: discrimination, calibration, and decision utility.
 
-### The Core Concept of Binary Classification
+## The probabilistic target
 
-The essence of binary classification lies in the ability to create a model that can take a new data point and correctly classify it into one of these two predefined classes. The model is trained on a labeled dataset, where each data point is associated with a specific class. During the training process, the model learns patterns and relationships within the data that allow it to make predictions about the class of new, unseen data points.
+Let
 
-### Real-World Relevance of Binary Classification
+$$
+Y\in\{0,1\}
+$$
 
-Binary classification is ubiquitous across various fields, from healthcare and finance to marketing and cybersecurity. For example, in medical testing, accurately classifying patients as either having a disease (positive class) or not having the disease (negative class) is crucial. However, not all classification errors have the same impact. A false positive, where a test incorrectly indicates the presence of a disease, can lead to unnecessary stress and additional tests for the patient. Conversely, a false negative, where a test fails to detect a disease that is present, can have severe consequences, including delayed treatment and worsened outcomes.
+and let $X$ denote the available predictors. A probabilistic classifier estimates
 
-## Measuring the Performance of Binary Classifiers
+$$
+p(x)=\Pr(Y=1\mid X=x).
+$$
 
-### Accuracy: A Basic Measure with Limitations
+A hard prediction is then produced by a threshold $t$,
 
-The most straightforward way to evaluate a binary classifier is to measure its accuracy, defined as the ratio of correctly classified instances to the total number of instances. However, accuracy alone can be misleading, especially in situations where the classes are imbalanced—that is, one class is much more frequent than the other. For instance, in a dataset where 95% of the instances belong to the negative class, a model that always predicts "negative" would achieve 95% accuracy, despite being completely useless in identifying the positive class.
+$$
+\hat Y =
+\begin{cases}
+1, & \hat p(x)\ge t,\\
+0, & \hat p(x)<t.
+\end{cases}
+$$
 
-### Confusion Matrix: A More Nuanced Evaluation
+The common threshold $t=0.5$ has no universal justification. If false negatives are much more costly than false positives, or if only a limited number of cases can be acted upon, the appropriate threshold can be very different.
 
-To better understand a classifier's performance, we use a confusion matrix, which breaks down the predictions into four categories:
+## Confusion matrix and threshold-dependent metrics
 
-1. **True Positives (TP)**: Instances correctly classified as the positive class.
-2. **True Negatives (TN)**: Instances correctly classified as the negative class.
-3. **False Positives (FP)**: Instances incorrectly classified as the positive class (also known as Type I errors).
-4. **False Negatives (FN)**: Instances incorrectly classified as the negative class (also known as Type II errors).
+For a fixed threshold, predictions can be summarized as true positives, false positives, true negatives, and false negatives.
 
-The confusion matrix provides a comprehensive view of how a model performs, particularly in distinguishing between different types of errors. 
+From these counts,
 
-### Beyond Accuracy: Precision, Recall, and F1-Score
+$$
+\text{Sensitivity}
+=
+\frac{TP}{TP+FN},
+$$
 
-To address the limitations of accuracy, especially in imbalanced datasets, additional metrics such as precision, recall, and the F1-score are often used:
+$$
+\text{Specificity}
+=
+\frac{TN}{TN+FP},
+$$
 
-- **Precision**: The proportion of positive identifications that are actually correct, calculated as $\text{Precision} = \frac{TP}{TP + FP}$. High precision indicates a low false positive rate.
+$$
+\text{Precision}
+=
+\frac{TP}{TP+FP}.
+$$
 
-- **Recall (Sensitivity or True Positive Rate)**: The proportion of actual positives that are correctly identified, calculated as $\text{Recall} = \frac{TP}{TP + FN}$. High recall indicates a low false negative rate.
+Precision depends on prevalence as well as model performance. It therefore changes when the same classifier is deployed in populations with different base rates.
 
-- **F1-Score**: The harmonic mean of precision and recall, providing a single metric that balances both concerns, calculated as $\text{F1-Score} = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$.
+The F1 score is
 
-These metrics allow for a more balanced assessment of a model's performance, especially in scenarios where the cost of false positives and false negatives is different.
+$$
+F_1
+=
+2\frac{\text{precision}\times\text{recall}}
+{\text{precision}+\text{recall}}.
+$$
 
-## Methods Commonly Used in Binary Classification
+It can be useful when precision and recall are both relevant, but it encodes a particular symmetric trade-off and ignores true negatives. It should not be treated as a universal classification objective.
 
-### Decision Trees and Random Forests
+## Accuracy and class imbalance
 
-**Decision Trees** are a popular method for binary classification, where data is split based on feature values to create a tree-like model of decisions. The simplicity and interpretability of decision trees make them attractive, though they can be prone to overfitting.
+Accuracy is
 
-**Random Forests** improve on decision trees by creating an ensemble of trees, each trained on a different subset of the data and features. This ensemble approach generally leads to better performance and robustness against overfitting, especially in complex datasets.
+$$
+\frac{TP+TN}{N}.
+$$
 
-### Support Vector Machines (SVM)
+It can be misleading when one class is common, because a trivial majority-class classifier may achieve high accuracy while detecting none of the minority class.
 
-**Support Vector Machines** are powerful classifiers that work by finding the hyperplane that best separates the two classes in the feature space. SVMs are particularly effective in high-dimensional spaces and are known for their robustness to overfitting, especially when using a kernel trick to handle non-linear relationships.
+Class imbalance does not, however, make every standard metric invalid. ROC AUC remains a valid ranking measure under imbalance, although it can be operationally uninformative when false positives are costly and the negative class is extremely large. Precision-recall curves are often more directly informative in rare-event settings because precision reflects the burden of false alerts.
 
-### Logistic Regression
+The important point is to choose metrics that correspond to the deployment problem rather than to classify metrics as universally "good" or "bad" for imbalanced data.
 
-**Logistic Regression** is a statistical method that models the probability that a given instance belongs to a particular class. Despite its name, logistic regression is well-suited for binary classification problems. It predicts the probability of the positive class and is highly interpretable, making it a staple in many applications.
+## Discrimination is not calibration
 
-### Neural Networks
+Two models can have similar ROC AUC and very different probability estimates. If among cases assigned risk $0.8$, only about 40% are actually positive, the probabilities are badly calibrated even if the ranking is strong.
 
-**Neural Networks** are inspired by the human brain and consist of layers of interconnected nodes (neurons). For binary classification, a neural network can model complex, non-linear relationships in the data, particularly when there is a large amount of labeled data available. However, neural networks require significant computational resources and expertise to tune properly.
+Calibration asks whether
 
-### Other Methods
+$$
+\Pr(Y=1\mid \hat p(X)\approx p)
+\approx p.
+$$
 
-- **Bayesian Networks** use probabilistic graphical models to represent a set of variables and their conditional dependencies. They are useful when domain knowledge is available to define the structure of the network.
-  
-- **Probit Model** is similar to logistic regression but assumes a normal distribution of the errors. It's commonly used in situations where the data follows this assumption.
+Useful diagnostics include reliability diagrams, the Brier score, calibration intercepts and slopes, and calibration curves.
 
-- **Genetic Programming** and its variants like **Linear Genetic Programming** and **Multi-Expression Programming** use evolutionary algorithms to evolve classifiers, which can be particularly useful in discovering novel patterns in complex datasets.
+Calibration matters whenever probabilities are interpreted as risks, used in expected-cost calculations, or combined with other decision models.
 
-## Choosing the Right Classifier
+## Logistic regression
 
-The choice of classifier depends on several factors, including:
+Logistic regression models the log odds as
 
-- **Size and Dimensionality of the Dataset**: Algorithms like random forests are well-suited for large datasets with many features, while simpler models like logistic regression might perform better on smaller datasets.
-  
-- **Presence of Noise**: Some classifiers, such as decision trees, are more susceptible to noise, whereas methods like SVM and random forests are more robust.
-  
-- **Interpretability**: In applications where understanding the model is crucial (e.g., healthcare), simpler models like logistic regression or decision trees are preferred.
+$$
+\log\frac{p(x)}{1-p(x)}
+=
+\beta_0+x^\top\beta.
+$$
 
-- **Computational Resources**: Complex models like neural networks require more computational power and time, making them less practical for some applications.
+This is a probabilistic model, not merely a classification rule. Its strengths include interpretability, stable estimation in moderate dimensions, and direct probability output. Its limitations include the assumed functional form on the log-odds scale and sensitivity to separation or severe misspecification.
+
+Nonlinearity can be introduced through splines, interactions, basis expansions, or generalized additive models without abandoning the regression framework.
+
+## Trees and ensembles
+
+Decision trees partition predictor space recursively. They are easy to visualize but can be unstable: small changes in the data can produce different trees.
+
+Random forests reduce that instability by averaging over many randomized trees. Gradient-boosted trees build an additive ensemble sequentially and can achieve strong predictive performance on structured tabular data.
+
+Neither method is automatically superior to logistic regression. Performance depends on sample size, signal structure, interactions, missingness, noise, and the validation design.
+
+## Support vector machines
+
+Support vector machines search for separating boundaries with large margins. With kernels, they can represent nonlinear decision surfaces.
+
+Their native output is a decision score rather than a calibrated probability. If calibrated probabilities are needed, a separate calibration procedure such as Platt scaling or isotonic regression may be applied using data not used to fit the original classifier.
+
+## Neural networks
+
+Neural networks can represent highly flexible decision functions and are valuable when the predictors have complex structure such as images, text, audio, or large-scale high-dimensional interactions.
+
+That flexibility does not remove the need for calibration, regularization, representative training data, and deployment-like validation. A more flexible model can overfit more subtle forms of dataset-specific structure.
+
+## Threshold choice as a decision problem
+
+Suppose a false positive costs $C_{FP}$ and a false negative costs $C_{FN}$. Under a simple two-action model with calibrated probabilities, the expected-loss threshold can be derived from those costs.
+
+Predict positive when
+
+$$
+(1-p)C_{FP}
+<
+pC_{FN}.
+$$
+
+Solving for $p$,
+
+$$
+p >
+\frac{C_{FP}}{C_{FP}+C_{FN}}.
+$$
+
+This simple result shows why 0.5 is not privileged. If missing a true case is ten times more costly than investigating a false alert, the optimal threshold can be much lower.
+
+Real systems often add capacity constraints, delayed outcomes, fairness requirements, or multiple downstream actions. The threshold should then be chosen inside the actual operational decision framework.
+
+## Validation must match deployment
+
+Random train-test splits assume that future observations are exchangeable with randomly held-out historical observations. That assumption often fails.
+
+Examples include:
+
+- repeated observations from the same person
+- multiple rows from the same machine
+- temporal forecasting
+- site-to-site deployment
+- geographic generalization
+- policy changes
+- sensor replacement
+- concept drift
+
+Grouped, temporal, or external validation may therefore be required. Leakage can make a classifier appear excellent even when it will fail immediately after deployment.
+
+## Choosing a classifier
+
+The correct question is not "Which algorithm is best?" A useful workflow is:
+
+1. define the outcome and observation unit
+2. define the deployment population
+3. identify the costs of different errors
+4. build a simple baseline
+5. compare candidate models under realistic validation
+6. assess both discrimination and calibration
+7. select thresholds from the decision problem
+8. monitor performance after deployment
+
+This process often makes model choice less dramatic than it first appears. A simple model that is calibrated, stable, and operationally aligned can be preferable to a more complex model with slightly better AUC.
 
 ## Conclusion
 
-Binary classification is a fundamental yet complex task in machine learning. While the basic idea is simple—classifying data into one of two categories—the real challenge lies in choosing the right model and evaluating its performance accurately. By understanding the nuances of different classifiers and metrics, one can make informed decisions that lead to better predictive performance and more reliable results in real-world applications.
+Binary classification is a probability-estimation problem followed by a decision rule. Confusion-matrix metrics describe one threshold. ROC and precision-recall curves describe families of thresholds. Calibration evaluates whether predicted probabilities can be trusted as probabilities. The final threshold belongs to the decision problem.
+
+A sound classifier is therefore not merely a function that returns zero or one. It is a model embedded in a measurement, validation, and decision system.
 
 ## References
 
-- Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
-- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Fawcett, T. (2006). An introduction to ROC analysis. *Pattern Recognition Letters*, 27(8), 861-874.
+- Hand, D. J. (2009). Measuring classifier performance: a coherent alternative to the area under the ROC curve. *Machine Learning*, 77, 103-123.
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
-- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
+- Niculescu-Mizil, A., & Caruana, R. (2005). Predicting good probabilities with supervised learning. *Proceedings of ICML*.
+- Saito, T., & Rehmsmeier, M. (2015). The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets. *PLOS ONE*, 10(3), e0118432.

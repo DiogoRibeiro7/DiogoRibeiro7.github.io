@@ -4,9 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2023-08-21'
-excerpt: Discover how data science, a multidisciplinary field combining statistics,
-  computer science, and domain expertise, can drive better business decisions and
-  outcomes.
+excerpt: Data science is not a catalogue of algorithms. It is a discipline for turning imperfect observations into defensible descriptions, predictions, and decisions under uncertainty.
 header:
   image: /assets/images/headers/photo-data-science-air-quality.jpg
   og_image: /assets/images/headers/photo-data-science-air-quality.jpg
@@ -17,125 +15,98 @@ header:
   twitter_image: /assets/images/headers/photo-data-science-air-quality.jpg
 keywords:
 - Data science
-- Business intelligence
-- Machine learning applications
-- Data-driven decision-making
-- Data analysis in business
-- Customer behavior analysis
+- Statistical modeling
+- Machine learning
+- Causal inference
+- Decision science
+- Data quality
+- Model validation
 - Predictive analytics
-- Operational efficiency with data science
-- Supply chain optimization
-- Personalized marketing strategies
-- Financial forecasting using data
-- Product innovation with data
-- Ai in business
-- Data science for revenue growth
-- Data science trends in business
+- Experimental design
+- Data-generating process
 permalink: '/data-science/demystifying_data_science/'
 redirect_from:
 - '/data science/demystifying_data_science/'
-seo_description: Learn what data science is and how it can transform your business
-  through improved decision-making, cost savings, and increased revenue.
-seo_title: 'Data Science: A Guide to Its Business Benefits'
+seo_description: A rigorous introduction to data science as a discipline of measurement, statistical reasoning, prediction, causal inference, validation, and decision-making under uncertainty.
+seo_title: 'What Data Science Actually Does'
 seo_type: article
-subtitle: What It Is and How It Can Help Your Business
-summary: This article explores the role of data science in business, highlighting
-  its potential to enhance decision-making, optimize operations, and drive revenue
-  growth. It delves into key applications such as customer behavior analysis, supply
-  chain optimization, and predictive analytics, showcasing how companies can leverage
-  data science for competitive advantage.
+subtitle: From Measurement to Decisions Under Uncertainty
+summary: Data science combines measurement, statistics, computation, domain knowledge, and decision analysis. Its value comes not from using fashionable algorithms but from defining the problem correctly, understanding how the data were generated, validating claims under realistic conditions, and connecting model outputs to decisions.
 tags:
 - Data Science
-- Business Intelligence
+- Statistics
 - Machine Learning
-- Data Analysis
+- Causal Inference
 title: Demystifying Data Science
 ---
 
 ![Data has better idea - Demystifying Data Science](/assets/images/data_has_better_idea.jpg){: width="4032" height="3024" loading="lazy"}
 
-Data science has emerged as one of the most powerful tools in the modern business landscape. From Silicon Valley startups to Fortune 500 companies, businesses are increasingly harnessing the power of data to gain competitive advantages. But despite its growing prominence, data science remains a somewhat elusive concept to many.
+Data science is often introduced as a mixture of statistics, computer science, and domain knowledge. That description is broadly correct, but it says little about the intellectual work that makes a data-science project succeed or fail. A project can contain sophisticated software, large datasets, and modern machine-learning models and still answer the wrong question. Conversely, a carefully designed analysis with a simple model can be decisive when the target, assumptions, measurements, and decision context are clear. The useful unit of analysis is therefore not the algorithm. It is the chain that connects a real-world question to observations, a statistical or computational representation, an uncertainty statement, and an action.
 
-In this article, we’ll break down the core components of data science, explain how it can revolutionize business processes, and offer a clear understanding of how you can leverage it to improve decision-making, reduce costs, and unlock new revenue streams.
+That distinction matters because data do not arrive as neutral facts. They are produced by measurement systems, business processes, experiments, sensors, surveys, transactions, and human decisions. Each mechanism determines what can be learned. A customer database records customers who interacted with the company, not an abstract population of all possible customers. A hospital database reflects admission criteria, clinical workflows, missingness, and treatment decisions. A machine sensor observes a physical process through calibration error, sampling frequency, drift, and failure modes. Before choosing a model, one should understand that observation process.
 
-## What is Data Science?
+## Start with the question, not the model
 
-Data science is the process of extracting meaningful insights and knowledge from both structured and unstructured data. It’s an interdisciplinary field that blends techniques from several disciplines—most notably statistics, computer science, mathematics, and domain-specific expertise. The ultimate goal of data science is to uncover patterns and trends in data that inform better decision-making.
+Most data-science work can be organised around a small number of inferential targets. A descriptive question asks what happened in the observed data. A predictive question asks how well an outcome can be forecast for new observations drawn from a relevant future population. A causal question asks how an outcome would change under an intervention. A decision problem asks which action should be taken once uncertainty, costs, constraints, and competing objectives are considered. These targets overlap, but they are not interchangeable.
 
-At the heart of data science lies several key steps:
+Suppose sales fall after a price increase. A descriptive analysis can quantify the change. A predictive model can estimate future sales from price and other covariates. Neither result, by itself, identifies the causal effect of the price change, because competitors, promotions, seasonality, and customer composition may also have changed. A causal analysis requires a design or assumptions that make the relevant counterfactual comparison credible. Even after a causal effect is estimated, the business decision is not automatic: margin, inventory, long-run customer value, and strategic constraints still determine whether the price change is desirable.
 
-- **Data Collection:** Gathering raw data from various sources such as databases, online interactions, or IoT devices. Data sources can range from customer purchase histories to sensor data from manufacturing equipment.
-  
-- **Data Cleaning:** Raw data often comes in incomplete, inconsistent, or inaccurate forms. Data cleaning is the process of fixing or removing incorrect or corrupted data, ensuring the dataset is suitable for analysis.
+This is why "data-driven decision-making" should not mean replacing judgment with a model score. A defensible workflow makes the judgment explicit. It states the target, the information available at decision time, the losses associated with different errors, and the conditions under which historical evidence is relevant to the future decision.
 
-- **Data Analysis:** Once data is collected and cleaned, statistical and computational methods are applied to identify trends, correlations, or anomalies within the data. This can include everything from exploratory data analysis to building predictive models.
-  
-- **Interpretation:** The results from data analysis are translated into actionable insights, which can then inform business decisions. This stage requires domain expertise to correctly interpret the findings and ensure they are aligned with the business’s goals.
+## Data quality is part of the model
 
-One of the most exciting aspects of data science is its use of machine learning. Machine learning algorithms allow systems to learn from past data and make predictions or classifications on new data, enabling businesses to automate processes, personalize customer experiences, and forecast trends more accurately.
+Cleaning data is sometimes presented as a preliminary engineering task that occurs before the "real" analysis. In serious work, data quality is inseparable from inference. Missing values may arise because a sensor failed, because a clinician chose not to order a test, because a customer stopped interacting with a service, or because a survey respondent declined to answer. Those mechanisms have different consequences. Treating them all as blank cells to be imputed ignores information about how the dataset was generated.
 
-## Benefits of Data Science
+The same applies to labels. A fraud label may mean confirmed fraud, investigated fraud, chargeback fraud, or a rule-based proxy. A churn label may depend on an arbitrary inactivity window. A failure label in predictive maintenance may reflect the maintenance policy rather than the latent degradation process. If the operational definition changes, the statistical target changes with it. The first task is therefore to define the observation unit, outcome, predictors, time origin, censoring rules, and provenance of each variable.
 
-Businesses today are faced with vast amounts of data, but having access to data alone is not enough. The true value lies in the ability to derive actionable insights. Here’s how data science can help transform your business:
+Measurement error also matters. If a predictor is noisy, the effect is not limited to a small reduction in model accuracy. Classical measurement error can attenuate regression coefficients, misclassification can distort associations, and sensor replacement can create distribution shifts that look like changes in the underlying process. The measurement system should be documented as carefully as the model.
 
-### Improved Decision-Making
+## Statistical models encode assumptions
 
-Data-driven decision-making is at the core of data science. With the insights gleaned from data analysis, businesses can make informed decisions based on factual evidence rather than gut feelings or assumptions.
+A model is not a machine that extracts truth from data. It is a set of assumptions that defines which patterns are treated as signal, which variation is treated as noise, and how information is pooled. Linear regression assumes a particular conditional mean structure. A Gaussian process encodes beliefs about smoothness and covariance. A random forest partitions the feature space through an ensemble of trees. A neural network represents a flexible function class whose practical behaviour depends on architecture, regularisation, optimisation, and training data.
 
-For example, by analysing historical sales data, businesses can determine optimal pricing strategies, forecast future demand, and adjust marketing efforts accordingly. Data science enables companies to move from reactive decision-making to a more proactive and predictive approach, which improves overall business outcomes.
+The relevant question is therefore not whether a model is "advanced". It is whether its assumptions and inductive biases are suitable for the target. In many scientific or operational settings, interpretability, uncertainty quantification, sample size, extrapolation behaviour, calibration, and computational constraints matter as much as raw predictive accuracy. A transparent parametric model can be preferable when it captures the structure of the problem and permits direct scrutiny of its assumptions.
 
-### Cost Reduction and Operational Efficiency
+Model complexity should be earned by out-of-sample evidence. A flexible method has more ways to fit accidental structure. Cross-validation, rolling-origin evaluation, external validation, or a genuinely held-out test set should reproduce the way the model will encounter future data. Randomly shuffling observations is inappropriate when future observations differ systematically from past observations or when multiple rows belong to the same patient, customer, machine, or site.
 
-One of the significant benefits of data science is its ability to identify inefficiencies within a business. Through detailed data analysis, companies can uncover bottlenecks in production, highlight areas where resources are being wasted, and streamline operations for greater efficiency.
+## Prediction, probability, and decisions are different layers
 
-For instance, in supply chain management, predictive analytics can forecast demand more accurately, reducing overstocking or understocking and minimizing the costs associated with inventory management.
+Many deployed systems ultimately produce a probability or score. That number is useful only if its interpretation is understood. A classifier can rank cases well while producing badly calibrated probabilities. A model can be calibrated in the population but perform poorly for an operationally important subgroup. A threshold that maximises the F1 score may be inappropriate when false negatives and false positives have very different consequences.
 
-### Increased Revenue and Market Opportunities
+For a probabilistic classifier with estimated risk $\hat p(x)$, a decision threshold should ideally arise from the loss of the available actions. If action $a_1$ has a false-positive cost $C_{FP}$ and failing to act has a false-negative cost $C_{FN}$, the optimal threshold under a simple two-action model depends on those costs, not on an arbitrary convention such as 0.5. Real decisions are often more complicated because capacity, fairness constraints, delayed outcomes, and downstream interventions also matter.
 
-Data science can also help businesses tap into new revenue streams by uncovering previously overlooked market opportunities. By analyzing customer data, businesses can identify new customer segments or cross-selling opportunities and adjust their strategies to target these markets.
+Forecasting has the same structure. A point forecast is not a full representation of uncertainty. Inventory, staffing, finance, and reliability decisions often require predictive distributions because the cost of under-prediction differs from the cost of over-prediction. Optimising a model for mean squared error and then using the point forecast inside a nonlinear decision rule can be inferior to modelling the distribution needed by the decision itself.
 
-Personalization, powered by machine learning, allows businesses to deliver customized product recommendations and marketing messages. This not only improves customer satisfaction but also drives revenue by increasing conversion rates and customer retention.
+## Experiments and causal inference
 
-### Enhanced Customer Experience
+When the question is causal, prediction is not enough. Randomised experiments remain powerful because treatment assignment breaks systematic links between treatment and pre-treatment confounders in expectation. Observational data require stronger assumptions and a clear causal structure. Regression adjustment, propensity scores, inverse-probability weighting, instrumental variables, regression discontinuity, and difference-in-differences solve different identification problems; they are not interchangeable entries in a modelling menu.
 
-Customer data is one of the most valuable assets for any business. Data science enables companies to better understand their customers by analyzing their behavior, preferences, and feedback. This insight allows businesses to tailor their products, services, and interactions to meet customer needs more effectively.
+The estimand should be stated before the estimator. Are we interested in an average treatment effect, an effect among treated units, a conditional effect for a subgroup, a policy value, or the effect of a dynamic treatment regime? The answer determines what data and assumptions are needed. Without that discipline, it is easy to report a statistically precise estimate of a quantity that does not correspond to the actual decision.
 
-For example, sentiment analysis—an application of natural language processing (NLP)—can help businesses understand how customers feel about their products or services in real time by analyzing social media posts, reviews, or survey responses. This proactive approach allows companies to address issues quickly and improve the overall customer experience.
+Experiments also require attention to interference, attrition, non-compliance, repeated exposure, novelty effects, and multiple outcomes. Randomisation protects against some biases, but it does not eliminate poor measurement, missing data, or a badly chosen endpoint.
 
-## Applications of Data Science in Business
+## Deployment changes the statistical problem
 
-Data science is not a one-size-fits-all solution. It has a wide range of applications across various industries and business functions. Here are some key areas where data science is making a significant impact:
+A model is not finished when validation metrics look good. Once deployed, it enters a system. Predictions can change human behaviour, which changes future data. Fraud models alter which transactions are investigated. Recommendation systems alter what users see and therefore what they click. Predictive-maintenance models change when machines are inspected or replaced, modifying the failure data used for future training. These feedback loops mean that the post-deployment data-generating process may differ from the training process.
 
-### Marketing and Customer Insights
+Monitoring should therefore include more than feature drift. Teams need to track outcome definitions, calibration, residual structure, data latency, missingness, schema changes, subgroup behaviour, operational thresholds, and whether the decision policy is still delivering the intended utility. Retraining on a schedule is not a substitute for diagnosing why performance changed.
 
-Data science is revolutionizing the way businesses approach marketing. By analyzing customer behavior data, businesses can develop detailed customer profiles, predict buying patterns, and segment customers into targeted groups for personalized marketing.
+Reproducibility is equally important. A defensible analysis records data versions, transformations, random seeds where relevant, package versions, model specifications, validation splits, and the exact code that generated reported numbers. Reproducibility does not guarantee correctness, but it makes claims inspectable and allows errors to be found.
 
-For instance, companies can use clustering algorithms to segment customers based on similar traits or behaviors and then design specific campaigns for each segment. Additionally, predictive analytics can determine which customers are most likely to churn, allowing companies to take preemptive actions such as offering loyalty incentives.
+## What data science contributes
 
-### Supply Chain and Operations Optimization
+The distinctive contribution of data science is not that it automates every decision or that it discovers hidden truth in large datasets. It provides a disciplined way to reason with imperfect observations at scale. That discipline combines measurement, statistical modelling, computation, experimental design, domain knowledge, uncertainty quantification, and decision analysis.
 
-In operations and logistics, data science can help businesses improve supply chain management by optimizing routes, predicting demand, and managing inventory more efficiently. Machine learning algorithms can also be used to automate repetitive tasks, freeing up human resources for more complex and value-driven activities.
+The best projects usually ask a sequence of increasingly specific questions. What exactly is being measured? Which population and time period do the data represent? What quantity do we want to estimate or predict? Which assumptions identify that quantity? How will the model be validated under deployment-like conditions? What uncertainty remains? Which action will use the output, and what are the costs of being wrong? What could change after deployment?
 
-### Financial Forecasting and Risk Management
+Once those questions are answered, the choice between regression, tree ensembles, Bayesian models, Gaussian processes, neural networks, or no predictive model at all becomes much easier. Data science is most useful when the modelling method follows from the problem rather than when the problem is reshaped to justify the method.
 
-In the financial sector, data science is central to risk management and forecasting. By analyzing historical transaction data, companies can build predictive models to forecast future trends, assess financial risks, and detect fraudulent activities.
+## References
 
-For example, machine learning models are increasingly used to identify suspicious transactions, helping financial institutions prevent fraud before it happens.
-
-### Product Development and Innovation
-
-Data science enables companies to improve product development by using data-driven insights to inform design decisions. By analyzing customer feedback, usage data, and competitor analysis, businesses can iterate on their products more effectively, ultimately leading to faster innovation and higher customer satisfaction.
-
-## Future of Data Science in Business
-
-As data continues to grow in volume and complexity, the role of data science will only become more critical to business success. The rapid evolution of artificial intelligence and machine learning will drive even more sophisticated applications of data science, enabling businesses to automate decision-making processes, derive deeper insights, and achieve new levels of operational efficiency.
-
-Additionally, as data privacy regulations such as GDPR become more stringent, businesses will need to ensure they are managing data ethically and responsibly. The growing demand for transparency and accountability will make ethical data science practices a priority for businesses in the years to come.
-
-## Conclusion
-
-Data science is not just a buzzword; it is a powerful tool that can transform the way businesses operate, make decisions, and interact with customers. By leveraging data science techniques, businesses can drive innovation, reduce costs, and create more personalized customer experiences.
-
-Whether you’re looking to optimize your operations, improve marketing strategies, or identify new market opportunities, data science has the potential to unlock significant value for your business. As the field continues to evolve, businesses that invest in data science will be well-positioned to thrive in the increasingly data-driven landscape.
-
----
+- Breiman, L. (2001). Statistical modeling: The two cultures. *Statistical Science*, 16(3), 199-231.
+- Cleveland, W. S. (2001). Data science: An action plan for expanding the technical areas of the field of statistics. *International Statistical Review*, 69(1), 21-26.
+- Donoho, D. (2017). 50 years of data science. *Journal of Computational and Graphical Statistics*, 26(4), 745-766.
+- Hernán, M. A., & Robins, J. M. (2020). *Causal Inference: What If*. Chapman & Hall/CRC.
+- Sculley, D., Holt, G., Golovin, D., et al. (2015). Hidden technical debt in machine learning systems. *Advances in Neural Information Processing Systems*, 28.
+- Tukey, J. W. (1977). *Exploratory Data Analysis*. Addison-Wesley.
