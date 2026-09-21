@@ -84,18 +84,9 @@ The bootstrapping process typically involves the following steps:
 
 ### Detailed Example: Estimating the Mean
 
-Consider a simple dataset of 10 observations. We aim to estimate the mean and its confidence interval using bootstrapping.
+Consider a simple dataset of 10 observations. We aim to estimate the mean and its confidence interval using bootstrapping. **Original Data**: $$ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] $$ **Step 1: Generate Bootstrap Samples** We create 1,000 bootstrap samples, each containing 10 observations drawn with replacement from the original data. **Step 2: Compute Statistic** For each bootstrap sample, we calculate the mean. This results in 1,000 bootstrap means.
 
-**Original Data**: $$ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] $$
-
-**Step 1: Generate Bootstrap Samples**  
-We create 1,000 bootstrap samples, each containing 10 observations drawn with replacement from the original data.
-
-**Step 2: Compute Statistic**  
-For each bootstrap sample, we calculate the mean. This results in 1,000 bootstrap means.
-
-**Step 3: Analyze Bootstrap Distribution**  
-We analyze the distribution of these 1,000 bootstrap means to estimate the standard error of the mean and construct a 95% confidence interval.
+**Step 3: Analyze Bootstrap Distribution** We analyze the distribution of these 1,000 bootstrap means to estimate the standard error of the mean and construct a 95% confidence interval.
 
 ## Example in Python
 
@@ -108,12 +99,12 @@ def bootstrap(data, statistic, n_bootstrap):
     """
     Perform bootstrapping on a dataset to estimate the sampling distribution of a statistic.
 
-    Parameters:
+Parameters:
     - data (np.ndarray): The original data sample.
     - statistic (callable): A function that computes the statistic of interest.
     - n_bootstrap (int): The number of bootstrap samples to generate.
 
-    Returns:
+Returns:
     - np.ndarray: Bootstrap replicates of the statistic.
     """
     n = len(data)
@@ -205,7 +196,6 @@ Bootstrapping is a powerful and versatile tool in statistics, offering a robust 
 - Hall, P. (1992). *The Bootstrap and Edgeworth Expansion*. Springer.
 - Mooney, C. Z., & Duval, R. D. (1993). *Bootstrapping: A Nonparametric Approach to Statistical Inference*. Sage Publications.
 
-
 ## Bootstrap confidence intervals are not all the same
 
 Common intervals include:
@@ -216,29 +206,15 @@ Common intervals include:
 - **BCa** for bias and acceleration corrections;
 - **studentized bootstrap**.
 
-The percentile interval is easy to compute but can have poor coverage for biased or skewed estimators.
-
-BCa and studentized intervals can improve accuracy under suitable regularity conditions, at additional computational cost.
+The percentile interval is easy to compute but can have poor coverage for biased or skewed estimators. BCa and studentized intervals can improve accuracy under suitable regularity conditions, at additional computational cost.
 
 ## The empirical distribution has finite support
 
-A nonparametric bootstrap cannot generate observations beyond values represented in the empirical sample.
-
-That is harmless for many smooth central statistics.
-
-It can be fatal for extreme-value inference, rare-event tails, or extrapolation beyond the observed support.
-
-Parametric bootstrap or domain-specific tail models may then be more appropriate.
+A nonparametric bootstrap cannot generate observations beyond values represented in the empirical sample. That is harmless for many smooth central statistics. It can be fatal for extreme-value inference, rare-event tails, or extrapolation beyond the observed support. Parametric bootstrap or domain-specific tail models may then be more appropriate.
 
 ## Respect the sampling unit
 
-For clustered data, resample clusters.
-
-For time series, use block or model-based bootstrap methods.
-
-For stratified surveys, reproduce the sample design.
-
-The bootstrap principle is
+For clustered data, resample clusters. For time series, use block or model-based bootstrap methods. For stratified surveys, reproduce the sample design. The bootstrap principle is
 
 $$
 \boxed{
