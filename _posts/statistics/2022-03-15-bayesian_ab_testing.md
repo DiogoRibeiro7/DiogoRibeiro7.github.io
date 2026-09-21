@@ -92,7 +92,7 @@ Here's a summary of how the test works:
    \end{array}
    $$
 
-3. **Test Statistic**: The Chi-square test calculates a statistic to determine whether the observed difference in conversion rates is statistically significant. If the p-value falls below a specified threshold (commonly 5%), we reject the null hypothesis and conclude that the button design affects conversion rates.
+3. **Test Statistic**: The Chi-square test calculates a statistic to determine whether the observed difference in conversion rates is statistically significant. If the p-value falls below the prespecified threshold, the data are incompatible enough with the null model to reject it under that procedure. This is not the same as proving that the button design has a practically important causal effect.
 
 However, the Chi-square test has notable **limitations**:
 
@@ -213,3 +213,71 @@ Whether conducting straightforward A/B tests for conversion rates or analyzing c
 - Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
 - Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. *Journal of the Royal Statistical Society: Series B*, 57(1), 289-300.
 - Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+
+
+## A Beta-Binomial model
+
+For binary conversion data,
+
+$$
+X_A\sim\operatorname{Binomial}(n_A,p_A),
+\qquad
+X_B\sim\operatorname{Binomial}(n_B,p_B).
+$$
+
+With independent priors
+
+$$
+p_A\sim\operatorname{Beta}(a_A,b_A),
+\qquad
+p_B\sim\operatorname{Beta}(a_B,b_B),
+$$
+
+the posteriors are
+
+$$
+p_A\mid D
+\sim
+\operatorname{Beta}(a_A+x_A,b_A+n_A-x_A),
+$$
+
+and similarly for $B$.
+
+The practical estimand should be stated explicitly. Often the relevant quantity is the absolute lift
+
+$$
+\Delta=p_B-p_A
+$$
+
+rather than merely the event $p_B>p_A$.
+
+## Minimum worthwhile improvement
+
+A product decision usually needs more than “probability B is better.”
+
+Let $\delta>0$ be the minimum lift worth the implementation cost.
+
+Then report
+
+$$
+P(
+p_B-p_A>\delta
+\mid D
+).
+$$
+
+This separates statistical uncertainty from business significance.
+
+## Priors and sensitivity
+
+A “non-informative” prior is not a neutral fact. Different Beta priors can matter materially when conversion counts are small.
+
+Run prior predictive checks and sensitivity analysis under several defensible priors. If the deployment decision changes, the data have not overwhelmed the prior.
+
+## Guardrails and multiple metrics
+
+Real experiments commonly track conversion, revenue, latency, retention, complaints, and safety metrics.
+
+Declaring a winner from one posterior while ignoring degraded guardrails is not a complete decision rule.
+
+Define the primary estimand and guardrail conditions before the experiment.

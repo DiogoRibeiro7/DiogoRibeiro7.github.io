@@ -43,7 +43,7 @@ This article examines the theory behind the Wald test, its mathematical formulat
 
 ## 1. Theoretical Background of the Wald Test
 
-At its core, the Wald test is used to evaluate hypotheses about the parameters of a statistical model. In the context of regression analysis, these parameters are typically the coefficients that measure the relationship between the dependent variable and one or more independent variables. Specifically, the test assesses whether a particular coefficient is equal to a hypothesized value, usually zero. If the coefficient is significantly different from zero, it suggests that the independent variable has a meaningful effect on the dependent variable.
+At its core, the Wald test is used to evaluate hypotheses about the parameters of a statistical model. In the context of regression analysis, these parameters are typically the coefficients that measure the relationship between the dependent variable and one or more independent variables. Specifically, the test assesses whether a particular coefficient is equal to a hypothesized value, usually zero. Rejecting a zero coefficient restriction means the estimate is incompatible with that restriction under the model and asymptotic approximation. It does not by itself establish a practically meaningful or causal effect.
 
 ### 1.1 Hypothesis Testing Framework
 
@@ -68,7 +68,13 @@ Here, $$\beta_j$$ is the coefficient associated with the $$j^{th}$$ predictor va
 The Wald statistic is derived from the ratio of the estimated coefficient to its standard error. For a coefficient $$\hat{\beta_j}$$, the Wald statistic is calculated as:
 
 $$
-W = \frac{\hat{\beta_j}}{\text{SE}(\hat{\beta_j})}
+Z_W
+=
+\frac{
+\hat\beta_j-\beta_{j,0}
+}{
+\operatorname{SE}(\hat\beta_j)
+}
 $$
 
 Where:
@@ -76,16 +82,26 @@ Where:
 - $$\hat{\beta_j}$$ is the estimated coefficient.
 - $$\text{SE}(\hat{\beta_j})$$ is the standard error of $$\hat{\beta_j}$$.
 
-The Wald statistic follows a standard normal distribution under the null hypothesis for large samples:
+For a one-parameter regular problem, the signed Wald z-statistic is asymptotically standard normal under the null:
 
 $$
-W \sim N(0, 1)
+Z_W
+\xrightarrow{d}
+N(0,1).
 $$
+
+Its square is asymptotically chi-square with one degree of freedom.
 
 Alternatively, for multi-parameter tests, the Wald statistic can be generalized as:
 
 $$
-W = (\hat{\boldsymbol{\beta}} - \boldsymbol{\beta_0})^T \mathbf{V}^{-1} (\hat{\boldsymbol{\beta}} - \boldsymbol{\beta_0})
+W
+=
+(R\hat\beta-r)^T
+\left[
+R\widehat{\operatorname{Var}}(\hat\beta)R^T
+\right]^{-1}
+(R\hat\beta-r)
 $$
 
 Where:
@@ -106,7 +122,7 @@ $$
 W^2 \sim \chi^2_1
 $$
 
-For multi-parameter tests, the degrees of freedom correspond to the number of parameters being tested.
+For $q$ independent regular restrictions, the asymptotic reference distribution is $\chi_q^2$.
 
 ## 2. Applications of the Wald Test in Regression Models
 
@@ -185,7 +201,7 @@ $$
 
 The LR statistic follows a chi-squared distribution with degrees of freedom equal to the difference in the number of parameters between the two models.
 
-The main advantage of the LRT over the Wald test is its greater robustness in small samples. However, the Wald test is often preferred in practice because it is computationally simpler and does not require fitting multiple models.
+The likelihood-ratio test is often better behaved than Wald tests when the likelihood is asymmetric or the estimate is far from locally quadratic, but neither test has universal small-sample superiority. However, the Wald test is often preferred in practice because it is computationally simpler and does not require fitting multiple models.
 
 ### 4.2 Wald Test vs. Score Test (Lagrange Multiplier Test)
 
@@ -203,13 +219,13 @@ The Wald test relies on asymptotic properties, meaning it assumes that the sampl
 
 ### 5.2 Boundary Issues
 
-When the parameter being tested is close to the boundary of the parameter space (e.g., when testing whether a variance parameter is zero), the Wald test can perform poorly. This is because the normal approximation used in the test may not hold near the boundary. In such situations, the likelihood ratio test is typically preferred.
+When the parameter being tested is close to the boundary of the parameter space (e.g., when testing whether a variance parameter is zero), the Wald test can perform poorly. This is because the normal approximation used in the test may not hold near the boundary. Boundary problems often require a nonstandard reference distribution; an ordinary likelihood-ratio chi-square approximation can also fail.
 
 ### 5.3 Interpretation of Results
 
 Note that a statistically significant Wald test does not necessarily imply a strong or practically meaningful effect. The magnitude of the coefficient, along with its confidence interval, should also be considered when interpreting the results of a regression analysis.
 
-Additionally, like all statistical tests, the Wald test is subject to the risk of **Type I** and **Type II errors**. A Type I error occurs when the null hypothesis is incorrectly rejected, while a Type II error occurs when the null hypothesis is incorrectly retained. Researchers should consider these risks when making decisions based on the results of the Wald test.
+Like other tests, Wald procedures have Type I and Type II operating characteristics determined by the design, model, effect size, and decision rule. A Type II error is failure to reject at a specified alternative; non-rejection is not proof that the null is true.
 
 ## 6. Conclusion
 
@@ -217,8 +233,53 @@ The Wald test is a powerful and versatile tool for hypothesis testing in regress
 
 Understanding the theoretical underpinnings of the Wald test, along with its practical applications and limitations, is essential for anyone working with regression models. By carefully interpreting the results of the Wald test and considering alternative hypothesis testing methods like the likelihood ratio test and the score test, researchers can make more informed decisions and draw more accurate conclusions from their data.
 
+## Wald tests are not invariant to nonlinear reparameterization
+
+Suppose the parameter is $\theta$ and we test
+
+$$
+H_0:\theta=\theta_0.
+$$
+
+A finite-sample Wald test performed on $\theta$ need not give the same result as a Wald test performed on a nonlinear transformation
+
+$$
+\phi=g(\theta).
+$$
+
+This lack of invariance occurs because the test uses local quadratic approximation around the estimate.
+
+Likelihood-ratio tests are invariant to one-to-one reparameterization.
+
+That is an important reason to be cautious with Wald tests far from the null or in strongly nonlinear models.
+
+## Separation in logistic regression
+
+With complete or quasi-complete separation, logistic-regression MLEs can diverge.
+
+A huge coefficient and huge standard error can produce misleading Wald output.
+
+Penalized likelihood, exact methods, or profile-likelihood inference may be more appropriate.
+
+## Robust covariance changes the Wald test
+
+In regression with heteroskedasticity or clustering, the same coefficient estimate can be tested with a sandwich covariance estimator:
+
+$$
+W
+=
+(R\hat\beta-r)^T
+[
+R\widehat V_{robust}R^T
+]^{-1}
+(R\hat\beta-r).
+$$
+
+The validity of the test then depends on the asymptotic regime behind that covariance estimator, including the number of independent clusters when cluster-robust inference is used.
+
 ## References
 
+- Wald, A. (1943). Tests of statistical hypotheses concerning several parameters when the number of observations is large. *Transactions of the American Mathematical Society*, 54(3), 426–482.
+- Hauck, W. W., & Donner, A. (1977). Wald's test as applied to hypotheses in logit analysis. *Journal of the American Statistical Association*, 72(360a), 851–853.
 - Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
 - McCullagh, P., & Nelder, J. A. (1989). *Generalized Linear Models* (2nd ed.). Chapman & Hall.
-- Efron, B. (1979). Bootstrap methods: another look at the jackknife. *Annals of Statistics*, 7(1), 1-26.

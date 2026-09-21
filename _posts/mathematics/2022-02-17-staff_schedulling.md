@@ -44,7 +44,7 @@ title: Optimizing Staff Scheduling with Linear Programming
 
 ## Overview
 
-Imagine managing a coffee shop that operates 24/7, requiring staff to be scheduled across various shifts. To efficiently allocate staff while minimizing costs, we can utilize linear programming. This article demonstrates how to apply linear programming using the PuLP library in Python to find the optimal staffing solution.
+Imagine managing a coffee shop that operates 24/7, requiring staff to be scheduled across overlapping shifts. Because the decision variables are numbers of workers, this is naturally an **integer linear program**, not an ordinary continuous LP unless fractional workers are acceptable. This article demonstrates how to apply linear programming using the PuLP library in Python to find the optimal staffing solution.
 
 The same formulation applies to call centers, hospitals, warehouses, security operations, and maintenance crews. The core task is always the same: choose staffing levels for each shift so every demand window is covered while total cost and policy violations are minimized.
 
@@ -128,7 +128,7 @@ workers = LpVariable.dicts("Workers", shifts, lowBound=0, cat='Integer')
 
 #### Objective Function
 
-The goal is to minimize the total number of workers while satisfying the demand for each time window:
+The goal below minimizes the sum of workers assigned to shifts. That is a headcount proxy, not necessarily labor cost: if shifts have different lengths or wage premiums, the objective should use per-shift costs.
 
 ```python
 from pulp import LpProblem, LpMinimize
@@ -206,8 +206,60 @@ These additions usually fit naturally into the same integer programming formulat
 
 ## Conclusion
 
-Using PuLP for linear programming in Python, we've optimized the staff scheduling for a 24/7 coffee shop. This method not only meets the staffing requirements but also minimizes labor costs. Such optimization techniques can be applied to various business operations to enhance efficiency and reduce expenses.
+Using PuLP, we solve a small integer staffing model for a 24/7 coffee shop. The model meets coverage constraints and minimizes the stated objective. It does **not** prove minimum labor cost unless the objective explicitly contains the relevant wage and shift costs. Such optimization techniques can be applied to various business operations to enhance efficiency and reduce expenses.
 
 By utilizing Python and PuLP, managers can solve complex scheduling problems with ease, ensuring optimal resource allocation and cost management.
 
 The model is intentionally small, but the pattern scales: define the decision variables, encode coverage, state the objective, add constraints, and inspect the solution against the operating reality before using it in production.
+
+
+## Coverage is not a complete roster
+
+The model chooses how many workers start each shift. It does not assign named employees.
+
+A real roster usually needs binary variables
+
+$$
+x_{e,s}
+=
+\begin{cases}
+1, & \text{employee } e \text{ works shift } s,\\
+0, & \text{otherwise},
+\end{cases}
+$$
+
+plus constraints for availability, skills, maximum hours, minimum rest, consecutive shifts, contracts, and fairness.
+
+That turns the model into a larger mixed-integer program.
+
+## Feasibility before optimality
+
+Before discussing the optimum, check whether the constraints are feasible. Operational rules can easily conflict.
+
+Useful diagnostics include:
+
+- unmet-demand slack variables with heavy penalties;
+- constraint names that identify infeasible windows;
+- solver status checks;
+- sensitivity to demand and absence scenarios.
+
+A solver returning a numerical variable vector is not enough. Always verify
+
+$$
+Axge d
+$$
+
+for every demand window and inspect the solver's optimality status.
+
+## Uncertainty belongs outside the deterministic demand table
+
+Staff demand is rarely known exactly. If forecasts are uncertain, one can optimize against scenarios or service-level constraints rather than pretending the point forecast is exact.
+
+For scenarios $\omega$ with demand $d_t^{(\omega)}$, a robust or stochastic formulation can trade staffing cost against undercoverage risk.
+
+The deterministic model in this article is a useful first layer, not the complete workforce-planning problem.
+
+## References
+
+- Dantzig, G. B. (1963). *Linear Programming and Extensions*. Princeton University Press.
+- Ernst, A. T., Jiang, H., Krishnamoorthy, M., & Sier, D. (2004). Staff scheduling and rostering: A review of applications, methods and models. *European Journal of Operational Research*, 153(1), 3–27.

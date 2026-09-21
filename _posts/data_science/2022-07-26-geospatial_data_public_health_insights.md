@@ -158,7 +158,83 @@ As the world faces growing challenges from global pandemics, climate change, and
 
 With advances in technology, such as the increasing availability of **real-time geospatial data** from satellites, mobile devices, and wearable health monitors, the future of spatial epidemiology looks promising. This field will continue to be at the forefront of efforts to protect public health by identifying and mitigating the factors that drive the spread of disease.
 
+## Rates need denominators
+
+A map of case counts answers
+
+$$
+\text{where cases were recorded}.
+$$
+
+A risk map requires a denominator:
+
+$$
+R_i
+=
+\frac{
+Y_i
+}{
+N_i
+},
+$$
+
+where $N_i$ may be population at risk, person-time, tests performed, births, or another exposure measure.
+
+Small-area crude rates can be extremely noisy when $N_i$ is small. Hierarchical or empirical-Bayes smoothing can stabilize them, but the smoothing model should be explicit.
+
+## Spatial autocorrelation
+
+Nearby observations are often correlated:
+
+$$
+\operatorname{Cov}(Y_i,Y_j)
+\ne0
+$$
+
+for spatial neighbors.
+
+Ordinary regression standard errors assuming independent residuals can therefore be wrong.
+
+Spatial random effects, conditional/autoregressive models, Gaussian processes, or other covariance structures can represent this dependence.
+
+## Modifiable areal unit problem
+
+Results can change when the same point-level data are aggregated into different administrative units or resolutions.
+
+This is the modifiable areal unit problem.
+
+A cluster visible by district may disappear or reverse when analyzed by census tract.
+
+The choice of spatial unit is part of the analysis, not a neutral visualization setting.
+
+## Ecological fallacy
+
+An area-level association does not imply the same relationship at the individual level.
+
+If neighborhoods with higher pollution have higher asthma rates, one cannot conclude from that aggregate pattern alone that the individuals with higher exposure are the individuals with asthma.
+
+Multilevel or individual-level data are needed for individual causal claims.
+
+## Cluster detection and multiple scanning
+
+Methods such as spatial scan statistics search many candidate regions.
+
+The null calibration must account for that search.
+
+A map that colors every locally high rate as a “hotspot” without a baseline model or multiplicity-aware procedure can greatly overstate evidence.
+
+## Privacy and re-identification
+
+Fine-resolution health locations can be identifying even after names are removed.
+
+Rare disease, household coordinates, age, and dates can combine to reveal individuals.
+
+Aggregation, geomasking, access controls, differential privacy, or restricted secure environments may be required depending on the use case.
+
+Privacy protection can itself alter spatial signal, so the statistical consequence should be assessed.
+
 ## References
 
-- Tufte, E. R. (2001). *The Visual Display of Quantitative Information* (2nd ed.). Graphics Press.
-- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Waller, L. A., & Gotway, C. A. (2004). *Applied Spatial Statistics for Public Health Data*. Wiley.
+- Kulldorff, M. (1997). A spatial scan statistic. *Communications in Statistics: Theory and Methods*, 26(6), 1481–1496.
+- Auchincloss, A. H., Gebreab, S. Y., Mair, C., & Diez Roux, A. V. (2012). A review of spatial methods in epidemiology, 2000–2010. *Annual Review of Public Health*, 33, 107–122.

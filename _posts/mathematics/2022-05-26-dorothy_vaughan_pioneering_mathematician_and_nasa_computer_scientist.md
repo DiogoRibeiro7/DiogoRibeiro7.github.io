@@ -37,40 +37,141 @@ title: 'Dorothy Vaughan: Pioneering Mathematician and NASA Computer Scientist'
 </p>
 <p align="center"><i>Dorothy Vaughan</i></p>
 
-## Dorothy Vaughan: Pioneering Mathematician and NASA Computer Scientist
+## Dorothy Vaughan: Leadership, Computing, and Langley
 
-**Dorothy Vaughan** (1910–2008) was a trailblazing African American mathematician and computer scientist who proved central to NASA's early space programs. As a leader in the **West Area Computing** unit at NASA, she specialized in **FORTRAN programming** and helped lay the foundation for modern computing in the aerospace industry. Vaughan's achievements were remarkable not only for her contributions to mathematics and computer science but also for her leadership as an African American woman during a time when racial segregation and gender discrimination were widespread in the United States.
+Dorothy Johnson Vaughan (1910–2008) was a mathematician, supervisor, and programmer whose career spanned the transition from hand computation to electronic computing at NACA and NASA.
 
-### Early Life and Education
+The historically precise description matters.
 
-Dorothy Johnson Vaughan was born on **September 20, 1910**, in **Kansas City, Missouri**, and raised in **West Virginia**. She excelled academically, earning a full-tuition scholarship to attend **Wilberforce University**, a historically Black university in Ohio. In 1929, she graduated with a degree in **mathematics**, intending to pursue a career as a teacher.
+Vaughan did not “lead NASA's computing division.” She led the segregated **West Area Computing** unit at NACA from 1949 until 1958, becoming NACA's first Black supervisor and one of its few female supervisors. When NACA became NASA and segregated work units were abolished, she joined the integrated **Analysis and Computation Division**.
 
-Vaughan began her professional life as a high school mathematics teacher in Virginia, but her career path took a pivotal turn during **World War II**, when the need for mathematicians to support the war effort provided opportunities for women and African Americans to enter the workforce in new roles.
+### Education and teaching
 
-### Working at NACA and NASA
+Vaughan was born in Kansas City, Missouri, in 1910 and later moved with her family to West Virginia.
 
-In 1943, Dorothy Vaughan was hired by the **National Advisory Committee for Aeronautics** (**NACA**), the precursor to **NASA**, as part of the **"West Area Computing"** group. This all-Black, all-female unit of mathematicians, referred to as **human computers**, was responsible for performing complex calculations by hand to support the aeronautics research conducted at Langley Memorial Aeronautical Laboratory in Virginia. Vaughan’s early work focused on helping engineers design more efficient aircraft during the war.
+She received a full-tuition scholarship to Wilberforce University and graduated in 1929 with a mathematics degree.
 
-The West Area Computing unit operated under the constraints of **racial segregation**, and Vaughan and her colleagues worked in a separate building, segregated from their white counterparts. Despite these challenges, Vaughan quickly distinguished herself as a talented mathematician and leader. In 1949, she became the first Black supervisor in the division, overseeing a group of human computers and ensuring the successful completion of critical projects.
+Before entering aeronautical research, she taught mathematics at Robert Russa Moton High School in Farmville, Virginia.
 
-### Transition to NASA and the Age of Computers
+### West Area Computing
 
-When NACA transitioned to **NASA** in 1958, Vaughan’s work began to shift from manual computation to the rapidly evolving field of computer programming. As **digital computers** were introduced to handle increasingly complex calculations, Vaughan recognized the need to stay ahead of the technological curve. She became an expert in **FORTRAN**, one of the first high-level programming languages, which was widely used for scientific and engineering applications.
+Vaughan joined the Langley Memorial Aeronautical Laboratory in December 1943 during World War II.
 
-Vaughan was instrumental in training herself and her team to use the IBM computers that NASA had begun to rely on for its space missions. Her knowledge of FORTRAN allowed her to translate human computations into machine-readable code, marking a new era in aerospace technology. Under Vaughan’s guidance, many women in her division became skilled computer programmers, making essential contributions to the U.S. space program, including the **Mercury** and **Apollo missions**.
+She was assigned to the segregated West Area Computing unit, where Black women mathematicians performed calculations for aeronautical research.
 
-### Overcoming Barriers in a Segregated Workforce
+The work involved slide rules, mechanical calculators, data from wind-tunnel and flight experiments, and the production of engineering quantities used by researchers.
 
-Dorothy Vaughan’s career was marked by her ability to break down barriers in a male-dominated and segregated workforce. As both a woman and an African American, she faced significant discrimination, yet her leadership and expertise allowed her to rise to prominence at NASA. She advocated for her colleagues and ensured that the women in her unit received equal opportunities to contribute to NASA's mission.
+In 1949 Vaughan became acting head of the group and later its formal section head.
 
-Vaughan’s role in transforming human computation to machine computation was crucial during the early years of space exploration. Her work, along with that of her colleagues **Katherine Johnson** and **Mary Jackson**, was highlighted in the best-selling book and critically acclaimed film **Hidden Figures**, which brought to light the significant, yet often overlooked, contributions of African American women at NASA.
+NASA's historical account emphasizes two roles:
 
-### Legacy and Impact
+- technical competence in difficult computations;
+- management and advocacy for the women assigned to West Computing.
 
-Dorothy Vaughan retired from NASA in 1971 after nearly three decades of service. Her impact, however, continues to resonate. She helped bridge the gap between human computing and the digital age, laying the groundwork for future generations of computer scientists and mathematicians. Vaughan’s work helped shape the success of NASA’s space missions and ensured that women and African Americans proved central to the United States’ achievements in space exploration.
+Engineers often requested particular computers for projects, and Vaughan was involved in assigning people to work that matched their skills.
 
-Her legacy as a trailblazer in **STEM (Science, Technology, Engineering, and Mathematics)** serves as an inspiration to women and minorities pursuing careers in science and technology. Today, Vaughan is remembered not only for her technical contributions but also for her leadership, perseverance, and dedication to breaking down barriers in the workforce.
+### From mechanical calculation to electronic computing
+
+By the late 1950s, electronic computers were changing Langley's workflow.
+
+When NASA was created in 1958, segregated units were abolished and Vaughan moved into the Analysis and Computation Division.
+
+She became an expert FORTRAN programmer.
+
+That transition is one of the most important parts of her career.
+
+The mathematical task changed from
+
+$$
+\text{manual numerical calculation}
+$$
+
+to
+
+$$
+\text{algorithm}
++
+\text{program}
++
+\text{machine execution}.
+$$
+
+Vaughan adapted to that change and helped others do the same.
+
+### FORTRAN
+
+FORTRAN was designed for scientific and engineering computation.
+
+A simple numerical algorithm that had previously been executed manually could now be encoded as a program operating on arrays, loops, and floating-point arithmetic.
+
+The important historical point is not that Vaughan “invented” such programming.
+
+It is that she learned and used the new computational language early enough to remain technically relevant as human computing was displaced by electronic computing.
+
+### Scout Launch Vehicle Program
+
+NASA records that Vaughan contributed to the **Scout Launch Vehicle Program**.
+
+Scout was a solid-fueled launch-vehicle system developed for small satellite missions.
+
+Her work therefore extended beyond generic computer programming into aerospace computations associated with an operational NASA program.
+
+The earlier version's broad statements about Mercury and Apollo were too unspecific.
+
+The strongest documented program-specific claim is her contribution to Scout.
+
+### Leadership under segregation
+
+Vaughan's management role existed inside a segregated institution.
+
+That context should not be reduced to an inspirational story about personal persistence.
+
+The structure of NACA limited who could work where and under what conditions.
+
+Within those constraints, Vaughan became the first Black supervisor at NACA and advocated for the advancement of computers working under her and elsewhere.
+
+Her leadership was institutional as well as technical.
+
+### Hidden Figures and public memory
+
+Margot Lee Shetterly's *Hidden Figures* brought Vaughan's work, together with that of Katherine Johnson, Mary Jackson, and other Black women at Langley, to a much wider audience.
+
+The film adaptation compresses people and timelines for narrative purposes.
+
+For technical and historical claims, NASA archival material and Shetterly's research are better sources than the dramatized film.
+
+### Retirement
+
+Vaughan retired from NASA in 1971 after a 28-year career.
+
+She had participated in three distinct technological eras:
+
+$$
+\text{manual human computing}
+\rightarrow
+\text{mechanical/electromechanical calculation}
+\rightarrow
+\text{electronic programming}.
+$$
+
+That transition is a substantial technical history in its own right.
 
 ### Conclusion
 
-Dorothy Vaughan’s career as a mathematician and computer scientist at NASA was nothing short of extraordinary. From her early days as a human computer to her later role as an expert in FORTRAN programming, Vaughan made invaluable contributions to NASA’s mission and helped usher in a new era of digital computing. Her story, brought to public attention through the book and film **Hidden Figures**, continues to inspire future generations of scientists, especially women and African Americans, in the field of mathematics and computer science.
+Dorothy Vaughan's importance rests on documented contributions:
+
+- leadership of West Area Computing;
+- technical work at Langley;
+- adaptation to electronic computation;
+- FORTRAN programming;
+- work in the Analysis and Computation Division;
+- contribution to the Scout Launch Vehicle Program;
+- advocacy for colleagues in a segregated institution.
+
+That record is stronger than generic claims that she “helped launch America into space.”
+
+## References
+
+- NASA. *Dorothy Vaughan*. NASA People and Langley historical biography.
+- NASA Langley Research Center. *Dorothy J. Vaughan*.
+- Shetterly, M. L. (2016). *Hidden Figures*. William Morrow.
