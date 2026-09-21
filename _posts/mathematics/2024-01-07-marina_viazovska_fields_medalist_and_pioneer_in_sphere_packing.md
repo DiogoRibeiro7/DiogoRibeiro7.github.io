@@ -38,7 +38,7 @@ title: "Marina Viazovska and the E8 Sphere-Packing Proof"
   <img src="/assets/images/biographies/marina_viazovska.jpg" alt="Marina Viazovska" loading="lazy" width="800" height="533">
 </p>
 
-Marina Viazovska received the 2022 Fields Medal for contributions centered on the sphere-packing problem in dimensions 8 and 24 and related advances in interpolation and discrete geometry. citeturn0search0
+Marina Viazovska received the 2022 Fields Medal for contributions centered on the sphere-packing problem in dimensions 8 and 24 and related advances in interpolation and discrete geometry.
 
 The importance of the result is not simply that a difficult packing problem was solved. The proof identified a previously missing analytic structure linking optimal lattices, Fourier analysis, and modular forms.
 
