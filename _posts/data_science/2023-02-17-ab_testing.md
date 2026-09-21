@@ -47,7 +47,7 @@ title: Advanced Statistical Methods for Efficient A/B Testing
 
 A/B testing is a randomized experiment comparing treatment policies on a prespecified estimand. The statistical method should follow the randomization unit, outcome type, effect size of interest, and stopping rule. However, traditional fixed-sample A/B testing can be inefficient, especially for organizations with limited user traffic or when swift decision-making is crucial. Sequential methods can support repeated looks or continuous monitoring while controlling specified operating characteristics, but only when the stopping rule and test are designed together.
 
-In this comprehensive article, we examine the theoretical underpinnings of sequential testing, explore its practical application in real-world scenarios, and discuss its advantages and limitations. We will cover the statistical foundations, including the Sequential Probability Ratio Test (SPRT), and provide detailed coding examples in R, JavaScript, and Python to illustrate how to implement sequential testing effectively.
+The useful distinction is between a fixed-horizon experiment, in which the stopping time is determined in advance, and a sequential design, in which the stopping rule is part of the inferential procedure. The Sequential Probability Ratio Test provides a clean mathematical example because its likelihood-ratio boundaries are derived from prespecified Type I and Type II error targets. The implementation examples below illustrate that mechanism, but they should be read as demonstrations of a simple Bernoulli SPRT rather than as a drop-in replacement for a two-arm randomized experiment.
 
 ## The Foundations of A/B Testing: Benefits and Limitations
 
@@ -86,11 +86,11 @@ Despite the same final price, psychological pricing suggests that consumers migh
 
 ### Introduction to Sequential Analysis
 
-Sequential testing allows for data evaluation at multiple points during the data collection process, offering the potential to conclude experiments earlier while maintaining control over error rates. The method dynamically assesses whether sufficient evidence exists to accept or reject a hypothesis.
+Sequential analysis permits repeated evaluation because the probability of stopping is incorporated into the design. This is fundamentally different from repeatedly applying an ordinary fixed-sample test until a desirable p-value appears. In a valid sequential procedure, the evidence boundary, the hypotheses, and the monitoring rule are defined together, so the nominal error guarantees refer to the entire stopping procedure rather than to one isolated interim look.
 
 ### The Sequential Probability Ratio Test (SPRT)
 
-Developed by Abraham Wald during World War II, the SPRT is a cornerstone of sequential analysis. It provides a framework for testing simple hypotheses by continuously monitoring the likelihood ratio of observed data.
+Developed by Abraham Wald, the classical SPRT compares two simple hypotheses by accumulating the log-likelihood ratio as observations arrive. Because both hypotheses specify complete probability models, the statistic has a direct interpretation: every new observation adds evidence in favor of one model or the other, and sampling stops only when that accumulated evidence crosses a prespecified boundary.
 
 #### Likelihood Ratio (LR)
 
@@ -125,13 +125,13 @@ For Bernoulli trials (e.g., conversions), the likelihood ratio after each observ
 
 - **Conversion (Success)**:
 
-$$
+  $$
   LR_n = LR_{n-1} \times \frac{p_1}{p_0}
   $$
 
 - **No Conversion (Failure)**:
 
-$$
+  $$
   LR_n = LR_{n-1} \times \frac{1 - p_1}{1 - p_0}
   $$
 
@@ -140,11 +140,9 @@ where:
 - **$$ p_0 $$**: Conversion rate under H₀.
 - **$$ p_1 $$**: Conversion rate under H₁.
 
-### Advantages of SPRT in A/B Testing
+### What the SPRT buys, and what it does not
 
-- **Efficiency**: Potentially fewer samples are needed compared to fixed-sample tests.
-- **Flexibility**: Tests can be stopped early if significant results are found.
-- **Error Control**: Maintains predefined error rates.
+The main attraction of the SPRT is expected sample efficiency when the data-generating parameter is sufficiently close to one of the two simple hypotheses. It also provides a principled stopping mechanism and controls the specified decision errors for that model. Those advantages do not mean that every online experiment should use an SPRT. Composite alternatives, heterogeneous users, delayed outcomes, ratio metrics, novelty effects, multiple guardrails, and treatment-control comparisons all require extensions beyond the one-stream Bernoulli example.
 
 ## Implementing Sequential Testing in Practice
 
@@ -152,24 +150,24 @@ where:
 
 1. **Define Hypotheses**:
 
-- **H₀**: The conversion rate is $$ p_0 $$.
+   - **H₀**: The conversion rate is $$ p_0 $$.
    - **H₁**: The conversion rate is $$ p_1 $$.
 
 2. **Set Error Rates**:
 
-- Choose acceptable levels for $$ \alpha $$ and $$ \beta $$.
+   - Choose acceptable levels for $$ \alpha $$ and $$ \beta $$.
 
 3. **Calculate Decision Boundaries**:
 
-- Compute $$ A $$ and $$ B $$ using the formulas provided.
+   - Compute $$ A $$ and $$ B $$ using the formulas provided.
 
 4. **Collect Data Sequentially**:
 
-- After each observation, update the likelihood ratio $$ LR_n $$.
+   - After each observation, update the likelihood ratio $$ LR_n $$.
 
 5. **Apply Decision Rules**:
 
-- If $$ LR_n \geq A $$, stop and reject H₀.
+   - If $$ LR_n \geq A $$, stop and reject H₀.
    - If $$ LR_n \leq B $$, stop and accept H₀.
    - Otherwise, continue collecting data.
 
@@ -186,13 +184,13 @@ Suppose a single Bernoulli stream is tested against $p_0=0.05$ versus $p_1=0.07$
 - **Set $$ \alpha = 0.05 $$ and $$ \beta = 0.20 $$**.
 - **Calculate Boundaries**:
 
-$$
+  $$
   A = \frac{1 - 0.20}{0.05} = 16, \quad B = \frac{0.20}{1 - 0.05} \approx 0.211
   $$
 
 - **Update LR After Each Observation**:
 
-- For a conversion: Multiply $$ LR_n $$ by $$ \frac{0.07}{0.05} = 1.4 $$.
+  - For a conversion: Multiply $$ LR_n $$ by $$ \frac{0.07}{0.05} = 1.4 $$.
   - For no conversion: Multiply $$ LR_n $$ by $$ \frac{0.93}{0.95} \approx 0.9789 $$.
 
 Continue this process until $$ LR_n $$ crosses $$ A $$ or $$ B $$.
@@ -297,16 +295,12 @@ const beta = 0.20;
 
 // Decision boundaries
 const A = (1 - beta) / alpha;
-const B = beta / (1 - alpha);
-
-// Simulate experiment
+const B = beta / (1 - alpha); // Simulate experiment
 const n_users = 500;
 const conversions = [];
 for (let i = 0; i < n_users; i++) {
   conversions.push(Math.random() < p1 ? 1 : 0);
-}
-
-// Initialize variables
+} // Initialize variables
 let LR = [1];
 let decision = null;
 
@@ -316,9 +310,7 @@ for (let i = 0; i < n_users; i++) {
     LR.push(LR[i] * (p1 / p0));
   } else {
     LR.push(LR[i] * ((1 - p1) / (1 - p0)));
-  }
-
-if (LR[i + 1] >= A) {
+  } if (LR[i + 1] >= A) {
     decision = "Reject H0 (Accept H1)";
     console.log(`Decision: ${decision} after ${i + 1} observations.`);
     break;
@@ -327,9 +319,7 @@ if (LR[i + 1] >= A) {
     console.log(`Decision: ${decision} after ${i + 1} observations.`);
     break;
   }
-}
-
-// Visualization can be added using charting libraries like Chart.js or D3.js
+} // Visualization can be added using charting libraries like Chart.js or D3.js
 ```
 
 #### Explanation
@@ -434,9 +424,7 @@ plt.show()
 
 ## Conclusion
 
-Sequential testing offers a sophisticated approach to experimentation, particularly beneficial in environments where data is scarce or rapid decisions are necessary. By allowing continuous data evaluation and maintaining control over error rates, it strikes a balance between efficiency and statistical rigor. However, the method's complexity necessitates a solid understanding of statistical principles to implement correctly. Organizations should weigh the benefits against the potential challenges, considering factors like team expertise, infrastructure capabilities, and the specific context of their experiments.
-
-When applied thoughtfully, sequential testing can significantly enhance the decision-making process, leading to faster insights and more effective strategies in product development and beyond.
+Sequential testing offers a sophisticated approach to experimentation, particularly beneficial in environments where data is scarce or rapid decisions are necessary. By allowing continuous data evaluation and maintaining control over error rates, it strikes a balance between efficiency and statistical rigor. However, the method's complexity necessitates a solid understanding of statistical principles to implement correctly. Organizations should weigh the benefits against the potential challenges, considering factors like team expertise, infrastructure capabilities, and the specific context of their experiments. When applied thoughtfully, sequential testing can significantly enhance the decision-making process, leading to faster insights and more effective strategies in product development and beyond.
 
 ## References
 
