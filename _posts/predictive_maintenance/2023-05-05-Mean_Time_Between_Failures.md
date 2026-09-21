@@ -275,27 +275,27 @@ You can easily modify the `failure_times` and `repair_durations` lists to reflec
 
 ## MTBF is a rate summary
 
-If failures follow a homogeneous Poisson process with rate $lambda$, then
+If failures follow a homogeneous Poisson process with rate $\lambda$, then
 
 $$
-widehatlambda
+\widehat{\lambda}
 =
-rac{N}{T},
+\frac{N}{T},
 $$
 
 and
 
 $$
-widehat{mathrm{MTBF}}
+\widehat{\mathrm{MTBF}}
 =
-rac{1}{widehatlambda}
+\frac{1}{\widehat{\lambda}}
 =
-rac{T}{N}.
+\frac{T}{N}.
 $$
 
 That derivation makes clear what the simple formula estimates: the reciprocal of a constant event rate.
 
-For a repairable system whose failure intensity changes with age, maintenance, or environment, use a non-homogeneous Poisson process, renewal process, recurrent-event model, or other reliability model.
+For a repairable system whose failure intensity changes with age, maintenance, or environment, use a non-homogeneous Poisson process, renewal process, recurrent-event model, or another reliability model.
 
 ## Censoring matters
 
@@ -303,7 +303,7 @@ If observation ends while the asset is still operating, the final interval is ri
 
 Ignoring that exposure can bias the failure-rate estimate.
 
-With zero failures, the conclusion is not infinite MTBF. The data provide a lower-confidence bound on reliability or an upper bound on failure rate, depending on the model.
+With zero failures, the conclusion is not infinite MTBF. The data provide information for a lower confidence bound on reliability or an upper confidence bound on failure rate, depending on the model.
 
 ## Availability formula assumptions
 
@@ -312,10 +312,10 @@ The familiar steady-state formula
 $$
 A
 =
-rac{
-mathrm{MTBF}
+\frac{
+\mathrm{MTBF}
 }{
-mathrm{MTBF}+mathrm{MTTR}
+\mathrm{MTBF}+\mathrm{MTTR}
 }
 $$
 
