@@ -76,9 +76,7 @@ Where:
 
 The primary distinction between ARIMAX and ARIMA lies in the inclusion of exogenous variables in ARIMAX. ARIMA models are solely dependent on the time series itself, meaning that they only rely on past values and past errors of the time series to predict future values. In contrast, ARIMAX allows for the inclusion of external factors, which can be critical in situations where outside influences affect the system.
 
-For example, while ARIMA might be used to forecast monthly sales based on past sales data, ARIMAX could be used to forecast sales while also accounting for factors such as advertising spending, economic indicators, or seasonal trends.
-
-This added flexibility can lead to more accurate predictions, especially in complex systems where external variables are important drivers of the observed behavior.
+For example, while ARIMA might be used to forecast monthly sales based on past sales data, ARIMAX could be used to forecast sales while also accounting for factors such as advertising spending, economic indicators, or seasonal trends. This added flexibility can lead to more accurate predictions, especially in complex systems where external variables are important drivers of the observed behavior.
 
 ### Key Differences:
 
