@@ -244,14 +244,6 @@ Gaussian Processes are elegant, but they are not a free replacement for every fo
 
 Use GPs when uncertainty, smoothness assumptions, and interpretable structure are important. For high-volume operational forecasting, compare them against simpler state-space, ARIMA, gradient boosting, and deep learning baselines.
 
-## References
-
-- Rasmussen, C. E., & Williams, C. K. I. (2006). *Gaussian Processes for Machine Learning*. MIT Press.
-- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
-- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
-- Roberts, S., Osborne, M., Ebden, M., Reece, S., Gibson, N., & Aigrain, S. (2013). Gaussian processes for time-series modelling. *Philosophical Transactions of the Royal Society A*, 371(1984).
-
-
 ## Latent-function uncertainty versus observation uncertainty
 
 The posterior covariance above is for the latent function $f(x)$.
@@ -259,25 +251,25 @@ The posterior covariance above is for the latent function $f(x)$.
 If a future observation satisfies
 
 $$
-y_ast
+y_\ast
 =
-f(x_ast)
+f(x_\ast)
 +
-arepsilon_ast,
-qquad
-arepsilon_ast
-sim
-N(0,sigma_n^2),
+\varepsilon_\ast,
+\qquad
+\varepsilon_\ast
+\sim
+N(0,\sigma_n^2),
 $$
 
 then predictive variance for the observation adds the noise variance:
 
 $$
-operatorname{Var}(y_astmid D)
+\operatorname{Var}(y_\ast\mid D)
 =
-operatorname{Var}(f_astmid D)
+\operatorname{Var}(f_\ast\mid D)
 +
-sigma_n^2.
+\sigma_n^2.
 $$
 
 Do not mix the two. A credible band for the latent smooth function is narrower than a predictive interval for a noisy future measurement.
@@ -301,3 +293,10 @@ If the scientific process has a persistent linear trend or mechanistic baseline,
 Exact GP calculations are commonly implemented with Cholesky factorization rather than generic matrix inversion.
 
 Add a small jitter term only when justified for numerical conditioning, and distinguish that numerical jitter from the observation-noise parameter.
+
+## References
+
+- Rasmussen, C. E., & Williams, C. K. I. (2006). *Gaussian Processes for Machine Learning*. MIT Press.
+- Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
+- Roberts, S., Osborne, M., Ebden, M., Reece, S., Gibson, N., & Aigrain, S. (2013). Gaussian processes for time-series modelling. *Philosophical Transactions of the Royal Society A*, 371(1984).
