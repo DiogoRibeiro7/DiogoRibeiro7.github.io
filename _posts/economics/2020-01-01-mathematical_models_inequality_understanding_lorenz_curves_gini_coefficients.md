@@ -53,9 +53,7 @@ This article explores these mathematical models in detail. We’ll examine the c
 
 ## Introduction to Economic Inequality
 
-Economic inequality is a multi-dimensional issue influenced by various social, political, and economic factors. In a purely egalitarian society, resources would be distributed equally among all individuals, but in reality, factors such as education, family background, and regional disparities contribute to unequal distributions of wealth and income.
-
-To study and quantify this inequality, mathematical models allow researchers to create visualizations and statistics that capture the degree of disparity within a population. These models help policymakers understand where intervention may be needed and allow for comparison across countries or over time.
+Economic inequality is a multi-dimensional issue influenced by various social, political, and economic factors. In a purely egalitarian society, resources would be distributed equally among all individuals, but in reality, factors such as education, family background, and regional disparities contribute to unequal distributions of wealth and income. To study and quantify this inequality, mathematical models allow researchers to create visualizations and statistics that capture the degree of disparity within a population. These models help policymakers understand where intervention may be needed and allow for comparison across countries or over time.
 
 ## Understanding the Lorenz Curve
 
@@ -143,9 +141,7 @@ $$
 G = 1 - 0.58 = 0.42.
 $$
 
-For this five-person example the Gini coefficient is 0.42. With a finite empirical sample, the maximum attainable uncorrected Gini is $1-1/n$ rather than exactly 1; the population-level 0-to-1 interpretation is the limiting idealization.
-
-A lower Gini Coefficient indicates a more equal distribution, while a higher coefficient suggests greater inequality.
+For this five-person example the Gini coefficient is 0.42. With a finite empirical sample, the maximum attainable uncorrected Gini is $1-1/n$ rather than exactly 1; the population-level 0-to-1 interpretation is the limiting idealization. A lower Gini Coefficient indicates a more equal distribution, while a higher coefficient suggests greater inequality.
 
 ### Interpretation of Gini Values
 
@@ -173,7 +169,7 @@ Real-world Gini Coefficients typically fall between 0.2 and 0.6. For example, Sc
 ## Real-World Applications and Examples
 
 1. **Country Comparisons**: Governments and international organizations, such as the World Bank, use Gini Coefficients to compare inequality levels across countries. For example, Scandinavian countries have relatively low Gini values, while countries in Latin America and sub-Saharan Africa tend to have higher values.
-  
+
 2. **Income and Wealth Studies**: Economists use Lorenz Curves and Gini Coefficients to study income and wealth distribution within a single country. By comparing values over time, they can track changes in inequality and assess the impact of economic policies.
 
 3. **Public Policy and Social Welfare**: Policymakers use these models to evaluate the effectiveness of social welfare programs and tax policies aimed at reducing inequality. For instance, progressive taxation is intended to narrow the gap between high-income and low-income earners, thus lowering the Gini Coefficient.
@@ -245,42 +241,42 @@ import java.util.Arrays;
 
 public class InequalityMetrics {
 
-    // Calculate Lorenz Curve Data
+// Calculate Lorenz Curve Data
     public static double[] lorenzCurve(double[] data) {
         Arrays.sort(data);
         double sum = Arrays.stream(data).sum();
         double[] cumulativeData = new double[data.length + 1];
         cumulativeData[0] = 0.0;
 
-        for (int i = 0; i < data.length; i++) {
+for (int i = 0; i < data.length; i++) {
             cumulativeData[i + 1] = cumulativeData[i] + data[i] / sum;
         }
         return cumulativeData;
     }
 
-    // Calculate Gini Coefficient
+// Calculate Gini Coefficient
     public static double giniCoefficient(double[] data) {
         Arrays.sort(data);
         int n = data.length;
         double cumulativeSum = 0.0;
         double relativeMeanDifference = 0.0;
 
-        for (int i = 0; i < n; i++) {
+for (int i = 0; i < n; i++) {
             cumulativeSum += data[i];
             relativeMeanDifference += (2 * (i + 1) - n - 1) * data[i];
         }
         return relativeMeanDifference / (n * cumulativeSum);
     }
 
-    // Example Usage
+// Example Usage
     public static void main(String[] args) {
         double[] incomeData = {10, 20, 30, 40, 100};
 
-        // Calculate Lorenz Curve
+// Calculate Lorenz Curve
         double[] lorenzData = lorenzCurve(incomeData);
         System.out.println("Lorenz Curve Data: " + Arrays.toString(lorenzData));
 
-        // Calculate Gini Coefficient
+// Calculate Gini Coefficient
         double gini = giniCoefficient(incomeData);
         System.out.println("Gini Coefficient: " + gini);
     }
@@ -296,13 +292,13 @@ function lorenzCurve(data) {
     const sum = data.reduce((acc, val) => acc + val, 0);
     let cumulativeData = [0];
 
-    data.reduce((cumulativeSum, value) => {
+data.reduce((cumulativeSum, value) => {
         cumulativeSum += value;
         cumulativeData.push(cumulativeSum / sum);
         return cumulativeSum;
     }, 0);
 
-    return cumulativeData;
+return cumulativeData;
 }
 
 // Calculate Gini Coefficient
@@ -312,11 +308,11 @@ function giniCoefficient(data) {
     const cumulativeSum = data.reduce((acc, val) => acc + val, 0);
     let relativeMeanDifference = 0;
 
-    for (let i = 0; i < n; i++) {
+for (let i = 0; i < n; i++) {
         relativeMeanDifference += (2 * (i + 1) - n - 1) * data[i];
     }
 
-    return relativeMeanDifference / (n * cumulativeSum);
+return relativeMeanDifference / (n * cumulativeSum);
 }
 
 // Example Usage
