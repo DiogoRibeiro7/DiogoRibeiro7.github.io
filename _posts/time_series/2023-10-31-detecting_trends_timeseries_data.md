@@ -4,7 +4,7 @@ categories:
 - Time Series
 classes: wide
 date: '2023-10-31'
-excerpt: The Mann-Kendall test detects monotone association with time, but serial dependence, seasonality, ties, change points, and irregular sampling must be handled explicitly.
+excerpt: "The Mann-Kendall test detects monotone association with time, but serial dependence, seasonality, ties, change points, and irregular sampling must be handled explicitly."
 header:
   image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
   og_image: /assets/images/headers/photo-data-science-parallel-coordinates.jpg
@@ -24,14 +24,14 @@ permalink: '/time-series/detecting_trends_timeseries_data/'
 redirect_from:
 - '/time-series analysis/detecting_trends_timeseries_data/'
 - '/time series/detecting_trends_timeseries_data/'
-seo_description: A rigorous guide to the Mann-Kendall trend test, including serial dependence, seasonality, ties, Sen slopes, change points, and irregular sampling.
-seo_title: Mann-Kendall Trend Test: Assumptions and Pitfalls
+seo_description: "A rigorous guide to the Mann-Kendall trend test, including serial dependence, seasonality, ties, Sen slopes, change points, and irregular sampling."
+seo_title: "Mann-Kendall Trend Test: Assumptions and Pitfalls"
 seo_type: article
 tags:
 - Time Series
 - Climate and Environment
 - Statistics
-title: Mann-Kendall Trend Test: Assumptions and Pitfalls
+title: "Mann-Kendall Trend Test: Assumptions and Pitfalls"
 ---
 
 The Mann-Kendall test is a rank-based test for monotone association between an ordered index and observations. It is popular because it does not require Gaussian marginal distributions, but "non-parametric" does not mean assumption-free.
@@ -40,7 +40,7 @@ The most important practical issue is serial dependence. Positive autocorrelatio
 
 ## The statistic
 
-For observations \(x_1,\ldots,x_n\), define
+For observations $x_1,\ldots,x_n$, define
 
 $$
 S=\sum_{i<j}\operatorname{sign}(x_j-x_i).
