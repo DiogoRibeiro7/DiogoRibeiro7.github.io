@@ -38,9 +38,7 @@ Hypothesis testing allows data scientists to objectively assess whether an obser
 
 ## Null vs. Alternative Hypotheses
 
-Every test starts with a **null hypothesis**, representing the status quo, and an **alternative hypothesis**, representing a potential effect. By choosing a significance level and calculating a p-value, we can decide whether to reject the null hypothesis.
-
-The logic is indirect, and worth stating carefully. We assume $H_0$ is true, work out how surprising the observed data would be under that assumption, and reject $H_0$ only if the data is surprising enough. Formally, the p-value is
+Every test starts with a **null hypothesis**, representing the status quo, and an **alternative hypothesis**, representing a potential effect. By choosing a significance level and calculating a p-value, we can decide whether to reject the null hypothesis. The logic is indirect, and worth stating carefully. We assume $H_0$ is true, work out how surprising the observed data would be under that assumption, and reject $H_0$ only if the data is surprising enough. Formally, the p-value is
 
 $$
 p = P\big(T(\text{data}) \ge t_{\text{obs}} \;\big|\; H_0 \text{ true}\big),
@@ -106,19 +104,13 @@ The p-value tells you the difference is unlikely under the null. It says nothing
 
 Misinterpreting p-values or failing to consider effect sizes can lead to misguided conclusions. Always pair statistical significance with domain context to ensure results are meaningful. Several specific traps recur often enough to name.
 
-**Multiple comparisons.** Testing 20 hypotheses at $\alpha = 0.05$ gives roughly a 64% chance of at least one false positive, since $1 - 0.95^{20} \approx 0.64$. Bonferroni correction divides $\alpha$ by the number of tests and is simple but conservative; controlling the false discovery rate via Benjamini-Hochberg is usually the better choice when many tests are genuinely exploratory.
+**Multiple comparisons.** Testing 20 hypotheses at $\alpha = 0.05$ gives roughly a 64% chance of at least one false positive, since $1 - 0.95^{20} \approx 0.64$. Bonferroni correction divides $\alpha$ by the number of tests and is simple but conservative; controlling the false discovery rate via Benjamini-Hochberg is usually the better choice when many tests are genuinely exploratory. **Optional stopping.** Checking results as data accumulates and stopping when $p < 0.05$ inflates the false-positive rate dramatically, because you are effectively running many tests. Fixing the sample size in advance, or using a sequential design built for repeated looks, is the fix.
 
-**Optional stopping.** Checking results as data accumulates and stopping when $p < 0.05$ inflates the false-positive rate dramatically, because you are effectively running many tests. Fixing the sample size in advance, or using a sequential design built for repeated looks, is the fix.
-
-**Dichotomising a continuum.** There is no meaningful difference between $p = 0.049$ and $p = 0.051$, yet the 0.05 threshold treats them as opposites. Report the actual value alongside an interval estimate.
-
-**Confusing statistical and practical significance.** With a large enough sample, a trivially small effect becomes statistically detectable. Significance answers "is it distinguishable from zero", not "is it big enough to act on".
+**Dichotomising a continuum.** There is no meaningful difference between $p = 0.049$ and $p = 0.051$, yet the 0.05 threshold treats them as opposites. Report the actual value alongside an interval estimate. **Confusing statistical and practical significance.** With a large enough sample, a trivially small effect becomes statistically detectable. Significance answers "is it distinguishable from zero", not "is it big enough to act on".
 
 ## Reporting Results Honestly
 
-A useful report contains the effect size in the units people care about, a confidence interval showing the range of values compatible with the data, the sample size, the test used and why, and the p-value as one input among several. It also discloses how many analyses were run and whether the hypothesis was specified before or after seeing the data.
-
-The American Statistical Association's 2016 statement on p-values makes the underlying point directly: scientific conclusions should not be based only on whether a p-value passes a threshold. Hypothesis testing is a tool for quantifying one specific kind of surprise, and it works well when used for exactly that and nothing more.
+A useful report contains the effect size in the units people care about, a confidence interval showing the range of values compatible with the data, the sample size, the test used and why, and the p-value as one input among several. It also discloses how many analyses were run and whether the hypothesis was specified before or after seeing the data. The American Statistical Association's 2016 statement on p-values makes the underlying point directly: scientific conclusions should not be based only on whether a p-value passes a threshold. Hypothesis testing is a tool for quantifying one specific kind of surprise, and it works well when used for exactly that and nothing more.
 
 ## References
 
