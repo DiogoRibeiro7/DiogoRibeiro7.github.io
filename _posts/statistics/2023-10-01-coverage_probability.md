@@ -5,7 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2023-10-01'
-excerpt: Coverage probability is a property of an interval procedure under repeated sampling. Nominal coverage, conditional coverage, prediction coverage, and calibration are different ideas.
+excerpt: "Coverage probability is a property of an interval procedure under repeated sampling. Nominal coverage, conditional coverage, prediction coverage, and calibration are different ideas."
 header:
   image: /assets/images/headers/photo-statistics-normal-distribution.jpg
   og_image: /assets/images/headers/photo-statistics-normal-distribution.jpg
@@ -21,16 +21,16 @@ keywords:
 - Bootstrap intervals
 - Calibration
 - Statistical inference
-seo_description: Coverage probability explained through confidence intervals, prediction intervals, conditional coverage, model misspecification, and simulation-based assessment.
-seo_title: Coverage Probability in Statistical Inference
+seo_description: "Coverage probability explained through confidence intervals, prediction intervals, conditional coverage, model misspecification, and simulation-based assessment."
+seo_title: "Coverage Probability in Statistical Inference"
 seo_type: article
 tags:
 - Confidence Intervals
 - Statistical Modeling
-title: Coverage Probability in Statistical Inference
+title: "Coverage Probability in Statistical Inference"
 ---
 
-Coverage probability is a property of an interval-producing procedure. If a confidence interval is written as \(C(X)\), its coverage at parameter value \(\theta\) is
+Coverage probability is a property of an interval-producing procedure. If a confidence interval is written as $C(X)$, its coverage at parameter value $\theta$ is
 
 $$
 \operatorname{Cov}(\theta)=P_\theta\{\theta\in C(X)\}.
@@ -70,7 +70,7 @@ Width matters too. A useful interval balances calibration and informativeness.
 
 A confidence interval targets a parameter. A prediction interval targets a future random quantity.
 
-For future observation \(Y_{n+1}\), a prediction procedure \(P(X)\) has coverage
+For future observation $Y_{n+1}$, a prediction procedure $P(X)$ has coverage
 
 $$
 P\{Y_{n+1}\in P(X)\}.
@@ -126,7 +126,7 @@ Coverage is often easiest to study by simulation:
 4. Record whether the true parameter lies inside each interval.
 5. Estimate coverage as the fraction of successful intervals.
 
-If \(B\) simulations are run and \(I_b\) indicates coverage in replicate b, then
+If $B$ simulations are run and $I_b$ indicates coverage in replicate b, then
 
 $$
 \widehat{\operatorname{Cov}}=\frac{1}{B}\sum_{b=1}^{B}I_b.
