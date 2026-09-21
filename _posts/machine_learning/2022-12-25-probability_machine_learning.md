@@ -94,7 +94,7 @@ In a survey with multiple choices, each choice corresponds to a category, and th
 
 ## The Ubiquitous Gaussian Distribution
 
-The Gaussian (or Normal) distribution is perhaps the most widely used distribution in statistics and machine learning due to its properties and the Central Limit Theorem (CLT). The CLT states that the sum of a large number of independent and identically distributed random variables tends to follow a Gaussian distribution, regardless of the original distribution of the variables.
+The Gaussian distribution appears frequently because of analytical convenience, measurement models, latent-variable assumptions, and central-limit behavior. A standard CLT requires conditions such as independence or weak dependence and finite variance; it concerns normalized sums or averages, not the original observations themselves.
 
 ### Mathematical Formulation
 
@@ -109,7 +109,7 @@ $$ f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left( -\frac{(x - \mu)^2}{2\sigma^2
 
 ### Real-World Example
 
-In finance, asset returns often follow a Gaussian distribution, facilitating portfolio optimization and risk management.
+Gaussian return models are analytically convenient in finance, but empirical returns commonly show heavy tails, skewness, volatility clustering, and dependence. Normal models should be treated as approximations whose tail adequacy must be checked.
 
 ## Continuous Distributions and Their Applications
 
@@ -127,7 +127,7 @@ $$ f(x; \lambda) = \lambda e^{-\lambda x} \quad \text{for } x \ge 0 $$
 
 #### Real-World Example
 
-In health tech, the Exponential distribution models the time until failure of medical equipment.
+The exponential distribution is appropriate for waiting times under a constant-hazard model. Equipment that ages or wears out often violates that assumption, making Weibull, lognormal, or richer survival models more plausible.
 
 ### Beta Distribution
 
@@ -142,7 +142,7 @@ where $$ B(\alpha, \beta) $$ is the Beta function.
 
 #### Real-World Example
 
-In manufacturing, the Beta distribution models the proportion of defective items in a production batch.
+The Beta distribution can model an **unknown defect probability** on $[0,1]$. The observed number of defective items in a batch is more naturally binomial conditional on that probability.
 
 Understanding probability distributions is crucial for effectively modeling, analyzing, and making predictions based on data in machine learning. The Bernoulli, Multinoulli, Gaussian, Exponential, and Beta distributions each play unique roles in handling different types of data and scenarios. By mastering these distributions, one can harness the power of statistical modeling to address a wide range of real-world problems.
 
@@ -157,3 +157,59 @@ Bishop, C. M. (2006). *Pattern Recognition and Machine Learning*. Springer.
 Wasserman, L. (2004). *All of Statistics: A Concise Course in Statistical Inference*. Springer.
 
 Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning*. MIT Press.
+
+
+## Distribution versus likelihood versus prior
+
+The same named distribution can play different roles.
+
+For example:
+
+- Bernoulli can be the likelihood for binary outcomes;
+- Beta can be a prior for an unknown Bernoulli probability;
+- Gaussian can be an observation model, latent-variable prior, or approximation;
+- categorical distributions can define multiclass likelihoods.
+
+The scientific interpretation therefore depends on **what quantity is modeled**, not only on the distribution name.
+
+## Probability models should match support
+
+Support is often the first useful diagnostic.
+
+A Gaussian model assigns positive density to every real number.
+
+That is inappropriate for quantities that are physically restricted to be positive when negative values are not merely negligible but impossible.
+
+Likewise, a Beta distribution is bounded to
+
+$$
+0le Xle1.
+$$
+
+Support mismatch is a model error, not something a large dataset automatically fixes.
+
+## Dependencies matter
+
+Writing
+
+$$
+p(y_1,ldots,y_n)
+=
+prod_i p(y_i)
+$$
+
+assumes independence.
+
+In time series, grouped observations, spatial data, and repeated measures, that factorization may be false.
+
+A correct marginal distribution for each observation does not imply a correct joint model.
+
+## Calibration
+
+For probabilistic prediction, the quality of a distributional model should be evaluated through proper scoring rules and calibration, not only point accuracy.
+
+A classifier can have good accuracy while producing badly calibrated probabilities.
+
+A regression model can have a good RMSE while prediction intervals undercover.
+
+Probability modeling is useful precisely because it lets us evaluate the whole predictive distribution.
