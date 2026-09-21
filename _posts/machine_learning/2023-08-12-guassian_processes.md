@@ -74,7 +74,7 @@ We can decompose a time series into these components and model each one separate
 
 ## Gaussian Processes Explained
 
-A Gaussian process is a stochastic process for which every finite collection of function values has a multivariate normal distribution. It defines a distribution over functions through a mean function and covariance kernel; it does not imply that every possible function is represented equally. A GP is characterized by two key elements:
+A Gaussian process is a stochastic process for which every finite collection of function values has a multivariate normal distribution. It defines a prior over functions through a mean function and covariance kernel, with the kernel determining which functions receive substantial prior probability. The model is therefore characterized by two coupled ingredients rather than by a generic claim that it represents “all possible functions”:
 
 - **Mean function** ($m(x)$): often set to zero after centering or when the kernel is expected to carry the structure, but nonzero parametric mean functions can be important for extrapolation.
 - **Covariance function** ($k(x, x')$): Determines how different points in the input space are related. The choice of kernel is crucial for controlling the smoothness, periodicity, and other aspects of the function.
@@ -85,7 +85,7 @@ $$
 f(x) \sim \mathcal{GP}(m(x), k(x, x'))
 $$
 
-The covariance function $k(x, x')$, or **kernel**, dictates the GP's behavior. By selecting different kernels, we can model various patterns such as trends or periodic behaviors.
+The covariance function $k(x,x')$, usually called the kernel, determines how function values co-vary across inputs and therefore encodes assumptions about smoothness, periodicity, characteristic length scales, and other structural properties. Kernel choice is consequently a modeling assumption rather than a purely technical tuning decision.
 
 ## Covariance Functions (Kernels)
 
@@ -125,7 +125,7 @@ def cov_periodic(xa, xb, sigma, l, p):
 
 ## Combining Kernels
 
-In practice, we combine different kernels to model the complex dynamics of a time series. For example, by summing an exponentiated quadratic kernel (to capture long-term trends) with a periodic kernel (for seasonality), and adding white noise to account for random fluctuations, we get a more comprehensive model.
+Kernel composition is useful because sums and products of valid kernels remain valid kernels and correspond to interpretable combinations of covariance structure. A sum of a smooth component and a periodic component can represent a latent function containing both slowly varying and seasonal behavior, while observation noise belongs in the likelihood rather than being casually conflated with the latent covariance.
 
 ```python
 # Combining kernels over the input index, not the observed target values
@@ -187,10 +187,10 @@ v = np.linalg.solve(
         K_s,
     )
 
-# Posterior mean
+    # Posterior mean
     mu_s = K_s.T @ alpha
 
-# Posterior covariance
+    # Posterior covariance
     cov_s = K_ss - K_s.T @ v
 
 return mu_s, cov_s
@@ -225,9 +225,7 @@ plt.xlabel('Timepoint')
 plt.ylabel('Value')
 plt.legend()
 plt.show()
-```
-
-Gaussian Processes offer a flexible and interpretable approach to modeling time series. By carefully selecting and combining kernels, we can capture trends, seasonality, and noise, making them an invaluable tool in the machine learning and statistical toolkit.
+``` Gaussian Processes offer a flexible and interpretable approach to modeling time series. By carefully selecting and combining kernels, we can capture trends, seasonality, and noise, making them an invaluable tool in the machine learning and statistical toolkit.
 
 ## Practical Limitations
 
