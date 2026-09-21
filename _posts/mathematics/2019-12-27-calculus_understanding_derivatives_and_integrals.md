@@ -31,9 +31,7 @@ Calculus is built on two operations that turn out to be inverses of each other: 
 
 ## Derivatives: Measuring Change
 
-A **derivative** measures the rate at which a quantity changes with respect to another variable — how a function's output responds to a change in its input. Geometrically it is the slope of the curve at a point.
-
-For a function $f(x)$, the derivative at $x = a$ is the limit
+A **derivative** measures the rate at which a quantity changes with respect to another variable — how a function's output responds to a change in its input. Geometrically it is the slope of the curve at a point. For a function $f(x)$, the derivative at $x = a$ is the limit
 
 $$
 f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}.
@@ -41,23 +39,17 @@ $$
 
 The fraction is the slope of the line through two points on the curve. Taking $h$ to zero slides the second point onto the first, and the secant becomes the tangent. The limit exists only when the curve has a well-defined direction there — which is why $|x|$ has no derivative at zero, and why ReLU networks are technically non-differentiable at the origin, a subtlety handled in practice by picking one of the one-sided slopes.
 
-A positive derivative means the function is increasing; negative means decreasing; zero marks a **critical point**, which may be a maximum, a minimum, or a saddle. The second derivative distinguishes them: positive means the curve is convex there and the point is a minimum, negative means concave and a maximum.
-
-For $f(x) = x^2$ the derivative is $f'(x) = 2x$. At $x = 1$ the slope is 2; at $x = 0$ it is 0, and since $f''(x) = 2 > 0$ everywhere, that critical point is a minimum.
+A positive derivative means the function is increasing; negative means decreasing; zero marks a **critical point**, which may be a maximum, a minimum, or a saddle. The second derivative distinguishes them: positive means the curve is convex there and the point is a minimum, negative means concave and a maximum. For $f(x) = x^2$ the derivative is $f'(x) = 2x$. At $x = 1$ the slope is 2; at $x = 0$ it is 0, and since $f''(x) = 2 > 0$ everywhere, that critical point is a minimum.
 
 ### Why Data Science Cares
 
-Nearly all model fitting is minimisation, and minimisation means finding where the derivative vanishes.
-
-Gradient descent is the direct application. In several variables the analogue of the derivative is the **gradient** $\nabla f$, the vector of partial derivatives, which points in the direction of steepest increase. Stepping against it decreases the function:
+Nearly all model fitting is minimisation, and minimisation means finding where the derivative vanishes. Gradient descent is the direct application. In several variables the analogue of the derivative is the **gradient** $\nabla f$, the vector of partial derivatives, which points in the direction of steepest increase. Stepping against it decreases the function:
 
 $$
 \theta_{t+1} = \theta_t - \eta \nabla f(\theta_t).
 $$
 
-Backpropagation is the chain rule applied systematically to a composition of functions. If $z = g(h(x))$, then $\frac{dz}{dx} = g'(h(x)) \cdot h'(x)$; a neural network is a long composition, and training it means evaluating that product efficiently from the output backwards.
-
-The chain rule also explains vanishing gradients. Multiplying many derivatives each smaller than one drives the product toward zero exponentially in depth, so early layers receive almost no signal — the motivation for ReLU activations, residual connections, and normalisation layers.
+Backpropagation is the chain rule applied systematically to a composition of functions. If $z = g(h(x))$, then $\frac{dz}{dx} = g'(h(x)) \cdot h'(x)$; a neural network is a long composition, and training it means evaluating that product efficiently from the output backwards. The chain rule also explains vanishing gradients. Multiplying many derivatives each smaller than one drives the product toward zero exponentially in depth, so early layers receive almost no signal — the motivation for ReLU activations, residual connections, and normalisation layers.
 
 ```python
 import numpy as np
@@ -89,9 +81,7 @@ $$
 \int_a^b f(x)\,dx
 $$
 
-is the limit of a sum of thin rectangles under the curve — the accumulated total of $f$ across the interval, and geometrically the signed area.
-
-The **Fundamental Theorem of Calculus** ties the two operations together. If $F$ is any antiderivative of $f$, then
+is the limit of a sum of thin rectangles under the curve — the accumulated total of $f$ across the interval, and geometrically the signed area. The **Fundamental Theorem of Calculus** ties the two operations together. If $F$ is any antiderivative of $f$, then
 
 $$
 \int_a^b f(x)\,dx = F(b) - F(a),
@@ -107,9 +97,7 @@ $$
 P(a \le X \le b) = \int_a^b f(x)\,dx, \qquad \int_{-\infty}^{\infty} f(x)\,dx = 1 .
 $$
 
-Every probability statement about a continuous variable is an integral, and the requirement that a density integrates to one is what distinguishes a density from an arbitrary non-negative function.
-
-Expectations are integrals too:
+Every probability statement about a continuous variable is an integral, and the requirement that a density integrates to one is what distinguishes a density from an arbitrary non-negative function. Expectations are integrals too:
 
 $$
 \mathbb{E}[X] = \int_{-\infty}^{\infty} x f(x)\,dx .
