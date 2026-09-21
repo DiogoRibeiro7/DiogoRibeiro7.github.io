@@ -51,9 +51,7 @@ title: The Math Behind Kernel Density Estimation
 
 Kernel Density Estimation (KDE) is a fundamental tool in non-parametric statistics, widely used for estimating the probability density function (PDF) of a dataset. KDE avoids choosing a finite-dimensional parametric family such as Gaussian or Gamma, but it is not assumption-free. Standard KDE theory assumes a sampling process, a smooth enough target density, a kernel, and a bandwidth sequence; boundary behavior and dependence can also matter. Instead, it uses kernel functions to construct a smooth estimate of the density from the data, making it extremely versatile in various domains like data science, machine learning, and statistics.
 
-This article examines the mathematical foundations of KDE, covering its key components, such as kernel functions and bandwidth selection. By exploring the underlying math, we aim to demystify how KDE works, how it compares to other density estimation methods, and how it can be applied effectively in real-world scenarios.
-
-In this comprehensive guide, we will explore:
+This article examines the mathematical foundations of KDE, covering its key components, such as kernel functions and bandwidth selection. By exploring the underlying math, we aim to demystify how KDE works, how it compares to other density estimation methods, and how it can be applied effectively in real-world scenarios. In this comprehensive guide, we will explore:
 
 - The mathematical definition of KDE and how it is derived.
 - The role of kernel functions and how different choices affect the density estimate.
@@ -62,18 +60,11 @@ In this comprehensive guide, we will explore:
 
 By the end of this article, you will have a solid understanding of KDE’s theoretical framework and be able to apply it confidently in various analytical contexts.
 
-
 ## 2. The Basics of Kernel Density Estimation (KDE)
 
 ### Definition of Kernel Density Estimation
 
-Kernel Density Estimation is a **non-parametric method** to estimate the probability density function of a random variable. The basic idea behind KDE is to "place" a smooth, continuous kernel function on each data point and sum these functions to obtain a smooth estimate of the overall density.
-
-The formal mathematical definition of the KDE estimator is given by:
-$$
-\hat{f}_h(x) = \frac{1}{n h} \sum_{i=1}^n K\left(\frac{x - x_i}{h}\right)
-$$
-Where:
+Kernel Density Estimation is a **non-parametric method** to estimate the probability density function of a random variable. The basic idea behind KDE is to "place" a smooth, continuous kernel function on each data point and sum these functions to obtain a smooth estimate of the overall density. The formal mathematical definition of the KDE estimator is given by: $$ \hat{f}_h(x) = \frac{1}{n h} \sum_{i=1}^n K\left(\frac{x - x_i}{h}\right) $$ Where:
 
 - $$ \hat{f}_h(x) $$ is the estimated density at point $$ x $$.
 - $$ n $$ is the number of data points.
@@ -92,7 +83,7 @@ Common kernel functions include:
   K(x) = \frac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}
   $$
   The Gaussian kernel is the most commonly used kernel, offering a smooth, bell-shaped curve that is symmetric around the data point.
-  
+
 - **Epanechnikov Kernel**:
   $$
   K(x) = \frac{3}{4}(1 - x^2) \quad \text{for} \quad |x| \leq 1
@@ -107,14 +98,11 @@ Common kernel functions include:
 
 Each kernel function has its advantages and trade-offs, but the Gaussian kernel is the most widely used due to its smoothness and mathematical properties.
 
-
 ## 7. Efficient Computation of KDE
 
 ### Naive KDE Computation
 
-The naive approach to computing KDE requires evaluating the kernel function for each data point at every location where the density is estimated. For $$ n $$ data points and $$ m $$ evaluation points, the computational complexity is $$ O(nm) $$, which can become prohibitively expensive as the dataset grows larger.
-
-For large datasets, this brute-force computation is inefficient, and alternative approaches must be considered.
+The naive approach to computing KDE requires evaluating the kernel function for each data point at every location where the density is estimated. For $$ n $$ data points and $$ m $$ evaluation points, the computational complexity is $$ O(nm) $$, which can become prohibitively expensive as the dataset grows larger. For large datasets, this brute-force computation is inefficient, and alternative approaches must be considered.
 
 ### Fast KDE Methods
 
@@ -131,7 +119,7 @@ For gridded one-dimensional KDE, binning plus FFT convolution can reduce repeate
 **Tree-based methods**, such as **KD-trees** and **Ball trees**, are commonly used to reduce the computational complexity of KDE. These methods work by dividing the data into hierarchical tree structures, allowing for efficient querying of nearby points.
 
 - **KD-trees**: A KD-tree is a binary tree that partitions the data points based on median values in each dimension. This reduces the number of kernel evaluations needed by quickly eliminating points that are far from the target.
-  
+
 - **Ball trees**: Similar to KD-trees, Ball trees partition the data into nested hyperspheres (balls), allowing for efficient querying in higher-dimensional spaces.
 
 These methods can reduce the time complexity of KDE to approximately $$ O(n \log n) $$, making them more scalable for larger datasets, especially in higher dimensions.
@@ -147,7 +135,7 @@ KDE has a wide range of applications across many fields, particularly in data sc
 ### 1. **Data Science and Machine Learning**
 
 - **Exploratory Data Analysis**: KDE is frequently used to understand the distribution of data during exploratory data analysis. It provides a smoother and more intuitive alternative to histograms, helping data scientists identify patterns, trends, and anomalies in the data.
-  
+
 - **Anomaly Detection**: In machine learning, KDE is used to detect anomalies by identifying regions in the data space where the estimated density is low. Anomalies, or outliers, are points that fall in these low-density regions.
 
 - **Density-based analysis**: KDE can support mode finding and level-set clustering. DBSCAN is related conceptually through local density, but it does not compute a KDE; it uses neighborhood counts defined by $\varepsilon$ and a minimum-points threshold.
@@ -204,9 +192,7 @@ While KDE is flexible and widely used, it may not always be the best tool for ev
 
 In this comprehensive exploration of **Kernel Density Estimation (KDE)**, we have examined the mathematical foundation, practical considerations, and applications of KDE. As a powerful non-parametric tool, KDE allows us to estimate the underlying probability density of data without assuming any specific distribution. From the choice of kernel functions to bandwidth selection, each component of KDE plays a critical role in shaping the final density estimate.
 
-We have also examined the **multivariate extension** of KDE, the computational challenges associated with it, and efficient algorithms that make it feasible for larger datasets. KDE’s diverse applications in fields like **data science**, **machine learning**, **finance**, and **healthcare** showcase its utility across different domains.
-
-Despite its advantages, KDE has limitations, particularly in high-dimensional settings and its sensitivity to bandwidth. However, by understanding these challenges, practitioners can make informed decisions when applying KDE to their data.
+We have also examined the **multivariate extension** of KDE, the computational challenges associated with it, and efficient algorithms that make it feasible for larger datasets. KDE’s diverse applications in fields like **data science**, **machine learning**, **finance**, and **healthcare** showcase its utility across different domains. Despite its advantages, KDE has limitations, particularly in high-dimensional settings and its sensitivity to bandwidth. However, by understanding these challenges, practitioners can make informed decisions when applying KDE to their data.
 
 ## References
 
@@ -239,7 +225,6 @@ Despite its advantages, KDE has limitations, particularly in high-dimensional se
 
 10. **Bowman, A. W., & Azzalini, A. (1997)**. *Applied Smoothing Techniques for Data Analysis: The Kernel Approach with S-Plus Illustrations*. Oxford University Press.
     - This book focuses on practical applications of kernel smoothing methods, including KDE, with numerous examples and illustrations using real data. It is a helpful resource for applied statisticians and data scientists.
-
 
 ## Bias, variance, and bandwidth
 
