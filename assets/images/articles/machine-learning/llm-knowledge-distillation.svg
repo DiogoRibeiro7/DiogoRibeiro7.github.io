@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 620" role="img" aria-labelledby="title desc">
+  <title id="title">Teacher-student knowledge distillation for language models</title>
+  <desc id="desc">A large teacher model produces either token distributions, generated responses, or rationales. A smaller student is trained to match these signals while being evaluated independently on held-out tasks.</desc>
+  <style>
+    svg { color: #0b0b0b; }
+    .diagram-surface { fill: #f7f9fa; }
+  </style>
+  <rect class="diagram-surface" x="0" y="0" width="100%" height="100%"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="55" y="220" width="230" height="105" rx="12"/>
+    <rect x="405" y="70" width="250" height="95" rx="12"/>
+    <rect x="405" y="225" width="250" height="95" rx="12"/>
+    <rect x="405" y="380" width="250" height="95" rx="12"/>
+    <rect x="810" y="210" width="250" height="125" rx="12"/>
+    <rect x="1200" y="210" width="245" height="125" rx="12"/>
+
+    <path d="M285 272 H350"/>
+    <path d="M350 272 C380 272 380 117 400 117" marker-end="url(#arrow)"/>
+    <path d="M350 272 H400" marker-end="url(#arrow)"/>
+    <path d="M350 272 C380 272 380 427 400 427" marker-end="url(#arrow)"/>
+
+    <path d="M655 117 C730 117 730 240 805 240" marker-end="url(#arrow)"/>
+    <path d="M655 272 H805" marker-end="url(#arrow)"/>
+    <path d="M655 427 C730 427 730 305 805 305" marker-end="url(#arrow)"/>
+    <path d="M1060 272 H1195" marker-end="url(#arrow)"/>
+  </g>
+
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="currentColor" text-anchor="middle">
+    <text x="170" y="258" font-size="24" font-weight="700">Teacher</text>
+    <text x="170" y="292" font-size="18">large model</text>
+
+    <text x="530" y="108" font-size="22" font-weight="700">Soft targets</text>
+    <text x="530" y="138" font-size="16">token probabilities / logits</text>
+
+    <text x="530" y="263" font-size="22" font-weight="700">Sequences</text>
+    <text x="530" y="293" font-size="16">teacher-generated responses</text>
+
+    <text x="530" y="418" font-size="22" font-weight="700">Rationales</text>
+    <text x="530" y="448" font-size="16">extra generated supervision</text>
+
+    <text x="935" y="252" font-size="24" font-weight="700">Student</text>
+    <text x="935" y="284" font-size="17">smaller model</text>
+    <text x="935" y="312" font-size="16">capacity-constrained approximation</text>
+
+    <text x="1322" y="252" font-size="24" font-weight="700">Evaluation</text>
+    <text x="1322" y="283" font-size="16">held-out task utility</text>
+    <text x="1322" y="309" font-size="16">latency · memory · regressions</text>
+
+    <text x="750" y="545" font-size="20" font-weight="700">Distillation transfers a function imperfectly; it does not copy the teacher's parameters or guarantee its capabilities.</text>
+  </g>
+</svg>
