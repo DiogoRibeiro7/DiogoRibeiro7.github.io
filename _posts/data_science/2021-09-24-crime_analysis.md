@@ -177,9 +177,7 @@ Several open-source and commercial data mining tools are available for crime ana
 
 ## Conclusion
 
-This article provides a detailed overview of how K-means clustering can be applied to crime analysis to uncover trends and patterns in criminal activities. Using data mining techniques like K-means clustering, law enforcement agencies can identify crime hotspots, allocate resources more efficiently, and anticipate future crimes.
-
-The experiment conducted using RapidMiner demonstrated the effectiveness of K-means clustering in analyzing crime datasets. By clustering crime data over time, the study revealed valuable insights into the trends and fluctuations in homicide rates in England and Wales.
+This article provides a detailed overview of how K-means clustering can be applied to crime analysis to uncover trends and patterns in criminal activities. Using data mining techniques like K-means clustering, law enforcement agencies can identify crime hotspots, allocate resources more efficiently, and anticipate future crimes. The experiment conducted using RapidMiner demonstrated the effectiveness of K-means clustering in analyzing crime datasets. By clustering crime data over time, the study revealed valuable insights into the trends and fluctuations in homicide rates in England and Wales.
 
 While K-means clustering is a useful tool for crime analysis, it has limitations such as sensitivity to outliers and difficulty handling non-convex clusters. Future research should explore other clustering techniques and integrate them with predictive analytics to enhance crime analysis further. Additionally, real-time crime analysis and advanced visualization tools could significantly improve law enforcement's ability to detect and prevent crimes.
 
@@ -242,7 +240,6 @@ This Python code performs K-means clustering on a crime dataset, groups the data
 - van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2nd ed.). CRC Press.
 - Tufte, E. R. (2001). *The Visual Display of Quantitative Information* (2nd ed.). Graphics Press.
 
-
 ## Recorded crime is not the latent crime process
 
 Police records are observations generated through several mechanisms:
@@ -257,15 +254,11 @@ $$
 \text{geocoding/classification}.
 $$
 
-Changes in enforcement, reporting propensity, recording standards, or patrol intensity can change the observed dataset even if the underlying offense process does not change.
-
-This is especially important when models are used to allocate patrol resources, because policing intensity can itself affect future recorded incidents and create a feedback loop.
+Changes in enforcement, reporting propensity, recording standards, or patrol intensity can change the observed dataset even if the underlying offense process does not change. This is especially important when models are used to allocate patrol resources, because policing intensity can itself affect future recorded incidents and create a feedback loop.
 
 ## Fairness and feedback
 
-A model trained on historical police records can reproduce historical surveillance patterns. If one neighborhood has been policed more heavily, more incidents may be detected there, which can then be interpreted as evidence for still more policing.
-
-Any operational use should therefore distinguish:
+A model trained on historical police records can reproduce historical surveillance patterns. If one neighborhood has been policed more heavily, more incidents may be detected there, which can then be interpreted as evidence for still more policing. Any operational use should therefore distinguish:
 
 - reported crime;
 - police-detected crime;
