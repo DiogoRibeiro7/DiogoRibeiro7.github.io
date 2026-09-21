@@ -47,21 +47,25 @@ Statistical tests are fundamental tools in data analysis, used to make inference
 
 ### Observed Data vs. Expected Data
 
-At the core of most statistical tests is a simple comparison:
+Many tests compare an observed statistic with the distribution that statistic would have under a null model. The generic structure is closer to
 
-$$ \text{Observed Data} - \text{Expected Data} $$
+$
+T(X)
+\quad\text{versus}\quad
+T(X^\ast),\;X^\ast\sim H_0.
+$
 
-This equation represents the essence of statistical hypothesis testing. We begin with observed data, the actual measurements or outcomes collected from our sample. We then compare these observations to expected data, which are the theoretical values predicted under the null hypothesis.
+Sometimes $T$ is literally an observed-minus-expected discrepancy, as in Pearson's chi-square test. In other tests it is a rank statistic, likelihood ratio, score, maximum deviation, or quadratic form. There is no single “observed minus expected” formula covering all tests. We begin with observed data, the actual measurements or outcomes collected from our sample. We then compare these observations to expected data, which are the theoretical values predicted under the null hypothesis.
 
 #### The Null Hypothesis
 
-The null hypothesis ($H_0$) is a critical concept in statistical testing. It typically posits that there is no effect, no difference, or no relationship in the population. The purpose of statistical testing is to evaluate whether the observed data provides sufficient evidence to reject the null hypothesis in favor of an alternative hypothesis ($H_a$).
+The null hypothesis is a restriction on the data-generating model. It may represent no mean difference, no association, a specified probability, equal distributions, a parameter value, or another structured claim. The purpose of statistical testing is to evaluate whether the observed data provides sufficient evidence to reject the null hypothesis in favor of an alternative hypothesis ($H_a$).
 
 For example, in a clinical trial comparing a new drug to a placebo, the null hypothesis might state that there is no difference in efficacy between the drug and the placebo. The expected data under the null hypothesis would reflect this lack of difference.
 
 #### The Alternative Hypothesis
 
-The alternative hypothesis ($H_a$) represents the outcome that researchers aim to support. It suggests that there is a statistically significant effect, difference, or relationship. Continuing with the clinical trial example, the alternative hypothesis might state that the new drug is more effective than the placebo.
+The alternative hypothesis specifies departures from the null that the test is designed to detect. It should not be described as the outcome researchers “aim to support,” because confirmatory inference should not encode a desired result. It suggests that there is a statistically significant effect, difference, or relationship. Continuing with the clinical trial example, the alternative hypothesis might state that the new drug is more effective than the placebo.
 
 ### Variability and Statistical Significance
 
@@ -69,11 +73,11 @@ The variability of data is central to determining the significance of the observ
 
 #### Standard Deviation and Variance
 
-Two common measures of variability are standard deviation and variance. The standard deviation ($\sigma$) is the average distance of each data point from the mean, while variance ($\sigma^2$) is the average of the squared differences from the mean. Low standard deviation and variance indicate that the data points are close to the mean, while high values indicate greater spread.
+Two common measures of variability are standard deviation and variance. The standard deviation is the square root of variance, not the average absolute distance from the mean, while variance ($\sigma^2$) is the average of the squared differences from the mean. Low standard deviation and variance indicate that the data points are close to the mean, while high values indicate greater spread.
 
 #### P-Value and Statistical Significance
 
-Statistical tests use the difference between observed and expected data, along with variability measures, to calculate a p-value. The p-value quantifies the probability that the observed difference could occur under the null hypothesis. A low p-value (typically less than 0.05) indicates that the observed data is unlikely under the null hypothesis, leading to its rejection.
+Statistical tests use the difference between observed and expected data, along with variability measures, to calculate a p-value. The p-value is the probability, under the null model and test procedure, of obtaining a test statistic at least as incompatible with the null as the observed statistic. It is not the probability that the observed data “occurred by chance” and not $P(H_0\mid X)$. A low p-value (typically less than 0.05) indicates that the observed data is unlikely under the null hypothesis, leading to its rejection.
 
 ### Common Statistical Tests
 
@@ -81,7 +85,7 @@ Many statistical tests adhere to the fundamental structure of comparing observed
 
 #### Student's t-test
 
-The Student's t-test compares the means of two groups to determine if they are significantly different from each other. It uses the following formula:
+A two-sample t procedure compares group means to determine if they are significantly different from each other. It uses the following formula:
 
 $$ t = \frac{\bar{X_1} - \bar{X_2}}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} $$
 
@@ -101,15 +105,13 @@ ANOVA evaluates whether there are any statistically significant differences betw
 
 $$ F = \frac{\text{Mean Square Between}}{\text{Mean Square Within}} $$
 
-#### F-test
+#### F-tests
 
-The F-test compares variances to determine if they are significantly different. It uses the ratio of two variances:
-
-$$ F = \frac{\sigma_1^2}{\sigma_2^2} $$
+An F statistic is a ratio of scaled quadratic forms. In one context it compares explained and residual mean squares in ANOVA; in another it can compare nested linear models. A variance-ratio test is one special case, not the definition of every F-test.
 
 #### Z-test
 
-Similar to the t-test, the Z-test is used for larger sample sizes or known variances. The formula is:
+A one-sample z-test is exact under a normal model with known population variance. In other settings, asymptotic z-tests arise because an estimator is approximately normal; “large sample” is not a standalone definition of a z-test. The formula is:
 
 $$ Z = \frac{\bar{X} - \mu}{\frac{\sigma}{\sqrt{n}}} $$
 
@@ -129,7 +131,7 @@ where $b$ and $c$ are the counts of discordant pairs.
 
 #### Wilcoxon Signed-Rank Test
 
-A non-parametric test for comparing two paired samples, the Wilcoxon Signed-Rank Test assesses whether their population mean ranks differ.
+The Wilcoxon signed-rank test uses the ranks of paired differences. Its usual location-shift interpretation relies on a symmetric distribution of those differences; it is not a test of “population mean ranks.”
 
 ### Implications of the Structure
 
@@ -145,3 +147,61 @@ The revelation that most statistical tests are built on the comparison of observ
 
 - Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
 - Wilcoxon, F. (1945). Individual comparisons by ranking methods. *Biometrics Bulletin*, 1(6), 80-83.
+
+
+## The reference distribution is part of the test
+
+A test statistic without its null distribution is incomplete.
+
+That null distribution may come from:
+
+- an exact finite-sample model;
+- asymptotic theory;
+- randomization/permutation;
+- Monte Carlo simulation;
+- bootstrap calibration.
+
+Two procedures using the same statistic can have different validity if they use different reference distributions.
+
+## Design determines valid resampling
+
+Permutation tests are exact only under the exchangeability induced by the null and study design.
+
+For paired data, treatment labels can usually be swapped **within pairs**, not across all rows. For randomized experiments, the randomization scheme defines the valid permutation set.
+
+This is why “use a permutation test when assumptions fail” is not a universal fallback.
+
+## Tests should be tied to estimands
+
+Before choosing a test, state the parameter or functional of interest:
+
+$$
+\text{mean difference},
+\quad
+\text{risk ratio},
+\quad
+\text{median},
+\quad
+\text{distributional equality},
+\quad
+\text{hazard ratio},
+\ldots
+$$
+
+Different tests can reject for different reasons and therefore support different scientific claims.
+
+The common structure is not “observed minus expected.”
+
+It is
+
+$$
+\boxed{
+\text{null model}
+\rightarrow
+\text{test statistic}
+\rightarrow
+\text{reference distribution}
+\rightarrow
+\text{decision rule}.
+}
+$$
