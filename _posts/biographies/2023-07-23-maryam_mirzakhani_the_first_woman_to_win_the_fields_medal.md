@@ -66,7 +66,7 @@ $$
 \mathcal M_g.
 $$
 
-This space does not describe one surface. It describes all conformal or hyperbolic structures of a fixed topological type, modulo equivalence.
+The resulting moduli space therefore does not describe one particular surface, but the entire family of conformal or hyperbolic structures of a fixed topological type, identified whenever they differ only by the relevant equivalence.
 
 ## Counting simple closed geodesics
 
@@ -79,13 +79,13 @@ c_X
 L^{6g-6}
 $$
 
-for a fixed hyperbolic surface $X$, with the exponent modified appropriately when punctures or boundaries are included. The striking feature is polynomial rather than exponential growth. The constant
+for a fixed hyperbolic surface $X$, with the exponent modified appropriately when punctures or boundaries are included. The striking feature is that the growth is polynomial rather than exponential, while the constant
 
-$$
+$
 c_X
-$$
+$
 
-depends on the hyperbolic surface. The proof linked geodesic counting with the geometry and volume of moduli space.
+depends on the chosen hyperbolic surface. The proof did not arise from a local counting trick: it connected the asymptotic number of simple geodesics with the global geometry and volume structure of moduli space, which is precisely what made the result so influential.
 
 ## Weil-Petersson volumes
 
@@ -95,7 +95,7 @@ $$
 V_{g,n}(L_1,\ldots,L_n)
 $$
 
-can be reduced to integrals involving volumes of moduli spaces of simpler topological type. This recursion was one of her central achievements. It transformed geometric decomposition identities into a computational structure for moduli-space volumes.
+can be reduced to integrals involving volumes of moduli spaces of simpler topological type. This recursion was one of her central achievements because it transformed geometric decomposition identities on individual surfaces into a computational structure for Weil-Petersson volumes across entire moduli spaces.
 
 ## McShane identities
 
@@ -103,7 +103,7 @@ A key ingredient was a generalization of identities associated with Greg McShane
 
 ## Witten's conjecture
 
-The Weil-Petersson volume recursion had an unexpected consequence. Intersection numbers of tautological classes on moduli space are connected to the coefficients of these volume polynomials. Mirzakhani's work yielded a new proof of Witten's conjecture concerning intersection theory on moduli space. The result had already been proved by Kontsevich through very different methods. Mirzakhani's proof was important because it revealed a direct geometric route from hyperbolic surfaces to the intersection theory underlying the conjecture.
+The Weil-Petersson volume recursion had an unexpected consequence. Intersection numbers of tautological classes on moduli space are connected to the coefficients of these volume polynomials. Mirzakhani's work yielded a new proof of Witten's conjecture concerning intersection theory on moduli space. Kontsevich had already proved Witten's conjecture through very different methods, but Mirzakhani's derivation was important for another reason: it exposed a direct geometric route from hyperbolic surfaces and Weil-Petersson volumes to the intersection theory of moduli space, showing that objects that had looked technically separate were governed by one coherent structure.
 
 ## Earthquake flow
 
@@ -121,7 +121,7 @@ on these moduli spaces. Very loosely, orbit closures that might have been expect
 
 ## Why the Fields Medal mattered
 
-The Fields Medal was not awarded because Mirzakhani was a symbol of women in mathematics. It was awarded for the mathematics. Her work linked:
+The historical importance of Mirzakhani becoming the first woman to receive a Fields Medal is undeniable, but it should not replace the mathematical reason for the award. The citation recognized a body of work that linked:
 
 $$
 \text{hyperbolic geometry}
@@ -133,7 +133,7 @@ $$
 \text{ergodic dynamics}.
 $$
 
-The historical significance of being the first woman recipient is real. It is separate from the reason the medal was mathematically deserved.
+That historical milestone and the mathematical merit of the work are both important, but they are different claims and should be kept analytically separate.
 
 ## Career
 
@@ -145,7 +145,7 @@ Mirzakhani died in 2017 at age 40 after breast cancer. Her death ended an active
 
 ## Conclusion
 
-Mirzakhani's work is difficult because it lives at the intersection of several sophisticated theories. The main chain is:
+Mirzakhani's work is difficult not because it is obscure for its own sake, but because it moves repeatedly between several sophisticated theories and uses each one to say something nontrivial about the others. The main chain is:
 
 $$
 \boxed{
