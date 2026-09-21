@@ -24,7 +24,7 @@ tags:
 title: 'Simpson’s Paradox: Theoretical Foundations and Implications in Data Analysis'
 ---
 
-Simpson’s Paradox is a fascinating statistical phenomenon where the relationship between two variables can drastically change when a third variable is introduced. This paradox is widely misunderstood and can lead to erroneous conclusions if data is not analyzed carefully. It reveals the complexities of data aggregation and emphasizes the necessity of considering lurking variables to avoid false interpretations.
+Simpson's paradox is a reversal or substantial change between a marginal association and conditional associations after stratifying on a third variable. This paradox is widely misunderstood and can lead to erroneous conclusions if data is not analyzed carefully. It reveals the complexities of data aggregation and emphasizes the necessity of considering lurking variables to avoid false interpretations.
 
 This article will explore the theoretical foundations of Simpson's Paradox, discuss real-world examples, and highlight why a rigorous approach to data analysis is essential in preventing misinterpretation.
 
@@ -41,7 +41,7 @@ At the heart of Simpson’s Paradox is the concept of **marginal** versus **cond
 
 The paradox arises when the marginal relationship (based on aggregated data) between two variables reverses or is significantly different from the conditional relationships within each subgroup.
 
-Consider a simple example where two variables, $$ X $$ and $$ Y $$, are positively correlated in the aggregate data. However, when the data is broken down by a third variable, $$ Z $$, the correlation between $$ X $$ and $$ Y $$ becomes negative or disappears entirely in each subgroup of $$ Z $$. This creates a situation where aggregated data misleads, hiding the true nature of the relationship.
+Consider a simple example where two variables, $$ X $$ and $$ Y $$, are positively correlated in the aggregate data. However, when the data is broken down by a third variable, $$ Z $$, the correlation between $$ X $$ and $$ Y $$ becomes negative or disappears entirely in each subgroup of $$ Z $$. The marginal and conditional associations are both mathematically correct summaries of different distributions. Which one is scientifically relevant depends on the sampling and causal structure.
 
 ### Formal Mathematical Representation
 
@@ -67,7 +67,7 @@ This mathematical framework highlights the crucial role of weighting and distrib
 
 ### Causal Inference and Simpson’s Paradox
 
-In the context of **causal inference**, Simpson’s Paradox often points to a **lurking variable** (the third variable) that affects both the outcome and the predictor. This lurking variable can distort the observed relationship between the two variables of interest.
+In the context of **causal inference**, Simpson’s Paradox often points to a **lurking variable** (the third variable) that affects both the outcome and the predictor. The third variable may be a confounder, a mediator, a collider, or simply a stratification variable. Conditioning is not automatically the correct move.
 
 A classic example of this occurs in medicine, where an overall treatment might seem less effective due to an uneven distribution of patients across various risk categories. The treatment's efficacy, when viewed within individual risk categories, might actually be higher, but this is obscured when the data is aggregated.
 
@@ -79,7 +79,7 @@ Simpson’s Paradox appears in various domains such as public health, economics,
 
 One of the most well-known examples of Simpson’s Paradox involves gender bias in university admissions. Suppose an analysis of overall admission data shows that men are accepted at a higher rate than women. At first glance, this seems to suggest bias against women. However, when the data is stratified by department, a different pattern emerges.
 
-Women might be applying disproportionately to highly competitive departments with lower acceptance rates, while men are applying to less competitive departments. Within each department, women might actually have higher acceptance rates, but the aggregated data misrepresents this due to uneven distribution across departments.
+In the Berkeley admissions example, application patterns across departments with different admission rates generated a striking marginal association. The example is useful precisely because adjustment changes the interpretation; it should not be reduced to a generic rule that stratification always removes bias.
 
 This example illustrates the dangers of relying on aggregated data, especially when subgroup characteristics (such as department competitiveness) differ dramatically.
 
@@ -127,7 +127,7 @@ Simpson’s Paradox serves as a crucial reminder for anyone working with data: a
 
 ### Best Practices to Avoid Misinterpretation
 
-1. **Always Stratify Data:** Before drawing conclusions from aggregated data, consider breaking the data down by meaningful subgroups, especially if you suspect lurking variables are at play.
+1. **Do not stratify mechanically:** decide whether the third variable should be adjusted for from the study design and causal question. Conditioning on a collider can create bias rather than remove it.
 2. **Use Visualizations:** Graphical representations of both aggregated and subgrouped data can help in identifying cases of Simpson’s Paradox.
 3. **Understand the Data’s Context:** Simpson’s Paradox highlights the importance of understanding the context and underlying factors influencing your data. Never assume that the aggregated trends tell the whole story.
 4. **Modeling Appropriately:** Use regression models or causal inference techniques to account for potential lurking variables and correctly model the relationships between variables.
@@ -135,3 +135,94 @@ Simpson’s Paradox serves as a crucial reminder for anyone working with data: a
 ## Conclusion
 
 Simpson’s Paradox reveals the hidden complexities of data interpretation and statistical analysis. It challenges our assumptions about aggregated data and underscores the importance of considering lurking variables. By understanding the theoretical foundations of the paradox, recognizing its real-world implications, and adopting best practices in data analysis, we can avoid drawing misleading conclusions from our data.
+
+
+## A weighted-average derivation
+
+Suppose $Z$ indexes strata. Then
+
+$$
+P(Y=1mid X=x)
+=
+sum_z
+P(Y=1mid X=x,Z=z)
+P(Z=zmid X=x).
+$$
+
+Even if
+
+$$
+P(Y=1mid X=1,Z=z)
+>
+P(Y=1mid X=0,Z=z)
+$$
+
+for every stratum, the marginal comparison can reverse because the weights
+
+$$
+P(Z=zmid X=1)
+$$
+
+and
+
+$$
+P(Z=zmid X=0)
+$$
+
+differ.
+
+That is the arithmetic engine of Simpson reversal.
+
+## Causal graphs decide whether adjustment helps
+
+Consider three possibilities.
+
+### Confounder
+
+$$
+Zightarrow X,
+qquad
+Zightarrow Y.
+$$
+
+Conditioning on $Z$ can help recover a causal effect under appropriate assumptions.
+
+### Mediator
+
+$$
+Xightarrow Zightarrow Y.
+$$
+
+Conditioning on $Z$ changes the estimand from a total effect toward a direct-effect question.
+
+### Collider
+
+$$
+Xightarrow Zleftarrow Y.
+$$
+
+Conditioning on $Z$ can create a spurious association.
+
+So the instruction “look for lurking variables and control for them” is incomplete.
+
+## Standardization
+
+When comparing groups with different stratum composition, one can standardize to a common distribution:
+
+$$
+P^ast(Y=1mid X=x)
+=
+sum_z
+P(Y=1mid X=x,Z=z)
+w_z,
+$$
+
+where the same weights $w_z$ are used for both exposure groups.
+
+This makes the comparison explicit rather than leaving the marginal weights to differ automatically.
+
+## References
+
+- Simpson, E. H. (1951). The interpretation of interaction in contingency tables. *Journal of the Royal Statistical Society: Series B*, 13(2), 238–241.
+- Blyth, C. R. (1972). On Simpson's paradox and the sure-thing principle. *Journal of the American Statistical Association*, 67(338), 364–366.
+- Pearl, J. (2009). *Causality* (2nd ed.). Cambridge University Press.
