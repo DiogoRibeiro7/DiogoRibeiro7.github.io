@@ -98,9 +98,7 @@ Two of the most widely-used traditional methods for solving linear programming p
 
 ### The Simplex Method
 
-First introduced by **George Dantzig** in 1947, the **Simplex Method** is an iterative algorithm that efficiently moves along the edges of the feasible region defined by the constraints of the LP problem. By following these edges, it identifies the optimal vertex (corner point) where the objective function is maximized or minimized.
-
-While the Simplex Method is incredibly efficient for many LP problems, it has certain limitations:
+First introduced by **George Dantzig** in 1947, the **Simplex Method** is an iterative algorithm that efficiently moves along the edges of the feasible region defined by the constraints of the LP problem. By following these edges, it identifies the optimal vertex (corner point) where the objective function is maximized or minimized. While the Simplex Method is incredibly efficient for many LP problems, it has certain limitations:
 
 - **Memory Overhead**: The Simplex Method relies on **LU factorization** for solving systems of linear equations, which introduces significant memory demands as problem sizes grow.
 - **Computational Complexity**: Despite being fast in practice, Simplex can degrade to exponential time in certain worst-case scenarios, though this is rare.
@@ -119,7 +117,7 @@ However, interior-point methods also have limitations:
 As LP problems grow larger and more complex, traditional methods face significant challenges:
 
 1. **Memory Overflows**: The reliance on matrix factorizations in both the Simplex and interior-point methods leads to excessive memory consumption. For large-scale problems, the memory required for these factorizations can exceed the available capacity of most machines.
-  
+
 2. **Sequential Operations**: Both methods are difficult to parallelize due to their dependence on sequential matrix factorizations. This makes it challenging to leverage modern computing architectures such as **GPUs** and **distributed systems**, which excel at parallel computations.
 
 3. **Computational Complexity**: For very large problems, both the Simplex and interior-point methods require substantial computational resources, making them less efficient for real-time or near-real-time decision-making.
@@ -133,9 +131,9 @@ Given these challenges, alternative methods that can efficiently handle large-sc
 ### Key Advantages of FOMs
 
 - **Memory Efficiency**: FOMs require only the storage of the LP instance itself, without the need for additional memory to store matrix factorizations. This makes them highly scalable for large problems.
-  
+
 - **Parallel Computation**: FOMs are well-suited to modern computational platforms, such as **GPUs** and **distributed systems**, as matrix-vector multiplications can be easily parallelized.
-  
+
 - **Scalability**: first-order methods can exploit sparse matrix-vector products and have low memory overhead per iteration, but they often need many more iterations and can converge slowly to high-accuracy solutions.
 
 Recent advancements in FOMs for LP have led to the development of new solvers capable of addressing the limitations of traditional methods. One such solver is **PDLP**.
@@ -156,9 +154,7 @@ At its core, PDLP uses a **primal-dual hybrid gradient method**, which is a firs
 
 ### Accuracy and stopping criteria
 
-LP solvers should be compared at the same feasibility and optimality tolerances. First-order methods can reach useful moderate-accuracy solutions quickly while taking much longer to obtain the high precision that simplex or interior-point methods may deliver efficiently on other instances.
-
-Conditioning and scaling matter strongly. Presolve, row/column scaling, restart strategies, and termination tests are part of the solver, not implementation details to ignore.
+LP solvers should be compared at the same feasibility and optimality tolerances. First-order methods can reach useful moderate-accuracy solutions quickly while taking much longer to obtain the high precision that simplex or interior-point methods may deliver efficiently on other instances. Conditioning and scaling matter strongly. Presolve, row/column scaling, restart strategies, and termination tests are part of the solver, not implementation details to ignore.
 
 ## LP and First-Order Methods for LP: A Comparison
 
@@ -180,9 +176,9 @@ Conditioning and scaling matter strongly. Presolve, row/column scaling, restart 
 Given its scalability and efficiency, PDLP is well-suited for a wide range of industrial applications:
 
 1. **Supply Chain Optimization**: PDLP can be used to optimize complex supply chains, where large-scale LP problems arise in areas such as transportation, inventory management, and logistics. Its ability to handle large datasets and its compatibility with distributed systems make it an ideal choice for global supply chains.
-  
+
 2. **Telecommunications and Networking**: In the networking industry, PDLP can be applied to optimize bandwidth allocation, network routing, and resource distribution. Its parallel processing capabilities enable real-time optimization in large, dynamic networks.
-  
+
 3. **Finance and Portfolio Optimization**: PDLP is well-suited for solving LP problems in portfolio optimization, where financial institutions seek to allocate assets efficiently while managing risk. The solver’s ability to scale makes it ideal for optimizing large portfolios with many variables.
 
 4. **Machine Learning and AI**: LP problems often arise in machine learning, particularly in tasks such as **support vector machines (SVMs)** and **constrained optimization**. PDLP’s scalability and efficiency make it a valuable tool for solving these problems in high-dimensional spaces.
@@ -192,7 +188,7 @@ Given its scalability and efficiency, PDLP is well-suited for a wide range of in
 While PDLP offers significant advantages over traditional LP solvers, there are still challenges and areas for further research. Some of the key challenges include:
 
 - **Algorithmic Refinement**: Although PDLP is highly efficient, further research is needed to refine the underlying algorithms to improve convergence rates and reduce computation times for specific problem types.
-  
+
 - **Integration with AI and ML Frameworks**: As data-driven decision-making becomes more prevalent, integrating PDLP with popular machine learning frameworks like **TensorFlow** and **PyTorch** will be essential for widespread adoption in AI-driven industries.
 
 - **Expanding Applications**: While PDLP has shown promise in traditional LP applications, expanding its use to non-linear programming (NLP) or mixed-integer programming (MIP) could open new avenues for optimization in more complex scenarios.
@@ -202,7 +198,6 @@ While PDLP offers significant advantages over traditional LP solvers, there are 
 Linear programming continues to be a vital tool in solving complex optimization problems across various industries. While traditional methods like the Simplex and interior-point methods have served the field well, they face significant challenges in scaling to large, modern problems. **First-order methods (FOMs)**, and specifically **PDLP**, offer a scalable and efficient alternative for solving large-scale LP problems. By leveraging matrix-vector multiplications and modern computational architectures such as **GPUs** and distributed systems, PDLP represents the future of linear programming solvers.
 
 As the demands on computational optimization grow, solvers like PDLP will play an increasingly important role in tackling the challenges of **big data**, **real-time decision-making**, and **global optimization**.
-
 
 ## Duality is the real organizing principle
 
@@ -214,16 +209,11 @@ $$
 Ax\ge b,
 $$
 
-the dual introduces variables associated with the constraints. Primal feasibility, dual feasibility, and the duality gap provide the natural stopping diagnostics.
-
-A solver is not finished merely because the objective stops moving. The returned point must satisfy the constraints to the requested tolerance and have a sufficiently small primal-dual gap.
+the dual introduces variables associated with the constraints. Primal feasibility, dual feasibility, and the duality gap provide the natural stopping diagnostics. A solver is not finished merely because the objective stops moving. The returned point must satisfy the constraints to the requested tolerance and have a sufficiently small primal-dual gap.
 
 ## Solver choice is empirical
 
-Benchmark candidate solvers on representative instances using the same tolerances. Record wall time, memory, feasibility residuals, objective gap, and solution reproducibility.
-
-Problem structure matters more than solver marketing.
-
+Benchmark candidate solvers on representative instances using the same tolerances. Record wall time, memory, feasibility residuals, objective gap, and solution reproducibility. Problem structure matters more than solver marketing.
 
 ## References
 
