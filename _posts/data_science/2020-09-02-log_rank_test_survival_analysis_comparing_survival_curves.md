@@ -61,9 +61,7 @@ By comparing the observed survival data to what would be expected if the null hy
 
 ## How the Log-Rank Test Works
 
-The log-rank test is based on comparing the observed number of events (such as deaths or relapses) in each group to the expected number of events under the assumption that the survival distributions are identical.
-
-The test works as follows:
+The log-rank test is based on comparing the observed number of events (such as deaths or relapses) in each group to the expected number of events under the assumption that the survival distributions are identical. The test works as follows:
 
 1. **Define time intervals:** The time axis is divided into intervals based on the times when events (deaths, relapses, etc.) occur in either of the groups.
 2. **Calculate expected events:** At each event time, the number of subjects at risk (still under observation) in each group is recorded. The expected number of events for each group is calculated based on the proportion of subjects at risk at that time point.
@@ -97,15 +95,11 @@ In such a study, researchers would use the Kaplan-Meier estimator to construct s
 
 ### 3.2 Multiple Group Comparisons
 
-While the log-rank test is most commonly used for comparing two groups, it can also be extended to compare survival curves across more than two groups. For example, researchers may want to compare survival outcomes across three different drug regimens in a cancer trial.
-
-In this case, the test statistic follows a chi-squared distribution with **k-1 degrees of freedom**, where **k** is the number of groups being compared.
+While the log-rank test is most commonly used for comparing two groups, it can also be extended to compare survival curves across more than two groups. For example, researchers may want to compare survival outcomes across three different drug regimens in a cancer trial. In this case, the test statistic follows a chi-squared distribution with **k-1 degrees of freedom**, where **k** is the number of groups being compared.
 
 ### 3.3 Medical Case Study: Breast Cancer Survival
 
-Consider a clinical study that compares survival times in two groups of breast cancer patients: one group receiving a standard chemotherapy regimen and another group receiving a new targeted therapy. The study tracks patient survival over five years, and Kaplan-Meier survival curves are generated for each group.
-
-By applying the log-rank test, researchers can assess whether the differences between the two survival curves are statistically significant. If the p-value from the log-rank test is less than 0.05, researchers would reject the null hypothesis and conclude that the new targeted therapy provides a statistically significant survival benefit compared to standard chemotherapy.
+Consider a clinical study that compares survival times in two groups of breast cancer patients: one group receiving a standard chemotherapy regimen and another group receiving a new targeted therapy. The study tracks patient survival over five years, and Kaplan-Meier survival curves are generated for each group. By applying the log-rank test, researchers can assess whether the differences between the two survival curves are statistically significant. If the p-value from the log-rank test is less than 0.05, researchers would reject the null hypothesis and conclude that the new targeted therapy provides a statistically significant survival benefit compared to standard chemotherapy.
 
 ## Interpreting Survival Curves and P-Values
 
@@ -140,9 +134,7 @@ While the log-rank test is a powerful tool for comparing survival curves, it has
 
 ## Conclusion
 
-The log-rank test is an essential tool in survival analysis, especially in the medical field, where it is used to compare the survival times of different patient groups. By providing a way to statistically assess whether the survival distributions of two or more groups differ significantly, the log-rank test is crucial for evaluating the effectiveness of treatments and interventions in clinical trials.
-
-Understanding Kaplan-Meier survival curves and how to interpret p-values from the log-rank test is key for medical researchers aiming to draw meaningful conclusions about survival outcomes. While the log-rank test has limitations, its simplicity and power make it a widely used method for comparing survival curves in studies across various fields.
+The log-rank test is an essential tool in survival analysis, especially in the medical field, where it is used to compare the survival times of different patient groups. By providing a way to statistically assess whether the survival distributions of two or more groups differ significantly, the log-rank test is crucial for evaluating the effectiveness of treatments and interventions in clinical trials. Understanding Kaplan-Meier survival curves and how to interpret p-values from the log-rank test is key for medical researchers aiming to draw meaningful conclusions about survival outcomes. While the log-rank test has limitations, its simplicity and power make it a widely used method for comparing survival curves in studies across various fields.
 
 ## References
 
@@ -150,12 +142,9 @@ Understanding Kaplan-Meier survival curves and how to interpret p-values from th
 - Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
 - Kaplan, E. L., & Meier, P. (1958). Nonparametric estimation from incomplete observations. *Journal of the American Statistical Association*, 53(282), 457-481.
 
-
 ## Effect size should accompany the test
 
-The log-rank statistic is an omnibus comparison. It does not estimate the magnitude of the difference.
-
-Useful companion estimands include:
+The log-rank statistic is an omnibus comparison. It does not estimate the magnitude of the difference. Useful companion estimands include:
 
 - survival probability difference at a prespecified time;
 - hazard ratio when proportional hazards is defensible;
