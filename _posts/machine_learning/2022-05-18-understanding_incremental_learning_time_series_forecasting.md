@@ -36,14 +36,14 @@ title: Understanding Incremental Learning in Time Series Forecasting
 
 ## Introduction to Incremental Learning
 
-Incremental learning, also known as online learning, is a method in machine learning that allows models to adaptively update themselves as new data becomes available, rather than undergoing complete retraining. This adaptive approach enables systems to adjust to changes in data patterns, allowing them to maintain accuracy and relevance over time. Unlike traditional “batch learning,” which relies on re-training the model with a static dataset, incremental learning continuously integrates new data points, updating the model in a more efficient and timely manner. 
+Incremental learning, also known as online learning, is a method in machine learning that allows models to adaptively update themselves as new data becomes available, rather than undergoing complete retraining. This adaptive approach enables systems to adjust to changes in data patterns, allowing them to maintain accuracy and relevance over time. Unlike traditional “batch learning,” which relies on re-training the model with a static dataset, incremental learning continuously integrates new data points, updating the model in a more efficient and timely manner.
 
 ### Understanding Batch Learning vs. Incremental Learning
 
 To appreciate the value of incremental learning, it’s helpful to understand the differences from batch learning:
 
 - **Batch Learning**: The entire dataset is used to train the model from scratch in one large “batch.” If new data arrives, the model must be retrained on both the original and the new data, making this process resource-intensive and slow.
-  
+
 - **Incremental Learning**: New data is incorporated into the model continuously, with each new data point prompting an update rather than a complete retraining. This enables models to evolve in real-time with minimal computational cost.
 
 Incremental learning is valuable in various fields, particularly where data is generated continuously, such as in sensor networks, financial trading systems, and time series forecasting for business applications. By reducing computational overhead and keeping models current with the latest information, incremental learning allows organizations to make timely, data-driven decisions.
@@ -143,9 +143,9 @@ Incremental learning offers significant benefits for machine learning practition
 ### Key Advantages
 
 1. **Resource Efficiency**: Incremental learning minimizes computational demands by updating models with new data points instead of retraining from scratch.
-   
+
 2. **Real-Time Adaptability**: With incremental updates, models can respond to changing data patterns, making this approach ideal for time-sensitive applications.
-   
+
 3. **Scalability**: Incremental learning is well-suited for large datasets and streaming data, where frequent retraining is impractical.
 
 4. **Enhanced Accuracy in Dynamic Environments**: By continuously learning from new data, incremental models maintain relevance and accuracy, particularly in domains like finance, e-commerce, and healthcare.
@@ -153,9 +153,9 @@ Incremental learning offers significant benefits for machine learning practition
 ### Challenges of Incremental Learning
 
 1. **Overfitting Risk**: Without careful parameter selection, incremental updates may cause the model to overfit to recent trends, reducing its generalizability.
-   
+
 2. **Model Stability**: Frequent updates can cause model instability if the learning rate or update parameters are not carefully managed.
-   
+
 3. **Parameter Selection**: Incremental models require careful tuning of parameters, such as the learning rate, to avoid issues like overfitting or underfitting.
 
 4. **Complexity in Non-Linear Models**: Incremental updates in non-linear models require iterative optimization methods, which may be computationally intensive and harder to tune.
@@ -197,7 +197,7 @@ This section outlines the practical steps for implementing incremental learning 
 ### Adding New Data Points
 
 1. **Feature Engineering**: Prepare new data points by applying the same transformations as the initial dataset, such as lagged variables or seasonal terms.
-   
+
 2. **Dynamic Updates with Sherman-Morrison Formula (Linear Models)**: For linear models, use the Sherman-Morrison formula to update the coefficient matrix efficiently, minimizing computational cost.
 
 3. **Gradient Updates for Neural Networks**: For non-linear models, use gradient descent to adjust weights in response to new data.
@@ -256,12 +256,12 @@ def sherman_morrison_update(A_inv, u, v):
     Applies the Sherman-Morrison formula to update the inverse of a matrix A
     when a new row (or vector) of data is added.
 
-    Args:
+Args:
         A_inv (ndarray): The current inverse of matrix A.
         u (ndarray): The new data vector to add (column vector).
         v (ndarray): The new data vector to add (row vector).
 
-    Returns:
+Returns:
         ndarray: The updated inverse matrix.
     """
     numerator = np.outer(A_inv @ u, v.T @ A_inv)
@@ -306,14 +306,14 @@ for i in range(n_initial, validation_start):
     x_new = X[i:i+1].T  # Column vector
     y_new = y[i]
 
-    # Update XTX_inv using Sherman-Morrison formula
+# Update XTX_inv using Sherman-Morrison formula
     XTX_inv = sherman_morrison_update(XTX_inv, x_new, x_new)
 
-    # Update X^T y as well as (X^T X)^{-1}
+# Update X^T y as well as (X^T X)^{-1}
     XTy = XTy + (x_new.flatten() * y_new)
     beta = XTX_inv @ XTy
 
-    # Print updated beta values
+# Print updated beta values
     print(f"Update {i - n_initial + 1}, beta: {beta.flatten()}")
 ```
 
@@ -364,18 +364,18 @@ def forward_pass(x, W1, b1, W2, b2):
 
 def backward_pass(x, y, y_pred, z1, a1, W2):
     m = x.shape[1]  # Number of examples
-    
-    # Output layer gradient
+
+# Output layer gradient
     dz2 = y_pred - y
     dW2 = (1 / m) * np.dot(dz2, a1.T)
     db2 = (1 / m) * np.sum(dz2, axis=1, keepdims=True)
 
-    # Hidden layer gradient
+# Hidden layer gradient
     dz1 = np.dot(W2.T, dz2) * relu_derivative(z1)
     dW1 = (1 / m) * np.dot(dz1, x.T)
     db1 = (1 / m) * np.sum(dz1, axis=1, keepdims=True)
 
-    return dW1, db1, dW2, db2
+return dW1, db1, dW2, db2
 ```
 
 #### Incremental Update with SGD
@@ -388,17 +388,17 @@ for i in range(n_initial, n_total):
     x_new = X[i:i+1].T  # Column vector for new input
     y_new = y[i:i+1].reshape(1, -1)  # Reshape for single output
 
-    # Forward pass with the new data
+# Forward pass with the new data
     y_pred, z1, a1 = forward_pass(x_new, W1, b1, W2, b2)
 
-    # Calculate loss
+# Calculate loss
     loss = mean_squared_error(y_new, y_pred)
     print(f"Update {i - n_initial + 1}, Loss: {loss}")
 
-    # Backward pass to calculate gradients
+# Backward pass to calculate gradients
     dW1, db1, dW2, db2 = backward_pass(x_new, y_new, y_pred, z1, a1, W2)
 
-    # Update weights and biases
+# Update weights and biases
     W1 -= learning_rate * dW1
     b1 -= learning_rate * db1
     W2 -= learning_rate * dW2
@@ -447,7 +447,6 @@ These approaches provide a foundation for adapting time series forecasting model
 - Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and Practice* (3rd ed.). OTexts.
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
 
-
 ## Sherman-Morrison has numerical limits
 
 For a new row vector $x$, the Gram matrix update is
@@ -466,9 +465,7 @@ $$
 1+x^TA_t^{-1}x
 $$
 
-is well behaved.
-
-Repeated inverse updates can nevertheless accumulate numerical error and become unstable when the design is ill-conditioned. QR, recursive least squares with stabilized covariance updates, or periodic refitting can be safer.
+is well behaved. Repeated inverse updates can nevertheless accumulate numerical error and become unstable when the design is ill-conditioned. QR, recursive least squares with stabilized covariance updates, or periodic refitting can be safer.
 
 ## Recursive least squares and forgetting
 
@@ -492,11 +489,7 @@ y_t-x_t^T\beta_{t-1}
 ),
 $$
 
-with forgetting factor $0<\lambda\le1$.
-
-Values below one downweight older observations. That can help under drift but increases estimator variance.
-
-The forgetting factor is therefore a bias-variance choice, not merely a speed parameter.
+with forgetting factor $0<\lambda\le1$. Values below one downweight older observations. That can help under drift but increases estimator variance. The forgetting factor is therefore a bias-variance choice, not merely a speed parameter.
 
 ## Prequential evaluation
 
@@ -508,15 +501,11 @@ $$
 f_{t-1}(x_t),
 $$
 
-then record the loss, then update to $f_t$ using $(x_t,y_t)$.
-
-This test-then-train sequence avoids evaluating on data already used for adaptation and is the natural online analogue of out-of-sample validation.
+then record the loss, then update to $f_t$ using $(x_t,y_t)$. This test-then-train sequence avoids evaluating on data already used for adaptation and is the natural online analogue of out-of-sample validation.
 
 ## Concept drift needs detection, not blind updating
 
-An online learner can adapt continuously to ordinary noise even when the data-generating process has not changed.
-
-Monitor forecast residuals, calibration, covariate shift, and change-point statistics. When a regime shift is detected, compare:
+An online learner can adapt continuously to ordinary noise even when the data-generating process has not changed. Monitor forecast residuals, calibration, covariate shift, and change-point statistics. When a regime shift is detected, compare:
 
 - gradual updating;
 - rolling-window refitting;
