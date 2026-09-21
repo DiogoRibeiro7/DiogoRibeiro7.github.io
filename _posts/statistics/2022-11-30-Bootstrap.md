@@ -241,8 +241,8 @@ For stratified surveys, reproduce the sample design.
 The bootstrap principle is
 
 $$
-oxed{
-	ext{simulate the sampling mechanism you actually had}.
+\boxed{
+\text{simulate the sampling mechanism you actually had}.
 }
 $$
 
