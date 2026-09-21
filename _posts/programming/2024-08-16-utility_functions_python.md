@@ -58,20 +58,20 @@ Below is an example of a simple utility class that groups basic mathematical ope
 ```python
 class MathUtils:
     """A collection of basic mathematical operations."""
-    
-    @staticmethod
+
+@staticmethod
     def add(a: int, b: int) -> int:
         return a + b
-    
-    @staticmethod
+
+@staticmethod
     def subtract(a: int, b: int) -> int:
         return a - b
-    
-    @staticmethod
+
+@staticmethod
     def multiply(a: int, b: int) -> int:
         return a * b
-    
-    @staticmethod
+
+@staticmethod
     def divide(a: int, b: int) -> float:
         if b == 0:
             raise ValueError("Cannot divide by zero.")
@@ -93,24 +93,24 @@ from typing import List
 
 class StatsUtils:
     """A collection of statistical calculation functions."""
-    
-    default_precision: int = 2
-    
-    @staticmethod
+
+default_precision: int = 2
+
+@staticmethod
     def mean(data: List[float]) -> float:
         return sum(data) / len(data)
-    
-    @classmethod
+
+@classmethod
     def rounded_mean(cls, data: List[float]) -> float:
         mean_value = cls.mean(data)
         return round(mean_value, cls.default_precision)
-    
-    @staticmethod
+
+@staticmethod
     def variance(data: List[float]) -> float:
         mean_value = StatsUtils.mean(data)
         return sum((x - mean_value) ** 2 for x in data) / len(data)
-    
-    @staticmethod
+
+@staticmethod
     def std_deviation(data: List[float]) -> float:
         return StatsUtils.variance(data) ** 0.5
 ```
@@ -144,16 +144,16 @@ A pure utility class consists of only static methods and does not maintain any s
 ```python
 class StringUtils:
     """A collection of string manipulation functions."""
-    
-    @staticmethod
+
+@staticmethod
     def to_uppercase(s: str) -> str:
         return s.upper()
-    
-    @staticmethod
+
+@staticmethod
     def to_lowercase(s: str) -> str:
         return s.lower()
-    
-    @staticmethod
+
+@staticmethod
     def reverse(s: str) -> str:
         return s[::-1]
 ```
@@ -165,20 +165,20 @@ Extended utility classes are more sophisticated. They maintain state through cla
 ```python
 class DataCleaner:
     """A collection of data cleaning functions."""
-    
-    default_replacement: str = "N/A"
-    
-    @staticmethod
+
+default_replacement: str = "N/A"
+
+@staticmethod
     def remove_nulls(data: List[str]) -> List[str]:
         return [x for x in data if x]
-    
-    @classmethod
+
+@classmethod
     def replace_nulls(cls, data: List[str], replacement: str = None) -> List[str]:
         if replacement is None:
             replacement = cls.default_replacement
         return [x if x else replacement for x in data]
-    
-    @staticmethod
+
+@staticmethod
     def trim_spaces(data: List[str]) -> List[str]:
         return [x.strip() for x in data]
 ```
