@@ -89,73 +89,73 @@ The mathematical structure is straightforward once the quantities are separated.
 
 Suppose two hypotheses make different predictions about a repeated binary observation.
 
-Under hypothesis (H_1),
+Under hypothesis $H_1$,
 
-[
-Pr(X=1mid H_1)=0.9.
-]
+$$
+\Pr(X=1\mid H_1)=0.9.
+$$
 
-Under hypothesis (H_2),
+Under hypothesis $H_2$,
 
-[
-Pr(X=1mid H_2)=0.6.
-]
+$$
+\Pr(X=1\mid H_2)=0.6.
+$$
 
 Now observe ten independent successes.
 
-The probability of those data under (H_1) is
+The probability of those data under $H_1$ is
 
-[
+$$
 L(H_1)
 =
 0.9^{10}.
-]
+$$
 
-Under (H_2),
+Under $H_2$,
 
-[
+$$
 L(H_2)
 =
 0.6^{10}.
-]
+$$
 
 The likelihood ratio is
 
-[
-Lambda
+$$
+\Lambda
 =
-rac{L(H_1)}{L(H_2)}
+\frac{L(H_1)}{L(H_2)}
 =
-left(
-rac{0.9}{0.6}
-ight)^{10}.
-]
+\left(
+\frac{0.9}{0.6}
+\right)^{10}.
+$$
 
 Numerically,
 
-[
-Lambda
-approx
+$$
+\Lambda
+\approx
 57.7.
-]
+$$
 
-The data are therefore about 58 times as probable under (H_1) as under (H_2), given the stated models and independence assumptions.
+The data are therefore about 58 times as probable under $H_1$ as under $H_2$, given the stated models and independence assumptions.
 
-Nothing in this calculation says that (H_1) is certainly true.
+Nothing in this calculation says that $H_1$ is certainly true.
 
 It says that these data discriminate strongly between the two specified explanations.
 
 Both statements can therefore be true at once:
 
-[
-	ext{uncertainty remains}
-]
+$$
+\text{uncertainty remains}
+$$
 
 and
 
-[
-	ext{the evidence favors }H_1	ext{ over }H_2.
-]
+$$
+\text{the evidence favors }H_1\text{ over }H_2.
+$$
 
 There is no contradiction.
 
@@ -171,37 +171,37 @@ A Bayesian analysis adds prior information.
 
 Let the prior probabilities of the two hypotheses be
 
-[
-Pr(H_1)
-]
+$$
+\Pr(H_1)
+$$
 
 and
 
-[
-Pr(H_2).
-]
+$$
+\Pr(H_2).
+$$
 
 Bayes' theorem can be written in odds form as
 
-[
-rac{
-Pr(H_1mid D)
+$$
+\frac{
+\Pr(H_1\mid D)
 }{
-Pr(H_2mid D)
+\Pr(H_2\mid D)
 }
 =
-rac{
-Pr(H_1)
+\frac{
+\Pr(H_1)
 }{
-Pr(H_2)
+\Pr(H_2)
 }
-	imes
-rac{
-Pr(Dmid H_1)
+\times
+\frac{
+\Pr(D\mid H_1)
 }{
-Pr(Dmid H_2)
+\Pr(D\mid H_2)
 }.
-]
+$$
 
 The first factor is the prior odds.
 
@@ -209,27 +209,27 @@ The second is the likelihood ratio or, for models with parameters integrated ove
 
 If the two hypotheses begin with equal prior probability, the prior odds are
 
-[
+$$
 1:1.
-]
+$$
 
 After observing the ten successes, the posterior odds become approximately
 
-[
+$$
 57.7:1.
-]
+$$
 
-The posterior probability of (H_1) is then
+The posterior probability of $H_1$ is then
 
-[
-Pr(H_1mid D)
+$$
+\Pr(H_1\mid D)
 =
-rac{57.7}{57.7+1}
-approx
+\frac{57.7}{57.7+1}
+\approx
 0.983.
-]
+$$
 
-There is still about 1.7% posterior probability assigned to (H_2) within this deliberately restricted two-model world.
+There is still about 1.7% posterior probability assigned to $H_2$ within this deliberately restricted two-model world.
 
 The uncertainty has not disappeared.
 
@@ -239,65 +239,65 @@ The explanations are nevertheless far from equally plausible.
 
 Now change the prior information.
 
-Suppose (H_1) begins with prior odds of
+Suppose $H_1$ begins with prior odds of
 
-[
+$$
 1:20
-]
+$$
 
-against (H_2).
+against $H_2$.
 
 Instead of ten successes, suppose we observe nine successes and one failure.
 
 The likelihood ratio is
 
-[
-Lambda
+$$
+\Lambda
 =
-rac{
+\frac{
 0.9^9(0.1)
 }{
 0.6^9(0.4)
 }
-approx
+\approx
 9.61.
-]
+$$
 
-The data favor (H_1) over (H_2) by almost ten to one.
+The data favor $H_1$ over $H_2$ by almost ten to one.
 
 The posterior odds are
 
-[
-rac{1}{20}
-	imes
+$$
+\frac{1}{20}
+\times
 9.61
-approx
+\approx
 0.481.
-]
+$$
 
 This corresponds to posterior probability
 
-[
-Pr(H_1mid D)
-approx
+$$
+\Pr(H_1\mid D)
+\approx
 0.325.
-]
+$$
 
-So the data favor (H_1), but (H_2) remains more probable after the update because (H_1) began with much lower prior plausibility.
+So the data favor $H_1$, but $H_2$ remains more probable after the update because $H_1$ began with much lower prior plausibility.
 
 That distinction is important.
 
 The statement
 
-[
-	ext{the data favor }H_1
-]
+$$
+\text{the data favor }H_1
+$$
 
 is not identical to
 
-[
-	ext{we should now regard }H_1	ext{ as more probable}.
-]
+$$
+\text{we should now regard }H_1\text{ as more probable}.
+$$
 
 The first is comparative evidence from the observed data under the stated models.
 
@@ -325,29 +325,29 @@ Scientific openness does not require assigning equal initial credibility to ever
 
 The previous examples contain a deliberate simplification.
 
-They assume that either (H_1) or (H_2) provides the relevant explanation.
+They assume that either $H_1$ or $H_2$ provides the relevant explanation.
 
-Reality may contain another possibility, (H_3).
+Reality may contain another possibility, $H_3$.
 
-Suppose the data strongly favor (H_1) over (H_2):
+Suppose the data strongly favor $H_1$ over $H_2$:
 
-[
-rac{L(H_1)}{L(H_2)}
+$$
+\frac{L(H_1)}{L(H_2)}
 =
 100.
-]
+$$
 
-That does not establish that (H_1) is a good model in absolute terms.
+That does not establish that $H_1$ is a good model in absolute terms.
 
-It establishes that (H_1) fits the observed data better than (H_2) according to the likelihood comparison.
+It establishes that $H_1$ fits the observed data better than $H_2$ according to the likelihood comparison.
 
 A third model could satisfy
 
-[
+$$
 L(H_3)
-gg
+\gg
 L(H_1).
-]
+$$
 
 Or all three models could fit poorly in ways not captured by the particular statistic being examined.
 
@@ -363,7 +363,7 @@ Winning does not certify adequacy.
 
 The word *uncertainty* is too broad to carry much scientific meaning unless its source is identified.
 
-Suppose a quantity of interest is (	heta). At least several kinds of uncertainty can affect inference about it.
+Suppose a quantity of interest is $\theta$. At least several kinds of uncertainty can affect inference about it.
 
 ### Sampling uncertainty
 
@@ -371,11 +371,11 @@ Different random samples produce different estimates.
 
 If
 
-[
-hat	heta
-sim
-mathcal N(	heta,sigma^2),
-]
+$$
+\hat\theta
+\sim
+\mathcal N(\theta,\sigma^2),
+$$
 
 then the realised estimate varies around the underlying quantity even when the model is correct.
 
@@ -387,11 +387,11 @@ The observed variable may differ from the quantity intended to be measured.
 
 A generic measurement model is
 
-[
-X=T+arepsilon.
-]
+$$
+X=T+\varepsilon.
+$$
 
-Even a large sample does not recover (T) accurately if systematic measurement error remains unaddressed.
+Even a large sample does not recover $T$ accurately if systematic measurement error remains unaddressed.
 
 ### Parameter uncertainty
 
@@ -431,79 +431,79 @@ Calling all of them simply "uncertainty" obscures what further evidence would ac
 
 Suppose a parameter estimate is
 
-[
-hat	heta=10
-]
+$$
+\hat\theta=10
+$$
 
 with standard error
 
-[
+$$
 SE=4.
-]
+$$
 
 A conventional approximate 95% interval is
 
-[
-10pm1.96(4),
-]
+$$
+10\pm1.96(4),
+$$
 
 which gives
 
-[
+$$
 [2.16, 17.84].
-]
+$$
 
 That is a broad range.
 
 Now consider two hypotheses:
 
-[
-H_A:	heta=10
-]
+$$
+H_A:\theta=10
+$$
 
 and
 
-[
-H_B:	heta=-10.
-]
+$$
+H_B:\theta=-10.
+$$
 
 Under a normal sampling model,
 
-[
-hat	heta
-sim
-mathcal N(	heta,4^2).
-]
+$$
+\hat\theta
+\sim
+\mathcal N(\theta,4^2).
+$$
 
-The likelihood ratio favoring (H_A) over (H_B) is
+The likelihood ratio favoring $H_A$ over $H_B$ is
 
-[
-rac{
-expleft[-(10-10)^2/(2cdot4^2)ight]
+$$
+\frac{
+\exp\left[-(10-10)^2/(2\cdot4^2)\right]
 }{
-expleft[-(10+10)^2/(2cdot4^2)ight]
+\exp\left[-(10+10)^2/(2\cdot4^2)\right]
 }.
-]
+$$
 
 This simplifies to
 
-[
-expleft(
-rac{400}{32}
-ight)
+$$
+\exp\left(
+\frac{400}{32}
+\right)
 =
-exp(12.5),
-]
+\exp(12.5),
+$$
 
 which is approximately
 
-[
-2.7	imes10^5.
-]
+$$
+2.7\times10^5.
+$$
 
 The parameter remains uncertain over a broad range.
 
-The particular alternative (	heta=-10) is nevertheless extremely poorly supported relative to (	heta=10) under the stated model.
+The particular alternative $\theta=-10$ is nevertheless extremely poorly supported relative to $\theta=10$ under the stated model.
 
 Uncertainty about magnitude is therefore not the same as uncertainty about sign, and uncertainty about sign is not the same as equal support for every possible value.
 
@@ -531,36 +531,36 @@ The National Academies has made a similar point in its work on science communica
 
 ## Independent lines of evidence can create asymmetric plausibility
 
-Suppose hypothesis (H_1) predicts observations from three largely independent evidence streams, (D_1), (D_2), and (D_3).
+Suppose hypothesis $H_1$ predicts observations from three largely independent evidence streams, $D_1$, $D_2$, and $D_3$.
 
 If conditional independence is a reasonable approximation, the likelihood ratio is
 
-[
-Lambda
+$$
+\Lambda
 =
-prod_{j=1}^{3}
-rac{
-Pr(D_jmid H_1)
+\prod_{j=1}^{3}
+\frac{
+\Pr(D_j\mid H_1)
 }{
-Pr(D_jmid H_2)
+\Pr(D_j\mid H_2)
 }.
-]
+$$
 
 Assume the individual likelihood ratios are
 
-[
-4,qquad5,qquad3.
-]
+$$
+4,\qquad5,\qquad3.
+$$
 
 The combined ratio is
 
-[
-Lambda
+$$
+\Lambda
 =
-4	imes5	imes3
+4\times5\times3
 =
 60.
-]
+$$
 
 No single piece of evidence is decisive.
 
@@ -600,19 +600,19 @@ Scientific consensus is strongest when agreement survives variation in data, des
 
 Another route to false equivalence begins with a negative result.
 
-Suppose hypothesis (H_2) has not been rejected by a statistical test.
+Suppose hypothesis $H_2$ has not been rejected by a statistical test.
 
 It does not follow that
 
-[
+$$
 H_1
-]
+$$
 
 and
 
-[
+$$
 H_2
-]
+$$
 
 are equally supported.
 
@@ -652,25 +652,25 @@ Treating these outputs as interchangeable encourages precisely the kind of false
 
 Suppose two models estimate the same quantity:
 
-[
-M_1:	hetaapprox10,
-]
+$$
+M_1:\theta\approx10,
+$$
 
-[
-M_2:	hetaapprox3.
-]
+$$
+M_2:\theta\approx3.
+$$
 
 Within each model, the standard error is only 0.5.
 
-If we report the estimate from (M_1) as
+If we report the estimate from $M_1$ as
 
-[
-10pm1,
-]
+$$
+10\pm1,
+$$
 
 the result looks extremely precise.
 
-That interval says nothing about uncertainty caused by choosing (M_1) rather than (M_2).
+That interval says nothing about uncertainty caused by choosing $M_1$ rather than $M_2$.
 
 A narrow interval conditional on one model can therefore coexist with substantial uncertainty across models.
 
@@ -706,15 +706,15 @@ The degree of confidence should track the quality and discriminatory power of th
 
 Suppose the posterior probability of an explanation is
 
-[
+$$
 0.99.
-]
+$$
 
 There remains a probability of
 
-[
+$$
 0.01
-]
+$$
 
 assigned elsewhere within the model.
 
@@ -738,21 +738,21 @@ Even when one explanation is much more plausible, a decision can remain difficul
 
 Suppose the probability of a harmful event is estimated as
 
-[
+$$
 0.02
-]
+$$
 
-under action (A) and
+under action $A$ and
 
-[
+$$
 0.03
-]
+$$
 
-under action (B).
+under action $B$.
 
 The evidence may strongly support the ordering.
 
-Whether the difference justifies choosing (A) depends on costs, benefits, reversibility, alternatives, and consequences of error.
+Whether the difference justifies choosing $A$ depends on costs, benefits, reversibility, alternatives, and consequences of error.
 
 Decision theory therefore adds quantities beyond evidential plausibility.
 
@@ -811,23 +811,23 @@ Return to the first example.
 
 Ten successes are observed.
 
-Under (H_1),
+Under $H_1$,
 
-[
+$$
 p=0.9.
-]
+$$
 
-Under (H_2),
+Under $H_2$,
 
-[
+$$
 p=0.6.
-]
+$$
 
 The likelihood ratio is approximately
 
-[
+$$
 57.7.
-]
+$$
 
 There is still uncertainty. A model with success probability 0.6 can produce ten successes. The probability is small but not zero.
 

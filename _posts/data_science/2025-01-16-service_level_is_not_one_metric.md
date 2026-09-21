@@ -90,27 +90,27 @@ Consider a replenishment cycle.
 
 Let
 
-[
+$$
 X
-]
+$$
 
 denote shortage quantity during that cycle.
 
 Cycle service level is
 
-[
+$$
 CSL
 =
 P(X=0).
-]
+$$
 
-Equivalently, if lead time demand is (D_L) and the reorder point is (r),
+Equivalently, if lead time demand is $D_L$ and the reorder point is $r$,
 
-[
+$$
 CSL
 =
-P(D_Lle r).
-]
+P(D_L\le r).
+$$
 
 A cycle service level of 95% means that 95% of replenishment cycles are expected to complete without any shortage under the model.
 
@@ -128,38 +128,38 @@ A common definition is the fraction of demanded units supplied immediately from 
 
 For a continuous review ((Q,r)) system with expected shortage per replenishment cycle
 
-[
-mathbb E[X],
-]
+$$
+\mathbb E[X],
+$$
 
 a standard approximation is
 
-[
-eta
+$$
+\beta
 =
 1-
-rac{
-mathbb E[X]
+\frac{
+\mathbb E[X]
 }{
 Q
 },
-]
+$$
 
-where (Q) is the replenishment quantity.
+where $Q$ is the replenishment quantity.
 
 The numerator is expected shortage quantity.
 
 Cycle service depends on
 
-[
+$$
 P(X>0).
-]
+$$
 
 Fill rate depends on
 
-[
-mathbb E[X].
-]
+$$
+\mathbb E[X].
+$$
 
 One counts how often shortage occurs.
 
@@ -171,83 +171,83 @@ Those quantities can move independently.
 
 Suppose replenishment quantity is
 
-[
+$$
 Q=100.
-]
+$$
 
 Consider Policy A.
 
 Its shortage distribution is
 
-[
+$$
 X_A
 =
-egin{cases}
-0, & p=0.95,\
+\begin{cases}
+0, & p=0.95,\\
 100, & p=0.05.
-end{cases}
-]
+\end{cases}
+$$
 
 Expected shortage is
 
-[
-mathbb E[X_A]
+$$
+\mathbb E[X_A]
 =
 0.95(0)+0.05(100)
 =
 5.
-]
+$$
 
 Its unit fill rate is therefore
 
-[
-eta_A
+$$
+\beta_A
 =
-1-rac{5}{100}
+1-\frac{5}{100}
 =
 0.95.
-]
+$$
 
 Its cycle service level is
 
-[
+$$
 CSL_A
 =
 P(X_A=0)
 =
 0.95.
-]
+$$
 
 Now consider Policy B.
 
 Its shortage distribution is
 
-[
+$$
 X_B
 =
-egin{cases}
-0, & p=0.50,\
+\begin{cases}
+0, & p=0.50,\\
 10, & p=0.50.
-end{cases}
-]
+\end{cases}
+$$
 
 Expected shortage is again
 
-[
-mathbb E[X_B]
+$$
+\mathbb E[X_B]
 =
 0.50(0)+0.50(10)
 =
 5.
-]
+$$
 
 So
 
-[
-eta_B
+$$
+\beta_B
 =
 0.95.
-]
+$$
 
 The fill rates are identical.
 
@@ -255,11 +255,11 @@ The cycle service levels are not.
 
 For Policy B,
 
-[
+$$
 CSL_B
 =
 0.50.
-]
+$$
 
 One system stocks out in only 5% of cycles but occasionally fails badly.
 
@@ -275,79 +275,79 @@ Now hold cycle service fixed.
 
 Again let
 
-[
+$$
 Q=100.
-]
+$$
 
 Consider Policy C:
 
-[
+$$
 X_C
 =
-egin{cases}
-0, & p=0.95,\
+\begin{cases}
+0, & p=0.95,\\
 1, & p=0.05.
-end{cases}
-]
+\end{cases}
+$$
 
 Then
 
-[
+$$
 CSL_C=0.95.
-]
+$$
 
 Expected shortage is
 
-[
-mathbb E[X_C]
+$$
+\mathbb E[X_C]
 =
 0.05.
-]
+$$
 
 The fill rate is
 
-[
-eta_C
+$$
+\beta_C
 =
-1-rac{0.05}{100}
+1-\frac{0.05}{100}
 =
 0.9995.
-]
+$$
 
 Now consider Policy D:
 
-[
+$$
 X_D
 =
-egin{cases}
-0, & p=0.95,\
+\begin{cases}
+0, & p=0.95,\\
 50, & p=0.05.
-end{cases}
-]
+\end{cases}
+$$
 
 Its cycle service level is also
 
-[
+$$
 0.95.
-]
+$$
 
 Expected shortage is
 
-[
-mathbb E[X_D]
+$$
+\mathbb E[X_D]
 =
 2.5.
-]
+$$
 
 The fill rate is
 
-[
-eta_D
+$$
+\beta_D
 =
-1-rac{2.5}{100}
+1-\frac{2.5}{100}
 =
 0.975.
-]
+$$
 
 Both systems can advertise 95% cycle service.
 
@@ -369,9 +369,9 @@ A one unit shortage can be nearly as disruptive as a fifty unit shortage.
 
 Then the event
 
-[
+$$
 X>0
-]
+$$
 
 matters directly.
 
@@ -381,9 +381,9 @@ Now suppose a retailer can tolerate occasional small backorders but cares strong
 
 Then
 
-[
-mathbb E[X]
-]
+$$
+\mathbb E[X]
+$$
 
 can be more informative.
 
@@ -395,86 +395,86 @@ The correct service metric follows from the consequence of failure.
 
 Suppose lead time demand is approximately normal:
 
-[
+$$
 D_L
-sim
-mathcal N(mu_L,sigma_L^2).
-]
+\sim
+\mathcal N(\mu_L,\sigma_L^2).
+$$
 
 Let
 
-[
-mu_L=500
-]
+$$
+\mu_L=500
+$$
 
 and
 
-[
-sigma_L=100.
-]
+$$
+\sigma_L=100.
+$$
 
 For a 95% cycle service target, choose
 
-[
+$$
 r
 =
-mu_L+z_{0.95}sigma_L.
-]
+\mu_L+z_{0.95}\sigma_L.
+$$
 
 Using
 
-[
-z_{0.95}approx1.645,
-]
+$$
+z_{0.95}\approx1.645,
+$$
 
 the reorder point is
 
-[
+$$
 r
 =
 500+1.645(100)
 =
 664.5.
-]
+$$
 
 By construction,
 
-[
+$$
 CSL
-approx
+\approx
 0.95.
-]
+$$
 
-For normal lead time demand, expected shortage above (r) is
+For normal lead time demand, expected shortage above $r$ is
 
-[
-mathbb E[(D_L-r)^+]
+$$
+\mathbb E[(D_L-r)^+]
 =
-sigma_L
-left[
-phi(z)
+\sigma_L
+\left[
+\phi(z)
 -
-z(1-Phi(z))
-ight].
-]
+z(1-\Phi(z))
+\right].
+$$
 
 At
 
-[
+$$
 z=1.645,
-]
+$$
 
 the standard normal loss function is approximately
 
-[
+$$
 0.0209.
-]
+$$
 
 Expected shortage is therefore approximately
 
-[
+$$
 2.09
-]
+$$
 
 units per replenishment cycle.
 
@@ -482,35 +482,35 @@ Now consider two order quantities.
 
 If
 
-[
+$$
 Q=20,
-]
+$$
 
 then
 
-[
-eta
+$$
+\beta
 =
-1-rac{2.09}{20}
-approx
+1-\frac{2.09}{20}
+\approx
 0.8955.
-]
+$$
 
 If
 
-[
+$$
 Q=200,
-]
+$$
 
 then
 
-[
-eta
+$$
+\beta
 =
-1-rac{2.09}{200}
-approx
+1-\frac{2.09}{200}
+\approx
 0.9896.
-]
+$$
 
 The reorder point is identical.
 
@@ -526,30 +526,30 @@ Unit fill rate weights units.
 
 Customer service can also be measured at the order level.
 
-Let customer order (j) contain requested quantity (Y_j).
+Let customer order $j$ contain requested quantity $Y_j$.
 
 Define
 
-[
+$$
 F_j
 =
-egin{cases}
-1, & 	ext{order }j	ext{ is completely filled immediately},\
-0, & 	ext{otherwise}.
-end{cases}
-]
+\begin{cases}
+1, & \text{order }j\text{ is completely filled immediately},\\
+0, & \text{otherwise}.
+\end{cases}
+$$
 
 Order fill rate is
 
-[
+$$
 OFR
 =
-rac{
-sum_j F_j
+\frac{
+\sum_j F_j
 }{
 N
 }.
-]
+$$
 
 This treats every customer order equally.
 
@@ -571,9 +571,9 @@ One order requests ninety one units.
 
 Total demand is
 
-[
+$$
 100.
-]
+$$
 
 Assume all nine small orders are filled completely.
 
@@ -581,25 +581,25 @@ The large order receives only 81 of its 91 units.
 
 Units filled are
 
-[
+$$
 9+81
 =
 90.
-]
+$$
 
 Unit fill rate is
 
-[
+$$
 90%.
-]
+$$
 
 Only nine of ten orders are complete.
 
 Order fill rate is also
 
-[
+$$
 90%.
-]
+$$
 
 Now change the pattern.
 
@@ -611,23 +611,23 @@ Suppose that failed order receives zero units.
 
 Units filled are
 
-[
+$$
 91+8
 =
 99.
-]
+$$
 
 Unit fill rate is
 
-[
+$$
 99%.
-]
+$$
 
 Order fill rate remains
 
-[
+$$
 90%.
-]
+$$
 
 One metric says performance improved from 90% to 99%.
 
@@ -643,15 +643,15 @@ One order with ten lines can be partially fulfilled even when nine lines are ava
 
 A line fill metric can define
 
-[
+$$
 LFR
 =
-rac{
-	ext{order lines completely filled}
+\frac{
+\text{order lines completely filled}
 }{
-	ext{total order lines}
+\text{total order lines}
 }.
-]
+$$
 
 This can differ from both unit fill rate and order fill rate.
 
@@ -665,27 +665,27 @@ The operational failure is set completion, not unit count.
 
 Another inventory service concept is the fraction of time the item is immediately available.
 
-Let (I_t) be on hand inventory.
+Let $I_t$ be on hand inventory.
 
 A time based ready rate can be written as
 
-[
+$$
 RR
 =
 P(I_t>0)
-]
+$$
 
 or estimated empirically as
 
-[
-widehat{RR}
+$$
+\widehat{RR}
 =
-rac{
-	ext{time with positive on hand inventory}
+\frac{
+\text{time with positive on hand inventory}
 }{
-	ext{total observed time}
+\text{total observed time}
 }.
-]
+$$
 
 This metric weights time.
 
@@ -721,39 +721,39 @@ On time in full extends beyond inventory.
 
 Define
 
-[
+$$
 T_j=1
-]
+$$
 
-if customer order (j) arrives by the promised date.
+if customer order $j$ arrives by the promised date.
 
 Define
 
-[
+$$
 F_j=1
-]
+$$
 
 if it arrives in full.
 
 Then
 
-[
+$$
 OTIF
 =
 P(T_j=1,F_j=1).
-]
+$$
 
 Empirically,
 
-[
-widehat{OTIF}
+$$
+\widehat{OTIF}
 =
-rac{
-	ext{orders delivered on time and in full}
+\frac{
+\text{orders delivered on time and in full}
 }{
-	ext{total eligible orders}
+\text{total eligible orders}
 }.
-]
+$$
 
 An order can be in full but late.
 
@@ -771,15 +771,15 @@ Treating OTIF as a pure inventory KPI assigns failures to the wrong part of the 
 
 It can be tempting to approximate
 
-[
+$$
 P(T=1,F=1)
-]
+$$
 
 as
 
-[
+$$
 P(T=1)P(F=1).
-]
+$$
 
 That requires independence.
 
@@ -827,23 +827,23 @@ Suppose stockouts create backorders.
 
 One metric is
 
-[
+$$
 P(B_t>0),
-]
+$$
 
 the probability that backlog exists.
 
 Another is expected backlog quantity,
 
-[
-mathbb E[B_t].
-]
+$$
+\mathbb E[B_t].
+$$
 
 A third is customer waiting time,
 
-[
-mathbb E[W].
-]
+$$
+\mathbb E[W].
+$$
 
 These quantities can move differently.
 
@@ -861,23 +861,23 @@ If unmet demand is lost, the denominator can become partially unobserved.
 
 Observed sales are
 
-[
+$$
 S_t
 =
-min(D_t,I_t).
-]
+\min(D_t,I_t).
+$$
 
-If true demand (D_t) exceeds inventory, transaction data alone do not reveal the missing units.
+If true demand $D_t$ exceeds inventory, transaction data alone do not reveal the missing units.
 
 A naive fill rate calculated as
 
-[
-rac{
-	ext{sales}
+$$
+\frac{
+\text{sales}
 }{
-	ext{recorded demand}
+\text{recorded demand}
 }
-]
+$$
 
 can therefore be biased upward when recorded demand excludes abandoned customers.
 
@@ -887,13 +887,13 @@ A service KPI can look excellent because the failures removed themselves from th
 
 ## Customer substitution complicates service measurement further
 
-Suppose product (A) is unavailable.
+Suppose product $A$ is unavailable.
 
-A customer buys substitute (B).
+A customer buys substitute $B$.
 
 From a category perspective, demand may have been served.
 
-From product (A)'s perspective, the requested SKU was not available.
+From product $A$'s perspective, the requested SKU was not available.
 
 From a revenue perspective, the outcome depends on the substitute price and margin.
 
@@ -915,17 +915,17 @@ Conversely, stores can maintain high shelf availability by carrying large local 
 
 A multi echelon supply chain therefore has service metrics at several interfaces:
 
-[
-	ext{supplier}ightarrow	ext{DC},
-]
+$$
+\text{supplier}\rightarrow\text{DC},
+$$
 
-[
-	ext{DC}ightarrow	ext{store},
-]
+$$
+\text{DC}\rightarrow\text{store},
+$$
 
-[
-	ext{store}ightarrow	ext{customer}.
-]
+$$
+\text{store}\rightarrow\text{customer}.
+$$
 
 High performance at one interface does not mathematically imply high end to end service.
 
@@ -951,33 +951,33 @@ The system optimises what each team is measured against.
 
 A statement such as
 
-[
-	ext{target service}=95%
-]
+$$
+\text{target service}=95%
+$$
 
 is incomplete.
 
 A useful target looks more like:
 
-[
+$$
 CSL=95%
-]
+$$
 
 for a particular item class,
 
 or
 
-[
-eta=98%
-]
+$$
+\beta=98%
+$$
 
 for units demanded,
 
 or
 
-[
+$$
 OTIF=96%
-]
+$$
 
 for customer orders under a specified promise definition.
 
@@ -1003,29 +1003,29 @@ Inventory policy is a tradeoff.
 
 A simple objective can be written as
 
-[
-C(pi)
+$$
+C(\pi)
 =
 c_h
-mathbb E[I]
+\mathbb E[I]
 +
 c_b
-mathbb E[B]
+\mathbb E[B]
 +
 c_o
-mathbb E[N_o]
+\mathbb E[N_o]
 +
 c_e
-mathbb E[E],
-]
+\mathbb E[E],
+$$
 
 subject to a service constraint such as
 
-[
-eta(pi)ge0.98.
-]
+$$
+\beta(\pi)\ge0.98.
+$$
 
-Here (pi) represents the inventory policy.
+Here $\pi$ represents the inventory policy.
 
 The service metric appears as a constraint because it expresses the business requirement.
 
@@ -1037,27 +1037,27 @@ This is more informative than ranking policies by service alone.
 
 Suppose Policy P produces
 
-[
+$$
 CSL=98%
-]
+$$
 
 and
 
-[
-eta=96%.
-]
+$$
+\beta=96%.
+$$
 
 Policy Q produces
 
-[
+$$
 CSL=90%
-]
+$$
 
 and
 
-[
-eta=99.5%.
-]
+$$
+\beta=99.5%.
+$$
 
 Which is better?
 
@@ -1077,9 +1077,9 @@ A nominal service level is model based.
 
 Suppose a reorder point is designed for
 
-[
+$$
 CSL=95%
-]
+$$
 
 under a normal lead time demand model.
 
@@ -1087,27 +1087,27 @@ If actual demand has a heavier right tail, empirical service may be lower.
 
 Backtesting should therefore estimate realised service:
 
-[
-widehat{CSL}
+$$
+\widehat{CSL}
 =
-rac{
-	ext{cycles without stockout}
+\frac{
+\text{cycles without stockout}
 }{
-	ext{completed cycles}
+\text{completed cycles}
 }
-]
+$$
 
 and realised unit fill rate:
 
-[
-widehat{eta}
+$$
+\widehat{\beta}
 =
-rac{
-	ext{units filled immediately}
+\frac{
+\text{units filled immediately}
 }{
-	ext{units requested}
+\text{units requested}
 }.
-]
+$$
 
 The model target and realised outcome should be shown together.
 
@@ -1121,17 +1121,17 @@ Suppose 95 of 100 cycles have no stockout.
 
 The estimated cycle service level is
 
-[
+$$
 0.95.
-]
+$$
 
 Suppose instead 9,500 of 10,000 cycles succeed.
 
 The estimate is also
 
-[
+$$
 0.95.
-]
+$$
 
 The second estimate is much more precise.
 
@@ -1139,33 +1139,33 @@ Operational dashboards often display both simply as 95%.
 
 For a binomial approximation,
 
-[
-SE(hat p)
+$$
+SE(\hat p)
 =
-sqrt{
-rac{
-hat p(1-hat p)
+\sqrt{
+\frac{
+\hat p(1-\hat p)
 }{
 n
 }
 }.
-]
+$$
 
 For (n=100),
 
-[
+$$
 SE
-approx
+\approx
 0.0218.
-]
+$$
 
 For (n=10000),
 
-[
+$$
 SE
-approx
+\approx
 0.00218.
-]
+$$
 
 The uncertainty differs by a factor of ten.
 
@@ -1198,25 +1198,25 @@ The segmentation should follow operational consequences rather than arbitrary da
 
 Suppose a dashboard reports:
 
-[
+$$
 CSL=95%,
-]
+$$
 
-[
-eta=98%,
-]
+$$
+\beta=98%,
+$$
 
 and
 
-[
+$$
 OTIF=92%.
-]
+$$
 
 Taking their arithmetic mean,
 
-[
+$$
 95%,
-]
+$$
 
 creates a number with no clear probabilistic interpretation.
 
@@ -1234,47 +1234,47 @@ Those assumptions should be explicit.
 
 The first pair of policies had the same fill rate:
 
-[
-eta_A
+$$
+\beta_A
 =
-eta_B
+\beta_B
 =
 95%.
-]
+$$
 
 Their cycle service levels were
 
-[
+$$
 95%
-]
+$$
 
 and
 
-[
+$$
 50%.
-]
+$$
 
 The second pair had the same cycle service level:
 
-[
+$$
 CSL_C
 =
 CSL_D
 =
 95%.
-]
+$$
 
 Their fill rates were approximately
 
-[
+$$
 99.95%
-]
+$$
 
 and
 
-[
+$$
 97.5%.
-]
+$$
 
 The metrics disagree because they count different things.
 

@@ -88,39 +88,39 @@ Scientific interpretation begins by keeping these questions separate.
 
 ## Detection is a property of a measurement procedure
 
-Let (C) represent the true concentration of an analyte in a sample. Suppose an analytical procedure returns
+Let $C$ represent the true concentration of an analyte in a sample. Suppose an analytical procedure returns
 
-[
-X=C+arepsilon,
-]
+$$
+X=C+\varepsilon,
+$$
 
-where (arepsilon) represents measurement variation. For illustration, assume
+where $\varepsilon$ represents measurement variation. For illustration, assume
 
-[
-arepsilonsimmathcal N(0,sigma^2).
-]
+$$
+\varepsilon\sim\mathcal N(0,\sigma^2).
+$$
 
-Now suppose the laboratory uses a signal criterion (L) and records a detection when
+Now suppose the laboratory uses a signal criterion $L$ and records a detection when
 
-[
+$$
 X>L.
-]
+$$
 
 The probability of detection is then
 
-[
-Pr(	ext{detect}mid C)
+$$
+\Pr(\text{detect}\mid C)
 =
-Pr(C+arepsilon>L)
+\Pr(C+\varepsilon>L)
 =
-1-Phileft(rac{L-C}{sigma}ight),
-]
+1-\Phi\left(\frac{L-C}{\sigma}\right),
+$$
 
-where (Phi) is the standard normal cumulative distribution function.
+where $\Phi$ is the standard normal cumulative distribution function.
 
 The important feature of this expression is not the normality assumption. Real analytical methods use more detailed validation procedures, and definitions of detection limits are operational rather than universal. The important point is that detection depends jointly on the concentration and the performance of the measurement system.
 
-When (C) is far above the relevant analytical limit, detection is highly probable. When (C) is near that limit, repeated measurements can sometimes satisfy the criterion and sometimes fail it. When (C) is below the limit, the substance may still be physically present even though the method cannot reliably distinguish its signal from the blank or background.
+When $C$ is far above the relevant analytical limit, detection is highly probable. When $C$ is near that limit, repeated measurements can sometimes satisfy the criterion and sometimes fail it. When $C$ is below the limit, the substance may still be physically present even though the method cannot reliably distinguish its signal from the blank or background.
 
 This is the logic behind the limit of detection. NIST describes it in terms of the lowest concentration or amount that can be reliably distinguished according to the criteria of the analytical method. Currie's foundational treatment of detection limits and later work distinguishing the limit of blank, limit of detection, and limit of quantitation make the same broader point: the boundary is defined by an analytical decision problem.
 
@@ -130,23 +130,23 @@ It is not a toxicological threshold.
 
 Consider a sample with a true concentration
 
-[
-C=0.10 mu	ext{g/L}.
-]
+$$
+C=0.10 \mu\text{g/L}.
+$$
 
 Suppose an older analytical method has a detection limit of approximately
 
-[
-L_{	ext{old}}=1.0 mu	ext{g/L}.
-]
+$$
+L_{\text{old}}=1.0 \mu\text{g/L}.
+$$
 
 The sample may be reported as not detected.
 
 A newer method has a detection limit of
 
-[
-L_{	ext{new}}=0.001 mu	ext{g/L}.
-]
+$$
+L_{\text{new}}=0.001 \mu\text{g/L}.
+$$
 
 The same concentration is now well within the method's analytical capability and is reported as detected.
 
@@ -154,15 +154,15 @@ The true concentration did not increase. Exposure did not increase. Toxicity did
 
 The analytical sensitivity improved by a factor of one thousand:
 
-[
-rac{L_{	ext{old}}}{L_{	ext{new}}}
+$$
+\frac{L_{\text{old}}}{L_{\text{new}}}
 =
 1000.
-]
+$$
 
 A comparison of historical surveillance records can therefore show an apparent increase in the frequency of detection simply because laboratories became capable of seeing concentrations that had previously been censored below the analytical limit. Before interpreting such a pattern as environmental deterioration or increased contamination, the measurement methods need to be comparable.
 
-The reverse mistake is equally serious. A non-detect under the older method would not justify replacing (C) with zero. The information is censored by the measurement process. Exactly how a non-detect should be handled statistically depends on the design, detection procedure, distributional assumptions, and purpose of the analysis, but the logical point is simpler: below the reporting boundary does not mean nonexistent.
+The reverse mistake is equally serious. A non-detect under the older method would not justify replacing $C$ with zero. The information is censored by the measurement process. Exactly how a non-detect should be handled statistically depends on the design, detection procedure, distributional assumptions, and purpose of the analysis, but the logical point is simpler: below the reporting boundary does not mean nonexistent.
 
 ## Concentration is still not dose
 
@@ -170,59 +170,59 @@ Once a substance has been quantified, another inferential step remains. Concentr
 
 For ingestion through a single medium, a deliberately simplified external dose calculation can be written as
 
-[
+$$
 D
 =
-rac{CI}{W},
-]
+\frac{CI}{W},
+$$
 
-where (C) is concentration, (I) is intake of the medium per unit time, and (W) is body mass. More elaborate exposure assessments include frequency, duration, absorption, multiple sources, route-specific factors, population distributions, and other variables. The simplified expression is useful because it shows what a concentration alone cannot tell us.
+where $C$ is concentration, $I$ is intake of the medium per unit time, and $W$ is body mass. More elaborate exposure assessments include frequency, duration, absorption, multiple sources, route-specific factors, population distributions, and other variables. The simplified expression is useful because it shows what a concentration alone cannot tell us.
 
-Consider a fictional compound (Q) measured in water at
+Consider a fictional compound $Q$ measured in water at
 
-[
-C=5 	ext{ng/L}.
-]
+$$
+C=5 \text{ng/L}.
+$$
 
 Assume, purely for the calculation, that a person consumes
 
-[
-I=2 	ext{L/day}
-]
+$$
+I=2 \text{L/day}
+$$
 
 from that source and has body mass
 
-[
-W=70 	ext{kg}.
-]
+$$
+W=70 \text{kg}.
+$$
 
 The estimated external dose is
 
-[
+$$
 D
 =
-rac{(5 	ext{ng/L})(2 	ext{L/day})}
-{70 	ext{kg}}
-]
+\frac{(5 \text{ng/L})(2 \text{L/day})}
+{70 \text{kg}}
+$$
 
 or
 
-[
+$$
 D
-approx
-0.143 	ext{ng/(kg day)}.
-]
+\approx
+0.143 \text{ng/(kg day)}.
+$$
 
 Expressed in micrograms,
 
-[
+$$
 D
-approx
-1.43	imes10^{-4}
- mu	ext{g/(kg day)}.
-]
+\approx
+1.43\times10^{-4}
+ \mu\text{g/(kg day)}.
+$$
 
-The analytical statement "compound (Q) was detected at 5 ng/L" and the exposure statement "under these assumptions, the external ingestion dose is approximately (1.43	imes10^{-4} mu	ext{g/(kg day)})" are therefore different claims. The second requires information that is absent from the first.
+The analytical statement "compound $Q$ was detected at 5 ng/L" and the exposure statement "under these assumptions, the external ingestion dose is approximately (1.43\times10^{-4} mu\text{g/(kg day)})" are therefore different claims. The second requires information that is absent from the first.
 
 Even the calculated external dose is not the final biological quantity. Absorption may be incomplete. Metabolism can change the active form. Distribution can concentrate an agent in particular tissues. Elimination can be rapid or slow. Repeated exposures can accumulate when uptake exceeds clearance.
 
@@ -232,69 +232,69 @@ Exposure assessment exists because the path from concentration in a sampled medi
 
 Suppose, continuing the fictional example, that an experiment provides a reference point
 
-[
-D_ast
+$$
+D_\ast
 =
-10 mu	ext{g/(kg day)}.
-]
+10 \mu\text{g/(kg day)}.
+$$
 
 This number is invented for the article. It is not a safety standard for any real compound.
 
 The ratio between the estimated exposure and the reference point is
 
-[
+$$
 R_D
 =
-rac{D}{D_ast}
+\frac{D}{D_\ast}
 =
-rac{1.43	imes10^{-4}}{10}
-approx
-1.43	imes10^{-5}.
-]
+\frac{1.43\times10^{-4}}{10}
+\approx
+1.43\times10^{-5}.
+$$
 
 The reference point is about seventy thousand times larger than the estimated external dose:
 
-[
-rac{D_ast}{D}
-approx
+$$
+\frac{D_\ast}{D}
+\approx
 70,000.
-]
+$$
 
 That comparison is informative. It is still not, by itself, a proof of safety.
 
-Its interpretation depends on what (D_ast) represents, how it was obtained, which biological endpoint was studied, whether the exposure routes are comparable, how duration differs, what uncertainty factors or extrapolations are appropriate, and what dose-response relationship is assumed.
+Its interpretation depends on what $D_\ast$ represents, how it was obtained, which biological endpoint was studied, whether the exposure routes are comparable, how duration differs, what uncertainty factors or extrapolations are appropriate, and what dose-response relationship is assumed.
 
 The distinction matters because different response models can agree at observed experimental doses and disagree when extrapolated elsewhere.
 
 Under a simple threshold model,
 
-[
-Delta R(D)
+$$
+\Delta R(D)
 =
-egin{cases}
-0, & D<D_0,\
-f(D), & Dge D_0,
-end{cases}
-]
+\begin{cases}
+0, & D<D_0,\\
+f(D), & D\ge D_0,
+\end{cases}
+$$
 
-there is no additional modeled risk below (D_0).
+there is no additional modeled risk below $D_0$.
 
 Under a linear model without a threshold,
 
-[
-Delta R(D)=kD,
-]
+$$
+\Delta R(D)=kD,
+$$
 
 every positive dose corresponds to a positive modeled increment, although the magnitude becomes smaller with dose.
 
 A nonlinear model could instead take a form such as
 
-[
-Delta R(D)
+$$
+\Delta R(D)
 =
-R_{max}
-rac{D^n}{K^n+D^n}.
-]
+R_{\max}
+\frac{D^n}{K^n+D^n}.
+$$
 
 These models make different biological and regulatory assumptions. Merely knowing that (D>0) does not select among them.
 
@@ -322,25 +322,25 @@ The scientific task is to connect the two.
 
 ## A binary detection variable destroys information
 
-Suppose the measured concentration is (C), but public discussion reduces it to
+Suppose the measured concentration is $C$, but public discussion reduces it to
 
-[
+$$
 Z=
-egin{cases}
-1, & C 	ext{ detected},\
-0, & C 	ext{ not detected}.
-end{cases}
-]
+\begin{cases}
+1, & C \text{ detected},\\
+0, & C \text{ not detected}.
+\end{cases}
+$$
 
 This transformation discards nearly all quantitative exposure information.
 
-A sample at (0.002 mu	ext{g/L}) and another at (200 mu	ext{g/L}) can both receive (Z=1). Their concentrations differ by a factor of one hundred thousand.
+A sample at $0.002 \mu\text{g/L}$ and another at $200 \mu\text{g/L}$ can both receive (Z=1). Their concentrations differ by a factor of one hundred thousand.
 
 At the same time, a concentration immediately below a method's detection criterion and one that is truly absent can both receive (Z=0).
 
 The binary variable is useful for some analytical and surveillance purposes. It is a poor substitute for dose when the scientific question concerns biological effect.
 
-This loss of information explains why headlines built around the phrase "scientists found chemical (X)" can sound more informative than they are. Presence is scientifically relevant. Without concentration, uncertainty, exposure conditions, and toxicological context, it does not specify the scale of the problem.
+This loss of information explains why headlines built around the phrase "scientists found chemical $X$" can sound more informative than they are. Presence is scientifically relevant. Without concentration, uncertainty, exposure conditions, and toxicological context, it does not specify the scale of the problem.
 
 The more sensitive analytical chemistry becomes, the more important this distinction becomes. An instrument that can identify one molecule among vastly more background molecules increases our knowledge of composition. It does not lower the biological dose required for an effect.
 
@@ -376,28 +376,28 @@ Numbers do not remove the need to understand what the numbers represent.
 
 A concentration measured once describes a sample at one time and place. Chronic risk questions often concern a distribution of exposures over months, years, or decades.
 
-Let (D_t) denote daily dose on day (t). A simple average daily dose over (T) days is
+Let $D_t$ denote daily dose on day $t$. A simple average daily dose over $T$ days is
 
-[
-ar D
+$$
+\bar D
 =
-rac{1}{T}
-sum_{t=1}^{T}D_t.
-]
+\frac{1}{T}
+\sum_{t=1}^{T}D_t.
+$$
 
-Two people can have the same (ar D) while having very different exposure patterns. One may receive a nearly constant dose. Another may receive short, high peaks separated by long periods of little exposure.
+Two people can have the same $\bar D$ while having very different exposure patterns. One may receive a nearly constant dose. Another may receive short, high peaks separated by long periods of little exposure.
 
 If biological response depends nonlinearly on peak concentration, those patterns need not be equivalent.
 
-A simple toxicokinetic model makes another dimension visible. Let (B_t) denote body burden, let (u_t) represent uptake, and let (k) represent an elimination rate:
+A simple toxicokinetic model makes another dimension visible. Let $B_t$ denote body burden, let $u_t$ represent uptake, and let $k$ represent an elimination rate:
 
-[
-rac{dB_t}{dt}
+$$
+\frac{dB_t}{dt}
 =
 u_t-kB_t.
-]
+$$
 
-When elimination is rapid, body burden can fall quickly after exposure stops. When (k) is small, repeated low exposures can accumulate toward a higher steady state.
+When elimination is rapid, body burden can fall quickly after exposure stops. When $k$ is small, repeated low exposures can accumulate toward a higher steady state.
 
 The concentration in one external sample therefore cannot answer every chronic exposure question. Frequency, duration, timing, uptake, and clearance may all matter.
 
@@ -409,15 +409,15 @@ Once a substance is detected, the reported concentration is itself an estimate.
 
 Suppose the laboratory reports
 
-[
-hat C = 5.0 	ext{ng/L}
-]
+$$
+\hat C = 5.0 \text{ng/L}
+$$
 
 with measurement standard uncertainty
 
-[
-u=0.8 	ext{ng/L}.
-]
+$$
+u=0.8 \text{ng/L}.
+$$
 
 The scientifically relevant object is not simply the printed value 5.0. The measurement procedure supports a range of plausible values, subject to its calibration model, matrix effects, sample handling, recovery, blank correction, and other sources of uncertainty.
 
@@ -429,11 +429,11 @@ That distinction matters if a risk estimate is sensitive to small changes in con
 
 If
 
-[
-D=rac{CI}{W},
-]
+$$
+D=\frac{CI}{W},
+$$
 
-uncertainty in (C), (I), and (W) all contribute to uncertainty in (D). More elaborate risk models add uncertainty in toxicokinetics, dose-response parameters, population variability, and model form.
+uncertainty in $C$, $I$, and $W$ all contribute to uncertainty in $D$. More elaborate risk models add uncertainty in toxicokinetics, dose-response parameters, population variability, and model form.
 
 A single detected concentration is therefore the beginning of a quantitative argument, not its conclusion.
 
@@ -463,19 +463,19 @@ The order matters because each step answers a different scientific question.
 
 The sequence can be represented schematically as
 
-[
-	ext{analytical signal}
-ightarrow
-	ext{concentration}
-ightarrow
-	ext{exposure}
-ightarrow
-	ext{dose}
-ightarrow
-	ext{biological response}
-ightarrow
-	ext{risk}.
-]
+$$
+\text{analytical signal}
+\rightarrow
+\text{concentration}
+\rightarrow
+\text{exposure}
+\rightarrow
+\text{dose}
+\rightarrow
+\text{biological response}
+\rightarrow
+\text{risk}.
+$$
 
 Evidence can enter at every stage, and uncertainty can enter at every stage.
 

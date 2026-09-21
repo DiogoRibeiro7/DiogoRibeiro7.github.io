@@ -83,19 +83,19 @@ A simple model makes the problem visible.
 
 ## An observed score is generated, not discovered
 
-Let (T) denote the quantity we actually want to measure. It may represent a physiological state, a cognitive ability, an environmental property, or another target that is not observed without a measurement procedure.
+Let $T$ denote the quantity we actually want to measure. It may represent a physiological state, a cognitive ability, an environmental property, or another target that is not observed without a measurement procedure.
 
 Suppose the observed score is
 
-[
-X = alpha + lambda T + delta B + arepsilon.
-]
+$$
+X = \alpha + \lambda T + \delta B + \varepsilon.
+$$
 
-The constant (alpha) sets the location of the scale. The coefficient (lambda) describes how strongly the target contributes to the score. The variable (B) represents a nuisance component that is not part of the target interpretation but nevertheless affects the measurement. The term (arepsilon) represents occasion-specific noise.
+The constant $\alpha$ sets the location of the scale. The coefficient $\lambda$ describes how strongly the target contributes to the score. The variable $B$ represents a nuisance component that is not part of the target interpretation but nevertheless affects the measurement. The term $\varepsilon$ represents occasion-specific noise.
 
-If (delta=0) and (arepsilon) is small, variation in (X) may track (T) closely. If (delta B) is large, the same observed score may primarily reflect something else.
+If $\delta=0$ and $\varepsilon$ is small, variation in $X$ may track $T$ closely. If $\delta B$ is large, the same observed score may primarily reflect something else.
 
-The equation is deliberately generic. In one setting (B) could be a persistent device calibration difference. In another it could represent reading ability contaminating a test intended to measure subject knowledge. In another it could represent a behavioural pattern that changes how a wearable sensor records a physiological signal. The model does not assert that all measurement problems have the same structure. It isolates one fact that is easy to lose once a score has been named: several processes can contribute to the same observable.
+The equation is deliberately generic. In one setting $B$ could be a persistent device calibration difference. In another it could represent reading ability contaminating a test intended to measure subject knowledge. In another it could represent a behavioural pattern that changes how a wearable sensor records a physiological signal. The model does not assert that all measurement problems have the same structure. It isolates one fact that is easy to lose once a score has been named: several processes can contribute to the same observable.
 
 This is why measurement is not completed by assigning a unit or a label. The interpretation depends on the mapping between the observable and the target.
 
@@ -107,83 +107,83 @@ The converse does not follow. A repeatable measurement need not be a valid measu
 
 Consider two measurements of the same person:
 
-[
-X_1 = T + B + arepsilon_1,
-]
+$$
+X_1 = T + B + \varepsilon_1,
+$$
 
-[
-X_2 = T + B + arepsilon_2.
-]
+$$
+X_2 = T + B + \varepsilon_2.
+$$
 
-Assume that the target (T), the stable nuisance component (B), and the two occasion-specific errors are mutually independent, with
+Assume that the target $T$, the stable nuisance component $B$, and the two occasion-specific errors are mutually independent, with
 
-[
-operatorname{Var}(T)=1,
-]
+$$
+\operatorname{Var}(T)=1,
+$$
 
-[
-operatorname{Var}(B)=9,
-]
+$$
+\operatorname{Var}(B)=9,
+$$
 
 and
 
-[
-operatorname{Var}(arepsilon_1)
+$$
+\operatorname{Var}(\varepsilon_1)
 =
-operatorname{Var}(arepsilon_2)
+\operatorname{Var}(\varepsilon_2)
 =
 0.1.
-]
+$$
 
 Each observed measurement then has variance
 
-[
-operatorname{Var}(X_t)
+$$
+\operatorname{Var}(X_t)
 =
 1+9+0.1
 =
 10.1.
-]
+$$
 
-Because (T) and (B) persist across both observations,
+Because $T$ and $B$ persist across both observations,
 
-[
-operatorname{Cov}(X_1,X_2)
+$$
+\operatorname{Cov}(X_1,X_2)
 =
-operatorname{Var}(T)+operatorname{Var}(B)
+\operatorname{Var}(T)+\operatorname{Var}(B)
 =
 10.
-]
+$$
 
 The test-retest correlation is therefore
 
-[
-operatorname{Corr}(X_1,X_2)
+$$
+\operatorname{Corr}(X_1,X_2)
 =
-rac{10}{10.1}
-approx
+\frac{10}{10.1}
+\approx
 0.990.
-]
+$$
 
 By an ordinary repeatability criterion, the measurement looks exceptional.
 
-Now ask a different question. How strongly does the observed score correspond to the target (T)?
+Now ask a different question. How strongly does the observed score correspond to the target $T$?
 
-Since only (T) is shared between (X) and the target itself,
+Since only $T$ is shared between $X$ and the target itself,
 
-[
-operatorname{Cov}(X,T)=1.
-]
+$$
+\operatorname{Cov}(X,T)=1.
+$$
 
 The correlation is
 
-[
-operatorname{Corr}(X,T)
+$$
+\operatorname{Corr}(X,T)
 =
-rac{1}{sqrt{10.1}}
-approx
+\frac{1}{\sqrt{10.1}}
+\approx
 0.315.
-]
+$$
 
 The square of that correlation is approximately (0.099). In this construction, only about ten per cent of the variance in the observed score is linearly associated with variance in the intended target, even though repeated measurements correlate at approximately 0.99.
 
@@ -199,39 +199,39 @@ It is tempting to treat every unwanted contribution to measurement as noise. Tha
 
 Independent random error can often be reduced by repetition. A stable nuisance component cannot.
 
-Suppose we measure the same target (m) times:
+Suppose we measure the same target $m$ times:
 
-[
-X_j = T + B + arepsilon_j,
-qquad
-j=1,ldots,m,
-]
+$$
+X_j = T + B + \varepsilon_j,
+\qquad
+j=1,\ldots,m,
+$$
 
-where the (arepsilon_j) terms are independent and have variance (sigma_arepsilon^2). The average is
+where the $\varepsilon_j$ terms are independent and have variance $\sigma_\varepsilon^2$. The average is
 
-[
-ar X
+$$
+\bar X
 =
-T+B+ararepsilon.
-]
+T+B+\bar\varepsilon.
+$$
 
 The variance of the averaged random error is
 
-[
-operatorname{Var}(ararepsilon)
+$$
+\operatorname{Var}(\bar\varepsilon)
 =
-rac{sigma_arepsilon^2}{m}.
-]
+\frac{\sigma_\varepsilon^2}{m}.
+$$
 
-As (m) increases, this term approaches zero. The stable nuisance component (B) does not.
+As $m$ increases, this term approaches zero. The stable nuisance component $B$ does not.
 
 In the limit,
 
-[
-ar X longrightarrow T+B,
-]
+$$
+\bar X \longrightarrow T+B,
+$$
 
-not (T).
+not $T$.
 
 This is one reason that collecting more observations can create a false sense of security. Repeated measurement can make an estimate extremely precise around the wrong quantity. The standard error shrinks while the systematic part of the discrepancy remains.
 
@@ -243,69 +243,69 @@ The difference between a score and its target becomes especially important when 
 
 Suppose a score is defined by
 
-[
-X = T + 2C + arepsilon,
-]
+$$
+X = T + 2C + \varepsilon,
+$$
 
-where (T) is the target construct and (C) is another component that affects the score.
+where $T$ is the target construct and $C$ is another component that affects the score.
 
-Assume lower values of (X) are interpreted as improvement.
+Assume lower values of $X$ are interpreted as improvement.
 
-Now introduce an intervention (A). Suppose it has no effect on the target:
+Now introduce an intervention $A$. Suppose it has no effect on the target:
 
-[
-mathbb E[Tmid A=1]
+$$
+\mathbb E[T\mid A=1]
 -
-mathbb E[Tmid A=0]
+\mathbb E[T\mid A=0]
 =
 0.
-]
+$$
 
 But suppose it reduces the nuisance component by one unit:
 
-[
-mathbb E[Cmid A=1]
+$$
+\mathbb E[C\mid A=1]
 -
-mathbb E[Cmid A=0]
+\mathbb E[C\mid A=0]
 =
 -1.
-]
+$$
 
 If the measurement error has mean zero in both groups, the expected observed change is
 
-[
-mathbb E[Xmid A=1]
+$$
+\mathbb E[X\mid A=1]
 -
-mathbb E[Xmid A=0]
+\mathbb E[X\mid A=0]
 =
 0+2(-1)
 =
 -2.
-]
+$$
 
 The score improves by two units while the target does not change at all.
 
 The reverse can also happen. Suppose the intervention genuinely improves the target by two units,
 
-[
-Delta T=-2,
-]
+$$
+\Delta T=-2,
+$$
 
 but increases the nuisance component by one unit,
 
-[
-Delta C=1.
-]
+$$
+\Delta C=1.
+$$
 
 Then
 
-[
-Delta X
+$$
+\Delta X
 =
 -2+2(1)
 =
 0.
-]
+$$
 
 The target improves while the observed score remains unchanged.
 
@@ -321,33 +321,33 @@ But the number of indicators is not the decisive property. Their error structure
 
 Consider
 
-[
+$$
 X_j
 =
-lambda_j T
+\lambda_j T
 +
-kappa_j C
+\kappa_j C
 +
-arepsilon_j,
-]
+\varepsilon_j,
+$$
 
-where (T) is the target, (C) is a shared nuisance factor, and (arepsilon_j) is indicator-specific error.
+where $T$ is the target, $C$ is a shared nuisance factor, and $\varepsilon_j$ is indicator-specific error.
 
-If the indicators have different (lambda_j) values and their nuisance contributions are limited or understood, their joint covariance structure can help identify (T). This is the basic intuition behind many factor models and other latent-variable approaches.
+If the indicators have different $\lambda_j$ values and their nuisance contributions are limited or understood, their joint covariance structure can help identify $T$. This is the basic intuition behind many factor models and other latent-variable approaches.
 
 Now consider the simpler case
 
-[
-X_j=T+C+arepsilon_j.
-]
+$$
+X_j=T+C+\varepsilon_j.
+$$
 
 Averaging many indicators gives
 
-[
-ar X
+$$
+\bar X
 =
-T+C+ararepsilon.
-]
+T+C+\bar\varepsilon.
+$$
 
 Again, the independent errors shrink while the shared nuisance component remains.
 
@@ -361,11 +361,11 @@ Hussey and Hughes illustrated the practical importance of this distinction in a 
 
 A variable can be extremely useful without measuring the construct that people casually say it measures.
 
-Suppose a score (X) predicts an outcome (Y) very well. That predictive relationship may justify using (X) for forecasting under the conditions in which the relationship has been established. It does not automatically justify interpreting (X) as a direct measure of whatever causal quantity is believed to produce (Y).
+Suppose a score $X$ predicts an outcome $Y$ very well. That predictive relationship may justify using $X$ for forecasting under the conditions in which the relationship has been established. It does not automatically justify interpreting $X$ as a direct measure of whatever causal quantity is believed to produce $Y$.
 
-Prediction asks whether knowing (X) improves our ability to anticipate (Y).
+Prediction asks whether knowing $X$ improves our ability to anticipate $Y$.
 
-Measurement asks what variation in (X) represents.
+Measurement asks what variation in $X$ represents.
 
 Those questions can overlap, but they are not identical.
 
@@ -381,44 +381,44 @@ Even a measurement that behaves well in one setting may not support the same int
 
 A simple group-specific measurement model is
 
-[
+$$
 X_g
 =
 
-u_g+lambda_gT+arepsilon_g,
-]
+u_g+\lambda_gT+\varepsilon_g,
+$$
 
-where (g) indexes a group, context, device version, language, or time period.
+where $g$ indexes a group, context, device version, language, or time period.
 
 If
 
-[
+$$
 
 u_1=
 u_2
-]
+$$
 
 and
 
-[
-lambda_1=lambda_2,
-]
+$$
+\lambda_1=\lambda_2,
+$$
 
 then equal target values generate comparable expected scores under this simplified model.
 
 If either parameter changes, observed score differences become harder to interpret.
 
-Suppose two groups have the same mean value of (T), but the intercept differs by three units:
+Suppose two groups have the same mean value of $T$, but the intercept differs by three units:
 
-[
+$$
 
 u_2-
 u_1=3.
-]
+$$
 
 The second group will have an expected observed score three units higher even though the target distributions are identical.
 
-Or suppose the loading changes. A one-unit difference in (T) may correspond to a one-unit score difference in one setting and a two-unit score difference in another.
+Or suppose the loading changes. A one-unit difference in $T$ may correspond to a one-unit score difference in one setting and a two-unit score difference in another.
 
 These problems motivate measurement invariance analysis. Meredith's formal treatment of factorial invariance made clear that comparisons across populations require assumptions about how observed variables relate to the latent variables being compared.
 
@@ -434,11 +434,11 @@ But numerical resolution is not the same as epistemic resolution.
 
 If
 
-[
-X = T+B+arepsilon,
-]
+$$
+X = T+B+\varepsilon,
+$$
 
-reducing the variance of (arepsilon) improves precision. It does nothing to remove (B).
+reducing the variance of $\varepsilon$ improves precision. It does nothing to remove $B$.
 
 A device can therefore become increasingly precise while the scientific uncertainty about what the score represents remains largely unchanged. Similarly, a statistical model can produce narrow confidence intervals for an estimand whose connection to the intended construct is poorly defended.
 
@@ -458,7 +458,7 @@ Evidence for an interpretation can come from several directions. A measure may b
 
 The pattern matters because different explanations for a score make different predictions.
 
-If a supposed measure of (T) responds strongly when (T) is experimentally manipulated but not when plausible nuisance variables are manipulated, that supports one interpretation. If the score changes more strongly under manipulation of an irrelevant component than under manipulation of the target, that is evidence against the intended interpretation even if the score remains highly reliable.
+If a supposed measure of $T$ responds strongly when $T$ is experimentally manipulated but not when plausible nuisance variables are manipulated, that supports one interpretation. If the score changes more strongly under manipulation of an irrelevant component than under manipulation of the target, that is evidence against the intended interpretation even if the score remains highly reliable.
 
 Good measurement theory therefore creates opportunities for the interpretation to fail.
 
@@ -488,21 +488,21 @@ Scientific communication often focuses on uncertainty after the measurement has 
 
 The measurement process deserves the same scrutiny.
 
-Before asking whether a difference in (X) is statistically significant, we need to know what a difference in (X) means. Before asking whether a model predicts (X) accurately, we need to know why (X) represents the target. Before interpreting change over time, we need evidence that the measurement function has not changed in a way that creates the appearance of target change.
+Before asking whether a difference in $X$ is statistically significant, we need to know what a difference in $X$ means. Before asking whether a model predicts $X$ accurately, we need to know why $X$ represents the target. Before interpreting change over time, we need evidence that the measurement function has not changed in a way that creates the appearance of target change.
 
 The simple model
 
-[
-X=alpha+lambda T+delta B+arepsilon
-]
+$$
+X=\alpha+\lambda T+\delta B+\varepsilon
+$$
 
 contains the essential warning.
 
-Precision concerns (arepsilon).
+Precision concerns $\varepsilon$.
 
 Repeatability depends on which components persist.
 
-Validity concerns whether the variation attributed to (T) supports the intended interpretation.
+Validity concerns whether the variation attributed to $T$ supports the intended interpretation.
 
 Those properties can move together, but they do not have to.
 

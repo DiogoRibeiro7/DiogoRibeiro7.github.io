@@ -209,9 +209,9 @@ As the demands on computational optimization grow, solvers like PDLP will play a
 For the primal LP
 
 $$
-min_x c^Tx
-quad	ext{subject to}quad
-Axge b,
+\min_x c^Tx
+\quad\text{subject to}\quad
+Ax\ge b,
 $$
 
 the dual introduces variables associated with the constraints. Primal feasibility, dual feasibility, and the duality gap provide the natural stopping diagnostics.

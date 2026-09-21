@@ -79,9 +79,9 @@ The important question is not how many extra units are stored. It is which uncer
 
 A rule such as
 
-[
-	ext{Safety stock}=0.5	ext{ days of demand}
-]
+$$
+\text{Safety stock}=0.5\text{ days of demand}
+$$
 
 looks operationally precise. It is not probabilistically precise.
 
@@ -93,67 +93,67 @@ It is a quantile of a random demand process.
 
 ## The relevant uncertainty is demand during the protection period
 
-Consider a continuous-review system with deterministic lead time (L).
+Consider a continuous-review system with deterministic lead time $L$.
 
 Let daily demand be
 
-[
-D_1,D_2,ldots,D_L.
-]
+$$
+D_1,D_2,\ldots,D_L.
+$$
 
 The demand that must be covered while waiting for replenishment is
 
-[
+$$
 S_L
 =
-sum_{t=1}^{L}D_t.
-]
+\sum_{t=1}^{L}D_t.
+$$
 
 If daily demand is independent with mean
 
-[
-mu_D
-]
+$$
+\mu_D
+$$
 
 and variance
 
-[
-sigma_D^2,
-]
+$$
+\sigma_D^2,
+$$
 
 then
 
-[
-mathbb E[S_L]
+$$
+\mathbb E[S_L]
 =
-Lmu_D
-]
+L\mu_D
+$$
 
 and
 
-[
-operatorname{Var}(S_L)
+$$
+\operatorname{Var}(S_L)
 =
-Lsigma_D^2.
-]
+L\sigma_D^2.
+$$
 
 The standard deviation is
 
-[
-sigma_L
+$$
+\sigma_L
 =
-sigma_Dsqrt{L}.
-]
+\sigma_D\sqrt{L}.
+$$
 
 A reorder point can be written as
 
-[
+$$
 r
 =
-mathbb E[S_L]
+\mathbb E[S_L]
 +
 SS,
-]
+$$
 
 where (SS) is safety stock.
 
@@ -167,45 +167,45 @@ Safety stock is the additional buffer used to cover uncertainty around that expe
 
 Suppose two SKUs both have mean daily demand
 
-[
-mu_D=100
-]
+$$
+\mu_D=100
+$$
 
 and fixed lead time
 
-[
+$$
 L=4.
-]
+$$
 
 Their expected lead-time demand is therefore identical:
 
-[
-mathbb E[S_L]
+$$
+\mathbb E[S_L]
 =
 4(100)
 =
 400.
-]
+$$
 
 Now assign both items half a day of average demand as safety stock:
 
-[
+$$
 SS
 =
 0.5(100)
 =
 50.
-]
+$$
 
 Both receive the same reorder point:
 
-[
+$$
 r
 =
 400+50
 =
 450.
-]
+$$
 
 So far the policies look identical.
 
@@ -213,109 +213,109 @@ They are not.
 
 For SKU A, suppose daily demand standard deviation is
 
-[
-sigma_A=10.
-]
+$$
+\sigma_A=10.
+$$
 
 Then lead-time demand standard deviation is
 
-[
-sigma_{L,A}
+$$
+\sigma_{L,A}
 =
-10sqrt{4}
+10\sqrt{4}
 =
 20.
-]
+$$
 
 The safety factor is
 
-[
+$$
 z_A
 =
-rac{450-400}{20}
+\frac{450-400}{20}
 =
 2.5.
-]
+$$
 
 If lead-time demand is approximately normal, cycle service is
 
-[
-Pr(S_Lle450)
+$$
+\Pr(S_L\le450)
 =
-Phi(2.5)
-approx
+\Phi(2.5)
+\approx
 0.9938.
-]
+$$
 
 SKU A therefore receives approximately
 
-[
+$$
 99.4%
-]
+$$
 
 cycle service.
 
 For SKU B, suppose daily demand standard deviation is
 
-[
-sigma_B=50.
-]
+$$
+\sigma_B=50.
+$$
 
 Then
 
-[
-sigma_{L,B}
+$$
+\sigma_{L,B}
 =
-50sqrt{4}
+50\sqrt{4}
 =
 100.
-]
+$$
 
 The same safety stock now corresponds to
 
-[
+$$
 z_B
 =
-rac{450-400}{100}
+\frac{450-400}{100}
 =
 0.5.
-]
+$$
 
 The cycle service level is
 
-[
-Phi(0.5)
-approx
+$$
+\Phi(0.5)
+\approx
 0.6915.
-]
+$$
 
 So SKU B receives only about
 
-[
+$$
 69.1%
-]
+$$
 
 cycle service.
 
 The two items have the same:
 
-[
-	ext{mean demand},
-]
+$$
+\text{mean demand},
+$$
 
-[
-	ext{lead time},
-]
+$$
+\text{lead time},
+$$
 
-[
-	ext{safety-stock days},
-]
+$$
+\text{safety-stock days},
+$$
 
 and
 
-[
-	ext{reorder point relative to mean demand}.
-]
+$$
+\text{reorder point relative to mean demand}.
+$$
 
 Their stockout probabilities are radically different.
 
@@ -325,46 +325,46 @@ The demand distributions did.
 
 ## The hidden quantity is the coefficient of variation
 
-For fixed lead time (L), suppose safety stock is set to (k) days of mean demand:
+For fixed lead time $L$, suppose safety stock is set to $k$ days of mean demand:
 
-[
+$$
 SS
 =
-kmu_D.
-]
+k\mu_D.
+$$
 
 The corresponding safety factor is
 
-[
+$$
 z
 =
-rac{kmu_D}
-{sigma_Dsqrt{L}}.
-]
+\frac{k\mu_D}
+{\sigma_D\sqrt{L}}.
+$$
 
 Define the coefficient of variation
 
-[
+$$
 CV
 =
-rac{sigma_D}{mu_D}.
-]
+\frac{\sigma_D}{\mu_D}.
+$$
 
 Then
 
-[
+$$
 z
 =
-rac{k}{CVsqrt{L}}.
-]
+\frac{k}{CV\sqrt{L}}.
+$$
 
 This equation explains why a days-of-cover rule cannot imply the same service across items.
 
-For fixed (k) and (L),
+For fixed $k$ and $L$,
 
-[
-zproptorac{1}{CV}.
-]
+$$
+z\propto\frac{1}{CV}.
+$$
 
 Low-variability items receive much higher service than high-variability items.
 
@@ -378,53 +378,53 @@ If it is not intentional, the heuristic is making the decision anyway.
 
 Suppose the desired cycle service level is
 
-[
-alpha.
-]
+$$
+\alpha.
+$$
 
 Then the reorder point should satisfy
 
-[
-Pr(S_Lle r_alpha)
+$$
+\Pr(S_L\le r_\alpha)
 =
-alpha.
-]
+\alpha.
+$$
 
 Equivalently,
 
-[
-r_alpha
+$$
+r_\alpha
 =
-F_{S_L}^{-1}(alpha),
-]
+F_{S_L}^{-1}(\alpha),
+$$
 
 where (F_{S_L}) is the predictive distribution of demand over the protection period.
 
 Safety stock is then
 
-[
-SS_alpha
+$$
+SS_\alpha
 =
-F_{S_L}^{-1}(alpha)
+F_{S_L}^{-1}(\alpha)
 -
-mathbb E[S_L].
-]
+\mathbb E[S_L].
+$$
 
 This is the general definition.
 
 The familiar formula
 
-[
+$$
 SS
 =
-z_alphasigma_L
-]
+z_\alpha\sigma_L
+$$
 
 appears only when the predictive distribution is normal or when a normal approximation is acceptable.
 
 The quantile is fundamental.
 
-The (zsigma) expression is a model-specific shortcut.
+The $z\sigma$ expression is a model-specific shortcut.
 
 ## The two SKUs need very different safety-stock days for the same service
 
@@ -432,69 +432,69 @@ Return to the two items.
 
 Suppose both should achieve
 
-[
+$$
 95%
-]
+$$
 
 cycle service.
 
 For a normal distribution,
 
-[
+$$
 z_{0.95}
-approx
+\approx
 1.645.
-]
+$$
 
 For SKU A,
 
-[
+$$
 SS_A
 =
 1.645(20)
-approx
+\approx
 32.90.
-]
+$$
 
 Expressed in days of mean demand,
 
-[
-rac{32.90}{100}
-approx
+$$
+\frac{32.90}{100}
+\approx
 0.329
-	ext{ days}.
-]
+\text{ days}.
+$$
 
 For SKU B,
 
-[
+$$
 SS_B
 =
 1.645(100)
-approx
+\approx
 164.49.
-]
+$$
 
 In days of mean demand,
 
-[
-rac{164.49}{100}
-approx
+$$
+\frac{164.49}{100}
+\approx
 1.645
-	ext{ days}.
-]
+\text{ days}.
+$$
 
 The same 95% service target requires approximately
 
-[
+$$
 0.33
-]
+$$
 
 days of safety stock for SKU A and
 
-[
+$$
 1.65
-]
+$$
 
 days for SKU B.
 
@@ -510,11 +510,11 @@ Cycle service level is commonly defined as the probability that no stockout occu
 
 In the simple continuous-review setting,
 
-[
+$$
 CSL
 =
-Pr(S_Lle r).
-]
+\Pr(S_L\le r).
+$$
 
 A 95% cycle service level means that approximately 95% of replenishment cycles avoid a stockout under the model.
 
@@ -526,99 +526,99 @@ The distinction matters because two policies can have the same stockout probabil
 
 ## Fill rate depends on expected shortage size
 
-Let (Q) denote order quantity.
+Let $Q$ denote order quantity.
 
 A common approximation for fill rate is
 
-[
-eta
+$$
+\beta
 =
 1-
-rac{
-mathbb E[(S_L-r)^+]
+\frac{
+\mathbb E[(S_L-r)^+]
 }{
 Q
 }.
-]
+$$
 
 The numerator is expected units short per replenishment cycle.
 
 Under normal lead-time demand,
 
-[
+$$
 S_L
-sim
-mathcal N(mu_L,sigma_L^2),
-]
+\sim
+\mathcal N(\mu_L,\sigma_L^2),
+$$
 
 define
 
-[
+$$
 z
 =
-rac{r-mu_L}{sigma_L}.
-]
+\frac{r-\mu_L}{\sigma_L}.
+$$
 
 Expected shortage is
 
-[
-mathbb E[(S_L-r)^+]
+$$
+\mathbb E[(S_L-r)^+]
 =
-sigma_L
-left[
-phi(z)
+\sigma_L
+\left[
+\phi(z)
 -
-z(1-Phi(z))
-ight].
-]
+z(1-\Phi(z))
+\right].
+$$
 
 The term
 
-[
-phi(z)
+$$
+\phi(z)
 -
-z(1-Phi(z))
-]
+z(1-\Phi(z))
+$$
 
 is the standard normal loss function.
 
 Now suppose both SKUs are configured for 95% cycle service, so
 
-[
+$$
 z=1.645.
-]
+$$
 
 The standardized loss is approximately
 
-[
+$$
 0.0209.
-]
+$$
 
 For SKU A,
 
-[
-sigma_L=20,
-]
+$$
+\sigma_L=20,
+$$
 
 so expected shortage is about
 
-[
+$$
 0.42
-]
+$$
 
 units per cycle.
 
 For SKU B,
 
-[
-sigma_L=100,
-]
+$$
+\sigma_L=100,
+$$
 
 so expected shortage is about
 
-[
+$$
 2.09
-]
+$$
 
 units.
 
@@ -646,16 +646,16 @@ The important point is that safety stock cannot be chosen coherently until the s
 
 A policy optimised for
 
-[
-P(	ext{no stockout})
-]
+$$
+P(\text{no stockout})
+$$
 
 is not necessarily the policy that optimises
 
-[
-rac{	ext{units immediately filled}}
-{	ext{units demanded}}.
-]
+$$
+\frac{\text{units immediately filled}}
+{\text{units demanded}}.
+$$
 
 The probability model must match the operational question.
 
@@ -673,26 +673,26 @@ The cost-based newsvendor formulation gives a different route.
 
 Let
 
-[
+$$
 c_u
-]
+$$
 
 be unit underage cost and
 
-[
+$$
 c_h
-]
+$$
 
 unit overage cost.
 
 The economically optimal quantile is
 
-[
-alpha^ast
+$$
+\alpha^\ast
 =
-rac{c_u}
+\frac{c_u}
 {c_u+c_h}.
-]
+$$
 
 If the shortage cost is much larger, the selected quantile moves deeper into the upper tail.
 
@@ -708,39 +708,39 @@ Both depend on uncertainty.
 
 If lead time itself is random, the relevant demand variable becomes
 
-[
+$$
 S_L
 =
-sum_{t=1}^{L}D_t
-]
+\sum_{t=1}^{L}D_t
+$$
 
-with random (L).
+with random $L$.
 
 Under independence between daily demand and lead time,
 
-[
-mathbb E[S_L]
+$$
+\mathbb E[S_L]
 =
-mu_Dmathbb E[L]
-]
+\mu_D\mathbb E[L]
+$$
 
 and
 
-[
-operatorname{Var}(S_L)
+$$
+\operatorname{Var}(S_L)
 =
-sigma_D^2mathbb E[L]
+\sigma_D^2\mathbb E[L]
 +
-mu_D^2operatorname{Var}(L).
-]
+\mu_D^2\operatorname{Var}(L).
+$$
 
 The second term is the inventory uncertainty created by variable replenishment time.
 
 A safety-stock formula using only
 
-[
-sigma_Dsqrt{mathbb E[L]}
-]
+$$
+\sigma_D\sqrt{\mathbb E[L]}
+$$
 
 ignores it.
 
@@ -750,25 +750,25 @@ More importantly, mean and variance may still be insufficient when lead-time dem
 
 The correct object remains
 
-[
+$$
 F_{S_L}.
-]
+$$
 
 ## Protection period depends on the inventory policy
 
 For continuous review, the main exposure period is lead time.
 
-For periodic review with review interval (R), the system may need to cover demand over
+For periodic review with review interval $R$, the system may need to cover demand over
 
-[
+$$
 R+L.
-]
+$$
 
 Then the relevant random quantity is
 
-[
+$$
 S_{R+L}.
-]
+$$
 
 Safety stock calculated for lead time alone will be too small if the policy must also survive the review interval.
 
@@ -784,49 +784,49 @@ Normal safety-stock formulas work best when lead-time demand is sufficiently con
 
 Consider a low-volume item with lead-time demand
 
-[
+$$
 S_L
-sim
-operatorname{Poisson}(2).
-]
+\sim
+\operatorname{Poisson}(2).
+$$
 
 Mean demand is
 
-[
+$$
 2.
-]
+$$
 
 Suppose the desired cycle service level is 95%.
 
 For a Poisson distribution,
 
-[
-P(S_Lle4)
-approx
+$$
+P(S_L\le4)
+\approx
 0.947.
-]
+$$
 
 That is slightly below 95%.
 
 But
 
-[
-P(S_Lle5)
-approx
+$$
+P(S_L\le5)
+\approx
 0.983.
-]
+$$
 
 The smallest reorder point that achieves at least 95% service is therefore
 
-[
+$$
 r=5.
-]
+$$
 
 Safety stock relative to mean lead-time demand is
 
-[
+$$
 SS=5-2=3.
-]
+$$
 
 The service level jumps from about 94.7% to 98.3% because the distribution is discrete.
 
@@ -842,23 +842,23 @@ Suppose an item sells one unit occasionally and zero units most days.
 
 Its mean demand may be
 
-[
+$$
 0.2
-]
+$$
 
 units per day.
 
 A rule such as
 
-[
-SS=2	ext{ days of demand}
-]
+$$
+SS=2\text{ days of demand}
+$$
 
 produces
 
-[
+$$
 0.4
-]
+$$
 
 units of safety stock.
 
@@ -880,34 +880,34 @@ The relevant uncertainty is forecast error over the protection period.
 
 Suppose
 
-[
+$$
 e_{t+h}
 =
 D_{t+h}
 -
-hat D_{t+h}.
-]
+\hat D_{t+h}.
+$$
 
 Cumulative protection-period error is
 
-[
+$$
 E_H
 =
-sum_{h=1}^{H}e_{t+h}.
-]
+\sum_{h=1}^{H}e_{t+h}.
+$$
 
 Its variance is
 
-[
-operatorname{Var}(E_H)
+$$
+\operatorname{Var}(E_H)
 =
-sum_h
-operatorname{Var}(e_{t+h})
+\sum_h
+\operatorname{Var}(e_{t+h})
 +
 2
-sum_{h<k}
-operatorname{Cov}(e_{t+h},e_{t+k}).
-]
+\sum_{h<k}
+\operatorname{Cov}(e_{t+h},e_{t+k}).
+$$
 
 If forecast errors are correlated across horizons, multiplying one-step error variance by the horizon underestimates or overestimates the uncertainty.
 
@@ -921,25 +921,25 @@ Historical demand variance is not always the same as forecast uncertainty.
 
 Suppose demand is modelled as
 
-[
+$$
 D_t
-sim
-mathcal N(mu,sigma^2),
-]
+\sim
+\mathcal N(\mu,\sigma^2),
+$$
 
-but (mu) and (sigma) are estimated from limited history.
+but $\mu$ and $\sigma$ are estimated from limited history.
 
 A plug-in calculation uses
 
-[
-hatmu
-]
+$$
+\hat\mu
+$$
 
 and
 
-[
-hatsigma
-]
+$$
+\hat\sigma
+$$
 
 as though they were known.
 
@@ -947,14 +947,14 @@ The resulting predictive distribution is too narrow because uncertainty in the p
 
 A more complete predictive distribution integrates over parameter uncertainty:
 
-[
-p(D_{mathrm{future}}midmathcal D)
+$$
+p(D_{\mathrm{future}}\mid\mathcal D)
 =
-int
-p(D_{mathrm{future}}mid	heta)
-p(	hetamidmathcal D)
-,d	heta.
-]
+\int
+p(D_{\mathrm{future}}\mid\theta)
+p(\theta\mid\mathcal D)
+,d\theta.
+$$
 
 A frequentist predictive distribution reaches the same conceptual goal through a different construction.
 
@@ -968,17 +968,17 @@ A probabilistic forecast is well calibrated at that quantile when approximately 
 
 Formally, if
 
-[
+$$
 q_{0.95,t}
-]
+$$
 
 is the predicted quantile,
 
-[
-P(D_tle q_{0.95,t})
-approx
+$$
+P(D_t\le q_{0.95,t})
+\approx
 0.95
-]
+$$
 
 over the relevant validation set.
 
@@ -992,9 +992,9 @@ For safety stock, tail calibration is operational calibration.
 
 Suppose demand forecasts are systematically low:
 
-[
-mathbb E[D-hat D]>0.
-]
+$$
+\mathbb E[D-\hat D]>0.
+$$
 
 A planner may increase safety stock until service recovers.
 
@@ -1002,25 +1002,25 @@ This can hide the forecasting problem.
 
 The buffer is now compensating for two distinct components:
 
-[
-	ext{systematic bias}
+$$
+\text{systematic bias}
 +
-	ext{random uncertainty}.
-]
+\text{random uncertainty}.
+$$
 
 That makes the safety stock harder to interpret and less transferable when forecast bias changes.
 
 A cleaner decomposition is
 
-[
+$$
 r
 =
-	ext{forecasted protection-period demand}
+\text{forecasted protection-period demand}
 +
-	ext{bias correction}
+\text{bias correction}
 +
-	ext{uncertainty buffer}.
-]
+\text{uncertainty buffer}.
+$$
 
 Not every system needs those terms literally separated in software.
 
@@ -1034,35 +1034,35 @@ Suppose two locations hold inventory separately.
 
 Their demands are
 
-[
+$$
 D_1
-]
+$$
 
 and
 
-[
+$$
 D_2.
-]
+$$
 
 If inventory is pooled, aggregate demand is
 
-[
+$$
 D_T
 =
 D_1+D_2.
-]
+$$
 
 Variance is
 
-[
-operatorname{Var}(D_T)
+$$
+\operatorname{Var}(D_T)
 =
-operatorname{Var}(D_1)
+\operatorname{Var}(D_1)
 +
-operatorname{Var}(D_2)
+\operatorname{Var}(D_2)
 +
-2operatorname{Cov}(D_1,D_2).
-]
+2\operatorname{Cov}(D_1,D_2).
+$$
 
 If demands are independent, pooling reduces variability relative to simply adding two separate safety buffers.
 
@@ -1109,15 +1109,15 @@ At each historical decision date:
 
 The empirical cycle service level is then
 
-[
-widehat{CSL}
+$$
+\widehat{CSL}
 =
-rac{
-	ext{cycles without stockout}
+\frac{
+\text{cycles without stockout}
 }{
-	ext{total completed cycles}
+\text{total completed cycles}
 }.
-]
+$$
 
 If a nominal 95% policy produces 82% historically, the discrepancy is information.
 
@@ -1133,11 +1133,11 @@ It also raises inventory.
 
 Under a simple policy, expected cycle stock and safety stock contribute differently to average inventory, but the broad relation is unavoidable:
 
-[
-	ext{higher protection}
-Rightarrow
-	ext{more capital tied in stock}
-]
+$$
+\text{higher protection}
+\Rightarrow
+\text{more capital tied in stock}
+$$
 
 unless another part of the system changes.
 
@@ -1145,21 +1145,21 @@ That is why "maximize service level" is rarely a complete objective.
 
 A cost formulation may include:
 
-[
+$$
 C
 =
 c_h
-mathbb E[	ext{inventory}]
+\mathbb E[\text{inventory}]
 +
 c_s
-mathbb E[	ext{shortage}]
+\mathbb E[\text{shortage}]
 +
 c_o
-mathbb E[	ext{orders}]
+\mathbb E[\text{orders}]
 +
 c_e
-mathbb E[	ext{expediting}].
-]
+\mathbb E[\text{expediting}].
+$$
 
 Safety stock is one control variable inside that decision problem.
 
@@ -1169,57 +1169,57 @@ The service target is meaningful only in relation to the costs and operational c
 
 The two SKUs both had:
 
-[
-mu_D=100,
-]
+$$
+\mu_D=100,
+$$
 
-[
+$$
 L=4,
-]
+$$
 
 and safety stock equal to half a day of mean demand:
 
-[
+$$
 SS=50.
-]
+$$
 
 For SKU A,
 
-[
-sigma_D=10,
-]
+$$
+\sigma_D=10,
+$$
 
 which produced
 
-[
-CSLapprox99.4%.
-]
+$$
+CSL\approx99.4%.
+$$
 
 For SKU B,
 
-[
-sigma_D=50,
-]
+$$
+\sigma_D=50,
+$$
 
 which produced
 
-[
-CSLapprox69.1%.
-]
+$$
+CSL\approx69.1%.
+$$
 
 The same safety-stock rule created a difference of more than thirty percentage points in cycle service.
 
 If the intended target was 95%, the correct buffers under the normal approximation were approximately
 
-[
+$$
 32.9
-]
+$$
 
 and
 
-[
+$$
 164.5
-]
+$$
 
 units.
 

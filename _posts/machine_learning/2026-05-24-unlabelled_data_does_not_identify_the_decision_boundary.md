@@ -22,7 +22,7 @@ excerpt: >-
   label mechanism.
 summary: >-
   A mathematical treatment of why semi-supervised learning requires structural
-  assumptions. The article separates the marginal distribution P(X) from the
+  assumptions. The article separates the marginal distribution P$X$ from the
   conditional distribution P(Y|X), shows why unlabelled data alone cannot identify
   a classifier, and develops the smoothness, cluster, low-density separation,
   manifold and generative assumptions as explicit bridges between the two.
@@ -41,13 +41,13 @@ why_this_exists: >-
   contains additional information. That statement is incomplete. Unlabelled data
   contains information about the distribution of X. A classifier needs information
   about Y given X. The useful question is therefore which assumptions allow one to
-  infer something about P(Y|X) from P(X).
+  infer something about P(Y|X) from P$X$.
 evidence: >-
   Classical semi-supervised learning theory, the standard smoothness, cluster and
   manifold assumptions, and later work on conditions under which unlabelled data
   can improve learning rates.
 methodology: >-
-  Start from the factorisation P(X,Y)=P(Y|X)P(X), construct distributions with the
+  Start from the factorisation P(X,Y)=P(Y|X)P$X$, construct distributions with the
   same feature marginal but different label mechanisms, then examine which
   additional structural assumptions make the marginal informative for
   classification.
@@ -65,7 +65,7 @@ header:
 Suppose we have a small labelled sample
 
 $$
-mathcal{D}_L
+\mathcal{D}_L
 =
 {(x_i,y_i)}_{i=1}^{n_L}
 $$
@@ -73,7 +73,7 @@ $$
 and a much larger unlabelled sample
 
 $$
-mathcal{D}_U
+\mathcal{D}_U
 =
 {x_j}_{j=1}^{n_U}.
 $$
@@ -81,7 +81,7 @@ $$
 The usual intuition behind semi-supervised learning is that
 
 $$
-n_U gg n_L
+n_U \gg n_L
 $$
 
 should help because the unlabelled observations reveal more of the structure of the data.
@@ -97,7 +97,7 @@ $$
 A classifier, however, needs information about the conditional distribution
 
 $$
-P(Ymid X).
+P(Y\mid X).
 $$
 
 Those are different objects.
@@ -113,26 +113,26 @@ For classification, the joint distribution can be written as
 $$
 P(X,Y)
 =
-P(Ymid X)P_X(X).
+P(Y\mid X)P_X(X).
 $$
 
 The Bayes classifier depends on the posterior class probabilities. In the binary case, define
 
 $$
-eta(x)
+\eta(x)
 =
-P(Y=1mid X=x).
+P(Y=1\mid X=x).
 $$
 
 Under equal misclassification costs, the Bayes rule is
 
 $$
-f^star(x)
+f^\star(x)
 =
-mathbb{1}
-left{
-eta(x)>rac{1}{2}
-ight}.
+\mathbb{1}
+\left\{
+\eta(x)>\frac{1}{2}
+\right\}.
 $$
 
 An infinitely large unlabelled sample can, in principle, identify the marginal distribution
@@ -146,7 +146,7 @@ arbitrarily well.
 But the decision boundary depends on
 
 $$
-eta(x).
+\eta(x).
 $$
 
 Knowing $P_X$ exactly does not generally identify $eta$.
@@ -158,7 +158,7 @@ That is not a technical nuisance. It is an identifiability problem.
 Consider a one-dimensional feature distribution
 
 $$
-Xsim operatorname{Unif}(-2,2).
+X\sim \operatorname{Unif}(-2,2).
 $$
 
 Now define two possible label mechanisms.
@@ -166,9 +166,9 @@ Now define two possible label mechanisms.
 Under the first,
 
 $$
-eta_1(x)
+\eta_1(x)
 =
-mathbb{1}{x>0}.
+\mathbb{1}{x>0}.
 $$
 
 The optimal boundary lies at zero.
@@ -176,9 +176,9 @@ The optimal boundary lies at zero.
 Under the second,
 
 $$
-eta_2(x)
+\eta_2(x)
 =
-mathbb{1}{|x|>1}.
+\mathbb{1}{|x|>1}.
 $$
 
 The optimal classifier has two boundaries, at $-1$ and $1$.
@@ -196,7 +196,7 @@ The information required to distinguish the two is label information.
 More generally, for a fixed marginal $P_X$, there are infinitely many possible conditional distributions
 
 $$
-P(Ymid X)
+P(Y\mid X)
 $$
 
 and therefore infinitely many possible decision boundaries.
@@ -204,10 +204,10 @@ and therefore infinitely many possible decision boundaries.
 This gives a useful principle:
 
 $$
-oxed{
+\boxed{
 P_X
-	ext{ does not identify }
-P(Ymid X)
+\text{ does not identify }
+P(Y\mid X)
 }
 $$
 
@@ -224,7 +224,7 @@ It can estimate where observations concentrate. It can reveal multimodality, loc
 In other words, it tells us about the geometry of
 
 $$
-mathcal{X}
+\mathcal{X}
 $$
 
 under the observed distribution.
@@ -233,7 +233,7 @@ But geometry becomes useful for classification only if it is related to labels.
 
 That relation is introduced through assumptions.
 
-The major semi-supervised learning assumptions are not implementation details. They are the statistical mechanism by which information about $P_X$ is allowed to constrain $P(Ymid X)$.
+The major semi-supervised learning assumptions are not implementation details. They are the statistical mechanism by which information about $P_X$ is allowed to constrain $P$Y\mid X$$.
 
 ## The Smoothness Assumption
 
@@ -246,16 +246,16 @@ Informally:
 For probabilistic classification, this means that if $x$ and $x'$ are close under a meaningful geometry, then
 
 $$
-eta(x)
-approx
-eta(x').
+\eta(x)
+\approx
+\eta(x').
 $$
 
 One could express a local version as
 
 $$
-|eta(x)-eta(x')|
-leq
+|\eta(x)-\eta(x')|
+\leq
 L,d(x,x')
 $$
 
@@ -282,15 +282,15 @@ Suppose a decision is determined by
 $$
 Y
 =
-mathbb{1}{x>c}.
+\mathbb{1}{x>c}.
 $$
 
 Two observations can be arbitrarily close,
 
 $$
-x=c-arepsilon,
-qquad
-x'=c+arepsilon,
+x=c-\varepsilon,
+\qquad
+x'=c+\varepsilon,
 $$
 
 while having opposite labels.
@@ -324,21 +324,21 @@ Suppose
 $$
 P_X(x)
 =
-rac{1}{2}
-mathcal{N}(-3,1)
+\frac{1}{2}
+\mathcal{N}(-3,1)
 +
-rac{1}{2}
-mathcal{N}(3,1).
+\frac{1}{2}
+\mathcal{N}(3,1).
 $$
 
 If the label mechanism is approximately
 
 $$
 Y=
-egin{cases}
-0, & X 	ext{ belongs to the left component},\
-1, & X 	ext{ belongs to the right component},
-end{cases}
+\begin{cases}
+0, & X \text{ belongs to the left component},\\
+1, & X \text{ belongs to the right component},
+\end{cases}
 $$
 
 then estimating the density structure from unlabelled data constrains the classifier strongly.
@@ -352,11 +352,11 @@ Now keep exactly the same marginal distribution
 $$
 P_X(x)
 =
-rac{1}{2}
-mathcal{N}(-3,1)
+\frac{1}{2}
+\mathcal{N}(-3,1)
 +
-rac{1}{2}
-mathcal{N}(3,1),
+\frac{1}{2}
+\mathcal{N}(3,1),
 $$
 
 but change the label mechanism.
@@ -364,7 +364,7 @@ but change the label mechanism.
 Suppose instead that
 
 $$
-P(Y=1mid X=x)
+P(Y=1\mid X=x)
 $$
 
 depends on whether $x$ lies near the centre or the tail of either Gaussian component.
@@ -398,9 +398,9 @@ is large.
 In a binary problem, one might prefer a decision surface
 
 $$
-mathcal{B}
+\mathcal{B}
 =
-{x:eta(x)=1/2}
+{x:\eta(x)=1/2}
 $$
 
 that passes through low-density regions of the feature distribution.
@@ -424,7 +424,7 @@ Nothing in probability theory forbids that situation.
 Let
 
 $$
-Xsim mathcal{N}(0,1)
+X\sim \mathcal{N}(0,1)
 $$
 
 and define
@@ -432,7 +432,7 @@ and define
 $$
 Y
 =
-mathbb{1}{X>0}.
+\mathbb{1}{X>0}.
 $$
 
 The Bayes boundary is
@@ -450,12 +450,12 @@ The unlabelled sample becomes more informative about the wrong objective as its 
 This is a useful reminder:
 
 $$
-oxed{
-	ext{more unlabelled data strengthens both correct and incorrect assumptions}
+\boxed{
+\text{more unlabelled data strengthens both correct and incorrect assumptions}
 }
 $$
 
-Large $n_U$ does not rescue a misspecified connection between $P_X$ and $P(Ymid X)$.
+Large $n_U$ does not rescue a misspecified connection between $P_X$ and $P$Y\mid X$$.
 
 It can make the consequences of the misspecification more stable.
 
@@ -466,7 +466,7 @@ High-dimensional observations often occupy only a small part of the ambient spac
 A data vector may live in
 
 $$
-mathbb{R}^{1000}
+\mathbb{R}^{1000}
 $$
 
 while the effective degrees of freedom are much smaller.
@@ -474,9 +474,9 @@ while the effective degrees of freedom are much smaller.
 The manifold assumption says, roughly, that the feature distribution is concentrated near a lower-dimensional manifold
 
 $$
-mathcal{M}
-subset
-mathbb{R}^p,
+\mathcal{M}
+\subset
+\mathbb{R}^p,
 $$
 
 and that the label function varies smoothly along that manifold.
@@ -484,7 +484,7 @@ and that the label function varies smoothly along that manifold.
 Distances measured through the ambient space may then be misleading. What matters is distance along
 
 $$
-mathcal{M}.
+\mathcal{M}.
 $$
 
 This motivates graph-based semi-supervised methods.
@@ -502,11 +502,11 @@ where $K$ is a similarity kernel. Labels can then be propagated under the assump
 A common smoothness penalty has the form
 
 $$
-sum_{i,j}
+\sum_{i,j}
 w_{ij}
-left(
+\left(
 f(x_i)-f(x_j)
-ight)^2.
+\right)^2.
 $$
 
 In matrix form, this becomes a graph-Laplacian regulariser,
@@ -536,7 +536,7 @@ Imagine observations lying on a circle.
 The feature geometry may be essentially one-dimensional, parameterised by an angle
 
 $$
-	heta.
+\theta.
 $$
 
 If the label changes once around the circle, smoothness along the manifold may be a sensible prior.
@@ -548,10 +548,10 @@ The manifold can be real and estimated correctly while still being unhelpful for
 This is the recurring pattern:
 
 $$
-	ext{structure in }P_X
+\text{structure in }P_X
 
-otRightarrow
-	ext{label-relevant structure}.
+ot\Rightarrow
+\text{label-relevant structure}.
 $$
 
 Semi-supervised learning requires the implication to be approximately valid.
@@ -565,7 +565,7 @@ Suppose
 $$
 P(X,Y)
 =
-P(Y)P(Xmid Y;	heta).
+P(Y)P(X\mid Y;\theta).
 $$
 
 If the model family is correctly specified, unlabelled observations can help estimate parameters of the marginal mixture
@@ -573,8 +573,8 @@ If the model family is correctly specified, unlabelled observations can help est
 $$
 P_X(x)
 =
-sum_y
-P(Y=y)P(xmid Y=y;	heta).
+\sum_y
+P(Y=y)P(x\mid Y=y;\theta).
 $$
 
 Those parameters may also determine the class-conditional distributions used by the classifier.
@@ -594,7 +594,7 @@ $$
 well but represents
 
 $$
-P(Ymid X)
+P(Y\mid X)
 $$
 
 poorly.
@@ -626,10 +626,10 @@ $$
 but different conditional label distributions,
 
 $$
-P_1(Ymid X)
+P_1(Y\mid X)
 
 eq
-P_2(Ymid X).
+P_2(Y\mid X).
 $$
 
 Then no procedure observing only additional unlabelled draws from $P_X$ can distinguish those two worlds.
@@ -647,23 +647,23 @@ This is why they are not optional philosophical decorations. They provide the id
 Suppose the classifier depends on parameters
 
 $$
-	heta.
+\theta.
 $$
 
 With labelled data only, the posterior is
 
 $$
-p(	hetamid X_L,Y_L)
-propto
-p(Y_Lmid X_L,	heta)
-p(X_Lmid	heta)
-p(	heta).
+p(\theta\mid X_L,Y_L)
+\propto
+p(Y_L\mid X_L,\theta)
+p(X_L\mid\theta)
+p(\theta).
 $$
 
 If the discriminative model is specified only through
 
 $$
-p(Ymid X,	heta),
+p(Y\mid X,\theta),
 $$
 
 then unlabelled observations contribute nothing unless the model also specifies how
@@ -672,12 +672,12 @@ $$
 X
 $$
 
-depends on $	heta$.
+depends on $\theta$.
 
 The unlabelled likelihood needs a term such as
 
 $$
-p(X_Umid	heta).
+p(X_U\mid\theta).
 $$
 
 If the parameters controlling the feature distribution are unrelated to the parameters controlling the conditional labels, then learning the first does not improve inference about the second.
@@ -784,11 +784,11 @@ It is the control condition that tells us whether the unlabelled information add
 Report
 
 $$
-Delta
+\Delta
 =
-R_{	ext{sup}}
+R_{\text{sup}}
 -
-R_{	ext{SSL}}
+R_{\text{SSL}}
 $$
 
 or the corresponding performance difference using a metric appropriate to the task.
@@ -887,7 +887,7 @@ $$
 The classifier depends on
 
 $$
-P(Ymid X).
+P(Y\mid X).
 $$
 
 The gap between those two objects is closed by assumptions.
@@ -907,11 +907,11 @@ The question is whether it contains information about the particular conditional
 Formally,
 
 $$
-oxed{
-	ext{unlabelled data helps classification only through assumptions linking }
+\boxed{
+\text{unlabelled data helps classification only through assumptions linking }
 P_X
-	ext{ to }
-P(Ymid X)
+\text{ to }
+P(Y\mid X)
 }
 $$
 

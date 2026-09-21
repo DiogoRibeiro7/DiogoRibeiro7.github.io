@@ -96,96 +96,96 @@ Lead time determines how strongly those revisions matter.
 
 ## Orders contain demand replacement and forecast correction
 
-Let customer demand in period (t) be
+Let customer demand in period $t$ be
 
-[
+$$
 D_t.
-]
+$$
 
 Assume for the moment that demand is independent over time with
 
-[
-mathbb E[D_t]=mu
-]
+$$
+\mathbb E[D_t]=\mu
+$$
 
 and
 
-[
-operatorname{Var}(D_t)=sigma^2.
-]
+$$
+\operatorname{Var}(D_t)=\sigma^2.
+$$
 
-Suppose the retailer forecasts future demand using an (n) period moving average,
+Suppose the retailer forecasts future demand using an $n$ period moving average,
 
-[
+$$
 F_t
 =
-rac{1}{n}
-sum_{j=0}^{n-1}
+\frac{1}{n}
+\sum_{j=0}^{n-1}
 D_{t-j}.
-]
+$$
 
-Let replenishment lead time be (L) periods.
+Let replenishment lead time be $L$ periods.
 
 A simple order up to policy sets the desired pipeline approximately proportional to expected demand during lead time,
 
-[
+$$
 S_t
 =
 LF_t.
-]
+$$
 
 Ignore a constant safety stock for the moment. A constant buffer changes the level of the target but disappears when the target change is calculated.
 
-The order in period (t) must replace current demand and adjust the pipeline from the previous target to the new one:
+The order in period $t$ must replace current demand and adjust the pipeline from the previous target to the new one:
 
-[
+$$
 O_t
 =
 D_t
 +
 S_t-S_{t-1}.
-]
+$$
 
 Substituting the target gives
 
-[
+$$
 O_t
 =
 D_t
 +
 L(F_t-F_{t-1}).
-]
+$$
 
 The moving average changes only because one new observation enters and one old observation leaves:
 
-[
+$$
 F_t-F_{t-1}
 =
-rac{D_t-D_{t-n}}{n}.
-]
+\frac{D_t-D_{t-n}}{n}.
+$$
 
 Therefore,
 
-[
+$$
 O_t
 =
 D_t
 +
-rac{L}{n}
+\frac{L}{n}
 (D_t-D_{t-n}).
-]
+$$
 
 Collecting terms,
 
-[
+$$
 O_t
 =
-left(
-1+rac{L}{n}
-ight)D_t
+\left(
+1+\frac{L}{n}
+\right)D_t
 -
-rac{L}{n}D_{t-n}.
-]
+\frac{L}{n}D_{t-n}.
+$$
 
 This equation contains the bullwhip mechanism.
 
@@ -197,23 +197,23 @@ It passes current demand plus a correction created by forecast updating.
 
 The expected order is
 
-[
-mathbb E[O_t]
+$$
+\mathbb E[O_t]
 =
-left(
-1+rac{L}{n}
-ight)mu
+\left(
+1+\frac{L}{n}
+\right)\mu
 -
-rac{L}{n}mu.
-]
+\frac{L}{n}\mu.
+$$
 
 So
 
-[
-mathbb E[O_t]
+$$
+\mathbb E[O_t]
 =
-mu.
-]
+\mu.
+$$
 
 On average, the retailer orders exactly the same quantity that customers demand.
 
@@ -225,71 +225,71 @@ It is a variance problem.
 
 ## The variance is larger than customer demand variance
 
-Because (D_t) and (D_{t-n}) are independent under the stated demand model,
+Because $D_t$ and $D_{t-n}$ are independent under the stated demand model,
 
-[
-operatorname{Cov}(D_t,D_{t-n})=0.
-]
+$$
+\operatorname{Cov}(D_t,D_{t-n})=0.
+$$
 
 Therefore,
 
-[
-operatorname{Var}(O_t)
+$$
+\operatorname{Var}(O_t)
 =
-left(
-1+rac{L}{n}
-ight)^2sigma^2
+\left(
+1+\frac{L}{n}
+\right)^2\sigma^2
 +
-left(
-rac{L}{n}
-ight)^2sigma^2.
-]
+\left(
+\frac{L}{n}
+\right)^2\sigma^2.
+$$
 
 Dividing by demand variance,
 
-[
+$$
 B
 =
-rac{
-operatorname{Var}(O_t)
+\frac{
+\operatorname{Var}(O_t)
 }{
-operatorname{Var}(D_t)
+\operatorname{Var}(D_t)
 }
-]
+$$
 
 gives the bullwhip ratio
 
-[
+$$
 B
 =
-left(
-1+rac{L}{n}
-ight)^2
+\left(
+1+\frac{L}{n}
+\right)^2
 +
-left(
-rac{L}{n}
-ight)^2.
-]
+\left(
+\frac{L}{n}
+\right)^2.
+$$
 
 Expanding,
 
-[
+$$
 B
 =
 1
 +
-rac{2L}{n}
+\frac{2L}{n}
 +
-2left(
-rac{L}{n}
-ight)^2.
-]
+2\left(
+\frac{L}{n}
+\right)^2.
+$$
 
 Whenever
 
-[
+$$
 L>0,
-]
+$$
 
 the ratio exceeds one.
 
@@ -307,99 +307,99 @@ The control rule is enough.
 
 Suppose customer demand has
 
-[
-mu=100
-]
+$$
+\mu=100
+$$
 
 and
 
-[
-sigma=10.
-]
+$$
+\sigma=10.
+$$
 
 Use an eight period moving average,
 
-[
+$$
 n=8,
-]
+$$
 
 with lead time
 
-[
+$$
 L=4.
-]
+$$
 
 The bullwhip ratio is
 
-[
+$$
 B
 =
 1
 +
-rac{2(4)}{8}
+\frac{2(4)}{8}
 +
-2left(
-rac{4}{8}
-ight)^2.
-]
+2\left(
+\frac{4}{8}
+\right)^2.
+$$
 
 Thus,
 
-[
+$$
 B
 =
 1+1+0.5
 =
 2.5.
-]
+$$
 
 Customer demand variance is
 
-[
+$$
 100.
-]
+$$
 
 Order variance is
 
-[
+$$
 250.
-]
+$$
 
 Customer demand standard deviation is
 
-[
+$$
 10.
-]
+$$
 
 Order standard deviation is
 
-[
-sqrt{250}
-approx
+$$
+\sqrt{250}
+\approx
 15.81.
-]
+$$
 
 The average order remains
 
-[
+$$
 100.
-]
+$$
 
 The coefficient of variation therefore rises from
 
-[
-rac{10}{100}
+$$
+\frac{10}{100}
 =
 0.10
-]
+$$
 
 to approximately
 
-[
-rac{15.81}{100}
+$$
+\frac{15.81}{100}
 =
 0.158.
-]
+$$
 
 Nothing about the consumer market became more unstable.
 
@@ -409,65 +409,65 @@ The replenishment policy transformed the variability.
 
 Keep the moving average window fixed at
 
-[
+$$
 n=8.
-]
+$$
 
 If lead time is only one period,
 
-[
+$$
 L=1,
-]
+$$
 
 then
 
-[
+$$
 B
 =
 1
 +
-rac{2}{8}
+\frac{2}{8}
 +
-2left(
-rac{1}{8}
-ight)^2
-approx
+2\left(
+\frac{1}{8}
+\right)^2
+\approx
 1.281.
-]
+$$
 
 If
 
-[
+$$
 L=4,
-]
+$$
 
 then
 
-[
+$$
 B=2.5.
-]
+$$
 
 If
 
-[
+$$
 L=8,
-]
+$$
 
 then
 
-[
+$$
 B
 =
 1+2+2
 =
 5.
-]
+$$
 
 The relationship is nonlinear because the final term contains
 
-[
+$$
 L^2.
-]
+$$
 
 Long lead time does more than delay replenishment.
 
@@ -483,67 +483,67 @@ Long lead time also makes forecast adjustments more consequential.
 
 Now keep
 
-[
+$$
 L=4
-]
+$$
 
 but change the moving average window.
 
 For
 
-[
+$$
 n=4,
-]
+$$
 
 the ratio is
 
-[
+$$
 B
 =
 1+2+2
 =
 5.
-]
+$$
 
 For
 
-[
+$$
 n=8,
-]
+$$
 
 we obtained
 
-[
+$$
 B=2.5.
-]
+$$
 
 For
 
-[
+$$
 n=20,
-]
+$$
 
-[
+$$
 B
 =
 1
 +
-rac{8}{20}
+\frac{8}{20}
 +
-2left(
-rac{4}{20}
-ight)^2.
-]
+2\left(
+\frac{4}{20}
+\right)^2.
+$$
 
 Therefore,
 
-[
+$$
 B
 =
 1+0.4+0.08
 =
 1.48.
-]
+$$
 
 A smoother forecast produces less order amplification.
 
@@ -557,63 +557,63 @@ The tradeoff is between responsiveness and variance amplification.
 
 Suppose demand has been stable at
 
-[
+$$
 100
-]
+$$
 
 and then permanently increases to
 
-[
+$$
 120.
-]
+$$
 
 Use the previous parameters,
 
-[
+$$
 L=4
-]
+$$
 
 and
 
-[
+$$
 n=8.
-]
+$$
 
 Each new observation of 120 replaces one old observation of 100 in the moving average.
 
 The forecast therefore increases by
 
-[
-rac{120-100}{8}
+$$
+\frac{120-100}{8}
 =
 2.5
-]
+$$
 
 units each period during the transition.
 
 The desired pipeline changes by
 
-[
+$$
 L(2.5)
 =
 10.
-]
+$$
 
 Current demand is already
 
-[
+$$
 120.
-]
+$$
 
 The order becomes
 
-[
+$$
 O_t
 =
 120+10
 =
 130
-]
+$$
 
 during each period in which the moving average is still adjusting.
 
@@ -621,9 +621,9 @@ Once all eight historical observations have been replaced, the forecast reaches 
 
 Orders then return to
 
-[
+$$
 120.
-]
+$$
 
 The retailer therefore sends an order stream of roughly 130 during the adjustment even though final customer demand has already stabilised at 120.
 
@@ -639,31 +639,31 @@ This is one of the most important distinctions in supply chain data.
 
 An upstream supplier often observes
 
-[
+$$
 O_t,
-]
+$$
 
 not
 
-[
+$$
 D_t.
-]
+$$
 
 The supplier's observed demand therefore contains:
 
-[
-	ext{consumer demand}
+$$
+\text{consumer demand}
 +
-	ext{forecast revision}
+\text{forecast revision}
 +
-	ext{inventory correction}
+\text{inventory correction}
 +
-	ext{pipeline correction}
+\text{pipeline correction}
 +
-	ext{batching}
+\text{batching}
 +
-	ext{commercial behaviour}.
-]
+\text{commercial behaviour}.
+$$
 
 A forecasting model trained on upstream orders is not modelling pure market demand.
 
@@ -675,21 +675,21 @@ That distinction becomes critical when a company tries to infer end customer beh
 
 A simple empirical measure is
 
-[
+$$
 B
 =
-rac{
-operatorname{Var}(	ext{orders})
+\frac{
+\operatorname{Var}(\text{orders})
 }{
-operatorname{Var}(	ext{downstream demand})
+\operatorname{Var}(\text{downstream demand})
 }.
-]
+$$
 
 If
 
-[
+$$
 B>1,
-]
+$$
 
 order variance exceeds demand variance.
 
@@ -713,53 +713,53 @@ Order batching provides an extreme illustration.
 
 Suppose customer demand is perfectly constant:
 
-[
-D_t=mu.
-]
+$$
+D_t=\mu.
+$$
 
 Customer demand variance is
 
-[
+$$
 0.
-]
+$$
 
-Now suppose a retailer orders only once every (k) periods.
+Now suppose a retailer orders only once every $k$ periods.
 
 The order sequence is
 
-[
-0,0,ldots,0,kmu
-]
+$$
+0,0,\ldots,0,k\mu
+$$
 
-over each (k) period cycle.
+over each $k$ period cycle.
 
 The average order remains
 
-[
-mu.
-]
+$$
+\mu.
+$$
 
 Its variance is positive.
 
 In fact, over a complete batching cycle,
 
-[
-mathbb E[O^2]
+$$
+\mathbb E[O^2]
 =
-rac{1}{k}(kmu)^2
+\frac{1}{k}(k\mu)^2
 =
-kmu^2.
-]
+k\mu^2.
+$$
 
 Therefore,
 
-[
-operatorname{Var}(O)
+$$
+\operatorname{Var}(O)
 =
-kmu^2-mu^2
+k\mu^2-\mu^2
 =
-(k-1)mu^2.
-]
+(k-1)\mu^2.
+$$
 
 The classical variance ratio is not defined because demand variance is zero.
 
@@ -807,15 +807,15 @@ If orders adjust slowly, inventory may deviate further from target after a deman
 
 A supply chain therefore faces a control problem with competing objectives:
 
-[
-	ext{order smoothness}
-]
+$$
+\text{order smoothness}
+$$
 
 versus
 
-[
-	ext{inventory responsiveness}.
-]
+$$
+\text{inventory responsiveness}.
+$$
 
 Minimising bullwhip alone is not the complete operational objective.
 
@@ -873,15 +873,15 @@ Information quality and control policy solve different parts of the problem.
 
 Suppose a manufacturer receives both:
 
-[
-	ext{retailer sales}
-]
+$$
+\text{retailer sales}
+$$
 
 and
 
-[
-	ext{retailer orders}.
-]
+$$
+\text{retailer orders}.
+$$
 
 The two series should not be treated as interchangeable features.
 
@@ -899,15 +899,15 @@ A model should therefore state which process it is forecasting.
 
 Consider a chain with:
 
-[
-	ext{customer}
-ightarrow
-	ext{retailer}
-ightarrow
-	ext{distributor}
-ightarrow
-	ext{manufacturer}.
-]
+$$
+\text{customer}
+\rightarrow
+\text{retailer}
+\rightarrow
+\text{distributor}
+\rightarrow
+\text{manufacturer}.
+$$
 
 The retailer observes customer demand and generates orders.
 
@@ -933,32 +933,32 @@ This is why simulation, state space models, and control theoretic formulations a
 
 The simple derivation assumed
 
-[
-operatorname{Cov}(D_t,D_{t-n})=0.
-]
+$$
+\operatorname{Cov}(D_t,D_{t-n})=0.
+$$
 
 If demand is autocorrelated, then
 
-[
-operatorname{Var}(O_t)
+$$
+\operatorname{Var}(O_t)
 =
-left(
-1+rac{L}{n}
-ight)^2sigma^2
+\left(
+1+\frac{L}{n}
+\right)^2\sigma^2
 +
-left(
-rac{L}{n}
-ight)^2sigma^2
+\left(
+\frac{L}{n}
+\right)^2\sigma^2
 -
 2
-left(
-1+rac{L}{n}
-ight)
-rac{L}{n}
-operatorname{Cov}(D_t,D_{t-n}).
-]
+\left(
+1+\frac{L}{n}
+\right)
+\frac{L}{n}
+\operatorname{Cov}(D_t,D_{t-n}).
+$$
 
-Positive autocorrelation at lag (n) reduces this particular variance contribution.
+Positive autocorrelation at lag $n$ reduces this particular variance contribution.
 
 Negative autocorrelation increases it.
 
@@ -991,9 +991,9 @@ This mirrors the earlier result that forecast accuracy and inventory performance
 
 Bullwhip adds a third objective:
 
-[
-	ext{upstream variability}.
-]
+$$
+\text{upstream variability}.
+$$
 
 ## Capacity converts variance into cost
 
@@ -1001,23 +1001,23 @@ Suppose a plant has comfortable average capacity.
 
 Mean demand is
 
-[
+$$
 100.
-]
+$$
 
 Plant capacity is
 
-[
+$$
 125.
-]
+$$
 
 If customer demand standard deviation is only 10, capacity exceedance is relatively rare.
 
 If bullwhip raises order standard deviation to approximately
 
-[
+$$
 15.8,
-]
+$$
 
 the probability of an upstream order above 125 increases materially.
 
@@ -1051,17 +1051,17 @@ Those larger targets can generate even larger orders.
 
 The system can therefore create endogenous lead time:
 
-[
-	ext{large orders}
-ightarrow
-	ext{capacity congestion}
-ightarrow
-	ext{longer lead time}
-ightarrow
-	ext{larger pipeline target}
-ightarrow
-	ext{larger orders}.
-]
+$$
+\text{large orders}
+\rightarrow
+\text{capacity congestion}
+\rightarrow
+\text{longer lead time}
+\rightarrow
+\text{larger pipeline target}
+\rightarrow
+\text{larger orders}.
+$$
 
 A model that assumes fixed lead time can miss this amplification entirely.
 
@@ -1099,23 +1099,23 @@ Manual overrides can become another feedback term.
 
 Suppose a statistical forecast is
 
-[
+$$
 F_t.
-]
+$$
 
 A planner applies an override
 
-[
+$$
 A_t.
-]
+$$
 
 The final forecast is
 
-[
-F_t^{mathrm{final}}
+$$
+F_t^{\mathrm{final}}
 =
 F_t+A_t.
-]
+$$
 
 If replenishment responds to changes in the final forecast, volatile overrides can generate volatile orders even when they do not improve demand prediction.
 
@@ -1123,19 +1123,19 @@ Forecast Value Added should therefore be extended beyond accuracy.
 
 For supply chain control, useful questions include:
 
-[
-operatorname{Var}(A_t),
-]
+$$
+\operatorname{Var}(A_t),
+$$
 
-[
-operatorname{Cov}(A_t,D_{t+1}-F_t),
-]
+$$
+\operatorname{Cov}(A_t,D_{t+1}-F_t),
+$$
 
 and the effect of overrides on
 
-[
-operatorname{Var}(O_t).
-]
+$$
+\operatorname{Var}(O_t).
+$$
 
 An override that improves forecast error slightly but greatly increases upstream order variance may not improve the complete system.
 
@@ -1153,23 +1153,23 @@ Another system may have slowly changing order waves that remain visible after ag
 
 Useful analysis can therefore examine:
 
-[
+$$
 B_h
 =
-rac{
-operatorname{Var}
-left(
-sum_{j=1}^{h}O_{t+j}
-ight)
+\frac{
+\operatorname{Var}
+\left(
+\sum_{j=1}^{h}O_{t+j}
+\right)
 }{
-operatorname{Var}
-left(
-sum_{j=1}^{h}D_{t+j}
-ight)
+\operatorname{Var}
+\left(
+\sum_{j=1}^{h}D_{t+j}
+\right)
 }
-]
+$$
 
-for several horizons (h).
+for several horizons $h$.
 
 This reveals whether amplification is primarily short term or persistent.
 
@@ -1181,25 +1181,25 @@ Variance collapses all frequencies into one number.
 
 Supply chain oscillations often have structure across frequencies.
 
-Let (f_D(omega)) denote the spectral density of customer demand and (f_O(omega)) the spectral density of orders.
+Let (f_D$\omega$) denote the spectral density of customer demand and (f_O$\omega$) the spectral density of orders.
 
 A frequency specific amplification ratio is
 
-[
-G(omega)
+$$
+G(\omega)
 =
-rac{
-f_O(omega)
+\frac{
+f_O(\omega)
 }{
-f_D(omega)
+f_D(\omega)
 }.
-]
+$$
 
 If
 
-[
-G(omega)>1
-]
+$$
+G(\omega)>1
+$$
 
 over a frequency band, the replenishment process amplifies variation at those frequencies.
 
@@ -1240,39 +1240,39 @@ Information sharing reduces uncertainty when it reveals the variables that gener
 
 Return to
 
-[
+$$
 O_t
 =
 D_t
 +
 S_t-S_{t-1}.
-]
+$$
 
 The full target correction
 
-[
+$$
 S_t-S_{t-1}
-]
+$$
 
 is not the only possible policy.
 
 A damped rule can use only a fraction
 
-[
-0<gamma<1
-]
+$$
+0<\gamma<1
+$$
 
 of the adjustment:
 
-[
+$$
 O_t
 =
 D_t
 +
-gamma(S_t-S_{t-1}).
-]
+\gamma(S_t-S_{t-1}).
+$$
 
-Smaller (gamma) reduces the immediate order reaction.
+Smaller $\gamma$ reduces the immediate order reaction.
 
 It also slows correction of inventory and pipeline errors.
 
@@ -1286,13 +1286,13 @@ It depends on the cost of production variability relative to the cost of invento
 
 A supply chain can care about all of the following:
 
-[
-operatorname{Var}(O_t),
-]
+$$
+\operatorname{Var}(O_t),
+$$
 
-[
-operatorname{Var}(I_t),
-]
+$$
+\operatorname{Var}(I_t),
+$$
 
 service level,
 
@@ -1310,28 +1310,28 @@ Reducing one can worsen another.
 
 An optimisation problem can therefore take a form such as
 
-[
-min_pi
-left[
-lambda_1
-operatorname{Var}(O_t)
+$$
+\min_\pi
+\left[
+\lambda_1
+\operatorname{Var}(O_t)
 +
-lambda_2
-operatorname{Var}(I_t)
+\lambda_2
+\operatorname{Var}(I_t)
 +
-lambda_3
-mathbb E[	ext{shortage}]
+\lambda_3
+\mathbb E[\text{shortage}]
 +
-lambda_4
-mathbb E[	ext{capacity cost}]
-ight].
-]
+\lambda_4
+\mathbb E[\text{capacity cost}]
+\right].
+$$
 
 The replenishment policy
 
-[
-pi
-]
+$$
+\pi
+$$
 
 should be evaluated against the complete objective.
 
@@ -1347,37 +1347,37 @@ Before concluding that the market has become unstable, decompose the order proce
 
 Potential contributors include:
 
-[
-	ext{consumer demand variation}
-]
+$$
+\text{consumer demand variation}
+$$
 
-[
-+	ext{forecast revision}
-]
+$$
++\text{forecast revision}
+$$
 
-[
-+	ext{pipeline correction}
-]
+$$
++\text{pipeline correction}
+$$
 
-[
-+	ext{inventory correction}
-]
+$$
++\text{inventory correction}
+$$
 
-[
-+	ext{batching}
-]
+$$
++\text{batching}
+$$
 
-[
-+	ext{promotion timing}
-]
+$$
++\text{promotion timing}
+$$
 
-[
-+	ext{manual override}
-]
+$$
++\text{manual override}
+$$
 
-[
-+	ext{allocation gaming}.
-]
+$$
++\text{allocation gaming}.
+$$
 
 Some components reflect external demand.
 
@@ -1393,68 +1393,68 @@ A production team should not interpret forecast correction as new consumer deman
 
 Under the simple model,
 
-[
+$$
 F_t
 =
-rac{1}{n}
-sum_{j=0}^{n-1}D_{t-j},
-]
+\frac{1}{n}
+\sum_{j=0}^{n-1}D_{t-j},
+$$
 
 and
 
-[
+$$
 O_t
 =
 D_t+L(F_t-F_{t-1}).
-]
+$$
 
 This becomes
 
-[
+$$
 O_t
 =
-left(
-1+rac{L}{n}
-ight)D_t
+\left(
+1+\frac{L}{n}
+\right)D_t
 -
-rac{L}{n}D_{t-n}.
-]
+\frac{L}{n}D_{t-n}.
+$$
 
 For independent demand,
 
-[
-rac{
-operatorname{Var}(O_t)
+$$
+\frac{
+\operatorname{Var}(O_t)
 }{
-operatorname{Var}(D_t)
+\operatorname{Var}(D_t)
 }
 =
 1
 +
-rac{2L}{n}
+\frac{2L}{n}
 +
-2left(
-rac{L}{n}
-ight)^2.
-]
+2\left(
+\frac{L}{n}
+\right)^2.
+$$
 
 With
 
-[
+$$
 L=4
-]
+$$
 
 and
 
-[
+$$
 n=8,
-]
+$$
 
 the bullwhip ratio is
 
-[
+$$
 2.5.
-]
+$$
 
 The average order is still correct.
 

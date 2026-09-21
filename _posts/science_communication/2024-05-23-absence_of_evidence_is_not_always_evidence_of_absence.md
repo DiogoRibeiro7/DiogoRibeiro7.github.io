@@ -89,49 +89,49 @@ The issue is what effects remain compatible with the data.
 
 ## A point null and practical absence are different hypotheses
 
-Let (	heta) denote an unknown effect. For a difference in means, (	heta) could represent the population mean difference between two conditions. Suppose an estimator (hat	heta) is approximately normally distributed:
+Let $\theta$ denote an unknown effect. For a difference in means, $\theta$ could represent the population mean difference between two conditions. Suppose an estimator $\hat\theta$ is approximately normally distributed:
 
-[
-hat	heta
-sim
-mathcal N(	heta, s^2),
-]
+$$
+\hat\theta
+\sim
+\mathcal N(\theta, s^2),
+$$
 
-where (s) is the standard error.
+where $s$ is the standard error.
 
 The conventional two-sided null hypothesis is
 
-[
-H_0:	heta=0.
-]
+$$
+H_0:\theta=0.
+$$
 
 A corresponding test statistic is
 
-[
+$$
 Z
 =
-rac{hat	heta}{s}.
-]
+\frac{\hat\theta}{s}.
+$$
 
-At significance level (alpha=0.05), the null is rejected in a large-sample normal test when
+At significance level $\alpha=0.05$, the null is rejected in a large-sample normal test when
 
-[
+$$
 |Z|>1.96.
-]
+$$
 
-This procedure distinguishes data that cross a particular incompatibility threshold under (	heta=0) from data that do not. It does not directly test whether the effect is too small to matter.
+This procedure distinguishes data that cross a particular incompatibility threshold under $\theta=0$ from data that do not. It does not directly test whether the effect is too small to matter.
 
 That scientific question requires a different hypothesis.
 
-Suppose effects between (-Delta) and (Delta) would be considered practically negligible:
+Suppose effects between $-\Delta$ and $\Delta$ would be considered practically negligible:
 
-[
--Delta<	heta<Delta.
-]
+$$
+-\Delta<\theta<\Delta.
+$$
 
-The value (Delta) must come from substantive considerations. It may represent the smallest effect that would alter a decision, a clinically meaningful difference, an engineering tolerance, an economically relevant change, or another domain-specific criterion. It should not be chosen merely because it makes the observed result convenient.
+The value $\Delta$ must come from substantive considerations. It may represent the smallest effect that would alter a decision, a clinically meaningful difference, an engineering tolerance, an economically relevant change, or another domain-specific criterion. It should not be chosen merely because it makes the observed result convenient.
 
-Under this formulation, the question is no longer whether (	heta) is exactly zero. The question is whether effects of meaningful magnitude can be excluded.
+Under this formulation, the question is no longer whether $\theta$ is exactly zero. The question is whether effects of meaningful magnitude can be excluded.
 
 Those are different inferential tasks.
 
@@ -139,85 +139,85 @@ Those are different inferential tasks.
 
 Consider two studies that produce the same point estimate:
 
-[
-hat	heta=0.10.
-]
+$$
+\hat\theta=0.10.
+$$
 
-Suppose both use the conventional two-sided test of (H_0:	heta=0).
+Suppose both use the conventional two-sided test of $H_0:\theta=0$.
 
 In Study A, the standard error is
 
-[
+$$
 s_A=0.60.
-]
+$$
 
 The test statistic is
 
-[
+$$
 Z_A
 =
-rac{0.10}{0.60}
-approx
+\frac{0.10}{0.60}
+\approx
 0.167,
-]
+$$
 
-which gives a two-sided (p)-value of approximately
+which gives a two-sided $p$-value of approximately
 
-[
-p_Aapprox0.868.
-]
+$$
+p_A\approx0.868.
+$$
 
 The 95% confidence interval is
 
-[
+$$
 0.10
-pm
+\pm
 1.96(0.60),
-]
+$$
 
 or approximately
 
-[
+$$
 [-1.08, 1.28].
-]
+$$
 
 Now consider Study B, with the same point estimate but a much smaller standard error:
 
-[
+$$
 s_B=0.12.
-]
+$$
 
 Its test statistic is
 
-[
+$$
 Z_B
 =
-rac{0.10}{0.12}
-approx
+\frac{0.10}{0.12}
+\approx
 0.833,
-]
+$$
 
 giving
 
-[
-p_Bapprox0.405.
-]
+$$
+p_B\approx0.405.
+$$
 
 This result is also conventionally non-significant.
 
 Its 95% confidence interval, however, is
 
-[
+$$
 0.10
-pm
+\pm
 1.96(0.12),
-]
+$$
 
 or approximately
 
-[
+$$
 [-0.14, 0.34].
-]
+$$
 
 If the results are reduced to "both studies found no statistically significant effect", the distinction between them disappears.
 
@@ -227,7 +227,7 @@ Study A remains compatible with effects around (-1) and (+1). Depending on the s
 
 Study B is different. Its uncertainty interval is narrow. It has not established that the true effect is exactly zero, but it has excluded a much larger range of effects.
 
-The two studies therefore provide different evidence even though their point estimates are identical and both (p)-values exceed 0.05.
+The two studies therefore provide different evidence even though their point estimates are identical and both $p$-values exceed 0.05.
 
 ## Confidence intervals show what non-significance hides
 
@@ -237,29 +237,29 @@ That formal interpretation matters. So does the practical information contained 
 
 Study A produced
 
-[
+$$
 [-1.08, 1.28].
-]
+$$
 
 Study B produced
 
-[
+$$
 [-0.14, 0.34].
-]
+$$
 
 Both contain zero. Only the first contains effects of large magnitude.
 
 A statement such as "there was no significant difference" therefore compresses two distinct questions into one binary label:
 
-[
-	ext{Does the interval contain zero?}
-]
+$$
+\text{Does the interval contain zero?}
+$$
 
 and
 
-[
-	ext{What nonzero effects does the interval also contain?}
-]
+$$
+\text{What nonzero effects does the interval also contain?}
+$$
 
 The first question determines the conventional 0.05 significance result for a corresponding two-sided test. The second determines whether the study has learned enough to exclude scientifically important alternatives.
 
@@ -275,63 +275,63 @@ Those are not the same result.
 
 Suppose effects within
 
-[
+$$
 [-0.50, 0.50]
-]
+$$
 
 are considered negligible for the scientific problem at hand. Here,
 
-[
-Delta=0.50.
-]
+$$
+\Delta=0.50.
+$$
 
 A conventional test evaluates
 
-[
-H_0:	heta=0.
-]
+$$
+H_0:\theta=0.
+$$
 
 An equivalence test instead evaluates whether the data provide enough evidence to reject effects outside the negligible region.
 
 Using the two one-sided tests procedure, the composite null hypothesis is
 
-[
+$$
 H_0:
-	hetaleq-0.50
-quad	ext{or}quad
-	hetageq0.50.
-]
+\theta\leq-0.50
+\quad\text{or}\quad
+\theta\geq0.50.
+$$
 
 The alternative is
 
-[
+$$
 H_1:
--0.50<	heta<0.50.
-]
+-0.50<\theta<0.50.
+$$
 
-At level (alpha=0.05), equivalence is concluded only if both one-sided null components can be rejected.
+At level $\alpha=0.05$, equivalence is concluded only if both one-sided null components can be rejected.
 
 There is an equivalent confidence-interval interpretation. For the ordinary symmetric setting considered here, the 90% confidence interval must lie completely inside the equivalence bounds.
 
 For Study A,
 
-[
+$$
 0.10
-pm
+\pm
 1.645(0.60)
-]
+$$
 
 gives the 90% interval
 
-[
+$$
 [-0.89, 1.09].
-]
+$$
 
 This interval extends far outside
 
-[
+$$
 [-0.50, 0.50].
-]
+$$
 
 Study A therefore supports neither a conventional difference from zero nor equivalence within the chosen bounds.
 
@@ -339,23 +339,23 @@ It is inconclusive with respect to both questions.
 
 For Study B,
 
-[
+$$
 0.10
-pm
+\pm
 1.645(0.12)
-]
+$$
 
 gives
 
-[
+$$
 [-0.10, 0.30].
-]
+$$
 
 That interval lies entirely inside
 
-[
+$$
 [-0.50, 0.50].
-]
+$$
 
 Study B therefore supports equivalence under the pre-specified criterion.
 
@@ -373,15 +373,15 @@ This is what it means for absence of evidence to become evidence against effects
 
 A conclusion of equivalence does not establish
 
-[
-	heta=0.
-]
+$$
+\theta=0.
+$$
 
 It establishes something weaker and usually more useful:
 
-[
-|	heta|<Delta
-]
+$$
+|\theta|<\Delta
+$$
 
 is supported relative to the chosen inferential procedure and assumptions.
 
@@ -395,7 +395,7 @@ The equivalence margin makes that substantive criterion explicit.
 
 It also creates an opportunity for misuse.
 
-If the bound (Delta) is chosen after seeing the confidence interval, the test no longer represents an independent scientific standard. A researcher can always make equivalence easier to establish by widening the region declared negligible.
+If the bound $\Delta$ is chosen after seeing the confidence interval, the test no longer represents an independent scientific standard. A researcher can always make equivalence easier to establish by widening the region declared negligible.
 
 The scientific work therefore begins before the test is run.
 
@@ -407,58 +407,58 @@ The same problem can be expressed prospectively through statistical power.
 
 Power is the probability that a statistical procedure will reject the null hypothesis under a specified alternative, assuming the design and model used in the calculation are correct.
 
-For a simple two-group comparison with equal group sizes (n), common standard deviation (sigma), and a difference in population means (delta), the standard error of the difference is approximately
+For a simple two-group comparison with equal group sizes $n$, common standard deviation $\sigma$, and a difference in population means $\delta$, the standard error of the difference is approximately
 
-[
+$$
 s
 =
-sigma
-sqrt{rac{2}{n}}.
-]
+\sigma
+\sqrt{\frac{2}{n}}.
+$$
 
 The noncentrality parameter for a normal approximation is
 
-[
-lambda
+$$
+\lambda
 =
-rac{delta}{s}
+\frac{\delta}{s}
 =
-rac{delta}{sigma}
-sqrt{rac{n}{2}}.
-]
+\frac{\delta}{\sigma}
+\sqrt{\frac{n}{2}}.
+$$
 
-For a two-sided test at level (alpha=0.05), approximate power is
+For a two-sided test at level $\alpha=0.05$, approximate power is
 
-[
-Prleft(
-|Z+lambda|>1.96
-ight),
-]
+$$
+\Pr\left(
+|Z+\lambda|>1.96
+\right),
+$$
 
 where (Zsimmathcal N(0,1)).
 
 Suppose the scientifically important standardised effect is
 
-[
-rac{delta}{sigma}=0.50.
-]
+$$
+\frac{\delta}{\sigma}=0.50.
+$$
 
 With
 
-[
+$$
 n=16
-]
+$$
 
 per group,
 
-[
-lambda
+$$
+\lambda
 =
 0.50
-sqrt{rac{16}{2}}
-approx
+\sqrt{\frac{16}{2}}
+\approx
 1.414.
-]
+$$
 
 The resulting power is only about 0.29.
 
@@ -468,20 +468,20 @@ A non-significant result from such a design would not be surprising under a scie
 
 Now increase the design to
 
-[
+$$
 n=64
-]
+$$
 
 per group. Then
 
-[
-lambda
+$$
+\lambda
 =
 0.50
-sqrt{rac{64}{2}}
-approx
+\sqrt{\frac{64}{2}}
+\approx
 2.828.
-]
+$$
 
 Power rises to approximately 0.81.
 
@@ -513,7 +513,7 @@ After observing a non-significant result, researchers sometimes calculate power 
 
 That calculation adds little information.
 
-For a fixed significance level and test structure, observed power calculated from the observed effect is largely determined by the same test statistic that generated the (p)-value. A small observed effect produces a large (p)-value and, mechanically, a low observed-power calculation.
+For a fixed significance level and test structure, observed power calculated from the observed effect is largely determined by the same test statistic that generated the $p$-value. A small observed effect produces a large $p$-value and, mechanically, a low observed-power calculation.
 
 Hoenig and Heisey described this practice as a pervasive misuse of power. Once the data have been observed, the confidence interval or likelihood-based information about the effect is more direct than a power calculation using the observed estimate as if it were the design alternative.
 
@@ -529,21 +529,21 @@ Those are not equivalent scientific tasks.
 
 After a study is complete, the uncertainty interval shows more directly what effect magnitudes the study has and has not constrained.
 
-## A large (p)-value is not positive evidence for the null
+## A large $p$-value is not positive evidence for the null
 
-A (p)-value is calculated under the test hypothesis. It measures how incompatible the observed data and more extreme outcomes are with that hypothesis under the assumptions of the model and test.
+A $p$-value is calculated under the test hypothesis. It measures how incompatible the observed data and more extreme outcomes are with that hypothesis under the assumptions of the model and test.
 
 It is not
 
-[
-Pr(H_0mid	ext{data}).
-]
+$$
+\Pr(H_0\mid\text{data}).
+$$
 
 A value such as
 
-[
+$$
 p=0.80
-]
+$$
 
 does not mean there is an 80% probability that the null hypothesis is true.
 
@@ -551,9 +551,9 @@ It can occur because the true effect is very small and the study is precise.
 
 It can also occur because the study is extremely noisy.
 
-Those situations can have similar (p)-values while providing very different information.
+Those situations can have similar $p$-values while providing very different information.
 
-Greenland and colleagues catalogue this and related interpretations in their discussion of common errors involving (p)-values, confidence intervals, and power. The difficulty is not that these quantities are useless. It is that a binary significance label discards the scale and precision needed for the scientific conclusion.
+Greenland and colleagues catalogue this and related interpretations in their discussion of common errors involving $p$-values, confidence intervals, and power. The difficulty is not that these quantities are useless. It is that a binary significance label discards the scale and precision needed for the scientific conclusion.
 
 The comparison between Study A and Study B makes that loss visible.
 
@@ -563,9 +563,9 @@ The phrase "no meaningful effect" is incomplete until meaningful has been define
 
 Suppose an experiment estimates a treatment difference of
 
-[
+$$
 0.02
-]
+$$
 
 with a narrow confidence interval. Whether that supports absence depends on the scale.
 
@@ -573,15 +573,15 @@ If an effect of 0.10 would materially change a clinical decision, the interval m
 
 If only effects larger than 5 units matter operationally, the same estimate may provide overwhelming evidence that the intervention is irrelevant for the decision.
 
-A threshold such as (Delta) therefore cannot be supplied by statistics alone.
+A threshold such as $\Delta$ therefore cannot be supplied by statistics alone.
 
-It may come from a cost-benefit calculation, an established clinical threshold, a measurement resolution, an engineering tolerance, a policy criterion, or a theoretically justified scale. The justification should be visible because different values of (Delta) can produce different conclusions from the same data.
+It may come from a cost-benefit calculation, an established clinical threshold, a measurement resolution, an engineering tolerance, a policy criterion, or a theoretically justified scale. The justification should be visible because different values of $\Delta$ can produce different conclusions from the same data.
 
 This is not a defect of equivalence testing.
 
 It is an explicit version of a judgement that conventional null-hypothesis testing often leaves hidden.
 
-A significance test with (H_0:	heta=0) asks whether the data can distinguish the effect from exact zero.
+A significance test with $H_0:\theta=0$ asks whether the data can distinguish the effect from exact zero.
 
 Most scientific decisions ask whether the effect is large enough to matter.
 
@@ -593,28 +593,28 @@ Equivalence testing is not the only framework in which data can support a null o
 
 A Bayesian comparison can evaluate the relative predictive support of two hypotheses or models. For example, let
 
-[
-H_0:	heta=0
-]
+$$
+H_0:\theta=0
+$$
 
-and let (H_1) assign a prior distribution to plausible nonzero effects.
+and let $H_1$ assign a prior distribution to plausible nonzero effects.
 
 The Bayes factor comparing the models is
 
-[
+$$
 BF_{01}
 =
-rac{p(ymid H_0)}
-{p(ymid H_1)}.
-]
+\frac{p(y\mid H_0)}
+{p(y\mid H_1)}.
+$$
 
 If the observed data are much more probable under the null model than under the specified alternative model, then
 
-[
+$$
 BF_{01}>1
-]
+$$
 
-favours (H_0) relative to that alternative.
+favours $H_0$ relative to that alternative.
 
 The result depends on the alternative prior. A very broad prior and a tightly concentrated prior make different predictions and can produce different Bayes factors. This is not an incidental technicality. Evidence is always evidence relative to competing explanations.
 
@@ -644,35 +644,35 @@ Another useful case occurs when an enormous study detects an effect that is stat
 
 Suppose
 
-[
-hat	heta=0.08
-]
+$$
+\hat\theta=0.08
+$$
 
 with
 
-[
+$$
 s=0.02.
-]
+$$
 
 The test statistic is
 
-[
+$$
 Z=4,
-]
+$$
 
-so the conventional two-sided (p)-value is very small.
+so the conventional two-sided $p$-value is very small.
 
 The 95% interval is approximately
 
-[
+$$
 [0.04, 0.12].
-]
+$$
 
 If the smallest meaningful effect is
 
-[
-Delta=0.50,
-]
+$$
+\Delta=0.50,
+$$
 
 the result provides strong evidence that the effect is nonzero and also strong evidence that it lies within a range considered practically negligible.
 
@@ -716,39 +716,39 @@ Study A and Study B show the difference.
 
 Both estimated
 
-[
-hat	heta=0.10.
-]
+$$
+\hat\theta=0.10.
+$$
 
 Both failed to reject
 
-[
-H_0:	heta=0.
-]
+$$
+H_0:\theta=0.
+$$
 
 Study A produced a wide interval:
 
-[
+$$
 [-1.08, 1.28].
-]
+$$
 
 It did not provide evidence that important effects were absent.
 
 Study B produced a narrow interval:
 
-[
+$$
 [-0.14, 0.34].
-]
+$$
 
 Under pre-specified equivalence bounds of
 
-[
+$$
 [-0.50, 0.50],
-]
+$$
 
 it did.
 
-The difference is not the (p)-value category.
+The difference is not the $p$-value category.
 
 It is the range of scientifically relevant possibilities the data have excluded.
 

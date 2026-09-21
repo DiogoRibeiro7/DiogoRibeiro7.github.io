@@ -78,9 +78,9 @@ In supply chains, that target is often sales.
 
 The assumption is implicit:
 
-[
-	ext{sales}=	ext{demand}.
-]
+$$
+\text{sales}=\text{demand}.
+$$
 
 When inventory is available, the approximation may be good.
 
@@ -100,51 +100,51 @@ The forecast begins to learn the consequences of inventory scarcity as if they w
 
 ## Sales are the minimum of demand and availability
 
-Let latent demand during period (t) be
+Let latent demand during period $t$ be
 
-[
+$$
 D_t.
-]
+$$
 
 Let the maximum quantity available for sale be
 
-[
+$$
 I_t.
-]
+$$
 
 If unmet demand is lost and no backorder is recorded, observed sales are
 
-[
+$$
 S_t
 =
-min(D_t,I_t).
-]
+\min(D_t,I_t).
+$$
 
 This equation contains the entire censoring problem.
 
 When
 
-[
+$$
 D_t<I_t,
-]
+$$
 
 we observe demand exactly:
 
-[
+$$
 S_t=D_t.
-]
+$$
 
 When
 
-[
-D_tge I_t,
-]
+$$
+D_t\ge I_t,
+$$
 
 we observe only
 
-[
+$$
 S_t=I_t.
-]
+$$
 
 The second case does not tell us the realised demand.
 
@@ -152,17 +152,17 @@ It tells us only that demand was at least as large as available inventory.
 
 Formally,
 
-[
-D_tge I_t.
-]
+$$
+D_t\ge I_t.
+$$
 
 That is a censored observation.
 
 Treating it as
 
-[
+$$
 D_t=I_t
-]
+$$
 
 throws away the inequality.
 
@@ -170,72 +170,72 @@ throws away the inequality.
 
 Suppose true daily demand is Poisson:
 
-[
+$$
 D
-sim
-operatorname{Poisson}(8).
-]
+\sim
+\operatorname{Poisson}(8).
+$$
 
 The true mean demand is therefore
 
-[
-mathbb E[D]=8.
-]
+$$
+\mathbb E[D]=8.
+$$
 
 Now suppose inventory available each day is capped at
 
-[
+$$
 I=7.
-]
+$$
 
 Observed sales are
 
-[
-S=min(D,7).
-]
+$$
+S=\min(D,7).
+$$
 
 The expected observed sales are
 
-[
-mathbb E[S]
+$$
+\mathbb E[S]
 =
-sum_{d=0}^{6}
+\sum_{d=0}^{6}
 d,P(D=d)
 +
-7P(Dge7).
-]
+7P(D\ge7).
+$$
 
 For
 
-[
-Dsimoperatorname{Poisson}(8),
-]
+$$
+D\sim\operatorname{Poisson}(8),
+$$
 
 this gives approximately
 
-[
-mathbb E[S]
-approx
+$$
+\mathbb E[S]
+\approx
 6.336.
-]
+$$
 
 The observed sales mean understates true mean demand by
 
-[
+$$
 8-6.336
 =
 1.664
-]
+$$
 
 units per day.
 
 Expressed proportionally,
 
-[
-rac{8-6.336}{8}
-approx
+$$
+\frac{8-6.336}{8}
+\approx
 20.8%.
-]
+$$
 
 A forecasting model trained naively on sales is therefore being shown a process whose mean is about one fifth below the actual demand mean.
 
@@ -247,25 +247,25 @@ The target variable did.
 
 The probability that observed sales equal the full available inventory is
 
-[
+$$
 P(S=7)
 =
-P(Dge7).
-]
+P(D\ge7).
+$$
 
 For the Poisson example,
 
-[
-P(Dge7)
-approx
+$$
+P(D\ge7)
+\approx
 0.6866.
-]
+$$
 
 So nearly
 
-[
+$$
 68.7%
-]
+$$
 
 of all days record sales of exactly seven units.
 
@@ -277,15 +277,15 @@ It is the capacity of the inventory system to satisfy demand.
 
 The sales histogram contains a point mass at the stock limit because many different latent demand values are mapped to the same observed sale:
 
-[
-D=7,8,9,10,ldots
-]
+$$
+D=7,8,9,10,\ldots
+$$
 
 all become
 
-[
+$$
 S=7.
-]
+$$
 
 This is information loss.
 
@@ -295,51 +295,51 @@ A forecasting model cannot recover those values from sales alone unless addition
 
 Because
 
-[
-S=min(D,I),
-]
+$$
+S=\min(D,I),
+$$
 
 we can write
 
-[
+$$
 D
 =
 S+(D-I)^+,
-]
+$$
 
 where
 
-[
-x^+=max(x,0)
-]
+$$
+x^+=\max(x,0)
+$$
 
 on periods where inventory constrains sales.
 
 Taking expectations gives
 
-[
-mathbb E[D]
+$$
+\mathbb E[D]
 =
-mathbb E[S]
+\mathbb E[S]
 +
-mathbb E[(D-I)^+].
-]
+\mathbb E[(D-I)^+].
+$$
 
 Therefore,
 
-[
-mathbb E[(D-I)^+]
+$$
+\mathbb E[(D-I)^+]
 =
-mathbb E[D]-mathbb E[S].
-]
+\mathbb E[D]-\mathbb E[S].
+$$
 
 In the example,
 
-[
-mathbb E[(D-7)^+]
-approx
+$$
+\mathbb E[(D-7)^+]
+\approx
 1.664.
-]
+$$
 
 That is the expected unobserved demand per day.
 
@@ -353,70 +353,70 @@ This is why lost-sales estimation is an inference problem rather than a data-cle
 
 Suppose demand follows a Poisson model with unknown rate
 
-[
-lambda.
-]
+$$
+\lambda.
+$$
 
 For an uncensored day where
 
-[
+$$
 S_t<I_t,
-]
+$$
 
 we know
 
-[
+$$
 D_t=S_t.
-]
+$$
 
 The likelihood contribution is
 
-[
-P(D_t=S_tmidlambda)
+$$
+P(D_t=S_t\mid\lambda)
 =
-rac{
-e^{-lambda}lambda^{S_t}
+\frac{
+e^{-\lambda}\lambda^{S_t}
 }{
 S_t!
 }.
-]
+$$
 
 For a censored day where
 
-[
+$$
 S_t=I_t,
-]
+$$
 
 we do not know the exact demand.
 
 We know only
 
-[
-D_tge I_t.
-]
+$$
+D_t\ge I_t.
+$$
 
 The correct likelihood contribution is therefore
 
-[
-P(D_tge I_tmidlambda)
+$$
+P(D_t\ge I_t\mid\lambda)
 =
 1-
-P(D_t<I_tmidlambda).
-]
+P(D_t<I_t\mid\lambda).
+$$
 
 For a Poisson model,
 
-[
-P(D_tge I_tmidlambda)
+$$
+P(D_t\ge I_t\mid\lambda)
 =
 1-
-sum_{d=0}^{I_t-1}
-rac{
-e^{-lambda}lambda^d
+\sum_{d=0}^{I_t-1}
+\frac{
+e^{-\lambda}\lambda^d
 }{
 d!
 }.
-]
+$$
 
 The full likelihood is a product of exact-probability terms for uncensored observations and tail-probability terms for censored observations.
 
@@ -432,33 +432,33 @@ A naive estimator treats every observed sale as exact demand.
 
 For the Poisson model, the sample mean of observed sales is then used as an estimator of the rate:
 
-[
-hatlambda_{mathrm{naive}}
+$$
+\hat\lambda_{\mathrm{naive}}
 =
-ar S.
-]
+\bar S.
+$$
 
 With enough data under the fixed inventory cap,
 
-[
-hatlambda_{mathrm{naive}}
-ightarrow
-mathbb E[min(D,7)].
-]
+$$
+\hat\lambda_{\mathrm{naive}}
+\rightarrow
+\mathbb E[\min(D,7)].
+$$
 
 In the example,
 
-[
-hatlambda_{mathrm{naive}}
-ightarrow
+$$
+\hat\lambda_{\mathrm{naive}}
+\rightarrow
 6.336
-]
+$$
 
 even though the true value is
 
-[
-lambda=8.
-]
+$$
+\lambda=8.
+$$
 
 The estimator is not merely noisy.
 
@@ -476,17 +476,17 @@ Suppose replenishment for the next period is partly based on the current demand 
 
 A simplified feedback loop is
 
-[
-	ext{low inventory}
-ightarrow
-	ext{more censoring}
-ightarrow
-	ext{lower observed sales}
-ightarrow
-	ext{lower forecast}
-ightarrow
-	ext{lower replenishment}.
-]
+$$
+\text{low inventory}
+\rightarrow
+\text{more censoring}
+\rightarrow
+\text{lower observed sales}
+\rightarrow
+\text{lower forecast}
+\rightarrow
+\text{lower replenishment}.
+$$
 
 The data-generating process is therefore endogenous to the forecasting policy.
 
@@ -502,15 +502,15 @@ This creates a policy-data feedback problem.
 
 Suppose the available quantity is
 
-[
+$$
 I_t=12
-]
+$$
 
 and observed sales equal
 
-[
+$$
 S_t=12.
-]
+$$
 
 The exact demand is unknown.
 
@@ -518,23 +518,23 @@ But the observation is not uninformative.
 
 It implies
 
-[
-D_tge12.
-]
+$$
+D_t\ge12.
+$$
 
 A day with sales 12 and no stockout means something different.
 
 If availability were
 
-[
+$$
 I_t=30
-]
+$$
 
 and sales were
 
-[
+$$
 12,
-]
+$$
 
 then demand is observed as 12.
 
@@ -556,15 +556,15 @@ Suppose an item begins the day with eight units and sells out by noon.
 
 The daily record may contain
 
-[
+$$
 S_t=8
-]
+$$
 
 and
 
-[
-	ext{stockout}=1.
-]
+$$
+\text{stockout}=1.
+$$
 
 Demand during the first half of the day was at least eight.
 
@@ -586,9 +586,9 @@ Then the customer request may still be recorded.
 
 If an order of ten units arrives while only six are available, the system may record
 
-[
+$$
 D_t=10
-]
+$$
 
 and create four backordered units.
 
@@ -636,49 +636,49 @@ The forecast target should match the inventory decision.
 
 ## Substitution contaminates more than the stocked-out SKU
 
-Consider two products, (A) and (B).
+Consider two products, $A$ and $B$.
 
 Let primary latent demands be
 
-[
+$$
 D_A
-]
+$$
 
 and
 
-[
+$$
 D_B.
-]
+$$
 
-Suppose product (A) stocks out.
+Suppose product $A$ stocks out.
 
 A fraction
 
-[
-ho
-]
+$$
+\rho
+$$
 
-of unmet demand for (A) switches to (B).
+of unmet demand for $A$ switches to $B$.
 
-Then observed demand pressure on (B) can be approximated by
+Then observed demand pressure on $B$ can be approximated by
 
-[
-D_B^{mathrm{obs}}
+$$
+D_B^{\mathrm{obs}}
 =
 D_B
 +
-ho(D_A-I_A)^+,
-]
+\rho(D_A-I_A)^+,
+$$
 
-subject to (B)'s own inventory constraint.
+subject to $B$'s own inventory constraint.
 
 A naive forecasting pipeline now makes two errors.
 
-It underestimates baseline demand for (A).
+It underestimates baseline demand for $A$.
 
-It overestimates baseline demand for (B).
+It overestimates baseline demand for $B$.
 
-When (A) returns to stock, the apparent demand for (B) may fall.
+When $A$ returns to stock, the apparent demand for $B$ may fall.
 
 A model without availability features can interpret this as arbitrary time-series variation.
 
@@ -698,13 +698,13 @@ The apparent promotional lift is therefore capped by availability.
 
 A naive estimator might compare sales before and during the promotion:
 
-[
-widehat{	ext{lift}}
+$$
+\widehat{\text{lift}}
 =
-ar S_{mathrm{promo}}
+\bar S_{\mathrm{promo}}
 -
-ar S_{mathrm{baseline}}.
-]
+\bar S_{\mathrm{baseline}}.
+$$
 
 If promotional periods stock out more often, the estimator is downward biased for demand lift.
 
@@ -722,15 +722,15 @@ A forecast model trained on these observations can systematically underlearn pro
 
 A daily sale of zero may mean:
 
-[
+$$
 D_t=0.
-]
+$$
 
 It may also mean:
 
-[
+$$
 I_t=0.
-]
+$$
 
 Those are operationally opposite states.
 
@@ -752,21 +752,21 @@ Suppose Region A has lower sales than Region B.
 
 A naive interpretation is
 
-[
-	ext{demand}_A
+$$
+\text{demand}_A
 <
-	ext{demand}_B.
-]
+\text{demand}_B.
+$$
 
 But if Region A has lower availability, the observed difference can instead reflect inventory constraints.
 
 Write
 
-[
+$$
 S_r
 =
-min(D_r,I_r).
-]
+\min(D_r,I_r).
+$$
 
 Then a regional sales comparison mixes demand and supply.
 
@@ -798,15 +798,15 @@ The censoring process is informative.
 
 A realistic model may need
 
-[
-P(D_tmid X_t)
-]
+$$
+P(D_t\mid X_t)
+$$
 
 and
 
-[
-P(I_tmid X_t,	ext{policy history})
-]
+$$
+P(I_t\mid X_t,\text{policy history})
+$$
 
 or an explicit structural model of replenishment.
 
@@ -830,11 +830,11 @@ The remaining sample can therefore have a lower demand distribution than the tar
 
 In the simple fixed-capacity setting,
 
-[
-	ext{keep day}
-iff
+$$
+\text{keep day}
+\iff
 D<I.
-]
+$$
 
 The retained sample follows a truncated distribution.
 
@@ -846,9 +846,9 @@ Deleting the censored observations removes precisely the upper tail we are tryin
 
 Another workaround replaces a stockout day with an assumed demand value such as:
 
-[
+$$
 S_t+20%.
-]
+$$
 
 This creates a complete-looking dataset.
 
@@ -856,11 +856,11 @@ It also creates invented observations.
 
 A model-based approach treats the lost amount as latent.
 
-For parametric demand model (p(D_tmid X_t,	heta)), a stockout contributes a survival probability:
+For parametric demand model (p$D_t\mid X_t,\theta$), a stockout contributes a survival probability:
 
-[
-P(D_tge I_tmid X_t,	heta).
-]
+$$
+P(D_t\ge I_t\mid X_t,\theta).
+$$
 
 Uncensored days contribute ordinary density or probability terms.
 
@@ -870,15 +870,15 @@ The missing demand need not be imputed first.
 
 If an imputed latent demand is useful operationally, it can be generated afterward from the conditional distribution
 
-[
+$$
 p(
 D_t
-mid
-D_tge I_t,
+\mid
+D_t\ge I_t,
 X_t,
-hat	heta
+\hat\theta
 ).
-]
+$$
 
 This preserves uncertainty rather than replacing every censored observation with one fabricated number.
 
@@ -886,11 +886,11 @@ This preserves uncertainty rather than replacing every censored observation with
 
 Suppose the model estimates
 
-[
-mathbb E[D_tmid D_tge I_t,X_t]
+$$
+\mathbb E[D_t\mid D_t\ge I_t,X_t]
 =
 10.4.
-]
+$$
 
 That does not mean the true demand on that day was 10.4.
 
@@ -932,30 +932,30 @@ That makes product availability analogous to exposure.
 
 Let
 
-[
+$$
 A_t
-]
+$$
 
 denote whether the item is available.
 
 Observed purchase behaviour depends on both latent preference and exposure:
 
-[
-P(	ext{purchase})
+$$
+P(\text{purchase})
 =
 P(
-	ext{purchase}
-mid
+\text{purchase}
+\mid
 A_t=1
 )
 P(A_t=1).
-]
+$$
 
 If
 
-[
+$$
 A_t=0,
-]
+$$
 
 a non-purchase contains little direct information about willingness to buy.
 
@@ -1121,9 +1121,9 @@ Suppose a planner stocks seven units.
 
 Observed average sales become
 
-[
+$$
 6.34.
-]
+$$
 
 The planner concludes that average demand is about six units and retains a low stock target.
 
@@ -1143,49 +1143,49 @@ Whenever a model output influences future observation opportunities, evaluation 
 
 True demand was
 
-[
+$$
 D
-sim
-operatorname{Poisson}(8).
-]
+\sim
+\operatorname{Poisson}(8).
+$$
 
 Available inventory was
 
-[
+$$
 I=7.
-]
+$$
 
 Observed sales were
 
-[
-S=min(D,7).
-]
+$$
+S=\min(D,7).
+$$
 
 The true mean was
 
-[
+$$
 8.
-]
+$$
 
 The observed mean was only
 
-[
+$$
 6.336.
-]
+$$
 
 Expected lost demand was
 
-[
+$$
 1.664
-]
+$$
 
 units per day.
 
 And the inventory ceiling was hit on approximately
 
-[
+$$
 68.7%
-]
+$$
 
 of days.
 

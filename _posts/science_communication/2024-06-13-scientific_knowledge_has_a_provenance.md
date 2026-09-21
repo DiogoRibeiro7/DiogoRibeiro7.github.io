@@ -146,55 +146,55 @@ It is a network.
 
 Consider a simplified chain:
 
-[
+$$
 R
-longrightarrow
+\longrightarrow
 A
-longrightarrow
+\longrightarrow
 S
-longrightarrow
+\longrightarrow
 C,
-]
+$$
 
 where
 
-[
+$$
 R
-]
+$$
 
 represents raw observations,
 
-[
+$$
 A
-]
+$$
 
 represents analysis,
 
-[
+$$
 S
-]
+$$
 
 represents synthesis across studies,
 
 and
 
-[
+$$
 C
-]
+$$
 
 represents the public claim.
 
 For example:
 
-[
-	ext{laboratory measurements}
-ightarrow
-	ext{study estimate}
-ightarrow
-	ext{systematic review}
-ightarrow
-	ext{public explanation}.
-]
+$$
+\text{laboratory measurements}
+\rightarrow
+\text{study estimate}
+\rightarrow
+\text{systematic review}
+\rightarrow
+\text{public explanation}.
+$$
 
 A communicator normally operates at the final stage.
 
@@ -226,21 +226,21 @@ Scientific provenance therefore avoids two bad arguments at once.
 
 The first is:
 
-[
-	ext{no academic credential}
-Rightarrow
-	ext{claim is false}.
-]
+$$
+\text{no academic credential}
+\Rightarrow
+\text{claim is false}.
+$$
 
 That is invalid.
 
 The second is:
 
-[
-	ext{confident communicator with visible results}
-Rightarrow
-	ext{claim is scientifically established}.
-]
+$$
+\text{confident communicator with visible results}
+\Rightarrow
+\text{claim is scientifically established}.
+$$
 
 That is also invalid.
 
@@ -252,49 +252,49 @@ Citation is not enough.
 
 Suppose a study establishes
 
-[
+$$
 C_1:
-	ext{A biomarker changed under a particular intervention in mice.}
-]
+\text{A biomarker changed under a particular intervention in mice.}
+$$
 
 A public post concludes
 
-[
+$$
 C_2:
-	ext{The intervention prevents disease in humans.}
-]
+\text{The intervention prevents disease in humans.}
+$$
 
 The citation is real.
 
 The inferential bridge is not.
 
-The transformation from (C_1) to (C_2) has introduced several additional assumptions:
+The transformation from $C_1$ to $C_2$ has introduced several additional assumptions:
 
-[
-	ext{mouse}
-ightarrow
-	ext{human},
-]
+$$
+\text{mouse}
+\rightarrow
+\text{human},
+$$
 
-[
-	ext{biomarker}
-ightarrow
-	ext{clinical outcome},
-]
+$$
+\text{biomarker}
+\rightarrow
+\text{clinical outcome},
+$$
 
-[
-	ext{experimental dose}
-ightarrow
-	ext{ordinary exposure},
-]
+$$
+\text{experimental dose}
+\rightarrow
+\text{ordinary exposure},
+$$
 
 and possibly
 
-[
-	ext{association}
-ightarrow
-	ext{causal effect}.
-]
+$$
+\text{association}
+\rightarrow
+\text{causal effect}.
+$$
 
 The scientific problem is therefore not simply whether a source exists.
 
@@ -304,15 +304,15 @@ It is whether the source supports the strength and scope of the public claim.
 
 Let the original evidence support a set of scientifically defensible claims
 
-[
-mathcal A(E).
-]
+$$
+\mathcal A(E).
+$$
 
-A public claim (C) is adequately supported only if
+A public claim $C$ is adequately supported only if
 
-[
-Cinmathcal A(E).
-]
+$$
+C\in\mathcal A(E).
+$$
 
 Communication requires compression.
 
@@ -552,23 +552,23 @@ It is not an estimator of scientific correctness.
 
 Let
 
-[
+$$
 N
-]
+$$
 
 be audience size and
 
-[
+$$
 T
-]
+$$
 
 be truth of a scientific claim.
 
 There is no general reason to expect
 
-[
-P(Tmid N	ext{ large})
-]
+$$
+P(T\mid N\text{ large})
+$$
 
 to be close to one.
 
@@ -608,41 +608,41 @@ That is not the same estimand.
 
 For a scientific claim in public communication, a useful provenance chain is:
 
-[
+$$
 C
-leftarrow
+\leftarrow
 S
-leftarrow
+\leftarrow
 P
-leftarrow
+\leftarrow
 D,
-]
+$$
 
 where
 
-[
+$$
 C
-]
+$$
 
 is the public claim,
 
-[
+$$
 S
-]
+$$
 
 is the synthesis or interpretation,
 
-[
+$$
 P
-]
+$$
 
 is primary research,
 
 and
 
-[
+$$
 D
-]
+$$
 
 is the underlying data or experimental observation.
 
@@ -722,11 +722,11 @@ No amount of confidence in delivery repairs the mismatch.
 
 A simple discipline is:
 
-[
-	ext{Strength(public claim)}
-le
-	ext{Strength(evidence)}.
-]
+$$
+\text{Strength(public claim)}
+\le
+\text{Strength(evidence)}.
+$$
 
 This is not a literal numerical inequality.
 
@@ -742,9 +742,9 @@ The more indirect the outcome, the more cautious the practical conclusion.
 
 When a paper reports
 
-[
-hat	heta=0.30
-]
+$$
+\hat\theta=0.30
+$$
 
 with a wide uncertainty interval, the interval is not optional metadata.
 
@@ -770,15 +770,15 @@ That can be legitimate.
 
 The important distinction is between:
 
-[
-	ext{the evidence reports}
-]
+$$
+\text{the evidence reports}
+$$
 
 and
 
-[
-	ext{I infer}.
-]
+$$
+\text{I infer}.
+$$
 
 Public communication becomes more trustworthy when those layers are visible.
 
