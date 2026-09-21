@@ -36,7 +36,7 @@ tags:
 title: Understanding Mean Time Between Failures (MTBF)
 ---
 
-In industries relying on complex systems, ensuring reliability is paramount. One key metric used to assess system reliability is **Mean Time Between Failures (MTBF)**. MTBF is a valuable indicator for predicting how long a system can operate before experiencing a failure, helping companies in planning maintenance schedules and improving product designs.
+In industries relying on complex systems, ensuring reliability is paramount. One key metric used to assess system reliability is **Mean Time Between Failures (MTBF)**. MTBF is a long-run average for a repairable-system failure process. It is not, by itself, a prediction of the next failure time, helping companies in planning maintenance schedules and improving product designs.
 
 ## What is MTBF?
 
@@ -64,7 +64,7 @@ MTBF is widely used in **reliability engineering** and **predictive maintenance*
   
 - **Comparing Different Systems or Designs**: MTBF is useful for comparing the reliability of different models or designs of the same system, helping companies choose the most reliable option.
 
-- **Maintenance Planning**: By knowing the MTBF of a system, maintenance teams can schedule **proactive maintenance** to prevent failures and minimize downtime.
+- **Fleet-level planning**: MTBF can summarize aggregate failure frequency and support capacity planning. Scheduling preventive maintenance exactly at the MTBF is generally unjustified unless a reliability model and cost analysis support that policy.
 
 ## Strengths of MTBF
 
@@ -80,11 +80,11 @@ MTBF offers several advantages, making it a commonly used metric in industrial s
 
 Despite its utility, MTBF has some inherent limitations:
 
-- **Assumption of Constant Failure Rate**: MTBF assumes that the system has a constant failure rate throughout its life, which is not always accurate. In reality, many systems follow the **Bathtub Curve**, with higher failure rates at the beginning (infant mortality) and end (wear-out phase) of the system's life.
+- **A mean hides the failure process**: MTBF itself does not require an exponential distribution or constant hazard. However, converting MTBF into reliability through $R(t)=e^{-t/\mathrm{MTBF}}$ **does** assume a homogeneous Poisson/exponential failure model, which is not always accurate. In reality, many systems follow the **Bathtub Curve**, with higher failure rates at the beginning (infant mortality) and end (wear-out phase) of the system's life.
 
 - **Misinterpretation of the Metric**: MTBF is sometimes misinterpreted as the **"average lifetime"** of the system or the **"failure-free period"**, which is incorrect. MTBF represents an average time between failures, but a system can fail at any point within that time.
 
-- **Exponential Distribution**: MTBF is based on an exponential distribution, meaning that at the point where the system reaches its MTBF value, the probability of survival is only 37% ($e^{-1}$), not 50%, as is often assumed.
+- **Exponential interpretation is optional**: only under a constant-rate exponential model does $R(\mathrm{MTBF})=e^{-1}\approx0.368$. A Weibull or renewal model with the same mean can have a very different survival probability at the mean.
 
 ## Related Metrics: MTTF and MTTR
 
@@ -144,7 +144,10 @@ def calculate_mtbf(total_operational_time, number_of_failures):
     float: The MTBF value.
     """
     if number_of_failures == 0:
-        return float('inf')  # No failures occurred, MTBF is infinite
+        raise ValueError(
+            "MTBF is not estimable from zero observed failures; "
+            "the data are right-censored, not evidence of infinite MTBF."
+        )
     return total_operational_time / number_of_failures
 
 # Example usage:
@@ -188,8 +191,11 @@ def calculate_mtbf(failure_times):
     Returns:
     float: MTBF value in hours.
     """
-    total_uptime = failure_times[-1] - failure_times[0]  # Total system uptime
-    number_of_failures = len(failure_times) - 1  # Number of failures (n-1 events)
+    intervals = np.diff(
+        np.concatenate(([0.0], np.asarray(failure_times, dtype=float)))
+    )
+    total_uptime = float(intervals.sum())
+    number_of_failures = len(failure_times)
 
     if number_of_failures == 0:
         return float('inf')  # No failures occurred, MTBF is infinite
@@ -258,11 +264,63 @@ In this example:
 
 - The system experiences 5 failures at different times: 120, 250, 310, 460, and 600 hours.
 - After each failure, it takes between 3 and 10 hours to repair the system.
-- The calculated values are:
-  - **MTBF**: The mean time between failures is approximately 120 hours.
+- The calculated MTBF depends on whether the listed times are calendar times, operating times, and whether downtime has already been removed. With event times measured from system start as written, the simple estimate is total observed operating exposure divided by observed failures.
   - **MTTR**: The average repair time is 6.6 hours.
   - **Availability**: The system is available approximately 94.80% of the time.
 
 ### Customizing the Code:
 
 You can easily modify the `failure_times` and `repair_durations` lists to reflect your specific system data. This code can be extended to include other metrics such as failure rates, reliability, or more sophisticated statistical methods.
+
+
+## MTBF is a rate summary
+
+If failures follow a homogeneous Poisson process with rate $\lambda$, then
+
+$$
+\widehat{\lambda}
+=
+\frac{N}{T},
+$$
+
+and
+
+$$
+\widehat{\mathrm{MTBF}}
+=
+\frac{1}{\widehat{\lambda}}
+=
+\frac{T}{N}.
+$$
+
+That derivation makes clear what the simple formula estimates: the reciprocal of a constant event rate.
+
+For a repairable system whose failure intensity changes with age, maintenance, or environment, use a non-homogeneous Poisson process, renewal process, recurrent-event model, or another reliability model.
+
+## Censoring matters
+
+If observation ends while the asset is still operating, the final interval is right-censored.
+
+Ignoring that exposure can bias the failure-rate estimate.
+
+With zero failures, the conclusion is not infinite MTBF. The data provide information for a lower confidence bound on reliability or an upper confidence bound on failure rate, depending on the model.
+
+## Availability formula assumptions
+
+The familiar steady-state formula
+
+$$
+A
+=
+\frac{
+\mathrm{MTBF}
+}{
+\mathrm{MTBF}+\mathrm{MTTR}
+}
+$$
+
+assumes an alternating renewal process with appropriate long-run means and that MTTR represents the relevant downtime cycle.
+
+Real availability can also include logistics delay, waiting for parts, preventive downtime, and administrative delay.
+
+Use operational availability when those components matter.

@@ -38,7 +38,7 @@ tags:
 title: 'Understanding the Fowlkes-Mallows Index: A Tool for Clustering and Classification Evaluation'
 ---
 
-The **Fowlkes-Mallows Index** (FMI) is a statistical metric designed to measure the similarity between two clustering solutions, allowing data scientists to assess how well clusters or groupings align with expected classifications or known labels. Originally developed by statisticians E.B. Fowlkes and C.L. Mallows in 1983, the index is instrumental in evaluating the performance of clustering algorithms, but it also finds utility in classification tasks. This makes FMI a versatile metric in both unsupervised and supervised learning environments, offering a quantitative means of validating model performance.
+The **Fowlkes-Mallows Index** (FMI) is a statistical metric designed to measure the similarity between two clustering solutions, allowing data scientists to assess how well clusters or groupings align with expected classifications or known labels. Originally developed by E. B. Fowlkes and C. L. Mallows in 1983, the index is an external clustering-agreement measure. It can compare any two partitions, including predicted clusters against known labels, but it is not a standard case-wise classification metric like accuracy, precision, recall, or log loss.
 
 ## Origins and Purpose of the Fowlkes-Mallows Index
 
@@ -77,7 +77,7 @@ In this example:
 
 - **TP (True Positives)**: (A, B) - both elements are clustered together in both solutions.
 - **FP (False Positives)**: (C, D) in Solution 1 but not in Solution 2.
-- **FN (False Negatives)**: (A, C), which are in the same cluster in Solution 2 but not in Solution 1.
+- **FN (False Negatives)**: (A, C) and (B, C), which are together in Solution 2 but separated in Solution 1.
 
 Using these values in the FMI formula provides a score that reflects the degree of similarity between the two clustering outcomes. Calculating FMI with real datasets follows a similar procedure, but requires iterating through all pairs of elements.
 
@@ -87,11 +87,11 @@ The Fowlkes-Mallows Index offers multiple advantages for machine learning and da
 
 - **Interpretability**: With values normalized between 0 and 1, FMI scores are easy to interpret, allowing for straightforward comparison between clustering results.
   
-- **Sensitivity to Cluster Sizes**: FMI adjusts for the sizes of clusters, making it effective even when clusters are of unequal size—an advantage when working with real-world data, where such imbalances are common.
+- **Pairwise interpretation**: FMI balances pairwise precision and pairwise recall. Because large clusters generate many more pairs than small clusters, FMI can still be dominated by large clusters; unequal cluster sizes are not automatically corrected away.
 
-- **Noise Tolerance**: FMI’s pair-based comparison is relatively robust to noise, providing reliable similarity assessments even in datasets with outliers.
+- **No built-in noise robustness**: FMI treats labels as given. Whether a noise label should count as an ordinary cluster, be excluded, or be handled separately is an evaluation choice.
 
-- **Adaptable to Classification**: Although FMI was developed for clustering, its structure lends itself well to classification tasks, where it can quantify the agreement between predicted and actual class labels.
+- **Permutation-invariant partition comparison**: cluster label names can be permuted without changing FMI. For supervised classification, however, class labels have semantic meaning and case-wise metrics are usually more informative.
 
 ## Applications Across Data Science Domains
 
@@ -294,3 +294,79 @@ The Fowlkes-Mallows Index is: 0.5773502691896257
 This FMI score reflects the similarity between `true_labels` and `pred_labels`, with a value closer to 1 indicating higher similarity.
 
 By following these steps, you can calculate the Fowlkes-Mallows Index using only base Python and NumPy, enabling flexible, efficient clustering evaluation without relying on external machine learning libraries.
+
+
+## Pairwise precision and recall
+
+Let
+
+$$
+P
+=
+\frac{TP}{TP+FP},
+$$
+
+and
+
+$$
+R
+=
+\frac{TP}{TP+FN}.
+$$
+
+Then
+
+$$
+\operatorname{FMI}
+=
+\sqrt{
+PR
+}.
+$$
+
+This makes FMI the geometric mean of pairwise precision and pairwise recall.
+
+That interpretation is useful because it shows what the metric weights: pairs of observations, not individual observations or clusters.
+
+## Large clusters dominate pair counts
+
+A cluster of size $m$ contributes
+
+$$
+\binom{m}{2}
+$$
+
+within-cluster pairs.
+
+Therefore one very large cluster can dominate the contingency of pairs even when several small clusters are recovered poorly.
+
+Report cluster-level diagnostics as well when small groups matter.
+
+## Chance adjustment
+
+FMI is not adjusted for agreement expected by chance.
+
+Adjusted Rand Index addresses a different desideratum by centering pairwise agreement relative to a random-partition baseline.
+
+Neither metric is universally superior.
+
+Choose based on whether chance adjustment, interpretability, or sensitivity to cluster-size structure matters.
+
+## Noise labels
+
+Density-based algorithms often assign a noise label such as -1.
+
+Treating all noise points as one cluster creates pairwise agreements among observations that the algorithm explicitly declared unclustered.
+
+Depending on the application, consider excluding noise points before external validation, evaluating noise detection separately, or clearly stating that the noise label is treated as a cluster.
+
+## Reference implementation
+
+Scikit-learn provides a tested implementation of the Fowlkes-Mallows score and avoids explicit O(n^2) pair enumeration.
+
+Use the library implementation for production evaluation and keep manual code only for teaching.
+
+## References
+
+- Fowlkes, E. B., & Mallows, C. L. (1983). A method for comparing two hierarchical clusterings. *Journal of the American Statistical Association*, 78(383), 553–569.
+- Hubert, L., & Arabie, P. (1985). Comparing partitions. *Journal of Classification*, 2, 193–218.

@@ -76,11 +76,11 @@ We can decompose a time series into these components and model each one separate
 
 ## Gaussian Processes Explained
 
-A Gaussian Process is a generalization of the multivariate normal distribution to an infinite number of dimensions. This means we can represent any function as a distribution over an infinite set of points, with each point having a mean and covariance.
+A Gaussian process is a stochastic process for which every finite collection of function values has a multivariate normal distribution. It defines a distribution over functions through a mean function and covariance kernel; it does not imply that every possible function is represented equally.
 
 A GP is characterized by two key elements:
 
-- **Mean function** ($m(x)$): Typically set to zero in practice, as the covariance function drives most of the model's behavior.
+- **Mean function** ($m(x)$): often set to zero after centering or when the kernel is expected to carry the structure, but nonzero parametric mean functions can be important for extrapolation.
 - **Covariance function** ($k(x, x')$): Determines how different points in the input space are related. The choice of kernel is crucial for controlling the smoothness, periodicity, and other aspects of the function.
 
 Mathematically, the GP is written as:
@@ -175,14 +175,27 @@ def gp_posterior(x_train, x_pred, y_train, kernel, noise=0.05, **kernel_params):
     """Calculate the GP posterior mean and covariance matrix"""
     K = kernel(x_train, x_train, **kernel_params) + noise ** 2 * np.eye(len(x_train))
     K_s = kernel(x_train, x_pred, **kernel_params)
-    K_ss = kernel(x_pred, x_pred, **kernel_params) + noise ** 2 * np.eye(len(x_pred))
-    K_inv = np.linalg.inv(K)
+    K_ss = kernel(
+        x_pred,
+        x_pred,
+        **kernel_params,
+    )
+    # Avoid forming K^{-1} explicitly.
+    alpha = np.linalg.solve(
+        K,
+        y_train,
+    )
+
+    v = np.linalg.solve(
+        K,
+        K_s,
+    )
 
     # Posterior mean
-    mu_s = K_s.T.dot(K_inv).dot(y_train)
-    
+    mu_s = K_s.T @ alpha
+
     # Posterior covariance
-    cov_s = K_ss - K_s.T.dot(K_inv).dot(K_s)
+    cov_s = K_ss - K_s.T @ v
     
     return mu_s, cov_s
 
@@ -195,8 +208,21 @@ mu_s, cov_s = gp_posterior(x_train, x_pred, y_train, kernel=cov_exp_quad, sigma=
 
 # Plot posterior mean
 plt.plot(x_pred, mu_s, label='Posterior Mean')
-plt.fill_between(x_pred, mu_s - 1.96 * np.sqrt(np.diag(cov_s)),
-                 mu_s + 1.96 * np.sqrt(np.diag(cov_s)), alpha=0.1, label='95% CI')
+std_latent = np.sqrt(
+    np.clip(
+        np.diag(cov_s),
+        0.0,
+        None,
+    )
+)
+
+plt.fill_between(
+    x_pred,
+    mu_s - 1.96 * std_latent,
+    mu_s + 1.96 * std_latent,
+    alpha=0.1,
+    label="95% latent-function credible band",
+)
 plt.scatter(x_train, y_train, label='Training Data')
 plt.title('GP Posterior')
 plt.xlabel('Timepoint')
@@ -217,6 +243,56 @@ Gaussian Processes are elegant, but they are not a free replacement for every fo
 - **Feature design:** for multivariate time series, calendar effects, interventions, and external regressors must be encoded deliberately.
 
 Use GPs when uncertainty, smoothness assumptions, and interpretable structure are important. For high-volume operational forecasting, compare them against simpler state-space, ARIMA, gradient boosting, and deep learning baselines.
+
+## Latent-function uncertainty versus observation uncertainty
+
+The posterior covariance above is for the latent function $f(x)$.
+
+If a future observation satisfies
+
+$$
+y_\ast
+=
+f(x_\ast)
++
+\varepsilon_\ast,
+\qquad
+\varepsilon_\ast
+\sim
+N(0,\sigma_n^2),
+$$
+
+then predictive variance for the observation adds the noise variance:
+
+$$
+\operatorname{Var}(y_\ast\mid D)
+=
+\operatorname{Var}(f_\ast\mid D)
++
+\sigma_n^2.
+$$
+
+Do not mix the two. A credible band for the latent smooth function is narrower than a predictive interval for a noisy future measurement.
+
+## Hyperparameters are estimated too
+
+The examples treat kernel amplitude, length scale, period, and noise level as fixed.
+
+In real applications those quantities are often estimated by maximizing the marginal likelihood or assigned priors.
+
+Plug-in hyperparameters understate uncertainty when hyperparameter posterior uncertainty is substantial.
+
+## Mean functions and extrapolation
+
+A zero-mean GP with a stationary kernel tends back toward its prior mean far from the observed data.
+
+If the scientific process has a persistent linear trend or mechanistic baseline, encode it in the mean function or kernel rather than expecting an RBF kernel to extrapolate the trend indefinitely.
+
+## Numerical stability
+
+Exact GP calculations are commonly implemented with Cholesky factorization rather than generic matrix inversion.
+
+Add a small jitter term only when justified for numerical conditioning, and distinguish that numerical jitter from the observation-noise parameter.
 
 ## References
 
