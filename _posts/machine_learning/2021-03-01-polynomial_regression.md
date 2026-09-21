@@ -65,9 +65,7 @@ $$
 Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \epsilon
 $$
 
-This model can be used to fit data where the relationship between $$Y$$ and $$X$$ is not linear but curves upward or downward, such as when modeling acceleration, parabolic trends, or growth rates that change over time.
-
-Polynomial regression provides greater flexibility for modeling complex relationships by allowing the curve to bend and adapt to the data. However, it remains grounded in the principles of linear regression, which we will explore in detail in the following sections.
+This model can be used to fit data where the relationship between $$Y$$ and $$X$$ is not linear but curves upward or downward, such as when modeling acceleration, parabolic trends, or growth rates that change over time. Polynomial regression provides greater flexibility for modeling complex relationships by allowing the curve to bend and adapt to the data. However, it remains grounded in the principles of linear regression, which we will explore in detail in the following sections.
 
 ## 2. The Mathematical Framework of Polynomial Regression
 
@@ -75,9 +73,7 @@ Despite its appearance as a nonlinear model due to the presence of higher-order 
 
 ### Rewriting the Polynomial Regression Equation
 
-The key to understanding why polynomial regression is still linear lies in rewriting the model. By introducing new variables that represent each power of the original variable $$X$$, we can express the polynomial model in a form that clearly resembles a linear regression model.
-
-Let:
+The key to understanding why polynomial regression is still linear lies in rewriting the model. By introducing new variables that represent each power of the original variable $$X$$, we can express the polynomial model in a form that clearly resembles a linear regression model. Let:
 
 - $$Z_1 = X$$,
 - $$Z_2 = X^2$$,
@@ -103,9 +99,7 @@ In polynomial regression, the response variable $$Y$$ is expressed as a linear c
 
 ### Using Linear Algebra in Polynomial Regression
 
-Because polynomial regression is linear in its coefficients, we can still use the same tools from linear algebra that we apply in traditional linear regression. For example, the method of least squares, which is the standard approach for estimating the coefficients in linear regression, also applies to polynomial regression.
-
-In this context, the design matrix for polynomial regression includes columns for each power of $$X$$, with the first column corresponding to $$X^0$$ (i.e., a column of ones for the intercept). This matrix structure allows us to apply linear algebra techniques to solve for the coefficients.
+Because polynomial regression is linear in its coefficients, we can still use the same tools from linear algebra that we apply in traditional linear regression. For example, the method of least squares, which is the standard approach for estimating the coefficients in linear regression, also applies to polynomial regression. In this context, the design matrix for polynomial regression includes columns for each power of $$X$$, with the first column corresponding to $$X^0$$ (i.e., a column of ones for the intercept). This matrix structure allows us to apply linear algebra techniques to solve for the coefficients.
 
 ## 4. The Role of Regression Coefficients in Polynomial Regression
 
@@ -128,9 +122,7 @@ m'(x)
 \cdots,
 $$
 
-so the effect of changing $x$ depends on the evaluation point and on several coefficients together.
-
-As the degree of the polynomial increases, the model becomes more flexible, allowing it to fit increasingly complex relationships between $$Y$$ and $$X$$. However, this flexibility comes with the risk of overfitting, which we will discuss in later sections.
+so the effect of changing $x$ depends on the evaluation point and on several coefficients together. As the degree of the polynomial increases, the model becomes more flexible, allowing it to fit increasingly complex relationships between $$Y$$ and $$X$$. However, this flexibility comes with the risk of overfitting, which we will discuss in later sections.
 
 ## 5. Least Squares Estimation in Polynomial Regression
 
@@ -162,9 +154,7 @@ $$
 \mathbf{X}^T\mathbf{Y}.
 $$
 
-The closed-form expression involving $(\mathbf{X}^T\mathbf{X})^{-1}$ is useful algebraically, but production code should not form the inverse explicitly. QR or SVD-based least-squares solvers are numerically safer, especially because polynomial feature matrices can be badly conditioned.
-
-Where:
+The closed-form expression involving $(\mathbf{X}^T\mathbf{X})^{-1}$ is useful algebraically, but production code should not form the inverse explicitly. QR or SVD-based least-squares solvers are numerically safer, especially because polynomial feature matrices can be badly conditioned. Where:
 
 - $$\mathbf{X}$$ is the design matrix containing the powers of the independent variable $$X$$,
 - $$\mathbf{Y}$$ is the vector of observed responses, and
@@ -191,7 +181,7 @@ Some may believe that polynomial regression is more difficult to implement than 
 Polynomial regression has numerous applications in fields such as economics, biology, engineering, and machine learning. Some common use cases include:
 
 - **Modeling Growth Curves:** Polynomial regression is often used to model biological or economic growth curves, where the growth rate changes over time. For example, a second-order polynomial may model population growth, while a higher-order polynomial may capture more complex trends in financial markets.
-  
+
 - **Predicting Stock Prices:** In financial modeling, polynomial regression can be used to predict stock prices or market trends based on historical data. The flexibility of polynomial models allows them to capture nonlinear relationships between stock prices and economic indicators.
 
 - **Physics and Engineering Models:** Polynomial regression is frequently used in physics and engineering to model relationships between variables that exhibit curvature. For example, a quadratic model may be used to model the trajectory of a projectile, while higher-order models may capture more complex dynamics.
@@ -220,21 +210,14 @@ While polynomial regression is a common approach for modeling nonlinear relation
 
 Polynomial regression is a powerful extension of linear regression that allows us to model nonlinear relationships between a response variable and explanatory variables. Despite its name, polynomial regression remains a form of linear regression because the response variable is a linear combination of the regression coefficients. Understanding this distinction is crucial for data scientists and analysts who wish to apply polynomial regression effectively in their work.
 
-While polynomial regression offers flexibility and versatility, it is important to be mindful of the risks of overfitting and numerical instability, particularly when using high-degree polynomials. In practice, selecting the appropriate model degree and using regularization techniques can help mitigate these challenges and improve the model's performance on new data.
-
-As with any modeling technique, the key to success with polynomial regression lies in understanding the underlying data, choosing the right model complexity, and carefully validating the model to ensure it generalizes well to unseen data.
-
+While polynomial regression offers flexibility and versatility, it is important to be mindful of the risks of overfitting and numerical instability, particularly when using high-degree polynomials. In practice, selecting the appropriate model degree and using regularization techniques can help mitigate these challenges and improve the model's performance on new data. As with any modeling technique, the key to success with polynomial regression lies in understanding the underlying data, choosing the right model complexity, and carefully validating the model to ensure it generalizes well to unseen data.
 
 ## Centering and orthogonal polynomial bases
 
 Raw powers $1,x,x^2,\ldots$ can become highly collinear as degree increases. Centering and scaling $x$ improves conditioning. Orthogonal polynomial bases go further by representing the same polynomial space with nearly orthogonal columns.
 
-The fitted curve can be identical while coefficient values change substantially because coefficients belong to the chosen basis.
-
-For this reason, model interpretation should focus on the fitted response, derivatives, contrasts, or predictions rather than treating each raw-power coefficient as an invariant effect.
+The fitted curve can be identical while coefficient values change substantially because coefficients belong to the chosen basis. For this reason, model interpretation should focus on the fitted response, derivatives, contrasts, or predictions rather than treating each raw-power coefficient as an invariant effect.
 
 ## Extrapolation is the main danger
 
-A polynomial can interpolate a bounded region well and behave wildly outside it. High-degree terms dominate as $|x|$ grows, so apparently modest training-range curvature can explode under extrapolation.
-
-Validation should therefore respect the range in which predictions will be used. If deployment requires extrapolation, mechanistic models, monotone constraints, splines with controlled tails, or other structured approaches may be safer.
+A polynomial can interpolate a bounded region well and behave wildly outside it. High-degree terms dominate as $|x|$ grows, so apparently modest training-range curvature can explode under extrapolation. Validation should therefore respect the range in which predictions will be used. If deployment requires extrapolation, mechanistic models, monotone constraints, splines with controlled tails, or other structured approaches may be safer.
