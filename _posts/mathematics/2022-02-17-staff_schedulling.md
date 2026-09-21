@@ -222,10 +222,10 @@ A real roster usually needs binary variables
 $$
 x_{e,s}
 =
-egin{cases}
-1,&	ext{employee }e	ext{ works shift }s,\
-0,&	ext{otherwise},
-end{cases}
+\begin{cases}
+1, & \text{employee } e \text{ works shift } s,\\
+0, & \text{otherwise},
+\end{cases}
 $$
 
 plus constraints for availability, skills, maximum hours, minimum rest, consecutive shifts, contracts, and fairness.
