@@ -96,9 +96,7 @@ The two often land in similar places numerically, especially with weak priors an
 
 ## Choosing Priors
 
-The prior is where most objections to Bayesian methods land, and where the most care is warranted.
-
-A **weakly informative** prior rules out absurd values while letting the data dominate. For a log-odds parameter, a normal prior with standard deviation 2.5 permits any plausible effect size but excludes values corresponding to probabilities indistinguishable from 0 or 1.
+The prior is where most objections to Bayesian methods land, and where the most care is warranted. A **weakly informative** prior rules out absurd values while letting the data dominate. For a log-odds parameter, a normal prior with standard deviation 2.5 permits any plausible effect size but excludes values corresponding to probabilities indistinguishable from 0 or 1.
 
 A **flat** prior is not automatically neutral. Uniformity is not preserved under reparameterisation: a prior that is flat in $\theta$ is not flat in $\log \theta$ or in the odds. Claiming to have "used no prior" is usually a claim about one particular parameterisation.
 
