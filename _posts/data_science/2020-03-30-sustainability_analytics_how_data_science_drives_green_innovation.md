@@ -30,13 +30,7 @@ tags:
 title: 'Sustainability Analytics: Measure the Environmental Outcome'
 ---
 
-Data science can reduce energy use, optimize routes, detect leaks, and improve material planning.
-
-None of those activities is automatically sustainable.
-
-The environmental claim depends on a measurable outcome.
-
-A useful sustainability analysis begins with
+Data science can reduce energy use, optimize routes, detect leaks, and improve material planning. None of those activities is automatically sustainable. The environmental claim depends on a measurable outcome. A useful sustainability analysis begins with
 
 $$
 \boxed{
@@ -54,11 +48,7 @@ Without those pieces, “AI for sustainability” can become ordinary efficiency
 
 ## Define the boundary
 
-Suppose a routing model reduces fuel consumption in one distribution center.
-
-What belongs in the analysis?
-
-Possible boundaries include:
+Suppose a routing model reduces fuel consumption in one distribution center. What belongs in the analysis? Possible boundaries include:
 
 - one vehicle;
 - one warehouse;
@@ -66,11 +56,7 @@ Possible boundaries include:
 - the entire supply chain;
 - the product life cycle.
 
-A local efficiency gain can shift emissions elsewhere.
-
-For example, faster delivery may require more packaging or air freight.
-
-System boundaries determine which trade-offs are visible.
+A local efficiency gain can shift emissions elsewhere. For example, faster delivery may require more packaging or air freight. System boundaries determine which trade-offs are visible.
 
 ## Carbon accounting
 
@@ -89,11 +75,7 @@ where:
 - $A_i$ is activity, such as kWh or liters of fuel;
 - $EF_i$ is an emission factor.
 
-The uncertainty in $E$ comes from both activity data and emission factors.
-
-If electricity emission intensity changes hourly, using one annual average can misrepresent the consequence of load shifting.
-
-Temporal and geographic resolution matter.
+The uncertainty in $E$ comes from both activity data and emission factors. If electricity emission intensity changes hourly, using one annual average can misrepresent the consequence of load shifting. Temporal and geographic resolution matter.
 
 ## Scope 1, 2, and 3
 
@@ -103,19 +85,11 @@ Corporate inventories often distinguish:
 - **Scope 2:** emissions associated with purchased energy;
 - **Scope 3:** other value-chain emissions.
 
-Optimization that reduces Scope 1 emissions can increase Scope 3.
-
-The accounting category should not be confused with total climate impact.
-
-A model needs the boundary relevant to the decision.
+Optimization that reduces Scope 1 emissions can increase Scope 3. The accounting category should not be confused with total climate impact. A model needs the boundary relevant to the decision.
 
 ## Baselines
 
-Suppose energy use falls by 10%.
-
-Compared with what?
-
-Possible baselines include:
+Suppose energy use falls by 10%. Compared with what? Possible baselines include:
 
 - previous year;
 - business-as-usual forecast;
@@ -123,9 +97,7 @@ Possible baselines include:
 - engineering simulation;
 - weather-normalized demand.
 
-A before-after comparison can be biased by production volume, weather, prices, or operational changes.
-
-The baseline is a statistical model.
+A before-after comparison can be biased by production volume, weather, prices, or operational changes. The baseline is a statistical model.
 
 ## Causal attribution
 
@@ -135,13 +107,7 @@ $$
 E[Y(1)-Y(0)],
 $$
 
-where $Y(1)$ is energy use with the intervention and $Y(0)$ without it.
-
-Only one trajectory is observed.
-
-Randomized rollout, difference-in-differences, synthetic controls, interrupted time series, or engineering models may help construct the counterfactual.
-
-A dashboard trend alone does not establish savings caused by the algorithm.
+where $Y(1)$ is energy use with the intervention and $Y(0)$ without it. Only one trajectory is observed. Randomized rollout, difference-in-differences, synthetic controls, interrupted time series, or engineering models may help construct the counterfactual. A dashboard trend alone does not establish savings caused by the algorithm.
 
 ## Energy optimization
 
@@ -153,9 +119,7 @@ $$
 c_t x_t
 $$
 
-for cost.
-
-A sustainability objective might instead use marginal emissions intensity
+for cost. A sustainability objective might instead use marginal emissions intensity
 
 $$
 \min_{x_t}
@@ -163,11 +127,7 @@ $$
 e_t x_t.
 $$
 
-These are not the same problem.
-
-The cheapest hour is not necessarily the lowest-carbon hour.
-
-Multi-objective optimization can include both.
+These are not the same problem. The cheapest hour is not necessarily the lowest-carbon hour. Multi-objective optimization can include both.
 
 ## Water analytics
 
@@ -185,13 +145,7 @@ $$
 \Delta\text{storage}.
 $$
 
-Sensor analytics can estimate leaks and abnormal flows.
-
-But reducing withdrawal at one site may matter differently depending on local water scarcity.
-
-A cubic meter of water is not environmentally equivalent everywhere.
-
-Context matters.
+Sensor analytics can estimate leaks and abnormal flows. But reducing withdrawal at one site may matter differently depending on local water scarcity. A cubic meter of water is not environmentally equivalent everywhere. Context matters.
 
 ## Waste and circularity
 
@@ -205,15 +159,11 @@ Waste reduction metrics should distinguish:
 - incineration;
 - hazardous waste.
 
-A high recycling rate can coexist with increasing total material throughput.
-
-Useful metrics therefore include both relative rates and absolute mass flows.
+A high recycling rate can coexist with increasing total material throughput. Useful metrics therefore include both relative rates and absolute mass flows.
 
 ## Life-cycle assessment
 
-A product can shift impact across life-cycle stages.
-
-A simplified life cycle includes:
+A product can shift impact across life-cycle stages. A simplified life cycle includes:
 
 $$
 \text{raw material}
@@ -227,27 +177,11 @@ $$
 \text{end of life}.
 $$
 
-Electrification may increase manufacturing emissions while decreasing use-phase emissions.
-
-A life-cycle perspective is needed to evaluate the net effect.
-
-Data science can improve inventories and scenarios.
-
-It does not remove the need for life-cycle accounting.
+Electrification may increase manufacturing emissions while decreasing use-phase emissions. A life-cycle perspective is needed to evaluate the net effect. Data science can improve inventories and scenarios. It does not remove the need for life-cycle accounting.
 
 ## Supply-chain transparency
 
-Traceability systems can improve knowledge of material origin.
-
-Blockchain is one possible database architecture.
-
-It does not verify that an upstream claim is true.
-
-An immutable ledger can preserve an incorrect input perfectly.
-
-Verification, audit, certification, and measurement remain necessary.
-
-Technology should not be confused with evidence.
+Traceability systems can improve knowledge of material origin. Blockchain is one possible database architecture. It does not verify that an upstream claim is true. An immutable ledger can preserve an incorrect input perfectly. Verification, audit, certification, and measurement remain necessary. Technology should not be confused with evidence.
 
 ## Logistics optimization
 
@@ -258,9 +192,7 @@ $$
 d_{ij}x_{ij},
 $$
 
-where $d_{ij}$ is distance.
-
-Emissions depend additionally on:
+where $d_{ij}$ is distance. Emissions depend additionally on:
 
 - vehicle type;
 - load;
@@ -270,19 +202,11 @@ Emissions depend additionally on:
 - refrigeration;
 - empty returns.
 
-Distance is a proxy.
-
-If emissions are the objective, model emissions directly when feasible.
+Distance is a proxy. If emissions are the objective, model emissions directly when feasible.
 
 ## Rebound effects
 
-Efficiency can reduce the cost of using a resource.
-
-That can increase demand.
-
-If energy per unit falls by 20% but production grows by 30%, total energy use can rise.
-
-Let
+Efficiency can reduce the cost of using a resource. That can increase demand. If energy per unit falls by 20% but production grows by 30%, total energy use can rise. Let
 
 $$
 I
@@ -290,45 +214,29 @@ I
 \frac{E}{Q}
 $$
 
-be energy intensity.
-
-Then total energy is
+be energy intensity. Then total energy is
 
 $$
 E=I Q.
 $$
 
-A fall in intensity does not guarantee a fall in total impact.
-
-Both intensity and absolute totals should be reported.
+A fall in intensity does not guarantee a fall in total impact. Both intensity and absolute totals should be reported.
 
 ## Model footprint
 
-The computational footprint of analytics itself can matter, especially for large repeated training runs.
-
-But the correct comparison is consequential.
-
-If a model consumes 1 MWh of electricity to train but reliably avoids 1,000 MWh of future consumption, focusing only on training energy misses the system effect.
-
-Likewise, vague claims that AI savings automatically outweigh computation are unsupported.
+The computational footprint of analytics itself can matter, especially for large repeated training runs. But the correct comparison is consequential. If a model consumes 1 MWh of electricity to train but reliably avoids 1,000 MWh of future consumption, focusing only on training energy misses the system effect. Likewise, vague claims that AI savings automatically outweigh computation are unsupported.
 
 Measure both when material.
 
 ## Uncertainty
 
-Environmental metrics often combine uncertain inputs.
-
-Monte Carlo propagation can estimate the distribution of an output
+Environmental metrics often combine uncertain inputs. Monte Carlo propagation can estimate the distribution of an output
 
 $$
 Z=f(X_1,\ldots,X_p)
 $$
 
-by repeatedly sampling uncertain inputs.
-
-This is preferable to reporting a single emissions number with several hidden uncertain factors.
-
-Scenario uncertainty should be separated from measurement uncertainty where possible.
+by repeatedly sampling uncertain inputs. This is preferable to reporting a single emissions number with several hidden uncertain factors. Scenario uncertainty should be separated from measurement uncertainty where possible.
 
 ## Optimization versus sustainability
 
@@ -338,11 +246,7 @@ $$
 \min_x f(x).
 $$
 
-Sustainability asks whether $f$ represents the environmental and social outcome we actually care about.
-
-A perfectly optimized proxy can produce the wrong result.
-
-The sequence should be:
+Sustainability asks whether $f$ represents the environmental and social outcome we actually care about. A perfectly optimized proxy can produce the wrong result. The sequence should be:
 
 1. define the system;
 2. define the environmental objective;
@@ -353,11 +257,7 @@ The sequence should be:
 
 ## Conclusion
 
-Sustainability analytics is not a collection of green use cases for machine learning.
-
-It is measurement and decision analysis under explicit environmental boundaries.
-
-The strongest workflow is
+Sustainability analytics is not a collection of green use cases for machine learning. It is measurement and decision analysis under explicit environmental boundaries. The strongest workflow is
 
 $$
 \boxed{
@@ -375,9 +275,7 @@ $$
 }
 $$
 
-Data science is valuable inside that chain.
-
-It should not replace the chain.
+Data science is valuable inside that chain. It should not replace the chain.
 
 ## References
 
