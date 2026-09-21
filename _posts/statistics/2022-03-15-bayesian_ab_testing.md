@@ -71,9 +71,7 @@ The frequentist approach is the most widely used in A/B testing, primarily due t
 
 ### Chi-square Test for Conversion Rates
 
-The Chi-square test compares the observed frequencies of conversions in each group with the expected frequencies under the null hypothesis that there is no difference between the two versions. In this case, the null hypothesis assumes that the new button design has no impact on the conversion rate.
-
-Here's a summary of how the test works:
+The Chi-square test compares the observed frequencies of conversions in each group with the expected frequencies under the null hypothesis that there is no difference between the two versions. In this case, the null hypothesis assumes that the new button design has no impact on the conversion rate. Here's a summary of how the test works:
 
 1. **Observed Data**:
    - Group A: 5 conversions, 95 no conversions.
@@ -135,15 +133,15 @@ with pm.Model() as ConversionModel:
     # Priors for conversion rates
     pA = pm.Uniform('pA', 0, 1)
     pB = pm.Uniform('pB', 0, 1)
-    
-    # Difference between conversion rates
+
+# Difference between conversion rates
     delta = pm.Deterministic('delta', pA - pB)
-    
-    # Likelihood (Bernoulli distributed conversions)
+
+# Likelihood (Bernoulli distributed conversions)
     obsA = pm.Bernoulli('obsA', pA, observed=[1, 0, 1, 0, ...])  # Group A data
     obsB = pm.Bernoulli('obsB', pB, observed=[0, 1, 0, 0, ...])  # Group B data
-    
-    # Posterior sampling
+
+# Posterior sampling
     trace = pm.sample(2000)
 ```
 
@@ -178,25 +176,25 @@ To model this scenario, we assume that each individual's interaction with the pl
 ```python
 with pm.Model(coords={'ind_id': ind_id}) as SwitchPointModel:
 
-    sigma = pm.HalfCauchy("sigma", beta=2, dims="ind_id")
+sigma = pm.HalfCauchy("sigma", beta=2, dims="ind_id")
 
-    # Switch point for each individual
+# Switch point for each individual
     switchpoint = pm.DiscreteUniform("switchpoint", lower=0, upper=100, dims="ind_id")
 
-    # Interaction intensity before and after the switch point
+# Interaction intensity before and after the switch point
     mu1 = pm.HalfNormal("mu1", sigma=10, dims="ind_id")
     mu2 = pm.HalfNormal("mu2", sigma=10, dims="ind_id")
-    
-    # Difference between pre- and post-switch behavior
+
+# Difference between pre- and post-switch behavior
     diff = pm.Deterministic("diff", mu1 - mu2)
 
-    # Interaction behavior as a function of switchpoint
+# Interaction behavior as a function of switchpoint
     intercept = pm.math.switch(switchpoint < X.T, mu1, mu2)
 
-    # Observed interactions
+# Observed interactions
     obsA = pm.Normal("y", mu=intercept, sigma=sigma, observed=obs)
-    
-    trace = pm.sample()
+
+trace = pm.sample()
 ```
 
 This model captures the dynamics of behavioral changes over time. We can then visualize the **posterior distributions** for the switch points and the differences in behavior before and after the intervention. A **forest plot** helps to show these differences clearly, providing actionable insights into how the two groups responded to their respective interventions.
@@ -213,7 +211,6 @@ Whether conducting straightforward A/B tests for conversion rates or analyzing c
 - Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
 - Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. *Journal of the Royal Statistical Society: Series B*, 57(1), 289-300.
 - Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
-
 
 ## A Beta-Binomial model
 
@@ -241,9 +238,7 @@ p_A\mid D
 \operatorname{Beta}(a_A+x_A,b_A+n_A-x_A),
 $$
 
-and similarly for $B$.
-
-The practical estimand should be stated explicitly. Often the relevant quantity is the absolute lift
+and similarly for $B$. The practical estimand should be stated explicitly. Often the relevant quantity is the absolute lift
 
 $$
 \Delta=p_B-p_A
@@ -253,11 +248,7 @@ rather than merely the event $p_B>p_A$.
 
 ## Minimum worthwhile improvement
 
-A product decision usually needs more than “probability B is better.”
-
-Let $\delta>0$ be the minimum lift worth the implementation cost.
-
-Then report
+A product decision usually needs more than “probability B is better.” Let $\delta>0$ be the minimum lift worth the implementation cost. Then report
 
 $$
 P(
@@ -270,14 +261,8 @@ This separates statistical uncertainty from business significance.
 
 ## Priors and sensitivity
 
-A “non-informative” prior is not a neutral fact. Different Beta priors can matter materially when conversion counts are small.
-
-Run prior predictive checks and sensitivity analysis under several defensible priors. If the deployment decision changes, the data have not overwhelmed the prior.
+A “non-informative” prior is not a neutral fact. Different Beta priors can matter materially when conversion counts are small. Run prior predictive checks and sensitivity analysis under several defensible priors. If the deployment decision changes, the data have not overwhelmed the prior.
 
 ## Guardrails and multiple metrics
 
-Real experiments commonly track conversion, revenue, latency, retention, complaints, and safety metrics.
-
-Declaring a winner from one posterior while ignoring degraded guardrails is not a complete decision rule.
-
-Define the primary estimand and guardrail conditions before the experiment.
+Real experiments commonly track conversion, revenue, latency, retention, complaints, and safety metrics. Declaring a winner from one posterior while ignoring degraded guardrails is not a complete decision rule. Define the primary estimand and guardrail conditions before the experiment.
