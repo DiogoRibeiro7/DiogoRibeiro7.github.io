@@ -86,7 +86,7 @@ Using these values in the FMI formula provides a score that reflects the degree 
 The Fowlkes-Mallows Index offers multiple advantages for machine learning and data science tasks:
 
 - **Interpretability**: With values normalized between 0 and 1, FMI scores are easy to interpret, allowing for straightforward comparison between clustering results.
-  
+
 - **Pairwise interpretation**: FMI balances pairwise precision and pairwise recall. Because large clusters generate many more pairs than small clusters, FMI can still be dominated by large clusters; unequal cluster sizes are not automatically corrected away.
 
 - **No built-in noise robustness**: FMI treats labels as given. Whether a noise label should count as an ordinary cluster, be excluded, or be handled separately is an evaluation choice.
@@ -171,7 +171,7 @@ To calculate the Fowlkes-Mallows Index, we need to:
 1. Count pairs of elements that are **True Positives (TP)**, **False Positives (FP)**, and **False Negatives (FN)** between the two clusterings.
 2. Use these values to calculate the FMI score with the formula:
 
-   $$
+$$
    \text{FMI} = \frac{\text{TP}}{\sqrt{(\text{TP} + \text{FP})(\text{TP} + \text{FN})}}
    $$
 
@@ -188,10 +188,10 @@ def generate_pairs(labels):
     Generate all unique pairs from a list of cluster labels and indicate whether
     each pair belongs to the same cluster or not.
 
-    Args:
+Args:
         labels (list or array): List or array of cluster labels for elements.
 
-    Returns:
+Returns:
         set: A set of pairs (tuples) where each tuple contains indices of elements
              that are in the same cluster.
     """
@@ -214,27 +214,27 @@ def count_pairs(true_labels, pred_labels):
     Count True Positive (TP), False Positive (FP), and False Negative (FN) pairs
     between two sets of cluster labels.
 
-    Args:
+Args:
         true_labels (list or array): Ground truth labels for each element.
         pred_labels (list or array): Predicted cluster labels for each element.
 
-    Returns:
+Returns:
         tuple: Counts of TP, FP, and FN pairs.
     """
     # Generate pairs from true and predicted clusterings
     true_pairs = generate_pairs(true_labels)
     pred_pairs = generate_pairs(pred_labels)
-    
-    # True Positives: Pairs that are in both true and predicted clusters
+
+# True Positives: Pairs that are in both true and predicted clusters
     TP = len(true_pairs.intersection(pred_pairs))
-    
-    # False Positives: Pairs in predicted clusters but not in true clusters
+
+# False Positives: Pairs in predicted clusters but not in true clusters
     FP = len(pred_pairs - true_pairs)
-    
-    # False Negatives: Pairs in true clusters but not in predicted clusters
+
+# False Negatives: Pairs in true clusters but not in predicted clusters
     FN = len(true_pairs - pred_pairs)
-    
-    return TP, FP, FN
+
+return TP, FP, FN
 ```
 
 ### Calculating the Fowlkes-Mallows Index
@@ -246,21 +246,21 @@ def fowlkes_mallows_index(true_labels, pred_labels):
     """
     Calculate the Fowlkes-Mallows Index (FMI) between two clustering solutions.
 
-    Args:
+Args:
         true_labels (list or array): Ground truth labels for each element.
         pred_labels (list or array): Predicted cluster labels for each element.
 
-    Returns:
+Returns:
         float: FMI score between 0 and 1.
     """
     TP, FP, FN = count_pairs(true_labels, pred_labels)
-    
-    # Avoid division by zero in cases with no pairs (e.g., single-element clusters)
+
+# Avoid division by zero in cases with no pairs (e.g., single-element clusters)
     denominator = np.sqrt((TP + FP) * (TP + FN))
     if denominator == 0:
         return 0.0
-    
-    return TP / denominator
+
+return TP / denominator
 ```
 
 ### Example Usage of the Fowlkes-Mallows Index Function
@@ -291,10 +291,7 @@ Given the example above, the output will look something like:
 The Fowlkes-Mallows Index is: 0.5773502691896257
 ```
 
-This FMI score reflects the similarity between `true_labels` and `pred_labels`, with a value closer to 1 indicating higher similarity.
-
-By following these steps, you can calculate the Fowlkes-Mallows Index using only base Python and NumPy, enabling flexible, efficient clustering evaluation without relying on external machine learning libraries.
-
+This FMI score reflects the similarity between `true_labels` and `pred_labels`, with a value closer to 1 indicating higher similarity. By following these steps, you can calculate the Fowlkes-Mallows Index using only base Python and NumPy, enabling flexible, efficient clustering evaluation without relying on external machine learning libraries.
 
 ## Pairwise precision and recall
 
@@ -324,9 +321,7 @@ PR
 }.
 $$
 
-This makes FMI the geometric mean of pairwise precision and pairwise recall.
-
-That interpretation is useful because it shows what the metric weights: pairs of observations, not individual observations or clusters.
+This makes FMI the geometric mean of pairwise precision and pairwise recall. That interpretation is useful because it shows what the metric weights: pairs of observations, not individual observations or clusters.
 
 ## Large clusters dominate pair counts
 
@@ -336,35 +331,19 @@ $$
 \binom{m}{2}
 $$
 
-within-cluster pairs.
-
-Therefore one very large cluster can dominate the contingency of pairs even when several small clusters are recovered poorly.
-
-Report cluster-level diagnostics as well when small groups matter.
+within-cluster pairs. Therefore one very large cluster can dominate the contingency of pairs even when several small clusters are recovered poorly. Report cluster-level diagnostics as well when small groups matter.
 
 ## Chance adjustment
 
-FMI is not adjusted for agreement expected by chance.
-
-Adjusted Rand Index addresses a different desideratum by centering pairwise agreement relative to a random-partition baseline.
-
-Neither metric is universally superior.
-
-Choose based on whether chance adjustment, interpretability, or sensitivity to cluster-size structure matters.
+FMI is not adjusted for agreement expected by chance. Adjusted Rand Index addresses a different desideratum by centering pairwise agreement relative to a random-partition baseline. Neither metric is universally superior. Choose based on whether chance adjustment, interpretability, or sensitivity to cluster-size structure matters.
 
 ## Noise labels
 
-Density-based algorithms often assign a noise label such as -1.
-
-Treating all noise points as one cluster creates pairwise agreements among observations that the algorithm explicitly declared unclustered.
-
-Depending on the application, consider excluding noise points before external validation, evaluating noise detection separately, or clearly stating that the noise label is treated as a cluster.
+Density-based algorithms often assign a noise label such as -1. Treating all noise points as one cluster creates pairwise agreements among observations that the algorithm explicitly declared unclustered. Depending on the application, consider excluding noise points before external validation, evaluating noise detection separately, or clearly stating that the noise label is treated as a cluster.
 
 ## Reference implementation
 
-Scikit-learn provides a tested implementation of the Fowlkes-Mallows score and avoids explicit O(n^2) pair enumeration.
-
-Use the library implementation for production evaluation and keep manual code only for teaching.
+Scikit-learn provides a tested implementation of the Fowlkes-Mallows score and avoids explicit O(n^2) pair enumeration. Use the library implementation for production evaluation and keep manual code only for teaching.
 
 ## References
 
