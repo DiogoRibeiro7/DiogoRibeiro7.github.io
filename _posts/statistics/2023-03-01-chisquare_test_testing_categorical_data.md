@@ -46,9 +46,7 @@ The test is defined from counts. Percentages alone are insufficient because they
 
 ### Goodness of Fit
 
-This compares one categorical variable against a hypothesised distribution. Are the six faces of a die equally likely? Do observed blood types match population frequencies?
-
-Expected counts are $E_i = n p_i$ under hypothesised proportions $p_i$, with $k - 1$ degrees of freedom for $k$ categories. If any parameters were estimated from the same data, subtract one degree of freedom for each.
+This compares one categorical variable against a hypothesised distribution. Are the six faces of a die equally likely? Do observed blood types match population frequencies? Expected counts are $E_i = n p_i$ under hypothesised proportions $p_i$, with $k - 1$ degrees of freedom for $k$ categories. If any parameters were estimated from the same data, subtract one degree of freedom for each.
 
 ### Test of Independence
 
@@ -100,9 +98,7 @@ For 2×2 tables, Yates's continuity correction is sometimes applied to compensat
 
 ## What a Significant Result Does Not Tell You
 
-A significant chi-square says the variables are associated. It does not say the association is strong, does not say which categories are responsible, and above all does not establish causation.
-
-It also gives no direction. Unlike a correlation coefficient, chi-square has no sign, because the categories may have no natural ordering. If your categories *are* ordered — none, mild, moderate, severe — the standard test discards that information and a test for trend, such as the Cochran-Armitage test, will be more powerful.
+A significant chi-square says the variables are associated. It does not say the association is strong, does not say which categories are responsible, and above all does not establish causation. It also gives no direction. Unlike a correlation coefficient, chi-square has no sign, because the categories may have no natural ordering. If your categories *are* ordered — none, mild, moderate, severe — the standard test discards that information and a test for trend, such as the Cochran-Armitage test, will be more powerful.
 
 Simpson's paradox applies here with full force. An association in a pooled table can vanish or reverse within every subgroup, so check whether an obvious stratifying variable changes the picture before treating the aggregate as the finding.
 
