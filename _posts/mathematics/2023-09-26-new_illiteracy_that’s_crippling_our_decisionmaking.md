@@ -5,7 +5,7 @@ categories:
 - Mathematics
 classes: wide
 date: '2023-09-26'
-excerpt: Quantitative literacy is less about performing arithmetic quickly than about reasoning with ratios, uncertainty, variation, denominators, and evidence.
+excerpt: "Quantitative literacy is less about performing arithmetic quickly than about reasoning with ratios, uncertainty, variation, denominators, and evidence."
 header:
   image: /assets/images/headers/photo-mathematics-mobius-strip.jpg
   og_image: /assets/images/headers/photo-mathematics-mobius-strip.jpg
@@ -23,13 +23,13 @@ keywords:
 - Percentages
 - Uncertainty
 - Data literacy
-seo_description: A rigorous introduction to quantitative literacy: ratios, denominators, base rates, uncertainty, graphs, and the reasoning needed to interpret numerical claims.
+seo_description: "A rigorous introduction to quantitative literacy: ratios, denominators, base rates, uncertainty, graphs, and the reasoning needed to interpret numerical claims."
 seo_title: 'Quantitative Literacy: Reading Numbers Without Being Misled'
 seo_type: article
 tags:
 - Mathematics
 - Statistical Literacy
-title: Quantitative Literacy: Reading Numbers Without Being Misled
+title: "Quantitative Literacy: Reading Numbers Without Being Misled"
 ---
 
 ![Inumeracy - Quantitative Literacy](/assets/images/inumeracy.jpg){: width="1400" height="1867" loading="lazy"}
