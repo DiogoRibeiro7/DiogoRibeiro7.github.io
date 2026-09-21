@@ -4,7 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2023-09-27'
-excerpt: Good data communication preserves the structure of the evidence: the estimand, denominator, uncertainty, assumptions, and distinction between description, prediction, and causation.
+excerpt: "Good data communication preserves the structure of the evidence: the estimand, denominator, uncertainty, assumptions, and distinction between description, prediction, and causation."
 header:
   image: /assets/images/headers/photo-data-science-neural-network.jpg
   og_image: /assets/images/headers/photo-data-science-neural-network.jpg
@@ -23,13 +23,13 @@ keywords:
 permalink: '/data-science/Data_communication/'
 redirect_from:
 - '/data science/Data_communication/'
-seo_description: How to communicate data without losing statistical meaning, including context, uncertainty, causal language, visualization, and decision relevance.
+seo_description: "How to communicate data without losing statistical meaning, including context, uncertainty, causal language, visualization, and decision relevance."
 seo_title: 'Data Communication: Preserve the Evidence'
 seo_type: article
 tags:
 - Research Methodology
 - Data Analysis
-title: Data Communication: Preserve the Evidence
+title: "Data Communication: Preserve the Evidence"
 ---
 
 ![Communication - Data Communication](/assets/images/communication.jpg){: width="2048" height="1366" loading="lazy"}
@@ -58,7 +58,7 @@ This gives the audience enough information to reconstruct the claim.
 
 ## Uncertainty belongs next to the estimate
 
-Point estimates create false precision when displayed without uncertainty. If an estimated effect is \(\hat\theta\), a report should usually include an interval or distribution that reflects the relevant uncertainty.
+Point estimates create false precision when displayed without uncertainty. If an estimated effect is $\hat\theta$, a report should usually include an interval or distribution that reflects the relevant uncertainty.
 
 For a confidence interval
 
