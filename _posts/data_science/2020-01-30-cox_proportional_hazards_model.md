@@ -43,11 +43,7 @@ h(t\mid X)
 h_0(t)\exp(X^\top\beta).
 $$
 
-The baseline hazard $h_0(t)$ can vary freely over time.
-
-The covariate effect is summarized through $\beta$.
-
-That flexibility is powerful, but it does not remove the need for assumptions.
+The baseline hazard $h_0(t)$ can vary freely over time. The covariate effect is summarized through $\beta$. That flexibility is powerful, but it does not remove the need for assumptions.
 
 ## Hazard is not probability
 
@@ -64,11 +60,7 @@ P(t\le T<t+\Delta t\mid T\ge t)
 }.
 $$
 
-It is an instantaneous event rate conditional on survival to time $t$.
-
-It is not a probability and can exceed 1 in its rate units.
-
-The survival function is
+It is an instantaneous event rate conditional on survival to time $t$. It is not a probability and can exceed 1 in its rate units. The survival function is
 
 $$
 S(t)
@@ -106,21 +98,13 @@ h(t\mid X_j,X_{-j})
 \exp(\beta_j).
 $$
 
-That is a hazard ratio.
-
-If
+That is a hazard ratio. If
 
 $$
 \exp(\beta_j)=2,
 $$
 
-the instantaneous event rate is doubled at each time under the proportional-hazards model.
-
-It does **not** mean the probability of experiencing the event by a fixed horizon is doubled.
-
-Risk depends on the cumulative hazard over time.
-
-A hazard ratio should therefore not be described casually as “twice the risk.”
+the instantaneous event rate is doubled at each time under the proportional-hazards model. It does **not** mean the probability of experiencing the event by a fixed horizon is doubled. Risk depends on the cumulative hazard over time. A hazard ratio should therefore not be described casually as “twice the risk.”
 
 ## Proportional hazards is the defining slope restriction
 
@@ -136,23 +120,11 @@ h(t\mid X_b)
 \exp\{(X_a-X_b)^\top\beta\}.
 $$
 
-The right-hand side does not depend on time.
-
-That is the proportional-hazards assumption.
-
-The baseline hazard can change dramatically.
-
-The **ratio** between hazards for fixed covariate profiles is assumed constant.
-
-If the treatment effect is strong early and weak later, a single constant coefficient can be misleading even if the fitted model converges without error.
+The right-hand side does not depend on time. That is the proportional-hazards assumption. The baseline hazard can change dramatically. The **ratio** between hazards for fixed covariate profiles is assumed constant. If the treatment effect is strong early and weak later, a single constant coefficient can be misleading even if the fitted model converges without error.
 
 ## Partial likelihood
 
-Suppose an event occurs for individual $i$ at time $t_i$.
-
-Let $R(t_i)$ be the risk set immediately before that event.
-
-Ignoring ties for the moment, the Cox partial-likelihood contribution is
+Suppose an event occurs for individual $i$ at time $t_i$. Let $R(t_i)$ be the risk set immediately before that event. Ignoring ties for the moment, the Cox partial-likelihood contribution is
 
 $$
 \frac{
@@ -177,59 +149,27 @@ L_p(\beta)
 }.
 $$
 
-The baseline hazard cancels from these conditional comparisons.
-
-That is why $\beta$ can be estimated without specifying a parametric form for $h_0(t)$.
-
-The method still uses event times through the risk sets.
-
-It is not merely based on event ordering in an information-free sense.
+The baseline hazard cancels from these conditional comparisons. That is why $\beta$ can be estimated without specifying a parametric form for $h_0(t)$. The method still uses event times through the risk sets. It is not merely based on event ordering in an information-free sense.
 
 ## Tied event times require a convention
 
-In real data, several events can occur at the same recorded time.
-
-The simple partial-likelihood expression above assumes no ties.
-
-Common approximations include Breslow and Efron methods.
-
-For coarse time measurement or many ties, the choice can matter.
-
-Software defaults should therefore be known rather than treated as an invisible implementation detail.
+In real data, several events can occur at the same recorded time. The simple partial-likelihood expression above assumes no ties. Common approximations include Breslow and Efron methods. For coarse time measurement or many ties, the choice can matter. Software defaults should therefore be known rather than treated as an invisible implementation detail.
 
 ## Censoring
 
-A right-censored observation contributes information that the event time exceeds its censoring time.
+A right-censored observation contributes information that the event time exceeds its censoring time. It remains in the risk set until censoring and leaves afterward. The standard analysis relies on an appropriate independent-censoring assumption. Informally, after conditioning on the variables required by the model and design, censoring should not contain additional information about the future event process.
 
-It remains in the risk set until censoring and leaves afterward.
-
-The standard analysis relies on an appropriate independent-censoring assumption.
-
-Informally, after conditioning on the variables required by the model and design, censoring should not contain additional information about the future event process.
-
-Loss to follow-up due to deteriorating health can violate this.
-
-Administrative censoring at a planned study end is often easier to justify.
+Loss to follow-up due to deteriorating health can violate this. Administrative censoring at a planned study end is often easier to justify.
 
 ## Schoenfeld residuals and proportional-hazards diagnostics
 
-For each event, Schoenfeld residuals compare the covariate value of the subject experiencing the event with a risk-set-weighted expected covariate value.
+For each event, Schoenfeld residuals compare the covariate value of the subject experiencing the event with a risk-set-weighted expected covariate value. Under proportional hazards, those residuals should not show systematic time trends. A common diagnostic examines scaled Schoenfeld residuals against time and tests whether the slope is compatible with zero.
 
-Under proportional hazards, those residuals should not show systematic time trends.
-
-A common diagnostic examines scaled Schoenfeld residuals against time and tests whether the slope is compatible with zero.
-
-A small p-value is evidence against the constant-effect specification.
-
-A large p-value does not prove proportional hazards.
-
-Plots remain important because the shape of the time dependence matters.
+A small p-value is evidence against the constant-effect specification. A large p-value does not prove proportional hazards. Plots remain important because the shape of the time dependence matters.
 
 ## Time-dependent covariates are not the same as time-varying effects
 
-These two ideas are often confused.
-
-A **time-dependent covariate** changes value over follow-up:
+These two ideas are often confused. A **time-dependent covariate** changes value over follow-up:
 
 $$
 X_j=X_j(t).
@@ -253,11 +193,7 @@ h_0(t)
 \exp\{X^\top\beta(t)\}.
 $$
 
-The first allows the exposure value to evolve.
-
-The second relaxes proportional hazards.
-
-They solve different problems.
+The first allows the exposure value to evolve. The second relaxes proportional hazards. They solve different problems.
 
 ## Stratification
 
@@ -270,9 +206,7 @@ h_{0s}(t)
 \exp(X^\top\beta).
 $$
 
-The covariate coefficients $\beta$ are shared across strata.
-
-No hazard ratio is estimated for the stratification variable itself because its effect is absorbed into the stratum-specific baseline hazards.
+The covariate coefficients $\beta$ are shared across strata. No hazard ratio is estimated for the stratification variable itself because its effect is absorbed into the stratum-specific baseline hazards.
 
 ## Frailty models
 
@@ -286,25 +220,11 @@ h_0(t)
 \exp(X_{ij}^\top\beta),
 $$
 
-where $u_j$ represents cluster-level unobserved heterogeneity.
-
-This can model dependence among individuals within families, hospitals, or other clusters.
-
-Frailty is not a generic repair for every omitted variable.
-
-Its interpretation depends on the assumed random-effect distribution and clustering mechanism.
+where $u_j$ represents cluster-level unobserved heterogeneity. This can model dependence among individuals within families, hospitals, or other clusters. Frailty is not a generic repair for every omitted variable. Its interpretation depends on the assumed random-effect distribution and clustering mechanism.
 
 ## Cox regression does not establish causation
 
-In an observational study, a treatment coefficient can be confounded even if the proportional-hazards model fits perfectly.
-
-The regression adjusts for included covariates.
-
-It does not guarantee exchangeability between treatment groups.
-
-Causal interpretation requires design or identification assumptions beyond the Cox likelihood.
-
-This is especially important in medical applications, where “adjusted hazard ratio” is sometimes read as though it were automatically a causal treatment effect.
+In an observational study, a treatment coefficient can be confounded even if the proportional-hazards model fits perfectly. The regression adjusts for included covariates. It does not guarantee exchangeability between treatment groups. Causal interpretation requires design or identification assumptions beyond the Cox likelihood. This is especially important in medical applications, where “adjusted hazard ratio” is sometimes read as though it were automatically a causal treatment effect.
 
 ## A reproducible Python example
 
@@ -332,29 +252,21 @@ model.check_assumptions(
 )
 ~~~
 
-The fitted coefficients are log-hazard ratios conditional on the model and included covariates.
-
-The diagnostics should be inspected before those ratios are summarized as constant effects over time.
+The fitted coefficients are log-hazard ratios conditional on the model and included covariates. The diagnostics should be inspected before those ratios are summarized as constant effects over time.
 
 ## Absolute survival remains important
 
-A hazard ratio can look impressive while the absolute difference in event probability is small, or vice versa.
-
-For clinical interpretation, report quantities such as
+A hazard ratio can look impressive while the absolute difference in event probability is small, or vice versa. For clinical interpretation, report quantities such as
 
 $$
 S(t\mid X)
 $$
 
-at meaningful horizons, absolute risk differences, or restricted mean survival time when appropriate.
-
-Relative and absolute effects answer different questions.
+at meaningful horizons, absolute risk differences, or restricted mean survival time when appropriate. Relative and absolute effects answer different questions.
 
 ## Conclusion
 
-The Cox model is semiparametric because it leaves the baseline hazard unspecified while imposing a multiplicative covariate structure.
-
-Its central coefficient interpretation is
+The Cox model is semiparametric because it leaves the baseline hazard unspecified while imposing a multiplicative covariate structure. Its central coefficient interpretation is
 
 $$
 \exp(\beta_j)
@@ -362,11 +274,7 @@ $$
 \text{hazard ratio},
 $$
 
-not risk ratio.
-
-The proportional-hazards assumption means that this hazard ratio is constant over time for time-fixed coefficients.
-
-Censoring, ties, time-varying effects, and causal interpretation all require separate attention.
+not risk ratio. The proportional-hazards assumption means that this hazard ratio is constant over time for time-fixed coefficients. Censoring, ties, time-varying effects, and causal interpretation all require separate attention.
 
 ## References
 
