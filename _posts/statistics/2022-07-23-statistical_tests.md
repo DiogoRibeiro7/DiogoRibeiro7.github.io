@@ -148,12 +148,9 @@ The revelation that most statistical tests are built on the comparison of observ
 - Wasserstein, R. L., & Lazar, N. A. (2016). The ASA statement on p-values: context, process, and purpose. *The American Statistician*, 70(2), 129-133.
 - Wilcoxon, F. (1945). Individual comparisons by ranking methods. *Biometrics Bulletin*, 1(6), 80-83.
 
-
 ## The reference distribution is part of the test
 
-A test statistic without its null distribution is incomplete.
-
-That null distribution may come from:
+A test statistic without its null distribution is incomplete. That null distribution may come from:
 
 - an exact finite-sample model;
 - asymptotic theory;
@@ -165,11 +162,7 @@ Two procedures using the same statistic can have different validity if they use 
 
 ## Design determines valid resampling
 
-Permutation tests are exact only under the exchangeability induced by the null and study design.
-
-For paired data, treatment labels can usually be swapped **within pairs**, not across all rows. For randomized experiments, the randomization scheme defines the valid permutation set.
-
-This is why “use a permutation test when assumptions fail” is not a universal fallback.
+Permutation tests are exact only under the exchangeability induced by the null and study design. For paired data, treatment labels can usually be swapped **within pairs**, not across all rows. For randomized experiments, the randomization scheme defines the valid permutation set. This is why “use a permutation test when assumptions fail” is not a universal fallback.
 
 ## Tests should be tied to estimands
 
@@ -188,11 +181,7 @@ $$
 \ldots
 $$
 
-Different tests can reject for different reasons and therefore support different scientific claims.
-
-The common structure is not “observed minus expected.”
-
-It is
+Different tests can reject for different reasons and therefore support different scientific claims. The common structure is not “observed minus expected.” It is
 
 $$
 \boxed{
