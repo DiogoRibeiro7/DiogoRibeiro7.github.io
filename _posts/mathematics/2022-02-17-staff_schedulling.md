@@ -208,16 +208,11 @@ These additions usually fit naturally into the same integer programming formulat
 
 Using PuLP, we solve a small integer staffing model for a 24/7 coffee shop. The model meets coverage constraints and minimizes the stated objective. It does **not** prove minimum labor cost unless the objective explicitly contains the relevant wage and shift costs. Such optimization techniques can be applied to various business operations to enhance efficiency and reduce expenses.
 
-By utilizing Python and PuLP, managers can solve complex scheduling problems with ease, ensuring optimal resource allocation and cost management.
-
-The model is intentionally small, but the pattern scales: define the decision variables, encode coverage, state the objective, add constraints, and inspect the solution against the operating reality before using it in production.
-
+By utilizing Python and PuLP, managers can solve complex scheduling problems with ease, ensuring optimal resource allocation and cost management. The model is intentionally small, but the pattern scales: define the decision variables, encode coverage, state the objective, add constraints, and inspect the solution against the operating reality before using it in production.
 
 ## Coverage is not a complete roster
 
-The model chooses how many workers start each shift. It does not assign named employees.
-
-A real roster usually needs binary variables
+The model chooses how many workers start each shift. It does not assign named employees. A real roster usually needs binary variables
 
 $$
 x_{e,s}
@@ -228,15 +223,11 @@ x_{e,s}
 \end{cases}
 $$
 
-plus constraints for availability, skills, maximum hours, minimum rest, consecutive shifts, contracts, and fairness.
-
-That turns the model into a larger mixed-integer program.
+plus constraints for availability, skills, maximum hours, minimum rest, consecutive shifts, contracts, and fairness. That turns the model into a larger mixed-integer program.
 
 ## Feasibility before optimality
 
-Before discussing the optimum, check whether the constraints are feasible. Operational rules can easily conflict.
-
-Useful diagnostics include:
+Before discussing the optimum, check whether the constraints are feasible. Operational rules can easily conflict. Useful diagnostics include:
 
 - unmet-demand slack variables with heavy penalties;
 - constraint names that identify infeasible windows;
@@ -253,11 +244,7 @@ for every demand window and inspect the solver's optimality status.
 
 ## Uncertainty belongs outside the deterministic demand table
 
-Staff demand is rarely known exactly. If forecasts are uncertain, one can optimize against scenarios or service-level constraints rather than pretending the point forecast is exact.
-
-For scenarios $\omega$ with demand $d_t^{(\omega)}$, a robust or stochastic formulation can trade staffing cost against undercoverage risk.
-
-The deterministic model in this article is a useful first layer, not the complete workforce-planning problem.
+Staff demand is rarely known exactly. If forecasts are uncertain, one can optimize against scenarios or service-level constraints rather than pretending the point forecast is exact. For scenarios $\omega$ with demand $d_t^{(\omega)}$, a robust or stochastic formulation can trade staffing cost against undercoverage risk. The deterministic model in this article is a useful first layer, not the complete workforce-planning problem.
 
 ## References
 
