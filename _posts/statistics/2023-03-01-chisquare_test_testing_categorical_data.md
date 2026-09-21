@@ -42,7 +42,7 @@ where $O_i$ is the observed count in cell $i$ and $E_i$ the expected count. Squa
 
 Large values indicate the observed pattern is unlikely under the null. Under the null the statistic follows approximately a chi-square distribution, whose degrees of freedom depend on which version you are running.
 
-Note that the test operates on **counts, never on percentages**. Feeding it proportions destroys the sample size information the statistic depends on, and is one of the most common ways to get a badly wrong answer while producing a plausible-looking number.
+The test is defined from counts. Percentages alone are insufficient because they discard the sample size; if percentages are merely a display of known counts, reconstruct the counts or fit an equivalent count model rather than passing proportions as though they were frequencies.
 
 ## The Two Main Tests
 
@@ -89,14 +89,14 @@ resid = (observed - expected) / np.sqrt(expected)
 print("standardised residuals:\n", resid.round(2))
 ```
 
-Two habits make this far more informative than the p-value alone. **Cramér's V** converts the statistic into an effect size between 0 and 1, which matters because chi-square grows with sample size — with 100,000 observations a trivial association becomes highly significant. **Standardised residuals** show which cells depart from expectation and in which direction; values beyond roughly ±2 mark the cells actually driving the result. A significant test with no explanation of where the discrepancy lies is an incomplete analysis.
+Two habits make this far more informative than the p-value alone. **Cramér's V** converts the statistic into an effect size between 0 and 1, which matters because chi-square grows with sample size — with 100,000 observations a trivial association becomes highly significant. Pearson or adjusted standardized residuals show which cells depart from expectation and in which direction. A rule such as absolute residual above 2 is exploratory; scanning many cells creates a multiplicity problem and should not be treated as a familywise-confirmatory threshold. A significant test with no explanation of where the discrepancy lies is an incomplete analysis.
 
 ## Assumptions and When They Fail
 
 The test rests on conditions that are easy to overlook:
 
 - **Independent observations.** Each subject contributes to exactly one cell. Repeated measurements on the same people violate this outright and call for McNemar's test (2×2) or Cochran's Q instead.
-- **Sufficient expected counts.** The chi-square approximation degrades when expected counts are small. The usual rule is that all expected counts should exceed 5, or at minimum that no more than 20% fall below 5 and none below 1. When violated, Fisher's exact test gives an exact answer for small tables.
+- **Adequate asymptotic calibration.** Small or sparse expected counts can make the chi-square approximation inaccurate. Rules involving expected count 5 are heuristics, not theorems. For small 2×2 tables, Fisher's exact test is one option; for larger sparse tables, exact or Monte Carlo conditional methods and suitable log-linear models may be preferable.
 - **Counts, not proportions or means.** As above.
 - **Mutually exclusive, exhaustive categories.** Every observation belongs to one and only one cell.
 
@@ -120,9 +120,9 @@ Simpson's paradox applies here with full force. An association in a pooled table
 | Paired binary data (before/after on the same subjects) | McNemar's test |
 | Three or more paired binary conditions | Cochran's Q |
 | Ordered categories with a trend hypothesis | Cochran-Armitage trend test |
-| Very large sparse tables | Likelihood-ratio (G) test |
+| Sparse tables where asymptotics are doubtful | Exact / Monte Carlo conditional methods or a suitable count model |
 
-The G-test is worth noting as a near-equivalent: it uses the same degrees of freedom and gives similar answers, but decomposes additively, which makes it easier to work with in hierarchical models.
+The likelihood-ratio G statistic is an asymptotically related alternative to Pearson's statistic. It does **not** solve sparse-cell calibration automatically; both ordinary chi-square reference approximations can be poor when expected counts are too small.
 
 ## Reporting
 
