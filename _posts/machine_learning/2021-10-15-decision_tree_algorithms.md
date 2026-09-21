@@ -45,9 +45,7 @@ Greedy means the algorithm never reconsiders. A split that looks best locally ma
 
 ## Choosing the Best Split
 
-Metrics like **Gini impurity** and **entropy** measure how mixed the classes are in each node. The algorithm searches over possible splits and selects the one that yields the largest reduction in impurity.
-
-For a node where class $k$ has proportion $p_k$:
+Metrics like **Gini impurity** and **entropy** measure how mixed the classes are in each node. The algorithm searches over possible splits and selects the one that yields the largest reduction in impurity. For a node where class $k$ has proportion $p_k$:
 
 $$
 \text{Gini} = 1 - \sum_{k} p_k^2, \qquad
