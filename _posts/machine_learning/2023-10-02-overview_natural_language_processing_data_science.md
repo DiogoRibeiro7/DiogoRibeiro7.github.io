@@ -4,7 +4,7 @@ categories:
 - Machine Learning
 classes: wide
 date: '2023-10-02'
-excerpt: Modern NLP ranges from classical token-based models to pretrained transformers and language models. The core challenges remain representation, evaluation, domain shift, retrieval, and task definition.
+excerpt: "Modern NLP ranges from classical token-based models to pretrained transformers and language models. The core challenges remain representation, evaluation, domain shift, retrieval, and task definition."
 header:
   image: /assets/images/headers/photo-data-science-openalex.jpg
   og_image: /assets/images/headers/photo-data-science-openalex.jpg
@@ -25,14 +25,14 @@ permalink: '/machine-learning/overview_natural_language_processing_data_science/
 redirect_from:
 - '/natural language processing/overview_natural_language_processing_data_science/'
 - '/machine learning/overview_natural_language_processing_data_science/'
-seo_description: A modern overview of NLP covering classical representations, transformers, embeddings, retrieval, language models, evaluation, and domain shift.
+seo_description: "A modern overview of NLP covering classical representations, transformers, embeddings, retrieval, language models, evaluation, and domain shift."
 seo_title: 'Natural Language Processing: Models, Tasks, and Evaluation'
 seo_type: article
 tags:
 - Natural Language Processing
 - Machine Learning
 - Data Science
-title: Natural Language Processing: Models, Tasks, and Evaluation
+title: "Natural Language Processing: Models, Tasks, and Evaluation"
 ---
 
 Natural language processing is the study of computational methods for text and language. The field includes tasks as different as document classification, information extraction, retrieval, translation, summarization, question answering, and open-ended generation. These tasks should not be collapsed into a single notion of "understanding language" because they impose different statistical and operational requirements.
