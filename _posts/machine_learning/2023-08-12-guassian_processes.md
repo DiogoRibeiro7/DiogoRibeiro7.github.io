@@ -33,9 +33,7 @@ tags:
 title: Gaussian Processes for Time-Series Analysis in Python
 ---
 
-Gaussian Processes (GPs) are a highly flexible Bayesian tool that can be employed in a variety of modeling tasks, including time-series analysis. While traditional methods like ARIMA focus on generative processes, Gaussian Processes approach the problem from a curve-fitting perspective, allowing the user to define how different temporal components—such as trend, seasonality, and noise—should behave.
-
-This post examines the mechanics of GPs, how they work in the context of time-series data, and practical ways to implement them using Python.
+Gaussian Processes (GPs) are a highly flexible Bayesian tool that can be employed in a variety of modeling tasks, including time-series analysis. While traditional methods like ARIMA focus on generative processes, Gaussian Processes approach the problem from a curve-fitting perspective, allowing the user to define how different temporal components—such as trend, seasonality, and noise—should behave. This post examines the mechanics of GPs, how they work in the context of time-series data, and practical ways to implement them using Python.
 
 The main advantage of a GP is not only the forecast mean. It is the explicit uncertainty around the forecast and the ability to encode structure through kernels. That makes GPs useful when observations are sparse, measurement noise matters, or a domain expert can describe the shape of the process better than a black-box model can infer it from data alone.
 
@@ -76,9 +74,7 @@ We can decompose a time series into these components and model each one separate
 
 ## Gaussian Processes Explained
 
-A Gaussian process is a stochastic process for which every finite collection of function values has a multivariate normal distribution. It defines a distribution over functions through a mean function and covariance kernel; it does not imply that every possible function is represented equally.
-
-A GP is characterized by two key elements:
+A Gaussian process is a stochastic process for which every finite collection of function values has a multivariate normal distribution. It defines a distribution over functions through a mean function and covariance kernel; it does not imply that every possible function is represented equally. A GP is characterized by two key elements:
 
 - **Mean function** ($m(x)$): often set to zero after centering or when the kernel is expected to carry the structure, but nonzero parametric mean functions can be important for extrapolation.
 - **Covariance function** ($k(x, x')$): Determines how different points in the input space are related. The choice of kernel is crucial for controlling the smoothness, periodicity, and other aspects of the function.
@@ -186,18 +182,18 @@ def gp_posterior(x_train, x_pred, y_train, kernel, noise=0.05, **kernel_params):
         y_train,
     )
 
-    v = np.linalg.solve(
+v = np.linalg.solve(
         K,
         K_s,
     )
 
-    # Posterior mean
+# Posterior mean
     mu_s = K_s.T @ alpha
 
-    # Posterior covariance
+# Posterior covariance
     cov_s = K_ss - K_s.T @ v
-    
-    return mu_s, cov_s
+
+return mu_s, cov_s
 
 # Define training data and new points to predict
 x_pred = np.linspace(1, 100, 50)
@@ -246,9 +242,7 @@ Use GPs when uncertainty, smoothness assumptions, and interpretable structure ar
 
 ## Latent-function uncertainty versus observation uncertainty
 
-The posterior covariance above is for the latent function $f(x)$.
-
-If a future observation satisfies
+The posterior covariance above is for the latent function $f(x)$. If a future observation satisfies
 
 $$
 y_\ast
@@ -276,23 +270,15 @@ Do not mix the two. A credible band for the latent smooth function is narrower t
 
 ## Hyperparameters are estimated too
 
-The examples treat kernel amplitude, length scale, period, and noise level as fixed.
-
-In real applications those quantities are often estimated by maximizing the marginal likelihood or assigned priors.
-
-Plug-in hyperparameters understate uncertainty when hyperparameter posterior uncertainty is substantial.
+The examples treat kernel amplitude, length scale, period, and noise level as fixed. In real applications those quantities are often estimated by maximizing the marginal likelihood or assigned priors. Plug-in hyperparameters understate uncertainty when hyperparameter posterior uncertainty is substantial.
 
 ## Mean functions and extrapolation
 
-A zero-mean GP with a stationary kernel tends back toward its prior mean far from the observed data.
-
-If the scientific process has a persistent linear trend or mechanistic baseline, encode it in the mean function or kernel rather than expecting an RBF kernel to extrapolate the trend indefinitely.
+A zero-mean GP with a stationary kernel tends back toward its prior mean far from the observed data. If the scientific process has a persistent linear trend or mechanistic baseline, encode it in the mean function or kernel rather than expecting an RBF kernel to extrapolate the trend indefinitely.
 
 ## Numerical stability
 
-Exact GP calculations are commonly implemented with Cholesky factorization rather than generic matrix inversion.
-
-Add a small jitter term only when justified for numerical conditioning, and distinguish that numerical jitter from the observation-noise parameter.
+Exact GP calculations are commonly implemented with Cholesky factorization rather than generic matrix inversion. Add a small jitter term only when justified for numerical conditioning, and distinguish that numerical jitter from the observation-noise parameter.
 
 ## References
 
