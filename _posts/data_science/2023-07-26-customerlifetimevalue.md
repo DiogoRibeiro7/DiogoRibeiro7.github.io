@@ -90,7 +90,7 @@ the probability customer $i$ remains active beyond time $t$.
 
 ### Non-contractual businesses
 
-Retail and ecommerce often have no explicit churn event. A customer who has not purchased recently may still return. Models such as Pareto/NBD or BG/NBD treat purchase frequency and latent dropout probabilistically. The statistical problem is different.
+Retail and ecommerce often have no explicit churn event. A customer who has not purchased recently may still return. Models such as Pareto/NBD or BG/NBD treat purchase frequency and latent dropout probabilistically. The statistical problem is therefore different: contractual settings provide an observed churn event that supports survival analysis directly, whereas non-contractual settings require a latent activity model because inactivity may reflect either dropout or simply a long inter-purchase interval.
 
 ## Survival-based CLV
 
@@ -138,7 +138,7 @@ E[
 S(t)\,dt.
 $$
 
-That is restricted mean survival time.
+This quantity is the restricted mean survival time, and it is the natural finite-horizon analogue of expected lifetime because it integrates the entire survival curve rather than selecting one quantile such as the median.
 
 ## Censoring
 
@@ -148,7 +148,7 @@ $$
 T_i>c_i.
 $$
 
-Treating every active customer as though they churn at the observation date underestimates lifetime.
+Treating every active customer as though churn occurred at the observation date therefore underestimates lifetime and destroys the information carried by censoring. A survival model uses that partial information directly rather than forcing every customer into an observed event time.
 
 ## Revenue is not profit
 
@@ -240,7 +240,7 @@ Randomly splitting customer-month rows can leak future customer history into tra
 
 ## Calibration
 
-If predicted CLV is meant to be an expected monetary quantity, calibration matters. For customers predicted near a particular value, average realized future contribution over the defined horizon should be near that value after accounting for incomplete follow-up. Ranking metrics alone are insufficient for budgeting.
+If predicted CLV is meant to be an expected monetary quantity, calibration matters. For customers predicted near a particular value, average realized future contribution over the defined horizon should be near that value after accounting for incomplete follow-up. Ranking metrics alone are therefore insufficient for budgeting or acquisition decisions because they can order customers correctly while systematically overstating or understating the monetary amount available to spend.
 
 ## A survival-based Python example
 
@@ -296,7 +296,7 @@ km.fit(
 )
 ~~~
 
-A real implementation should model customer-level survival and margin rather than multiplying one population survival curve by one global average charge.
+A real implementation should move beyond this population-level illustration by modeling customer-level survival and customer-level contribution margin, propagating both sources of uncertainty rather than multiplying one global survival curve by one global average charge.
 
 ## Uncertainty
 
