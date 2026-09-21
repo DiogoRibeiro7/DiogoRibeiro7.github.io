@@ -53,9 +53,7 @@ The useful framing is that supply chain analytics has three layers: prediction, 
 
 ### What is Supply Chain Optimization?
 
-Supply chain optimization refers to the process of improving the efficiency and effectiveness of a supply chain by fine-tuning processes such as production, transportation, and inventory management. The goal is to ensure that goods flow smoothly from suppliers to customers while minimizing costs and maximizing customer satisfaction.
-
-Key metrics in supply chain optimization include:
+Supply chain optimization refers to the process of improving the efficiency and effectiveness of a supply chain by fine-tuning processes such as production, transportation, and inventory management. The goal is to ensure that goods flow smoothly from suppliers to customers while minimizing costs and maximizing customer satisfaction. Key metrics in supply chain optimization include:
 
 - **Cost Efficiency:** Reducing operational costs such as transportation, warehousing, and inventory.
 - **Lead Time Reduction:** Decreasing the time it takes for goods to move through the supply chain.
@@ -83,9 +81,7 @@ Collecting and analyzing this data in real-time enables companies to optimize th
 
 ### Predictive Analytics in Supply Chain Optimization
 
-**Predictive analytics** allows businesses to forecast future demand, optimize resource allocation, and anticipate potential disruptions. By analyzing historical data, predictive models can uncover patterns and trends that help businesses prepare for future events.
-
-Common techniques in predictive analytics include:
+**Predictive analytics** allows businesses to forecast future demand, optimize resource allocation, and anticipate potential disruptions. By analyzing historical data, predictive models can uncover patterns and trends that help businesses prepare for future events. Common techniques in predictive analytics include:
 
 - **Time-Series Forecasting:** Using methods such as **moving averages** or **ARIMA models** to predict demand based on past data.
 - **Statistical and machine-learning forecasting:** compare seasonal-naive, exponential-smoothing, regression, tree-based, and neural approaches under the same horizon and loss. Complexity should be earned by held-out performance.
@@ -103,9 +99,7 @@ Data science introduces sophisticated optimization techniques to improve logisti
 
 ### Prescriptive Analytics in Supply Chains
 
-While predictive analytics forecasts future events, **prescriptive analytics** recommends the best course of action. By running **what-if scenarios**, businesses can test various strategies and choose the most effective one.
-
-For example, if demand is expected to spike, prescriptive models can suggest how to reallocate resources, adjust production levels, or modify logistics plans to handle the surge.
+While predictive analytics forecasts future events, **prescriptive analytics** recommends the best course of action. By running **what-if scenarios**, businesses can test various strategies and choose the most effective one. For example, if demand is expected to spike, prescriptive models can suggest how to reallocate resources, adjust production levels, or modify logistics plans to handle the surge.
 
 ## Industrial Network Analysis
 
@@ -115,9 +109,7 @@ Industrial network analysis focuses on understanding and optimizing the complex 
 
 ### Graph Theory in Industrial Network Analysis
 
-**Graph theory** is central to industrial network analysis by helping businesses model and analyze the structure of their supply chains. This allows companies to optimize routes, identify bottlenecks, and improve the overall flow of goods.
-
-Key concepts in graph theory include:
+**Graph theory** is central to industrial network analysis by helping businesses model and analyze the structure of their supply chains. This allows companies to optimize routes, identify bottlenecks, and improve the overall flow of goods. Key concepts in graph theory include:
 
 - **Shortest Path Algorithms:** Algorithms such as **Dijkstra’s algorithm** help find the most efficient transportation routes, reducing delivery times and costs.
 - **Max Flow-Min Cut Theorem:** This algorithm optimizes the flow of materials or goods through a network, identifying bottlenecks and ensuring efficient resource allocation.
@@ -140,15 +132,11 @@ If a shipment delay is detected, a routing or scheduling optimizer can recompute
 
 ### Big Data and Supply Chain Visibility
 
-**Big data** technologies provide the ability to process and analyze vast amounts of data from multiple sources, giving businesses **end-to-end visibility** across their supply chains. This visibility is critical for ensuring that goods are moving efficiently and that potential issues are identified before they escalate.
-
-For instance, **predictive maintenance** models can analyze sensor data from machinery to detect early signs of failure, allowing companies to perform maintenance before a breakdown occurs.
+**Big data** technologies provide the ability to process and analyze vast amounts of data from multiple sources, giving businesses **end-to-end visibility** across their supply chains. This visibility is critical for ensuring that goods are moving efficiently and that potential issues are identified before they escalate. For instance, **predictive maintenance** models can analyze sensor data from machinery to detect early signs of failure, allowing companies to perform maintenance before a breakdown occurs.
 
 ### Evidence should be decision-specific
 
-The previous version used generic Amazon and Walmart examples without sources or reproducible performance measures. A stronger case study states the optimization problem, baseline policy, decision horizon, constraints, and measured outcome.
-
-For inventory, for example, report service level, fill rate, holding cost, stockouts, and working capital rather than saying that “predictive analytics improved inventory.”
+The previous version used generic Amazon and Walmart examples without sources or reproducible performance measures. A stronger case study states the optimization problem, baseline policy, decision horizon, constraints, and measured outcome. For inventory, for example, report service level, fill rate, holding cost, stockouts, and working capital rather than saying that “predictive analytics improved inventory.”
 
 ## Challenges and Future Directions
 
@@ -182,9 +170,7 @@ Looking to the future, several trends are expected to shape supply chain optimiz
 
 ## Conclusion
 
-**Supply chain optimization** and **industrial network analysis** are critical components of modern business operations, and **data science** is central to enhancing their effectiveness. By leveraging techniques such as **predictive analytics**, **machine learning**, and **graph theory**, businesses can optimize their supply chains, reduce costs, and improve customer satisfaction.
-
-As data science continues to evolve, the future of supply chains will be increasingly **smart, connected, and data-driven**, empowering businesses to thrive in a competitive global marketplace.
+**Supply chain optimization** and **industrial network analysis** are critical components of modern business operations, and **data science** is central to enhancing their effectiveness. By leveraging techniques such as **predictive analytics**, **machine learning**, and **graph theory**, businesses can optimize their supply chains, reduce costs, and improve customer satisfaction. As data science continues to evolve, the future of supply chains will be increasingly **smart, connected, and data-driven**, empowering businesses to thrive in a competitive global marketplace.
 
 The strongest supply chain systems are not simply automated. They are observable, stress-tested, and designed so planners can understand why a recommendation changed. That combination of optimization and human oversight is what turns analytics into reliable operational advantage.
 
@@ -195,14 +181,9 @@ The strongest supply chain systems are not simply automated. They are observable
 - Ahuja, R. K., Magnanti, T. L., & Orlin, J. B. (1993). *Network Flows: Theory, Algorithms, and Applications*. Prentice Hall.
 - Snyder, L. V., & Shen, Z.-J. M. (2019). *Fundamentals of Supply Chain Theory* (2nd ed.). Wiley.
 
-
 ## Forecasts and decisions should be evaluated jointly
 
-A forecast with lower RMSE is not automatically better for inventory.
-
-If replenishment uses an order-up-to policy, what matters is the induced distribution of stockouts, service level, holding cost, and expediting cost.
-
-The analytical chain is
+A forecast with lower RMSE is not automatically better for inventory. If replenishment uses an order-up-to policy, what matters is the induced distribution of stockouts, service level, holding cost, and expediting cost. The analytical chain is
 
 $$
 \boxed{

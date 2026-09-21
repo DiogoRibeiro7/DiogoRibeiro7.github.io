@@ -59,9 +59,7 @@ In this article, we’ll explore how to select the appropriate regression algori
 - The dimensionality of the input data.
 - The need for probabilistic output.
 
-For simplicity, we’ll focus on traditional machine learning methods, excluding neural networks, and work primarily with smaller, synthetic datasets.
-
-Ready to dive in? Let’s explore the world of regression.
+For simplicity, we’ll focus on traditional machine learning methods, excluding neural networks, and work primarily with smaller, synthetic datasets. Ready to dive in? Let’s explore the world of regression.
 
 ## 1. A Taxonomy of Regression Methods
 
@@ -266,16 +264,14 @@ SVR shines when the relationship between the input and output is nonlinear and c
 Although the methods we've discussed so far cover a wide range of regression tasks, there are several other popular approaches worth mentioning:
 
 - **XGBoost**: A gradient boosting method that sequentially builds models to correct errors made by previous models. XGBoost is highly efficient and often used in competitive machine learning challenges.
-  
+
 - **Random Forests and Decision Trees**: Decision trees split the dataset into smaller subsets based on feature values. Random forests improve upon this by averaging the predictions of multiple trees to enhance accuracy and avoid overfitting.
-  
+
 - **Neural Networks**: Although outside the scope of this article, neural networks are extremely popular for solving regression tasks, especially when the relationship between features and the target variable is highly complex.
 
 ## 7. Final Thoughts
 
-Regression tasks are a fundamental part of machine learning, offering a wide range of methods to model relationships between variables. Whether you’re working with simple linear data or complex, nonlinear datasets, there is a regression method suited to your needs.
-
-In this article, we:
+Regression tasks are a fundamental part of machine learning, offering a wide range of methods to model relationships between variables. Whether you’re working with simple linear data or complex, nonlinear datasets, there is a regression method suited to your needs. In this article, we:
 
 - Explored the distinction between classification and regression.
 - Introduced a decision framework for selecting the right regression method based on dataset complexity and needs.
@@ -293,12 +289,9 @@ Remember, the key to effective regression modeling lies in understanding your da
 - Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189-1232.
 - Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
 
-
 ## Compare models on the same target
 
-Use pipelines so preprocessing is learned inside each training fold. Evaluate every candidate with the same split and loss.
-
-For ordinary regression, useful questions include:
+Use pipelines so preprocessing is learned inside each training fold. Evaluate every candidate with the same split and loss. For ordinary regression, useful questions include:
 
 - Will deployment require extrapolation?
 - Are prediction intervals or only point predictions needed?
@@ -307,6 +300,4 @@ For ordinary regression, useful questions include:
 - Is coefficient interpretation a scientific requirement?
 - How much data is available relative to model flexibility?
 
-No algorithm name answers those questions.
-
-A strong default benchmark set is often smaller than a catalogue: linear/ridge regression, one smooth nonlinear model such as splines or GAMs, and one flexible tree or kernel model. Add complexity only when held-out performance or scientific structure justifies it.
+No algorithm name answers those questions. A strong default benchmark set is often smaller than a catalogue: linear/ridge regression, one smooth nonlinear model such as splines or GAMs, and one flexible tree or kernel model. Add complexity only when held-out performance or scientific structure justifies it.

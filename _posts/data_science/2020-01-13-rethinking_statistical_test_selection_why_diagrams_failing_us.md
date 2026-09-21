@@ -34,20 +34,14 @@ tags:
 title: 'Choosing Statistical Tests: Start with the Estimand'
 ---
 
-Statistical test-selection diagrams fail for a simple reason.
-
-They usually begin with questions such as:
+Statistical test-selection diagrams fail for a simple reason. They usually begin with questions such as:
 
 - Is the outcome continuous?
 - Is the sample normal?
 - Is $n>30$?
 - Are there two groups or three?
 
-Those questions can matter.
-
-They are not the first questions.
-
-A defensible analysis starts with
+Those questions can matter. They are not the first questions. A defensible analysis starts with
 
 $$
 \boxed{
@@ -67,9 +61,7 @@ The named test comes last.
 
 ## Start with the estimand
 
-Suppose there are two groups.
-
-Possible targets include:
+Suppose there are two groups. Possible targets include:
 
 - mean difference;
 - median difference;
@@ -81,9 +73,7 @@ Possible targets include:
 - quantile difference;
 - full-distribution equality.
 
-These are different estimands.
-
-No normality test can decide which one the scientific question requires.
+These are different estimands. No normality test can decide which one the scientific question requires.
 
 ## Means
 
@@ -97,13 +87,7 @@ E[Y\mid G=1]
 E[Y\mid G=0],
 $$
 
-use a method for means.
-
-For independent groups, Welch's t procedure is often a sensible default for an unadjusted mean contrast because it does not require equal variances.
-
-That does not make it universally optimal.
-
-Clustered observations, repeated measures, extreme tails, small samples, survey weights, or covariate adjustment can require another approach.
+use a method for means. For independent groups, Welch's t procedure is often a sensible default for an unadjusted mean contrast because it does not require equal variances. That does not make it universally optimal. Clustered observations, repeated measures, extreme tails, small samples, survey weights, or covariate adjustment can require another approach.
 
 The right method preserves the mean estimand.
 
@@ -117,15 +101,7 @@ Q_{0.5}(Y\mid G=1)
 Q_{0.5}(Y\mid G=0),
 $$
 
-quantile regression gives a direct model for that quantity.
-
-The Mann-Whitney test does not generally test equality of medians.
-
-Its null is more naturally expressed through equality of rank distributions or pairwise ordering probabilities.
-
-Under additional equal-shape assumptions, it can acquire a location interpretation.
-
-Those assumptions should be stated rather than silently imported.
+quantile regression gives a direct model for that quantity. The Mann-Whitney test does not generally test equality of medians. Its null is more naturally expressed through equality of rank distributions or pairwise ordering probabilities. Under additional equal-shape assumptions, it can acquire a location interpretation. Those assumptions should be stated rather than silently imported.
 
 ## Binary outcomes
 
@@ -149,15 +125,7 @@ p_0/(1-p_0)
 }.
 $$
 
-These are the risk difference, risk ratio, and odds ratio.
-
-Logistic regression targets log odds.
-
-A log-binomial or modified Poisson approach can target risk ratios.
-
-A linear probability model targets risk differences directly, with suitable robust inference.
-
-Choosing logistic regression simply because the outcome is binary does not decide which effect measure is scientifically preferred.
+These are the risk difference, risk ratio, and odds ratio. Logistic regression targets log odds. A log-binomial or modified Poisson approach can target risk ratios. A linear probability model targets risk differences directly, with suitable robust inference. Choosing logistic regression simply because the outcome is binary does not decide which effect measure is scientifically preferred.
 
 ## Counts and rates
 
@@ -185,17 +153,11 @@ $$
 \log T
 $$
 
-acts as an offset for exposure.
-
-Overdispersion may motivate negative-binomial or quasi-likelihood methods.
-
-Again, the model follows the data-generating structure.
+acts as an offset for exposure. Overdispersion may motivate negative-binomial or quasi-likelihood methods. Again, the model follows the data-generating structure.
 
 ## Dependence comes before distribution shape
 
-Ten thousand observations from ten subjects are not equivalent to ten thousand independent subjects.
-
-Dependence can arise from:
+Ten thousand observations from ten subjects are not equivalent to ten thousand independent subjects. Dependence can arise from:
 
 - repeated measures;
 - families;
@@ -205,17 +167,11 @@ Dependence can arise from:
 - time series;
 - matched designs.
 
-Ignoring dependence can make standard errors badly wrong.
-
-No amount of marginal normality checking repairs that.
+Ignoring dependence can make standard errors badly wrong. No amount of marginal normality checking repairs that.
 
 ## Transformations are modeling choices
 
-A log transformation is not inherently bad.
-
-Neither is it automatically good.
-
-If
+A log transformation is not inherently bad. Neither is it automatically good. If
 
 $$
 \log Y
@@ -223,19 +179,11 @@ $$
 X^\top\beta+\varepsilon
 $$
 
-is scientifically meaningful, then the transformation defines the scale of the estimand.
-
-The problem is not “transforming data.”
-
-The problem is transforming without asking what quantity the transformed model estimates.
-
-A transformation should be justified through the model and interpretation.
+is scientifically meaningful, then the transformation defines the scale of the estimand. The problem is not “transforming data.” The problem is transforming without asking what quantity the transformed model estimates. A transformation should be justified through the model and interpretation.
 
 ## There is no universal $n>30$ rule
 
-The Central Limit Theorem is asymptotic.
-
-Approximation quality depends on:
+The Central Limit Theorem is asymptotic. Approximation quality depends on:
 
 - skewness;
 - tail weight;
@@ -244,43 +192,19 @@ Approximation quality depends on:
 - sample balance;
 - leverage.
 
-For some distributions, $n=20$ is enough for a useful approximation.
-
-For others, $n=10{,}000$ may still leave problematic tail behavior.
-
-Sample-size rules cannot replace diagnostics.
+For some distributions, $n=20$ is enough for a useful approximation. For others, $n=10{,}000$ may still leave problematic tail behavior. Sample-size rules cannot replace diagnostics.
 
 ## Parametric and nonparametric are not quality rankings
 
-“Nonparametric” does not mean robust, modern, or assumption-free.
-
-“Parametric” does not mean fragile or obsolete.
-
-A parametric model can be highly robust for one target.
-
-A rank test can answer the wrong question perfectly.
-
-The meaningful distinction is what assumptions connect the data to the estimand.
+“Nonparametric” does not mean robust, modern, or assumption-free. “Parametric” does not mean fragile or obsolete. A parametric model can be highly robust for one target. A rank test can answer the wrong question perfectly. The meaningful distinction is what assumptions connect the data to the estimand.
 
 ## Permutation tests
 
-A permutation test is valid when the permutation scheme represents the null exchangeability structure.
-
-For a two-group randomized experiment, labels may be permutable under the randomization design.
-
-For paired data, unrestricted permutation across all observations is wrong.
-
-The design determines the allowed permutations.
-
-Permutation is not a magic assumption-free wrapper around any statistic.
+A permutation test is valid when the permutation scheme represents the null exchangeability structure. For a two-group randomized experiment, labels may be permutable under the randomization design. For paired data, unrestricted permutation across all observations is wrong. The design determines the allowed permutations. Permutation is not a magic assumption-free wrapper around any statistic.
 
 ## Bootstrap
 
-Bootstrap methods approximate the sampling distribution by resampling from an empirical estimate of the data-generating process.
-
-The resampling unit must match the dependence structure.
-
-Examples include:
+Bootstrap methods approximate the sampling distribution by resampling from an empirical estimate of the data-generating process. The resampling unit must match the dependence structure. Examples include:
 
 - ordinary bootstrap for independent observations;
 - cluster bootstrap for clustered data;
@@ -298,11 +222,7 @@ A named two-sample test becomes insufficient when the scientific question includ
 - multiple groups;
 - repeated measures.
 
-Regression modeling is often useful because it makes the estimand conditional on explicit covariates.
-
-But adding a regression formula does not automatically create causal interpretation.
-
-Design and identification remain separate.
+Regression modeling is often useful because it makes the estimand conditional on explicit covariates. But adding a regression formula does not automatically create causal interpretation. Design and identification remain separate.
 
 ## A practical framework
 
@@ -322,11 +242,7 @@ Only then choose the named procedure.
 
 ## Conclusion
 
-The problem with test-selection diagrams is not that the tests listed in them are old.
-
-It is that the diagrams usually hide the estimand and design.
-
-A better rule is:
+The problem with test-selection diagrams is not that the tests listed in them are old. It is that the diagrams usually hide the estimand and design. A better rule is:
 
 $$
 \boxed{

@@ -102,16 +102,16 @@ Feature selection is a crucial process in data preprocessing that involves ident
 2. **Meaningful Features**: When the goal is to retain the most meaningful features that contribute significantly to the target variable or the outcome of interest. This is particularly important in domains where interpretability is critical, such as healthcare or finance.
 3. **Measurement Integrity**: When it is essential to keep the original measurements intact. A transformation, such as that used in feature extraction, would result in a linear combination of measurements, leading to the loss of the original units and making it difficult to interpret the results.
 
-While feature selection is highly beneficial, it has some disadvantages. One major drawback is that it requires a search strategy and/or an objective function to evaluate and select potential candidates. This often involves computational complexity and can be time-consuming. For instance, it may require a supervised approach with class information to perform a statistical test or a cross-validation approach to identify the most informative features. 
+While feature selection is highly beneficial, it has some disadvantages. One major drawback is that it requires a search strategy and/or an objective function to evaluate and select potential candidates. This often involves computational complexity and can be time-consuming. For instance, it may require a supervised approach with class information to perform a statistical test or a cross-validation approach to identify the most informative features.
 
 However, feature selection can also be performed without class information. In such cases, unsupervised methods can be used, such as selecting the top N features based on variance, where higher variance is often an indicator of greater informational value. This approach is simpler but may not always capture the most relevant features for the specific task.
 
 ### Common Feature Selection Methods
 
 1. **Filter Methods**: These methods apply a statistical measure to assign a scoring to each feature. Features are ranked by the score, and either selected to be kept or removed from the dataset. Examples include correlation coefficients, chi-square tests, and mutual information.
-   
+
 2. **Wrapper Methods**: These methods evaluate the feature subsets using a machine learning model. They are computationally intensive but often provide better performance. Examples include recursive feature elimination and forward/backward feature selection.
-   
+
 3. **Embedded Methods**: These methods perform feature selection during the model training process. Examples include regularization methods like Lasso (L1) and Ridge (L2) regression, which penalize certain features during model fitting.
 
 Feature selection is a powerful tool to enhance model performance, improve interpretability, and reduce overfitting by eliminating irrelevant or redundant features. Choosing the right method and approach depends on the specific characteristics of the dataset and the goals of the analysis.
@@ -197,9 +197,7 @@ Before performing PCA, it is crucial to standardize the data. Standardization en
 1. **Subtracting the mean**: Subtract the mean value of each feature from the corresponding feature values.
 2. **Dividing by the standard deviation**: Divide each feature value by the standard deviation of the feature.
 
-Standardization gives each feature sample mean zero and sample standard deviation one. It does **not** make the feature normally distributed.
-
-Understanding these steps provides a comprehensive view of how PCA reduces dimensionality and transforms the data into a new feature space that retains the most significant information.
+Standardization gives each feature sample mean zero and sample standard deviation one. It does **not** make the feature normally distributed. Understanding these steps provides a comprehensive view of how PCA reduces dimensionality and transforms the data into a new feature space that retains the most significant information.
 
 ## The PCA Library
 
@@ -308,9 +306,7 @@ model.biplot(label=wine.target)
 plt.show()
 ```
 
-In the wine dataset analysis, the scree plot will show how the variance is distributed among the principal components. The biplot will help us understand the contributions of each original feature to the principal components, revealing insights into the data's underlying structure.
-
-By following these steps, you can gain a practical understanding of how PCA works, how to interpret the loadings, and how to visualize the explained variance and contributions of features in both synthetic and real datasets.
+In the wine dataset analysis, the scree plot will show how the variance is distributed among the principal components. The biplot will help us understand the contributions of each original feature to the principal components, revealing insights into the data's underlying structure. By following these steps, you can gain a practical understanding of how PCA works, how to interpret the loadings, and how to visualize the explained variance and contributions of features in both synthetic and real datasets.
 
 ## Outlier Detection
 
@@ -454,16 +450,9 @@ print("Outliers identified by the SPE/DmodX method:", outliers_spe.index)
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
 - Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.
 
-
 ## PCA is unsupervised
 
-PCA does not use the target variable.
-
-A low-variance direction can still be highly predictive of $Y$.
-
-Therefore selecting components only by explained variance can hurt supervised prediction.
-
-When PCA is used inside a predictive pipeline, choose the number of components inside cross-validation and compare against supervised alternatives such as ridge regression, PLS, or regularized models on the original features.
+PCA does not use the target variable. A low-variance direction can still be highly predictive of $Y$. Therefore selecting components only by explained variance can hurt supervised prediction. When PCA is used inside a predictive pipeline, choose the number of components inside cross-validation and compare against supervised alternatives such as ridge regression, PLS, or regularized models on the original features.
 
 ## Sign indeterminacy
 
@@ -473,30 +462,14 @@ $$
 -v
 $$
 
-is the same principal direction.
-
-Software may therefore flip the sign of a component across implementations or runs without changing the PCA solution.
-
-Interpret loading **relative patterns**, not the arbitrary global sign.
+is the same principal direction. Software may therefore flip the sign of a component across implementations or runs without changing the PCA solution. Interpret loading **relative patterns**, not the arbitrary global sign.
 
 ## Outlier detection is model-dependent
 
-Hotelling's $T^2$ measures distance in retained score space.
-
-SPE/Q residual measures distance outside the retained PCA subspace.
-
-Neither is a universal outlier detector.
-
-Thresholds depend on assumptions about the reference population, retained rank, and distribution.
-
-If PCA is fitted to data already containing anomalies, the anomalous observations can rotate the components and hide themselves.
+Hotelling's $T^2$ measures distance in retained score space. SPE/Q residual measures distance outside the retained PCA subspace. Neither is a universal outlier detector. Thresholds depend on assumptions about the reference population, retained rank, and distribution. If PCA is fitted to data already containing anomalies, the anomalous observations can rotate the components and hide themselves.
 
 Robust PCA or a clean reference set may be needed.
 
 ## Data leakage
 
-Centering, scaling, PCA fitting, and component selection must all be learned on the training data only.
-
-Fitting PCA on the full dataset before cross-validation leaks the covariance structure of the validation observations into the model.
-
-Use a pipeline that refits PCA inside each fold.
+Centering, scaling, PCA fitting, and component selection must all be learned on the training data only. Fitting PCA on the full dataset before cross-validation leaks the covariance structure of the validation observations into the model. Use a pipeline that refits PCA inside each fold.

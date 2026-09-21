@@ -55,12 +55,7 @@ The Bernoulli distribution models binary outcomes, representing scenarios where 
 
 ### Mathematical Formulation
 
-The Bernoulli distribution is parameterized by a single parameter $$ p $$, which represents the probability of success:
-$$ P(X=1) = p $$
-$$ P(X=0) = 1 - p $$
-
-The probability mass function (PMF) is given by:
-$$ P(X=x) = p^x (1-p)^{1-x} \quad \text{for } x \in \{0, 1\} $$
+The Bernoulli distribution is parameterized by a single parameter $$ p $$, which represents the probability of success: $$ P(X=1) = p $$ $$ P(X=0) = 1 - p $$ The probability mass function (PMF) is given by: $$ P(X=x) = p^x (1-p)^{1-x} \quad \text{for } x \in \{0, 1\} $$
 
 ### Properties
 
@@ -77,10 +72,7 @@ The Multinoulli (or Categorical) distribution generalizes the Bernoulli distribu
 
 ### Mathematical Formulation
 
-The Multinoulli distribution is parameterized by a vector $$ \mathbf{p} = (p_1, p_2, \ldots, p_k) $$ where $$ p_i $$ represents the probability of the $$ i $$-th category and $$ \sum_{i=1}^k p_i = 1 $$.
-
-The probability mass function is:
-$$ P(X=i) = p_i \quad \text{for } i = 1, 2, \ldots, k $$
+The Multinoulli distribution is parameterized by a vector $$ \mathbf{p} = (p_1, p_2, \ldots, p_k) $$ where $$ p_i $$ represents the probability of the $$ i $$-th category and $$ \sum_{i=1}^k p_i = 1 $$. The probability mass function is: $$ P(X=i) = p_i \quad \text{for } i = 1, 2, \ldots, k $$
 
 ### Properties
 
@@ -98,8 +90,7 @@ The Gaussian distribution appears frequently because of analytical convenience, 
 
 ### Mathematical Formulation
 
-The Gaussian distribution is characterized by two parameters: the mean $$ \mu $$ and the variance $$ \sigma^2 $$. Its probability density function (PDF) is:
-$$ f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left( -\frac{(x - \mu)^2}{2\sigma^2} \right) $$
+The Gaussian distribution is characterized by two parameters: the mean $$ \mu $$ and the variance $$ \sigma^2 $$. Its probability density function (PDF) is: $$ f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left( -\frac{(x - \mu)^2}{2\sigma^2} \right) $$
 
 ### Properties
 
@@ -117,8 +108,7 @@ Beyond the Gaussian distribution, other continuous distributions are vital in va
 
 ### Exponential Distribution
 
-The Exponential distribution models the time between events in a Poisson process. It is characterized by a single parameter $$ \lambda $$ (rate parameter):
-$$ f(x; \lambda) = \lambda e^{-\lambda x} \quad \text{for } x \ge 0 $$
+The Exponential distribution models the time between events in a Poisson process. It is characterized by a single parameter $$ \lambda $$ (rate parameter): $$ f(x; \lambda) = \lambda e^{-\lambda x} \quad \text{for } x \ge 0 $$
 
 #### Properties
 
@@ -131,9 +121,7 @@ The exponential distribution is appropriate for waiting times under a constant-h
 
 ### Beta Distribution
 
-The Beta distribution is useful for modeling proportions and probabilities. It is characterized by two shape parameters, $$ \alpha $$ and $$ \beta $$:
-$$ f(x; \alpha, \beta) = \frac{x^{\alpha-1} (1-x)^{\beta-1}}{B(\alpha, \beta)} \quad \text{for } 0 \le x \le 1 $$
-where $$ B(\alpha, \beta) $$ is the Beta function.
+The Beta distribution is useful for modeling proportions and probabilities. It is characterized by two shape parameters, $$ \alpha $$ and $$ \beta $$: $$ f(x; \alpha, \beta) = \frac{x^{\alpha-1} (1-x)^{\beta-1}}{B(\alpha, \beta)} \quad \text{for } 0 \le x \le 1 $$ where $$ B(\alpha, \beta) $$ is the Beta function.
 
 #### Properties
 
@@ -158,12 +146,9 @@ Wasserman, L. (2004). *All of Statistics: A Concise Course in Statistical Infere
 
 Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning*. MIT Press.
 
-
 ## Distribution versus likelihood versus prior
 
-The same named distribution can play different roles.
-
-For example:
+The same named distribution can play different roles. For example:
 
 - Bernoulli can be the likelihood for binary outcomes;
 - Beta can be a prior for an unknown Bernoulli probability;
@@ -174,13 +159,7 @@ The scientific interpretation therefore depends on **what quantity is modeled**,
 
 ## Probability models should match support
 
-Support is often the first useful diagnostic.
-
-A Gaussian model assigns positive density to every real number.
-
-That is inappropriate for quantities that are physically restricted to be positive when negative values are not merely negligible but impossible.
-
-Likewise, a Beta distribution is bounded to
+Support is often the first useful diagnostic. A Gaussian model assigns positive density to every real number. That is inappropriate for quantities that are physically restricted to be positive when negative values are not merely negligible but impossible. Likewise, a Beta distribution is bounded to
 
 $$
 0le Xle1.
@@ -198,18 +177,8 @@ p(y_1,ldots,y_n)
 prod_i p(y_i)
 $$
 
-assumes independence.
-
-In time series, grouped observations, spatial data, and repeated measures, that factorization may be false.
-
-A correct marginal distribution for each observation does not imply a correct joint model.
+assumes independence. In time series, grouped observations, spatial data, and repeated measures, that factorization may be false. A correct marginal distribution for each observation does not imply a correct joint model.
 
 ## Calibration
 
-For probabilistic prediction, the quality of a distributional model should be evaluated through proper scoring rules and calibration, not only point accuracy.
-
-A classifier can have good accuracy while producing badly calibrated probabilities.
-
-A regression model can have a good RMSE while prediction intervals undercover.
-
-Probability modeling is useful precisely because it lets us evaluate the whole predictive distribution.
+For probabilistic prediction, the quality of a distributional model should be evaluated through proper scoring rules and calibration, not only point accuracy. A classifier can have good accuracy while producing badly calibrated probabilities. A regression model can have a good RMSE while prediction intervals undercover. Probability modeling is useful precisely because it lets us evaluate the whole predictive distribution.

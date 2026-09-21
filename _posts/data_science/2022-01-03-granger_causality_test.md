@@ -138,17 +138,11 @@ H_0:
 b_1=\cdots=b_p=0.
 $$
 
-The unrestricted model is compared with the restricted model omitting lagged $X$.
-
-Lag order should be chosen before interpreting the test, using domain knowledge, information criteria, and residual diagnostics. Testing many lag lengths and reporting the smallest p-value creates a multiplicity problem.
+The unrestricted model is compared with the restricted model omitting lagged $X$. Lag order should be chosen before interpreting the test, using domain knowledge, information criteria, and residual diagnostics. Testing many lag lengths and reporting the smallest p-value creates a multiplicity problem.
 
 ## Cointegration
 
-If $X_t$ and $Y_t$ are integrated but cointegrated, differencing both series and fitting a VAR in differences discards the equilibrium-correction term.
-
-A vector error-correction model represents both short-run dynamics and long-run equilibrium adjustment.
-
-The appropriate test then depends on that VECM specification.
+If $X_t$ and $Y_t$ are integrated but cointegrated, differencing both series and fitting a VAR in differences discards the equilibrium-correction term. A vector error-correction model represents both short-run dynamics and long-run equilibrium adjustment. The appropriate test then depends on that VECM specification.
 
 ## Predictive content is information-set dependent
 
@@ -160,8 +154,4 @@ X
 Y
 $$
 
-is always conditional on what else is in the model.
-
-If a third variable $Z$ contains the predictive information that makes $X$ useful, adding $Z$ can eliminate the Granger relationship.
-
-That conditional nature is one reason Granger causality should not be equated with intervention causality.
+is always conditional on what else is in the model. If a third variable $Z$ contains the predictive information that makes $X$ useful, adding $Z$ can eliminate the Granger relationship. That conditional nature is one reason Granger causality should not be equated with intervention causality.

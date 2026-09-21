@@ -37,9 +37,7 @@ Predictive maintenance is often presented as a machine-learning problem:
 2. train a failure model;
 3. predict the next breakdown.
 
-That description is incomplete.
-
-A useful predictive-maintenance system has at least four layers:
+That description is incomplete. A useful predictive-maintenance system has at least four layers:
 
 $$
 \boxed{
@@ -57,11 +55,7 @@ The final step matters because a prediction has value only if it changes a decis
 
 ## Condition-based maintenance and predictive maintenance
 
-Condition-based maintenance uses information about the current state of an asset to decide when maintenance should be performed.
-
-Predictive maintenance adds a forward-looking component.
-
-It may estimate:
+Condition-based maintenance uses information about the current state of an asset to decide when maintenance should be performed. Predictive maintenance adds a forward-looking component. It may estimate:
 
 - failure probability over a future horizon;
 - time to a specific fault;
@@ -69,9 +63,7 @@ It may estimate:
 - probability of crossing a degradation threshold;
 - or the future distribution of a health indicator.
 
-These are different statistical targets.
-
-They should not be collapsed into one generic “failure prediction” label.
+These are different statistical targets. They should not be collapsed into one generic “failure prediction” label.
 
 ## Diagnostics and prognostics are different tasks
 
@@ -79,9 +71,7 @@ They should not be collapsed into one generic “failure prediction” label.
 
 > What is wrong now?
 
-A diagnostic system may classify a bearing fault, detect misalignment, or identify an abnormal operating state.
-
-**Prognostics** asks:
+A diagnostic system may classify a bearing fault, detect misalignment, or identify an abnormal operating state. **Prognostics** asks:
 
 > What is likely to happen next, and when?
 
@@ -93,21 +83,11 @@ RUL_t
 T_{\mathrm{failure}}-t,
 $$
 
-conditional on the information available at time $t$.
-
-A good diagnostic classifier does not automatically produce a good RUL model.
-
-The targets, losses, labels, and evaluation schemes are different.
+conditional on the information available at time $t$. A good diagnostic classifier does not automatically produce a good RUL model. The targets, losses, labels, and evaluation schemes are different.
 
 ## The data-generating process begins with the machine
 
-Sensor data are not abstract features.
-
-They arise from physical processes.
-
-Vibration, temperature, pressure, acoustic emissions, current, lubricant chemistry, and operational loads each respond to different failure mechanisms.
-
-The observed signal can be written schematically as
+Sensor data are not abstract features. They arise from physical processes. Vibration, temperature, pressure, acoustic emissions, current, lubricant chemistry, and operational loads each respond to different failure mechanisms. The observed signal can be written schematically as
 
 $$
 Y_t
@@ -130,15 +110,11 @@ where:
 - $S_t$ is sensor or acquisition state;
 - $\varepsilon_t$ is measurement noise.
 
-A temperature rise caused by higher workload is not the same event as a temperature rise caused by degradation.
-
-This is why operating context belongs in the model.
+A temperature rise caused by higher workload is not the same event as a temperature rise caused by degradation. This is why operating context belongs in the model.
 
 ## Health indicators
 
-Raw waveforms are often converted into health indicators.
-
-For a vibration signal $x_1,\ldots,x_n$, simple examples include root-mean-square amplitude
+Raw waveforms are often converted into health indicators. For a vibration signal $x_1,\ldots,x_n$, simple examples include root-mean-square amplitude
 
 $$
 \mathrm{RMS}
@@ -149,19 +125,11 @@ $$
 },
 $$
 
-kurtosis, spectral-band energy, crest factor, or features extracted from time-frequency representations.
-
-A useful health indicator should ideally vary with degradation rather than with irrelevant operating conditions.
-
-That is a stronger requirement than being predictive in one historical dataset.
+kurtosis, spectral-band energy, crest factor, or features extracted from time-frequency representations. A useful health indicator should ideally vary with degradation rather than with irrelevant operating conditions. That is a stronger requirement than being predictive in one historical dataset.
 
 ## Failure labels are usually difficult
 
-Supervised predictive-maintenance models often assume clean labels.
-
-Real maintenance data rarely provide them.
-
-Common problems include:
+Supervised predictive-maintenance models often assume clean labels. Real maintenance data rarely provide them. Common problems include:
 
 - failures are rare;
 - preventive maintenance removes components before failure;
@@ -170,43 +138,21 @@ Common problems include:
 - a component can be replaced for administrative reasons rather than degradation;
 - several failure modes can compete.
 
-This produces censoring and selection.
-
-A unit removed before failure does not have an observed failure time.
-
-Treating it as a healthy negative indefinitely is wrong.
+This produces censoring and selection. A unit removed before failure does not have an observed failure time. Treating it as a healthy negative indefinitely is wrong.
 
 ## Censoring belongs in RUL analysis
 
-Suppose an asset is observed until time $C$ without failing.
-
-We know only
+Suppose an asset is observed until time $C$ without failing. We know only
 
 $$
 T_{\mathrm{failure}}>C.
 $$
 
-That is right censoring.
-
-Survival-analysis and reliability methods are designed for this information structure.
-
-Discarding censored units wastes information.
-
-Assigning an arbitrary failure time invents data.
-
-For time-to-event targets, the censoring process should be part of the model and validation design.
+That is right censoring. Survival-analysis and reliability methods are designed for this information structure. Discarding censored units wastes information. Assigning an arbitrary failure time invents data. For time-to-event targets, the censoring process should be part of the model and validation design.
 
 ## Maintenance changes the data you later learn from
 
-This is one of the most important problems in predictive maintenance.
-
-Suppose the system detects degradation and replaces a component.
-
-The failure that would have occurred is never observed.
-
-Successful maintenance therefore removes exactly the future failures the model would otherwise learn from.
-
-The historical data satisfy a feedback loop:
+This is one of the most important problems in predictive maintenance. Suppose the system detects degradation and replaces a component. The failure that would have occurred is never observed. Successful maintenance therefore removes exactly the future failures the model would otherwise learn from. The historical data satisfy a feedback loop:
 
 $$
 \text{model or inspection}
@@ -216,15 +162,11 @@ $$
 \text{future observations}.
 $$
 
-This means maintenance policy is part of the data-generating process.
-
-Ignoring it can create biased estimates of failure risk.
+This means maintenance policy is part of the data-generating process. Ignoring it can create biased estimates of failure risk.
 
 ## Anomaly detection is not failure prediction
 
-Anomaly detection estimates whether current behavior is unusual relative to a reference distribution.
-
-A score might be
+Anomaly detection estimates whether current behavior is unusual relative to a reference distribution. A score might be
 
 $$
 A_t
@@ -235,11 +177,7 @@ X_t,
 ),
 $$
 
-where $\mathcal R$ represents normal operating data.
-
-A high anomaly score does not imply imminent failure.
-
-An anomaly can arise from:
+where $\mathcal R$ represents normal operating data. A high anomaly score does not imply imminent failure. An anomaly can arise from:
 
 - a new operating regime;
 - sensor drift;
@@ -248,25 +186,13 @@ An anomaly can arise from:
 - a genuine fault;
 - or a harmless rare state.
 
-Anomaly detection is useful when labels are scarce.
-
-It should not be marketed as a failure-probability model unless that relationship has been validated.
+Anomaly detection is useful when labels are scarce. It should not be marketed as a failure-probability model unless that relationship has been validated.
 
 ## Clustering has a narrower role than many articles imply
 
-Clustering can reveal operating regimes or groups of similar assets.
+Clustering can reveal operating regimes or groups of similar assets. That can be useful when a single model would otherwise mix incompatible behaviors. But cluster membership does not automatically correspond to fault modes. K-means optimizes within-cluster squared Euclidean distance. DBSCAN identifies density-connected regions under its scale and neighborhood parameters.
 
-That can be useful when a single model would otherwise mix incompatible behaviors.
-
-But cluster membership does not automatically correspond to fault modes.
-
-K-means optimizes within-cluster squared Euclidean distance.
-
-DBSCAN identifies density-connected regions under its scale and neighborhood parameters.
-
-Neither algorithm knows what “healthy” or “failing” means.
-
-Those meanings require external validation.
+Neither algorithm knows what “healthy” or “failing” means. Those meanings require external validation.
 
 ## Remaining useful life is a distribution, not just a number
 
@@ -276,11 +202,7 @@ $$
 \widehat{RUL}_t=37\text{ hours}
 $$
 
-looks actionable.
-
-But maintenance decisions also need uncertainty.
-
-A probabilistic model aims at
+looks actionable. But maintenance decisions also need uncertainty. A probabilistic model aims at
 
 $$
 p(
@@ -290,11 +212,7 @@ RUL_t
 ),
 $$
 
-where $\mathcal F_t$ contains the information observed up to time $t$.
-
-Two assets can have the same expected RUL and very different risk profiles.
-
-For one asset,
+where $\mathcal F_t$ contains the information observed up to time $t$. Two assets can have the same expected RUL and very different risk profiles. For one asset,
 
 $$
 RUL
@@ -302,21 +220,11 @@ RUL
 \mathcal N(37,2^2),
 $$
 
-while another may have a broad or skewed distribution.
-
-The maintenance decision should not treat those forecasts as equivalent.
+while another may have a broad or skewed distribution. The maintenance decision should not treat those forecasts as equivalent.
 
 ## Lead time matters
 
-A correct failure prediction can still be operationally useless if it arrives too late.
-
-Suppose maintenance requires 12 hours of planning and parts procurement.
-
-An alarm 30 minutes before failure has excellent event classification but almost no scheduling value.
-
-Evaluation therefore needs a prediction horizon.
-
-Useful questions include:
+A correct failure prediction can still be operationally useless if it arrives too late. Suppose maintenance requires 12 hours of planning and parts procurement. An alarm 30 minutes before failure has excellent event classification but almost no scheduling value. Evaluation therefore needs a prediction horizon. Useful questions include:
 
 - How early is the first reliable warning?
 - How often does the system oscillate between alarm and normal?
@@ -327,13 +235,7 @@ These are more operationally meaningful than global accuracy alone.
 
 ## Random train-test splits create leakage
 
-Sensor data from the same machine are strongly correlated over time.
-
-If observations from one asset appear in both training and test sets, a model can partially memorize machine-specific behavior.
-
-The same problem occurs when windows from the same degradation trajectory are split randomly.
-
-A better validation design holds out:
+Sensor data from the same machine are strongly correlated over time. If observations from one asset appear in both training and test sets, a model can partially memorize machine-specific behavior. The same problem occurs when windows from the same degradation trajectory are split randomly. A better validation design holds out:
 
 - entire assets;
 - future time periods;
@@ -345,9 +247,7 @@ The split should mimic deployment.
 
 ## Feature leakage can be subtle
 
-Maintenance databases often contain variables recorded after the decision that the model is supposed to predict.
-
-Examples include:
+Maintenance databases often contain variables recorded after the decision that the model is supposed to predict. Examples include:
 
 - work-order status;
 - technician diagnosis;
@@ -355,11 +255,7 @@ Examples include:
 - post-inspection measurements;
 - timestamps generated by maintenance workflows.
 
-Such fields can make a model look spectacular offline.
-
-They are unavailable at prediction time.
-
-A strict feature timestamp is therefore essential:
+Such fields can make a model look spectacular offline. They are unavailable at prediction time. A strict feature timestamp is therefore essential:
 
 $$
 X_t
@@ -369,15 +265,7 @@ $$
 
 ## Accuracy is not the operational objective
 
-Suppose failures occur in 0.1% of observation windows.
-
-A model that always predicts “no failure” has 99.9% accuracy.
-
-That metric is useless.
-
-Precision and recall are better but still incomplete.
-
-A false alarm may cause:
+Suppose failures occur in 0.1% of observation windows. A model that always predicts “no failure” has 99.9% accuracy. That metric is useless. Precision and recall are better but still incomplete. A false alarm may cause:
 
 - an unnecessary inspection;
 - production stoppage;
@@ -428,19 +316,11 @@ $$
 \hat p_t>\tau
 $$
 
-defines an intervention rule.
-
-Different thresholds generate different false-alarm rates, missed failures, and maintenance costs.
-
-So model selection and threshold selection should be separated.
-
-A model with better AUC may still produce a worse maintenance policy at the operational threshold.
+defines an intervention rule. Different thresholds generate different false-alarm rates, missed failures, and maintenance costs. So model selection and threshold selection should be separated. A model with better AUC may still produce a worse maintenance policy at the operational threshold.
 
 ## Classical reliability models remain useful
 
-Predictive maintenance does not require machine learning.
-
-Useful models include:
+Predictive maintenance does not require machine learning. Useful models include:
 
 - Weibull lifetime models;
 - proportional-hazards models;
@@ -451,34 +331,22 @@ Useful models include:
 - change-point methods;
 - Bayesian hierarchical models.
 
-These models can be especially attractive when failure data are scarce and physical interpretation matters.
-
-The appropriate model follows the degradation mechanism and decision target.
+These models can be especially attractive when failure data are scarce and physical interpretation matters. The appropriate model follows the degradation mechanism and decision target.
 
 ## Machine learning is useful when the signal warrants it
 
-Machine-learning methods can help when the relationship among sensor streams, operating regimes, and failure outcomes is too complex for a simple parametric model.
-
-Examples include:
+Machine-learning methods can help when the relationship among sensor streams, operating regimes, and failure outcomes is too complex for a simple parametric model. Examples include:
 
 - gradient-boosted trees for engineered condition features;
 - convolutional models for spectra or raw vibration signals;
 - sequence models for multivariate trajectories;
 - representation learning for high-dimensional sensor streams.
 
-The burden of validation rises with model flexibility.
-
-A complex model should earn its complexity through out-of-asset and out-of-time performance, not through training fit.
+The burden of validation rises with model flexibility. A complex model should earn its complexity through out-of-asset and out-of-time performance, not through training fit.
 
 ## Physics and data can be combined
 
-Purely data-driven models can extrapolate badly outside historical operating regimes.
-
-Purely physics-based models can omit complex degradation mechanisms.
-
-Hybrid models combine physical structure with statistical calibration.
-
-For example,
+Purely data-driven models can extrapolate badly outside historical operating regimes. Purely physics-based models can omit complex degradation mechanisms. Hybrid models combine physical structure with statistical calibration. For example,
 
 $$
 H_{t+1}
@@ -501,15 +369,11 @@ Y_t
 g(H_t)+\varepsilon_t.
 $$
 
-Unknown parameters and states can then be inferred statistically.
-
-This is often more defensible than treating every sensor channel as an unrelated tabular feature.
+Unknown parameters and states can then be inferred statistically. This is often more defensible than treating every sensor channel as an unrelated tabular feature.
 
 ## Deployment needs monitoring too
 
-A predictive-maintenance model changes as the fleet changes.
-
-Potential drift sources include:
+A predictive-maintenance model changes as the fleet changes. Potential drift sources include:
 
 - firmware updates;
 - replacement sensor models;
@@ -519,9 +383,7 @@ Potential drift sources include:
 - aging fleet composition;
 - seasonal environment changes.
 
-Monitoring should therefore cover both prediction quality and the input process.
-
-A model can remain numerically stable while the operational meaning of its features changes.
+Monitoring should therefore cover both prediction quality and the input process. A model can remain numerically stable while the operational meaning of its features changes.
 
 ## A defensible workflow
 
@@ -544,11 +406,7 @@ The algorithm appears in the middle of the process, not at the beginning.
 
 ## Conclusion
 
-Predictive maintenance is not a leaderboard problem.
-
-It is a reliability and decision problem supported by data.
-
-The core chain is
+Predictive maintenance is not a leaderboard problem. It is a reliability and decision problem supported by data. The core chain is
 
 $$
 \boxed{

@@ -72,9 +72,7 @@ To calculate the Gini coefficient:
 
 ### Relation to AUC
 
-The Gini coefficient is related to the Area Under the ROC Curve (AUC) by the formula:
-$$\text{Gini} = 2 \times \text{AUC} - 1$$
-A random prediction yields a Gini score of 0 (AUC = 0.5).
+The Gini coefficient is related to the Area Under the ROC Curve (AUC) by the formula: $$\text{Gini} = 2 \times \text{AUC} - 1$$ A random prediction yields a Gini score of 0 (AUC = 0.5).
 
 ### Normalized Gini Coefficient
 
@@ -88,8 +86,7 @@ The Default Rate measures the percentage of loans that a lender writes off as un
 
 ### Calculation Formula
 
-The formula for the Default Rate is:
-$$\text{Default Rate} = \left( \frac{\text{Number of Defaulted Loans}}{\text{Total Number of Loans}} \right) \times 100$$
+The formula for the Default Rate is: $$\text{Default Rate} = \left( \frac{\text{Number of Defaulted Loans}}{\text{Total Number of Loans}} \right) \times 100$$
 
 ### Default Criteria
 
@@ -120,11 +117,11 @@ def gini(actual, pred):
     """
     Calculate the Gini coefficient for the given actual and predicted values.
 
-    Parameters:
+Parameters:
     actual (tf.Tensor): The actual values.
     pred (tf.Tensor): The predicted values.
 
-    Returns:
+Returns:
     tf.Tensor: The Gini coefficient.
     """
     n = tf.shape(actual)[0]
@@ -145,11 +142,11 @@ def gini_normalized(actual, pred):
     """
     Calculate the normalized Gini coefficient for the given actual and predicted values.
 
-    Parameters:
+Parameters:
     actual (tf.Tensor): The actual values.
     pred (tf.Tensor): The predicted values.
 
-    Returns:
+Returns:
     tf.Tensor: The normalized Gini coefficient.
     """
     gini_actual_pred = gini(actual, pred)

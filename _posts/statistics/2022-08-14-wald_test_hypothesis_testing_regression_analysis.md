@@ -37,7 +37,7 @@ tags:
 title: 'Wald Test: Hypothesis Testing in Regression Analysis'
 ---
 
-The Wald test is a widely used statistical tool for hypothesis testing in regression analysis. It is central to determining whether the coefficients of predictor variables in a regression model are statistically significant. The test is applicable across various types of regression models, including **logistic regression**, **Poisson regression**, and more complex statistical models. Understanding how to implement and interpret the Wald test is essential for statisticians and researchers dealing with data modeling and regression analysis. 
+The Wald test is a widely used statistical tool for hypothesis testing in regression analysis. It is central to determining whether the coefficients of predictor variables in a regression model are statistically significant. The test is applicable across various types of regression models, including **logistic regression**, **Poisson regression**, and more complex statistical models. Understanding how to implement and interpret the Wald test is essential for statisticians and researchers dealing with data modeling and regression analysis.
 
 This article examines the theory behind the Wald test, its mathematical formulation, and practical applications in different types of regression models. We'll also explore how the Wald test compares to other hypothesis testing methods, such as the **likelihood ratio test** and the **score test**, to give you a well-rounded understanding of its utility.
 
@@ -90,9 +90,7 @@ Z_W
 N(0,1).
 $$
 
-Its square is asymptotically chi-square with one degree of freedom.
-
-Alternatively, for multi-parameter tests, the Wald statistic can be generalized as:
+Its square is asymptotically chi-square with one degree of freedom. Alternatively, for multi-parameter tests, the Wald statistic can be generalized as:
 
 $$
 W
@@ -114,9 +112,7 @@ This generalized Wald statistic follows a chi-squared distribution with degrees 
 
 ### 1.3 Interpretation of the Wald Statistic
 
-Once the Wald statistic is calculated, it is compared to a critical value from the chi-squared distribution. If the Wald statistic exceeds the critical value, the null hypothesis is rejected, suggesting that the parameter in question is statistically significant.
-
-For a single coefficient test, the Wald statistic is squared to follow a chi-squared distribution with 1 degree of freedom:
+Once the Wald statistic is calculated, it is compared to a critical value from the chi-squared distribution. If the Wald statistic exceeds the critical value, the null hypothesis is rejected, suggesting that the parameter in question is statistically significant. For a single coefficient test, the Wald statistic is squared to follow a chi-squared distribution with 1 degree of freedom:
 
 $$
 W^2 \sim \chi^2_1
@@ -136,15 +132,11 @@ $$
 Y = \beta_0 + \beta_1 X + \epsilon
 $$
 
-The Wald test can assess whether $$\beta_1 = 0$$, i.e., whether the predictor variable $$X$$ has any effect on the outcome $$Y$$. The test statistic is calculated as described earlier, and a significant result indicates that the predictor variable plays a role in explaining the variation in the outcome variable.
-
-In practice, the Wald test is often reported alongside the $$t$$-statistic in regression software outputs. For large samples, the Wald test and the $$t$$-test yield similar results because the square of the $$t$$-statistic follows a chi-squared distribution with 1 degree of freedom.
+The Wald test can assess whether $$\beta_1 = 0$$, i.e., whether the predictor variable $$X$$ has any effect on the outcome $$Y$$. The test statistic is calculated as described earlier, and a significant result indicates that the predictor variable plays a role in explaining the variation in the outcome variable. In practice, the Wald test is often reported alongside the $$t$$-statistic in regression software outputs. For large samples, the Wald test and the $$t$$-test yield similar results because the square of the $$t$$-statistic follows a chi-squared distribution with 1 degree of freedom.
 
 ### 2.2 Wald Test in Logistic Regression
 
-The Wald test is particularly useful in **logistic regression**, where the relationship between a binary outcome and one or more predictor variables is modeled. Logistic regression is a type of **generalized linear model (GLM)** that uses a **logit link function** to relate the probability of an event occurring (coded as 1) or not occurring (coded as 0) to the predictor variables.
-
-For a binary outcome $$Y$$ and a set of predictor variables $$X_1, X_2, \dots, X_k$$, the logistic regression model is expressed as:
+The Wald test is particularly useful in **logistic regression**, where the relationship between a binary outcome and one or more predictor variables is modeled. Logistic regression is a type of **generalized linear model (GLM)** that uses a **logit link function** to relate the probability of an event occurring (coded as 1) or not occurring (coded as 0) to the predictor variables. For a binary outcome $$Y$$ and a set of predictor variables $$X_1, X_2, \dots, X_k$$, the logistic regression model is expressed as:
 
 $$
 \text{logit}(P(Y = 1)) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_k X_k
@@ -162,17 +154,13 @@ $$
 \text{log}(\lambda) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_k X_k
 $$
 
-Where $$\lambda$$ is the expected count (mean of the Poisson distribution), and $$\beta_j$$ are the regression coefficients.
-
-The Wald test is used to assess the significance of the predictor variables in explaining the variation in the count data. A significant Wald statistic suggests that the predictor variable has a substantial effect on the count outcome.
+Where $$\lambda$$ is the expected count (mean of the Poisson distribution), and $$\beta_j$$ are the regression coefficients. The Wald test is used to assess the significance of the predictor variables in explaining the variation in the count data. A significant Wald statistic suggests that the predictor variable has a substantial effect on the count outcome.
 
 Poisson regression is commonly used in fields like economics, ecology, and public health, where researchers model event counts (e.g., number of births, disease incidence, etc.). The Wald test provides a convenient method for determining which predictors are significant in these models.
 
 ## 3. The Wald Test in Generalized Linear Models (GLMs)
 
-Beyond logistic and Poisson regression, the Wald test is applicable in a wide range of **generalized linear models (GLMs)**. GLMs extend the linear regression framework by allowing the outcome variable to follow different probability distributions (e.g., binomial, Poisson, gamma) and by linking the expected value of the outcome to the linear predictor through a **link function**.
-
-The general form of a GLM is:
+Beyond logistic and Poisson regression, the Wald test is applicable in a wide range of **generalized linear models (GLMs)**. GLMs extend the linear regression framework by allowing the outcome variable to follow different probability distributions (e.g., binomial, Poisson, gamma) and by linking the expected value of the outcome to the linear predictor through a **link function**. The general form of a GLM is:
 
 $$
 g(\mu) = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k
@@ -199,9 +187,7 @@ $$
 \text{LR} = -2 \left( \text{log-likelihood of restricted model} - \text{log-likelihood of full model} \right)
 $$
 
-The LR statistic follows a chi-squared distribution with degrees of freedom equal to the difference in the number of parameters between the two models.
-
-The likelihood-ratio test is often better behaved than Wald tests when the likelihood is asymmetric or the estimate is far from locally quadratic, but neither test has universal small-sample superiority. However, the Wald test is often preferred in practice because it is computationally simpler and does not require fitting multiple models.
+The LR statistic follows a chi-squared distribution with degrees of freedom equal to the difference in the number of parameters between the two models. The likelihood-ratio test is often better behaved than Wald tests when the likelihood is asymmetric or the estimate is far from locally quadratic, but neither test has universal small-sample superiority. However, the Wald test is often preferred in practice because it is computationally simpler and does not require fitting multiple models.
 
 ### 4.2 Wald Test vs. Score Test (Lagrange Multiplier Test)
 
@@ -223,9 +209,7 @@ When the parameter being tested is close to the boundary of the parameter space 
 
 ### 5.3 Interpretation of Results
 
-Note that a statistically significant Wald test does not necessarily imply a strong or practically meaningful effect. The magnitude of the coefficient, along with its confidence interval, should also be considered when interpreting the results of a regression analysis.
-
-Like other tests, Wald procedures have Type I and Type II operating characteristics determined by the design, model, effect size, and decision rule. A Type II error is failure to reject at a specified alternative; non-rejection is not proof that the null is true.
+Note that a statistically significant Wald test does not necessarily imply a strong or practically meaningful effect. The magnitude of the coefficient, along with its confidence interval, should also be considered when interpreting the results of a regression analysis. Like other tests, Wald procedures have Type I and Type II operating characteristics determined by the design, model, effect size, and decision rule. A Type II error is failure to reject at a specified alternative; non-rejection is not proof that the null is true.
 
 ## 6. Conclusion
 
@@ -247,19 +231,11 @@ $$
 \phi=g(\theta).
 $$
 
-This lack of invariance occurs because the test uses local quadratic approximation around the estimate.
-
-Likelihood-ratio tests are invariant to one-to-one reparameterization.
-
-That is an important reason to be cautious with Wald tests far from the null or in strongly nonlinear models.
+This lack of invariance occurs because the test uses local quadratic approximation around the estimate. Likelihood-ratio tests are invariant to one-to-one reparameterization. That is an important reason to be cautious with Wald tests far from the null or in strongly nonlinear models.
 
 ## Separation in logistic regression
 
-With complete or quasi-complete separation, logistic-regression MLEs can diverge.
-
-A huge coefficient and huge standard error can produce misleading Wald output.
-
-Penalized likelihood, exact methods, or profile-likelihood inference may be more appropriate.
+With complete or quasi-complete separation, logistic-regression MLEs can diverge. A huge coefficient and huge standard error can produce misleading Wald output. Penalized likelihood, exact methods, or profile-likelihood inference may be more appropriate.
 
 ## Robust covariance changes the Wald test
 

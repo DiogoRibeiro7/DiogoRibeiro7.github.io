@@ -31,11 +31,7 @@ tags:
 title: 'Beyond Type I and Type II Errors: Decisions, Power, and Multiplicity'
 ---
 
-The basic Type I and Type II error table is useful.
-
-It is not enough for real analysis.
-
-A hypothesis test is embedded in a larger workflow:
+The basic Type I and Type II error table is useful. It is not enough for real analysis. A hypothesis test is embedded in a larger workflow:
 
 $$
 \boxed{
@@ -51,15 +47,11 @@ $$
 }
 $$
 
-Error rates defined for one prespecified test can change when we search across outcomes, models, subgroups, and stopping times.
-
-This article focuses on those practical extensions.
+Error rates defined for one prespecified test can change when we search across outcomes, models, subgroups, and stopping times. This article focuses on those practical extensions.
 
 ## Error probabilities belong to a procedure
 
-Let $R(X)$ be the rule that decides whether to reject a null hypothesis.
-
-For parameter value $\theta$, define
+Let $R(X)$ be the rule that decides whether to reject a null hypothesis. For parameter value $\theta$, define
 
 $$
 \pi(\theta)
@@ -69,25 +61,19 @@ R(X)=1
 ).
 $$
 
-This is the power function.
-
-When $\theta$ lies in the null parameter space,
+This is the power function. When $\theta$ lies in the null parameter space,
 
 $$
 \pi(\theta)
 $$
 
-is a Type I rejection probability.
-
-When $\theta$ lies in the alternative,
+is a Type I rejection probability. When $\theta$ lies in the alternative,
 
 $$
 1-\pi(\theta)
 $$
 
-is the Type II error probability.
-
-There is usually no single Type II error rate without specifying the alternative value.
+is the Type II error probability. There is usually no single Type II error rate without specifying the alternative value.
 
 ## Nominal alpha and actual size
 
@@ -108,11 +94,7 @@ P_\theta(
 0.05
 $$
 
-or approximately so under the intended assumptions.
-
-The actual rejection probability can be lower for conservative discrete tests or vary across a composite null.
-
-Therefore nominal $\alpha$ is a design level, not a universal empirical false-positive fraction.
+or approximately so under the intended assumptions. The actual rejection probability can be lower for conservative discrete tests or vary across a composite null. Therefore nominal $\alpha$ is a design level, not a universal empirical false-positive fraction.
 
 ## Power depends on effect size
 
@@ -122,9 +104,7 @@ $$
 H_0:\theta=0.
 $$
 
-Power is not one number.
-
-It is a function
+Power is not one number. It is a function
 
 $$
 \pi(\theta).
@@ -144,17 +124,13 @@ is incomplete unless the alternative effect is specified.
 
 ## Minimum effect of interest
 
-Study design should be tied to an effect that matters scientifically.
-
-Let
+Study design should be tied to an effect that matters scientifically. Let
 
 $$
 \Delta
 $$
 
-be the smallest effect worth detecting.
-
-Then a sensible power target is
+be the smallest effect worth detecting. Then a sensible power target is
 
 $$
 P_{\theta=\Delta}
@@ -165,37 +141,21 @@ P_{\theta=\Delta}
 0.80
 $$
 
-or another prespecified level.
-
-Choosing $\Delta$ after the sample-size calculation reverses the logic.
-
-The effect should come from the scientific or operational problem.
+or another prespecified level. Choosing $\Delta$ after the sample-size calculation reverses the logic. The effect should come from the scientific or operational problem.
 
 ## Statistical significance is not decision significance
 
-With enough observations, an arbitrarily small nonzero effect can become statistically detectable.
-
-That does not increase the Type I error rate.
-
-It increases the ability to reject a false null.
-
-The problem is interpretation, not false-positive calibration.
-
-A large sample can produce
+With enough observations, an arbitrarily small nonzero effect can become statistically detectable. That does not increase the Type I error rate. It increases the ability to reject a false null. The problem is interpretation, not false-positive calibration. A large sample can produce
 
 $$
 p<10^{-6}
 $$
 
-for an effect too small to matter.
-
-This is why the previous version's statement that large samples “increase Type I error by detecting irrelevant effects” was wrong.
+for an effect too small to matter. This is why the previous version's statement that large samples “increase Type I error by detecting irrelevant effects” was wrong.
 
 ## Multiplicity changes the error target
 
-Suppose $m$ true null hypotheses are tested independently at level $\alpha$.
-
-The probability of at least one false rejection is
+Suppose $m$ true null hypotheses are tested independently at level $\alpha$. The probability of at least one false rejection is
 
 $$
 1-(1-\alpha)^m.
@@ -209,19 +169,11 @@ m=20,
 \alpha=0.05,
 $$
 
-this is about 0.64.
-
-The individual tests remain level 0.05.
-
-The family-level procedure does not.
-
-This is why multiple testing requires its own error criterion.
+this is about 0.64. The individual tests remain level 0.05. The family-level procedure does not. This is why multiple testing requires its own error criterion.
 
 ## Family-wise error rate
 
-Let $V$ be the number of false rejections.
-
-Family-wise error is
+Let $V$ be the number of false rejections. Family-wise error is
 
 $$
 FWER
@@ -229,9 +181,7 @@ FWER
 P(V\ge1).
 $$
 
-Bonferroni and Holm procedures control this criterion.
-
-This can be appropriate when even one false claim in the family is costly.
+Bonferroni and Holm procedures control this criterion. This can be appropriate when even one false claim in the family is costly.
 
 ## False discovery rate
 
@@ -250,11 +200,7 @@ V
 \right],
 $$
 
-where $R$ is the total number of rejections.
-
-Benjamini-Hochberg controls FDR under its dependence conditions.
-
-FWER and FDR solve different problems.
+where $R$ is the total number of rejections. Benjamini-Hochberg controls FDR under its dependence conditions. FWER and FDR solve different problems.
 
 ## Optional stopping
 
@@ -264,13 +210,7 @@ $$
 p<0.05.
 $$
 
-The overall probability of eventually crossing 0.05 under the null can exceed 5%.
-
-The problem is not that p-values “stop working.”
-
-The procedure has changed.
-
-Valid sequential analysis requires a design built for repeated looks, such as:
+The overall probability of eventually crossing 0.05 under the null can exceed 5%. The problem is not that p-values “stop working.” The procedure has changed. Valid sequential analysis requires a design built for repeated looks, such as:
 
 - group-sequential boundaries;
 - alpha-spending functions;
@@ -280,42 +220,28 @@ The stopping rule is part of the inferential procedure.
 
 ## Model and subgroup search
 
-If ten regression specifications and twenty subgroups are examined and only the most significant result is reported, the selected coefficient no longer has the same sampling behavior as a coefficient from one prespecified model.
+If ten regression specifications and twenty subgroups are examined and only the most significant result is reported, the selected coefficient no longer has the same sampling behavior as a coefficient from one prespecified model. This creates selection bias. The reported effect tends to be exaggerated because the analysis selected an extreme estimate.
 
-This creates selection bias.
-
-The reported effect tends to be exaggerated because the analysis selected an extreme estimate.
-
-This is one form of the winner's curse.
-
-Preregistration, held-out confirmation, selective-inference methods, or explicit multiplicity adjustments address different versions of this problem.
+This is one form of the winner's curse. Preregistration, held-out confirmation, selective-inference methods, or explicit multiplicity adjustments address different versions of this problem.
 
 ## Type S and Type M errors
 
-When power is low, conditional on achieving significance, the estimated effect can be badly distorted.
-
-Gelman and Carlin distinguish:
+When power is low, conditional on achieving significance, the estimated effect can be badly distorted. Gelman and Carlin distinguish:
 
 - **Type S error:** the estimated effect has the wrong sign;
 - **Type M error:** the magnitude is strongly exaggerated.
 
-These are not replacements for Type I and Type II errors.
-
-They describe another practical consequence of noisy, selected estimates.
+These are not replacements for Type I and Type II errors. They describe another practical consequence of noisy, selected estimates.
 
 ## Equivalence and non-inferiority
 
-A failed superiority test does not demonstrate no meaningful effect.
-
-Suppose effects with absolute magnitude below
+A failed superiority test does not demonstrate no meaningful effect. Suppose effects with absolute magnitude below
 
 $$
 \Delta
 $$
 
-are negligible.
-
-An equivalence analysis can test
+are negligible. An equivalence analysis can test
 
 $$
 H_0:
@@ -333,15 +259,11 @@ H_1:
 \Delta.
 $$
 
-The hypothesis is deliberately reversed.
-
-To support absence of a practically important difference, design the study around equivalence from the beginning.
+The hypothesis is deliberately reversed. To support absence of a practically important difference, design the study around equivalence from the beginning.
 
 ## Error rates and decision costs
 
-Statistical error rates do not tell us the cost of an error.
-
-Suppose a false positive costs
+Statistical error rates do not tell us the cost of an error. Suppose a false positive costs
 
 $$
 c_I
@@ -365,13 +287,7 @@ c_{II}
 P(\text{Type II}).
 $$
 
-Different domains imply different costs.
-
-A screening stage may tolerate more false positives.
-
-A confirmatory licensing decision may not.
-
-The conventional 0.05 threshold is not a universal solution to those costs.
+Different domains imply different costs. A screening stage may tolerate more false positives. A confirmatory licensing decision may not. The conventional 0.05 threshold is not a universal solution to those costs.
 
 ## Classification errors are related but not identical
 
@@ -399,49 +315,21 @@ Y=1
 ).
 $$
 
-These resemble Type I and Type II errors structurally.
-
-But overfitting is **not** itself a Type I error, and underfitting is **not** itself a Type II error.
-
-Overfitting describes a failure of generalization.
-
-A false positive is a case-level classification error.
-
-The earlier version of this article incorrectly equated those concepts.
+These resemble Type I and Type II errors structurally. But overfitting is **not** itself a Type I error, and underfitting is **not** itself a Type II error. Overfitting describes a failure of generalization. A false positive is a case-level classification error. The earlier version of this article incorrectly equated those concepts.
 
 ## Cross-validation does not control hypothesis-test alpha
 
-Cross-validation estimates predictive performance when used correctly.
-
-It does not automatically reduce Type I and Type II error probabilities of a scientific hypothesis test.
-
-If model selection and inference use the same resampling results without accounting for selection, inferential calibration can still fail.
-
-Prediction error and hypothesis-test error are different targets.
+Cross-validation estimates predictive performance when used correctly. It does not automatically reduce Type I and Type II error probabilities of a scientific hypothesis test. If model selection and inference use the same resampling results without accounting for selection, inferential calibration can still fail. Prediction error and hypothesis-test error are different targets.
 
 ## Randomization addresses bias, not every test error directly
 
-Randomization can create exchangeability between treatment groups and protect against confounding in expectation.
-
-Blinding can reduce measurement and behavioral biases.
-
-These design improvements can increase validity and sometimes power.
-
-But saying they “reduce Type I and Type II errors” without specifying the test is too broad.
-
-Design affects the data-generating structure.
+Randomization can create exchangeability between treatment groups and protect against confounding in expectation. Blinding can reduce measurement and behavioral biases. These design improvements can increase validity and sometimes power. But saying they “reduce Type I and Type II errors” without specifying the test is too broad. Design affects the data-generating structure.
 
 Test error rates are then derived under that design.
 
 ## Sample size
 
-Increasing sample size generally increases power for a fixed nonzero alternative while keeping the nominal Type I error level fixed when the test is correctly calibrated.
-
-It does **not** inherently increase Type I error.
-
-What changes is the ability to detect smaller departures from the null.
-
-Therefore:
+Increasing sample size generally increases power for a fixed nonzero alternative while keeping the nominal Type I error level fixed when the test is correctly calibrated. It does **not** inherently increase Type I error. What changes is the ability to detect smaller departures from the null. Therefore:
 
 $$
 \boxed{
@@ -479,9 +367,7 @@ The decision threshold should be visible rather than implicit.
 
 ## Conclusion
 
-Type I and Type II errors are only the first layer of statistical decision-making.
-
-Applied inference also has to manage
+Type I and Type II errors are only the first layer of statistical decision-making. Applied inference also has to manage
 
 $$
 \boxed{

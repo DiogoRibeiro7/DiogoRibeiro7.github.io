@@ -48,9 +48,7 @@ To address this challenge, **Automated Prompt Engineering (APE)** has emerged as
 
 ## The Importance of Prompt Engineering
 
-Prompt engineering involves designing prompts to extract the most accurate and useful responses from an LLM. Whether the task is code generation, text summarization, or sentiment analysis, carefully crafted prompts can drastically improve the model’s performance. 
-
-For example, in code generation, a prompt that clearly specifies the coding task can be evaluated almost immediately by running the code through a compiler. If the output compiles and functions correctly, the prompt is considered successful.
+Prompt engineering involves designing prompts to extract the most accurate and useful responses from an LLM. Whether the task is code generation, text summarization, or sentiment analysis, carefully crafted prompts can drastically improve the model’s performance. For example, in code generation, a prompt that clearly specifies the coding task can be evaluated almost immediately by running the code through a compiler. If the output compiles and functions correctly, the prompt is considered successful.
 
 However, manual prompt engineering is inherently limited:
 
@@ -118,9 +116,7 @@ The concrete walkthrough below is adapted from Heiko Hotz's 2024 tutorial, *Auto
 
 ### The Dataset
 
-For this implementation, we’ll use the **geometric_shapes** dataset from the Big-Bench Hard (BBH) benchmark. This dataset presents a challenge for LLMs, as it requires interpreting SVG path elements to determine the shape they represent.
-
-To prepare the dataset:
+For this implementation, we’ll use the **geometric_shapes** dataset from the Big-Bench Hard (BBH) benchmark. This dataset presents a challenge for LLMs, as it requires interpreting SVG path elements to determine the shape they represent. To prepare the dataset:
 
 ```python
 from datasets import load_dataset
@@ -155,9 +151,9 @@ from vertexai.generative_models import HarmBlockThreshold, HarmCategory
 if __name__ == "__main__":
     df_train = pd.read_csv('train.csv')  # Load training data
 
-    evaluator = PromptEvaluator(df_train, target_model_name="gemini-1.5-flash", ...)
-    
-    prompt = "Solve the given problem about geometric shapes."
+evaluator = PromptEvaluator(df_train, target_model_name="gemini-1.5-flash", ...)
+
+prompt = "Solve the given problem about geometric shapes."
     asyncio.run(evaluator.main(prompt))
 ```
 
@@ -175,11 +171,11 @@ for i in range(num_iterations):
         metaprompt = update_metaprompt(prompt_history)
         new_prompt = get_new_prompt(metaprompt)
 
-    accuracy = evaluate_prompt(new_prompt)
+accuracy = evaluate_prompt(new_prompt)
     prompt_accuracies.append((new_prompt, accuracy))
     prompt_history.append((new_prompt, accuracy))
 
-    if accuracy > best_accuracy:
+if accuracy > best_accuracy:
         best_prompt = new_prompt
         best_accuracy = accuracy
 ```
@@ -199,7 +195,6 @@ Automated Prompt Engineering (APE) offers a powerful way to improve the performa
 In this tutorial, we explored the APE workflow and reproduced the structure of a published OPRO walkthrough. The reported performance improvements belong to that source example and should be treated as such rather than as results independently generated for this post. As APE continues to evolve, it holds immense potential for making LLMs more adaptable and effective across a broad range of applications.
 
 For further exploration, consider incorporating techniques like few-shot prompting or using existing APE frameworks such as DSPy to streamline the process. By leveraging APE, you can unlock the full potential of Large Language Models and enhance their capabilities for a variety of tasks.
-
 
 ## Sources
 

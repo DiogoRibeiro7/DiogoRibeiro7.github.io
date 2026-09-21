@@ -75,9 +75,7 @@ $$
 |\Delta \mu| = 1
 $$
 
-But the distributions are not equally different. The meaning of the parameter movement depends on uncertainty.
-
-This is one of the basic motivations for information geometry. We need a notion of distance that measures how much the distribution changes, not merely how much the parameter vector changes.
+But the distributions are not equally different. The meaning of the parameter movement depends on uncertainty. This is one of the basic motivations for information geometry. We need a notion of distance that measures how much the distribution changes, not merely how much the parameter vector changes.
 
 ## KL Divergence as Local Geometry
 
@@ -87,9 +85,7 @@ $$
 D_{KL}(p \parallel q) = \int p(x) \log \frac{p(x)}{q(x)} dx
 $$
 
-KL divergence is not a true metric because it is not symmetric and does not satisfy all metric axioms. Still, it is central in information geometry because it describes how distributions separate.
-
-For two nearby parameter values, $\theta$ and $\theta + d\theta$, the KL divergence has a local quadratic approximation:
+KL divergence is not a true metric because it is not symmetric and does not satisfy all metric axioms. Still, it is central in information geometry because it describes how distributions separate. For two nearby parameter values, $\theta$ and $\theta + d\theta$, the KL divergence has a local quadratic approximation:
 
 $$
 D_{KL}(p(x \mid \theta) \parallel p(x \mid \theta + d\theta))
@@ -149,9 +145,7 @@ $$
 \theta_{t+1} = \theta_t - \eta \nabla_\theta L(\theta_t)
 $$
 
-This treats all parameter directions according to the ordinary coordinate system. But if the parameters are just a coordinate system for probability distributions, this can be misleading.
-
-The natural gradient adjusts the update by the inverse Fisher information matrix:
+This treats all parameter directions according to the ordinary coordinate system. But if the parameters are just a coordinate system for probability distributions, this can be misleading. The natural gradient adjusts the update by the inverse Fisher information matrix:
 
 $$
 \theta_{t+1} =
@@ -162,15 +156,11 @@ The goal is to move efficiently in distribution space rather than parameter spac
 
 This idea is powerful because it makes optimization less dependent on arbitrary parameterization. If two parameterizations describe the same family of probability distributions, ordinary gradient descent may behave differently under each one. Natural gradient methods are designed to respect the geometry of the statistical model itself.
 
-In practice, computing and inverting the full Fisher information matrix can be expensive, especially for large neural networks. Many methods therefore use approximations: diagonal Fisher matrices, block diagonal approximations, Kronecker-factored approximations, or adaptive optimizers that capture part of the same intuition.
-
-The conceptual lesson remains valuable even when the exact algorithm is not used: the geometry of the model should shape the update.
+In practice, computing and inverting the full Fisher information matrix can be expensive, especially for large neural networks. Many methods therefore use approximations: diagonal Fisher matrices, block diagonal approximations, Kronecker-factored approximations, or adaptive optimizers that capture part of the same intuition. The conceptual lesson remains valuable even when the exact algorithm is not used: the geometry of the model should shape the update.
 
 ## Curvature and Learning
 
-Optimization problems in machine learning are often described with landscapes: valleys, plateaus, saddle points, and sharp minima. Information geometry makes this metaphor more precise.
-
-Curvature describes how quickly local geometry changes. In statistical models, curvature can appear because the same parameter movement has different distributional effects in different regions.
+Optimization problems in machine learning are often described with landscapes: valleys, plateaus, saddle points, and sharp minima. Information geometry makes this metaphor more precise. Curvature describes how quickly local geometry changes. In statistical models, curvature can appear because the same parameter movement has different distributional effects in different regions.
 
 High curvature can make learning unstable. A step that is appropriate in one direction may be too large in another. Low curvature can make learning slow because the objective provides weak guidance. Mixed curvature creates narrow valleys where optimization zigzags.
 
@@ -180,18 +170,14 @@ The geometric view also explains why rescaling variables, standardizing features
 
 ## The Geometry of Exponential Families
 
-Information geometry is especially clean for exponential families. Many familiar distributions belong to this class, including the normal, Bernoulli, Poisson, exponential, gamma, and multinomial distributions.
-
-An exponential family can often be written as:
+Information geometry is especially clean for exponential families. Many familiar distributions belong to this class, including the normal, Bernoulli, Poisson, exponential, gamma, and multinomial distributions. An exponential family can often be written as:
 
 $$
 p(x \mid \theta) =
 h(x) \exp(\theta^T T(x) - A(\theta))
 $$
 
-Here, $\theta$ is the natural parameter, $T(x)$ is a sufficient statistic, and $A(\theta)$ is the log partition function.
-
-The log partition function is more than a normalizing constant. Its derivatives encode moments:
+Here, $\theta$ is the natural parameter, $T(x)$ is a sufficient statistic, and $A(\theta)$ is the log partition function. The log partition function is more than a normalizing constant. Its derivatives encode moments:
 
 $$
 \nabla A(\theta) = \mathbb{E}_\theta[T(X)]
@@ -254,15 +240,11 @@ $$
 P(Y = 1 \mid x) = \sigma(x^T \beta)
 $$
 
-where $\sigma$ is the logistic function.
-
-The parameter vector $\beta$ controls a probability distribution for each input $x$. But the same change in $\beta$ does not have the same effect everywhere.
+where $\sigma$ is the logistic function. The parameter vector $\beta$ controls a probability distribution for each input $x$. But the same change in $\beta$ does not have the same effect everywhere.
 
 When $x^T \beta$ is near zero, the predicted probability is near 0.5 and the model is sensitive to changes in $\beta$. When $x^T \beta$ is very large or very negative, the predicted probability is close to 1 or 0 and the model is less sensitive. The sigmoid curve is flat in the tails.
 
-This means information is not uniformly distributed across the feature space. Observations near the decision boundary often carry more information about the parameters than observations that are already predicted with high confidence.
-
-This is one reason active learning strategies often focus on uncertain cases. It is also why separable data can create unstable coefficient estimates: the likelihood may keep improving as coefficients grow, even though the classification boundary is already determined.
+This means information is not uniformly distributed across the feature space. Observations near the decision boundary often carry more information about the parameters than observations that are already predicted with high confidence. This is one reason active learning strategies often focus on uncertain cases. It is also why separable data can create unstable coefficient estimates: the likelihood may keep improving as coefficients grow, even though the classification boundary is already determined.
 
 Geometry explains both phenomena.
 
@@ -290,43 +272,23 @@ $$
 \mathrm{Cov}(\hat{\theta}) \approx \left[n I(\hat{\theta})\right]^{-1}.
 $$
 
-If $I_n(\theta)$ denotes the Fisher information for the full sample instead, the same statement is written $\mathrm{Cov}(\hat{\theta}) \approx I_n(\hat{\theta})^{-1}$.
-
-The approximation can fail when samples are small, models are weakly identified, likelihoods are asymmetric, parameters are near boundaries, or posterior distributions are multimodal. But the geometric idea remains useful: uncertainty is connected to the local shape of the model around the estimate.
+If $I_n(\theta)$ denotes the Fisher information for the full sample instead, the same statement is written $\mathrm{Cov}(\hat{\theta}) \approx I_n(\hat{\theta})^{-1}$. The approximation can fail when samples are small, models are weakly identified, likelihoods are asymmetric, parameters are near boundaries, or posterior distributions are multimodal. But the geometric idea remains useful: uncertainty is connected to the local shape of the model around the estimate.
 
 When that shape is irregular, uncertainty summaries should be treated carefully.
 
 ## Practical Uses in Data Science
 
-Information geometry may sound theoretical, but its consequences appear in everyday data science.
+Information geometry may sound theoretical, but its consequences appear in everyday data science. It helps explain why feature scaling improves optimization. Rescaled features change the conditioning of the objective, making gradient steps more balanced. It helps explain why probability calibration matters. A model that ranks cases correctly can still distort distances between distributions if its probability scale is wrong.
 
-It helps explain why feature scaling improves optimization. Rescaled features change the conditioning of the objective, making gradient steps more balanced.
+It helps explain why some parameters are unstable. Low-information directions are not fixed by better optimization alone; they reflect weak identification. It helps explain why variational inference can underestimate uncertainty. The chosen divergence and approximation family determine the geometry of the projection. It helps explain why adaptive optimizers work. Methods that rescale updates by historical gradients partially compensate for uneven local geometry.
 
-It helps explain why probability calibration matters. A model that ranks cases correctly can still distort distances between distributions if its probability scale is wrong.
-
-It helps explain why some parameters are unstable. Low-information directions are not fixed by better optimization alone; they reflect weak identification.
-
-It helps explain why variational inference can underestimate uncertainty. The chosen divergence and approximation family determine the geometry of the projection.
-
-It helps explain why adaptive optimizers work. Methods that rescale updates by historical gradients partially compensate for uneven local geometry.
-
-It helps explain why reparameterization can improve Bayesian sampling. A centered and non-centered hierarchical model may represent the same statistical assumptions but create very different posterior geometry.
-
-These examples share one principle: the coordinates used to write a model are not neutral.
+It helps explain why reparameterization can improve Bayesian sampling. A centered and non-centered hierarchical model may represent the same statistical assumptions but create very different posterior geometry. These examples share one principle: the coordinates used to write a model are not neutral.
 
 ## Diagnostics Through a Geometric Lens
 
-A geometric mindset suggests useful diagnostics.
+A geometric mindset suggests useful diagnostics. Look for flat directions. These may appear as large standard errors, unstable coefficients, high posterior correlations, poor mixing in Markov chain Monte Carlo, or wide profile likelihoods. Look for sharp directions. These may appear as sensitivity to small perturbations, unstable training, exploding gradients, or large changes in predictions after minor parameter updates.
 
-Look for flat directions. These may appear as large standard errors, unstable coefficients, high posterior correlations, poor mixing in Markov chain Monte Carlo, or wide profile likelihoods.
-
-Look for sharp directions. These may appear as sensitivity to small perturbations, unstable training, exploding gradients, or large changes in predictions after minor parameter updates.
-
-Look for poor conditioning. This may appear when optimization is slow, learning rates are difficult to tune, or convergence depends strongly on scaling.
-
-Look for non-identifiability. This may appear when multiple parameter settings produce equivalent predictions or when parameters trade off against each other.
-
-Look for projection error. This may appear when residuals are structured, calibration is poor, subgroup performance differs, or uncertainty estimates are overconfident.
+Look for poor conditioning. This may appear when optimization is slow, learning rates are difficult to tune, or convergence depends strongly on scaling. Look for non-identifiability. This may appear when multiple parameter settings produce equivalent predictions or when parameters trade off against each other. Look for projection error. This may appear when residuals are structured, calibration is poor, subgroup performance differs, or uncertainty estimates are overconfident.
 
 These diagnostics do not require a full differential-geometry toolkit. They require paying attention to the shape of the problem.
 
@@ -336,9 +298,7 @@ Information geometry is not a replacement for domain knowledge, experimental des
 
 It also has practical limits. Exact Fisher information can be expensive to compute. Large models may require approximations. Real data may violate modeling assumptions. High-dimensional probability spaces can be difficult to visualize and reason about directly.
 
-The value of information geometry is not that every data scientist must calculate Christoffel symbols or study abstract manifolds. Its value is that it corrects a misleading habit: treating parameters as if their numerical coordinates are the real object of interest.
-
-The real object is usually the distribution, prediction, or decision induced by those parameters.
+The value of information geometry is not that every data scientist must calculate Christoffel symbols or study abstract manifolds. Its value is that it corrects a misleading habit: treating parameters as if their numerical coordinates are the real object of interest. The real object is usually the distribution, prediction, or decision induced by those parameters.
 
 ## Conclusion
 
@@ -346,9 +306,7 @@ Information geometry changes how we see statistical modeling. A model is not jus
 
 Fisher information tells us how sensitive the distribution is to parameter movement. KL divergence gives local structure to that space. Natural gradients use this structure to move more intelligently. Curvature explains why some models are stable, others are fragile, and many are harder to optimize than their equations suggest.
 
-For data science, the lesson is practical: do not trust parameter distance blindly. Ask how much the distribution changes, where the model is sensitive, which directions are weakly identified, and whether the optimization method respects the geometry of the problem.
-
-Good modeling is not only about fitting data. It is about understanding the shape of the model we are fitting.
+For data science, the lesson is practical: do not trust parameter distance blindly. Ask how much the distribution changes, where the model is sensitive, which directions are weakly identified, and whether the optimization method respects the geometry of the problem. Good modeling is not only about fitting data. It is about understanding the shape of the model we are fitting.
 
 ## References
 

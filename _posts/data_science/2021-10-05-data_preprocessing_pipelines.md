@@ -45,9 +45,7 @@ A pipeline enforces the boundary structurally. Fitting happens on training folds
 
 ## Handling Missing Values
 
-Start by assessing the extent of missing data. Common strategies include dropping incomplete rows, filling numeric columns with the mean or median, and using the most frequent category for categorical features.
-
-Before choosing, it is worth asking why the values are missing, because the mechanism determines what is safe:
+Start by assessing the extent of missing data. Common strategies include dropping incomplete rows, filling numeric columns with the mean or median, and using the most frequent category for categorical features. Before choosing, it is worth asking why the values are missing, because the mechanism determines what is safe:
 
 - **Missing completely at random (MCAR).** Missingness is independent of the variables relevant to the analysis under the stated model. Complete-case analysis can then be unbiased for many targets, but it is inefficient and still depends on the sampling/design assumptions.
 - **Missing at random (MAR).** Missingness depends on observed variables, for example income being unreported more often in certain regions. Conditional imputation can recover the structure.

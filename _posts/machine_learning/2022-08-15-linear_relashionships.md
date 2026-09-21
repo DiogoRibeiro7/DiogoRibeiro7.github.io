@@ -73,9 +73,7 @@ PCR first forms unsupervised linear combinations of the predictors with PCA and 
 
 ### 1. **Performance Issues with Non-Linear Data**
 
-If a model assumes a linear relationship between $$X$$ and $$Y$$, but the data does not follow this pattern, the model will struggle to provide accurate predictions. The residuals (errors) between the predicted and actual values will exhibit patterns, indicating the model’s poor fit.
-
-When the linear assumption is violated, the model might either underfit the data or miss important non-linear patterns. In such cases, switching to a non-linear model like **decision trees** or **neural networks** might lead to better performance.
+If a model assumes a linear relationship between $$X$$ and $$Y$$, but the data does not follow this pattern, the model will struggle to provide accurate predictions. The residuals (errors) between the predicted and actual values will exhibit patterns, indicating the model’s poor fit. When the linear assumption is violated, the model might either underfit the data or miss important non-linear patterns. In such cases, switching to a non-linear model like **decision trees** or **neural networks** might lead to better performance.
 
 ### 2. **Interpretability of Linear Models**
 
@@ -91,9 +89,7 @@ Linear models are computationally efficient, making them suitable for high-dimen
 
 ## Handling Non-Linear Relationships
 
-When a linear relationship does not exist between the predictors and the outcome, several strategies can be used to improve model performance:
-
-Before changing models, diagnose the problem. Useful checks include:
+When a linear relationship does not exist between the predictors and the outcome, several strategies can be used to improve model performance: Before changing models, diagnose the problem. Useful checks include:
 
 - residual plots against fitted values and individual predictors;
 - partial dependence or accumulated local effects plots;
@@ -105,9 +101,7 @@ If the residuals show a clear pattern, the model is missing structure. If the pa
 
 ### 1. **Transforming Variables**
 
-One common approach to reveal linear relationships is to apply **mathematical transformations** to the predictors. For instance, logarithmic or polynomial transformations can convert non-linear data into a form that better fits the assumptions of linear models.
-
-For example, if a relationship between two variables follows a quadratic pattern, squaring one of the predictors could transform the problem into a linear one.
+One common approach to reveal linear relationships is to apply **mathematical transformations** to the predictors. For instance, logarithmic or polynomial transformations can convert non-linear data into a form that better fits the assumptions of linear models. For example, if a relationship between two variables follows a quadratic pattern, squaring one of the predictors could transform the problem into a linear one.
 
 ### 2. **Discretization**
 
@@ -127,9 +121,7 @@ Let’s look at a practical application of linear relationships in a common mach
 
 ### Dataset and Setup
 
-We use the **House Price dataset** from Kaggle, which contains numerous predictors for residential homes. You can download the dataset [here](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data).
-
-In this example, we focus on a subset of features to demonstrate linear and non-linear relationships with the target variable, Sale Price.
+We use the **House Price dataset** from Kaggle, which contains numerous predictors for residential homes. You can download the dataset [here](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data). In this example, we focus on a subset of features to demonstrate linear and non-linear relationships with the target variable, Sale Price.
 
 ### Identifying Linear and Non-Linear Variables
 
@@ -154,9 +146,7 @@ In real-world problems like predicting house prices, **linear relationships** be
 
 In machine learning, understanding the assumptions of linear models is essential for choosing the right algorithm and ensuring accurate predictions. While linear models like **Linear Regression**, **Logistic Regression**, and **LDA** offer simplicity and interpretability, they perform best when the relationship between predictors and the target is genuinely linear. When this assumption is not met, transformations or non-linear models can provide more effective solutions.
 
-For practitioners, the ability to recognize linear and non-linear relationships in the data is crucial for building models that both perform well and meet business or regulatory requirements.
-
-Linear models should usually be the first serious baseline, not the final answer by default. Fit them, inspect their errors, compare them against more flexible models, and choose the simplest model that captures the structure required by the use case.
+For practitioners, the ability to recognize linear and non-linear relationships in the data is crucial for building models that both perform well and meet business or regulatory requirements. Linear models should usually be the first serious baseline, not the final answer by default. Fit them, inspect their errors, compare them against more flexible models, and choose the simplest model that captures the structure required by the use case.
 
 ## References
 

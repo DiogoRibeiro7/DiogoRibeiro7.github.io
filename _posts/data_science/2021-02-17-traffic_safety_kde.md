@@ -30,15 +30,7 @@ tags:
 title: 'Traffic Crash KDE: Density Is Not Risk'
 ---
 
-Kernel density estimation is useful for visualizing where recorded traffic crashes concentrate.
-
-That statement is narrower than saying that KDE identifies the most dangerous roads.
-
-A location can contain many crashes because it is genuinely hazardous.
-
-It can also contain many crashes because it carries much more traffic.
-
-The central distinction is
+Kernel density estimation is useful for visualizing where recorded traffic crashes concentrate. That statement is narrower than saying that KDE identifies the most dangerous roads. A location can contain many crashes because it is genuinely hazardous. It can also contain many crashes because it carries much more traffic. The central distinction is
 
 $$
 \boxed{
@@ -74,39 +66,23 @@ K
 \right),
 $$
 
-where $K$ is a kernel and $h$ is the bandwidth.
-
-The bandwidth is usually much more important than the exact kernel shape.
-
-Small $h$ produces localized peaks.
-
-Large $h$ produces broader smooth regions.
+where $K$ is a kernel and $h$ is the bandwidth. The bandwidth is usually much more important than the exact kernel shape. Small $h$ produces localized peaks. Large $h$ produces broader smooth regions.
 
 ## Coordinates must be metric
 
-Longitude and latitude are angular coordinates.
-
-A bandwidth such as
+Longitude and latitude are angular coordinates. A bandwidth such as
 
 $$
 h=0.01
 $$
 
-degrees has different physical meaning across latitude and is not directly interpretable as road distance.
-
-Before Euclidean KDE, project crash coordinates into an appropriate local metric coordinate reference system.
-
-Then a bandwidth such as
+degrees has different physical meaning across latitude and is not directly interpretable as road distance. Before Euclidean KDE, project crash coordinates into an appropriate local metric coordinate reference system. Then a bandwidth such as
 
 $$
 h=250\text{ m}
 $$
 
-has a physical meaning.
-
-The previous code in this article applied Euclidean KDE directly to longitude and latitude.
-
-That is not a defensible default.
+has a physical meaning. The previous code in this article applied Euclidean KDE directly to longitude and latitude. That is not a defensible default.
 
 ## KDE estimates events, not exposure-adjusted risk
 
@@ -122,9 +98,7 @@ $$
 5{,}000.
 $$
 
-Even if the per-vehicle crash risk is lower on the arterial, it may produce more crashes.
-
-A simple risk-like rate is
+Even if the per-vehicle crash risk is lower on the arterial, it may produce more crashes. A simple risk-like rate is
 
 $$
 R(s)
@@ -136,21 +110,11 @@ R(s)
 }.
 $$
 
-Exposure may be measured through vehicle-kilometers traveled, pedestrian volume, cyclist flow, road length, intersection traffic, or time at risk.
-
-The correct denominator depends on the safety question.
-
-KDE alone provides the numerator structure, not the denominator.
+Exposure may be measured through vehicle-kilometers traveled, pedestrian volume, cyclist flow, road length, intersection traffic, or time at risk. The correct denominator depends on the safety question. KDE alone provides the numerator structure, not the denominator.
 
 ## Road networks are not continuous planes
 
-A planar KDE lets kernel mass spread through buildings, parks, rivers, and other locations where vehicles cannot travel.
-
-Traffic crashes occur on a network.
-
-Network KDE measures distance along roads rather than straight-line Euclidean distance.
-
-If $d_N(x,x_i)$ is shortest-path network distance, a network kernel has the form
+A planar KDE lets kernel mass spread through buildings, parks, rivers, and other locations where vehicles cannot travel. Traffic crashes occur on a network. Network KDE measures distance along roads rather than straight-line Euclidean distance. If $d_N(x,x_i)$ is shortest-path network distance, a network kernel has the form
 
 $$
 \hat\lambda_h(x)
@@ -166,35 +130,15 @@ This often provides a more meaningful hotspot representation for road crashes.
 
 ## Bandwidth determines the question
 
-A 50-meter bandwidth asks about very local concentration.
-
-A 2-kilometer bandwidth asks about neighborhood-scale concentration.
-
-There is no context-free optimal bandwidth.
-
-Statistical cross-validation can help select $h$, but domain scale matters too.
-
-Bandwidth sensitivity should be shown rather than hidden.
+A 50-meter bandwidth asks about very local concentration. A 2-kilometer bandwidth asks about neighborhood-scale concentration. There is no context-free optimal bandwidth. Statistical cross-validation can help select $h$, but domain scale matters too. Bandwidth sensitivity should be shown rather than hidden.
 
 ## Edge effects
 
-Kernels near the study boundary lose mass outside the observation region.
-
-Road-network endpoints and administrative boundaries create additional complications.
-
-Without correction, density can be underestimated near boundaries.
-
-Possible responses include boundary correction, extending the analysis region, network-specific normalization, or cautious interpretation near boundaries.
+Kernels near the study boundary lose mass outside the observation region. Road-network endpoints and administrative boundaries create additional complications. Without correction, density can be underestimated near boundaries. Possible responses include boundary correction, extending the analysis region, network-specific normalization, or cautious interpretation near boundaries.
 
 ## Repeated crashes at one coordinate
 
-Geocoding often snaps several incidents to one intersection or road centroid.
-
-Those duplicated coordinates are not necessarily duplicate records.
-
-They can represent multiple crashes at the same location.
-
-A weighted KDE may be appropriate when one record contains an event count $w_i$:
+Geocoding often snaps several incidents to one intersection or road centroid. Those duplicated coordinates are not necessarily duplicate records. They can represent multiple crashes at the same location. A weighted KDE may be appropriate when one record contains an event count $w_i$:
 
 $$
 \hat\lambda_h(x)
@@ -204,17 +148,11 @@ w_i
 K_h(x-x_i).
 $$
 
-The previous code loaded an accident count column but ignored it.
-
-That mismatch is now explicit.
+The previous code loaded an accident count column but ignored it. That mismatch is now explicit.
 
 ## Temporal aggregation matters
 
-Combining ten years of crashes into one spatial map assumes the underlying process is stable enough that the aggregation is meaningful.
-
-But road design, traffic volume, speed limits, and land use change.
-
-A useful model may estimate
+Combining ten years of crashes into one spatial map assumes the underlying process is stable enough that the aggregation is meaningful. But road design, traffic volume, speed limits, and land use change. A useful model may estimate
 
 $$
 \lambda(s,t)
@@ -230,33 +168,15 @@ At minimum, compare time periods and test whether identified hotspots persist.
 
 ## Severity should not be hidden
 
-A location with many minor crashes and a location with a few fatal crashes may require different interventions.
-
-Weighted maps can incorporate severity, but the weights must represent a defined decision objective.
-
-Those weights are policy choices.
-
-They should not be presented as natural statistical constants.
+A location with many minor crashes and a location with a few fatal crashes may require different interventions. Weighted maps can incorporate severity, but the weights must represent a defined decision objective. Those weights are policy choices. They should not be presented as natural statistical constants.
 
 ## Hotspot detection versus causal intervention evaluation
 
-KDE can identify spatial concentration.
-
-It cannot establish that a proposed road treatment will reduce crashes.
-
-Suppose density falls after a new speed limit.
-
-A before-after map is confounded by regression to the mean, traffic-volume change, broader safety trends, enforcement changes, and seasonal composition.
-
-Evaluating an intervention requires a counterfactual design.
+KDE can identify spatial concentration. It cannot establish that a proposed road treatment will reduce crashes. Suppose density falls after a new speed limit. A before-after map is confounded by regression to the mean, traffic-volume change, broader safety trends, enforcement changes, and seasonal composition. Evaluating an intervention requires a counterfactual design.
 
 ## Regression to the mean
 
-Road sites are often selected for treatment because they recently had unusually many crashes.
-
-Even without any intervention, extremely high counts tend to move closer to their long-run expectation later.
-
-Therefore
+Road sites are often selected for treatment because they recently had unusually many crashes. Even without any intervention, extremely high counts tend to move closer to their long-run expectation later. Therefore
 
 $$
 \text{high before}
@@ -268,13 +188,7 @@ is not sufficient evidence of treatment success.
 
 ## Uncertainty in hotspot maps
 
-KDE maps are commonly drawn as smooth colored surfaces with no uncertainty.
-
-But estimated density depends on finite event counts.
-
-Bootstrap resampling can reveal which spatial peaks are stable.
-
-A hotspot that disappears under small data perturbations should not receive the same policy confidence as one that persists across resamples and bandwidths.
+KDE maps are commonly drawn as smooth colored surfaces with no uncertainty. But estimated density depends on finite event counts. Bootstrap resampling can reveal which spatial peaks are stable. A hotspot that disappears under small data perturbations should not receive the same policy confidence as one that persists across resamples and bandwidths.
 
 ## A safer Python workflow
 
@@ -342,15 +256,11 @@ density: FloatArray = np.exp(
 geo["kde_density"] = density
 ~~~
 
-This estimates planar event density in meters.
-
-For a real road-safety analysis, network KDE and an exposure model may be more appropriate.
+This estimates planar event density in meters. For a real road-safety analysis, network KDE and an exposure model may be more appropriate.
 
 ## Validation
 
-A useful hotspot method should be evaluated prospectively.
-
-One design is:
+A useful hotspot method should be evaluated prospectively. One design is:
 
 1. estimate hotspots from years 1 through $T$;
 2. predict high-density locations for year $T+1$;
@@ -360,9 +270,7 @@ This avoids praising a map merely because it reproduces the same incidents used 
 
 ## Conclusion
 
-KDE is an exploratory spatial estimator.
-
-Its correct interpretation is
+KDE is an exploratory spatial estimator. Its correct interpretation is
 
 $$
 \boxed{
@@ -370,9 +278,7 @@ $$
 }
 $$
 
-unless exposure and network structure are explicitly added.
-
-For traffic safety, the full chain is
+unless exposure and network structure are explicitly added. For traffic safety, the full chain is
 
 $$
 \boxed{

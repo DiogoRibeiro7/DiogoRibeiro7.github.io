@@ -31,11 +31,7 @@ tags:
 title: 'Type I and Type II Errors: Size, Power, and Study Design'
 ---
 
-Type I and Type II errors are often taught with a two-by-two table.
-
-That table is useful, but it hides an important fact: the error probabilities belong to a **decision rule under specified parameter values**. They are not universal constants attached to a scientific question.
-
-Suppose a test concerns a parameter $\theta$ and divides the parameter space into
+Type I and Type II errors are often taught with a two-by-two table. That table is useful, but it hides an important fact: the error probabilities belong to a **decision rule under specified parameter values**. They are not universal constants attached to a scientific question. Suppose a test concerns a parameter $\theta$ and divides the parameter space into
 
 $$
 H_0:\theta\in\Theta_0
@@ -55,31 +51,23 @@ $$
 P_\theta(X\in R).
 $$
 
-This one function contains both kinds of error.
-
-For $\theta\in\Theta_0$,
+This one function contains both kinds of error. For $\theta\in\Theta_0$,
 
 $$
 \pi(\theta)
 $$
 
-is the probability of a Type I error.
-
-For $\theta\in\Theta_1$,
+is the probability of a Type I error. For $\theta\in\Theta_1$,
 
 $$
 1-\pi(\theta)
 $$
 
-is the probability of a Type II error.
-
-That is more precise than saying that every test has one fixed false-positive rate and one fixed false-negative rate.
+is the probability of a Type II error. That is more precise than saying that every test has one fixed false-positive rate and one fixed false-negative rate.
 
 ## Type I error and the size of a test
 
-A Type I error occurs when the procedure rejects $H_0$ even though the data-generating parameter lies in the null space.
-
-A level-$\alpha$ test is designed so that
+A Type I error occurs when the procedure rejects $H_0$ even though the data-generating parameter lies in the null space. A level-$\alpha$ test is designed so that
 
 $$
 \sup_{\theta\in\Theta_0}
@@ -94,19 +82,11 @@ $$
 P_\theta(\text{reject }H_0)
 $$
 
-is the **size** of the test.
-
-For some continuous tests, the size is exactly $\alpha$.
-
-For discrete tests, conservative tests, or composite null hypotheses, the actual rejection probability can be smaller than the nominal level at some or all null parameter values.
-
-So the common sentence
+is the **size** of the test. For some continuous tests, the size is exactly $\alpha$. For discrete tests, conservative tests, or composite null hypotheses, the actual rejection probability can be smaller than the nominal level at some or all null parameter values. So the common sentence
 
 > $\alpha=0.05$ means there is exactly a 5% chance of a false positive
 
-is too broad.
-
-A better statement is:
+is too broad. A better statement is:
 
 > The procedure is calibrated so that its Type I error probability is controlled at, or approximately at, 5% under the null assumptions.
 
@@ -114,9 +94,7 @@ That calibration is conditional on the model being correct.
 
 ## Type II error is indexed by the alternative
 
-A Type II error occurs when the procedure fails to reject $H_0$ at a parameter value in the alternative.
-
-Its probability is
+A Type II error occurs when the procedure fails to reject $H_0$ at a parameter value in the alternative. Its probability is
 
 $$
 \beta(\theta)
@@ -134,11 +112,7 @@ $$
 1-\pi(\theta).
 $$
 
-There is usually no single value called "the Type II error rate" unless a particular alternative has been specified.
-
-A test can have very low power against a tiny effect and very high power against a large effect.
-
-That dependence on effect size is central to study design.
+There is usually no single value called "the Type II error rate" unless a particular alternative has been specified. A test can have very low power against a tiny effect and very high power against a large effect. That dependence on effect size is central to study design.
 
 ## A concrete normal-mean example
 
@@ -212,9 +186,7 @@ z_{1-\alpha}
 \right).
 $$
 
-This equation shows the design trade-offs directly.
-
-Power rises when:
+This equation shows the design trade-offs directly. Power rises when:
 
 - the effect $\mu_1$ is larger;
 - the sample size $n$ is larger;
@@ -223,17 +195,9 @@ Power rises when:
 
 ## Lowering alpha does not create a universal inverse relationship
 
-For a fixed sample size, effect size, model, and test statistic, lowering $\alpha$ makes the rejection region harder to enter. Power therefore decreases and Type II error increases.
+For a fixed sample size, effect size, model, and test statistic, lowering $\alpha$ makes the rejection region harder to enter. Power therefore decreases and Type II error increases. But it is misleading to say that Type I and Type II errors are intrinsically inversely related. Sample size can reduce Type II error while leaving the nominal Type I level unchanged.
 
-But it is misleading to say that Type I and Type II errors are intrinsically inversely related.
-
-Sample size can reduce Type II error while leaving the nominal Type I level unchanged.
-
-Better measurement can increase power without changing $\alpha$.
-
-A more efficient design can do the same.
-
-The trade-off exists **conditional on the rest of the design**.
+Better measurement can increase power without changing $\alpha$. A more efficient design can do the same. The trade-off exists **conditional on the rest of the design**.
 
 ## Power should be tied to a scientifically meaningful effect
 
@@ -241,20 +205,14 @@ A statement such as
 
 > the study has 80% power
 
-is incomplete.
-
-Power against what effect?
-
-A defensible design specifies a minimum effect of scientific or practical interest, say $\Delta$, and targets
+is incomplete. Power against what effect? A defensible design specifies a minimum effect of scientific or practical interest, say $\Delta$, and targets
 
 $$
 P_{\theta=\Delta}(\text{reject }H_0)
 \ge 1-\beta.
 $$
 
-The choice of $\Delta$ should come from the scientific or operational problem, not from whichever effect size makes the desired sample size convenient.
-
-This matters because a very large study can have high power to detect effects that are too small to matter.
+The choice of $\Delta$ should come from the scientific or operational problem, not from whichever effect size makes the desired sample size convenient. This matters because a very large study can have high power to detect effects that are too small to matter.
 
 ## False positive is useful shorthand, but not always literal classification
 
@@ -265,13 +223,7 @@ The language of false positives and false negatives is intuitive:
 | Reject $H_0$ | Type I error | Correct rejection |
 | Fail to reject $H_0$ | Correct non-rejection | Type II error |
 
-But hypothesis testing is not always a binary diagnostic classifier.
-
-A composite null can contain many parameter values. The actual Type I error probability may vary across them.
-
-Likewise, the alternative is often a continuum, so the Type II error probability is a function rather than one number.
-
-The table is a summary of the decision logic, not the whole statistical model.
+But hypothesis testing is not always a binary diagnostic classifier. A composite null can contain many parameter values. The actual Type I error probability may vary across them. Likewise, the alternative is often a continuum, so the Type II error probability is a function rather than one number. The table is a summary of the decision logic, not the whole statistical model.
 
 ## Failing to reject is not accepting the null
 
@@ -281,13 +233,7 @@ $$
 p>0.05,
 $$
 
-the correct conclusion is usually that the data did not provide sufficient evidence to reject the null at the chosen level.
-
-It does not follow that the null has been shown to be true.
-
-The study may simply have little power for scientifically relevant alternatives.
-
-This is why non-significant results should be accompanied by effect estimates and uncertainty intervals.
+the correct conclusion is usually that the data did not provide sufficient evidence to reject the null at the chosen level. It does not follow that the null has been shown to be true. The study may simply have little power for scientifically relevant alternatives. This is why non-significant results should be accompanied by effect estimates and uncertainty intervals.
 
 An equivalence or non-inferiority question requires a test designed for that question, not a failed conventional significance test.
 
@@ -299,13 +245,7 @@ $$
 \alpha=0.05
 $$
 
-is not a law of nature.
-
-The acceptable Type I error rate depends on the consequences of the decision and on the regulatory or scientific context.
-
-In a confirmatory clinical trial, false evidence of efficacy can have substantial costs.
-
-In an early screening stage, a larger false-positive rate may be tolerable if the purpose is to avoid discarding promising candidates too early.
+is not a law of nature. The acceptable Type I error rate depends on the consequences of the decision and on the regulatory or scientific context. In a confirmatory clinical trial, false evidence of efficacy can have substantial costs. In an early screening stage, a larger false-positive rate may be tolerable if the purpose is to avoid discarding promising candidates too early.
 
 The statistical design should make those consequences explicit.
 
@@ -317,9 +257,7 @@ $$
 \alpha=0.05
 $$
 
-does not generally control the probability of one or more false rejections across the whole family.
-
-The relevant error criterion may instead be:
+does not generally control the probability of one or more false rejections across the whole family. The relevant error criterion may instead be:
 
 - family-wise error rate;
 - false discovery rate;
@@ -338,9 +276,7 @@ $$
 \text{do not reject}.
 $$
 
-That is rarely enough.
-
-A useful report includes:
+That is rarely enough. A useful report includes:
 
 - the estimated effect;
 - a confidence or credible interval;
@@ -349,17 +285,11 @@ A useful report includes:
 - the planned Type I error criterion;
 - and the sample-size assumptions.
 
-The error rates belong to the procedure.
-
-The scientific interpretation belongs to the estimated effect and its uncertainty.
+The error rates belong to the procedure. The scientific interpretation belongs to the estimated effect and its uncertainty.
 
 ## Conclusion
 
-Type I and Type II errors are not merely two boxes in a table.
-
-They are features of a decision rule over a parameter space.
-
-The central object is the power function
+Type I and Type II errors are not merely two boxes in a table. They are features of a decision rule over a parameter space. The central object is the power function
 
 $$
 \pi(\theta)
@@ -367,9 +297,7 @@ $$
 P_\theta(\text{reject }H_0).
 $$
 
-Under the null, it describes Type I error.
-
-Under the alternative, it determines Type II error through
+Under the null, it describes Type I error. Under the alternative, it determines Type II error through
 
 $$
 \beta(\theta)=1-\pi(\theta).

@@ -32,15 +32,7 @@ tags:
 title: 'Maximum Likelihood Estimation: What It Guarantees and What It Does Not'
 ---
 
-Maximum likelihood estimation is one of the central ideas in statistical modeling.
-
-Its definition is simple.
-
-Given observed data $x$ and a model indexed by parameter $\theta$, choose the parameter value that makes the observed data most likely under that model.
-
-The difficulty is everything hidden inside the phrase **under that model**.
-
-MLE does not tell us whether the model is scientifically appropriate.
+Maximum likelihood estimation is one of the central ideas in statistical modeling. Its definition is simple. Given observed data $x$ and a model indexed by parameter $\theta$, choose the parameter value that makes the observed data most likely under that model. The difficulty is everything hidden inside the phrase **under that model**. MLE does not tell us whether the model is scientifically appropriate.
 
 It tells us which parameter value fits best within the family we chose.
 
@@ -73,13 +65,7 @@ L(\theta;x)
 p(x_i\mid\theta).
 $$
 
-The observations are fixed inside this function.
-
-The parameter varies.
-
-This is why a likelihood is not a probability distribution over $\theta$.
-
-Without a prior, it does not integrate to one over parameter space and need not be interpreted probabilistically as
+The observations are fixed inside this function. The parameter varies. This is why a likelihood is not a probability distribution over $\theta$. Without a prior, it does not integrate to one over parameter space and need not be interpreted probabilistically as
 
 $$
 P(\theta\mid x).
@@ -87,9 +73,7 @@ $$
 
 ## Log-likelihood
 
-Products of many small probabilities or densities are numerically inconvenient.
-
-Because the logarithm is monotone,
+Products of many small probabilities or densities are numerically inconvenient. Because the logarithm is monotone,
 
 $$
 \arg\max_\theta L(\theta)
@@ -126,9 +110,7 @@ X_i
 \operatorname{Bernoulli}(p),
 $$
 
-independently.
-
-If there are $k$ successes among $n$ observations,
+independently. If there are $k$ successes among $n$ observations,
 
 $$
 L(p)
@@ -164,9 +146,7 @@ $$
 \frac{k}{n}.
 $$
 
-So the sample proportion is the Bernoulli MLE.
-
-The result is familiar, but the derivation shows the estimation principle explicitly.
+So the sample proportion is the Bernoulli MLE. The result is familiar, but the derivation shows the estimation principle explicitly.
 
 ## Normal example
 
@@ -207,9 +187,7 @@ $$
 (x_i-\bar x)^2.
 $$
 
-This is not the unbiased sample-variance estimator, whose denominator is $n-1$.
-
-MLE and unbiasedness are different criteria.
+This is not the unbiased sample-variance estimator, whose denominator is $n-1$. MLE and unbiasedness are different criteria.
 
 ## The score and information
 
@@ -254,17 +232,11 @@ E_\theta
 \right].
 $$
 
-Information measures local curvature and parameter sensitivity.
-
-Flat likelihood directions correspond to weak identification and large uncertainty.
+Information measures local curvature and parameter sensitivity. Flat likelihood directions correspond to weak identification and large uncertainty.
 
 ## Consistency is not automatic
 
-Textbook summaries often say that MLE is consistent.
-
-The correct statement is conditional.
-
-Consistency requires assumptions such as:
+Textbook summaries often say that MLE is consistent. The correct statement is conditional. Consistency requires assumptions such as:
 
 - the data-generating distribution belongs to, or is appropriately represented by, the model;
 - the parameter is identifiable;
@@ -276,9 +248,7 @@ When those conditions fail, MLE can be inconsistent, non-unique, or undefined.
 
 ## Identifiability
 
-A model is identifiable if different parameter values imply different observable distributions.
-
-Formally,
+A model is identifiable if different parameter values imply different observable distributions. Formally,
 
 $$
 P_{\theta_1}=P_{\theta_2}
@@ -286,11 +256,7 @@ P_{\theta_1}=P_{\theta_2}
 \theta_1=\theta_2.
 $$
 
-If two different parameter vectors generate exactly the same distribution, the data cannot distinguish them.
-
-No optimizer can solve an identification problem.
-
-This is a property of the model, not of the numerical algorithm.
+If two different parameter vectors generate exactly the same distribution, the data cannot distinguish them. No optimizer can solve an identification problem. This is a property of the model, not of the numerical algorithm.
 
 ## Asymptotic normality
 
@@ -309,9 +275,7 @@ I_1(\theta_0)^{-1}
 \right),
 $$
 
-where $I_1$ denotes information per observation.
-
-Equivalently,
+where $I_1$ denotes information per observation. Equivalently,
 
 $$
 \operatorname{Var}(\hat\theta)
@@ -320,19 +284,11 @@ $$
 I_1(\theta_0)^{-1}.
 $$
 
-This approximation motivates Wald standard errors and confidence intervals.
-
-It can fail near parameter boundaries, under weak identification, with mixture models, under nonregular likelihoods, or in small samples.
+This approximation motivates Wald standard errors and confidence intervals. It can fail near parameter boundaries, under weak identification, with mixture models, under nonregular likelihoods, or in small samples.
 
 ## Efficiency also needs qualification
 
-MLE is often described as “efficient.”
-
-Under the regular correctly specified parametric model, the MLE is asymptotically efficient in the usual Cramér-Rao sense.
-
-That is not the statement that the MLE has minimum variance among all unbiased estimators in every finite sample.
-
-Nor does it imply that an MLE from a wrong model is optimal for the scientific target.
+MLE is often described as “efficient.” Under the regular correctly specified parametric model, the MLE is asymptotically efficient in the usual Cramér-Rao sense. That is not the statement that the MLE has minimum variance among all unbiased estimators in every finite sample. Nor does it imply that an MLE from a wrong model is optimal for the scientific target.
 
 The word **asymptotic** matters.
 
@@ -344,9 +300,7 @@ $$
 p(x\mid\theta).
 $$
 
-The MLE can still converge.
-
-But it generally converges to the parameter value
+The MLE can still converge. But it generally converges to the parameter value
 
 $$
 \theta^\ast
@@ -357,15 +311,7 @@ E_g[
 ].
 $$
 
-Equivalently, this is the member of the model family minimizing Kullback-Leibler divergence from the truth, when the relevant quantities exist.
-
-The parameter $\theta^\ast$ is a **pseudo-true parameter**.
-
-That can be useful.
-
-It is not evidence that the fitted model is literally true.
-
-Under misspecification, the usual inverse-Fisher covariance formula also needs replacement by a sandwich form.
+Equivalently, this is the member of the model family minimizing Kullback-Leibler divergence from the truth, when the relevant quantities exist. The parameter $\theta^\ast$ is a **pseudo-true parameter**. That can be useful. It is not evidence that the fitted model is literally true. Under misspecification, the usual inverse-Fisher covariance formula also needs replacement by a sandwich form.
 
 ## Logistic regression
 
@@ -396,33 +342,13 @@ y_i\log p_i
 \right].
 $$
 
-There is no general closed-form solution for $\hat\beta$.
-
-Numerical optimization is used.
-
-This is a genuine example of a common machine-learning loss arising directly as a negative log-likelihood.
+There is no general closed-form solution for $\hat\beta$. Numerical optimization is used. This is a genuine example of a common machine-learning loss arising directly as a negative log-likelihood.
 
 ## Not every machine-learning algorithm is MLE
 
-The previous version of this article incorrectly grouped support vector machines, decision trees, and random forests as if they were likelihood-based MLE procedures.
+The previous version of this article incorrectly grouped support vector machines, decision trees, and random forests as if they were likelihood-based MLE procedures. They are not, in their standard forms. A soft-margin SVM minimizes hinge loss plus a regularization term. A decision tree recursively optimizes split criteria. A random forest averages randomized trees.
 
-They are not, in their standard forms.
-
-A soft-margin SVM minimizes hinge loss plus a regularization term.
-
-A decision tree recursively optimizes split criteria.
-
-A random forest averages randomized trees.
-
-These can be studied statistically, but they are not automatically maximum-likelihood estimators.
-
-Neural networks are more nuanced.
-
-A network trained with cross-entropy for a categorical outcome can be interpreted as maximizing a conditional likelihood.
-
-A network trained under another objective may not have that interpretation.
-
-The loss function determines the statistical connection.
+These can be studied statistically, but they are not automatically maximum-likelihood estimators. Neural networks are more nuanced. A network trained with cross-entropy for a categorical outcome can be interpreted as maximizing a conditional likelihood. A network trained under another objective may not have that interpretation. The loss function determines the statistical connection.
 
 ## Optimization is not inference
 
@@ -434,11 +360,7 @@ $$
 \arg\max_\theta\ell(\theta)
 $$
 
-is an optimization problem.
-
-Inference requires additional work.
-
-Questions include:
+is an optimization problem. Inference requires additional work. Questions include:
 
 - Is the optimum unique?
 - Is it global or local?
@@ -452,9 +374,7 @@ An optimizer returning “success” does not answer any of those.
 
 ## Local maxima and numerical issues
 
-For a simple concave likelihood such as ordinary logistic regression without separation, optimization is well behaved.
-
-Other likelihoods can contain:
+For a simple concave likelihood such as ordinary logistic regression without separation, optimization is well behaved. Other likelihoods can contain:
 
 - multiple local maxima;
 - flat ridges;
@@ -462,11 +382,7 @@ Other likelihoods can contain:
 - boundary optima;
 - unbounded likelihoods.
 
-Mixture models are a classic example.
-
-Numerical diagnostics are part of statistical modeling.
-
-Convergence flags, gradients, Hessians, starting values, and repeated initializations can matter.
+Mixture models are a classic example. Numerical diagnostics are part of statistical modeling. Convergence flags, gradients, Hessians, starting values, and repeated initializations can matter.
 
 ## Reproducible Python examples
 
@@ -488,7 +404,7 @@ def bernoulli_mle(
             "observations must be one-dimensional"
         )
 
-    if not np.all(
+if not np.all(
         (observations == 0)
         | (observations == 1)
     ):
@@ -496,8 +412,7 @@ def bernoulli_mle(
             "Bernoulli observations must be 0 or 1"
         )
 
-    return float(observations.mean())
-
+return float(observations.mean())
 
 def normal_mle(
     observations: FloatArray,
@@ -507,23 +422,22 @@ def normal_mle(
             "observations must be one-dimensional"
         )
 
-    if observations.size == 0:
+if observations.size == 0:
         raise ValueError(
             "observations cannot be empty"
         )
 
-    mean_mle: float = float(
+mean_mle: float = float(
         observations.mean()
     )
 
-    variance_mle: float = float(
+variance_mle: float = float(
         np.mean(
             (observations - mean_mle) ** 2
         )
     )
 
-    return mean_mle, variance_mle
-
+return mean_mle, variance_mle
 
 rng = np.random.default_rng(2026)
 
@@ -543,15 +457,11 @@ print(bernoulli_mle(binary))
 print(normal_mle(normal))
 ~~~
 
-The normal variance uses denominator $n$ because it is the MLE.
-
-That is intentional.
+The normal variance uses denominator $n$ because it is the MLE. That is intentional.
 
 ## Likelihood ratios
 
-Likelihood also supports model comparison.
-
-For nested models with maximized log-likelihoods
+Likelihood also supports model comparison. For nested models with maximized log-likelihoods
 
 $$
 \ell_0
@@ -569,11 +479,7 @@ $$
 2(\ell_1-\ell_0).
 $$
 
-Under regular conditions, Wilks' theorem gives an asymptotic chi-square distribution with degrees of freedom equal to the difference in parameter dimension.
-
-Again, “under regular conditions” matters.
-
-Boundary parameters and non-identifiable models can invalidate the ordinary chi-square reference distribution.
+Under regular conditions, Wilks' theorem gives an asymptotic chi-square distribution with degrees of freedom equal to the difference in parameter dimension. Again, “under regular conditions” matters. Boundary parameters and non-identifiable models can invalidate the ordinary chi-square reference distribution.
 
 ## Bayesian inference uses the same likelihood differently
 
@@ -598,19 +504,11 @@ $$
 \right].
 $$
 
-This often resembles penalized likelihood.
-
-But MLE and Bayesian inference answer different probability questions.
-
-The likelihood is common to both.
-
-The inferential framework is not.
+This often resembles penalized likelihood. But MLE and Bayesian inference answer different probability questions. The likelihood is common to both. The inferential framework is not.
 
 ## Conclusion
 
-MLE is a disciplined way to estimate parameters inside a probabilistic model.
-
-Its strongest properties are conditional:
+MLE is a disciplined way to estimate parameters inside a probabilistic model. Its strongest properties are conditional:
 
 $$
 \boxed{
@@ -626,9 +524,7 @@ $$
 }
 $$
 
-The maximized likelihood cannot validate the model that generated it.
-
-A good likelihood analysis therefore combines estimation with diagnostics, uncertainty, model comparison, and explicit discussion of misspecification.
+The maximized likelihood cannot validate the model that generated it. A good likelihood analysis therefore combines estimation with diagnostics, uncertainty, model comparison, and explicit discussion of misspecification.
 
 ## References
 

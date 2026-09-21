@@ -60,7 +60,7 @@ Interference in wireless communication is often caused by dynamic changes in the
 
 ## Practical Considerations and Mitigations
 
-To mitigate the negative effects of human presence on RSSI, several practical strategies can be implemented. 
+To mitigate the negative effects of human presence on RSSI, several practical strategies can be implemented.
 
 Firstly, proper antenna placement is crucial. Positioning antennas in locations less likely to be obstructed by human bodies, such as elevated or strategically placed areas, can minimize human-induced attenuation. By ensuring that the antennas have a clear line of sight, the impact of signal blockage and reflection can be reduced.
 

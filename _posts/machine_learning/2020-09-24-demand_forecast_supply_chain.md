@@ -48,9 +48,7 @@ Unlike traditional time series data that focuses solely on product and time, **t
 
 Instead of purely focusing on product-level forecasting, this method incorporates **transaction-level data**, which includes the customer, product, and transaction time. This approach shifts the focus from a one-dimensional product-time perspective to a more comprehensive customer-product-time framework. By incorporating customer purchasing behavior, we gain valuable insights that improve the **demand forecasting** process.
 
-Even though the ultimate goal is still to predict the future sales volume of products, the structural differences in the data require a different approach. Here, considering **customer-level factors** like purchase frequency, recency, and average spending helps build a more precise forecasting model.
-
-For instance, in this supply chain forecasting problem, individual customer behavior becomes a critical component of the model, providing an added layer of detail beyond traditional time series methods.
+Even though the ultimate goal is still to predict the future sales volume of products, the structural differences in the data require a different approach. Here, considering **customer-level factors** like purchase frequency, recency, and average spending helps build a more precise forecasting model. For instance, in this supply chain forecasting problem, individual customer behavior becomes a critical component of the model, providing an added layer of detail beyond traditional time series methods.
 
 ## Applying a Repurchase Predictive Model
 
@@ -151,8 +149,8 @@ seasonal_indices = {}
 for product in daily_sales_pivot.columns:
     product_series = daily_sales_pivot[product]
     model_type = 'multiplicative' if (product_series > 0).all() else 'additive'
-    
-    if len(product_series.dropna()) >= 90:
+
+if len(product_series.dropna()) >= 90:
         decomposition = seasonal_decompose(
             product_series,
             model=model_type,
@@ -184,10 +182,7 @@ The model is validated by comparing the predicted sales with actual sales data f
 
 A customer-level repurchase model and a product-level demand forecast answer different questions. Neither is inherently more accurate than a time-series model; the comparison must be made on the same forecast target, horizon, information set, and validation period. The BG/NBD model provides valuable insights into customer behavior, enabling businesses to forecast demand and optimize inventory more effectively.
 
-The combination of repurchase models, seasonality adjustments, and product-level forecasts enhances the precision of predictions, offering a robust framework for supply chain management.
-
-For further refinement, future models could incorporate external factors like promotions, holidays, or inventory levels to capture even more variability in demand. With ongoing exploration and refinement, this approach can lead to better business decisions and more efficient supply chain operations.
-
+The combination of repurchase models, seasonality adjustments, and product-level forecasts enhances the precision of predictions, offering a robust framework for supply chain management. For further refinement, future models could incorporate external factors like promotions, holidays, or inventory levels to capture even more variability in demand. With ongoing exploration and refinement, this approach can lead to better business decisions and more efficient supply chain operations.
 
 ## The forecast target must be explicit
 
@@ -197,31 +192,23 @@ $$
 Y_{s,t+h},
 $$
 
-demand for SKU $s$ at horizon $h$, or a hierarchy such as SKU-store, category-store, region, and total demand.
-
-A customer repurchase model estimates a different object:
+demand for SKU $s$ at horizon $h$, or a hierarchy such as SKU-store, category-store, region, and total demand. A customer repurchase model estimates a different object:
 
 $$
 E[N_i(t,t+h)\mid\mathcal F_t],
 $$
 
-the expected number of future transactions for customer $i$.
-
-Turning one into the other requires a product-choice model or an assumption that future product mix follows historical proportions. That assumption should be tested rather than hidden inside a groupby.
+the expected number of future transactions for customer $i$. Turning one into the other requires a product-choice model or an assumption that future product mix follows historical proportions. That assumption should be tested rather than hidden inside a groupby.
 
 ## BG/NBD assumptions
 
-BG/NBD models repeat purchasing under assumptions about transaction rates and dropout. They are useful for non-contractual customer behavior, but they are not generic demand models.
-
-The Gamma-Gamma model is designed for positive monetary value under assumptions about independence between transaction frequency and monetary value. Passing item quantity as if it were monetary value changes the model meaning.
+BG/NBD models repeat purchasing under assumptions about transaction rates and dropout. They are useful for non-contractual customer behavior, but they are not generic demand models. The Gamma-Gamma model is designed for positive monetary value under assumptions about independence between transaction frequency and monetary value. Passing item quantity as if it were monetary value changes the model meaning.
 
 If the target is unit demand, model units directly.
 
 ## Inventory decisions need distributions
 
-Point forecasts are not enough for safety-stock decisions.
-
-For lead time $L$, inventory policy depends on the distribution
+Point forecasts are not enough for safety-stock decisions. For lead time $L$, inventory policy depends on the distribution
 
 $$
 P(
@@ -235,9 +222,7 @@ Quantiles, prediction intervals, and service-level loss matter more than RMSE al
 
 ## Validation must be time ordered
 
-The training period must precede the validation period, and every feature must be available at the forecast origin.
-
-Compare against simple baselines:
+The training period must precede the validation period, and every feature must be available at the forecast origin. Compare against simple baselines:
 
 - seasonal naive;
 - moving average;

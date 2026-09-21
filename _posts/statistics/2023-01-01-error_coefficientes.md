@@ -31,13 +31,7 @@ tags:
 title: 'Error Terms in Linear and Logistic Regression'
 ---
 
-Linear and logistic regression both model a conditional distribution.
-
-The difference is not that one model has “error” and the other does not.
-
-The difference is how random variation is represented.
-
-For a Gaussian linear model,
+Linear and logistic regression both model a conditional distribution. The difference is not that one model has “error” and the other does not. The difference is how random variation is represented. For a Gaussian linear model,
 
 $$
 Y_i
@@ -63,9 +57,7 @@ $$
 X_i^\top\beta.
 $$
 
-The first writes a disturbance term explicitly.
-
-The second places randomness directly in the Bernoulli conditional distribution.
+The first writes a disturbance term explicitly. The second places randomness directly in the Bernoulli conditional distribution.
 
 ## Model error is not the same thing as residual
 
@@ -79,9 +71,7 @@ Y_i
 E(Y_i\mid X_i).
 $$
 
-It is part of the data-generating model and is not observed directly.
-
-After fitting, the residual is
+It is part of the data-generating model and is not observed directly. After fitting, the residual is
 
 $$
 e_i
@@ -91,9 +81,7 @@ Y_i
 \hat Y_i.
 $$
 
-Residuals depend on the estimated model and therefore are not identical to the latent errors.
-
-In matrix form,
+Residuals depend on the estimated model and therefore are not identical to the latent errors. In matrix form,
 
 $$
 e
@@ -109,9 +97,7 @@ H
 X(X^\top X)^{-1}X^\top
 $$
 
-is the hat matrix.
-
-This means residuals have a covariance structure induced by the fitted model even when the original errors are independent.
+is the hat matrix. This means residuals have a covariance structure induced by the fitted model even when the original errors are independent.
 
 ## The linear conditional mean
 
@@ -157,11 +143,7 @@ $$
 \mathcal N(0,\sigma^2I),
 $$
 
-then OLS is also the maximum-likelihood estimator for $\beta$ and exact finite-sample t and F distributions become available.
-
-That is a stronger assumption than OLS estimation itself requires.
-
-The usual hierarchy is:
+then OLS is also the maximum-likelihood estimator for $\beta$ and exact finite-sample t and F distributions become available. That is a stronger assumption than OLS estimation itself requires. The usual hierarchy is:
 
 - conditional mean zero for unbiasedness;
 - standard regularity conditions for consistency;
@@ -180,13 +162,7 @@ $$
 \sigma_i^2,
 $$
 
-OLS coefficients can remain unbiased or consistent under the appropriate exogeneity assumptions.
-
-What fails is the ordinary homoskedastic covariance formula.
-
-A heteroskedasticity-consistent covariance estimator can then be used for inference.
-
-So variance misspecification and conditional-mean misspecification are different problems.
+OLS coefficients can remain unbiased or consistent under the appropriate exogeneity assumptions. What fails is the ordinary homoskedastic covariance formula. A heteroskedasticity-consistent covariance estimator can then be used for inference. So variance misspecification and conditional-mean misspecification are different problems.
 
 ## Logistic regression has a stochastic model
 
@@ -226,9 +202,7 @@ $$
 p_i(1-p_i).
 $$
 
-The random variation is therefore explicit in the Bernoulli distribution.
-
-There is no need to add an independent Gaussian error to the logit equation.
+The random variation is therefore explicit in the Bernoulli distribution. There is no need to add an independent Gaussian error to the logit equation.
 
 ## The likelihood
 
@@ -264,15 +238,11 @@ $$
 \ell(\beta).
 $$
 
-The likelihood is not “the error term.”
-
-It is the probability model used to estimate the coefficients.
+The likelihood is not “the error term.” It is the probability model used to estimate the coefficients.
 
 ## Logistic residuals exist
 
-Logistic regression has several useful residual definitions.
-
-The response residual is
+Logistic regression has several useful residual definitions. The response residual is
 
 $$
 e_i
@@ -294,11 +264,7 @@ y_i-\hat p_i
 }.
 $$
 
-Deviance residuals measure the signed contribution of each observation to model deviance.
-
-These residuals can reveal lack of fit, unusual observations, or systematic structure not captured by the model.
-
-So “logistic regression has no residuals” is false.
+Deviance residuals measure the signed contribution of each observation to model deviance. These residuals can reveal lack of fit, unusual observations, or systematic structure not captured by the model. So “logistic regression has no residuals” is false.
 
 ## Latent-variable representation
 
@@ -320,11 +286,7 @@ X_i^\top\beta
 \varepsilon_i,
 $$
 
-where $\varepsilon_i$ follows a logistic distribution.
-
-This representation helps explain why the logit link appears.
-
-But the latent scale is not directly observed, so the coefficient scale depends on the fixed logistic error distribution.
+where $\varepsilon_i$ follows a logistic distribution. This representation helps explain why the logit link appears. But the latent scale is not directly observed, so the coefficient scale depends on the fixed logistic error distribution.
 
 ## Coefficients live on different scales
 
@@ -334,33 +296,23 @@ $$
 \beta_j
 $$
 
-is a conditional change in the mean response per unit change in predictor $j$, holding the other modeled predictors fixed.
-
-In logistic regression,
+is a conditional change in the mean response per unit change in predictor $j$, holding the other modeled predictors fixed. In logistic regression,
 
 $$
 \beta_j
 $$
 
-is a conditional change in log-odds.
-
-Exponentiating gives an odds ratio:
+is a conditional change in log-odds. Exponentiating gives an odds ratio:
 
 $$
 \exp(\beta_j).
 $$
 
-Neither coefficient is automatically causal.
-
-That interpretation requires a causal design or identification assumptions.
+Neither coefficient is automatically causal. That interpretation requires a causal design or identification assumptions.
 
 ## Classification metrics do not replace model diagnostics
 
-A logistic model can have high classification accuracy and still be poorly calibrated.
-
-AUC can be high while predicted probabilities are systematically too extreme.
-
-Useful diagnostics include:
+A logistic model can have high classification accuracy and still be poorly calibrated. AUC can be high while predicted probabilities are systematically too extreme. Useful diagnostics include:
 
 - calibration plots;
 - Brier score;
@@ -374,9 +326,7 @@ The statistical model and the classification decision are related but distinct l
 
 ## Dependence
 
-Both linear and logistic regression can be misspecified when observations are dependent.
-
-Examples include:
+Both linear and logistic regression can be misspecified when observations are dependent. Examples include:
 
 - repeated measurements;
 - patients within hospitals;
@@ -384,9 +334,7 @@ Examples include:
 - spatial data;
 - family clusters.
 
-For binary repeated measures, options include GEE, mixed-effects logistic regression, or cluster-robust inference depending on the estimand.
-
-The Bernoulli mean model alone does not define dependence among observations.
+For binary repeated measures, options include GEE, mixed-effects logistic regression, or cluster-robust inference depending on the estimand. The Bernoulli mean model alone does not define dependence among observations.
 
 ## Overdispersion and binary data
 
@@ -398,17 +346,11 @@ $$
 p_i(1-p_i)
 $$
 
-is fixed by the mean.
-
-But grouped binomial data can exhibit extra-binomial variation due to unmodeled heterogeneity or dependence.
-
-That can be handled through beta-binomial models, random effects, quasi-likelihood, or robust covariance methods depending on the source of variation.
+is fixed by the mean. But grouped binomial data can exhibit extra-binomial variation due to unmodeled heterogeneity or dependence. That can be handled through beta-binomial models, random effects, quasi-likelihood, or robust covariance methods depending on the source of variation.
 
 ## Conclusion
 
-Linear and logistic regression do not differ because one “has error” and the other does not.
-
-They differ because they specify different conditional distributions:
+Linear and logistic regression do not differ because one “has error” and the other does not. They differ because they specify different conditional distributions:
 
 $$
 \boxed{
@@ -426,9 +368,7 @@ $$
 }
 $$
 
-Residuals are fitted diagnostics in both settings.
-
-The inferential assumptions belong to the full probability model, not to a vague idea of “error handling.”
+Residuals are fitted diagnostics in both settings. The inferential assumptions belong to the full probability model, not to a vague idea of “error handling.”
 
 ## References
 

@@ -97,9 +97,7 @@ When the dimensionality of $$x$$ is large, traditional numerical integration tec
 
 ### Rare Event Sampling
 
-MCMC methods are also valuable in **rare event sampling**, where the goal is to sample from regions of the probability space that correspond to low-probability, high-impact events. These events are important in fields like reliability engineering, finance, and risk analysis.
-
-In these cases, MCMC methods gradually explore the rare failure regions by generating samples that concentrate on the areas of interest, even when these regions are hard to find in a high-dimensional space.
+MCMC methods are also valuable in **rare event sampling**, where the goal is to sample from regions of the probability space that correspond to low-probability, high-impact events. These events are important in fields like reliability engineering, finance, and risk analysis. In these cases, MCMC methods gradually explore the rare failure regions by generating samples that concentrate on the areas of interest, even when these regions are hard to find in a high-dimensional space.
 
 ### Hierarchical Models
 
@@ -121,14 +119,12 @@ The **Metropolis-Hastings algorithm** is one of the most widely used MCMC method
 2. Propose a new state $$X'$$ based on a proposal distribution $$q(X' | X_n)$$.
 3. Compute the acceptance probability:
 
-   $$ \alpha = \min \left( 1, \frac{P(X') q(X_n | X')}{P(X_n) q(X' | X_n)} \right) $$
+$$ \alpha = \min \left( 1, \frac{P(X') q(X_n | X')}{P(X_n) q(X' | X_n)} \right) $$
 
 4. Accept the proposed state with probability $$\alpha$$. If accepted, set $$X_{n+1} = X'$$, otherwise, keep the current state: $$X_{n+1} = X_n$$.
 5. Repeat the process to generate the desired number of samples.
 
-The algorithm relies on a proposal distribution, which can be chosen based on the problem at hand. Common choices include Gaussian distributions centered at the current state.
-
-The **Metropolis algorithm** is a special case of the Metropolis-Hastings algorithm where the proposal distribution is symmetric, i.e., $$q(X' | X) = q(X | X')$$.
+The algorithm relies on a proposal distribution, which can be chosen based on the problem at hand. Common choices include Gaussian distributions centered at the current state. The **Metropolis algorithm** is a special case of the Metropolis-Hastings algorithm where the proposal distribution is symmetric, i.e., $$q(X' | X) = q(X | X')$$.
 
 ### Gibbs Sampling
 
@@ -196,7 +192,7 @@ You can install `numpy` by running:
 pip install numpy
 ```
 
-### Code Implementation 
+### Code Implementation
 
 ```python
 import numpy as np
@@ -205,11 +201,11 @@ def target_distribution(x):
     """
     Target distribution we want to sample from.
     In this example, it's a standard normal distribution.
-    
-    Parameters:
+
+Parameters:
     - x: float, the point at which to evaluate the probability density function.
-    
-    Returns:
+
+Returns:
     - float, the probability density at point x.
     """
     return np.exp(-0.5 * x ** 2)  # Standard normal distribution (Gaussian)
@@ -218,12 +214,12 @@ def proposal_distribution(x, step_size=1.0):
     """
     Proposal distribution to generate a new candidate state.
     We use a symmetric normal distribution centered at the current state.
-    
-    Parameters:
+
+Parameters:
     - x: float, the current state.
     - step_size: float, the standard deviation of the proposal distribution.
-    
-    Returns:
+
+Returns:
     - float, the new candidate state.
     """
     return np.random.normal(loc=x, scale=step_size)
@@ -231,39 +227,39 @@ def proposal_distribution(x, step_size=1.0):
 def metropolis_hastings(target_dist, proposal_dist, initial_state, num_samples, step_size=1.0):
     """
     Metropolis-Hastings algorithm to sample from the target distribution.
-    
-    Parameters:
+
+Parameters:
     - target_dist: function, the target probability distribution.
     - proposal_dist: function, the proposal distribution to generate new states.
     - initial_state: float, the starting point of the Markov chain.
     - num_samples: int, the number of samples to generate.
     - step_size: float, the standard deviation of the proposal distribution.
-    
-    Returns:
+
+Returns:
     - samples: numpy array, the generated samples from the target distribution.
     """
     samples = np.zeros(num_samples)
     current_state = initial_state
     samples[0] = current_state
-    
-    for i in range(1, num_samples):
+
+for i in range(1, num_samples):
         # Propose a new state from the proposal distribution
         proposed_state = proposal_dist(current_state, step_size)
-        
-        # Compute the acceptance probability
+
+# Compute the acceptance probability
         acceptance_ratio = min(
             1.0,
             target_dist(proposed_state)
             / target_dist(current_state),
         )
-        
-        # Accept or reject the proposed state
+
+# Accept or reject the proposed state
         if np.random.rand() < acceptance_ratio:
             current_state = proposed_state  # Accept the new state
-            
-        samples[i] = current_state  # Store the current state
-        
-    return samples
+
+samples[i] = current_state  # Store the current state
+
+return samples
 
 # Set parameters
 initial_state = 0.0  # Start at x = 0
@@ -306,9 +302,9 @@ The `metropolis_hastings` function is the core of the algorithm. It generates a 
 $$ \alpha = \frac{P(\text{proposed state})}{P(\text{current state})} $$
 
 This ratio helps determine whether the new state should be accepted based on how much more likely the proposed state is compared to the current one.
-   
+
 4. **State Acceptance or Rejection**: A random number between 0 and 1 is generated. If this number is less than the acceptance ratio $\alpha$, the new state is accepted. Otherwise, the current state is retained.
-   
+
 5. **Sampling Process**: The process repeats for a predefined number of samples, and each accepted state is stored in an array to represent the distribution being sampled.
 
 ### Parameters
@@ -372,9 +368,7 @@ $$
 f(x) = \frac{1}{\sqrt{2\pi}} \exp\left(-\frac{x^2}{2}\right)
 $$
 
-This is plotted for reference to show how closely the sampled distribution matches the theoretical one.
-
-The histogram should closely match the red curve, verifying that the Metropolis-Hastings algorithm is successfully sampling from the standard normal distribution.
+This is plotted for reference to show how closely the sampled distribution matches the theoretical one. The histogram should closely match the red curve, verifying that the Metropolis-Hastings algorithm is successfully sampling from the standard normal distribution.
 
 ## References: Books and Articles on MCMC
 
@@ -448,12 +442,9 @@ Here are some books, articles, and online resources for learning about Markov Ch
    - **URL**: [https://chi-feng.github.io/mcmc-demo/](https://chi-feng.github.io/mcmc-demo/)  
    - **Description**: This interactive, visual tutorial explains MCMC methods with a focus on helping users intuitively understand the behavior of the algorithms.
 
-
 ## Monte Carlo error and effective sample size
 
-Posterior uncertainty and Monte Carlo uncertainty are different. Even after the target distribution is correctly specified, finite MCMC output introduces simulation error.
-
-For a scalar estimand $E_\pi[g(X)]$, the Monte Carlo standard error depends on the autocorrelation of $g(X_t)$. A convenient summary is the effective sample size,
+Posterior uncertainty and Monte Carlo uncertainty are different. Even after the target distribution is correctly specified, finite MCMC output introduces simulation error. For a scalar estimand $E_\pi[g(X)]$, the Monte Carlo standard error depends on the autocorrelation of $g(X_t)$. A convenient summary is the effective sample size,
 
 $$
 ESS
@@ -462,6 +453,4 @@ ESS
 {1+2\sum_{k\ge1}\rho_k}.
 $$
 
-Two chains with the same number of draws can therefore contain very different amounts of information.
-
-Warmup or burn-in should not be treated as a ritual number of iterations. Modern samplers use warmup to adapt tuning parameters, and diagnostics should be based on multiple chains, effective sample sizes, and convergence measures rather than “discard the first 10%.”
+Two chains with the same number of draws can therefore contain very different amounts of information. Warmup or burn-in should not be treated as a ritual number of iterations. Modern samplers use warmup to adapt tuning parameters, and diagnostics should be based on multiple chains, effective sample sizes, and convergence measures rather than “discard the first 10%.”

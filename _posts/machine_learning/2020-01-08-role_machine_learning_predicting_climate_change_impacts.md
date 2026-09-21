@@ -30,15 +30,9 @@ tags:
 title: 'Machine Learning in Climate Science: Where It Helps and Where It Fails'
 ---
 
-Machine learning is useful in climate science, but the useful claim is narrower than the popular one.
+Machine learning is useful in climate science, but the useful claim is narrower than the popular one. Climate is governed by physical processes: fluid dynamics, radiation, thermodynamics, phase changes, ocean circulation, land-surface exchange, chemistry, and biology. General circulation models encode these processes numerically. Machine learning does not make those equations obsolete.
 
-Climate is governed by physical processes: fluid dynamics, radiation, thermodynamics, phase changes, ocean circulation, land-surface exchange, chemistry, and biology. General circulation models encode these processes numerically.
-
-Machine learning does not make those equations obsolete.
-
-Its strongest role is often to approximate expensive components, infer unresolved structure from observations, or combine physical constraints with flexible statistical models.
-
-The distinction is
+Its strongest role is often to approximate expensive components, infer unresolved structure from observations, or combine physical constraints with flexible statistical models. The distinction is
 
 $$
 \boxed{
@@ -62,13 +56,7 @@ $$
 
 ## Weather and climate are different prediction problems
 
-Weather forecasting asks for the future atmospheric state from the current state over days to weeks.
-
-Climate projection asks about distributions of future states under forcing scenarios over decades or longer.
-
-The two tasks share equations but differ statistically.
-
-A weather model is evaluated on trajectory accuracy over forecast lead time.
+Weather forecasting asks for the future atmospheric state from the current state over days to weeks. Climate projection asks about distributions of future states under forcing scenarios over decades or longer. The two tasks share equations but differ statistically. A weather model is evaluated on trajectory accuracy over forecast lead time.
 
 A climate model is often evaluated on quantities such as:
 
@@ -84,9 +72,7 @@ A model that predicts tomorrow's temperature well is not automatically a valid c
 
 ## Emulation
 
-One direct use of machine learning is **emulation**.
-
-Suppose an expensive simulator maps inputs $x$ to output
+One direct use of machine learning is **emulation**. Suppose an expensive simulator maps inputs $x$ to output
 
 $$
 y=f(x).
@@ -100,9 +86,7 @@ $$
 f(x)
 $$
 
-at much lower computational cost.
-
-This can be useful for:
+at much lower computational cost. This can be useful for:
 
 - parameter sweeps;
 - uncertainty propagation;
@@ -110,19 +94,11 @@ This can be useful for:
 - ensemble generation;
 - inverse problems.
 
-The emulator approximates the simulator.
-
-It does not add physical validity that the simulator lacks.
-
-And it is reliable only over the input region represented in its training data or supported by strong structural assumptions.
+The emulator approximates the simulator. It does not add physical validity that the simulator lacks. And it is reliable only over the input region represented in its training data or supported by strong structural assumptions.
 
 ## Parameterization of unresolved processes
 
-Climate models cannot resolve every spatial and temporal scale.
-
-Cloud microphysics, convection, turbulence, and land-surface processes may occur below the grid scale.
-
-Traditional models use parameterizations:
+Climate models cannot resolve every spatial and temporal scale. Cloud microphysics, convection, turbulence, and land-surface processes may occur below the grid scale. Traditional models use parameterizations:
 
 $$
 \text{resolved state}
@@ -136,41 +112,21 @@ Machine learning can estimate such mappings from:
 - observations;
 - process models.
 
-This can improve computational efficiency or local fidelity.
-
-But a learned parameterization must remain stable when coupled back into the dynamical model.
-
-A small one-step prediction error can create a large long-term climate bias after repeated feedback.
-
-Offline accuracy is therefore not enough.
+This can improve computational efficiency or local fidelity. But a learned parameterization must remain stable when coupled back into the dynamical model. A small one-step prediction error can create a large long-term climate bias after repeated feedback. Offline accuracy is therefore not enough.
 
 ## Conservation laws and physical constraints
 
-A generic neural network can violate basic physical constraints.
-
-For example, a model may predict tendencies that do not conserve mass or energy.
-
-Hybrid approaches can constrain outputs so that
+A generic neural network can violate basic physical constraints. For example, a model may predict tendencies that do not conserve mass or energy. Hybrid approaches can constrain outputs so that
 
 $$
 \sum_i \Delta E_i = 0
 $$
 
-for an energy-conserving subsystem, or incorporate conservation directly into the architecture or loss.
-
-Physical constraints reduce the hypothesis space.
-
-That can improve extrapolation and make failures easier to diagnose.
-
-The goal is not to make the network look more “scientific.”
-
-It is to encode information already known to be true.
+for an energy-conserving subsystem, or incorporate conservation directly into the architecture or loss. Physical constraints reduce the hypothesis space. That can improve extrapolation and make failures easier to diagnose. The goal is not to make the network look more “scientific.” It is to encode information already known to be true.
 
 ## Downscaling
 
-Global climate models operate on spatial grids that are often coarser than the scale required for local impact studies.
-
-Statistical downscaling learns a relationship such as
+Global climate models operate on spatial grids that are often coarser than the scale required for local impact studies. Statistical downscaling learns a relationship such as
 
 $$
 Y_{\mathrm{local}}
@@ -182,15 +138,7 @@ X_{\mathrm{large\ scale}}
 \varepsilon.
 $$
 
-Machine learning can make $g$ highly flexible.
-
-The central difficulty is stationarity.
-
-A relationship learned under historical climate conditions may not remain valid under a substantially warmer climate.
-
-This is a distribution-shift problem.
-
-Training and deployment distributions differ:
+Machine learning can make $g$ highly flexible. The central difficulty is stationarity. A relationship learned under historical climate conditions may not remain valid under a substantially warmer climate. This is a distribution-shift problem. Training and deployment distributions differ:
 
 $$
 P_{\mathrm{train}}(X,Y)
@@ -202,19 +150,13 @@ Cross-validation within the historical period cannot prove future-climate validi
 
 ## Extreme events
 
-Extremes are statistically difficult because the events of greatest interest are rare.
-
-A model trained to minimize ordinary mean-squared error can perform well overall while smoothing the tails.
-
-For an extreme threshold $u$, the relevant quantity may be
+Extremes are statistically difficult because the events of greatest interest are rare. A model trained to minimize ordinary mean-squared error can perform well overall while smoothing the tails. For an extreme threshold $u$, the relevant quantity may be
 
 $$
 P(Y>u\mid X),
 $$
 
-not the conditional mean.
-
-Evaluation should therefore include:
+not the conditional mean. Evaluation should therefore include:
 
 - tail calibration;
 - threshold exceedance rates;
@@ -235,11 +177,7 @@ Machine learning can help with components of sea-level analysis such as:
 - surrogate models for expensive simulations;
 - bias correction.
 
-But long-term sea-level projection remains a physical inference problem involving thermal expansion, glaciers, ice sheets, land-water storage, and vertical land motion.
-
-A purely historical regression cannot reliably learn responses to forcing states it has never observed.
-
-This is a general lesson:
+But long-term sea-level projection remains a physical inference problem involving thermal expansion, glaciers, ice sheets, land-water storage, and vertical land motion. A purely historical regression cannot reliably learn responses to forcing states it has never observed. This is a general lesson:
 
 $$
 \boxed{
@@ -251,13 +189,7 @@ $$
 
 ## Biodiversity and ecological impacts
 
-Remote sensing and machine learning can map land cover, vegetation traits, habitat fragmentation, species distributions, and disturbance.
-
-These tasks are valuable for climate-impact science.
-
-But ecological response is not identified by image classification alone.
-
-Species distributions depend on:
+Remote sensing and machine learning can map land cover, vegetation traits, habitat fragmentation, species distributions, and disturbance. These tasks are valuable for climate-impact science. But ecological response is not identified by image classification alone. Species distributions depend on:
 
 - climate;
 - land use;
@@ -271,9 +203,7 @@ A model predicting current species presence from current climate does not automa
 
 ## Distribution shift is central
 
-Climate applications routinely violate the standard machine-learning assumption that future data resemble training data.
-
-The system changes because:
+Climate applications routinely violate the standard machine-learning assumption that future data resemble training data. The system changes because:
 
 - greenhouse-gas concentrations change;
 - land use changes;
@@ -282,11 +212,7 @@ The system changes because:
 - extreme-event frequency changes;
 - feedbacks enter regions not represented historically.
 
-This makes out-of-distribution behavior a first-order problem.
-
-A random historical train-test split mostly measures interpolation.
-
-It does not test the scenario the model is built for.
+This makes out-of-distribution behavior a first-order problem. A random historical train-test split mostly measures interpolation. It does not test the scenario the model is built for.
 
 ## Validation should follow the deployment question
 
@@ -302,9 +228,7 @@ The split must be scientifically adversarial enough to expose the extrapolation 
 
 ## Uncertainty has several sources
 
-A climate prediction contains more than ordinary statistical uncertainty.
-
-One useful decomposition is
+A climate prediction contains more than ordinary statistical uncertainty. One useful decomposition is
 
 $$
 \text{uncertainty}
@@ -318,23 +242,11 @@ $$
 \text{statistical approximation error}.
 $$
 
-Machine learning can reduce one component while leaving the others untouched.
-
-An emulator with very small prediction error does not remove scenario uncertainty.
-
-A calibrated weather model does not remove structural uncertainty in long-run feedbacks.
-
-The uncertainty statement must match the model's role.
+Machine learning can reduce one component while leaving the others untouched. An emulator with very small prediction error does not remove scenario uncertainty. A calibrated weather model does not remove structural uncertainty in long-run feedbacks. The uncertainty statement must match the model's role.
 
 ## Interpretability is not the main issue
 
-Climate ML discussions often focus on whether neural networks are interpretable.
-
-Interpretability matters, but physical validity matters more.
-
-A model can be easy to visualize and still violate conservation.
-
-A complex model can be scientifically useful if it is:
+Climate ML discussions often focus on whether neural networks are interpretable. Interpretability matters, but physical validity matters more. A model can be easy to visualize and still violate conservation. A complex model can be scientifically useful if it is:
 
 - stable;
 - calibrated;
@@ -343,17 +255,11 @@ A complex model can be scientifically useful if it is:
 - accompanied by uncertainty;
 - reproducible.
 
-The key question is not whether every neuron has a human-readable meaning.
-
-It is whether the model supports the scientific claim being made.
+The key question is not whether every neuron has a human-readable meaning. It is whether the model supports the scientific claim being made.
 
 ## Hybrid Earth-system modeling
 
-Reichstein and colleagues argued for combining deep learning with process understanding rather than treating the two as competing paradigms.
-
-That direction is still the most convincing framing.
-
-A hybrid model may use:
+Reichstein and colleagues argued for combining deep learning with process understanding rather than treating the two as competing paradigms. That direction is still the most convincing framing. A hybrid model may use:
 
 $$
 \frac{dx}{dt}
@@ -363,19 +269,11 @@ f_{\mathrm{physics}}(x)
 f_{\mathrm{ML}}(x;\theta),
 $$
 
-where the data-driven term represents unresolved or poorly known processes.
-
-The decomposition makes assumptions explicit.
-
-It also allows the known physics to control behavior outside the densest regions of training data.
+where the data-driven term represents unresolved or poorly known processes. The decomposition makes assumptions explicit. It also allows the known physics to control behavior outside the densest regions of training data.
 
 ## Conclusion
 
-Machine learning can make climate science faster and, in some tasks, more accurate.
-
-Its strongest uses are not magical prediction of the future.
-
-They are:
+Machine learning can make climate science faster and, in some tasks, more accurate. Its strongest uses are not magical prediction of the future. They are:
 
 - emulation;
 - parameterization;

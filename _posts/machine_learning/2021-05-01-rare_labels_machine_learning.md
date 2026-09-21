@@ -92,7 +92,6 @@ data[categorical_var].value_counts().plot(kind='bar')
 
 This will give you an idea of which categories are dominant and which ones are rare.
 
-
 ## Handling Rare Labels in Categorical Variables
 
 There are several techniques to handle rare labels effectively:
@@ -169,13 +168,8 @@ In the Mercedes-Benz Greener Manufacturing Challenge, for example, properly hand
 - Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
 - Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
 
-
 ## Frequency thresholds belong inside the training pipeline
 
-The set of categories considered rare must be learned from the training data only. Computing frequencies on the full dataset leaks information about the validation or test distribution.
-
-The same rule applies to target encoding, grouping into "Other", and selecting top categories.
-
-For high-cardinality features, consider regularized target encoders, hashing, learned embeddings, or hierarchical models. The right choice depends on whether category identity has stable meaning at deployment.
+The set of categories considered rare must be learned from the training data only. Computing frequencies on the full dataset leaks information about the validation or test distribution. The same rule applies to target encoding, grouping into "Other", and selecting top categories. For high-cardinality features, consider regularized target encoders, hashing, learned embeddings, or hierarchical models. The right choice depends on whether category identity has stable meaning at deployment.
 
 Rare does not mean unimportant. A rare category can carry strong signal, so grouping should be validated out of sample rather than applied by rule.

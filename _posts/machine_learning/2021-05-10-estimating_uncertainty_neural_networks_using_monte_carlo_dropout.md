@@ -40,7 +40,7 @@ tags:
 title: Estimating Uncertainty in Neural Networks Using Monte Carlo Dropout
 ---
 
-In machine learning, particularly in high-stakes applications, it's essential not only to predict outcomes but also to gauge how confident a model is in its predictions. This is particularly relevant for multi-class classification tasks, where predictions can be highly sensitive to input variations. Neural networks, especially deep ones, are known for their powerful prediction capabilities, but they are often criticized for their inability to provide well-calibrated uncertainty estimates. 
+In machine learning, particularly in high-stakes applications, it's essential not only to predict outcomes but also to gauge how confident a model is in its predictions. This is particularly relevant for multi-class classification tasks, where predictions can be highly sensitive to input variations. Neural networks, especially deep ones, are known for their powerful prediction capabilities, but they are often criticized for their inability to provide well-calibrated uncertainty estimates.
 
 Enter Monte Carlo dropout—a powerful technique that enables neural networks to produce estimates of uncertainty without significantly modifying the architecture. This approach, pioneered by Yarin Gal and his colleagues, leverages the dropout regularization technique during inference, allowing models to estimate uncertainty in their predictions. In this article, we'll explore the fundamental workings of Monte Carlo dropout, how to compute uncertainty using this technique, and the best ways to extract meaningful uncertainty scores.
 
@@ -203,17 +203,10 @@ As uncertainty estimation becomes increasingly important in machine learning app
 
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
 
-
 ## Calibration is a separate requirement
 
-Uncertainty scores are not automatically probabilities with correct coverage or frequency calibration.
-
-For classification, evaluate calibration with reliability diagrams, proper scoring rules such as log loss or Brier score, and calibration error measures. For regression, evaluate predictive interval coverage and sharpness.
-
-Temperature scaling can improve calibration of the mean predictive probabilities, but it does not turn MC dropout into an exact posterior.
+Uncertainty scores are not automatically probabilities with correct coverage or frequency calibration. For classification, evaluate calibration with reliability diagrams, proper scoring rules such as log loss or Brier score, and calibration error measures. For regression, evaluate predictive interval coverage and sharpness. Temperature scaling can improve calibration of the mean predictive probabilities, but it does not turn MC dropout into an exact posterior.
 
 ## Aleatoric and epistemic uncertainty
 
-MC dropout primarily targets uncertainty associated with model parameters under its approximate Bayesian interpretation. Data noise should be modeled separately when it matters.
-
-For heteroskedastic regression, for example, a network can predict both a conditional mean and an observation variance. Repeated dropout passes then combine parameter uncertainty with an explicit noise model rather than treating all variation as one quantity.
+MC dropout primarily targets uncertainty associated with model parameters under its approximate Bayesian interpretation. Data noise should be modeled separately when it matters. For heteroskedastic regression, for example, a network can predict both a conditional mean and an observation variance. Repeated dropout passes then combine parameter uncertainty with an explicit noise model rather than treating all variation as one quantity.

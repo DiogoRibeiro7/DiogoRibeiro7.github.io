@@ -44,9 +44,7 @@ P(\Omega) = 1, \qquad P(A) \ge 0, \qquad
 P\left(\bigcup_{i} A_i\right) = \sum_i P(A_i) \ \text{for disjoint } A_i .
 $$
 
-These axioms look modest, but everything else follows from them: the complement rule $P(A^c) = 1 - P(A)$, the inclusion-exclusion formula $P(A \cup B) = P(A) + P(B) - P(A \cap B)$, and the whole apparatus of conditional probability.
-
-The definition that does the most work in practice is conditioning. Given that $B$ has occurred, the probability of $A$ becomes
+These axioms look modest, but everything else follows from them: the complement rule $P(A^c) = 1 - P(A)$, the inclusion-exclusion formula $P(A \cup B) = P(A) + P(B) - P(A \cap B)$, and the whole apparatus of conditional probability. The definition that does the most work in practice is conditioning. Given that $B$ has occurred, the probability of $A$ becomes
 
 $$
 P(A \mid B) = \frac{P(A \cap B)}{P(B)}, \qquad P(B) > 0 .
@@ -56,9 +54,7 @@ Two events are independent exactly when conditioning changes nothing, that is wh
 
 ## Random Variables and Distributions
 
-A random variable assigns numerical values to outcomes in a sample space. Formally it is a function $X: \Omega \to \mathbb{R}$, which lets us replace awkward talk about events with ordinary arithmetic on numbers.
-
-Discrete random variables are described by a probability mass function $p(x) = P(X = x)$. Continuous ones are described by a density $f(x)$, where probability is recovered by integration:
+A random variable assigns numerical values to outcomes in a sample space. Formally it is a function $X: \Omega \to \mathbb{R}$, which lets us replace awkward talk about events with ordinary arithmetic on numbers. Discrete random variables are described by a probability mass function $p(x) = P(X = x)$. Continuous ones are described by a density $f(x)$, where probability is recovered by integration:
 
 $$
 P(a \le X \le b) = \int_a^b f(x)\,dx .
@@ -141,15 +137,11 @@ $$
 P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)} .
 $$
 
-The second is treating a conjunction as more likely than its parts. $P(A \cap B)$ can never exceed $\min(P(A), P(B))$, yet a detailed, plausible-sounding scenario routinely strikes people as more probable than the vaguer claim it entails.
-
-Both errors share a root cause: reasoning from how representative a story feels rather than from how much probability mass it can actually claim.
+The second is treating a conjunction as more likely than its parts. $P(A \cap B)$ can never exceed $\min(P(A), P(B))$, yet a detailed, plausible-sounding scenario routinely strikes people as more probable than the vaguer claim it entails. Both errors share a root cause: reasoning from how representative a story feels rather than from how much probability mass it can actually claim.
 
 ## Bringing It Together
 
-Mastering probability theory enables data scientists to better interpret model outputs and reason about uncertainty in real-world applications. A p-value, a confidence interval, and a posterior distribution are all statements about probability measures, and none of them can be read correctly without knowing what the underlying random variable is and what assumptions were imposed on it.
-
-The practical discipline is to state the sample space, name the distribution and justify it mechanically, and check whether the independence and finite-variance assumptions your method depends on actually hold. Most statistical errors in production are not arithmetic mistakes; they are assumptions that were never examined.
+Mastering probability theory enables data scientists to better interpret model outputs and reason about uncertainty in real-world applications. A p-value, a confidence interval, and a posterior distribution are all statements about probability measures, and none of them can be read correctly without knowing what the underlying random variable is and what assumptions were imposed on it. The practical discipline is to state the sample space, name the distribution and justify it mechanically, and check whether the independence and finite-variance assumptions your method depends on actually hold. Most statistical errors in production are not arithmetic mistakes; they are assumptions that were never examined.
 
 ## References
 

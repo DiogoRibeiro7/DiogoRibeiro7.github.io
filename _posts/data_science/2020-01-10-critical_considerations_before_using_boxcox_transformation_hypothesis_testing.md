@@ -37,13 +37,7 @@ The Box-Cox transformation is often used as a preprocessing ritual:
 3. make the histogram look more normal;
 4. run the original analysis.
 
-That sequence misses the point of the method.
-
-Box and Cox introduced a **family of transformed regression models** and a likelihood-based way to compare them.
-
-The transformation is part of the model.
-
-It changes the scale on which the conditional mean is specified and therefore changes the interpretation of coefficients and hypotheses.
+That sequence misses the point of the method. Box and Cox introduced a **family of transformed regression models** and a likelihood-based way to compare them. The transformation is part of the model. It changes the scale on which the conditional mean is specified and therefore changes the interpretation of coefficients and hypotheses.
 
 ## The Box-Cox family
 
@@ -89,9 +83,7 @@ $$
 \log y.
 $$
 
-The original method includes scaling conventions so likelihoods for different $\lambda$ values are comparable.
-
-That detail matters.
+The original method includes scaling conventions so likelihoods for different $\lambda$ values are comparable. That detail matters.
 
 ## What model is being assumed?
 
@@ -113,9 +105,7 @@ $$
 \mathcal N(0,\sigma^2)
 $$
 
-under the model.
-
-So the target is not
+under the model. So the target is not
 
 > find a transformation that makes $Y$ normal.
 
@@ -145,11 +135,7 @@ $$
 \beta_0+\beta_1X+\varepsilon
 $$
 
-has well-behaved Gaussian errors.
-
-Testing the raw outcome for normality before fitting the regression answers the wrong question.
-
-Conditional modeling matters.
+has well-behaved Gaussian errors. Testing the raw outcome for normality before fitting the regression answers the wrong question. Conditional modeling matters.
 
 ## Positivity is not optional
 
@@ -165,19 +151,11 @@ $$
 Y^\ast=Y+c.
 $$
 
-That is not innocuous.
-
-Different choices of $c$ can produce different fitted transformations, especially when values are close to zero.
-
-If zero or negative values are scientifically meaningful, a shifted Box-Cox transformation should be justified explicitly or another model family should be used.
-
-A transformation should not erase the meaning of zero.
+That is not innocuous. Different choices of $c$ can produce different fitted transformations, especially when values are close to zero. If zero or negative values are scientifically meaningful, a shifted Box-Cox transformation should be justified explicitly or another model family should be used. A transformation should not erase the meaning of zero.
 
 ## Choosing lambda by likelihood
 
-For each candidate $\lambda$, fit the transformed model and compute the corresponding profile likelihood.
-
-Then choose
+For each candidate $\lambda$, fit the transformed model and compute the corresponding profile likelihood. Then choose
 
 $$
 \hat\lambda
@@ -186,9 +164,7 @@ $$
 \ell_p(\lambda).
 $$
 
-A likelihood interval for $\lambda$ is often more informative than the single optimum.
-
-If values near
+A likelihood interval for $\lambda$ is often more informative than the single optimum. If values near
 
 $$
 \lambda=0
@@ -200,15 +176,11 @@ $$
 \lambda=0.1
 $$
 
-fit almost equally well, reporting three decimal places for $\hat\lambda$ is false precision.
-
-Interpretability can justify choosing a nearby simple value such as 0, 1/2, or 1 when the likelihood supports it.
+fit almost equally well, reporting three decimal places for $\hat\lambda$ is false precision. Interpretability can justify choosing a nearby simple value such as 0, 1/2, or 1 when the likelihood supports it.
 
 ## The Jacobian matters
 
-A transformation changes the density scale.
-
-If
+A transformation changes the density scale. If
 
 $$
 Z=T_\lambda(Y),
@@ -226,9 +198,7 @@ f_Z(T_\lambda(y))
 \right|.
 $$
 
-Likelihood comparison across transformation parameters must include this change-of-variable term, or use an equivalent scaled formulation.
-
-Simply fitting ordinary least squares after many arbitrary transforms and comparing residual sums of squares can give the wrong comparison.
+Likelihood comparison across transformation parameters must include this change-of-variable term, or use an equivalent scaled formulation. Simply fitting ordinary least squares after many arbitrary transforms and comparing residual sums of squares can give the wrong comparison.
 
 ## Transformations change hypotheses
 
@@ -246,11 +216,7 @@ $$
 E[\log Y\mid X]
 $$
 
-on the transformed scale.
-
-A coefficient difference there is naturally multiplicative after exponentiation.
-
-For a simple log-linear model,
+on the transformed scale. A coefficient difference there is naturally multiplicative after exponentiation. For a simple log-linear model,
 
 $$
 \log Y
@@ -264,9 +230,7 @@ $$
 \exp(\beta_1)
 $$
 
-is associated with a ratio on a geometric-mean or median-like scale under the model, not automatically a ratio of arithmetic means.
-
-The scientific estimand has changed.
+is associated with a ratio on a geometric-mean or median-like scale under the model, not automatically a ratio of arithmetic means. The scientific estimand has changed.
 
 ## Back-transformation is not as simple as exponentiating the fitted mean
 
@@ -311,17 +275,11 @@ E[Y\mid X]
 \right).
 $$
 
-That extra term is retransformation bias correction.
-
-For other transformations or heteroskedastic errors, the correction is more complicated.
+That extra term is retransformation bias correction. For other transformations or heteroskedastic errors, the correction is more complicated.
 
 ## Outliers are not a reason to transform automatically
 
-A monotone transformation can reduce the numerical leverage of large observations.
-
-That does not tell us whether those observations are errors, valid extremes, or evidence that the model is wrong.
-
-The sequence should be:
+A monotone transformation can reduce the numerical leverage of large observations. That does not tell us whether those observations are errors, valid extremes, or evidence that the model is wrong. The sequence should be:
 
 1. verify the observation;
 2. understand the mechanism;
@@ -332,9 +290,7 @@ Transformation is not data cleaning.
 
 ## Variance stabilization
 
-Box-Cox can be useful when variance scales systematically with the mean.
-
-Suppose approximately
+Box-Cox can be useful when variance scales systematically with the mean. Suppose approximately
 
 $$
 \operatorname{SD}(Y\mid X)
@@ -342,11 +298,7 @@ $$
 E[Y\mid X]^q.
 $$
 
-A power transformation can sometimes make residual variability more nearly constant.
-
-But if the mean-variance relationship has a known stochastic origin, a generalized linear model may be more natural.
-
-For counts, for example, a Poisson or negative-binomial model uses the count distribution directly rather than trying to make counts Gaussian.
+A power transformation can sometimes make residual variability more nearly constant. But if the mean-variance relationship has a known stochastic origin, a generalized linear model may be more natural. For counts, for example, a Poisson or negative-binomial model uses the count distribution directly rather than trying to make counts Gaussian.
 
 ## GLMs are not merely “methods for non-normal residuals”
 
@@ -362,19 +314,11 @@ g(\mu_i)
 x_i^\top\beta.
 $$
 
-The link transforms the **mean**, not the observed response.
-
-That is conceptually different from transforming $Y$ and fitting Gaussian least squares.
-
-Choosing between Box-Cox and a GLM is therefore a modeling decision, not two interchangeable normalization tricks.
+The link transforms the **mean**, not the observed response. That is conceptually different from transforming $Y$ and fitting Gaussian least squares. Choosing between Box-Cox and a GLM is therefore a modeling decision, not two interchangeable normalization tricks.
 
 ## Comparing transformed models
 
-Prediction error on the transformed scale is not directly comparable with prediction error on the original scale.
-
-If the operational loss is measured in euros, kilograms, or minutes, validation should return predictions to that scale and evaluate the relevant loss there.
-
-Likewise, $R^2$ values from different response transformations do not answer the same variance-explained question.
+Prediction error on the transformed scale is not directly comparable with prediction error on the original scale. If the operational loss is measured in euros, kilograms, or minutes, validation should return predictions to that scale and evaluate the relevant loss there. Likewise, $R^2$ values from different response transformations do not answer the same variance-explained question.
 
 Model comparison must match the scientific and operational scale.
 
@@ -416,19 +360,11 @@ print(
 )
 ~~~
 
-Because the data-generating process is log-linear, the estimated Box-Cox parameter should typically be near zero.
-
-The example works because we know the generating mechanism.
-
-With real data, diagnostics and subject-matter interpretation remain necessary.
+Because the data-generating process is log-linear, the estimated Box-Cox parameter should typically be near zero. The example works because we know the generating mechanism. With real data, diagnostics and subject-matter interpretation remain necessary.
 
 ## Conclusion
 
-Box-Cox is not a test for whether data are normal.
-
-It is a family of transformed statistical models.
-
-The sequence should be
+Box-Cox is not a test for whether data are normal. It is a family of transformed statistical models. The sequence should be
 
 $$
 \boxed{

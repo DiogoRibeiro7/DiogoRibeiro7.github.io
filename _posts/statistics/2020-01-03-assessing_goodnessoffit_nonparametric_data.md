@@ -31,13 +31,7 @@ tags:
 title: 'Kolmogorov-Smirnov Goodness-of-Fit: What the Test Actually Assumes'
 ---
 
-The Kolmogorov-Smirnov test is often introduced as a distribution-free way to ask whether data follow a named distribution.
-
-That description is incomplete.
-
-The statistic is simple. The null distribution is simple only in the classical case where the reference distribution is fully specified before seeing the data.
-
-The distinction matters most in the common workflow of estimating a normal mean and variance from the sample and then running an ordinary one-sample K-S test against that fitted normal distribution.
+The Kolmogorov-Smirnov test is often introduced as a distribution-free way to ask whether data follow a named distribution. That description is incomplete. The statistic is simple. The null distribution is simple only in the classical case where the reference distribution is fully specified before seeing the data. The distinction matters most in the common workflow of estimating a normal mean and variance from the sample and then running an ordinary one-sample K-S test against that fitted normal distribution.
 
 The usual K-S p-value is not valid for that procedure.
 
@@ -68,9 +62,7 @@ D_n
 |F_n(x)-F_0(x)|.
 $$
 
-It measures the largest vertical separation between the empirical and theoretical CDFs.
-
-The null hypothesis is
+It measures the largest vertical separation between the empirical and theoretical CDFs. The null hypothesis is
 
 $$
 H_0:
@@ -89,13 +81,7 @@ U_i=F_0(X_i)
 \mathrm{Uniform}(0,1)
 $$
 
-under $H_0$.
-
-Therefore the null distribution of $D_n$ does not depend on the particular continuous $F_0$.
-
-That is the classical distribution-free property.
-
-It does not mean that every workflow involving a fitted distribution has the same null law.
+under $H_0$. Therefore the null distribution of $D_n$ does not depend on the particular continuous $F_0$. That is the classical distribution-free property. It does not mean that every workflow involving a fitted distribution has the same null law.
 
 ## Estimating parameters changes the null distribution
 
@@ -116,15 +102,7 @@ $$
 \right),
 $$
 
-the fitted CDF has been pulled toward the observations.
-
-The discrepancy is therefore systematically smaller than it would be against a fixed distribution.
-
-The standard Kolmogorov critical values no longer apply.
-
-For the normal case, Lilliefors derived the corresponding corrected null distribution.
-
-So these are different tests:
+the fitted CDF has been pulled toward the observations. The discrepancy is therefore systematically smaller than it would be against a fixed distribution. The standard Kolmogorov critical values no longer apply. For the normal case, Lilliefors derived the corresponding corrected null distribution. So these are different tests:
 
 $$
 \text{K-S against } \mathcal N(0,1)
@@ -155,37 +133,17 @@ $$
 H_0:F=G.
 $$
 
-This is stronger than equality of means or medians.
-
-The test can react to differences in location, scale, skewness, tail behavior, or any other feature that changes the CDF.
-
-A rejection therefore does not tell us how the distributions differ.
-
-That requires plots, effect summaries, or a more targeted model.
+This is stronger than equality of means or medians. The test can react to differences in location, scale, skewness, tail behavior, or any other feature that changes the CDF. A rejection therefore does not tell us how the distributions differ. That requires plots, effect summaries, or a more targeted model.
 
 ## K-S is not a general test for “non-parametric data”
 
-The phrase “non-parametric data” is not useful here.
-
-Data are not parametric or non-parametric.
-
-Models and procedures are.
-
-The K-S statistic can compare an empirical distribution with a parametric model, or compare two empirical samples without specifying a parametric family.
-
-The procedure is called nonparametric in the two-sample setting because the null does not impose a finite-dimensional parametric family.
+The phrase “non-parametric data” is not useful here. Data are not parametric or non-parametric. Models and procedures are. The K-S statistic can compare an empirical distribution with a parametric model, or compare two empirical samples without specifying a parametric family. The procedure is called nonparametric in the two-sample setting because the null does not impose a finite-dimensional parametric family.
 
 That terminology should not be confused with a property of the observations themselves.
 
 ## Normality testing is a special case
 
-If the sole question is exact normality with estimated mean and variance, Shapiro-Wilk is usually a stronger general-purpose choice than plugging fitted parameters into an uncorrected K-S test.
-
-Anderson-Darling places additional weight in the tails.
-
-A Lilliefors-type test modifies the K-S calibration to account for parameter estimation.
-
-The useful question is not which test is universally best.
+If the sole question is exact normality with estimated mean and variance, Shapiro-Wilk is usually a stronger general-purpose choice than plugging fitted parameters into an uncorrected K-S test. Anderson-Darling places additional weight in the tails. A Lilliefors-type test modifies the K-S calibration to account for parameter estimation. The useful question is not which test is universally best.
 
 It is
 
@@ -199,43 +157,23 @@ A tail-sensitive problem may call for a tail-sensitive diagnostic. A location-sc
 
 ## P-values do not identify the model
 
-A large p-value does not establish that the proposed distribution is true.
-
-It says that the observed discrepancy is not unusually large under the null calibration of the test.
-
-A small sample may have little power against important alternatives.
-
-A very large sample may reject a model because of a tiny discrepancy that has no practical consequence.
+A large p-value does not establish that the proposed distribution is true. It says that the observed discrepancy is not unusually large under the null calibration of the test. A small sample may have little power against important alternatives. A very large sample may reject a model because of a tiny discrepancy that has no practical consequence.
 
 Graphical diagnostics remain valuable because they reveal where the model fails.
 
 ## Q-Q plots and ECDF differences
 
-A Q-Q plot compares empirical order statistics with theoretical quantiles.
-
-The shape of the departure can distinguish skewness, heavy tails, light tails, isolated outliers, mixtures, or central fit with tail failure.
-
-Similarly, plotting
+A Q-Q plot compares empirical order statistics with theoretical quantiles. The shape of the departure can distinguish skewness, heavy tails, light tails, isolated outliers, mixtures, or central fit with tail failure. Similarly, plotting
 
 $$
 F_n(x)-F_0(x)
 $$
 
-shows where the K-S maximum occurs.
-
-The scalar $D_n$ records only the largest discrepancy.
-
-The plot contains more information.
+shows where the K-S maximum occurs. The scalar $D_n$ records only the largest discrepancy. The plot contains more information.
 
 ## Discrete distributions need separate care
 
-The classical continuous K-S null distribution assumes a continuous reference CDF.
-
-For discrete distributions, ties occur with positive probability and the null distribution of the statistic changes.
-
-Using continuous critical values can be conservative or otherwise miscalibrated depending on the setting.
-
-Exact, Monte Carlo, or discrete-specific goodness-of-fit procedures are preferable when the null distribution is discrete.
+The classical continuous K-S null distribution assumes a continuous reference CDF. For discrete distributions, ties occur with positive probability and the null distribution of the statistic changes. Using continuous critical values can be conservative or otherwise miscalibrated depending on the setting. Exact, Monte Carlo, or discrete-specific goodness-of-fit procedures are preferable when the null distribution is discrete.
 
 ## A reproducible example
 
@@ -271,15 +209,11 @@ print(result.statistic)
 print(result.pvalue)
 ~~~
 
-That is a classical one-sample K-S test.
-
-If we instead estimate the mean and standard deviation from the same sample, the ordinary K-S p-value is no longer the correct normality-test calibration.
+That is a classical one-sample K-S test. If we instead estimate the mean and standard deviation from the same sample, the ordinary K-S p-value is no longer the correct normality-test calibration.
 
 ## Simulation can calibrate fitted-model tests
 
-When parameters are estimated and no convenient analytic correction is available, a parametric bootstrap gives a direct solution.
-
-The logic is:
+When parameters are estimated and no convenient analytic correction is available, a parametric bootstrap gives a direct solution. The logic is:
 
 1. fit the model to the observed data;
 2. compute the observed goodness-of-fit statistic;
@@ -288,9 +222,7 @@ The logic is:
 5. recompute the statistic;
 6. compare the observed statistic with that simulated null distribution.
 
-The crucial step is refitting on every bootstrap sample.
-
-That reproduces the same parameter-estimation effect that occurred in the original analysis.
+The crucial step is refitting on every bootstrap sample. That reproduces the same parameter-estimation effect that occurred in the original analysis.
 
 ## Conclusion
 
@@ -300,13 +232,7 @@ $$
 D=\sup_x|F_n(x)-F(x)|.
 $$
 
-The hard part is knowing which null distribution belongs to the way $F$ was obtained.
-
-If the reference CDF is fully specified in advance, the classical continuous one-sample K-S distribution applies.
-
-If parameters are estimated from the same observations, it generally does not.
-
-That distinction is more important than labeling the method “non-parametric.”
+The hard part is knowing which null distribution belongs to the way $F$ was obtained. If the reference CDF is fully specified in advance, the classical continuous one-sample K-S distribution applies. If parameters are estimated from the same observations, it generally does not. That distinction is more important than labeling the method “non-parametric.”
 
 ## References
 

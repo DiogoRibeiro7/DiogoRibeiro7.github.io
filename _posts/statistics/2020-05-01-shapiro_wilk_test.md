@@ -33,17 +33,13 @@ title: 'Shapiro-Wilk Test vs. Anderson-Darling Test: Checking Normality in Data'
 
 Normality matters differently across statistical procedures. In regression and ANOVA the relevant assumption concerns model errors conditional on predictors or groups, not whether the pooled raw outcome has a bell-shaped histogram. A normality test should therefore not be used as a mechanical gatekeeper before choosing a statistical procedure.
 
-Two of the most commonly used tests for checking normality are the **Shapiro-Wilk test** and the **Anderson-Darling test**. Both tests assess whether a dataset is consistent with a normal distribution, but they differ in their methodologies and sensitivity to different aspects of the data.
-
-This article provides a detailed comparison of the Shapiro-Wilk and Anderson-Darling tests, explains when to use each test, and discusses how to interpret their results in order to decide whether parametric or non-parametric methods should be used in further analysis.
+Two of the most commonly used tests for checking normality are the **Shapiro-Wilk test** and the **Anderson-Darling test**. Both tests assess whether a dataset is consistent with a normal distribution, but they differ in their methodologies and sensitivity to different aspects of the data. This article provides a detailed comparison of the Shapiro-Wilk and Anderson-Darling tests, explains when to use each test, and discusses how to interpret their results in order to decide whether parametric or non-parametric methods should be used in further analysis.
 
 ---
 
 ## Why Check for Normality?
 
-Many normal-theory methods make assumptions about errors, residuals, or sampling distributions rather than about the marginal distribution of every observed response. The object to diagnose depends on the model.
-
-If the data is not normally distributed, applying parametric tests could lead to:
+Many normal-theory methods make assumptions about errors, residuals, or sampling distributions rather than about the marginal distribution of every observed response. The object to diagnose depends on the model. If the data is not normally distributed, applying parametric tests could lead to:
 
 - **Misleading p-values**: The significance levels might be inaccurate, leading to incorrect conclusions.
 - **Increased risk of Type I and Type II errors**: There could be a higher risk of falsely rejecting or failing to reject the null hypothesis.
@@ -53,9 +49,7 @@ If the data is not normally distributed, applying parametric tests could lead to
 - **Parametric methods** assume that the data follows a specific distribution (typically normal) and are generally more powerful when the assumptions are met.
 - **Non-parametric methods** do not make distributional assumptions and can be used when the data violates normality or when working with ordinal data.
 
-Testing for normality helps determine whether a parametric or non-parametric method is appropriate for further analysis.
-
----
+Testing for normality helps determine whether a parametric or non-parametric method is appropriate for further analysis. ---
 
 ## Shapiro-Wilk Test: A Powerful Normality Test
 
@@ -97,9 +91,7 @@ Where:
 
 ### What is the Anderson-Darling Test?
 
-The **Anderson-Darling test** is another popular method for testing whether data follows a normal distribution. It is a modification of the **Kolmogorov-Smirnov test**, and it provides a more sensitive test by giving more weight to the tails of the distribution, where deviations from normality often occur.
-
-Unlike the Shapiro-Wilk test, the Anderson-Darling test calculates a statistic that measures the discrepancy between the **empirical cumulative distribution function (CDF)** of the data and the expected CDF of the normal distribution.
+The **Anderson-Darling test** is another popular method for testing whether data follows a normal distribution. It is a modification of the **Kolmogorov-Smirnov test**, and it provides a more sensitive test by giving more weight to the tails of the distribution, where deviations from normality often occur. Unlike the Shapiro-Wilk test, the Anderson-Darling test calculates a statistic that measures the discrepancy between the **empirical cumulative distribution function (CDF)** of the data and the expected CDF of the normal distribution.
 
 ### How the Anderson-Darling Test Works
 
@@ -188,9 +180,7 @@ Imagine you are analyzing the performance of three different marketing campaigns
 
 2. **Anderson-Darling Test**: You also apply the Anderson-Darling test, which places more emphasis on the tails of the distribution, and obtain a **p-value of 0.01**. The Anderson-Darling test confirms that the data is non-normal, particularly highlighting deviations in the extreme values (e.g., outlier stores with very high or low sales).
 
-Based on these results, you decide to use a non-parametric method to compare the marketing campaigns.
-
----
+Based on these results, you decide to use a non-parametric method to compare the marketing campaigns. ---
 
 ## Conclusion
 

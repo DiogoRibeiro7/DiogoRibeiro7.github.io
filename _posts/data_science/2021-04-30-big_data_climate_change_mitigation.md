@@ -58,7 +58,7 @@ One of the core challenges in climate science is understanding how all these fac
 Some key benefits of utilizing big data in climate research include:
 
 - **Model initialization, calibration, and evaluation:** observations help constrain states, parameters, and biases, but climate-model resolution is primarily determined by numerical formulation and computational resources rather than by data volume alone.
-  
+
 - **Pattern detection and trend analysis:** Big data analytics can uncover long-term trends and patterns in climate-related phenomena that would be difficult to identify with smaller datasets. For example, analyzing decades of weather data can help detect subtle changes in storm intensity or rainfall patterns.
 
 - **Real-time climate monitoring:** The continuous flow of real-time data from satellites and sensor networks allows for up-to-the-minute tracking of environmental changes, such as sea level rise, glacier retreat, and deforestation.
@@ -141,12 +141,9 @@ Big data is also being used to protect ecosystems and biodiversity, which are un
 
 Big data is transforming the way we understand and respond to climate change. From satellite observations that provide a global view of climate processes to sensor networks that capture localized environmental data, the ability to collect, analyze, and interpret large datasets is enabling scientists, policymakers, and businesses to develop more effective strategies for mitigating climate change. As the impacts of climate change become more severe, the role of big data in driving climate action will only continue to grow. By leveraging the power of big data, we can improve our understanding of the complex dynamics of the Earth's climate system and take meaningful steps towards a more sustainable future.
 
-
 ## Observation is not mitigation
 
-A satellite map, sensor network, or predictive model can reveal where emissions occur. Mitigation requires a decision that changes emissions relative to a credible baseline.
-
-A useful chain is
+A satellite map, sensor network, or predictive model can reveal where emissions occur. Mitigation requires a decision that changes emissions relative to a credible baseline. A useful chain is
 
 $$
 \boxed{
@@ -166,14 +163,8 @@ The counterfactual is essential. If emissions fall after a policy, the decline m
 
 ## Data integration creates uncertainty as well as information
 
-Combining satellites, in-situ sensors, inventories, and models requires reconciliation of spatial resolution, time resolution, missingness, calibration, and measurement error.
-
-More sources do not simply add information. They can introduce incompatible biases.
-
-A rigorous analysis should keep uncertainty attached to every harmonization step rather than collapse all inputs into one apparently precise data product.
+Combining satellites, in-situ sensors, inventories, and models requires reconciliation of spatial resolution, time resolution, missingness, calibration, and measurement error. More sources do not simply add information. They can introduce incompatible biases. A rigorous analysis should keep uncertainty attached to every harmonization step rather than collapse all inputs into one apparently precise data product.
 
 ## Mitigation and adaptation are different
 
-Early-warning systems for floods, droughts, and heat waves are primarily adaptation tools. Emissions monitoring, renewable integration, methane-leak detection, and energy-system optimization can contribute directly to mitigation.
-
-The distinction should be explicit because measuring climate impacts is not the same thing as reducing greenhouse-gas forcing.
+Early-warning systems for floods, droughts, and heat waves are primarily adaptation tools. Emissions monitoring, renewable integration, methane-leak detection, and energy-system optimization can contribute directly to mitigation. The distinction should be explicit because measuring climate impacts is not the same thing as reducing greenhouse-gas forcing.

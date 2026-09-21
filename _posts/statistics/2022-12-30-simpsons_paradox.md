@@ -45,25 +45,19 @@ Consider a simple example where two variables, $$ X $$ and $$ Y $$, are positive
 
 ### Formal Mathematical Representation
 
-Simpson’s Paradox can be formalized using **conditional probabilities** and the law of total probability. Suppose we have two binary variables, $$ A $$ and $$ B $$, and a third variable $$ C $$, which is categorical. The paradox can be described mathematically as follows:
-
-Let:
+Simpson’s Paradox can be formalized using **conditional probabilities** and the law of total probability. Suppose we have two binary variables, $$ A $$ and $$ B $$, and a third variable $$ C $$, which is categorical. The paradox can be described mathematically as follows: Let:
 
 $$
 P(A | B) = \frac{a_1}{a_1 + b_1}, \quad P(A | \neg B) = \frac{a_2}{a_2 + b_2}
 $$
 
-Here, $$ a_1 $$ and $$ b_1 $$ represent the number of positive and negative outcomes for $$ A $$ when $$ B $$ is true, and $$ a_2 $$ and $$ b_2 $$ represent the outcomes when $$ B $$ is false.
-
-However, if you split the data by the third variable $$ C $$ (such as subgroups $$ C_1 $$ and $$ C_2 $$), you might find:
+Here, $$ a_1 $$ and $$ b_1 $$ represent the number of positive and negative outcomes for $$ A $$ when $$ B $$ is true, and $$ a_2 $$ and $$ b_2 $$ represent the outcomes when $$ B $$ is false. However, if you split the data by the third variable $$ C $$ (such as subgroups $$ C_1 $$ and $$ C_2 $$), you might find:
 
 $$
 P(A | B, C_1) \neq P(A | B, C_2)
 $$
 
-The aggregated probabilities $$ P(A|B) $$ and $$ P(A|\neg B) $$ suggest one relationship, but the subgroup probabilities may tell a completely different story, leading to contradictory conclusions.
-
-This mathematical framework highlights the crucial role of weighting and distribution in Simpson’s Paradox. Aggregating the data without considering these subtleties can lead to misleading interpretations.
+The aggregated probabilities $$ P(A|B) $$ and $$ P(A|\neg B) $$ suggest one relationship, but the subgroup probabilities may tell a completely different story, leading to contradictory conclusions. This mathematical framework highlights the crucial role of weighting and distribution in Simpson’s Paradox. Aggregating the data without considering these subtleties can lead to misleading interpretations.
 
 ### Causal Inference and Simpson’s Paradox
 
@@ -79,9 +73,7 @@ Simpson’s Paradox appears in various domains such as public health, economics,
 
 One of the most well-known examples of Simpson’s Paradox involves gender bias in university admissions. Suppose an analysis of overall admission data shows that men are accepted at a higher rate than women. At first glance, this seems to suggest bias against women. However, when the data is stratified by department, a different pattern emerges.
 
-In the Berkeley admissions example, application patterns across departments with different admission rates generated a striking marginal association. The example is useful precisely because adjustment changes the interpretation; it should not be reduced to a generic rule that stratification always removes bias.
-
-This example illustrates the dangers of relying on aggregated data, especially when subgroup characteristics (such as department competitiveness) differ dramatically.
+In the Berkeley admissions example, application patterns across departments with different admission rates generated a striking marginal association. The example is useful precisely because adjustment changes the interpretation; it should not be reduced to a generic rule that stratification always removes bias. This example illustrates the dangers of relying on aggregated data, especially when subgroup characteristics (such as department competitiveness) differ dramatically.
 
 ### Example 2: Smoking and Health Outcomes
 
@@ -103,9 +95,7 @@ In the context of Simpson’s Paradox, when subgroups have dramatically differen
 
 ### Unequal Weighting and Its Effects
 
-When combining data across subgroups, the paradox emerges from unequal weighting of group-specific probabilities. For instance, if one subgroup has far more data points than another, the aggregated result may reflect the trends of the larger subgroup, even if the smaller subgroup has a stronger internal correlation.
-
-Simpson’s Paradox can also occur when the underlying distributions of the lurking variables differ between subgroups, which causes an unintended reversal of trends in the aggregate data.
+When combining data across subgroups, the paradox emerges from unequal weighting of group-specific probabilities. For instance, if one subgroup has far more data points than another, the aggregated result may reflect the trends of the larger subgroup, even if the smaller subgroup has a stronger internal correlation. Simpson’s Paradox can also occur when the underlying distributions of the lurking variables differ between subgroups, which causes an unintended reversal of trends in the aggregate data.
 
 ## 4. Visualizing Simpson’s Paradox
 
@@ -113,9 +103,7 @@ Visualization can be a powerful tool for understanding Simpson’s Paradox. The 
 
 ### Scatter Plots and Grouping by Lurking Variables
 
-A common way to visualize Simpson’s Paradox is through a scatter plot where the relationship between two variables appears to show a specific trend, such as a positive correlation. By color-coding or otherwise marking subgroups based on a third variable (the lurking variable), it becomes clear that the relationship between the two variables may differ dramatically within each subgroup.
-
-For example, in an aggregated scatter plot, the relationship between variables $$ X $$ and $$ Y $$ might appear positive. However, when the data is stratified by the lurking variable $$ Z $$, the individual subgroup plots may show negative correlations, revealing the paradox.
+A common way to visualize Simpson’s Paradox is through a scatter plot where the relationship between two variables appears to show a specific trend, such as a positive correlation. By color-coding or otherwise marking subgroups based on a third variable (the lurking variable), it becomes clear that the relationship between the two variables may differ dramatically within each subgroup. For example, in an aggregated scatter plot, the relationship between variables $$ X $$ and $$ Y $$ might appear positive. However, when the data is stratified by the lurking variable $$ Z $$, the individual subgroup plots may show negative correlations, revealing the paradox.
 
 ### Bar Charts: Aggregated vs. Stratified Data
 
@@ -135,7 +123,6 @@ Simpson’s Paradox serves as a crucial reminder for anyone working with data: a
 ## Conclusion
 
 Simpson’s Paradox reveals the hidden complexities of data interpretation and statistical analysis. It challenges our assumptions about aggregated data and underscores the importance of considering lurking variables. By understanding the theoretical foundations of the paradox, recognizing its real-world implications, and adopting best practices in data analysis, we can avoid drawing misleading conclusions from our data.
-
 
 ## A weighted-average derivation
 
@@ -169,9 +156,7 @@ $$
 P(Z=zmid X=0)
 $$
 
-differ.
-
-That is the arithmetic engine of Simpson reversal.
+differ. That is the arithmetic engine of Simpson reversal.
 
 ## Causal graphs decide whether adjustment helps
 
@@ -201,9 +186,7 @@ $$
 Xightarrow Zleftarrow Y.
 $$
 
-Conditioning on $Z$ can create a spurious association.
-
-So the instruction “look for lurking variables and control for them” is incomplete.
+Conditioning on $Z$ can create a spurious association. So the instruction “look for lurking variables and control for them” is incomplete.
 
 ## Standardization
 
@@ -217,9 +200,7 @@ P(Y=1mid X=x,Z=z)
 w_z,
 $$
 
-where the same weights $w_z$ are used for both exposure groups.
-
-This makes the comparison explicit rather than leaving the marginal weights to differ automatically.
+where the same weights $w_z$ are used for both exposure groups. This makes the comparison explicit rather than leaving the marginal weights to differ automatically.
 
 ## References
 

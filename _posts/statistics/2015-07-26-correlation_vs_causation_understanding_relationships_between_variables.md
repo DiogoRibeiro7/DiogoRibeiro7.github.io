@@ -38,9 +38,7 @@ title: 'Correlation vs. Causation: Understanding Relationships Between Variables
 </p>
 <p align="center"><i>Correlation vs. Causation</i></p>
 
-Understanding the difference between correlation and causation is key in data analysis, especially in fields where decisions really matter, like medicine, economics, social science, and engineering. Mistaking correlation for causation can lead to costly errors, while correctly identifying causation supports solid, evidence-based decisions.
-
-This article unpacks correlation and causation in detail, covering:
+Understanding the difference between correlation and causation is key in data analysis, especially in fields where decisions really matter, like medicine, economics, social science, and engineering. Mistaking correlation for causation can lead to costly errors, while correctly identifying causation supports solid, evidence-based decisions. This article unpacks correlation and causation in detail, covering:
 
 - How correlation shows an association between variables
 - Key statistical tools for calculating correlation coefficients
@@ -92,9 +90,7 @@ A debunked study once suggested a link between vaccines and autism, which fueled
 
 ### Case Study: Coffee and Health Benefits
 
-Research often finds that coffee consumption is linked with health benefits, like reduced heart disease risk. But causation hasn’t been established, as factors like diet and activity levels might also contribute.
-
----
+Research often finds that coffee consumption is linked with health benefits, like reduced heart disease risk. But causation hasn’t been established, as factors like diet and activity levels might also contribute. ---
 
 ## Key Takeaways
 
@@ -119,11 +115,11 @@ fn pearson_correlation(x: &[f64], y: &[f64]) -> f64 {
     let sum_x_sq: f64 = x.iter().map(|&xi| xi * xi).sum();
     let sum_y_sq: f64 = y.iter().map(|&yi| yi * yi).sum();
     let sum_xy: f64 = x.iter().zip(y.iter()).map(|(&xi, &yi)| xi * yi).sum();
-    
-    let numerator = sum_xy - (sum_x * sum_y / n);
+
+let numerator = sum_xy - (sum_x * sum_y / n);
     let denominator = ((sum_x_sq - (sum_x.powi(2) / n)) * (sum_y_sq - (sum_y.powi(2) / n))).sqrt();
-    
-    if denominator == 0.0 {
+
+if denominator == 0.0 {
         0.0
     } else {
         numerator / denominator
@@ -140,16 +136,16 @@ fn spearman_rank_correlation(x: &[f64], y: &[f64]) -> f64 {
 fn rank(data: &[f64]) -> Vec<f64> {
     let mut indexed_data: Vec<(usize, f64)> = data.iter().cloned().enumerate().collect();
     indexed_data.sort_by(|a, b| a.1.partial_cmp(&b.1).unwrap());
-    
-    let mut ranks = vec![0.0; data.len()];
+
+let mut ranks = vec![0.0; data.len()];
     let mut i = 0;
     while i < indexed_data.len() {
         let mut j = i + 1;
         while j < indexed_data.len() && indexed_data[j].1 == indexed_data[i].1 {
             j += 1;
         }
-        
-        let rank = (i + j + 1) as f64 / 2.0;
+
+let rank = (i + j + 1) as f64 / 2.0;
         for k in i..j {
             ranks[indexed_data[k].0] = rank;
         }
@@ -164,17 +160,17 @@ fn rank(data: &[f64]) -> Vec<f64> {
 fn kendalls_tau_b(x: &[f64], y: &[f64]) -> f64 {
     assert_eq!(x.len(), y.len());
 
-    let mut concordant = 0.0;
+let mut concordant = 0.0;
     let mut discordant = 0.0;
     let mut ties_x = 0.0;
     let mut ties_y = 0.0;
 
-    for i in 0..x.len() {
+for i in 0..x.len() {
         for j in (i + 1)..x.len() {
             let dx = (x[i] - x[j]).signum();
             let dy = (y[i] - y[j]).signum();
 
-            match (dx == 0.0, dy == 0.0) {
+match (dx == 0.0, dy == 0.0) {
                 (true, true) => {}
                 (true, false) => ties_x += 1.0,
                 (false, true) => ties_y += 1.0,
@@ -184,10 +180,10 @@ fn kendalls_tau_b(x: &[f64], y: &[f64]) -> f64 {
         }
     }
 
-    let denominator =
+let denominator =
         ((concordant + discordant + ties_x) * (concordant + discordant + ties_y)).sqrt();
 
-    if denominator == 0.0 {
+if denominator == 0.0 {
         0.0
     } else {
         (concordant - discordant) / denominator
@@ -213,11 +209,11 @@ pearson_correlation <- function(x, y) {
     sum_x_sq <- sum(x^2)
     sum_y_sq <- sum(y^2)
     sum_xy <- sum(x * y)
-    
-    numerator <- sum_xy - (sum_x * sum_y / n)
+
+numerator <- sum_xy - (sum_x * sum_y / n)
     denominator <- sqrt((sum_x_sq - (sum_x^2 / n)) * (sum_y_sq - (sum_y^2 / n)))
-    
-    if (denominator == 0) return(0)
+
+if (denominator == 0) return(0)
     return(numerator / denominator)
 }
 
@@ -238,21 +234,21 @@ library(lmtest)
 
 granger_causality <- function(x, y, max_lag = 1) {
     data <- data.frame(x = x, y = y)
-    
-    # Create a lagged version of y for Granger causality
+
+# Create a lagged version of y for Granger causality
     for (i in 1:max_lag) {
         data[[paste0("y_lag_", i)]] <- c(rep(NA, i), head(y, -i))
         data[[paste0("x_lag_", i)]] <- c(rep(NA, i), head(x, -i))
     }
     data <- na.omit(data)
-    
-    # Model with y lag terms only
+
+# Model with y lag terms only
     model_y_only <- lm(y ~ ., data = data[, c("y", grep("y_lag", names(data), value = TRUE))])
-    
-    # Model with x and y lag terms
+
+# Model with x and y lag terms
     model_with_x <- lm(y ~ ., data = data[, c("y", grep("y_lag|x_lag", names(data), value = TRUE))])
-    
-    # Compare models using an F-test for Granger causality
+
+# Compare models using an F-test for Granger causality
     test_result <- anova(model_y_only, model_with_x)
     return(test_result["Pr(>F)"][2, ])
 }
