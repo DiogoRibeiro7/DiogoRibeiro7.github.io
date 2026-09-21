@@ -45,7 +45,7 @@ tags:
 title: Advanced Statistical Methods for Efficient A/B Testing
 ---
 
-A/B testing stands as a pillar data-driven decision-making, offering a methodical approach to evaluating product variations based on user interactions and key performance indicators. However, traditional fixed-sample A/B testing can be inefficient, especially for organizations with limited user traffic or when swift decision-making is crucial. **Sequential testing**, grounded in advanced statistical theory, emerges as a powerful alternative that enables continuous data evaluation, potentially accelerating conclusions without compromising statistical integrity.
+A/B testing is a randomized experiment comparing treatment policies on a prespecified estimand. The statistical method should follow the randomization unit, outcome type, effect size of interest, and stopping rule. However, traditional fixed-sample A/B testing can be inefficient, especially for organizations with limited user traffic or when swift decision-making is crucial. Sequential methods can support repeated looks or continuous monitoring while controlling specified operating characteristics, but only when the stopping rule and test are designed together.
 
 In this comprehensive article, we examine the theoretical underpinnings of sequential testing, explore its practical application in real-world scenarios, and discuss its advantages and limitations. We will cover the statistical foundations, including the Sequential Probability Ratio Test (SPRT), and provide detailed coding examples in R, JavaScript, and Python to illustrate how to implement sequential testing effectively.
 
@@ -175,13 +175,13 @@ where:
 
 ### Practical Considerations
 
-- **Initial Parameters**: Accurate estimates of $$ p_0 $$ and $$ p_1 $$ are crucial.
+- **Design alternatives**: $p_0$ and $p_1$ are hypotheses, not estimates produced after looking at the experiment. The alternative should correspond to a minimum effect worth detecting.
 - **Sample Size Limit**: Although SPRT doesn't require a fixed sample size, setting a maximum limit can prevent indefinite testing.
 - **Data Quality**: Ensure data is collected and recorded accurately in real-time.
 
-### Example Scenario
+### One-rate Bernoulli SPRT example
 
-Suppose we want to test if a new feature increases the conversion rate from 5% ($$ p_0 $$) to 7% ($$ p_1 $$).
+Suppose a single Bernoulli stream is tested against $p_0=0.05$ versus $p_1=0.07$. This illustrates the mechanics of the SPRT, not the full treatment-control A/B problem.
 
 - **Set $$ \alpha = 0.05 $$ and $$ \beta = 0.20 $$**.
 - **Calculate Boundaries**:
@@ -407,8 +407,8 @@ plt.show()
 
 ### Flexibility
 
-- **Real-Time Decisions**: Ability to act on data as it is collected.
-- **Adaptive Designs**: Modify the test in response to interim results.
+- **Planned repeated monitoring**: valid stopping can be built into the procedure.
+- **Adaptive designs**: adaptations require methods whose error guarantees explicitly allow the adaptation; arbitrary mid-test changes invalidate the original calibration.
 
 ### Ethical Considerations
 
@@ -446,3 +446,71 @@ When applied thoughtfully, sequential testing can significantly enhance the deci
 - **Jennison, C., & Turnbull, B. W. (2000)**. *Group Sequential Methods with Applications to Clinical Trials*. Chapman & Hall/CRC.
 - **Lan, K. K., & DeMets, D. L. (1983)**. "Discrete sequential boundaries for clinical trials". *Biometrika*, 70(3), 659-663.
 - **Whitehead, J. (1997)**. *The Design and Analysis of Sequential Clinical Trials*. Wiley.
+
+
+## The two-arm estimand comes first
+
+For conversion rates
+
+$$
+p_A=P(Y=1mid A),
+qquad
+p_B=P(Y=1mid B),
+$$
+
+a common estimand is the absolute lift
+
+$$
+Delta=p_B-p_A.
+$$
+
+The scientific null might be
+
+$$
+H_0:Delta=0,
+$$
+
+while a business decision may care about
+
+$$
+H_1:Deltagedelta,
+$$
+
+for a minimum worthwhile lift $delta$.
+
+Testing one rate against a historical benchmark is not equivalent to randomizing users between A and B. The latter protects the comparison from time trends and other concurrent changes under the randomization assumptions.
+
+## Ratio metrics and clustered users
+
+Many product metrics are not IID Bernoulli observations.
+
+Examples include:
+
+- revenue per user;
+- sessions nested within users;
+- multiple conversions by one user;
+- ratio metrics such as revenue / active user.
+
+The **randomization unit** should usually be the unit used for inference. Treating repeated sessions as independent observations can make uncertainty far too small.
+
+Cluster-robust, delta-method, bootstrap, or randomization-based procedures may be required depending on the metric.
+
+## Early stopping biases the point estimate
+
+A sequentially valid test can control Type I error and still produce a biased effect estimate conditional on stopping early.
+
+Experiments tend to stop when the observed effect is unusually large.
+
+Therefore report confidence sequences or sequentially adjusted intervals where appropriate, and avoid interpreting the stopping estimate as an unbiased estimate of long-run lift.
+
+## Guardrails and novelty effects
+
+Conversion lift can coexist with worse retention, latency, complaints, or revenue quality.
+
+Define guardrail metrics and follow-up horizons before launch.
+
+A short experiment may also capture novelty or learning effects rather than steady-state behavior. Sequential efficiency does not remove the need for a meaningful minimum exposure duration.
+
+## Implementation note
+
+The R, JavaScript, and Python snippets in this article demonstrate a **single-stream simple-hypothesis SPRT**. They should not be copied as a two-arm A/B implementation without replacing the likelihood with one that models both randomized groups.
