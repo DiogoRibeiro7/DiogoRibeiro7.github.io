@@ -93,7 +93,7 @@ The trade-off between FPR and TPR is often depicted in a **Receiver Operating Ch
 ## Strengths of FPR
 
 1. **Clear Interpretation:** The FPR offers a straightforward way to evaluate how well a model avoids false positives. A low FPR suggests that the model is unlikely to generate false alarms, which is critical in many applications.
-   
+
 2. **Useful in High-Stakes Situations:** For models used in critical areas like medicine or finance, understanding how often a model generates false positives can be more important than overall accuracy or precision. An inaccurate prediction could result in costly or harmful decisions.
 
 3. **Complementary to Other Metrics:** FPR works in conjunction with other metrics, like TPR or precision, to provide a holistic view of model performance. For example, FPR can help you determine whether a model with high sensitivity is also prone to producing too many false positives.
@@ -161,7 +161,7 @@ A related visualization is the **Precision-Recall (PR) curve**, which plots prec
 Let’s consider an example of a machine learning model used in healthcare to predict whether a patient has a rare disease. In this case, the stakes are high: a false positive could lead to unnecessary medical interventions, while a false negative might delay critical treatment.
 
 1. **Initial Model Performance:** The model has high accuracy (90%) and a high TPR (80%). However, the FPR is also high (30%), meaning that for every 100 patients without the disease, 30 are incorrectly flagged as positive.
-   
+
 2. **Cost of False Positives:** For each false positive, patients undergo invasive tests, leading to increased healthcare costs and patient distress. Reducing the FPR becomes a priority to avoid these unnecessary outcomes.
 
 3. **Balancing FPR and TPR:** To reduce the FPR, the model’s threshold is adjusted, lowering the sensitivity slightly but drastically reducing the FPR to 5%. Now, only 5 out of 100 healthy patients are incorrectly diagnosed, which is a significant improvement in reducing the costs of false positives.
@@ -176,9 +176,7 @@ In statistics, particularly in the context of hypothesis testing, the False Posi
 
 ### Type I Errors in Hypothesis Testing
 
-In hypothesis testing, a **Type I error** occurs when the null hypothesis, which is actually true, is incorrectly rejected. This is essentially a "false alarm" — the test claims there is an effect or difference when, in fact, none exists.
-
-Mathematically, the probability of committing a Type I error is represented by $\alpha$, commonly referred to as the **significance level** of the test. It is the probability of rejecting the true null hypothesis.
+In hypothesis testing, a **Type I error** occurs when the null hypothesis, which is actually true, is incorrectly rejected. This is essentially a "false alarm" — the test claims there is an effect or difference when, in fact, none exists. Mathematically, the probability of committing a Type I error is represented by $\alpha$, commonly referred to as the **significance level** of the test. It is the probability of rejecting the true null hypothesis.
 
 $$
 \alpha = P(\text{Reject } H_0 | H_0 \text{ is true})
@@ -191,9 +189,7 @@ For example, in a medical test for a disease:
 
 ### FPR and Type I Error: The Connection
 
-In binary classification, the False Positive Rate (FPR) mirrors the concept of a Type I error in hypothesis testing. Both FPR and Type I error rate represent the likelihood of incorrectly identifying a non-event (or negative instance) as an event (or positive instance).
-
-Thus, the False Positive Rate (FPR) can be interpreted as the probability of making a Type I error in the context of machine learning. In other words, FPR quantifies the rate at which negative instances are misclassified as positive, just as the Type I error rate represents the probability of incorrectly rejecting a true null hypothesis.
+In binary classification, the False Positive Rate (FPR) mirrors the concept of a Type I error in hypothesis testing. Both FPR and Type I error rate represent the likelihood of incorrectly identifying a non-event (or negative instance) as an event (or positive instance). Thus, the False Positive Rate (FPR) can be interpreted as the probability of making a Type I error in the context of machine learning. In other words, FPR quantifies the rate at which negative instances are misclassified as positive, just as the Type I error rate represents the probability of incorrectly rejecting a true null hypothesis.
 
 $$
 \text{FPR} = P(\text{False Positive}) = \frac{\text{False Positives (FP)}}{\text{False Positives (FP)} + \text{True Negatives (TN)}}
@@ -219,9 +215,7 @@ In settings such as:
 
 ### Balancing FPR and Statistical Significance
 
-In both machine learning and statistics, there is often a trade-off between controlling the FPR (or Type I error rate) and other metrics, such as the **True Positive Rate (TPR)** or **sensitivity**. A model or test that reduces FPR may also become less sensitive, meaning it misses more true positives (equivalent to increasing the **Type II error rate**).
-
-Understanding this balance is crucial when setting thresholds for decision-making, whether it’s the significance level in a hypothesis test or the classification threshold in a machine learning model.
+In both machine learning and statistics, there is often a trade-off between controlling the FPR (or Type I error rate) and other metrics, such as the **True Positive Rate (TPR)** or **sensitivity**. A model or test that reduces FPR may also become less sensitive, meaning it misses more true positives (equivalent to increasing the **Type II error rate**). Understanding this balance is crucial when setting thresholds for decision-making, whether it’s the significance level in a hypothesis test or the classification threshold in a machine learning model.
 
 The False Positive Rate (FPR) in machine learning directly parallels the concept of a Type I error in statistics. Both represent the probability of incorrectly identifying a negative instance as positive, and both are central to decision-making processes. Controlling FPR or Type I errors is particularly important in fields where false positives carry significant consequences, such as medicine, finance, and security.
 
@@ -378,7 +372,6 @@ This R code provides a practical approach for calculating and visualizing the Fa
    This article thoroughly examines the use of ROC analysis, with a strong focus on FPR and its trade-offs with other metrics like TPR, discussing how ROC curves are used to evaluate and compare machine learning algorithms.
    - *Bradley, A. P. (1997). The use of the area under the ROC curve in the evaluation of machine learning algorithms. Pattern Recognition, 30(7), 1145-1159. doi:10.1016/S0031-3203(96)00142-2*
 
-
 ## FPR is not the fraction of alerts that are false
 
 False positive rate is
@@ -387,9 +380,7 @@ $$
 P(\hat Y=1\mid Y=0).
 $$
 
-The fraction of positive predictions that are false is instead $FP/(TP+FP)=1-\mathrm{Precision}$.
-
-With prevalence $\pi$, true-positive rate $\mathrm{TPR}$, and false-positive rate $\mathrm{FPR}$,
+The fraction of positive predictions that are false is instead $FP/(TP+FP)=1-\mathrm{Precision}$. With prevalence $\pi$, true-positive rate $\mathrm{TPR}$, and false-positive rate $\mathrm{FPR}$,
 
 $$
 \mathrm{Precision}
