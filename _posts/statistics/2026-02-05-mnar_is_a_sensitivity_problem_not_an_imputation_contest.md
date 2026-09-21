@@ -651,7 +651,7 @@ decreasing sharply for poor outcomes, random artificial masking replaces that me
 
 Even designing a synthetic MNAR masking mechanism does not prove that it matches the real one. It tests performance under the assumed mechanism chosen by the analyst.
 
-Reconstruction error is also not the same as inferential validity. An imputation model with slightly better RMSE can distort a treatment contrast, tail probability, regression coefficient or standard error more severely than a model with worse pointwise prediction. The blog draft [Imputation Accuracy Is Not Inferential Validity](/drafts/) is aimed at that broader distinction.
+Reconstruction error is also not the same as inferential validity. An imputation model with slightly better RMSE can distort a treatment contrast, tail probability, regression coefficient or standard error more severely than a model with worse pointwise prediction. The related draft *Imputation Accuracy Is Not Inferential Validity* is aimed at that broader distinction.
 
 For MNAR specifically, algorithm benchmarking should therefore be subordinate to sensitivity analysis. The first question is whether the full-data estimand is identified under the assumed mechanism. The second is whether the computational method approximates that identified model well.
 
