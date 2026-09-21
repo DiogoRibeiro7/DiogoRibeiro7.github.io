@@ -57,7 +57,7 @@ and $$\varepsilon_t$$ is white noise. The integer $$d$$ denotes the number of no
 
 ## Identifying Model Order via ACF and PACF
 
-Choosing suitable values for $$p$$, $$d$$, and $$q$$ begins with visualization. The autocorrelation function (ACF) plots $$\mathrm{Corr}(x_t, x_{t-k})$$ against lag $$k$$, while the partial autocorrelation function (PACF) isolates the correlation at lag $$k$$ after removing intermediate effects. A slowly decaying ACF suggests need for differencing; a sharp cutoff in the PACF after lag $$p$$ hints at an AR($$p$$) component, whereas a cutoff in the ACF after lag $$q$$ indicates an MA($$q$$) term.  
+Choosing suitable values for $$p$$, $$d$$, and $$q$$ begins with visualization. The autocorrelation function (ACF) plots $$\mathrm{Corr}(x_t, x_{t-k})$$ against lag $$k$$, while the partial autocorrelation function (PACF) isolates the correlation at lag $$k$$ after removing intermediate effects. A slowly decaying ACF suggests need for differencing; a sharp cutoff in the PACF after lag $$p$$ hints at an AR($$p$$) component, whereas a cutoff in the ACF after lag $$q$$ indicates an MA($$q$$) term.
 
 In practice, one may:
 
@@ -70,7 +70,7 @@ These heuristics guide the initial grid of candidate $$(p,d,q)$$ combinations to
 
 ## Stationarity, Differencing, and Seasonal Extensions
 
-Non-stationary behavior—trends or unit roots—violates ARIMA assumptions. The Augmented Dickey-Fuller (ADF) test offers a statistical check for a unit root and informs the choice of $$d$$. When seasonal patterns recur every $$s$$ observations (for example, $$s=12$$ for monthly data), applying a seasonal difference $$(1 - L^s)$$ yields the SARIMA(p, d, q)(P, D, Q)$$_s$$ model. Seasonal terms capture long-period dependencies that nonseasonal differencing cannot.  
+Non-stationary behavior—trends or unit roots—violates ARIMA assumptions. The Augmented Dickey-Fuller (ADF) test offers a statistical check for a unit root and informs the choice of $$d$$. When seasonal patterns recur every $$s$$ observations (for example, $$s=12$$ for monthly data), applying a seasonal difference $$(1 - L^s)$$ yields the SARIMA(p, d, q)(P, D, Q)$$_s$$ model. Seasonal terms capture long-period dependencies that nonseasonal differencing cannot.
 
 Proper differencing is used to stabilize the mean by removing trends or unit-root behavior and to reduce persistent autocorrelation. It does not, by itself, stabilize a changing variance; transformations such as a logarithm or Box–Cox transform are used for that purpose. Over-differencing should be avoided, as it can inflate model variance and distort forecasts.
 
