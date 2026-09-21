@@ -67,7 +67,7 @@ The distribution of bootstrap replicates is then used to estimate parameters suc
 
 ### Why Bootstrapping Works
 
-Bootstrapping leverages the empirical distribution of the data to simulate the sampling distribution of a statistic. Traditional methods often rely on specific distributional assumptions (e.g., normality) or complex mathematical derivations to estimate these distributions. Bootstrapping, however, bypasses the need for such assumptions by repeatedly sampling from the data itself. The Law of Large Numbers underpins bootstrapping: as the number of bootstrap samples increases, the distribution of the bootstrap replicates converges to the true sampling distribution of the statistic.
+The nonparametric bootstrap replaces the unknown population distribution $F$ with the empirical distribution $F_n$ and studies the statistic under repeated samples from $F_n$. Bootstrap consistency is a property of the statistic and sampling model; increasing the number of Monte Carlo bootstrap replicates only reduces simulation error around the **bootstrap approximation**. It does not force an invalid bootstrap scheme to converge to the true sampling distribution.
 
 ### Comparison with Other Resampling Techniques
 
@@ -147,11 +147,11 @@ print(f"95% Confidence Interval: {confidence_interval}")
 
 ### Hypothesis Testing
 
-Bootstrapping is often used in hypothesis testing, particularly when the sample size is small or the underlying distribution is unknown. By comparing the bootstrap distribution of a test statistic under the null hypothesis with the observed value, we can assess the significance of the results without relying on traditional parametric tests.
+Bootstrap tests can be useful when the null distribution of a statistic is difficult to derive, but small samples are not automatically a favorable bootstrap regime. Tail and non-smooth problems can be particularly difficult. By comparing the bootstrap distribution of a test statistic under the null hypothesis with the observed value, we can assess the significance of the results without relying on traditional parametric tests.
 
 ### Model Validation
 
-In machine learning, bootstrapping is used for model validation and assessing the stability of model predictions. By generating multiple training sets through bootstrapping and evaluating the model on each, practitioners can estimate the variability of model performance metrics, such as accuracy or mean squared error.
+In machine learning, bootstrapping is used for model validation and assessing the stability of model predictions. For model evaluation, the test observation must not have trained the model whose prediction is scored. Bootstrap-based performance methods therefore require out-of-bag logic or an explicit bootstrap estimator such as .632/.632+, not evaluation on the same in-bag observations., such as accuracy or mean squared error.
 
 ### Bias Correction
 
@@ -165,7 +165,7 @@ In regression analysis, bootstrapping can be applied to estimate the variability
 
 ### Non-parametric Approach
 
-Bootstrapping does not require assumptions about the underlying distribution of the data, making it applicable to a wide range of problems, especially when the data does not fit standard distributions.
+The ordinary nonparametric bootstrap does not choose a parametric distribution family, but it assumes the empirical sampling scheme adequately represents the population mechanism. IID resampling is inappropriate for clustered, temporal, spatial, or survey-weighted samples unless the resampling unit is adapted., making it applicable to a wide range of problems, especially when the data does not fit standard distributions.
 
 ### Flexibility
 
@@ -204,3 +204,46 @@ Bootstrapping is a powerful and versatile tool in statistics, offering a robust 
 - DiCiccio, T. J., & Efron, B. (1996). "Bootstrap Confidence Intervals". *Statistical Science*.
 - Hall, P. (1992). *The Bootstrap and Edgeworth Expansion*. Springer.
 - Mooney, C. Z., & Duval, R. D. (1993). *Bootstrapping: A Nonparametric Approach to Statistical Inference*. Sage Publications.
+
+
+## Bootstrap confidence intervals are not all the same
+
+Common intervals include:
+
+- **normal approximation** using bootstrap standard error;
+- **basic bootstrap**;
+- **percentile interval**;
+- **BCa** for bias and acceleration corrections;
+- **studentized bootstrap**.
+
+The percentile interval is easy to compute but can have poor coverage for biased or skewed estimators.
+
+BCa and studentized intervals can improve accuracy under suitable regularity conditions, at additional computational cost.
+
+## The empirical distribution has finite support
+
+A nonparametric bootstrap cannot generate observations beyond values represented in the empirical sample.
+
+That is harmless for many smooth central statistics.
+
+It can be fatal for extreme-value inference, rare-event tails, or extrapolation beyond the observed support.
+
+Parametric bootstrap or domain-specific tail models may then be more appropriate.
+
+## Respect the sampling unit
+
+For clustered data, resample clusters.
+
+For time series, use block or model-based bootstrap methods.
+
+For stratified surveys, reproduce the sample design.
+
+The bootstrap principle is
+
+$$
+oxed{
+	ext{simulate the sampling mechanism you actually had}.
+}
+$$
+
+Resampling rows is only one special case.
