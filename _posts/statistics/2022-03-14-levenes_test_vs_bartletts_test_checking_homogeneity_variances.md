@@ -45,9 +45,7 @@ Levene's test is a test based on absolute deviations from a group center. It is 
 
 ### 1.1 How Levene's Test Works
 
-Levene’s test essentially works by transforming the data into deviations from the group medians or means and then testing whether the absolute deviations across groups are significantly different.
-
-The steps involved in Levene's Test are as follows:
+Levene’s test essentially works by transforming the data into deviations from the group medians or means and then testing whether the absolute deviations across groups are significantly different. The steps involved in Levene's Test are as follows:
 
 1. **Define the hypothesis**:
    - **Null hypothesis ($$H_0$$):** All group variances are equal.
@@ -79,9 +77,7 @@ Levene’s test can be performed using two different types of transformations:
 
 ### 2.1 How Bartlett’s Test Works
 
-Bartlett’s test works by comparing the variances of the groups directly and calculating a test statistic based on the logarithms of the group variances. This test statistic follows a chi-squared distribution, which is used to assess whether the group variances are equal.
-
-The steps for Bartlett’s test are as follows:
+Bartlett’s test works by comparing the variances of the groups directly and calculating a test statistic based on the logarithms of the group variances. This test statistic follows a chi-squared distribution, which is used to assess whether the group variances are equal. The steps for Bartlett’s test are as follows:
 
 1. **Define the hypothesis**:
    - **Null hypothesis ($$H_0$$):** The variances of all groups are equal.
@@ -164,7 +160,6 @@ For most practical applications, especially when working with real-world data th
 - Levene, H. (1960). Robust tests for equality of variances. In *Contributions to Probability and Statistics* (pp. 278-292). Stanford University Press.
 - Bartlett, M. S. (1937). Properties of sufficiency and statistical tests. *Proceedings of the Royal Society A*, 160(901), 268-282.
 
-
 ## Brown-Forsythe variant
 
 A common robust form replaces the group mean with the group median:
@@ -175,16 +170,8 @@ Z_{ij}
 |Y_{ij}-\tilde Y_j|.
 $$
 
-An ordinary one-way ANOVA is then applied to the $Z_{ij}$ values.
-
-This is usually called the Brown-Forsythe modification of Levene's test and tends to be less sensitive to skewness and heavy tails.
+An ordinary one-way ANOVA is then applied to the $Z_{ij}$ values. This is usually called the Brown-Forsythe modification of Levene's test and tends to be less sensitive to skewness and heavy tails.
 
 ## Variance equality may itself be the estimand
 
-Sometimes the scientific question is genuinely about variability: manufacturing consistency, biological heterogeneity, or measurement precision.
-
-Then a variance test can be primary.
-
-That is different from using a variance test only to decide whether another test is permitted.
-
-If variability is the target, report variance ratios or scale-effect estimates with uncertainty rather than only a p-value.
+Sometimes the scientific question is genuinely about variability: manufacturing consistency, biological heterogeneity, or measurement precision. Then a variance test can be primary. That is different from using a variance test only to decide whether another test is permitted. If variability is the target, report variance ratios or scale-effect estimates with uncertainty rather than only a p-value.
