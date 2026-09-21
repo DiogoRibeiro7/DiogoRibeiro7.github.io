@@ -5,7 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2023-11-16'
-excerpt: The Mann-Whitney U test compares pairwise ordering between two independent distributions. It is not automatically a test of medians or a fallback whenever normality fails.
+excerpt: "The Mann-Whitney U test compares pairwise ordering between two independent distributions. It is not automatically a test of medians or a fallback whenever normality fails."
 header:
   image: /assets/images/headers/photo-statistics-regression-errors.jpg
   og_image: /assets/images/headers/photo-statistics-regression-errors.jpg
@@ -22,14 +22,14 @@ keywords:
 - Nonparametric statistics
 redirect_from:
 - '/non-parametric tests/mannwhitney_u_test_nonparametric_comparison_two_independent_samples/'
-seo_description: A rigorous guide to the Mann-Whitney U test, its pairwise-ordering estimand, assumptions, ties, effect sizes, and relationship to the two-sample t-test.
-seo_title: Mann-Whitney U Test: What It Actually Tests
+seo_description: "A rigorous guide to the Mann-Whitney U test, its pairwise-ordering estimand, assumptions, ties, effect sizes, and relationship to the two-sample t-test."
+seo_title: "Mann-Whitney U Test: What It Actually Tests"
 seo_type: article
 tags:
 - Hypothesis Testing
 - Nonparametric Methods
 - Data Analysis
-title: Mann-Whitney U Test: What It Actually Tests
+title: "Mann-Whitney U Test: What It Actually Tests"
 ---
 
 The Mann-Whitney U test, also called the Wilcoxon rank-sum test, is frequently taught as the non-parametric replacement for the independent-samples t-test. That description causes two common errors: using it automatically when a normality test rejects, and interpreting rejection as evidence that two medians differ.
@@ -48,7 +48,7 @@ $$
 
 If the two distributions are identical, theta is 0.5.
 
-The U statistic estimates this pairwise ordering probability up to scaling. For samples of sizes \(n_1\) and \(n_2\),
+The U statistic estimates this pairwise ordering probability up to scaling. For samples of sizes $n_1$ and $n_2$,
 
 $$
 \hat\theta = \frac{U}{n_1n_2}
@@ -68,7 +68,7 @@ U_1
 R_1-\frac{n_1(n_1+1)}{2}.
 $$
 
-Equivalent formulas may report \(n_1n_2-U_1\), so software orientation should be checked before interpreting direction.
+Equivalent formulas may report $n_1n_2-U_1$, so software orientation should be checked before interpreting direction.
 
 ## What the null hypothesis is
 
@@ -128,7 +128,7 @@ There is no universal sample-size threshold such as 20 that suddenly makes the a
 
 ## Effect sizes
 
-Alongside \(\hat\theta\), rank-biserial correlation can summarize direction and magnitude:
+Alongside $\hat\theta$, rank-biserial correlation can summarize direction and magnitude:
 
 $$
 r_{rb}=2\hat\theta-1.
