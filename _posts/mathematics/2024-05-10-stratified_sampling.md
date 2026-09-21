@@ -105,9 +105,7 @@ n
 {\sum_{j=1}^{H} N_j S_j}.
 $$
 
-Larger and more variable strata receive more observations.
-
-If per-unit sampling costs $c_h$ differ by stratum, the cost-sensitive optimum is proportional to
+Larger and more variable strata receive more observations. If per-unit sampling costs $c_h$ differ by stratum, the cost-sensitive optimum is proportional to
 
 $$
 \frac{N_h S_h}{\sqrt{c_h}}.
@@ -122,9 +120,7 @@ Consider a population with two strata:
 | 1 | 800 | 10 |
 | 2 | 200 | 30 |
 
-Suppose the total sample size is $n=100$.
-
-Under proportional allocation,
+Suppose the total sample size is $n=100$. Under proportional allocation,
 
 $$
 n_1=80, \qquad n_2=20.
@@ -152,9 +148,7 @@ Although the second stratum is much smaller, it receives nearly half the sample 
 
 ## Stratified Sampling and Cluster Sampling
 
-Strata and clusters are often confused because both partition the population, but the design logic is almost opposite.
-
-In stratified sampling, units are sampled from every stratum. We usually want units within each stratum to be relatively similar with respect to the outcome, because this reduces within-stratum variance.
+Strata and clusters are often confused because both partition the population, but the design logic is almost opposite. In stratified sampling, units are sampled from every stratum. We usually want units within each stratum to be relatively similar with respect to the outcome, because this reduces within-stratum variance.
 
 In one-stage cluster sampling, only some clusters are selected and the sampled clusters contribute many or all of their units. For efficiency, clusters would ideally resemble small versions of the full population. In practice, units within a geographic or organizational cluster are often positively correlated, which increases variance through the design effect.
 
@@ -162,17 +156,13 @@ Stratification is therefore primarily a precision and representation device. Clu
 
 ## Choosing Strata
 
-Useful stratification variables are known for the population before sampling, define mutually exclusive and exhaustive groups, and are associated with the outcome or with important analytic domains.
-
-Examples include age bands in a health survey, school type in an education study, region in a national household survey, or customer segment in market research.
+Useful stratification variables are known for the population before sampling, define mutually exclusive and exhaustive groups, and are associated with the outcome or with important analytic domains. Examples include age bands in a health survey, school type in an education study, region in a national household survey, or customer segment in market research.
 
 If the stratification variable is weakly related to the outcome, the design may provide little precision gain. This is not the same as inducing bias. Bias arises from problems such as incorrect weights, frame errors, nonresponse, measurement error, or a sampling mechanism that is not implemented as designed.
 
 ## Disproportionate Sampling and Weights
 
-Researchers often oversample small or policy-important strata to obtain adequate subgroup precision. In that case, the raw sample is not proportional to the population.
-
-The design weight for a sampled unit in stratum $h$ is the inverse inclusion probability:
+Researchers often oversample small or policy-important strata to obtain adequate subgroup precision. In that case, the raw sample is not proportional to the population. The design weight for a sampled unit in stratum $h$ is the inverse inclusion probability:
 
 $$
 d_h = \frac{N_h}{n_h}.
