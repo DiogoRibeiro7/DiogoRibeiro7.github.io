@@ -75,7 +75,7 @@ By the end of this guide, you will have a thorough understanding of PCA and its 
 
 ## Gentle Introduction to PCA
 
-The main purpose of Principal Component Analysis (PCA) is to reduce dimensionality in datasets while minimizing information loss. High-dimensional data can be challenging to analyze due to the curse of dimensionality, where the performance of classifiers and other models deteriorates as the number of features increases. PCA addresses this issue by transforming the data into a new set of dimensions, known as principal components, which are linear combinations of the original features.
+PCA finds linear directions maximizing retained variance, equivalently minimizing squared reconstruction error for a chosen number of components. Variance retention is not the same thing as preserving all predictive or scientific information. High-dimensional data can create computational, collinearity, and estimation problems. PCA can reduce dimension when the signal is well represented by a low-rank linear subspace, but it does not generically solve the curse of dimensionality by transforming the data into a new set of dimensions, known as principal components, which are linear combinations of the original features.
 
 There are two primary methods to reduce dimensionality: **Feature Selection** and **Feature Extraction**. Understanding the distinction between these methods is crucial:
 
@@ -124,11 +124,11 @@ The transformation function in PCA can be expressed as $$ y = f(x) $$, which is 
 
 ### Steps in PCA for Feature Extraction
 
-1. **Standardization**: Before applying PCA, it is essential to standardize the data to ensure that each feature contributes equally to the analysis. This involves rescaling the features to have a mean of zero and a standard deviation of one.
+1. **Standardization**: Centering is required for ordinary covariance-based PCA. Scaling to unit variance is a modeling choice, not a universal requirement: use it when feature units or scales should not determine variance dominance.
 
 2. **Covariance Matrix Computation**: Calculate the covariance matrix to understand how the variables in the dataset vary with respect to each other.
 
-3. **Eigenvalue and Eigenvector Calculation**: Compute the eigenvalues and eigenvectors of the covariance matrix. The eigenvectors determine the directions of the new feature space, while the eigenvalues indicate the magnitude of the variance in these directions.
+3. **Eigenvalue and Eigenvector Calculation**: Compute the eigenvalues and eigenvectors of the covariance matrix. For covariance PCA, eigenvectors of the sample covariance matrix define orthogonal loading directions and eigenvalues give the variance of the corresponding component scores. In computation, SVD of the centered data matrix is usually numerically preferable to explicitly forming the covariance matrix.
 
 4. **Forming Principal Components**: Sort the eigenvalues in descending order and select the top k eigenvectors to form the principal components. These principal components are the new features that capture the most significant variance in the data.
 
@@ -197,7 +197,7 @@ Before performing PCA, it is crucial to standardize the data. Standardization en
 1. **Subtracting the mean**: Subtract the mean value of each feature from the corresponding feature values.
 2. **Dividing by the standard deviation**: Divide each feature value by the standard deviation of the feature.
 
-By standardizing the data, we ensure that each feature has the properties of a standard normal distribution, allowing PCA to accurately capture the underlying structure of the data.
+Standardization gives each feature sample mean zero and sample standard deviation one. It does **not** make the feature normally distributed.
 
 Understanding these steps provides a comprehensive view of how PCA reduces dimensionality and transforms the data into a new feature space that retains the most significant information.
 
@@ -210,7 +210,7 @@ The `pca` library is a versatile tool designed to simplify and enhance the proce
 - **Extraction of Best-Performing Features**: The library helps identify and extract the most informative features, improving model performance and interpretability.
 - **Insights into Loadings with the Biplot**: Users can gain insights into the contributions of original features to the principal components through biplots.
 - **Outlier Detection**: The library includes methods for detecting outliers, enhancing the robustness of the analysis.
-- **Removal of Unwanted (Technical) Bias**: It provides functionalities to normalize data and remove technical biases, ensuring a more accurate analysis.
+- **Preprocessing support**: software may offer scaling or normalization helpers, but PCA itself does not remove batch effects or technical bias unless those effects happen to align with discarded components, which is not a safe assumption.
 
 ### Benefits of `pca` Library
 
@@ -453,3 +453,50 @@ print("Outliers identified by the SPE/DmodX method:", outliers_spe.index)
 - Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Philosophical Transactions of the Royal Society A*, 374(2065).
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
 - Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.
+
+
+## PCA is unsupervised
+
+PCA does not use the target variable.
+
+A low-variance direction can still be highly predictive of $Y$.
+
+Therefore selecting components only by explained variance can hurt supervised prediction.
+
+When PCA is used inside a predictive pipeline, choose the number of components inside cross-validation and compare against supervised alternatives such as ridge regression, PLS, or regularized models on the original features.
+
+## Sign indeterminacy
+
+If $v$ is a principal loading vector, then
+
+$$
+-v
+$$
+
+is the same principal direction.
+
+Software may therefore flip the sign of a component across implementations or runs without changing the PCA solution.
+
+Interpret loading **relative patterns**, not the arbitrary global sign.
+
+## Outlier detection is model-dependent
+
+Hotelling's $T^2$ measures distance in retained score space.
+
+SPE/Q residual measures distance outside the retained PCA subspace.
+
+Neither is a universal outlier detector.
+
+Thresholds depend on assumptions about the reference population, retained rank, and distribution.
+
+If PCA is fitted to data already containing anomalies, the anomalous observations can rotate the components and hide themselves.
+
+Robust PCA or a clean reference set may be needed.
+
+## Data leakage
+
+Centering, scaling, PCA fitting, and component selection must all be learned on the training data only.
+
+Fitting PCA on the full dataset before cross-validation leaks the covariance structure of the validation observations into the model.
+
+Use a pipeline that refits PCA inside each fold.
