@@ -4,85 +4,255 @@ categories:
 - Biographies
 classes: wide
 date: '2023-07-23'
-excerpt: Maryam Mirzakhani made history as the first woman to win the Fields Medal for her groundbreaking work on the geometry of Riemann surfaces. Her contributions continue to inspire mathematicians today.
+excerpt: Maryam Mirzakhani transformed the geometry and dynamics of moduli spaces through work on simple closed geodesics, Weil-Petersson volumes, earthquake flow, and Teichmüller dynamics.
 header:
-  image: /assets/images/headers/photo-mathematics-polyhedra.jpg
-  og_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
-  overlay_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  image: /assets/images/headers/photo-mathematics-geometry.jpg
+  og_image: /assets/images/headers/photo-mathematics-geometry.jpg
+  overlay_image: /assets/images/headers/photo-mathematics-geometry.jpg
   overlay_filter: 0.4
   show_overlay_excerpt: false
-  teaser: /assets/images/headers/photo-mathematics-polyhedra.jpg
-  twitter_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
+  teaser: /assets/images/headers/photo-mathematics-geometry.jpg
+  twitter_image: /assets/images/headers/photo-mathematics-geometry.jpg
 keywords:
-- Maryam mirzakhani biography
-- First woman fields medalist
-- Riemann surfaces and geometry
-- Hyperbolic geometry contributions
-- Women in mathematics
-seo_description: Maryam Mirzakhani, the first woman to win the Fields Medal, and her work on Riemann surfaces and hyperbolic geometry.
-seo_title: 'Maryam Mirzakhani: First Woman to Win the Fields Medal'
+- Maryam Mirzakhani
+- Fields Medal
+- Riemann surfaces
+- moduli spaces
+- hyperbolic geometry
+- Teichmuller dynamics
+seo_description: Maryam Mirzakhani's work on simple closed geodesics, Weil-Petersson volumes, moduli spaces, earthquake flow, and Teichmuller dynamics, including the mathematics behind her 2014 Fields Medal.
+seo_title: 'Maryam Mirzakhani: Geometry and Dynamics of Moduli Spaces'
 seo_type: article
-summary: Maryam Mirzakhani was the first woman to win the Fields Medal, recognized for her pioneering work on the dynamics and geometry of Riemann surfaces and their moduli spaces. Her legacy continues to inspire the world of mathematics.
+summary: A mathematical biography of Maryam Mirzakhani focused on the work recognized by the Fields Medal: counting simple geodesics, recursion for Weil-Petersson volumes, Witten's conjecture, earthquake flow, and rigidity in moduli space.
 tags:
 - Biographies
 - Geometry
-- Mathematical Modeling
-title: 'Maryam Mirzakhani: The First Woman to Win the Fields Medal'
+- Dynamical Systems
+title: 'Maryam Mirzakhani: Geometry and Dynamics of Moduli Spaces'
 ---
 
 <p align="center">
-  <img src="/assets/images/biographies/maryam_mirzakhani.jpeg" alt="Maryam mirzakhani - Maryam Mirzakhani: The First Woman to Win the Fields Medal" loading="lazy" width="1200" height="720">
+  <img src="/assets/images/biographies/maryam_mirzakhani.jpeg" alt="Maryam Mirzakhani" loading="lazy" width="1200" height="720">
 </p>
 <p align="center"><i>Maryam Mirzakhani</i></p>
 
-## Maryam Mirzakhani: The First Woman to Win the Fields Medal
+Maryam Mirzakhani (1977–2017) changed the study of hyperbolic surfaces and moduli spaces by connecting geometry, topology, dynamics, and probability in ways that had not previously been available.
 
-In 2014, **Maryam Mirzakhani** made history by becoming the first woman to win the prestigious **Fields Medal**, often referred to as the "Nobel Prize of Mathematics." A **brilliant Iranian mathematician**, Mirzakhani was recognized for her groundbreaking work in **hyperbolic geometry**, **complex analysis**, and the **dynamics of Riemann surfaces**. Her research transformed the understanding of moduli spaces, geometric structures, and their broader implications in mathematics and physics. Although Mirzakhani passed away in 2017, her legacy continues to inspire mathematicians and trailblazers around the world.
+In 2014 she became the first woman to receive a Fields Medal.
 
-### Early Life and Education
+The official citation recognized her
 
-Maryam Mirzakhani was born on **May 12, 1977**, in **Tehran, Iran**. From a young age, she displayed a deep intellectual curiosity and a love for reading, with dreams of becoming a writer. However, during her teenage years, Mirzakhani’s talent for mathematics began to emerge, and she developed a passion for solving complex problems. Her potential became evident when she participated in Iran’s national **mathematics olympiads**, and she eventually won **gold medals** at the **International Mathematical Olympiad** in 1994 and 1995, achieving a perfect score in her second year.
+> outstanding contributions to the dynamics and geometry of Riemann surfaces and their moduli spaces.
 
-Mirzakhani pursued her undergraduate studies at **Sharif University of Technology** in Tehran before moving to the United States to attend graduate school. She earned her **PhD in mathematics** from **Harvard University** in 2004 under the supervision of **Curtis McMullen**, himself a Fields Medalist. Her doctoral thesis focused on the **moduli space of Riemann surfaces**, a topic that would become central to her groundbreaking research.
+That wording is precise enough to organize the mathematics.
 
-### Pioneering Contributions to Mathematics
+## From Tehran to Harvard
 
-Maryam Mirzakhani’s research spanned several interconnected areas of mathematics, but her most significant contributions were in **hyperbolic geometry**, **Teichmüller theory**, and the **dynamics and geometry of Riemann surfaces**. These topics are notoriously difficult and abstract, but Mirzakhani's innovative approach provided deep insights into the geometry of curved surfaces and their behavior over time.
+Mirzakhani was born in Tehran in 1977.
 
-#### Riemann Surfaces and Moduli Spaces
+She won gold medals at the International Mathematical Olympiad in 1994 and 1995, earning a perfect score in the second competition.
 
-A **Riemann surface** is a one-dimensional complex manifold, which can be thought of as a two-dimensional surface that exhibits complex structure. These surfaces arise naturally in various areas of mathematics and physics, particularly in the study of **complex analysis** and **string theory**. The study of **moduli spaces** involves understanding all possible shapes (or "moduli") that a given surface can take under certain constraints.
+She studied mathematics at Sharif University of Technology and then completed a PhD at Harvard under Curtis McMullen.
 
-Mirzakhani's research explored the **dynamics of moduli spaces**, providing a new understanding of how geometric structures on surfaces evolve over time. Her work on **simple closed geodesics**—curves that do not intersect themselves—on hyperbolic surfaces helped reveal patterns that had previously been difficult to understand. By combining techniques from **hyperbolic geometry**, **ergodic theory**, and **Teichmüller dynamics**, Mirzakhani made profound connections between areas of mathematics that were not previously well understood.
+Her doctoral work already contained ideas that would become central to her later research: hyperbolic geometry, moduli spaces, geodesics, and Weil-Petersson geometry.
 
-#### Hyperbolic Geometry and Ergodic Theory
+## Hyperbolic surfaces
 
-Hyperbolic geometry, a non-Euclidean geometry, deals with surfaces that have constant negative curvature, like a saddle shape. Mirzakhani was particularly interested in how hyperbolic surfaces behave under deformation. Her research examined the relationship between the geometry of these surfaces and their **moduli spaces**, applying sophisticated tools from **ergodic theory**—a branch of mathematics that studies the statistical behavior of dynamical systems.
+A closed orientable surface of genus
 
-Her **quantitative results** on the counting of closed geodesics on hyperbolic surfaces were groundbreaking. By generalizing earlier work, she proved formulas that described the number of such curves on surfaces of different types and showed how these curves distribute over the surface. This result had far-reaching implications for both mathematics and physics, particularly in understanding the behavior of dynamical systems in **negative curvature** spaces.
+$$
+g\ge2
+$$
 
-### Fields Medal: A Historic Achievement
+admits a hyperbolic metric of constant curvature
 
-In 2014, at the **International Congress of Mathematicians** in Seoul, South Korea, Maryam Mirzakhani was awarded the Fields Medal, the highest honor in mathematics. She became the first woman and the first Iranian to receive this prestigious award. Mirzakhani was honored for "her outstanding contributions to the dynamics and geometry of Riemann surfaces and their moduli spaces." Her work was hailed for its brilliance, creativity, and its ability to unify different areas of mathematics.
+$$
+-1.
+$$
 
-At the time of her award, Mirzakhani was a professor at **Stanford University**, where she continued to produce groundbreaking research and mentor young mathematicians. Despite the male-dominated nature of mathematics, Mirzakhani’s achievement was a historic moment, opening the door for greater recognition of women in the field.
+On such a surface, each nontrivial free homotopy class contains a unique closed geodesic.
 
-### Legacy and Impact
+The collection of all hyperbolic structures on a fixed topological surface forms Teichmüller space.
 
-Maryam Mirzakhani’s legacy extends far beyond her technical achievements in mathematics. Her work not only solved long-standing problems but also opened new avenues of research in **geometry**, **topology**, and **theoretical physics**. She collaborated with leading mathematicians around the world and left a profound impact on the academic community.
+Quotienting by the mapping class group produces the moduli space
 
-Sadly, Mirzakhani passed away on **July 14, 2017**, at the age of 40, after a long battle with **breast cancer**. Her untimely death was a tremendous loss to the mathematical world, but her influence continues through her research and the inspiration she provided to future generations of mathematicians, particularly women.
+$$
+\mathcal M_g.
+$$
 
-In recognition of her groundbreaking achievements, several institutions and organizations have honored her legacy. For example, **Stanford University** established the **Maryam Mirzakhani Graduate Fellowship**, which supports graduate students in mathematics. In 2019, Iran declared **May 12**—Mirzakhani’s birthday—as **National Women in Mathematics Day** to celebrate her contributions and encourage more women to pursue mathematics.
+This space does not describe one surface.
 
-### A Role Model for Women in STEM
+It describes all conformal or hyperbolic structures of a fixed topological type, modulo equivalence.
 
-As the first woman to receive the Fields Medal, Maryam Mirzakhani became a global symbol for women in **science, technology, engineering, and mathematics** (STEM). Her perseverance, intellectual curiosity, and groundbreaking achievements have inspired countless young women to pursue careers in mathematics and other STEM fields.
+## Counting simple closed geodesics
 
-Mirzakhani once described mathematics as "like being lost in a jungle and trying to use all the knowledge you can gather to come up with some new tricks, and with luck, you might find a way out." Her ability to navigate the dense and abstract jungles of mathematics made her a true pioneer and a shining example of how creativity and persistence can lead to profound discoveries.
+A classical result in hyperbolic geometry says that the number of all closed geodesics of length at most $L$ grows exponentially with $L$.
 
-### Conclusion
+Mirzakhani studied the much thinner set of **simple** closed geodesics: those without self-intersections.
 
-Maryam Mirzakhani's contributions to mathematics were monumental, and her influence will be felt for generations to come. Her work on **hyperbolic surfaces**, **Riemann surfaces**, and **moduli spaces** changed the way mathematicians understand geometric structures, providing insights that continue to influence **theoretical physics** and **geometric topology**.
+For a surface of genus $g$, she proved asymptotic counting results of the form
 
-As the first woman to win the Fields Medal, she broke barriers in a field traditionally dominated by men, inspiring young mathematicians worldwide. Though her life was tragically cut short, her legacy endures through her research, her students, and the inspiration she gave to women in mathematics.
+$$
+N_X(L)
+\sim
+c_X
+L^{6g-6}
+$$
+
+for a fixed hyperbolic surface $X$, with the exponent modified appropriately when punctures or boundaries are included.
+
+The striking feature is polynomial rather than exponential growth.
+
+The constant
+
+$$
+c_X
+$$
+
+depends on the hyperbolic surface.
+
+The proof linked geodesic counting with the geometry and volume of moduli space.
+
+## Weil-Petersson volumes
+
+Teichmüller space carries a natural symplectic form known as the Weil-Petersson form.
+
+For bordered surfaces, the corresponding moduli spaces have Weil-Petersson volumes depending on boundary lengths.
+
+Mirzakhani derived recursive formulas for these volumes.
+
+Schematically,
+
+$$
+V_{g,n}(L_1,\ldots,L_n)
+$$
+
+can be reduced to integrals involving volumes of moduli spaces of simpler topological type.
+
+This recursion was one of her central achievements.
+
+It transformed geometric decomposition identities into a computational structure for moduli-space volumes.
+
+## McShane identities
+
+A key ingredient was a generalization of identities associated with Greg McShane.
+
+These identities decompose boundary-length information into contributions from simple geodesics.
+
+Mirzakhani integrated such identities over moduli space.
+
+That move is mathematically characteristic of her work: a formula about one hyperbolic surface becomes, after integration over the entire moduli space, a recursion for global geometric quantities.
+
+## Witten's conjecture
+
+The Weil-Petersson volume recursion had an unexpected consequence.
+
+Intersection numbers of tautological classes on moduli space are connected to the coefficients of these volume polynomials.
+
+Mirzakhani's work yielded a new proof of Witten's conjecture concerning intersection theory on moduli space.
+
+The result had already been proved by Kontsevich through very different methods.
+
+Mirzakhani's proof was important because it revealed a direct geometric route from hyperbolic surfaces to the intersection theory underlying the conjecture.
+
+## Earthquake flow
+
+Thurston's earthquake operation deforms a hyperbolic surface by cutting along a measured geodesic lamination and shearing.
+
+Mirzakhani showed that earthquake flow is ergodic and mixing with respect to a natural measure.
+
+Ergodicity means that invariant measurable sets are trivial in measure.
+
+Mixing is stronger: as time increases, initially specified regions of phase space become asymptotically decorrelated under the flow.
+
+These are dynamical statements about how geometric structures move through moduli space.
+
+## Teichmüller dynamics
+
+Mirzakhani's later work moved further into the dynamics of moduli spaces of translation surfaces.
+
+With Alex Eskin, she proved a major rigidity theorem for the action of
+
+$$
+SL(2,\mathbb R)
+$$
+
+on these moduli spaces.
+
+Very loosely, orbit closures that might have been expected to possess highly irregular fractal structure instead turn out to have rigid algebraic-linear structure in suitable local coordinates.
+
+This result is sometimes called the "magic wand theorem" because it provided a powerful classification tool in Teichmüller dynamics.
+
+The nickname should not obscure the mathematical point: the theorem imposed unexpected rigidity on orbit closures in a highly non-homogeneous space.
+
+## Why the Fields Medal mattered
+
+The Fields Medal was not awarded because Mirzakhani was a symbol of women in mathematics.
+
+It was awarded for the mathematics.
+
+Her work linked:
+
+$$
+\text{hyperbolic geometry}
++
+\text{moduli-space volume}
++
+\text{intersection theory}
++
+\text{ergodic dynamics}.
+$$
+
+The historical significance of being the first woman recipient is real.
+
+It is separate from the reason the medal was mathematically deserved.
+
+## Career
+
+Mirzakhani held positions at Princeton and later Stanford University, where she became a professor of mathematics.
+
+Her research style was often described by colleagues as unusually geometric and patient: she worked through large conceptual pictures and long derivations rather than optimizing for quick results.
+
+That style is visible in the mathematics itself, where local geometric identities are repeatedly turned into global statements about spaces of surfaces.
+
+## Death and legacy
+
+Mirzakhani died in 2017 at age 40 after breast cancer.
+
+Her death ended an active research program rather than closing a completed career.
+
+Several of the areas she helped shape—Teichmüller dynamics, moduli-space geometry, counting problems, and rigidity—remain highly active.
+
+May 12, her birthday, is now celebrated internationally as Women in Mathematics Day.
+
+Her mathematical legacy, however, is best understood through the results themselves rather than through symbolic language.
+
+## Conclusion
+
+Mirzakhani's work is difficult because it lives at the intersection of several sophisticated theories.
+
+The main chain is:
+
+$$
+\boxed{
+\text{geodesics on surfaces}
+\rightarrow
+\text{moduli-space geometry}
+\rightarrow
+\text{volume recursion}
+\rightarrow
+\text{intersection theory}
+\rightarrow
+\text{dynamical rigidity}.
+}
+$$
+
+That is the structure behind the Fields Medal citation.
+
+## References
+
+- International Mathematical Union. *Fields Medal 2014: Maryam Mirzakhani*.
+- Mirzakhani, M. (2004). Simple geodesics on hyperbolic surfaces and the volume of the moduli space of curves. PhD thesis, Harvard University.
+- Mirzakhani, M. (2007). Simple geodesics and Weil-Petersson volumes of moduli spaces of bordered Riemann surfaces. *Inventiones Mathematicae*, 167, 179–222.
+- Mirzakhani, M. (2008). Ergodic theory of the earthquake flow. *International Mathematics Research Notices*.
+- Eskin, A., & Mirzakhani, M. (2015). Invariant and stationary measures for the $SL(2,\mathbb R)$ action on moduli space. *Publications Mathématiques de l'IHÉS*, 127, 95–324.
