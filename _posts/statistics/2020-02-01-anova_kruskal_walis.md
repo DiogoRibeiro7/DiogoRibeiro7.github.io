@@ -49,11 +49,7 @@ $$
 \text{unequal variances} \Rightarrow \text{Kruskal-Wallis}.
 $$
 
-Both rules are too crude.
-
-ANOVA and Kruskal-Wallis do not generally test the same estimand under different assumptions. If the scientific question is about **means**, replacing ANOVA by a rank test because a normality test rejected can change the question being asked.
-
-The useful sequence is
+Both rules are too crude. ANOVA and Kruskal-Wallis do not generally test the same estimand under different assumptions. If the scientific question is about **means**, replacing ANOVA by a rank test because a normality test rejected can change the question being asked. The useful sequence is
 
 $$
 \boxed{
@@ -77,9 +73,7 @@ $$
 Y_{ij}=\mu_i+\varepsilon_{ij},
 $$
 
-where $i=1,\ldots,g$ indexes groups and $j=1,\ldots,n_i$ indexes observations.
-
-The classical one-way ANOVA null hypothesis is
+where $i=1,\ldots,g$ indexes groups and $j=1,\ldots,n_i$ indexes observations. The classical one-way ANOVA null hypothesis is
 
 $$
 H_0:
@@ -109,23 +103,13 @@ $$
 \mathcal N(0,\sigma^2),
 $$
 
-the null distribution is an $F$ distribution with $g-1$ and $N-g$ degrees of freedom.
-
-The null hypothesis is about means.
-
-That point should remain visible throughout the analysis.
+the null distribution is an $F$ distribution with $g-1$ and $N-g$ degrees of freedom. The null hypothesis is about means. That point should remain visible throughout the analysis.
 
 ## Normality is not a binary gatekeeper
 
-The classical finite-sample derivation uses normal errors, but practical robustness depends on sample size, imbalance, tail behavior and outliers.
+The classical finite-sample derivation uses normal errors, but practical robustness depends on sample size, imbalance, tail behavior and outliers. A rejection from Shapiro-Wilk does not imply that the mean is no longer the target or that ANOVA must be abandoned. Likewise, failure to reject normality does not prove that the Gaussian model is correct.
 
-A rejection from Shapiro-Wilk does not imply that the mean is no longer the target or that ANOVA must be abandoned.
-
-Likewise, failure to reject normality does not prove that the Gaussian model is correct.
-
-The relevant diagnostic object is the within-group error structure or model residuals, not a pooled histogram of all observations.
-
-When the scientific target is a difference in means, robustness checks should preserve that estimand.
+The relevant diagnostic object is the within-group error structure or model residuals, not a pooled histogram of all observations. When the scientific target is a difference in means, robustness checks should preserve that estimand.
 
 ## Unequal variances point to Welch ANOVA
 
@@ -135,11 +119,7 @@ $$
 \operatorname{Var}(Y_{ij})=\sigma_i^2,
 $$
 
-the natural alternative is **Welch's ANOVA**, not automatically Kruskal-Wallis.
-
-Welch's procedure modifies the weighting and degrees of freedom so that inference on group means remains useful under heteroscedasticity.
-
-Conceptually, this is important:
+the natural alternative is **Welch's ANOVA**, not automatically Kruskal-Wallis. Welch's procedure modifies the weighting and degrees of freedom so that inference on group means remains useful under heteroscedasticity. Conceptually, this is important:
 
 $$
 \boxed{
@@ -153,9 +133,7 @@ rather than changing to a rank estimand without noticing.
 
 ## What Kruskal-Wallis actually tests
 
-The Kruskal-Wallis statistic is based on pooled ranks.
-
-Let $R_{ij}$ denote the rank of observation $Y_{ij}$ among all $N$ observations and let $\bar R_i$ be the mean rank in group $i$. Ignoring the tie correction for notation, the statistic is
+The Kruskal-Wallis statistic is based on pooled ranks. Let $R_{ij}$ denote the rank of observation $Y_{ij}$ among all $N$ observations and let $\bar R_i$ be the mean rank in group $i$. Ignoring the tie correction for notation, the statistic is
 
 $$
 H
@@ -168,42 +146,26 @@ n_i
 \right)^2.
 $$
 
-Under the null hypothesis that the group distributions are the same, and under the usual regularity conditions, $H$ is approximately chi-square with $g-1$ degrees of freedom.
-
-The general null is therefore about equality of distributions,
+Under the null hypothesis that the group distributions are the same, and under the usual regularity conditions, $H$ is approximately chi-square with $g-1$ degrees of freedom. The general null is therefore about equality of distributions,
 
 $$
 H_0:
 F_1=F_2=\cdots=F_g.
 $$
 
-If all group distributions have the same shape and differ only by a location shift, the procedure can be interpreted as a test of location. Under stronger symmetry assumptions, that is sometimes summarized informally as a comparison of medians.
-
-Without those assumptions, "Kruskal-Wallis compares medians" is not generally correct.
+If all group distributions have the same shape and differ only by a location shift, the procedure can be interpreted as a test of location. Under stronger symmetry assumptions, that is sometimes summarized informally as a comparison of medians. Without those assumptions, "Kruskal-Wallis compares medians" is not generally correct.
 
 ## Unequal spreads can make Kruskal-Wallis reject
 
-Suppose two groups have the same center but very different spread.
-
-Their rank distributions can differ even though their means or medians are equal.
-
-Kruskal-Wallis can therefore reject because the distributions differ in scale or shape.
-
-This is why the statement
+Suppose two groups have the same center but very different spread. Their rank distributions can differ even though their means or medians are equal. Kruskal-Wallis can therefore reject because the distributions differ in scale or shape. This is why the statement
 
 > Use Kruskal-Wallis when variances are unequal
 
-is particularly dangerous.
-
-Unequal variances are not a nuisance that the rank test simply ignores. They can be part of what drives the rank differences.
+is particularly dangerous. Unequal variances are not a nuisance that the rank test simply ignores. They can be part of what drives the rank differences.
 
 ## Outliers do not automatically define the estimand
 
-Rank procedures are less sensitive to the numerical magnitude of extreme values because only order is retained.
-
-That can be useful.
-
-But the correct response to outliers depends on why they exist.
+Rank procedures are less sensitive to the numerical magnitude of extreme values because only order is retained. That can be useful. But the correct response to outliers depends on why they exist.
 
 An outlier caused by a recording error should be corrected or removed for a documented reason. A genuine extreme observation may be scientifically important. A heavy-tailed population may call for a robust location estimator, transformed model, generalized linear model, bootstrap procedure or explicit heavy-tailed likelihood.
 
@@ -221,25 +183,15 @@ Use a mean-based method.
 
 ### If the target is a location shift or stochastic ordering
 
-A rank-based procedure may be appropriate.
-
-Kruskal-Wallis is useful when the scientific question is naturally expressed through relative ranks and when its interpretation matches the shapes of the group distributions.
+A rank-based procedure may be appropriate. Kruskal-Wallis is useful when the scientific question is naturally expressed through relative ranks and when its interpretation matches the shapes of the group distributions.
 
 ### If distributions differ in several ways
 
-Then a single location test may be inadequate.
-
-Plot the distributions and consider models that allow differences in scale, shape or other features explicitly.
+Then a single location test may be inadequate. Plot the distributions and consider models that allow differences in scale, shape or other features explicitly.
 
 ## Post-hoc comparisons must match the global test
 
-A significant omnibus result does not identify which groups differ.
-
-After classical ANOVA, Tukey's HSD is a common familywise-error-controlled method when its assumptions fit.
-
-After Welch ANOVA, a heteroscedastic post-hoc procedure such as Games-Howell is more coherent than ordinary Tukey HSD.
-
-After Kruskal-Wallis, pairwise rank-based comparisons can be used with multiplicity correction, but their interpretation remains rank-based.
+A significant omnibus result does not identify which groups differ. After classical ANOVA, Tukey's HSD is a common familywise-error-controlled method when its assumptions fit. After Welch ANOVA, a heteroscedastic post-hoc procedure such as Games-Howell is more coherent than ordinary Tukey HSD. After Kruskal-Wallis, pairwise rank-based comparisons can be used with multiplicity correction, but their interpretation remains rank-based.
 
 The global and follow-up analyses should answer the same kind of question.
 
@@ -251,19 +203,11 @@ $$
 10.2,\quad 11.1,\quad 13.8,
 $$
 
-but the third group has much larger variance.
-
-If the research question is
+but the third group has much larger variance. If the research question is
 
 > Are the population means equal?
 
-then unequal variance does not make the question disappear.
-
-Welch ANOVA preserves the mean comparison.
-
-Replacing the analysis with Kruskal-Wallis changes the object from equality of means to equality of rank distributions. If the third group has the same center but a much wider distribution, the rank test may still react.
-
-That may be scientifically interesting.
+then unequal variance does not make the question disappear. Welch ANOVA preserves the mean comparison. Replacing the analysis with Kruskal-Wallis changes the object from equality of means to equality of rank distributions. If the third group has the same center but a much wider distribution, the rank test may still react. That may be scientifically interesting.
 
 It is simply a different claim.
 
