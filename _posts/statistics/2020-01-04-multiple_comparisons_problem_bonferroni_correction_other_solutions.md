@@ -31,28 +31,18 @@ tags:
 title: 'Multiple Testing: Bonferroni, Holm, and False Discovery Rate'
 ---
 
-The phrase “multiple comparisons problem” hides several different inferential problems.
-
-If we test many hypotheses, we need to decide what kind of error we want to control.
-
-Possible targets include:
+The phrase “multiple comparisons problem” hides several different inferential problems. If we test many hypotheses, we need to decide what kind of error we want to control. Possible targets include:
 
 - the probability of at least one false rejection;
 - the expected proportion of false rejections among all rejections;
 - the average false-positive rate per test;
 - or a decision-theoretic loss that weighs different mistakes differently.
 
-Bonferroni, Holm, and Benjamini-Hochberg do not solve the same problem with different levels of aggressiveness.
-
-They control different error criteria.
+Bonferroni, Holm, and Benjamini-Hochberg do not solve the same problem with different levels of aggressiveness. They control different error criteria.
 
 ## Family-wise error rate
 
-Suppose we test $m$ null hypotheses.
-
-Let $V$ be the number of false rejections.
-
-The family-wise error rate is
+Suppose we test $m$ null hypotheses. Let $V$ be the number of false rejections. The family-wise error rate is
 
 $$
 \operatorname{FWER}
@@ -84,11 +74,7 @@ $$
 0.642.
 $$
 
-That 64% calculation requires independence.
-
-Without independence, the exact FWER is different.
-
-The multiple-testing problem remains, but the simple formula is no longer exact.
+That 64% calculation requires independence. Without independence, the exact FWER is different. The multiple-testing problem remains, but the simple formula is no longer exact.
 
 ## Bonferroni control
 
@@ -118,11 +104,7 @@ $$
 \alpha.
 $$
 
-No independence assumption is required for this bound.
-
-That robustness is the main strength of Bonferroni.
-
-Its price is conservatism when the number of tests is large or when the dependence structure could be exploited more efficiently.
+No independence assumption is required for this bound. That robustness is the main strength of Bonferroni. Its price is conservatism when the number of tests is large or when the dependence structure could be exploited more efficiently.
 
 ## Adjusted p-values
 
@@ -146,15 +128,11 @@ $$
 p_i^{adj}\le\alpha.
 $$
 
-The threshold and adjusted-p-value views are equivalent.
-
-Adjusted p-values are often easier to report because they preserve a common significance threshold.
+The threshold and adjusted-p-value views are equivalent. Adjusted p-values are often easier to report because they preserve a common significance threshold.
 
 ## Holm's sequential procedure
 
-Holm improves on ordinary Bonferroni while retaining strong FWER control.
-
-Sort the p-values:
+Holm improves on ordinary Bonferroni while retaining strong FWER control. Sort the p-values:
 
 $$
 p_{(1)}
@@ -182,23 +160,11 @@ p_{(2)}
 \frac{\alpha}{m-1},
 $$
 
-and so on.
-
-Stop at the first non-rejection.
-
-All later hypotheses remain unrejected.
-
-Holm is uniformly at least as powerful as single-step Bonferroni while making no stronger dependence assumption for FWER control.
-
-So when strong FWER control is required, Holm is often a better default than plain Bonferroni.
+and so on. Stop at the first non-rejection. All later hypotheses remain unrejected. Holm is uniformly at least as powerful as single-step Bonferroni while making no stronger dependence assumption for FWER control. So when strong FWER control is required, Holm is often a better default than plain Bonferroni.
 
 ## False discovery rate
 
-FWER asks whether **any** false discovery occurs.
-
-In high-dimensional exploratory problems, that can be too stringent.
-
-Let
+FWER asks whether **any** false discovery occurs. In high-dimensional exploratory problems, that can be too stringent. Let
 
 $$
 R
@@ -210,9 +176,7 @@ $$
 V
 $$
 
-the number of false rejections.
-
-The false discovery proportion is
+the number of false rejections. The false discovery proportion is
 
 $$
 \operatorname{FDP}
@@ -228,9 +192,7 @@ $$
 E[\operatorname{FDP}].
 $$
 
-This is not the same as the probability that an individual rejected hypothesis is false.
-
-It is an expectation over the random set of rejections produced by the whole procedure.
+This is not the same as the probability that an individual rejected hypothesis is false. It is an expectation over the random set of rejections produced by the whole procedure.
 
 ## Benjamini-Hochberg
 
@@ -264,21 +226,11 @@ $$
 H_{(1)},\ldots,H_{(k)}.
 $$
 
-The phrase **largest index** is important.
-
-A common incorrect implementation tests each ordered p-value separately against its threshold and rejects only the positions satisfying the inequality.
-
-The correct step-up rule rejects every hypothesis up to the largest qualifying index.
+The phrase **largest index** is important. A common incorrect implementation tests each ordered p-value separately against its threshold and rejects only the positions satisfying the inequality. The correct step-up rule rejects every hypothesis up to the largest qualifying index.
 
 ## Dependence assumptions for BH
 
-Under independent p-values for the true nulls, Benjamini-Hochberg controls FDR at the target level, with the familiar bound involving the proportion of true nulls.
-
-The procedure also has control under certain forms of positive dependence.
-
-Under arbitrary dependence, the original BH guarantee does not generally hold unchanged.
-
-The Benjamini-Yekutieli procedure modifies the thresholds using
+Under independent p-values for the true nulls, Benjamini-Hochberg controls FDR at the target level, with the familiar bound involving the proportion of true nulls. The procedure also has control under certain forms of positive dependence. Under arbitrary dependence, the original BH guarantee does not generally hold unchanged. The Benjamini-Yekutieli procedure modifies the thresholds using
 
 $$
 c_m
@@ -286,25 +238,13 @@ c_m
 \sum_{i=1}^{m}\frac{1}{i}
 $$
 
-to obtain broader dependence robustness, at the cost of power.
-
-So “FDR correction works under any dependence” is too strong.
+to obtain broader dependence robustness, at the cost of power. So “FDR correction works under any dependence” is too strong.
 
 ## FWER and FDR answer different scientific questions
 
-Suppose a confirmatory clinical trial has one primary endpoint and several prespecified key secondary endpoints.
+Suppose a confirmatory clinical trial has one primary endpoint and several prespecified key secondary endpoints. A false positive anywhere in that confirmatory family may be costly. Strong FWER control can be appropriate. Now suppose a genomics experiment screens 20,000 genes to generate candidates for later validation. Allowing some false discoveries may be acceptable if the expected fraction is controlled.
 
-A false positive anywhere in that confirmatory family may be costly.
-
-Strong FWER control can be appropriate.
-
-Now suppose a genomics experiment screens 20,000 genes to generate candidates for later validation.
-
-Allowing some false discoveries may be acceptable if the expected fraction is controlled.
-
-FDR can be much more useful.
-
-The choice is not
+FDR can be much more useful. The choice is not
 
 > conservative method versus powerful method.
 
@@ -314,25 +254,13 @@ It is
 
 ## The family must be defined
 
-Multiplicity corrections apply to a **family** of hypotheses.
-
-That family is not determined automatically by software.
-
-If ten outcomes, four subgroups, three models, and several time points are all examined, which tests belong to the same inferential family depends on the scientific claims being made.
-
-Defining the family after seeing the p-values defeats much of the purpose of multiplicity control.
+Multiplicity corrections apply to a **family** of hypotheses. That family is not determined automatically by software. If ten outcomes, four subgroups, three models, and several time points are all examined, which tests belong to the same inferential family depends on the scientific claims being made. Defining the family after seeing the p-values defeats much of the purpose of multiplicity control.
 
 Confirmatory analyses should define it in advance when possible.
 
 ## Exploratory and confirmatory analyses should not be blurred
 
-Exploratory analyses can tolerate a different error structure from confirmatory claims.
-
-The problem arises when a broad exploratory search is conducted and only the smallest p-value is presented as though it came from one prespecified test.
-
-Multiplicity is then hidden rather than controlled.
-
-A transparent analysis reports the search space, the correction strategy, and which claims are confirmatory versus exploratory.
+Exploratory analyses can tolerate a different error structure from confirmatory claims. The problem arises when a broad exploratory search is conducted and only the smallest p-value is presented as though it came from one prespecified test. Multiplicity is then hidden rather than controlled. A transparent analysis reports the search space, the correction strategy, and which claims are confirmatory versus exploratory.
 
 ## Reproducible Python
 
@@ -371,9 +299,7 @@ print("Holm:", reject_holm, p_holm)
 print("BH:", reject_bh, p_bh)
 ~~~
 
-The returned adjusted p-values and rejection decisions preserve the original hypothesis order.
-
-That detail is easy to get wrong in hand-written implementations after sorting.
+The returned adjusted p-values and rejection decisions preserve the original hypothesis order. That detail is easy to get wrong in hand-written implementations after sorting.
 
 ## A transparent BH implementation
 
@@ -397,7 +323,7 @@ def benjamini_hochberg(
             "p_values must be one-dimensional."
         )
 
-    if np.any(
+if np.any(
         (p_values < 0.0)
         | (p_values > 1.0)
     ):
@@ -405,44 +331,44 @@ def benjamini_hochberg(
             "p-values must lie in [0, 1]."
         )
 
-    if not 0.0 < q < 1.0:
+if not 0.0 < q < 1.0:
         raise ValueError(
             "q must lie strictly between 0 and 1."
         )
 
-    m: int = p_values.size
+m: int = p_values.size
 
-    if m == 0:
+if m == 0:
         return np.zeros(0, dtype=bool)
 
-    order = np.argsort(p_values)
+order = np.argsort(p_values)
     sorted_p = p_values[order]
 
-    thresholds = (
+thresholds = (
         np.arange(1, m + 1)
         / m
         * q
     )
 
-    qualifying = np.flatnonzero(
+qualifying = np.flatnonzero(
         sorted_p <= thresholds
     )
 
-    reject_sorted = np.zeros(
+reject_sorted = np.zeros(
         m,
         dtype=bool,
     )
 
-    if qualifying.size > 0:
+if qualifying.size > 0:
         k: int = int(qualifying[-1])
         reject_sorted[: k + 1] = True
 
-    reject = np.zeros(
+reject = np.zeros(
         m,
         dtype=bool,
     )
 
-    reject[order] = reject_sorted
+reject[order] = reject_sorted
     return reject
 ~~~
 
@@ -450,27 +376,13 @@ The implementation deliberately rejects all ordered hypotheses up to the last qu
 
 ## Power is not the only reason to prefer one correction
 
-Multiplicity procedures can encode structure.
-
-Gatekeeping procedures test secondary hypotheses only after primary success.
-
-Hierarchical procedures exploit ordered families.
-
-Closed testing can provide strong FWER control with logical relationships among hypotheses.
-
-Weighted procedures can allocate more Type I error to more important hypotheses when weights are prespecified.
+Multiplicity procedures can encode structure. Gatekeeping procedures test secondary hypotheses only after primary success. Hierarchical procedures exploit ordered families. Closed testing can provide strong FWER control with logical relationships among hypotheses. Weighted procedures can allocate more Type I error to more important hypotheses when weights are prespecified.
 
 The number of tests alone does not determine the best correction.
 
 ## Conclusion
 
-Multiple testing is a problem of defining an error criterion across a family of hypotheses.
-
-Bonferroni controls FWER through a union bound and requires no independence assumption for that guarantee.
-
-Holm improves power while retaining strong FWER control.
-
-Benjamini-Hochberg controls the expected false discovery proportion under its dependence conditions and is aimed at a different inferential objective.
+Multiple testing is a problem of defining an error criterion across a family of hypotheses. Bonferroni controls FWER through a union bound and requires no independence assumption for that guarantee. Holm improves power while retaining strong FWER control. Benjamini-Hochberg controls the expected false discovery proportion under its dependence conditions and is aimed at a different inferential objective.
 
 The central sequence is
 
