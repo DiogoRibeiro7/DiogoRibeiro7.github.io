@@ -23,7 +23,7 @@ keywords:
 seo_description: Maryam Mirzakhani's work on simple closed geodesics, Weil-Petersson volumes, moduli spaces, earthquake flow, and Teichmuller dynamics, including the mathematics behind her 2014 Fields Medal.
 seo_title: 'Maryam Mirzakhani: Geometry and Dynamics of Moduli Spaces'
 seo_type: article
-summary: A mathematical biography of Maryam Mirzakhani focused on the work recognized by the Fields Medal: counting simple geodesics, recursion for Weil-Petersson volumes, Witten's conjecture, earthquake flow, and rigidity in moduli space.
+summary: "A mathematical biography of Maryam Mirzakhani focused on the work recognized by the Fields Medal: counting simple geodesics, recursion for Weil-Petersson volumes, Witten's conjecture, earthquake flow, and rigidity in moduli space."
 tags:
 - Biographies
 - Geometry
