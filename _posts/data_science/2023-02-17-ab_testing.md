@@ -125,13 +125,13 @@ For Bernoulli trials (e.g., conversions), the likelihood ratio after each observ
 
 - **Conversion (Success)**:
 
-  $$
+$$
   LR_n = LR_{n-1} \times \frac{p_1}{p_0}
   $$
 
 - **No Conversion (Failure)**:
 
-  $$
+$$
   LR_n = LR_{n-1} \times \frac{1 - p_1}{1 - p_0}
   $$
 
@@ -152,24 +152,24 @@ where:
 
 1. **Define Hypotheses**:
 
-   - **H₀**: The conversion rate is $$ p_0 $$.
+- **H₀**: The conversion rate is $$ p_0 $$.
    - **H₁**: The conversion rate is $$ p_1 $$.
 
 2. **Set Error Rates**:
 
-   - Choose acceptable levels for $$ \alpha $$ and $$ \beta $$.
+- Choose acceptable levels for $$ \alpha $$ and $$ \beta $$.
 
 3. **Calculate Decision Boundaries**:
 
-   - Compute $$ A $$ and $$ B $$ using the formulas provided.
+- Compute $$ A $$ and $$ B $$ using the formulas provided.
 
 4. **Collect Data Sequentially**:
 
-   - After each observation, update the likelihood ratio $$ LR_n $$.
+- After each observation, update the likelihood ratio $$ LR_n $$.
 
 5. **Apply Decision Rules**:
 
-   - If $$ LR_n \geq A $$, stop and reject H₀.
+- If $$ LR_n \geq A $$, stop and reject H₀.
    - If $$ LR_n \leq B $$, stop and accept H₀.
    - Otherwise, continue collecting data.
 
@@ -186,13 +186,13 @@ Suppose a single Bernoulli stream is tested against $p_0=0.05$ versus $p_1=0.07$
 - **Set $$ \alpha = 0.05 $$ and $$ \beta = 0.20 $$**.
 - **Calculate Boundaries**:
 
-  $$
+$$
   A = \frac{1 - 0.20}{0.05} = 16, \quad B = \frac{0.20}{1 - 0.05} \approx 0.211
   $$
 
 - **Update LR After Each Observation**:
 
-  - For a conversion: Multiply $$ LR_n $$ by $$ \frac{0.07}{0.05} = 1.4 $$.
+- For a conversion: Multiply $$ LR_n $$ by $$ \frac{0.07}{0.05} = 1.4 $$.
   - For no conversion: Multiply $$ LR_n $$ by $$ \frac{0.93}{0.95} \approx 0.9789 $$.
 
 Continue this process until $$ LR_n $$ crosses $$ A $$ or $$ B $$.
@@ -258,7 +258,7 @@ for (i in 1:n_users) {
     LR[i + 1] <- LR[i] * ((1 - p1) / (1 - p0))
   }
 
-  if (LR[i + 1] >= A) {
+if (LR[i + 1] >= A) {
     decision <- "Reject H0 (Accept H1)"
     break
   } else if (LR[i + 1] <= B) {
@@ -318,7 +318,7 @@ for (let i = 0; i < n_users; i++) {
     LR.push(LR[i] * ((1 - p1) / (1 - p0)));
   }
 
-  if (LR[i + 1] >= A) {
+if (LR[i + 1] >= A) {
     decision = "Reject H0 (Accept H1)";
     console.log(`Decision: ${decision} after ${i + 1} observations.`);
     break;
@@ -369,8 +369,8 @@ for i in range(n_users):
         LR.append(LR[i] * (p1 / p0))
     else:
         LR.append(LR[i] * ((1 - p1) / (1 - p0)))
-    
-    if LR[i + 1] >= A:
+
+if LR[i + 1] >= A:
         decision = "Reject H0 (Accept H1)"
         print(f"Decision: {decision} after {i + 1} observations.")
         break
@@ -434,9 +434,7 @@ plt.show()
 
 ## Conclusion
 
-Sequential testing offers a sophisticated approach to experimentation, particularly beneficial in environments where data is scarce or rapid decisions are necessary. By allowing continuous data evaluation and maintaining control over error rates, it strikes a balance between efficiency and statistical rigor.
-
-However, the method's complexity necessitates a solid understanding of statistical principles to implement correctly. Organizations should weigh the benefits against the potential challenges, considering factors like team expertise, infrastructure capabilities, and the specific context of their experiments.
+Sequential testing offers a sophisticated approach to experimentation, particularly beneficial in environments where data is scarce or rapid decisions are necessary. By allowing continuous data evaluation and maintaining control over error rates, it strikes a balance between efficiency and statistical rigor. However, the method's complexity necessitates a solid understanding of statistical principles to implement correctly. Organizations should weigh the benefits against the potential challenges, considering factors like team expertise, infrastructure capabilities, and the specific context of their experiments.
 
 When applied thoughtfully, sequential testing can significantly enhance the decision-making process, leading to faster insights and more effective strategies in product development and beyond.
 
@@ -446,7 +444,6 @@ When applied thoughtfully, sequential testing can significantly enhance the deci
 - **Jennison, C., & Turnbull, B. W. (2000)**. *Group Sequential Methods with Applications to Clinical Trials*. Chapman & Hall/CRC.
 - **Lan, K. K., & DeMets, D. L. (1983)**. "Discrete sequential boundaries for clinical trials". *Biometrika*, 70(3), 659-663.
 - **Whitehead, J. (1997)**. *The Design and Analysis of Sequential Clinical Trials*. Wiley.
-
 
 ## The two-arm estimand comes first
 
@@ -476,40 +473,26 @@ $$
 H_1:Deltagedelta,
 $$
 
-for a minimum worthwhile lift $delta$.
-
-Testing one rate against a historical benchmark is not equivalent to randomizing users between A and B. The latter protects the comparison from time trends and other concurrent changes under the randomization assumptions.
+for a minimum worthwhile lift $delta$. Testing one rate against a historical benchmark is not equivalent to randomizing users between A and B. The latter protects the comparison from time trends and other concurrent changes under the randomization assumptions.
 
 ## Ratio metrics and clustered users
 
-Many product metrics are not IID Bernoulli observations.
-
-Examples include:
+Many product metrics are not IID Bernoulli observations. Examples include:
 
 - revenue per user;
 - sessions nested within users;
 - multiple conversions by one user;
 - ratio metrics such as revenue / active user.
 
-The **randomization unit** should usually be the unit used for inference. Treating repeated sessions as independent observations can make uncertainty far too small.
-
-Cluster-robust, delta-method, bootstrap, or randomization-based procedures may be required depending on the metric.
+The **randomization unit** should usually be the unit used for inference. Treating repeated sessions as independent observations can make uncertainty far too small. Cluster-robust, delta-method, bootstrap, or randomization-based procedures may be required depending on the metric.
 
 ## Early stopping biases the point estimate
 
-A sequentially valid test can control Type I error and still produce a biased effect estimate conditional on stopping early.
-
-Experiments tend to stop when the observed effect is unusually large.
-
-Therefore report confidence sequences or sequentially adjusted intervals where appropriate, and avoid interpreting the stopping estimate as an unbiased estimate of long-run lift.
+A sequentially valid test can control Type I error and still produce a biased effect estimate conditional on stopping early. Experiments tend to stop when the observed effect is unusually large. Therefore report confidence sequences or sequentially adjusted intervals where appropriate, and avoid interpreting the stopping estimate as an unbiased estimate of long-run lift.
 
 ## Guardrails and novelty effects
 
-Conversion lift can coexist with worse retention, latency, complaints, or revenue quality.
-
-Define guardrail metrics and follow-up horizons before launch.
-
-A short experiment may also capture novelty or learning effects rather than steady-state behavior. Sequential efficiency does not remove the need for a meaningful minimum exposure duration.
+Conversion lift can coexist with worse retention, latency, complaints, or revenue quality. Define guardrail metrics and follow-up horizons before launch. A short experiment may also capture novelty or learning effects rather than steady-state behavior. Sequential efficiency does not remove the need for a meaningful minimum exposure duration.
 
 ## Implementation note
 
