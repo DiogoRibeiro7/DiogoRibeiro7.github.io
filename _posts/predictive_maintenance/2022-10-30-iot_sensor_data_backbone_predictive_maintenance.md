@@ -236,13 +236,13 @@ Sending every raw waveform to the cloud can be wasteful.
 A common architecture is
 
 $$
-	ext{sensor}
-ightarrow
-	ext{edge filtering/features}
-ightarrow
-	ext{event or summary}
-ightarrow
-	ext{central store/model}.
+\text{sensor}
+\rightarrow
+\text{edge filtering/features}
+\rightarrow
+\text{event or summary}
+\rightarrow
+\text{central store/model}.
 $$
 
 Keep raw data when it is required for diagnostics or model development, but define retention intentionally.
