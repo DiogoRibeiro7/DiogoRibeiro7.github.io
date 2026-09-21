@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 620" role="img" aria-labelledby="title desc">
+  <title id="title">Continued pretraining balances domain adaptation against forgetting</title>
+  <desc id="desc">A pretrained language model is continued on a mixture of domain and general text, producing a domain-adapted model that is evaluated on both domain and general held-out corpora before supervised fine-tuning.</desc>
+  <style>
+    svg { color: #0b0b0b; }
+    .diagram-surface { fill: #f7f9fa; }
+  </style>
+  <rect class="diagram-surface" x="0" y="0" width="100%" height="100%"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="45" y="220" width="230" height="100" rx="12"/>
+    <rect x="405" y="80" width="245" height="100" rx="12"/>
+    <rect x="405" y="360" width="245" height="100" rx="12"/>
+    <rect x="775" y="205" width="270" height="130" rx="12"/>
+    <rect x="1165" y="95" width="270" height="100" rx="12"/>
+    <rect x="1165" y="345" width="270" height="100" rx="12"/>
+    <path d="M275 270 H360"/>
+    <path d="M360 270 C380 270 380 130 400 130" marker-end="url(#arrow)"/>
+    <path d="M360 270 C380 270 380 410 400 410" marker-end="url(#arrow)"/>
+    <path d="M650 130 C710 130 710 245 770 245" marker-end="url(#arrow)"/>
+    <path d="M650 410 C710 410 710 295 770 295" marker-end="url(#arrow)"/>
+    <path d="M1045 270 C1100 270 1100 145 1160 145" marker-end="url(#arrow)"/>
+    <path d="M1045 270 C1100 270 1100 395 1160 395" marker-end="url(#arrow)"/>
+  </g>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="currentColor" text-anchor="middle">
+    <text x="160" y="258" font-size="24" font-weight="700">Pretrained model</text>
+    <text x="160" y="289" font-size="17">parameters θ₀</text>
+    <text x="527" y="118" font-size="23" font-weight="700">Domain corpus</text>
+    <text x="527" y="148" font-size="17">specialized unlabeled text</text>
+    <text x="527" y="398" font-size="23" font-weight="700">General replay</text>
+    <text x="527" y="428" font-size="17">sample of broad pretraining-like text</text>
+    <text x="910" y="247" font-size="23" font-weight="700">Continued pretraining</text>
+    <text x="910" y="280" font-size="18">next-token objective</text>
+    <text x="910" y="310" font-size="17">mixture weight λ</text>
+    <text x="1300" y="133" font-size="23" font-weight="700">Domain evaluation</text>
+    <text x="1300" y="164" font-size="17">perplexity + downstream tasks</text>
+    <text x="1300" y="383" font-size="23" font-weight="700">General evaluation</text>
+    <text x="1300" y="414" font-size="17">forgetting + regression tests</text>
+    <text x="750" y="545" font-size="20" font-weight="700">Domain gain without a general-domain control can hide catastrophic forgetting.</text>
+  </g>
+</svg>
