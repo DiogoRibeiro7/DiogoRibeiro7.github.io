@@ -74,7 +74,7 @@ Reader payoff: Treat Monte Carlo as an estimator-design problem and know when to
 Exclusions: A survey of MCMC algorithms, a catalogue of quasi-Monte-Carlo constructions, and repetition of the existing standalone importance-sampling article.
 -->
 
-Monte Carlo methods are often introduced with a reassuringly simple recipe: generate random draws, evaluate a function, average the results, and increase the sample size until the answer stabilises. The mathematical justification is equally familiar. If independent observations have finite variance, the central limit theorem gives an error that decreases at the rate \(N^{-1/2}\). This rate is dimension-independent in a narrow but important sense, and it explains why Monte Carlo remains useful when deterministic quadrature becomes difficult.
+Monte Carlo methods are often introduced with a reassuringly simple recipe: generate random draws, evaluate a function, average the results, and increase the sample size until the answer stabilises. The mathematical justification is equally familiar. If independent observations have finite variance, the central limit theorem gives an error that decreases at the rate $N^{-1/2}$. This rate is dimension-independent in a narrow but important sense, and it explains why Monte Carlo remains useful when deterministic quadrature becomes difficult.
 
 The same presentation can encourage a misleading computational habit. If the estimate is noisy, run more simulations. If the desired standard error is ten times smaller, run one hundred times as many. That conclusion follows only after the estimator itself has been fixed. Monte Carlo methods are not merely about how many random numbers are generated. They are about constructing a random estimator of a deterministic quantity, and two unbiased estimators of exactly the same target can have variances that differ by factors of ten, one thousand, or much more.
 
@@ -100,7 +100,7 @@ $$
 X_1,\ldots,X_N
 $$
 
-are independent draws from \(p\), the ordinary Monte Carlo estimator is
+are independent draws from $p$, the ordinary Monte Carlo estimator is
 
 $$
 \hat\mu_N
@@ -157,7 +157,7 @@ $$
 \frac{s_f}{\sqrt N},
 $$
 
-where \(s_f^2\) is the sample variance of the simulated values \(f(X_i)\).
+where $s_f^2$ is the sample variance of the simulated values $f(X_i)$.
 
 The square-root rate is both powerful and unforgiving. If the standard error must be divided by two, the sample size must be multiplied by four. Dividing error by ten requires roughly one hundred times as many draws. Dividing it by one hundred requires roughly ten thousand times as many draws. Brute-force Monte Carlo becomes expensive quickly when each function evaluation involves a PDE solve, a stochastic simulator, a financial portfolio revaluation, a reliability model or another expensive forward computation.
 
@@ -189,7 +189,7 @@ A variance-reduction method that halves variance while doubling evaluation cost 
 
 ## Control variates use a quantity whose expectation is already known
 
-The cleanest variance-reduction argument begins with correlation. Suppose \(Y=f(X)\) has unknown mean \(\mu\), while another random variable \(Z\), generated from the same draw, has known expectation
+The cleanest variance-reduction argument begins with correlation. Suppose $Y=f(X)$ has unknown mean $\mu$, while another random variable $Z$, generated from the same draw, has known expectation
 
 $$
 \mathbb E[Z]
@@ -197,7 +197,7 @@ $$
 m_Z.
 $$
 
-For any constant \(c\),
+For any constant $c$,
 
 $$
 \hat\mu_c
@@ -230,7 +230,7 @@ c^2\operatorname{Var}(Z)
 2c\operatorname{Cov}(Y,Z).
 $$
 
-Minimising with respect to \(c\) gives
+Minimising with respect to $c$ gives
 
 $$
 c^\star
@@ -253,7 +253,7 @@ $$
 \right),
 $$
 
-where \(\rho_{YZ}\) is the correlation between \(Y\) and \(Z\). A control variate therefore converts correlation with a known quantity directly into variance reduction.
+where $\rho_{YZ}$ is the correlation between $Y$ and $Z$. A control variate therefore converts correlation with a known quantity directly into variance reduction.
 
 An exact Gaussian example makes the gain visible. Let
 
@@ -365,7 +365,7 @@ $$
 24.
 $$
 
-The estimator has exactly the same expectation as the naive estimator and one quarter of its variance. With \(N\) draws,
+The estimator has exactly the same expectation as the naive estimator and one quarter of its variance. With $N$ draws,
 
 $$
 \operatorname{Var}(\hat\mu_{\text{naive}})
@@ -385,7 +385,7 @@ The naive method therefore needs four times as many samples to obtain the same v
 
 This example is modest compared with many practical applications because the correlation is not extremely close to one. In simulation models, useful control variates often come from simplified analytic approximations, conservation laws, lower-fidelity simulators or quantities whose expectation is available by symmetry. When a control tracks most of the variation in the expensive output, the gain can be dramatic.
 
-The central principle is that randomness in a Monte Carlo estimator is not automatically useful. If part of that randomness is shared with a quantity whose mean is already known, it can be subtracted rather than averaged away slowly through larger \(N\).
+The central principle is that randomness in a Monte Carlo estimator is not automatically useful. If part of that randomness is shared with a quantity whose mean is already known, it can be subtracted rather than averaged away slowly through larger $N$.
 
 ## Deliberate dependence can reduce variance
 
@@ -407,7 +407,7 @@ $$
 e-1.
 $$
 
-One ordinary estimator evaluates \(e^U\) at independent uniforms. Antithetic sampling uses each draw together with its reflection,
+One ordinary estimator evaluates $e^U$ at independent uniforms. Antithetic sampling uses each draw together with its reflection,
 
 $$
 1-U.
@@ -423,7 +423,7 @@ e^U+e^{1-U}
 }{2}.
 $$
 
-Because both \(U\) and \(1-U\) are uniformly distributed,
+Because both $U$ and $1-U$ are uniformly distributed,
 
 $$
 \mathbb E[A(U)]
@@ -431,7 +431,7 @@ $$
 e-1.
 $$
 
-The two function evaluations are negatively correlated. When \(U\) is large, \(1-U\) is small, and vice versa.
+The two function evaluations are negatively correlated. When $U$ is large, $1-U$ is small, and vice versa.
 
 For one ordinary evaluation,
 
@@ -463,7 +463,7 @@ $$
 0.0039125.
 $$
 
-A fair comparison should use the same number of function evaluations. With \(2N\) independent evaluations, ordinary Monte Carlo has variance
+A fair comparison should use the same number of function evaluations. With $2N$ independent evaluations, ordinary Monte Carlo has variance
 
 $$
 \frac{
@@ -473,7 +473,7 @@ $$
 }.
 $$
 
-With \(N\) antithetic pairs, also requiring \(2N\) evaluations, the variance is
+With $N$ antithetic pairs, also requiring $2N$ evaluations, the variance is
 
 $$
 \frac{
@@ -497,9 +497,9 @@ $$
 
 At equal evaluation cost, antithetic coupling is more than thirty times as efficient in this example.
 
-There is no universal guarantee that antithetic sampling helps. The construction works when the two evaluations tend to move in opposite directions around the target. For monotone functions of a scalar uniform variable, the reflection \(U\mapsto1-U\) often induces useful negative correlation. For irregular or non-monotone functions, the covariance may be weak or even positive. The right diagnostic is the covariance of the paired evaluations, not the fact that the method is called antithetic.
+There is no universal guarantee that antithetic sampling helps. The construction works when the two evaluations tend to move in opposite directions around the target. For monotone functions of a scalar uniform variable, the reflection $U\mapsto1-U$ often induces useful negative correlation. For irregular or non-monotone functions, the covariance may be weak or even positive. The right diagnostic is the covariance of the paired evaluations, not the fact that the method is called antithetic.
 
-Stratified sampling exploits a related idea by forcing the sample to cover parts of the domain deliberately rather than trusting random allocation. If the integration domain is partitioned into strata \(S_h\) with probabilities \(p_h\), then
+Stratified sampling exploits a related idea by forcing the sample to cover parts of the domain deliberately rather than trusting random allocation. If the integration domain is partitioned into strata $S_h$ with probabilities $p_h$, then
 
 $$
 \mu
@@ -513,7 +513,7 @@ $$
 
 Estimating each conditional expectation separately prevents random overrepresentation of some strata and underrepresentation of others. With suitable allocation, variance can fall substantially when outcomes are relatively homogeneous within strata.
 
-Conditional Monte Carlo goes further. If \(Y\) is a noisy estimator and \(Z\) is a useful conditioning variable, replace \(Y\) by
+Conditional Monte Carlo goes further. If $Y$ is a noisy estimator and $Z$ is a useful conditioning variable, replace $Y$ by
 
 $$
 \mathbb E[Y\mid Z]
@@ -659,7 +659,7 @@ $$
 
 A simulation containing one hundred million draws will therefore return the estimate zero about ninety percent of the time.
 
-Importance sampling changes the distribution from which simulations are drawn. Let the target density be the standard-normal density \(\phi(x)\), but simulate instead from
+Importance sampling changes the distribution from which simulations are drawn. Let the target density be the standard-normal density $\phi(x)$, but simulate instead from
 
 $$
 q(x)
@@ -718,7 +718,7 @@ $$
 X_i\sim N(6,1).
 $$
 
-The estimator remains unbiased, but the event now occurs with probability one half under the proposal rather than probability \(10^{-9}\).
+The estimator remains unbiased, but the event now occurs with probability one half under the proposal rather than probability $10^{-9}$.
 
 Its second moment can be calculated analytically:
 
@@ -797,12 +797,12 @@ The contrast is not subtle.
 
 | Method | Approximate draws for 10% relative standard error |
 | --- | ---: |
-| Naive Monte Carlo | \(1.01\times10^{11}\) |
-| Shifted importance sampling \(N(6,1)\) | \(687\) |
+| Naive Monte Carlo | $1.01\times10^{11}$ |
+| Shifted importance sampling $N(6,1)$ | $687$ |
 
 Both estimators target exactly the same probability. Both are unbiased. Both ultimately obey a square-root law. The difference lies in the variance constant.
 
-This is why statements such as "Monte Carlo converges at \(N^{-1/2}\)" are mathematically correct and computationally incomplete. The exponent of \(N\) does not tell us whether the constant multiplying it is \(10^{-3}\), \(1\), or \(10^9\).
+This is why statements such as "Monte Carlo converges at $N^{-1/2}$" are mathematically correct and computationally incomplete. The exponent of $N$ does not tell us whether the constant multiplying it is $10^{-3}$, $1$, or $10^9$.
 
 The zero-variance importance distribution would sample directly from the target distribution conditional on the rare event,
 
@@ -824,7 +824,7 @@ $$
 \int f(x)p(x)\,dx,
 $$
 
-importance sampling from \(q\) uses
+importance sampling from $q$ uses
 
 $$
 Y
@@ -854,7 +854,7 @@ q(x)
 \infty.
 $$
 
-This condition explains why proposal tails matter. If \(q(x)\) becomes too small in regions where \(f(x)p(x)\) remains important, the importance weights
+This condition explains why proposal tails matter. If $q(x)$ becomes too small in regions where $f(x)p(x)$ remains important, the importance weights
 
 $$
 w(x)
@@ -896,7 +896,7 @@ N_{\mathrm{eff}}
 },
 $$
 
-or, for normalised weights \(\tilde w_i\),
+or, for normalised weights $\tilde w_i$,
 
 $$
 N_{\mathrm{eff}}
@@ -923,13 +923,13 @@ w_i f(X_i)
 },
 $$
 
-is useful when the target density is known only up to a normalising constant. Unlike the basic importance-sampling estimator, it is generally biased at finite \(N\), although it can be consistent under appropriate conditions. The distinction illustrates a broader principle: Monte Carlo design is not limited to choosing between unbiased estimators. A small controlled bias can sometimes be worthwhile if it reduces variance or makes the computation possible, but the trade-off should be stated explicitly.
+is useful when the target density is known only up to a normalising constant. Unlike the basic importance-sampling estimator, it is generally biased at finite $N$, although it can be consistent under appropriate conditions. The distinction illustrates a broader principle: Monte Carlo design is not limited to choosing between unbiased estimators. A small controlled bias can sometimes be worthwhile if it reduces variance or makes the computation possible, but the trade-off should be stated explicitly.
 
 ## Variance reduction should be evaluated at equal cost
 
 The previous examples counted function evaluations because that is the dominant cost in many simulations. Real Monte Carlo algorithms have more complicated cost structures. A control variate may require an additional model evaluation. A stratified design may require preprocessing. Importance sampling may need optimisation to build the proposal. Conditional Monte Carlo may replace simulation with an expensive numerical integral.
 
-The relevant comparison is therefore not variance per draw but variance per unit of computation. If method \(A\) costs \(c_A\) per independent replication and has single-replication variance \(v_A\), while method \(B\) has cost \(c_B\) and variance \(v_B\), then at a total budget \(C\),
+The relevant comparison is therefore not variance per draw but variance per unit of computation. If method $A$ costs $c_A$ per independent replication and has single-replication variance $v_A$, while method $B$ has cost $c_B$ and variance $v_B$, then at a total budget $C$,
 
 $$
 \operatorname{Var}(\hat\mu_A)
@@ -941,7 +941,7 @@ C
 },
 $$
 
-and similarly for \(B\). The product
+and similarly for $B$. The product
 
 $$
 c_Av_A
@@ -965,7 +965,7 @@ $$
 
 is straightforward. A simulation can stop when the MCSE falls below a scientifically meaningful absolute or relative tolerance rather than after an arbitrary round number of iterations.
 
-The stopping criterion should be connected to the scale of the decision. If the estimate is approximately \(1000\), an MCSE of \(0.01\) may be pointless if model uncertainty is \(50\). Conversely, a simulation standard error of \(10\) may be unacceptable if the difference between two policies is expected to be \(5\).
+The stopping criterion should be connected to the scale of the decision. If the estimate is approximately $1000$, an MCSE of $0.01$ may be pointless if model uncertainty is $50$. Conversely, a simulation standard error of $10$ may be unacceptable if the difference between two policies is expected to be $5$.
 
 Monte Carlo uncertainty is not the same as uncertainty in the underlying scientific model. If a posterior mean is estimated by simulation, the posterior uncertainty describes uncertainty about the model parameter conditional on the model and data, while the MCSE describes numerical uncertainty from approximating that posterior expectation with finite simulation. These two layers should not be conflated.
 
@@ -1000,7 +1000,7 @@ $$
 \rho_k
 $$
 
-is an integrated autocorrelation time. Positive serial correlation reduces the effective information in \(N\) iterations. This motivates the familiar approximation
+is an integrated autocorrelation time. Positive serial correlation reduces the effective information in $N$ iterations. This motivates the familiar approximation
 
 $$
 N_{\mathrm{eff}}
@@ -1038,7 +1038,7 @@ This is especially relevant in importance sampling because poor weight distribut
 
 High dimension creates a different limitation. Plain Monte Carlo's nominal convergence rate does not contain dimension explicitly, which is often contrasted favourably with deterministic grids. The variance constant can still deteriorate badly with dimension, and importance proposals can become mismatched in exponentially many directions. A dimension-free exponent does not imply dimension-free computational difficulty.
 
-Quasi-Monte Carlo methods attack integration error differently by replacing independent random points with low-discrepancy sequences. Under smoothness and effective-dimension conditions, they can outperform the classical square-root rate. Randomised quasi-Monte Carlo restores a form of error assessment while retaining much of the low-discrepancy advantage. This is a distinct subject deserving its own treatment; it is enough here to note that \(N^{-1/2}\) is not a universal computational lower bound for numerical integration.
+Quasi-Monte Carlo methods attack integration error differently by replacing independent random points with low-discrepancy sequences. Under smoothness and effective-dimension conditions, they can outperform the classical square-root rate. Randomised quasi-Monte Carlo restores a form of error assessment while retaining much of the low-discrepancy advantage. This is a distinct subject deserving its own treatment; it is enough here to note that $N^{-1/2}$ is not a universal computational lower bound for numerical integration.
 
 ## Monte Carlo is an estimator-design problem
 
@@ -1048,13 +1048,13 @@ $$
 \mathbb E[X^4]
 $$
 
-with single-draw variance \(96\). A control variate reduced that variance to \(24\) without changing the expectation. Antithetic sampling estimated
+with single-draw variance $96$. A control variate reduced that variance to $24$ without changing the expectation. Antithetic sampling estimated
 
 $$
 \mathbb E[e^U]
 $$
 
-more than thirty times as efficiently as independent sampling at equal evaluation cost. For the six-sigma Gaussian tail, naive simulation required about \(10^{11}\) draws for 10% relative precision, while a simple shifted importance sampler required fewer than \(10^3\).
+more than thirty times as efficiently as independent sampling at equal evaluation cost. For the six-sigma Gaussian tail, naive simulation required about $10^{11}$ draws for 10% relative precision, while a simple shifted importance sampler required fewer than $10^3$.
 
 None of these improvements changed the quantity being estimated. They changed the random variable used to estimate it.
 
@@ -1064,7 +1064,7 @@ Sometimes the best method is indeed ordinary sampling. It is simple, parallel, a
 
 When simulation is expensive or the target is rare, the estimator itself becomes the main numerical object. Known expectations can become control variates. Symmetry can create antithetic pairs. Conditioning can remove unnecessary randomness. Stratification can prevent inefficient allocation. A change of measure can move computation into a rare region that naive simulation almost never visits.
 
-The \(N^{-1/2}\) law remains true for a large class of these estimators. It simply does not tell us how large \(N\) needs to be.
+The $N^{-1/2}$ law remains true for a large class of these estimators. It simply does not tell us how large $N$ needs to be.
 
 That number is controlled by variance.
 
