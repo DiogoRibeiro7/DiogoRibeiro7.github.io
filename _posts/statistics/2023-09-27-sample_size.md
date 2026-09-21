@@ -5,8 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2023-09-27'
-excerpt: Dive into the nuances of sample size in statistical analysis, challenging
-  the common belief that larger samples always lead to better results.
+excerpt: "Sample size should be derived from the estimand, design, effect size, uncertainty target, and error rates, not from a universal rule that more data are always better."
 header:
   image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
   og_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
@@ -17,215 +16,140 @@ header:
   twitter_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
 keywords:
 - Sample size
-- Statistical analysis
-- Data quality
-- Statistical accuracy
-- Experimental design
 - Statistical power
-- Hypothesis testing
-- Data sampling
 - Effect size
-- Research methodology
-seo_description: 'Why a bigger sample isn''t always better, and how data quality and experimental design shape what your analysis can support.'
-seo_title: The Myth and Reality of Sample Size in Statistical Analysis
+- Precision
+- Experimental design
+- Confidence intervals
+- Clustered data
+seo_description: "How to reason about sample size from power, effect size, precision, design effects, clustering, multiplicity, and practical constraints."
+seo_title: 'Sample Size: Power, Precision, and Design'
 seo_type: article
-subtitle: A Nuanced Perspective
+subtitle: "Power, Precision, and Design"
 tags:
 - Data Analysis
 - Sample Size
-- Model Evaluation
-title: The Myth and Reality of Sample Size in Statistical Analysis
+- Experimental Design
+title: "Sample Size: Power, Precision, and Design"
 ---
 
-![Sample 1 - The Myth and Reality of Sample Size in Statistical Analysis](/assets/images/sample_1.png){: width="320" height="126" loading="lazy"}
+![Sample 1 - Sample Size](/assets/images/sample_1.png){: width="320" height="126" loading="lazy"}
 
-The idea that a larger sample size leads to more accurate statistical analysis is a cornerstone in the field of statistics and data science. It's a principle taught in introductory courses and often cited in research papers and industry reports. The logic seems straightforward: the more data you have, the closer you get to representing the true nature of the population you're studying. This belief influences decisions in various sectors, from healthcare and manufacturing to energy and logistics. Researchers allocate resources, time, and effort to collect larger samples, all in the pursuit of accuracy.
+Sample size is not a universal measure of study quality. More observations can reduce sampling variability, but they do not repair biased measurement, selection bias, confounding, leakage, or a badly defined estimand. A very large sample can estimate the wrong quantity with great precision.
 
-However, the relationship between sample size and accuracy is not as straightforward as it may appear. This article aims to challenge this conventional wisdom and provide a more nuanced perspective. We will examine the mathematical principles that govern sample size, discuss the limitations of relying solely on large samples, and explore the importance of data quality and experimental design. By the end of this article, the goal is to equip you with a more comprehensive understanding of how sample size impacts statistical analysis, and why bigger isn't always better.
+The useful question is therefore not "How large should the sample be?" in isolation. It is "How much information is required for this estimand under this design and decision criterion?"
 
-## Key Definitions: Sample vs. Sample Space
+## Precision and the square-root law
 
-Before diving into the complexities of sample size and its impact on statistical analysis, it's essential to clarify some key terms that often get used interchangeably but have distinct meanings: "sample" and "sample space."
+For many simple estimators, standard error decreases approximately as
 
-### What is a Sample?
+$$
+\operatorname{SE}\propto \frac{1}{\sqrt n}.
+$$
 
-In statistics, a sample refers to a subset of a population that is selected for analysis. The purpose of taking a sample is to draw inferences about the larger population from which it is drawn. For example, if you're conducting a survey to understand public opinion on a particular issue, the responses from a group of participants represent your sample. The quality and representativeness of the sample are crucial for the validity of the conclusions drawn from the analysis.
-Sample space refers to the set of all possible outcomes or results that could occur in a statistical experiment. For instance, if you're flipping a coin, the sample space consists of two outcomes: heads or tails. In a medical trial, the sample space could include all possible health outcomes for patients, ranging from full recovery to no change to adverse effects. Unlike a sample, which is a subset of a population, the sample space is a theoretical construct that encompasses all conceivable outcomes.
+This means diminishing returns. To cut a standard error in half, one often needs roughly four times as many independent observations.
 
-### Why Both Matter for Accurate Statistical Analysis
+For a mean with standard deviation $\sigma$,
 
-Understanding the difference between a sample and sample space is crucial for several reasons. First, conflating the two can lead to incorrect interpretations of data. For example, if you're analyzing the efficacy of a new drug, your sample might consist of a group of patients who have taken the medication. However, the sample space would include not just those who improved but also those who experienced no change or even deteriorated. Failing to consider the entire sample space could result in a skewed understanding of the drug's effectiveness.
+$$
+\operatorname{SE}(\bar X)=\frac{\sigma}{\sqrt n}.
+$$
 
-Second, the quality of your sample is highly dependent on the comprehensiveness of your sample space. If your sample space is too narrow, you risk missing out on possible outcomes, which can lead to biased or inaccurate conclusions.
+If the goal is an interval with half-width $h$, a normal approximation gives roughly
 
-While a sample provides the data points for analysis, the sample space sets the theoretical framework within which the analysis occurs. Both are integral to the process of statistical analysis, and understanding their roles and limitations is key to achieving accurate and meaningful results.
+$$
+n\approx \left(\frac{z_{1-\alpha/2}\sigma}{h}\right)^2.
+$$
 
-## The Difference Between Precision and Accuracy
+This is a precision calculation, not a power calculation.
 
-In the discourse surrounding statistics and data analysis, the terms "precision" and "accuracy" are often used interchangeably. However, in the statistical context, these terms have distinct meanings, and understanding the difference between them is crucial for interpreting results correctly.
+## Power depends on an alternative
 
-### What is Precision?
+Power is the probability of rejecting the null under a specified alternative:
 
-Precision refers to the closeness of multiple measurements to each other. In other words, if you were to conduct the same experiment or survey multiple times, a high level of precision would mean that the results are very similar each time. Precision is about consistency and repeatability; it tells us how much the data points in a sample deviate from the mean of the sample. Mathematically, this is often quantified using the standard deviation or the standard error, which provide measures of the dispersion or spread of the data points around the mean.
+$$
+\pi(\theta)=P_\theta(\text{reject }H_0).
+$$
 
-### What is Accuracy?
+A sample-size calculation therefore needs an effect size or alternative hypothesis. Asking for 80% or 90% power without specifying the effect to be detected is incomplete.
 
-Accuracy, in contrast, refers to how close a measurement is to the true or actual value. In statistical terms, accuracy is about the closeness of the sample estimate to the true population parameter. For example, if you're measuring the average height of adults in a city, an accurate measurement would be one that is very close to the true average height of all adults in that city. Unlike precision, accuracy is not concerned with the spread of values but rather with how correct or truthful the values are.
+For a simple two-group mean comparison with common variance, the required sample size depends on the standardized effect
 
-### Why They Are Not Synonymous
+$$
+d=\frac{\mu_1-\mu_0}{\sigma},
+$$
 
-The distinction between precision and accuracy becomes crucial when interpreting the results of a statistical analysis. It's entirely possible for a study to be precise but not accurate. For instance, if you're using a biased sampling method, you might get very consistent results (high precision) that are consistently wrong (low accuracy). Conversely, a study can be accurate but not precise if the results, while close to the true value, show a lot of variability.
+along with alpha, desired power, allocation ratio, and test specification.
 
-In practical terms, a highly precise but inaccurate study could lead to consistent yet wrong conclusions, which could be misleading. On the other hand, an accurate but imprecise study might offer a glimpse of the truth but lack the reliability needed for confident decision-making.
+## Minimum detectable effect
 
-Therefore, in statistical analysis, it's not enough to aim for either precision or accuracy; both are needed for a comprehensive, reliable, and truthful understanding of the data. Understanding the difference between these two concepts is essential for anyone engaged in research, data analysis, or interpretation of statistical results.
+Sometimes the design starts from a fixed budget or feasible sample size. Then the more honest question is the minimum detectable effect rather than pretending the sample can be chosen freely.
 
-## The Mathematics of Sample Size
+A minimum detectable effect should be interpreted substantively. A study can have enough power to detect a tiny effect that has no practical relevance, or too little power to detect the smallest effect that would actually change a decision.
 
-When discussing the impact of sample size on statistical analysis, it's crucial to examine the mathematical principles that govern this relationship. One of the key formulas that statisticians use to understand the variability in a sample is the formula for standard error. Additionally, it's important to recognize the concept of diminishing returns when increasing sample size, as it challenges the notion that simply adding more data points will linearly improve the accuracy of the study.
+## Larger samples make trivial effects significant
 
-### The Formula for Standard Error
+With sufficiently large n, very small deviations from a null model can produce small p-values. Statistical significance therefore becomes easier as sample size increases.
 
-The standard error is a measure that quantifies the variability or dispersion of a sample statistic, such as the sample mean, around the population parameter. The formula for calculating the standard error of the sample mean is:
+This is not a defect of hypothesis testing; it is a reminder to report effect sizes and uncertainty. Practical importance is a scientific or decision question, not a p-value threshold.
 
-$$\text{Standard Error (SE)} = \frac{\sigma}{\sqrt{n}}$$
+## Dependence reduces effective information
 
-Here,σ represents the population standard deviation, and n is the sample size. The standard error gives us an idea of how much the sample mean is expected to vary from the true population mean. A smaller standard error implies that the sample mean is a more accurate estimate of the population mean.
+One thousand independent observations and one thousand highly correlated observations do not contain the same information.
 
-Diminishing Returns in Increasing Sample Size
-While it might seem logical to assume that continually increasing the sample size will proportionally decrease the standard error, the formula shows that this is not the case. The standard error is inversely proportional to the square root of the sample size $$\sqrt{n}$$. This means that to halve the standard error, you would need to quadruple the sample size.
+For clustered data, a common approximation uses the design effect
 
-For example, if you start with a sample size of 100, you would need to increase it to 400 to halve the standard error, then to 1600 to halve it again. This demonstrates the concept of diminishing returns: each incremental increase in sample size yields a smaller reduction in standard error.
+$$
+DE=1+(m-1)\rho,
+$$
 
-The principle of diminishing returns is especially important in practical applications where resources such as time and money are limited. It suggests that beyond a certain point, the benefit gained from increasing the sample size may not justify the additional resources required.
+where m is average cluster size and $\rho$ the intraclass correlation. The effective sample size is then roughly
 
-While increasing the sample size does reduce the standard error, the relationship is governed by the square root function, leading to diminishing returns. Understanding this mathematical nuance is essential for making informed decisions about sample size in research and data analysis.
+$$
+n_{\mathrm{eff}}\approx \frac{n}{DE}.
+$$
 
-## When Large Samples Can't Save You
+Repeated measures, households, hospitals, schools, devices, and spatial units all require attention to dependence.
 
-The allure of large samples often creates a false sense of security, leading to the assumption that a bigger sample size will automatically correct for any shortcomings in the data or methodology. However, this is far from the truth. Even with a large sample, certain statistical rules and assumptions must be met for the analysis to be valid. Violating these assumptions can lead to misleading or incorrect conclusions, regardless of how large the sample is.
+## Attrition and missing data
 
-### Statistical Rules and Assumptions for Valid Analysis
+Planned sample size should account for expected loss to follow-up, but merely inflating n does not solve informative missingness.
 
-Statistical tests often come with a set of underlying assumptions that must be satisfied for the test results to be valid. Some of the most common assumptions include:
+If dropout depends on prognosis, treatment response, or unobserved outcomes, the missingness mechanism can bias estimates. The design should include retention strategies and a principled analysis plan, not only an attrition multiplier.
 
-* **Normality:** The data should be normally distributed, especially for small samples.
-* **Homoscedasticity:** The variance of the errors should be constant across all levels of the independent variable.
-* **Independence:** The observations should be independent of each other.
+## Multiple outcomes and subgroup analyses
 
-### Large Samples Can't Correct Violations
+If a study has several primary outcomes, many treatment arms, or planned subgroup analyses, the sample-size problem changes. Multiplicity can reduce power after error-rate control, while interaction effects often require much larger samples than main effects.
 
-Even with a large sample size, violating these assumptions can lead to skewed or misleading results. For instance, if your data is not normally distributed, using statistical tests that assume normality can lead to incorrect inferences. Similarly, if the data violates the assumption of homoscedasticity, the results may underestimate or overestimate the true effect size.
+A design powered for an overall treatment effect may be severely underpowered for heterogeneity of treatment effect.
 
-### Examples of Common Violations
+## Prediction models have different requirements
 
-1. **Non-Normality:** In medical research, variables like blood pressure or cholesterol levels may not be normally distributed in the population. Using a large sample won't correct this issue, and specialized non-parametric tests may be required.
+Sample-size planning for prediction is not the same as planning a two-sample test. Relevant quantities include outcome prevalence, number of candidate parameters, expected signal strength, shrinkage, calibration, and the intended validation strategy.
 
-2. **Heteroscedasticity:** In economic studies, the variance of income or expenditure might change with the level of income, violating the assumption of constant variance. A large sample size won't automatically correct for this.
+Rules such as "ten events per variable" are too crude to serve as universal design criteria. Modern prediction-model planning should be based on expected model complexity and target performance rather than a single heuristic.
 
-3. **Lack of Independence:** In longitudinal studies, observations from the same individual at different time points are not independent. A large sample size won't resolve this issue, and specialized statistical methods like mixed-effects models may be needed.
+## External validity is not bought with n
 
-While a large sample size offers many advantages, it is not a panacea for all statistical challenges. Understanding the underlying assumptions and limitations of statistical methods is crucial for conducting valid and reliable research. Even with a large sample, failing to meet these assumptions can lead to erroneous conclusions, underscoring the importance of a well-designed experimental approach.
+A huge convenience sample can be less informative about a target population than a smaller probability sample. Representativeness depends on sampling design and transportability assumptions.
 
-## The Pitfalls of Large Sample Sizes
+If the sample excludes important subpopulations, increasing n within the same biased frame only estimates the restricted population more precisely.
 
-The quest for larger sample sizes is often driven by the belief that more data will invariably lead to better results. While it's true that larger samples can provide more robust estimates, they also come with their own set of challenges and pitfalls. Two of the most notable issues are the risk of overfitting and the phenomenon of detecting statistically significant but practically irrelevant differences.
+## Simulation is often the right tool
 
-### The Risk of Overfitting
+When the design includes clustering, censoring, nonlinearity, adaptive rules, complex estimators, or several endpoints, analytic formulas can become unreliable or unavailable.
 
-Overfitting occurs when a statistical model captures not just the underlying trend in the data but also the random noise. In essence, the model becomes too tailored to the sample data, reducing its ability to generalize to new or unseen data. This is especially problematic in machine learning and predictive modeling, where the goal is often to make accurate predictions on new data.
+A simulation-based design can generate data under plausible parameter values, apply the planned analysis, and estimate operating characteristics such as power, bias, interval width, and coverage.
 
-$$\text{Overfitting:} \quad \text{Model captures both signal and noise, reducing generalizability}$$
+## Conclusion
 
-Large sample sizes can exacerbate the risk of overfitting because they provide more data points, making it easier for the model to fit the noise. While techniques like cross-validation can help mitigate this risk, it's important to be aware that a large sample size is not a safeguard against overfitting.
+Sample size should follow from the inferential target. The central ingredients are effect size, precision, alpha, power, dependence, missingness, model complexity, multiplicity, and the intended decision.
 
-### Statistically Significant but Practically Irrelevant Differences
-
-Another pitfall of large sample sizes is the detection of differences that are statistically significant but practically irrelevant. In a large sample, even tiny differences between groups can become statistically significant simply because of the sheer volume of data. However, statistical significance does not necessarily imply practical or clinical significance.
-
-$$\text{Statistical Significance} \neq \text{Practical Significance}$$
-
-For example, in a medical trial with thousands of participants, a medication might show a statistically significant reduction in blood pressure compared to a placebo. However, if the actual reduction is minuscule, say 1 mm Hg, the result, while statistically significant, may not be clinically relevant.
-
-While large sample sizes offer the promise of more accurate and reliable results, they come with their own set of challenges that researchers must navigate carefully. Overfitting and the detection of statistically significant but practically irrelevant differences are two key pitfalls that can compromise the integrity of research findings. Being aware of these issues is crucial for conducting robust and meaningful statistical analyses, underscoring the need for a balanced and thoughtful approach to sample size.
-
-## The Importance of Data Quality
-
-In the pursuit of statistical rigor, the focus often shifts overwhelmingly towards increasing the sample size. While a larger sample can offer more robust estimates and greater statistical power, it is not a cure-all solution. One critical aspect that can easily be overshadowed by the allure of large samples is data quality. No matter how large the sample size, biases or inaccuracies in the data can significantly compromise the validity of the analysis.
-
-### Larger Sample Size Doesn't Correct for Biases or Inaccuracies
-
-A common misconception is that a larger sample size will "average out" any biases or inaccuracies present in the data. However, this is not the case. Biases in data collection, measurement errors, or any form of systematic inaccuracies are not corrected by simply increasing the number of data points.
-
-$$\text{Larger Sample Size} \nRightarrow \text{Correction for Biases or Inaccuracies}$$
-
-For instance, if a survey has a selection bias where a particular group is overrepresented, increasing the sample size will only amplify this bias. Similarly, if the data contains measurement errors, a larger sample size will not correct these errors but may instead propagate them, leading to misleading conclusions.
-
-### The Concept of "Garbage In, Garbage Out"
-
-The principle of "garbage in, garbage out" succinctly captures the essence of the importance of data quality. This concept posits that flawed or poor-quality input will inevitably produce flawed or poor-quality output, regardless of the analytical methods employed.
-
-$$\text{"Garbage In, Garbage Out": Flawed Input} \Rightarrow \text{Flawed Output}$$
-
-In the context of statistical analysis, if the data is biased, incomplete, or inaccurate, then the results, too, will be biased, incomplete, or inaccurate. No amount of statistical maneuvering or large sample sizes can turn poor-quality data into reliable findings.
-
-The quality of the data is as important, if not more so, than the quantity represented by the sample size. While large samples can offer many advantages, they cannot correct for poor data quality. Understanding the limitations of large sample sizes and the paramount importance of data quality is essential for conducting meaningful and valid statistical analyses. Therefore, alongside considerations of sample size, equal attention must be given to ensuring the quality and integrity of the data being analyzed.
-
-## The Role of Experimental Design
-
-In research and data analysis, the importance of a well-designed experiment cannot be overstated. While much attention is often given to the size of the sample, the design of the experiment itself is a critical factor that directly impacts the validity and reliability of the results. A poorly designed experiment can introduce biases and errors that no amount of data or sophisticated statistical techniques can correct.
-
-### A Well-Designed Experiment is Crucial for Accurate Results
-
-A well-designed experiment serves as the foundation upon which reliable and valid conclusions can be drawn. It ensures that variables are properly controlled or accounted for, that the sample is representative of the population, and that the data collection methods are both accurate and consistent.
-
-$$\text{Well-Designed Experiment} \Rightarrow \text{Controlled Variables, Representative Sample, Accurate Data Collection}$$
-
-A well-planned design minimizes the risk of confounding variables, selection biases, and measurement errors, thereby enhancing the integrity of the findings. It sets the stage for the data to be both robust and generalizable, making it a cornerstone of any credible research endeavor.
-
-### Common Flaws in Experimental Design
-
-Even with a large sample size, certain flaws in experimental design can significantly compromise the quality of the research. Some common flaws include:
-
-1. **Confounding Variables:** Failure to control for variables that can affect the outcome can lead to spurious results.
-2. **Selection Bias:** Non-random or unrepresentative sampling can introduce biases that skew the results.
-3. **Measurement Errors:** Inaccurate instruments or flawed data collection methods can introduce systematic errors into the data.
-
-### Flaws That Can't Be Corrected by Increasing Sample Size
-
-Simply increasing the sample size cannot correct these flaws. For instance, if there is a selection bias in the sample, making the sample larger will not make it more representative of the population. Similarly, if there are confounding variables that have not been controlled for, their impact will not be diminished by a larger sample size.
-
-$$\text{Increasing Sample Size} \nRightarrow \text{Correction for Design Flaws}$$
-
-The design of the experiment is a critical factor that directly influences the quality of the research. While a large sample size offers many advantages, it is not a substitute for a well-designed experiment. Researchers must pay close attention to the design aspects, from controlling variables to ensuring a representative sample and accurate measurements, to conduct research that is both valid and reliable.
-
-## Real-world Implications
-
-The notion that a larger sample size invariably leads to better insights is pervasive across various sectors, from healthcare and economics to technology and social sciences. However, real-world examples often demonstrate that this is not always the case. The financial and time costs associated with unnecessarily large sample sizes can be substantial, making it crucial to weigh the benefits against the drawbacks.
-
-### Examples from Various Sectors
-
-1. **Healthcare:** In a clinical trial for a new drug, a large sample size was used to detect even the smallest effects. However, the results, while statistically significant, showed only a negligible improvement in patient outcomes, raising questions about the drug's practical utility.
-
-2. **Finance:** In stock market analysis, using a large dataset spanning several decades may seem advantageous. However, such an approach can overlook market regime changes, leading to investment strategies that are not adaptive to current conditions.
-
-3. **Technology:** In machine learning, using a massive dataset for training can sometimes lead to overfitting, where the model performs exceptionally well on the training data but poorly on new, unseen data.
-
-### Financial and Time Costs
-
-Conducting research with a large sample size comes with its own set of challenges, most notably the financial and time costs. Collecting, storing, and analyzing large volumes of data require significant resources. In sectors like healthcare, where clinical trials involve human subjects, the costs can be astronomical. Additionally, the time required to collect and analyze the data can be extensive, delaying the time-to-insight and potentially the time-to-market for new products or therapies.
-
-While large sample sizes offer the allure of more robust and statistically significant results, they are not without their pitfalls. From the risk of detecting statistically significant but practically irrelevant differences to the financial and time costs involved, a larger sample size is not always better. Real-world examples across various sectors underscore the importance of a balanced approach that considers not just the sample size but also the quality of the data and the design of the experiment.
-
-## Final Thoughts
-
-The quest for larger sample sizes in statistical analysis is often driven by the well-intentioned aim of achieving more accurate and reliable results. However, as this article has explored, a larger sample size is not a panacea for the complexities and challenges inherent in statistical research. From the risk of overfitting to the detection of statistically significant but practically irrelevant differences, large samples come with their own set of pitfalls. They cannot correct for biases, inaccuracies, or flaws in experimental design, emphasizing the principle of "garbage in, garbage out."
-
-The quality of the data and the design of the experiment are equally, if not more, important than the sheer size of the sample. A well-designed experiment serves as the bedrock of valid and reliable research, setting the stage for data that is both robust and generalizable. Financial and time costs associated with large samples further underscore the need for a more balanced and thoughtful approach.
-
-While the allure of large sample sizes is understandable, a balanced approach that takes into account the quality of the data, the integrity of the experimental design, and the practical implications is essential for conducting meaningful and valid statistical analyses.
+More data are useful when they add relevant information. They are not a substitute for good measurement or good design.
 
 ## References
 
-- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Lawrence Erlbaum.
-- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences*.
+- Lakens, D. (2022). Sample Size Justification.
+- Riley, R. D., et al. (2020). Calculating the sample size required for developing a clinical prediction model.
+- van Belle, G. (2008). *Statistical Rules of Thumb*.
