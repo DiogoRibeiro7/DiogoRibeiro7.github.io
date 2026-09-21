@@ -4,9 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2023-12-30'
-excerpt: A comprehensive comparison of Value at Risk (VaR) and Expected Shortfall
-  (ES) in financial risk management, with a focus on their performance during volatile
-  and stable market conditions.
+excerpt: "Value at Risk is a quantile of a loss distribution. Expected Shortfall averages the tail beyond that quantile. Both are model-dependent and require careful horizon, sign, and backtesting conventions."
 header:
   image: /assets/images/headers/photo-microscope.jpg
   og_image: /assets/images/headers/photo-microscope.jpg
@@ -16,148 +14,199 @@ header:
   teaser: /assets/images/headers/photo-microscope.jpg
   twitter_image: /assets/images/headers/photo-microscope.jpg
 keywords:
-- Value at risk
-- Expected shortfall
-- Financial risk management
-- Risk assessment models
-- Market volatility
-- Financial crisis
-- Var vs es
-- Risk modeling
+- Value at Risk
+- Expected Shortfall
 - Tail risk
-- Risk metrics
-- Python
+- Backtesting
+- Financial risk
+- Quantile risk
 permalink: '/data-science/value_risk_expected_shortfall/'
 redirect_from:
 - '/data science/value_risk_expected_shortfall/'
-seo_description: Value at Risk (VaR) and Expected Shortfall (ES) compared as risk models, and how each performs under different market conditions.
-seo_title: 'VaR vs Expected Shortfall: A Data-Driven Analysis'
+seo_description: "A rigorous comparison of Value at Risk and Expected Shortfall, including definitions, coherence, horizon scaling, estimation, and backtesting."
+seo_title: "Value at Risk and Expected Shortfall: Quantiles and Tail Risk"
 seo_type: article
 tags:
 - Finance
 - Risk Management
 - Python
-title: 'Comparing Value at Risk (VaR) and Expected Shortfall (ES): A Data-Driven Analysis'
+title: "Value at Risk and Expected Shortfall: Quantiles and Tail Risk"
 ---
 
-## Risk Calculation Models: Value at Risk (VaR) vs. Expected Shortfall (ES)
+Value at Risk and Expected Shortfall summarize different parts of a loss distribution. Their usefulness depends on consistent sign conventions, horizon definitions, estimation methods, and validation.
 
-Before the financial crisis of 2008, financial institutions predominantly used Value at Risk (VaR) to calculate minimum capital requirements for market risk. However, the crisis revealed significant deficiencies in this approach. Many institutions lacked the capital buffers necessary to withstand severe market shocks, prompting regulatory bodies to reassess risk management frameworks. In response, the Basel Committee on Banking Supervision introduced the Fundamental Review of the Trading Book (FRTB), advocating a shift from VaR to Expected Shortfall (ES) to provide a more robust risk measurement.
+Let $L$ denote portfolio loss, with larger positive values meaning worse outcomes.
 
-ES measures average losses exceeding the VaR level, offering a more comprehensive view of potential losses under adverse market conditions. This article compares VaR and ES, highlighting their strengths and weaknesses through the lens of the 2008 financial crisis and the more stable market environment of 2017.
+## Value at Risk
 
-## Defining Value at Risk (VaR) and Expected Shortfall (ES)
-
-### Value at Risk (VaR)
-
-VaR quantifies the maximum potential loss over a specified time period at a given confidence level. For example, a 10-day VaR at the 95% confidence level answers the question: "What is the maximum loss amount that the portfolio will not surpass over a 10-day period with a probability of 95%?"
-
-Mathematically, VaR is the $$1 - \alpha$$ percentile of the loss distribution:
+At confidence level $\alpha$, VaR is the $\alpha$-quantile of the loss distribution,
 
 $$
-\text{VaR}_{\alpha} = F_X^{-1}(1 - \alpha)
+\operatorname{VaR}_\alpha(L)
+=
+\inf\{\ell:P(L\le \ell)\ge \alpha\}.
 $$
 
-where $$X$$ is a random variable representing losses, $$F_X$$ is the cumulative distribution function of losses over the given period, and $$\alpha$$ is the confidence level. In the distribution, the right tail represents the maximum potential loss, while the left tail indicates negative returns (earnings).
+A 99% one-day VaR of EUR 1 million means that, under the model used to construct the loss distribution, losses exceed EUR 1 million on about 1% of days.
 
-### Expected Shortfall (ES)
+It does not mean EUR 1 million is the maximum possible loss.
 
-Expected Shortfall (ES) measures the expected loss when losses exceed the VaR threshold. In other words, it estimates the average loss beyond the VaR percentile, providing insight into the severity of losses in the tail of the distribution. ES is mathematically defined as:
+## Expected Shortfall
+
+Expected Shortfall describes losses in the tail beyond VaR.
+
+For a continuous distribution,
+
 $$
-\text{ES}_{\alpha} = \mathbb{E}[X | X > \text{VaR}_{\alpha}]
+\operatorname{ES}_\alpha(L)
+=
+E[L\mid L\ge \operatorname{VaR}_\alpha(L)].
 $$
-where $$\mathbb{E}$$ denotes the expected value. ES thus accounts for the risk of extreme losses, offering a more comprehensive risk assessment than VaR.
 
-## Limitations and Risks of VaR and ES
+A more general quantile-based definition is
 
-Both VaR and ES have limitations, primarily due to their reliance on the underlying loss distribution model, which can be based on historical data or statistical distributions (e.g., normal distribution). Some key considerations include:
+$$
+\operatorname{ES}_\alpha(L)
+=
+\frac{1}{1-\alpha}
+\int_\alpha^1
+\operatorname{VaR}_u(L)\,du.
+$$
 
-- **Tail Risk Estimation:** Using a normal distribution may underestimate tail risks, while historical data might not adequately represent future market conditions, particularly extreme events.
-- **Model Assumptions:** Accurate risk measurement depends on the validity of model assumptions. Misestimating the distribution of returns can lead to incorrect risk assessments.
-- **Scope of Risk:** VaR and ES quantify market risk but do not account for other risks such as liquidity, operational, and model risk. A comprehensive risk management approach should incorporate multiple risk measures and frameworks.
+This remains well defined when the loss distribution has atoms or ties.
 
-## Case Study: VaR and ES During Different Market Conditions
+## Why ES is different
 
-To illustrate the differences between VaR and ES, we compare their performance during two distinct market periods:
+VaR identifies a threshold. It does not describe how bad losses are after the threshold is crossed.
 
-1. **Financial Crisis (April 2008 - April 2009):** A period marked by high volatility and severe market stress.
-2. **Stable Market (January 2017 - December 2017):** A period characterized by low volatility and steady market growth due to quantitative easing.
+Two portfolios can have the same 99% VaR and very different tail severity. ES distinguishes them by averaging deeper tail losses.
 
-### Visual Analysis
+Expected Shortfall is also coherent under standard conditions, including subadditivity, whereas VaR need not be subadditive for arbitrary loss distributions.
 
-- **2008 Financial Crisis:** The DAX 30 index experienced rapid declines and significant daily swings, with daily returns occasionally dropping as much as -7%.
-- **2017 Stable Market:** The index showed steady growth with relatively low volatility, and daily returns fluctuated within a narrow range around zero.
+That does not make ES assumption-free.
 
-### Computational Analysis
+## Estimation methods
 
-We will calculate the VaR and ES for a portfolio with an initial value of <span class="tex2jax_ignore">$10,000</span> over a 10-day holding period at a 95% confidence level. The steps involve:
+Common approaches include:
 
-1. Calculating the daily return and daily loss.
-2. Estimating the 95th percentile of the loss distribution for VaR.
-3. Calculating ES by averaging the losses exceeding the VaR threshold.
-4. Scaling the one-day risk measures to a 10-day period assuming a normal distribution of returns.
+- historical simulation
+- parametric models
+- filtered historical simulation
+- Monte Carlo simulation
+- extreme-value methods for tails
 
-### Results and Insights
+Each produces a different estimated loss distribution.
 
-- **2008 Financial Crisis:** 
-  - **Expected Return:** -<span class="tex2jax_ignore">$196.59</span>
-  - **VaR (95%):** <span class="tex2jax_ignore">$1,366.41</span>
-  - **ES:** <span class="tex2jax_ignore">$1,841.86</span>
-  - **Interpretation:** High volatility led to substantial potential losses. ES provided a more comprehensive estimate, indicating the average loss beyond the VaR threshold.
+Historical simulation uses observed historical returns directly but assumes the historical window is relevant to current risk.
 
-- **2017 Stable Market:**
-  - **Expected Return:** <span class="tex2jax_ignore">$43.01</span>
-  - **VaR (95%):** <span class="tex2jax_ignore">$354.74</span>
-  - **ES:** <span class="tex2jax_ignore">$423.22</span>
-  - **Interpretation:** Lower volatility resulted in smaller potential losses. Both VaR and ES values were closer, reflecting a more stable environment.
+Parametric methods can be efficient if the model is credible, but Gaussian assumptions can badly understate skewness and heavy tails.
 
-### Conclusion
+## The old code problem: cumulative wealth is not one-day loss
 
-The comparison demonstrates that while both VaR and ES are valuable tools for risk assessment, ES provides a more detailed view of tail risks by considering the severity of losses beyond the VaR threshold. During volatile periods like the 2008 financial crisis, ES offers greater insights into potential losses, while VaR provides a baseline measure. In stable markets, both measures converge, indicating lower overall risk.
+A common implementation error is to generate daily returns, compound them into a cumulative portfolio path, and then calculate
 
-## Python Code: Calculating VaR and ES
+$$
+V_0-V_t
+$$
 
-Below is a Python code snippet that calculates the 10-day VaR and ES at the 95% confidence level for a simulated portfolio using historical returns.
+for every date as if those were independent one-day losses.
 
-```python
+They are not. Those values are cumulative path losses at different horizons.
+
+For one-day historical VaR, the loss series should correspond to one-day portfolio P&L or returns.
+
+## A correct simple historical example
+
+~~~python
+from __future__ import annotations
+
+from collections.abc import Sequence
+
 import numpy as np
-import pandas as pd
+from numpy.typing import NDArray
 
-# Simulated daily returns (e.g., historical data)
-np.random.seed(42)
-daily_returns = np.random.normal(0, 0.02, 252)  # 252 trading days in a year
 
-# Portfolio initial value
-initial_value = 10000
+def var_es(
+    returns: Sequence[float],
+    portfolio_value: float,
+    confidence: float = 0.99,
+) -> tuple[float, float]:
+    """Estimate historical one-period VaR and ES from return observations."""
+    if not 0.0 < confidence < 1.0:
+        raise ValueError("confidence must be between 0 and 1")
+    if portfolio_value <= 0:
+        raise ValueError("portfolio_value must be positive")
 
-# Calculate daily portfolio values
-daily_portfolio_values = initial_value * (1 + daily_returns).cumprod()
+    r: NDArray[np.float64] = np.asarray(returns, dtype=float)
+    if r.ndim != 1 or r.size < 2:
+        raise ValueError("returns must be a one-dimensional sample")
 
-# Calculate daily losses
-daily_losses = initial_value - daily_portfolio_values
+    # Positive values represent losses.
+    losses = -portfolio_value * r
 
-# 1-day VaR at 95% confidence level
-confidence_level = 0.95
-var_95 = np.percentile(daily_losses, 100 * (1 - confidence_level))
+    var = float(np.quantile(losses, confidence))
+    tail = losses[losses >= var]
+    es = float(np.mean(tail))
 
-# Expected Shortfall (ES) - average loss beyond VaR
-es_95 = daily_losses[daily_losses > var_95].mean()
+    return var, es
+~~~
 
-# Scaling to 10-day VaR and ES assuming normal distribution
-holding_period = 10
-var_95_10day = var_95 * np.sqrt(holding_period)
-es_95_10day = es_95 * np.sqrt(holding_period)
+The sign convention is explicit and the horizon of the loss data matches the reported metric.
 
-print(f"1-Day VaR (95%): ${var_95:.2f}")
-print(f"1-Day ES (95%): ${es_95:.2f}")
-print(f"10-Day VaR (95%): ${var_95_10day:.2f}")
-print(f"10-Day ES (95%): ${es_95_10day:.2f}")
-```
+## Horizon scaling
 
-### Explanation of the Code
+The square-root-of-time rule,
 
-The code simulates daily returns using a normal distribution. It calculates the portfolio's daily losses based on these returns. The 1-day VaR and ES at a 95% confidence level are calculated using the loss distribution. To obtain 10-day VaR and ES, the daily measures are scaled using the square root of the holding period, assuming a normal distribution.
+$$
+\sigma_h\approx \sqrt h\,\sigma_1,
+$$
 
-### Conclusion
+comes from independent, identically distributed increments with finite variance.
 
-By providing insights into both maximum potential losses (VaR) and the severity of tail risks (ES), this analysis underscores the importance of incorporating ES into risk management strategies, particularly in volatile market conditions. However, careful consideration of model assumptions and input data is crucial for accurate risk measurement.
+Scaling VaR or ES by $\sqrt h$ is therefore not universally valid. Volatility clustering, serial dependence, nonlinear portfolios, jumps, and changing positions can all invalidate it.
+
+A direct multi-day simulation is often preferable.
+
+## Backtesting VaR
+
+If a model reports 99% VaR, exceedances should occur roughly 1% of the time under correct unconditional calibration.
+
+But counting exceedances is not enough. Exceedances should also not cluster systematically.
+
+Coverage and independence tests therefore examine different failure modes.
+
+## Backtesting ES
+
+ES is harder to backtest because it concerns the magnitude of tail losses, not only threshold exceedances.
+
+Modern regulatory frameworks use joint or related testing procedures because VaR identifies the tail region over which ES is interpreted.
+
+## Stress testing is complementary
+
+VaR and ES summarize a modeled distribution. Stress testing asks what happens under specified severe scenarios.
+
+A portfolio can have acceptable model-based VaR and still be vulnerable to liquidity shocks, basis breakdowns, concentration, or structural market changes not represented in the estimated distribution.
+
+Risk management therefore needs both statistical tail measures and scenario analysis.
+
+## Regulatory context
+
+The Basel market-risk framework moved from VaR toward Expected Shortfall for internal-model capital because ES better captures the severity of tail losses and has more desirable aggregation properties. That policy change does not imply that ES eliminates model risk.
+
+## Conclusion
+
+VaR answers:
+
+> Where does the tail begin?
+
+Expected Shortfall answers:
+
+> How severe are losses once we are in the tail?
+
+Both depend on the loss model, time horizon, portfolio dynamics, and validation procedure. The most important implementation discipline is to define the loss variable clearly and keep the estimation horizon consistent with the risk measure being reported.
+
+## References
+
+- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent Measures of Risk.
+- Basel Committee on Banking Supervision. Fundamental Review of the Trading Book.
+- McNeil, A. J., Frey, R., & Embrechts, P. (2015). *Quantitative Risk Management*.
