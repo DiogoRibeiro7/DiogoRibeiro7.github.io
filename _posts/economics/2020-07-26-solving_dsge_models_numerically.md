@@ -36,11 +36,7 @@ tags:
 title: 'Solving DSGE Models Numerically: Perturbation and Global Methods'
 ---
 
-A dynamic stochastic general equilibrium model is not "solved" by evaluating its equations at a few future values.
-
-The numerical task is to recover functions that map the state of the economy into decisions.
-
-If the state is
+A dynamic stochastic general equilibrium model is not "solved" by evaluating its equations at a few future values. The numerical task is to recover functions that map the state of the economy into decisions. If the state is
 
 $$
 s_t,
@@ -54,9 +50,7 @@ c_t=g_c(s_t),
 k_{t+1}=g_k(s_t),
 $$
 
-together with laws of motion for the exogenous states.
-
-That distinction matters because a piece of code can satisfy one Euler equation at one pair of points without solving the dynamic model.
+together with laws of motion for the exogenous states. That distinction matters because a piece of code can satisfy one Euler equation at one pair of points without solving the dynamic model.
 
 The earlier version of this article made exactly that mistake. It called a root finder on a static expression "first-order perturbation" and called a forward numerical derivative "finite-difference solution." Neither operation computes the policy functions of a DSGE model.
 
@@ -177,11 +171,7 @@ E_t
 \right].
 $$
 
-A correct numerical solution should make the Euler-equation residual small over the region where the policy will be used.
-
-That residual is a diagnostic.
-
-It is not, by itself, a solution algorithm.
+A correct numerical solution should make the Euler-equation residual small over the region where the policy will be used. That residual is a diagnostic. It is not, by itself, a solution algorithm.
 
 ## Deterministic steady state
 
@@ -231,11 +221,7 @@ c^\ast
 \delta k^\ast.
 $$
 
-The steady state is important for both local and global algorithms.
-
-Perturbation expands the solution around it.
-
-A global method often uses it to define a sensible computational domain.
+The steady state is important for both local and global algorithms. Perturbation expands the solution around it. A global method often uses it to define a sensible computational domain.
 
 ## What perturbation actually means
 
@@ -245,9 +231,7 @@ $$
 F(s_t,s_{t+1},\varepsilon_{t+1};\sigma)=0
 $$
 
-collect the equilibrium conditions, where $\sigma$ scales shock size.
-
-A perturbation method treats the equilibrium policy function as an unknown smooth function of the state and shock scale and computes derivatives of that function around the deterministic steady state,
+collect the equilibrium conditions, where $\sigma$ scales shock size. A perturbation method treats the equilibrium policy function as an unknown smooth function of the state and shock scale and computes derivatives of that function around the deterministic steady state,
 
 $$
 (s^\ast,\sigma=0).
@@ -263,29 +247,15 @@ A\hat s_t
 B\varepsilon_{t+1},
 $$
 
-where hats denote deviations from steady state, often in logs.
+where hats denote deviations from steady state, often in logs. The matrices $A$ and $B$ are not obtained by calling a generic scalar root finder on the Euler equation. They come from differentiating the complete equilibrium system and solving the resulting linear rational-expectations problem. At first order, certainty equivalence commonly appears: shock variances do not change the mean policy rule.
 
-The matrices $A$ and $B$ are not obtained by calling a generic scalar root finder on the Euler equation. They come from differentiating the complete equilibrium system and solving the resulting linear rational-expectations problem.
-
-At first order, certainty equivalence commonly appears: shock variances do not change the mean policy rule.
-
-At second order, curvature introduces terms involving variances and interactions, allowing uncertainty to affect expected decisions and welfare.
-
-That is one reason second-order perturbation is used for risk premia and welfare calculations.
+At second order, curvature introduces terms involving variances and interactions, allowing uncertainty to affect expected decisions and welfare. That is one reason second-order perturbation is used for risk premia and welfare calculations.
 
 ## Local accuracy is the main trade-off
 
-Perturbation is attractive because it is fast.
+Perturbation is attractive because it is fast. For large macroeconomic models with many state and control variables, a first- or second-order local solution can be dramatically cheaper than constructing a high-dimensional global grid. But the approximation is local. If the economy moves far from the expansion point, or if occasionally binding constraints matter, the truncated Taylor expansion can become inaccurate or even imply impossible decisions.
 
-For large macroeconomic models with many state and control variables, a first- or second-order local solution can be dramatically cheaper than constructing a high-dimensional global grid.
-
-But the approximation is local.
-
-If the economy moves far from the expansion point, or if occasionally binding constraints matter, the truncated Taylor expansion can become inaccurate or even imply impossible decisions.
-
-This is not a defect in Taylor series.
-
-It is the consequence of asking a local approximation to describe a global nonlinear problem.
+This is not a defect in Taylor series. It is the consequence of asking a local approximation to describe a global nonlinear problem.
 
 ## Finite differences are not a competing DSGE solution method by themselves
 
@@ -297,17 +267,9 @@ f'(x)
 \frac{f(x+h)-f(x)}{h}
 $$
 
-approximates a derivative.
+approximates a derivative. That tool can appear inside many numerical algorithms. For example, finite differences can approximate derivatives in a Hamilton-Jacobi-Bellman equation, compute Jacobians for Newton methods, or discretize a continuous-state problem. But evaluating finite differences of the production function does not solve the DSGE model.
 
-That tool can appear inside many numerical algorithms.
-
-For example, finite differences can approximate derivatives in a Hamilton-Jacobi-Bellman equation, compute Jacobians for Newton methods, or discretize a continuous-state problem.
-
-But evaluating finite differences of the production function does not solve the DSGE model.
-
-The numerical method is defined by the equation being discretized and the policy or value function being recovered.
-
-So the meaningful comparison is not
+The numerical method is defined by the equation being discretized and the policy or value function being recovered. So the meaningful comparison is not
 
 $$
 \text{perturbation versus finite differences}.
@@ -448,14 +410,14 @@ for iteration in range(max_iterations):
     value_new = np.empty_like(value)
     policy_new = np.empty_like(policy_index)
 
-    for z_index, z_value in enumerate(
+for z_index, z_value in enumerate(
         productivity
     ):
         expected_value: FloatArray = (
             transition[z_index] @ value
         )
 
-        for k_index, capital in enumerate(
+for k_index, capital in enumerate(
             capital_grid
         ):
             resources: float = (
@@ -463,48 +425,48 @@ for iteration in range(max_iterations):
                 + (1.0 - delta) * capital
             )
 
-            consumption: FloatArray = (
+consumption: FloatArray = (
                 resources - capital_grid
             )
 
-            objective: FloatArray = np.full(
+objective: FloatArray = np.full(
                 capital_grid.shape,
                 -np.inf,
                 dtype=float,
             )
 
-            feasible: NDArray[np.bool_] = (
+feasible: NDArray[np.bool_] = (
                 consumption > 0.0
             )
 
-            objective[feasible] = (
+objective[feasible] = (
                 np.log(consumption[feasible])
                 + beta
                 * expected_value[feasible]
             )
 
-            best_index: int = int(
+best_index: int = int(
                 np.argmax(objective)
             )
 
-            value_new[
+value_new[
                 z_index,
                 k_index,
             ] = objective[best_index]
 
-            policy_new[
+policy_new[
                 z_index,
                 k_index,
             ] = best_index
 
-    sup_norm: float = float(
+sup_norm: float = float(
         np.max(np.abs(value_new - value))
     )
 
-    value = value_new
+value = value_new
     policy_index = policy_new
 
-    if sup_norm < tolerance:
+if sup_norm < tolerance:
         break
 else:
     raise RuntimeError(
@@ -531,19 +493,11 @@ print(
 )
 ~~~
 
-With the parameters above, the code converges on the specified grid.
-
-The policy moves next-period capital upward in the high-productivity state and downward in the low-productivity state around the deterministic steady state, which is the direction economic intuition predicts.
+With the parameters above, the code converges on the specified grid. The policy moves next-period capital upward in the high-productivity state and downward in the low-productivity state around the deterministic steady state, which is the direction economic intuition predicts.
 
 ## Grid error is different from model error
 
-A value-function solution on a finite grid contains discretization error.
-
-If the true optimum lies between $k_j$ and $k_{j+1}$, a discrete policy must choose one grid point.
-
-Increasing the grid density reduces this source of error but increases computational cost.
-
-Interpolation can improve the approximation without making the grid prohibitively dense.
+A value-function solution on a finite grid contains discretization error. If the true optimum lies between $k_j$ and $k_{j+1}$, a discrete policy must choose one grid point. Increasing the grid density reduces this source of error but increases computational cost. Interpolation can improve the approximation without making the grid prohibitively dense.
 
 The distinction is worth making explicit:
 
@@ -553,11 +507,7 @@ $$
 \text{numerical discretization error}.
 $$
 
-Perturbation mainly introduces truncation error from a local Taylor expansion.
-
-Grid methods introduce discretization and interpolation error.
-
-Both need diagnostics.
+Perturbation mainly introduces truncation error from a local Taylor expansion. Grid methods introduce discretization and interpolation error. Both need diagnostics.
 
 ## Euler-equation errors are a useful common diagnostic
 
@@ -581,15 +531,11 @@ E
 \right].
 $$
 
-A small residual over the relevant state space indicates that the approximate policy nearly satisfies the first-order condition.
-
-This allows different numerical methods to be compared on a common economic equation rather than on implementation-specific convergence criteria alone.
+A small residual over the relevant state space indicates that the approximate policy nearly satisfies the first-order condition. This allows different numerical methods to be compared on a common economic equation rather than on implementation-specific convergence criteria alone.
 
 ## Projection and collocation methods
 
-Value-function iteration is not the only global method.
-
-Projection methods approximate an unknown policy or value function by basis functions,
+Value-function iteration is not the only global method. Projection methods approximate an unknown policy or value function by basis functions,
 
 $$
 g(s)
@@ -598,13 +544,7 @@ g(s)
 a_m\phi_m(s),
 $$
 
-then choose the coefficients $a_m$ so that equilibrium residuals are small at selected collocation points or in a weighted integral sense.
-
-Chebyshev polynomials are a common basis because they have good approximation properties over bounded intervals.
-
-Projection can be much faster than dense grids in smooth low-dimensional problems.
-
-The curse of dimensionality remains important.
+then choose the coefficients $a_m$ so that equilibrium residuals are small at selected collocation points or in a weighted integral sense. Chebyshev polynomials are a common basis because they have good approximation properties over bounded intervals. Projection can be much faster than dense grids in smooth low-dimensional problems. The curse of dimensionality remains important.
 
 ## Occasionally binding constraints change the method choice
 
@@ -620,11 +560,7 @@ $$
 i_t\ge0.
 $$
 
-Near a point where the constraint never binds, a local perturbation can completely miss the kink created when it becomes active.
-
-Piecewise-linear methods, occasionally binding constraint algorithms, endogenous-grid methods, projection, or other global approaches can be more appropriate.
-
-The numerical method should follow the economic structure.
+Near a point where the constraint never binds, a local perturbation can completely miss the kink created when it becomes active. Piecewise-linear methods, occasionally binding constraint algorithms, endogenous-grid methods, projection, or other global approaches can be more appropriate. The numerical method should follow the economic structure.
 
 ## Choosing a method
 
@@ -640,19 +576,11 @@ A useful summary is:
 | Main error | Taylor truncation | Grid / basis approximation |
 | Diagnostics | Euler errors, simulation moments | Euler errors, Bellman residuals |
 
-There is no universally best solver.
-
-There is a model, a region of the state space that matters, and an accuracy requirement.
+There is no universally best solver. There is a model, a region of the state space that matters, and an accuracy requirement.
 
 ## Conclusion
 
-A DSGE solution is a set of decision rules satisfying equilibrium conditions over the relevant states.
-
-Perturbation obtains local derivatives of those rules around a steady state.
-
-Global methods approximate the functions over a larger region.
-
-Finite differences can help approximate derivatives inside such methods, but a finite-difference formula is not itself a DSGE solution.
+A DSGE solution is a set of decision rules satisfying equilibrium conditions over the relevant states. Perturbation obtains local derivatives of those rules around a steady state. Global methods approximate the functions over a larger region. Finite differences can help approximate derivatives inside such methods, but a finite-difference formula is not itself a DSGE solution.
 
 That distinction is the difference between numerical analysis and code that merely produces numbers.
 
