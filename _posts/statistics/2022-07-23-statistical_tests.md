@@ -49,11 +49,11 @@ Statistical tests are fundamental tools in data analysis, used to make inference
 
 Many tests compare an observed statistic with the distribution that statistic would have under a null model. The generic structure is closer to
 
-$
+$$
 T(X)
 \quad\text{versus}\quad
 T(X^\ast),\;X^\ast\sim H_0.
-$
+$$
 
 Sometimes $T$ is literally an observed-minus-expected discrepancy, as in Pearson's chi-square test. In other tests it is a rank statistic, likelihood ratio, score, maximum deviation, or quadratic form. There is no single “observed minus expected” formula covering all tests. We begin with observed data, the actual measurements or outcomes collected from our sample. We then compare these observations to expected data, which are the theoretical values predicted under the null hypothesis.
 
