@@ -31,23 +31,13 @@ tags:
 title: 'Log-Rank Test: What It Tests and When It Loses Power'
 ---
 
-The log-rank test is often described as a nonparametric test of whether two survival curves are equal.
-
-That is broadly correct.
-
-The usual explanation then adds that the log-rank test assumes proportional hazards.
-
-That statement needs qualification.
-
-Proportional hazards is the setting in which the ordinary log-rank weighting is especially natural and powerful. Non-proportional hazards, such as crossing survival curves, can severely reduce power and make a single hazard-ratio summary misleading.
+The log-rank test is often described as a nonparametric test of whether two survival curves are equal. That is broadly correct. The usual explanation then adds that the log-rank test assumes proportional hazards. That statement needs qualification. Proportional hazards is the setting in which the ordinary log-rank weighting is especially natural and powerful. Non-proportional hazards, such as crossing survival curves, can severely reduce power and make a single hazard-ratio summary misleading.
 
 But proportional hazards is not the same kind of validity condition as independent censoring.
 
 ## Survival and hazard functions
 
-Let $T$ be an event time.
-
-The survival function is
+Let $T$ be an event time. The survival function is
 
 $$
 S(t)
@@ -72,9 +62,7 @@ The log-rank test compares groups by repeatedly contrasting the observed number 
 
 ## Risk sets and expected events
 
-Consider two groups.
-
-At ordered event time $t_j$, let
+Consider two groups. At ordered event time $t_j$, let
 
 $$
 Y_{1j},\quad Y_{0j}
@@ -86,9 +74,7 @@ $$
 d_{1j},\quad d_{0j}
 $$
 
-be the numbers of observed events.
-
-Define
+be the numbers of observed events. Define
 
 $$
 Y_j=Y_{1j}+Y_{0j},
@@ -121,9 +107,7 @@ Z
 \frac{U}{\sqrt V},
 $$
 
-which is asymptotically standard normal under the null.
-
-For more than two groups, the vector form leads to a chi-square statistic.
+which is asymptotically standard normal under the null. For more than two groups, the vector form leads to a chi-square statistic.
 
 ## What the null hypothesis means
 
@@ -136,11 +120,7 @@ S_1(t)=S_0(t)
 \text{for all }t.
 $$
 
-For continuous distributions, equality of survival functions is equivalent to equality of hazard functions over the relevant time range.
-
-The test is omnibus in the sense that systematic differences in event incidence can accumulate over time.
-
-But its weighting is not equally sensitive to every possible alternative.
+For continuous distributions, equality of survival functions is equivalent to equality of hazard functions over the relevant time range. The test is omnibus in the sense that systematic differences in event incidence can accumulate over time. But its weighting is not equally sensitive to every possible alternative.
 
 ## Why proportional hazards matters
 
@@ -158,65 +138,33 @@ $$
 \exp(\beta)
 $$
 
-is then constant over time.
-
-Against alternatives close to this proportional-hazards form, the standard log-rank test has strong efficiency properties.
-
-This is why proportional hazards appears so often in discussions of the test.
-
-Now consider crossing hazards:
+is then constant over time. Against alternatives close to this proportional-hazards form, the standard log-rank test has strong efficiency properties. This is why proportional hazards appears so often in discussions of the test. Now consider crossing hazards:
 
 - treatment is beneficial early;
 - harmful later;
 - the two effects partly cancel in the accumulated log-rank score.
 
-The log-rank test can then have low power even when the survival curves differ substantially.
-
-That is a sensitivity problem, not proof that the p-value is automatically invalid.
+The log-rank test can then have low power even when the survival curves differ substantially. That is a sensitivity problem, not proof that the p-value is automatically invalid.
 
 ## Independent censoring is more fundamental
 
-Right censoring removes an individual from future risk sets.
+Right censoring removes an individual from future risk sets. For standard survival inference, censoring must be independent of the future event process in the appropriate conditional sense. Informally, among individuals with the same relevant history, those censored at a given time should not have systematically different future event prospects from those remaining under observation.
 
-For standard survival inference, censoring must be independent of the future event process in the appropriate conditional sense.
-
-Informally, among individuals with the same relevant history, those censored at a given time should not have systematically different future event prospects from those remaining under observation.
-
-If high-risk patients preferentially drop out for reasons not captured in the analysis, the observed risk sets can become unrepresentative.
-
-That can bias both Kaplan-Meier estimates and group comparisons.
-
-This is a deeper problem than non-proportional hazards.
+If high-risk patients preferentially drop out for reasons not captured in the analysis, the observed risk sets can become unrepresentative. That can bias both Kaplan-Meier estimates and group comparisons. This is a deeper problem than non-proportional hazards.
 
 ## Administrative censoring is usually benign
 
-If a trial stops on a fixed calendar date, some participants are censored simply because they entered later.
-
-That is administrative censoring.
-
-When study entry and the administrative end date are appropriately handled, this mechanism is often plausibly non-informative.
-
-Loss to follow-up is more difficult because the reason for leaving may be related to health status.
+If a trial stops on a fixed calendar date, some participants are censored simply because they entered later. That is administrative censoring. When study entry and the administrative end date are appropriately handled, this mechanism is often plausibly non-informative. Loss to follow-up is more difficult because the reason for leaving may be related to health status.
 
 The censoring mechanism should therefore be described, not merely labeled.
 
 ## A significant test does not estimate the size of the effect
 
-A log-rank p-value answers a global comparison question.
-
-It does not tell us the absolute survival difference at 1 year, the restricted mean survival time difference, the median survival difference, the hazard ratio, or whether the difference is clinically important.
-
-Kaplan-Meier curves and effect estimates should accompany the test.
-
-A survival-analysis report that gives only a p-value throws away most of the information.
+A log-rank p-value answers a global comparison question. It does not tell us the absolute survival difference at 1 year, the restricted mean survival time difference, the median survival difference, the hazard ratio, or whether the difference is clinically important. Kaplan-Meier curves and effect estimates should accompany the test. A survival-analysis report that gives only a p-value throws away most of the information.
 
 ## Cox regression is not a remedy for non-proportional hazards
 
-A common recommendation is to use Cox regression when proportional hazards fails.
-
-That is backwards.
-
-The standard Cox proportional-hazards model assumes
+A common recommendation is to use Cox regression when proportional hazards fails. That is backwards. The standard Cox proportional-hazards model assumes
 
 $$
 h(t\mid X)
@@ -224,11 +172,7 @@ h(t\mid X)
 h_0(t)\exp(X^\top\beta),
 $$
 
-which imposes time-constant hazard ratios for time-fixed coefficients.
-
-If hazards are non-proportional, an ordinary Cox model with a single coefficient can be misleading.
-
-Possible responses include time-varying coefficients, stratified Cox models for nuisance factors, piecewise effects, flexible parametric survival models, restricted mean survival time comparisons, or weighted log-rank tests chosen for the scientific alternative.
+which imposes time-constant hazard ratios for time-fixed coefficients. If hazards are non-proportional, an ordinary Cox model with a single coefficient can be misleading. Possible responses include time-varying coefficients, stratified Cox models for nuisance factors, piecewise effects, flexible parametric survival models, restricted mean survival time comparisons, or weighted log-rank tests chosen for the scientific alternative.
 
 The method should reflect the time pattern of the effect.
 
@@ -244,11 +188,7 @@ w(t_j)
 (d_{1j}-E_{1j}).
 $$
 
-The ordinary log-rank test uses approximately equal weight across event times in its score construction.
-
-Other choices emphasize early or late events.
-
-Fleming-Harrington weights can be written using the pooled Kaplan-Meier estimate $\hat S(t)$:
+The ordinary log-rank test uses approximately equal weight across event times in its score construction. Other choices emphasize early or late events. Fleming-Harrington weights can be written using the pooled Kaplan-Meier estimate $\hat S(t)$:
 
 $$
 w(t)
@@ -257,17 +197,11 @@ w(t)
 \{1-\hat S(t)\}^q.
 $$
 
-Different $(p,q)$ values target different time regions.
-
-Choosing a weight after inspecting the curves, however, creates a multiplicity and selection problem.
-
-The weighting strategy should ideally be prespecified when confirmatory inference is intended.
+Different $(p,q)$ values target different time regions. Choosing a weight after inspecting the curves, however, creates a multiplicity and selection problem. The weighting strategy should ideally be prespecified when confirmatory inference is intended.
 
 ## Restricted mean survival time
 
-When hazards are non-proportional, a direct time-scale estimand can be more interpretable.
-
-For horizon $\tau$, the restricted mean survival time is
+When hazards are non-proportional, a direct time-scale estimand can be more interpretable. For horizon $\tau$, the restricted mean survival time is
 
 $$
 \operatorname{RMST}(\tau)
@@ -285,11 +219,7 @@ $$
 \operatorname{RMST}_0(\tau)
 $$
 
-has units of time.
-
-It answers how much additional event-free time is associated with one group compared with the other by time $\tau$.
-
-This remains meaningful when survival curves cross, provided the horizon is scientifically justified.
+has units of time. It answers how much additional event-free time is associated with one group compared with the other by time $\tau$. This remains meaningful when survival curves cross, provided the horizon is scientifically justified.
 
 ## Interpreting a non-significant log-rank test
 
@@ -299,13 +229,7 @@ $$
 p>0.05,
 $$
 
-the conclusion is not that the survival curves are equal.
-
-It is that the observed log-rank statistic did not provide sufficient evidence against the null at that threshold.
-
-Low event counts, heavy censoring, crossing hazards, or a genuinely small difference can all produce a non-significant result.
-
-Effect estimates and confidence intervals are necessary to distinguish these possibilities.
+the conclusion is not that the survival curves are equal. It is that the observed log-rank statistic did not provide sufficient evidence against the null at that threshold. Low event counts, heavy censoring, crossing hazards, or a genuinely small difference can all produce a non-significant result. Effect estimates and confidence intervals are necessary to distinguish these possibilities.
 
 ## Reproducible Python example
 
@@ -348,11 +272,7 @@ The test should be interpreted together with the fitted survival curves and a re
 
 ## Conclusion
 
-The log-rank test compares groups through observed-minus-expected event counts over successive risk sets.
-
-Its essential requirements concern valid group comparison and censoring.
-
-Proportional hazards is the alternative under which the standard test is particularly well matched and powerful, not a simplistic switch that makes the test valid or invalid.
+The log-rank test compares groups through observed-minus-expected event counts over successive risk sets. Its essential requirements concern valid group comparison and censoring. Proportional hazards is the alternative under which the standard test is particularly well matched and powerful, not a simplistic switch that makes the test valid or invalid.
 
 When hazards cross or effects change over time, the analysis should move beyond a single log-rank p-value and report time-specific or time-integrated effects that match the scientific question.
 
