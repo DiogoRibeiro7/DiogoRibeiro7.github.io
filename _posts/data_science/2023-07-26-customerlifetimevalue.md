@@ -59,7 +59,7 @@ M_{it}
 \right],
 $$
 
-where \(M_{it}\) is future contribution margin from customer \(i\), \(r\) is the discount rate, and \(\mathcal F_0\) is the information available at the prediction date.
+where $M_{it}$ is future contribution margin from customer $i$, $r$ is the discount rate, and $\mathcal F_0$ is the information available at the prediction date.
 
 ## Historical value is not CLV
 
@@ -98,7 +98,7 @@ X_i
 ),
 $$
 
-the probability customer \(i\) remains active beyond time \(t\).
+the probability customer $i$ remains active beyond time $t$.
 
 ### Non-contractual businesses
 
@@ -112,7 +112,7 @@ The statistical problem is different.
 
 ## Survival-based CLV
 
-Suppose customer \(i\) produces expected margin rate \(m_i(t)\) while active.
+Suppose customer $i$ produces expected margin rate $m_i(t)$ while active.
 
 A continuous-time CLV can be written as
 
@@ -140,7 +140,7 @@ It is not a valid general CLV estimator because median survival is not expected 
 
 ## Expected lifetime from a survival curve
 
-For a nonnegative lifetime \(T\),
+For a nonnegative lifetime $T$,
 
 $$
 E[T]
@@ -151,7 +151,7 @@ $$
 
 provided the integral exists.
 
-If analysis is limited to horizon \(\tau\),
+If analysis is limited to horizon $\tau$,
 
 $$
 E[
@@ -168,7 +168,7 @@ That is restricted mean survival time.
 
 Customers still active at the data cutoff are right-censored.
 
-If customer \(i\) has been observed for \(c_i\) months without churn, we know only
+If customer $i$ has been observed for $c_i$ months without churn, we know only
 
 $$
 T_i>c_i.
@@ -188,7 +188,7 @@ CLV used for acquisition or retention decisions should generally be based on con
 
 Future value is worth less than immediate value.
 
-For periodic discount rate \(r\),
+For periodic discount rate $r$,
 
 $$
 PV_t
@@ -258,7 +258,7 @@ High predicted CLV does not imply "spend as much as possible to retain this cust
 
 The relevant decision is incremental value.
 
-For retention action \(a\),
+For retention action $a$,
 
 $$
 \Delta V_i(a)
