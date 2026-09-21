@@ -96,31 +96,23 @@ $$
 
 The difference is not cosmetic. Minimising squared error targets the conditional mean, while minimising absolute error targets the conditional median. On skewed targets these differ substantially, and RMSE will chase outliers that MAE largely ignores. Choose RMSE when a single large miss really is disproportionately costly, MAE when all errors scale linearly with cost.
 
-RMSE is also always at least as large as MAE, so the two are never directly comparable across reports. When errors should be judged relative to magnitude, MAPE is tempting but breaks when actual values approach zero and penalises over-prediction and under-prediction asymmetrically; MASE, which scales error against a naive baseline, avoids both problems.
-
-$R^2$ reports the share of variance explained, but it is a comparison against predicting the mean, not an absolute quality measure, and it should never be the sole criterion.
+RMSE is also always at least as large as MAE, so the two are never directly comparable across reports. When errors should be judged relative to magnitude, MAPE is tempting but breaks when actual values approach zero and penalises over-prediction and under-prediction asymmetrically; MASE, which scales error against a naive baseline, avoids both problems. $R^2$ reports the share of variance explained, but it is a comparison against predicting the mean, not an absolute quality measure, and it should never be the sole criterion.
 
 ## Validating Honestly
 
 The metric is only as trustworthy as the split it is computed on. Random k-fold cross-validation assumes exchangeable observations. That assumption fails for time series, where future data must never inform predictions about the past, and for grouped data, where the same customer or patient appearing in both training and test folds leaks information.
 
-Use forward-chaining splits for temporal data and grouped splits when records cluster. And keep a genuinely held-out test set that is consulted once, at the end, because a validation set used repeatedly for tuning gradually becomes part of training.
-
-Report uncertainty or resampling sensitivity alongside the point estimate. The standard deviation of fold scores is descriptive, but because folds share training data it is not automatically a standard error for the generalization metric or for a model difference.
+Use forward-chaining splits for temporal data and grouped splits when records cluster. And keep a genuinely held-out test set that is consulted once, at the end, because a validation set used repeatedly for tuning gradually becomes part of training. Report uncertainty or resampling sensitivity alongside the point estimate. The standard deviation of fold scores is descriptive, but because folds share training data it is not automatically a standard error for the generalization metric or for a model difference.
 
 ## Connecting Back to the Decision
 
-Selecting evaluation metrics that align with business goals will help you make informed decisions about which model to deploy.
-
-The most direct way to do that is to skip the proxy where possible. If each error type carries a known cost, compute expected cost directly:
+Selecting evaluation metrics that align with business goals will help you make informed decisions about which model to deploy. The most direct way to do that is to skip the proxy where possible. If each error type carries a known cost, compute expected cost directly:
 
 $$
 \text{Cost} = C_{FP} \cdot FP + C_{FN} \cdot FN,
 $$
 
-then choose the threshold that minimises it. This converts an abstract metric debate into an explicit economic one, and it makes the assumptions visible enough to argue about.
-
-Track one primary metric that drives decisions, plus a small set of guardrails that must not degrade. Optimising a single number without constraints tends to produce models that win on the metric and fail in use.
+then choose the threshold that minimises it. This converts an abstract metric debate into an explicit economic one, and it makes the assumptions visible enough to argue about. Track one primary metric that drives decisions, plus a small set of guardrails that must not degrade. Optimising a single number without constraints tends to produce models that win on the metric and fail in use.
 
 ## References
 
