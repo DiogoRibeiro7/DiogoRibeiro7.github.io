@@ -76,15 +76,15 @@ For non-linear models such as neural networks, direct application of linear alge
 
 ## Incremental Learning in Time Series Forecasting
 
-Time series forecasting presents unique challenges for machine learning models, particularly due to the non-stationary nature of time series data. Models built on past data may become less accurate over time as new patterns emerge. Incremental learning addresses these challenges by enabling the model to adapt to the latest data, maintaining forecasting accuracy in real-time.
+Time series forecasting presents unique challenges for machine learning models, particularly due to the non-stationary nature of time series data. Models built on past data may become less accurate over time as new patterns emerge. Incremental learning can update a forecasting model as new observations arrive. It does not guarantee maintained accuracy: continual adaptation can help under gradual change, but it can also chase noise, forget useful history, or react badly to abrupt regime shifts.
 
 ### The Necessity of Incremental Learning in Time Series
 
-1. **Evolving Data Patterns**: Time series data can fluctuate due to seasonality, trends, and unexpected events, making static models inadequate for long-term use.
+1. **Evolving Data Patterns**: changing seasonality, trends, covariate relationships, and regimes can make a fixed model stale. The appropriate response may be online updating, rolling-window refitting, explicit state evolution, or regime-change detection.
 
 2. **Immediate Validation Constraints**: Forecasting accuracy can only be confirmed once future data is available, making incremental adjustments essential to refine models over time.
 
-3. **Limited Temporal Range of Training Data**: Some patterns may only be relevant in specific time ranges, and relying on old data may reduce forecast accuracy for current conditions.
+3. **History length is a modeling choice**: old data can stabilize estimation or become harmful under drift. The forgetting mechanism should be explicit rather than assuming newer data are always better.
 
 4. **Emphasis on Data Handling**: Unlike many machine learning tasks that emphasize complex algorithms, time series forecasting benefits significantly from well-handled, relevant data. Incremental learning focuses on incorporating relevant data efficiently.
 
@@ -301,7 +301,7 @@ beta = XTX_inv @ XTy  # Initial coefficient estimate
 As new data arrives, we use the Sherman-Morrison formula to update `XTX_inv` and adjust `beta`.
 
 ```python
-for i in range(n_initial, n_total):
+for i in range(n_initial, validation_start):
     # New data point
     x_new = X[i:i+1].T  # Column vector
     y_new = y[i]
@@ -309,8 +309,9 @@ for i in range(n_initial, n_total):
     # Update XTX_inv using Sherman-Morrison formula
     XTX_inv = sherman_morrison_update(XTX_inv, x_new, x_new)
 
-    # Update beta
-    beta = XTX_inv @ (XTy + x_new * y_new)
+    # Update X^T y as well as (X^T X)^{-1}
+    XTy = XTy + (x_new.flatten() * y_new)
+    beta = XTX_inv @ XTy
 
     # Print updated beta values
     print(f"Update {i - n_initial + 1}, beta: {beta.flatten()}")
@@ -411,9 +412,12 @@ After each iteration, the neural network adjusts its weights based on the new da
 To validate the effectiveness of incremental updates, we can monitor the model’s accuracy on a validation set as new data is incorporated.
 
 ```python
-# Validation set
-X_valid = X[n_initial:]
-y_valid = y[n_initial:]
+# Keep a separate future block that is never used for online updates.
+# The stream used for updating the model cannot simultaneously be
+# treated as an untouched validation set.
+validation_start = 90
+X_valid = X[validation_start:]
+y_valid = y[validation_start:]
 
 # Predict on validation set after all updates
 y_pred_valid = []
@@ -442,3 +446,82 @@ These approaches provide a foundation for adapting time series forecasting model
 
 - Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and Practice* (3rd ed.). OTexts.
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
+
+
+## Sherman-Morrison has numerical limits
+
+For a new row vector $x$, the Gram matrix update is
+
+$$
+A_{t+1}
+=
+A_t
++
+x x^T.
+$$
+
+Sherman-Morrison updates $A_t^{-1}$ cheaply when the denominator
+
+$$
+1+x^TA_t^{-1}x
+$$
+
+is well behaved.
+
+Repeated inverse updates can nevertheless accumulate numerical error and become unstable when the design is ill-conditioned. QR, recursive least squares with stabilized covariance updates, or periodic refitting can be safer.
+
+## Recursive least squares and forgetting
+
+A standard recursive least-squares update uses
+
+$$
+K_t
+=
+\frac{P_{t-1}x_t}
+{\lambda+x_t^TP_{t-1}x_t},
+$$
+
+$$
+\beta_t
+=
+\beta_{t-1}
++
+K_t
+(
+y_t-x_t^T\beta_{t-1}
+),
+$$
+
+with forgetting factor $0<\lambda\le1$.
+
+Values below one downweight older observations. That can help under drift but increases estimator variance.
+
+The forgetting factor is therefore a bias-variance choice, not merely a speed parameter.
+
+## Prequential evaluation
+
+For online forecasting, evaluate each observation **before** using it for model update:
+
+$$
+\hat y_t
+=
+f_{t-1}(x_t),
+$$
+
+then record the loss, then update to $f_t$ using $(x_t,y_t)$.
+
+This test-then-train sequence avoids evaluating on data already used for adaptation and is the natural online analogue of out-of-sample validation.
+
+## Concept drift needs detection, not blind updating
+
+An online learner can adapt continuously to ordinary noise even when the data-generating process has not changed.
+
+Monitor forecast residuals, calibration, covariate shift, and change-point statistics. When a regime shift is detected, compare:
+
+- gradual updating;
+- rolling-window refitting;
+- state-space models;
+- explicit break models;
+- full retraining.
+
+Incremental learning is one response to drift, not the definition of drift handling.
