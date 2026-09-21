@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 620" role="img" aria-labelledby="title desc">
+  <title id="title">Speculative decoding drafts several tokens and verifies them with the target model</title>
+  <desc id="desc">A small draft model proposes several tokens. The large target model scores the whole draft in one pass, accepts a prefix according to the speculative decoding rule, rejects the first failing token, and continues from the corrected prefix.</desc>
+  <style>
+    svg { color: #0b0b0b; }
+    .diagram-surface { fill: #f7f9fa; }
+  </style>
+  <rect class="diagram-surface" x="0" y="0" width="100%" height="100%"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="55" y="230" width="200" height="100" rx="12"/>
+    <rect x="355" y="90" width="265" height="115" rx="12"/>
+    <rect x="355" y="355" width="265" height="115" rx="12"/>
+    <rect x="750" y="205" width="300" height="145" rx="12"/>
+    <rect x="1175" y="205" width="270" height="145" rx="12"/>
+
+    <path d="M255 280 C300 280 300 147 350 147" marker-end="url(#arrow)"/>
+    <path d="M620 147 C690 147 690 245 745 245" marker-end="url(#arrow)"/>
+    <path d="M620 412 C690 412 690 310 745 310" marker-end="url(#arrow)"/>
+    <path d="M1050 277 H1170" marker-end="url(#arrow)"/>
+
+    <line x1="395" y1="405" x2="580" y2="405"/>
+    <circle cx="415" cy="405" r="7" fill="currentColor"/>
+    <circle cx="455" cy="405" r="7" fill="currentColor"/>
+    <circle cx="495" cy="405" r="7" fill="currentColor"/>
+    <circle cx="535" cy="405" r="7" fill="currentColor"/>
+    <circle cx="575" cy="405" r="7" fill="currentColor"/>
+  </g>
+
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="currentColor" text-anchor="middle">
+    <text x="155" y="267" font-size="24" font-weight="700">Current prefix</text>
+    <text x="155" y="299" font-size="17">x₁:ₜ</text>
+
+    <text x="487" y="128" font-size="23" font-weight="700">Draft model q</text>
+    <text x="487" y="159" font-size="17">propose γ tokens cheaply</text>
+    <text x="487" y="184" font-size="16">y₁, …, yγ</text>
+
+    <text x="487" y="385" font-size="23" font-weight="700">Target model p</text>
+    <text x="487" y="438" font-size="16">score the draft positions in parallel</text>
+
+    <text x="900" y="245" font-size="23" font-weight="700">Verification</text>
+    <text x="900" y="278" font-size="17">accept token i with</text>
+    <text x="900" y="309" font-size="19">min(1, p(yi)/q(yi))</text>
+    <text x="900" y="333" font-size="15">then correct the first rejection</text>
+
+    <text x="1310" y="246" font-size="23" font-weight="700">Committed output</text>
+    <text x="1310" y="279" font-size="17">several target-distributed tokens</text>
+    <text x="1310" y="307" font-size="17">from one target verification pass</text>
+
+    <text x="750" y="535" font-size="20" font-weight="700">The draft proposes. The target decides. Standard speculative sampling preserves the target distribution.</text>
+  </g>
+</svg>
