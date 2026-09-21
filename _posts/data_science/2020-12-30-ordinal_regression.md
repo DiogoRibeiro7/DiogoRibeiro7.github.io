@@ -34,9 +34,7 @@ tags:
 title: 'Ordinal Regression: Proportional Odds and Marginal Effects'
 ---
 
-Ordinal outcomes contain more information than nominal categories and less information than continuous measurements.
-
-A response such as none, not much, some, and a good deal has an ordering, but the distance from one category to the next need not be equal. Coding those categories as the integers 1, 2, 3, 4 and fitting ordinary least squares silently imposes equal spacing.
+Ordinal outcomes contain more information than nominal categories and less information than continuous measurements. A response such as none, not much, some, and a good deal has an ordering, but the distance from one category to the next need not be equal. Coding those categories as the integers 1, 2, 3, 4 and fitting ordinary least squares silently imposes equal spacing.
 
 A proportional-odds model avoids that assumption.
 
@@ -62,9 +60,7 @@ $$
 \alpha_j-x^\top\beta.
 $$
 
-Each threshold has its own intercept $\alpha_j$, but the coefficient vector $\beta$ is shared across all thresholds. That shared slope is the proportional-odds assumption.
-
-Equivalently,
+Each threshold has its own intercept $\alpha_j$, but the coefficient vector $\beta$ is shared across all thresholds. That shared slope is the proportional-odds assumption. Equivalently,
 
 $$
 \operatorname{logit}P(Y>j\mid x)
@@ -88,9 +84,7 @@ $$
 \alpha_1<\alpha_2<\cdots<\alpha_{J-1}.
 $$
 
-They partition an underlying latent scale into observed categories.
-
-Because the thresholds already act as intercepts, the design matrix must not contain an additional constant when using **statsmodels.miscmodels.ordinal_model.OrderedModel**.
+They partition an underlying latent scale into observed categories. Because the thresholds already act as intercepts, the design matrix must not contain an additional constant when using **statsmodels.miscmodels.ordinal_model.OrderedModel**.
 
 ## Category probabilities
 
@@ -200,11 +194,7 @@ The previous article passed only an age vector to a model fitted with several pr
 
 ## Marginal effects are category-specific
 
-A positive coefficient does not imply that every category probability increases.
-
-If age shifts probability toward higher categories, lower-category probabilities decrease while upper-category probabilities increase.
-
-For category $j$, the relevant derivative is
+A positive coefficient does not imply that every category probability increases. If age shifts probability toward higher categories, lower-category probabilities decrease while upper-category probabilities increase. For category $j$, the relevant derivative is
 
 $$
 \frac{\partial P(Y=j\mid x)}
@@ -310,25 +300,15 @@ $$
 \beta^{(J-1)}
 $$
 
-is substantive.
-
-If a predictor has little effect on crossing the first threshold but a large effect on crossing the final threshold, the common-slope model can hide that pattern.
-
-Useful checks include separate cumulative binary models, plots of observed and fitted cumulative probabilities, and comparison with partial proportional-odds or multinomial alternatives when justified.
+is substantive. If a predictor has little effect on crossing the first threshold but a large effect on crossing the final threshold, the common-slope model can hide that pattern. Useful checks include separate cumulative binary models, plots of observed and fitted cumulative probabilities, and comparison with partial proportional-odds or multinomial alternatives when justified.
 
 ## Coding and missing values
 
-The outcome categories must be stored in the intended order. Alphabetical ordering is not a statistical definition.
-
-Survey codes also need inspection before fitting. Values for "don't know", "refused", or "not applicable" must not be treated as legitimate levels of the ordinal response.
-
-A correct likelihood cannot repair incorrectly coded categories.
+The outcome categories must be stored in the intended order. Alphabetical ordering is not a statistical definition. Survey codes also need inspection before fitting. Values for "don't know", "refused", or "not applicable" must not be treated as legitimate levels of the ordinal response. A correct likelihood cannot repair incorrectly coded categories.
 
 ## Conclusion
 
-Ordinal regression preserves ordering without inventing equal distances between response categories.
-
-The proportional-odds model is compact:
+Ordinal regression preserves ordering without inventing equal distances between response categories. The proportional-odds model is compact:
 
 $$
 \operatorname{logit}P(Y\le j\mid x)
@@ -336,9 +316,7 @@ $$
 \alpha_j-x^\top\beta.
 $$
 
-Its elegance comes from sharing one coefficient vector across thresholds. Its principal limitation comes from the same assumption.
-
-Interpretation should therefore move from raw coefficients to predicted category probabilities and category-specific marginal effects, while checking whether proportional odds is plausible.
+Its elegance comes from sharing one coefficient vector across thresholds. Its principal limitation comes from the same assumption. Interpretation should therefore move from raw coefficients to predicted category probabilities and category-specific marginal effects, while checking whether proportional odds is plausible.
 
 ## References
 
