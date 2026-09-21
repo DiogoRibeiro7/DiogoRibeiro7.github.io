@@ -158,18 +158,12 @@ As the world faces growing challenges from global pandemics, climate change, and
 
 With advances in technology, such as the increasing availability of **real-time geospatial data** from satellites, mobile devices, and wearable health monitors, the future of spatial epidemiology looks promising. This field will continue to be at the forefront of efforts to protect public health by identifying and mitigating the factors that drive the spread of disease.
 
-## References
-
-- Tufte, E. R. (2001). *The Visual Display of Quantitative Information* (2nd ed.). Graphics Press.
-- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
-
-
 ## Rates need denominators
 
 A map of case counts answers
 
 $$
-	ext{where cases were recorded}.
+\text{where cases were recorded}.
 $$
 
 A risk map requires a denominator:
