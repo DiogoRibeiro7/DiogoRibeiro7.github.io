@@ -95,63 +95,63 @@ That quantity depends on both demand uncertainty and lead-time uncertainty.
 
 Let
 
-[
+$$
 L
-]
+$$
 
 denote lead time in days.
 
 Let daily demand be
 
-[
-D_1,D_2,ldots
-]
+$$
+D_1,D_2,\ldots
+$$
 
 with
 
-[
-mathbb E[D_t]=mu_D
-]
+$$
+\mathbb E[D_t]=\mu_D
+$$
 
 and
 
-[
-operatorname{Var}(D_t)=sigma_D^2.
-]
+$$
+\operatorname{Var}(D_t)=\sigma_D^2.
+$$
 
 The demand that accumulates during lead time is
 
-[
+$$
 S_L
 =
-sum_{t=1}^{L}D_t.
-]
+\sum_{t=1}^{L}D_t.
+$$
 
-If lead time were fixed at (L=ell), then under independence,
+If lead time were fixed at $L=\ell$, then under independence,
 
-[
-mathbb E[S_Lmid L=ell]
+$$
+\mathbb E[S_L\mid L=\ell]
 =
-mu_Dell
-]
+\mu_Dell
+$$
 
 and
 
-[
-operatorname{Var}(S_Lmid L=ell)
+$$
+\operatorname{Var}(S_L\mid L=\ell)
 =
-sigma_D^2ell.
-]
+\sigma_D^2\ell.
+$$
 
-Once (L) is random, we need to average over its distribution.
+Once $L$ is random, we need to average over its distribution.
 
 By the law of total expectation,
 
-[
-mathbb E[S_L]
+$$
+\mathbb E[S_L]
 =
-mu_Dmathbb E[L].
-]
+\mu_D\mathbb E[L].
+$$
 
 The mean depends only on the mean lead time.
 
@@ -159,35 +159,35 @@ The variance does not.
 
 Using the law of total variance,
 
-[
-operatorname{Var}(S_L)
+$$
+\operatorname{Var}(S_L)
 =
-mathbb E[
-operatorname{Var}(S_Lmid L)
+\mathbb E[
+\operatorname{Var}(S_L\mid L)
 ]
 +
-operatorname{Var}[
-mathbb E(S_Lmid L)
+\operatorname{Var}[
+\mathbb E(S_L\mid L)
 ].
-]
+$$
 
 Substituting the conditional moments gives
 
-[
-operatorname{Var}(S_L)
+$$
+\operatorname{Var}(S_L)
 =
-sigma_D^2mathbb E[L]
+\sigma_D^2\mathbb E[L]
 +
-mu_D^2operatorname{Var}(L).
-]
+\mu_D^2\operatorname{Var}(L).
+$$
 
 This formula contains the central result.
 
 Lead-time uncertainty contributes through
 
-[
-mu_D^2operatorname{Var}(L).
-]
+$$
+\mu_D^2\operatorname{Var}(L).
+$$
 
 When average daily demand is large, even moderate variability in lead time can dominate ordinary day-to-day demand variability.
 
@@ -195,126 +195,126 @@ When average daily demand is large, even moderate variability in lead time can d
 
 Suppose daily demand has
 
-[
-mu_D=100
-]
+$$
+\mu_D=100
+$$
 
 and
 
-[
-sigma_D=20.
-]
+$$
+\sigma_D=20.
+$$
 
 Consider Supplier A.
 
 Its lead time is essentially deterministic:
 
-[
+$$
 L_A=5.
-]
+$$
 
 Therefore,
 
-[
-mathbb E[L_A]=5
-]
+$$
+\mathbb E[L_A]=5
+$$
 
 and
 
-[
-operatorname{Var}(L_A)=0.
-]
+$$
+\operatorname{Var}(L_A)=0.
+$$
 
 Lead-time demand has mean
 
-[
-mathbb E[S_{L_A}]
+$$
+\mathbb E[S_{L_A}]
 =
 100(5)
 =
 500
-]
+$$
 
 and variance
 
-[
-operatorname{Var}(S_{L_A})
+$$
+\operatorname{Var}(S_{L_A})
 =
 20^2(5)
 =
 2000.
-]
+$$
 
 The standard deviation is
 
-[
-sqrt{2000}
-approx
+$$
+\sqrt{2000}
+\approx
 44.72.
-]
+$$
 
 Now consider Supplier B.
 
 Half of orders arrive in two days and half arrive in eight days:
 
-[
+$$
 L_B
 =
-egin{cases}
-2, & p=0.5,\
+\begin{cases}
+2, & p=0.5,\\
 8, & p=0.5.
-end{cases}
-]
+\end{cases}
+$$
 
 Its mean is still
 
-[
-mathbb E[L_B]
+$$
+\mathbb E[L_B]
 =
 0.5(2)+0.5(8)
 =
 5.
-]
+$$
 
 The variance is
 
-[
-operatorname{Var}(L_B)
+$$
+\operatorname{Var}(L_B)
 =
 9.
-]
+$$
 
 The mean lead-time demand is therefore also
 
-[
+$$
 500.
-]
+$$
 
 But the variance becomes
 
-[
-operatorname{Var}(S_{L_B})
+$$
+\operatorname{Var}(S_{L_B})
 =
 20^2(5)
 +
 100^2(9).
-]
+$$
 
 Thus,
 
-[
-operatorname{Var}(S_{L_B})
+$$
+\operatorname{Var}(S_{L_B})
 =
 2000+90000
 =
 92000.
-]
+$$
 
 The standard deviation is approximately
 
-[
+$$
 303.32.
-]
+$$
 
 The two suppliers have the same mean lead time.
 
@@ -328,31 +328,31 @@ Suppose a planner wants a 95% cycle service level.
 
 If lead time is incorrectly treated as fixed at five days and lead-time demand is approximated as normal, the reorder point is
 
-[
+$$
 r
 =
-mu_D L
+\mu_D L
 +
-z_{0.95}sigma_Dsqrt{L}.
-]
+z_{0.95}\sigma_D\sqrt{L}.
+$$
 
 Using
 
-[
-z_{0.95}approx1.645,
-]
+$$
+z_{0.95}\approx1.645,
+$$
 
 we obtain
 
-[
+$$
 r
 =
 500
 +
 1.645(44.72)
-approx
+\approx
 573.56.
-]
+$$
 
 For Supplier A, this is reasonable under the stated assumptions.
 
@@ -360,41 +360,41 @@ Now apply exactly the same reorder point to Supplier B.
 
 Conditional on a two-day lead time,
 
-[
+$$
 S_L
-sim
-mathcal N(200,20^2cdot2).
-]
+\sim
+\mathcal N(200,20^2\cdot2).
+$$
 
 Conditional on an eight-day lead time,
 
-[
+$$
 S_L
-sim
-mathcal N(800,20^2cdot8).
-]
+\sim
+\mathcal N(800,20^2\cdot8).
+$$
 
 The unconditional distribution is therefore a mixture:
 
-[
+$$
 F_{S_L}(x)
 =
 0.5F_2(x)+0.5F_8(x),
-]
+$$
 
-where (F_2) and (F_8) are the two conditional normal distributions.
+where $F_2$ and $F_8$ are the two conditional normal distributions.
 
 At
 
-[
+$$
 r=573.56,
-]
+$$
 
 the probability of avoiding a stockout is approximately
 
-[
+$$
 0.50.
-]
+$$
 
 A reorder point intended to deliver 95% service produces only about 50% service.
 
@@ -434,39 +434,39 @@ A single lead-time mean can hide the existence of qualitatively different states
 
 Suppose we retain both
 
-[
-mathbb E[L]=5
-]
+$$
+\mathbb E[L]=5
+$$
 
 and
 
-[
-operatorname{Var}(L)=9.
-]
+$$
+\operatorname{Var}(L)=9.
+$$
 
 Using the variance formula, lead-time demand has mean
 
-[
+$$
 500
-]
+$$
 
 and standard deviation
 
-[
+$$
 303.32.
-]
+$$
 
 A normal approximation would then set a 95% reorder point at
 
-[
-r_{mathrm{normal}}
+$$
+r_{\mathrm{normal}}
 =
 500
 +
 1.645(303.32)
-approx
+\approx
 998.91.
-]
+$$
 
 This is far safer than the mean-only result.
 
@@ -474,9 +474,9 @@ It is also substantially above the exact 95th percentile of the mixture.
 
 For Supplier B, the exact 95th percentile is approximately
 
-[
+$$
 872.50.
-]
+$$
 
 The moment-matched normal approximation therefore carries more stock than necessary for the target service in this example.
 
@@ -494,29 +494,29 @@ Summarising the distribution only through mean and variance can still distort ta
 
 ## Safety stock is a quantile problem
 
-A reorder point for a target cycle service level (alpha) is fundamentally a quantile:
+A reorder point for a target cycle service level $\alpha$ is fundamentally a quantile:
 
-[
-r_alpha
+$$
+r_\alpha
 =
-F_{S_L}^{-1}(alpha).
-]
+F_{S_L}^{-1}(\alpha).
+$$
 
 If the operational target is
 
-[
-alpha=0.95,
-]
+$$
+\alpha=0.95,
+$$
 
 the planner needs the 95th percentile of demand accumulated during the replenishment period.
 
 A formula such as
 
-[
+$$
 r
 =
-mu+z_alphasigma
-]
+\mu+z_\alpha\sigma
+$$
 
 is therefore not the definition of safety stock.
 
@@ -538,15 +538,15 @@ For moderate service targets, the inventory implications may be similar.
 
 At service levels such as
 
-[
+$$
 99%
-]
+$$
 
 or
 
-[
+$$
 99.9%,
-]
+$$
 
 the rare delays can dominate the required reorder point.
 
@@ -576,9 +576,9 @@ The risk is then worse than a model that estimates the two distributions separat
 
 A more general representation is
 
-[
+$$
 P(D,L),
-]
+$$
 
 the joint distribution of demand and lead time.
 
@@ -604,21 +604,21 @@ This can inflate variance while providing little useful information for decision
 
 A better model may condition on:
 
-[
-	ext{day of week},
-quad
-	ext{holiday proximity},
-quad
-	ext{cutoff time},
-quad
-	ext{origin},
-quad
-	ext{destination},
-quad
-	ext{carrier},
-quad
-	ext{supplier state}.
-]
+$$
+\text{day of week},
+\quad
+\text{holiday proximity},
+\quad
+\text{cutoff time},
+\quad
+\text{origin},
+\quad
+\text{destination},
+\quad
+\text{carrier},
+\quad
+\text{supplier state}.
+$$
 
 The objective is not merely to forecast lead time accurately.
 
@@ -628,13 +628,13 @@ It is to forecast the conditional distribution relevant at the moment the replen
 
 Logistics analytics often converts lead time into
 
-[
+$$
 Y=
-egin{cases}
-1, & 	ext{late},\
-0, & 	ext{on time}.
-end{cases}
-]
+\begin{cases}
+1, & \text{late},\\
+0, & \text{on time}.
+\end{cases}
+$$
 
 That classification can be useful for service reporting.
 
@@ -664,23 +664,23 @@ Deleting them creates selection bias because long-running orders are exactly the
 
 This is right censoring.
 
-Let (T) denote time to delivery.
+Let $T$ denote time to delivery.
 
 The survival function is
 
-[
+$$
 S(t)
 =
 P(T>t).
-]
+$$
 
-For an order that has already been open for (t_0) days, the conditional probability that it remains open beyond (t_0+s) is
+For an order that has already been open for $t_0$ days, the conditional probability that it remains open beyond $t_0+s$ is
 
-[
-P(T>t_0+smid T>t_0)
+$$
+P(T>t_0+s\mid T>t_0)
 =
-rac{S(t_0+s)}{S(t_0)}.
-]
+\frac{S(t_0+s)}{S(t_0)}.
+$$
 
 That quantity is directly relevant to an operations team waiting for a shipment.
 
@@ -710,38 +710,38 @@ Seasonality alters transit conditions.
 
 A lead-time model estimated from two years of pooled history can therefore describe no current operating regime particularly well.
 
-Let the distribution at time (t) be
+Let the distribution at time $t$ be
 
-[
+$$
 F_{L,t}.
-]
+$$
 
 If
 
-[
+$$
 F_{L,t}
 
 eq
 F_{L,t-k},
-]
+$$
 
 historical observations should not necessarily receive equal weight.
 
 Useful monitoring quantities include changes in:
 
-[
-mathbb E[L],
-]
+$$
+\mathbb E[L],
+$$
 
-[
-operatorname{Var}(L),
-]
+$$
+\operatorname{Var}(L),
+$$
 
 upper quantiles,
 
-[
-P(L>ell),
-]
+$$
+P(L>\ell),
+$$
 
 and calibration of probabilistic lead-time forecasts.
 
@@ -751,29 +751,29 @@ Change-point detection can be more useful than a generic anomaly detector when t
 
 Suppose Supplier A has:
 
-[
-mathbb E[L_A]=5.0.
-]
+$$
+\mathbb E[L_A]=5.0.
+$$
 
 Supplier B has:
 
-[
-mathbb E[L_B]=4.7.
-]
+$$
+\mathbb E[L_B]=4.7.
+$$
 
 It is tempting to call B faster.
 
 But suppose:
 
-[
+$$
 Q_{0.95}(L_A)=6
-]
+$$
 
 while
 
-[
+$$
 Q_{0.95}(L_B)=14.
-]
+$$
 
 For an inventory system designed around a high service target, Supplier A may be operationally easier to manage despite the slightly slower mean.
 
@@ -794,13 +794,13 @@ The appropriate metric depends on how supplier uncertainty enters the downstream
 
 Return to the variance decomposition:
 
-[
-operatorname{Var}(S_L)
+$$
+\operatorname{Var}(S_L)
 =
-sigma_D^2mathbb E[L]
+\sigma_D^2\mathbb E[L]
 +
-mu_D^2operatorname{Var}(L).
-]
+\mu_D^2\operatorname{Var}(L).
+$$
 
 The first term is demand variability accumulated over average lead time.
 
@@ -808,23 +808,23 @@ The second term is variability created by the randomness of lead time itself.
 
 Using the numerical example,
 
-[
-sigma_D^2mathbb E[L]
+$$
+\sigma_D^2\mathbb E[L]
 =
 20^2(5)
 =
 2000.
-]
+$$
 
 The lead-time contribution is
 
-[
-mu_D^2operatorname{Var}(L)
+$$
+\mu_D^2\operatorname{Var}(L)
 =
 100^2(9)
 =
 90000.
-]
+$$
 
 Lead-time uncertainty contributes forty-five times as much variance as ordinary daily demand variation.
 
@@ -836,41 +836,41 @@ This is precisely why supply-chain data science should evaluate the complete dec
 
 A natural computational approach is simulation.
 
-At decision time (t):
+At decision time $t$:
 
 1. sample a future lead time
 
-[
+$$
 L^{(m)}
-sim
-p(Lmid X_t),
-]
+\sim
+p(L\mid X_t),
+$$
 
 2. sample future demand conditional on the relevant information,
 
-[
-D_{t+1}^{(m)},D_{t+2}^{(m)},ldots,
-]
+$$
+D_{t+1}^{(m)},D_{t+2}^{(m)},\ldots,
+$$
 
 3. accumulate demand until the sampled replenishment arrival,
 
-[
+$$
 S^{(m)}
 =
-sum_{h=1}^{L^{(m)}}D_{t+h}^{(m)},
-]
+\sum_{h=1}^{L^{(m)}}D_{t+h}^{(m)},
+$$
 
 4. repeat for
 
-[
-m=1,ldots,M.
-]
+$$
+m=1,\ldots,M.
+$$
 
 The resulting empirical distribution of
 
-[
+$$
 S^{(m)}
-]
+$$
 
 is a predictive distribution for lead-time demand.
 
@@ -878,14 +878,14 @@ Inventory quantities can then be extracted directly.
 
 For example,
 
-[
+$$
 r_{0.95}
 =
 Q_{0.95}
-left(
-S^{(1)},ldots,S^{(M)}
-ight).
-]
+\left(
+S^{(1)},\ldots,S^{(M)}
+\right).
+$$
 
 This approach naturally handles non-normal lead times, nonlinear demand models, calendar effects, and interactions if those structures are represented in the simulations.
 
@@ -936,24 +936,24 @@ When the cost of rare delays is asymmetric, tail calibration matters.
 
 If the inventory policy requires a lead-time quantile, the corresponding forecast can be evaluated with quantile loss.
 
-For quantile level (alpha),
+For quantile level $\alpha$,
 
-[
-L_alpha(y,q)
+$$
+L_\alpha(y,q)
 =
-egin{cases}
-alpha(y-q), & yge q,\
-(1-alpha)(q-y), & y<q.
-end{cases}
-]
+\begin{cases}
+\alpha(y-q), & y\ge q,\\
+(1-\alpha)(q-y), & y<q.
+\end{cases}
+$$
 
 A model intended to estimate the 95th percentile should therefore be judged differently from a model intended to estimate the mean.
 
 If the operational decision uses
 
-[
+$$
 Q_{0.95}(L),
-]
+$$
 
 optimising RMSE of point lead-time forecasts can target the wrong functional.
 
@@ -965,9 +965,9 @@ The strongest lesson from the worked example is not that averages are bad.
 
 Both suppliers truly have
 
-[
-mathbb E[L]=5.
-]
+$$
+\mathbb E[L]=5.
+$$
 
 The average is mathematically correct.
 

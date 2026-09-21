@@ -110,47 +110,47 @@ Both properties matter, but they diagnose different parts of the scientific proc
 
 ## The p-value is a random variable across replications
 
-Suppose two independent studies estimate the same true effect (delta).
+Suppose two independent studies estimate the same true effect $\delta$.
 
 Let
 
-[
-hatdelta_j
-sim
-mathcal N(delta,sigma^2),
-]
+$$
+\hat\delta_j
+\sim
+\mathcal N(\delta,\sigma^2),
+$$
 
-for studies (j=1,2), and assume for simplicity that both have the same known standard error (sigma).
+for studies (j=1,2), and assume for simplicity that both have the same known standard error $\sigma$.
 
 The corresponding z statistic is
 
-[
+$$
 Z_j
 =
-rac{hatdelta_j}{sigma}.
-]
+\frac{\hat\delta_j}{\sigma}.
+$$
 
 Its distribution is
 
-[
+$$
 Z_j
-sim
-mathcal N
-left(
-rac{delta}{sigma},
+\sim
+\mathcal N
+\left(
+\frac{\delta}{\sigma},
 1
-ight).
-]
+\right).
+$$
 
-Even though (delta) is fixed, (Z_j) changes from sample to sample because (hatdelta_j) changes.
+Even though $\delta$ is fixed, $Z_j$ changes from sample to sample because $\hat\delta_j$ changes.
 
 The two-sided p-value
 
-[
+$$
 p_j
 =
-2left[1-Phi(|Z_j|)ight]
-]
+2\left[1-\Phi(|Z_j|)\right]
+$$
 
 is therefore also random.
 
@@ -158,9 +158,9 @@ There is no reason to expect two exact replications to produce the same p-value.
 
 The relevant probability is not
 
-[
-Pr(p_2=p_1),
-]
+$$
+\Pr(p_2=p_1),
+$$
 
 which is effectively zero for continuous statistics.
 
@@ -168,9 +168,9 @@ It is the probability that the replication falls into whatever evidential region
 
 If that region is simply
 
-[
+$$
 p_2<0.05,
-]
+$$
 
 the probability of "successful replication" under the rule is just the statistical power of the replication design against the true effect.
 
@@ -180,55 +180,55 @@ That observation already causes trouble for the binary criterion.
 
 Take a true effect of
 
-[
-delta=0.30
-]
+$$
+\delta=0.30
+$$
 
 and standard error
 
-[
-sigma=0.20.
-]
+$$
+\sigma=0.20.
+$$
 
 The expected z statistic is
 
-[
-rac{delta}{sigma}
+$$
+\frac{\delta}{\sigma}
 =
 1.5.
-]
+$$
 
 For a two-sided 0.05 test, statistical significance requires approximately
 
-[
+$$
 |Z|>1.96.
-]
+$$
 
 Under the stated true effect,
 
-[
+$$
 Z
-sim
-mathcal N(1.5,1).
-]
+\sim
+\mathcal N(1.5,1).
+$$
 
 The probability of significance is therefore
 
-[
-Pr(|Z|>1.96)
+$$
+\Pr(|Z|>1.96)
 =
-Pr(Z>1.96)
+\Pr(Z>1.96)
 +
-Pr(Z<-1.96).
-]
+\Pr(Z<-1.96).
+$$
 
 Numerically,
 
-[
-Pr(|Z|>1.96)
-approx
+$$
+\Pr(|Z|>1.96)
+\approx
 0.323.
-]
+$$
 
 So an exact replication of a real effect under this design has only about a 32.3% chance of producing (p<0.05).
 
@@ -250,77 +250,77 @@ The problem becomes sharper when the original study enters scientific attention 
 
 Continue with
 
-[
-delta=0.30
-]
+$$
+\delta=0.30
+$$
 
 and
 
-[
-sigma=0.20.
-]
+$$
+\sigma=0.20.
+$$
 
 For a positive observed estimate to be significant at the two-sided 0.05 level, it must exceed
 
-[
+$$
 1.96(0.20)=0.392.
-]
+$$
 
 The original estimate follows
 
-[
-hatdelta
-sim
-mathcal N(0.30,0.20^2).
-]
+$$
+\hat\delta
+\sim
+\mathcal N(0.30,0.20^2).
+$$
 
 Condition on the event
 
-[
-hatdelta>0.392.
-]
+$$
+\hat\delta>0.392.
+$$
 
-For a normally distributed variable truncated below at a threshold (a), the conditional mean is
+For a normally distributed variable truncated below at a threshold $a$, the conditional mean is
 
-[
-mathbb E[hatdeltamidhatdelta>a]
+$$
+\mathbb E[\hat\delta\mid\hat\delta>a]
 =
-delta
+\delta
 +
-sigma
-rac{phi(alpha)}
-{1-Phi(alpha)},
-]
+\sigma
+\frac{\phi(\alpha)}
+{1-\Phi(\alpha)},
+$$
 
 where
 
-[
-alpha
+$$
+\alpha
 =
-rac{a-delta}{sigma}.
-]
+\frac{a-\delta}{\sigma}.
+$$
 
 Here,
 
-[
-alpha
+$$
+\alpha
 =
-rac{0.392-0.30}{0.20}
+\frac{0.392-0.30}{0.20}
 =
 0.46.
-]
+$$
 
 Substituting gives
 
-[
-mathbb E[
-hatdelta
-mid
-hatdelta>0.392
+$$
+\mathbb E[
+\hat\delta
+\mid
+\hat\delta>0.392
 ]
-approx
+\approx
 0.522.
-]
+$$
 
 The true effect is 0.30.
 
@@ -336,15 +336,15 @@ This is a version of the winner's curse.
 
 Suppose the original significant study reports
 
-[
-hatdelta_1=0.52.
-]
+$$
+\hat\delta_1=0.52.
+$$
 
 An exact replication then reports
 
-[
-hatdelta_2=0.28.
-]
+$$
+\hat\delta_2=0.28.
+$$
 
 The second estimate is nearly half the first.
 
@@ -366,93 +366,93 @@ We need to compare the observed difference with the difference expected under a 
 
 Suppose the original study reports
 
-[
-hatdelta_1=0.45
-]
+$$
+\hat\delta_1=0.45
+$$
 
 with standard error
 
-[
+$$
 SE_1=0.18.
-]
+$$
 
 Its z statistic is
 
-[
+$$
 Z_1=2.50,
-]
+$$
 
 so
 
-[
-p_1approx0.012.
-]
+$$
+p_1\approx0.012.
+$$
 
 Now suppose the replication reports
 
-[
-hatdelta_2=0.35
-]
+$$
+\hat\delta_2=0.35
+$$
 
 with
 
-[
+$$
 SE_2=0.22.
-]
+$$
 
 Then
 
-[
-Z_2approx1.59,
-]
+$$
+Z_2\approx1.59,
+$$
 
 and
 
-[
-p_2approx0.11.
-]
+$$
+p_2\approx0.11.
+$$
 
 A binary comparison says:
 
-[
-	ext{significant}
-quad	ext{versus}quad
-	ext{not significant}.
-]
+$$
+\text{significant}
+\quad\text{versus}\quad
+\text{not significant}.
+$$
 
 That wording creates the impression of contradiction.
 
 The effect estimates differ by only
 
-[
+$$
 0.45-0.35=0.10.
-]
+$$
 
 Under independence, the standard error of their difference is approximately
 
-[
-SE_{Delta}
+$$
+SE_{\Delta}
 =
-sqrt{SE_1^2+SE_2^2}
-]
+\sqrt{SE_1^2+SE_2^2}
+$$
 
 so
 
-[
-SE_{Delta}
+$$
+SE_{\Delta}
 =
-sqrt{0.18^2+0.22^2}
-approx
+\sqrt{0.18^2+0.22^2}
+\approx
 0.284.
-]
+$$
 
 The standardized difference is
 
-[
-rac{0.10}{0.284}
-approx
+$$
+\frac{0.10}{0.284}
+\approx
 0.35.
-]
+$$
 
 The two estimated effects are highly compatible with a common underlying value.
 
@@ -468,31 +468,31 @@ The same example is clearer if we examine uncertainty intervals.
 
 The original 95% interval is approximately
 
-[
+$$
 0.45
-pm
+\pm
 1.96(0.18),
-]
+$$
 
 or
 
-[
+$$
 [0.10, 0.80].
-]
+$$
 
 The replication interval is approximately
 
-[
+$$
 0.35
-pm
+\pm
 1.96(0.22),
-]
+$$
 
 or
 
-[
+$$
 [-0.08, 0.78].
-]
+$$
 
 The replication interval contains zero.
 
@@ -518,39 +518,39 @@ Before deciding whether a study replicated, we need to know what proposition is 
 
 Consider three possible original claims:
 
-[
+$$
 C_1:
-delta>0,
-]
+\delta>0,
+$$
 
-[
+$$
 C_2:
-deltage0.50,
-]
+\delta\ge0.50,
+$$
 
 and
 
-[
+$$
 C_3:
-delta
-	ext{ is large enough to change a practical decision}.
-]
+\delta
+\text{ is large enough to change a practical decision}.
+$$
 
 A replication estimate of
 
-[
+$$
 0.20
-]
+$$
 
-may support (C_1), contradict (C_2), and be irrelevant to (C_3) until a practical threshold is specified.
+may support $C_1$, contradict $C_2$, and be irrelevant to $C_3$ until a practical threshold is specified.
 
 The replication status therefore depends on the scientific claim.
 
 This is why repeating the original p-value threshold is conceptually weak. The null hypothesis
 
-[
-H_0:delta=0
-]
+$$
+H_0:\delta=0
+$$
 
 may never have been the most important scientific proposition.
 
@@ -566,31 +566,31 @@ Two independent estimates are almost never exactly equal.
 
 If
 
-[
-hatdelta_1
-sim
-mathcal N(delta,sigma_1^2)
-]
+$$
+\hat\delta_1
+\sim
+\mathcal N(\delta,\sigma_1^2)
+$$
 
 and
 
-[
-hatdelta_2
-sim
-mathcal N(delta,sigma_2^2),
-]
+$$
+\hat\delta_2
+\sim
+\mathcal N(\delta,\sigma_2^2),
+$$
 
 then their difference satisfies
 
-[
-hatdelta_1-hatdelta_2
-sim
-mathcal N
-left(
+$$
+\hat\delta_1-\hat\delta_2
+\sim
+\mathcal N
+\left(
 0,
-sigma_1^2+sigma_2^2
-ight)
-]
+\sigma_1^2+\sigma_2^2
+\right)
+$$
 
 under a common-effect model.
 
@@ -612,39 +612,39 @@ Once several studies estimate related effects, a natural next step is to combine
 
 Under a simple fixed-effect model,
 
-[
-hatdelta_j
-sim
-mathcal N(delta,s_j^2),
-]
+$$
+\hat\delta_j
+\sim
+\mathcal N(\delta,s_j^2),
+$$
 
 and an inverse-variance weighted estimate is
 
-[
-hatdelta_{	ext{FE}}
+$$
+\hat\delta_{\text{FE}}
 =
-rac{
-sum_j w_jhatdelta_j
+\frac{
+\sum_j w_j\hat\delta_j
 }{
-sum_j w_j
+\sum_j w_j
 },
-]
+$$
 
 where
 
-[
-w_j=rac{1}{s_j^2}.
-]
+$$
+w_j=\frac{1}{s_j^2}.
+$$
 
 This formulation treats each study as a noisy estimate of a common effect rather than as a binary success or failure.
 
 If effects differ across populations or implementations, a random-effects model introduces between-study variation:
 
-[
-delta_j
-sim
-mathcal N(mu,	au^2).
-]
+$$
+\delta_j
+\sim
+\mathcal N(\mu,\tau^2).
+$$
 
 Now replication is no longer framed as demanding identical effects. The model asks whether observed variation is compatible with a distribution of effects and attempts to estimate its centre and heterogeneity.
 
@@ -680,21 +680,21 @@ It is an experiment on the stability of the original result.
 
 A conceptual replication changes aspects of the operationalisation while testing a related theoretical claim.
 
-Suppose a theory predicts that mechanism (M) should affect outcome (Y).
+Suppose a theory predicts that mechanism $M$ should affect outcome $Y$.
 
-The original study manipulates (M) using procedure (A).
+The original study manipulates $M$ using procedure $A$.
 
-A conceptual replication uses a different procedure (B).
+A conceptual replication uses a different procedure $B$.
 
-If both produce the predicted consequence, confidence can increase that the finding is not an artefact unique to procedure (A).
+If both produce the predicted consequence, confidence can increase that the finding is not an artefact unique to procedure $A$.
 
 This is scientifically valuable.
 
 It is also easier to interpret flexibly after the fact.
 
-If procedure (B) fails, researchers can argue that (B) did not manipulate the construct correctly.
+If procedure $B$ fails, researchers can argue that $B$ did not manipulate the construct correctly.
 
-If (B) succeeds differently, the theory can sometimes be modified to accommodate the result.
+If $B$ succeeds differently, the theory can sometimes be modified to accommodate the result.
 
 The more a replication changes, the more scientific judgement enters the claim that it tested the same proposition.
 
@@ -738,30 +738,30 @@ It does not repair a changed estimand, biased measurement, altered intervention,
 
 Suppose the original study estimates
 
-[
-delta_A
-]
+$$
+\delta_A
+$$
 
-under population (A), while the replication estimates
+under population $A$, while the replication estimates
 
-[
-delta_B
-]
+$$
+\delta_B
+$$
 
-under population (B).
+under population $B$.
 
 If treatment effects are heterogeneous,
 
-[
-delta_A
+$$
+\delta_A
 
 eq
-delta_B
-]
+\delta_B
+$$
 
 can be true even when both studies are internally valid.
 
-A much larger replication in population (B) can estimate (delta_B) with great precision while saying less about (delta_A) than its sample size suggests.
+A much larger replication in population $B$ can estimate $\delta_B$ with great precision while saying less about $\delta_A$ than its sample size suggests.
 
 Precision is not transportability.
 
@@ -775,23 +775,23 @@ Some scientific claims imply quantitative predictions for future observations.
 
 Suppose the original model estimates
 
-[
-hat	heta
-]
+$$
+\hat\theta
+$$
 
 and predicts that a replication estimate should follow
 
-[
-hat	heta_{	ext{rep}}
-sim
-mathcal N
-left(
-hat	heta,
-V_{	ext{pred}}
-ight),
-]
+$$
+\hat\theta_{\text{rep}}
+\sim
+\mathcal N
+\left(
+\hat\theta,
+V_{\text{pred}}
+\right),
+$$
 
-where (V_{	ext{pred}}) includes uncertainty in the original estimate and sampling variation in the replication.
+where (V_{\text{pred}}) includes uncertainty in the original estimate and sampling variation in the replication.
 
 The replication can then be assessed against a predictive distribution rather than a significance threshold.
 
@@ -813,15 +813,15 @@ Suppose an analysis ignores clustering.
 
 The reported standard error may be
 
-[
-SE_{	ext{naive}}=0.10,
-]
+$$
+SE_{\text{naive}}=0.10,
+$$
 
 while a correct cluster-robust analysis gives
 
-[
-SE_{	ext{correct}}=0.25.
-]
+$$
+SE_{\text{correct}}=0.25.
+$$
 
 The point estimate does not change.
 
@@ -924,41 +924,41 @@ The most useful way to think about replication is as evidence accumulation.
 
 Suppose an original study supports an effect near
 
-[
-delta=0.50
-]
+$$
+\delta=0.50
+$$
 
 but with substantial uncertainty.
 
 A precise replication near
 
-[
+$$
 0.45
-]
+$$
 
 should increase confidence that an effect of roughly that magnitude is real.
 
 A precise replication near
 
-[
+$$
 0.05
-]
+$$
 
 should reduce confidence in the original magnitude.
 
 A very imprecise replication near
 
-[
+$$
 0.05
-]
+$$
 
 should change confidence less because it provides little information.
 
 A replication near
 
-[
+$$
 -0.50
-]
+$$
 
 with small uncertainty creates a much deeper conflict requiring explanation.
 
@@ -972,29 +972,29 @@ Return to the original low-power example.
 
 The true effect is
 
-[
-delta=0.30.
-]
+$$
+\delta=0.30.
+$$
 
 The design has standard error
 
-[
+$$
 0.20.
-]
+$$
 
 An exact replication has only about a 32.3% chance of producing (p<0.05).
 
 Among original studies selected for positive significance, the expected estimate is about
 
-[
+$$
 0.52,
-]
+$$
 
 even though the underlying effect remains
 
-[
+$$
 0.30.
-]
+$$
 
 A replication estimate near 0.30 can therefore be smaller and non-significant while being more representative of the true effect than the original significant estimate.
 

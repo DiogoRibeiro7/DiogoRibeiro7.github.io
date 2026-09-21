@@ -80,7 +80,7 @@ Among these, K-means clustering is highly efficient and easy to implement, makin
 
 ## K-means Clustering Algorithm
 
-K-means clustering is an iterative algorithm that partitions data points into a predefined number of clusters (k). The algorithm operates in the following steps:
+K-means clustering is an iterative algorithm that partitions data points into a predefined number of clusters $k$. The algorithm operates in the following steps:
 
 1. **Initialization**: K initial centroids are chosen randomly from the dataset.
 2. **Assignment**: Each data point is assigned to the nearest centroid, forming k clusters.
@@ -122,7 +122,7 @@ In the experiment conducted by the authors, the RapidMiner tool was used to perf
 
 1. **Load the Dataset**: The crime dataset is loaded into RapidMiner.
 2. **Preprocess the Data**: Missing values are handled using the Replace Missing Value operator, and the data is normalized using the Normalize operator.
-3. **Apply K-means Clustering**: The K-means clustering algorithm is applied to the dataset, with the number of clusters (k) set to a predefined value.
+3. **Apply K-means Clustering**: The K-means clustering algorithm is applied to the dataset, with the number of clusters $k$ set to a predefined value.
 4. **Visualize the Results**: The results are plotted to visualize the clusters and analyze the crime trends.
 
 ### Analysis of Crime Patterns
@@ -248,13 +248,13 @@ This Python code performs K-means clustering on a crime dataset, groups the data
 Police records are observations generated through several mechanisms:
 
 $$
-	ext{offense}
-ightarrow
-	ext{reporting}
-ightarrow
-	ext{police recording}
-ightarrow
-	ext{geocoding/classification}.
+\text{offense}
+\rightarrow
+\text{reporting}
+\rightarrow
+\text{police recording}
+\rightarrow
+\text{geocoding/classification}.
 $$
 
 Changes in enforcement, reporting propensity, recording standards, or patrol intensity can change the observed dataset even if the underlying offense process does not change.

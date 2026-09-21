@@ -91,37 +91,37 @@ The reason is mathematical. A forecast accuracy metric defines one loss function
 
 ## Forecasting metrics encode a decision even when they look neutral
 
-Let demand in period (t) be (D_t), and let the point forecast be (f_t).
+Let demand in period $t$ be $D_t$, and let the point forecast be $f_t$.
 
 Squared error is
 
-[
-L_{mathrm{SE}}(D_t,f_t)
+$$
+L_{\mathrm{SE}}(D_t,f_t)
 =
 (D_t-f_t)^2.
-]
+$$
 
 The corresponding population objective is
 
-[
-mathbb E[(D-f)^2].
-]
+$$
+\mathbb E[(D-f)^2].
+$$
 
-The value of (f) that minimizes expected squared error is the conditional mean,
+The value of $f$ that minimizes expected squared error is the conditional mean,
 
-[
-f^ast_{mathrm{SE}}
+$$
+f^\ast_{\mathrm{SE}}
 =
-mathbb E[Dmid X].
-]
+\mathbb E[D\mid X].
+$$
 
 Absolute error uses
 
-[
-L_{mathrm{AE}}(D_t,f_t)
+$$
+L_{\mathrm{AE}}(D_t,f_t)
 =
 |D_t-f_t|,
-]
+$$
 
 and its population-optimal point forecast is a conditional median.
 
@@ -137,48 +137,48 @@ If the downstream cost of underpredicting demand differs from the cost of overpr
 
 Consider a single-period inventory decision.
 
-We choose stock level (q) before demand (D) is observed.
+We choose stock level $q$ before demand $D$ is observed.
 
 If
 
-[
+$$
 q>D,
-]
+$$
 
 we have excess inventory.
 
 If
 
-[
+$$
 D>q,
-]
+$$
 
 we have a shortage.
 
-Let (c_h) denote the unit overage or holding cost, and let (c_u) denote the unit underage or shortage cost.
+Let $c_h$ denote the unit overage or holding cost, and let $c_u$ denote the unit underage or shortage cost.
 
 A simple operational loss is
 
-[
+$$
 L(D,q)
 =
 c_h(q-D)^+
 +
 c_u(D-q)^+,
-]
+$$
 
 where
 
-[
-x^+=max(x,0).
-]
+$$
+x^+=\max(x,0).
+$$
 
 This loss is asymmetric whenever
 
-[
+$$
 c_h
 eq c_u.
-]
+$$
 
 If a stockout is nine times more expensive than carrying one excess unit, then an error of minus ten units and an error of plus ten units should not receive the same operational penalty.
 
@@ -192,52 +192,52 @@ The inventory problem is asking a different question.
 
 For the cost function above, the expected cost is
 
-[
+$$
 C(q)
 =
-c_hmathbb E[(q-D)^+]
+c_h\mathbb E[(q-D)^+]
 +
-c_umathbb E[(D-q)^+].
-]
+c_u\mathbb E[(D-q)^+].
+$$
 
-Under standard regularity conditions, differentiating with respect to (q) gives
+Under standard regularity conditions, differentiating with respect to $q$ gives
 
-[
-rac{dC(q)}{dq}
+$$
+\frac{dC(q)}{dq}
 =
 c_hF_D(q)
 -
 c_u[1-F_D(q)],
-]
+$$
 
-where (F_D) is the cumulative distribution function of demand.
+where $F_D$ is the cumulative distribution function of demand.
 
 Setting the derivative to zero,
 
-[
+$$
 c_hF_D(q)
 =
 c_u[1-F_D(q)].
-]
+$$
 
 Therefore,
 
-[
-F_D(q^ast)
+$$
+F_D(q^\ast)
 =
-rac{c_u}{c_u+c_h}.
-]
+\frac{c_u}{c_u+c_h}.
+$$
 
 The optimal stock level is
 
-[
-q^ast
+$$
+q^\ast
 =
 F_D^{-1}
-left(
-rac{c_u}{c_u+c_h}
-ight).
-]
+\left(
+\frac{c_u}{c_u+c_h}
+\right).
+$$
 
 This is the classical newsvendor critical fractile.
 
@@ -253,131 +253,131 @@ Now consider a concrete synthetic example.
 
 Suppose demand follows
 
-[
+$$
 D
-sim
-mathcal N(100,15^2).
-]
+\sim
+\mathcal N(100,15^2).
+$$
 
 The mean demand is
 
-[
-mu=100
-]
+$$
+\mu=100
+$$
 
 and the standard deviation is
 
-[
-sigma=15.
-]
+$$
+\sigma=15.
+$$
 
 Assume one unit of excess inventory costs
 
-[
+$$
 c_h=1,
-]
+$$
 
 while one unit of shortage costs
 
-[
+$$
 c_u=9.
-]
+$$
 
 The critical fractile is therefore
 
-[
-alpha
+$$
+\alpha
 =
-rac{9}{9+1}
+\frac{9}{9+1}
 =
 0.9.
-]
+$$
 
 The inventory-optimal quantity is the 90th percentile of demand:
 
-[
-q^ast
+$$
+q^\ast
 =
 F_D^{-1}(0.9).
-]
+$$
 
 For a standard normal distribution,
 
-[
-Phi^{-1}(0.9)
-approx
+$$
+\Phi^{-1}(0.9)
+\approx
 1.2816.
-]
+$$
 
 Therefore,
 
-[
-q^ast
+$$
+q^\ast
 =
 100+1.2816(15)
-approx
+\approx
 119.22.
-]
+$$
 
 Now compare two point forecasts.
 
 **Forecast A** reports the conditional mean:
 
-[
+$$
 f_A=100.
-]
+$$
 
 **Forecast B** reports the inventory-optimal quantile:
 
-[
+$$
 f_B=119.22.
-]
+$$
 
 If forecasts are evaluated using RMSE, Forecast A is better.
 
-For a constant forecast (f),
+For a constant forecast $f$,
 
-[
-operatorname{MSE}(f)
+$$
+\operatorname{MSE}(f)
 =
-operatorname{Var}(D)
+\operatorname{Var}(D)
 +
-[mathbb E(D)-f]^2.
-]
+[\mathbb E(D)-f]^2.
+$$
 
 For Forecast A,
 
-[
-operatorname{RMSE}_A
+$$
+\operatorname{RMSE}_A
 =
-sqrt{15^2}
+\sqrt{15^2}
 =
 15.
-]
+$$
 
 For Forecast B,
 
-[
-operatorname{RMSE}_B
+$$
+\operatorname{RMSE}_B
 =
-sqrt{
+\sqrt{
 15^2+(119.22-100)^2
 }.
-]
+$$
 
 Thus,
 
-[
-operatorname{RMSE}_B
-approx
+$$
+\operatorname{RMSE}_B
+\approx
 24.38.
-]
+$$
 
 According to RMSE,
 
-[
+$$
 A
-]
+$$
 
 is clearly superior.
 
@@ -385,115 +385,115 @@ Now evaluate the same two decisions using the inventory cost that motivated the 
 
 For normally distributed demand, define
 
-[
+$$
 z
 =
-rac{q-mu}{sigma}.
-]
+\frac{q-\mu}{\sigma}.
+$$
 
 Expected excess inventory is
 
-[
-mathbb E[(q-D)^+]
+$$
+\mathbb E[(q-D)^+]
 =
-(q-mu)Phi(z)
+(q-\mu)\Phi(z)
 +
-sigmaphi(z),
-]
+\sigma\phi(z),
+$$
 
 and expected shortage is
 
-[
-mathbb E[(D-q)^+]
+$$
+\mathbb E[(D-q)^+]
 =
-(mu-q)[1-Phi(z)]
+(\mu-q)[1-\Phi(z)]
 +
-sigmaphi(z),
-]
+\sigma\phi(z),
+$$
 
-where (phi) and (Phi) are the standard normal density and distribution functions.
+where $\phi$ and $\Phi$ are the standard normal density and distribution functions.
 
 At
 
-[
+$$
 q=100,
-]
+$$
 
 we have
 
-[
+$$
 z=0
-]
+$$
 
 and
 
-[
-phi(0)
+$$
+\phi(0)
 =
-rac{1}{sqrt{2pi}}.
-]
+\frac{1}{\sqrt{2\pi}}.
+$$
 
 Expected excess inventory and expected shortage are both
 
-[
-15phi(0)
-approx
+$$
+15\phi(0)
+\approx
 5.984.
-]
+$$
 
 The expected operational cost is therefore
 
-[
+$$
 C_A
 =
 1(5.984)
 +
 9(5.984)
-]
+$$
 
 or
 
-[
+$$
 C_A
-approx
+\approx
 59.84.
-]
+$$
 
 At
 
-[
+$$
 q=119.22,
-]
+$$
 
 the expected excess inventory is approximately
 
-[
+$$
 19.93,
-]
+$$
 
 while expected shortage falls to approximately
 
-[
+$$
 0.71.
-]
+$$
 
 The resulting expected cost is
 
-[
+$$
 C_B
 =
 1(19.93)
 +
 9(0.71)
-]
+$$
 
 or
 
-[
+$$
 C_B
-approx
+\approx
 26.32.
-]
+$$
 
 The ranking reverses.
 
@@ -518,9 +518,9 @@ It is not trying to estimate mean demand.
 
 The quantity
 
-[
+$$
 119.22
-]
+$$
 
 is an intentionally conservative demand quantile chosen because shortages are more expensive than excess stock.
 
@@ -530,7 +530,7 @@ If we ask for the stock level that minimises the stated inventory cost, 100 is t
 
 The statistical target is part of the forecasting specification.
 
-This matters in machine learning because a model trained under squared-error loss is pushed toward a conditional mean. A model trained under quantile loss at level (alpha) is pushed toward the conditional (alpha)-quantile.
+This matters in machine learning because a model trained under squared-error loss is pushed toward a conditional mean. A model trained under quantile loss at level $\alpha$ is pushed toward the conditional $\alpha$-quantile.
 
 The training loss, forecast output, evaluation score, and downstream decision should therefore be coherent.
 
@@ -540,36 +540,36 @@ Otherwise, a forecasting pipeline can optimise one mathematical target and deplo
 
 For quantile level
 
-[
-0<alpha<1,
-]
+$$
+0<\alpha<1,
+$$
 
 the pinball loss can be written as
 
-[
-L_alpha(D,q)
+$$
+L_\alpha(D,q)
 =
-egin{cases}
-alpha(D-q), & Dge q,\
-(1-alpha)(q-D), & D<q.
-end{cases}
-]
+\begin{cases}
+\alpha(D-q), & D\ge q,\\
+(1-\alpha)(q-D), & D<q.
+\end{cases}
+$$
 
 Ignoring a positive multiplicative constant, the inventory cost
 
-[
+$$
 c_h(q-D)^+
 +
 c_u(D-q)^+
-]
+$$
 
 is a pinball loss with
 
-[
-alpha
+$$
+\alpha
 =
-rac{c_u}{c_u+c_h}.
-]
+\frac{c_u}{c_u+c_h}.
+$$
 
 This equivalence is important.
 
@@ -577,21 +577,21 @@ It means that a demand quantile can be trained and evaluated using a statistical
 
 For
 
-[
+$$
 c_u=9
-]
+$$
 
 and
 
-[
+$$
 c_h=1,
-]
+$$
 
 the relevant quantile is
 
-[
-alpha=0.9.
-]
+$$
+\alpha=0.9.
+$$
 
 A 0.9-quantile forecasting model should not be penalised for systematically lying above the conditional mean.
 
@@ -607,35 +607,35 @@ Inventory position can include on-hand stock, outstanding purchase orders, backo
 
 A periodic-review order-up-to policy can be written schematically as
 
-[
+$$
 Q_t
 =
-max
-left[
+\max
+\left[
 0,
 S_t-IP_t
-ight],
-]
+\right],
+$$
 
-where (Q_t) is the new order, (S_t) is the order-up-to level, and (IP_t) is inventory position.
+where $Q_t$ is the new order, $S_t$ is the order-up-to level, and (IP_t) is inventory position.
 
-The target (S_t) depends on demand over the protection period.
+The target $S_t$ depends on demand over the protection period.
 
-If the review interval is (R) and lead time is (L), the relevant random quantity is not next-period demand.
+If the review interval is $R$ and lead time is $L$, the relevant random quantity is not next-period demand.
 
 It is cumulative demand over approximately
 
-[
+$$
 R+L.
-]
+$$
 
 Write this as
 
-[
+$$
 D^{(R+L)}
 =
-sum_{j=1}^{R+L}D_{t+j}.
-]
+\sum_{j=1}^{R+L}D_{t+j}.
+$$
 
 A forecast can perform well one step ahead and still estimate the protection-period distribution poorly.
 
@@ -645,36 +645,36 @@ Inventory performance depends on the latter.
 
 Suppose one-step demand errors are
 
-[
+$$
 e_{t+h}
 =
-D_{t+h}-hat D_{t+h}.
-]
+D_{t+h}-\hat D_{t+h}.
+$$
 
-For lead time (L), the cumulative forecast error is
+For lead time $L$, the cumulative forecast error is
 
-[
+$$
 E_L
 =
-sum_{h=1}^{L}e_{t+h}.
-]
+\sum_{h=1}^{L}e_{t+h}.
+$$
 
 Its variance is
 
-[
-operatorname{Var}(E_L)
+$$
+\operatorname{Var}(E_L)
 =
-sum_{h=1}^{L}
-operatorname{Var}(e_{t+h})
+\sum_{h=1}^{L}
+\operatorname{Var}(e_{t+h})
 +
 2
-sum_{h<k}
-operatorname{Cov}(e_{t+h},e_{t+k}).
-]
+\sum_{h<k}
+\operatorname{Cov}(e_{t+h},e_{t+k}).
+$$
 
 The covariance terms matter.
 
-Multiplying one-step error variance by (L) implicitly assumes that forecast errors across horizons are independent and similarly distributed.
+Multiplying one-step error variance by $L$ implicitly assumes that forecast errors across horizons are independent and similarly distributed.
 
 That assumption can be wrong even when the underlying demand process itself has little serial correlation.
 
@@ -694,9 +694,9 @@ Model A makes errors that are approximately symmetric around zero.
 
 Model B produces persistent negative forecast errors:
 
-[
-mathbb E[D-hat D]>0.
-]
+$$
+\mathbb E[D-\hat D]>0.
+$$
 
 Under a shortage-sensitive inventory policy, the models may perform very differently.
 
@@ -718,15 +718,15 @@ This is why bias should be monitored separately even when a symmetric accuracy m
 
 Suppose management requires a cycle service level of
 
-[
+$$
 95%.
-]
+$$
 
 A policy may then choose a demand quantile near
 
-[
+$$
 0.95
-]
+$$
 
 for the relevant protection period, depending on the exact service definition and model assumptions.
 
@@ -734,9 +734,9 @@ That decision may not minimise economic cost.
 
 If the implied shortage and holding costs correspond to a critical fractile of
 
-[
+$$
 0.80,
-]
+$$
 
 then choosing the 0.95 quantile intentionally carries more inventory than the newsvendor cost optimum.
 
@@ -746,18 +746,18 @@ It shows that supply-chain objectives can be constrained.
 
 A practical optimisation problem may look more like
 
-[
-min_{pi}
-mathbb E[C(pi)]
-]
+$$
+\min_{\pi}
+\mathbb E[C(\pi)]
+$$
 
 subject to
 
-[
-operatorname{ServiceLevel}(pi)
-ge
+$$
+\operatorname{ServiceLevel}(\pi)
+\ge
 0.95.
-]
+$$
 
 Forecast evaluation should reflect this structure.
 
@@ -795,11 +795,11 @@ The result does not prove that B is the better forecasting model.
 
 It proves that the combined system
 
-[
-	ext{forecast}
+$$
+\text{forecast}
 +
-	ext{policy}
-]
+\text{policy}
+$$
 
 performed better.
 
@@ -821,7 +821,7 @@ Those are different experiments.
 
 A supply-chain forecasting backtest should preserve the temporal order of decisions.
 
-At time (t), the model should use only information available at (t).
+At time $t$, the model should use only information available at $t$.
 
 It should generate the predictive quantities required by the replenishment policy.
 
@@ -831,51 +831,51 @@ The simulator should then advance time, receive previously placed orders accordi
 
 A simple cost function might be
 
-[
+$$
 C_t
 =
 c_hI_t^+
 +
 c_bB_t
 +
-c_omathbf 1(Q_t>0)
+c_o\mathbf 1(Q_t>0)
 +
 c_eE_t,
-]
+$$
 
 where
 
-[
+$$
 I_t^+
-]
+$$
 
 is positive ending inventory,
 
-[
+$$
 B_t
-]
+$$
 
 is backorder or lost-demand quantity,
 
-[
+$$
 c_o
-]
+$$
 
 is fixed ordering cost, and
 
-[
+$$
 E_t
-]
+$$
 
 represents emergency replenishment or another exception cost.
 
 Total backtest cost is
 
-[
-C_{mathrm{total}}
+$$
+C_{\mathrm{total}}
 =
-sum_tC_t.
-]
+\sum_tC_t.
+$$
 
 This simulation produces operational outputs that can be compared alongside forecast metrics.
 
@@ -903,15 +903,15 @@ If operational costs are chosen after the forecast results are visible, model ev
 
 Suppose Model A performs better when shortage cost is
 
-[
+$$
 c_u=3,
-]
+$$
 
 while Model B performs better when
 
-[
+$$
 c_u=20.
-]
+$$
 
 Choosing 20 after seeing the result is not a neutral evaluation.
 
@@ -921,11 +921,11 @@ When costs are uncertain, sensitivity analysis is preferable to pretending that 
 
 For example, evaluate the model ranking over
 
-[
-rac{c_u}{c_h}
-in
+$$
+\frac{c_u}{c_h}
+\in
 {2,5,10,20}.
-]
+$$
 
 If Model B dominates across the range, the operational conclusion is robust.
 
@@ -945,11 +945,11 @@ Accuracy metrics can also reveal whether a model improved after adding informati
 
 The problem is the final inference:
 
-[
-	ext{lower forecast error}
-Rightarrow
-	ext{better supply-chain performance}.
-]
+$$
+\text{lower forecast error}
+\Rightarrow
+\text{better supply-chain performance}.
+$$
 
 That implication requires assumptions about the decision policy and loss function.
 
@@ -959,9 +959,9 @@ It is not a mathematical identity.
 
 The newsvendor result depends on
 
-[
-F_D^{-1}(alpha).
-]
+$$
+F_D^{-1}(\alpha).
+$$
 
 That requires a predictive distribution or at least an estimate of the relevant quantile.
 
@@ -971,19 +971,19 @@ Suppose two forecasting systems both predict mean demand of 100.
 
 Model A believes
 
-[
+$$
 D
-sim
-mathcal N(100,5^2).
-]
+\sim
+\mathcal N(100,5^2).
+$$
 
 Model B believes
 
-[
+$$
 D
-sim
-mathcal N(100,25^2).
-]
+\sim
+\mathcal N(100,25^2).
+$$
 
 Their point forecasts are identical.
 
@@ -991,23 +991,23 @@ Their inventory implications are not.
 
 For a 95th-percentile stock target,
 
-[
+$$
 q_A
-approx
+\approx
 100+1.645(5)
 =
 108.23,
-]
+$$
 
 while
 
-[
+$$
 q_B
-approx
+\approx
 100+1.645(25)
 =
 141.13.
-]
+$$
 
 The mean forecast contains no information about this difference in uncertainty.
 
@@ -1037,23 +1037,23 @@ Operational evaluation should therefore ask whether the distribution is accurate
 
 Suppose historical demand is assumed normal,
 
-[
+$$
 D_t
-sim
-mathcal N(mu,sigma^2).
-]
+\sim
+\mathcal N(\mu,\sigma^2).
+$$
 
 We estimate
 
-[
-hatmu
-]
+$$
+\hat\mu
+$$
 
 and
 
-[
-hatsigma
-]
+$$
+\hat\sigma
+$$
 
 from limited data.
 
@@ -1085,15 +1085,15 @@ Did the improvement in the forecast change the replenishment decision enough to 
 
 Suppose a planner override reduces MAE from
 
-[
+$$
 12.0
-]
+$$
 
 to
 
-[
+$$
 11.7.
-]
+$$
 
 If both forecasts generate the same order quantity after lot-size rounding and safety-stock rules, the operational value of that improvement may be zero.
 
@@ -1101,13 +1101,13 @@ Conversely, a small change in a forecast near a reorder threshold can alter the 
 
 This suggests a decision-level analogue:
 
-[
-	ext{Decision Value Added}
+$$
+\text{Decision Value Added}
 =
-C_{mathrm{baseline}}
+C_{\mathrm{baseline}}
 -
-C_{mathrm{new}}.
-]
+C_{\mathrm{new}}.
+$$
 
 The name matters less than the principle.
 
@@ -1151,11 +1151,11 @@ Observed sales are not always equal to latent demand.
 
 If a product stocks out, observed sales can be censored:
 
-[
-	ext{Sales}_t
+$$
+\text{Sales}_t
 =
-min(D_t,I_t^{mathrm{available}}).
-]
+\min(D_t,I_t^{\mathrm{available}}).
+$$
 
 When inventory reaches zero, true demand can continue while recorded sales cannot.
 
@@ -1177,17 +1177,17 @@ The first evaluates predictive quality.
 
 It can include metrics such as:
 
-[
-	ext{MASE},
-quad
-	ext{RMSE},
-quad
-	ext{bias},
-quad
-	ext{quantile loss},
-quad
-	ext{coverage},
-]
+$$
+\text{MASE},
+\quad
+\text{RMSE},
+\quad
+\text{bias},
+\quad
+\text{quantile loss},
+\quad
+\text{coverage},
+$$
 
 depending on the forecasting target.
 
@@ -1195,19 +1195,19 @@ The second evaluates operational performance under a fixed and documented replen
 
 It can include:
 
-[
-	ext{total cost},
-quad
-	ext{holding cost},
-quad
-	ext{shortage cost},
-quad
-	ext{fill rate},
-quad
-	ext{cycle service},
-quad
-	ext{average inventory}.
-]
+$$
+\text{total cost},
+\quad
+\text{holding cost},
+\quad
+\text{shortage cost},
+\quad
+\text{fill rate},
+\quad
+\text{cycle service},
+\quad
+\text{average inventory}.
+$$
 
 A model that improves both is easy to defend.
 
@@ -1225,57 +1225,57 @@ The worked example gives the central result.
 
 For
 
-[
-Dsimmathcal N(100,15^2),
-]
+$$
+D\sim\mathcal N(100,15^2),
+$$
 
 Forecast A uses the mean
 
-[
+$$
 100
-]
+$$
 
 and obtains
 
-[
-operatorname{RMSE}=15.
-]
+$$
+\operatorname{RMSE}=15.
+$$
 
 Forecast B uses the 90th percentile
 
-[
+$$
 119.22
-]
+$$
 
 and obtains the worse RMSE
 
-[
+$$
 24.38.
-]
+$$
 
 Under shortage cost
 
-[
+$$
 c_u=9
-]
+$$
 
 and holding cost
 
-[
+$$
 c_h=1,
-]
+$$
 
 their expected inventory costs are approximately
 
-[
+$$
 59.84
-]
+$$
 
 and
 
-[
+$$
 26.32.
-]
+$$
 
 The lower-RMSE forecast loses.
 

@@ -81,7 +81,7 @@ A model that fits observed data well has passed a test.
 
 The difficulty is deciding which test.
 
-A small residual sum of squares can show that predictions are numerically close to the observations used in fitting. A large likelihood can show that the observed data are relatively compatible with one set of model parameters. A high (R^2) can show that the model explains much of the observed variation according to a particular decomposition. Accurate held-out prediction can show that a fitted procedure generalises to data drawn under conditions similar to those used for validation.
+A small residual sum of squares can show that predictions are numerically close to the observations used in fitting. A large likelihood can show that the observed data are relatively compatible with one set of model parameters. A high $R^2$ can show that the model explains much of the observed variation according to a particular decomposition. Accurate held-out prediction can show that a fitted procedure generalises to data drawn under conditions similar to those used for validation.
 
 These are meaningful achievements.
 
@@ -95,109 +95,109 @@ The most direct way to see the issue is to construct models that fit perfectly a
 
 ## Perfect interpolation does not determine what happens between or beyond the data
 
-Suppose we observe (n) input-output pairs
+Suppose we observe $n$ input-output pairs
 
-[
-(x_1,y_1),ldots,(x_n,y_n).
-]
+$$
+(x_1,y_1),\ldots,(x_n,y_n).
+$$
 
-Assume a function (f(x)) fits them exactly:
+Assume a function (f$x$) fits them exactly:
 
-[
+$$
 f(x_i)=y_i
-]
+$$
 
 for every observed point.
 
 Now define a new family of functions
 
-[
+$$
 g_c(x)
 =
 f(x)
 +
-cprod_{i=1}^{n}(x-x_i),
-]
+c\prod_{i=1}^{n}(x-x_i),
+$$
 
-where (c) can be any real number.
+where $c$ can be any real number.
 
-At every observed input (x_j), one factor in the product is zero. Therefore,
+At every observed input $x_j$, one factor in the product is zero. Therefore,
 
-[
+$$
 g_c(x_j)
 =
 f(x_j)
 +
-ccdot0
+c\cdot0
 =
 y_j.
-]
+$$
 
-Every value of (c) produces exactly the same fit to the observed data.
+Every value of $c$ produces exactly the same fit to the observed data.
 
 There are infinitely many such models.
 
 Their residual sum of squares on the observed points is identical:
 
-[
-operatorname{RSS}(g_c)=0.
-]
+$$
+\operatorname{RSS}(g_c)=0.
+$$
 
 Their predictions away from the observed inputs can be arbitrarily different.
 
 Take the simplest concrete example. Suppose the observed data are
 
-[
-(0,0),qquad(1,1),qquad(2,2).
-]
+$$
+(0,0),\qquad(1,1),\qquad(2,2).
+$$
 
 One exact model is
 
-[
+$$
 f(x)=x.
-]
+$$
 
 Another family is
 
-[
+$$
 g_c(x)
 =
 x+c,x(x-1)(x-2).
-]
+$$
 
 At (x=0), (x=1), and (x=2), every member of this family produces exactly the observed values.
 
 At (x=3),
 
-[
+$$
 g_c(3)
 =
 3+6c.
-]
+$$
 
 If
 
-[
+$$
 c=10,
-]
+$$
 
 then
 
-[
+$$
 g_{10}(3)=63.
-]
+$$
 
 If
 
-[
+$$
 c=-10,
-]
+$$
 
 then
 
-[
+$$
 g_{-10}(3)=-57.
-]
+$$
 
 The training data cannot distinguish a prediction of 63 from a prediction of (-57), even though both models achieve perfect fit at every observed point.
 
@@ -215,29 +215,29 @@ The deeper distinction is that extrapolation depends more strongly on structural
 
 Suppose observations cover
 
-[
-0le xle2.
-]
+$$
+0\le x\le2.
+$$
 
 Within that interval, a linear model and a mildly curved model may be nearly indistinguishable. Outside the interval, the terms that were numerically small can dominate.
 
 A polynomial model illustrates this immediately:
 
-[
+$$
 Y
 =
-eta_0+eta_1x+eta_2x^2+arepsilon.
-]
+\beta_0+\beta_1x+\beta_2x^2+\varepsilon.
+$$
 
-If all observed (x) values occupy a narrow range around zero, the contribution of
+If all observed $x$ values occupy a narrow range around zero, the contribution of
 
-[
-eta_2x^2
-]
+$$
+\beta_2x^2
+$$
 
-may be too small to distinguish reliably from noise. The fitted data can look almost linear whether (eta_2=0), (0.1), or a moderately different value.
+may be too small to distinguish reliably from noise. The fitted data can look almost linear whether $\beta_2=0$, (0.1), or a moderately different value.
 
-At larger (x), the quadratic term grows as (x^2).
+At larger $x$, the quadratic term grows as $x^2$.
 
 A component that was practically invisible in the calibration region can dominate the extrapolation.
 
@@ -255,107 +255,107 @@ A second problem occurs when the model's observable predictions are well determi
 
 Consider
 
-[
+$$
 Y_i
 =
-abx_i+arepsilon_i,
-]
+abx_i+\varepsilon_i,
+$$
 
 with
 
-[
-arepsilon_isimmathcal N(0,sigma^2).
-]
+$$
+\varepsilon_i\sim\mathcal N(0,\sigma^2).
+$$
 
 The expected value is
 
-[
-mu_i=abx_i.
-]
+$$
+\mu_i=abx_i.
+$$
 
-The likelihood depends on (a) and (b) only through their product
+The likelihood depends on $a$ and $b$ only through their product
 
-[
-	heta=ab.
-]
+$$
+\theta=ab.
+$$
 
 If the data strongly support
 
-[
-	heta=2,
-]
+$$
+\theta=2,
+$$
 
 then all of the following parameter pairs produce exactly the same fitted mean:
 
-[
+$$
 (a,b)=(1,2),
-]
+$$
 
-[
+$$
 (a,b)=(2,1),
-]
+$$
 
-[
+$$
 (a,b)=(4,0.5),
-]
+$$
 
 and infinitely many others satisfying
 
-[
+$$
 ab=2.
-]
+$$
 
-Prediction of (Y) can be excellent.
+Prediction of $Y$ can be excellent.
 
-Separate interpretation of (a) and (b) is impossible from these data.
+Separate interpretation of $a$ and $b$ is impossible from these data.
 
 The geometry appears directly in the Fisher information.
 
 The derivatives of the mean are
 
-[
-rac{partialmu_i}{partial a}
+$$
+\frac{\partial\mu_i}{\partial a}
 =
 bx_i
-]
+$$
 
 and
 
-[
-rac{partialmu_i}{partial b}
+$$
+\frac{\partial\mu_i}{\partial b}
 =
 ax_i.
-]
+$$
 
 For independent normal observations with known variance, the information matrix is
 
-[
+$$
 I(a,b)
 =
-rac{1}{sigma^2}
-sum_i x_i^2
-egin{pmatrix}
-b^2 & ab\
+\frac{1}{\sigma^2}
+\sum_i x_i^2
+\begin{pmatrix}
+b^2 & ab\\
 ab & a^2
-end{pmatrix}.
-]
+\end{pmatrix}.
+$$
 
 Its determinant is
 
-[
-det I(a,b)
+$$
+\det I(a,b)
 =
-left(
-rac{1}{sigma^2}sum_i x_i^2
-ight)^2
-left(a^2b^2-a^2b^2ight)
+\left(
+\frac{1}{\sigma^2}\sum_i x_i^2
+\right)^2
+\left(a^2b^2-a^2b^2\right)
 =
 0.
-]
+$$
 
 The matrix is singular.
 
-No amount of additional data of exactly the same form resolves the individual parameters. More observations can estimate (ab) more precisely, but they cannot separate (a) from (b).
+No amount of additional data of exactly the same form resolves the individual parameters. More observations can estimate (ab) more precisely, but they cannot separate $a$ from $b$.
 
 This is structural non-identifiability.
 
@@ -365,7 +365,7 @@ Cobelli and DiStefano discussed this distinction in physiological models decades
 
 The distinction matters because parameters often carry scientific names.
 
-If (a) represents one biological rate and (b) another, good prediction of their product does not justify claiming that both rates have been estimated.
+If $a$ represents one biological rate and $b$ another, good prediction of their product does not justify claiming that both rates have been estimated.
 
 ## Reparameterisation can reveal what the data actually identify
 
@@ -375,15 +375,15 @@ It is badly parameterised for the information supplied by the experiment.
 
 Define
 
-[
-	heta=ab.
-]
+$$
+\theta=ab.
+$$
 
 The model becomes
 
-[
-Y_i=	heta x_i+arepsilon_i.
-]
+$$
+Y_i=\theta x_i+\varepsilon_i.
+$$
 
 Now the identifiable object is explicit.
 
@@ -407,88 +407,88 @@ They should not be confused.
 
 A model can also fit every aspect of an observational distribution and still fail to identify the causal direction.
 
-Let (X) and (Y) be standard normal variables with correlation
+Let $X$ and $Y$ be standard normal variables with correlation
 
-[
-ho.
-]
+$$
+\rho.
+$$
 
 Consider the structural model
 
-[
-Xsimmathcal N(0,1),
-]
+$$
+X\sim\mathcal N(0,1),
+$$
 
-[
-Y=ho X+arepsilon_Y,
-]
+$$
+Y=\rho X+\varepsilon_Y,
+$$
 
 where
 
-[
-arepsilon_Y
-sim
-mathcal N(0,1-ho^2)
-]
+$$
+\varepsilon_Y
+\sim
+\mathcal N(0,1-\rho^2)
+$$
 
-and (arepsilon_Y) is independent of (X).
+and $\varepsilon_Y$ is independent of $X$.
 
 This generates
 
-[
-operatorname{Var}(X)=1,
-]
+$$
+\operatorname{Var}(X)=1,
+$$
 
-[
-operatorname{Var}(Y)=1,
-]
+$$
+\operatorname{Var}(Y)=1,
+$$
 
 and
 
-[
-operatorname{Cov}(X,Y)=ho.
-]
+$$
+\operatorname{Cov}(X,Y)=\rho.
+$$
 
 Now reverse the structural direction:
 
-[
-Ysimmathcal N(0,1),
-]
+$$
+Y\sim\mathcal N(0,1),
+$$
 
-[
-X=ho Y+arepsilon_X,
-]
+$$
+X=\rho Y+\varepsilon_X,
+$$
 
 with
 
-[
-arepsilon_X
-sim
-mathcal N(0,1-ho^2)
-]
+$$
+\varepsilon_X
+\sim
+\mathcal N(0,1-\rho^2)
+$$
 
-independent of (Y).
+independent of $Y$.
 
 This model generates exactly the same bivariate normal observational distribution:
 
-[
-egin{pmatrix}
-X\
+$$
+\begin{pmatrix}
+X\\
 Y
-end{pmatrix}
-sim
-mathcal N
-left[
-egin{pmatrix}
-0\
+\end{pmatrix}
+\sim
+\mathcal N
+\left[
+\begin{pmatrix}
+0\\
 0
-end{pmatrix},
-egin{pmatrix}
-1 & ho\
-ho & 1
-end{pmatrix}
-ight].
-]
+\end{pmatrix},
+\begin{pmatrix}
+1 & \rho\\
+\rho & 1
+\end{pmatrix}
+\right].
+$$
 
 No amount of passive observation of that joint distribution can distinguish the two models under the stated assumptions.
 
@@ -496,25 +496,25 @@ Their intervention predictions differ.
 
 Under the first model, forcing
 
-[
+$$
 X=x
-]
+$$
 
 gives
 
-[
-mathbb E[Ymid do(X=x)]
+$$
+\mathbb E[Y\mid do(X=x)]
 =
-ho x.
-]
+\rho x.
+$$
 
-Under the second model, (Y) is generated upstream of (X). Intervening on (X) does not alter the distribution of (Y), so
+Under the second model, $Y$ is generated upstream of $X$. Intervening on $X$ does not alter the distribution of $Y$, so
 
-[
-mathbb E[Ymid do(X=x)]
+$$
+\mathbb E[Y\mid do(X=x)]
 =
 0.
-]
+$$
 
 The observational fit is identical.
 
@@ -560,37 +560,37 @@ Training error is especially weak evidence because the model was selected using 
 
 Held-out prediction improves the situation.
 
-Let (P) denote the distribution that generated the development data. For a prediction function (f) and loss (ell), define its target risk under (P) as
+Let $P$ denote the distribution that generated the development data. For a prediction function $f$ and loss $\ell$, define its target risk under $P$ as
 
-[
+$$
 R_P(f)
 =
-mathbb E_P[ell(Y,f(X))].
-]
+\mathbb E_P[\ell(Y,f(X))].
+$$
 
 A properly designed test set can estimate this quantity when test observations are independent and drawn from the same relevant distribution.
 
-Now suppose deployment occurs under a different distribution (Q).
+Now suppose deployment occurs under a different distribution $Q$.
 
 The relevant risk becomes
 
-[
+$$
 R_Q(f)
 =
-mathbb E_Q[ell(Y,f(X))].
-]
+\mathbb E_Q[\ell(Y,f(X))].
+$$
 
 Excellent estimation of
 
-[
+$$
 R_P(f)
-]
+$$
 
 does not determine
 
-[
+$$
 R_Q(f).
-]
+$$
 
 The change can arise from a different covariate distribution, altered measurement procedures, changed behaviour, a new policy environment, different prevalence, selection into the sample, or modification of the causal system itself.
 
@@ -604,11 +604,11 @@ Validation is always relative to a population, measurement process, outcome defi
 
 ## A likelihood can be maximised under a false model
 
-Suppose the true data distribution is (P), but every model in the fitted family
+Suppose the true data distribution is $P$, but every model in the fitted family
 
-[
-{Q_	heta:	hetainTheta}
-]
+$$
+{Q_\theta:\theta\in\Theta}
+$$
 
 is wrong.
 
@@ -620,9 +620,9 @@ That limiting parameter can be useful.
 
 It is not proof that
 
-[
-P=Q_{	heta}.
-]
+$$
+P=Q_{\theta}.
+$$
 
 White's 1982 analysis of maximum likelihood under model misspecification formalised this distinction. Standard inferential formulas that assume correct specification can also fail under misspecification, motivating robust covariance estimators in many settings.
 
@@ -630,15 +630,15 @@ This is another reason optimisation success should not be interpreted as model t
 
 A numerical method answers
 
-[
-	ext{which member of this family fits best?}
-]
+$$
+\text{which member of this family fits best?}
+$$
 
 It does not answer
 
-[
-	ext{is this family scientifically adequate?}
-]
+$$
+\text{is this family scientifically adequate?}
+$$
 
 Those are different questions.
 
@@ -652,32 +652,32 @@ For probabilistic models, one can simulate replicated datasets from the fitted m
 
 If a Bayesian model is described by
 
-[
-p(	hetamid y),
-]
+$$
+p(\theta\mid y),
+$$
 
 the posterior predictive distribution is
 
-[
-p(y^{mathrm{rep}}mid y)
+$$
+p(y^{\mathrm{rep}}\mid y)
 =
-int
-p(y^{mathrm{rep}}mid	heta)
-p(	hetamid y)
-,d	heta.
-]
+\int
+p(y^{\mathrm{rep}}\mid\theta)
+p(\theta\mid y)
+,d\theta.
+$$
 
-A discrepancy statistic (T) can then compare
+A discrepancy statistic $T$ can then compare
 
-[
-T(y^{mathrm{rep}})
-]
+$$
+T(y^{\mathrm{rep}})
+$$
 
 with
 
-[
+$$
 T(y).
-]
+$$
 
 Gelman and Shalizi emphasise this model-checking perspective. The aim is not merely to obtain posterior uncertainty conditional on a model, but to ask whether important features of the observed data resemble what the fitted model itself predicts.
 
@@ -695,11 +695,11 @@ A model check is informative only about the aspect of the model that the check w
 
 Suppose two models have nearly identical root mean squared error:
 
-[
-operatorname{RMSE}_1
-approx
-operatorname{RMSE}_2.
-]
+$$
+\operatorname{RMSE}_1
+\approx
+\operatorname{RMSE}_2.
+$$
 
 One may systematically underpredict the upper tail while the other is well calibrated there.
 
@@ -725,13 +725,13 @@ The evaluation target should therefore resemble the inferential target.
 
 Increasing model flexibility almost always creates opportunities to fit observed data more closely.
 
-Suppose model (M_1) is nested inside model (M_2). The larger model can often achieve
+Suppose model $M_1$ is nested inside model $M_2$. The larger model can often achieve
 
-[
-operatorname{RSS}(M_2)
-le
-operatorname{RSS}(M_1)
-]
+$$
+\operatorname{RSS}(M_2)
+\le
+\operatorname{RSS}(M_1)
+$$
 
 on the training data.
 
@@ -757,11 +757,11 @@ The distinction is important.
 
 In the product model
 
-[
-Y=abX+arepsilon,
-]
+$$
+Y=abX+\varepsilon,
+$$
 
-(a) and (b) are structurally non-identifiable because only their product enters the observable distribution.
+$a$ and $b$ are structurally non-identifiable because only their product enters the observable distribution.
 
 Now consider a different model in which the parameters are theoretically separable, but the experiment observes only a short time interval or a narrow input range. The likelihood may contain a long, nearly flat ridge. With ideal richer data the parameters could be separated. With the available experiment, they cannot.
 
@@ -775,23 +775,23 @@ A model can therefore reproduce a time series beautifully while its scientific i
 
 If several models explain the same observed regime, a useful scientific strategy is to create conditions under which their predictions diverge.
 
-Suppose models (M_1) and (M_2) both fit historical data.
+Suppose models $M_1$ and $M_2$ both fit historical data.
 
-Under an intervention (A), they predict
+Under an intervention $A$, they predict
 
-[
-mathbb E_{M_1}[Ymid do(A=a)]
+$$
+\mathbb E_{M_1}[Y\mid do(A=a)]
 =
 5
-]
+$$
 
 and
 
-[
-mathbb E_{M_2}[Ymid do(A=a)]
+$$
+\mathbb E_{M_2}[Y\mid do(A=a)]
 =
 12.
-]
+$$
 
 An experiment near that intervention is far more informative for discriminating between the models than collecting many more passive observations from a regime in which both predict approximately the same thing.
 
@@ -799,11 +799,11 @@ This is the connection between modelling and experimental design.
 
 Data are informative when they stress the dimensions along which plausible models disagree.
 
-The product-parameter example can also be solved this way. If an additional experiment measures a quantity that depends on (a) but not (b), or perturbs the system so that their effects enter separately, the ridge
+The product-parameter example can also be solved this way. If an additional experiment measures a quantity that depends on $a$ but not $b$, or perturbs the system so that their effects enter separately, the ridge
 
-[
-ab=	heta
-]
+$$
+ab=\theta
+$$
 
 can be broken.
 
@@ -821,15 +821,15 @@ If the scientific conclusion changes substantially across reasonable alternative
 
 Suppose one model estimates
 
-[
-hat	au=0.8
-]
+$$
+\hat\tau=0.8
+$$
 
 and a plausible alternative estimates
 
-[
-hat	au=-0.2.
-]
+$$
+\hat\tau=-0.2.
+$$
 
 Reporting only the first fit conceals the dependence of the conclusion on model specification.
 
@@ -865,9 +865,9 @@ It is whether the model has survived tests capable of detecting errors that matt
 
 The statement
 
-[
-	ext{this model fits well}
-]
+$$
+\text{this model fits well}
+$$
 
 is incomplete.
 
@@ -905,21 +905,21 @@ Return to the three constructions.
 
 The interpolation family
 
-[
+$$
 g_c(x)
 =
 f(x)
 +
-cprod_i(x-x_i)
-]
+c\prod_i(x-x_i)
+$$
 
 shows that perfect fit to finite observations does not uniquely determine continuation away from those observations.
 
 The product model
 
-[
-Y=abX+arepsilon
-]
+$$
+Y=abX+\varepsilon
+$$
 
 shows that perfect predictive fit can coexist with parameters that cannot be separately identified.
 

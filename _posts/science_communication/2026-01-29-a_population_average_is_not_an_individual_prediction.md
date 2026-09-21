@@ -91,44 +91,44 @@ This is not a limitation of sample size. It is built into the structure of the c
 
 Let
 
-[
+$$
 Y_i(1)
-]
+$$
 
-denote the outcome person (i) would experience under treatment, and let
+denote the outcome person $i$ would experience under treatment, and let
 
-[
+$$
 Y_i(0)
-]
+$$
 
 denote the outcome the same person would experience under control.
 
 The individual treatment effect is
 
-[
-	au_i
+$$
+\tau_i
 =
 Y_i(1)-Y_i(0).
-]
+$$
 
-For a continuous outcome, (	au_i) is an ordinary difference. For a binary outcome with (Y=1) representing success, (	au_i) can take three values:
+For a continuous outcome, $\tau_i$ is an ordinary difference. For a binary outcome with (Y=1) representing success, $\tau_i$ can take three values:
 
-[
-	au_i=
-egin{cases}
-1, & 	ext{treatment changes failure into success},\
-0, & 	ext{the outcome is the same under both conditions},\
--1, & 	ext{treatment changes success into failure}.
-end{cases}
-]
+$$
+\tau_i=
+\begin{cases}
+1, & \text{treatment changes failure into success},\\
+0, & \text{the outcome is the same under both conditions},\\
+-1, & \text{treatment changes success into failure}.
+\end{cases}
+$$
 
-The problem is immediate. If person (i) receives treatment, we observe (Y_i(1)), but (Y_i(0)) is counterfactual. If the person receives control, the reverse is true.
+The problem is immediate. If person $i$ receives treatment, we observe (Y_i(1)), but (Y_i(0)) is counterfactual. If the person receives control, the reverse is true.
 
 We therefore never observe
 
-[
-igl(Y_i(1),Y_i(0)igr)
-]
+$$
+\bigl(Y_i(1),Y_i(0)\bigr)
+$$
 
 as a pair for the same person at the same moment.
 
@@ -142,25 +142,25 @@ Suppose treatment assignment is random. Then, apart from sampling variation and 
 
 This allows us to estimate
 
-[
-mathbb E[Y(1)]
-]
+$$
+\mathbb E[Y(1)]
+$$
 
 and
 
-[
-mathbb E[Y(0)].
-]
+$$
+\mathbb E[Y(0)].
+$$
 
 Their difference is the average treatment effect,
 
-[
-operatorname{ATE}
+$$
+\operatorname{ATE}
 =
-mathbb E[Y(1)-Y(0)]
+\mathbb E[Y(1)-Y(0)]
 =
-mathbb E[Y(1)]-mathbb E[Y(0)].
-]
+\mathbb E[Y(1)]-\mathbb E[Y(0)].
+$$
 
 The equality follows from linearity of expectation. It does not require us to observe both potential outcomes for the same individual.
 
@@ -176,25 +176,25 @@ Consider a binary outcome where (1) means success.
 
 Suppose a very large randomized trial finds
 
-[
-Pr(Y(1)=1)=0.60
-]
+$$
+\Pr(Y(1)=1)=0.60
+$$
 
 and
 
-[
-Pr(Y(0)=1)=0.40.
-]
+$$
+\Pr(Y(0)=1)=0.40.
+$$
 
 The average treatment effect on the risk-difference scale is therefore
 
-[
-operatorname{ATE}
+$$
+\operatorname{ATE}
 =
 0.60-0.40
 =
 0.20.
-]
+$$
 
 Treatment increases the probability of success by 20 percentage points on average.
 
@@ -220,15 +220,15 @@ Now construct **Population A**:
 
 Under treatment, success occurs among the always-successful and those who benefit:
 
-[
+$$
 0.40+0.20=0.60.
-]
+$$
 
 Under control, only the always-successful group succeeds:
 
-[
+$$
 0.40.
-]
+$$
 
 The trial therefore observes a 20 percentage point average benefit.
 
@@ -245,29 +245,29 @@ Now construct **Population B**:
 
 Under treatment,
 
-[
+$$
 0.10+0.50=0.60.
-]
+$$
 
 Under control,
 
-[
+$$
 0.10+0.30=0.40.
-]
+$$
 
 The randomized trial produces exactly the same treatment and control success rates:
 
-[
+$$
 60%
-quad	ext{versus}quad
+\quad\text{versus}\quad
 40%.
-]
+$$
 
 The average treatment effect is again
 
-[
+$$
 0.20.
-]
+$$
 
 But the individual response structure is radically different. Half the population benefits and 30% is harmed.
 
@@ -281,103 +281,103 @@ The same example can be written algebraically.
 
 Let
 
-[
-a=Pr(Y(1)=1,Y(0)=1),
-]
+$$
+a=\Pr(Y(1)=1,Y(0)=1),
+$$
 
-[
-b=Pr(Y(1)=1,Y(0)=0),
-]
+$$
+b=\Pr(Y(1)=1,Y(0)=0),
+$$
 
-[
-c=Pr(Y(1)=0,Y(0)=1),
-]
+$$
+c=\Pr(Y(1)=0,Y(0)=1),
+$$
 
 and
 
-[
-d=Pr(Y(1)=0,Y(0)=0).
-]
+$$
+d=\Pr(Y(1)=0,Y(0)=0).
+$$
 
 The treatment arm tells us
 
-[
+$$
 a+b=0.60,
-]
+$$
 
 while the control arm tells us
 
-[
+$$
 a+c=0.40.
-]
+$$
 
 Subtracting gives
 
-[
+$$
 b-c=0.20.
-]
+$$
 
 This identifies the average treatment effect because the proportion who benefit minus the proportion who are harmed is 0.20.
 
-It does not identify (b) and (c) separately.
+It does not identify $b$ and $c$ separately.
 
 Because all probabilities must be non-negative,
 
-[
-0le ale0.40.
-]
+$$
+0\le a\le0.40.
+$$
 
 Since
 
-[
+$$
 b=0.60-a,
-]
+$$
 
 the fraction who benefit can range from
 
-[
+$$
 0.20
-]
+$$
 
 to
 
-[
+$$
 0.60.
-]
+$$
 
 Similarly,
 
-[
+$$
 c=0.40-a,
-]
+$$
 
 so the fraction harmed can range from
 
-[
+$$
 0
-]
+$$
 
 to
 
-[
+$$
 0.40.
-]
+$$
 
 The trial therefore establishes
 
-[
-0.20le
-Pr(	ext{benefit})
-le0.60
-]
+$$
+0.20\le
+\Pr(\text{benefit})
+\le0.60
+$$
 
 and
 
-[
-0le
-Pr(	ext{harm})
-le0.40
-]
+$$
+0\le
+\Pr(\text{harm})
+\le0.40
+$$
 
 without additional assumptions or information.
 
@@ -393,9 +393,9 @@ Suppose we impose the condition that treatment can never convert a success under
 
 In the binary example, this is
 
-[
-Y_i(1)ge Y_i(0)
-]
+$$
+Y_i(1)\ge Y_i(0)
+$$
 
 for every individual.
 
@@ -403,21 +403,21 @@ This is a monotonicity assumption.
 
 It rules out the harmed category, so
 
-[
+$$
 c=0.
-]
+$$
 
 Since
 
-[
+$$
 b-c=0.20,
-]
+$$
 
 we then obtain
 
-[
+$$
 b=0.20.
-]
+$$
 
 Under monotonicity, exactly 20% benefit.
 
@@ -435,51 +435,51 @@ The second statement makes the inferential structure visible.
 
 Measured baseline characteristics can make treatment-effect estimates more relevant to a particular person.
 
-Let (X) denote baseline information such as age, disease severity, a biomarker, previous exposure, or another characteristic measured before treatment.
+Let $X$ denote baseline information such as age, disease severity, a biomarker, previous exposure, or another characteristic measured before treatment.
 
 A conditional average treatment effect is
 
-[
-	au(x)
+$$
+\tau(x)
 =
-mathbb E[Y(1)-Y(0)mid X=x].
-]
+\mathbb E[Y(1)-Y(0)\mid X=x].
+$$
 
-If (	au(x)) differs across values of (x), treatment effects are heterogeneous with respect to that characteristic.
+If (\tau$x$) differs across values of $x$, treatment effects are heterogeneous with respect to that characteristic.
 
 This can be scientifically and practically important.
 
-But (	au(x)) remains an average among people who share the specified covariate pattern. It is not generally the unobservable individual effect
+But (\tau$x$) remains an average among people who share the specified covariate pattern. It is not generally the unobservable individual effect
 
-[
+$$
 Y_i(1)-Y_i(0).
-]
+$$
 
 This distinction matters because the word "individualized" is often used for models that actually estimate conditional average risks.
 
 For a binary outcome, an individualized treatment-effect model may estimate
 
-[
-Pr(Y(1)=1mid X=x)
-]
+$$
+\Pr(Y(1)=1\mid X=x)
+$$
 
 and
 
-[
-Pr(Y(0)=1mid X=x),
-]
+$$
+\Pr(Y(0)=1\mid X=x),
+$$
 
 then report their difference,
 
-[
-delta(x)
+$$
+\delta(x)
 =
-Pr(Y(1)=1mid X=x)
+\Pr(Y(1)=1\mid X=x)
 -
-Pr(Y(0)=1mid X=x).
-]
+\Pr(Y(0)=1\mid X=x).
+$$
 
-This can be an excellent decision quantity. It estimates how treatment changes outcome probability among individuals with covariates like (x).
+This can be an excellent decision quantity. It estimates how treatment changes outcome probability among individuals with covariates like $x$.
 
 It still does not reveal both potential outcomes of the actual person standing in front of us.
 
@@ -491,45 +491,45 @@ Treatment-effect heterogeneity does not always require a biological interaction 
 
 Suppose an intervention reduces the relative risk of an adverse outcome by 20% across all baseline-risk groups:
 
-[
+$$
 RR=0.80.
-]
+$$
 
 Consider a low-risk group with untreated risk
 
-[
+$$
 p_0=0.05.
-]
+$$
 
 Under treatment,
 
-[
+$$
 p_1=0.80(0.05)=0.04.
-]
+$$
 
 The absolute risk reduction is
 
-[
+$$
 ARR=0.05-0.04=0.01.
-]
+$$
 
 Now consider a higher-risk group with untreated risk
 
-[
+$$
 p_0=0.50.
-]
+$$
 
 Under the same relative effect,
 
-[
+$$
 p_1=0.80(0.50)=0.40,
-]
+$$
 
 giving
 
-[
+$$
 ARR=0.50-0.40=0.10.
-]
+$$
 
 The relative effect is identical.
 
@@ -537,21 +537,21 @@ The absolute benefit differs by a factor of ten.
 
 If one chooses to express the result as a number needed to treat,
 
-[
-NNT=rac{1}{ARR},
-]
+$$
+NNT=\frac{1}{ARR},
+$$
 
 the corresponding values are
 
-[
+$$
 NNT=100
-]
+$$
 
 and
 
-[
+$$
 NNT=10.
-]
+$$
 
 These are population-level quantities under the stated risks. They do not mean that exactly one identifiable person among every ten will benefit.
 
@@ -567,21 +567,21 @@ A treatment can have a constant relative effect and a varying absolute effect.
 
 Conversely, a constant absolute effect generally implies a changing relative effect when baseline risks differ.
 
-Suppose two groups have control risks (p_{0a}) and (p_{0b}). If treatment subtracts a constant risk difference (d),
+Suppose two groups have control risks $p_{0a}$ and $p_{0b}$. If treatment subtracts a constant risk difference $d$,
 
-[
+$$
 p_1=p_0-d,
-]
+$$
 
 then the relative risk is
 
-[
+$$
 RR
 =
-rac{p_0-d}{p_0}
+\frac{p_0-d}{p_0}
 =
-1-rac{d}{p_0}.
-]
+1-\frac{d}{p_0}.
+$$
 
 The relative effect therefore depends on baseline risk.
 
@@ -607,25 +607,25 @@ The relevant hypothesis concerns interaction.
 
 If a model is
 
-[
+$$
 Y
 =
-eta_0
+\beta_0
 +
-eta_1A
+\beta_1A
 +
-eta_2X
+\beta_2X
 +
-eta_3AX
+\beta_3AX
 +
-arepsilon,
-]
+\varepsilon,
+$$
 
-then heterogeneity with respect to (X) is represented by the interaction term
+then heterogeneity with respect to $X$ is represented by the interaction term
 
-[
-eta_3.
-]
+$$
+\beta_3.
+$$
 
 Testing treatment separately within each subgroup and observing significance in one subgroup but not another is not equivalent to testing whether the subgroup effects differ.
 
@@ -645,11 +645,11 @@ They do not observe the missing potential outcome.
 
 Their target is usually something like
 
-[
-	au(x)
+$$
+\tau(x)
 =
-mathbb E[Y(1)-Y(0)mid X=x].
-]
+\mathbb E[Y(1)-Y(0)\mid X=x].
+$$
 
 To estimate this quantity reliably, the model must learn treatment-outcome relationships across covariate space. That creates familiar statistical problems.
 
@@ -659,7 +659,7 @@ The PATH statement developed by Kent and colleagues distinguishes risk modelling
 
 The central point is conceptual before it is computational.
 
-A more complicated prediction algorithm can use more information about (X). It does not transform an unobserved counterfactual into an observed individual response.
+A more complicated prediction algorithm can use more information about $X$. It does not transform an unobserved counterfactual into an observed individual response.
 
 ## The best treatment rule is a different estimand from the individual effect
 
@@ -667,33 +667,33 @@ Decision making does not always require identification of the complete distribut
 
 Suppose a model estimates
 
-[
-mu_1(x)
+$$
+\mu_1(x)
 =
-mathbb E[Y(1)mid X=x]
-]
+\mathbb E[Y(1)\mid X=x]
+$$
 
 and
 
-[
-mu_0(x)
+$$
+\mu_0(x)
 =
-mathbb E[Y(0)mid X=x].
-]
+\mathbb E[Y(0)\mid X=x].
+$$
 
 A treatment rule may choose treatment when
 
-[
-mu_1(x)>mu_0(x)
-]
+$$
+\mu_1(x)>\mu_0(x)
+$$
 
 for an outcome where larger values are desirable.
 
 This rule can improve average outcomes even though the actual pair
 
-[
-igl(Y_i(1),Y_i(0)igr)
-]
+$$
+\bigl(Y_i(1),Y_i(0)\bigr)
+$$
 
 remains unknown for every person.
 
@@ -729,9 +729,9 @@ That would be a mistake.
 
 The ATE answers a coherent and often important question:
 
-[
-mathbb E[Y(1)-Y(0)].
-]
+$$
+\mathbb E[Y(1)-Y(0)].
+$$
 
 If a health system, company, school, or government must choose one intervention for an entire target population, the population average can be directly relevant to the decision.
 
@@ -771,35 +771,35 @@ Return to the original example.
 
 The randomized trial establishes
 
-[
-Pr(Y(1)=1)=0.60
-]
+$$
+\Pr(Y(1)=1)=0.60
+$$
 
 and
 
-[
-Pr(Y(0)=1)=0.40.
-]
+$$
+\Pr(Y(0)=1)=0.40.
+$$
 
 It therefore identifies
 
-[
-operatorname{ATE}=0.20.
-]
+$$
+\operatorname{ATE}=0.20.
+$$
 
 That is substantial information.
 
 What it does not identify is whether the population contains
 
-[
-20%	ext{ benefiting and }0%	ext{ harmed},
-]
+$$
+20%\text{ benefiting and }0%\text{ harmed},
+$$
 
 or
 
-[
-50%	ext{ benefiting and }30%	ext{ harmed},
-]
+$$
+50%\text{ benefiting and }30%\text{ harmed},
+$$
 
 or another compatible mixture.
 

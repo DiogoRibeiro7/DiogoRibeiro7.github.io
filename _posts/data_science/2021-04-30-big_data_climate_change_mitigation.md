@@ -149,16 +149,16 @@ A satellite map, sensor network, or predictive model can reveal where emissions 
 A useful chain is
 
 $$
-oxed{
-	ext{measurement}
-ightarrow
-	ext{inventory}
-ightarrow
-	ext{counterfactual}
-ightarrow
-	ext{intervention}
-ightarrow
-	ext{verified emissions change}.
+\boxed{
+\text{measurement}
+\rightarrow
+\text{inventory}
+\rightarrow
+\text{counterfactual}
+\rightarrow
+\text{intervention}
+\rightarrow
+\text{verified emissions change}.
 }
 $$
 

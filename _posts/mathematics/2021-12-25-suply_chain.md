@@ -205,14 +205,14 @@ If replenishment uses an order-up-to policy, what matters is the induced distrib
 The analytical chain is
 
 $$
-oxed{
-	ext{forecast}
-ightarrow
-	ext{optimization policy}
-ightarrow
-	ext{executed decision}
-ightarrow
-	ext{operational outcome}.
+\boxed{
+\text{forecast}
+\rightarrow
+\text{optimization policy}
+\rightarrow
+\text{executed decision}
+\rightarrow
+\text{operational outcome}.
 }
 $$
 
