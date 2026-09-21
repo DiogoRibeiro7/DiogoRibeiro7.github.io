@@ -37,11 +37,7 @@ Class imbalance creates real evaluation problems, but not for the reason usually
 
 A common explanation says that ROC AUC is "dominated by true negatives" and therefore becomes invalid when the positive class is rare. That statement is too crude. ROC AUC is built from the **true-positive rate** and **false-positive rate**, both of which are conditional rates. If the conditional score distributions remain unchanged, changing the number of positives relative to negatives does not by itself change the population ROC curve.
 
-Precision behaves differently. It depends directly on class prevalence.
-
-That distinction is the reason precision-recall curves can be much more informative in rare-event applications.
-
-The correct conclusion is therefore not
+Precision behaves differently. It depends directly on class prevalence. That distinction is the reason precision-recall curves can be much more informative in rare-event applications. The correct conclusion is therefore not
 
 $$
 \boxed{\text{imbalanced data} \Rightarrow \text{ignore ROC AUC}}
@@ -77,9 +73,7 @@ $$
 P(\hat Y=1\mid Y=0).
 $$
 
-The ROC curve plots $\mathrm{TPR}$ against $\mathrm{FPR}$ while the classification threshold varies.
-
-Precision is
+The ROC curve plots $\mathrm{TPR}$ against $\mathrm{FPR}$ while the classification threshold varies. Precision is
 
 $$
 \mathrm{Precision}
@@ -95,13 +89,7 @@ $$
 \mathrm{Recall}=\mathrm{TPR}.
 $$
 
-The change in conditioning is the entire story.
-
-ROC asks how the classifier behaves **within the positive and negative classes**.
-
-Precision asks what fraction of the cases **flagged by the classifier** are actually positive.
-
-Those are not interchangeable questions.
+The change in conditioning is the entire story. ROC asks how the classifier behaves **within the positive and negative classes**. Precision asks what fraction of the cases **flagged by the classifier** are actually positive. Those are not interchangeable questions.
 
 ## Why prevalence enters precision but not the ROC coordinates
 
@@ -111,9 +99,7 @@ $$
 \pi=P(Y=1)
 $$
 
-be the prevalence of the positive class.
-
-Bayes' rule gives
+be the prevalence of the positive class. Bayes' rule gives
 
 $$
 P(Y=1\mid \hat Y=1)
@@ -141,9 +127,7 @@ $$
 }
 $$
 
-This equation explains why a classifier can have an attractive ROC operating point and still create an unacceptable number of false alerts in a rare-event problem.
-
-Suppose fraud prevalence is
+This equation explains why a classifier can have an attractive ROC operating point and still create an unacceptable number of false alerts in a rare-event problem. Suppose fraud prevalence is
 
 $$
 \pi=0.005,
@@ -169,9 +153,7 @@ $$
 \approx 0.287.
 $$
 
-Only about 29% of the alerts are fraud.
-
-The ROC point
+Only about 29% of the alerts are fraud. The ROC point
 
 $$
 (0.01,0.80)
@@ -181,9 +163,7 @@ has not changed. The operational interpretation has.
 
 ## What ROC AUC actually measures
 
-ROC AUC summarizes ranking performance across thresholds.
-
-For continuous scores, it has the probabilistic interpretation
+ROC AUC summarizes ranking performance across thresholds. For continuous scores, it has the probabilistic interpretation
 
 $$
 \mathrm{AUC}_{ROC}
@@ -193,21 +173,11 @@ P(S^+>S^-)
 \frac{1}{2}P(S^+=S^-),
 $$
 
-where $S^+$ is the score assigned to a randomly selected positive observation and $S^-$ is the score assigned to a randomly selected negative observation.
-
-This is why ROC AUC is largely insensitive to class prevalence: the comparison is made between conditional score distributions.
-
-That property is not a defect.
-
-If the scientific question is
+where $S^+$ is the score assigned to a randomly selected positive observation and $S^-$ is the score assigned to a randomly selected negative observation. This is why ROC AUC is largely insensitive to class prevalence: the comparison is made between conditional score distributions. That property is not a defect. If the scientific question is
 
 > How well does the score rank positives above negatives?
 
-ROC AUC is a coherent answer.
-
-The problem begins when that ranking statistic is interpreted as though it described the expected burden of positive predictions in a population where positives are extremely rare.
-
-It does not.
+ROC AUC is a coherent answer. The problem begins when that ranking statistic is interpreted as though it described the expected burden of positive predictions in a population where positives are extremely rare. It does not.
 
 ## Gini adds no new information to ROC AUC
 
@@ -225,35 +195,21 @@ $$
 G=0.60.
 $$
 
-Gini does not solve or worsen the class-imbalance problem. It is a linear rescaling of the same ranking statistic.
-
-Reporting both as though they were independent evidence of model quality is redundant.
+Gini does not solve or worsen the class-imbalance problem. It is a linear rescaling of the same ranking statistic. Reporting both as though they were independent evidence of model quality is redundant.
 
 ## Why precision-recall plots are useful for rare events
 
-A precision-recall curve plots precision against recall while the threshold varies.
-
-Because precision contains prevalence explicitly, the curve exposes the cost of false positives in the population being evaluated.
-
-For a random classifier whose predictions are independent of the outcome, expected precision is the prevalence,
+A precision-recall curve plots precision against recall while the threshold varies. Because precision contains prevalence explicitly, the curve exposes the cost of false positives in the population being evaluated. For a random classifier whose predictions are independent of the outcome, expected precision is the prevalence,
 
 $$
 \mathrm{Precision}_{\mathrm{baseline}}=\pi.
 $$
 
-If prevalence is 0.5%, a precision of 5% is ten times the random baseline even though 95% of alerts are false positives.
-
-That is a much more useful statement than calling 5% precision simply "low."
-
-The baseline moves with prevalence, which is both a strength and a limitation.
+If prevalence is 0.5%, a precision of 5% is ten times the random baseline even though 95% of alerts are false positives. That is a much more useful statement than calling 5% precision simply "low." The baseline moves with prevalence, which is both a strength and a limitation.
 
 ## AUPRC is not prevalence-invariant
 
-The fact that precision depends on $\pi$ means that the area under a precision-recall curve also depends on prevalence.
-
-This matters when comparing experiments.
-
-Suppose the same conditional score model is evaluated once in a case-control sample containing 50% positives and once in the real deployment population containing 1% positives. The ROC curve can remain essentially unchanged while the precision-recall curve changes dramatically.
+The fact that precision depends on $\pi$ means that the area under a precision-recall curve also depends on prevalence. This matters when comparing experiments. Suppose the same conditional score model is evaluated once in a case-control sample containing 50% positives and once in the real deployment population containing 1% positives. The ROC curve can remain essentially unchanged while the precision-recall curve changes dramatically.
 
 Therefore,
 
@@ -263,19 +219,11 @@ $$
 }
 $$
 
-If deployment prevalence matters, evaluation should use a test set representative of that population or adjust predictive values to the target prevalence.
-
-Saito and Rehmsmeier's central point is precisely that precision-recall plots make the consequences of imbalance visible in a way ROC plots do not.
-
-That does not imply that ROC AUC is mathematically corrupted by imbalance.
+If deployment prevalence matters, evaluation should use a test set representative of that population or adjust predictive values to the target prevalence. Saito and Rehmsmeier's central point is precisely that precision-recall plots make the consequences of imbalance visible in a way ROC plots do not. That does not imply that ROC AUC is mathematically corrupted by imbalance.
 
 ## Neither area metric chooses an operating threshold
 
-AUC metrics average over many thresholds, including thresholds that may never be used.
-
-Production systems operate at one threshold, or under a policy that changes thresholds according to capacity or cost.
-
-At a candidate threshold, the decision may depend on quantities such as
+AUC metrics average over many thresholds, including thresholds that may never be used. Production systems operate at one threshold, or under a policy that changes thresholds according to capacity or cost. At a candidate threshold, the decision may depend on quantities such as
 
 $$
 \mathrm{TP},\quad
@@ -319,13 +267,7 @@ $$
 99.5\%
 $$
 
-accuracy.
-
-Its recall is zero.
-
-This is a direct consequence of class prevalence because ordinary accuracy weights every observation equally and the negative class dominates the sample count.
-
-That argument should not be transferred mechanically to ROC AUC. The two metrics have different denominators and different meanings.
+accuracy. Its recall is zero. This is a direct consequence of class prevalence because ordinary accuracy weights every observation equally and the negative class dominates the sample count. That argument should not be transferred mechanically to ROC AUC. The two metrics have different denominators and different meanings.
 
 ## A better evaluation stack
 
@@ -349,21 +291,15 @@ Report precision, recall, specificity and the confusion matrix at thresholds tha
 
 ### Decision performance
 
-When costs or benefits can be stated, evaluate expected utility, expected cost, net benefit or another domain-specific objective directly.
-
-The best metric depends on what the classifier is for.
+When costs or benefits can be stated, evaluate expected utility, expected cost, net benefit or another domain-specific objective directly. The best metric depends on what the classifier is for.
 
 ## Conclusion
 
-Class imbalance does not make ROC AUC meaningless.
-
-It makes **some interpretations of ROC performance incomplete**.
+Class imbalance does not make ROC AUC meaningless. It makes **some interpretations of ROC performance incomplete**.
 
 ROC coordinates condition on the true class and are therefore insensitive to prevalence in a way that precision is not. Precision asks the operationally different question of how many positive predictions are correct. When positives are rare, even a small false-positive rate can produce many more false alerts than true alerts, and a precision-recall curve makes that visible.
 
-So the useful rule is not "AUPRC beats ROC AUC."
-
-It is:
+So the useful rule is not "AUPRC beats ROC AUC." It is:
 
 $$
 \boxed{
