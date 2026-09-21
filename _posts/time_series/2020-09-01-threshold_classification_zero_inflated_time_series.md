@@ -58,9 +58,7 @@ This paper aims to integrate the concept of stationarity into the threshold clas
 
 ### Zero-Inflated Time Series Data
 
-In zero-inflated time series data, zeros dominate the distribution, making it difficult to apply traditional thresholding techniques like percentiles or standard deviation-based intervals. This is especially problematic for classification tasks, where a meaningful distinction between event intensities (such as low, moderate, or severe precipitation) is needed.
-
-A percentile threshold does not inherently assume normality. The real difficulty is that a zero-inflated series often represents a mixture of two processes: whether an event occurs at all and, conditional on occurrence, how large it is.
+In zero-inflated time series data, zeros dominate the distribution, making it difficult to apply traditional thresholding techniques like percentiles or standard deviation-based intervals. This is especially problematic for classification tasks, where a meaningful distinction between event intensities (such as low, moderate, or severe precipitation) is needed. A percentile threshold does not inherently assume normality. The real difficulty is that a zero-inflated series often represents a mixture of two processes: whether an event occurs at all and, conditional on occurrence, how large it is.
 
 ### Limitations of Existing Methods
 
@@ -106,9 +104,7 @@ with a positive-valued distribution. The occurrence probability $p_t$ and positi
 
 ### Step 3: Define thresholds from the operational loss
 
-With the stationary distribution in hand, thresholds for classification can be defined using its quantiles. This ensures that the thresholds are meaningful and reflect the underlying distribution of the time series, including the effect of zeros.
-
-For example, thresholds can be set at the 25th, 50th, and 75th percentiles of the stationary distribution:
+With the stationary distribution in hand, thresholds for classification can be defined using its quantiles. This ensures that the thresholds are meaningful and reflect the underlying distribution of the time series, including the effect of zeros. For example, thresholds can be set at the 25th, 50th, and 75th percentiles of the stationary distribution:
 
 1. **None**: Zero values, represented by the point mass at zero.
 2. **Low**: Values between the 25th percentile and the median (50th percentile).
@@ -187,14 +183,9 @@ This paper presents a novel approach to threshold classification in zero-inflate
 
 ---
 
-
 ## Zero-inflated and hurdle models
 
-A zero-inflated model assumes some zeros arise from a structural-zero process while the count process can also generate zeros. A hurdle model separates zero versus positive occurrence and then uses a zero-truncated positive distribution.
-
-Those assumptions are different. The choice should follow the mechanism.
-
-For time series, dependence can enter both components:
+A zero-inflated model assumes some zeros arise from a structural-zero process while the count process can also generate zeros. A hurdle model separates zero versus positive occurrence and then uses a zero-truncated positive distribution. Those assumptions are different. The choice should follow the mechanism. For time series, dependence can enter both components:
 
 $$
 \operatorname{logit}(p_t)
@@ -204,6 +195,4 @@ x_t^\top\beta
 \phi Z_{t-1},
 $$
 
-while the positive magnitude model can have its own temporal structure.
-
-Differencing the raw series is not a generic solution to zero inflation.
+while the positive magnitude model can have its own temporal structure. Differencing the raw series is not a generic solution to zero inflation.
