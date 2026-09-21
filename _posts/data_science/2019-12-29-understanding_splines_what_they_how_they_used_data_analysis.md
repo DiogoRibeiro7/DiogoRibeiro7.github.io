@@ -43,9 +43,7 @@ title: 'Understanding Splines: What They Are and How They Are Used in Data Analy
 
 In the world of statistics, machine learning, and data science, one of the key challenges is finding models that **accurately capture complex patterns** in data. While linear models are simple and easy to interpret, they often fall short when data relationships are more intricate. This is where **splines** come into play—a flexible tool for modeling **non-linear relationships** and **smoothing data** in a way that linear models cannot achieve.
 
-If you've ever dealt with data that doesn’t follow a simple straight line but still want to avoid the complexity of high-degree polynomials or other rigid functions, splines might be the perfect solution for you.
-
-In this article, we’ll explore:
+If you've ever dealt with data that doesn’t follow a simple straight line but still want to avoid the complexity of high-degree polynomials or other rigid functions, splines might be the perfect solution for you. In this article, we’ll explore:
 
 - **What splines are**
 - **How they work**
@@ -77,7 +75,7 @@ A **spline function** is constructed by dividing the data into smaller intervals
 Let’s break down the process of how splines work step by step:
 
 1. **Define the intervals**: The data range is divided into intervals, and a polynomial is fitted in each interval. The points that define where one polynomial ends and another begins are called **knots**.
-   
+
 2. **Fit a polynomial in each interval**: Within each interval between knots, a polynomial (usually of low degree, such as cubic) is fitted to the data. The degree of the polynomial can vary, but **cubic splines** are the most common because they provide enough flexibility without excessive complexity.
 
 3. **Ensure continuity**: Splines require that at the knots, the different polynomial segments connect smoothly. This means the value, the slope (first derivative), and possibly the curvature (second derivative) of the function should be the same at each knot. This ensures that the curve doesn’t break or show sharp changes at the knots.
@@ -124,15 +122,11 @@ Splines are versatile tools that are used across a wide range of fields, from **
 
 One of the most common uses of splines is in **data smoothing**. In real-world data, especially in time-series or noisy datasets, there may be significant fluctuations or outliers that complicate the analysis. Splines can be used to fit a smooth curve that **captures the overall trend** in the data without being overly influenced by noise or small fluctuations.
 
-In this context, splines help **reduce noise** while preserving the **general pattern** in the data. B-splines, in particular, are excellent for this purpose because they don’t force the curve to pass through every data point, allowing for a more **flexible fit**.
-
-**Example**: Splines are frequently used in economics to smooth time-series data, such as stock prices, GDP trends, or employment rates, where you want to extract long-term trends from short-term fluctuations.
+In this context, splines help **reduce noise** while preserving the **general pattern** in the data. B-splines, in particular, are excellent for this purpose because they don’t force the curve to pass through every data point, allowing for a more **flexible fit**. **Example**: Splines are frequently used in economics to smooth time-series data, such as stock prices, GDP trends, or employment rates, where you want to extract long-term trends from short-term fluctuations.
 
 ### 2. **Nonlinear Regression**
 
-Splines are particularly useful in **nonlinear regression**, where the relationship between variables is complex and cannot be captured by a simple linear model. Instead of fitting a single polynomial or exponential function, splines allow you to break the relationship into different segments, each with its own polynomial.
-
-This flexibility enables splines to fit data that exhibits **nonlinear patterns**, such as **U-shaped** or **S-shaped** curves, in a way that avoids the problems associated with high-degree polynomial regression (like oscillation or overfitting).
+Splines are particularly useful in **nonlinear regression**, where the relationship between variables is complex and cannot be captured by a simple linear model. Instead of fitting a single polynomial or exponential function, splines allow you to break the relationship into different segments, each with its own polynomial. This flexibility enables splines to fit data that exhibits **nonlinear patterns**, such as **U-shaped** or **S-shaped** curves, in a way that avoids the problems associated with high-degree polynomial regression (like oscillation or overfitting).
 
 **Example**: In environmental studies, spline regression is often used to model the effect of temperature on crop yield, where the relationship might not be linear. The curve might increase up to a point and then plateau, something splines can model effectively.
 
@@ -150,9 +144,7 @@ In **machine learning**, splines are used to fit complex, nonlinear patterns in 
 
 ### 5. **Geometric Modeling and Computer Graphics**
 
-In **geometric modeling** and **computer graphics**, splines are widely used to model smooth curves and surfaces. The flexibility of B-splines and cubic splines allows for the creation of complex shapes and surfaces, which can be manipulated easily for animation, design, or 3D rendering.
-
-**Example**: In 3D animation, splines are used to create smooth paths for moving objects or to design character models with smooth, flowing surfaces.
+In **geometric modeling** and **computer graphics**, splines are widely used to model smooth curves and surfaces. The flexibility of B-splines and cubic splines allows for the creation of complex shapes and surfaces, which can be manipulated easily for animation, design, or 3D rendering. **Example**: In 3D animation, splines are used to create smooth paths for moving objects or to design character models with smooth, flowing surfaces.
 
 ## Advantages and Disadvantages of Splines
 
@@ -210,7 +202,7 @@ plt.show()
 ```
 
 ### B-Spline Fitting with `scipy`
-  
+
 ```python
 from scipy.interpolate import splrep, splev
 
@@ -234,7 +226,7 @@ plt.show()
 ```
 
 ### Spline Regression with `statsmodels`
-  
+
 ```python
 import statsmodels.api as sm
 from patsy import dmatrix
@@ -303,19 +295,19 @@ package main
 import (
     "fmt"
 
-    "gonum.org/v1/gonum/interp"
+"gonum.org/v1/gonum/interp"
 )
 
 func main() {
     x := []float64{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
     y := []float64{0, 0.84, 0.91, 0.14, -0.75, -1, -0.75, 0.14, 0.91, 0.84, 0}
 
-    var spline interp.NaturalCubic
+var spline interp.NaturalCubic
     if err := spline.Fit(x, y); err != nil {
         panic(err)
     }
 
-    xEval := 6.5
+xEval := 6.5
     fmt.Printf("Spline evaluation at x = %.1f: y = %.4f\n", xEval, spline.Predict(xEval))
 }
 ```
@@ -338,11 +330,11 @@ func main() {
     x := []float64{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
     y := []float64{0, 0.84, 0.91, 0.14, -0.75, -1, -0.75, 0.14, 0.91, 0.84, 0}
 
-    // Create a cubic spline interpolator
+// Create a cubic spline interpolator
     spline := interp.NaturalCubic{}
     spline.Fit(x, y)
 
-    // Evaluate the spline at a new point
+// Evaluate the spline at a new point
     xEval := 6.5
     yEval := spline.Predict(xEval)
     fmt.Printf("Spline evaluation at x = %v: y = %v\n", xEval, yEval)
