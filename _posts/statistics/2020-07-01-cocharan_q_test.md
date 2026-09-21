@@ -31,9 +31,7 @@ tags:
 title: 'Cochran’s Q Test: Comparing Three or More Related Proportions'
 ---
 
-In statistical analysis, there are many situations where we need to compare proportions across **related groups**, particularly when the data is **binary** (e.g., success/failure, yes/no). For such cases, **Cochran’s Q test** provides an effective way to determine whether there are significant differences in proportions across three or more related samples.
-
-This article provides a comprehensive overview of Cochran’s Q test, including when it should be used, its underlying assumptions, and how it relates to other statistical tests, such as **McNemar’s test** and **logistic regression**.
+In statistical analysis, there are many situations where we need to compare proportions across **related groups**, particularly when the data is **binary** (e.g., success/failure, yes/no). For such cases, **Cochran’s Q test** provides an effective way to determine whether there are significant differences in proportions across three or more related samples. This article provides a comprehensive overview of Cochran’s Q test, including when it should be used, its underlying assumptions, and how it relates to other statistical tests, such as **McNemar’s test** and **logistic regression**.
 
 ---
 
@@ -76,9 +74,7 @@ The groups being compared must be **related**. This means that the same particip
 
 ### 3. **Three or More Groups**
 
-Cochran’s Q test is used when you need to compare **three or more groups** (i.e., proportions in different conditions). If there are only two groups, the **McNemar’s test** is more appropriate.
-
----
+Cochran’s Q test is used when you need to compare **three or more groups** (i.e., proportions in different conditions). If there are only two groups, the **McNemar’s test** is more appropriate. ---
 
 ## How Cochran’s Q Test Works
 
@@ -116,13 +112,13 @@ For moderate samples, $Q$ is compared with a chi-square distribution with $k-1$ 
 ### Relationship Between Cochran’s Q and McNemar’s Test
 
 - **McNemar’s Test**: Applied when comparing two proportions in related samples. For example, testing whether the proportion of patients responding positively to a treatment differs between two medications.
-  
+
 The test statistic for McNemar’s test is based on a **2x2 contingency table** and uses the following formula:
-  
+
 $$
 \chi^2 = \frac{(b - c)^2}{b + c}
 $$
-  
+
 Where **b** and **c** are the off-diagonal counts in the contingency table.
 
 - **Cochran’s Q Test**: Used when there are more than two related groups. It extends the logic of McNemar’s test by allowing the comparison of multiple proportions across related samples, making it useful for studies with more than two conditions.
@@ -166,15 +162,11 @@ Consider a clinical trial in which 15 patients are given three different treatme
 | 3       | Yes         | No          | No          |
 | ...     | ...         | ...         | ...         |
 
-In this case, Cochran’s Q test would be applied to test if there is a significant difference in the proportions of patients responding positively to the three treatments. If the p-value is less than 0.05, we would conclude that the treatments are not equally effective.
-
----
+In this case, Cochran’s Q test would be applied to test if there is a significant difference in the proportions of patients responding positively to the three treatments. If the p-value is less than 0.05, we would conclude that the treatments are not equally effective. ---
 
 ## Conclusion
 
-**Cochran’s Q test** is a valuable tool for comparing proportions across **three or more related groups**, especially in cases where the data is **binary**. It serves as an extension of **McNemar’s test** and offers a non-parametric approach for determining whether differences in proportions are statistically significant.
-
-While Cochran’s Q test is highly effective in simple cases of comparing binary outcomes across related samples, more complex analyses involving multiple predictor variables or continuous data may require **logistic regression**. Ultimately, choosing the right test depends on the data structure, the number of groups being compared, and the complexity of the analysis.
+**Cochran’s Q test** is a valuable tool for comparing proportions across **three or more related groups**, especially in cases where the data is **binary**. It serves as an extension of **McNemar’s test** and offers a non-parametric approach for determining whether differences in proportions are statistically significant. While Cochran’s Q test is highly effective in simple cases of comparing binary outcomes across related samples, more complex analyses involving multiple predictor variables or continuous data may require **logistic regression**. Ultimately, choosing the right test depends on the data structure, the number of groups being compared, and the complexity of the analysis.
 
 ### Further Reading
 
