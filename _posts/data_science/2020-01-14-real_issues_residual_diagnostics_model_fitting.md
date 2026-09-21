@@ -42,15 +42,11 @@ e_i
 y_i-\hat y_i.
 $$
 
-That simple difference is used to diagnose several different things.
-
-The mistake is to compress them into one question:
+That simple difference is used to diagnose several different things. The mistake is to compress them into one question:
 
 > Are the residuals normal?
 
-Normality is only one possible assumption, and often not the most important one.
-
-A useful diagnostic asks
+Normality is only one possible assumption, and often not the most important one. A useful diagnostic asks
 
 $$
 \boxed{
@@ -68,9 +64,7 @@ Y_i
 m(X_i)+\varepsilon_i,
 $$
 
-the unobserved error is $\varepsilon_i$.
-
-The fitted residual is
+the unobserved error is $\varepsilon_i$. The fitted residual is
 
 $$
 e_i
@@ -78,19 +72,13 @@ e_i
 Y_i-\hat m(X_i).
 $$
 
-Residuals depend on the estimated model and are not independent copies of the errors.
-
-In linear regression,
+Residuals depend on the estimated model and are not independent copies of the errors. In linear regression,
 
 $$
 e=(I-H)y,
 $$
 
-where $H$ is the hat matrix.
-
-This creates different residual variances according to leverage.
-
-Raw residuals should therefore not always be treated as identically distributed observations.
+where $H$ is the hat matrix. This creates different residual variances according to leverage. Raw residuals should therefore not always be treated as identically distributed observations.
 
 ## Conditional mean misspecification
 
@@ -124,11 +112,7 @@ $$
 \operatorname{Var}(\varepsilon_i\mid X_i)
 $$
 
-changes with predictors, residual spread may form a funnel pattern.
-
-This primarily affects the usual covariance estimate, not necessarily the OLS coefficient itself when the conditional mean is correct.
-
-Responses include:
+changes with predictors, residual spread may form a funnel pattern. This primarily affects the usual covariance estimate, not necessarily the OLS coefficient itself when the conditional mean is correct. Responses include:
 
 - heteroskedasticity-consistent covariance estimators;
 - explicit variance models;
@@ -139,19 +123,13 @@ The response should match the source of the variance change.
 
 ## Dependence
 
-Residual autocorrelation can indicate missing temporal dynamics.
-
-Clustered residual patterns can reveal within-group dependence.
-
-For a time series, inspect quantities such as
+Residual autocorrelation can indicate missing temporal dynamics. Clustered residual patterns can reveal within-group dependence. For a time series, inspect quantities such as
 
 $$
 \operatorname{Corr}(e_t,e_{t-k}).
 $$
 
-For repeated measures, model subject-level dependence.
-
-Normal residual histograms say nothing about whether observations are serially correlated.
+For repeated measures, model subject-level dependence. Normal residual histograms say nothing about whether observations are serially correlated.
 
 ## Normality and exact small-sample inference
 
@@ -163,13 +141,7 @@ $$
 \mathcal N(0,\sigma^2I),
 $$
 
-normality supports exact finite-sample t and F distributions.
-
-For large samples, many coefficient estimators have approximately normal sampling distributions under much broader error distributions.
-
-That does not mean normality never matters.
-
-It means the consequence of non-normality depends on:
+normality supports exact finite-sample t and F distributions. For large samples, many coefficient estimators have approximately normal sampling distributions under much broader error distributions. That does not mean normality never matters. It means the consequence of non-normality depends on:
 
 - sample size;
 - leverage;
@@ -179,13 +151,7 @@ It means the consequence of non-normality depends on:
 
 ## Why Shapiro-Wilk is a poor gatekeeper
 
-The Shapiro-Wilk test examines exact normality.
-
-In small samples it may have little power against relevant departures.
-
-In large samples it can reject tiny departures that have negligible effect on the estimator.
-
-So this workflow is weak:
+The Shapiro-Wilk test examines exact normality. In small samples it may have little power against relevant departures. In large samples it can reject tiny departures that have negligible effect on the estimator. So this workflow is weak:
 
 $$
 \text{Shapiro p}<0.05
@@ -197,9 +163,7 @@ The test answers a narrower question than model validity.
 
 ## Q-Q plots
 
-A Q-Q plot is useful because the **shape** of the departure is visible.
-
-Common patterns include:
+A Q-Q plot is useful because the **shape** of the departure is visible. Common patterns include:
 
 - S-shaped tails: heavier or lighter tails;
 - one curved tail: skewness;
@@ -210,23 +174,11 @@ The visual pattern should lead to a specific statistical question.
 
 ## Skewness and kurtosis
 
-Sample skewness and kurtosis summarize aspects of residual shape.
-
-They are descriptive statistics, not model diagnoses by themselves.
-
-High kurtosis can arise from heavy tails or isolated extreme observations.
-
-The normal distribution has ordinary kurtosis 3 and excess kurtosis 0.
-
-Software differs in which convention it reports.
-
-That convention should be stated before comparing a value with “3” or “0.”
+Sample skewness and kurtosis summarize aspects of residual shape. They are descriptive statistics, not model diagnoses by themselves. High kurtosis can arise from heavy tails or isolated extreme observations. The normal distribution has ordinary kurtosis 3 and excess kurtosis 0. Software differs in which convention it reports. That convention should be stated before comparing a value with “3” or “0.”
 
 ## Leverage
 
-Leverage is determined by the design matrix.
-
-For linear regression,
+Leverage is determined by the design matrix. For linear regression,
 
 $$
 H
@@ -240,21 +192,11 @@ $$
 h_{ii}
 $$
 
-measures how unusual observation $i$ is in predictor space.
-
-A high-leverage observation can strongly affect the fitted model even when its residual is not large.
-
-Outlier diagnostics based only on $y$ miss this.
+measures how unusual observation $i$ is in predictor space. A high-leverage observation can strongly affect the fitted model even when its residual is not large. Outlier diagnostics based only on $y$ miss this.
 
 ## Influence
 
-Influence combines residual size and leverage.
-
-Cook's distance is one common summary.
-
-The purpose is not to delete every influential point.
-
-The useful sequence is:
+Influence combines residual size and leverage. Cook's distance is one common summary. The purpose is not to delete every influential point. The useful sequence is:
 
 1. verify the data;
 2. understand why the point is influential;
@@ -265,9 +207,7 @@ Automatic deletion creates its own selection bias.
 
 ## Standardized and studentized residuals
 
-Because residual variance depends on leverage, standardized forms are easier to compare.
-
-A common internally studentized residual is roughly
+Because residual variance depends on leverage, standardized forms are easier to compare. A common internally studentized residual is roughly
 
 $$
 r_i
@@ -279,9 +219,7 @@ e_i
 }.
 $$
 
-Externally studentized residuals estimate $\sigma$ with the observation omitted.
-
-These are more appropriate than raw residuals for identifying unusually large conditional errors.
+Externally studentized residuals estimate $\sigma$ with the observation omitted. These are more appropriate than raw residuals for identifying unusually large conditional errors.
 
 ## Mixed models need conditional diagnostics
 
@@ -302,9 +240,7 @@ there are at least two stochastic components:
 - random effects $b_i$;
 - residual errors $\varepsilon_{ij}$.
 
-A single Shapiro-Wilk test on one residual vector cannot diagnose both.
-
-Useful diagnostics include:
+A single Shapiro-Wilk test on one residual vector cannot diagnose both. Useful diagnostics include:
 
 - conditional residuals;
 - random-effect distributions;
@@ -316,9 +252,7 @@ The design unit matters.
 
 ## Predictive diagnostics
 
-If prediction is the goal, residual fit on the training sample is not enough.
-
-Out-of-sample residuals
+If prediction is the goal, residual fit on the training sample is not enough. Out-of-sample residuals
 
 $$
 e_i^{test}
@@ -326,15 +260,11 @@ e_i^{test}
 y_i-\hat y_i^{train}
 $$
 
-reveal generalization error.
-
-Calibration, coverage of prediction intervals, and performance across subgroups may be more important than whether training residuals look Gaussian.
+reveal generalization error. Calibration, coverage of prediction intervals, and performance across subgroups may be more important than whether training residuals look Gaussian.
 
 ## Simulation-based diagnostics
 
-For complex models, simulate replicated data from the fitted model.
-
-If the model is adequate, simulated data should reproduce features that matter scientifically:
+For complex models, simulate replicated data from the fitted model. If the model is adequate, simulated data should reproduce features that matter scientifically:
 
 - variance;
 - zeros;
@@ -343,15 +273,11 @@ If the model is adequate, simulated data should reproduce features that matter s
 - cluster patterns;
 - event rates.
 
-This idea appears in posterior predictive checking, parametric bootstrap diagnostics, and simulation-based residual methods.
-
-It scales better than forcing every model into a normal-residual template.
+This idea appears in posterior predictive checking, parametric bootstrap diagnostics, and simulation-based residual methods. It scales better than forcing every model into a normal-residual template.
 
 ## Conclusion
 
-Residual diagnostics are not one test.
-
-They are a collection of checks linked to specific assumptions:
+Residual diagnostics are not one test. They are a collection of checks linked to specific assumptions:
 
 $$
 \boxed{
@@ -371,9 +297,7 @@ $$
 }
 $$
 
-The right question is not whether residuals pass a normality threshold.
-
-It is whether the fitted model is adequate for the inferential or predictive claim being made.
+The right question is not whether residuals pass a normality threshold. It is whether the fitted model is adequate for the inferential or predictive claim being made.
 
 ## References
 
