@@ -35,13 +35,7 @@ tags:
 title: 'Customer Lifetime Value: A Statistical and Decision-Theoretic View'
 ---
 
-Customer Lifetime Value is often described as "how much a customer is worth."
-
-That phrase hides several choices.
-
-A defensible CLV definition specifies value, horizon, customer activity, future transactions, servicing cost, discounting, and uncertainty.
-
-A useful mathematical definition is
+Customer Lifetime Value is often described as "how much a customer is worth." That phrase hides several choices. A defensible CLV definition specifies value, horizon, customer activity, future transactions, servicing cost, discounting, and uncertainty. A useful mathematical definition is
 
 $$
 CLV_i
@@ -72,11 +66,7 @@ HV_i
 M_{it}.
 $$
 
-Predictive CLV is about the future.
-
-Mixing the two can create leakage.
-
-A customer with high historical spend may indeed have high future value, but the model must estimate that relationship rather than redefine past revenue as lifetime value.
+Predictive CLV is about the future. Mixing the two can create leakage. A customer with high historical spend may indeed have high future value, but the model must estimate that relationship rather than redefine past revenue as lifetime value.
 
 ## Contractual and non-contractual settings
 
@@ -84,9 +74,7 @@ CLV modeling depends heavily on whether customer churn is observed directly.
 
 ### Contractual businesses
 
-Subscriptions, insurance policies, and telecom contracts often provide an explicit cancellation or churn event.
-
-A survival model can estimate
+Subscriptions, insurance policies, and telecom contracts often provide an explicit cancellation or churn event. A survival model can estimate
 
 $$
 S_i(t)
@@ -102,19 +90,11 @@ the probability customer $i$ remains active beyond time $t$.
 
 ### Non-contractual businesses
 
-Retail and ecommerce often have no explicit churn event.
-
-A customer who has not purchased recently may still return.
-
-Models such as Pareto/NBD or BG/NBD treat purchase frequency and latent dropout probabilistically.
-
-The statistical problem is different.
+Retail and ecommerce often have no explicit churn event. A customer who has not purchased recently may still return. Models such as Pareto/NBD or BG/NBD treat purchase frequency and latent dropout probabilistically. The statistical problem is different.
 
 ## Survival-based CLV
 
-Suppose customer $i$ produces expected margin rate $m_i(t)$ while active.
-
-A continuous-time CLV can be written as
+Suppose customer $i$ produces expected margin rate $m_i(t)$ while active. A continuous-time CLV can be written as
 
 $$
 CLV_i
@@ -134,9 +114,7 @@ $$
 \text{average monthly charge}.
 $$
 
-The previous version used that shortcut.
-
-It is not a valid general CLV estimator because median survival is not expected survival time, average monthly charge is not contribution margin, and the shortcut ignores heterogeneity, discounting, changes in spend, and the rest of the survival distribution.
+The previous version used that shortcut. It is not a valid general CLV estimator because median survival is not expected survival time, average monthly charge is not contribution margin, and the shortcut ignores heterogeneity, discounting, changes in spend, and the rest of the survival distribution.
 
 ## Expected lifetime from a survival curve
 
@@ -149,9 +127,7 @@ E[T]
 S(t)\,dt,
 $$
 
-provided the integral exists.
-
-If analysis is limited to horizon $\tau$,
+provided the integral exists. If analysis is limited to horizon $\tau$,
 
 $$
 E[
@@ -166,9 +142,7 @@ That is restricted mean survival time.
 
 ## Censoring
 
-Customers still active at the data cutoff are right-censored.
-
-If customer $i$ has been observed for $c_i$ months without churn, we know only
+Customers still active at the data cutoff are right-censored. If customer $i$ has been observed for $c_i$ months without churn, we know only
 
 $$
 T_i>c_i.
@@ -178,17 +152,11 @@ Treating every active customer as though they churn at the observation date unde
 
 ## Revenue is not profit
 
-A customer paying 100 monetary units per month is not necessarily more valuable than one paying 80.
-
-If contribution margins are 20 and 40 respectively, the second customer can have larger economic value despite lower revenue.
-
-CLV used for acquisition or retention decisions should generally be based on contribution margin or another decision-relevant economic quantity.
+A customer paying 100 monetary units per month is not necessarily more valuable than one paying 80. If contribution margins are 20 and 40 respectively, the second customer can have larger economic value despite lower revenue. CLV used for acquisition or retention decisions should generally be based on contribution margin or another decision-relevant economic quantity.
 
 ## Discounting
 
-Future value is worth less than immediate value.
-
-For periodic discount rate $r$,
+Future value is worth less than immediate value. For periodic discount rate $r$,
 
 $$
 PV_t
@@ -200,15 +168,11 @@ M_t
 }.
 $$
 
-Over short horizons this may be negligible.
-
-Over several years it can materially change customer rankings.
+Over short horizons this may be negligible. Over several years it can materially change customer rankings.
 
 ## Transaction models
 
-In non-contractual settings, BG/NBD models repeat transaction behavior through heterogeneity in purchase rates and dropout propensity.
-
-The model estimates expected future transaction count:
+In non-contractual settings, BG/NBD models repeat transaction behavior through heterogeneity in purchase rates and dropout propensity. The model estimates expected future transaction count:
 
 $$
 E[
@@ -218,9 +182,7 @@ N_i(T)
 ].
 $$
 
-A separate monetary-value model can estimate expected contribution per transaction.
-
-Then a simplified decomposition is
+A separate monetary-value model can estimate expected contribution per transaction. Then a simplified decomposition is
 
 $$
 CLV_i
@@ -238,27 +200,15 @@ with discounting and model-specific details added as required.
 
 ## Gamma-Gamma caveat
 
-The Gamma-Gamma monetary model assumes a latent customer-specific mean transaction value and particular independence conditions between frequency and monetary value.
-
-Those assumptions should be checked.
-
-Using the model mechanically when high-frequency customers systematically spend more or less per transaction can bias CLV.
+The Gamma-Gamma monetary model assumes a latent customer-specific mean transaction value and particular independence conditions between frequency and monetary value. Those assumptions should be checked. Using the model mechanically when high-frequency customers systematically spend more or less per transaction can bias CLV.
 
 ## Customer heterogeneity
 
-A useful CLV model may include predictors such as acquisition channel, product mix, contract type, tenure, geography, service usage, support burden, and return rate.
-
-But these variables must be available at the prediction date.
-
-Future behavior cannot be used to predict CLV at customer acquisition time.
+A useful CLV model may include predictors such as acquisition channel, product mix, contract type, tenure, geography, service usage, support burden, and return rate. But these variables must be available at the prediction date. Future behavior cannot be used to predict CLV at customer acquisition time.
 
 ## CLV and retention decisions
 
-High predicted CLV does not imply "spend as much as possible to retain this customer."
-
-The relevant decision is incremental value.
-
-For retention action $a$,
+High predicted CLV does not imply "spend as much as possible to retain this customer." The relevant decision is incremental value. For retention action $a$,
 
 $$
 \Delta V_i(a)
@@ -272,17 +222,11 @@ CLV_i(0)
 C_i(a).
 $$
 
-This is a causal decision problem.
-
-A predictive CLV model ranks expected value under observed policy.
-
-It does not estimate the treatment effect of a retention intervention.
+This is a causal decision problem. A predictive CLV model ranks expected value under observed policy. It does not estimate the treatment effect of a retention intervention.
 
 ## Time-based validation
 
-CLV must be validated prospectively.
-
-A correct split is
+CLV must be validated prospectively. A correct split is
 
 $$
 \text{feature/history window}
@@ -292,23 +236,15 @@ $$
 \text{future value window}.
 $$
 
-Randomly splitting customer-month rows can leak future customer history into training.
-
-Use cohort or temporal holdouts.
+Randomly splitting customer-month rows can leak future customer history into training. Use cohort or temporal holdouts.
 
 ## Calibration
 
-If predicted CLV is meant to be an expected monetary quantity, calibration matters.
-
-For customers predicted near a particular value, average realized future contribution over the defined horizon should be near that value after accounting for incomplete follow-up.
-
-Ranking metrics alone are insufficient for budgeting.
+If predicted CLV is meant to be an expected monetary quantity, calibration matters. For customers predicted near a particular value, average realized future contribution over the defined horizon should be near that value after accounting for incomplete follow-up. Ranking metrics alone are insufficient for budgeting.
 
 ## A survival-based Python example
 
-The following example estimates expected active months up to a finite horizon using Kaplan-Meier and then multiplies by a specified contribution margin rate.
-
-It remains a population-level illustration, not individualized production CLV.
+The following example estimates expected active months up to a finite horizon using Kaplan-Meier and then multiplies by a specified contribution margin rate. It remains a population-level illustration, not individualized production CLV.
 
 ~~~python
 from __future__ import annotations
@@ -390,17 +326,11 @@ A real implementation should model customer-level survival and margin rather tha
 
 ## Uncertainty
 
-CLV predictions can be highly uncertain for new customers.
-
-Report predictive distributions or intervals when decisions are sensitive to that uncertainty.
-
-Two customers with the same expected CLV but very different uncertainty are not operationally identical.
+CLV predictions can be highly uncertain for new customers. Report predictive distributions or intervals when decisions are sensitive to that uncertainty. Two customers with the same expected CLV but very different uncertainty are not operationally identical.
 
 ## Conclusion
 
-Customer Lifetime Value is not a single historical metric.
-
-It is a forward-looking expectation:
+Customer Lifetime Value is not a single historical metric. It is a forward-looking expectation:
 
 $$
 \boxed{
@@ -416,13 +346,7 @@ $$
 }
 $$
 
-The right model depends on the business process.
-
-Survival analysis is useful when churn is observed.
-
-Repeat-purchase models are useful when churn is latent.
-
-Causal methods are needed when the question becomes whether an intervention will increase CLV.
+The right model depends on the business process. Survival analysis is useful when churn is observed. Repeat-purchase models are useful when churn is latent. Causal methods are needed when the question becomes whether an intervention will increase CLV.
 
 ## References
 
