@@ -46,9 +46,7 @@ tags:
 title: Exploring Shared Nearest Neighbors (SNN) for Outlier Detection
 ---
 
-In this article, we will examine the concept of Shared Nearest Neighbors (SNN), a distance metric that has shown significant utility in various machine learning tasks, particularly in outlier detection and clustering. Traditional distance metrics like Euclidean and Manhattan distances often fail to capture meaningful similarities when working with high-dimensional datasets or data with variable densities. SNN provides a robust alternative in such situations.
-
-We'll cover the origins of SNN in clustering algorithms like DBSCAN, explore its effectiveness in k Nearest Neighbors (kNN) outlier detection, and analyze how it compares to more common metrics. The implementation of SNN in Python will be presented in an appendix, making it easier to reproduce and experiment with the techniques discussed here. This article assumes familiarity with basic distance-based algorithms like kNN, DBSCAN, and standard metrics like Euclidean and Manhattan distances. If these concepts are new to you, consider reviewing these topics before proceeding.
+Shared Nearest Neighbors (SNN) is a neighborhood-overlap similarity construction used in clustering and anomaly detection. Its motivation is not that Euclidean or Manhattan distance simply “fails” in every high-dimensional problem, but that absolute distances can become difficult to interpret when neighborhoods are unstable, irrelevant dimensions dominate, or local density varies strongly. SNN replaces the raw magnitude of distance with overlap among local neighbor sets, so two observations are considered similar when they are embedded in much the same local neighborhood. The method still depends on the original nearest-neighbor graph, which means that feature scaling, representation, the base metric, and the choice of $k$ remain central modeling decisions.
 
 ## The Importance of Distance Metrics in Machine Learning
 
@@ -70,13 +68,17 @@ The **curse of dimensionality** is one of the most challenging problems in machi
 
 ### Addressing the Curse of Dimensionality with SNN
 
-Shared Nearest Neighbors (SNN) is a neighborhood-overlap similarity construction. A dissimilarity can be derived from that similarity, but the shared-neighbor count itself is **not** a distance metric. SNN achieves this by emphasizing the concept of shared neighbors between points, rather than solely relying on direct distances. The key innovation in SNN is that it assesses similarity between two points based on how many of their k nearest neighbors are shared. This shared-neighbor approach makes SNN more resilient to high-dimensional data, where the direct distances between points may be less informative.
+Formally, the shared-neighbor count is a **similarity**, not a distance. If $N_k(i)$ denotes the $k$ nearest neighbors of observation $i$, then a basic similarity is
 
-In the next sections, we will explore how SNN was developed as an extension to the popular DBSCAN clustering algorithm, and how it can be used for outlier detection, where it excels in datasets with variable density.
+$
+s(i,j)=|N_k(i)cap N_k(j)|.
+$
+
+Larger values mean more local structure is shared. Any clustering algorithm that expects distances must therefore convert this similarity into a dissimilarity explicitly. This distinction is not cosmetic: the previous implementation passed shared-neighbor similarities directly to DBSCAN as a precomputed distance matrix, reversing the intended geometry.
 
 ## Origins of Shared Nearest Neighbors in Clustering
 
-SNN was originally introduced as an enhancement to **DBSCAN** (Density-Based Spatial Clustering of Applications with Noise), a popular density-based clustering algorithm. DBSCAN is highly effective at identifying clusters of arbitrary shapes and sizes and is particularly well-suited to datasets with noise (outliers). However, DBSCAN struggles when clusters have varying densities. It assumes a global threshold for determining whether a point is part of a cluster, which can lead to poor results in datasets with dense and sparse regions.
+The shared-neighbor idea predates DBSCAN and is closely associated with the Jarvis-Patrick clustering framework. Later SNN density methods reused the idea to reduce sensitivity to raw-distance scale. DBSCAN itself defines neighborhoods through a global radius $arepsilon$, so a single radius can be problematic when the data contain clusters with sharply different local scales. SNN changes the neighborhood representation, but it does not remove parameter sensitivity or guarantee recovery of clusters with arbitrary density variation.
 
 ### A Quick Overview of DBSCAN
 
@@ -105,7 +107,7 @@ The concept of shared nearest neighbors is not entirely new. In fact, the earlie
 
 ## Shared Nearest Neighbors in Outlier Detection
 
-Outlier detection, or anomaly detection, is a crucial task in fields such as fraud detection, medical diagnosis, and network security. In such applications, identifying instances that deviate significantly from the norm can reveal critical insights or point to potential problems. Many outlier detection algorithms, including k Nearest Neighbors (kNN) and Local Outlier Factor (LOF), rely on distance metrics to evaluate how far a point is from its neighbors. The farther a point is from its neighbors, the more likely it is to be an outlier.
+In anomaly detection, the relevant question is whether an observation has weak support from the local structure represented by the chosen neighborhood graph. kNN distance, LOF, and SNN-based scores quantify that support differently. None has a universal claim to robustness, so an SNN anomaly score should be defined mathematically and validated against the type of anomalies the application actually cares about.
 
 ### Challenges in Outlier Detection
 
