@@ -45,9 +45,7 @@ title: 'A Comparison of Predictive Maintenance Algorithms: Classical vs. Machine
 
 Predictive maintenance (PdM) is an essential strategy in industries reliant on machinery and equipment. It aims to predict equipment failures before they occur by analyzing historical data and current conditions, allowing for maintenance to be scheduled proactively rather than reactively. At the core of this approach are various predictive algorithms, ranging from classical statistical models to modern machine learning techniques.
 
-The useful distinction is not “classical” versus “machine learning.” Predictive maintenance contains several targets—condition monitoring, anomaly detection, failure-within-horizon classification, time-to-event modeling, and remaining-useful-life estimation—and different methods solve different targets.
-
-This article explores the strengths and limitations of both approaches by comparing their performance, accuracy, and scalability in real-world applications.
+The useful distinction is not “classical” versus “machine learning.” Predictive maintenance contains several targets—condition monitoring, anomaly detection, failure-within-horizon classification, time-to-event modeling, and remaining-useful-life estimation—and different methods solve different targets. This article explores the strengths and limitations of both approaches by comparing their performance, accuracy, and scalability in real-world applications.
 
 ## 2. Classical Predictive Maintenance Algorithms
 
@@ -82,9 +80,7 @@ Regression models, such as linear and polynomial regression, are commonly used i
 - **Linear Regression** assumes a straight-line relationship between the variables, making it ideal for simple, linear degradation patterns.
 - **Polynomial Regression** extends linear regression by fitting a curve to the data, which is more useful for equipment that degrades in a nonlinear fashion.
 
-These models are effective when there is a clear and quantifiable relationship between the predictors and the outcome.
-
-**Advantages**:
+These models are effective when there is a clear and quantifiable relationship between the predictors and the outcome. **Advantages**:
 
 - Simple and interpretable models, easy to implement and understand.
 - Effective for equipment with linear or well-defined nonlinear failure patterns.
@@ -122,9 +118,7 @@ Machine learning models offer a more flexible and powerful alternative to classi
 
 ### 3.1 Decision Trees and Random Forests
 
-**Decision Trees** are supervised learning algorithms that split data into branches based on feature values, creating a tree-like structure where each leaf node represents a predicted outcome. Decision trees are easy to interpret and can handle both numerical and categorical data.
-
-**Random Forests**, an ensemble learning method, improve on decision trees by combining multiple trees to reduce overfitting and improve prediction accuracy. Random forests are well-suited for predictive maintenance because they can capture nonlinear relationships between variables and are robust to noisy data.
+**Decision Trees** are supervised learning algorithms that split data into branches based on feature values, creating a tree-like structure where each leaf node represents a predicted outcome. Decision trees are easy to interpret and can handle both numerical and categorical data. **Random Forests**, an ensemble learning method, improve on decision trees by combining multiple trees to reduce overfitting and improve prediction accuracy. Random forests are well-suited for predictive maintenance because they can capture nonlinear relationships between variables and are robust to noisy data.
 
 **Advantages**:
 
@@ -184,23 +178,17 @@ To compare classical predictive maintenance models with machine learning algorit
 
 There is no general accuracy ordering in which machine-learning models outperform statistical or reliability models. Performance depends on the target, sample size, failure-label quality, sensor structure, validation split, and deployment regime. While ARIMA and regression-based models work well for simple, linear relationships, they often struggle with the intricate patterns that emerge in multivariate or nonlinear systems.
 
-For example, a recurrent neural network (RNN) may capture the temporal dependencies in time-series data more effectively than ARIMA when the system exhibits complex, nonlinear behaviors. Similarly, random forests can model interactions between multiple variables more accurately than traditional regression techniques.
-
-However, the performance of machine learning models depends heavily on the quality and quantity of training data. Classical models, by contrast, often perform well with smaller datasets and when the underlying relationships in the data are relatively simple.
+For example, a recurrent neural network (RNN) may capture the temporal dependencies in time-series data more effectively than ARIMA when the system exhibits complex, nonlinear behaviors. Similarly, random forests can model interactions between multiple variables more accurately than traditional regression techniques. However, the performance of machine learning models depends heavily on the quality and quantity of training data. Classical models, by contrast, often perform well with smaller datasets and when the underlying relationships in the data are relatively simple.
 
 ### 4.2 Scalability for Big Data and Real-Time Applications
 
 Scalability is another crucial factor when comparing classical and machine learning models. In modern industrial environments, vast amounts of data are generated from IoT sensors, machinery, and operational systems. Machine learning algorithms, particularly deep learning models, are designed to handle large datasets and can scale to meet the needs of big data applications.
 
-Computational scalability and model flexibility are separate issues. ARIMA-like models can be inexpensive and straightforward to update in real time for low-dimensional signals, while some tree ensembles or neural networks can become expensive when retraining, feature generation, and calibration are included.
-
-Machine learning models, such as random forests and neural networks, are more suited for big data environments, as they can process vast amounts of historical and real-time data simultaneously. Additionally, the rise of edge computing and distributed systems has enabled machine learning algorithms to be deployed in real-time predictive maintenance systems, further enhancing their scalability.
+Computational scalability and model flexibility are separate issues. ARIMA-like models can be inexpensive and straightforward to update in real time for low-dimensional signals, while some tree ensembles or neural networks can become expensive when retraining, feature generation, and calibration are included. Machine learning models, such as random forests and neural networks, are more suited for big data environments, as they can process vast amounts of historical and real-time data simultaneously. Additionally, the rise of edge computing and distributed systems has enabled machine learning algorithms to be deployed in real-time predictive maintenance systems, further enhancing their scalability.
 
 ### 4.3 Interpretability and Transparency
 
-While machine learning models often excel in predictive performance, they tend to lack the interpretability of classical models. Techniques such as ARIMA and linear regression offer clear, mathematically interpretable results, which can be important in industries where regulatory compliance or safety is a concern.
-
-In contrast, deep learning models, especially neural networks, operate as "black boxes," making it difficult for engineers to understand how they arrived at a particular prediction. This can limit their adoption in certain industries where transparency and explainability are crucial.
+While machine learning models often excel in predictive performance, they tend to lack the interpretability of classical models. Techniques such as ARIMA and linear regression offer clear, mathematically interpretable results, which can be important in industries where regulatory compliance or safety is a concern. In contrast, deep learning models, especially neural networks, operate as "black boxes," making it difficult for engineers to understand how they arrived at a particular prediction. This can limit their adoption in certain industries where transparency and explainability are crucial.
 
 However, recent advancements in explainable AI (XAI) are addressing this challenge by providing tools and techniques that allow users to interpret machine learning models' outputs more effectively.
 
@@ -210,16 +198,14 @@ Both classical and machine learning approaches have been successfully applied to
 
 ### Evidence should be reproducible
 
-The previous version gave specific claims such as a 20% downtime reduction from ARIMA and 90% neural-network accuracy with a 30% maintenance-cost reduction without citing reproducible sources. Those numbers should not be treated as evidence.
-
-A defensible comparison should use the same assets, forecast horizon, feature availability, and loss function, and should include transparent baselines.
+The previous version gave specific claims such as a 20% downtime reduction from ARIMA and 90% neural-network accuracy with a 30% maintenance-cost reduction without citing reproducible sources. Those numbers should not be treated as evidence. A defensible comparison should use the same assets, forecast horizon, feature availability, and loss function, and should include transparent baselines.
 
 ## 6. Future Directions in Predictive Maintenance Algorithms
 
 As technology continues to evolve, the future of predictive maintenance algorithms will likely involve a hybrid approach, combining the strengths of classical and machine learning techniques. Some key trends to watch include:
 
 - **Explainable AI (XAI)**: As machine learning models become more widespread, the need for transparency and interpretability will drive the development of XAI techniques, allowing engineers to better understand how models make predictions.
-  
+
 - **Transfer Learning**: Transfer learning allows models to apply knowledge gained from one system to another, reducing the need for large datasets. This is especially useful in predictive maintenance, where labeled failure data is often scarce.
 
 - **Edge Computing**: Edge computing enables machine learning models to process data locally, improving real-time decision-making capabilities and reducing the need for centralized processing.
@@ -230,9 +216,7 @@ As technology continues to evolve, the future of predictive maintenance algorith
 
 Predictive maintenance algorithms are central to reducing downtime, extending equipment lifespan, and optimizing operational efficiency. Classical models like ARIMA, regression, and exponential smoothing offer simplicity and interpretability, making them suitable for straightforward, linear systems. On the other hand, machine learning algorithms such as random forests, SVMs, and neural networks excel in handling complex, nonlinear, and multivariate data, providing greater predictive accuracy in more challenging environments.
 
-The choice between classical and machine learning approaches depends on various factors, including the complexity of the data, the availability of computational resources, and the need for model interpretability. As industries continue to adopt predictive maintenance strategies, the combination of these two approaches will likely provide the most robust and scalable solutions.
-
----
+The choice between classical and machine learning approaches depends on various factors, including the complexity of the data, the availability of computational resources, and the need for model interpretability. As industries continue to adopt predictive maintenance strategies, the combination of these two approaches will likely provide the most robust and scalable solutions. ---
 
 ## References
 
@@ -241,7 +225,6 @@ The choice between classical and machine learning approaches depends on various 
 - Breiman, L., Friedman, J., Olshen, R., & Stone, C. (1984). *Classification and Regression Trees*. Wadsworth.
 - Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning* (2nd ed.). Springer.
-
 
 ## Match the method to the target
 
