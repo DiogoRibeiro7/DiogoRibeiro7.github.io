@@ -5,7 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2023-09-30'
-excerpt: Stepwise regression is an unstable search procedure, not a general cure for overfitting. Model specification should follow the prediction or inference target, theory, validation, and regularization.
+excerpt: "Stepwise regression is an unstable search procedure, not a general cure for overfitting. Model specification should follow the prediction or inference target, theory, validation, and regularization."
 header:
   image: /assets/images/headers/photo-statistics-mahalanobis.jpg
   og_image: /assets/images/headers/photo-statistics-mahalanobis.jpg
@@ -22,15 +22,15 @@ keywords:
 - Regularization
 - Model selection
 - Cross-validation
-seo_description: Why stepwise regression is unstable, how post-selection inference is distorted, and what to use instead for prediction and explanatory modeling.
+seo_description: "Why stepwise regression is unstable, how post-selection inference is distorted, and what to use instead for prediction and explanatory modeling."
 seo_title: 'Stepwise Regression: Why Automatic Selection Is Fragile'
 seo_type: article
-summary: Stepwise procedures repeatedly search the data and then report a selected model as if it had been prespecified. This distorts p-values, confidence intervals, coefficients, and predictive performance. Better choices depend on the goal.
+summary: "Stepwise procedures repeatedly search the data and then report a selected model as if it had been prespecified. This distorts p-values, confidence intervals, coefficients, and predictive performance. Better choices depend on the goal."
 tags:
 - Regression
 - Model Selection
 - Statistics
-title: Stepwise Regression: Why Automatic Selection Is Fragile
+title: "Stepwise Regression: Why Automatic Selection Is Fragile"
 ---
 
 Multiple regression and stepwise regression are not competing model families. Multiple regression is a model class; stepwise regression is a search algorithm for choosing a subset of predictors within that class.
