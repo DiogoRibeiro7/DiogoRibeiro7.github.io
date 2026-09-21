@@ -5,9 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2023-09-01'
-excerpt: Regression and path analysis are two statistical techniques used to model
-  relationships between variables. This article explains their differences, highlighting
-  key features and use cases for each.
+excerpt: Path analysis is a system of linked regression equations. It can decompose associations into direct and indirect paths, but causal interpretation still depends on identification assumptions and study design.
 header:
   image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
   og_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
@@ -19,204 +17,162 @@ header:
 keywords:
 - Regression analysis
 - Path analysis
-- Statistical modeling
 - Structural equation models
-- Multivariate analysis
-seo_description: The key differences between regression analysis and path analysis, with their applications, advantages, and limitations.
-seo_title: 'Regression vs. Path Analysis: A Comprehensive Comparison'
+- Mediation
+- Causal inference
+- Direct effects
+- Indirect effects
+seo_description: A rigorous comparison of regression and path analysis, including mediation, identification, direct and indirect effects, and the limits of causal interpretation.
+seo_title: 'Regression and Path Analysis: Models, Mediation, and Causality'
 seo_type: article
-summary: Regression and path analysis are both important statistical methods, but
-  they differ in terms of their complexity, scope, and purpose. While regression focuses
-  on predicting dependent variables from independent variables, path analysis allows
-  for the modeling of more complex, multivariate relationships between variables.
-  This comprehensive article delves into the theoretical and practical distinctions
-  between these two methods.
+summary: Path analysis extends regression by fitting a system of linked equations and decomposing effects along prespecified paths. The diagram does not create causal identification: causal claims require assumptions about temporal ordering, confounding, measurement, and model specification.
 tags:
 - Regression
-- Statistical Modeling
-title: Understanding the Difference Between Regression and Path Analysis
+- Structural Equation Modeling
+- Causal Inference
+title: Regression and Path Analysis: What the Diagram Does Not Tell You
 ---
 
-## Introduction
+Regression and path analysis are often presented as two separate techniques, with regression described as a simple predictive method and path analysis as a more advanced causal method. That framing is misleading. Path analysis is built from regression equations. Its distinctive feature is that several equations are linked into a system so that a variable can be an outcome in one equation and a predictor in another.
 
-In the field of **statistical modeling**, two powerful techniques stand out when it comes to understanding relationships between variables: **regression analysis** and **path analysis**. Although these methods share some conceptual similarities, they differ significantly in scope, complexity, and application. Regression is primarily used to analyze relationships between one dependent variable and one or more independent variables, while path analysis is a more advanced technique that explores complex causal relationships, often involving multiple dependent and independent variables.
+The important distinction is therefore not "prediction versus causality." Both regression and path models can be used descriptively, predictively, or causally depending on the design and assumptions. A path diagram can encode a causal hypothesis, but arrows on a diagram do not make the hypothesis true.
 
-In this article, we explore the key differences between regression analysis and path analysis, providing a thorough understanding of their individual features, strengths, and limitations. We also discuss their applications in research across various disciplines, offering examples of how each method can be used to address specific research questions. By the end of this article, readers will have a clear grasp of when to use regression and when to employ path analysis, as well as an understanding of the fundamental theoretical underpinnings that distinguish these methods.
+## Regression as a conditional model
 
-## Regression Analysis
+A linear regression model can be written as
 
-### Definition and Purpose
+$$
+Y = \beta_0 + X^\top\beta + \varepsilon,
+$$
 
-**Regression analysis** is a statistical technique that models the relationship between a **dependent variable** (also called the outcome or response variable) and one or more **independent variables** (also known as predictors or explanatory variables). The primary goal of regression is to determine how changes in the independent variables affect the dependent variable, allowing researchers to make predictions, assess associations, and quantify the strength of relationships.
+with the conditional mean
 
-Regression analysis is often used for two main purposes:
+$$
+E(Y\mid X)=\beta_0+X^\top\beta.
+$$
 
-1. **Prediction**: In many fields, regression is employed to predict future outcomes based on known values of independent variables. For instance, in economics, regression models can predict consumer spending based on income, interest rates, and other factors.
-2. **Inference**: Regression can also be used to assess the strength and significance of relationships between variables, testing hypotheses about whether certain predictors have a meaningful impact on the dependent variable.
+The coefficients describe conditional associations under the specified model. Their causal interpretation requires additional assumptions. For example, if $X_j$ is interpreted as an intervention, then confounding, selection, measurement error, post-treatment adjustment, and interference must all be considered.
 
-### Types of Regression
+Normality of residuals is not required for ordinary least-squares coefficients to exist or for the Gauss-Markov result. It becomes relevant for exact small-sample Gaussian inference. Likewise, multicollinearity does not generally bias OLS coefficients; it can make them unstable and imprecise.
 
-Several types of regression models exist, each designed to handle different kinds of data and relationships:
+Regression can also contain nonlinear terms, interactions, splines, fixed effects, random effects, and generalized response distributions. The phrase "regression analysis" therefore covers a much broader class than simple straight-line fitting.
 
-- **Simple Linear Regression**: This is the most basic form of regression, where a single independent variable is used to predict the dependent variable. The relationship is assumed to be linear, meaning it can be represented by a straight line.
+## Path analysis as a system of regressions
 
-  $$ Y = \beta_0 + \beta_1 X + \epsilon $$
+Consider three variables $X$, $M$, and $Y$, where $M$ is hypothesized to mediate part of the relationship between $X$ and $Y$. A simple path model is
 
-  Here, $Y$ is the dependent variable, $X$ is the independent variable, $\beta_0$ is the intercept, $\beta_1$ is the slope of the line, and $\epsilon$ represents the error term.
+$$
+M = aX + \varepsilon_M,
+$$
 
-- **Multiple Linear Regression**: In this form of regression, more than one independent variable is used to predict the dependent variable. The relationship is still assumed to be linear, but it now accounts for multiple predictors.
+$$
+Y = c'X + bM + \varepsilon_Y.
+$$
 
-  $$ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_n X_n + \epsilon $$
+The direct path from $X$ to $Y$ is represented by $c'$. Under the linear model, the product
 
-- **Polynomial Regression**: When the relationship between variables is not linear, a polynomial regression can be used to model the curvature in the data. In this case, the independent variables are raised to powers greater than one.
+$$
+ab
+$$
 
-- **Logistic Regression**: Used when the dependent variable is binary (e.g., success/failure, yes/no), logistic regression models the probability of an outcome occurring. It uses a logistic function to estimate the probability, ensuring that predictions fall between 0 and 1.
+is the model-based indirect effect through $M$. If a compatible total-effect model is
 
-  $$ P(Y=1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X)}} $$
+$$
+Y = cX + \varepsilon,
+$$
 
-### Key Assumptions of Regression
+then under the standard linear decomposition,
 
-Regression models rely on several key assumptions:
+$$
+c = c' + ab.
+$$
 
-1. **Linearity**: The relationship between the independent and dependent variables must be linear.
-2. **Independence of errors**: The residuals (differences between observed and predicted values) must be independent of each other.
-3. **Homoscedasticity**: The variance of the residuals should be constant across all levels of the independent variables.
-4. **Normality of errors**: The residuals should be normally distributed.
-5. **No multicollinearity**: In multiple regression, the independent variables should not be too highly correlated with each other.
+This algebra is useful, but it does not establish that $ab$ is a causal mediation effect. That interpretation needs assumptions about treatment assignment, mediator-outcome confounding, treatment-induced confounders, temporal ordering, consistency, and model specification.
 
-When these assumptions are met, regression analysis can provide reliable estimates and insights into the relationships between variables. However, violations of these assumptions can lead to biased results or inefficient estimates.
+## What path diagrams encode
 
-### Applications of Regression
+A path diagram is a compact representation of the equations and covariance assumptions.
 
-Regression analysis is widely used across various disciplines, including:
+- A single-headed arrow usually represents a directed regression path.
+- A double-headed arrow usually represents an allowed covariance.
+- Exogenous variables have no directed causes inside the specified model.
+- Endogenous variables are explained, at least partly, by other variables in the system.
 
-- **Economics**: Predicting consumer behavior, analyzing the impact of policy changes, and forecasting economic growth.
-- **Medicine**: Identifying risk factors for diseases, assessing the effectiveness of treatments, and predicting patient outcomes.
-- **Psychology**: Examining the relationship between psychological traits and behavior, or predicting mental health outcomes based on environmental factors.
-- **Marketing**: Estimating the impact of advertising spend on sales, or predicting customer churn based on demographic data.
+These labels are properties of the model, not metaphysical properties of the variables. A variable can be exogenous in one model and endogenous in another.
 
-### Advantages and Limitations of Regression
+The diagram is valuable because it forces assumptions into the open. If two residuals are allowed to correlate, that says something about omitted common causes or shared measurement structure. If no arrow or residual covariance connects two components, the model asserts a conditional independence structure that can have testable implications.
 
-#### Advantages
+## Identification comes before estimation
 
-- **Simplicity**: Regression models are relatively easy to understand and interpret, especially in the case of linear regression.
-- **Flexibility**: Various types of regression can be applied depending on the nature of the data (e.g., linear, logistic, polynomial).
-- **Predictive Power**: Regression models provide a straightforward way to make predictions about future outcomes based on known relationships between variables.
+A path model can contain more unknown parameters than the observed covariance structure can identify. Before interpreting fitted coefficients, one should ask whether the model is identified.
 
-#### Limitations
+For $p$ observed variables, the covariance matrix supplies
 
-- **Assumptions**: Violations of regression assumptions (e.g., non-linearity, multicollinearity) can lead to biased or inefficient results.
-- **Limited Causal Inference**: While regression can identify associations between variables, it does not necessarily imply causality. It can be difficult to infer complex causal relationships based on regression models alone.
-- **Multivariate Limitations**: When there are multiple dependent variables or complex causal relationships, regression analysis becomes insufficient. This is where more advanced techniques, such as **path analysis**, come into play.
+$$
+\frac{p(p+1)}{2}
+$$
 
-## Path Analysis
+distinct second-order moments. A covariance-structure model cannot estimate an arbitrary number of free means, variances, covariances, and paths from those moments.
 
-### Definition and Purpose
+Identification is not merely a software issue. A model can converge numerically and still encode a causal quantity that is not identified from the study design. Statistical identification and causal identification are related but distinct questions.
 
-**Path analysis** is a more advanced statistical technique that extends regression analysis to allow for the modeling of more complex relationships between variables, including **causal pathways**. Path analysis is a form of **structural equation modeling (SEM)**, which focuses on understanding the direct and indirect effects of independent variables on one or more dependent variables.
+## Direct and indirect effects are model dependent
 
-In path analysis, variables can serve as both **predictors** and **outcomes**, which allows researchers to explore **mediated relationships**. For example, in a psychological study, one might be interested in how socioeconomic status influences academic performance indirectly through self-esteem. Path analysis enables researchers to quantify the strength of these indirect effects, in addition to the direct effects.
+The decomposition of an association into direct and indirect components depends on the variables included and on their causal roles. Conditioning on a mediator changes the estimand. Conditioning on a collider can create bias. Conditioning on a post-treatment common cause of mediator and outcome can destroy a simple mediation interpretation.
 
-### Key Components of Path Analysis
+Even in linear models, an indirect effect is not a universal property of the data. It is relative to a specified causal graph and intervention. In nonlinear models, products of coefficients may not equal a marginal mediated effect at all.
 
-Path analysis typically involves several key components:
+This is why mediation analysis should begin with the causal question rather than with a path diagram template.
 
-1. **Exogenous Variables**: These are variables that are not influenced by other variables in the model. In a causal model, they are typically considered independent variables.
-2. **Endogenous Variables**: These variables are influenced by other variables in the model. Endogenous variables serve as both predictors and outcomes.
-3. **Path Coefficients**: Similar to regression coefficients, these values represent the strength and direction of the relationships between variables. A path coefficient indicates how a change in one variable influences another variable, holding all other factors constant.
-4. **Mediators**: These are variables that mediate the relationship between two other variables. For example, in a model where income affects academic achievement through self-esteem, self-esteem would be a mediator.
-5. **Direct and Indirect Effects**: Path analysis allows researchers to differentiate between direct effects (the impact of one variable on another without mediation) and indirect effects (the impact of one variable on another through one or more mediators).
+## Path analysis versus structural equation models
 
-### Path Diagrams
+Observed-variable path analysis is commonly treated as a special case of structural equation modelling. Full SEM can additionally include latent variables and explicit measurement models. For example, a latent construct $\eta$ may be measured by several indicators,
 
-A hallmark of path analysis is the use of **path diagrams**, which visually represent the relationships between variables in the model. In these diagrams, arrows are used to depict causal relationships:
+$$
+Y_j = \lambda_j \eta + \epsilon_j.
+$$
 
-- **Single-headed arrows** represent a direct causal effect from one variable to another.
-- **Double-headed arrows** represent correlations between variables, without implying causality.
+This separates measurement error from structural relations among latent variables, at least under the assumptions of the measurement model.
 
-Path diagrams provide a clear, visual way to communicate the hypothesized relationships between variables, making path analysis a valuable tool for modeling complex systems.
+Observed-variable path analysis generally treats measured variables as observed without an explicit latent measurement model. If a variable is measured unreliably, its path coefficients can be distorted just as regression coefficients can be distorted by measurement error.
 
-### Assumptions of Path Analysis
+## Model fit is not causal validation
 
-Path analysis relies on many of the same assumptions as regression analysis, including:
+SEM software reports fit statistics such as the chi-square test, RMSEA, CFI, TLI, and SRMR. These can be useful for diagnosing whether the covariance restrictions implied by the model are compatible with the observed covariance structure.
 
-1. **Linearity**: The relationships between variables are assumed to be linear.
-2. **Additivity**: The effects of independent variables on dependent variables are assumed to be additive (i.e., there are no interactions between variables unless explicitly modeled).
-3. **Normality**: The residuals (errors) in the model are assumed to be normally distributed.
-4. **No measurement error**: Unlike full structural equation modeling (SEM), which can account for measurement error, path analysis assumes that variables are measured without error.
+Good fit does not prove the causal graph. Distinct causal models can imply the same covariance structure, and a misspecified model can sometimes fit well because the data do not contain enough information to distinguish alternatives. Conversely, a scientifically useful approximation can be rejected in a very large sample because even tiny deviations become detectable.
 
-### Applications of Path Analysis
+Fit statistics should therefore be interpreted as evidence about model-data compatibility, not as proof of mechanism.
 
-Path analysis is commonly used in fields that require modeling of complex causal relationships, including:
+## When ordinary regression is enough
 
-- **Psychology**: Examining how different cognitive and emotional factors contribute to behavior.
-- **Sociology**: Modeling the interrelationships between socioeconomic factors, educational attainment, and health outcomes.
-- **Epidemiology**: Investigating how lifestyle factors, genetic predispositions, and environmental exposures interact to influence health risks.
-- **Business and Marketing**: Exploring how customer satisfaction, brand loyalty, and product quality impact sales and profitability.
+A system of path equations is unnecessary when the scientific target is a single conditional mean or a single treatment contrast. A regression model may be sufficient when there is one main outcome and no need to represent a network of mediating or reciprocal relations.
 
-### Path Analysis vs. Regression: Key Differences
+Adding a path diagram does not improve an analysis merely by making it look more structural. Complexity is justified when the joint system itself matters.
 
-#### 1. **Scope of Analysis**
+## When path analysis is useful
 
-Regression analysis typically focuses on predicting a single dependent variable from one or more independent variables. In contrast, path analysis allows for the modeling of multiple dependent variables and their interrelationships. This makes path analysis more suitable for research questions involving complex, multivariate systems.
+Path analysis becomes useful when several linked equations are substantively motivated. Common examples include longitudinal developmental models, mediation hypotheses, economic systems with intermediate mechanisms, and social-science theories involving multiple endogenous variables.
 
-#### 2. **Direct and Indirect Effects**
-
-While regression analysis primarily focuses on direct effects, path analysis enables researchers to disentangle both direct and indirect effects. This makes it possible to explore **mediated relationships**, where one variable influences another through an intermediary variable.
-
-For example, in a regression model, we might examine the direct effect of parental income on a child's academic performance. In path analysis, we can also assess the indirect effect of parental income on academic performance through variables such as parental involvement or self-esteem.
-
-#### 3. **Causal Inference**
-
-Both regression and path analysis can be used for causal inference, but path analysis is explicitly designed for this purpose. By modeling multiple variables and their relationships, path analysis provides a framework for testing complex causal hypotheses. However, it's important to note that path analysis, like regression, is still reliant on the assumption of causal direction based on theory or prior research. It does not "prove" causality but offers a structured way to explore potential causal relationships.
-
-#### 4. **Model Complexity**
-
-Regression models are generally simpler and easier to interpret than path analysis models. Path analysis, on the other hand, can handle more complex systems with multiple dependent and independent variables. This makes path analysis a powerful tool for research questions that cannot be adequately addressed with standard regression techniques.
-
-#### 5. **Visualization**
-
-Path analysis often involves **path diagrams**, which provide a visual representation of the relationships between variables. These diagrams make it easier to communicate complex models, especially when multiple variables and pathways are involved. Regression analysis does not typically include such visual aids, though residual plots and scatter plots can be used for diagnostic purposes.
-
-### Advantages and Limitations of Path Analysis
-
-#### Advantages
-
-- **Handles Complex Models**: Path analysis is ideal for studying systems with multiple interrelated variables.
-- **Direct and Indirect Effects**: It allows researchers to distinguish between direct and indirect effects, providing a more nuanced understanding of causal relationships.
-- **Visual Representation**: Path diagrams offer a clear, intuitive way to represent and communicate complex models.
-
-#### Limitations
-
-- **Assumptions**: Like regression, path analysis relies on assumptions about linearity, additivity, and normality. Violations of these assumptions can affect the validity of the model.
-- **No Measurement Error**: Unlike full structural equation modeling (SEM), path analysis does not account for measurement error, which can lead to biased estimates.
-- **Complexity**: Path analysis models can become quite complex, making them harder to interpret than simpler regression models.
-
-## When to Use Regression vs. Path Analysis
-
-Choosing between regression and path analysis depends on the research question, the nature of the data, and the complexity of the relationships between variables.
-
-- **Use regression** when you are interested in predicting a single dependent variable from one or more independent variables, and the relationships are relatively straightforward. Regression is ideal for simpler models where the primary goal is to assess direct associations or make predictions.
-  
-- **Use path analysis** when the research involves multiple dependent variables, mediated relationships, or complex causal pathways. Path analysis is better suited for exploring systems where variables influence each other directly and indirectly.
-
-### Example: Health Research
-
-Suppose a researcher is studying the effects of physical activity on mental health. A **regression model** might look at how physical activity (independent variable) directly affects mental health (dependent variable). However, the researcher might also be interested in how physical activity indirectly influences mental health through improved sleep quality and reduced stress levels. In this case, **path analysis** would be more appropriate, as it allows the researcher to model both direct and indirect effects, capturing the complexity of the relationships.
-
-### Example: Educational Research
-
-In educational research, **regression** might be used to study the effect of parental education on a child's academic performance. If the researcher suspects that parental education influences the child's performance through other factors such as parental involvement and the home learning environment, **path analysis** would be a better choice, as it can account for these indirect pathways.
+The strongest applications have three features: temporal and substantive ordering is specified before looking at the final estimates, the relevant confounders are addressed by design or explicit assumptions, and alternative plausible structures are considered rather than treating one diagram as uniquely determined by the data.
 
 ## Conclusion
 
-**regression analysis** and **path analysis** are both essential tools in statistical modeling, each suited to different types of research questions. While regression provides a straightforward method for predicting a single dependent variable from one or more independent variables, path analysis offers a more advanced framework for exploring complex, multivariate relationships. By distinguishing between direct and indirect effects and allowing for the modeling of multiple dependent variables, path analysis extends the capabilities of regression and is particularly useful for causal inference.
+Regression and path analysis belong to the same modelling family. Path analysis links several regressions so that direct, indirect, and total associations can be represented within one system. That extra structure can be scientifically useful, but it also adds assumptions.
 
-However, both techniques rely on certain assumptions, and their proper use depends on the nature of the data and the research objectives. Researchers should carefully consider the complexity of their models and the relationships between variables when deciding whether to use regression or path analysis.
+The central lesson is
 
-Ultimately, the choice between regression and path analysis is not an either/or decision but rather a question of which method best fits the research design and goals. In many cases, these techniques can complement each other, with regression providing a foundation for understanding direct relationships and path analysis offering a more nuanced view of causal mechanisms.
+$$
+\text{diagram}
+\neq
+\text{identification}.
+$$
+
+A causal path interpretation requires more than a fitted covariance model. It requires a defensible design, temporal logic, appropriate adjustment, measurement assumptions, and a clear estimand. Once those are stated, path analysis can be a concise language for the hypothesized mechanism rather than a substitute for causal reasoning.
 
 ## References
 
-- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley.
-- Kline, R. B. (2015). *Principles and Practice of Structural Equation Modeling* (4th ed.). Guilford Press.
+- Bollen, K. A. (1989). *Structural Equations with Latent Variables*. Wiley.
+- Kline, R. B. (2016). *Principles and Practice of Structural Equation Modeling* (4th ed.). Guilford Press.
+- Pearl, J. (2009). *Causality* (2nd ed.). Cambridge University Press.
+- VanderWeele, T. J. (2015). *Explanation in Causal Inference: Methods for Mediation and Interaction*. Oxford University Press.
