@@ -82,9 +82,7 @@ The independent t-test is appropriate when:
 
 #### Example 1: Comparing Blood Pressure Between Two Treatments
 
-A medical researcher wants to compare the effect of two drugs (Drug A and Drug B) on blood pressure. The researcher collects blood pressure data from two groups of patients—one group taking Drug A and the other taking Drug B.
-
-Using an independent t-test, the researcher can determine whether there is a statistically significant difference in the mean blood pressure between the two groups. If the p-value is less than 0.05, the null hypothesis is rejected, suggesting that the two drugs have different effects on blood pressure.
+A medical researcher wants to compare the effect of two drugs (Drug A and Drug B) on blood pressure. The researcher collects blood pressure data from two groups of patients—one group taking Drug A and the other taking Drug B. Using an independent t-test, the researcher can determine whether there is a statistically significant difference in the mean blood pressure between the two groups. If the p-value is less than 0.05, the null hypothesis is rejected, suggesting that the two drugs have different effects on blood pressure.
 
 ## Mann-Whitney U Test: A Non-Parametric Alternative
 
@@ -94,9 +92,7 @@ The **Mann-Whitney U test** (also known as the **Wilcoxon rank-sum test**) is a 
 
 The Mann-Whitney U test compares the ranks of the values in the two groups rather than the actual values themselves. It ranks all the data points from both groups together and then compares the sum of the ranks for each group. The test statistic, U, is calculated based on these ranks.
 
-The null hypothesis ($$H_0$$) of the Mann-Whitney U test is that the distribution of ranks in both groups is the same. The alternative hypothesis ($$H_A$$) is that the distributions differ.
-
-The formula for U is:
+The null hypothesis ($$H_0$$) of the Mann-Whitney U test is that the distribution of ranks in both groups is the same. The alternative hypothesis ($$H_A$$) is that the distributions differ. The formula for U is:
 
 $$
 U = n_1n_2 + \frac{n_1(n_1+1)}{2} - R_1
