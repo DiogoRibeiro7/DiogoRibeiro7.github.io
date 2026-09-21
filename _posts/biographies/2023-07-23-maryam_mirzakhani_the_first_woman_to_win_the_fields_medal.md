@@ -81,9 +81,9 @@ $$
 
 for a fixed hyperbolic surface $X$, with the exponent modified appropriately when punctures or boundaries are included. The striking feature is that the growth is polynomial rather than exponential, while the constant
 
-$
+$$
 c_X
-$
+$$
 
 depends on the chosen hyperbolic surface. The proof did not arise from a local counting trick: it connected the asymptotic number of simple geodesics with the global geometry and volume structure of moduli space, which is precisely what made the result so influential.
 
