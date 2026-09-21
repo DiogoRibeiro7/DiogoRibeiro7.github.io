@@ -52,7 +52,7 @@ In this article, we’ll explore:
 
 ## What Is Spatial Epidemiology?
 
-At its core, **spatial epidemiology** is the study of the **spatial distribution** of diseases. It focuses on understanding how health outcomes vary across different geographic areas and identifying **geospatial patterns** that might be related to environmental factors, population density, or access to healthcare services. 
+At its core, **spatial epidemiology** is the study of the **spatial distribution** of diseases. It focuses on understanding how health outcomes vary across different geographic areas and identifying **geospatial patterns** that might be related to environmental factors, population density, or access to healthcare services.
 
 Spatial epidemiologists use **geographic information systems** (GIS) and statistical models to analyze how disease incidence is affected by geography. By visualizing and analyzing disease data on maps, they can identify **clusters** of disease cases, **hotspots** of outbreaks, and **spatial correlations** between disease patterns and other variables such as climate, socioeconomic factors, or proximity to healthcare facilities.
 
@@ -107,18 +107,14 @@ These tools help public health officials **prioritize regions** for intervention
 
 In traditional epidemiology, **regression models** are used to understand the relationships between variables. In spatial epidemiology, **spatial regression models** extend these capabilities to account for the geographic nature of the data. Spatial regression takes into account the fact that nearby locations may be more similar to each other than distant ones, a phenomenon known as **spatial autocorrelation**.
 
-For example, spatial regression could be used to model the relationship between air pollution levels and the incidence of respiratory diseases while accounting for the fact that areas closer together might have more similar pollution levels due to local environmental factors.
-
-Common spatial regression techniques include:
+For example, spatial regression could be used to model the relationship between air pollution levels and the incidence of respiratory diseases while accounting for the fact that areas closer together might have more similar pollution levels due to local environmental factors. Common spatial regression techniques include:
 
 - **Geographically Weighted Regression (GWR)**: This method allows the relationships between variables to vary over space, making it useful when the factors driving disease incidence differ from one region to another.
 - **Bayesian Hierarchical Models**: These models allow for the integration of spatial data with prior information, often used when data is sparse in certain geographic areas.
 
 ### 4. **Machine Learning in Spatial Epidemiology**
 
-**Machine learning** techniques are increasingly being applied to spatial epidemiology to create predictive models of disease spread. These models can integrate large datasets, such as satellite imagery, climate data, and population mobility patterns, to predict how diseases might spread geographically over time.
-
-For instance, **random forests**, **support vector machines**, and **deep learning** models can be trained to predict the likelihood of an outbreak occurring in a given region based on historical data and environmental factors. These predictions can help public health agencies prepare for and respond to potential outbreaks.
+**Machine learning** techniques are increasingly being applied to spatial epidemiology to create predictive models of disease spread. These models can integrate large datasets, such as satellite imagery, climate data, and population mobility patterns, to predict how diseases might spread geographically over time. For instance, **random forests**, **support vector machines**, and **deep learning** models can be trained to predict the likelihood of an outbreak occurring in a given region based on historical data and environmental factors. These predictions can help public health agencies prepare for and respond to potential outbreaks.
 
 ## Practical Applications of Spatial Epidemiology
 
@@ -154,9 +150,7 @@ While spatial epidemiology offers tremendous benefits, there are also challenges
 
 ## The Future of Spatial Epidemiology
 
-As the world faces growing challenges from global pandemics, climate change, and emerging diseases, **spatial epidemiology** will continue to play a critical role in public health. By combining **geospatial data** with **data science techniques**, spatial epidemiology provides public health officials with the tools to better understand disease patterns, predict outbreaks, and design targeted interventions.
-
-With advances in technology, such as the increasing availability of **real-time geospatial data** from satellites, mobile devices, and wearable health monitors, the future of spatial epidemiology looks promising. This field will continue to be at the forefront of efforts to protect public health by identifying and mitigating the factors that drive the spread of disease.
+As the world faces growing challenges from global pandemics, climate change, and emerging diseases, **spatial epidemiology** will continue to play a critical role in public health. By combining **geospatial data** with **data science techniques**, spatial epidemiology provides public health officials with the tools to better understand disease patterns, predict outbreaks, and design targeted interventions. With advances in technology, such as the increasing availability of **real-time geospatial data** from satellites, mobile devices, and wearable health monitors, the future of spatial epidemiology looks promising. This field will continue to be at the forefront of efforts to protect public health by identifying and mitigating the factors that drive the spread of disease.
 
 ## Rates need denominators
 
@@ -178,9 +172,7 @@ N_i
 },
 $$
 
-where $N_i$ may be population at risk, person-time, tests performed, births, or another exposure measure.
-
-Small-area crude rates can be extremely noisy when $N_i$ is small. Hierarchical or empirical-Bayes smoothing can stabilize them, but the smoothing model should be explicit.
+where $N_i$ may be population at risk, person-time, tests performed, births, or another exposure measure. Small-area crude rates can be extremely noisy when $N_i$ is small. Hierarchical or empirical-Bayes smoothing can stabilize them, but the smoothing model should be explicit.
 
 ## Spatial autocorrelation
 
@@ -191,47 +183,23 @@ $$
 \ne0
 $$
 
-for spatial neighbors.
-
-Ordinary regression standard errors assuming independent residuals can therefore be wrong.
-
-Spatial random effects, conditional/autoregressive models, Gaussian processes, or other covariance structures can represent this dependence.
+for spatial neighbors. Ordinary regression standard errors assuming independent residuals can therefore be wrong. Spatial random effects, conditional/autoregressive models, Gaussian processes, or other covariance structures can represent this dependence.
 
 ## Modifiable areal unit problem
 
-Results can change when the same point-level data are aggregated into different administrative units or resolutions.
-
-This is the modifiable areal unit problem.
-
-A cluster visible by district may disappear or reverse when analyzed by census tract.
-
-The choice of spatial unit is part of the analysis, not a neutral visualization setting.
+Results can change when the same point-level data are aggregated into different administrative units or resolutions. This is the modifiable areal unit problem. A cluster visible by district may disappear or reverse when analyzed by census tract. The choice of spatial unit is part of the analysis, not a neutral visualization setting.
 
 ## Ecological fallacy
 
-An area-level association does not imply the same relationship at the individual level.
-
-If neighborhoods with higher pollution have higher asthma rates, one cannot conclude from that aggregate pattern alone that the individuals with higher exposure are the individuals with asthma.
-
-Multilevel or individual-level data are needed for individual causal claims.
+An area-level association does not imply the same relationship at the individual level. If neighborhoods with higher pollution have higher asthma rates, one cannot conclude from that aggregate pattern alone that the individuals with higher exposure are the individuals with asthma. Multilevel or individual-level data are needed for individual causal claims.
 
 ## Cluster detection and multiple scanning
 
-Methods such as spatial scan statistics search many candidate regions.
-
-The null calibration must account for that search.
-
-A map that colors every locally high rate as a “hotspot” without a baseline model or multiplicity-aware procedure can greatly overstate evidence.
+Methods such as spatial scan statistics search many candidate regions. The null calibration must account for that search. A map that colors every locally high rate as a “hotspot” without a baseline model or multiplicity-aware procedure can greatly overstate evidence.
 
 ## Privacy and re-identification
 
-Fine-resolution health locations can be identifying even after names are removed.
-
-Rare disease, household coordinates, age, and dates can combine to reveal individuals.
-
-Aggregation, geomasking, access controls, differential privacy, or restricted secure environments may be required depending on the use case.
-
-Privacy protection can itself alter spatial signal, so the statistical consequence should be assessed.
+Fine-resolution health locations can be identifying even after names are removed. Rare disease, household coordinates, age, and dates can combine to reveal individuals. Aggregation, geomasking, access controls, differential privacy, or restricted secure environments may be required depending on the use case. Privacy protection can itself alter spatial signal, so the statistical consequence should be assessed.
 
 ## References
 
