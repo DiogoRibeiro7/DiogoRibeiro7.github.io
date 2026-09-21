@@ -191,7 +191,7 @@ Risk management therefore needs both statistical tail measures and scenario anal
 
 ## Regulatory context
 
-The Basel market-risk framework moved from VaR toward Expected Shortfall for internal-model capital because ES better captures the severity of tail losses and has more desirable aggregation properties. That policy change does not imply that ES eliminates model risk. citeturn0search1
+The Basel market-risk framework moved from VaR toward Expected Shortfall for internal-model capital because ES better captures the severity of tail losses and has more desirable aggregation properties. That policy change does not imply that ES eliminates model risk.
 
 ## Conclusion
 
