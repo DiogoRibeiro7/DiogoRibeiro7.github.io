@@ -70,15 +70,15 @@ The **curse of dimensionality** is one of the most challenging problems in machi
 
 Formally, the shared-neighbor count is a **similarity**, not a distance. If $N_k(i)$ denotes the $k$ nearest neighbors of observation $i$, then a basic similarity is
 
-$
+$$
 s(i,j)=|N_k(i)cap N_k(j)|.
-$
+$$
 
 Larger values mean more local structure is shared. Any clustering algorithm that expects distances must therefore convert this similarity into a dissimilarity explicitly. This distinction is not cosmetic: the previous implementation passed shared-neighbor similarities directly to DBSCAN as a precomputed distance matrix, reversing the intended geometry.
 
 ## Origins of Shared Nearest Neighbors in Clustering
 
-The shared-neighbor idea predates DBSCAN and is closely associated with the Jarvis-Patrick clustering framework. Later SNN density methods reused the idea to reduce sensitivity to raw-distance scale. DBSCAN itself defines neighborhoods through a global radius $arepsilon$, so a single radius can be problematic when the data contain clusters with sharply different local scales. SNN changes the neighborhood representation, but it does not remove parameter sensitivity or guarantee recovery of clusters with arbitrary density variation.
+The shared-neighbor idea predates DBSCAN and is closely associated with the Jarvis-Patrick clustering framework. Later SNN density methods reused the idea to reduce sensitivity to raw-distance scale. DBSCAN itself defines neighborhoods through a global radius $\varepsilon$, so a single radius can be problematic when the data contain clusters with sharply different local scales. SNN changes the neighborhood representation, but it does not remove parameter sensitivity or guarantee recovery of clusters with arbitrary density variation.
 
 ### A Quick Overview of DBSCAN
 
