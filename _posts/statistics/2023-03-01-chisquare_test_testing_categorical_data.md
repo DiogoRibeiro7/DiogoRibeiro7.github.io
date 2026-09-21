@@ -38,9 +38,7 @@ $$
 \chi^2 = \sum_i \frac{(O_i - E_i)^2}{E_i},
 $$
 
-where $O_i$ is the observed count in cell $i$ and $E_i$ the expected count. Squaring makes over- and under-shoots count equally; dividing by $E_i$ scales each discrepancy by how large it should have been, so a shortfall of 10 in a cell expecting 20 weighs far more than the same shortfall in a cell expecting 2000.
-
-Large values indicate the observed pattern is unlikely under the null. Under the null the statistic follows approximately a chi-square distribution, whose degrees of freedom depend on which version you are running.
+where $O_i$ is the observed count in cell $i$ and $E_i$ the expected count. Squaring makes over- and under-shoots count equally; dividing by $E_i$ scales each discrepancy by how large it should have been, so a shortfall of 10 in a cell expecting 20 weighs far more than the same shortfall in a cell expecting 2000. Large values indicate the observed pattern is unlikely under the null. Under the null the statistic follows approximately a chi-square distribution, whose degrees of freedom depend on which version you are running.
 
 The test is defined from counts. Percentages alone are insufficient because they discard the sample size; if percentages are merely a display of known counts, reconstruct the counts or fit an equivalent count model rather than passing proportions as though they were frequencies.
 
@@ -48,9 +46,7 @@ The test is defined from counts. Percentages alone are insufficient because they
 
 ### Goodness of Fit
 
-This compares one categorical variable against a hypothesised distribution. Are the six faces of a die equally likely? Do observed blood types match population frequencies?
-
-Expected counts are $E_i = n p_i$ under hypothesised proportions $p_i$, with $k - 1$ degrees of freedom for $k$ categories. If any parameters were estimated from the same data, subtract one degree of freedom for each.
+This compares one categorical variable against a hypothesised distribution. Are the six faces of a die equally likely? Do observed blood types match population frequencies? Expected counts are $E_i = n p_i$ under hypothesised proportions $p_i$, with $k - 1$ degrees of freedom for $k$ categories. If any parameters were estimated from the same data, subtract one degree of freedom for each.
 
 ### Test of Independence
 
@@ -60,9 +56,7 @@ $$
 E_{ij} = \frac{R_i \times C_j}{N},
 $$
 
-where $R_i$ is the row total, $C_j$ the column total and $N$ the grand total. Degrees of freedom are $(r-1)(c-1)$.
-
-A closely related third form, the test of homogeneity, uses identical arithmetic but a different design: independence samples one population and classifies it two ways, while homogeneity samples several populations and compares one classification across them. The computation does not change; the interpretation does.
+where $R_i$ is the row total, $C_j$ the column total and $N$ the grand total. Degrees of freedom are $(r-1)(c-1)$. A closely related third form, the test of homogeneity, uses identical arithmetic but a different design: independence samples one population and classifies it two ways, while homogeneity samples several populations and compares one classification across them. The computation does not change; the interpretation does.
 
 ## A Worked Example
 
@@ -104,9 +98,7 @@ For 2×2 tables, Yates's continuity correction is sometimes applied to compensat
 
 ## What a Significant Result Does Not Tell You
 
-A significant chi-square says the variables are associated. It does not say the association is strong, does not say which categories are responsible, and above all does not establish causation.
-
-It also gives no direction. Unlike a correlation coefficient, chi-square has no sign, because the categories may have no natural ordering. If your categories *are* ordered — none, mild, moderate, severe — the standard test discards that information and a test for trend, such as the Cochran-Armitage test, will be more powerful.
+A significant chi-square says the variables are associated. It does not say the association is strong, does not say which categories are responsible, and above all does not establish causation. It also gives no direction. Unlike a correlation coefficient, chi-square has no sign, because the categories may have no natural ordering. If your categories *are* ordered — none, mild, moderate, severe — the standard test discards that information and a test for trend, such as the Cochran-Armitage test, will be more powerful.
 
 Simpson's paradox applies here with full force. An association in a pooled table can vanish or reverse within every subgroup, so check whether an obvious stratifying variable changes the picture before treating the aggregate as the finding.
 
