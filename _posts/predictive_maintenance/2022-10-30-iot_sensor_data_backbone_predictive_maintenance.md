@@ -186,8 +186,6 @@ The future of predictive maintenance will be shaped by advancements in IoT and s
 
 IoT-enabled sensors are the backbone of predictive maintenance, providing the real-time data needed to monitor equipment health and predict potential failures. By collecting data on critical parameters like vibration, temperature, and pressure, sensors allow organizations to detect early signs of equipment degradation and take proactive maintenance actions. As IoT technology continues to evolve, the role of sensors in predictive maintenance will become even more integral, driving further improvements in operational efficiency and equipment reliability.
 
----
-
 
 ## Event time, processing time, and synchronization
 
