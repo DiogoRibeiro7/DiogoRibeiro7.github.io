@@ -38,9 +38,7 @@ $$
 \chi^2 = \sum_i \frac{(O_i - E_i)^2}{E_i},
 $$
 
-where $O_i$ is the observed count in cell $i$ and $E_i$ the expected count. Squaring makes over- and under-shoots count equally; dividing by $E_i$ scales each discrepancy by how large it should have been, so a shortfall of 10 in a cell expecting 20 weighs far more than the same shortfall in a cell expecting 2000.
-
-Large values indicate the observed pattern is unlikely under the null. Under the null the statistic follows approximately a chi-square distribution, whose degrees of freedom depend on which version you are running.
+where $O_i$ is the observed count in cell $i$ and $E_i$ the expected count. Squaring makes over- and under-shoots count equally; dividing by $E_i$ scales each discrepancy by how large it should have been, so a shortfall of 10 in a cell expecting 20 weighs far more than the same shortfall in a cell expecting 2000. Large values indicate the observed pattern is unlikely under the null. Under the null the statistic follows approximately a chi-square distribution, whose degrees of freedom depend on which version you are running.
 
 The test is defined from counts. Percentages alone are insufficient because they discard the sample size; if percentages are merely a display of known counts, reconstruct the counts or fit an equivalent count model rather than passing proportions as though they were frequencies.
 
@@ -60,9 +58,7 @@ $$
 E_{ij} = \frac{R_i \times C_j}{N},
 $$
 
-where $R_i$ is the row total, $C_j$ the column total and $N$ the grand total. Degrees of freedom are $(r-1)(c-1)$.
-
-A closely related third form, the test of homogeneity, uses identical arithmetic but a different design: independence samples one population and classifies it two ways, while homogeneity samples several populations and compares one classification across them. The computation does not change; the interpretation does.
+where $R_i$ is the row total, $C_j$ the column total and $N$ the grand total. Degrees of freedom are $(r-1)(c-1)$. A closely related third form, the test of homogeneity, uses identical arithmetic but a different design: independence samples one population and classifies it two ways, while homogeneity samples several populations and compares one classification across them. The computation does not change; the interpretation does.
 
 ## A Worked Example
 
