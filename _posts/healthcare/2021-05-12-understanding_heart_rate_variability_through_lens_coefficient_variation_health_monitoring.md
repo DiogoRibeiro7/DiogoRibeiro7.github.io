@@ -59,9 +59,7 @@ HRV is a non-invasive measure used in assessing the adaptability of the cardiova
 
 ### Standard Deviation (SD)
 
-One of the simplest and most common methods of calculating HRV is by measuring the standard deviation of the intervals between heartbeats, also known as the inter-beat intervals (IBIs). The standard deviation gives an idea of how much variation there is in the timing of the heartbeats.
-
-While useful, the SD alone doesn't account for differences in average heart rate between individuals or even within the same individual across different times or conditions. For example, two individuals could have similar SDs in their HRV, but if one person has a significantly higher average heart rate, the variability could represent a different degree of physiological stress or health condition.
+One of the simplest and most common methods of calculating HRV is by measuring the standard deviation of the intervals between heartbeats, also known as the inter-beat intervals (IBIs). The standard deviation gives an idea of how much variation there is in the timing of the heartbeats. While useful, the SD alone doesn't account for differences in average heart rate between individuals or even within the same individual across different times or conditions. For example, two individuals could have similar SDs in their HRV, but if one person has a significantly higher average heart rate, the variability could represent a different degree of physiological stress or health condition.
 
 ### Root Mean Square of Successive Differences (RMSSD)
 
@@ -136,6 +134,4 @@ While CV offers a valuable perspective on HRV, it is important to acknowledge ot
 
 The coefficient of variation of NN intervals can be a useful relative measure of HRV because it scales SDNN by the mean NN interval. Its meaning is straightforward: more CVNN means more relative interval variability, less CVNN means less. Clinical interpretation must still be anchored to standardized measurements and the broader HRV context.
 
-In the fields of fitness, stress monitoring, cardiovascular disease, and sleep analysis, CV can offer additional insights that complement traditional HRV metrics. When used alongside other measures such as RMSSD, SDNN, and LF/HF, CV becomes a powerful tool for assessing overall health, guiding recovery, and providing early warnings for potential health risks.
-
-As healthcare continues to evolve with the integration of wearable technology and real-time monitoring systems, CV's role in personalized health management is likely to expand, offering both patients and providers more nuanced and actionable data.
+In the fields of fitness, stress monitoring, cardiovascular disease, and sleep analysis, CV can offer additional insights that complement traditional HRV metrics. When used alongside other measures such as RMSSD, SDNN, and LF/HF, CV becomes a powerful tool for assessing overall health, guiding recovery, and providing early warnings for potential health risks. As healthcare continues to evolve with the integration of wearable technology and real-time monitoring systems, CV's role in personalized health management is likely to expand, offering both patients and providers more nuanced and actionable data.
