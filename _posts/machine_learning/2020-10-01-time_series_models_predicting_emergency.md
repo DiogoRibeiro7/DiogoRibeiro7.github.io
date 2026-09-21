@@ -56,7 +56,7 @@ This article does not include the underlying hospital dataset or a reproducible 
 For comparison, three univariate time series models were used as baselines:
 
 - **ARIMA (AutoRegressive Integrated Moving Average)**: A well-established time series model that combines autoregressive and moving average components to capture trends and seasonality in time series data. ARIMA assumes that future values can be predicted as a linear function of past observations and residuals.
-  
+
 - **Exponential Smoothing (ETS)**: ETS models capture trend and seasonality by applying smoothing to past observations. ETS includes three components—error, trend, and seasonality—allowing it to adapt to different time series patterns.
 
 - **Facebook's Prophet**: Prophet is a flexible time series forecasting tool developed by Facebook. It is designed to handle time series data with seasonality and holidays, making it a useful baseline for this study. Prophet can automatically detect yearly, weekly, and daily seasonality and accommodate missing data and irregular trends.
@@ -92,9 +92,7 @@ A valid benchmark should publish, for every model and forecast horizon:
 - point and probabilistic forecast metrics;
 - uncertainty in score differences.
 
-For point forecasts, MAE and RMSE answer different loss questions. For staffing decisions, quantile loss can be more useful because underforecasting and overforecasting may have asymmetric costs.
-
-A strong baseline set includes:
+For point forecasts, MAE and RMSE answer different loss questions. For staffing decisions, quantile loss can be more useful because underforecasting and overforecasting may have asymmetric costs. A strong baseline set includes:
 
 $$
 \hat y_{t+h}=y_t
@@ -106,15 +104,11 @@ $$
 \hat y_{t+h}=y_{t+h-s},
 $$
 
-and a well-tuned exponential-smoothing or regression-with-ARIMA-errors model.
-
-Machine-learning models should use lagged demand features and external covariates only when those covariates are genuinely known at the forecast origin.
+and a well-tuned exponential-smoothing or regression-with-ARIMA-errors model. Machine-learning models should use lagged demand features and external covariates only when those covariates are genuinely known at the forecast origin.
 
 ### Feature importance is not causal explanation
 
-Random-forest or boosting feature importance measures predictive contribution inside a fitted model. They do not establish that temperature, pressure, or weekday **causes** ED volume changes.
-
-Correlated predictors can split importance unpredictably, and impurity-based importance can be biased toward high-cardinality or noisy continuous variables.
+Random-forest or boosting feature importance measures predictive contribution inside a fitted model. They do not establish that temperature, pressure, or weekday **causes** ED volume changes. Correlated predictors can split importance unpredictably, and impurity-based importance can be biased toward high-cardinality or noisy continuous variables.
 
 Permutation importance or SHAP values can describe model dependence, but causal interpretation still requires a causal design.
 
