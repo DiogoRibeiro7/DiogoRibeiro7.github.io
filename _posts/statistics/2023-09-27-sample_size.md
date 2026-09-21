@@ -5,7 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2023-09-27'
-excerpt: Sample size should be derived from the estimand, design, effect size, uncertainty target, and error rates, not from a universal rule that more data are always better.
+excerpt: "Sample size should be derived from the estimand, design, effect size, uncertainty target, and error rates, not from a universal rule that more data are always better."
 header:
   image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
   og_image: /assets/images/headers/photo-statistics-logistic-pdf.jpg
@@ -22,15 +22,15 @@ keywords:
 - Experimental design
 - Confidence intervals
 - Clustered data
-seo_description: How to reason about sample size from power, effect size, precision, design effects, clustering, multiplicity, and practical constraints.
+seo_description: "How to reason about sample size from power, effect size, precision, design effects, clustering, multiplicity, and practical constraints."
 seo_title: 'Sample Size: Power, Precision, and Design'
 seo_type: article
-subtitle: Power, Precision, and Design
+subtitle: "Power, Precision, and Design"
 tags:
 - Data Analysis
 - Sample Size
 - Experimental Design
-title: Sample Size: Power, Precision, and Design
+title: "Sample Size: Power, Precision, and Design"
 ---
 
 ![Sample 1 - Sample Size](/assets/images/sample_1.png){: width="320" height="126" loading="lazy"}
@@ -49,13 +49,13 @@ $$
 
 This means diminishing returns. To cut a standard error in half, one often needs roughly four times as many independent observations.
 
-For a mean with standard deviation \(\sigma\),
+For a mean with standard deviation $\sigma$,
 
 $$
 \operatorname{SE}(\bar X)=\frac{\sigma}{\sqrt n}.
 $$
 
-If the goal is an interval with half-width \(h\), a normal approximation gives roughly
+If the goal is an interval with half-width $h$, a normal approximation gives roughly
 
 $$
 n\approx \left(\frac{z_{1-\alpha/2}\sigma}{h}\right)^2.
@@ -103,7 +103,7 @@ $$
 DE=1+(m-1)\rho,
 $$
 
-where m is average cluster size and \(\rho\) the intraclass correlation. The effective sample size is then roughly
+where m is average cluster size and $\rho$ the intraclass correlation. The effective sample size is then roughly
 
 $$
 n_{\mathrm{eff}}\approx \frac{n}{DE}.
