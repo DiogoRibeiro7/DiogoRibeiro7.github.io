@@ -42,7 +42,7 @@ A useful discussion therefore begins with the probability model.
 
 ## Shannon entropy
 
-For a discrete random variable \(X\) with probability mass function
+For a discrete random variable $X$ with probability mass function
 
 $$
 p(x)=P(X=x),
@@ -68,7 +68,7 @@ It does not belong to one realized observation.
 
 ## Why the logarithm appears
 
-If two independent events have probabilities \(p\) and \(q\), their joint probability is
+If two independent events have probabilities $p$ and $q$, their joint probability is
 
 $$
 pq.
@@ -110,7 +110,7 @@ $$
 
 ## Uniform distributions maximize discrete entropy
 
-If \(X\) has \(k\) possible outcomes, then
+If $X$ has $k$ possible outcomes, then
 
 $$
 H(X)
@@ -152,13 +152,13 @@ $$
 p=\frac12
 $$
 
-and tends to zero as \(p\) approaches 0 or 1.
+and tends to zero as $p$ approaches 0 or 1.
 
 A deterministic Bernoulli variable therefore has zero Shannon entropy.
 
 ## Joint and conditional entropy
 
-For variables \(X\) and \(Y\),
+For variables $X$ and $Y$,
 
 $$
 H(X,Y)
@@ -185,7 +185,7 @@ H(Y)
 H(X\mid Y).
 $$
 
-If \(Y\) tells us something about \(X\), then uncertainty about \(X\) can decrease after conditioning.
+If $Y$ tells us something about $X$, then uncertainty about $X$ can decrease after conditioning.
 
 ## Mutual information
 
@@ -233,7 +233,7 @@ $$
 I(X;Y)\ge0.
 $$
 
-It is zero if and only if \(X\) and \(Y\) are independent, under the usual regularity conditions.
+It is zero if and only if $X$ and $Y$ are independent, under the usual regularity conditions.
 
 Mutual information detects arbitrary statistical dependence, not only linear correlation.
 
@@ -241,7 +241,7 @@ It does not establish causation.
 
 ## Kullback-Leibler divergence
 
-For distributions \(P\) and \(Q\),
+For distributions $P$ and $Q$,
 
 $$
 D_{\mathrm{KL}}(P\|Q)
@@ -278,7 +278,7 @@ Maximum likelihood under model misspecification, variational inference, coding t
 
 ## Cross-entropy
 
-For a true distribution \(P\) and model distribution \(Q\),
+For a true distribution $P$ and model distribution $Q$,
 
 $$
 H(P,Q)
@@ -297,7 +297,7 @@ H(P)
 D_{\mathrm{KL}}(P\|Q)
 $$
 
-shows why minimizing cross-entropy is equivalent to minimizing KL divergence from the data-generating distribution when \(H(P)\) does not depend on the model.
+shows why minimizing cross-entropy is equivalent to minimizing KL divergence from the data-generating distribution when $H(P)$ does not depend on the model.
 
 In classification, cross-entropy loss is therefore not an arbitrary heuristic.
 
@@ -305,7 +305,7 @@ It is a negative conditional log-likelihood under a categorical model.
 
 ## Differential entropy
 
-For a continuous variable with density \(f(x)\),
+For a continuous variable with density $f(x)$,
 
 $$
 h(X)
@@ -366,7 +366,7 @@ S
 k_B\log\Omega,
 $$
 
-where \(\Omega\) is the number of accessible microstates compatible with the macrostate.
+where $\Omega$ is the number of accessible microstates compatible with the macrostate.
 
 For a probability distribution over microstates,
 
@@ -380,7 +380,7 @@ $$
 
 is the Gibbs entropy.
 
-The formal similarity to Shannon entropy is exact up to the factor \(k_B\).
+The formal similarity to Shannon entropy is exact up to the factor $k_B$.
 
 The physical interpretation is different because the probability distribution is tied to a thermodynamic model and physical state space.
 
@@ -423,7 +423,7 @@ is the partition function.
 
 This distribution can be obtained by maximizing Gibbs entropy subject to normalization and a fixed expected energy.
 
-The Lagrange multiplier associated with the energy constraint becomes \(\beta\).
+The Lagrange multiplier associated with the energy constraint becomes $\beta$.
 
 This is one of the cleanest mathematical connections between constrained entropy maximization and statistical mechanics.
 
@@ -454,7 +454,7 @@ Local entropy can decrease when entropy is exported to the environment.
 
 ## Von Neumann entropy
 
-For a quantum state with density operator \(\rho\),
+For a quantum state with density operator $\rho$,
 
 $$
 S(\rho)
@@ -465,7 +465,7 @@ S(\rho)
 \right).
 $$
 
-If \(\rho\) has eigenvalues
+If $\rho$ has eigenvalues
 
 $$
 \lambda_1,\ldots,\lambda_k,
@@ -504,7 +504,7 @@ $$
 |\psi\rangle_{AB},
 $$
 
-the reduced state of subsystem \(A\) is
+the reduced state of subsystem $A$ is
 
 $$
 \rho_A
@@ -642,7 +642,7 @@ This is more appropriate for time-series information content than applying singl
 
 Shannon's source coding theorem connects entropy with lossless compression.
 
-For an IID source with entropy \(H(X)\), no lossless code can have expected code length below \(H(X)\) bits per symbol in the ideal asymptotic sense, while codes can approach that bound arbitrarily closely over long blocks.
+For an IID source with entropy $H(X)$, no lossless code can have expected code length below $H(X)$ bits per symbol in the ideal asymptotic sense, while codes can approach that bound arbitrarily closely over long blocks.
 
 The theorem does not say every practical compressor reaches entropy exactly.
 
