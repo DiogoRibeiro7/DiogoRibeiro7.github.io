@@ -99,9 +99,7 @@ Handling MAR data requires more sophisticated techniques than those used for MCA
 
 - **Full Information Maximum Likelihood (FIML)**: Similar to ML, FIML uses all available data to estimate model parameters directly, without imputing the missing values. It is particularly effective in the context of regression models and longitudinal data analysis.
 
-Each of these methods has its advantages and limitations, and the choice of method depends on the specific context and data structure of the study. It is essential to include all relevant covariates in the imputation model to accurately reflect the relationships between variables and reduce bias.
-
-By carefully applying these strategies, researchers can mitigate the impact of missing data and ensure the robustness and validity of their findings in studies where data are MAR.
+Each of these methods has its advantages and limitations, and the choice of method depends on the specific context and data structure of the study. It is essential to include all relevant covariates in the imputation model to accurately reflect the relationships between variables and reduce bias. By carefully applying these strategies, researchers can mitigate the impact of missing data and ensure the robustness and validity of their findings in studies where data are MAR.
 
 ### Missing Not at Random (MNAR)
 
@@ -109,9 +107,7 @@ By carefully applying these strategies, researchers can mitigate the impact of m
 
 Missing Not at Random (MNAR) occurs when the probability of data being missing is related to the unobserved data itself. In other words, the missingness depends on the value of the variable that is missing. This situation is particularly problematic because the mechanism behind the missing data cannot be explained by other observed variables in the dataset.
 
-For example, consider a study measuring blood pressure where individuals with extremely high blood pressure readings are less likely to return for follow-up visits due to health concerns. Here, the missing blood pressure readings are directly related to the actual (unobserved) blood pressure values, making the data MNAR.
-
-Another example might be a survey on income levels where individuals with very high or very low incomes are less likely to disclose their income, resulting in missing data that are dependent on the income values themselves.
+For example, consider a study measuring blood pressure where individuals with extremely high blood pressure readings are less likely to return for follow-up visits due to health concerns. Here, the missing blood pressure readings are directly related to the actual (unobserved) blood pressure values, making the data MNAR. Another example might be a survey on income levels where individuals with very high or very low incomes are less likely to disclose their income, resulting in missing data that are dependent on the income values themselves.
 
 #### Challenges in Addressing MNAR Data
 
@@ -145,7 +141,7 @@ T-tests can be used to compare the means of observed and missing data groups. By
 - **Procedure**:
   - Create a binary indicator variable (e.g., 0 for observed data, 1 for missing data).
   - Conduct independent samples t-tests to compare the means of the observed and missing groups for each variable.
-  
+
 - **Interpretation**:
   - If there is no significant difference between the means of the observed and missing groups for all variables, the data can be considered MCAR.
   - Significant differences suggest that the data may not be MCAR, indicating that the missingness is related to the observed data, thus potentially MAR or MNAR.
@@ -160,7 +156,7 @@ Logistic regression analyses can be used to model the probability of missingness
 - **Procedure**:
   - Create a binary dependent variable indicating missingness (e.g., 0 for observed, 1 for missing).
   - Use logistic regression to predict the probability of missingness based on other observed variables.
-  
+
 - **Interpretation**:
   - If none of the predictor variables are significantly associated with the missingness indicator, the data may be considered MCAR.
   - Significant associations suggest that the missingness is related to the observed data, indicating MAR or MNAR.
@@ -264,7 +260,7 @@ Distinguishing MAR from MNAR is a complex but essential task in clinical researc
 Complete Case Analysis (CCA), also known as listwise deletion, is a method for handling missing data where only the cases with complete data across all variables are included in the analysis. This approach is straightforward and easy to implement, as it involves simply excluding any records with missing values from the dataset.
 
 - **Description**: In CCA, all observations (or cases) that have missing values for any of the variables included in the analysis are removed. The analysis is then conducted using only the subset of complete cases. This method assumes that the remaining data are representative of the entire dataset.
-  
+
 - **Limitations**:
   - **Reduction in Sample Size**: One of the primary drawbacks of CCA is the potential loss of a significant portion of the dataset, which can lead to a substantial reduction in sample size. This reduction decreases the statistical power of the study, making it harder to detect true effects.
   - **Bias Introduction**: If the data are not MCAR, CCA can introduce bias into the analysis. Specifically, if the missingness is related to the outcome or predictor variables, the complete cases may not be representative of the original population, leading to biased estimates.
@@ -276,11 +272,11 @@ Complete Case Analysis (CCA), also known as listwise deletion, is a method for h
 Despite its limitations, there are specific scenarios where CCA can be a valid and appropriate method for handling missing data:
 
 - **MCAR Data**: CCA is most appropriate when the missing data mechanism is Missing Completely at Random (MCAR). In this scenario, the missingness is unrelated to any observed or unobserved variables, meaning that the complete cases are a random subset of the original dataset. Under MCAR, CCA can produce unbiased estimates.
-  
+
 - **Small Proportion of Missing Data**: When the proportion of missing data is very small (e.g., less than 5%), the impact of excluding incomplete cases may be minimal. In such cases, the loss of data and potential bias introduced by CCA are limited, making it a viable option.
-  
+
 - **Sensitivity Analyses**: CCA can be used as part of a sensitivity analysis to compare results with other missing data methods. By analyzing both complete cases and imputed datasets, researchers can assess the robustness of their findings across different handling methods.
-  
+
 - **Secondary Analyses**: In some situations, CCA might be used for secondary or exploratory analyses where the primary focus is not on the missing data but rather on generating preliminary insights. However, any conclusions drawn from such analyses should be interpreted with caution.
 
 #### Example
