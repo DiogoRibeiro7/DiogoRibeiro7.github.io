@@ -5,8 +5,7 @@ categories:
 - Mathematics
 classes: wide
 date: '2024-01-29'
-excerpt: Explore Markov Chain Monte Carlo (MCMC) methods, specifically the Metropolis
-  algorithm, and learn how to perform Bayesian inference through Python code.
+excerpt: "Probabilistic programming separates model specification from inference, but inference still depends on diagnostics, geometry, and numerical stability."
 header:
   image: /assets/images/headers/photo-mathematics-polyhedra.jpg
   og_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
@@ -16,134 +15,228 @@ header:
   teaser: /assets/images/headers/photo-mathematics-polyhedra.jpg
   twitter_image: /assets/images/headers/photo-mathematics-polyhedra.jpg
 keywords:
-- Mcmc
-- Metropolis algorithm
-- Bayesian inference
-- Markov chain monte carlo
 - Probabilistic programming
-- Bayesian statistics
-- Statistical modeling
-- Python code for mcmc
-- Data science
-- Machine learning
-- Python
-seo_description: A practical explanation of MCMC and the Metropolis algorithm, focusing
-  on Bayesian inference with Python code examples to make the concepts accessible.
-seo_title: 'Demystifying MCMC: A Hands-On Guide to Bayesian Inference'
+- MCMC
+- Metropolis-Hastings
+- Bayesian inference
+- Hamiltonian Monte Carlo
+- Posterior diagnostics
+seo_description: "A rigorous introduction to probabilistic programming and MCMC, including Metropolis-Hastings, log densities, convergence diagnostics, and Hamiltonian Monte Carlo."
+seo_title: "Probabilistic Programming and MCMC"
 seo_type: article
-subtitle: Understanding the Metropolis Algorithm Through Code
 tags:
-- Data Science
-- Mathematical Modeling
-- Statistical Modeling
-- Machine Learning
 - Probability
+- Bayesian Statistics
 - Programming
-title: 'Demystifying MCMC: A Practical Guide to Bayesian Inference'
+title: "Probabilistic Programming and MCMC"
 ---
 
-In my talks about probabilistic programming and Bayesian statistics, I often keep the explanation of inference high-level, treating it as a sort of "black box". Probabilistic programming's advantage is that it doesn't require deep knowledge of the inference mechanism to construct models, although understanding it is beneficial.
+Probabilistic programming lets us write a statistical model and delegate much of the inference machinery to a general-purpose engine. That separation is powerful, but it does not make inference a black box.
 
-Once, while introducing a Bayesian model to my CEO, who is new to Bayesian statistics, he questioned the inference process, the part I usually simplify. He asked, "How does the inference work? How do we obtain samples from the posterior?"
+A model can be valid while an MCMC chain mixes badly, explores only one mode, or returns highly autocorrelated draws. Understanding the mechanics is therefore useful even when software automates them.
 
-I could have simply said, "MCMC generates samples from the posterior distribution by creating a reversible Markov-chain with the target posterior distribution as its equilibrium." But is such a technical explanation helpful? My criticism of math and stats education is its focus on complex math rather than the underlying intuition, which is often simpler. I had to spend hours deciphering these concepts myself.
+## Posterior inference
 
-This blog post aims to elucidate the intuition behind MCMC sampling, specifically the random-walk Metropolis algorithm, using code rather than formulas.
-
-Let's start by examining Bayes' formula:
+Bayes' rule gives
 
 $$
-P(\theta \mid X) = \frac{P(X \mid \theta) \cdot P(\theta)}{P(X)}
+p(\theta\mid y)
+=
+\frac{p(y\mid\theta)p(\theta)}
+{p(y)}.
 $$
 
-Where:
+The normalizing constant
 
-- $$P(\theta \mid X)$$ is the posterior probability of the parameters ($$\theta$$) given the data ($$X$$).
-- $$P(X \mid \theta)$$ is the likelihood of the data given the parameters.
-- $$P(\theta)$$ is the prior probability of the parameters.
-- $$P(X)$$ is the probability of the data (also known as the evidence).
+$$
+p(y)
+=
+\int p(y\mid\theta)p(\theta)\,d\theta
+$$
 
-The formula calculates the probability of our model parameters given our data. We multiply the prior (our initial belief before data) with the likelihood (our assumption about data distribution). The numerator is straightforward, but the denominator, the evidence, is challenging as it requires integrating over all possible parameter values.
+is often difficult to compute.
 
-Since direct computation is difficult, we consider approximations. One method is to sample from the posterior distribution using Monte Carlo methods, but this requires solving and inverting Bayes' formula, a complex task.
+MCMC avoids evaluating this integral directly because many acceptance ratios depend only on the unnormalized posterior
 
-Alternatively, we might construct an ergodic, reversible Markov chain whose equilibrium distribution matches our posterior. This process is simplified using Markov chain Monte Carlo (MCMC) algorithms.
+$$
+\tilde p(\theta)
+=
+p(y\mid\theta)p(\theta).
+$$
 
-For our example, we'll use Python libraries like numpy and scipy. Our goal is to estimate the posterior of the mean (mu), assuming a known standard deviation, from data points drawn from a normal distribution centered at zero.
+## Metropolis-Hastings
 
-Here's our Python setup:
+Suppose the current state is $\theta$ and a proposal $\theta'$ is drawn from $q(\theta'\mid\theta)$.
 
-```python
+The Metropolis-Hastings acceptance probability is
+
+$$
+a
+=
+\min\left(
+1,
+\frac{
+\tilde p(\theta')q(\theta\mid\theta')
+}{
+\tilde p(\theta)q(\theta'\mid\theta)
+}
+\right).
+$$
+
+For a symmetric random-walk proposal, the proposal densities cancel.
+
+The chain intentionally accepts some lower-density moves. Without that behavior it would become an optimizer rather than a sampler.
+
+## Work in log space
+
+Directly multiplying many likelihood terms can underflow numerically.
+
+Use log densities:
+
+$$
+\log \tilde p(\theta)
+=
+\log p(y\mid\theta)
++
+\log p(\theta).
+$$
+
+Then compare log acceptance ratios instead of raw products.
+
+## A typed implementation
+
+~~~python
+from __future__ import annotations
+
+from collections.abc import Callable
+
 import numpy as np
-import scipy as sp
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from scipy.stats import norm
+from numpy.typing import NDArray
 
-sns.set_style('white')
-sns.set_context('talk')
-np.random.seed(123)
 
-# Generating sample data
-data = np.random.randn(20)
-ax = plt.subplot()
-sns.distplot(data, kde=False, ax=ax)
-_ = ax.set(title='Histogram of observed data', xlabel='x', ylabel='# observations')
-```
+LogDensity = Callable[[float], float]
 
-We define our model as a normal distribution. Conveniently, we can compute the posterior analytically in this case:
 
-```python
-def calc_posterior_analytical(data, x, mu_0, sigma_0):
-    sigma = 1.
-    n = len(data)
-    mu_post = (mu_0 / sigma_0**2 + data.sum() / sigma**2) / (1. / sigma_0**2 + n / sigma**2)
-    sigma_post = (1. / sigma_0**2 + n / sigma**2)**-1
-    return norm(mu_post, np.sqrt(sigma_post)).pdf(x)
+def random_walk_metropolis(
+    log_target: LogDensity,
+    initial: float,
+    proposal_sd: float,
+    draws: int,
+    seed: int = 42,
+) -> NDArray[np.float64]:
+    """Sample a one-dimensional target with random-walk Metropolis."""
+    if proposal_sd <= 0:
+        raise ValueError("proposal_sd must be positive")
+    if draws <= 0:
+        raise ValueError("draws must be positive")
 
-x = np.linspace(-1, 1, 500)
-posterior_analytical = calc_posterior_analytical(data, x, 0., 1.)
-ax.plot(x, posterior_analytical)
-ax.set(xlabel='mu', ylabel='belief', title='Analytical posterior')
-sns.despine()
-```
+    rng = np.random.default_rng(seed)
+    chain = np.empty(draws, dtype=float)
 
-Next, we implement the MCMC sampler. We start with an initial mu value, propose a new mu, and decide whether to accept it based on the likelihood of the data given the proposed mu:
+    current = float(initial)
+    current_logp = float(log_target(current))
 
-```python
-def sampler(data, samples=4, mu_init=.5, proposal_width=.5, plot=False, mu_prior_mu=0, mu_prior_sd=1.):
-    mu_current = mu_init
-    posterior = [mu_current]
-    for i in range(samples):
-        mu_proposal = norm(mu_current, proposal_width).rvs()
+    for i in range(draws):
+        proposal = float(rng.normal(current, proposal_sd))
+        proposal_logp = float(log_target(proposal))
 
-        likelihood_current = norm(mu_current, 1).pdf(data).prod()
-        likelihood_proposal = norm(mu_proposal, 1).pdf(data).prod()
+        log_alpha = proposal_logp - current_logp
 
-        prior_current = norm(mu_prior_mu, mu_prior_sd).pdf(mu_current)
-        prior_proposal = norm(mu_prior_mu, mu_prior_sd).pdf(mu_proposal)
+        if np.log(rng.uniform()) < min(0.0, log_alpha):
+            current = proposal
+            current_logp = proposal_logp
 
-        p_current = likelihood_current * prior_current
-        p_proposal = likelihood_proposal * prior_proposal
+        chain[i] = current
 
-        p_accept = p_proposal / p_current
+    return chain
+~~~
 
-        accept = np.random.rand() < p_accept
+This is pedagogical code, not a replacement for mature MCMC libraries.
 
-        if accept:
-            mu_current = mu_proposal
-        posterior.append(mu_current)
-        
-    return np.array(posterior)
-```
+## Stationarity is not enough
 
-This algorithm navigates towards more probable values of mu but sometimes accepts less likely values, ensuring exploration of the parameter space. The sampler generates samples representing the posterior distribution of the model, confirmed by comparing the histogram of these samples to the analytically computed posterior.
+Constructing a chain with the correct stationary distribution does not guarantee useful samples in finite time.
 
-While this post simplifies some aspects, it aims to clarify the concept of MCMC and the Metropolis sampler. This foundation should help in understanding more technical discussions of MCMC algorithms like Hamiltonian Monte Carlo, which function similarly but with more sophisticated proposal mechanisms.
+Important practical questions include:
+
+- Has the chain reached the typical set?
+- Are multiple chains exploring the same region?
+- Is autocorrelation high?
+- Are there multimodal regions the chain cannot cross?
+- Is the effective sample size adequate?
+
+## Diagnostics
+
+Modern workflows use multiple chains and diagnostics such as split-$\widehat R$, effective sample size, trace plots, and Monte Carlo standard errors.
+
+A large raw draw count can hide poor mixing. Ten thousand highly correlated draws may contain much less information than ten thousand independent samples.
+
+## Hamiltonian Monte Carlo
+
+Random-walk Metropolis moves diffusively through parameter space. In high dimensions this can become extremely inefficient.
+
+Hamiltonian Monte Carlo introduces auxiliary momentum and uses gradients of the log posterior to propose distant moves with high acceptance probability.
+
+The No-U-Turn Sampler adapts trajectory length automatically and is now standard in many probabilistic-programming systems.
+
+## Reparameterization matters
+
+Posterior geometry can make sampling difficult. Hierarchical models often exhibit funnels or strong correlations.
+
+Centered and non-centered parameterizations can produce dramatically different MCMC efficiency while representing the same probability model.
+
+This is a reminder that computational statistics depends on geometry as well as probability.
+
+## Prior predictive checking
+
+Inference should not begin with MCMC.
+
+Before seeing the data, simulate from
+
+$$
+p(y)
+=
+\int p(y\mid\theta)p(\theta)\,d\theta.
+$$
+
+Prior predictive checks reveal whether the prior implies absurd data scales or impossible outcomes.
+
+## Posterior predictive checking
+
+After inference, simulate replicated data
+
+$$
+y^{rep}\sim p(y^{rep}\mid\theta),
+\qquad
+\theta\sim p(\theta\mid y).
+$$
+
+Compare relevant summaries of $y^{rep}$ with the observed data.
+
+A well-converged chain cannot rescue a badly specified model.
+
+## Conclusion
+
+Probabilistic programming automates inference mechanics, but it does not automate statistical judgment.
+
+A reliable workflow is
+
+$$
+\text{model}
+\rightarrow
+\text{prior predictive check}
+\rightarrow
+\text{inference}
+\rightarrow
+\text{diagnostics}
+\rightarrow
+\text{posterior predictive check}.
+$$
+
+MCMC is one component of that workflow, not the definition of Bayesian analysis.
 
 ## References
 
-- Hastings, W. K. (1970). Monte Carlo sampling methods using Markov chains and their applications. *Biometrika*, 57(1), 97-109.
-- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). *Bayesian Data Analysis* (3rd ed.). CRC Press.
-- Hoffman, M. D., & Gelman, A. (2014). The No-U-Turn Sampler: adaptively setting path lengths in Hamiltonian Monte Carlo. *Journal of Machine Learning Research*, 15, 1593-1623.
+- Gelman, A., et al. (2013). *Bayesian Data Analysis*.
+- Hastings, W. K. (1970). Monte Carlo sampling methods using Markov chains and their applications.
+- Hoffman, M. D., & Gelman, A. (2014). The No-U-Turn Sampler.
