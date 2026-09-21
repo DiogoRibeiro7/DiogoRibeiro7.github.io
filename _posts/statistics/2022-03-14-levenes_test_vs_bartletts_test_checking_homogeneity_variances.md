@@ -35,13 +35,13 @@ title: 'Levene''s Test vs. Bartlett’s Test: Checking for Homogeneity of Varian
 
 ## Introduction to Homogeneity of Variances
 
-Many statistical tests, such as **ANOVA** (Analysis of Variance) and **t-tests**, make the assumption that the groups being compared have **equal variances**. This assumption is known as **homogeneity of variances**. If this assumption is violated, the results of these tests may be unreliable. To check whether the variances across groups are equal, statisticians use **Levene’s Test** and **Bartlett’s Test**, two of the most common methods for assessing homogeneity of variances.
+The pooled two-sample t-test and classical homoskedastic one-way ANOVA assume a common within-group variance. Welch procedures do not require this assumption, so equality-of-variance testing should not be treated as a mandatory gate before comparing means. This assumption is known as **homogeneity of variances**. If this assumption is violated, the results of these tests may be unreliable. To check whether the variances across groups are equal, statisticians use **Levene’s Test** and **Bartlett’s Test**, two of the most common methods for assessing homogeneity of variances.
 
 While both tests aim to determine whether group variances are homogeneous, they differ in their sensitivity to the normality of the data and their use cases. In this article, we will compare Levene’s Test and Bartlett’s Test, explaining when each test is appropriate, how they work, and their relevance in conjunction with tests that assume equal variances, like ANOVA.
 
 ## Levene's Test: A Robust, Non-Parametric Approach
 
-**Levene's Test** is a **non-parametric** method used to test the homogeneity of variances across groups. It is robust to violations of normality, making it a versatile option for datasets that may not follow a normal distribution.
+Levene's test is a test based on absolute deviations from a group center. It is often more robust to non-normality than Bartlett's test, but calling it “non-parametric” can be misleading because its null calibration still relies on a model for the transformed deviations and sampling structure. It is robust to violations of normality, making it a versatile option for datasets that may not follow a normal distribution.
 
 ### 1.1 How Levene's Test Works
 
@@ -62,7 +62,7 @@ The steps involved in Levene's Test are as follows:
 Levene's test is particularly useful in the following scenarios:
 
 - **Non-Normal Data**: Since Levene’s test is robust to non-normal distributions, it can be used when data does not meet the assumption of normality. This makes it ideal for real-world datasets that often deviate from the normal distribution.
-- **Small Sample Sizes**: In cases where the sample size is small, and the data may not be normally distributed, Levene’s test offers a robust alternative to Bartlett’s test.
+- **Robustness to shape departures**: median-centered Brown–Forsythe variants are often preferred when heavy tails or skewness make Bartlett's test unreliable. Small samples remain difficult because all variance tests can have low power or unstable calibration.
 
 Levene’s test is often preferred in practice due to its flexibility and ability to handle non-normal data.
 
@@ -96,7 +96,7 @@ The steps for Bartlett’s test are as follows:
 Bartlett’s test is most appropriate under the following conditions:
 
 - **Normally Distributed Data**: Bartlett’s test is sensitive to deviations from normality, so it should only be used when there is strong evidence that the data follows a normal distribution.
-- **Large Sample Sizes**: Bartlett’s test can be more powerful than Levene’s test when the sample size is large and the data is normally distributed.
+- **Gaussian samples**: Bartlett's test is efficient under normality. Large sample size alone does not make it preferable if the group distributions remain strongly non-normal.
 
 ### 2.3 Limitations of Bartlett’s Test
 
@@ -118,7 +118,7 @@ The key differences between Levene’s Test and Bartlett’s Test can be summari
 
 ## Applications in Conjunction with ANOVA
 
-Both Levene’s test and Bartlett’s test are often used in conjunction with **ANOVA** (Analysis of Variance) to ensure that the assumption of equal variances is met. ANOVA assumes that the variances across the groups being compared are equal, so checking for homogeneity of variances before conducting ANOVA is essential.
+Do not use Levene or Bartlett as a pre-test that decides whether ANOVA is allowed. If the estimand is a mean difference and heteroscedasticity is plausible, Welch ANOVA can be used directly. Pre-testing can itself distort the operating characteristics of the overall procedure.
 
 ### 3.1 Using Levene’s Test with ANOVA
 
@@ -126,11 +126,11 @@ Levene’s test is commonly used as a pre-test before running ANOVA. If Levene�
 
 #### Example
 
-In a clinical trial comparing the effects of three different drugs on blood pressure, Levene's test can be used to check if the variances in blood pressure reduction are equal across the three groups. If Levene's test finds no significant difference in variances, ANOVA can proceed.
+In a clinical trial comparing the effects of three different drugs on blood pressure, Levene's test can be used to check if the variances in blood pressure reduction are equal across the three groups. A non-significant Levene test does not establish equal variances. The analysis should be chosen from the design and estimand rather than from a preliminary p-value.
 
 ### 3.2 Bartlett’s Test with Parametric Models
 
-Bartlett’s test is most appropriate when conducting ANOVA on normally distributed data. If Bartlett’s test indicates that variances are equal, ANOVA can be used with confidence. However, if the test shows unequal variances, researchers might consider using a different test or transformation to account for the heterogeneity in variances.
+Bartlett’s test is most appropriate when conducting ANOVA on normally distributed data. A non-significant Bartlett test does not prove homoskedasticity, and it does not certify the validity of the downstream ANOVA. However, if the test shows unequal variances, researchers might consider using a different test or transformation to account for the heterogeneity in variances.
 
 #### Example
 
@@ -163,3 +163,28 @@ For most practical applications, especially when working with real-world data th
 
 - Levene, H. (1960). Robust tests for equality of variances. In *Contributions to Probability and Statistics* (pp. 278-292). Stanford University Press.
 - Bartlett, M. S. (1937). Properties of sufficiency and statistical tests. *Proceedings of the Royal Society A*, 160(901), 268-282.
+
+
+## Brown-Forsythe variant
+
+A common robust form replaces the group mean with the group median:
+
+$$
+Z_{ij}
+=
+|Y_{ij}-\tilde Y_j|.
+$$
+
+An ordinary one-way ANOVA is then applied to the $Z_{ij}$ values.
+
+This is usually called the Brown-Forsythe modification of Levene's test and tends to be less sensitive to skewness and heavy tails.
+
+## Variance equality may itself be the estimand
+
+Sometimes the scientific question is genuinely about variability: manufacturing consistency, biological heterogeneity, or measurement precision.
+
+Then a variance test can be primary.
+
+That is different from using a variance test only to decide whether another test is permitted.
+
+If variability is the target, report variance ratios or scale-effect estimates with uncertainty rather than only a p-value.
