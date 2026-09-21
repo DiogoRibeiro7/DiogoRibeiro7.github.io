@@ -30,9 +30,7 @@ tags:
 title: 'Chi-Square Tests: Expected Counts, Association, and Effect Size'
 ---
 
-Pearson's chi-square statistic is one formula used in several related categorical-data tests.
-
-The common structure is
+Pearson's chi-square statistic is one formula used in several related categorical-data tests. The common structure is
 
 $$
 X^2
@@ -45,17 +43,11 @@ E
 },
 $$
 
-where $O$ is an observed count and $E$ is the count expected under a specified null model.
-
-The important part is not the formula.
-
-It is how the expected counts were obtained.
+where $O$ is an observed count and $E$ is the count expected under a specified null model. The important part is not the formula. It is how the expected counts were obtained.
 
 ## Goodness-of-fit
 
-Suppose one categorical variable has $k$ categories.
-
-Let
+Suppose one categorical variable has $k$ categories. Let
 
 $$
 O_1,\ldots,O_k
@@ -100,17 +92,13 @@ If parameters used to compute $p_i$ are estimated from the same data, the degree
 
 ## Independence in a contingency table
 
-Now suppose two categorical variables form an $r\times c$ table.
-
-Let
+Now suppose two categorical variables form an $r\times c$ table. Let
 
 $$
 O_{ij}
 $$
 
-be the observed count in row $i$, column $j$.
-
-Under independence,
+be the observed count in row $i$, column $j$. Under independence,
 
 $$
 P(A=i,B=j)
@@ -153,17 +141,11 @@ X^2
 \chi^2_{(r-1)(c-1)}.
 $$
 
-This tests association.
-
-It does not estimate a causal effect.
+This tests association. It does not estimate a causal effect.
 
 ## Why the same formula appears twice
 
-The goodness-of-fit and independence tests are both comparisons between observed counts and counts implied by a null model.
-
-In the goodness-of-fit problem, the expected probabilities are specified externally or by a fitted model.
-
-In the independence problem, expected counts are fitted under the factorization constraint
+The goodness-of-fit and independence tests are both comparisons between observed counts and counts implied by a null model. In the goodness-of-fit problem, the expected probabilities are specified externally or by a fitted model. In the independence problem, expected counts are fitted under the factorization constraint
 
 $$
 p_{ij}=p_{i+}p_{+j}.
@@ -173,40 +155,24 @@ The chi-square statistic measures discrepancy from the corresponding constrained
 
 ## The sampling design matters
 
-The same numerical contingency table can arise from different designs.
-
-For example:
+The same numerical contingency table can arise from different designs. For example:
 
 - multinomial sampling with fixed total $n$;
 - independent multinomial samples with fixed row totals;
 - product-binomial sampling in a case-control or cohort design;
 - Poisson sampling of cell counts.
 
-The large-sample Pearson statistic can look similar across these formulations.
-
-But the meaning of parameters and appropriate effect measures can differ.
-
-A two-by-two table from a cohort naturally supports risk ratios and risk differences.
-
-A case-control sample generally does not estimate population risks directly from the sampled row totals.
+The large-sample Pearson statistic can look similar across these formulations. But the meaning of parameters and appropriate effect measures can differ. A two-by-two table from a cohort naturally supports risk ratios and risk differences. A case-control sample generally does not estimate population risks directly from the sampled row totals.
 
 The table alone does not encode the design.
 
 ## Expected counts and the chi-square approximation
 
-The chi-square reference distribution is asymptotic.
-
-Small expected counts can make it inaccurate.
-
-The common rule
+The chi-square reference distribution is asymptotic. Small expected counts can make it inaccurate. The common rule
 
 > every expected cell count must be at least 5
 
-is a heuristic, not a theorem.
-
-What matters is the entire table structure, sparsity, dimension, and how extreme the expected counts are.
-
-When counts are sparse, options include:
+is a heuristic, not a theorem. What matters is the entire table structure, sparsity, dimension, and how extreme the expected counts are. When counts are sparse, options include:
 
 - exact conditional tests;
 - Monte Carlo calibration;
@@ -217,23 +183,13 @@ Combining categories solely to satisfy a rule can change the estimand and discar
 
 ## Fisher's exact test
 
-For a two-by-two table with fixed margins, Fisher's exact test conditions on the row and column totals.
-
-Under the null, the cell count follows a hypergeometric distribution.
-
-This gives exact finite-sample calibration under that conditional sampling model.
-
-“Exact” does not mean universally superior.
-
-The test conditions on margins and can be conservative depending on the inferential target.
+For a two-by-two table with fixed margins, Fisher's exact test conditions on the row and column totals. Under the null, the cell count follows a hypergeometric distribution. This gives exact finite-sample calibration under that conditional sampling model. “Exact” does not mean universally superior. The test conditions on margins and can be conservative depending on the inferential target.
 
 It is one tool for sparse two-by-two data, not a generic replacement for every chi-square test.
 
 ## A significant chi-square statistic says only that the model does not fit
 
-If an independence test rejects, we know that the observed table is incompatible with independence at the chosen level.
-
-We do not yet know:
+If an independence test rejects, we know that the observed table is incompatible with independence at the chosen level. We do not yet know:
 
 - which cells drive the discrepancy;
 - the direction of association;
@@ -256,11 +212,7 @@ O_{ij}-E_{ij}
 }.
 $$
 
-Large absolute residuals identify cells contributing strongly to the Pearson statistic.
-
-Because cell residuals are not independent and their variance is affected by fitted margins, adjusted standardized residuals are often more useful for diagnostic interpretation.
-
-The point is to move from
+Large absolute residuals identify cells contributing strongly to the Pearson statistic. Because cell residuals are not independent and their variance is affected by fitted margins, adjusted standardized residuals are often more useful for diagnostic interpretation. The point is to move from
 
 $$
 X^2
@@ -284,44 +236,22 @@ n\min(r-1,c-1)
 }.
 $$
 
-It ranges from 0 to 1.
-
-It summarizes association strength but does not reveal direction.
-
-For a two-by-two table, odds ratios, risk ratios, and risk differences can be more interpretable depending on the sampling design and scientific question.
-
-A p-value and an effect size answer different questions.
+It ranges from 0 to 1. It summarizes association strength but does not reveal direction. For a two-by-two table, odds ratios, risk ratios, and risk differences can be more interpretable depending on the sampling design and scientific question. A p-value and an effect size answer different questions.
 
 ## The chi-square test is not “non-parametric” in the sense of assumption-free
 
-The statistic does not require normally distributed observations.
-
-That does not make it assumption-free.
-
-The analysis still depends on:
+The statistic does not require normally distributed observations. That does not make it assumption-free. The analysis still depends on:
 
 - independent sampling units or an appropriate dependence model;
 - a correctly specified null structure;
 - adequate asymptotic approximation or an exact alternative;
 - correct classification of observations into categories.
 
-Clustered survey data, repeated measures, or matched pairs violate the ordinary independence formulation.
-
-For those designs, a standard Pearson chi-square test can have the wrong variance.
+Clustered survey data, repeated measures, or matched pairs violate the ordinary independence formulation. For those designs, a standard Pearson chi-square test can have the wrong variance.
 
 ## Paired binary data need McNemar's test
 
-Suppose the same subjects are measured before and after an intervention.
-
-The two responses are paired.
-
-A standard two-by-two independence test treats the counts as if the observations came from independent groups.
-
-That is incorrect.
-
-McNemar's test focuses on discordant pairs and is designed for paired binary data.
-
-Study design comes before table format.
+Suppose the same subjects are measured before and after an intervention. The two responses are paired. A standard two-by-two independence test treats the counts as if the observations came from independent groups. That is incorrect. McNemar's test focuses on discordant pairs and is designed for paired binary data. Study design comes before table format.
 
 ## Reproducible Python example
 
@@ -375,9 +305,7 @@ The omnibus statistic, effect size, and cell diagnostics should be interpreted t
 
 ## Conclusion
 
-A chi-square test is a model-discrepancy test for counts.
-
-The core logic is
+A chi-square test is a model-discrepancy test for counts. The core logic is
 
 $$
 \boxed{
@@ -393,9 +321,7 @@ X^2
 }
 $$
 
-The formula is easy.
-
-The statistical work lies in defining the correct expected counts and the correct sampling model.
+The formula is easy. The statistical work lies in defining the correct expected counts and the correct sampling model.
 
 ## References
 
