@@ -5,7 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2023-09-01'
-excerpt: Path analysis is a system of linked regression equations. It can decompose associations into direct and indirect paths, but causal interpretation still depends on identification assumptions and study design.
+excerpt: "Path analysis is a system of linked regression equations. It can decompose associations into direct and indirect paths, but causal interpretation still depends on identification assumptions and study design."
 header:
   image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
   og_image: /assets/images/headers/photo-statistics-law-large-numbers.jpg
@@ -22,15 +22,15 @@ keywords:
 - Causal inference
 - Direct effects
 - Indirect effects
-seo_description: A rigorous comparison of regression and path analysis, including mediation, identification, direct and indirect effects, and the limits of causal interpretation.
+seo_description: "A rigorous comparison of regression and path analysis, including mediation, identification, direct and indirect effects, and the limits of causal interpretation."
 seo_title: 'Regression and Path Analysis: Models, Mediation, and Causality'
 seo_type: article
-summary: Path analysis extends regression by fitting a system of linked equations and decomposing effects along prespecified paths. The diagram does not create causal identification: causal claims require assumptions about temporal ordering, confounding, measurement, and model specification.
+summary: "Path analysis extends regression by fitting a system of linked equations and decomposing effects along prespecified paths. The diagram does not create causal identification: causal claims require assumptions about temporal ordering, confounding, measurement, and model specification."
 tags:
 - Regression
 - Structural Equation Modeling
 - Causal Inference
-title: Regression and Path Analysis: What the Diagram Does Not Tell You
+title: "Regression and Path Analysis: What the Diagram Does Not Tell You"
 ---
 
 Regression and path analysis are often presented as two separate techniques, with regression described as a simple predictive method and path analysis as a more advanced causal method. That framing is misleading. Path analysis is built from regression equations. Its distinctive feature is that several equations are linked into a system so that a variable can be an outcome in one equation and a predictor in another.
