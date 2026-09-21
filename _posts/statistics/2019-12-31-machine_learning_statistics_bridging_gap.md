@@ -86,9 +86,7 @@ $$
 Y_i = \beta_0 + X_i^\top\beta + \varepsilon_i,
 $$
 
-we might want a confidence interval for one component of $\beta$, a test of a scientific hypothesis, or an estimate of a causal effect under additional identification assumptions.
-
-Good prediction does not make those quantities identified. Conversely, a model can estimate a scientifically meaningful parameter well without being the best predictive model available.
+we might want a confidence interval for one component of $\beta$, a test of a scientific hypothesis, or an estimate of a causal effect under additional identification assumptions. Good prediction does not make those quantities identified. Conversely, a model can estimate a scientifically meaningful parameter well without being the best predictive model available.
 
 This difference in target is more important than the label attached to the method.
 
@@ -101,9 +99,7 @@ $$
 \left(y_i-\beta_0-x_i^\top\beta\right)^2.
 $$
 
-That is an optimization problem and therefore fits naturally into supervised learning.
-
-Under a Gaussian error model,
+That is an optimization problem and therefore fits naturally into supervised learning. Under a Gaussian error model,
 
 $$
 \varepsilon_i
@@ -111,13 +107,9 @@ $$
 \mathcal N(0,\sigma^2),
 $$
 
-the same coefficient estimates are also maximum-likelihood estimates. The probabilistic model then supplies more structure: likelihood-based uncertainty, model diagnostics and a precise statement of the assumptions under which finite-sample inference is derived.
+the same coefficient estimates are also maximum-likelihood estimates. The probabilistic model then supplies more structure: likelihood-based uncertainty, model diagnostics and a precise statement of the assumptions under which finite-sample inference is derived. The prediction problem does not require every one of those assumptions. If the only goal is out-of-sample squared-error performance, cross-validation can compare predictive procedures without asserting that the errors are exactly Gaussian.
 
-The prediction problem does not require every one of those assumptions. If the only goal is out-of-sample squared-error performance, cross-validation can compare predictive procedures without asserting that the errors are exactly Gaussian.
-
-The inferential problem is different. Standard errors, confidence intervals and coefficient interpretations depend on the sampling model and on which assumptions are being used.
-
-The algorithm is the same. The claim being made is not.
+The inferential problem is different. Standard errors, confidence intervals and coefficient interpretations depend on the sampling model and on which assumptions are being used. The algorithm is the same. The claim being made is not.
 
 ## Regularization makes the loss function explicit
 
@@ -151,17 +143,13 @@ $$
 
 The important point is not that these are "machine-learning versions" of regression. Both are statistical estimators. Their behavior follows from a deliberate bias-variance trade-off.
 
-Ridge shrinks unstable coefficients and can improve prediction when predictors are correlated or $p$ is large. Lasso can set coefficients exactly to zero and therefore combines shrinkage with variable selection.
-
-But a selected lasso model does not automatically inherit ordinary least-squares inference as if the selected variables had been fixed in advance. Prediction, selection and post-selection inference are distinct problems.
+Ridge shrinks unstable coefficients and can improve prediction when predictors are correlated or $p$ is large. Lasso can set coefficients exactly to zero and therefore combines shrinkage with variable selection. But a selected lasso model does not automatically inherit ordinary least-squares inference as if the selected variables had been fixed in advance. Prediction, selection and post-selection inference are distinct problems.
 
 ![Lasso coefficient paths against the regularisation strength. As the penalty increases, coefficients shrink toward zero and some become exactly zero, illustrating how regularisation changes the fitted model rather than merely changing its label.](/assets/images/figures/regularization_paths.png){: width="1177" height="697" loading="lazy"}
 
 ## Trees are not statistical because they use Gini impurity
 
-Decision trees are sometimes described as statistical methods because split criteria use quantities such as entropy or Gini impurity. That is not a useful distinction.
-
-For a binary node with class proportion $p$, Gini impurity is
+Decision trees are sometimes described as statistical methods because split criteria use quantities such as entropy or Gini impurity. That is not a useful distinction. For a binary node with class proportion $p$, Gini impurity is
 
 $$
 G(p)=2p(1-p),
@@ -175,9 +163,7 @@ H(p)
 -p\log p-(1-p)\log(1-p).
 $$
 
-A tree searches candidate partitions and chooses splits that reduce an impurity or loss criterion. The difficult statistical question is what happens after repeatedly searching the data for those splits.
-
-A deep tree has low training error but high variance. Pruning, minimum leaf sizes and other constraints regularize the search.
+A tree searches candidate partitions and chooses splits that reduce an impurity or loss criterion. The difficult statistical question is what happens after repeatedly searching the data for those splits. A deep tree has low training error but high variance. Pruning, minimum leaf sizes and other constraints regularize the search.
 
 Random forests attack the variance problem differently. Each tree is fit to a bootstrap sample and each split considers only a random subset of predictors. Averaging many decorrelated trees can reduce prediction variance substantially.
 
@@ -185,9 +171,7 @@ None of this depends on drawing a boundary between "statistics" and "machine lea
 
 ## Support vector machines are not probabilistic models by default
 
-A support vector machine is another useful counterexample to loose terminology.
-
-For binary labels $y_i\in\{-1,+1\}$, a soft-margin linear SVM can be written as
+A support vector machine is another useful counterexample to loose terminology. For binary labels $y_i\in\{-1,+1\}$, a soft-margin linear SVM can be written as
 
 $$
 \min_{w,b}
@@ -199,11 +183,7 @@ C\sum_{i=1}^{n}
 \right].
 $$
 
-The second term is the hinge loss. The first controls the size of $w$, which determines the geometric margin.
-
-This is a convex optimization problem arising from statistical learning theory. It is not, in its standard form, a probability model for $P(Y=1\mid X=x)$.
-
-The kernel construction changes the representation by replacing inner products with
+The second term is the hinge loss. The first controls the size of $w$, which determines the geometric margin. This is a convex optimization problem arising from statistical learning theory. It is not, in its standard form, a probability model for $P(Y=1\mid X=x)$. The kernel construction changes the representation by replacing inner products with
 
 $$
 K(x_i,x_j)
@@ -211,15 +191,11 @@ K(x_i,x_j)
 \langle \phi(x_i),\phi(x_j)\rangle,
 $$
 
-so that a linear separator in the feature space can represent nonlinear boundaries in the original variables.
-
-Calling the kernel trick a "statistical technique" adds little. It is a mathematical device that becomes part of a statistical learning procedure when used to estimate a decision function from data.
+so that a linear separator in the feature space can represent nonlinear boundaries in the original variables. Calling the kernel trick a "statistical technique" adds little. It is a mathematical device that becomes part of a statistical learning procedure when used to estimate a decision function from data.
 
 ## Probability models are only one part of machine learning
 
-Other methods start explicitly from probability distributions.
-
-Logistic regression models
+Other methods start explicitly from probability distributions. Logistic regression models
 
 $$
 P(Y=1\mid X=x)
@@ -242,23 +218,15 @@ For a predictive system, the relevant quantity is usually generalization error. 
 
 ![Training and test error against model complexity. Training error keeps falling as flexibility increases, while test error eventually rises, showing why fitting the observed sample and generalising to new data are different objectives.](/assets/images/figures/bias_variance.png){: width="1177" height="697" loading="lazy"}
 
-For a statistical model used primarily for inference, validation also includes model checking: residual structure, calibration, specification, sensitivity to assumptions and whether the sampling design supports the intended interpretation.
-
-These are not competing philosophies. A serious analysis often needs both.
+For a statistical model used primarily for inference, validation also includes model checking: residual structure, calibration, specification, sensitivity to assumptions and whether the sampling design supports the intended interpretation. These are not competing philosophies. A serious analysis often needs both.
 
 A clinical risk model can require good calibration and discrimination on new patients while also needing uncertainty estimates. A causal model may need predictive components internally while the final target is a treatment effect. A forecasting system can have an excellent likelihood fit and still fail operationally out of sample.
 
 ## Breiman's "two cultures" is a useful historical description, not a law
 
-Leo Breiman described a tension between a **data-modeling culture**, which starts from an explicit stochastic model, and an **algorithmic-modeling culture**, which treats the mechanism as largely unknown and emphasizes prediction.
+Leo Breiman described a tension between a **data-modeling culture**, which starts from an explicit stochastic model, and an **algorithmic-modeling culture**, which treats the mechanism as largely unknown and emphasizes prediction. That distinction remains useful because it describes different habits of thought. It should not be turned into a rigid taxonomy.
 
-That distinction remains useful because it describes different habits of thought.
-
-It should not be turned into a rigid taxonomy.
-
-Modern statistical learning contains both cultures. Generalized additive models, boosting, Bayesian hierarchical models, random forests, Gaussian processes and neural networks can all be studied with statistical questions about risk, uncertainty and generalization.
-
-The better question is therefore not
+Modern statistical learning contains both cultures. Generalized additive models, boosting, Bayesian hierarchical models, random forests, Gaussian processes and neural networks can all be studied with statistical questions about risk, uncertainty and generalization. The better question is therefore not
 
 > Is this statistics or machine learning?
 
