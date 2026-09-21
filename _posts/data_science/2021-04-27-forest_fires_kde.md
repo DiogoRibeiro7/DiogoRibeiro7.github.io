@@ -195,26 +195,26 @@ fire_calls_with_factors = gpd.sjoin(fire_calls_with_factors, precipitation, how=
 def kde_analysis(geo_df, bandwidth=500):
     """
     Perform Kernel Density Estimation on GeoDataFrame of points (forest fire calls).
-    
-    Parameters:
+
+Parameters:
     geo_df (GeoDataFrame): The GeoDataFrame with points
     bandwidth (int): Smoothing parameter for KDE
 
-    Returns:
+Returns:
     KDE values as a 2D grid and extent of the grid.
     """
     coords = np.vstack([geo_df.geometry.x, geo_df.geometry.y]).T
     kde = KernelDensity(kernel='gaussian', bandwidth=bandwidth).fit(coords)
 
-    # Create a grid for evaluation
+# Create a grid for evaluation
     x_min, y_min, x_max, y_max = geo_df.total_bounds
     x_grid, y_grid = np.meshgrid(np.linspace(x_min, x_max, 100), np.linspace(y_min, y_max, 100))
     grid_coords = np.vstack([x_grid.ravel(), y_grid.ravel()]).T
 
-    # Get KDE estimates for the grid
+# Get KDE estimates for the grid
     z = np.exp(kde.score_samples(grid_coords)).reshape(x_grid.shape)
 
-    return z, (x_min, x_max, y_min, y_max)
+return z, (x_min, x_max, y_min, y_max)
 
 # Perform KDE Analysis
 kde_values, extent = kde_analysis(fire_calls)
@@ -233,17 +233,17 @@ def getis_ord_gi(fire_calls, threshold_dist=1000):
     """
     Perform Getis-Ord Gi* hotspot analysis on forest fire data.
 
-    Parameters:
+Parameters:
     fire_calls (GeoDataFrame): GeoDataFrame with forest fire points
     threshold_dist (int): Distance threshold for defining neighbors
 
-    Returns:
+Returns:
     Z-scores for Getis-Ord Gi*.
     """
     coords = np.vstack([fire_calls.geometry.x, fire_calls.geometry.y]).T
     g = G_Local(coords, threshold_dist)
 
-    return g.ZI
+return g.ZI
 
 # Run Getis-Ord Gi* Analysis
 gi_z_scores = getis_ord_gi(fire_calls)
@@ -261,16 +261,16 @@ def local_morans_i(fire_calls):
     """
     Perform Anselin Local Moran’s I hotspot analysis on forest fire calls.
 
-    Parameters:
+Parameters:
     fire_calls (GeoDataFrame): GeoDataFrame with forest fire points
 
-    Returns:
+Returns:
     Moran’s I values and p-values for each point.
     """
     coords = np.vstack([fire_calls.geometry.x, fire_calls.geometry.y]).T
     weights = np.ones((len(coords), len(coords)))  # Simple weights for spatial autocorrelation
 
-    moran = Moran_Local(coords, weights)
+moran = Moran_Local(coords, weights)
     return moran.Is, moran.p_sim
 
 # Run Anselin Local Moran’s I Analysis
@@ -290,7 +290,7 @@ def validate_hotspots(fire_calls_with_factors):
     """
     Validate the hotspots by checking interference with contributory factors.
 
-    Parameters:
+Parameters:
     fire_calls_with_factors (GeoDataFrame): GeoDataFrame with fire calls and contributory factors
     """
     # Example of validation: Check correlation between fire density and population density
@@ -352,7 +352,6 @@ This code provides a starting point for performing GIS-based forest fire hotspot
 - Diggle, P.J. (2013). *Statistical Analysis of Spatial and Spatio-Temporal Point Patterns*. CRC Press.  
 - Bivand, R.S., Pebesma, E., & Gómez-Rubio, V. (2013). *Applied Spatial Data Analysis with R*. Springer Science & Business Media.
 - Brunsdon, C., & Comber, L. (2015). *An Introduction to R for Spatial Analysis and Mapping*. Sage Publications.
-
 
 ### What should be validated instead?
 
