@@ -78,7 +78,7 @@ Principal component analysis begins with a deceptively simple object: the eigenv
 
 That intuition depends on an asymptotic regime that modern datasets often violate.
 
-If the number of variables \(p\) grows with the sample size \(n\) so that the ratio
+If the number of variables $p$ grows with the sample size $n$ so that the ratio
 
 $$
 c
@@ -86,7 +86,7 @@ c
 \frac{p}{n}
 $$
 
-does not vanish, then even pure noise produces a broad and highly structured eigenvalue distribution. The sample covariance matrix does not converge to the identity in operator norm. Its smallest and largest eigenvalues move away from one by amounts that remain substantial no matter how large \(n\) becomes, provided \(p/n\) approaches a positive constant.
+does not vanish, then even pure noise produces a broad and highly structured eigenvalue distribution. The sample covariance matrix does not converge to the identity in operator norm. Its smallest and largest eigenvalues move away from one by amounts that remain substantial no matter how large $n$ becomes, provided $p/n$ approaches a positive constant.
 
 Random matrix theory is the mathematical framework that describes this regime.
 
@@ -100,7 +100,7 @@ $$
 X_1,\ldots,X_n
 $$
 
-be independent \(p\)-dimensional Gaussian vectors with
+be independent $p$-dimensional Gaussian vectors with
 
 $$
 X_i
@@ -128,7 +128,7 @@ S
 X_iX_i^\top.
 $$
 
-Equivalently, if \(X\) is the \(p\times n\) data matrix,
+Equivalently, if $X$ is the $p\times n$ data matrix,
 
 $$
 S
@@ -137,7 +137,7 @@ S
 XX^\top.
 $$
 
-For fixed \(p\) and
+For fixed $p$ and
 
 $$
 n\to\infty,
@@ -171,7 +171,7 @@ c
 (0,\infty).
 $$
 
-Then the empirical distribution of the eigenvalues of \(S\) converges to the Marchenko-Pastur law.
+Then the empirical distribution of the eigenvalues of $S$ converges to the Marchenko-Pastur law.
 
 For
 
@@ -211,7 +211,7 @@ The average population eigenvalue is still one.
 
 The sample eigenvalues are not concentrated at one.
 
-They occupy an interval whose width depends on \(c\).
+They occupy an interval whose width depends on $c$.
 
 This is a qualitative change in covariance geometry.
 
@@ -283,7 +283,7 @@ It lies inside the ordinary noise bulk.
 
 This immediately undermines several common heuristics.
 
-The Kaiser rule in PCA retains components with eigenvalues above one after standardization. Under the Marchenko-Pastur null with \(c=0.5\), a large fraction of pure-noise eigenvalues exceed one.
+The Kaiser rule in PCA retains components with eigenvalues above one after standardization. Under the Marchenko-Pastur null with $c=0.5$, a large fraction of pure-noise eigenvalues exceed one.
 
 A scree plot can show apparently substantial leading components even when every population direction has exactly the same variance.
 
@@ -387,7 +387,7 @@ $$
 p>n,
 $$
 
-the sample covariance matrix has rank at most \(n\), so at least
+the sample covariance matrix has rank at most $n$, so at least
 
 $$
 p-n
@@ -397,9 +397,9 @@ eigenvalues are exactly zero.
 
 This is not a small-sample inconvenience that disappears with careful numerical linear algebra.
 
-It is a structural consequence of trying to estimate a \(p\times p\) covariance matrix with only \(n\) observations.
+It is a structural consequence of trying to estimate a $p\times p$ covariance matrix with only $n$ observations.
 
-When \(p\) is of the same order as \(n\), classical covariance inversion becomes intrinsically unstable.
+When $p$ is of the same order as $n$, classical covariance inversion becomes intrinsically unstable.
 
 ## PCA diagonalizes both signal and sampling noise
 
@@ -856,7 +856,7 @@ Block dependence among variables changes the population spectrum before sampling
 
 The correct use of Marchenko-Pastur theory is therefore not:
 
-> every eigenvalue below \(\lambda_+\) is noise and every eigenvalue above it is signal.
+> every eigenvalue below $\lambda_+$ is noise and every eigenvalue above it is signal.
 
 The correct interpretation is conditional:
 
@@ -897,7 +897,7 @@ n^{-2/3}
 \right)
 $$
 
-on the normalized covariance scale, with constants depending on the precise finite-\(n,p\) normalization.
+on the normalized covariance scale, with constants depending on the precise finite-$n,p$ normalization.
 
 This matters if one wants a formal significance threshold for a leading eigenvalue.
 
@@ -1022,7 +1022,7 @@ $$
 }
 $$
 
-as the fraction of variance explained by component \(j\).
+as the fraction of variance explained by component $j$.
 
 Under identity covariance,
 
