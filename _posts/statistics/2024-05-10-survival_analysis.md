@@ -31,7 +31,7 @@ This distinction gives survival methods a structure that ordinary regression on 
 
 ## Event time, censoring, and the structure of the risk set
 
-Let \(T\) denote the event time of interest and let \(C\) denote a right-censoring time. What we observe is
+Let $T$ denote the event time of interest and let $C$ denote a right-censoring time. What we observe is
 
 $$
 Y = \min(T,C)
@@ -43,7 +43,7 @@ $$
 \Delta = \mathbf{1}\{T \le C\}.
 $$
 
-When \(\Delta=1\), the event time is observed. When \(\Delta=0\), the event has not been observed by time \(C\), so the available information is only that \(T>C\). The distinction sounds simple, but it changes the likelihood contribution of the observation and therefore changes estimation fundamentally. Replacing a censored observation by an event at \(C\) systematically shortens observed survival, whereas dropping censored observations selectively removes long-lived units. Both operations bias the analysis.
+When $\Delta=1$, the event time is observed. When $\Delta=0$, the event has not been observed by time $C$, so the available information is only that $T>C$. The distinction sounds simple, but it changes the likelihood contribution of the observation and therefore changes estimation fundamentally. Replacing a censored observation by an event at $C$ systematically shortens observed survival, whereas dropping censored observations selectively removes long-lived units. Both operations bias the analysis.
 
 The usual right-censoring methods rely on an assumption often described as **independent** or **non-informative censoring**. Informally, after conditioning on the covariates represented in the model, the censoring mechanism should not contain additional information about the unobserved event time. In notation, one often works with a condition resembling
 
@@ -59,7 +59,7 @@ $$
 S(t)=P(T>t),
 $$
 
-the probability of remaining event-free beyond time \(t\). The hazard function is an instantaneous event rate among units that have survived up to time \(t\),
+the probability of remaining event-free beyond time $t$. The hazard function is an instantaneous event rate among units that have survived up to time $t$,
 
 $$
 h(t)
@@ -72,7 +72,7 @@ P(t\le T<t+\Delta t \mid T\ge t)
 }.
 $$
 
-Because the hazard is a rate rather than a probability, it is not restricted to the interval \([0,1]\). This point is routinely misunderstood. A hazard of 1.4 at a particular time does not mean a 140% event probability; it describes an instantaneous rate conditional on being event-free immediately before that time.
+Because the hazard is a rate rather than a probability, it is not restricted to the interval $[0,1]$. This point is routinely misunderstood. A hazard of 1.4 at a particular time does not mean a 140% event probability; it describes an instantaneous rate conditional on being event-free immediately before that time.
 
 For a continuous event-time distribution, the cumulative hazard
 
@@ -86,13 +86,13 @@ $$
 S(t)=\exp[-H(t)].
 $$
 
-This identity is useful because some models are most naturally described in terms of hazards while scientific interpretation may be easier on the survival-probability scale. It also makes clear that the hazard is not simply another way to write the same probability. Survival accumulates the entire hazard history up to time \(t\).
+This identity is useful because some models are most naturally described in terms of hazards while scientific interpretation may be easier on the survival-probability scale. It also makes clear that the hazard is not simply another way to write the same probability. Survival accumulates the entire hazard history up to time $t$.
 
-The notion of a **risk set** follows naturally. At event time \(t\), the relevant comparison population consists only of individuals who are still under observation and have not yet experienced the event immediately before \(t\). Units that experienced the event earlier are no longer at risk of a first event; units censored earlier are no longer observed. Much of survival analysis can be understood as careful accounting of these changing risk sets.
+The notion of a **risk set** follows naturally. At event time $t$, the relevant comparison population consists only of individuals who are still under observation and have not yet experienced the event immediately before $t$. Units that experienced the event earlier are no longer at risk of a first event; units censored earlier are no longer observed. Much of survival analysis can be understood as careful accounting of these changing risk sets.
 
 ## Kaplan-Meier estimation and non-parametric comparison
 
-The Kaplan-Meier estimator provides a non-parametric estimate of the survival function under right censoring. Suppose events occur at ordered times \(t_1<t_2<\cdots\). Let \(n_j\) denote the number of units at risk just before \(t_j\), and let \(d_j\) denote the number of events at that time. The conditional probability of surviving past \(t_j\), given survival up to \(t_j\), is estimated by
+The Kaplan-Meier estimator provides a non-parametric estimate of the survival function under right censoring. Suppose events occur at ordered times $t_1<t_2<\cdots$. Let $n_j$ denote the number of units at risk just before $t_j$, and let $d_j$ denote the number of events at that time. The conditional probability of surviving past $t_j$, given survival up to $t_j$, is estimated by
 
 $$
 1-\frac{d_j}{n_j}.
@@ -130,7 +130,7 @@ In practice, confidence intervals are often constructed on transformed scales to
 
 Comparing two Kaplan-Meier curves requires similar care. The log-rank test is frequently used to test whether event-time distributions differ between groups, but it should not be interpreted as a generic measure of clinical or operational importance. The test gives particular weight to differences consistent with proportional-hazards-type alternatives and can lose power when survival curves cross. Moreover, a statistically significant difference does not describe its magnitude. Differences in survival probability at a prespecified horizon, differences in median survival when estimable, or differences in restricted mean survival time can often communicate the practical effect more directly.
 
-Restricted mean survival time is especially useful when proportional hazards are doubtful. For a horizon \(\tau\),
+Restricted mean survival time is especially useful when proportional hazards are doubtful. For a horizon $\tau$,
 
 $$
 \operatorname{RMST}(\tau)
@@ -139,7 +139,7 @@ $$
 S(t)\,dt.
 $$
 
-It represents the expected event-free time accumulated up to \(\tau\). Comparing RMST between groups gives an effect in units of time and does not require a constant hazard ratio. The choice of \(\tau\) must be scientifically justified and should generally lie within a range where both groups have adequate follow-up.
+It represents the expected event-free time accumulated up to $\tau$. Comparing RMST between groups gives an effect in units of time and does not require a constant hazard ratio. The choice of $\tau$ must be scientifically justified and should generally lie within a range where both groups have adequate follow-up.
 
 ## Regression models: Cox, accelerated failure time, and changing covariates
 
@@ -152,7 +152,7 @@ h_0(t)
 \exp(X^\top\beta),
 $$
 
-where \(h_0(t)\) is an unspecified baseline hazard and the covariates act multiplicatively on the hazard. The model is semi-parametric because the regression coefficients are finite-dimensional parameters while the baseline hazard is left unspecified. Estimation of \(\beta\) uses the partial likelihood, which compares the covariates of the individual experiencing an event with the covariates of everyone in the corresponding risk set. Ignoring ties for notational simplicity, the partial likelihood has the form
+where $h_0(t)$ is an unspecified baseline hazard and the covariates act multiplicatively on the hazard. The model is semi-parametric because the regression coefficients are finite-dimensional parameters while the baseline hazard is left unspecified. Estimation of $\beta$ uses the partial likelihood, which compares the covariates of the individual experiencing an event with the covariates of everyone in the corresponding risk set. Ignoring ties for notational simplicity, the partial likelihood has the form
 
 $$
 L(\beta)
@@ -166,9 +166,9 @@ L(\beta)
 },
 $$
 
-where \(R(t_i)\) denotes the risk set immediately before event time \(t_i\).
+where $R(t_i)$ denotes the risk set immediately before event time $t_i$.
 
-For a one-unit increase in covariate \(X_j\), the factor \(\exp(\beta_j)\) is a hazard ratio under the model. A hazard ratio is **not** a risk ratio, a probability ratio, a ratio of median survival times, or a statement that one group experiences the event a fixed percentage sooner. It compares instantaneous event rates among individuals who are still event-free at a given time. Because the composition of the risk sets changes over time, hazard ratios can be difficult to translate into intuitive probability differences, especially when the event is common or when hazards are non-proportional.
+For a one-unit increase in covariate $X_j$, the factor $\exp(\beta_j)$ is a hazard ratio under the model. A hazard ratio is **not** a risk ratio, a probability ratio, a ratio of median survival times, or a statement that one group experiences the event a fixed percentage sooner. It compares instantaneous event rates among individuals who are still event-free at a given time. Because the composition of the risk sets changes over time, hazard ratios can be difficult to translate into intuitive probability differences, especially when the event is common or when hazards are non-proportional.
 
 The proportional-hazards assumption is therefore central. In the basic Cox model, the ratio of hazards for two covariate patterns does not depend on time:
 
@@ -196,19 +196,19 @@ X^\top\beta
 \sigma\varepsilon,
 $$
 
-where the distribution of \(\varepsilon\) determines models such as Weibull or log-normal survival. Exponentiating a coefficient gives a multiplicative effect on the time scale under the model. This can be easier to interpret in settings where the scientific question concerns acceleration or deceleration of event time rather than relative hazard.
+where the distribution of $\varepsilon$ determines models such as Weibull or log-normal survival. Exponentiating a coefficient gives a multiplicative effect on the time scale under the model. This can be easier to interpret in settings where the scientific question concerns acceleration or deceleration of event time rather than relative hazard.
 
-Two time-related modeling ideas are often confused. A **time-dependent covariate** is a predictor whose value changes during follow-up, written \(X(t)\). Blood pressure, account balance, treatment status, or machine temperature may all vary with time. A **time-varying coefficient** means that the effect of a predictor changes with time, written \(\beta(t)\). A customer balance can change while its effect remains constant, or a fixed baseline treatment can have an effect that weakens through time. These are different model structures and should not be conflated.
+Two time-related modeling ideas are often confused. A **time-dependent covariate** is a predictor whose value changes during follow-up, written $X(t)$. Blood pressure, account balance, treatment status, or machine temperature may all vary with time. A **time-varying coefficient** means that the effect of a predictor changes with time, written $\beta(t)$. A customer balance can change while its effect remains constant, or a fixed baseline treatment can have an effect that weakens through time. These are different model structures and should not be conflated.
 
 Time-dependent predictors create additional hazards of their own, particularly when they are affected by previous treatment or previous outcomes. Naively inserting such variables into a Cox model does not automatically produce a causal effect. In longitudinal causal problems with time-varying confounding, methods such as marginal structural models or other g-methods may be required.
 
 ## Truncation, competing risks, recurrent events, and multi-state processes
 
-Right censoring is only one form of incomplete observation. **Left truncation**, also called delayed entry, occurs when a unit is observed only if it has survived long enough to enter the study. If individuals become eligible for inclusion at entry time \(L_i\), then they should contribute to the risk set only after \(L_i\). Ignoring delayed entry creates survivorship bias because people who experienced the event before they could enter the dataset are systematically absent.
+Right censoring is only one form of incomplete observation. **Left truncation**, also called delayed entry, occurs when a unit is observed only if it has survived long enough to enter the study. If individuals become eligible for inclusion at entry time $L_i$, then they should contribute to the risk set only after $L_i$. Ignoring delayed entry creates survivorship bias because people who experienced the event before they could enter the dataset are systematically absent.
 
 Interval censoring is another distinct problem. Sometimes the exact event time is unknown but is known to lie between two examinations. If a disease is absent at one visit and present at the next, the event did not necessarily occur at the second visit. Treating that visit time as exact introduces measurement error into the event process. Methods designed for interval-censored data use the interval information directly.
 
-Competing risks arise when several mutually exclusive event types can occur and one event prevents observation of another. If a patient can die from several causes, or a customer can leave because of cancellation, migration, or account closure, then the event type matters. Let \(J\) denote the event cause. The cause-specific cumulative incidence function is
+Competing risks arise when several mutually exclusive event types can occur and one event prevents observation of another. If a patient can die from several causes, or a customer can leave because of cancellation, migration, or account closure, then the event type matters. Let $J$ denote the event cause. The cause-specific cumulative incidence function is
 
 $$
 F_k(t)
@@ -216,7 +216,7 @@ F_k(t)
 P(T\le t, J=k).
 $$
 
-It can be written in terms of the overall survival function and the cause-specific hazard \(\lambda_k(t)\) as
+It can be written in terms of the overall survival function and the cause-specific hazard $\lambda_k(t)$ as
 
 $$
 F_k(t)
@@ -235,7 +235,7 @@ Some applications contain repeated events rather than one terminal event. Hospit
 
 Survival prediction requires more than ranking individuals by risk. The concordance index is widely used because it measures whether individuals with earlier events tend to receive higher predicted risk scores. It is therefore a discrimination metric. A model can have high concordance and still produce badly calibrated survival probabilities. If a model predicts a 20% two-year event probability for a group of individuals, calibration asks whether roughly 20% of comparable individuals actually experience the event by two years, after accounting appropriately for censoring.
 
-The Brier score at time \(t\) compares the event-free indicator with the predicted survival probability,
+The Brier score at time $t$ compares the event-free indicator with the predicted survival probability,
 
 $$
 BS(t)
