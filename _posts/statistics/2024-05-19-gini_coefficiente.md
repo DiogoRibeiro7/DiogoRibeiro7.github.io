@@ -5,9 +5,7 @@ categories:
 - Statistics
 classes: wide
 date: '2024-05-19'
-excerpt: Learn about the Normalized Gini Coefficient and Default Rate, two essential
-  metrics in credit scoring and risk assessment. Explore their significance in evaluating
-  credit risk and loan defaults.
+excerpt: "In binary credit scoring, the model Gini is a linear transformation of ROC AUC. It measures ranking discrimination, not calibration, default rate, or economic value."
 header:
   image: /assets/images/headers/photo-statistics-student-t.jpg
   og_image: /assets/images/headers/photo-statistics-student-t.jpg
@@ -17,160 +15,189 @@ header:
   teaser: /assets/images/headers/photo-statistics-student-t.jpg
   twitter_image: /assets/images/headers/photo-statistics-student-t.jpg
 keywords:
-- Normalized gini coefficient
-- Default rate in credit scoring
-- Credit risk assessment metrics
-- Machine learning credit models
-- Loan default prediction
-- Gini coefficient vs auc
-- Python
-seo_description: The Normalized Gini Coefficient and Default Rate in credit scoring, risk assessment, and machine learning model evaluation.
-seo_title: Gini Coefficient and Default Rate in Credit Risk
+- Gini coefficient credit scoring
+- ROC AUC
+- Credit risk discrimination
+- Default rate
+- Model calibration
+seo_description: "Credit-score Gini explained through its relationship with ROC AUC, ranking discrimination, default prevalence, calibration, and validation."
+seo_title: "Credit-Score Gini: Ranking Is Not Calibration"
 seo_type: article
-subtitle: Guide to the Normalized Gini Coefficient and Default Rate in Credit Scoring
-  and Risk Assessment
-summary: This article explores the Normalized Gini Coefficient and Default Rate, key
-  metrics used in credit scoring and risk assessment. Learn how these metrics are
-  applied in machine learning and financial modeling.
 tags:
-- Economics
 - Finance
 - Model Evaluation
 - Risk Management
-- Python
-- Mathematical Modeling
-title: Understanding the Normalized Gini Coefficient and Default Rate
+title: "Credit-Score Gini: Ranking Is Not Calibration"
 ---
 
-## Introduction
+In binary credit scoring, the commonly reported model Gini is
 
-Credit scoring and risk assessment are crucial aspects of modern financial systems. Two key metrics in evaluating credit risk are the Gini Coefficient and the Default Rate. This article examines the definitions, calculations, and practical applications of these metrics, providing a comprehensive understanding of their roles in credit scoring.
+$$
+G
+=
+2\,AUC-1.
+$$
 
-## Section 1: Understanding the Gini Coefficient
+It measures ranking discrimination.
 
-### Definition
+It does not measure calibration, default rate, profitability, fairness, or stability.
 
-The Gini coefficient is a statistical measure of a model's performance in rank-ordering risk. It evaluates how well a scorecard or characteristic can distinguish between good and bad cases. A Gini coefficient of 0% indicates no ability to differentiate, while higher values indicate better performance.
+## ROC AUC interpretation
 
-### Typical Values
+For a score oriented so higher values indicate higher risk,
 
-- Credit scorecards typically have Gini values between 40-60%.
-- Behavior scorecards have higher values, ranging from 70-80%.
-- Very powerful characteristics might have a Gini coefficient around 25%.
-- Random selection yields a Gini coefficient of 0%.
-- Perfect rank-ordering results in a Gini coefficient of 100%.
-- The higher the Gini coefficient, the better the model's ability to rank-order risk.
-- The Gini coefficient is often used in binary classification tasks.
+$$
+AUC
+=
+P(S_D>S_N)
++
+\frac12P(S_D=S_N),
+$$
 
-### Calculation Method
+where $S_D$ is a score for a randomly selected defaulter and $S_N$ for a randomly selected non-defaulter.
 
-To calculate the Gini coefficient:
+Thus Gini is a rescaling of pairwise ranking probability.
 
-- Rank-order good and bad accounts by score, ensuring unique scores for each case.
-- For binary ranking, interpret the coefficient through its exact relationship with AUC: random ranking gives Gini = 0 and perfect ranking gives Gini = 1.
-- Gini should not be interpreted as the percentage of adjacent swaps required to reach a perfect ordering.
+AUC $=0.5$ gives
 
-### Relation to AUC
+$$
+G=0.
+$$
 
-The Gini coefficient is related to the Area Under the ROC Curve (AUC) by the formula: $$\text{Gini} = 2 \times \text{AUC} - 1$$ A random prediction yields a Gini score of 0 (AUC = 0.5).
+Perfect ranking gives
 
-### Normalized Gini Coefficient
+$$
+G=1.
+$$
 
-The normalized Gini Coefficient measures how far the sorted actual values are from a random state, represented by the number of swaps. It is used in regression tasks and is calculated by normalizing the Gini coefficient of the model with that of a perfect model.
+A reversed ranking can produce negative Gini.
 
-## Section 2: The Default Rate
+## Default rate is a separate quantity
 
-### Definition
+Portfolio default rate is
 
-The Default Rate measures the percentage of loans that a lender writes off as unpaid after a borrower fails to make payments for an extended period. It can also refer to the higher interest rate imposed on delinquent borrowers.
+$$
+DR
+=
+\frac{\text{defaults}}
+{\text{exposures}}
+$$
 
-### Calculation Formula
+under a specified default definition and observation horizon.
 
-The formula for the Default Rate is: $$\text{Default Rate} = \left( \frac{\text{Number of Defaulted Loans}}{\text{Total Number of Loans}} \right) \times 100$$
+A model can have the same Gini in two portfolios with very different default rates.
 
-### Default Criteria
+Discrimination and prevalence are distinct.
 
-Default criteria vary by loan type, for example:
+## Calibration
 
-- Credit cards: 180 days
-- Mortgages: 30 days
-- Student loans: 270 days
+A well-calibrated probability model satisfies approximately
 
-### Economic Indicator
+$$
+P(Y=1\mid \widehat p\approx p)
+\approx p.
+$$
 
-The Default Rate is a key indicator of economic health, often analyzed alongside other metrics like the unemployment rate and inflation.
+High Gini does not imply good calibration.
 
-### Consequences for Borrowers
+A model can rank accounts well while systematically overestimating or underestimating PD.
 
-Lenders may increase interest rates (penalty rate) or seize personal assets in cases of default. Assets could include property, wages, or investments, potentially through foreclosure or other legal means.
+Credit-risk validation therefore needs both discrimination and calibration.
 
-## Section 3: Practical Implementation
+## Sample dependence
 
-### Implementation in TensorFlow
+Estimated Gini depends on the evaluation population.
 
-Here's a Python implementation of the normalized Gini coefficient using TensorFlow:
+Changes in product mix, underwriting policy, macroeconomic conditions, and observation horizon can change the estimate.
 
-```python
-import tensorflow as tf
+Comparing Gini across datasets requires comparable target definitions and sampling frames.
 
-def gini(actual, pred):
-    """
-    Calculate the Gini coefficient for the given actual and predicted values.
+## Confidence intervals
 
-Parameters:
-    actual (tf.Tensor): The actual values.
-    pred (tf.Tensor): The predicted values.
+A reported Gini is an estimate.
 
-Returns:
-    tf.Tensor: The Gini coefficient.
-    """
-    n = tf.shape(actual)[0]
-    # Get indices of sorted predictions in descending order
-    indices = tf.argsort(pred, direction='DESCENDING')
-    # Gather actual values based on sorted indices
-    a_s = tf.gather(actual, indices)
-    # Calculate cumulative sum of sorted actual values
-    a_c = tf.cumsum(a_s)
-    # Sum of cumulative sums
-    gini_sum = tf.reduce_sum(a_c) / tf.reduce_sum(a_s)
-    # Adjust gini sum
-    gini_sum -= (tf.cast(n, tf.float32) + 1) / 2.0
-    # Normalize gini sum
-    return gini_sum / tf.cast(n, tf.float32)
+Bootstrap or asymptotic methods can quantify uncertainty.
 
-def gini_normalized(actual, pred):
-    """
-    Calculate the normalized Gini coefficient for the given actual and predicted values.
+Small validation samples can make differences between two scorecards statistically uninformative.
 
-Parameters:
-    actual (tf.Tensor): The actual values.
-    pred (tf.Tensor): The predicted values.
+## Ties
 
-Returns:
-    tf.Tensor: The normalized Gini coefficient.
-    """
-    gini_actual_pred = gini(actual, pred)
-    gini_actual_actual = gini(actual, actual)
-    return gini_actual_pred / gini_actual_actual
+Credit scores are often discrete.
 
-# Example usage:
-# actual = tf.constant([1, 0, 1, 1, 0], dtype=tf.float32)
-# pred = tf.constant([0.9, 0.2, 0.8, 0.6, 0.3], dtype=tf.float32)
-# result = gini_normalized(actual, pred)
-# print(result.numpy())
-```
+Ties should receive half credit in the pairwise AUC interpretation.
 
-### Code Explanation
+Implementation details matter when many accounts share the same score.
 
-- **gini**: Calculates the Gini coefficient for given actual and predicted values.
-- **gini_normalized**: Normalizes the Gini coefficient against a perfect model.
-- **Example Usage**: Demonstrates how to use the functions with sample data.
+## Gini for continuous targets is different
 
-## Section 4: Practical Applications and Conclusion
+Some competitions and regression tasks use a normalized Gini based on Lorenz-style ordering of continuous outcomes.
 
-### Applications in Credit Scoring
+That is not the same object as binary credit-score Gini.
 
-The Gini Coefficient and Default Rate are widely used in credit scoring and risk assessment. They help financial institutions evaluate the risk associated with borrowers and make informed lending decisions.
+The shared name causes confusion.
+
+The article should state which definition is being used.
+
+## No universal 'good Gini' threshold
+
+Rules such as “40-60% is typical” depend on portfolio, product, horizon, data quality, and score purpose.
+
+There is no universal cutoff at which a model becomes acceptable.
+
+A weaker Gini can be operationally preferable if calibration, stability, cost, and governance are better.
+
+## Economic value
+
+Ranking quality matters because decisions such as pricing, approval, and limit assignment depend on ordering risk.
+
+But economic value also depends on exposure, loss given default, margin, capital, and decision thresholds.
+
+Gini alone cannot determine the optimal lending policy.
+
+## A simple Python implementation
+
+~~~python
+from __future__ import annotations
+
+import numpy as np
+from numpy.typing import NDArray
+from sklearn.metrics import roc_auc_score
+
+
+def binary_gini(
+    y_true: NDArray[np.int_],
+    score: NDArray[np.float64],
+) -> float:
+    """Return binary-model Gini = 2*AUC - 1."""
+    if y_true.ndim != 1 or score.ndim != 1:
+        raise ValueError("inputs must be one-dimensional")
+    if y_true.size != score.size:
+        raise ValueError("inputs must have equal length")
+
+    auc = roc_auc_score(y_true, score)
+    return float(2.0 * auc - 1.0)
+~~~
+
+The score orientation must be documented.
 
 ## Conclusion
-Understanding the Gini Coefficient and Default Rate is crucial for effective credit scoring and risk management. These metrics provide valuable insights into the performance of predictive models and the overall health of loan portfolios.
+
+Binary credit-score Gini is a discrimination metric.
+
+It answers:
+
+> How well does the score rank defaulters relative to non-defaulters?
+
+It does not answer:
+
+- Are predicted probabilities calibrated?
+- Is the portfolio default rate acceptable?
+- Is the model stable?
+- Is the lending policy profitable?
+
+Those require separate analyses.
+
+## References
+
+- Hand, D. J., & Till, R. J. (2001). A Simple Generalisation of the Area Under the ROC Curve.
+- Thomas, L. C., Crook, J. N., & Edelman, D. B. (2017). *Credit Scoring and Its Applications*.
