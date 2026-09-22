@@ -4,8 +4,7 @@ categories:
 - Data Science
 classes: wide
 date: '2024-02-17'
-excerpt: Exploring Climate Value at Risk (VaR) from a data science perspective, detailing
-  its role in assessing financial risks associated with climate change.
+excerpt: "Climate financial risk is better treated as scenario-conditioned loss analysis than as a simple extension of short-horizon market VaR."
 header:
   image: /assets/images/headers/photo-data-science-heatmap.jpg
   og_image: /assets/images/headers/photo-data-science-heatmap.jpg
@@ -15,156 +14,202 @@ header:
   teaser: /assets/images/headers/photo-data-science-heatmap.jpg
   twitter_image: /assets/images/headers/photo-data-science-heatmap.jpg
 keywords:
-- Climate var
-- Value at risk
-- Climate change risk
-- Financial risk management
-- Data science in climate risk
-- Financial assessment tools
-- Climate data modeling
-- Environmental risk management
+- Climate risk
+- Scenario analysis
+- Physical risk
+- Transition risk
 - Climate finance
-- Sustainability and risk
-- Python
+- Value at risk
 permalink: '/data-science/climate_var/'
 redirect_from:
 - '/data science/climate_var/'
-seo_description: Climate Value at Risk (VaR) from a data science perspective, and its importance for financial risk assessment under climate change.
-seo_title: 'Climate VaR: Data Science and Financial Risk Assessment'
+seo_description: "How to quantify climate-related financial risk using scenario-conditioned loss distributions, physical and transition risk models, and uncertainty analysis."
+seo_title: "Climate Financial Risk Beyond Traditional VaR"
 seo_type: article
 tags:
 - Climate and Environment
 - Finance
 - Data Science
-- Python
-title: 'Climate Value at Risk (VaR): A Data Science Perspective'
+title: "Climate Financial Risk Beyond Traditional VaR"
 ---
 
-## Understanding Climate Value at Risk (Climate VaR) Through Data Science
+Climate-related financial risk is often compressed into the phrase **Climate VaR**. The label is convenient, but it can be misleading if it suggests that climate risk is just ordinary one-day market VaR with an extra climate variable added.
 
-Climate change poses a complex challenge that goes beyond environmental concerns, affecting economies, industries, and financial markets globally. To navigate this multifaceted issue, data science has emerged as a critical tool for quantifying and managing the financial risks associated with climate change. One such metric is Climate Value at Risk (Climate VaR), an extension of the traditional Value at Risk (VaR) model, designed to assess the potential financial losses due to climate-related events. This article examines the role of data science in developing and implementing Climate VaR, illustrating its significance in financial risk management in a rapidly changing climate.
+Traditional market VaR usually concerns a relatively short horizon and a loss distribution estimated from recent market dynamics. Climate risk can act over years or decades, depends on policy and technology pathways, and may involve structural changes that are not represented in historical return data.
 
-## The Intersection of Climate Risk and Financial Markets
+That makes scenario analysis central.
 
-Climate change is increasingly recognized as a material risk to financial markets. It manifests through two primary channels:
+## Physical and transition risk
 
-1. **Physical Risks:** These are direct consequences of climate change, including extreme weather events, sea-level rise, and long-term shifts in climate patterns. These events can damage infrastructure, disrupt supply chains, and lead to significant financial losses.
+Physical risk includes damage from heat, flood, wildfire, storms, sea-level rise, chronic temperature shifts, and other climate hazards.
 
-2. **Transition Risks:** These arise from the shift toward a low-carbon economy, including regulatory changes, technological advancements, and evolving market preferences. The transition can result in "stranded assets," where investments in carbon-intensive industries lose value as the world moves toward renewable energy sources.
+Transition risk includes changes in regulation, carbon pricing, technology, demand, financing conditions, and asset values during decarbonization.
 
-The financial impact of these risks has become increasingly apparent, compelling investors and companies to adopt sophisticated risk management tools. Climate VaR offers a quantitative approach to gauge the potential losses and opportunities presented by climate change.
+These channels can interact. A company may simultaneously face physical disruption and transition-related repricing.
 
-## Value at Risk (VaR) and Its Extension to Climate VaR
+## The first problem is exposure mapping
 
-### Traditional Value at Risk (VaR)
+A climate model does not directly produce a financial loss.
 
-Value at Risk (VaR) is a widely used financial metric that quantifies the maximum potential loss of a portfolio over a specified period at a given confidence level. VaR provides an estimate of the loss threshold that a portfolio is unlikely to exceed, helping investors and risk managers make informed decisions. 
+The chain is closer to
 
-For instance, if a portfolio has a 95% one-month VaR of <span class="tex2jax_ignore">$1 million</span>, it indicates a 95% confidence that the portfolio will not lose more than <span class="tex2jax_ignore">$1 million</span> over the next month. Despite its popularity, traditional VaR is primarily focused on market, credit, and operational risks, often overlooking climate-related risks.
+$$
+\text{hazard}
+\rightarrow
+\text{asset exposure}
+\rightarrow
+\text{vulnerability}
+\rightarrow
+\text{economic loss}
+\rightarrow
+\text{portfolio loss}.
+$$
 
-### Introducing Climate Value at Risk (Climate VaR)
+Each arrow contains assumptions.
 
-Climate VaR builds on the traditional VaR framework by incorporating climate-specific factors. It assesses the potential financial losses that could result from climate-related events and the transition to a low-carbon economy. Unlike traditional VaR, Climate VaR explicitly models the impact of physical and transition risks, providing a more holistic view of potential financial exposures.
+A flood projection must be matched to asset location, floor height, defenses, insurance, replacement cost, downtime, supplier dependence, and recovery dynamics before it becomes a financial quantity.
 
-Key elements of Climate VaR include:
+## Scenario-conditioned losses
 
-- **Physical Risks:** Estimating potential losses due to climate-related physical events such as hurricanes, floods, and heatwaves.
-- **Transition Risks:** Evaluating the financial impact of transitioning to a low-carbon economy, including regulatory changes, technological advancements, and market shifts.
-- **Scenario Analysis:** Using scenario modeling to project potential future states of the world under different climate pathways, such as the Representative Concentration Pathways (RCPs) defined by the Intergovernmental Panel on Climate Change (IPCC).
+Let $S$ denote a climate-policy scenario and $L$ portfolio loss.
 
-## The Role of Data Science in Climate VaR
+A useful object is
 
-### Data Collection and Quality
+$$
+P(L\mid S),
+$$
 
-Data science is central to calculating Climate VaR by leveraging diverse data sources to model climate risks accurately. The quality and granularity of data significantly influence the precision of Climate VaR estimates. Key data sources include:
+the loss distribution conditional on a stated scenario.
 
-1. **Historical Climate Data:** Long-term records of climate variables such as temperature, precipitation, and sea-level rise provide insights into historical trends and patterns, helping to model the likelihood and impact of future climate events.
+One may then report a quantile
 
-2. **Geolocation Data:** High-resolution geospatial data is essential for assessing physical risks at a granular level. For example, assets located in coastal areas are more vulnerable to sea-level rise and storm surges.
+$$
+q_\alpha(S)
+=
+F^{-1}_{L\mid S}(\alpha),
+$$
 
-3. **Market and Financial Data:** Information on asset values, market exposure, and financial performance helps estimate the potential financial impact of climate-related events.
+or an expected shortfall within that scenario.
 
-4. **Climate Models and Scenarios:** Climate models, such as those developed by the IPCC, provide scenarios that simulate different pathways of climate change. These scenarios are crucial for conducting stress testing and scenario analysis.
+The scenario label matters. A 95% quantile under one transition pathway is not comparable with a 95% quantile under another unless their assumptions are explicit.
 
-### Statistical and Machine Learning Models
+## Climate scenarios are not ordinary probability forecasts
 
-Data science employs various statistical and machine learning models to estimate Climate VaR:
+Many climate-financial scenarios are exploratory pathways rather than mutually exclusive events with known probabilities.
 
-1. **Historical Simulation:** This method uses historical climate data to simulate potential future losses. By analyzing past climate events and their financial impact, historical simulation can provide insights into potential future risks.
+Assigning precise probabilities to them can create false confidence.
 
-2. **Monte Carlo Simulations:** Monte Carlo methods generate a large number of potential future climate scenarios, taking into account various factors such as temperature increases, regulatory changes, and market dynamics. These simulations help estimate the range of potential losses under different climate pathways.
+It is often more honest to present a set of conditional outcomes:
 
-3. **Regression Analysis:** Regression models are used to understand the relationship between climate variables and financial outcomes. For instance, regression analysis can help quantify how changes in temperature or sea levels affect asset values.
+- orderly transition
+- delayed transition
+- high physical-risk pathway
+- sector-specific policy shock
 
-4. **Machine Learning Algorithms:** Advanced machine learning techniques, such as random forests and neural networks, can be applied to identify complex patterns in climate and financial data. These algorithms can enhance the predictive accuracy of Climate VaR models by capturing non-linear relationships.
+and then discuss sensitivity across scenarios.
 
-### Scenario Analysis and Stress Testing
+## Historical simulation is weak for structural risk
 
-Scenario analysis is a cornerstone of Climate VaR modeling. It involves creating hypothetical climate scenarios to assess the potential financial impact of different climate pathways. Common scenarios include:
+Historical returns cannot contain future carbon taxes, future sea-level exposure, or technologies that have not yet been deployed.
 
-- **Business-as-Usual Scenario:** Projects the impact of continuing current emissions trends, leading to significant physical risks.
-- **Paris Agreement Scenario:** Models the financial implications of limiting global warming to well below 2°C, emphasizing transition risks.
-- **Severe Climate Impact Scenario:** Considers extreme climate events and the potential cascading effects on the financial system.
+Historical data remain useful for calibration and market dynamics, but they are insufficient as the sole generator of climate scenarios.
 
-Stress testing complements scenario analysis by assessing the resilience of financial portfolios under adverse climate conditions. These techniques help organizations understand the potential range of losses and the actions required to mitigate climate-related risks.
+Climate stress testing therefore combines physical climate models, sector models, macroeconomic assumptions, asset-level data, and financial transmission models.
 
-## Implementing Climate VaR: A Data-Driven Approach
+## Uncertainty propagates through the chain
 
-Implementing Climate VaR requires a data-driven approach that integrates climate data, financial metrics, and sophisticated modeling techniques. The process typically involves the following steps:
+Climate models, damage functions, adaptation assumptions, policy pathways, discount rates, and financial response models all contribute uncertainty.
 
-1. **Data Collection:** Gather relevant climate, financial, and geolocation data.
-2. **Data Preprocessing:** Clean and preprocess data to ensure accuracy and consistency.
-3. **Model Selection:** Choose appropriate models (e.g., historical simulation, Monte Carlo) based on the investment portfolio and analysis goals.
-4. **Scenario Analysis:** Define climate scenarios and simulate their impact on asset values.
-5. **Climate VaR Calculation:** Use statistical models to calculate the potential financial losses under each scenario.
-6. **Risk Assessment:** Analyze the results to identify climate-related risks and opportunities.
-7. **Risk Mitigation:** Develop strategies to mitigate identified risks, such as diversifying investments or adopting climate-resilient infrastructure.
+If a final number is reported as
 
-## Code Snippet: Calculating Climate VaR with Monte Carlo Simulation
+> Climate VaR = EUR 83.4 million
 
-Below is a Python code snippet that demonstrates how to calculate Climate VaR using a simplified Monte Carlo simulation approach. This example assumes access to climate and financial data in the form of time series.
+without showing scenario and model uncertainty, the decimal precision is deceptive.
 
-```python
+Sensitivity analysis is usually more informative than one point estimate.
+
+## Dependence and cascading losses
+
+Climate losses are not independent across assets.
+
+A regional event can affect physical assets, suppliers, transport, energy systems, insurers, and credit conditions simultaneously.
+
+Portfolio aggregation must therefore consider dependence rather than simply summing independent asset-level VaRs.
+
+## Transition risk is not just a carbon-price multiplier
+
+A simple transition model might write firm value as a function of emissions and carbon price.
+
+Real repricing can also depend on substitution, technology adoption, regulation, financing costs, customer demand, and competitive responses.
+
+Machine-learning models can help estimate some relationships, but extrapolating outside observed policy regimes remains difficult.
+
+## A better computational example
+
+A toy model should make its assumptions explicit instead of adding random 'climate sensitivity' noise to daily returns.
+
+~~~python
+from __future__ import annotations
+
+from dataclasses import dataclass
+
 import numpy as np
-import pandas as pd
+from numpy.typing import NDArray
 
-# Simulated climate impact on asset returns (e.g., percentage change in asset value)
-# Assume historical climate data and asset returns have been preprocessed
-num_simulations = 10000
-climate_sensitivity = 0.05  # Sensitivity of asset to climate change (example value)
-historical_returns = np.random.normal(0.001, 0.02, 252)  # Simulated daily returns
 
-# Monte Carlo Simulation
-simulated_returns = np.zeros((num_simulations, len(historical_returns)))
+@dataclass(frozen=True)
+class ClimateScenario:
+    physical_loss_mean: float
+    physical_loss_sd: float
+    transition_loss_mean: float
+    transition_loss_sd: float
 
-for i in range(num_simulations):
-    # Apply climate sensitivity to simulate potential future returns
-    climate_impact = np.random.normal(0, climate_sensitivity, len(historical_returns))
-    simulated_returns[i] = historical_returns + climate_impact
 
-# Calculate the portfolio value paths
-initial_portfolio_value = 1e6  # Example portfolio value in dollars
-simulated_portfolio_values = initial_portfolio_value * (1 + simulated_returns).cumprod(axis=1)
+def simulate_losses(
+    scenario: ClimateScenario,
+    simulations: int = 100_000,
+    seed: int = 42,
+) -> NDArray[np.float64]:
+    """Simulate scenario-conditioned portfolio losses as fractions of value."""
+    if simulations <= 0:
+        raise ValueError("simulations must be positive")
 
-# Calculate the final portfolio values after the simulation period
-final_portfolio_values = simulated_portfolio_values[:, -1]
+    rng = np.random.default_rng(seed)
 
-# Calculate Climate VaR at 95% confidence level
-confidence_level = 0.95
-climate_var = initial_portfolio_value - np.percentile(final_portfolio_values, 100 * (1 - confidence_level))
+    physical = rng.normal(
+        scenario.physical_loss_mean,
+        scenario.physical_loss_sd,
+        simulations,
+    )
+    transition = rng.normal(
+        scenario.transition_loss_mean,
+        scenario.transition_loss_sd,
+        simulations,
+    )
 
-print(f"Climate VaR (95% confidence): ${climate_var:.2f}")
-```
+    return np.maximum(physical + transition, 0.0)
+~~~
 
-### Explanation of the Code
+This is still a toy model. Its advantage is conceptual: the scenario assumptions are explicit and separate from the Monte Carlo engine.
 
-The code simulates asset returns by incorporating climate sensitivity into historical return data using Monte Carlo simulations. It then calculates the final portfolio values and determines the 95% Climate VaR, representing the potential loss due to climate-related risks.
+## Backtesting is fundamentally limited
 
-### The Future of Climate VaR in Financial Risk Management
+Traditional VaR can be backtested against repeated realized short-horizon losses.
 
-As climate change continues to pose unprecedented challenges, Climate VaR provides a data-driven approach to assess and manage climate-related financial risks. Data science is central to this process, offering sophisticated modeling techniques, scenario analysis, and high-resolution data to accurately estimate potential losses. By integrating Climate VaR into their risk management strategies, companies and investors can better navigate the evolving landscape of climate risks, safeguarding their assets and contributing to a more resilient financial system.
+Long-horizon climate scenarios cannot be backtested in the same way because we do not observe many independent realizations of 2050 under alternative policy pathways.
+
+Validation must therefore rely more heavily on component models, hindcasts, physical consistency, sensitivity analysis, and comparison across plausible assumptions.
+
+## Conclusion
+
+Climate financial risk is not best understood as ordinary VaR with an extra covariate.
+
+It is a scenario-conditioned loss problem with deep model uncertainty.
+
+The strongest analysis makes the chain from hazard to portfolio loss explicit and reports sensitivity across scenarios rather than hiding structural uncertainty inside one apparently precise number.
 
 ## References
 
-- Artzner, P., Delbaen, F., Eber, J.-M., & Heath, D. (1999). Coherent measures of risk. *Mathematical Finance*, 9(3), 203-228.
-- Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+- Network for Greening the Financial System. Climate Scenarios for central banks and supervisors.
+- Basel Committee on Banking Supervision. Principles for the effective management and supervision of climate-related financial risks.
+- IPCC. Assessment reports and climate scenario framework.
