@@ -40,11 +40,11 @@ Alan Turing's 1936 work formalized computation through the abstract machine now 
 
 This work was not an AI algorithm, but it established a mathematical framework for what computation means.
 
-In 1950, Turing's paper *Computing Machinery and Intelligence* reframed machine intelligence as an operational question about behavior rather than demanding a metaphysical definition of thinking. citeturn0search1
+In 1950, Turing's paper *Computing Machinery and Intelligence* reframed machine intelligence as an operational question about behavior rather than demanding a metaphysical definition of thinking.
 
 ## Dartmouth and the naming of the field
 
-The 1955 Dartmouth proposal by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon used the term **artificial intelligence** for a 1956 summer research project. citeturn0search0
+The 1955 Dartmouth proposal by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon used the term **artificial intelligence** for a 1956 summer research project.
 
 The proposal reflected the optimism of the period: aspects of learning and intelligence might be described precisely enough for machines to simulate them.
 
@@ -96,7 +96,7 @@ Deep learning became dominant much later because several ingredients aligned:
 - better initialization and regularization
 - architectures suited to images, speech, and sequences
 
-AlexNet's 2012 ImageNet result became a visible turning point for computer vision and helped accelerate adoption of deep neural networks. citeturn0search2
+AlexNet's 2012 ImageNet result became a visible turning point for computer vision and helped accelerate adoption of deep neural networks.
 
 ## Convolutional and recurrent architectures
 
@@ -108,7 +108,7 @@ These architectures were specialized inductive biases, not generic intelligence.
 
 ## Attention and transformers
 
-The 2017 paper *Attention Is All You Need* introduced the Transformer architecture for sequence transduction, replacing recurrence with attention-based computation. citeturn0search3
+The 2017 paper *Attention Is All You Need* introduced the Transformer architecture for sequence transduction, replacing recurrence with attention-based computation.
 
 Transformers scale well with parallel hardware and became the dominant architecture for large language models.
 
