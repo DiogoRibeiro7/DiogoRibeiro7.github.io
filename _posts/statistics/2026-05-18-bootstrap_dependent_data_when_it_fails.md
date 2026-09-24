@@ -13,8 +13,8 @@ seo_title: 'When the Bootstrap Fails'
 seo_description: 'The bootstrap assumes that resampling observations reproduces how the data arose. Autocorrelated series, clustered data, small skewed samples and sample extremes each break that, and each has a fix. A simulation measures the damage and the repair.'
 excerpt: >-
   Resample the data, recompute the statistic, read off the spread. On an
-  autocorrelated series of 200 points the interval that comes out is three
-  times too narrow, and covers the truth half the time. The bootstrap did
+  autocorrelated series of 200 points the interval that comes out is
+  typically 2.4 times too narrow, and covers the truth half the time. The bootstrap did
   exactly what it was told.
 summary: >-
   What the ordinary bootstrap assumes, coverage of its intervals on
@@ -126,7 +126,7 @@ true_sd = np.std([ar1(n, 0.7, np.random.default_rng(10000 + s)).mean() for s in 
 print(f"phi = 0.7: naive bootstrap sd of the mean {naive_sd:.3f}; true sd {true_sd:.3f}; ratio {true_sd/naive_sd:.1f}")
 ```
 
-The mechanism is in that ratio. At an autocorrelation of 0.7 the ordinary bootstrap believes the mean has a standard error of 0.076. Across genuinely independent series of the same process it is 0.234, three times larger. Positive autocorrelation means neighbouring points repeat each other's information, so 200 dependent points carry the information of roughly 200 times $(1-\phi)/(1+\phi)$ independent ones: about 35 at 0.7, about 10 at 0.9. The ordinary bootstrap counts 200.
+The mechanism is in that ratio. At an autocorrelation of 0.7 the ordinary bootstrap believes the mean has a standard error of 0.076. Across genuinely independent series of the same process it is 0.234, three times larger for this series. Averaged over series the ordinary bootstrap gives 0.098, so the typical shortfall is a factor of 2.4. Positive autocorrelation means neighbouring points repeat each other's information, so 200 dependent points carry the information of roughly 200 times $(1-\phi)/(1+\phi)$ independent ones: about 35 at 0.7, about 10 at 0.9. The ordinary bootstrap counts 200.
 
 Blocks recover most of the loss. At 0.7, blocks of 10 to 20 bring coverage to 85 percent; at 0.9, blocks of 20 to 40 reach 76 percent. Neither reaches 95, and the shortfall is not a bug in the method. With ten independent observations' worth of information, no resampling scheme can produce a well-calibrated interval, because the information is not there. The block bootstrap also has a cost visible in the first row: at zero autocorrelation, blocks of 40 give only five blocks per resample, the bootstrap distribution becomes lumpy, and coverage falls to 84 percent. Blocks should be long enough to contain the dependence and short enough to leave many of them. The rule of Hall, Horowitz and Jing is a length growing like $n^{1/3}$, about six here, and the stationary bootstrap of Politis and Romano, which draws random block lengths, removes the sharp dependence on the choice. When the dependence structure is known, fitting a time-series model and resampling its residuals is often better still.
 
