@@ -250,6 +250,8 @@ The rule of thumb from the table above is that an input check detects a failure 
 5. Reconcile breakdowns against the total. When the parts stop summing to the whole, something upstream has changed, and that check costs one query.
 6. Put the input check first in the incident runbook for any metric move. It is the cheapest hypothesis to eliminate and the most often correct.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/data_science/null_monitoring.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Schelter, S., Lange, D., Schmidt, P., Celikel, M., Biessmann, F., & Grafberger, A. (2018). Automating large-scale data quality verification. *Proceedings of the VLDB Endowment*, 11(12), 1781-1794.

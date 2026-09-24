@@ -236,6 +236,8 @@ It is
 
 That question survives changes in software, terminology and fashion.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/bias_variance.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figures; run it with `--dry-run` to print the numbers behind the figures without writing an image.
+
 ## References
 
 - Breiman, L. (2001). Statistical modeling: The two cultures. *Statistical Science*, 16(3), 199–231. https://doi.org/10.1214/ss/1009213726

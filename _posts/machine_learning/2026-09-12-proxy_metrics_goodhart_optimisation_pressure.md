@@ -279,6 +279,8 @@ Averaging four proxies with independent manipulable parts raises the realised go
 5. **Combine proxies with different failure modes**, or cap rather than maximise, when the goal cannot be measured often enough to govern the optimiser directly.
 6. **Re-derive the proxy when the system changes.** A proxy validated before optimisation says nothing about the regime that optimisation creates.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/machine_learning/proxy_selection.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Goodhart, C. A. E. (1984). Problems of monetary management: the UK experience. In *Monetary Theory and Practice*. Palgrave Macmillan.

@@ -239,6 +239,8 @@ Measurement error becomes a problem in three situations. When the coefficient is
 6. **Record which columns are measurements and which are settings**, since they bias in opposite directions.
 7. **Leave the attenuation alone** when the model will only ever see the same noisy inputs it was trained on. There it is not a bias but the answer.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/measurement_error.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Spearman, C. (1904). The proof and measurement of association between two things. *The American Journal of Psychology*, 15(1), 72-101.

@@ -252,6 +252,8 @@ Before crediting any intervention aimed at extreme performers:
 
 None of this says targeted interventions do not work. It says that the evidence usually offered for them is compatible with their not working at all, and that the fix is a matter of design rather than of more data.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/regression_to_the_mean.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Galton, F. (1886). Regression towards mediocrity in hereditary stature. *Journal of the Anthropological Institute of Great Britain and Ireland*, 15, 246-263.

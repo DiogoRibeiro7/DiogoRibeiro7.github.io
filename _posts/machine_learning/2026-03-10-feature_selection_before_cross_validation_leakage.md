@@ -223,6 +223,8 @@ The second reason is that the inflated number is the one people want. A 92 perce
 5. **Keep a test set that nothing has touched**, and score the final pipeline on it once. It is the check that catches whatever the pipeline object missed.
 6. **Run the procedure on shuffled labels** as a sanity check; a pipeline that scores well above chance on permuted labels has a leak.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/machine_learning/selection_leakage.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Ambroise, C., & McLachlan, G. J. (2002). Selection bias in gene extraction on the basis of microarray gene-expression data. *Proceedings of the National Academy of Sciences*, 99(10), 6562-6566.

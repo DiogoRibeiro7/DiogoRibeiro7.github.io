@@ -176,6 +176,8 @@ Markov Chain Monte Carlo (MCMC) has revolutionized the way we approach complex p
 
 Understanding the underlying principles of MCMC and how different algorithms like Metropolis-Hastings and Gibbs sampling operate is crucial for applying these methods effectively. As MCMC continues to evolve with improvements such as adaptive methods and Hamiltonian Monte Carlo, it remains at the forefront of modern statistical computation.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/mathematics/metropolis.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## Appendix: Python Implementation of the Metropolis-Hastings Algorithm
 
 Below is a simple implementation of the Metropolis-Hastings (MH) algorithm using only base Python and `numpy`. The goal is to generate samples from a target probability distribution using the MH algorithm. For simplicity, we use a standard normal distribution as our target distribution.

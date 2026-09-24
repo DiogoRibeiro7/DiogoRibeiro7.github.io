@@ -244,6 +244,8 @@ This decomposition costs one line of preparation and it is the difference betwee
 5. Distrust the tight interval on an aggregate. Its width reflects the number of groups, not the number of people, and it says nothing about whether the aggregate answers your question.
 6. When only aggregate data exists, say what the estimate is about. "Stores with more sign-ups take larger baskets" is defensible; "customers who sign up spend more" is not the same sentence.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/group_aggregation.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Robinson, W. S. (1950). Ecological correlations and the behavior of individuals. *American Sociological Review*, 15(3), 351-357.

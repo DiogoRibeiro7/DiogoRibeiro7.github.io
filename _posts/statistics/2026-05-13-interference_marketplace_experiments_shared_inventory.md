@@ -173,6 +173,8 @@ The interference in the simulation is visible before any data are collected. The
 5. **Expect the bias in both directions**: a treatment that consumes a shared resource inflates the user-level estimate, one that produces a shared benefit deflates it.
 6. **Report the design's assumption** with the result: "no interference between users" is a claim, and in a marketplace it is usually false.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/marketplace_interference.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Rubin, D. B. (1980). Randomization analysis of experimental data: the Fisher randomization test, comment. *Journal of the American Statistical Association*, 75(371), 591-593.

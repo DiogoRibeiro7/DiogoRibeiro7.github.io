@@ -242,6 +242,8 @@ And it changes reported numbers, which is an organisational problem before it is
 5. Group comparable experiments before pooling, and keep groups large enough to estimate a variance.
 6. Treat a large effect from an imprecise test as the least trustworthy result in the programme, not the most exciting one.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/empirical_bayes.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Efron, B., & Morris, C. (1975). Data analysis using Stein's estimator and its generalizations. *Journal of the American Statistical Association*, 70(350), 311-319.

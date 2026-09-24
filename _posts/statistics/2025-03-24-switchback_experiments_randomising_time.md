@@ -316,6 +316,8 @@ The second is that assignment is balanced against the daily season. With six-hou
 5. Block the randomisation across adjacent periods or across the same hour on different days, so that the daily season cannot fall unevenly across arms.
 6. Check the estimate by position within the period after the test. A gradient that has not flattened means the burn-in was too short and the result is still attenuated.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/switchback.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Bojinov, I., Simchi-Levi, D., & Zhao, J. (2023). Design and analysis of switchback experiments. *Management Science*, 69(7), 3759-3777.

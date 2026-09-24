@@ -220,6 +220,8 @@ Where that is impractical, the honest fallback is to report the effect as a rang
 5. **Check the arms' composition and return rates by tenure** before trusting the curve, since mix shift and differential attrition produce similar-looking decay.
 6. **Report the window with the number** whenever the effect has not settled, and say which direction it is still moving.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/novelty_effects.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Kohavi, R., Deng, A., Frasca, B., Longbotham, R., Walker, T., & Xu, Y. (2012). Trustworthy online controlled experiments: five puzzling outcomes explained. *Proceedings of the 18th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 786-794.

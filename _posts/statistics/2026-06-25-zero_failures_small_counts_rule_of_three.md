@@ -231,6 +231,8 @@ A pump that ran a thousand hours without a failure has demonstrated a failure ra
 5. **Read small-count comparisons as interval overlaps**, not as ratios of point estimates; one failure against none establishes nothing.
 6. **Pool exposure across units** for events in time, after checking that failures are independent, since the bound depends only on the total exposure.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/small_count_intervals.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Hanley, J. A., & Lippman-Hand, A. (1983). If nothing goes wrong, is everything all right? Interpreting zero numerators. *JAMA*, 249(13), 1743-1745.

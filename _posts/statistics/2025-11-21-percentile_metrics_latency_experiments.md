@@ -270,6 +270,8 @@ Reporting the median and a tail percentile together, always, costs nothing and m
 5. **Predict which part of the distribution the change touches**, and check the statistic that should respond before concluding that nothing happened.
 6. **Watch the share of requests in the slow path** as its own metric; a change to it moves the mean and the tail together while leaving the median untouched.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/percentile_metrics.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Dean, J., & Barroso, L. A. (2013). The tail at scale. *Communications of the ACM*, 56(2), 74-80.

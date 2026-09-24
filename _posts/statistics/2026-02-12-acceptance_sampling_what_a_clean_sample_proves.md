@@ -264,6 +264,8 @@ The last column is the one to put in the report. A one-in-a-thousand error rate 
 5. Switch to the exact finite-lot calculation when the sample exceeds about a tenth of the lot.
 6. Size data audits the same way, and report the implied number of affected rows rather than the rate. Two hundred rows finds nothing in a table with thousands of errors.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/acceptance_sampling.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Dodge, H. F., & Romig, H. G. (1959). *Sampling Inspection Tables: Single and Double Sampling* (2nd ed.). Wiley.

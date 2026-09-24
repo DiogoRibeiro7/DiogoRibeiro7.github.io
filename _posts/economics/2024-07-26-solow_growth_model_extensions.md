@@ -108,3 +108,5 @@ Differences in growth rates across countries are frequently attributed to variat
 The Solow Growth Model, with extensions to include technological progress and human capital, provides a powerful framework for understanding the long-term drivers of economic growth. By expanding the model to incorporate these critical factors, economists can capture more of the complex interactions that influence productivity and growth across different countries.
 
 Through the incorporation of technological change and human capital, the Solow model serves as a foundational tool for policy analysis, guiding decisions on education, health, R&D, and capital investment to foster sustainable economic growth.
+
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/economics/solow_growth.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.

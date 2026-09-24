@@ -194,6 +194,8 @@ The diagnostic that separates these is to run the check on segments: by day, by 
 5. **Compare against the intended ratio**, including during ramps, and restart the analysis window whenever the allocation changes.
 6. **Audit the filters** applied between assignment and analysis; each one that reads behaviour is a candidate cause, and each should be applied identically to both arms or not at all.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/sample_ratio_mismatch.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Fabijan, A., Gupchup, J., Gupta, S., Omhover, J., Qin, W., Vermeer, L., & Dmitriev, P. (2019). Diagnosing sample ratio mismatch in online controlled experiments: a taxonomy and rules of thumb for practitioners. *Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 2156-2164.

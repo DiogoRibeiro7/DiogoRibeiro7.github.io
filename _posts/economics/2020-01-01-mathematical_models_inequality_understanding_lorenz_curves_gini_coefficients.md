@@ -188,6 +188,8 @@ Lorenz Curves and Gini Coefficients are essential tools for economists and polic
 
 In combination with other measures, Lorenz Curves and Gini Coefficients enable a comprehensive assessment of inequality, guiding policies that aim to create fairer and more equitable societies.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/economics/inequality.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## Appendix: Python Code Examples for Lorenz Curve and Gini Coefficient
 
 ```python

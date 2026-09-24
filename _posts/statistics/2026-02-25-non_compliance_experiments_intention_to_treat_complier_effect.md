@@ -216,6 +216,8 @@ Neither number is the as-treated comparison, and no amount of covariate adjustme
 5. **Size the experiment for the compliance rate**: the users required for a given effect of use grow with the inverse square of adoption.
 6. **Raise adoption before measuring effect** when compliance is low; an experiment that few users take up is far smaller than it looks.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/noncompliance.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Angrist, J. D., Imbens, G. W., & Rubin, D. B. (1996). Identification of causal effects using instrumental variables. *Journal of the American Statistical Association*, 91(434), 444-455.

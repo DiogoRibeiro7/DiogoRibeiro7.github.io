@@ -252,6 +252,8 @@ The interval $[-71.7, 2.53]$ does not claim that a mean of $-71$ is a sensible e
 
 So an exact interval is calibrated, not necessarily informative, and the two should never be confused. When the selected value clears its bar comfortably, conditioning costs almost nothing and the interval is the ordinary one. When it clears by a hair, the width is telling the reader that most of what made the result look interesting was the selection itself. That is uncomfortable, and it is the thing an uncertainty statement is for.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/post_selection_intervals.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figures; run it with `--dry-run` to print the numbers behind the figures without writing an image.
+
 ## References
 
 - Berk, R., Brown, L., Buja, A., Zhang, K., & Zhao, L. (2013). Valid post-selection inference. *The Annals of Statistics*, 41(2), 802-837.

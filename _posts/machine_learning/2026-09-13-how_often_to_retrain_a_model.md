@@ -301,6 +301,8 @@ The value of a unit of quality is the one that requires a conversation rather th
 5. Use a trigger when abrupt breaks are common, roughly more than one a year, and then invest in a fast, low-noise quality signal rather than in threshold tuning.
 6. Add the label delay to any trigger's expected reaction time, and treat a delayed trigger as a schedule with an unpredictable period.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/machine_learning/retraining.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Gama, J., Žliobaitė, I., Bifet, A., Pechenizkiy, M., & Bouchachia, A. (2014). A survey on concept drift adaptation. *ACM Computing Surveys*, 46(4), 1-37.

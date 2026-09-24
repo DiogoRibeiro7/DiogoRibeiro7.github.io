@@ -321,6 +321,8 @@ Shapley-value methods do not escape this. Interventional SHAP breaks correlation
 - **Do not use single-feature permutation importance for feature selection** on correlated inputs. A feature can be dropped as redundant, and its partner dropped next for the same reason, until a real signal is gone.
 - **Send causal questions to causal methods.** If the audience wants to know what to change in the plant, no importance ranking answers it.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/machine_learning/permutation_importance.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.

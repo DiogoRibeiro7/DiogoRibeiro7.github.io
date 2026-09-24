@@ -468,6 +468,8 @@ As data availability and computational power continue to grow, the integration o
 
 By leveraging the appropriate survival analysis methods, researchers and analysts can gain valuable insights into the timing and occurrence of critical events. This enables better decision-making, strategy development, and understanding of underlying processes across various fields. Whether using parametric, non-parametric, or machine learning approaches, the key is to carefully consider the specific needs and characteristics of the data at hand.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/mathematics/kaplan_meier.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## Appendix: Python Code Examples
 
 This appendix provides Python code examples for performing survival analysis using both parametric and non-parametric methods.

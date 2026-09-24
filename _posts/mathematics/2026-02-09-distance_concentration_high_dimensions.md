@@ -218,6 +218,8 @@ If neighbourhoods were even-handed, each point would appear in about ten lists. 
 
 The nearest-neighbour idea is sound. It just requires that near and far mean something, and past a few dozen dimensions that has to be arranged rather than assumed.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/mathematics/distance_concentration.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Beyer, K., Goldstein, J., Ramakrishnan, R., & Shaft, U. (1999). When is "nearest neighbor" meaningful? In *Database Theory, ICDT '99*, Lecture Notes in Computer Science 1540, 217-235. Springer.

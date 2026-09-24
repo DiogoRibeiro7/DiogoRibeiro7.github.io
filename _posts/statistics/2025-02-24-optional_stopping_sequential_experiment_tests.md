@@ -361,6 +361,8 @@ What does not work is the rule that has no name: look every day, stop on 0.05, a
 5. Report the effect from data that did not drive the stopping decision. An early stop is evidence that something happened, not a measurement of how much.
 6. Size the test for the effect you would act on, so that stopping early is an exception rather than the plan. A test with 80 percent power at the horizon has little to gain from aggressive early stopping.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/sequential_testing.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Armitage, P., McPherson, C. K., & Rowe, B. C. (1969). Repeated significance tests on accumulating data. *Journal of the Royal Statistical Society: Series A*, 132(2), 235-244.

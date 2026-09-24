@@ -291,6 +291,8 @@ That is why an observational estimate should be accompanied by a sensitivity ana
 5. **Trim extreme scores and say so**, because trimming changes the population the estimate describes.
 6. **Report a sensitivity analysis** for unmeasured confounding alongside the estimate; no propensity method addresses it.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/propensity_scores.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Rosenbaum, P. R., & Rubin, D. B. (1983). The central role of the propensity score in observational studies for causal effects. *Biometrika*, 70(1), 41-55.

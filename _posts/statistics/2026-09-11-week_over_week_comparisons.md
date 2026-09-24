@@ -281,6 +281,8 @@ Three changes cover most of the gap. Put an interval on the comparison, computed
 5. Do not assume a weekly average is the square root of seven times more precise. With day-to-day persistence the real factor here is 1.75.
 6. Escalate on persistence rather than on a single reading. A step that is real will still be there next week, and a metric that moves once will usually move back.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/week_over_week.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Box, G. E. P., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). *Time Series Analysis: Forecasting and Control* (5th ed.). Wiley.

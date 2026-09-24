@@ -246,6 +246,8 @@ Use neither as a substitute for the other. A bandit with a p-value stapled to it
 5. **Prefer bandits when arms are many and differences large**, which is where the regret saving is biggest and identification is not in doubt.
 6. **Treat the winner's estimated advantage from a bandit as an upper bound**, not a measurement; in the simulation it ran a third above the truth.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/machine_learning/bandit_regret.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Thompson, W. R. (1933). On the likelihood that one unknown probability exceeds another in view of the evidence of two samples. *Biometrika*, 25(3-4), 285-294.

@@ -234,6 +234,8 @@ The setting in the example is equipment rating, and the same arithmetic governs 
 
 The tail cannot be seen in the data. Its shape can, and that is enough to say how far the tail goes with an honest statement of how sure one can be.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/extreme_values.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Coles, S. (2001). *An Introduction to Statistical Modeling of Extreme Values*. Springer.

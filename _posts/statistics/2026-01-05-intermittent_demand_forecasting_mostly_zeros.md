@@ -274,6 +274,8 @@ Evaluating those requires distributional scores rather than error metrics. When 
 5. Evaluate on the decision: stock needed for a target fill rate, cost of stockouts, or whatever the forecast actually drives. That comparison separated methods that the error table ranked as equivalent.
 6. Report the probability of demand and a lead-time distribution where the tooling allows, rather than a point forecast that will be wrong in every single week by construction.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/intermittent_demand.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Croston, J. D. (1972). Forecasting and stock control for intermittent demands. *Operational Research Quarterly*, 23(3), 289-303.

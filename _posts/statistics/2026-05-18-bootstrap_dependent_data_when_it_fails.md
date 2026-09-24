@@ -226,6 +226,8 @@ A milder version affects non-smooth statistics such as the median in small sampl
 
 The bootstrap is not assumption-free. It has one assumption, and it is the one about how the data arose, which is also the one most often untrue.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/block_bootstrap.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Efron, B. (1979). Bootstrap methods: another look at the jackknife. *The Annals of Statistics*, 7(1), 1-26.

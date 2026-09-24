@@ -209,6 +209,8 @@ What it cannot deliver is external validity. The estimate is the effect on this 
 
 The method does not manufacture a control group. It makes explicit, and testable, the assumption that every before-after comparison makes silently: that the unit would have followed some path, and that we know what it was.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/data_science/synthetic_control.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Abadie, A., & Gardeazabal, J. (2003). The economic costs of conflict: a case study of the Basque Country. *American Economic Review*, 93(1), 113-132.

@@ -352,6 +352,8 @@ For those interested in looking more closely at time series analysis and smoothi
 
 By understanding and applying the appropriate smoothing techniques, analysts and data scientists can enhance the clarity and interpretability of their time series data, leading to more accurate analysis and better-informed decision-making.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/data_science/savitzky_golay.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 1. Schafer, R. W. (2011). "What Is a Savitzky-Golay Filter?" IEEE Signal Processing Magazine, 28(4), 111–117. [DOI: 10.1109/MSP.2011.941097](https://ieeexplore.ieee.org/document/6017220)

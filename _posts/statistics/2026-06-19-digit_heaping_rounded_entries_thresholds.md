@@ -273,6 +273,8 @@ The cost is an assumption about shape. The fit above assumes a lognormal, which 
 5. Add the recording path to the list of suspects whenever a monitored percentile or breach rate moves. A form change, a new integration or a retrained team will move them with no change in the underlying work.
 6. Fit rounded values as intervals when the number matters. It recovers the distribution almost exactly and costs a dozen lines.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/digit_heaping.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Heitjan, D. F., & Rubin, D. B. (1990). Inference from coarse data via multiple imputation with application to age heaping. *Journal of the American Statistical Association*, 85(410), 304-314.

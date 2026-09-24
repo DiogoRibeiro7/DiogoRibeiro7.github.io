@@ -253,6 +253,8 @@ That reading changes the operational response. A shift is addressed by changing 
 5. **Regularise flexible quantile models harder** than their mean counterparts, sort the predicted quantiles, and conformalise if coverage still falls short.
 6. **Read the coefficient table across quantiles** as a description of how the inputs move the distribution, and act on the shape, not just the centre.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/quantile_regression.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Koenker, R., & Bassett, G. (1978). Regression quantiles. *Econometrica*, 46(1), 33-50.

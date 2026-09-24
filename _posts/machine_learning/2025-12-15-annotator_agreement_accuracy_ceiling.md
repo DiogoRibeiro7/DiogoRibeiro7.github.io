@@ -231,6 +231,8 @@ This is the case where the ceiling is not merely low but misleading about which 
 5. **Adjudicate disagreements against a written definition** rather than adding voters, because correlated annotator error survives any vote.
 6. **Check whether error is asymmetric** on rare classes, and treat measured recall and prevalence as understated when annotators miss positives.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/machine_learning/annotator_ceiling.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Cohen, J. (1960). A coefficient of agreement for nominal scales. *Educational and Psychological Measurement*, 20(1), 37-46.

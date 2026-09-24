@@ -235,6 +235,8 @@ The setting was a maintenance crew, and the same arithmetic governs any resource
 6. **Report and target percentiles**, since the mean wait is met while the tail fails.
 7. **Simulate** the specific system, with its own arrival and service distributions, when a decision rides on the number. The recursion is six lines.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/mathematics/queueing.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Little, J. D. C. (1961). A proof for the queuing formula L = λW. *Operations Research*, 9(3), 383-387.
