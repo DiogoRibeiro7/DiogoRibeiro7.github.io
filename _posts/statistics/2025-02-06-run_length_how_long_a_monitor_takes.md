@@ -18,8 +18,8 @@ excerpt: >-
 summary: >-
   Why a monitor is described by two numbers rather than one, how the
   run length distribution makes the average misleading, how cumulative
-  and exponentially weighted charts detect small shifts four times faster
-  at the same false alarm rate, and how day-to-day correlation in the
+  and exponentially weighted charts detect shifts of half to one standard
+  deviation four to five times faster at the same false alarm rate, and how day-to-day correlation in the
   metric destroys the alarm interval a chart was tuned for.
 keywords:
   - average run length
@@ -183,7 +183,7 @@ The first row confirms the three charts are comparable: all three run around 350
 
 That pattern has a simple explanation. A large shift shows up in a single observation, which is exactly what the Shewhart rule is good at. A small shift never produces an extreme day; it produces a long run of slightly high days, which only a chart with memory can see.
 
-![Mean days to detection against the size of the shift, for a three-sigma rule, an exponentially weighted chart and a cumulative sum chart, all tuned to the same false alarm rate, on a log scale. The two charts with memory detect small shifts four to five times faster, and the three converge above two standard deviations.](/assets/images/figures/monitor_detection_delay.png){: width="1152" height="672" loading="lazy"}
+![Mean days to detection against the size of the shift, for a three-sigma rule, an exponentially weighted chart and a cumulative sum chart, all tuned to the same false alarm rate, on a log scale. The two charts with memory detect shifts of half to one standard deviation four to five times faster, a quarter-sigma shift only about 2.4 times faster, and the three converge above two standard deviations.](/assets/images/figures/monitor_detection_delay.png){: width="1152" height="672" loading="lazy"}
 
 ## The Average Is the Wrong Summary
 
@@ -252,7 +252,7 @@ One caution about tightening. Moving a Shewhart limit from three sigma to two cu
 
 1. Write both numbers into the monitor's definition: the expected days between false alarms, and the expected days to catch the smallest shift that matters.
 2. Report the ninetieth percentile of the detection delay, not the average. That is the exposure window an incident review will ask about.
-3. Use a cumulative sum or exponentially weighted chart for small persistent shifts. At the same false alarm rate they are four to five times faster below one sigma.
+3. Use a cumulative sum or exponentially weighted chart for small persistent shifts. At the same false alarm rate they are four to five times faster at shifts of half to one sigma.
 4. Keep a single-point rule alongside them for large jumps, where it is the fastest and simplest thing available.
 5. Estimate limits from the long-run spread, never from consecutive differences, unless the metric is genuinely independent day to day.
 6. Measure the autocorrelation of every monitored metric before setting limits. Above about 0.3 the nominal alarm interval is fiction.

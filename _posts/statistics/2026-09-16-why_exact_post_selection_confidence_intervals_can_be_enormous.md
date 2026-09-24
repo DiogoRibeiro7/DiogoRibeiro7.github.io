@@ -114,7 +114,7 @@ $$
 \label{eq:limit}
 $$
 
-where $\ln(2/\alpha) = 3.69$ at the 95% level. For $x = 2.05$ this gives $-71.78$ against the exact $-71.74$; for $x = 2.01$, $-366.89$ against $-366.88$; for $x = 2.2$, $-16.44$ against $-16.29$. It degrades as the distance grows, as it should, since the exponential tail is a statement about means far below the threshold. The right panel of the figure shows the exact width following $3.69/d$ over two orders of magnitude before bending towards the ordinary width of $3.92$.
+where $\ln(2/\alpha) = 3.69$ at the 95% level. For $x = 2.05$ this gives $-71.78$ against the exact $-71.74$; for $x = 2.01$, $-366.89$ against $-366.88$; for $x = 2.2$, $-16.44$ against $-16.29$. It degrades as the distance grows, as it should, since the exponential tail is a statement about means far below the threshold. The right panel of the figure shows the exact width staying within 10% of $3.69/d$ from $d = 0.01$ to about $d = 0.2$, widths from 367 down to 20, before bending towards the ordinary width of $3.92$.
 
 This is the whole phenomenon in one line. The information that would have ruled out $\mu = -72$ is the improbability of crossing the threshold at all, and conditioning on the crossing removes exactly that information from the calculation. What remains is where the observation landed inside the selection region, and a landing $0.05$ above the edge is what almost every mean below the edge predicts.
 
@@ -128,7 +128,7 @@ $$
 
 A tail of order $1/w$ has no mean. The expected width of the exact interval is infinite, for every value of $\mu$, even though every individual interval is finite. Kivaranovic and Leeb (2021) prove this in general for intervals built by conditioning on polyhedral selection events. Their Proposition 1 states that whenever the truncation region is bounded from above or from below the expected length is infinite, for the reason just given. They also show that the upper quantiles of the length grow like $1/(1 - \kappa)$ as the level $\kappa$ approaches 1, which is the same $1/w$ tail read the other way round. For the lasso they find the condition met in most of the problems they simulate, the exceptions being models that contain almost all or almost none of the regressors.
 
-Under $\mu = 0$ the hazard at the threshold is $2.37$, so the approximation reads $8.75/w$. The exact quantiles of the width, given selection, bear it out. The second column is the probability of selection and the last the share of intervals wider than 20.
+Under $\mu = 0$ the hazard at the threshold is $2.37$, so the approximation reads $8.75/w$. The exact limit is slightly smaller, $8.69/w$, because the upper end of the interval recedes as well, by $\ln(1/0.975)/d$, so that near the threshold the width is $\ln(39)/d = 3.66/d$ rather than $3.69/d$. The exact quantiles of the width, given selection, bear it out. The second column is the probability of selection and the last the share of intervals wider than 20.
 
 | Mean | Selected | Median | 90th | 99th | Over 20 |
 | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -191,7 +191,7 @@ The figure shows the median width of each procedure, given selection, with a ban
 | 3 | 84.1% / 76.0% | 5.32, 13.9 | 4.47, 4.87 | 5.54 |
 | 4 | 97.7% / 92.1% | 4.31, 6.6 | 4.22, 4.60 | 5.54 |
 
-All three procedures cover 95% given selection; in the simulation behind the randomised column their coverage ranged from 94.4% to 95.5% across the fifteen cells. The randomised interval was never wider than $5.51$ over the whole range of observations, just under the splitting width, which is an instance of a general result: Kivaranovic and Leeb (2020) show that randomised selection and data carving give intervals of bounded length that are never longer than the corresponding split.
+All three procedures cover 95% given selection; in the simulation behind the randomised column their coverage ranged from 94.4% to 95.5% across the fifteen cells. The randomised interval was never wider than $5.51$ for observations from $-4$ to $10$, and for observations further down its width creeps up towards the splitting width of $5.54$ without reaching it, which is an instance of a general result: Kivaranovic and Leeb (2020) show that randomised selection and data carving give intervals of bounded length that are never longer than the corresponding split.
 
 None of this is free, and the second column shows where the bill goes. Randomising the selection changes *what gets selected*: under the null it reports more than three times as many false leads, and at $\mu = 4$ it misses 8% of real effects where the hard threshold misses 2%. Splitting pays the same price in a different coin. The choice is between a sharp selection with occasionally useless intervals and a blunter selection with uniformly usable ones, and which is better depends on whether the selection or the interval is the product. Rasines and Young (2023) compare the splitting strategies directly. A third route avoids conditioning altogether: simultaneous inference over every model the search could have chosen (Berk et al., 2013) is valid whatever the selection rule, at the price of intervals that are wider for every result, the clear winners included.
 

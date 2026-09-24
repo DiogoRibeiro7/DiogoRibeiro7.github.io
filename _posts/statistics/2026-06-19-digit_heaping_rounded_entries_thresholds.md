@@ -111,7 +111,7 @@ for heap in (0.0, 0.2, 0.5, 0.8, 1.0):
 | 80% | 84.1% | 426 |
 | 100% | 100.0% | 500 |
 
-The index tracks the rounding almost linearly, which makes it a usable monitor in its own right: compute it per month, per team or per data source, and a jump means the recording behaviour changed. The first row reads 110 rather than exactly 100 because one value in five is a multiple of five by arithmetic alone, and the lognormal shape is not perfectly flat across the band. Treat anything under about 110 as clean and anything over 150 as heavily rounded.
+The index tracks the rounding almost linearly, which makes it a usable monitor in its own right: compute it per month, per team or per data source, and a jump means the recording behaviour changed. The first row reads 110 rather than exactly 100 mostly by arithmetic: the whole numbers from 10 to 60 include 11 multiples of five among 51, a little more than one in five, which alone gives 108. The lognormal shape, not perfectly flat across the band, adds about one point, and sampling noise the rest. Treat anything under about 110 as clean and anything over 150 as heavily rounded.
 
 ## What Survives and What Does Not
 
@@ -133,7 +133,7 @@ for heap in (0.0, 0.2, 0.5, 0.8):
 
 The mean is untouched to two decimal places at every level of rounding, because rounding to the nearest five is symmetric and the errors cancel. That is the reassuring half of the story, and it is why heaping so often goes unnoticed: the headline average is fine.
 
-The quantiles are not fine. The median moves from 18 to 20 as rounding increases, an 11 percent error, because a quantile is a position in a sorted list and heaping moves the values around that position onto the nearest round number. The 90th percentile drifts the other way, from 37 down to 35. A percentile metric computed on heaped data is reporting the round number nearest the truth, not the truth.
+The quantiles are not fine. The median moves from 18 to 20 as rounding increases, an 11 percent error, because a quantile is a position in a sorted list and heaping moves the values around that position onto the nearest round number. The 90th percentile drifts the other way, down to 35. A percentile metric computed on heaped data is reporting the round number nearest the truth, not the truth.
 
 ## A Threshold on a Round Number
 

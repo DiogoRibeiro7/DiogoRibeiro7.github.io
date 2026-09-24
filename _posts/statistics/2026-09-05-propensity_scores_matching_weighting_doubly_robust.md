@@ -193,7 +193,7 @@ The interesting question is what happens when a model is wrong, which in practic
 | Inverse probability weighting | 2.01 | +0.01 | 0.29 |
 | Doubly robust | 2.00 | +0.00 | 0.20 |
 
-Regression adjustment is biased by 0.19, about a tenth of the effect, and its confidence interval is narrow enough to exclude the truth. Matching and weighting are untouched, because neither ever models the outcome: they balance the covariates and let the data supply the rest.
+Regression adjustment is biased by 0.19, about a tenth of the effect, and its 95 percent confidence interval excludes the truth in three studies out of ten. Matching and weighting are untouched, because neither ever models the outcome: they balance the covariates and let the data supply the rest.
 
 **The propensity model is misspecified.** A confounder is left out of the treatment model, while the outcome model is correct.
 
@@ -231,7 +231,7 @@ for s in (0.5, 1.0, 2.0, 3.0):
 | 2.0 | 0.00 to 1.00 | 37.2% | 78.1 | 14% |
 | 3.0 | 0.00 to 1.00 | 54.9% | 2,623 | 38% |
 
-As the covariates predict treatment more strongly, scores pile up at the ends, weights explode, and the estimate comes to depend on a handful of units. At strength 3, one unit in a hundred carries 38 percent of the weight: the effective sample is tiny and the variance is enormous, which is exactly what the fourth condition showed, with weighting biased by 0.29 and matching's spread quadrupled.
+As the covariates predict treatment more strongly, scores pile up at the ends, weights explode, and the estimate comes to depend on a handful of units. At strength 3, one unit in a hundred carries 38 percent of the weight: the effective sample is tiny and the variance is enormous, which is exactly what the fourth condition showed, with weighting biased by 0.29 and matching's spread tripled.
 
 Trimming units with extreme scores is the usual response.
 

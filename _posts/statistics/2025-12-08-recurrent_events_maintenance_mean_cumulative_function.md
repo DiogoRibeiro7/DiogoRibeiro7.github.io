@@ -169,9 +169,9 @@ for e in ("normal", "harsh"):
 | --- | --- | --- | --- |
 | Normal | 0.75 per year | 0.60 per year | 0.77 per year |
 | Harsh | 1.55 per year | 1.18 per year | 1.50 per year |
-| Ratio harsh / normal | 2.06 | 1.97 | 2.00 |
+| Ratio harsh / normal | 2.06 | 1.97 | 1.94 |
 
-Both analyses get the ratio about right here, because the frailty affects both sites alike and cancels in the ratio, but only the all-events rates are the right magnitude. A budget built on the first-failure rates would be a quarter short at both kinds of site. In a regression with several covariates, the all-events analysis is the Andersen-Gill model, a Cox model in which each machine re-enters the risk set after every failure, and its coefficients are log rate ratios exactly like these.
+Both analyses get the ratio about right here, because the frailty affects both sites alike and cancels in the ratio, but only the all-events rates are the right magnitude. A budget built on the first-failure rates would be a fifth short at normal sites and nearly a quarter short at harsh ones. In a regression with several covariates, the all-events analysis is the Andersen-Gill model, a Cox model in which each machine re-enters the risk set after every failure, and its coefficients are log rate ratios exactly like these.
 
 ## Repeat Offenders
 
@@ -186,7 +186,7 @@ pois = np.random.default_rng(1).poisson(base_rate * np.where(env == "harsh", har
 print(f"without frailty: {np.sort(pois)[::-1][: n_machines // 10].sum() / pois.sum():.0%}")
 ```
 
-The counts have mean 2.2 and variance 5.7, more than twice what a Poisson process would give. The top tenth of machines accounts for 34 percent of failures; in a fleet with the same site mix and observation times but no frailty, the top tenth would account for 29 percent, the share that pure chance plus the site effect produces. The excess is the chronic offenders, and identifying them is a maintenance decision worth money, which the first-failure analysis cannot support because it does not know how many times anything failed.
+The counts have mean 2.2 and variance 5.7, more than twice what a Poisson process would give. The top tenth of machines accounts for 34 percent of failures; in a fleet with the same site mix and observation times but no frailty, the top tenth would account for 27 percent on average (the single such fleet drawn above gives 29), the share that pure chance plus the site effect produces. The excess is the chronic offenders, and identifying them is a maintenance decision worth money, which the first-failure analysis cannot support because it does not know how many times anything failed.
 
 The most useful consequence is that the past predicts the future within a machine.
 

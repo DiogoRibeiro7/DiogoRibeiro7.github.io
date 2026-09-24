@@ -63,7 +63,7 @@ An engineer has three years of hourly peak load on a piece of equipment and has 
 
 The largest of $n$ observations sits near the quantile $1 - 1/n$. Three years of hourly data is 26,280 observations, so the sample maximum estimates the level exceeded about once in three years. The ten-year level is three times rarer than anything in the record; the hundred-year level, thirty times rarer. Neither is in the data, and any estimate of either is an extrapolation.
 
-It is also a noisy one. The probability that a three-year record contains at least one event of the ten-year kind is $1 - 0.9^3$, about 27 percent. One record in four contains something rarer than its own length and overstates the three-year level; three in four do not and understate anything beyond it. Adding a fixed margin to the maximum does not repair this, because the right margin depends on how fast the tail thins out, which is exactly what has not been estimated.
+It is also a noisy one. The probability that a three-year record contains at least one event of the ten-year kind is very nearly $1 - e^{-0.3}$, about 26 percent. One record in four contains something rarer than its own length and overstates the three-year level; three in four do not and understate anything beyond it. Adding a fixed margin to the maximum does not repair this, because the right margin depends on how fast the tail thins out, which is exactly what has not been estimated.
 
 Fitting a familiar distribution to the whole dataset is worse. The body of the data determines the fit, and the body says nothing about the tail. A normal distribution fitted to heavy-tailed data reports a ten-year level that the record has already exceeded many times.
 
@@ -146,7 +146,7 @@ For the hundred-year level the truth is 502, the normal fit says 166, and the Pa
 
 The picture is the argument. The observed points stop at the sample maximum, a little below the three-year line. The normal fit leaves the data before the 98th percentile, and at the level it calls a ten-year event the true exceedance probability is roughly 180 times what it claims. The Pareto fit follows the observed tail through 526 exceedances and continues along the true curve to levels three and thirty times rarer than anything observed.
 
-Two features of the result deserve attention. The fit is a little low: the estimated shape is 0.19 against a true 0.25, and the ten-year estimate is 8 percent under the truth. And the intervals are wide and asymmetric, the hundred-year interval spanning almost a factor of two. Neither is a defect. The first is the threshold bias discussed next; the second is what the uncertainty about a hundred-year event from a three-year record actually is, and an estimate that reported it narrower would be lying.
+Two features of the result deserve attention. The fit is a little low: the estimated shape is 0.19 against a true 0.25, and the ten-year estimate is 7 percent under the truth. And the intervals are wide and asymmetric, the hundred-year interval spanning almost a factor of two. Neither is a defect. The first is the threshold bias discussed next; the second is what the uncertainty about a hundred-year event from a three-year record actually is, and an estimate that reported it narrower would be lying.
 
 ## Choosing the Threshold
 
@@ -167,7 +167,7 @@ for q in (0.90, 0.95, 0.98, 0.99, 0.995):
 | 99% | 263 | 0.22 | 471 |
 | 99.5% | 132 | 0.28 | 564 |
 
-The shape climbs toward its true value of 0.25 as the threshold rises, and the hundred-year estimate climbs with it, from 373 to 564 around a truth of 502. The two standard diagnostics for picking a threshold both come from the Pareto property itself. Above a valid threshold the mean excess is linear in the threshold, so a plot of mean excess against threshold should turn straight; and the shape estimate should stop changing, so a plot of $\xi$ against threshold should go flat. In practice the choice lands between the 90th and 99th percentiles, and the honest report is not one number but the range across a few thresholds, which here is the range the truth sits inside.
+The shape rises with the threshold, though not steadily, from 0.16 to 0.28 against a true value of 0.25, and the hundred-year estimate moves with it, from 373 to 564 around a truth of 502. The two standard diagnostics for picking a threshold both come from the Pareto property itself. Above a valid threshold the mean excess is linear in the threshold, so a plot of mean excess against threshold should turn straight; and the shape estimate should stop changing, so a plot of $\xi$ against threshold should go flat. In practice the choice lands between the 90th and 99th percentiles, and the honest report is not one number but the range across a few thresholds, which here is the range the truth sits inside.
 
 ## Repeating the Experiment
 
@@ -182,7 +182,7 @@ One dataset shows one outcome. Two hundred simulated three-year records show the
 
 The truth is 326. The normal fit is precisely and confidently wrong: an interquartile range of one unit around a value half the true level, because the body of the data pins down the mean and standard deviation and neither has anything to do with the tail. The sample maximum is biased low and spread widely. The margin of 20 percent happens to bracket the truth for this tail, and that is luck: for an exponential tail the same margin would be far too generous and for a heavier one far too little, and nothing in the procedure tells the engineer which tail they have. The Pareto estimate is tighter than the maximum, less biased, and comes with an interval; its remaining downward bias is the threshold effect, and it shrinks at higher thresholds at the cost of width.
 
-The shape parameter is also what tells the engineer how the risk scales. With $\xi = 0.25$, going from the ten-year to the hundred-year level multiplies the excess over the threshold by about $10^{0.25}$, a factor of 1.8. With an exponential tail it would add a constant instead. For this tail the hundred-year level sits 54 percent above the ten-year level; for an exponential tail with the same scale it would sit about 7 percent above. Which of those margins applies is not visible in the sample maximum.
+The shape parameter is also what tells the engineer how the risk scales. With $\xi = 0.25$, going from the ten-year to the hundred-year level multiplies the excess over the 98th-percentile threshold by about 1.9, tending to $10^{0.25}$, a factor of 1.8, for longer return periods. With an exponential tail it would add a constant instead. For this tail the hundred-year level sits 54 percent above the ten-year level; for an exponential tail with the same scale it would sit about 7 percent above. Which of those margins applies is not visible in the sample maximum.
 
 ## Exceedances Come in Clusters
 

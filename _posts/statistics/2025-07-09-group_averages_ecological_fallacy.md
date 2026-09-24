@@ -205,7 +205,7 @@ print(f"individual correlation {r_i:+.3f} on {x.size:,} people, "
 | Individual correlation, on 200,000 people | −0.133 |
 | Is the individual value inside that interval | No |
 
-The interval is half a percentage point wide either side and it excludes the individual answer by nearly a full unit of correlation. The interval is not wrong: it is a correct interval for the correlation between store averages. It simply has nothing to say about customers, and its narrowness invites the reader to think otherwise.
+The interval is about two and a half percentage points wide either side and it excludes the individual answer by nearly a full unit of correlation. The interval is not wrong: it is a correct interval for the correlation between store averages. It simply has nothing to say about customers, and its narrowness invites the reader to think otherwise.
 
 ## Reporting Both Levels
 
