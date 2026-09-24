@@ -139,7 +139,7 @@ for rho in (0.0, 0.3, 0.5, 0.7, 0.85):
 | 0.70 | 0.305 | 0.221 | 0.221 | 0.234 | 0.51 |
 | 0.85 | 0.316 | 0.165 | 0.165 | 0.192 | 0.28 |
 
-At a correlation of 0.7, the CUPED and regression estimates have a variance ratio of 0.52 to the difference in means, against a predicted 0.51. At 0.85 the standard error is about half, which is the precision of four times the users. Stratification into quartiles captures most of the gain but not all of it, because a four-level categorisation of a continuous covariate loses some of the linear information; finer strata close the gap. CUPED and regression adjustment coincide here because both fit the same linear relationship; they differ only when the adjustment is estimated per arm, which is Lin's refinement and matters when the treatment changes the slope.
+At a correlation of 0.7, the CUPED and regression estimates have a variance ratio of 0.52 to the difference in means, against a predicted 0.51. At 0.85 the standard error is about half, 0.53 of the unadjusted one, which is the precision of 3.6 times the users. Stratification into quartiles captures most of the gain but not all of it, because a four-level categorisation of a continuous covariate loses some of the linear information; finer strata close the gap. CUPED and regression adjustment coincide here because both fit the same linear relationship; they differ only when the adjustment is estimated per arm, which is Lin's refinement and matters when the treatment changes the slope.
 
 A covariate uncorrelated with the outcome gains nothing and costs almost nothing: the first row shows the adjusted estimators within a thousandth of the unadjusted one, the price of estimating a $\theta$ that is really zero.
 
