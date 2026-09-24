@@ -197,13 +197,13 @@ print("estimated:", " ".join(f"{v:.2f}" for v in ev))
 | True effect | 0.20 | 0.40 | 0.60 | 0.80 | 1.00 | 1.20 | 1.40 | 1.60 | 1.80 | 2.00 |
 | Group-time estimate | 0.19 | 0.39 | 0.59 | 0.79 | 0.97 | 1.18 | 1.40 | 1.60 | 1.79 | 1.99 |
 
-The event study recovers the dynamic effect to within two hundredths at every exposure. It also answers the question the team was asking better than any single number: the routing logic is worth 0.2 in its first month and 2.0 after ten, and a report that says "0.6" or "1.27" hides the shape that matters for deciding whether to keep rolling it out.
+The event study recovers the dynamic effect to within two hundredths at every exposure but four, where it is three hundredths low. It also answers the question the team was asking better than any single number: the routing logic is worth 0.2 in its first month and 2.0 after ten, and a report that says "0.6" or "1.27" hides the shape that matters for deciding whether to keep rolling it out.
 
 ![Treatment effect by periods since adoption for a staggered rollout in which the effect grows with exposure. The group-time estimates lie on the true dynamic effect at every exposure; the two-way fixed effects coefficient, a horizontal line at about 0.6, sits below half the true average effect on the treated.](/assets/images/figures/staggered_did_event_study.png){: width="1152" height="672" loading="lazy"}
 
 ## Which Control Group
 
-Two versions of the group-time estimator were run: one using only never-treated units as controls, one using every unit not yet treated at $t$. Both are valid under parallel trends, and both gave 1.26 to 1.27 in the growing-effect scenario. The not-yet-treated version uses more data and is more precise, especially in the later periods when most units have adopted, and it is the default in most implementations. The never-treated version is the one to prefer when the never-treated units are a well-defined group with a reason to be untreated that does not involve the outcome, and the not-yet-treated units might be timing their adoption in response to it.
+Two versions of the group-time estimator were run: one using only never-treated units as controls, one using every unit not yet treated at $t$. Both are valid under parallel trends, and both gave 1.26 to 1.27 in the growing-effect scenario. The not-yet-treated version uses more data and is more precise, overall and at every exposure but four, and it is the default in most implementations. The never-treated version is the one to prefer when the never-treated units are a well-defined group with a reason to be untreated that does not involve the outcome, and the not-yet-treated units might be timing their adoption in response to it.
 
 When there are no never-treated units at all, the last cohort serves as the control for everyone else until its own adoption, and the effects for that last cohort in its post-period cannot be estimated. That is a limit of the data, not of the method, and it is better stated than papered over by a regression that will produce a number regardless.
 
