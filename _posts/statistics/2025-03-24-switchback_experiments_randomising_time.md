@@ -256,7 +256,7 @@ for period in (15, 30, 60, 180, 360):
 | --- | --- | --- | --- | --- | --- | --- |
 | 15 m | 2.479% | 2.972% | −0.493% | 0.001% | −0.492% | 26.7% |
 | 30 m | 2.641% | 2.888% | −0.248% | 0.001% | −0.247% | 13.3% |
-| 60 m | 2.996% | 3.121% | −0.125% | 0.001% | −0.124% | 6.7% |
+| 60 m | 2.996% | 3.121% | −0.125% | 0.001% | −0.123% | 6.7% |
 | 180 m | 3.076% | 3.118% | −0.042% | 0.000% | −0.041% | 2.2% |
 | 360 m | 2.688% | 2.709% | −0.021% | 0.000% | −0.021% | 1.1% |
 
@@ -299,7 +299,7 @@ At fifteen-minute periods the burn-in throws away 53 percent of the orders and t
 
 The same table settles the period length question. Power falls steeply as periods lengthen: 50 percent at fifteen minutes with a burn-in, 32 at thirty, 20 at an hour, 11 at three hours. Shorter periods mean more independent draws of the market, and that is the only currency this design spends. The carryover bias that comes with them is handled by the burn-in rather than by lengthening the period, so the usual framing of a bias-variance tradeoff resolves in favour of short periods plus a burn-in.
 
-![Carryover bias and estimator spread against period length, in percentage points of a 3 percent true effect, on a log scale. Going from fifteen-minute to six-hour periods divides the bias by more than twenty and multiplies the spread by four, and a burn-in leaves the spread almost unchanged.](/assets/images/figures/switchback_period_length.png){: width="1152" height="672" loading="lazy"}
+![Carryover bias and estimator spread against period length, in percentage points of a 3 percent true effect, on a log scale. Going from fifteen-minute to six-hour periods divides the bias by more than twenty and multiplies the spread by 4.7, and a burn-in leaves the spread almost unchanged.](/assets/images/figures/switchback_period_length.png){: width="1152" height="672" loading="lazy"}
 
 ## Where the Design Still Fails
 
