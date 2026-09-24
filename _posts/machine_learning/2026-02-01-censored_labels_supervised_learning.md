@@ -109,14 +109,15 @@ fixed = HistGradientBoostingClassifier(max_iter=200, learning_rate=0.05,
                                        random_state=0).fit(Xf[tr & full], event12[tr & full])
 p_fixed = fixed.predict_proba(Xf[test])[:, 1]
 
-# discrete-time hazard: one row per customer-month up to min(churn, follow-up, 12)
+# discrete-time hazard: one row per customer-month observed to its end,
+# up to the month of churn or month 12
 def person_months(idx):
     rows, ys = [], []
     for i in idx:
-        last = int(np.ceil(min(T[i], followup[i], H)))
-        for m in range(1, max(last, 1) + 1):
+        last = min(int(np.ceil(T[i])), int(followup[i]), H)   # int() keeps complete months only
+        for m in range(1, last + 1):
             rows.append((x1[i], x2[i], m))
-            ys.append(int(T[i] <= m and T[i] > m - 1 and m <= followup[i] + 1e-9))
+            ys.append(int(T[i] <= m))                         # churned in month m
     return np.array(rows), np.array(ys)
 
 def design(rows):
@@ -137,7 +138,7 @@ def p12_hazard(idx):
 p_haz = p12_hazard(np.where(test)[0])
 ```
 
-The fixed-horizon model changes the label to what the business asked for and drops every customer who cannot yet have that label. The hazard model changes the unit of analysis instead: one row per customer per month, a binary outcome of churning in that month, and a month effect, so that a customer with four months of follow-up contributes four rows and then stops without being called a negative. The twelve-month probability is one minus the product of twelve monthly survival probabilities.
+The fixed-horizon model changes the label to what the business asked for and drops every customer who cannot yet have that label. The hazard model changes the unit of analysis instead: one row per customer per month, a binary outcome of churning in that month, and a month effect, so that a customer with four months of follow-up contributes four rows and then stops without being called a negative. A month enters only once the customer has been observed to its end, so the month in which the extract falls is left out whatever happened in it: counting it as survived would pull every monthly hazard down, and keeping only the churns in it would push them up. The twelve-month probability is one minus the product of twelve monthly survival probabilities.
 
 ```python
 ten = followup[test]
@@ -151,11 +152,11 @@ for lo, hi in bins:
 
 | Months since signup | Customers | True 12-month churn | Naive | Fixed horizon | Hazard |
 | --- | --- | --- | --- | --- | --- |
-| 0 to 3 | 410 | 0.501 | 0.089 | 0.505 | 0.495 |
-| 3 to 6 | 415 | 0.456 | 0.219 | 0.465 | 0.450 |
-| 6 to 12 | 890 | 0.476 | 0.396 | 0.478 | 0.469 |
-| 12 to 24 | 1,700 | 0.484 | 0.607 | 0.488 | 0.477 |
-| 24 to 36 | 1,633 | 0.490 | 0.737 | 0.494 | 0.483 |
+| 0 to 3 | 410 | 0.501 | 0.089 | 0.505 | 0.504 |
+| 3 to 6 | 415 | 0.456 | 0.219 | 0.465 | 0.458 |
+| 6 to 12 | 890 | 0.476 | 0.396 | 0.478 | 0.477 |
+| 12 to 24 | 1,700 | 0.484 | 0.607 | 0.488 | 0.486 |
+| 24 to 36 | 1,633 | 0.490 | 0.737 | 0.494 | 0.492 |
 
 ![Mean predicted twelve-month churn probability by months since signup, for held-out customers, from three models trained on the same extract. The naive model, trained on whether a customer had churned by the extract date, predicts almost no risk for recent customers and too much for old ones. A fixed-horizon label and a discrete-time hazard model both track the true probability.](/assets/images/figures/censored_labels_cohorts.png){: width="1152" height="672" loading="lazy"}
 
@@ -177,7 +178,7 @@ print("brand-new customer with average features: naive",
 | --- | --- | --- |
 | Naive | 0.764 | 0.193 |
 | Fixed horizon | 0.839 | 0.051 |
-| Hazard | 0.849 | 0.007 |
+| Hazard | 0.849 | 0.006 |
 
 The naive model's AUC against its own labels is 0.896. Against the outcome the business asked about it is 0.764, and its probabilities are off by 19 points on average. For a brand-new customer with average features it predicts a churn probability of 0.006 against a true value of 0.446, a factor of about seventy. None of this is visible from inside the pipeline: the training labels, the validation labels and the test labels all have the same censoring, so every metric the pipeline computes agrees that the model is excellent.
 
@@ -185,7 +186,7 @@ The gap between the fixed-horizon and hazard models in the last table is partly 
 
 ## The Feature That Leaks Time
 
-Tenure at extract did the damage in the naive model, and removing it does not undo it. Without tenure, the model can no longer express the bias per cohort, so it averages it: the snapshot label's positive rate is 42 percent against a true twelve-month rate of 49 percent, and the model predicts around the lower figure for everyone. The label is still the wrong label. Tenure merely made the wrongness visible by cohort, and any other feature that moves with signup date, such as plan version, acquisition channel or number of orders, carries the same information more quietly.
+Tenure at extract did the damage in the naive model, and removing it does not undo it. Without tenure, the model can no longer express the bias per cohort, so it averages it: the average customer has been observed for eighteen months rather than twelve, the snapshot label's positive rate is 54 percent against a true twelve-month rate of 49 percent, and the model predicts around the higher figure whatever the tenure. The label is still the wrong label. Tenure merely made the wrongness visible by cohort, and any other feature that moves with signup date, such as plan version, acquisition channel or number of orders, carries the same information more quietly.
 
 There is a second, subtler version. Features measured at the extract, such as days since last login, are computed on a different clock for each customer. For a customer who churned a year ago, days since last login is enormous, and it is enormous *because* they churned, not before it. A feature computed after the event it is supposed to predict is a leak of the ordinary kind, and snapshot pipelines produce it by default. Features have to be computed as of the reference time the label is defined from, not as of the extract.
 
@@ -194,12 +195,12 @@ There is a second, subtler version. Features measured at the extract, such as da
 | Approach | Data used | Tooling | Output | Cost |
 | --- | --- | --- | --- | --- |
 | Fixed horizon | Customers observed at least $H$ | Any classifier | Probability of the event within $H$ | Discards recent cohorts; lags behind change |
-| Discrete-time hazard | Every customer, every observed period | Any classifier on person-period rows | Full curve; any horizon | Rows multiply; needs month effects |
+| Discrete-time hazard | Every customer, every fully observed period | Any classifier on person-period rows | Full curve; any horizon | Rows multiply; needs month effects |
 | Censoring weights | Every customer with a determinable label | Any classifier, with sample weights | Probability within $H$ | Needs a censoring model; noisy weights near the horizon |
 
 **Fixed horizon** is the smallest change. Define the label as the event within $H$ of a reference time, require follow-up of at least $H$, compute features as of the reference time, and train a classifier. It answers the business question exactly and needs no new tooling. Its cost is data: in the simulation, 5,014 of 14,952 training customers had less than twelve months of follow-up and were dropped, and they were the most recent ones, which are the ones most representative of current conditions.
 
-**Discrete-time hazard** keeps them. The 14,952 customers produced 115,084 customer-month rows, and a customer with four months of history contributed four rows to the estimation of the early hazards without being asked about the eighth month. The model is an ordinary classifier on ordinary rows, which means gradient boosting or a neural network can replace the logistic regression without changing the construction, and it produces the whole survival curve, so the twelve-month question and the three-month question come from one fit. Singer and Willett's account of this construction is the standard reference.
+**Discrete-time hazard** keeps them. The 14,952 customers produced 111,366 customer-month rows, and a customer with four months of history contributed four rows to the estimation of the early hazards without being asked about the eighth month. The model is an ordinary classifier on ordinary rows, which means gradient boosting or a neural network can replace the logistic regression without changing the construction, and it produces the whole survival curve, so the twelve-month question and the three-month question come from one fit. Singer and Willett's account of this construction is the standard reference.
 
 **Censoring weights** take a middle path. Each customer whose twelve-month label can be determined is kept, and weighted by the inverse of the probability of being observed that long, estimated from the censoring distribution. Customers observed for a long time stand in for the similar customers who were censored early. It keeps the classifier and the label unchanged and uses more of the data than the fixed horizon does, at the cost of a censoring model and of large weights where few customers were observed long enough.
 
