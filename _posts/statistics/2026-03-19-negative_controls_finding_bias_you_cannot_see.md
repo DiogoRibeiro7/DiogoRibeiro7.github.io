@@ -144,7 +144,7 @@ for conf_y, conf_n in ((0.8, 0.6), (0.8, 0.8), (0.4, 0.6), (1.2, 0.6), (0.0, 0.6
 | 1.2 | 0.6 | +0.998 | +0.497 | 2.01 |
 | 0.0 | 0.6 | −0.001 | +0.497 | 0.00 |
 
-The ratio is exactly the ratio of the two confounding strengths, which is the whole story in one column. When the control is affected by the hidden variable to the same degree as the outcome, its signal is the bias. When it is affected half as much, it understates the bias by half. And the last row is the case that costs credibility: the control screams while the real outcome is unbiased, because the hidden variable happens to touch one and not the other.
+The ratio is the ratio of the two confounding strengths, up to sampling noise, which is the whole story in one column. When the control is affected by the hidden variable to the same degree as the outcome, its signal is the bias. When it is affected half as much, it understates the bias by half. And the last row is the case that costs credibility: the control screams while the real outcome is unbiased, because the hidden variable happens to touch one and not the other.
 
 So a negative control is a strong detector and a weak estimator. A signal means the design cannot be trusted. The absence of a signal is weaker evidence than it feels, and the size of a signal is not the size of the bias unless there is an argument that the confounding acts equally on both.
 
