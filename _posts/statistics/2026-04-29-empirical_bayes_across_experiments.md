@@ -9,7 +9,7 @@ tags:
 - Statistics
 author_profile: false
 seo_title: 'Empirical Bayes Shrinkage for an Experiment Programme'
-seo_description: 'Across a programme of 200 experiments, shrinking each estimate toward the distribution of past results cuts squared error by 42 percent. The winners that looked biggest overstate the truth by up to 3.8 times, and shrinkage recovers it almost exactly.'
+seo_description: 'Across a programme of 200 experiments, shrinking each estimate toward the distribution of past results cuts root mean squared error by 42 percent. The winners that looked biggest overstate the truth by up to 3.8 times, and shrinkage recovers it almost exactly.'
 excerpt: >-
   The experiment reports a 4.2 percent lift. The last two hundred
   experiments in the same programme had effects spread around a
@@ -136,7 +136,7 @@ print(f"raw error {np.mean(raw_rmse):.5f}, shrunk error {np.mean(sh_rmse):.5f}, 
 | Error of the shrunk estimates | 0.00744 |
 | Reduction | 42.1% |
 
-The estimator of the spread is accurate, and the shrunk estimates are closer to the truth by 42 percent in root mean squared error. That improvement is not a trick of averaging: it holds experiment by experiment, and it is the same phenomenon that makes a batting average early in a season a poor forecast of the rest of it.
+The estimator of the spread is accurate, and the shrunk estimates are closer to the truth by 42 percent in root mean squared error. That improvement is not a trick of averaging: it holds programme by programme, in all 400 of them, and it is the same phenomenon that makes a batting average early in a season a poor forecast of the rest of it.
 
 ## The Ones That Looked Like Wins
 
@@ -163,7 +163,7 @@ print(f"top ten by raw estimate: raw {est[top].mean():+.4f}, "
 
 The top ten by measured effect average 2.64 percent and are worth 0.85. The shrunk estimate says 0.87. Ranking by a noisy measurement selects for luck as well as quality, and the shrinkage undoes almost exactly the amount of luck that the selection introduced.
 
-![Raw and shrunk estimates against the true effect for the positive significant results of one programme, with the diagonal marking perfect agreement. The raw points sit well above the line and the shrunk points sit much closer to it, clustered near the programme's typical effect.](/assets/images/figures/empirical_bayes_shrinkage.png){: width="1152" height="672" loading="lazy"}
+![Raw and shrunk estimates against the true effect for the positive significant results of one simulated programme of 4,000 experiments, with the diagonal marking perfect agreement. The raw points sit well above the line and the shrunk points sit much closer to it on average, clustered near the programme's typical effect.](/assets/images/figures/empirical_bayes_shrinkage.png){: width="1152" height="672" loading="lazy"}
 
 ## How Far They Fall Back Depends on Precision
 
