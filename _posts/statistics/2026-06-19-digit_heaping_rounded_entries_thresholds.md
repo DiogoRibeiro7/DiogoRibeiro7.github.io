@@ -67,7 +67,7 @@ Values entered by people cluster on multiples of five, ten, fifteen and sixty. I
 
 ## Measuring How Much of It There Is
 
-The simulation generates true handling times from a lognormal distribution with a median of eighteen minutes, then records them: a share of entries rounded to the nearest five minutes, the rest to the nearest minute. Whipple's index, borrowed from demography, measures how much mass sits on multiples of five. It reads 100 when there is no preference and 500 when every value is a multiple of five.
+The simulation generates true handling times from a lognormal distribution with a median of eighteen minutes, then records them: a share of entries rounded to the nearest five minutes, the rest to the nearest minute. Whipple's index, borrowed from demography, measures how much mass sits on multiples of five. It reads 500 when every value is a multiple of five and, in its standard form, 100 when there is no preference; over the band from 10 to 60 used here, no preference reads about 108.
 
 ```python
 import numpy as np
@@ -90,7 +90,8 @@ def record(n, heap, rng=RNG):
 
 def whipple(v, lo=10, hi=60):
     """Whipple's index: how much of the mass sits on multiples of five.
-    100 means no preference, 500 means every value is a multiple of five."""
+    About 108 means no preference over 10 to 60 (100 in the standard index),
+    500 means every value is a multiple of five."""
     band = v[(v >= lo) & (v <= hi)]
     on5 = np.isclose(band % 5, 0) | np.isclose(band % 5, 5)
     return 500 * on5.sum() / band.size
