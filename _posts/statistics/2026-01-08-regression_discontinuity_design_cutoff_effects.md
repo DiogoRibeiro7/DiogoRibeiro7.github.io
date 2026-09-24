@@ -124,7 +124,7 @@ for h in (2, 5, 10, 20, 35, 50):
           f"rmse {np.sqrt(np.mean((est-tau)**2)):.2f}")
 ```
 
-The naive comparison of everyone above the cutoff with everyone below gives 8.50, more than four times the truth, because it compares units 25 points apart on average along a trend that rises with the score. The local estimates:
+The naive comparison of everyone above the cutoff with everyone below gives 8.50, more than four times the truth, because it compares units 50 points apart on average along a trend that rises with the score. The local estimates:
 
 | Bandwidth | Units used | Mean estimate | Bias | Standard deviation | Root mean squared error |
 | --- | --- | --- | --- | --- | --- |
@@ -156,7 +156,7 @@ for deg in (1, 2, 4, 6):
 | Degree 4 | 2.02 | 0.57 | 0.57 |
 | Degree 6 | 2.04 | 0.78 | 0.78 |
 
-The degree-2 polynomial does well here because the simulated trend is exactly quadratic, which the analyst never knows. Beyond that, each extra degree adds noise without removing bias, and a degree-6 fit is worse than a local linear fit with a bandwidth of 20 while using five times the data. High-order global polynomials put heavy weight on observations far from the cutoff and produce estimates that swing with the degree chosen, which is Gelman and Imbens's argument for abandoning them. A local fit of low degree near the cutoff is the standard for a reason.
+The degree-2 polynomial does well here because the simulated trend is exactly quadratic, which the analyst never knows. Beyond that, each extra degree adds noise without removing bias, and a degree-6 fit is worse than a local linear fit with a bandwidth of 20 while using two and a half times the data. High-order global polynomials put heavy weight on observations far from the cutoff and produce estimates that swing with the degree chosen, which is Gelman and Imbens's argument for abandoning them. A local fit of low degree near the cutoff is the standard for a reason.
 
 ## Placebo Cutoffs
 
