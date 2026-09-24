@@ -13,8 +13,8 @@ seo_title: 'Zero Events, Small Counts and the Rule of Three'
 seo_description: 'A clean run of n trials with no failures bounds the failure rate at about 3/n, not at zero. This post gives the exact bound, the trials needed to prove a rate is below a target, why the textbook interval fails at small counts, which intervals to use instead, and the same arithmetic for events in time.'
 excerpt: >-
   The release passed 300 test runs without a failure. The failure rate
-  compatible with that result, at 95 percent confidence, is anything up
-  to 1.2 percent. A rate of one in a thousand would have produced the
+  compatible with that result, by the exact two-sided 95 percent
+  interval, is anything up to 1.2 percent. A rate of one in a thousand would have produced the
   same clean run three times out of four.
 summary: >-
   What a run with zero events does and does not establish, the exact
@@ -46,8 +46,8 @@ evidence: >-
   5 percent and expected counts from 0.2 to 20 events, comparing the
   coverage of the Wald, Wilson and Clopper-Pearson intervals.
 methodology: >-
-  Tabulates the exact 95 percent upper bound for zero events against the
-  rule of three and the Wilson and Wald bounds, derives the trials needed
+  Tabulates the upper end of the exact two-sided 95 percent interval for
+  zero events against the rule of three and the Wilson and Wald bounds, derives the trials needed
   for a target rate with zero to five failures from the chi-square
   relation, computes the probability of a clean run under given true
   rates, and measures interval coverage and the share of samples with no
@@ -63,7 +63,7 @@ header:
 ---
 The release candidate ran through 300 end-to-end test executions and none failed. The report says the failure rate is zero, with a confidence interval, computed by the usual formula, of zero to zero. The candidate ships to a fleet that will execute the same path a hundred thousand times in its first week.
 
-A failure rate of one in a thousand would have produced 300 clean runs three times out of four. A rate of one in two hundred would have produced them one time in five. What 300 clean runs actually establish, at 95 percent confidence, is that the rate is below 1.2 percent, which on a hundred thousand executions is up to 1,200 failures. The report's interval of zero to zero is not a conservative summary of a good result; it is the output of a formula applied outside the range in which it works, and it is the one situation in which that formula gives an answer that is not merely imprecise but empty.
+A failure rate of one in a thousand would have produced 300 clean runs three times out of four. A rate of one in two hundred would have produced them one time in five. What 300 clean runs actually establish, by the exact two-sided 95 percent interval, is that the rate is below 1.2 percent, which on a hundred thousand executions is up to 1,200 failures. The report's interval of zero to zero is not a conservative summary of a good result; it is the output of a formula applied outside the range in which it works, and it is the one situation in which that formula gives an answer that is not merely imprecise but empty.
 
 ## What Zero Proves
 
@@ -94,7 +94,7 @@ for n in (10, 30, 100, 300, 1000, 3000):
           f"Wilson {wilson(0, n)[1]:.4f}, Wald {wald(0, n)[1]:.4f}")
 ```
 
-**The 95 percent upper bound on the rate after zero failures in $n$ trials.**
+**Upper ends of two-sided 95 percent intervals for the rate after zero failures in $n$ trials, against the rule of three.**
 
 | Trials | Exact (Clopper-Pearson) | Rule of three, 3/n | Wilson | Wald |
 | --- | --- | --- | --- | --- |
@@ -105,7 +105,7 @@ for n in (10, 30, 100, 300, 1000, 3000):
 | 1,000 | 0.0037 | 0.0030 | 0.0038 | 0.0000 |
 | 3,000 | 0.0012 | 0.0010 | 0.0013 | 0.0000 |
 
-The exact bound and the rule of three agree to within a fifth at every size, and the Wilson interval, which comes from inverting a score test rather than assuming the estimate is normal, lands next to them. The Wald interval, the one in most spreadsheets and most reports, is zero wide at zero events for every $n$, because it estimates the variance from $\hat p(1 - \hat p)$ and $\hat p$ is zero. It has not concluded that the rate is zero; it has failed to produce an interval and reported the failure as certainty.
+The exact column is the upper end of the two-sided Clopper-Pearson interval, which leaves 2.5 percent in each tail, so it is the one-sided 97.5 percent bound $1 - 0.025^{1/n}$, about $3.7/n$ for large $n$. The one-sided 95 percent bound derived above, $1 - 0.05^{1/n}$, is the one the rule of three approximates, and it is 0.0099 at 300 trials. The rule of three sits within a fifth below the two-sided exact bound at every size, and the Wilson interval, which comes from inverting a score test rather than assuming the estimate is normal, lands next to them. The Wald interval, the one in most spreadsheets and most reports, is zero wide at zero events for every $n$, because it estimates the variance from $\hat p(1 - \hat p)$ and $\hat p$ is zero. It has not concluded that the rate is zero; it has failed to produce an interval and reported the failure as certainty.
 
 ## How Many Clean Runs Prove a Rate
 
@@ -127,7 +127,7 @@ for k in (0, 1, 2, 3, 5):
 
 Each factor of ten in the target costs a factor of ten in trials. A team that wants to claim one failure in a thousand needs three thousand clean runs, and a claim of one in ten thousand needs thirty thousand, which is why such claims are usually made from field data rather than from a test campaign. A single failure during the campaign does not end it; it raises the bill.
 
-| Failures observed | Trials for the exact 95% bound to reach 0.1% |
+| Failures observed | Trials for the exact one-sided 95% bound to reach 0.1% |
 | --- | --- |
 | 0 | 2,996 |
 | 1 | 4,744 |
@@ -153,7 +153,7 @@ for p in (0.001, 0.005, 0.01, 0.02):
 | 1.0% | 5% |
 | 2.0% | 0% |
 
-A rate of a tenth of a percent produces the clean run three times out of four, and half a percent produces it one time in five. The 300 runs rule out 2 percent and make 1 percent unlikely; they say almost nothing about the range below half a percent, which is where the difference between an acceptable release and a bad one usually lives. This table is the honest content of the report, and it fits in one line: "300 clean runs; rates up to 1.2 percent remain compatible with this result."
+A rate of a tenth of a percent produces the clean run three times out of four, and half a percent produces it one time in five. The 300 runs rule out 2 percent and make 1 percent unlikely; they say almost nothing about the range below half a percent, which is where the difference between an acceptable release and a bad one usually lives. This table is the honest content of the report, and it fits in one line: "300 clean runs; the exact 95 percent interval for the failure rate is zero to 1.2 percent."
 
 ## Which Interval to Trust When Counts Are Small
 
