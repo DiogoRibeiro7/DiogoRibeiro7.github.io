@@ -18,7 +18,7 @@ excerpt: >-
   and one of them needs more than six times the traffic to see.
 summary: >-
   Why an effect confined to a small triggered population arrives at the
-  dashboard divided by the trigger rate, what that does to the sample
+  dashboard multiplied by the trigger rate, what that does to the sample
   size needed for a decision, when restricting the analysis to triggered
   users is valid and when it silently compares different kinds of user,
   and how counterfactual trigger logging recovers a clean comparison.
