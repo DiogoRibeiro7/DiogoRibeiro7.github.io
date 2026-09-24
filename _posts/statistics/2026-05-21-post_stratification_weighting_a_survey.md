@@ -194,7 +194,7 @@ The bias is removed at every level of imbalance, and the price is precision. At 
 
 That is the right trade in almost every case, because bias does not shrink with sample size and variance does. But it has a planning consequence: a survey that will need heavy weighting should be sized for its effective sample, not its response count.
 
-![Two shares against how unevenly the groups responded: the effective sample size as a fraction of respondents, and the bias surviving weighting as a fraction of the bias before it. Precision falls from 97 percent to under two thirds as the weights spread out, while the surviving bias stays near zero.](/assets/images/figures/weighting_effective_sample.png){: width="1152" height="672" loading="lazy"}
+![Two shares against how unevenly the groups responded: the effective sample size as a fraction of respondents, and the bias surviving weighting as a fraction of the bias before it. Precision falls from 99.8 percent to under two thirds as the weights spread out, while the surviving bias is under 8 percent at the two mildest imbalances, where there is little bias to remove, and within 3 percent of zero beyond them.](/assets/images/figures/weighting_effective_sample.png){: width="1152" height="672" loading="lazy"}
 
 ## The Limit That Matters
 
