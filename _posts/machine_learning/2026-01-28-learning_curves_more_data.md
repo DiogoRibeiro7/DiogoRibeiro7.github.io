@@ -18,7 +18,7 @@ excerpt: >-
 summary: >-
   What a learning curve shows and why its shape is usually a power law, a
   simulation with a known Bayes error in which a gradient boosting model
-  heads for that floor while a logistic regression stalls three times higher,
+  heads for that floor while a logistic regression stalls about nine points higher,
   how a fit to the five smallest training sizes predicts the three largest,
   how to turn the fitted curve into a price for the next batch of labels,
   what label noise does to the curve and to its apparent floor, and the
@@ -134,11 +134,11 @@ for i, n in enumerate(sizes):
 | 16,000 | 0.298 | 0.296 | 0.215 | 0.167 |
 | 32,000 | 0.298 | 0.296 | 0.211 | 0.182 |
 
-The Bayes error is 0.205. The logistic regression stops improving at about a thousand examples and sits at 0.298 from then on, almost ten points above the floor, because no quantity of data teaches a linear model an interaction. The boosting model is worse than the logistic one at 250 examples and better from 500 onwards, and at 32,000 it is within six tenths of a point of the Bayes rate.
+The Bayes error is 0.205. The logistic regression stops improving at about a thousand examples and sits at 0.298 from then on, almost ten points above the floor, because no quantity of data teaches a linear model an interaction. The boosting model is better than the logistic one at every size, by three points at 250 examples, and at 32,000 it is within six tenths of a point of the Bayes rate.
 
 The training error column is the diagnostic. At 250 examples the boosting model's training error is 0.127 against a test error of 0.296: a gap of seventeen points, which is variance, and variance is what more data removes. The logistic model's gap is three points at 250 and zero by a thousand. A model with high error and no gap is not short of data. It is short of capacity or of features, and the budget request should be redirected.
 
-The curve is noisy where it is steep. The standard deviation across the three training draws at 250 examples is 0.025, larger than the difference between the two models at that size; by 1,000 it is 0.002. A learning curve built from one draw per size can show a model getting worse with more data, and the remedy is to average several draws at each size.
+The curve is noisy where it is steep. The standard deviation across the three training draws at 250 examples is 0.025, almost as large as the 0.030 difference between the two models at that size; by 1,000 it is 0.002. A learning curve built from one draw per size can show a model getting worse with more data, and the remedy is to average several draws at each size.
 
 ## Extrapolating the Curve
 
@@ -160,7 +160,7 @@ for name in models:
     print(f"   predicted at 1,000,000 = {power(1e6, a, b, c):.3f}   (Bayes {bayes:.3f})")
 ```
 
-![Test error against training-set size for a logistic regression and a gradient boosting classifier on the same simulated task, with the Bayes error rate. Power-law curves fitted to the five smallest sizes predict the held-out larger sizes: the boosting curve heads for the Bayes rate, the logistic curve for a floor three times higher.](/assets/images/figures/learning_curves_extrapolation.png){: width="1152" height="672" loading="lazy"}
+![Test error against training-set size for a logistic regression and a gradient boosting classifier on the same simulated task, with the Bayes error rate. Power-law curves fitted to the five smallest sizes predict the held-out larger sizes: the boosting curve heads for the Bayes rate, the logistic curve for a floor about nine points higher.](/assets/images/figures/learning_curves_extrapolation.png){: width="1152" height="672" loading="lazy"}
 
 | Model | Fitted floor $a$ | Exponent $c$ | Predicted at 8,000 | Actual | Predicted at 32,000 | Actual |
 | --- | --- | --- | --- | --- | --- | --- |
