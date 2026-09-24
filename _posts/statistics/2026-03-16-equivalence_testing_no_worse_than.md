@@ -126,7 +126,7 @@ for n in (200, 800, 1600, 3200):
 | 400 | 5% | 91% | 96% |
 | 800 | 5% | 100% | 100% |
 
-At 50 cases the interval is about three points wide and can never fit inside a two-point margin, so equivalence is undemonstrable at that size even for models that are in fact identical. The team that concluded equivalence from 50 cases had no test that could have reached that conclusion.
+At 50 cases the interval is about three points wide and almost never fits inside a two-point margin, so equivalence is all but undemonstrable at that size even for models that are in fact identical. The team that concluded equivalence from 50 cases had no test that could realistically have reached that conclusion.
 
 **A challenger 1.5 points worse.** This is the case that matters, because it is the one in which the wrong reading admits an inferior model.
 
@@ -174,7 +174,7 @@ print(f"required n for 90% power: {n_req90:.0f}")
 
 Simulation at 308 cases gives 81 percent. For 90 percent power the formula asks for 390. For a true difference $\Delta$ inside the margin, replace $\delta$ by $\delta - |\Delta|$ and, since only the nearer edge is then in doubt, $z_{1-\beta/2}$ by $z_{1-\beta}$: at half a point, the 80 percent figure becomes about 890, in line with the table.
 
-The comparison worth making is with the size needed to *detect* a one-point difference by a two-sided t-test at the same power, which is $\sigma_d^2 (z_{0.975} + z_{0.8})^2 / \delta^2$, about 282. Demonstrating equivalence within a margin costs about the same as detecting a difference of that size. It is not a cheaper claim; it is a different one, and the team that expected to establish it from a test set too small to detect anything was asking for something that size cannot provide.
+The comparison worth making is with the size needed to *detect* a one-point difference by a two-sided t-test at the same power, which is $\sigma_d^2 (z_{0.975} + z_{0.8})^2 / \delta^2$, about 283. Demonstrating equivalence within a margin costs about the same as detecting a difference of that size. It is not a cheaper claim; it is a different one, and the team that expected to establish it from a test set too small to detect anything was asking for something that size cannot provide.
 
 Two practical notes. The standard deviation of the paired difference can be measured on any existing data on which both models have been scored, so the test set can be sized before it is labeled. And pairing is what keeps $\sigma_d$ at six: the two models make many of the same errors, and the difference of their losses varies far less than either loss does. Comparing on separate test sets, or against a number from an older evaluation, throws that away and multiplies the required size several times over.
 
