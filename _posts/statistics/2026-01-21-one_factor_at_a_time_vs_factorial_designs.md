@@ -14,7 +14,7 @@ seo_description: 'Changing one factor at a time from a baseline cannot see inter
 excerpt: >-
   The team tests each of four process settings on its own, sees two of them
   make things worse, keeps the baseline, and never learns that the two
-  "harmful" changes together would have lifted the response by eight points.
+  "harmful" changes together would have lifted the response by seven points.
 summary: >-
   Why one-factor-at-a-time experiments cannot measure interactions and can be
   trapped by them, what a two-level factorial design measures instead and why
@@ -61,7 +61,7 @@ header:
 ---
 A production line has four settings the engineers believe matter: a temperature, a feed rate, a catalyst grade and a mixing time. The current recipe is the baseline. To improve it they do the careful thing. Holding everything else at baseline, they raise the temperature and run three batches. Yield drops by a point. They put the temperature back, raise the feed rate, run three more batches. Yield drops by two. They try the catalyst: nothing. The mixing time: up by one. Fifteen batches later they keep the longer mixing time and file a report saying the other three settings are already where they should be.
 
-The process they were tuning has an eight-point improvement available. Raising the temperature *and* the feed rate together lifts the yield from 8.5 to 16.5. Either change alone, at the baseline value of the other, makes things worse, which is exactly what the fifteen batches measured, honestly and precisely. One factor at a time cannot see an interaction, and when the interaction is the largest effect in the system, it walks the experiment into the wrong corner and leaves it there.
+The process they were tuning has an eight-point improvement available. Raising the temperature *and* the feed rate together lifts the yield from 8.5 to 15.5, and the longer mixing time adds the last point. Either change alone, at the baseline value of the other, makes things worse, which is exactly what the fifteen batches measured, honestly and precisely. One factor at a time cannot see an interaction, and when the interaction is the largest effect in the system, it walks the experiment into the wrong corner and leaves it there.
 
 ## What One Factor at a Time Measures
 
@@ -167,15 +167,15 @@ for label, fn, arg in [("OFAT, 15 runs", ofat, 3), ("OFAT, 40 runs", ofat, 8), (
 | Full factorial $2^4$ | 16 | 70% |
 | Full factorial, replicated | 32 | 77% |
 
-The one-at-a-time rows get worse with more runs. That is the signature of bias rather than noise: with fifteen runs the estimates are noisy enough that the experiment occasionally stumbles into raising $A$ or $B$ by accident, and with a hundred runs it measures the wrong quantities precisely and never does. The half fraction, with eight runs, finds the optimum ten times more often than one at a time with a hundred.
+The one-at-a-time rows get worse with more runs. That is the signature of bias rather than noise: with fifteen runs the estimates are noisy enough that the experiment occasionally stumbles into raising $A$ or $B$ by accident, and with a hundred runs it measures the wrong quantities precisely and never does. The half fraction, with eight runs, finds the optimum ten times more often than one at a time with fifteen.
 
-The factorial designs miss the optimum about three times in ten, and every one of those misses is on $D$. Across three thousand further experiments, the sixteen-run factorial and the eight-run half fraction both set $A$ and $B$ correctly every time and $D$ correctly about 70 percent of the time. The choice of $D$ at the best corner rides on its main effect of one point plus its three interactions with the other factors, each estimated with a standard error of one, so the prediction that decides it has about even odds of the wrong sign when the effect is this small. The design finds the large effects and the interaction at once, and leaves a small effect to be resolved by replication, which is the right order to learn things in.
+The factorial designs miss the optimum about three times in ten, and nearly every one of those misses is on $D$. Across three thousand further experiments, the sixteen-run factorial set $A$ and $B$ correctly every time and the eight-run half fraction got one of them wrong about once in six hundred, and both set $D$ correctly about 70 percent of the time. The choice of $D$ at the best corner rides on its main effect of one point plus its three interactions with the other factors, each estimated with a standard error of one, so the prediction that decides it has the wrong sign about three times in ten when the effect is this small. The design finds the large effects and the interaction at once, and leaves a small effect to be resolved by replication, which is the right order to learn things in.
 
 ![Share of simulated experiments that end at the best setting against the number of runs, for a four-factor process with one strong interaction. One factor at a time is trapped by the interaction at every budget; the factorial designs find the optimum two thirds to three quarters of the time from eight to thirty-two runs.](/assets/images/figures/factorial_vs_ofat_optimum.png){: width="1152" height="672" loading="lazy"}
 
 ## Seeing the Interaction
 
-The factorial design estimates the $AB$ interaction as the difference between the effect of $A$ at $B = +1$ and its effect at $B = -1$, halved, and every run contributes to it. At sixteen runs the estimate is $5.0 \pm 1.0$ and its $t$ statistic exceeds 2 in every one of the four thousand simulations. An interaction of this size is not subtle; it is invisible to one-factor-at-a-time experimentation by construction, not by lack of power.
+The factorial design estimates the $AB$ interaction as the difference between the effect of $A$ at $B = +1$ and its effect at $B = -1$, halved, and every run contributes to it. At sixteen runs the estimate is $5.0 \pm 1.0$ and its $t$ statistic exceeds 2 in all but six of the four thousand simulations. An interaction of this size is not subtle; it is invisible to one-factor-at-a-time experimentation by construction, not by lack of power.
 
 ```python
 for n_rep in (1, 2, 4):
