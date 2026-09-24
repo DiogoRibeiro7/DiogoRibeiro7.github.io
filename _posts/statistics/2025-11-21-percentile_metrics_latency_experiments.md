@@ -178,7 +178,7 @@ for q in (0.5, 0.95, 0.99):
 
 The formula matches the simulation to within a fraction of a percentage point, which is the check that the intuition about density is the right one.
 
-![Relative standard error of the mean, median, 95th and 99th percentile against the number of requests, on log scales. The median is an order of magnitude more precise than the 99th percentile at every sample size.](/assets/images/figures/percentile_precision.png){: width="1152" height="672" loading="lazy"}
+![Relative standard error of the mean, median, 95th and 99th percentile against the number of requests, on log scales. The median is about eight times as precise as the 99th percentile at every sample size.](/assets/images/figures/percentile_precision.png){: width="1152" height="672" loading="lazy"}
 
 ## What It Costs to Detect a Change
 
