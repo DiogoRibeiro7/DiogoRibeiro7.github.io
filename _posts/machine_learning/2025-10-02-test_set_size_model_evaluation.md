@@ -189,7 +189,7 @@ Model A has 90.0 percent accuracy and model B 90.9 percent, and they disagree on
 
 ![How often a test set ranks two classifiers correctly, against test-set size, when model B is one accuracy point better than model A and the two disagree on about eight percent of cases. Evaluating both on the same test set beats separate test sets at every size, and a paired test reaches significance long before two independent confidence intervals stop overlapping.](/assets/images/figures/test_set_size_ranking.png){: width="1152" height="672" loading="lazy"}
 
-Four things are in that table. On 400 or 500 cases, the better model measures higher about three times in four, which means the worse model wins the comparison one time in four. Evaluating the two models on separate test sets, which happens whenever a challenger is scored on fresh data while the incumbent's number comes from its original evaluation, is worse at every size. The paired test needs about 8,000 cases to reach 80 percent power for a one-point difference. And the rule of thumb that two models differ when their confidence intervals do not overlap is so conservative that it needs 20,000 cases to fire reliably, because it ignores the pairing entirely and treats two correlated measurements as independent.
+Four things are in that table. On 400 or 500 cases, the better model measures higher about three times in four, which means the worse model wins the comparison one time in four. Evaluating the two models on separate test sets, which happens whenever a challenger is scored on fresh data while the incumbent's number comes from its original evaluation, is worse at every size. The paired test needs between 5,000 and 10,000 cases to reach 80 percent power for a one-point difference. And the rule of thumb that two models differ when their confidence intervals do not overlap is so conservative that it needs 20,000 cases to fire reliably, because it ignores the pairing entirely and treats two correlated measurements as independent.
 
 ## Sizing the Test Set
 
@@ -218,7 +218,7 @@ for _ in range(reps):
 print(f"formula size n = {n}, simulated power = {hits/reps:.0%}")
 ```
 
-With $d = 0.084$ and $\delta = 0.0092$ the formula gives 7,734 cases. Simulating 2,000 test sets of that size, the paired test rejects in 84 percent of them: the target, with a little margin from the difference between the normal approximation behind the formula and the exact binomial test being run.
+With $d = 0.084$ and $\delta = 0.0092$ the formula gives about 7,790 cases, and 7,734 from the unrounded simulated values the code uses. Simulating 2,000 test sets of 7,734 cases, the paired test rejects in 84 percent of them: the target, with a little margin from the difference between the normal approximation behind the formula and the exact binomial test being run.
 
 The formula's inputs are more available than they look. The disagreement rate does not need labels: run both models on unlabeled production data and count how often they differ. A validation set gives a rough $\delta$. Both can be known before a single test case is labeled, which means the labeling budget can be set from the comparison it has to support rather than from a percentage.
 
