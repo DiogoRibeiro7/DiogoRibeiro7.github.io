@@ -149,7 +149,7 @@ Two things stand out. The bias is large relative to the effect long before it is
 
 The 0.2 percent row is the uncomfortable one. The bias is already a tenth of the effect and the check almost never fires. Nothing in the data reveals it; the defence there is not the statistical test but the engineering practice of logging assignment at the moment of randomisation rather than at the moment of exposure.
 
-![Relative error in the measured lift and the share of experiments whose sample ratio check fires, against the share of treated users lost before logging. The check is nearly silent while the error is a tenth of the effect and fires reliably once the error approaches the effect itself.](/assets/images/figures/srm_detection_and_bias.png){: width="1152" height="672" loading="lazy"}
+![Relative bias in the measured lift, averaged over experiments, and the share of experiments whose sample ratio check fires, against the share of treated users lost before logging. The check is nearly silent while the bias is a tenth of the effect or less and fires reliably once the bias is about half the effect.](/assets/images/figures/srm_detection_and_bias.png){: width="1152" height="672" loading="lazy"}
 
 ## Why the Result Cannot Be Rescued
 

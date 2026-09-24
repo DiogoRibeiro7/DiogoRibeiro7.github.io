@@ -110,7 +110,7 @@ The picture makes the mechanism visible. The identity line is where machines wou
 
 ## The Mirror Image
 
-The best decile went the other way, from 0.52 failures to 2.22, more than a fourfold increase. Nobody opens an investigation into why the best machines deteriorated, which is precisely why the effect goes unnoticed: attention is asymmetric, the statistics are not. Any before-after analysis of a selected group should report what happened to the opposite extreme over the same period. If the best group got worse by about as much as the worst group improved, the intervention has not yet demonstrated anything.
+The best decile went the other way, from 0.52 failures to 2.22, about a fourfold increase. Nobody opens an investigation into why the best machines deteriorated, which is precisely why the effect goes unnoticed: attention is asymmetric, the statistics are not. Any before-after analysis of a selected group should report what happened to the opposite extreme over the same period. If the best group got worse by about as much as the worst group improved, the intervention has not yet demonstrated anything.
 
 ## A Placebo Test
 

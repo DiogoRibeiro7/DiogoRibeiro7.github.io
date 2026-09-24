@@ -148,7 +148,7 @@ At 50 cases the t-test is non-significant six times in ten, and a team reading n
 | 1,600 | 95% | 95% |
 | 3,200 | 100% | 100% |
 
-Showing equivalence is harder when the true difference is not zero, because the interval has to clear the margin from a starting point half a point closer to it. Four times the cases are needed compared with identical models, and that is the general rule: the required size grows with the inverse square of the distance between the true difference and the margin.
+Showing equivalence is harder when the true difference is not zero, because the interval has to clear the margin from a starting point half a point closer to it. Nearly three times the cases are needed compared with identical models. The required size grows with the inverse square of the distance between the true difference and the margin, which on its own would make it four times, but away from zero only the test against the nearer edge is in any doubt, and one test is easier to pass than two.
 
 ![Share of paired comparisons reaching each conclusion against the number of test cases, with a one-point equivalence margin and a six-point standard deviation of the per-item difference. A challenger that is truly 1.5 points worse produces a non-significant t-test more than half the time at 50 cases, which is not evidence that it is no worse; two identical models need about 300 cases before the equivalence test can say so.](/assets/images/figures/equivalence_testing_power.png){: width="1152" height="672" loading="lazy"}
 
@@ -172,7 +172,7 @@ n_req90 = sigma_d**2 * (z(0.95) + z(0.95)) ** 2 / margin**2
 print(f"required n for 90% power: {n_req90:.0f}")
 ```
 
-Simulation at 308 cases gives 81 percent. For 90 percent power the formula asks for 390. For a true difference $\Delta$ inside the margin, replace $\delta$ by $\delta - |\Delta|$: at half a point, the 80 percent figure becomes about 1,230, in line with the table.
+Simulation at 308 cases gives 81 percent. For 90 percent power the formula asks for 390. For a true difference $\Delta$ inside the margin, replace $\delta$ by $\delta - |\Delta|$ and, since only the nearer edge is then in doubt, $z_{1-\beta/2}$ by $z_{1-\beta}$: at half a point, the 80 percent figure becomes about 890, in line with the table.
 
 The comparison worth making is with the size needed to *detect* a one-point difference by a two-sided t-test at the same power, which is $\sigma_d^2 (z_{0.975} + z_{0.8})^2 / \delta^2$, about 282. Demonstrating equivalence within a margin costs about the same as detecting a difference of that size. It is not a cheaper claim; it is a different one, and the team that expected to establish it from a test set too small to detect anything was asking for something that size cannot provide.
 

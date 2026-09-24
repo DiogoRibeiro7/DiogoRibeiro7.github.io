@@ -196,7 +196,7 @@ The bias is always downward, and it is large. At the middle row the method repor
 
 That correlation is measurable, and it is the warning sign. Cross-tabulate the two lists and compare the overlap against what independence predicts, which is $$n_1 n_2 / N$$. An overlap materially larger than that means the estimate is a lower bound rather than an estimate.
 
-![Estimated population against the spread in how easy items are to find, showing the two-pass Chapman estimate, Chao's lower bound from three passes, and the number found by at least one pass, against a true population of 500. The two-pass estimate falls away steeply as the spread grows, ending level with what was actually found, while Chao's bound stays much closer and errs low.](/assets/images/figures/capture_recapture_heterogeneity.png){: width="1152" height="672" loading="lazy"}
+![Estimated population against the spread in how easy items are to find, showing the two-pass Chapman estimate, Chao's lower bound from three passes, and the number found by at least one pass, against a true population of 500. The two-pass estimate falls away steeply as the spread grows, ending level with what was actually found, while Chao's bound starts at the truth, stays much closer and errs low once the spread grows.](/assets/images/figures/capture_recapture_heterogeneity.png){: width="1152" height="672" loading="lazy"}
 
 ## Using It to Decide Whether to Stop
 
@@ -253,12 +253,14 @@ def loglinear(a, b, c):
 
 def chao(a, b, c):
     """Chao's lower bound: items seen once and twice carry the information about
-    items seen never, and it does not assume the passes are independent."""
+    items seen never, and it does not assume the passes are independent. With t
+    passes the correction carries a factor (t - 1) / t."""
+    t = 3
     times = a.astype(int) + b.astype(int) + c.astype(int)
     d = int((times > 0).sum())
     f1 = int((times == 1).sum())
     f2 = int((times == 2).sum())
-    return d + f1 ** 2 / (2 * f2) if f2 else np.inf
+    return d + (t - 1) / t * f1 ** 2 / (2 * f2) if f2 else np.inf
 
 
 for spread in (0.0, 0.4, 0.8, 1.2):
@@ -279,10 +281,10 @@ for spread in (0.0, 0.4, 0.8, 1.2):
 
 | Spread | Seen by any pass | Two passes | Three passes with interactions | Chao lower bound |
 | --- | --- | --- | --- | --- |
-| 0.0 | 418 | 497 | 498, quartiles 482 to 520 | 543 |
-| 0.4 | 393 | 434 | 535, quartiles 503 to 576 | 509 |
-| 0.8 | 338 | 348 | 714, quartiles 618 to 839 | 460 |
-| 1.2 | 276 | 277 | 952, quartiles 755 to 1205 | 400 |
+| 0.0 | 418 | 497 | 498, quartiles 482 to 520 | 501 |
+| 0.4 | 393 | 434 | 535, quartiles 503 to 576 | 470 |
+| 0.8 | 338 | 348 | 714, quartiles 618 to 839 | 419 |
+| 1.2 | 276 | 277 | 952, quartiles 755 to 1205 | 359 |
 
 The truth is 500 in every row. When the passes really are independent, all three methods agree and the log-linear model costs nothing. As soon as items differ in difficulty, the two-pass estimate collapses downward and the log-linear model overshoots, badly and with enormous spread, because it is fitting a pairwise interaction to a dependence that is not pairwise: the passes are correlated through the items, not through each other. Chao's bound stays closest, and errs in the direction it is meant to, which is low.
 

@@ -174,7 +174,7 @@ for e in ("normal", "harsh"):
 | Normal | 4.70 | 8.85 | 4.61 |
 | Harsh | 3.13 | 5.60 | 3.00 |
 
-Without the correction both medians are inflated, and the harsh sites are inflated proportionally more, because selection by survival removes a larger share of the short-lived harsh units. The gap between sites, 1.6 years in truth, reads as 3.3 years on the naive curves; a decision about whether harsh sites justify a different maintenance regime would be made on a difference twice its real size, from a fleet in which the harsh units that mattered most are absent. The left-truncated estimates put both medians within a tenth of a year of the truth.
+Without the correction both medians are inflated, and by a similar factor, 1.88 times the truth at normal sites and 1.79 at harsh sites; in years that is 4.15 at normal sites against 2.47 at harsh ones. The gap between sites, 1.6 years in truth, reads as 3.3 years on the naive curves; a decision about whether harsh sites justify a different maintenance regime would be made on a difference twice its real size, from a fleet in which the harsh units that mattered most are absent. The left-truncated estimates put the normal sites' median within a tenth of a year of the truth and the harsh sites' within 0.14.
 
 ## Failure Rates That Point the Wrong Way
 
