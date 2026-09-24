@@ -15,7 +15,7 @@ excerpt: >-
   Eight percent of users ever open the panel the experiment changed. The
   effect among them is a 6 percent lift, and the number on the dashboard
   is 0.76 percent. Both are correct, they answer different questions,
-  and one of them needs thirteen times the traffic to see.
+  and one of them needs more than six times the traffic to see.
 summary: >-
   Why an effect confined to a small triggered population arrives at the
   dashboard divided by the trigger rate, what that does to the sample
@@ -223,7 +223,7 @@ The counterfactual analysis is immune because it defines the triggered set the s
 
 Dilution is a measurement problem; it is not always a problem with the metric. The all-user number is the right one for a forecast, because the company's revenue is the population number and not the triggered number. The triggered number is the right one for a decision about the feature, because it measures what the change does when it is used, and it is the number that generalises if the feature is later made easier to find.
 
-The practical consequence is that both belong in the report. A feature with a 6 percent effect on 8 percent of users is worth 0.5 percent overall today, and might be worth 2 percent if the entry point moves. Reporting only the diluted figure hides the feature's quality; reporting only the triggered figure overstates its value to the business.
+The practical consequence is that both belong in the report. A feature with a 6 percent effect on 8 percent of users is worth 0.76 percent overall today, and might be worth 2 percent if the entry point moves. Reporting only the diluted figure hides the feature's quality; reporting only the triggered figure overstates its value to the business.
 
 ```python
 for p in (0.50, 0.20, 0.08, 0.02):
