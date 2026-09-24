@@ -226,6 +226,8 @@ The choice depends on the question, and the questions are different from the sin
 5. **Rank machines by frailty** and use failure history as the first inspection criterion; a year-one failure roughly doubles the year-two rate.
 6. **Reserve first-failure analysis for the questions it answers**: warranty exposure, infant mortality and the time to the first intervention, none of which is the fleet's failure burden.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/recurrent_events.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Andersen, P. K., & Gill, R. D. (1982). Cox's regression model for counting processes: a large sample study. *The Annals of Statistics*, 10(4), 1100-1120.

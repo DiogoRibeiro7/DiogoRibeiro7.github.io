@@ -171,6 +171,8 @@ From **cubic splines** for smooth curve fitting to **B-splines** for handling no
 
 If you're dealing with **nonlinear patterns** in data, consider giving splines a try. With their balance of flexibility and smoothness, they just might be the tool you need to uncover the true relationship hiding in your data.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/data_science/splines.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## Appendix: Python Code for Splines
 
 Below is an example of how to use splines in Python with the `scipy` and `statsmodels` libraries. The code demonstrates fitting a spline to data, plotting the result, and using spline regression to model nonlinear relationships.

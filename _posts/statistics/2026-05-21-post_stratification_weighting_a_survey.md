@@ -250,6 +250,8 @@ None of those is free, and all three are more useful than adding a fourth weight
 5. Do not describe a weighted survey as representative. Say what it was weighted on, because that is exactly the extent of the claim.
 6. Spend effort on response rates and on non-respondent follow-up rather than on more weighting variables, because that is the only way to reach the bias that weighting cannot.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/post_stratification.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Holt, D., & Smith, T. M. F. (1979). Post stratification. *Journal of the Royal Statistical Society: Series A*, 142(1), 33-46.

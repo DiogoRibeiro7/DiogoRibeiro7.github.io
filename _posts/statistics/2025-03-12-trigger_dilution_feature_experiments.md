@@ -252,6 +252,8 @@ The last row is the one that produces false conclusions. A real 6 percent improv
 5. Size on the analysis you will act on. A triggered analysis needs users in proportion to one over the trigger rate; an all-user analysis needs one over its square.
 6. When the trigger cannot be logged counterfactually, keep the all-user estimate as the primary result and treat the triggered figure as an upper bound.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/trigger_dilution.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Deng, A., Lu, J., & Litz, J. (2017). Trustworthy analysis of online A/B tests: pitfalls, challenges and solutions. *Proceedings of the Tenth ACM International Conference on Web Search and Data Mining*, 641-649.

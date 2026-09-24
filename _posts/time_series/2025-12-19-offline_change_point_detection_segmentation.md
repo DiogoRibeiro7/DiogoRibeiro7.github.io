@@ -225,6 +225,8 @@ The two problems share cost functions and little else. The sequential detector's
 5. **Validate by simulation** on a series with the same noise structure and no changes, and confirm that the chosen penalty finds none.
 6. **Report locations with a tolerance**, and the penalty that produced them.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/time_series/optimal_partition.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Killick, R., Fearnhead, P., & Eckley, I. A. (2012). Optimal detection of changepoints with a linear computational cost. *Journal of the American Statistical Association*, 107(500), 1590-1598.

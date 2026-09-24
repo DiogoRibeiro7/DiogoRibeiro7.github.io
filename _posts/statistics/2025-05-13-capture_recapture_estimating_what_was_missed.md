@@ -303,6 +303,8 @@ Each of those has the same weakness. Two matching rules both find the obvious du
 5. Add a third pass when the stakes justify it, and use it first to test dependence rather than to refine the number.
 6. When dependence is present, quote Chao's lower bound and describe it as a lower bound. A floor that is honest beats a point estimate that is quietly 30 percent low.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/capture_recapture.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Chapman, D. G. (1951). Some properties of the hypergeometric distribution with applications to zoological sample censuses. *University of California Publications in Statistics*, 1(7), 131-160.

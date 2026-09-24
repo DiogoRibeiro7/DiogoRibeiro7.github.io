@@ -252,6 +252,8 @@ Estimate $\theta$ on the pooled data from both arms, not per arm and not on hist
 5. **Never adjust for anything measured after assignment.** A post-treatment covariate turns the variance reduction into bias.
 6. **Report the covariate and its correlation** with every result, so the precision is explainable.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/cuped.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Deng, A., Xu, Y., Kohavi, R., & Walker, T. (2013). Improving the sensitivity of online controlled experiments by utilizing pre-experiment data. *Proceedings of the Sixth ACM International Conference on Web Search and Data Mining*, 123-132.

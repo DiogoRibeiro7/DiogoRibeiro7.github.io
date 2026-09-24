@@ -222,6 +222,8 @@ Heterogeneity across cohorts is not an assumption violation; it is the reason th
 5. **Check parallel trends and anticipation** on the pre-adoption coefficients rather than asserting them.
 6. **Use an implementation that does this for you** when the panel is large: the `did` package in R and `csdid` in Stata implement Callaway and Sant'Anna, and `differences` in Python covers the same ground. Stacked regression and the imputation estimator of Borusyak, Jaravel and Spiess are alternatives with the same logic.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/staggered_did.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Goodman-Bacon, A. (2021). Difference-in-differences with variation in treatment timing. *Journal of Econometrics*, 225(2), 254-277.

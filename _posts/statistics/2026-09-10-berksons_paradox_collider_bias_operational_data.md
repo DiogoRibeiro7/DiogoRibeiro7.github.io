@@ -220,6 +220,8 @@ The defensive habits follow from the mechanism. Analyse the population the selec
 5. **Train on the population the model will score**, or, when the labels exist only for the selected cases, say so and test the model on a sample of unselected cases before trusting it on them.
 6. **Prefer selection-aware methods** when the selection cannot be undone: sample-selection models when the selection inputs are recorded, and inverse-probability weighting by the selection probability when it can be estimated.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/berkson_selection.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Berkson, J. (1946). Limitations of the application of fourfold table analysis to hospital data. *Biometrics Bulletin*, 2(3), 47-53.

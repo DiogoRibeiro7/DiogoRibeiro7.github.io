@@ -236,6 +236,8 @@ The floor moves when the *test* labels are noisy. With ten percent of test label
 6. **Clean the test labels first**, since a noisy evaluation raises the apparent floor and no training data lowers it.
 7. **Retune at each size** so that the curve describes the model class, not one configuration of it.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/machine_learning/learning_curves.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Cortes, C., Jackel, L. D., Solla, S. A., Vapnik, V., & Denker, J. S. (1994). Learning curves: asymptotic values and rate of convergence. *Advances in Neural Information Processing Systems*, 6.

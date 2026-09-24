@@ -245,6 +245,8 @@ The most reliable source is time. An outcome recorded before the treatment exist
 5. Do not subtract the control unless you can argue the confounding acts equally on both. Use it to bound the claim instead.
 6. Run A/A comparisons continuously in the experiment platform rather than once before launch, and size them against the smallest bias that would change a decision.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/negative_controls.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Lipsitch, M., Tchetgen Tchetgen, E., & Cohen, T. (2010). Negative controls: a tool for detecting confounding and bias in observational studies. *Epidemiology*, 21(3), 383-388.

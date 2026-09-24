@@ -232,6 +232,8 @@ The design cannot say what the treatment does far from the cutoff. The bank lear
 5. **Run placebo cutoffs** away from the threshold and check that covariates fixed before assignment do not jump at it.
 6. **State that the estimate is local to the cutoff**, and match it to a decision about moving the threshold rather than to a decision about the treatment in general.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/regression_discontinuity.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Thistlethwaite, D. L., & Campbell, D. T. (1960). Regression-discontinuity analysis: an alternative to the ex post facto experiment. *Journal of Educational Psychology*, 51(6), 309-317.

@@ -248,6 +248,8 @@ With eight variants the usual equal split gives the control eleven percent of tr
 5. Give a shared control the square root of the number of treatment arms. With five or more variants this is the cheapest precision available.
 6. Recompute the duration after fixing the split, and put the result in the test plan. Most disagreements about traffic splits end when the cost is quoted in days.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/unequal_allocation.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Neyman, J. (1934). On the two different aspects of the representative method. *Journal of the Royal Statistical Society*, 97(4), 558-625.

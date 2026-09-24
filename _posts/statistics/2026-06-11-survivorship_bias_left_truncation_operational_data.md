@@ -227,6 +227,8 @@ The check is always the same question: could a unit have been excluded from this
 5. **Forecast new units from an estimate on the origin scale**, never from the rates observed among survivors, whose age distribution the new units do not share.
 6. **Go back for the failures.** If the register of retired, churned or defaulted units exists anywhere, adding it turns the survivors into a full cohort and removes the problem at the source.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/left_truncation.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Kaplan, E. L., & Meier, P. (1958). Nonparametric estimation from incomplete observations. *Journal of the American Statistical Association*, 53(282), 457-481.

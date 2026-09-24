@@ -269,6 +269,8 @@ Kernel Density Estimation (KDE) is a versatile and powerful tool for estimating 
 
 KDE’s ability to model intricate, multimodal distributions without predefined assumptions allows data scientists and analysts to explore patterns in data that might otherwise go unnoticed. As data sets become larger and more complex, KDE remains a crucial technique in the data analyst’s toolkit, offering both deep insights and practical solutions for real-world problems.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/data_science/kernel_density.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Parzen, E. (1962). On estimation of a probability density function and mode. *Annals of Mathematical Statistics*, 33(3), 1065-1076.

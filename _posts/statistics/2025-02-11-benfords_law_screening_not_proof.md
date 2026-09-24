@@ -276,6 +276,8 @@ Used the other way round, the screen is genuinely valuable. Run it on a column t
 5. Follow a first-digit flag with terminal-digit and second-digit checks. They separate rounding and data-entry conventions, which are common, from fabrication, which is rare.
 6. Treat any flag as a question for the process owner. Most failures have a dull explanation, and finding it is cheaper than defending an accusation.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/benford.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Benford, F. (1938). The law of anomalous numbers. *Proceedings of the American Philosophical Society*, 78(4), 551-572.

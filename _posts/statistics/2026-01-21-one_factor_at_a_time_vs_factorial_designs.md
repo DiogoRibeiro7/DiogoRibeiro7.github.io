@@ -226,6 +226,8 @@ The designs in this post are small enough to write by hand, as the code above do
 5. **Know the alias structure** of any fraction before running it, and plan the fold-over that resolves the aliases that turn out to matter.
 6. **Confirm the chosen setting** with a few replicated runs at the recommended corner; the model's best prediction is an estimate, and the confirmation run is cheap.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/factorial_designs.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Box, G. E. P., Hunter, J. S., & Hunter, W. G. (2005). *Statistics for Experimenters: Design, Innovation, and Discovery* (2nd ed.). Wiley.

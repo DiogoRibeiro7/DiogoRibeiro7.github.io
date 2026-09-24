@@ -165,6 +165,8 @@ They don't just offer a tool for economists—they represent a **mindset**: mode
 
 The caveat that keeps that mindset honest is that a simulation inherits every assumption of the model generating it. A tight fan chart reflects confidence in the specification, not knowledge about the world, and the distributions that matter most in a crisis are exactly the ones estimated from the fewest historical observations.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/economics/gdp_fan.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Robert, C. P., & Casella, G. (2004). *Monte Carlo Statistical Methods* (2nd ed.). Springer.

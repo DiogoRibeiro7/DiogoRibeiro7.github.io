@@ -147,12 +147,11 @@ Supported repository tooling includes:
 - `scripts/sync_theme_assets.py`: synchronise theme-owned assets into this site.
 - `scripts/check_internal_links.py`: check internal links in the generated site.
 - `scripts/validate_front_matter.rb`: check post front matter.
-- `assets/viz/generate_figures.py`: regenerate custom article figures.
 - `assets/viz/generate_headers.py`: regenerate the header image pool.
 - `assets/viz/fetch_headers.py`: fetch freely licensed header photographs and
   record their attribution.
-- `assets/viz/housestyle.py` and `assets/viz/house.mplstyle`: the shared chart
-  style the two generators above use.
+- `assets/viz/housestyle.py` and `assets/viz/house.mplstyle`: the chart style
+  the header generator uses.
 
 ## Where the article calculations live
 
@@ -165,10 +164,6 @@ figures and its tests.
 
 This repository keeps the rendered images the articles embed, so every image URL
 on the site is unchanged. It no longer keeps the code that produced them.
-
-One migration is still outstanding: `assets/viz/generate_figures.py` holds the
-remaining 78 figure generators and has not moved yet. `housestyle.py` stays here
-for as long as it and the header generators need it.
 
 Avoid adding broad one-off mutation scripts to the repository root. Prefer a
 small tested utility only when it supports an ongoing repository workflow.

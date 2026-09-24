@@ -227,6 +227,8 @@ The reverse mismatch exists too: randomising sessions and analysing users, which
 5. **Decide between the ratio of sums and the mean of per-user rates before the test**, from the decision the result will inform, and report which one was used.
 6. **Run A/A tests on your own pipeline.** A false positive rate above 5 percent in A/A data is the fastest diagnosis of a unit mismatch, and it costs nothing but compute.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/ratio_metrics.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Deng, A., Knoblich, U., & Lu, J. (2018). Applying the delta method in metric analytics: a practical guide with novel ideas. *Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 233-242.

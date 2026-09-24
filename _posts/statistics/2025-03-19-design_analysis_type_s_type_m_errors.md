@@ -251,6 +251,8 @@ When that sample size is unaffordable, the honest response is not to run the sma
 5. Expect the second estimate to be smaller. Shrinkage on replication is the normal behaviour of the filter, not a sign that the first result was fabricated or that the effect has decayed.
 6. Report the interval as the headline, not the point estimate. It carries the uncertainty that the exaggeration ratio is quantifying.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/design_analysis.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Gelman, A., & Carlin, J. (2014). Beyond power calculations: assessing Type S (sign) and Type M (magnitude) errors. *Perspectives on Psychological Science*, 9(6), 641-651.

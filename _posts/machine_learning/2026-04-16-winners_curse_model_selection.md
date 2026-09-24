@@ -192,6 +192,8 @@ A held-out test set is the clean answer and the one to use when the data allow i
 5. **Use nested cross-validation** when data are too scarce for a separate test set, and report the outer-fold score as the estimate.
 6. **Read the runner-up scores.** A winner that is not clearly separated from the field has not been selected on evidence, and any configuration in the field would have done as well.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/machine_learning/winners_curse.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Jensen, D. D., & Cohen, P. R. (2000). Multiple comparisons in induction algorithms. *Machine Learning*, 38, 309-338.

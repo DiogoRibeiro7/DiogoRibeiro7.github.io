@@ -239,6 +239,8 @@ The general rule is the same in each. The label is the event within a horizon of
 5. **Evaluate on records with full follow-up**, or with censoring-weighted metrics, and accept that the evaluation lags the present by the horizon.
 6. **Treat the model's own metrics with suspicion** when training, validation and test share a snapshot. An AUC of 0.90 on a censored label is a measurement of how well the model has learned the extract date.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/machine_learning/censored_labels.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Kalbfleisch, J. D., & Prentice, R. L. (2002). *The Statistical Analysis of Failure Time Data* (2nd ed.). Wiley.

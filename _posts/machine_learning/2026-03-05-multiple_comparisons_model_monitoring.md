@@ -280,6 +280,8 @@ Work backwards from what the team can investigate:
 
 With 200 features, Benjamini-Hochberg at $q = 0.05$, a three-day persistence rule and an effect-size gate, the simulated monitor produces well under one false alert a month and still reports a 0.2 standard deviation shift within days. A monitor that fires ten times a day is not vigilant. It is noise with a dashboard, and the arithmetic that makes it so has been known since before the first model was deployed.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/machine_learning/monitoring_alerts.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figures; run it with `--dry-run` to print the numbers behind the figures without writing an image.
+
 ## References
 
 - Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. *Journal of the Royal Statistical Society: Series B*, 57(1), 289-300.

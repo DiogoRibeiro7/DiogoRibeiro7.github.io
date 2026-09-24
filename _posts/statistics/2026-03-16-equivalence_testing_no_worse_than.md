@@ -210,6 +210,8 @@ The pattern recurs wherever a change is meant to be neutral on one dimension and
 5. **Report the interval and the margin together.** "No significant difference" on its own is not a finding, and "equivalent" without a margin is not a claim.
 6. **Say "inconclusive"** when the interval crosses the margin, and either collect more cases or accept that the question is open.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/equivalence_testing.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Schuirmann, D. J. (1987). A comparison of the two one-sided tests procedure and the power approach for assessing the equivalence of average bioavailability. *Journal of Pharmacokinetics and Biopharmaceutics*, 15(6), 657-680.

@@ -257,6 +257,8 @@ One caution about tightening. Moving a Shewhart limit from three sigma to two cu
 5. Estimate limits from the long-run spread, never from consecutive differences, unless the metric is genuinely independent day to day.
 6. Measure the autocorrelation of every monitored metric before setting limits. Above about 0.3 the nominal alarm interval is fiction.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/run_length.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Page, E. S. (1954). Continuous inspection schemes. *Biometrika*, 41(1-2), 100-115.

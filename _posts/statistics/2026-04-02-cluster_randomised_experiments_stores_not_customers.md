@@ -222,6 +222,8 @@ The store-means test used here is the simplest valid analysis, and it is a good 
 5. **Report the number of clusters** with every result, next to the number of customers; the first is the sample size that matters.
 6. **Run the A/A check** on historical data by randomly labelling stores: a customer-level test that rejects far more than 5 percent of the time has told you the intraclass correlation is not zero.
 
+The [figure generator](https://github.com/DiogoRibeiro7/blog-reproducibility/blob/main/scripts/figures/statistics/cluster_randomisation.py) in the [blog-reproducibility repository](https://github.com/DiogoRibeiro7/blog-reproducibility) reproduces this article's figure; run it with `--dry-run` to print the numbers behind the figure without writing an image.
+
 ## References
 
 - Donner, A., & Klar, N. (2000). *Design and Analysis of Cluster Randomization Trials in Health Research*. Arnold.
