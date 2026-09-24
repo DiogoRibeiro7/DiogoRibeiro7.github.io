@@ -15,7 +15,7 @@ excerpt: >-
   Four estimators agree on the effect when both models are correct.
   Misspecify the outcome model and regression adjustment is off by 0.19;
   misspecify the treatment model and matching and weighting are off by
-  0.24. The doubly robust estimator is right in both cases.
+  0.24 and 0.23. The doubly robust estimator is right in both cases.
 summary: >-
   What a propensity score is and why one number can stand in for many
   covariates, a simulated observational study with three confounders in

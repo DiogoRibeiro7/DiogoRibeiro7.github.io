@@ -10,7 +10,7 @@ tags:
 - Statistics
 author_profile: false
 seo_title: 'Switchback Experiments: Period Length, Carryover and Clustered Errors'
-seo_description: 'When pricing or dispatch cannot be split by user, the alternative is to switch the system on and off over time. A simulation shows the order-level standard error understating the truth by a factor of 228, the carryover bias matching its closed form to four decimals, and a burn-in that raises power while discarding half the data.'
+seo_description: 'When pricing or dispatch cannot be split by user, the alternative is to switch the system on and off over time. A simulation shows the order-level standard error understating the truth by a factor of 228, the carryover bias matching its closed form to about a thousandth of a percentage point, and a burn-in that raises power while discarding half the data.'
 excerpt: >-
   Pricing cannot be randomised by user, so the system is switched on and
   off every fifteen minutes instead. The order-level analysis reports a
@@ -260,7 +260,7 @@ for period in (15, 30, 60, 180, 360):
 | 180 m | 3.076% | 3.118% | −0.042% | 0.000% | −0.041% | 2.2% |
 | 360 m | 2.688% | 2.709% | −0.021% | 0.000% | −0.021% | 1.1% |
 
-The carryover bias is now visible to four decimal places, and it matches its closed form exactly. The share of control time contaminated is the probability that the previous period was treated, one half, times the fraction of a period the carryover covers, so
+The carryover bias is now visible to four decimal places, and it matches its closed form to within about two Monte Carlo errors. The share of control time contaminated is the probability that the previous period was treated, one half, times the fraction of a period the carryover covers, so
 
 $$\text{bias} = \frac{1 + \delta}{1 + \tfrac{1}{2}\tfrac{c}{L}\,\gamma\,\delta} - 1 - \delta,$$
 

@@ -173,7 +173,7 @@ for c in (0.9, 0.6, 0.4, 0.2):
 | 40% | 0.81 ± 0.17 | 2.01 ± 0.41 | 662 |
 | 20% | 0.39 ± 0.17 | 1.95 ± 0.84 | 2,649 |
 
-At 20 percent compliance the Wald estimate is still centred on the truth, but its spread is five times what it is at 90 percent, and the experiment needs twenty times the users to detect the same effect of use. The sample-size formula for the intention-to-treat contrast is the usual one with the effect multiplied by the compliance rate, so the users required grow as $1/c^2$. This is the practical argument for driving adoption before measuring effect: an experiment on a feature that a fifth of users adopt is, for the purpose of learning what the feature does, an experiment a twenty-fifth the size it appears to be.
+At 20 percent compliance the Wald estimate is still centred on the truth, but its spread is nearly five times what it is at 90 percent, and the experiment needs about twenty times the users to detect the same effect of use. The sample-size formula for the intention-to-treat contrast is the usual one with the effect multiplied by the compliance rate, so the users required grow as $1/c^2$. This is the practical argument for driving adoption before measuring effect: an experiment on a feature that a fifth of users adopt is, for the purpose of learning what the feature does, an experiment a twenty-fifth the size it appears to be.
 
 ## When There Are No Always-Takers
 

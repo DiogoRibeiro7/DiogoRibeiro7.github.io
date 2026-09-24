@@ -10,7 +10,7 @@ tags:
 - Statistics
 author_profile: false
 seo_title: 'CUPED and Regression Adjustment in A/B Tests'
-seo_description: 'A pre-experiment covariate correlated with the outcome removes a share of the variance equal to the squared correlation. A simulation shows CUPED, regression adjustment and stratification halving the standard error at a correlation of 0.7, keeping the false positive rate, and going wrong only when the covariate is measured after exposure.'
+seo_description: 'A pre-experiment covariate correlated with the outcome removes a share of the variance equal to the squared correlation. A simulation shows CUPED, regression adjustment and stratification roughly halving the variance at a correlation of 0.7, keeping the false positive rate, and going wrong only when the covariate is measured after exposure.'
 excerpt: >-
   The experiment needs 1,570 users per arm to detect a two percent lift.
   Each user's spend over the previous month is already in the warehouse
