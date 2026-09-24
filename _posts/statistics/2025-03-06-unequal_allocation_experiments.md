@@ -130,7 +130,7 @@ for f in (0.5, 0.3, 0.1):
 | 30% | 98.3% | 98.6% |
 | 10% | 76.0% | 76.3% |
 
-![Variance of the estimated difference relative to an even split, against the share of traffic sent to the treatment arm. The curve is flat between about thirty and seventy percent and rises steeply at the edges, passing 2.8 at a ninety-ten split and 5.3 at ninety-five-five.](/assets/images/figures/allocation_variance_cost.png){: width="1152" height="672" loading="lazy"}
+![Variance of the estimated difference relative to an even split, against the share of traffic sent to the treatment arm. The curve stays within ten percent of an even split between about thirty-five and sixty-five percent, reaches 1.19 at a seventy-thirty split, and rises steeply at the edges, passing 2.8 at a ninety-ten split and 5.3 at ninety-five-five.](/assets/images/figures/allocation_variance_cost.png){: width="1152" height="672" loading="lazy"}
 
 ## The Price of Caution, in Days
 
