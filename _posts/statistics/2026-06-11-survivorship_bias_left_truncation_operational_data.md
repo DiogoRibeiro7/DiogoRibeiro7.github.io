@@ -13,7 +13,7 @@ seo_title: 'Survivorship Bias and Left Truncation in Operational Data'
 seo_description: 'Analysing the machines, customers or accounts that are still there overstates lifetimes, hides the harshest conditions and inflates failure rates in the wrong direction. A simulated fleet shows the biases and the left-truncation correction that removes them.'
 excerpt: >-
   A reliability study follows every machine in service today for two years
-  and estimates a median life of 7.7 years. The true median is 3.9. The
+  and estimates a median life of 7.7 years. The true median is 4.0. The
   machines that would have pulled the estimate down failed before the study
   started, and the ones that remain are the survivors.
 summary: >-
@@ -63,7 +63,7 @@ header:
 ---
 The reliability team is asked how long the pumps last. They take the asset register as of this year, which lists every pump currently in service with its installation date, follow the fleet for two years, record the failures, and fit a survival curve. The median life comes out at 7.7 years. The manufacturer's figure was closer to four, and the team writes a note explaining that field conditions must be milder than the test bench.
 
-Field conditions are not milder. The true median in the simulation this post is built on is 3.9 years. The register the team started from lists the pumps that are still running, and a pump that failed in its second year is not in it. The sample was drawn by survival, and every estimate made on it inherits the selection.
+Field conditions are not milder. The true median in the simulation this post is built on is 4.0 years. The register the team started from lists the pumps that are still running, and a pump that failed in its second year is not in it. The sample was drawn by survival, and every estimate made on it inherits the selection.
 
 ## Three Distortions from One Selection
 
@@ -152,7 +152,7 @@ print("reference, all units:          ", round(median_from(g_full, s_full), 2))
 | Age scale with left truncation | 3.83 years |
 | Reference: every unit ever installed | 3.95 years |
 
-The first row is not wrong, only about something else: it estimates the remaining life of the current fleet, which nobody asked for. The second row is the 7.7 that went into the report. It puts every survivor into the risk set from age zero, so the estimator sees 7,644 units "surviving" their first three years with almost no failures, because the failures in those years happened to units that are not in the table. The third row uses the same 7,644 units and the same 2,940 failures and changes only the risk set; it recovers the reference to within a tenth of a year.
+The first row is not wrong, only about something else: it estimates the remaining life of the current fleet, which nobody asked for. The second row is the 7.7 that went into the report. It puts every survivor into the risk set from age zero, so the estimator sees 7,644 units "surviving" their first three years with almost no failures, because the failures in those years happened to units that are not in the table. The third row uses the same 7,644 units and the same 2,940 failures and changes only the risk set; it recovers the reference to within 0.12 years.
 
 ![Survival curves against age for the simulated fleet: the reference from every unit ever installed, the curve from survivors counted from age zero, and the left-truncated curve from the same survivors. Counting survivors from age zero roughly doubles the apparent median; the left-truncated estimate lies on the reference.](/assets/images/figures/survivorship_left_truncation.png){: width="1152" height="672" loading="lazy"}
 
