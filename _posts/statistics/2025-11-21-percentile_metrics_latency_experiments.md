@@ -264,7 +264,7 @@ Reporting the median and a tail percentile together, always, costs nothing and m
 ## What to Do
 
 1. **Report the median and a tail percentile side by side**, plus the mean when cost or capacity is at stake. A single latency number hides changes that move parts of the distribution in opposite directions.
-2. **Size experiments on the statistic you will decide with.** A five percent body improvement needs four thousand requests at the median and three million at p99.
+2. **Size experiments on the statistic you will decide with.** A five percent body improvement needs four thousand requests at the median and nearly five million at p99.
 3. **Use order-statistic intervals for percentiles**, or the bootstrap for differences of percentiles; the normal approximation under-covers because the tail density cannot be estimated well.
 4. **Treat tail percentiles as guardrails over long windows** rather than as experiment endpoints, unless the traffic makes them measurable.
 5. **Predict which part of the distribution the change touches**, and check the statistic that should respond before concluding that nothing happened.
