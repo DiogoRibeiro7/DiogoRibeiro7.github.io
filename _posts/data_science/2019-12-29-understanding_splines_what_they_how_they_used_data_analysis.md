@@ -50,7 +50,7 @@ If you've ever dealt with data that doesn’t follow a simple straight line but 
 - **The different types of splines**
 - **Practical uses of splines in regression, smoothing, and machine learning**
 
-![A cubic spline, a degree-10 polynomial, and a straight line fitted to the same curved data. The polynomial oscillates near the edges while the spline follows the shape.](/assets/images/figures/splines_fit.png){: width="1177" height="697" loading="lazy"}
+![A cubic spline, a degree-10 polynomial, and a straight line fitted to the same noisy data, a sharp peak on a gentle upward trend. The polynomial falls short of the peak and oscillates across the flat stretches and near the edges, while the spline follows the shape.](/assets/images/figures/splines_fit.png){: width="1177" height="697" loading="lazy"}
 
 ## What Are Splines?
 
